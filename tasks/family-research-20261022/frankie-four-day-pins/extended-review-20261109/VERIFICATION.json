@@ -1,0 +1,19 @@
+{
+  "workbook_sha256": "8284fea447359b0d9c939714b32adda9f97859422f11ff2cf20750376cd1b14c",
+  "bytes": 8622690,
+  "sheets": 36,
+  "layer_columns": 131,
+  "trade_examples": 13,
+  "payloads": 695,
+  "payload_chunks": 78692,
+  "checks": [
+    "all 131 layer headers preserved in both matrices",
+    "all populated source payloads round-trip exactly",
+    "all 105 brain documents round-trip exactly",
+    "all sample nanosecond clocks preserved exactly",
+    "6168 original and recovered source pins retained",
+    "all restored forecasts and disagreement rows match sources",
+    "all sheets remain unlocked"
+  ],
+  "complete_all_layers": false
+}

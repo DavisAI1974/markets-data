@@ -1,0 +1,52 @@
+{
+  "complete_all_layers": false,
+  "workbook_locked": false,
+  "original_book_fifo_trade_rows": 143270,
+  "full_book_location": "Full book sources and Book packet files sheets",
+  "saved_dipole_stage_rows": 193124,
+  "dipole_raw_sources": "Original source references in Dipole source files and complete saved Native extracts beside the workbook.",
+  "workflow_runs": [
+    42571551209,
+    42573465249
+  ],
+  "delayed_outcomes_excluded": true,
+  "prior_second_workflow_excluded": true,
+  "prior_second_workflow_archive_run": 42573465249,
+  "late_session_clock_tables": 529,
+  "late_session_clock_files": 1945,
+  "outcome_rule": "Derive the outcome from observed MBO and FIFO replay after each decision. Keep decision and outcome clocks separate.",
+  "calculation_exclusions": [
+    {
+      "sheets": [
+        "Delayed outcomes",
+        "Delayed outcome conditions"
+      ],
+      "source_files": [
+        "b-delayed-outcomes.parquet",
+        "cross-study-condition-outcomes.parquet"
+      ],
+      "scope": "All four dates. Historical 1, 5 and 30 second delayed outcomes.",
+      "allowed_use": "Original historical archive only. Excluded from workbook and calculations."
+    },
+    {
+      "workflow": "Whole lifecycle audit",
+      "run": 42573465249,
+      "scope": "All four dates.",
+      "allowed_use": "Historical provenance only. Refresh the workflow from populated inputs."
+    }
+  ],
+  "dipole_lead": {
+    "reported_ng_seconds_approximate": 0.5,
+    "exact_later_measurement": "Not yet located in an immutable source.",
+    "scope": "Subsecond turn timing inherited from the Bitcoin dipole research.",
+    "historical_sources": "TIMING_SOURCE_PINS.json"
+  },
+  "original_october18_second_set_trades": 30739,
+  "second_set_replay_run": 42640458600,
+  "pending": [
+    "Later exact natural-gas lead calculation",
+    "Complete replay results for October 2, 3 and 17",
+    "Refresh the second workflow after the workbook has been populated",
+    "Approved workbook lock and runtime layer-ID binding"
+  ]
+}

@@ -1,0 +1,2236 @@
+[
+  {
+    "name": "October discovery and primer, operator and prebirth results",
+    "repo": "DavisAI1974/Markets",
+    "revision": "407a23379e3e99ee7589921d6d91b2fcff207748",
+    "files": [
+      {
+        "path": "tasks/family-research-20261022/AGENTS.md",
+        "git_blob": "693500008da65ca8e671620049eb591fa484fd4c",
+        "bytes": 3358
+      },
+      {
+        "path": "tasks/family-research-20261022/analyze_day_flow_and_quotes.py",
+        "git_blob": "a37d62a730987af83b863e955a9be422c33139e3",
+        "bytes": 20502
+      },
+      {
+        "path": "tasks/family-research-20261022/analyze_local_liquidity.py",
+        "git_blob": "1c891f4743cdd1ce478ea19827f85861506be9ed",
+        "bytes": 24280
+      },
+      {
+        "path": "tasks/family-research-20261022/analyze_quote_order_gapfill.py",
+        "git_blob": "522616fc0d4adda693ecb05761338ade521d9a06",
+        "bytes": 11663
+      },
+      {
+        "path": "tasks/family-research-20261022/analyze_saved_trade_quotes.py",
+        "git_blob": "74012ca42f3858a2ef3def6ccbabf68136126be1",
+        "bytes": 7719
+      },
+      {
+        "path": "tasks/family-research-20261022/attach_trade_external_evidence.py",
+        "git_blob": "4d0d5c0cb9c0428c80bf5fe1fbf7b0e1c0b565a1",
+        "bytes": 7502
+      },
+      {
+        "path": "tasks/family-research-20261022/attach_trade_root_and_order_evidence.py",
+        "git_blob": "0ab16dd0dbadba051ae65cebf4df82d15261bba3",
+        "bytes": 5123
+      },
+      {
+        "path": "tasks/family-research-20261022/audit_october18_touch_mechanisms.py",
+        "git_blob": "f99f987e2451dcc3adc8843d7ced4d45c8adaa8d",
+        "bytes": 12304
+      },
+      {
+        "path": "tasks/family-research-20261022/audit_trade_dipole_overlay.py",
+        "git_blob": "c9963c4abd432bb89fe8e486fed47bf7c26db16a",
+        "bytes": 7376
+      },
+      {
+        "path": "tasks/family-research-20261022/build_model_perspectives.py",
+        "git_blob": "041666aabcfa1575bf121fa8f8645c45798baecf",
+        "bytes": 18157
+      },
+      {
+        "path": "tasks/family-research-20261022/candidate-aux-readout-20261023.json",
+        "git_blob": "60eae892b98c1877e734b75bbdc44e4a3ebd345e",
+        "bytes": 31583
+      },
+      {
+        "path": "tasks/family-research-20261022/candidate-main-metrics-20261023.csv",
+        "git_blob": "8e1adaf915495a6e49d87cac68e47981f7421371",
+        "bytes": 120169
+      },
+      {
+        "path": "tasks/family-research-20261022/candidate-main-summary-20261023.json",
+        "git_blob": "70fc9af6a962f373ff4d0c33ed6c09afed4f1209",
+        "bytes": 277749
+      },
+      {
+        "path": "tasks/family-research-20261022/candidate-metric-readout-20261023.json",
+        "git_blob": "bc80c671cb8c044362fe3c583c7925a09a014284",
+        "bytes": 38819
+      },
+      {
+        "path": "tasks/family-research-20261022/capture_discovery_table_index.py",
+        "git_blob": "480d773316ef104acbcc499004acd34caeffa7aa",
+        "bytes": 4164
+      },
+      {
+        "path": "tasks/family-research-20261022/check_early_signal_context.py",
+        "git_blob": "7ce7e92788da1628d5a0bb70f158328ef837ef2d",
+        "bytes": 5869
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/a-state-direction-knowable-oct18-events.jsonl.gz",
+        "git_blob": "ff159db70e7a6c37727f4467a2b2fbf83eef6549",
+        "bytes": 12916
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/a-state-direction-knowable-oct18-summary.json",
+        "git_blob": "b1be80692030836365628ced1be7f82cfbffe94e",
+        "bytes": 8437
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/a_state_direction_knowable_oct18.py",
+        "git_blob": "b808ec5eeac41eaef31cad8b90530cdf02f94874",
+        "bytes": 4848
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/dipole-post-recognition-rows.jsonl.gz",
+        "git_blob": "27779248356dfaa7e0e267439a188b1ff3a4760c",
+        "bytes": 29625
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/dipole-post-recognition-summary.json",
+        "git_blob": "0e30515ea0951cbdca5af6f05de5c7704c2abdb5",
+        "bytes": 32250
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/dipole_post_recognition_outcomes.py",
+        "git_blob": "37a44e183436f615fb55e742898fee6289858db6",
+        "bytes": 10818
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/exhaustion-clock-20231002-flow-only-events.jsonl.gz",
+        "git_blob": "81ada6b4b940f41039d6fa76d59164de8072a8c0",
+        "bytes": 16849
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/exhaustion-clock-20231002-flow-only.json",
+        "git_blob": "a7d297573f12c935151e4b30d226e6314abc16a5",
+        "bytes": 1167
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/exhaustion-clock-20231017-flow-only-events.jsonl.gz",
+        "git_blob": "be9119cccab47f8c957c00318be953a2af562480",
+        "bytes": 16930
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/exhaustion-clock-20231017-flow-only.json",
+        "git_blob": "5d694f345fa47d6ac34087c4d745318337c83d66",
+        "bytes": 1167
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/exhaustion-clock-oct18-events.jsonl.gz",
+        "git_blob": "b98e2c1b06e990fd1feed07d05e61e54d172a78c",
+        "bytes": 224211
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/exhaustion-clock-oct18-summary.json",
+        "git_blob": "1db27c2915ac33aca1c14e30fcec24dfc83bbf2b",
+        "bytes": 22465
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/exhaustion_clock_flow_only.py",
+        "git_blob": "f28fed18baef9e6495fcaed53508cb4cb48a11db",
+        "bytes": 5558
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/exhaustion_clock_reanalysis_oct18.py",
+        "git_blob": "e8fa4a9b01ec84de38c0a214d20a9e8616c8a8e4",
+        "bytes": 24266
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/first-family-four-arm-events.jsonl.gz",
+        "git_blob": "d60a2357b5865940d88cd00c1149356383e7bfba",
+        "bytes": 82668
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/first-family-four-arm-summary.json",
+        "git_blob": "a31bd792518f72cee06b7833053f14294ae7fa35",
+        "bytes": 155296
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/four_arm_first_family_flow_book.py",
+        "git_blob": "470072e4aebf8d9a0048898a5c480ea167946128",
+        "bytes": 17098
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/frozen-a-classifier-oct18-events.jsonl.gz",
+        "git_blob": "66a63055b1b52e2dc3a13a80bd2f49c7fc1fd781",
+        "bytes": 68855
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/frozen-a-classifier-oct18-summary.json",
+        "git_blob": "64ac5e8ba4e668bfb66b5020049a3cb9b3a58361",
+        "bytes": 10337
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/frozen_a_classifier_oct18.py",
+        "git_blob": "d94badb9d42843e82886d2899b85a01efb322c65",
+        "bytes": 7121
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+        "git_blob": "1d2b7bb97da19912a2ca6fe495013b888fa95152",
+        "bytes": 43740
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.pdf",
+        "git_blob": "7f32e42f2f44fa77592018e7d092f291bcdde33a",
+        "bytes": 144094
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/research-notes/commodity_futures_and_natural_gas.md",
+        "git_blob": "f24e157df35d22043b3a094a206a0056aca85c15",
+        "bytes": 51091
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/research-notes/market_psychology.md",
+        "git_blob": "314b30aab69984dd7f215fd6d67f66983134fca1",
+        "bytes": 55951
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+        "git_blob": "d118de5d26e153ee9b0dd87007390f92d4250715",
+        "bytes": 68458
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/research-notes/price_formation_microstructure.md",
+        "git_blob": "e22f94449119693edf3421e4f8f0cbc4b634a6c7",
+        "bytes": 67069
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/research-notes/quant_research_methods.md",
+        "git_blob": "42bb5125679cf2ea184dd6b045b5a606e348d963",
+        "bytes": 50812
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/research-notes/unsolved_puzzles.md",
+        "git_blob": "ceb1d36afc7fca71801366b89dd14cd0f4869bc9",
+        "bytes": 90914
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/runway-duration-oct18-events.jsonl.gz",
+        "git_blob": "69244b9667754bf75a029a6037b1193d44128a23",
+        "bytes": 58110
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/runway-duration-oct18-summary.json",
+        "git_blob": "0c6db4a927b1f34315e38b0d509ae213b1ce256f",
+        "bytes": 9995
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/runway_duration_test_oct18.py",
+        "git_blob": "50b1c2484a9c2fa8eb07ca18b99574d2c91accc5",
+        "bytes": 5756
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/size-one-four-arm-summary.json",
+        "git_blob": "dc8cd3ebff8f566090349b1d57c0471e7842b8fa",
+        "bytes": 19093
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/size_one_four_arm.py",
+        "git_blob": "8e190ac2ea3af9625c85ab9db1e0d58b3631cf31",
+        "bytes": 5567
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/sweep-cohort-events.jsonl.gz",
+        "git_blob": "2ea0a49cc3bdf54eb1585b148ed7315fec77a626",
+        "bytes": 113509
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/sweep_cohort_trace.py",
+        "git_blob": "c2421d7ca38e94ae7a90d4f515a845cab0240a71",
+        "bytes": 7700
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/trace-events.json",
+        "git_blob": "9aa7e83efdbdacc4e1d6860b81c7e07d2edf3166",
+        "bytes": 543
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/trace-first-family-summary.json",
+        "git_blob": "8227d363963e99e5c40b1a3af10b6b7ee5302d65",
+        "bytes": 668606
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/trace-instance375-messages.jsonl.gz",
+        "git_blob": "792074d06cbe220ed41c0e120aba1d8871e37547",
+        "bytes": 32256
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/trace-instance391-messages.jsonl.gz",
+        "git_blob": "e36d7ec3919c2aa262214221eac1689ebe0e6a38",
+        "bytes": 24242
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-code/trace_first_family_orders.py",
+        "git_blob": "4b79980fc28154d9a8f68648044d6bca52b7e776",
+        "bytes": 10788
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-october-discovery-20261108.md",
+        "git_blob": "2b0d660942feb5049726b39d3dc246afd06ae547",
+        "bytes": 51219
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-october-discovery-drop-in.txt",
+        "git_blob": "5c1501e246687316341fc03651675c14caab2034",
+        "bytes": 4507
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c01_load_groups.py",
+        "git_blob": "8b8dcb31db151912312efe15130c1c16616fd589",
+        "bytes": 1651
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c02_family_outcomes.py",
+        "git_blob": "cb507dc4a1fbdefaceae18f37845b49bd4f7d80d",
+        "bytes": 1724
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c03_recon_mbo.py",
+        "git_blob": "9ecdcd95c17c3fcdeb8a7153ddca52abec72dc93",
+        "bytes": 6246
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c04_order_features.py",
+        "git_blob": "9c9d4f866c2988881756d2b12b6df9d5a732befd",
+        "bytes": 5494
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c05_case_trace.py",
+        "git_blob": "c75278ca757d9f1e13ed7b55577eb89423fd1f31",
+        "bytes": 1668
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c06_tier1_master.py",
+        "git_blob": "ef9eba1690125e496bf28a4886ec5bcb2f6408fa",
+        "bytes": 4693
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c07_tier1_cells.py",
+        "git_blob": "a4111f10007a33108941759ef5f6340058d325a2",
+        "bytes": 3239
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c08_depth_and_corners.py",
+        "git_blob": "0261d08e39873640bab2a4ac3a317802ecc506bd",
+        "bytes": 2577
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c09_matched50.py",
+        "git_blob": "b5157d2d7a534c138d20db4933e135670a45255e",
+        "bytes": 2803
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c10_refill.py",
+        "git_blob": "7a59a31486115ae22f9fbdf7be887b2429f913a1",
+        "bytes": 3423
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c11_tier1_fourarm.py",
+        "git_blob": "b05e8bd316892dc4e91db4458d1577f59932f85e",
+        "bytes": 3227
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c12_tier2_build.py",
+        "git_blob": "b6776534264832da2bbcbb2a485e892b2e6d700a",
+        "bytes": 6108
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c13_coupling_scan.py",
+        "git_blob": "d19d95cf883eb53f5cb66a45e9a22585a4ea8828",
+        "bytes": 3569
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c14_coupling_conditions.py",
+        "git_blob": "9934f4d3300d153016cfe60c8e2a0e64cee3ddf5",
+        "bytes": 4049
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c14_coupling_deseason.py",
+        "git_blob": "d0b7dfba539c4317a26d6972e136967193e75a46",
+        "bytes": 4569
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c15_pair_couplings.py",
+        "git_blob": "1c07bee7823b4025791d82331ca8a723cd3687c5",
+        "bytes": 4451
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c16_leadlag.py",
+        "git_blob": "c890119ccf7b52831a78b32a4405e1e19fc1959c",
+        "bytes": 4661
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c17_state_cells.py",
+        "git_blob": "1a60744a386e4f0f34f34963ab4f3ea4efbc01a4",
+        "bytes": 3680
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/c18_forward_stack.py",
+        "git_blob": "0669ad36448d21676e8cd5115f1f9521d451cdb4",
+        "bytes": 2845
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/fourarm.py",
+        "git_blob": "1f98f82c5beb9796acf31f2d116277e9890d3116",
+        "bytes": 4876
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_cells_flow_pattern_x_depth.csv",
+        "git_blob": "f267482c83eb6366744e274096eaa4debdeb47b3",
+        "bytes": 8521
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_corners_flow_x_neardepth.csv",
+        "git_blob": "787266f6220c2d516e9776b7dd0a9663eb83ef66",
+        "bytes": 1932
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_family_master.csv",
+        "git_blob": "723ea5b24c887364cdc396667ba28ee6b822d90a",
+        "bytes": 1104451
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_family_master_flags.csv",
+        "git_blob": "9b13c571197809b042481862d9fa3c4133a82e8a",
+        "bytes": 1114151
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_family_master_receipt.json",
+        "git_blob": "6ea8a450db5c9872219aa4b68f7aaee7ae448140",
+        "bytes": 87
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_fourarm_by_block.csv",
+        "git_blob": "4f5c84a72d48638b11ca3d2c0e9737011db28b8a",
+        "bytes": 31108
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_fourarm_summary.csv",
+        "git_blob": "3f425f0c4476197bf895aefcc7b5b9ae9c095e6d",
+        "bytes": 13633
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_matched50_cases.csv",
+        "git_blob": "cbef3357eed6497407dd6bddb58cbf157acdaf1d",
+        "bytes": 13015
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_oriented_to_5s_flow.csv",
+        "git_blob": "ff37a578babfdaf3902fdb5e84eaf4752f0d1b2d",
+        "bytes": 493
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_refill_by_fill_stratum.csv",
+        "git_blob": "8b4a29391032bf6efd82a05b9cebf3575cfd5675",
+        "bytes": 712
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_refill_terciles.csv",
+        "git_blob": "dd94b7b0ff41ae7551063057d47736ab3173d9d8",
+        "bytes": 2986
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t1_stack_variants.csv",
+        "git_blob": "a83ab8e69e5a86557d8c1de66a4e477df2edb044",
+        "bytes": 5522
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t2_coupling_conditions.csv",
+        "git_blob": "6bf0bdb5e1b95382adfe8bc3783154e61daefe96",
+        "bytes": 199274
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t2_coupling_scan.csv",
+        "git_blob": "67b49f00595dee248a76c1f8cbcb817a38214783",
+        "bytes": 435222
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t2_forward_stack.csv",
+        "git_blob": "7dade7dd6f3a35c136696fd5aab4d1104efa6d2d",
+        "bytes": 2136
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t2_leadlag_matrix.csv",
+        "git_blob": "a2ece98f02a9941824d01bdc18641f2f8bf1c997",
+        "bytes": 5906
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t2_pair_couplings_top400.csv",
+        "git_blob": "f6a1bdb0c8b511a4b46ee8dfba58782888a768c4",
+        "bytes": 28145
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t2_pair_couplings_top60.csv",
+        "git_blob": "a764b299642ccd556f50304c3f740f432d84a249",
+        "bytes": 6424
+      },
+      {
+        "path": "tasks/family-research-20261022/claude-pass/tables/t2_state_cells.csv",
+        "git_blob": "1f1072240e056e55661ae5fd7fa600c4379f6fe9",
+        "bytes": 4919
+      },
+      {
+        "path": "tasks/family-research-20261022/codex-flow-book-discovery-20261108.md",
+        "git_blob": "fa0f5c3f67d57d53919c7fff3cce7d3d5aaa03ea",
+        "bytes": 73578
+      },
+      {
+        "path": "tasks/family-research-20261022/codex-input-coverage-20261108.md",
+        "git_blob": "904d90e9c5970f70bf756cc79babd876f1c97507",
+        "bytes": 4317
+      },
+      {
+        "path": "tasks/family-research-20261022/codex-research-memory.md",
+        "git_blob": "fbbd293177923e92103c1313906683fc953148b9",
+        "bytes": 10832
+      },
+      {
+        "path": "tasks/family-research-20261022/codex-snapshot-candidate-exhaustion-handoff-20261108.md",
+        "git_blob": "ca4003d64210be4e28ccdc8dc6450bcc371358b2",
+        "bytes": 11392
+      },
+      {
+        "path": "tasks/family-research-20261022/codex-stack-plan.md",
+        "git_blob": "72b070b5d7b3f0db7e7752531825309fd47e2fe2",
+        "bytes": 2262
+      },
+      {
+        "path": "tasks/family-research-20261022/compare_standing_touch_history.py",
+        "git_blob": "bc6953755cf20121c924490b8acb79a97ebff3e0",
+        "bytes": 4233
+      },
+      {
+        "path": "tasks/family-research-20261022/compare_thin_touch_onsets.py",
+        "git_blob": "98eba438a60c2e49f279e2f9d037e5139cec743d",
+        "bytes": 4032
+      },
+      {
+        "path": "tasks/family-research-20261022/compare_trading_episode_375_391.py",
+        "git_blob": "83647503dc66cdddb1c96d1f908023112fbc40b8",
+        "bytes": 11693
+      },
+      {
+        "path": "tasks/family-research-20261022/continue_trade_chronology.py",
+        "git_blob": "418c47383d1363aeffaee1abde3ee0fa6ec74c8f",
+        "bytes": 13169
+      },
+      {
+        "path": "tasks/family-research-20261022/export_bounded_quote_order_sources.py",
+        "git_blob": "3a23d0734439ff835a2756b6e3ff1363164b5991",
+        "bytes": 9941
+      },
+      {
+        "path": "tasks/family-research-20261022/export_oct17_liquidity.py",
+        "git_blob": "d25c4d76e6d0e2affc1f9dc553b5c7fbf45dac63",
+        "bytes": 10865
+      },
+      {
+        "path": "tasks/family-research-20261022/extract_final_analysis.py",
+        "git_blob": "0a30fdccd181e0a18277e13d3eae85552a5b96b4",
+        "bytes": 3224
+      },
+      {
+        "path": "tasks/family-research-20261022/finalize_quote_order_interpretation.py",
+        "git_blob": "bbc358ebf659eea45af154e636e2309caf8faa8c",
+        "bytes": 7973
+      },
+      {
+        "path": "tasks/family-research-20261022/finalize_trade_evidence.py",
+        "git_blob": "0d64a4a29ebde2a8931044053f760a7715abcc51",
+        "bytes": 8958
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/activity-control-outcomes.csv",
+        "git_blob": "127ed444bfac4fd0b95f6b37ede5e13baf9d53ff",
+        "bytes": 24955
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/activity-controls.csv",
+        "git_blob": "bf51e86da5ade357e5fa6272ad2710a6a1387a31",
+        "bytes": 3790
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/all-13-point-coverage.csv",
+        "git_blob": "24487c30349d38901fb399ee8f6a9869a04ceac9",
+        "bytes": 1954
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/all-99-relationship-roles.csv",
+        "git_blob": "c2abf8d863290b864f66dbbce792426ab01d08c0",
+        "bytes": 14633
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/all-field-relationships.csv.gz",
+        "git_blob": "19ddf6b7f53fcc7a9e2aa30eea393a52d1f2c300",
+        "bytes": 163593
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/arm-metrics.csv",
+        "git_blob": "5864c7e98afa246f658c0c4e70c1118b1572114b",
+        "bytes": 6378
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/arm-predictions.csv.gz",
+        "git_blob": "db5927a2ce17b6e26479cff10695a44a501a0f8b",
+        "bytes": 213807
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/case-375-391-external.csv.gz",
+        "git_blob": "2648f060b7dc04c38d209b7f313d5b3575738186",
+        "bytes": 4883
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/case-375-391-measurements.csv",
+        "git_blob": "293b41ff25d2c110a8b3158cec64451721ac9435",
+        "bytes": 41380
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/case-original-messages.csv.gz",
+        "git_blob": "dcd23114abeb840216a1e052486e7f0aa504dc51",
+        "bytes": 60411
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/chronological-splits.csv",
+        "git_blob": "ce3bf865f1409032d15c3d3542569187e69d15d7",
+        "bytes": 20320
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/cohort-outcomes.csv",
+        "git_blob": "fc86d04a9637f0ec2076af1a9532d519c8e3620b",
+        "bytes": 1746
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/date-tables/20231002/legacy_book_imbalance.json.gz",
+        "git_blob": "3934e9599a704a647f95a3750c6211564d9a513c",
+        "bytes": 2530
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/date-tables/20231002/legacy_native_signed_flow.json.gz",
+        "git_blob": "e6804dcddeeeab2854e2129401a28ad993df6022",
+        "bytes": 219809
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/date-tables/20231002/legacy_per_second_roll20.json.gz",
+        "git_blob": "cfa147f64551faba9f43c8ef7ade267e8ad32173",
+        "bytes": 69569
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/date-tables/20231002/legacy_price.json.gz",
+        "git_blob": "32490f24402900b4f0f1db3d069dd044aac2e774",
+        "bytes": 598
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/date-tables/20231002/legacy_structure_observables.json.gz",
+        "git_blob": "597ce08ef9d611e9fb3b6ecf09dc672e4ce31776",
+        "bytes": 2295
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/date-tables/20231002/table-index.json",
+        "git_blob": "0fa76352efb3483b6c6585c7f408bccd101224e0",
+        "bytes": 3309
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/date-tables/20231003/table-index.json",
+        "git_blob": "c89c881cfe6d7455fc0c76d1bd07a51b2ed4ced5",
+        "bytes": 839
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/date-tables/20231017/legacy_native_signed_flow.json.gz",
+        "git_blob": "7aab58e4ab380a585debb0539e8937e2fda3508f",
+        "bytes": 218602
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/date-tables/20231017/legacy_per_second_roll20.json.gz",
+        "git_blob": "3536cc9521656fc9ab872d94e62ecba4d0941087",
+        "bytes": 65557
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/date-tables/20231017/legacy_price.json.gz",
+        "git_blob": "2972097fe593ac037051bb1501b2363da9077afc",
+        "bytes": 598
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/date-tables/20231017/table-index.json",
+        "git_blob": "104addadb786e5a31f44dd5eb22fa9a632483191",
+        "bytes": 2065
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/dipole-after-recognition-summary.csv",
+        "git_blob": "4bf19b7aa807f6428d2cdf8fd5850ad3b945b21c",
+        "bytes": 1441
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/dipole-after-recognition.csv.gz",
+        "git_blob": "7238967e74dec96e02f3b5fea82867e4afe543e1",
+        "bytes": 157794
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/external-operands.csv.gz",
+        "git_blob": "b7d3c86028ac70901f8e958ad0c795befa3bf7bb",
+        "bytes": 221976
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/external-series-coverage.csv",
+        "git_blob": "56bf2d98b8e390181614fb04e8c0818ac1a0a34a",
+        "bytes": 15232
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/initial-no-embargo/arm-metrics.csv",
+        "git_blob": "2dd2e55b458ecbea2506d9e4cfaf241e98e0bc1d",
+        "bytes": 6387
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/initial-no-embargo/arm-predictions.csv.gz",
+        "git_blob": "8b15cda84c383a4227ff4dfca061e9aac4a77e6b",
+        "bytes": 213500
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/initial-no-embargo/chronological-splits.csv",
+        "git_blob": "66a3014d76d5426f0257654f6ae72a1f55066fad",
+        "bytes": 20978
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/initial-no-embargo/method.json",
+        "git_blob": "91dfacc6560bb18d8c876e381814b9e4de1bdffc",
+        "bytes": 3047
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/measurement-coverage.csv",
+        "git_blob": "9410bfa180187db3fbba437947c9e38c149c7bcb",
+        "bytes": 33665
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/method.json",
+        "git_blob": "d3c11baf47a9913537650f36423c2f6b85d2156f",
+        "bytes": 3093
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/opportunities.csv.gz",
+        "git_blob": "42b2fd4afb7b9092fb10ed620eb3eae3eeb4ecf8",
+        "bytes": 157580
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/original-message-source.json",
+        "git_blob": "f974e1180eb2509ba9e1149aca8a6f0946ed23dd",
+        "bytes": 623
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/outcomes.csv.gz",
+        "git_blob": "537f2bc16f5b6f9cb822873c4c0112598fcd78ba",
+        "bytes": 116966
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/relationship-method.json",
+        "git_blob": "ddfb7afd4e457cb2e8a0bbf6496155f7b3035cad",
+        "bytes": 872
+      },
+      {
+        "path": "tasks/family-research-20261022/flow-book-discovery-v1/setup-crosstabs.csv",
+        "git_blob": "54b72fbb69a7e8318afc48e644119425ab285345",
+        "bytes": 3868
+      },
+      {
+        "path": "tasks/family-research-20261022/flow_book_discovery.py",
+        "git_blob": "aab74e1f3899be14b69784f8d9f659b269ef9fc8",
+        "bytes": 19049
+      },
+      {
+        "path": "tasks/family-research-20261022/flow_book_relationships.py",
+        "git_blob": "f3eb9f00fdab300a947776d4e46dcd748c51149f",
+        "bytes": 13732
+      },
+      {
+        "path": "tasks/family-research-20261022/four-box-todo.md",
+        "git_blob": "2613dc0d2538868e4411b52bf5e76fb346f5748d",
+        "bytes": 1897
+      },
+      {
+        "path": "tasks/family-research-20261022/full-context-coverage-spec.md",
+        "git_blob": "de6b52b59ffd6e55f120d5a9ff86281e55da5a79",
+        "bytes": 6252
+      },
+      {
+        "path": "tasks/family-research-20261022/full-depth-rerun-plan.md",
+        "git_blob": "dd2334ce221034140450171bcf00dca50f49c84c",
+        "bytes": 2545
+      },
+      {
+        "path": "tasks/family-research-20261022/model-comparison-plan.md",
+        "git_blob": "820b6e9878f8a059ed8f75a33f12a095c9457afd",
+        "bytes": 3103
+      },
+      {
+        "path": "tasks/family-research-20261022/new-chat-instance-analysis-drop-in-20261022.txt",
+        "git_blob": "d447528b81ae6c748d4317e1b2ac689167424106",
+        "bytes": 1953
+      },
+      {
+        "path": "tasks/family-research-20261022/october-discovery-log-claude.md",
+        "git_blob": "e3d9a9a9b821312558702dd56c5c5738db78d545",
+        "bytes": 10306
+      },
+      {
+        "path": "tasks/family-research-20261022/october-discovery-log.md",
+        "git_blob": "009fcb3fceeb4ba9d9782fa6191752cb46c69495",
+        "bytes": 45017
+      },
+      {
+        "path": "tasks/family-research-20261022/october18-candidate-input-summary.json",
+        "git_blob": "99d97f2f71db3a4c78807a49749aa103a029133a",
+        "bytes": 3017
+      },
+      {
+        "path": "tasks/family-research-20261022/october18-candidate-inputs.jsonl.gz",
+        "git_blob": "ab5fcd5ac6e1c87e6527acfc7bbbde9145c97c33",
+        "bytes": 127477
+      },
+      {
+        "path": "tasks/family-research-20261022/october18-prebirth-and-exhaustion-log.md",
+        "git_blob": "48929cbf60e4593608ae555dd22cefb04901277a",
+        "bytes": 12988
+      },
+      {
+        "path": "tasks/family-research-20261022/october18-prebirth-research.json",
+        "git_blob": "74aeb9ba711fa0198a1ff12b7b7dbeda9c11d6d3",
+        "bytes": 6588
+      },
+      {
+        "path": "tasks/family-research-20261022/october18-size-one-mechanisms.jsonl.gz",
+        "git_blob": "33184439bbb7dc5c72a0ea1566022319c37d7dbe",
+        "bytes": 113226
+      },
+      {
+        "path": "tasks/family-research-20261022/october18-touch-print-decisions.jsonl.gz",
+        "git_blob": "fd04de5b15b3a9b272b129a6ae5aab461b0f2661",
+        "bytes": 4763930
+      },
+      {
+        "path": "tasks/family-research-20261022/per-date-execution.md",
+        "git_blob": "f71e9104870b973b2a1f933371e5b4d5e74f79c1",
+        "bytes": 7931
+      },
+      {
+        "path": "tasks/family-research-20261022/plan.md",
+        "git_blob": "8cf93a639940de54f69eb2d1e462b5c15eea9713",
+        "bytes": 7974
+      },
+      {
+        "path": "tasks/family-research-20261022/plot_exact_quote_order_path.py",
+        "git_blob": "e35c4cd334b2bbeac77267506807bb35c7368255",
+        "bytes": 2802
+      },
+      {
+        "path": "tasks/family-research-20261022/plot_trade_overlay.py",
+        "git_blob": "78ac80f7636f59e06fbade6fce3c23ebf9296b72",
+        "bytes": 4254
+      },
+      {
+        "path": "tasks/family-research-20261022/preserve_prior_local_files.py",
+        "git_blob": "5c2b5a059d60595b7eb2b49fe5b984aa9ce9096e",
+        "bytes": 6526
+      },
+      {
+        "path": "tasks/family-research-20261022/query_saved_run_connections.py",
+        "git_blob": "8539c56fab1754e715d5751b99bd6ceb4d675c1c",
+        "bytes": 16024
+      },
+      {
+        "path": "tasks/family-research-20261022/read_bounded_second_set.py",
+        "git_blob": "084cbcc8710f3785d6f4d4bedcf5b759d2bd7d74",
+        "bytes": 7350
+      },
+      {
+        "path": "tasks/family-research-20261022/reading-trade-charts-and-signals.md",
+        "git_blob": "42e4865f07ae2d28429f0184b3affa2bb4b6db06",
+        "bytes": 15834
+      },
+      {
+        "path": "tasks/family-research-20261022/receive_quote_order_sources.py",
+        "git_blob": "69c073dd58bb1a07b3d59f8e43c76ca1363782dc",
+        "bytes": 2836
+      },
+      {
+        "path": "tasks/family-research-20261022/reconcile_saved_trade_roles.py",
+        "git_blob": "2f70a6a3a94e9a55ff0a772982fd218102de2527",
+        "bytes": 6969
+      },
+      {
+        "path": "tasks/family-research-20261022/reconstruct_october18_candidate_inputs.py",
+        "git_blob": "0188df076d398db359d3baa126fccd559184d1af",
+        "bytes": 16083
+      },
+      {
+        "path": "tasks/family-research-20261022/render_instance_cards.py",
+        "git_blob": "7a734efbe128398f40e09c7af59e16a534541b19",
+        "bytes": 7300
+      },
+      {
+        "path": "tasks/family-research-20261022/replay-save-shutdown-20261108.md",
+        "git_blob": "73581bfe2523150ba5eb0749b98074af30455f3c",
+        "bytes": 3026
+      },
+      {
+        "path": "tasks/family-research-20261022/replay_early_falling_touch.py",
+        "git_blob": "7c5c06ef3c90333e120dd4d922739d450e81d7fa",
+        "bytes": 4318
+      },
+      {
+        "path": "tasks/family-research-20261022/replay_local_liquidity.py",
+        "git_blob": "a4dc5578d3adfa8216fe0402a29d686d1ccc1815",
+        "bytes": 9040
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/aggression-to-rest-actions.csv.gz",
+        "git_blob": "872061edea9919bd2c5a68a3c171ca4140b84f40",
+        "bytes": 92698
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/aggression-to-rest-events.csv",
+        "git_blob": "651dfc941d4dfd0ee69af34884f69476b928df4d",
+        "bytes": 257317
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/aggression-to-rest-outcomes.csv.gz",
+        "git_blob": "6bdc742b180d6e0bb40e4d7962451a3899c8869e",
+        "bytes": 287289
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/active-events.csv.gz",
+        "git_blob": "288fc0001101995b5a15dd748cae5a3efd69c87c",
+        "bytes": 2001300
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/birth-links.csv.gz",
+        "git_blob": "6c1dcac47079888885b67d57332b4c5b1340b6f5",
+        "bytes": 72634
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/method.json",
+        "git_blob": "8069a9c561e4c2385cacc495ecd759666dadcf55",
+        "bytes": 2147
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/observations.csv.gz",
+        "git_blob": "c5790fc57aa86b1c41f2694289f0213100244144",
+        "bytes": 1998576
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/onset-birth-labels.csv.gz",
+        "git_blob": "230501d4aa438de256c1ca0ac5311f3665bdcb13",
+        "bytes": 66822
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/onsets.csv.gz",
+        "git_blob": "3990298cfad048f47d51fdf4096e83bfcdcab3f0",
+        "bytes": 1526588
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/outcome-summary.csv",
+        "git_blob": "5b8d29497345c1bef2630012f57a3baa98b7fc36",
+        "bytes": 2887
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/outcomes.csv.gz",
+        "git_blob": "49c0dad4461ca7f9fae9de2647ba26dd8eeacc5e",
+        "bytes": 2280580
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/paper-date-queue.csv",
+        "git_blob": "654ae99526198fcdfbdc6e71019dbcf9cba978e8",
+        "bytes": 105783
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/paper-hypotheses.json",
+        "git_blob": "5c6a77aac0262040a3ce2d986965e8cb93676ce2",
+        "bytes": 120433
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/paper-retention-method.json",
+        "git_blob": "425caa7805b8fd9c8b59f40b1a5473526a160027",
+        "bytes": 15140
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/summary.csv",
+        "git_blob": "b307814ae3ec75dfc221eb389e89d50026eb71dc",
+        "bytes": 1179
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/dipole-application-method.json",
+        "git_blob": "6a81e04e49fb083a653ae8a6070be33705d05625",
+        "bytes": 1616
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/dipole-completed-group-flow.csv.gz",
+        "git_blob": "c95ae604477d46d026e9f920cf6296ea9c0dc98b",
+        "bytes": 412630
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/dipole-operator-observations.csv.gz",
+        "git_blob": "03118f59e062fe173c21383774de49da126eb36e",
+        "bytes": 92423
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/dipole-weakening-events.csv",
+        "git_blob": "dd9b4427c4168255f75367568d5609710eabcec9",
+        "bytes": 87183
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/dipole-weakening-outcomes.csv.gz",
+        "git_blob": "0af5c956ee6b8bcd65b6801fffd72317ed0d52fc",
+        "bytes": 171678
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/dipole-weakening-path.csv.gz",
+        "git_blob": "07dcd520a09acd745d41d7a8d8f83185ffdd2098",
+        "bytes": 54543
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/dipole-weakening-summary.csv",
+        "git_blob": "dff2fdba13f69c17675a356003c1e6fa42b17a66",
+        "bytes": 3266
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/family-to-resting-events.csv",
+        "git_blob": "5613c86b666949b1bfd40c857c67894cdde20bc8",
+        "bytes": 138556
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/case-391-order-path.png",
+        "git_blob": "568ca716ddd9026977034e5a3743bb58baa9e3c5",
+        "bytes": 164797
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/case-391-order-path.svg",
+        "git_blob": "7e777b431f8b43bacb3d77f617d5df612dc7ec8a",
+        "bytes": 31790
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/dipole-weakening-mechanisms.png",
+        "git_blob": "31dd96d9b477eb2071d437cf46823459e42b63f2",
+        "bytes": 99927
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/dipole-weakening-mechanisms.svg",
+        "git_blob": "bfbefc3e828ba1bda8707a00af986c6a5b92b6ad",
+        "bytes": 77445
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/four-arm-stability.png",
+        "git_blob": "71650ed5771d780368c805a6c68b8211fca404e5",
+        "bytes": 245003
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/four-arm-stability.svg",
+        "git_blob": "a13ca138f007b6381333810abf977ff5fac2b4ae",
+        "bytes": 48197
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/mechanism-overview.png",
+        "git_blob": "4507ffc29b4eb52bc06674922d21d3ef9dcb785c",
+        "bytes": 199916
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/mechanism-overview.svg",
+        "git_blob": "71228eceb56d728953d955f4204fd38893a5724b",
+        "bytes": 35811
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/prebirth-candidate-contrasts.png",
+        "git_blob": "bdc1c4c81a1a39654bed3f28505c7acfd95a7a2a",
+        "bytes": 176596
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/prebirth-candidate-contrasts.svg",
+        "git_blob": "20c7d30dc24e0d9cc06c96fdc02a90f0f5eea750",
+        "bytes": 85865
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/relationship-context-map.png",
+        "git_blob": "ed4b3dbae2da7c5e29cde04c63906fe8c855769f",
+        "bytes": 239166
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/relationship-context-map.svg",
+        "git_blob": "232d782cbe2d24b94a624dcc25b987e0757d1287",
+        "bytes": 45328
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/resting-event-landscape.png",
+        "git_blob": "708febce45c91346d6b2c8a69c692e8ffb16b361",
+        "bytes": 250055
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/resting-event-landscape.svg",
+        "git_blob": "3a42246d21ea99f443e8e8685e5c9da0716e775a",
+        "bytes": 244495
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/stack-conditional-story.png",
+        "git_blob": "7649e31191389d71211ffead70574e2f7cdaf76d",
+        "bytes": 114337
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/stack-conditional-story.svg",
+        "git_blob": "cd62327341ed30e2d415e42343b3434e4c78cce8",
+        "bytes": 82840
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/stack-incremental-information.png",
+        "git_blob": "b467c9bd1c499b601ff6dd7b18bd88fb6208801c",
+        "bytes": 176811
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/figures/stack-incremental-information.svg",
+        "git_blob": "fd174c560a9188a88f16422d0e79d21106519a2c",
+        "bytes": 107911
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/flow-method.json",
+        "git_blob": "603a6121491ea578b00c7c36a49cb6a32c708f67",
+        "bytes": 936
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/interactive-configs.json",
+        "git_blob": "ccaca57fdfa3e74017cbafb2ed688104bfcbf729",
+        "bytes": 522651
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/mechanism-method.json",
+        "git_blob": "f97e6aecab206bb2ca9b55551135df69b4ec8fcd",
+        "bytes": 1015
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/mechanism-outcome-summary.csv",
+        "git_blob": "f50ac1d39a6fac4d128875bdd3156ee40f035179",
+        "bytes": 6471
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/observation-method.json",
+        "git_blob": "71321ccf54102139cae5d49684e04bf577be8851",
+        "bytes": 883
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/prebirth-cases.csv.gz",
+        "git_blob": "605d2fd153dda466f40d413a30a0ae764dcdb842",
+        "bytes": 269139
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/prebirth-dipole_birth-control-grid.csv.gz",
+        "git_blob": "c0088ed24680d5ac07fc1300157f56de0fb1e644",
+        "bytes": 102394
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/prebirth-family_start-control-grid.csv.gz",
+        "git_blob": "84f32c431d594120005c94ad2f26641416d69696",
+        "bytes": 240891
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/prebirth-matched-pairs.csv.gz",
+        "git_blob": "c01183dac043fa0af2c5ac48f3bac0b06e864518",
+        "bytes": 329498
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/prebirth-method.json",
+        "git_blob": "cd44f17270e7da20e6af141fb9a381a259cb2ced",
+        "bytes": 1622
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/prebirth-summary.csv",
+        "git_blob": "4ec0251c155859e25cd0e097aebf1c0336640535",
+        "bytes": 38140
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/primer-application-method.json",
+        "git_blob": "4a4ba2e44d691e3d25a4087e6713e0c88af54acb",
+        "bytes": 1469
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/primer-prebirth-sensitivity.csv",
+        "git_blob": "a3c6da8dffcf426d5d51067ab605281171fe57b0",
+        "bytes": 1985
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/primer-spread-event-outcomes.csv.gz",
+        "git_blob": "fd786ac44601e81357b134f65cda286494f2de36",
+        "bytes": 257421
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/primer-spread-event-summary.csv",
+        "git_blob": "52a6dcf5b2b08a22ef46dff2b0cae2c21533c0ee",
+        "bytes": 8673
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/resting-observation-decisions.csv.gz",
+        "git_blob": "a6f70e210d9195716c00a44e2924b90642f6ece7",
+        "bytes": 120586
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/resting-observation-outcomes.csv.gz",
+        "git_blob": "52ac3ce85746ad17f513e29f7731bf5bdebb2657",
+        "bytes": 196125
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/resting-observation-summary.csv",
+        "git_blob": "c2e3d58428c58b71459cadd2ce63b206a68b0e3e",
+        "bytes": 7435
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/rolling-flow-date-summary.csv",
+        "git_blob": "67bf679565c0c4ca8044bcf70ee666a1e507f966",
+        "bytes": 540
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/rolling-flow-seconds.csv.gz",
+        "git_blob": "bfd0b64de6ebd0c04d96509f0964fb1efbd0d2cf",
+        "bytes": 1234724
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/rolling-flow-state-transitions.csv",
+        "git_blob": "ce15a3fa8c3a548c3a828230bcae9706b4d7a4cc",
+        "bytes": 1091
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/snapshot-prefix-inspection.json",
+        "git_blob": "80b91bf13a31f90b65dddab75f7dfccda2c385cb",
+        "bytes": 1361
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/sources/claude-primer-user-20261108.pdf",
+        "git_blob": "d1becc5c10e6bd4c9e0b282a3bcf062ed30c5933",
+        "bytes": 123328
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/sources/info_dipole_pinned.py",
+        "git_blob": "c04751cbe5f92952e33328f6c04fcae6392e05e5",
+        "bytes": 9291
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/sources/ng-continuous-timing-correction.md",
+        "git_blob": "bf450aa8aa40743d54291965c2cac589f13b38e2",
+        "bytes": 5256
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/sources/ng-frozen-runway-clock.md",
+        "git_blob": "f3cb54e0ef9b96bfa331b53be41c57c711b134ec",
+        "bytes": 4959
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/sources/ng-frozen-runway-clock.py",
+        "git_blob": "746bfd4dcb0288928366f49e1617076767d3a06b",
+        "bytes": 17003
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/sources/ng-timing-source-manifest.json",
+        "git_blob": "e3a2852b93b4003c0ae507b1e15569f746068cd6",
+        "bytes": 1266
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/sources/ng-v4-interpretation-correction.md",
+        "git_blob": "378dfe1f6bd4fbce35651c9c3e0d823fdd0b707a",
+        "bytes": 3923
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/sources/primer-source.json",
+        "git_blob": "8d0107dca7c1a0214a65af2bf9719e7400af3f1e",
+        "bytes": 500
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/stack-conditional-states.csv",
+        "git_blob": "ec150bfb29c4c1333de859c3f9a34666106a2c2e",
+        "bytes": 2617
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/stack-feature-redundancy.csv",
+        "git_blob": "b5038d6df8cbce786a0d8f4a30c71594bf564e96",
+        "bytes": 12693
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/stack-features.csv.gz",
+        "git_blob": "1bf19c1158726ad13eac60d6fd435e6b9dcc782a",
+        "bytes": 50817
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/stack-flow-outcomes.csv",
+        "git_blob": "1e4c8f4f845ef106b13eee7c62e9280bd7b6df07",
+        "bytes": 77305
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/stack-layer-contributions.csv",
+        "git_blob": "2829c7949b9152dedeca5457541840b6c6ce3bca",
+        "bytes": 7895
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/stack-method.json",
+        "git_blob": "f393297bf8b47b10fb1d00636ee9363662b78570",
+        "bytes": 2919
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/stack-metrics.csv",
+        "git_blob": "9ce007cee9e5814d3505bf4695776954edb4b4f7",
+        "bytes": 40940
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/stack-predictions.csv.gz",
+        "git_blob": "7511671f0d8bcbbeaa5296e1093f1944fb3da17d",
+        "bytes": 1130745
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/stack-splits.csv",
+        "git_blob": "03f0be4951135b6f8bc9b1b7961e0acc86ba3c1f",
+        "bytes": 1599
+      },
+      {
+        "path": "tasks/family-research-20261022/research-atlas-v2/stack-state-examples.csv",
+        "git_blob": "03675964f69d49a43d855b2ac30f6530a9bf4c6e",
+        "bytes": 7873
+      },
+      {
+        "path": "tasks/family-research-20261022/research_atlas.py",
+        "git_blob": "24e2037cd568eea0c4657375d29a82bdf79dc308",
+        "bytes": 17607
+      },
+      {
+        "path": "tasks/family-research-20261022/research_atlas_continuous.py",
+        "git_blob": "dcfd9cec95199c0f9fdac83bfbddfe3c4d297d03",
+        "bytes": 13201
+      },
+      {
+        "path": "tasks/family-research-20261022/research_atlas_dipole.py",
+        "git_blob": "0a1670a391c68fc5ff972e282545461c94768d63",
+        "bytes": 8614
+      },
+      {
+        "path": "tasks/family-research-20261022/research_atlas_dipole_figures.py",
+        "git_blob": "67d916406bbc5bdc93becd9b89d9fef8ef0155fe",
+        "bytes": 2316
+      },
+      {
+        "path": "tasks/family-research-20261022/research_atlas_figures.py",
+        "git_blob": "3c7626afe226a5322c84e01b81d9b06f025a82dd",
+        "bytes": 16330
+      },
+      {
+        "path": "tasks/family-research-20261022/research_atlas_prebirth.py",
+        "git_blob": "668bbd27dcce6f2564d65da982478510576576ba",
+        "bytes": 7957
+      },
+      {
+        "path": "tasks/family-research-20261022/research_atlas_prebirth_figures.py",
+        "git_blob": "86afa3ab025efb89ba703de84e1a96355c289061",
+        "bytes": 1596
+      },
+      {
+        "path": "tasks/family-research-20261022/research_atlas_primer.py",
+        "git_blob": "8c8d49b398f1987aec99f0c220aab9b0df7bdee8",
+        "bytes": 6890
+      },
+      {
+        "path": "tasks/family-research-20261022/research_atlas_stack.py",
+        "git_blob": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "bytes": 13847
+      },
+      {
+        "path": "tasks/family-research-20261022/research_atlas_stack_figures.py",
+        "git_blob": "fdb3722d00e38c687e0e951d393905de2f888553",
+        "bytes": 3859
+      },
+      {
+        "path": "tasks/family-research-20261022/research_atlas_timing.py",
+        "git_blob": "1bcfa2c1e567d489fe381b74bff6648dd0bc80ee",
+        "bytes": 5232
+      },
+      {
+        "path": "tasks/family-research-20261022/research_october18_trade_prebirth.py",
+        "git_blob": "c547f11fae53cecca8e15c1d0529f357ca8aff87",
+        "bytes": 10775
+      },
+      {
+        "path": "tasks/family-research-20261022/research_paper_retention.py",
+        "git_blob": "e4f1c1578d01f7876e10014113f9f91473a73494",
+        "bytes": 8758
+      },
+      {
+        "path": "tasks/family-research-20261022/reuse-armed-verification-20261022.json",
+        "git_blob": "a08e98731a1867e0febb8290e519f5bfc4eee719",
+        "bytes": 2835
+      },
+      {
+        "path": "tasks/family-research-20261022/reuse-captures-20261022T231800Z.json",
+        "git_blob": "e6f51a2b59308e4f2eb2793de4a63df3d46c59eb",
+        "bytes": 25192
+      },
+      {
+        "path": "tasks/family-research-20261022/reuse-commit-20261022T231800Z.json",
+        "git_blob": "34e1fe18381be83d44ef0fca1c98738969a1e444",
+        "bytes": 12480
+      },
+      {
+        "path": "tasks/family-research-20261022/reuse-final-tests-20261022.json",
+        "git_blob": "313cce60a8d6393fad40bb7d82d22aca67a8bf84",
+        "bytes": 932
+      },
+      {
+        "path": "tasks/family-research-20261022/reuse-spec.md",
+        "git_blob": "472a4c333a3e32e21e7e7ac074d2c1e5073a06e0",
+        "bytes": 2586
+      },
+      {
+        "path": "tasks/family-research-20261022/review_individual_instances.py",
+        "git_blob": "57e2948fe394ca939b3bcb027589ea54287713a2",
+        "bytes": 19309
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/.gitattributes",
+        "git_blob": "fcadb2cf97913f58a2523f535336e725c6b59d1f",
+        "bytes": 14
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/committed_ingest.py",
+        "git_blob": "94ab64c0633dc59f837bc933f43bcb509c62f5d5",
+        "bytes": 2532
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/discovery-execution-20261108.md",
+        "git_blob": "0256ef4395ddef5a79b00af3e9af3c9b5a82dfea",
+        "bytes": 3629
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/markets-paths",
+        "git_blob": "3d169faab43febad7995c1a09f5498ebd164659e",
+        "bytes": 464
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/producers-paths",
+        "git_blob": "0c7037e6381498f224c2ffc0f5928a0fdd7cecc8",
+        "bytes": 9771
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/runpod_local_runtime.sh",
+        "git_blob": "b358afc14b6fc7b772ada05317f0ef73dda284ee",
+        "bytes": 754
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/runpod_replay_day.sh",
+        "git_blob": "e2027c599a8469080aa8131f021cbcc4064da7fc",
+        "bytes": 3343
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/runpod_root_bootstrap.py",
+        "git_blob": "7aa71f680a779a8580f47d974b1a0fb9808db7ee",
+        "bytes": 895
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/runpod_standalone_after_handoff.sh",
+        "git_blob": "b15884dcd7d92474b658e66f1b08091a339e0a97",
+        "bytes": 1165
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/runpod_watch_native_compat.sh",
+        "git_blob": "a3113bb1ddfc3d9dc5df339d29927c741e3d5747",
+        "bytes": 1580
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/spread_root_reader_startup.py",
+        "git_blob": "7fdf0277a954f0700bdf606537134b9f9c042636",
+        "bytes": 3008
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/streaming-replay.md",
+        "git_blob": "8d680ec1bcc8422cb044d0e2d33a6f919eda734b",
+        "bytes": 2615
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/takeover_after_ingest.sh",
+        "git_blob": "204558b4be58f60c0af1cbe5c9cdd735c0738c31",
+        "bytes": 1269
+      },
+      {
+        "path": "tasks/family-research-20261022/runpod/test_committed_ingest.py",
+        "git_blob": "402ae4928c3c3c893c7694d0649cfa999f15510f",
+        "bytes": 2954
+      },
+      {
+        "path": "tasks/family-research-20261022/save-reuse-status-20261023T0023Z.json",
+        "git_blob": "f6abac9587e62eba60f7b1870489057becfdffcf",
+        "bytes": 5369
+      },
+      {
+        "path": "tasks/family-research-20261022/save-stop-todo.md",
+        "git_blob": "9ec6777c516422ce63cd2989e83811a8d00c59d1",
+        "bytes": 1739
+      },
+      {
+        "path": "tasks/family-research-20261022/second-box-plan.md",
+        "git_blob": "a77540608f2397175e41f9ebf4187230e25db84f",
+        "bytes": 5562
+      },
+      {
+        "path": "tasks/family-research-20261022/second-box-todo.md",
+        "git_blob": "62927c5509ebb0899c51aa8ba743185deb47812b",
+        "bytes": 2733
+      },
+      {
+        "path": "tasks/family-research-20261022/sqlite-addition-inventory.csv",
+        "git_blob": "14f1c5bf8c7c8d31c2965758ef74cfb9c3df92cd",
+        "bytes": 14442276
+      },
+      {
+        "path": "tasks/family-research-20261022/stage_october18_julia_reference.py",
+        "git_blob": "0aab0e4991a732ae43ae4b17a3c5d5cc7e12ea61",
+        "bytes": 3177
+      },
+      {
+        "path": "tasks/family-research-20261022/summarize_candidate_readout.py",
+        "git_blob": "15bece1c2ec916509d4c301f3609872a2eac51f2",
+        "bytes": 5585
+      },
+      {
+        "path": "tasks/family-research-20261022/summarize_trading_episode_375_391.py",
+        "git_blob": "ef93c3d8c60c43b66a4e266be564fa677cc5341d",
+        "bytes": 9146
+      },
+      {
+        "path": "tasks/family-research-20261022/targeted_trade_lifecycle_pass.py",
+        "git_blob": "323852787279382ee2edd6309d31863009e2d85b",
+        "bytes": 20745
+      },
+      {
+        "path": "tasks/family-research-20261022/test_day_flow_and_quotes.py",
+        "git_blob": "60678d3959debf54069600898d13151b7f707c4f",
+        "bytes": 2392
+      },
+      {
+        "path": "tasks/family-research-20261022/test_flow_book_discovery.py",
+        "git_blob": "9c20ba35a8fc724aa4f011ee90fba7eea428637d",
+        "bytes": 2834
+      },
+      {
+        "path": "tasks/family-research-20261022/test_local_liquidity.py",
+        "git_blob": "4df166683122677399da460029d670c6e39fdce9",
+        "bytes": 2766
+      },
+      {
+        "path": "tasks/family-research-20261022/test_oct17_liquidity_export.py",
+        "git_blob": "c1c0f95a581d03b9110f98e132c56b2e1caba357",
+        "bytes": 5746
+      },
+      {
+        "path": "tasks/family-research-20261022/test_research_atlas.py",
+        "git_blob": "7cee753241f169312c2b76f9f58bb4630fbe2190",
+        "bytes": 6033
+      },
+      {
+        "path": "tasks/family-research-20261022/test_research_atlas_continuous.py",
+        "git_blob": "7f7cf4c18679de6a913eae4bf08920fa94050684",
+        "bytes": 4543
+      },
+      {
+        "path": "tasks/family-research-20261022/test_research_atlas_dipole.py",
+        "git_blob": "676c170c41d0d0a642ef87c242d6045912223443",
+        "bytes": 1811
+      },
+      {
+        "path": "tasks/family-research-20261022/test_research_atlas_stack.py",
+        "git_blob": "cf8982a30e877e9ec722b0adbd83121d8e2a6e08",
+        "bytes": 2600
+      },
+      {
+        "path": "tasks/family-research-20261022/test_saved_run_connections.py",
+        "git_blob": "82b2230b4f97671b1c210b322250db290bbc8c44",
+        "bytes": 2399
+      },
+      {
+        "path": "tasks/family-research-20261022/test_saved_trade_quotes.py",
+        "git_blob": "b6d999f6524db8cc34e53d3be73fc3ca08133ba5",
+        "bytes": 1284
+      },
+      {
+        "path": "tasks/family-research-20261022/test_trade_chronology.py",
+        "git_blob": "0abd977ca4761a23dd0408a390c0b7316e1dd25f",
+        "bytes": 4196
+      },
+      {
+        "path": "tasks/family-research-20261022/three-date-replay-runbook.md",
+        "git_blob": "1bf2d35eaebd6817e7322f318b9ab7078e3cc0a0",
+        "bytes": 21480
+      },
+      {
+        "path": "tasks/family-research-20261022/todo.md",
+        "git_blob": "54a384d9f951fc52cf8ae740361a01065595a9bc",
+        "bytes": 2065
+      },
+      {
+        "path": "tasks/family-research-20261022/verified-save-stop-completion-20261023.json",
+        "git_blob": "c9d9db0ef18d90b968f40fa178e9a887f347c94d",
+        "bytes": 9283
+      },
+      {
+        "path": "tasks/family-research-20261022/verify_day_flow_and_quotes.py",
+        "git_blob": "01be07ac35ca9b446ff3ec1834e01bce9d0d232e",
+        "bytes": 12368
+      },
+      {
+        "path": "tasks/family-research-20261022/verify_local_liquidity.py",
+        "git_blob": "3dd401eca879b1925de7be912fb3b0adb5fdf10f",
+        "bytes": 13731
+      },
+      {
+        "path": "tasks/family-research-20261022/verify_saved_run_connections.py",
+        "git_blob": "1329ede5953fbeae79bcca39c094e07af5289170",
+        "bytes": 11840
+      },
+      {
+        "path": "tasks/family-research-20261022/verify_saved_trade_quotes.py",
+        "git_blob": "bdccf5aa3519c17a5079d4321516f85fd4ee8ebd",
+        "bytes": 3512
+      },
+      {
+        "path": "tasks/family-research-20261022/verify_trade_checkpoint.py",
+        "git_blob": "d31056b3103c4e712f875e1e6432bf2acf7deb41",
+        "bytes": 6085
+      },
+      {
+        "path": "tasks/family-research-20261022/verify_trade_chronology.py",
+        "git_blob": "09553f35da94bb5b55ed51a7d12142451e9c66ab",
+        "bytes": 4528
+      },
+      {
+        "path": "tasks/family-research-20261022/verify_trade_external_overlay.py",
+        "git_blob": "6a7fd5b5f36606b1ab4cfddbaf9ac8cdcf838708",
+        "bytes": 2579
+      },
+      {
+        "path": "tasks/family-research-20261022/verify_trade_handoff.py",
+        "git_blob": "07d7ef05d0d378fa5d8dfb55cce53f00030c4342",
+        "bytes": 4028
+      },
+      {
+        "path": "tasks/family-research-20261022/why-october18-touch-behaved-differently.md",
+        "git_blob": "3569045971cb64036914724e559e300094d7eda0",
+        "bytes": 12323
+      }
+    ]
+  },
+  {
+    "name": "Native dipole pass code and findings",
+    "repo": "DavisAI1974/Markets",
+    "revision": "4cf6e85de5de2a9fb479c90b7afb8dd50f1748cb",
+    "files": [
+      {
+        "path": "agent-pass/.gitignore",
+        "git_blob": "7c42f4f7adb81561b33537ec52a065bc58453dec",
+        "bytes": 111
+      },
+      {
+        "path": "agent-pass/20231018-part1a-receipt.json",
+        "git_blob": "acec646a6dde0d43657d8d9791b507def79e8f20",
+        "bytes": 321
+      },
+      {
+        "path": "agent-pass/AGENTS.md",
+        "git_blob": "5aa330f840aed13031775c3bbcf068e912eea6e8",
+        "bytes": 7631
+      },
+      {
+        "path": "agent-pass/CCODE_FAMILY_AND_RECOGNITION_INPUTS.md",
+        "git_blob": "c496c1e347141a06d83b39c6c5aa97d22537a84b",
+        "bytes": 6189
+      },
+      {
+        "path": "agent-pass/COMBINED_EVENT_STUDIES.md",
+        "git_blob": "6c206dca8da9ea65ad7e809a61ac220c2d0557ee",
+        "bytes": 5997
+      },
+      {
+        "path": "agent-pass/DIPOLE_PINNING_PACKET.md",
+        "git_blob": "792a78bea4ac271d11dc45c28844fae96f28f91a",
+        "bytes": 9331
+      },
+      {
+        "path": "agent-pass/DIPOLE_RENDERS.md",
+        "git_blob": "98620af70f2afef78ccba854b655680e8891d402",
+        "bytes": 8045
+      },
+      {
+        "path": "agent-pass/EXECUTION.md",
+        "git_blob": "1337cc5b4d41e4cef2c4842a7c9c8785b50c3b3a",
+        "bytes": 2767
+      },
+      {
+        "path": "agent-pass/FAMILY_REPLICATION.md",
+        "git_blob": "ef17047953459db25e1947ff627bd47d43380ce9",
+        "bytes": 6611
+      },
+      {
+        "path": "agent-pass/FINDINGS.md",
+        "git_blob": "54015f7171e134dde93ca3a243f956820e77acea",
+        "bytes": 86613
+      },
+      {
+        "path": "agent-pass/FOUR_DAY_REPLICATION.md",
+        "git_blob": "e26b1bbc23880bf3dbc48f486f6d00bf0e49e5d4",
+        "bytes": 4963
+      },
+      {
+        "path": "agent-pass/NEXT_CHAT_HANDOFF.md",
+        "git_blob": "9e8de5a3d117cf138696c4f9d0d0116a22e7f57b",
+        "bytes": 13178
+      },
+      {
+        "path": "agent-pass/PENDING_PUBLICATION.md",
+        "git_blob": "cead42469c4c2797525257951a094600a7b5db64",
+        "bytes": 569
+      },
+      {
+        "path": "agent-pass/PROGRESS.md",
+        "git_blob": "ba5b98416846c3eab8320ff534c15d46fbbfb8a0",
+        "bytes": 29731
+      },
+      {
+        "path": "agent-pass/PUBLICATION.md",
+        "git_blob": "70fdf763fea429eb4331a235050622a45cc2ea31",
+        "bytes": 4335
+      },
+      {
+        "path": "agent-pass/TASK.md",
+        "git_blob": "2d82c9f9dbcd49807005af11b0e0964f89da0d9a",
+        "bytes": 5991
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-FLIP-actions.png",
+        "git_blob": "42ded222a79cabb0f7c04e95945a5a70af0e5a57",
+        "bytes": 434145
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-FLIP-endpoints.png",
+        "git_blob": "d7ea4059a6dad3a681a2a49e497d7c90e27ca287",
+        "bytes": 127947
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-FLIP-flow.png",
+        "git_blob": "22fc514094e01cc11363602198f652000ec2e4e0",
+        "bytes": 72965
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-FLIP-quotes.png",
+        "git_blob": "ad0d53d708302511fa66808c24b3c4ed258787fe",
+        "bytes": 186007
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-NO_PREDECESSOR-actions.png",
+        "git_blob": "034cf16ae9117cfa4397a6edd00c841fa55588e5",
+        "bytes": 242434
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-NO_PREDECESSOR-endpoints.png",
+        "git_blob": "e510b9b3dc348898fb7902bcd75331372d592e8d",
+        "bytes": 81029
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-NO_PREDECESSOR-flow.png",
+        "git_blob": "10b7af031b7c7406ad7a41c771f0fb20615df4fb",
+        "bytes": 39912
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-NO_PREDECESSOR-quotes.png",
+        "git_blob": "ec87ca82da8b5410901161c19d998754fc12496b",
+        "bytes": 106395
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-SAME-actions.png",
+        "git_blob": "0944154a13a98727a881377797b6f471685d2118",
+        "bytes": 444111
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-SAME-endpoints.png",
+        "git_blob": "58f1a20183ebb738baf02eb6795c254bfc95e06d",
+        "bytes": 126454
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-SAME-flow.png",
+        "git_blob": "6529e71e57cc05976e2ffcbc2513e19e0b51d406",
+        "bytes": 70490
+      },
+      {
+        "path": "agent-pass/figures/20231018-candidate-SAME-quotes.png",
+        "git_blob": "6eef0114028c5b59583f57dd1e4a666b47328353",
+        "bytes": 177940
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-FLIP-actions.png",
+        "git_blob": "d24d991272d454b8bc7d91d3c00a8a8511d7763b",
+        "bytes": 446654
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-FLIP-endpoints.png",
+        "git_blob": "b86eaba20a65085f77f452f3f361598811b89330",
+        "bytes": 135805
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-FLIP-flow.png",
+        "git_blob": "189c6a91ca439d2fa38749a4079f234b0d0d09ad",
+        "bytes": 74794
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-FLIP-quotes.png",
+        "git_blob": "f4a8b2dbb9447d547c966ac32492d871277a4c73",
+        "bytes": 195245
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-NO_PREDECESSOR-actions.png",
+        "git_blob": "8e372efd8b935fc61a06fb0878bc0287f8078b9e",
+        "bytes": 243733
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-NO_PREDECESSOR-endpoints.png",
+        "git_blob": "671861d708722998a1ed9c47e592f59db3b25fa4",
+        "bytes": 84347
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-NO_PREDECESSOR-flow.png",
+        "git_blob": "1237e0bbdb0c5e445988276a5399f418634c76fd",
+        "bytes": 38754
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-NO_PREDECESSOR-quotes.png",
+        "git_blob": "1776b27b977f87705ac2584ec4bda22ea99ef299",
+        "bytes": 115914
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-SAME-actions.png",
+        "git_blob": "580a26a2639ca1114f50a7721a0794b84c005ae4",
+        "bytes": 413562
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-SAME-endpoints.png",
+        "git_blob": "1c20e89a486ad0cfd33c2912f4f64404032f78bb",
+        "bytes": 126821
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-SAME-flow.png",
+        "git_blob": "f1ff00fb4c656b95dcc1a5adec76fb1d8e36cd50",
+        "bytes": 71752
+      },
+      {
+        "path": "agent-pass/figures/20231018-control1-SAME-quotes.png",
+        "git_blob": "8102c91594398b73e54d1432c653b5ac1d33ba2d",
+        "bytes": 185893
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-FLIP-actions.png",
+        "git_blob": "e1a3b6c3f678e183ebf06660ca0673aaee7d64ca",
+        "bytes": 458961
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-FLIP-endpoints.png",
+        "git_blob": "ef8f611ac44bd1679cbedb89bc12e72783b1850c",
+        "bytes": 135838
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-FLIP-flow.png",
+        "git_blob": "c82468c2f1742ec2906b6f886e3d3b31c7b6e031",
+        "bytes": 75627
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-FLIP-quotes.png",
+        "git_blob": "a0df95da6050cda17b87c7d60d667c8fec0eb03f",
+        "bytes": 197134
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-NO_PREDECESSOR-actions.png",
+        "git_blob": "4b95365b83a81de0ded92091813794e715842349",
+        "bytes": 247040
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-NO_PREDECESSOR-endpoints.png",
+        "git_blob": "101a4626fd582358bc60d6f28e065ea922d055ae",
+        "bytes": 80418
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-NO_PREDECESSOR-flow.png",
+        "git_blob": "e1e29e409df6599346b1c76798f629c84b0d8645",
+        "bytes": 38065
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-NO_PREDECESSOR-quotes.png",
+        "git_blob": "3f15798e060164bef5f79b3e4bb0dcce697d0073",
+        "bytes": 112563
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-SAME-actions.png",
+        "git_blob": "a6e7e574373b3b57d31b2b8a5a2b47915c7f1be7",
+        "bytes": 441790
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-SAME-endpoints.png",
+        "git_blob": "6129ed96154d331b2c0854379812a750abeba1ca",
+        "bytes": 131046
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-SAME-flow.png",
+        "git_blob": "8288cf78a504df802d307592197e394d7b44fe4e",
+        "bytes": 73368
+      },
+      {
+        "path": "agent-pass/figures/20231018-control2-SAME-quotes.png",
+        "git_blob": "bd710a65719b988ed17b81666cca0cfcff43d62c",
+        "bytes": 189642
+      },
+      {
+        "path": "agent-pass/figures/20231018-lag-distributions.png",
+        "git_blob": "ec6aa052e08adac2e2f80b3c5d36a999520bcad4",
+        "bytes": 111609
+      },
+      {
+        "path": "agent-pass/replication/README.md",
+        "git_blob": "fa2d64cd4990bb4a513e98cfd5e6ee567350317a",
+        "bytes": 859
+      },
+      {
+        "path": "agent-pass/replication/audit_whole_lifecycles.py",
+        "git_blob": "2367fbddabbaeaa39bd39f7210f80902f2b98466",
+        "bytes": 14133
+      },
+      {
+        "path": "agent-pass/replication/combined_event_sources.py",
+        "git_blob": "3916b68f7c2c4d1c02b7e4396dfb824404b2c206",
+        "bytes": 10506
+      },
+      {
+        "path": "agent-pass/replication/combined_event_studies.py",
+        "git_blob": "ade4652d04da8861b18b8aedcd1eb7e011d15626",
+        "bytes": 2883
+      },
+      {
+        "path": "agent-pass/replication/event_chronology.py",
+        "git_blob": "0347ee21207d77becacbdd696eedc7a06aaf095b",
+        "bytes": 8936
+      },
+      {
+        "path": "agent-pass/replication/event_common.py",
+        "git_blob": "6d936dcd7da200428587cb83785ce3ade2c6f248",
+        "bytes": 5197
+      },
+      {
+        "path": "agent-pass/replication/event_integration.py",
+        "git_blob": "971dd687e5c116fd3edb50df731da8a85be78519",
+        "bytes": 4981
+      },
+      {
+        "path": "agent-pass/replication/event_moves.py",
+        "git_blob": "1c11f45c001cc76eccb4d23193f01773be4cbc8c",
+        "bytes": 8150
+      },
+      {
+        "path": "agent-pass/replication/event_pressure.py",
+        "git_blob": "082566576bada9d3c42a845dc6cb3d20ff6ec123",
+        "bytes": 11357
+      },
+      {
+        "path": "agent-pass/replication/finish_family_replication.py",
+        "git_blob": "842522a4ddd32b11eb8f4197d2bf0eb9e6d3e5f8",
+        "bytes": 23775
+      },
+      {
+        "path": "agent-pass/replication/finish_four_day_extensions.py",
+        "git_blob": "242270214cd4711dd81c860121977a9162bd4775",
+        "bytes": 13803
+      },
+      {
+        "path": "agent-pass/replication/probe_family_archive.py",
+        "git_blob": "77e604d6d64f7e37c7212484cd50554e1354d398",
+        "bytes": 1974
+      },
+      {
+        "path": "agent-pass/replication/render_whole_lifecycles.py",
+        "git_blob": "e1fb4bf9e3f1d9b6386be70f361f2dff72942d76",
+        "bytes": 17911
+      },
+      {
+        "path": "agent-pass/replication/research_atlas_continuous.py",
+        "git_blob": "9efd0ef52cee211dd9ba04b50e507d237e3787ed",
+        "bytes": 13270
+      },
+      {
+        "path": "agent-pass/replication/research_atlas_primer.py",
+        "git_blob": "d73a251e6f97fec50a0183643b5b9b68f4b11fe8",
+        "bytes": 7028
+      },
+      {
+        "path": "agent-pass/replication/run_combined_events.py",
+        "git_blob": "bc44516cdbf75de076ef6b0801c943f93395fd46",
+        "bytes": 761
+      },
+      {
+        "path": "agent-pass/replication/test_extensions.py",
+        "git_blob": "723293ae0e09cd5f42309da1df19821ccdf3dff6",
+        "bytes": 2915
+      },
+      {
+        "path": "agent-pass/replication/verify_combined_events.py",
+        "git_blob": "3b600391818541e5b1e4aace2f9200b66267ff65",
+        "bytes": 5950
+      },
+      {
+        "path": "agent-pass/replication/verify_published_events.py",
+        "git_blob": "bfb2656611f331891afd4f51d508ae3469068d35",
+        "bytes": 1384
+      },
+      {
+        "path": "agent-pass/research-tables.xlsx",
+        "git_blob": "5d003e70a201d1fc233e6331587f7ce5bb2f03fb",
+        "bytes": 487205
+      },
+      {
+        "path": "agent-pass/scripts/clock_decomposition.py",
+        "git_blob": "b69d360b28b4347ac836f3900476dd0f3eaf5150",
+        "bytes": 6942
+      },
+      {
+        "path": "agent-pass/scripts/common.py",
+        "git_blob": "e6be811075ffb5997a2a3e242c8133b61807dfb8",
+        "bytes": 6391
+      },
+      {
+        "path": "agent-pass/scripts/crossday.py",
+        "git_blob": "571cdbbb634e38ae4c2fd363a09a070f4de45488",
+        "bytes": 3092
+      },
+      {
+        "path": "agent-pass/scripts/crossday_moonshots.py",
+        "git_blob": "c5f73cb59a06414d64558b07610208f5709920e9",
+        "bytes": 2889
+      },
+      {
+        "path": "agent-pass/scripts/inventory_local.py",
+        "git_blob": "3e3ea93e6f007ed156bdac20187c6db36627360d",
+        "bytes": 2436
+      },
+      {
+        "path": "agent-pass/scripts/part1a.py",
+        "git_blob": "ae9b1d6beb95805450d0d6916409ca04edc113ca",
+        "bytes": 9900
+      },
+      {
+        "path": "agent-pass/scripts/part1b.py",
+        "git_blob": "e0bb9609658daccafaf91f6a0e46ef9dfedda09e",
+        "bytes": 8799
+      },
+      {
+        "path": "agent-pass/scripts/part2.py",
+        "git_blob": "13251d61e5f8ec5e4fd8e215ded88cba05c93bc6",
+        "bytes": 12507
+      },
+      {
+        "path": "agent-pass/scripts/part3.py",
+        "git_blob": "6f937b384bc6fc60fedb3220b65e42cf82c485f3",
+        "bytes": 12208
+      },
+      {
+        "path": "agent-pass/scripts/repair_reviewed_figures.py",
+        "git_blob": "7c735a04a63149cd4dfa7241b7e2878e3a586b01",
+        "bytes": 1193
+      },
+      {
+        "path": "agent-pass/scripts/report.py",
+        "git_blob": "38dddf163f04e7c2342bd3d5a725cfaad47a6ad9",
+        "bytes": 24702
+      },
+      {
+        "path": "agent-pass/scripts/shape_forms.py",
+        "git_blob": "3910c544015465bda17165f1dc7f0d90facb5556",
+        "bytes": 11580
+      },
+      {
+        "path": "agent-pass/scripts/shape_forms_environment.py",
+        "git_blob": "3e0c54b01d334992b515fce50bfe95877d1e45bc",
+        "bytes": 6376
+      },
+      {
+        "path": "agent-pass/scripts/shape_forms_focus.py",
+        "git_blob": "5210035da9446db347198fd5bbd792aa11637e28",
+        "bytes": 1516
+      },
+      {
+        "path": "agent-pass/scripts/shape_forms_markers.py",
+        "git_blob": "8387da2454c2defee4ef801faacc8dbba35eaf60",
+        "bytes": 2307
+      },
+      {
+        "path": "agent-pass/scripts/shape_forms_report.py",
+        "git_blob": "beaabd772f77ccfb1fd975be09797af158d5c496",
+        "bytes": 12058
+      },
+      {
+        "path": "agent-pass/scripts/shape_forms_verify.py",
+        "git_blob": "78ccf749cfaffde41d1b1bf61195a509a5bc3f68",
+        "bytes": 6736
+      },
+      {
+        "path": "agent-pass/scripts/shape_overlays.py",
+        "git_blob": "86e2a304d1c27a67c9a2179b2f995651c2fc0252",
+        "bytes": 4344
+      },
+      {
+        "path": "agent-pass/scripts/update_part1b_report.py",
+        "git_blob": "f379530707d531aa897a5e68aefbd496d5a4bbfa",
+        "bytes": 2786
+      },
+      {
+        "path": "agent-pass/scripts/verify_all.py",
+        "git_blob": "6b4cf5d1edfadb5ebf0f632f96a69c3a3857e992",
+        "bytes": 4823
+      },
+      {
+        "path": "agent-pass/scripts/verify_data_inputs.py",
+        "git_blob": "1409fef1b376cc4a6feb719bc98fe6ef496bf310",
+        "bytes": 2739
+      },
+      {
+        "path": "agent-pass/scripts/verify_detector.py",
+        "git_blob": "c77422e07b1fbef2707315be0e737e276e670d9e",
+        "bytes": 1150
+      },
+      {
+        "path": "agent-pass/scripts/verify_figures.py",
+        "git_blob": "654c770c775309d65964f10ab8f194fb20fa035e",
+        "bytes": 849
+      },
+      {
+        "path": "agent-pass/scripts/verify_moonshots.py",
+        "git_blob": "85a678c81b08c5ac53e5ab28278279d4270f917e",
+        "bytes": 3240
+      },
+      {
+        "path": "agent-pass/scripts/verify_part1a.py",
+        "git_blob": "cd35656c73137d04efd69e7eb9076bae19176f0c",
+        "bytes": 1016
+      },
+      {
+        "path": "agent-pass/scripts/verify_workbook.py",
+        "git_blob": "4f671c6d507de198350ccf6ec7f5e9522031632e",
+        "bytes": 1383
+      },
+      {
+        "path": "agent-pass/scripts/workbook.mjs",
+        "git_blob": "f242d0db7812bd78e6e624a49dadbf3c8da4a8d4",
+        "bytes": 2737
+      },
+      {
+        "path": "agent-pass/scripts/workbook_data.py",
+        "git_blob": "e60f8cd670c457d087117916b319048ffbb836b0",
+        "bytes": 1165
+      },
+      {
+        "path": "agent-pass/source-manifest.json",
+        "git_blob": "a855c167ddde0f52339ab9b859a2f2348c166c83",
+        "bytes": 2727
+      },
+      {
+        "path": "agent-pass/tables/20231018-birth-differences-completed_group.csv",
+        "git_blob": "d46caa28d71e72e4848a95946c5bd1d631bf3f43",
+        "bytes": 8923
+      },
+      {
+        "path": "agent-pass/tables/20231018-birth-differences-native_action.csv",
+        "git_blob": "0d045feac9a4cff3203d686568e68a527b1cdd7e",
+        "bytes": 645
+      },
+      {
+        "path": "agent-pass/tables/20231018-candidate-operands.csv",
+        "git_blob": "ca54a62629b09c1bb90b14b14a1f5813a37087d8",
+        "bytes": 143226
+      },
+      {
+        "path": "agent-pass/tables/20231018-case-raw-records.csv.gz",
+        "git_blob": "19c8e3e7aefebe0478288787998aa7fbc6673e45",
+        "bytes": 59067
+      },
+      {
+        "path": "agent-pass/tables/20231018-cases.csv",
+        "git_blob": "5ee3e128a921fb4614eefff561f51419936e375d",
+        "bytes": 1263
+      },
+      {
+        "path": "agent-pass/tables/20231018-detected-completed_group.csv",
+        "git_blob": "bddad1446ce0c251cdb93daf6903c8df163a5bb9",
+        "bytes": 86032
+      },
+      {
+        "path": "agent-pass/tables/20231018-detected-native_action.csv",
+        "git_blob": "dbb21305005f06e77d41f3cd1c7f1a229778b949",
+        "bytes": 84062
+      },
+      {
+        "path": "agent-pass/tables/20231018-detector-all-comparisons.csv",
+        "git_blob": "a20b6deb8a50241b1be89aeca7e87985b760faf3",
+        "bytes": 528511
+      },
+      {
+        "path": "agent-pass/tables/20231018-detector-figure-reconciliation.csv",
+        "git_blob": "f99b6f8fff85441ae9a81cf238e45f3070a93f8e",
+        "bytes": 713
+      },
+      {
+        "path": "agent-pass/tables/20231018-detector-summary.csv",
+        "git_blob": "9384cb751dc04f029002676da2273eaabe99fa9b",
+        "bytes": 156
+      },
+      {
+        "path": "agent-pass/tables/20231018-figure-reconciliation.csv",
+        "git_blob": "3cdf9d39e09eda322464eb2a62a3679654cfd234",
+        "bytes": 29144
+      },
+      {
+        "path": "agent-pass/tables/20231018-lag-measurements.csv",
+        "git_blob": "e4f7fcee4b006253caf5ba66cac41baeb8b1d843",
+        "bytes": 181088
+      },
+      {
+        "path": "agent-pass/tables/20231018-path-dispositions.csv",
+        "git_blob": "3c42e2a92f608e8ab1fa6b225f347d51c6c7dbf4",
+        "bytes": 20
+      },
+      {
+        "path": "agent-pass/tables/20231018-path-members.csv",
+        "git_blob": "4a090b517112ee43dc4df69c4d205b6f4c8791c9",
+        "bytes": 625519
+      },
+      {
+        "path": "agent-pass/tables/20231018-paths.csv.gz",
+        "git_blob": "47684dbc70318ceb9f081578de1b1ce882d976d2",
+        "bytes": 4455611
+      },
+      {
+        "path": "agent-pass/tables/20231018-seconds-disposition-completed_group.csv.gz",
+        "git_blob": "21c9f4f63b7f9b2212cb0fd0464a61297ad70143",
+        "bytes": 229518
+      },
+      {
+        "path": "agent-pass/tables/20231018-seconds-disposition-native_action.csv.gz",
+        "git_blob": "b1a6d345e539c08518d11e647013d2ac908d6c11",
+        "bytes": 229436
+      }
+    ]
+  }
+]
