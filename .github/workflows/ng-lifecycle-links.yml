@@ -1,0 +1,22 @@
+name: Link Claude lifecycle data
+on:
+  push:
+    branches: [codex/native-dipole-artifacts-20261108]
+    paths: [.github/workflows/ng-lifecycle-links.yml]
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pyarrow==20.0.0
+      - run: |
+          curl --fail --retry 3 -sS https://raw.githubusercontent.com/DavisAI1974/Markets/2c3ec3d0ffbc1261042ce8e74d9ebc92c5c31c2e/agent-pass/lifecycle-links/probe.py -o probe.py
+          python probe.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lifecycle-link-inputs
+          path: results
