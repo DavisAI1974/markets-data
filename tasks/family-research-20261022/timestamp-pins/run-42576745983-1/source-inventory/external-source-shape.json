@@ -1,0 +1,3556 @@
+{
+  "keys": [
+    "series",
+    "claims"
+  ],
+  "series": [
+    {
+      "name": "cot.managed_money_net_pctile_1y",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 302,
+      "first": [
+        {
+          "published_ns": 1515184200000000000,
+          "state": 1,
+          "value": null,
+          "reason": "VALUE_IS_NULL_IN_DAY_FILE",
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1515184200000000000,
+            "event_time_ns": 1514930400000000000,
+            "publication_confidence": "derived",
+            "publication_delayed": false,
+            "contract_code": "023651",
+            "managed_money_long": 268064,
+            "managed_money_net": 5208,
+            "managed_money_net_chg_wow": null,
+            "managed_money_net_pctile_1y": null,
+            "managed_money_net_pctile_3y": null,
+            "managed_money_short": 262856,
+            "market_name": "NATURAL GAS - NEW YORK MERCANTILE EXCHANGE",
+            "open_interest": 1422917,
+            "other_reportable_net": -146408,
+            "pctile_1y_n_obs": 1,
+            "pctile_3y_n_obs": 1,
+            "producer_merchant_net": -55360,
+            "store_publication_confidence": "derived",
+            "store_publication_delayed": false,
+            "publication_ts": "2018-01-05T15:30:00-05:00",
+            "report_date": "2018-01-02",
+            "swap_dealer_net": 170973
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697225400000000000,
+          "state": 0,
+          "value": 99.06,
+          "reason": null,
+          "source_ordinal": 301,
+          "row": {
+            "published_ns": 1697225400000000000,
+            "event_time_ns": 1696971600000000000,
+            "publication_confidence": "derived",
+            "publication_delayed": false,
+            "contract_code": "023651",
+            "managed_money_long": 171312,
+            "managed_money_net": 25626,
+            "managed_money_net_chg_wow": 66665,
+            "managed_money_net_pctile_1y": 99.06,
+            "managed_money_net_pctile_3y": 66.56,
+            "managed_money_short": 145686,
+            "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+            "open_interest": 1142309,
+            "other_reportable_net": -76285,
+            "pctile_1y_n_obs": 53,
+            "pctile_3y_n_obs": 157,
+            "producer_merchant_net": -110680,
+            "store_publication_confidence": "derived",
+            "store_publication_delayed": false,
+            "publication_ts": "2023-10-13T15:30:00-04:00",
+            "report_date": "2023-10-10",
+            "swap_dealer_net": 144140
+          }
+        }
+      ]
+    },
+    {
+      "name": "cot.managed_money_net_chg_wow",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 302,
+      "first": [
+        {
+          "published_ns": 1515184200000000000,
+          "state": 1,
+          "value": null,
+          "reason": "VALUE_IS_NULL_IN_DAY_FILE",
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1515184200000000000,
+            "event_time_ns": 1514930400000000000,
+            "publication_confidence": "derived",
+            "publication_delayed": false,
+            "contract_code": "023651",
+            "managed_money_long": 268064,
+            "managed_money_net": 5208,
+            "managed_money_net_chg_wow": null,
+            "managed_money_net_pctile_1y": null,
+            "managed_money_net_pctile_3y": null,
+            "managed_money_short": 262856,
+            "market_name": "NATURAL GAS - NEW YORK MERCANTILE EXCHANGE",
+            "open_interest": 1422917,
+            "other_reportable_net": -146408,
+            "pctile_1y_n_obs": 1,
+            "pctile_3y_n_obs": 1,
+            "producer_merchant_net": -55360,
+            "store_publication_confidence": "derived",
+            "store_publication_delayed": false,
+            "publication_ts": "2018-01-05T15:30:00-05:00",
+            "report_date": "2018-01-02",
+            "swap_dealer_net": 170973
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697225400000000000,
+          "state": 0,
+          "value": 66665.0,
+          "reason": null,
+          "source_ordinal": 301,
+          "row": {
+            "published_ns": 1697225400000000000,
+            "event_time_ns": 1696971600000000000,
+            "publication_confidence": "derived",
+            "publication_delayed": false,
+            "contract_code": "023651",
+            "managed_money_long": 171312,
+            "managed_money_net": 25626,
+            "managed_money_net_chg_wow": 66665,
+            "managed_money_net_pctile_1y": 99.06,
+            "managed_money_net_pctile_3y": 66.56,
+            "managed_money_short": 145686,
+            "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+            "open_interest": 1142309,
+            "other_reportable_net": -76285,
+            "pctile_1y_n_obs": 53,
+            "pctile_3y_n_obs": 157,
+            "producer_merchant_net": -110680,
+            "store_publication_confidence": "derived",
+            "store_publication_delayed": false,
+            "publication_ts": "2023-10-13T15:30:00-04:00",
+            "report_date": "2023-10-10",
+            "swap_dealer_net": 144140
+          }
+        }
+      ]
+    },
+    {
+      "name": "cot.managed_money_net_pctile_3y",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 302,
+      "first": [
+        {
+          "published_ns": 1515184200000000000,
+          "state": 1,
+          "value": null,
+          "reason": "VALUE_IS_NULL_IN_DAY_FILE",
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1515184200000000000,
+            "event_time_ns": 1514930400000000000,
+            "publication_confidence": "derived",
+            "publication_delayed": false,
+            "contract_code": "023651",
+            "managed_money_long": 268064,
+            "managed_money_net": 5208,
+            "managed_money_net_chg_wow": null,
+            "managed_money_net_pctile_1y": null,
+            "managed_money_net_pctile_3y": null,
+            "managed_money_short": 262856,
+            "market_name": "NATURAL GAS - NEW YORK MERCANTILE EXCHANGE",
+            "open_interest": 1422917,
+            "other_reportable_net": -146408,
+            "pctile_1y_n_obs": 1,
+            "pctile_3y_n_obs": 1,
+            "producer_merchant_net": -55360,
+            "store_publication_confidence": "derived",
+            "store_publication_delayed": false,
+            "publication_ts": "2018-01-05T15:30:00-05:00",
+            "report_date": "2018-01-02",
+            "swap_dealer_net": 170973
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697225400000000000,
+          "state": 0,
+          "value": 66.56,
+          "reason": null,
+          "source_ordinal": 301,
+          "row": {
+            "published_ns": 1697225400000000000,
+            "event_time_ns": 1696971600000000000,
+            "publication_confidence": "derived",
+            "publication_delayed": false,
+            "contract_code": "023651",
+            "managed_money_long": 171312,
+            "managed_money_net": 25626,
+            "managed_money_net_chg_wow": 66665,
+            "managed_money_net_pctile_1y": 99.06,
+            "managed_money_net_pctile_3y": 66.56,
+            "managed_money_short": 145686,
+            "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+            "open_interest": 1142309,
+            "other_reportable_net": -76285,
+            "pctile_1y_n_obs": 53,
+            "pctile_3y_n_obs": 157,
+            "producer_merchant_net": -110680,
+            "store_publication_confidence": "derived",
+            "store_publication_delayed": false,
+            "publication_ts": "2023-10-13T15:30:00-04:00",
+            "report_date": "2023-10-10",
+            "swap_dealer_net": 144140
+          }
+        }
+      ]
+    },
+    {
+      "name": "cot.ice.ld1.managed_money_net_pctile_1y",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 302,
+      "first": [
+        {
+          "published_ns": 1515184200000000000,
+          "state": 1,
+          "value": null,
+          "reason": "VALUE_IS_NULL_IN_DAY_FILE",
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1515184200000000000,
+            "event_time_ns": 1514930400000000000,
+            "publication_confidence": "derived",
+            "publication_delayed": false,
+            "contract_code": "023391",
+            "managed_money_long": 424539,
+            "managed_money_net": 403020,
+            "managed_money_net_chg_wow": null,
+            "managed_money_net_pctile_1y": null,
+            "managed_money_net_pctile_3y": null,
+            "managed_money_short": 21519,
+            "market_name": "NATURAL GAS ICE HENRY HUB - ICE FUTURES ENERGY DIV",
+            "open_interest": 5094670,
+            "other_reportable_net": 17198,
+            "pctile_1y_n_obs": 1,
+            "pctile_3y_n_obs": 1,
+            "producer_merchant_net": 1889012,
+            "store_publication_confidence": "derived",
+            "store_publication_delayed": false,
+            "publication_ts": "2018-01-05T15:30:00-05:00",
+            "report_date": "2018-01-02",
+            "swap_dealer_net": -2338653
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697225400000000000,
+          "state": 0,
+          "value": 74.53,
+          "reason": null,
+          "source_ordinal": 301,
+          "row": {
+            "published_ns": 1697225400000000000,
+            "event_time_ns": 1696971600000000000,
+            "publication_confidence": "derived",
+            "publication_delayed": false,
+            "contract_code": "023391",
+            "managed_money_long": 300733,
+            "managed_money_net": 214906,
+            "managed_money_net_chg_wow": 46204,
+            "managed_money_net_pctile_1y": 74.53,
+            "managed_money_net_pctile_3y": 34.08,
+            "managed_money_short": 85827,
+            "market_name": "NAT GAS ICE LD1 - ICE FUTURES ENERGY DIV",
+            "open_interest": 6511331,
+            "other_reportable_net": 205146,
+            "pctile_1y_n_obs": 53,
+            "pctile_3y_n_obs": 157,
+            "producer_merchant_net": 2395254,
+            "store_publication_confidence": "derived",
+            "store_publication_delayed": false,
+            "publication_ts": "2023-10-13T15:30:00-04:00",
+            "report_date": "2023-10-10",
+            "swap_dealer_net": -2841480
+          }
+        }
+      ]
+    },
+    {
+      "name": "mos.GFS.gw_hdd_D",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 10,
+      "first": [
+        {
+          "published_ns": 1697430600000000000,
+          "state": 0,
+          "value": 5.452,
+          "reason": null,
+          "source_ordinal": 10,
+          "row": {
+            "published_ns": 1697430600000000000,
+            "event_time_ns": 1697414400000000000,
+            "model": "GFS",
+            "runtime_utc": "2023-10-16 00:00:00",
+            "target_day": "2023-10-18",
+            "horizon_days": 0,
+            "gw_hdd": 5.452,
+            "gw_cdd": 1.831,
+            "n_metros": 16,
+            "coverage": 1.0,
+            "metros_missing": []
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697625000000000000,
+          "state": 0,
+          "value": 5.031,
+          "reason": null,
+          "source_ordinal": 67,
+          "row": {
+            "published_ns": 1697625000000000000,
+            "event_time_ns": 1697608800000000000,
+            "model": "GFS",
+            "runtime_utc": "2023-10-18 06:00:00",
+            "target_day": "2023-10-18",
+            "horizon_days": 0,
+            "gw_hdd": 5.031,
+            "gw_cdd": 2.011,
+            "n_metros": 16,
+            "coverage": 1.0,
+            "metros_missing": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "mos.NAM.gw_hdd_D",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 5,
+      "first": [
+        {
+          "published_ns": 1697430600000000000,
+          "state": 0,
+          "value": 7.626,
+          "reason": null,
+          "source_ordinal": 17,
+          "row": {
+            "published_ns": 1697430600000000000,
+            "event_time_ns": 1697414400000000000,
+            "model": "NAM",
+            "runtime_utc": "2023-10-16 00:00:00",
+            "target_day": "2023-10-18",
+            "horizon_days": 0,
+            "gw_hdd": 7.626,
+            "gw_cdd": 1.351,
+            "n_metros": 16,
+            "coverage": 1.0,
+            "metros_missing": []
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697603400000000000,
+          "state": 0,
+          "value": 5.565,
+          "reason": null,
+          "source_ordinal": 64,
+          "row": {
+            "published_ns": 1697603400000000000,
+            "event_time_ns": 1697587200000000000,
+            "model": "NAM",
+            "runtime_utc": "2023-10-18 00:00:00",
+            "target_day": "2023-10-18",
+            "horizon_days": 0,
+            "gw_hdd": 5.565,
+            "gw_cdd": 1.688,
+            "n_metros": 16,
+            "coverage": 1.0,
+            "metros_missing": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "mos.GFS.gw_hdd_D1",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 7,
+      "first": [
+        {
+          "published_ns": 1697517000000000000,
+          "state": 0,
+          "value": 4.23,
+          "reason": null,
+          "source_ordinal": 29,
+          "row": {
+            "published_ns": 1697517000000000000,
+            "event_time_ns": 1697500800000000000,
+            "model": "GFS",
+            "runtime_utc": "2023-10-17 00:00:00",
+            "target_day": "2023-10-19",
+            "horizon_days": 1,
+            "gw_hdd": 4.23,
+            "gw_cdd": 2.941,
+            "n_metros": 16,
+            "coverage": 1.0,
+            "metros_missing": []
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697646600000000000,
+          "state": 0,
+          "value": 3.888,
+          "reason": null,
+          "source_ordinal": 70,
+          "row": {
+            "published_ns": 1697646600000000000,
+            "event_time_ns": 1697630400000000000,
+            "model": "GFS",
+            "runtime_utc": "2023-10-18 12:00:00",
+            "target_day": "2023-10-19",
+            "horizon_days": 1,
+            "gw_hdd": 3.888,
+            "gw_cdd": 3.02,
+            "n_metros": 16,
+            "coverage": 1.0,
+            "metros_missing": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "mos.MEX.gw_hdd_D3",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 8,
+      "first": [
+        {
+          "published_ns": 1697344200000000000,
+          "state": 0,
+          "value": 9.107,
+          "reason": null,
+          "source_ordinal": 3,
+          "row": {
+            "published_ns": 1697344200000000000,
+            "event_time_ns": 1697328000000000000,
+            "model": "MEX",
+            "runtime_utc": "2023-10-15 00:00:00",
+            "target_day": "2023-10-21",
+            "horizon_days": 3,
+            "gw_hdd": 9.107,
+            "gw_cdd": 2.171,
+            "n_metros": 16,
+            "coverage": 1.0,
+            "metros_missing": []
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697646600000000000,
+          "state": 0,
+          "value": 7.045,
+          "reason": null,
+          "source_ordinal": 74,
+          "row": {
+            "published_ns": 1697646600000000000,
+            "event_time_ns": 1697630400000000000,
+            "model": "MEX",
+            "runtime_utc": "2023-10-18 12:00:00",
+            "target_day": "2023-10-21",
+            "horizon_days": 3,
+            "gw_hdd": 7.045,
+            "gw_cdd": 2.11,
+            "n_metros": 16,
+            "coverage": 1.0,
+            "metros_missing": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "mos.max_abs_spread_gw_hdd",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 6,
+      "first": [
+        {
+          "published_ns": 1697430600000000000,
+          "state": 0,
+          "value": 2.174,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697430600000000000,
+            "event_time_ns": 1697414400000000000,
+            "runtime_utc": "2023-10-16 00:00:00",
+            "max_abs_spread_gw_hdd": 2.174,
+            "at_horizon_days": 0,
+            "spreads_by_horizon": [
+              [
+                0,
+                -2.174,
+                16
+              ]
+            ]
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697646600000000000,
+          "state": 0,
+          "value": 1.809,
+          "reason": null,
+          "source_ordinal": 5,
+          "row": {
+            "published_ns": 1697646600000000000,
+            "event_time_ns": 1697630400000000000,
+            "runtime_utc": "2023-10-18 12:00:00",
+            "max_abs_spread_gw_hdd": 1.809,
+            "at_horizon_days": 2,
+            "spreads_by_horizon": [
+              [
+                1,
+                -1.635,
+                16
+              ],
+              [
+                2,
+                -1.809,
+                16
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "eia930.US48.wind_mwh",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 213,
+      "first": [
+        {
+          "published_ns": 1696896000000000000,
+          "state": 0,
+          "value": 24428.0,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1696896000000000000,
+            "event_time_ns": 1696888800000000000,
+            "period_utc": "2023-10-09T22",
+            "wind_mwh": 24428.0,
+            "gas_mwh": 198792.0,
+            "est_gas_burn_bcfd_rate": 36.416
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697659200000000000,
+          "state": 0,
+          "value": 58104.0,
+          "reason": null,
+          "source_ordinal": 212,
+          "row": {
+            "published_ns": 1697659200000000000,
+            "event_time_ns": 1697652000000000000,
+            "period_utc": "2023-10-18T18",
+            "wind_mwh": 58104.0,
+            "gas_mwh": 153460.0,
+            "est_gas_burn_bcfd_rate": 28.112
+          }
+        }
+      ]
+    },
+    {
+      "name": "eia930.US48.est_gas_burn_bcfd_rate",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 213,
+      "first": [
+        {
+          "published_ns": 1696896000000000000,
+          "state": 0,
+          "value": 36.416,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1696896000000000000,
+            "event_time_ns": 1696888800000000000,
+            "period_utc": "2023-10-09T22",
+            "wind_mwh": 24428.0,
+            "gas_mwh": 198792.0,
+            "est_gas_burn_bcfd_rate": 36.416
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697659200000000000,
+          "state": 0,
+          "value": 28.112,
+          "reason": null,
+          "source_ordinal": 212,
+          "row": {
+            "published_ns": 1697659200000000000,
+            "event_time_ns": 1697652000000000000,
+            "period_utc": "2023-10-18T18",
+            "wind_mwh": 58104.0,
+            "gas_mwh": 153460.0,
+            "est_gas_burn_bcfd_rate": 28.112
+          }
+        }
+      ]
+    },
+    {
+      "name": "calendar.sessions_since_prompt_expiry",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1,
+      "first": [
+        {
+          "published_ns": 1697652000000000000,
+          "state": 0,
+          "value": 15.0,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697652000000000000,
+            "event_time_ns": null,
+            "sessions_since_prompt_expiry": 15,
+            "last_prompt_symbol": "NGV23",
+            "last_prompt_expiry": "2023-09-27"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697652000000000000,
+          "state": 0,
+          "value": 15.0,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697652000000000000,
+            "event_time_ns": null,
+            "sessions_since_prompt_expiry": 15,
+            "last_prompt_symbol": "NGV23",
+            "last_prompt_expiry": "2023-09-27"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.gw_hdd",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 18,
+      "first": [
+        {
+          "published_ns": 1696137000000000000,
+          "state": 0,
+          "value": 1.419,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1696137000000000000,
+            "event_time_ns": 1696136400000000000,
+            "gas_day": "2023-09-30",
+            "gw_hdd": 1.419,
+            "gw_cdd": 6.511,
+            "gw_precip": 0.0,
+            "n_stations": 16,
+            "coverage": 1.0,
+            "regime": "mod_cool"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697605800000000000,
+          "state": 0,
+          "value": 7.719,
+          "reason": null,
+          "source_ordinal": 17,
+          "row": {
+            "published_ns": 1697605800000000000,
+            "event_time_ns": 1697605200000000000,
+            "gas_day": "2023-10-17",
+            "gw_hdd": 7.719,
+            "gw_cdd": 1.466,
+            "gw_precip": 0.0169,
+            "n_stations": 16,
+            "coverage": 1.0,
+            "regime": "shoulder"
+          }
+        }
+      ]
+    },
+    {
+      "name": "storage.level_bcf",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 419,
+      "first": [
+        {
+          "published_ns": 1444314600000000000,
+          "state": 0,
+          "value": 3634.0,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1444314600000000000,
+            "event_time_ns": 1443819600000000000,
+            "week_ending": "2015-10-02",
+            "level_bcf": 3634.0,
+            "weekly_chg_bcf": null,
+            "vs_5yr_bcf": null,
+            "same_week_prior_5y_levels": [],
+            "five_yr_avg_bcf": null,
+            "year_ago_bcf": null,
+            "source": "EIA API v2 natural-gas/stor/wkly NW2_EPG0_SWO_R48_BCF"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697121000000000000,
+          "state": 0,
+          "value": 3529.0,
+          "reason": null,
+          "source_ordinal": 418,
+          "row": {
+            "published_ns": 1697121000000000000,
+            "event_time_ns": 1696626000000000000,
+            "week_ending": "2023-10-06",
+            "level_bcf": 3529.0,
+            "weekly_chg_bcf": 84.0,
+            "vs_5yr_bcf": 163.0,
+            "same_week_prior_5y_levels": [
+              [
+                2018,
+                2956.0
+              ],
+              [
+                2019,
+                3415.0
+              ],
+              [
+                2020,
+                3831.0
+              ],
+              [
+                2021,
+                3369.0
+              ],
+              [
+                2022,
+                3231.0
+              ]
+            ],
+            "five_yr_avg_bcf": 3366,
+            "year_ago_bcf": 3213,
+            "source": "EIA WNGSR as released 2023-10-12 (archived page, capture 20231013053144 UTC)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "storage.weekly_chg_bcf",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 419,
+      "first": [
+        {
+          "published_ns": 1444314600000000000,
+          "state": 1,
+          "value": null,
+          "reason": "VALUE_IS_NULL_IN_DAY_FILE",
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1444314600000000000,
+            "event_time_ns": 1443819600000000000,
+            "week_ending": "2015-10-02",
+            "level_bcf": 3634.0,
+            "weekly_chg_bcf": null,
+            "vs_5yr_bcf": null,
+            "same_week_prior_5y_levels": [],
+            "five_yr_avg_bcf": null,
+            "year_ago_bcf": null,
+            "source": "EIA API v2 natural-gas/stor/wkly NW2_EPG0_SWO_R48_BCF"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697121000000000000,
+          "state": 0,
+          "value": 84.0,
+          "reason": null,
+          "source_ordinal": 418,
+          "row": {
+            "published_ns": 1697121000000000000,
+            "event_time_ns": 1696626000000000000,
+            "week_ending": "2023-10-06",
+            "level_bcf": 3529.0,
+            "weekly_chg_bcf": 84.0,
+            "vs_5yr_bcf": 163.0,
+            "same_week_prior_5y_levels": [
+              [
+                2018,
+                2956.0
+              ],
+              [
+                2019,
+                3415.0
+              ],
+              [
+                2020,
+                3831.0
+              ],
+              [
+                2021,
+                3369.0
+              ],
+              [
+                2022,
+                3231.0
+              ]
+            ],
+            "five_yr_avg_bcf": 3366,
+            "year_ago_bcf": 3213,
+            "source": "EIA WNGSR as released 2023-10-12 (archived page, capture 20231013053144 UTC)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "storage.vs_5yr_bcf",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 419,
+      "first": [
+        {
+          "published_ns": 1444314600000000000,
+          "state": 1,
+          "value": null,
+          "reason": "VALUE_IS_NULL_IN_DAY_FILE",
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1444314600000000000,
+            "event_time_ns": 1443819600000000000,
+            "week_ending": "2015-10-02",
+            "level_bcf": 3634.0,
+            "weekly_chg_bcf": null,
+            "vs_5yr_bcf": null,
+            "same_week_prior_5y_levels": [],
+            "five_yr_avg_bcf": null,
+            "year_ago_bcf": null,
+            "source": "EIA API v2 natural-gas/stor/wkly NW2_EPG0_SWO_R48_BCF"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697121000000000000,
+          "state": 0,
+          "value": 163.0,
+          "reason": null,
+          "source_ordinal": 418,
+          "row": {
+            "published_ns": 1697121000000000000,
+            "event_time_ns": 1696626000000000000,
+            "week_ending": "2023-10-06",
+            "level_bcf": 3529.0,
+            "weekly_chg_bcf": 84.0,
+            "vs_5yr_bcf": 163.0,
+            "same_week_prior_5y_levels": [
+              [
+                2018,
+                2956.0
+              ],
+              [
+                2019,
+                3415.0
+              ],
+              [
+                2020,
+                3831.0
+              ],
+              [
+                2021,
+                3369.0
+              ],
+              [
+                2022,
+                3231.0
+              ]
+            ],
+            "five_yr_avg_bcf": 3366,
+            "year_ago_bcf": 3213,
+            "source": "EIA WNGSR as released 2023-10-12 (archived page, capture 20231013053144 UTC)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "storage.estimate_bcf",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 11,
+      "first": [
+        {
+          "published_ns": 1633012200000000000,
+          "state": 0,
+          "value": 87.0,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1633012200000000000,
+            "event_time_ns": 1633012200000000000,
+            "print_ns": 1633012200000000000,
+            "print_date": "2021-09-30",
+            "week_ending": "2021-09-24",
+            "estimate_bcf": 87.0,
+            "actual_bcf": 88,
+            "surprise_bcf": 1.0,
+            "source": "street estimate: TradingEconomics (tradingeconomics.com/united-states/natural-gas-stocks-change) calendar row (archived page, capture 20211019041134 UTC); actual: EIA WNGSR as released 2021-09-30 (archived page, capture 20210930181325 UTC)",
+            "missing_reason": null
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697121000000000000,
+          "state": 0,
+          "value": 88.0,
+          "reason": null,
+          "source_ordinal": 10,
+          "row": {
+            "published_ns": 1697121000000000000,
+            "event_time_ns": 1697121000000000000,
+            "print_ns": 1697121000000000000,
+            "print_date": "2023-10-12",
+            "week_ending": "2023-10-06",
+            "estimate_bcf": 88.0,
+            "actual_bcf": 84,
+            "surprise_bcf": -4.0,
+            "source": "street estimate: es.investing.com event 386 calendar row (archived page, capture 20231102092241 UTC); actual: EIA WNGSR as released 2023-10-12 (archived page, capture 20231013053144 UTC)",
+            "missing_reason": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "storage.actual_bcf",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 11,
+      "first": [
+        {
+          "published_ns": 1633012200000000000,
+          "state": 0,
+          "value": 88.0,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1633012200000000000,
+            "event_time_ns": 1633012200000000000,
+            "print_ns": 1633012200000000000,
+            "print_date": "2021-09-30",
+            "week_ending": "2021-09-24",
+            "estimate_bcf": 87.0,
+            "actual_bcf": 88,
+            "surprise_bcf": 1.0,
+            "source": "street estimate: TradingEconomics (tradingeconomics.com/united-states/natural-gas-stocks-change) calendar row (archived page, capture 20211019041134 UTC); actual: EIA WNGSR as released 2021-09-30 (archived page, capture 20210930181325 UTC)",
+            "missing_reason": null
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697121000000000000,
+          "state": 0,
+          "value": 84.0,
+          "reason": null,
+          "source_ordinal": 10,
+          "row": {
+            "published_ns": 1697121000000000000,
+            "event_time_ns": 1697121000000000000,
+            "print_ns": 1697121000000000000,
+            "print_date": "2023-10-12",
+            "week_ending": "2023-10-06",
+            "estimate_bcf": 88.0,
+            "actual_bcf": 84,
+            "surprise_bcf": -4.0,
+            "source": "street estimate: es.investing.com event 386 calendar row (archived page, capture 20231102092241 UTC); actual: EIA WNGSR as released 2023-10-12 (archived page, capture 20231013053144 UTC)",
+            "missing_reason": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "storage.surprise_bcf",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 11,
+      "first": [
+        {
+          "published_ns": 1633012200000000000,
+          "state": 0,
+          "value": 1.0,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1633012200000000000,
+            "event_time_ns": 1633012200000000000,
+            "print_ns": 1633012200000000000,
+            "print_date": "2021-09-30",
+            "week_ending": "2021-09-24",
+            "estimate_bcf": 87.0,
+            "actual_bcf": 88,
+            "surprise_bcf": 1.0,
+            "source": "street estimate: TradingEconomics (tradingeconomics.com/united-states/natural-gas-stocks-change) calendar row (archived page, capture 20211019041134 UTC); actual: EIA WNGSR as released 2021-09-30 (archived page, capture 20210930181325 UTC)",
+            "missing_reason": null
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697121000000000000,
+          "state": 0,
+          "value": -4.0,
+          "reason": null,
+          "source_ordinal": 10,
+          "row": {
+            "published_ns": 1697121000000000000,
+            "event_time_ns": 1697121000000000000,
+            "print_ns": 1697121000000000000,
+            "print_date": "2023-10-12",
+            "week_ending": "2023-10-06",
+            "estimate_bcf": 88.0,
+            "actual_bcf": 84,
+            "surprise_bcf": -4.0,
+            "source": "street estimate: es.investing.com event 386 calendar row (archived page, capture 20231102092241 UTC); actual: EIA WNGSR as released 2023-10-12 (archived page, capture 20231013053144 UTC)",
+            "missing_reason": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "curve.settled.front",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 15,
+      "first": [
+        {
+          "published_ns": 1697567441926733771,
+          "state": 0,
+          "value": 3.079,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697567441926733771,
+            "event_time_ns": 1697567441926733771,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGH4",
+            "front": 3.079,
+            "c1": 3.367,
+            "back_rank": 1,
+            "back": 3.367,
+            "slope_1": 0.288,
+            "slope_back": 0.288,
+            "curvature": 0.0,
+            "front_next_spread": -0.288,
+            "regime": "contango",
+            "n_ranks": 2
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697655621056907666,
+          "state": 0,
+          "value": 3.056,
+          "reason": null,
+          "source_ordinal": 14,
+          "row": {
+            "published_ns": 1697655621056907666,
+            "event_time_ns": 1697655621056907666,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.056,
+            "c1": 3.463,
+            "back_rank": 11,
+            "back": 3.475,
+            "slope_1": 0.407,
+            "slope_back": 0.419,
+            "curvature": -0.1235,
+            "front_next_spread": -0.407,
+            "regime": "contango",
+            "n_ranks": 12
+          }
+        }
+      ]
+    },
+    {
+      "name": "curve.settled.slope_1",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 15,
+      "first": [
+        {
+          "published_ns": 1697567441926733771,
+          "state": 0,
+          "value": 0.288,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697567441926733771,
+            "event_time_ns": 1697567441926733771,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGH4",
+            "front": 3.079,
+            "c1": 3.367,
+            "back_rank": 1,
+            "back": 3.367,
+            "slope_1": 0.288,
+            "slope_back": 0.288,
+            "curvature": 0.0,
+            "front_next_spread": -0.288,
+            "regime": "contango",
+            "n_ranks": 2
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697655621056907666,
+          "state": 0,
+          "value": 0.407,
+          "reason": null,
+          "source_ordinal": 14,
+          "row": {
+            "published_ns": 1697655621056907666,
+            "event_time_ns": 1697655621056907666,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.056,
+            "c1": 3.463,
+            "back_rank": 11,
+            "back": 3.475,
+            "slope_1": 0.407,
+            "slope_back": 0.419,
+            "curvature": -0.1235,
+            "front_next_spread": -0.407,
+            "regime": "contango",
+            "n_ranks": 12
+          }
+        }
+      ]
+    },
+    {
+      "name": "curve.settled.slope_back",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 15,
+      "first": [
+        {
+          "published_ns": 1697567441926733771,
+          "state": 0,
+          "value": 0.288,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697567441926733771,
+            "event_time_ns": 1697567441926733771,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGH4",
+            "front": 3.079,
+            "c1": 3.367,
+            "back_rank": 1,
+            "back": 3.367,
+            "slope_1": 0.288,
+            "slope_back": 0.288,
+            "curvature": 0.0,
+            "front_next_spread": -0.288,
+            "regime": "contango",
+            "n_ranks": 2
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697655621056907666,
+          "state": 0,
+          "value": 0.419,
+          "reason": null,
+          "source_ordinal": 14,
+          "row": {
+            "published_ns": 1697655621056907666,
+            "event_time_ns": 1697655621056907666,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.056,
+            "c1": 3.463,
+            "back_rank": 11,
+            "back": 3.475,
+            "slope_1": 0.407,
+            "slope_back": 0.419,
+            "curvature": -0.1235,
+            "front_next_spread": -0.407,
+            "regime": "contango",
+            "n_ranks": 12
+          }
+        }
+      ]
+    },
+    {
+      "name": "curve.settled.curvature",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 15,
+      "first": [
+        {
+          "published_ns": 1697567441926733771,
+          "state": 0,
+          "value": 0.0,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697567441926733771,
+            "event_time_ns": 1697567441926733771,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGH4",
+            "front": 3.079,
+            "c1": 3.367,
+            "back_rank": 1,
+            "back": 3.367,
+            "slope_1": 0.288,
+            "slope_back": 0.288,
+            "curvature": 0.0,
+            "front_next_spread": -0.288,
+            "regime": "contango",
+            "n_ranks": 2
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697655621056907666,
+          "state": 0,
+          "value": -0.1235,
+          "reason": null,
+          "source_ordinal": 14,
+          "row": {
+            "published_ns": 1697655621056907666,
+            "event_time_ns": 1697655621056907666,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.056,
+            "c1": 3.463,
+            "back_rank": 11,
+            "back": 3.475,
+            "slope_1": 0.407,
+            "slope_back": 0.419,
+            "curvature": -0.1235,
+            "front_next_spread": -0.407,
+            "regime": "contango",
+            "n_ranks": 12
+          }
+        }
+      ]
+    },
+    {
+      "name": "curve.settled.front_next_spread",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 15,
+      "first": [
+        {
+          "published_ns": 1697567441926733771,
+          "state": 0,
+          "value": -0.288,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697567441926733771,
+            "event_time_ns": 1697567441926733771,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGH4",
+            "front": 3.079,
+            "c1": 3.367,
+            "back_rank": 1,
+            "back": 3.367,
+            "slope_1": 0.288,
+            "slope_back": 0.288,
+            "curvature": 0.0,
+            "front_next_spread": -0.288,
+            "regime": "contango",
+            "n_ranks": 2
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697655621056907666,
+          "state": 0,
+          "value": -0.407,
+          "reason": null,
+          "source_ordinal": 14,
+          "row": {
+            "published_ns": 1697655621056907666,
+            "event_time_ns": 1697655621056907666,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.056,
+            "c1": 3.463,
+            "back_rank": 11,
+            "back": 3.475,
+            "slope_1": 0.407,
+            "slope_back": 0.419,
+            "curvature": -0.1235,
+            "front_next_spread": -0.407,
+            "regime": "contango",
+            "n_ranks": 12
+          }
+        }
+      ]
+    },
+    {
+      "name": "curve.traded.front",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 31152,
+      "first": [
+        {
+          "published_ns": 1697500829078116357,
+          "state": 0,
+          "value": 3.12,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697500829078116357,
+            "event_time_ns": 1697500829078116357,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.12,
+            "c1": 3.48,
+            "back_rank": 1,
+            "back": 3.48,
+            "slope_1": 0.36,
+            "slope_back": 0.36,
+            "curvature": 0.0,
+            "front_next_spread": -0.36,
+            "regime": "contango",
+            "n_ranks": 2
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662799109031819,
+          "state": 0,
+          "value": 3.072,
+          "reason": null,
+          "source_ordinal": 31151,
+          "row": {
+            "published_ns": 1697662799109031819,
+            "event_time_ns": 1697662799109031819,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.072,
+            "c1": 3.477,
+            "back_rank": 11,
+            "back": 3.488,
+            "slope_1": 0.405,
+            "slope_back": 0.416,
+            "curvature": -0.1339,
+            "front_next_spread": -0.405,
+            "regime": "contango",
+            "n_ranks": 12
+          }
+        }
+      ]
+    },
+    {
+      "name": "curve.traded.c1",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 31152,
+      "first": [
+        {
+          "published_ns": 1697500829078116357,
+          "state": 0,
+          "value": 3.48,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697500829078116357,
+            "event_time_ns": 1697500829078116357,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.12,
+            "c1": 3.48,
+            "back_rank": 1,
+            "back": 3.48,
+            "slope_1": 0.36,
+            "slope_back": 0.36,
+            "curvature": 0.0,
+            "front_next_spread": -0.36,
+            "regime": "contango",
+            "n_ranks": 2
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662799109031819,
+          "state": 0,
+          "value": 3.477,
+          "reason": null,
+          "source_ordinal": 31151,
+          "row": {
+            "published_ns": 1697662799109031819,
+            "event_time_ns": 1697662799109031819,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.072,
+            "c1": 3.477,
+            "back_rank": 11,
+            "back": 3.488,
+            "slope_1": 0.405,
+            "slope_back": 0.416,
+            "curvature": -0.1339,
+            "front_next_spread": -0.405,
+            "regime": "contango",
+            "n_ranks": 12
+          }
+        }
+      ]
+    },
+    {
+      "name": "curve.traded.slope_1",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 31152,
+      "first": [
+        {
+          "published_ns": 1697500829078116357,
+          "state": 0,
+          "value": 0.36,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697500829078116357,
+            "event_time_ns": 1697500829078116357,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.12,
+            "c1": 3.48,
+            "back_rank": 1,
+            "back": 3.48,
+            "slope_1": 0.36,
+            "slope_back": 0.36,
+            "curvature": 0.0,
+            "front_next_spread": -0.36,
+            "regime": "contango",
+            "n_ranks": 2
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662799109031819,
+          "state": 0,
+          "value": 0.405,
+          "reason": null,
+          "source_ordinal": 31151,
+          "row": {
+            "published_ns": 1697662799109031819,
+            "event_time_ns": 1697662799109031819,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.072,
+            "c1": 3.477,
+            "back_rank": 11,
+            "back": 3.488,
+            "slope_1": 0.405,
+            "slope_back": 0.416,
+            "curvature": -0.1339,
+            "front_next_spread": -0.405,
+            "regime": "contango",
+            "n_ranks": 12
+          }
+        }
+      ]
+    },
+    {
+      "name": "curve.traded.slope_back",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 31152,
+      "first": [
+        {
+          "published_ns": 1697500829078116357,
+          "state": 0,
+          "value": 0.36,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697500829078116357,
+            "event_time_ns": 1697500829078116357,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.12,
+            "c1": 3.48,
+            "back_rank": 1,
+            "back": 3.48,
+            "slope_1": 0.36,
+            "slope_back": 0.36,
+            "curvature": 0.0,
+            "front_next_spread": -0.36,
+            "regime": "contango",
+            "n_ranks": 2
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662799109031819,
+          "state": 0,
+          "value": 0.416,
+          "reason": null,
+          "source_ordinal": 31151,
+          "row": {
+            "published_ns": 1697662799109031819,
+            "event_time_ns": 1697662799109031819,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.072,
+            "c1": 3.477,
+            "back_rank": 11,
+            "back": 3.488,
+            "slope_1": 0.405,
+            "slope_back": 0.416,
+            "curvature": -0.1339,
+            "front_next_spread": -0.405,
+            "regime": "contango",
+            "n_ranks": 12
+          }
+        }
+      ]
+    },
+    {
+      "name": "curve.traded.curvature",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 31152,
+      "first": [
+        {
+          "published_ns": 1697500829078116357,
+          "state": 0,
+          "value": 0.0,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697500829078116357,
+            "event_time_ns": 1697500829078116357,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.12,
+            "c1": 3.48,
+            "back_rank": 1,
+            "back": 3.48,
+            "slope_1": 0.36,
+            "slope_back": 0.36,
+            "curvature": 0.0,
+            "front_next_spread": -0.36,
+            "regime": "contango",
+            "n_ranks": 2
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662799109031819,
+          "state": 0,
+          "value": -0.1339,
+          "reason": null,
+          "source_ordinal": 31151,
+          "row": {
+            "published_ns": 1697662799109031819,
+            "event_time_ns": 1697662799109031819,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.072,
+            "c1": 3.477,
+            "back_rank": 11,
+            "back": 3.488,
+            "slope_1": 0.405,
+            "slope_back": 0.416,
+            "curvature": -0.1339,
+            "front_next_spread": -0.405,
+            "regime": "contango",
+            "n_ranks": 12
+          }
+        }
+      ]
+    },
+    {
+      "name": "curve.traded.front_next_spread",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 31152,
+      "first": [
+        {
+          "published_ns": 1697500829078116357,
+          "state": 0,
+          "value": -0.36,
+          "reason": null,
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697500829078116357,
+            "event_time_ns": 1697500829078116357,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.12,
+            "c1": 3.48,
+            "back_rank": 1,
+            "back": 3.48,
+            "slope_1": 0.36,
+            "slope_back": 0.36,
+            "curvature": 0.0,
+            "front_next_spread": -0.36,
+            "regime": "contango",
+            "n_ranks": 2
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662799109031819,
+          "state": 0,
+          "value": -0.405,
+          "reason": null,
+          "source_ordinal": 31151,
+          "row": {
+            "published_ns": 1697662799109031819,
+            "event_time_ns": 1697662799109031819,
+            "front_symbol": "NGX3",
+            "next_symbol": "NGZ3",
+            "front": 3.072,
+            "c1": 3.477,
+            "back_rank": 11,
+            "back": 3.488,
+            "slope_1": 0.405,
+            "slope_back": 0.416,
+            "curvature": -0.1339,
+            "front_next_spread": -0.405,
+            "regime": "contango",
+            "n_ranks": 12
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.ATL",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1229,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 0,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "ATL",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "29.74",
+            "drct": "M",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "17.00",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "M",
+            "skyc1": "FEW",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "4500.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21072,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "ATL",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "30.11",
+            "drct": "160.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "2.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.AUS",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1227,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 1,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "AUS",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "30.11",
+            "drct": "350.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "16.00",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "11.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21073,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "AUS",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "29.93",
+            "drct": "170.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "11.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.BOS",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1231,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 2,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "BOS",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "29.70",
+            "drct": "280.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "7.00",
+            "skyc1": "FEW",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "4400.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21074,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "BOS",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "30.14",
+            "drct": "120.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "8.00",
+            "skyc1": "OVC",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "8000.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.DCA",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1246,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 3,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "DCA",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "29.55",
+            "drct": "110.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "4.00",
+            "skyc1": "BKN",
+            "skyc2": "OVC",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "1000.00",
+            "skyl2": "1300.00",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "8.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21075,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "DCA",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "30.16",
+            "drct": "330.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "4.00",
+            "skyc1": "OVC",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "5000.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.DEN",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1228,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 4,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "DEN",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "30.29",
+            "drct": "40.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "5.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21076,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "DEN",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "30.12",
+            "drct": "350.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "5.00",
+            "skyc1": "FEW",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "10000.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.DFW",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1227,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 5,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "DFW",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "30.12",
+            "drct": "M",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "M",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21077,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "DFW",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "29.87",
+            "drct": "170.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "13.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.DTW",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1234,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 6,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "DTW",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "29.83",
+            "drct": "360.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "15.00",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "10.00",
+            "skyc1": "OVC",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "6500.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21078,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "DTW",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "30.01",
+            "drct": "190.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "8.00",
+            "skyc1": "BKN",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "4000.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.IAH",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1227,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 7,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "IAH",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "30.04",
+            "drct": "M",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "18.00",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "M",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21079,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "IAH",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "29.97",
+            "drct": "M",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "M",
+            "skyc1": "SCT",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "6000.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.LAX",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1245,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 8,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "LAX",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "30.01",
+            "drct": "260.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "8.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21080,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "LAX",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "29.89",
+            "drct": "270.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "11.00",
+            "skyc1": "SCT",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "500.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "6.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.MSP",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1231,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 9,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "MSP",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "30.22",
+            "drct": "10.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "9.00",
+            "skyc1": "SCT",
+            "skyc2": "OVC",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "4100.00",
+            "skyl2": "5000.00",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21081,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "MSP",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "29.65",
+            "drct": "280.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "8.00",
+            "skyc1": "BKN",
+            "skyc2": "OVC",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "2500.00",
+            "skyl2": "3100.00",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.NYC",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 105,
+      "first": [
+        {
+          "published_ns": 1697322000000000000,
+          "state": 0,
+          "value": 50.0,
+          "reason": null,
+          "source_ordinal": 46,
+          "row": {
+            "published_ns": 1697322000000000000,
+            "event_time_ns": 1697321400000000000,
+            "station": "NYC",
+            "valid_utc": "2023-10-14 22:10",
+            "alti": "29.70",
+            "drct": "50.00",
+            "dwpf": "48.00",
+            "feel": "50.00",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "T",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "92.80",
+            "sknt": "7.00",
+            "skyc1": "FEW",
+            "skyc2": "SCT",
+            "skyc3": "OVC",
+            "skyc4": "M",
+            "skyl1": "1100.00",
+            "skyl2": "2400.00",
+            "skyl3": "4700.00",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "50.00",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697659260000000000,
+          "state": 0,
+          "value": 60.0,
+          "reason": null,
+          "source_ordinal": 20884,
+          "row": {
+            "published_ns": 1697659260000000000,
+            "event_time_ns": 1697658660000000000,
+            "station": "NYC",
+            "valid_utc": "2023-10-18 19:51",
+            "alti": "30.15",
+            "drct": "M",
+            "dwpf": "51.00",
+            "feel": "60.00",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "1020.10",
+            "p01i": "0.00",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "72.12",
+            "sknt": "3.00",
+            "skyc1": "OVC",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "6500.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "60.00",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.ORD",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1234,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 10,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "ORD",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "29.97",
+            "drct": "M",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "19.00",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "M",
+            "skyc1": "FEW",
+            "skyc2": "SCT",
+            "skyc3": "OVC",
+            "skyc4": "M",
+            "skyl1": "3800.00",
+            "skyl2": "4700.00",
+            "skyl3": "6000.00",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21082,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "ORD",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "29.83",
+            "drct": "180.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "11.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.PHL",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1239,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 11,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "PHL",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "29.62",
+            "drct": "60.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "0.01",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "9.00",
+            "skyc1": "OVC",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "1000.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "4.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21083,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "PHL",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "30.12",
+            "drct": "260.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "5.00",
+            "skyc1": "FEW",
+            "skyc2": "SCT",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "5000.00",
+            "skyl2": "7500.00",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.PHX",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1230,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 12,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "PHX",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "29.96",
+            "drct": "0.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "0.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21084,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "PHX",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "29.87",
+            "drct": "0.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "0.00",
+            "skyc1": "M",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.SAT",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1228,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 13,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "SAT",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "30.11",
+            "drct": "10.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "7.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21085,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "SAT",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "29.95",
+            "drct": "160.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "11.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.SEA",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1258,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 14,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "SEA",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "30.04",
+            "drct": "280.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "2.00",
+            "skyc1": "FEW",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "8500.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21086,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "SEA",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "30.06",
+            "drct": "190.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "7.00",
+            "skyc1": "FEW",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "3000.00",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.SFO",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1238,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 15,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "SFO",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "30.06",
+            "drct": "260.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "11.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "9.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21087,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "SFO",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "29.93",
+            "drct": "60.00",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "4.00",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    },
+    {
+      "name": "weather.tmpf.STL",
+      "keys": [
+        "name",
+        "table",
+        "column",
+        "where",
+        "known",
+        "absent_reason"
+      ],
+      "count": 1232,
+      "first": [
+        {
+          "published_ns": 1697321400000000000,
+          "state": 0,
+          "value": 57.0,
+          "reason": null,
+          "source_ordinal": 16,
+          "row": {
+            "published_ns": 1697321400000000000,
+            "event_time_ns": 1697320800000000000,
+            "station": "STL",
+            "valid_utc": "2023-10-14 22:00",
+            "alti": "29.98",
+            "drct": "320.00",
+            "dwpf": "49.00",
+            "feel": "57.00",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "T",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "74.55",
+            "sknt": "9.00",
+            "skyc1": "SCT",
+            "skyc2": "SCT",
+            "skyc3": "OVC",
+            "skyc4": "M",
+            "skyl1": "2000.00",
+            "skyl2": "2600.00",
+            "skyl3": "3700.00",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "57.00",
+            "vsby": "10.00"
+          }
+        }
+      ],
+      "last": [
+        {
+          "published_ns": 1697662500000000000,
+          "state": 2,
+          "value": null,
+          "reason": "NOT_NUMERIC: 'M'",
+          "source_ordinal": 21088,
+          "row": {
+            "published_ns": 1697662500000000000,
+            "event_time_ns": 1697661900000000000,
+            "station": "STL",
+            "valid_utc": "2023-10-18 20:45",
+            "alti": "29.86",
+            "drct": "M",
+            "dwpf": "M",
+            "feel": "M",
+            "gust": "M",
+            "ice_accretion_1hr": "M",
+            "ice_accretion_3hr": "M",
+            "ice_accretion_6hr": "M",
+            "mslp": "M",
+            "p01i": "M",
+            "peak_wind_drct": "M",
+            "peak_wind_gust": "M",
+            "peak_wind_time": "M",
+            "relh": "M",
+            "sknt": "M",
+            "skyc1": "CLR",
+            "skyc2": "M",
+            "skyc3": "M",
+            "skyc4": "M",
+            "skyl1": "M",
+            "skyl2": "M",
+            "skyl3": "M",
+            "skyl4": "M",
+            "snowdepth": "M",
+            "tmpf": "M",
+            "vsby": "10.00"
+          }
+        }
+      ]
+    }
+  ]
+}
