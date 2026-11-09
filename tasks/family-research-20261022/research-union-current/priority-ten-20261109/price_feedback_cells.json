@@ -1,0 +1,151 @@
+{
+  "counts": {
+    "20231002": {
+      "full_depth_vs_touch_opposed": 355,
+      "prior_price_vs_flow_missing": 108,
+      "full_depth_vs_touch_aligned": 395,
+      "prior_price_vs_flow_neutral": 117,
+      "full_depth_vs_touch_neutral": 45,
+      "prior_price_vs_flow_aligned": 433,
+      "prior_price_vs_flow_opposed": 137
+    },
+    "20231003": {
+      "full_depth_vs_touch_neutral": 60,
+      "prior_price_vs_flow_neutral": 135,
+      "prior_price_vs_flow_missing": 136,
+      "full_depth_vs_touch_aligned": 420,
+      "full_depth_vs_touch_opposed": 368,
+      "prior_price_vs_flow_aligned": 419,
+      "prior_price_vs_flow_opposed": 158
+    },
+    "20231017": {
+      "full_depth_vs_touch_aligned": 388,
+      "prior_price_vs_flow_missing": 123,
+      "full_depth_vs_touch_neutral": 60,
+      "prior_price_vs_flow_neutral": 77,
+      "full_depth_vs_touch_opposed": 375,
+      "prior_price_vs_flow_aligned": 467,
+      "prior_price_vs_flow_opposed": 156
+    },
+    "20231018": {
+      "full_depth_vs_touch_aligned": 321,
+      "prior_price_vs_flow_missing": 159,
+      "full_depth_vs_touch_opposed": 366,
+      "full_depth_vs_touch_neutral": 62,
+      "prior_price_vs_flow_aligned": 378,
+      "prior_price_vs_flow_neutral": 85,
+      "prior_price_vs_flow_opposed": 127
+    }
+  },
+  "future_20s_ticks_by_prior_price_flow_relation": [
+    {
+      "day": "20231002",
+      "relation": "neutral",
+      "n": 94,
+      "mean": 0.13829787234041974,
+      "positive": 45,
+      "negative": 28,
+      "flat": 21
+    },
+    {
+      "day": "20231002",
+      "relation": "aligned",
+      "n": 433,
+      "mean": 0.4549653579676799,
+      "positive": 216,
+      "negative": 169,
+      "flat": 48
+    },
+    {
+      "day": "20231002",
+      "relation": "opposed",
+      "n": 137,
+      "mean": -0.37226277372265804,
+      "positive": 53,
+      "negative": 64,
+      "flat": 20
+    },
+    {
+      "day": "20231003",
+      "relation": "neutral",
+      "n": 102,
+      "mean": 0.03921568627448371,
+      "positive": 44,
+      "negative": 40,
+      "flat": 18
+    },
+    {
+      "day": "20231003",
+      "relation": "aligned",
+      "n": 419,
+      "mean": 0.09665871121717895,
+      "positive": 178,
+      "negative": 182,
+      "flat": 59
+    },
+    {
+      "day": "20231003",
+      "relation": "opposed",
+      "n": 158,
+      "mean": -0.07911392405063404,
+      "positive": 66,
+      "negative": 73,
+      "flat": 19
+    },
+    {
+      "day": "20231017",
+      "relation": "neutral",
+      "n": 64,
+      "mean": 0.5390624999999927,
+      "positive": 37,
+      "negative": 19,
+      "flat": 8
+    },
+    {
+      "day": "20231017",
+      "relation": "aligned",
+      "n": 467,
+      "mean": 0.44646680942184513,
+      "positive": 220,
+      "negative": 192,
+      "flat": 55
+    },
+    {
+      "day": "20231017",
+      "relation": "opposed",
+      "n": 156,
+      "mean": -0.432692307692307,
+      "positive": 67,
+      "negative": 74,
+      "flat": 15
+    },
+    {
+      "day": "20231018",
+      "relation": "aligned",
+      "n": 378,
+      "mean": 0.33994708994709655,
+      "positive": 184,
+      "negative": 154,
+      "flat": 40
+    },
+    {
+      "day": "20231018",
+      "relation": "opposed",
+      "n": 127,
+      "mean": 1.4330708661417424,
+      "positive": 67,
+      "negative": 45,
+      "flat": 15
+    },
+    {
+      "day": "20231018",
+      "relation": "neutral",
+      "n": 68,
+      "mean": -0.4411764705882651,
+      "positive": 25,
+      "negative": 30,
+      "flat": 13
+    }
+  ],
+  "limit": "Prior 20-second price state -> current flow/depth -> later 20-second price diagnostic; retrospective family selection and same-message mechanics prevent causal interpretation."
+}

@@ -1,6 +1,6 @@
 {
-  "status_as_of_utc": "2026-11-09T18:17:22.070668+00:00",
-  "status_as_of_eastern": "2026-11-09T13:17:22.070668-05:00",
+  "status_as_of_utc": "2026-11-09T19:00:19.651175+00:00",
+  "status_as_of_eastern": "2026-11-09T14:00:19.651175-05:00",
   "clock_meaning": "File/status time, distinct from exact market event, receive, known-by and scheduled clocks inside records",
   "verified_workbooks": [
     {
@@ -1425,7 +1425,18 @@
       "matches_published_batch": true
     }
   ],
-  "worker_logs": {
+  "work_root": "E:\\Markets\\outputs\\research-union-20261109",
+  "local_current": "E:\\Markets\\outputs\\research-union-20261109\\current",
+  "publication_branch": "codex/research-union-four-days-20261109",
+  "publication_repository": "DavisAI1974/markets-data",
+  "latest_confirmed_publication": {
+    "commit": "fd4e2aed69de5987df07db199856c5631645eb05",
+    "files": 71,
+    "research_rows": 5075640,
+    "trade_layer_rows": 143270
+  },
+  "previous_status_as_of_utc": "2026-11-09T18:17:22.070668+00:00",
+  "historical_worker_log_snapshot": {
     "publication-progress.log": [
       "remote: warning: File tasks/family-research-20261022/research-union-current/trade-layers/20231017-all-trade-layer-values-03.xlsx is 55.12 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        ",
       "remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        ",
@@ -1479,14 +1490,62 @@
       "Verified all 47 workflow source files"
     ]
   },
-  "work_root": "E:\\Markets\\outputs\\research-union-20261109",
-  "local_current": "E:\\Markets\\outputs\\research-union-20261109\\current",
-  "publication_branch": "codex/research-union-four-days-20261109",
-  "publication_repository": "DavisAI1974/markets-data",
-  "latest_confirmed_publication": {
-    "commit": "fd4e2aed69de5987df07db199856c5631645eb05",
-    "files": 71,
-    "research_rows": 5075640,
-    "trade_layer_rows": 143270
+  "worker_logs": {
+    "workflow-progress.log": {
+      "status": "completed",
+      "last_lines": [
+        "S12867 2589 2589",
+        "WORKFLOW COMPLETE {'20231002': 4340150, '20231003': 4724287, '20231017': 4534976, '20231018': 4066088}"
+      ]
+    },
+    "workflow-excel-20231002.log": {
+      "status": "completed",
+      "last_lines": [
+        "20231002-research-pins-workflow-255.xlsx Full payload parts 0",
+        "PIN WORKBOOKS COMPLETE 4340150 255"
+      ]
+    },
+    "remaining-resume.log": {
+      "status": "completed",
+      "last_lines": [
+        "S12787 583688 583688",
+        "WORKFLOW COMPLETE {'20231002': 798156, '20231003': 867816, '20231017': 824841, '20231018': 583688, 'crossday': 10}"
+      ]
+    },
+    "sample-reconciliation.log": {
+      "status": "completed",
+      "last_lines": [
+        "S14773 {'records': 55, 'original_clock_rows': 55, 'remaining_unbound_rows': 55, 'status:no sample_id': 55, 'packets': 1}",
+        "SAMPLE RECONCILIATION COMPLETE {'records': 34825917, 'original_unbound_rows': 29256290, 'remaining_unbound_rows': 6402286, 'status:no sample_id': 5848259, 'packets': 7681912, 'parent_bound_rows': 28423631, 'new_parent_bound_rows': 25000795, 'status:bound': 28423631, 'original_clock_rows': 5569627, 'status:source lineage not established': 554027}"
+      ]
+    },
+    "priority-analysis.log": {
+      "status": "completed",
+      "last_lines": [
+        "ANALYZED P10 Price flow book context 3176",
+        "CELL ANALYSIS COMPLETE 628672"
+      ]
+    },
+    "priority-cell-verification.log": {
+      "status": "completed",
+      "last_lines": [
+        "VERIFIED ALL CELLS P10 Price flow book context 3176 155624",
+        "VERIFICATION COMPLETE 628672"
+      ]
+    },
+    "priority-finalize.log": {
+      "status": "completed",
+      "last_lines": [
+        "FINAL WORKBOOK VERIFIED 88646894 80 preserved sheets"
+      ]
+    }
+  },
+  "priority_delivery": {
+    "status": "Priority ten complete; exhaustive reconciliation deferred",
+    "manifest": "priority-ten-20261109/PUBLICATION_MANIFEST.json",
+    "rows": 628672,
+    "paper_rule_version": "priority-paper-v1-20261109",
+    "paper_execution": "Not connected or running",
+    "publication_parent": "ef5466792f6eecc0fe32879e42bacc450cf4e75b"
   }
 }
