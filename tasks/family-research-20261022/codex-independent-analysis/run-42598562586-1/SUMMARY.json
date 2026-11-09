@@ -1,0 +1,31 @@
+{
+  "analyst": "Codex",
+  "brief_revision": "64f599312106537d83a23fc65447dd2db0e6ca95",
+  "evidence_revision": "e7b1c4acac2e37205cdb9ce1c53829b6ca30f4ee",
+  "source_contents": 1296,
+  "source_aliases": 163,
+  "flattened_field_paths": 223428,
+  "field_semantic_status_counts": {
+    "pending detailed field interpretation": 170945,
+    "class-level interpretation; source definition authoritative": 52483
+  },
+  "relationship_rows": 209020,
+  "relationship_source_tables": 191,
+  "core_claims": 30,
+  "price_response_comparisons": 170,
+  "cases": 22,
+  "registry_layers": 99,
+  "source_defined_additional_aspects": 9,
+  "supporting_files": 65,
+  "supporting_fields": 1435,
+  "supporting_unassessed": [],
+  "limitations": [
+    "Field paths include metadata and nested keys, not independent features.",
+    "Missing count includes explicit None/empty values; absent keys and all NaN-like strings are not a complete missingness census.",
+    "Class-level field interpretations and structural parsing do not certify full semantic resolution.",
+    "Images/PDFs retain source links; not every render visually inspected.",
+    "Raw DBN bytes verified; completed reconstruction receipts reused, no producer rerun.",
+    "No causal effect, net strategy performance or paper deployment claimed.",
+    "Separate final reports; no reconciliation or joint synthesis."
+  ]
+}
