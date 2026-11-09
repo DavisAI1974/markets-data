@@ -10,9 +10,11 @@ concurrency:
   group: ng-combined-events
   cancel-in-progress: false
 env:
-  CODE_REV: 782e1e11ffb4c3eb0fbfe6fd84fc75a3a3fdc516
+  CODE_REV: 43e4d2bdfa5a10f4df9ab1b12da1dd713615bbd4
   SOURCE_REV: 2fd55ea1276d00530f8cdbd1caf5918910494f19
   SOURCE_RUN: '42569937357'
+  ANALYSIS_REV: f82e5c747195a03ba28aa2778b80df1d191c91ba
+  ANALYSIS_RUN: '42570958744'
   MPLBACKEND: Agg
 jobs:
   analyze:
@@ -29,10 +31,10 @@ jobs:
       - run: python -m pip install numpy==2.2.6 pandas==2.2.3 pyarrow==20.0.0 zstandard==0.25.0 sortedcontainers==2.4.0
       - name: Run pinned combined study stage
         run: |
-          for script in finish_family_replication.py event_common.py event_chronology.py event_pressure.py event_moves.py run_combined_events.py; do
+          for script in finish_family_replication.py event_common.py event_chronology.py event_pressure.py event_moves.py event_integration.py verify_combined_events.py verify_published_events.py; do
             curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/replication/$script" -o "$RUNNER_TEMP/$script"
           done
-          python -u "$RUNNER_TEMP/run_combined_events.py" --day "${{ matrix.day }}" --output "$RUNNER_TEMP/results"
+          python -u "$RUNNER_TEMP/verify_published_events.py" --day "${{ matrix.day }}" --output "$RUNNER_TEMP/results"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
