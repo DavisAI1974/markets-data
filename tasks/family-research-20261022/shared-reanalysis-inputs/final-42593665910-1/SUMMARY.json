@@ -1,0 +1,27 @@
+{
+  "status": "FROZEN_USER_START_AUTHORIZED",
+  "analysis_authorized": true,
+  "evidence_frozen": true,
+  "authorization": "User explicitly said Start on November 9, 2026",
+  "shared_scope": "Both analysts independently analyze the entire identical packet; no duty split.",
+  "source_coordinates": 1459,
+  "unique_file_contents": 1296,
+  "duplicate_file_aliases_removed": 163,
+  "duplicate_groups": 156,
+  "annotation_ledger_contents": 8,
+  "final_source_files_measured": 813,
+  "prior_distinct_contents_preserved": 590,
+  "unavailable_archive_references": 3,
+  "registry_match": true,
+  "bindings_match": true,
+  "registry_layers": 99,
+  "bound_points": 13,
+  "physical_source_deletions": 0,
+  "limitations": [
+    "Three historical archive directory references remain unavailable; retain explicit coverage.",
+    "Byte-identical copies are aliases. Distinct source projections and embedded annotations are joined by source identities before pooled counting.",
+    "Final receipt lists a removed discovery HANDOFF_20261109.md: the user confirms there is no separate handoff.",
+    "The final receipt describes its pre-generation parent revision; authoritative receipt bytes are pinned at 3d0b06a.",
+    "Freezing inputs does not establish availability or execution validity for every observation; assess each claimed decision against its own clocks."
+  ]
+}

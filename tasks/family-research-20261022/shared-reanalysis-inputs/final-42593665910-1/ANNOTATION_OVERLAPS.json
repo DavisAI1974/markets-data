@@ -1,0 +1,182 @@
+[
+  {
+    "content_id": "sha256:13622ec8c4745b72531a76d5da6710c75bca69eb1f2f5fedc74366523e81a872",
+    "source": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct17.jsonl.gz",
+      "sha256": "13622ec8c4745b72531a76d5da6710c75bca69eb1f2f5fedc74366523e81a872",
+      "bytes": 30246972,
+      "collection": "data_repository_manifest",
+      "day": "20231017",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "derived",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct17.jsonl.gz",
+        "bytes": 30246972,
+        "sha256": "13622ec8c4745b72531a76d5da6710c75bca69eb1f2f5fedc74366523e81a872",
+        "markets_commit": null,
+        "markets_data_commit": "5c94c6453d9dfd3c6ce32386050d7bdc23c765c5",
+        "session": "20231017",
+        "markets_data_path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct17.jsonl.gz",
+        "note": "99-layer pin ledger of every Claude Code per-event row for the session; rebuilt at the second pass to add the flow-only detector runs, the Oct 18 sweep cohort and instance traces, the traced divergent pairs and the five-view case rows (series, per-second tape, touch snapshots, prints); 31 layers"
+      },
+      "role": "pin_annotations_with_embedded_rows",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "treatment": "attach layer/clock annotations; embedded row is not an additional independent observation when its source row exists; unmatched embedded rows remain available",
+    "exact_row_aliases_verified": false
+  },
+  {
+    "content_id": "sha256:351b9b27f16bf2f01351a0dbb9de1f301a87f25ccf772636503bb81c2ae6970b",
+    "source": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct18.jsonl.gz",
+      "sha256": "351b9b27f16bf2f01351a0dbb9de1f301a87f25ccf772636503bb81c2ae6970b",
+      "bytes": 33748538,
+      "collection": "data_repository_manifest",
+      "day": "20231018",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "derived",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct18.jsonl.gz",
+        "bytes": 33748538,
+        "sha256": "351b9b27f16bf2f01351a0dbb9de1f301a87f25ccf772636503bb81c2ae6970b",
+        "markets_commit": null,
+        "markets_data_commit": "5c94c6453d9dfd3c6ce32386050d7bdc23c765c5",
+        "session": "20231018",
+        "markets_data_path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct18.jsonl.gz",
+        "note": "99-layer pin ledger of every Claude Code per-event row for the session; rebuilt at the second pass to add the flow-only detector runs, the Oct 18 sweep cohort and instance traces, the traced divergent pairs and the five-view case rows (series, per-second tape, touch snapshots, prints); 31 layers"
+      },
+      "role": "pin_annotations_with_embedded_rows",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "treatment": "attach layer/clock annotations; embedded row is not an additional independent observation when its source row exists; unmatched embedded rows remain available",
+    "exact_row_aliases_verified": false
+  },
+  {
+    "content_id": "sha256:b7ee8c9cf6f1d2c9ff01028125cd5438abb20cda98ceaac2882d0d30d777c2d8",
+    "source": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "c6e99f43f7c2ddb0b7f837c6c3c6d820e8aa322d",
+      "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct18.jsonl.gz",
+      "bytes": 3470449,
+      "sha256": "b7ee8c9cf6f1d2c9ff01028125cd5438abb20cda98ceaac2882d0d30d777c2d8",
+      "collection": "tier1_precision_corrected",
+      "role": "pin_annotations_with_embedded_rows",
+      "checksum_evidence": "measured; every source row and pin verified",
+      "day": null,
+      "clock_status": "exact integer clocks verified against original CSV"
+    },
+    "treatment": "join annotation to original Tier 1 CSV by session + source row ordinal + family_id + instance; never count embedded rows separately",
+    "exact_row_aliases_verified": true
+  },
+  {
+    "content_id": "sha256:86a905973d28816483f26a41baba057aac3ac5b029aef3eca6285f67e58bb6cb",
+    "source": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct03.jsonl.gz",
+      "sha256": "86a905973d28816483f26a41baba057aac3ac5b029aef3eca6285f67e58bb6cb",
+      "bytes": 27461772,
+      "collection": "data_repository_manifest",
+      "day": "20231003",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "derived",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct03.jsonl.gz",
+        "bytes": 27461772,
+        "sha256": "86a905973d28816483f26a41baba057aac3ac5b029aef3eca6285f67e58bb6cb",
+        "markets_commit": null,
+        "markets_data_commit": "5c94c6453d9dfd3c6ce32386050d7bdc23c765c5",
+        "session": "20231003",
+        "markets_data_path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct03.jsonl.gz",
+        "note": "99-layer pin ledger of every Claude Code per-event row for the session; rebuilt at the second pass to add the flow-only detector runs, the Oct 18 sweep cohort and instance traces, the traced divergent pairs and the five-view case rows (series, per-second tape, touch snapshots, prints); 31 layers"
+      },
+      "role": "pin_annotations_with_embedded_rows",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "treatment": "attach layer/clock annotations; embedded row is not an additional independent observation when its source row exists; unmatched embedded rows remain available",
+    "exact_row_aliases_verified": false
+  },
+  {
+    "content_id": "sha256:bcc170f5586dfaba252893105b2c420a49b3ecbb4c52fcbda12bdada5bc9da3f",
+    "source": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct02.jsonl.gz",
+      "sha256": "bcc170f5586dfaba252893105b2c420a49b3ecbb4c52fcbda12bdada5bc9da3f",
+      "bytes": 25764845,
+      "collection": "data_repository_manifest",
+      "day": "20231002",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "derived",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct02.jsonl.gz",
+        "bytes": 25764845,
+        "sha256": "bcc170f5586dfaba252893105b2c420a49b3ecbb4c52fcbda12bdada5bc9da3f",
+        "markets_commit": null,
+        "markets_data_commit": "5c94c6453d9dfd3c6ce32386050d7bdc23c765c5",
+        "session": "20231002",
+        "markets_data_path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct02.jsonl.gz",
+        "note": "99-layer pin ledger of every Claude Code per-event row for the session; rebuilt at the second pass to add the flow-only detector runs, the Oct 18 sweep cohort and instance traces, the traced divergent pairs and the five-view case rows (series, per-second tape, touch snapshots, prints); 31 layers"
+      },
+      "role": "pin_annotations_with_embedded_rows",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "treatment": "attach layer/clock annotations; embedded row is not an additional independent observation when its source row exists; unmatched embedded rows remain available",
+    "exact_row_aliases_verified": false
+  },
+  {
+    "content_id": "sha256:cb99f0f5c3a77c783c55dc3c251977de0f5f76293edb17a16a6bf576bbe543ee",
+    "source": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "c6e99f43f7c2ddb0b7f837c6c3c6d820e8aa322d",
+      "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct02.jsonl.gz",
+      "bytes": 3555715,
+      "sha256": "cb99f0f5c3a77c783c55dc3c251977de0f5f76293edb17a16a6bf576bbe543ee",
+      "collection": "tier1_precision_corrected",
+      "role": "pin_annotations_with_embedded_rows",
+      "checksum_evidence": "measured; every source row and pin verified",
+      "day": null,
+      "clock_status": "exact integer clocks verified against original CSV"
+    },
+    "treatment": "join annotation to original Tier 1 CSV by session + source row ordinal + family_id + instance; never count embedded rows separately",
+    "exact_row_aliases_verified": true
+  },
+  {
+    "content_id": "sha256:ee0bdd5f7e9aabd3700393b58f62e0db09a8f1e0ee8d726ba134df68bc416cdb",
+    "source": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "c6e99f43f7c2ddb0b7f837c6c3c6d820e8aa322d",
+      "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct03.jsonl.gz",
+      "bytes": 3739326,
+      "sha256": "ee0bdd5f7e9aabd3700393b58f62e0db09a8f1e0ee8d726ba134df68bc416cdb",
+      "collection": "tier1_precision_corrected",
+      "role": "pin_annotations_with_embedded_rows",
+      "checksum_evidence": "measured; every source row and pin verified",
+      "day": null,
+      "clock_status": "exact integer clocks verified against original CSV"
+    },
+    "treatment": "join annotation to original Tier 1 CSV by session + source row ordinal + family_id + instance; never count embedded rows separately",
+    "exact_row_aliases_verified": true
+  },
+  {
+    "content_id": "sha256:d56cf0d3492fe304aa08b185785596b9e7b8b6196b6855c79588717e8bbb95ab",
+    "source": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "c6e99f43f7c2ddb0b7f837c6c3c6d820e8aa322d",
+      "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct17.jsonl.gz",
+      "bytes": 3677144,
+      "sha256": "d56cf0d3492fe304aa08b185785596b9e7b8b6196b6855c79588717e8bbb95ab",
+      "collection": "tier1_precision_corrected",
+      "role": "pin_annotations_with_embedded_rows",
+      "checksum_evidence": "measured; every source row and pin verified",
+      "day": null,
+      "clock_status": "exact integer clocks verified against original CSV"
+    },
+    "treatment": "join annotation to original Tier 1 CSV by session + source row ordinal + family_id + instance; never count embedded rows separately",
+    "exact_row_aliases_verified": true
+  }
+]
