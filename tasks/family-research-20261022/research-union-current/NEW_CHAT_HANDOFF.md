@@ -1,5 +1,7 @@
 # Reanalysis complete; finish analysis before platform work
 
+> Storage update, November 9: [Start from the central market-data index](https://github.com/DavisAI1974/markets-data/blob/main/MARKET_DATA_INDEX.md). E-drive paths below are historical migration-source locations and may have been removed after verification. Use the [complete workroot manifest and restore instructions](https://github.com/DavisAI1974/markets-data/blob/main/consolidation/20261109/README.md) and [migration status](https://github.com/DavisAI1974/markets-data/blob/main/consolidation/20261109/MIGRATION_STATUS.json). Preserve deferred work from those archives; do not restart completed workers or assume an old local path still exists. Wider-folder consolidation remains in progress.
+
 Updated 2026-11-09T20:45:23.577442+00:00. This is a file/status clock, not a market-event clock.
 
 ## Latest user instructions
