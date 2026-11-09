@@ -1,0 +1,37 @@
+name: Codex trade environment application
+on:
+  push:
+    branches: [codex/native-dipole-artifacts-20261108]
+    paths: [.github/workflows/ng-codex-trade-environment.yml]
+permissions:
+  contents: write
+concurrency:
+  group: ng-codex-trade-environment
+  cancel-in-progress: false
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      CODE_REV: 97e0fbe7f06f62a572e29a65354c9c3be8e53d73
+      OUTPUT_PATH: tasks/family-research-20261022/codex-trade-environment/probe-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/native-dipole-artifacts-20261108
+          sparse-checkout: .github
+      - name: Install saved-data readers
+        run: pip install numpy pyarrow openpyxl pandas matplotlib
+      - name: Apply findings to saved trade environments
+        run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/reanalysis/codex/source_review.py" -o /tmp/source_review.py
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/reanalysis/codex/inspect_trade_environment.py" -o /tmp/inspect_trade_environment.py
+          python -m py_compile /tmp/inspect_trade_environment.py
+          python /tmp/inspect_trade_environment.py "$OUTPUT_PATH"
+      - name: Publish saved-evidence application
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --sparse "$OUTPUT_PATH"
+          git commit -m "research: save trade-environment source schemas"
+          git push origin HEAD:codex/native-dipole-artifacts-20261108
