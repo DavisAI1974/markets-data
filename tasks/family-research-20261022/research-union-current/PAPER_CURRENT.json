@@ -1,11 +1,22 @@
 {
-  "rule_version": "priority-paper-v1.2-all-rules-20261109",
-  "specification": "paper-validation-20261109/PAPER_STRATEGIES_v1_2.json",
+  "rule_version": "priority-paper-v1.3-reanalysis-20261109",
+  "specification": "reanalysis-20261109/TRADE_RULES.json",
   "paper_enabled_strategies": [
     "R1",
-    "R2"
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6A",
+    "R6B",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
   ],
   "execution_enabled": false,
-  "supersedes": "discovery-depth-20261109/PAPER_STRATEGIES_v1_1.json",
-  "reason": "User requires all defined strategies in paper testing, with no observation-only category."
+  "native_platform_import": false,
+  "analysis_report": "reanalysis-20261109/REPORT.md",
+  "platform_paper_testing_required": true,
+  "standalone_historical_strategy_backtests": "deferred"
 }

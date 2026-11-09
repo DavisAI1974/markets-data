@@ -1,0 +1,10 @@
+# Follow-up reanalysis, pinned before new comparisons
+
+User priority: reanalyze the existing Excel deeply; paper scheduling and platform setup are out of scope. All defined strategy hypotheses go into paper testing, regardless of weak or conflicting historical results. Preserve all earlier raw data and findings, annotate corrections, and pin this pass for the next analysis.
+
+1. Audit source definitions before interpreting features. P10's producer classifies prints against the previous complete-group midpoint; P01 uses native classification. Compare their signs, unknown/empty coverage and 5/20-second windows at identical recognition times. Require native completed-second known-by times no later than the decision. Do not equate a calendar closure label with proven availability.
+2. Reproduce P10 entropy/MI inputs using the original 20-bin source and pinned operator. Measure sparse-window degeneracy and denominator sensitivity. Compare fixed ridge models using only earlier dates to train: count/price/book baseline, plus information features, plus display changes, and both. Retain every later date and both all-row and 60-second-separated diagnostics. These are already-used discovery dates, not unseen validation.
+3. Examine whether one-tick price confirmation at +1s or +5s leaves subsequent midpoint movement to +20s/+60s. Subtract the confirmation move from the outcome, retain failed/flat/missing confirmations, and distinguish this delayed midpoint diagnostic from executable quote fills or the exact R1/R2 rule.
+4. Compare actual native cancellations/additions in P02 to traded flow, with original family selection and reference-clock limitations retained. Examine differential book change, aligned/opposed/neutral/missing directions and per-day outcomes rather than optimize a winning cutoff.
+
+Deliver: updated Excel reader views, source/cell evidence, all comparison tables, reproducible calculations, concrete paper hypotheses, and a current handoff. No new worker, native replay suite, remote compute, new analyst report, or trading session.

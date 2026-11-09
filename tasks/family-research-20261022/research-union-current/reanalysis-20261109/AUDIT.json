@@ -1,0 +1,48 @@
+{
+  "recognition_rows": 3176,
+  "family_rows": 3215,
+  "direct_excel_cells_checked": 107984,
+  "entropy_operator_reproduced_rows": 3176,
+  "source_flow": [
+    {
+      "day": "20231002",
+      "source_id": "S01536",
+      "sha": "4e313eae924efa124300ee9dbe6c2ff65bfd724d",
+      "rows": 75600
+    },
+    {
+      "day": "20231003",
+      "source_id": "S01573",
+      "sha": "1f8bb3544e5e0f501eed1385fe38b71ef26341e3",
+      "rows": 82800
+    },
+    {
+      "day": "20231017",
+      "source_id": "S01610",
+      "sha": "7ef4e790bcf9e6b187dc6b0b3bd362bcfffc27da",
+      "rows": 75600
+    },
+    {
+      "day": "20231018",
+      "source_id": "S01646",
+      "sha": "c95ae604477d46d026e9f920cf6296ea9c0dc98b",
+      "rows": 82800
+    }
+  ],
+  "parameters": {
+    "ridge_penalty": 10,
+    "confirmation_ticks": 1,
+    "delays": [
+      1,
+      5
+    ],
+    "horizons": [
+      20,
+      60
+    ],
+    "model_train": "all strictly earlier dates",
+    "evaluation": "already-used discovery dates"
+  },
+  "paper_policy": "Every defined strategy is included in paper testing. Weak or conflicting results are retained.",
+  "session_setup": "Deferred by user; Henry Hub December 2026 assumed; Tradovate demo selected."
+}
