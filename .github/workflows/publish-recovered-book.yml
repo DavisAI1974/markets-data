@@ -1,0 +1,80 @@
+name: Publish retained book recovery without recalculation
+on:
+  push:
+    branches: [codex/frankie-four-day-audit-20261109]
+    paths: [.github/workflows/publish-recovered-book.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        day: ['20231002', '20231003', '20231017', '20231018']
+    env:
+      GH_TOKEN: ${{ github.token }}
+      DAY: ${{ matrix.day }}
+      SOURCE_RUN: '42617700678'
+      OUTPUT_BRANCH: codex/frankie-book-recovery-${{ matrix.day }}-42617700678
+    steps:
+      - name: Download retained completed calculation
+        run: |
+          for attempt in $(seq 1 80); do
+            if gh run download "$SOURCE_RUN" --repo "$GITHUB_REPOSITORY" --name "partial-book-recovery-$DAY" --dir /tmp/recovered; then
+              break
+            fi
+            sleep 30
+          done
+          test -f /tmp/recovered/RECOVERY_RECEIPT.json
+      - name: Verify and publish source bytes through Git objects
+        run: |
+          python - <<'PY'
+          import base64,concurrent.futures,hashlib,json,os,pathlib,time,urllib.request
+          root=pathlib.Path('/tmp/recovered')
+          repo=os.environ['GITHUB_REPOSITORY']
+          branch=os.environ['OUTPUT_BRANCH']
+          day=os.environ['DAY']
+          prefix=f'tasks/family-research-20261022/frankie-four-day-pins/book-recovery-42617700678-1/{day}'
+          def api(method,path,payload=None):
+              data=None if payload is None else json.dumps(payload).encode()
+              request=urllib.request.Request(f'https://api.github.com/repos/{repo}/{path}',data=data,method=method,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','User-Agent':'Frankie-evidence-publication'})
+              for attempt in range(5):
+                  try:
+                      with urllib.request.urlopen(request,timeout=180) as response:return json.load(response)
+                  except Exception:
+                      if attempt==4:raise
+                      time.sleep(2**attempt)
+          receipt=json.loads((root/'RECOVERY_RECEIPT.json').read_text())
+          assert receipt['completed_book_fifo_recovery'] and receipt['day']==day
+          assert receipt['expected_trades']==receipt['recovered_trades']
+          manifest=json.loads((root/'MANIFEST.json').read_text())
+          for entry in manifest['files']:
+              p=(root/entry['path']).resolve()
+              assert p.is_relative_to(root.resolve())
+              with p.open('rb') as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
+              assert digest==entry['sha256'] and p.stat().st_size==entry['bytes']
+          head=api('GET','git/ref/heads/codex/frankie-four-day-audit-20261109')['object']['sha']
+          base=api('GET','git/commits/'+head)['tree']['sha']
+          files=sorted(p for p in root.iterdir() if p.is_file())
+          def blob(p):
+              data=p.read_bytes()
+              assert len(data)<95_000_000,p.name
+              expected=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+              result=api('POST','git/blobs',{'encoding':'base64','content':base64.b64encode(data).decode()})
+              assert result['sha']==expected
+              return dict(path=prefix+'/'+p.name,mode='100644',type='blob',sha=expected)
+          elements=[]
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+              for i,item in enumerate(pool.map(blob,files),1):
+                  elements.append(item)
+                  if i%25==0:print(day,'verified Git blobs',i,'of',len(files),flush=True)
+          tree=api('POST','git/trees',{'base_tree':base,'tree':elements})
+          commit=api('POST','git/commits',{'message':f'data: retain all recovered book and FIFO inputs for {day} [skip ci]','tree':tree['sha'],'parents':[head]})
+          api('POST','git/refs',{'ref':'refs/heads/'+branch,'sha':commit['sha']})
+          verified=api('GET','git/ref/heads/'+branch)['object']['sha']
+          assert verified==commit['sha']
+          print(json.dumps(dict(day=day,commit=verified,files=len(elements),recovered_trades=receipt['recovered_trades'])),flush=True)
+          PY
