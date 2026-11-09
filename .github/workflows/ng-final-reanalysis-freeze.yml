@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      CODE_REV: bb019f3fc4ab7e7f207aa5ba32c8f982c31140f4
+      CODE_REV: 958676ae7b795ba6aede3d2cb9855a05dfe8eff4
       OUTPUT_PATH: tasks/family-research-20261022/shared-reanalysis-inputs/final-${{ github.run_id }}-${{ github.run_attempt }}
       GITHUB_TOKEN: ${{ github.token }}
     steps:
