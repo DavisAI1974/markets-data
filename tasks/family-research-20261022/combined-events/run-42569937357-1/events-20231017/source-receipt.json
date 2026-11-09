@@ -1,0 +1,12 @@
+{
+  "day": "20231017",
+  "groups": 635170,
+  "actions": 841601,
+  "trades": 33451,
+  "action_and_group_checks": "passed",
+  "all_group_quotes_sizes_order_counts": "passed",
+  "clocks": "integer event_ns, receive_ns, known_by_ns, cursor; group event clock is not individual action event clock",
+  "book_initialization": "Original UTC tape from first available member snapshot, including source prehistory before retained cursor zero",
+  "scope": "Original retained date span; October2/17 remain partial; no external layer inputs",
+  "source_modules_revision": "0408df44c4f106f7fda4ac4b92ae622d7d34cd7b"
+}
