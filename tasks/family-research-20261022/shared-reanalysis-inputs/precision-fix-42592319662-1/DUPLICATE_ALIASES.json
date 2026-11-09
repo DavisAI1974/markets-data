@@ -1,0 +1,634 @@
+[
+  {
+    "content_id": "sha256:13622ec8c4745b72531a76d5da6710c75bca69eb1f2f5fedc74366523e81a872",
+    "canonical": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct17.jsonl.gz",
+      "sha256": "13622ec8c4745b72531a76d5da6710c75bca69eb1f2f5fedc74366523e81a872",
+      "bytes": 30246972,
+      "collection": "data_repository_manifest",
+      "day": "20231017",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "derived",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct17.jsonl.gz",
+        "bytes": 30246972,
+        "sha256": "13622ec8c4745b72531a76d5da6710c75bca69eb1f2f5fedc74366523e81a872",
+        "markets_commit": null,
+        "markets_data_commit": "5c94c6453d9dfd3c6ce32386050d7bdc23c765c5",
+        "session": "20231017",
+        "markets_data_path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct17.jsonl.gz",
+        "note": "99-layer pin ledger of every Claude Code per-event row for the session; rebuilt at the second pass to add the flow-only detector runs, the Oct 18 sweep cohort and instance traces, the traced divergent pairs and the five-view case rows (series, per-second tape, touch snapshots, prints); 31 layers"
+      },
+      "role": "pin_annotations_with_embedded_rows",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "ccode_existing_pins",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "993cf54e09b06002d2c4554cd762e6887d9648c0",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct17.jsonl.gz",
+        "git_blob": "619a79695911e2c38f630c843f8fb832e08916c6",
+        "bytes": 30246972,
+        "day": "20231017",
+        "sha256": "13622ec8c4745b72531a76d5da6710c75bca69eb1f2f5fedc74366523e81a872",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "pin_annotations_with_embedded_rows",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231017/rows/7899f87d5686c311e239/TABLE.json",
+          "counts": {
+            "rows": 127849,
+            "direct_clocks": 124316,
+            "clocks": 340079,
+            "corrections": 3320,
+            "aggregate_or_unclocked_retained": 3533
+          }
+        }
+      }
+    ]
+  },
+  {
+    "content_id": "sha256:351b9b27f16bf2f01351a0dbb9de1f301a87f25ccf772636503bb81c2ae6970b",
+    "canonical": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct18.jsonl.gz",
+      "sha256": "351b9b27f16bf2f01351a0dbb9de1f301a87f25ccf772636503bb81c2ae6970b",
+      "bytes": 33748538,
+      "collection": "data_repository_manifest",
+      "day": "20231018",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "derived",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct18.jsonl.gz",
+        "bytes": 33748538,
+        "sha256": "351b9b27f16bf2f01351a0dbb9de1f301a87f25ccf772636503bb81c2ae6970b",
+        "markets_commit": null,
+        "markets_data_commit": "5c94c6453d9dfd3c6ce32386050d7bdc23c765c5",
+        "session": "20231018",
+        "markets_data_path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct18.jsonl.gz",
+        "note": "99-layer pin ledger of every Claude Code per-event row for the session; rebuilt at the second pass to add the flow-only detector runs, the Oct 18 sweep cohort and instance traces, the traced divergent pairs and the five-view case rows (series, per-second tape, touch snapshots, prints); 31 layers"
+      },
+      "role": "pin_annotations_with_embedded_rows",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "ccode_existing_pins",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "993cf54e09b06002d2c4554cd762e6887d9648c0",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct18.jsonl.gz",
+        "git_blob": "40b9402d786cb9db6892aff1bf7469a4ae79a2b0",
+        "bytes": 33748538,
+        "day": "20231018",
+        "sha256": "351b9b27f16bf2f01351a0dbb9de1f301a87f25ccf772636503bb81c2ae6970b",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "pin_annotations_with_embedded_rows",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/27ab7005d66a90f0ad69/TABLE.json",
+          "counts": {
+            "rows": 136319,
+            "direct_clocks": 130892,
+            "clocks": 352768,
+            "corrections": 3560,
+            "aggregate_or_unclocked_retained": 5427
+          }
+        }
+      }
+    ]
+  },
+  {
+    "content_id": "sha256:56d2d592e5841f29c4a730fbe62f9445fb683cbca8d94afe44bf8a1debebbf2c",
+    "canonical": {
+      "collection": "native",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+      "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231002-birth-differences-native_action.csv",
+      "git_blob": "6b12b8b8207ed227263793a0607d8aea3397109c",
+      "bytes": 646,
+      "day": "20231002",
+      "sha256": "56d2d592e5841f29c4a730fbe62f9445fb683cbca8d94afe44bf8a1debebbf2c",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231002/rows/20986d91fde32c208491/TABLE.json",
+        "counts": {}
+      }
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "native",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+        "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231003-birth-differences-native_action.csv",
+        "git_blob": "6b12b8b8207ed227263793a0607d8aea3397109c",
+        "bytes": 646,
+        "day": "20231003",
+        "sha256": "56d2d592e5841f29c4a730fbe62f9445fb683cbca8d94afe44bf8a1debebbf2c",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "source_data",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231003/rows/306b2cf95679762540c8/TABLE.json",
+          "counts": {}
+        }
+      },
+      {
+        "collection": "native",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+        "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231017-birth-differences-native_action.csv",
+        "git_blob": "6b12b8b8207ed227263793a0607d8aea3397109c",
+        "bytes": 646,
+        "day": "20231017",
+        "sha256": "56d2d592e5841f29c4a730fbe62f9445fb683cbca8d94afe44bf8a1debebbf2c",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "source_data",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231017/rows/a0e42216aa4edbe10ce4/TABLE.json",
+          "counts": {}
+        }
+      },
+      {
+        "collection": "native",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+        "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231018-birth-differences-native_action.csv",
+        "git_blob": "6b12b8b8207ed227263793a0607d8aea3397109c",
+        "bytes": 646,
+        "day": "20231018",
+        "sha256": "56d2d592e5841f29c4a730fbe62f9445fb683cbca8d94afe44bf8a1debebbf2c",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "source_data",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/2899180312b0477529c4/TABLE.json",
+          "counts": {}
+        }
+      }
+    ]
+  },
+  {
+    "content_id": "sha256:5b6d655af9f2ebfe7c516c4344bfa534a122f4203138e29cfc3f5b9b75599443",
+    "canonical": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/chronological-instance-index.csv",
+      "sha256": "5b6d655af9f2ebfe7c516c4344bfa534a122f4203138e29cfc3f5b9b75599443",
+      "bytes": 349903,
+      "collection": "data_repository_manifest",
+      "day": "20231003",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "export",
+        "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/chronological-instance-index.csv",
+        "bytes": 349903,
+        "sha256": "5b6d655af9f2ebfe7c516c4344bfa534a122f4203138e29cfc3f5b9b75599443",
+        "markets_commit": null,
+        "markets_data_commit": "7b50d634f94ea4777d1e772ac2b916b001019582",
+        "session": "20231003",
+        "markets_data_path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/chronological-instance-index.csv",
+        "note": "first-observed structural family starts with strict-pre ROOT operands (family replication run 42566535537)"
+      },
+      "role": "source_data",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "family",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+        "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/chronological-instance-index.csv",
+        "git_blob": "c57d43036acec57195e720c580b294af50171003",
+        "bytes": 349903,
+        "day": "20231003",
+        "sha256": "5b6d655af9f2ebfe7c516c4344bfa534a122f4203138e29cfc3f5b9b75599443",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "source_data",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231003/rows/6c2c2b452adcde5bd027/TABLE.json",
+          "counts": {
+            "rows": 849,
+            "direct_clocks": 849,
+            "clocks": 849,
+            "corrections": 0
+          }
+        }
+      }
+    ]
+  },
+  {
+    "content_id": "sha256:6698516406ce595bd530718a9106fdcbce02974b396e437d9815110d9d55fea2",
+    "canonical": {
+      "collection": "family",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+      "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/research-atlas-v2/primer-spread-event-outcomes.csv.gz",
+      "git_blob": "49041bab282b9b080d134f39e1f47bfa8bf5b812",
+      "bytes": 257151,
+      "day": "20231018",
+      "sha256": "6698516406ce595bd530718a9106fdcbce02974b396e437d9815110d9d55fea2",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/cd949b73519501d641eb/TABLE.json",
+        "counts": {
+          "rows": 17290,
+          "direct_clocks": 17290,
+          "clocks": 34580,
+          "corrections": 0
+        }
+      }
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "continuous",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "71240aa56a8b27f7d7f68acd154784579094e5c1",
+        "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231018/research-atlas-v2/primer-spread-event-outcomes.csv.gz",
+        "git_blob": "49041bab282b9b080d134f39e1f47bfa8bf5b812",
+        "bytes": 257151,
+        "day": "20231018",
+        "sha256": "6698516406ce595bd530718a9106fdcbce02974b396e437d9815110d9d55fea2",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "source_data",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/2156ffac86b066fd60fb/TABLE.json",
+          "counts": {
+            "rows": 17290,
+            "direct_clocks": 17290,
+            "clocks": 34580,
+            "corrections": 0
+          }
+        }
+      }
+    ]
+  },
+  {
+    "content_id": "sha256:769a390c6e7a80159669b50dc81a1a3fd0579509317362691e938bf13fec3ae8",
+    "canonical": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/chronological-instance-index.csv",
+      "sha256": "769a390c6e7a80159669b50dc81a1a3fd0579509317362691e938bf13fec3ae8",
+      "bytes": 497923,
+      "collection": "data_repository_manifest",
+      "day": "20231018",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "export",
+        "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/chronological-instance-index.csv",
+        "bytes": 497923,
+        "sha256": "769a390c6e7a80159669b50dc81a1a3fd0579509317362691e938bf13fec3ae8",
+        "markets_commit": null,
+        "markets_data_commit": "7b50d634f94ea4777d1e772ac2b916b001019582",
+        "session": "20231018",
+        "markets_data_path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/chronological-instance-index.csv",
+        "note": "first-observed structural family starts with strict-pre ROOT operands (family replication run 42566535537)"
+      },
+      "role": "source_data",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "family",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+        "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/chronological-instance-index.csv",
+        "git_blob": "5ecf18c6fcf6213980bedc3e9b2e5ef722dd5874",
+        "bytes": 497923,
+        "day": "20231018",
+        "sha256": "769a390c6e7a80159669b50dc81a1a3fd0579509317362691e938bf13fec3ae8",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "source_data",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/407c897c1ff5fa549f77/TABLE.json",
+          "counts": {
+            "rows": 749,
+            "direct_clocks": 749,
+            "clocks": 3745,
+            "corrections": 0
+          }
+        }
+      }
+    ]
+  },
+  {
+    "content_id": "sha256:86a905973d28816483f26a41baba057aac3ac5b029aef3eca6285f67e58bb6cb",
+    "canonical": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct03.jsonl.gz",
+      "sha256": "86a905973d28816483f26a41baba057aac3ac5b029aef3eca6285f67e58bb6cb",
+      "bytes": 27461772,
+      "collection": "data_repository_manifest",
+      "day": "20231003",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "derived",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct03.jsonl.gz",
+        "bytes": 27461772,
+        "sha256": "86a905973d28816483f26a41baba057aac3ac5b029aef3eca6285f67e58bb6cb",
+        "markets_commit": null,
+        "markets_data_commit": "5c94c6453d9dfd3c6ce32386050d7bdc23c765c5",
+        "session": "20231003",
+        "markets_data_path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct03.jsonl.gz",
+        "note": "99-layer pin ledger of every Claude Code per-event row for the session; rebuilt at the second pass to add the flow-only detector runs, the Oct 18 sweep cohort and instance traces, the traced divergent pairs and the five-view case rows (series, per-second tape, touch snapshots, prints); 31 layers"
+      },
+      "role": "pin_annotations_with_embedded_rows",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "ccode_existing_pins",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "993cf54e09b06002d2c4554cd762e6887d9648c0",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct03.jsonl.gz",
+        "git_blob": "1f8abd9b069fffa07841d6c1dd9329144623adba",
+        "bytes": 27461772,
+        "day": "20231003",
+        "sha256": "86a905973d28816483f26a41baba057aac3ac5b029aef3eca6285f67e58bb6cb",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "pin_annotations_with_embedded_rows",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231003/rows/be16bb8c9aa437fd17b5/TABLE.json",
+          "counts": {
+            "rows": 113600,
+            "direct_clocks": 110711,
+            "clocks": 305873,
+            "corrections": 3428,
+            "aggregate_or_unclocked_retained": 2889
+          }
+        }
+      }
+    ]
+  },
+  {
+    "content_id": "sha256:9e0ea6324e6408227602b7be6e13fc80bde0bb7767de8eaf86d581e62f64e5b1",
+    "canonical": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/chronological-instance-index.csv",
+      "sha256": "9e0ea6324e6408227602b7be6e13fc80bde0bb7767de8eaf86d581e62f64e5b1",
+      "bytes": 329366,
+      "collection": "data_repository_manifest",
+      "day": "20231002",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "export",
+        "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/chronological-instance-index.csv",
+        "bytes": 329366,
+        "sha256": "9e0ea6324e6408227602b7be6e13fc80bde0bb7767de8eaf86d581e62f64e5b1",
+        "markets_commit": null,
+        "markets_data_commit": "7b50d634f94ea4777d1e772ac2b916b001019582",
+        "session": "20231002",
+        "markets_data_path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/chronological-instance-index.csv",
+        "note": "first-observed structural family starts with strict-pre ROOT operands (family replication run 42566535537)"
+      },
+      "role": "source_data",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "family",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+        "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/chronological-instance-index.csv",
+        "git_blob": "da5ff23bf20ac27d71fc9bd3a900ed9d604d7a7d",
+        "bytes": 329366,
+        "day": "20231002",
+        "sha256": "9e0ea6324e6408227602b7be6e13fc80bde0bb7767de8eaf86d581e62f64e5b1",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "source_data",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231002/rows/1ca17346bde3d574fcb1/TABLE.json",
+          "counts": {
+            "rows": 796,
+            "direct_clocks": 796,
+            "clocks": 796,
+            "corrections": 0
+          }
+        }
+      }
+    ]
+  },
+  {
+    "content_id": "sha256:b912a498099cc2094167741da07228eea29eacb1108c3d6876f0a79bdb707bef",
+    "canonical": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/chronological-instance-index.csv",
+      "sha256": "b912a498099cc2094167741da07228eea29eacb1108c3d6876f0a79bdb707bef",
+      "bytes": 339984,
+      "collection": "data_repository_manifest",
+      "day": "20231017",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "export",
+        "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/chronological-instance-index.csv",
+        "bytes": 339984,
+        "sha256": "b912a498099cc2094167741da07228eea29eacb1108c3d6876f0a79bdb707bef",
+        "markets_commit": null,
+        "markets_data_commit": "7b50d634f94ea4777d1e772ac2b916b001019582",
+        "session": "20231017",
+        "markets_data_path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/chronological-instance-index.csv",
+        "note": "first-observed structural family starts with strict-pre ROOT operands (family replication run 42566535537)"
+      },
+      "role": "source_data",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "family",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+        "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/chronological-instance-index.csv",
+        "git_blob": "95514d84bebd4a42950fb2d30454ec909b479f2d",
+        "bytes": 339984,
+        "day": "20231017",
+        "sha256": "b912a498099cc2094167741da07228eea29eacb1108c3d6876f0a79bdb707bef",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "source_data",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231017/rows/760c7cbd9eae1ac1f1f4/TABLE.json",
+          "counts": {
+            "rows": 824,
+            "direct_clocks": 824,
+            "clocks": 824,
+            "corrections": 0
+          }
+        }
+      }
+    ]
+  },
+  {
+    "content_id": "sha256:bcc170f5586dfaba252893105b2c420a49b3ecbb4c52fcbda12bdada5bc9da3f",
+    "canonical": {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct02.jsonl.gz",
+      "sha256": "bcc170f5586dfaba252893105b2c420a49b3ecbb4c52fcbda12bdada5bc9da3f",
+      "bytes": 25764845,
+      "collection": "data_repository_manifest",
+      "day": "20231002",
+      "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+      "source_manifest_entry": {
+        "tier": "derived",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct02.jsonl.gz",
+        "bytes": 25764845,
+        "sha256": "bcc170f5586dfaba252893105b2c420a49b3ecbb4c52fcbda12bdada5bc9da3f",
+        "markets_commit": null,
+        "markets_data_commit": "5c94c6453d9dfd3c6ce32386050d7bdc23c765c5",
+        "session": "20231002",
+        "markets_data_path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct02.jsonl.gz",
+        "note": "99-layer pin ledger of every Claude Code per-event row for the session; rebuilt at the second pass to add the flow-only detector runs, the Oct 18 sweep cohort and instance traces, the traced divergent pairs and the five-view case rows (series, per-second tape, touch snapshots, prints); 31 layers"
+      },
+      "role": "pin_annotations_with_embedded_rows",
+      "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "ccode_existing_pins",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "993cf54e09b06002d2c4554cd762e6887d9648c0",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct02.jsonl.gz",
+        "git_blob": "2a4e5bcca3fa76a75a2da36cecd561ebcf3fdd41",
+        "bytes": 25764845,
+        "day": "20231002",
+        "sha256": "bcc170f5586dfaba252893105b2c420a49b3ecbb4c52fcbda12bdada5bc9da3f",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "pin_annotations_with_embedded_rows",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231002/rows/aae674326049605be2ca/TABLE.json",
+          "counts": {
+            "rows": 108412,
+            "direct_clocks": 104509,
+            "clocks": 284971,
+            "corrections": 3356,
+            "aggregate_or_unclocked_retained": 3903
+          }
+        }
+      }
+    ]
+  },
+  {
+    "content_id": "sha256:db5a1ce7b5b216a30b4db4b60e4024fd1b243b17bd1f15faec1c82ee62732437",
+    "canonical": {
+      "collection": "native",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+      "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231002-path-dispositions.csv",
+      "git_blob": "b22d872119231a1fff2adf00520a5d1451832c08",
+      "bytes": 21,
+      "day": "20231002",
+      "sha256": "db5a1ce7b5b216a30b4db4b60e4024fd1b243b17bd1f15faec1c82ee62732437",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231002/rows/8ca05484b582e1e86bb7/TABLE.json",
+        "counts": {}
+      }
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "native",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+        "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231018-path-dispositions.csv",
+        "git_blob": "b22d872119231a1fff2adf00520a5d1451832c08",
+        "bytes": 21,
+        "day": "20231018",
+        "sha256": "db5a1ce7b5b216a30b4db4b60e4024fd1b243b17bd1f15faec1c82ee62732437",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "source_data",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/96d90f1fdefa69798fe2/TABLE.json",
+          "counts": {}
+        }
+      }
+    ]
+  },
+  {
+    "content_id": "sha256:ebb681dd880d56d457c1d01f0e27c058e9f03e033c02dab7e2b7c925c820de18",
+    "canonical": {
+      "collection": "family",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+      "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/research-atlas-v2/primer-spread-event-summary.csv",
+      "git_blob": "52a6dcf5b2b08a22ef46dff2b0cae2c21533c0ee",
+      "bytes": 8673,
+      "day": "20231018",
+      "sha256": "ebb681dd880d56d457c1d01f0e27c058e9f03e033c02dab7e2b7c925c820de18",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/6b0ce28d23aa53f5a97e/TABLE.json",
+        "counts": {
+          "rows": 100,
+          "aggregate_or_unclocked_retained": 100,
+          "clocks": 0,
+          "corrections": 0
+        }
+      }
+    },
+    "removed_from_independent_input_list": [
+      {
+        "collection": "continuous",
+        "repository": "DavisAI1974/markets-data",
+        "revision": "71240aa56a8b27f7d7f68acd154784579094e5c1",
+        "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231018/research-atlas-v2/primer-spread-event-summary.csv",
+        "git_blob": "52a6dcf5b2b08a22ef46dff2b0cae2c21533c0ee",
+        "bytes": 8673,
+        "day": "20231018",
+        "sha256": "ebb681dd880d56d457c1d01f0e27c058e9f03e033c02dab7e2b7c925c820de18",
+        "checksum_evidence": "measured and blob-verified by completed source-clock run",
+        "role": "source_data",
+        "clock_sidecar": {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+          "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/37dfefd15ca72ab354b1/TABLE.json",
+          "counts": {
+            "rows": 100,
+            "aggregate_or_unclocked_retained": 100,
+            "clocks": 0,
+            "corrections": 0
+          }
+        }
+      }
+    ]
+  }
+]

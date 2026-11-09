@@ -1,0 +1,222 @@
+{
+  "status": "PASS",
+  "replacements": [
+    {
+      "old_content_id": "sha256:3661c126e20c7c89bbaf10b08d4c8db5749d16c8b937fc93a40a26ad44985507",
+      "new_content_id": "sha256:11ae487125e7bbfe5da9c450dfee9e44ee6ec99261c72e6317552ae33c5c8ac2",
+      "superseded_coordinates": [
+        {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+          "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-summary.json",
+          "sha256": "3661c126e20c7c89bbaf10b08d4c8db5749d16c8b937fc93a40a26ad44985507",
+          "bytes": 12036,
+          "collection": "data_repository_manifest",
+          "day": null,
+          "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+          "source_manifest_entry": {
+            "tier": "derived",
+            "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-summary.json",
+            "bytes": 12036,
+            "sha256": "3661c126e20c7c89bbaf10b08d4c8db5749d16c8b937fc93a40a26ad44985507",
+            "markets_commit": null,
+            "markets_data_commit": null,
+            "session": null,
+            "markets_data_path": null,
+            "note": "field map added, clock kinds added and per-session counts for the Tier 1 pin ledgers"
+          },
+          "role": "source_data",
+          "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+        }
+      ],
+      "replacement": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "c6e99f43f7c2ddb0b7f837c6c3c6d820e8aa322d",
+        "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-summary.json",
+        "bytes": 12036,
+        "sha256": "11ae487125e7bbfe5da9c450dfee9e44ee6ec99261c72e6317552ae33c5c8ac2",
+        "collection": "tier1_precision_corrected",
+        "role": "source_data",
+        "checksum_evidence": "measured; every source row and pin verified",
+        "day": null,
+        "clock_status": "exact integer clocks verified against original CSV"
+      }
+    },
+    {
+      "old_content_id": "sha256:5ad103811fe7b68d71da01ef302e3faeb22fcef2c4b9a3d4b8e8baadfb3e017f",
+      "new_content_id": "sha256:b7ee8c9cf6f1d2c9ff01028125cd5438abb20cda98ceaac2882d0d30d777c2d8",
+      "superseded_coordinates": [
+        {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+          "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct18.jsonl.gz",
+          "sha256": "5ad103811fe7b68d71da01ef302e3faeb22fcef2c4b9a3d4b8e8baadfb3e017f",
+          "bytes": 3468543,
+          "collection": "data_repository_manifest",
+          "day": null,
+          "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+          "source_manifest_entry": {
+            "tier": "derived",
+            "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct18.jsonl.gz",
+            "bytes": 3468543,
+            "sha256": "5ad103811fe7b68d71da01ef302e3faeb22fcef2c4b9a3d4b8e8baadfb3e017f",
+            "markets_commit": null,
+            "markets_data_commit": null,
+            "session": null,
+            "markets_data_path": null,
+            "note": "99-layer pin ledger of the Tier 1 family-master rows (actual first-observed family starts, x18_tier1_days.py on claude/three-day-dipole-20261108), one record per family; built by claude-code/pin_tier1_rows_to_99.py"
+          },
+          "role": "pin_annotations_with_embedded_rows",
+          "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+        }
+      ],
+      "replacement": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "c6e99f43f7c2ddb0b7f837c6c3c6d820e8aa322d",
+        "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct18.jsonl.gz",
+        "bytes": 3470449,
+        "sha256": "b7ee8c9cf6f1d2c9ff01028125cd5438abb20cda98ceaac2882d0d30d777c2d8",
+        "collection": "tier1_precision_corrected",
+        "role": "pin_annotations_with_embedded_rows",
+        "checksum_evidence": "measured; every source row and pin verified",
+        "day": null,
+        "clock_status": "exact integer clocks verified against original CSV"
+      }
+    },
+    {
+      "old_content_id": "sha256:e08ddb84fdcca441fe6c00d100c2a7a5d7bc7030632d872c62458b728817459c",
+      "new_content_id": "sha256:cb99f0f5c3a77c783c55dc3c251977de0f5f76293edb17a16a6bf576bbe543ee",
+      "superseded_coordinates": [
+        {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+          "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct02.jsonl.gz",
+          "sha256": "e08ddb84fdcca441fe6c00d100c2a7a5d7bc7030632d872c62458b728817459c",
+          "bytes": 3552869,
+          "collection": "data_repository_manifest",
+          "day": null,
+          "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+          "source_manifest_entry": {
+            "tier": "derived",
+            "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct02.jsonl.gz",
+            "bytes": 3552869,
+            "sha256": "e08ddb84fdcca441fe6c00d100c2a7a5d7bc7030632d872c62458b728817459c",
+            "markets_commit": null,
+            "markets_data_commit": null,
+            "session": null,
+            "markets_data_path": null,
+            "note": "99-layer pin ledger of the Tier 1 family-master rows (actual first-observed family starts, x18_tier1_days.py on claude/three-day-dipole-20261108), one record per family; built by claude-code/pin_tier1_rows_to_99.py"
+          },
+          "role": "pin_annotations_with_embedded_rows",
+          "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+        }
+      ],
+      "replacement": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "c6e99f43f7c2ddb0b7f837c6c3c6d820e8aa322d",
+        "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct02.jsonl.gz",
+        "bytes": 3555715,
+        "sha256": "cb99f0f5c3a77c783c55dc3c251977de0f5f76293edb17a16a6bf576bbe543ee",
+        "collection": "tier1_precision_corrected",
+        "role": "pin_annotations_with_embedded_rows",
+        "checksum_evidence": "measured; every source row and pin verified",
+        "day": null,
+        "clock_status": "exact integer clocks verified against original CSV"
+      }
+    },
+    {
+      "old_content_id": "sha256:e1ae859dda18993ffccf3ac5e562574e085e1665f44ea73e00c19e2ae3d1b53d",
+      "new_content_id": "sha256:ee0bdd5f7e9aabd3700393b58f62e0db09a8f1e0ee8d726ba134df68bc416cdb",
+      "superseded_coordinates": [
+        {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+          "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct03.jsonl.gz",
+          "sha256": "e1ae859dda18993ffccf3ac5e562574e085e1665f44ea73e00c19e2ae3d1b53d",
+          "bytes": 3736544,
+          "collection": "data_repository_manifest",
+          "day": null,
+          "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+          "source_manifest_entry": {
+            "tier": "derived",
+            "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct03.jsonl.gz",
+            "bytes": 3736544,
+            "sha256": "e1ae859dda18993ffccf3ac5e562574e085e1665f44ea73e00c19e2ae3d1b53d",
+            "markets_commit": null,
+            "markets_data_commit": null,
+            "session": null,
+            "markets_data_path": null,
+            "note": "99-layer pin ledger of the Tier 1 family-master rows (actual first-observed family starts, x18_tier1_days.py on claude/three-day-dipole-20261108), one record per family; built by claude-code/pin_tier1_rows_to_99.py"
+          },
+          "role": "pin_annotations_with_embedded_rows",
+          "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+        }
+      ],
+      "replacement": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "c6e99f43f7c2ddb0b7f837c6c3c6d820e8aa322d",
+        "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct03.jsonl.gz",
+        "bytes": 3739326,
+        "sha256": "ee0bdd5f7e9aabd3700393b58f62e0db09a8f1e0ee8d726ba134df68bc416cdb",
+        "collection": "tier1_precision_corrected",
+        "role": "pin_annotations_with_embedded_rows",
+        "checksum_evidence": "measured; every source row and pin verified",
+        "day": null,
+        "clock_status": "exact integer clocks verified against original CSV"
+      }
+    },
+    {
+      "old_content_id": "sha256:f0a58dd4e08c17046c9f35a5f9432b4e334390f47404b4ab6bf2a3e9f765e63f",
+      "new_content_id": "sha256:d56cf0d3492fe304aa08b185785596b9e7b8b6196b6855c79588717e8bbb95ab",
+      "superseded_coordinates": [
+        {
+          "repository": "DavisAI1974/markets-data",
+          "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+          "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct17.jsonl.gz",
+          "sha256": "f0a58dd4e08c17046c9f35a5f9432b4e334390f47404b4ab6bf2a3e9f765e63f",
+          "bytes": 3674276,
+          "collection": "data_repository_manifest",
+          "day": null,
+          "checksum_evidence": "declared in immutable source MANIFEST.json; not newly rehashed here",
+          "source_manifest_entry": {
+            "tier": "derived",
+            "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct17.jsonl.gz",
+            "bytes": 3674276,
+            "sha256": "f0a58dd4e08c17046c9f35a5f9432b4e334390f47404b4ab6bf2a3e9f765e63f",
+            "markets_commit": null,
+            "markets_data_commit": null,
+            "session": null,
+            "markets_data_path": null,
+            "note": "99-layer pin ledger of the Tier 1 family-master rows (actual first-observed family starts, x18_tier1_days.py on claude/three-day-dipole-20261108), one record per family; built by claude-code/pin_tier1_rows_to_99.py"
+          },
+          "role": "pin_annotations_with_embedded_rows",
+          "clock_status": "requires final handoff reconciliation unless an existing clock sidecar alias is present"
+        }
+      ],
+      "replacement": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "c6e99f43f7c2ddb0b7f837c6c3c6d820e8aa322d",
+        "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct17.jsonl.gz",
+        "bytes": 3677144,
+        "sha256": "d56cf0d3492fe304aa08b185785596b9e7b8b6196b6855c79588717e8bbb95ab",
+        "collection": "tier1_precision_corrected",
+        "role": "pin_annotations_with_embedded_rows",
+        "checksum_evidence": "measured; every source row and pin verified",
+        "day": null,
+        "clock_status": "exact integer clocks verified against original CSV"
+      }
+    }
+  ],
+  "verification": {
+    "repository": "DavisAI1974/markets-data",
+    "revision": "c6e99f43f7c2ddb0b7f837c6c3c6d820e8aa322d",
+    "verification_path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/VERIFICATION.json",
+    "replacement_count": 5,
+    "scope": "four Tier 1 ledgers and their summary only; final-suite preparation is otherwise unchanged"
+  },
+  "original_packet": {
+    "repository": "DavisAI1974/markets-data",
+    "revision": "5347fb95a760de8732c1b27d6fb0536a85a2628e",
+    "path": "tasks/family-research-20261022/shared-reanalysis-inputs/run-42588327774-1"
+  }
+}
