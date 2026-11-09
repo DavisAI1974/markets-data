@@ -1,0 +1,61 @@
+name: Timestamp pins for 99 layers and 13 inputs
+on:
+  push:
+    branches: [codex/native-dipole-artifacts-20261108]
+    paths: [.github/workflows/ng-timestamp-pins.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ng-timestamp-pins
+  cancel-in-progress: false
+env:
+  CODE_REV: 17afe79dfd88ddc21073cf1c9376f7a652af50e8
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pyarrow==20.0.0
+      - name: Inspect original pin sources
+        env:
+          OUTPUT_DIR: ${{ runner.temp }}/results
+        run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/pinning/probe.py" -o "$RUNNER_TEMP/probe.py"
+          python -u "$RUNNER_TEMP/probe.py"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: source-inventory
+          path: ${{ runner.temp }}/results
+  publish:
+    if: always()
+    needs: [inspect]
+    runs-on: ubuntu-latest
+    env:
+      OUTPUT_PATH: tasks/family-research-20261022/timestamp-pins/run-${{ github.run_id }}-${{ github.run_attempt }}
+      JOB_RESULTS: ${{ toJSON(needs) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/native-dipole-artifacts-20261108
+          sparse-checkout: .github
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: source-inventory
+          path: ${{ env.OUTPUT_PATH }}
+      - run: |
+          python - <<'PY'
+          import os,json,pathlib
+          p=pathlib.Path(os.environ["OUTPUT_PATH"]);p.mkdir(parents=True,exist_ok=True)
+          (p/"RUN_STATUS.json").write_text(json.dumps({"code_revision":os.environ["CODE_REV"],"jobs":json.loads(os.environ["JOB_RESULTS"])},indent=2))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --sparse "$OUTPUT_PATH"
+          git commit -m "data: preserve original timestamp pin input inventory"
+          git pull --rebase origin codex/native-dipole-artifacts-20261108
+          git push origin HEAD:codex/native-dipole-artifacts-20261108
