@@ -1,0 +1,56 @@
+[
+  {
+    "source_manifest_entry": {
+      "tier": "archive",
+      "path": "tasks/family-research-20261022/replay-artifacts/20231002/root-frames/",
+      "bytes_uncompressed": 520064232895,
+      "spool_sha256": "d1801a98138551d75fa675d1153d616b0b81f65e5a42311d78ab46ea934f30a2",
+      "rows": 600291,
+      "parts": 211,
+      "parts_listing": "tasks/family-research-20261022/replay-artifacts/20231002/root-frames/SHA256SUMS",
+      "markets_commit": "ac52a6ac59a9610aba031740bd29a93b2dcb614d",
+      "session": "20231002",
+      "markets_data_path": null,
+      "target": "s3://bento-568968024170-us-east-2-an/root-frames/20231002/",
+      "note": "ROOT frame spool split into sub-100 MB parts; not for any git repository; verify parts against SHA256SUMS after the move"
+    },
+    "status": "historical_archive_reference_not_an_available_file",
+    "action": "do not fetch prohibited external storage; resolve from GitHub final handoff"
+  },
+  {
+    "source_manifest_entry": {
+      "tier": "archive",
+      "path": "tasks/family-research-20261022/replay-artifacts/20231003/root-frames/",
+      "bytes_uncompressed": 572726375854,
+      "spool_sha256": "9320ab9c0bc71786458291d01758243842ca6ec9b29e3e6cc58073a44efe0cce",
+      "rows": 653912,
+      "parts": 236,
+      "parts_listing": "tasks/family-research-20261022/replay-artifacts/20231003/root-frames/SHA256SUMS",
+      "markets_commit": "ac52a6ac59a9610aba031740bd29a93b2dcb614d",
+      "session": "20231003",
+      "markets_data_path": null,
+      "target": "s3://bento-568968024170-us-east-2-an/root-frames/20231003/",
+      "note": "ROOT frame spool split into sub-100 MB parts; not for any git repository; verify parts against SHA256SUMS after the move"
+    },
+    "status": "historical_archive_reference_not_an_available_file",
+    "action": "do not fetch prohibited external storage; resolve from GitHub final handoff"
+  },
+  {
+    "source_manifest_entry": {
+      "tier": "archive",
+      "path": "tasks/family-research-20261022/replay-artifacts/20231017/root-frames/",
+      "bytes_uncompressed": 581067333483,
+      "spool_sha256": "729dcd74f72124092c0c0816e69a05d137217f80369b424c552ef10783c5fcf8",
+      "rows": 635170,
+      "parts": 243,
+      "parts_listing": "tasks/family-research-20261022/replay-artifacts/20231017/root-frames/SHA256SUMS",
+      "markets_commit": "ac52a6ac59a9610aba031740bd29a93b2dcb614d",
+      "session": "20231017",
+      "markets_data_path": null,
+      "target": "s3://bento-568968024170-us-east-2-an/root-frames/20231017/",
+      "note": "ROOT frame spool split into sub-100 MB parts; not for any git repository; verify parts against SHA256SUMS after the move"
+    },
+    "status": "historical_archive_reference_not_an_available_file",
+    "action": "do not fetch prohibited external storage; resolve from GitHub final handoff"
+  }
+]
