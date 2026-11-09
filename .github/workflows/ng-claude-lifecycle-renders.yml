@@ -1,0 +1,133 @@
+name: Complete Claude four-day lifecycle renders
+on:
+  push:
+    branches: [codex/native-dipole-artifacts-20261108]
+    paths: [.github/workflows/ng-claude-lifecycle-renders.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ng-claude-lifecycle-renders
+  cancel-in-progress: false
+env:
+  CODE_REV: 141d876541aae7e04e5de242d0af0a9e047228b9
+  RED_REV: ea4d8487434c901781969d706ae44265d6d2d005
+  SOURCE_REV: beb2104c079045c24832f2279eac5e8e69bc576e
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify failing contracts then implemented behavior
+        run: |
+          mkdir -p "$RUNNER_TEMP/red" "$RUNNER_TEMP/green" "$RUNNER_TEMP/validation"
+          for file in test_render_core.py render_core.py; do
+            curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$RED_REV/agent-pass/claude-render-completion/$file" -o "$RUNNER_TEMP/red/$file"
+            curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/claude-render-completion/$file" -o "$RUNNER_TEMP/green/$file"
+          done
+          cd "$RUNNER_TEMP/red"
+          set +e
+          python -m unittest -v test_render_core.py > "$RUNNER_TEMP/validation/red.txt" 2>&1
+          status=$?
+          set -e
+          test "$status" = 1
+          grep -q NotImplementedError "$RUNNER_TEMP/validation/red.txt"
+          cd "$RUNNER_TEMP/green"
+          python -m unittest -v test_render_core.py 2>&1 | tee "$RUNNER_TEMP/validation/green.txt"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: render-validation
+          path: ${{ runner.temp }}/validation
+  render:
+    needs: contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        day: ['20231002', '20231003', '20231017', '20231018']
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==2.2.6 matplotlib==3.10.3 pillow==11.2.1
+      - name: Render saved individual arrays
+        env:
+          DAY: ${{ matrix.day }}
+          SHARD: ${{ matrix.shard }}
+          MPLCONFIGDIR: ${{ runner.temp }}/mpl
+        run: |
+          mkdir -p "$RUNNER_TEMP/code"
+          for file in complete.py render_core.py; do
+            curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/claude-render-completion/$file" -o "$RUNNER_TEMP/code/$file"
+          done
+          python -u "$RUNNER_TEMP/code/complete.py" --day "$DAY" --shard "$SHARD" --output "$RUNNER_TEMP/results/$DAY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: claude-render-${{ matrix.day }}-${{ matrix.shard }}
+          path: ${{ runner.temp }}/results
+          compression-level: 0
+  audit-publish:
+    needs: [render, contracts]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OUTPUT_PATH: tasks/family-research-20261022/claude-lifecycle-renders/run-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/native-dipole-artifacts-20261108
+          sparse-checkout: .github
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==2.2.6 pillow==11.2.1
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: claude-render-*
+          merge-multiple: true
+          path: ${{ env.OUTPUT_PATH }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: render-validation
+          path: ${{ env.OUTPUT_PATH }}/validation
+      - name: Reconcile every page to original saved inputs
+        run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/claude-render-completion/audit.py" -o "$RUNNER_TEMP/audit.py"
+          python -u "$RUNNER_TEMP/audit.py" "$OUTPUT_PATH"
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/claude-render-completion/README.md" -o "$OUTPUT_PATH/README.md"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lifecycle-20231002-complete
+          path: ${{ env.OUTPUT_PATH }}/20231002
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lifecycle-20231003-complete
+          path: ${{ env.OUTPUT_PATH }}/20231003
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lifecycle-20231017-complete
+          path: ${{ env.OUTPUT_PATH }}/20231017
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lifecycle-20231018-complete
+          path: ${{ env.OUTPUT_PATH }}/20231018
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lifecycle-preview-and-audit
+          path: |
+            ${{ env.OUTPUT_PATH }}/previews
+            ${{ env.OUTPUT_PATH }}/AUDIT.json
+            ${{ env.OUTPUT_PATH }}/PREVIEWS.json
+      - name: Preserve renders and receipts in data repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --sparse "$OUTPUT_PATH"
+          git commit -m "data: complete four-day Claude individual lifecycle renders"
+          git pull --rebase origin codex/native-dipole-artifacts-20261108
+          git push origin HEAD:codex/native-dipole-artifacts-20261108
