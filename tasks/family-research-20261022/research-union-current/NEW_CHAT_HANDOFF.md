@@ -1,5 +1,10 @@
 # Continue after the discovery-focused reanalysis
 
+## Latest user correction: all strategies go into paper trading
+
+The user explicitly rejected observation-only treatment. [Version 1.2](paper-validation-20261109/PAPER_STRATEGIES_v1_2.json) is now authoritative for paper policy. Both defined rules R1 and R2 have paper_enabled=true, equal operational prerequisites and independent virtual ledgers. Each ledger keeps its one-contract, 20-entry and 12-tick loss limits; at most two virtual contracts total. Remove the R2 evidence veto and R1 priority suppression. Runtime execution is still off because the platform, exact contract/session and execution integration remain unset. No trading started. 23 reference tests pass; no full R2 runner exists yet. Historical v1.1 files and workbook readiness labels below remain provenance, not current policy. Additional causal rule definitions should also enter paper testing; do not fabricate entries from future labels or claim undefined hypotheses are already implemented.
+
+
 ## Paper preparation after “Proceed” — 2026-11-09
 
 [Offline preparation report](paper-validation-20261109/README.md): 22 synthetic reference contract tests passed; [receipt](paper-validation-20261109/CHECK_RECEIPT.json) and [unset session template](paper-validation-20261109/SESSION_TEMPLATE.json) are saved. This is not a full runner, historical strategy backtest or adapter certification. Both rules remain disabled; R2 is observation-only. No adapter was connected and no order was sent. The user was asked for the paper platform, exact NG contract and session hours; no reply had arrived at this checkpoint. Read the report's remaining integration checks before claiming execution readiness. The existing crypto paper adapter is unsuitable; the native NG research adapter's inclusive flow cutoff differs from R1's exclusive cutoff. Existing research adapters and workbooks were not modified.

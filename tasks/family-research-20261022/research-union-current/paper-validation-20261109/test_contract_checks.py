@@ -108,8 +108,11 @@ class ContractTests(unittest.TestCase):
         self.assertIn('fees_round_turn_usd',reasons)
         self.assertIn('full_runner_acceptance_receipt',reasons)
 
-    def test_r2_always_blocked_in_this_version(self):
-        self.assertIn('R2_observation_only',activation_blockers({},'R2'))
+    def test_r2_has_same_operational_requirements_as_r1(self):
+        self.assertEqual(activation_blockers({},'R2'),activation_blockers({},'R1'))
+
+    def test_unknown_rule_still_rejected(self):
+        self.assertIn('unknown_strategy',activation_blockers({},'R99'))
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

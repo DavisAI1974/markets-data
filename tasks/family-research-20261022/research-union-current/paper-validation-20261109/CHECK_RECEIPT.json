@@ -1,12 +1,12 @@
 {
-  "created_utc": "2026-11-09T19:55:15.223631+00:00",
+  "created_utc": "2026-11-09T20:10:28.017250+00:00",
   "kind": "synthetic_reference_contract_tests_only",
-  "tests": 22,
+  "tests": 23,
   "failures": 0,
   "errors": 0,
   "passed": true,
   "python": "3.13.7",
-  "rule_version": "priority-paper-v1.1-discovery-20261109",
+  "rule_version": "priority-paper-v1.2-all-rules-20261109",
   "activation_blockers": [
     "execution_adapter",
     "contract_id",
@@ -21,10 +21,13 @@
   "orders_submitted": 0,
   "adapter_connected": false,
   "source_sha256": {
-    "E:\\Markets\\outputs\\research-union-20261109\\discovery-depth\\PAPER_STRATEGIES_v1_1.json": "eb81f78393a3a2d27792984b006d5be29cd8a105cf28044549e1380aca4248fc",
-    "E:\\Markets\\outputs\\research-union-20261109\\git-publication\\tasks\\family-research-20261022\\research-union-current\\paper-validation-20261109\\contract_checks.py": "5999681da03211c2d684ae3f03d14026bc8b363fbcd19e25cd8a1cb5a60ee00c",
-    "E:\\Markets\\outputs\\research-union-20261109\\git-publication\\tasks\\family-research-20261022\\research-union-current\\paper-validation-20261109\\test_contract_checks.py": "d25371dd2550aa68ab7f1654b1450e027283ae0f56003b54b265d9e4e764a608",
-    "E:\\Markets\\executor\\exchanges\\paper.py": "43d988ea590a7896e6fc9676ba45aae43802581766bfb38b2f8eff16c1bcbb40",
-    "E:\\Markets\\research\\ng_exhaustion_mbo_v4_state_adapter_20260820.py": "d754b8c56d22ee81ca743b9112ec0136417d7904541a1aa52c71412a911867a3"
-  }
+    "E:\\Markets\\outputs\\research-union-20261109\\git-publication\\tasks\\family-research-20261022\\research-union-current\\paper-validation-20261109\\PAPER_STRATEGIES_v1_2.json": "db532e0dd2b523aec935c4d2dfe002da30cba754fb3d68b78d69a34e09083a58",
+    "E:\\Markets\\outputs\\research-union-20261109\\git-publication\\tasks\\family-research-20261022\\research-union-current\\paper-validation-20261109\\contract_checks.py": "dc9c3da6a64f964d935a481374aab278f8f926dfee3812f014e1179d32475fca",
+    "E:\\Markets\\outputs\\research-union-20261109\\git-publication\\tasks\\family-research-20261022\\research-union-current\\paper-validation-20261109\\test_contract_checks.py": "fed4bc33fbb5cbd8139522965489957f498ecea887c897afd5e45d2150c5e26b"
+  },
+  "rule_paper_enabled": {
+    "R1": true,
+    "R2": true
+  },
+  "execution_enabled": false
 }

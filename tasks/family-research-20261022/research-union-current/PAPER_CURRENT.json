@@ -1,0 +1,11 @@
+{
+  "rule_version": "priority-paper-v1.2-all-rules-20261109",
+  "specification": "paper-validation-20261109/PAPER_STRATEGIES_v1_2.json",
+  "paper_enabled_strategies": [
+    "R1",
+    "R2"
+  ],
+  "execution_enabled": false,
+  "supersedes": "discovery-depth-20261109/PAPER_STRATEGIES_v1_1.json",
+  "reason": "User requires all defined strategies in paper testing, with no observation-only category."
+}

@@ -1,4 +1,4 @@
-"""Offline reference checks for v1.1. No broker, feed reader, order sender or runner.
+"""Offline reference checks for v1.2. No broker, feed reader, order sender or runner.
 
 Group.index is a locally assigned COMPLETE-group ordinal, not exchange sequence.
 Prices are integer NG ticks. Clocks use one already-verified receive-time domain;
@@ -168,8 +168,6 @@ def activation_blockers(config, strategy='R1'):
                 'fees_round_turn_usd','arrival_clock_mapping_receipt','full_runner_acceptance_receipt',
                 'feed_continuity_receipt','prospective_rule_freeze_receipt')
     blocked = [key for key in required if config.get(key) is None or config.get(key) == '']
-    if strategy == 'R2':
-        blocked.append('R2_observation_only')
-    elif strategy != 'R1':
+    if strategy not in ('R1', 'R2'):
         blocked.append('unknown_strategy')
     return blocked

@@ -14,14 +14,15 @@ test_gap_invalidates_immediately (test_contract_checks.ContractTests.test_gap_in
 test_input_guards (test_contract_checks.ContractTests.test_input_guards) ... ok
 test_invalid_quote_never_fills (test_contract_checks.ContractTests.test_invalid_quote_never_fills) ... ok
 test_later_group_confirms_long (test_contract_checks.ContractTests.test_later_group_confirms_long) ... ok
-test_r2_always_blocked_in_this_version (test_contract_checks.ContractTests.test_r2_always_blocked_in_this_version) ... ok
+test_r2_has_same_operational_requirements_as_r1 (test_contract_checks.ContractTests.test_r2_has_same_operational_requirements_as_r1) ... ok
 test_same_group_never_confirms (test_contract_checks.ContractTests.test_same_group_never_confirms) ... ok
 test_short_is_symmetric (test_contract_checks.ContractTests.test_short_is_symmetric) ... ok
 test_sign_failure_consumes_arm (test_contract_checks.ContractTests.test_sign_failure_consumes_arm) ... ok
 test_unconfigured_activation_remains_blocked (test_contract_checks.ContractTests.test_unconfigured_activation_remains_blocked) ... ok
 test_unknown_fees_are_not_zero (test_contract_checks.ContractTests.test_unknown_fees_are_not_zero) ... ok
+test_unknown_rule_still_rejected (test_contract_checks.ContractTests.test_unknown_rule_still_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 22 tests in 0.001s
+Ran 23 tests in 0.001s
 
 OK

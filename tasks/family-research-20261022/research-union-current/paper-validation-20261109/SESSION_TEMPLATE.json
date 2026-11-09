@@ -4,11 +4,17 @@
   "session_start_utc": null,
   "session_end_utc": null,
   "fees_round_turn_usd": null,
-  "rule_version": "priority-paper-v1.1-discovery-20261109",
+  "rule_version": "priority-paper-v1.2-all-rules-20261109",
   "mode": "paper_only",
-  "paper_enabled": false,
+  "paper_enabled": true,
   "arrival_clock_mapping_receipt": null,
   "full_runner_acceptance_receipt": null,
   "feed_continuity_receipt": null,
-  "prospective_rule_freeze_receipt": null
+  "prospective_rule_freeze_receipt": null,
+  "execution_enabled": false,
+  "paper_enabled_strategies": [
+    "R1",
+    "R2"
+  ],
+  "ledger_mode": "independent_per_rule"
 }
