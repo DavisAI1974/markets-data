@@ -1,0 +1,42 @@
+name: Publish verified retained input packets
+on:
+  push:
+    branches: [codex/frankie-four-day-audit-20261109]
+    paths: [.github/workflows/publish-retained-packets.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      GH_TOKEN: ${{ github.token }}
+      CODE_REV: 26b508b39dc4b5cdbca98e170d3e2df071955ae3
+    steps:
+      - name: Publish retained calculations serially with rate-limit recovery
+        run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/research/kalshi/frankie_boss/four_day_pins/publish_verified_packet.py" -o /tmp/publish.py
+          for packet in book:20231002:42617700678 native:20231002:42621496819 native:20231003:42621496819 native:20231017:42621496819; do
+            IFS=: read -r kind day source_run <<< "$packet"
+            directory="/tmp/retained-$kind-$day"
+            if [ "$kind" = book ]; then
+              name="partial-book-recovery-$day"
+              branch="codex/frankie-book-recovery-$day-$source_run"
+              prefix="tasks/family-research-20261022/frankie-four-day-pins/book-recovery-$source_run-1/$day"
+            else
+              name="retained-native-lifecycle-$day"
+              branch="codex/frankie-lifecycle-recovery-$day-$source_run"
+              prefix="tasks/family-research-20261022/frankie-four-day-pins/native-lifecycle-$source_run-1/$day"
+            fi
+            if gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/$branch" --jq .object.sha; then
+              echo "Already published $kind $day"
+              continue
+            fi
+            for attempt in $(seq 1 30); do
+              if gh run download "$source_run" --repo "$GITHUB_REPOSITORY" --name "$name" --dir "$directory"; then break; fi
+              sleep 30
+            done
+            test -f "$directory/RECOVERY_RECEIPT.json"
+            python /tmp/publish.py "$directory" "$branch" "$prefix"
+          done
