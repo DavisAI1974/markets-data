@@ -1,0 +1,93 @@
+{
+  "A": {
+    "trades": 30739,
+    "stretches": 9109,
+    "legs": 5120,
+    "families": 764,
+    "family_windows": 20628,
+    "family_neighbor_links": 93762,
+    "dipoles": 863,
+    "trade_dipole_links": 10451,
+    "reference_chronology_counts": "passed",
+    "external_layers": "deferred",
+    "full_path_availability": "not inferred from nominal lifetime endpoint"
+  },
+  "B": {
+    "signals": {
+      "size_one": 27551,
+      "early_falling": 64079,
+      "retreat_previous_second": 18124
+    },
+    "quote_episodes": 27551,
+    "delayed_outcomes": 329262,
+    "adjacent_opportunities": 583593,
+    "reference_window_counts": {
+      "B": {
+        "size_one": 511,
+        "early_falling": 1438,
+        "retreat_previous_second": 341
+      },
+      "A": {
+        "size_one": 501,
+        "early_falling": 1412,
+        "retreat_previous_second": 357
+      }
+    },
+    "endings": {
+      "recovered_same_price": 14600,
+      "retreated": 12677,
+      "improved": 274
+    },
+    "arrival_cells": [
+      {
+        "current_has_print": false,
+        "standalone_falling_touch": false,
+        "opportunities": 498417,
+        "next_print_group": 22312
+      },
+      {
+        "current_has_print": false,
+        "standalone_falling_touch": true,
+        "opportunities": 55379,
+        "next_print_group": 2408
+      },
+      {
+        "current_has_print": true,
+        "standalone_falling_touch": false,
+        "opportunities": 21902,
+        "next_print_group": 3505
+      },
+      {
+        "current_has_print": true,
+        "standalone_falling_touch": true,
+        "opportunities": 7895,
+        "next_print_group": 1572
+      }
+    ],
+    "definitions": "historical 1ms entry and 1/5/30s exits; first later completed quote; observed spread only, no fees or fill claim"
+  },
+  "C": {
+    "large_moves": 64,
+    "prior_signal_links": 4822,
+    "quote_ending_mechanisms": 27551,
+    "selected_book_groups": 54845,
+    "individual_selected_actions": 138510,
+    "rank_counts": {
+      "bid_rank_increase": 135225,
+      "bid_rank_increase_without_shared_add": 9125,
+      "ask_rank_increase": 125302,
+      "ask_rank_increase_without_shared_add": 8793
+    },
+    "full_recoveries_observed": 49,
+    "reference_large_move_count": "passed",
+    "scope": "All eligible retained groups; historical 375/391 bounded window is not silently substituted for whole-day scope",
+    "recovery_definition": "First5s most displaced midpoint from pre-move quote, then first half/full return within600s; first passage is not event death"
+  },
+  "joint_analysis": {
+    "linked_signals": 109754,
+    "condition_cells": 453,
+    "conditioned_outcomes": 329262,
+    "denominator_conservation": "passed",
+    "meaning": "Descriptive joint cells on separate event populations; counts retain failed/flat/censored cases, no causal or independent-trial claim"
+  }
+}

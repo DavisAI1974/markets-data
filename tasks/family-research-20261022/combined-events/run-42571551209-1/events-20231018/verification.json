@@ -1,0 +1,135 @@
+{
+  "individual_signal_clocks": "passed",
+  "prior_print_order": "passed",
+  "episode_endings": "passed",
+  "delayed_quote_clocks": "passed",
+  "exact_integer_ns_schema": "passed",
+  "signals": 109754,
+  "historical_reference": "All twelve side/rule x horizon outcome cells and thin-ending/by-entry counts reproduced",
+  "reference_outcomes": {
+    "size_one_touch_onset": {
+      "1": {
+        "OBSERVED": 1012,
+        "signed_twice_midpoint_change_raw_1": 377,
+        "cross_spread_pnl_raw_0": 127,
+        "cross_spread_pnl_raw_-1": 846,
+        "signed_twice_midpoint_change_raw_0": 361,
+        "signed_twice_midpoint_change_raw_-1": 274,
+        "cross_spread_pnl_raw_1": 39
+      },
+      "5": {
+        "OBSERVED": 1010,
+        "signed_twice_midpoint_change_raw_-1": 369,
+        "cross_spread_pnl_raw_-1": 682,
+        "signed_twice_midpoint_change_raw_1": 466,
+        "cross_spread_pnl_raw_0": 189,
+        "signed_twice_midpoint_change_raw_0": 175,
+        "cross_spread_pnl_raw_1": 139,
+        "EXIT_CENSORED": 2
+      },
+      "30": {
+        "OBSERVED": 973,
+        "signed_twice_midpoint_change_raw_-1": 407,
+        "cross_spread_pnl_raw_-1": 572,
+        "signed_twice_midpoint_change_raw_0": 99,
+        "signed_twice_midpoint_change_raw_1": 467,
+        "cross_spread_pnl_raw_0": 119,
+        "cross_spread_pnl_raw_1": 282,
+        "EXIT_CENSORED": 39
+      }
+    },
+    "retreat_to_previous_second": {
+      "1": {
+        "OBSERVED": 698,
+        "signed_twice_midpoint_change_raw_1": 228,
+        "cross_spread_pnl_raw_-1": 618,
+        "signed_twice_midpoint_change_raw_0": 225,
+        "signed_twice_midpoint_change_raw_-1": 245,
+        "cross_spread_pnl_raw_0": 53,
+        "cross_spread_pnl_raw_1": 27
+      },
+      "5": {
+        "OBSERVED": 696,
+        "signed_twice_midpoint_change_raw_-1": 301,
+        "cross_spread_pnl_raw_-1": 525,
+        "signed_twice_midpoint_change_raw_1": 311,
+        "cross_spread_pnl_raw_0": 91,
+        "signed_twice_midpoint_change_raw_0": 84,
+        "cross_spread_pnl_raw_1": 80,
+        "EXIT_CENSORED": 2
+      },
+      "30": {
+        "OBSERVED": 674,
+        "signed_twice_midpoint_change_raw_-1": 319,
+        "cross_spread_pnl_raw_-1": 443,
+        "signed_twice_midpoint_change_raw_0": 59,
+        "signed_twice_midpoint_change_raw_1": 296,
+        "cross_spread_pnl_raw_1": 155,
+        "cross_spread_pnl_raw_0": 76,
+        "EXIT_CENSORED": 24
+      }
+    },
+    "early_B": {
+      "1": {
+        "OBSERVED": 1438,
+        "signed_twice_midpoint_change_raw_flat": 566,
+        "cross_spread_pnl_raw_negative": 1217,
+        "signed_twice_midpoint_change_raw_positive": 422,
+        "signed_twice_midpoint_change_raw_negative": 450,
+        "cross_spread_pnl_raw_flat": 159,
+        "cross_spread_pnl_raw_positive": 62
+      },
+      "5": {
+        "OBSERVED": 1433,
+        "signed_twice_midpoint_change_raw_flat": 282,
+        "cross_spread_pnl_raw_negative": 986,
+        "signed_twice_midpoint_change_raw_negative": 545,
+        "signed_twice_midpoint_change_raw_positive": 606,
+        "cross_spread_pnl_raw_flat": 243,
+        "cross_spread_pnl_raw_positive": 204,
+        "EXIT_CENSORED": 5
+      },
+      "30": {
+        "OBSERVED": 1397,
+        "signed_twice_midpoint_change_raw_negative": 537,
+        "cross_spread_pnl_raw_negative": 777,
+        "signed_twice_midpoint_change_raw_flat": 148,
+        "signed_twice_midpoint_change_raw_positive": 712,
+        "cross_spread_pnl_raw_flat": 228,
+        "cross_spread_pnl_raw_positive": 392,
+        "EXIT_CENSORED": 41
+      }
+    },
+    "early_A": {
+      "1": {
+        "OBSERVED": 1412,
+        "signed_twice_midpoint_change_raw_flat": 532,
+        "cross_spread_pnl_raw_negative": 1149,
+        "signed_twice_midpoint_change_raw_negative": 397,
+        "signed_twice_midpoint_change_raw_positive": 483,
+        "cross_spread_pnl_raw_positive": 63,
+        "cross_spread_pnl_raw_flat": 200
+      },
+      "5": {
+        "OBSERVED": 1398,
+        "signed_twice_midpoint_change_raw_flat": 238,
+        "cross_spread_pnl_raw_negative": 1024,
+        "signed_twice_midpoint_change_raw_positive": 568,
+        "cross_spread_pnl_raw_flat": 211,
+        "cross_spread_pnl_raw_positive": 163,
+        "signed_twice_midpoint_change_raw_negative": 592,
+        "EXIT_CENSORED": 14
+      },
+      "30": {
+        "OBSERVED": 1344,
+        "signed_twice_midpoint_change_raw_positive": 516,
+        "cross_spread_pnl_raw_positive": 287,
+        "cross_spread_pnl_raw_flat": 151,
+        "cross_spread_pnl_raw_negative": 906,
+        "signed_twice_midpoint_change_raw_flat": 130,
+        "signed_twice_midpoint_change_raw_negative": 698,
+        "EXIT_CENSORED": 68
+      }
+    }
+  }
+}
