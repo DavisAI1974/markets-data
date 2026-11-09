@@ -1,0 +1,1416 @@
+{
+  "cot.023391": {
+    "normalized_sha256": "336a1e330b5a20d2cd655e0a5b1b7cbf8d30647821186b6b1f460e05049565b1",
+    "point_name": "cot.023391",
+    "scope_id": "a75bfce86897a7a5b1b6b44ade20093df9cf48deda784107fbeecd81e176f8a0",
+    "observation_id": "bf31c5474469e41b0d3a7cf6dad63714d154f0f5a52086a136df2c22ff46004b",
+    "available_ns": 1515184200000000000,
+    "event_ns": 1514930400000000000,
+    "source_published_ns": 1515184200000000000,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "report_date": "2018-01-02"
+    },
+    "numeric": {
+      "managed_money_long": 424539.0,
+      "managed_money_net": 403020.0,
+      "managed_money_net_chg_wow": null,
+      "managed_money_net_pctile_1y": null,
+      "managed_money_net_pctile_3y": null,
+      "managed_money_short": 21519.0,
+      "open_interest": 5094670.0,
+      "other_reportable_net": 17198.0,
+      "pctile_1y_n_obs": 1.0,
+      "pctile_3y_n_obs": 1.0,
+      "producer_merchant_net": 1889012.0,
+      "swap_dealer_net": -2338653.0
+    },
+    "states": {
+      "managed_money_long": "PRESENT",
+      "managed_money_net": "PRESENT",
+      "managed_money_net_chg_wow": "SOURCE_NULL",
+      "managed_money_net_pctile_1y": "SOURCE_NULL",
+      "managed_money_net_pctile_3y": "SOURCE_NULL",
+      "managed_money_short": "PRESENT",
+      "open_interest": "PRESENT",
+      "other_reportable_net": "PRESENT",
+      "pctile_1y_n_obs": "PRESENT",
+      "pctile_3y_n_obs": "PRESENT",
+      "producer_merchant_net": "PRESENT",
+      "swap_dealer_net": "PRESENT"
+    },
+    "categories": {
+      "market_name": "NATURAL GAS ICE HENRY HUB - ICE FUTURES ENERGY DIV",
+      "publication_confidence": "derived",
+      "publication_delayed": false,
+      "store_publication_confidence": "derived",
+      "store_publication_delayed": false
+    },
+    "provenance": {
+      "publication_ts": "2018-01-05T15:30:00-05:00"
+    },
+    "scope": {
+      "contract_code": "023391"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:1ee038440136246133a5e0a4427b4fe9e34e8c8192008557173238660b80ffb2",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20221011",
+        "source_sha256": "1ee038440136246133a5e0a4427b4fe9e34e8c8192008557173238660b80ffb2",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:2073697e3a3b9be12330a3d83b5c0c3e114ec2be6a5a0ec0db5ba96f72129409",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20231011",
+        "source_sha256": "2073697e3a3b9be12330a3d83b5c0c3e114ec2be6a5a0ec0db5ba96f72129409",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:30f044e1c65cf3d32fbd950d10e78e9b084bcb1fd213e3ee52cff404df35821a",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20221018",
+        "source_sha256": "30f044e1c65cf3d32fbd950d10e78e9b084bcb1fd213e3ee52cff404df35821a",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:3b169f86b0b433528381e407012aac496c407e7d0cbf3f5adb7c3b87bbeccaf0",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20231018",
+        "source_sha256": "3b169f86b0b433528381e407012aac496c407e7d0cbf3f5adb7c3b87bbeccaf0",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:45f14d5d8d1efa0e7480fed38318536383d3e0e922db0ac839a47df599e9de31",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20211005",
+        "source_sha256": "45f14d5d8d1efa0e7480fed38318536383d3e0e922db0ac839a47df599e9de31",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:4b10ea92eb368e723768272f539304761c2cb5310b36b0855cd0a7b76c049639",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20221004",
+        "source_sha256": "4b10ea92eb368e723768272f539304761c2cb5310b36b0855cd0a7b76c049639",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:75451caf9b525422f3f6f9dc6151cc0d68babcff8f620b8f4b1cb7659e818219",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20211020",
+        "source_sha256": "75451caf9b525422f3f6f9dc6151cc0d68babcff8f620b8f4b1cb7659e818219",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:944376d372fb92f036287b40182c7d036425ecf9958afa0685a57c67e4dff369",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20231017",
+        "source_sha256": "944376d372fb92f036287b40182c7d036425ecf9958afa0685a57c67e4dff369",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:9ce963a69b6883a44ffce9d8b2a6d58ae16ddee61b3c54e733480a24d4e3d57f",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20211006",
+        "source_sha256": "9ce963a69b6883a44ffce9d8b2a6d58ae16ddee61b3c54e733480a24d4e3d57f",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:b5308e408ff0fdd8b558c6365b1553df55f2151f5d0672bf032cc704fc039870",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20221019",
+        "source_sha256": "b5308e408ff0fdd8b558c6365b1553df55f2151f5d0672bf032cc704fc039870",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:d9d9a7bdfe8395f3b0da0a3b848b454088147941a37f98c3bdfa63791776fcf0",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20211012",
+        "source_sha256": "d9d9a7bdfe8395f3b0da0a3b848b454088147941a37f98c3bdfa63791776fcf0",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:da894f0a26f2f6c29bf57fb210a16d0c8342c38cb0e56e79e9f2ffe7d5df173c",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20231010",
+        "source_sha256": "da894f0a26f2f6c29bf57fb210a16d0c8342c38cb0e56e79e9f2ffe7d5df173c",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:ea1743657277553846ca4ff5de3bbd17b7d353017b23420558fd99072b2066f9",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20231004",
+        "source_sha256": "ea1743657277553846ca4ff5de3bbd17b7d353017b23420558fd99072b2066f9",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:f8d440319382a180a7c758c722eb09591a96ecb42c4f3a44cfdd6cd1c5bd7c0b",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20211013",
+        "source_sha256": "f8d440319382a180a7c758c722eb09591a96ecb42c4f3a44cfdd6cd1c5bd7c0b",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:f8e729ac62c6b3838674e54299b2ca7d51d2ae4c3f16c7f8e79600234ea84b5a",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20221012",
+        "source_sha256": "f8e729ac62c6b3838674e54299b2ca7d51d2ae4c3f16c7f8e79600234ea84b5a",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:fdc272b04238002251a48fe70c9f9483fb5b396b7dca5a24352dd17e4378a776",
+        "source_ordinal": 0,
+        "raw_row_sha256": "bf775b94f10d235eb37341af4edeccaf10831d7b5890de2b853d871e5de050ad",
+        "source_day": "20221005",
+        "source_sha256": "fdc272b04238002251a48fe70c9f9483fb5b396b7dca5a24352dd17e4378a776",
+        "vintage": "CFTC archive as retrieved"
+      }
+    ],
+    "disposition": "CFTC_HISTORICAL_EVIDENCE"
+  },
+  "cot.023392": {
+    "normalized_sha256": "bb7415e2fece349a8186d42117cd3ea2d0313431a94eae1205f59d31005529cd",
+    "point_name": "cot.023392",
+    "scope_id": "5833c190db8080e885d76ebe37b54adaf09973d1fdf515b4adfc238f2ecc6d23",
+    "observation_id": "57a83e166ac2bd88550f34bcb7b5caffec928324911d089405c62c9380af4f46",
+    "available_ns": 1515184200000000000,
+    "event_ns": 1514930400000000000,
+    "source_published_ns": 1515184200000000000,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "report_date": "2018-01-02"
+    },
+    "numeric": {
+      "managed_money_long": 14815.0,
+      "managed_money_net": -140907.0,
+      "managed_money_net_chg_wow": null,
+      "managed_money_net_pctile_1y": null,
+      "managed_money_net_pctile_3y": null,
+      "managed_money_short": 155722.0,
+      "open_interest": 281929.0,
+      "other_reportable_net": 33276.0,
+      "pctile_1y_n_obs": 1.0,
+      "pctile_3y_n_obs": 1.0,
+      "producer_merchant_net": -16578.0,
+      "swap_dealer_net": 122483.0
+    },
+    "states": {
+      "managed_money_long": "PRESENT",
+      "managed_money_net": "PRESENT",
+      "managed_money_net_chg_wow": "SOURCE_NULL",
+      "managed_money_net_pctile_1y": "SOURCE_NULL",
+      "managed_money_net_pctile_3y": "SOURCE_NULL",
+      "managed_money_short": "PRESENT",
+      "open_interest": "PRESENT",
+      "other_reportable_net": "PRESENT",
+      "pctile_1y_n_obs": "PRESENT",
+      "pctile_3y_n_obs": "PRESENT",
+      "producer_merchant_net": "PRESENT",
+      "swap_dealer_net": "PRESENT"
+    },
+    "categories": {
+      "market_name": "NATURAL GAS PENULTIMATE ICE - ICE FUTURES ENERGY DIV",
+      "publication_confidence": "derived",
+      "publication_delayed": false,
+      "store_publication_confidence": "derived",
+      "store_publication_delayed": false
+    },
+    "provenance": {
+      "publication_ts": "2018-01-05T15:30:00-05:00"
+    },
+    "scope": {
+      "contract_code": "023392"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:1ee038440136246133a5e0a4427b4fe9e34e8c8192008557173238660b80ffb2",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20221011",
+        "source_sha256": "1ee038440136246133a5e0a4427b4fe9e34e8c8192008557173238660b80ffb2",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:2073697e3a3b9be12330a3d83b5c0c3e114ec2be6a5a0ec0db5ba96f72129409",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20231011",
+        "source_sha256": "2073697e3a3b9be12330a3d83b5c0c3e114ec2be6a5a0ec0db5ba96f72129409",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:30f044e1c65cf3d32fbd950d10e78e9b084bcb1fd213e3ee52cff404df35821a",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20221018",
+        "source_sha256": "30f044e1c65cf3d32fbd950d10e78e9b084bcb1fd213e3ee52cff404df35821a",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:3b169f86b0b433528381e407012aac496c407e7d0cbf3f5adb7c3b87bbeccaf0",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20231018",
+        "source_sha256": "3b169f86b0b433528381e407012aac496c407e7d0cbf3f5adb7c3b87bbeccaf0",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:45f14d5d8d1efa0e7480fed38318536383d3e0e922db0ac839a47df599e9de31",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20211005",
+        "source_sha256": "45f14d5d8d1efa0e7480fed38318536383d3e0e922db0ac839a47df599e9de31",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:4b10ea92eb368e723768272f539304761c2cb5310b36b0855cd0a7b76c049639",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20221004",
+        "source_sha256": "4b10ea92eb368e723768272f539304761c2cb5310b36b0855cd0a7b76c049639",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:75451caf9b525422f3f6f9dc6151cc0d68babcff8f620b8f4b1cb7659e818219",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20211020",
+        "source_sha256": "75451caf9b525422f3f6f9dc6151cc0d68babcff8f620b8f4b1cb7659e818219",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:944376d372fb92f036287b40182c7d036425ecf9958afa0685a57c67e4dff369",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20231017",
+        "source_sha256": "944376d372fb92f036287b40182c7d036425ecf9958afa0685a57c67e4dff369",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:9ce963a69b6883a44ffce9d8b2a6d58ae16ddee61b3c54e733480a24d4e3d57f",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20211006",
+        "source_sha256": "9ce963a69b6883a44ffce9d8b2a6d58ae16ddee61b3c54e733480a24d4e3d57f",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:b5308e408ff0fdd8b558c6365b1553df55f2151f5d0672bf032cc704fc039870",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20221019",
+        "source_sha256": "b5308e408ff0fdd8b558c6365b1553df55f2151f5d0672bf032cc704fc039870",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:d9d9a7bdfe8395f3b0da0a3b848b454088147941a37f98c3bdfa63791776fcf0",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20211012",
+        "source_sha256": "d9d9a7bdfe8395f3b0da0a3b848b454088147941a37f98c3bdfa63791776fcf0",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:da894f0a26f2f6c29bf57fb210a16d0c8342c38cb0e56e79e9f2ffe7d5df173c",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20231010",
+        "source_sha256": "da894f0a26f2f6c29bf57fb210a16d0c8342c38cb0e56e79e9f2ffe7d5df173c",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:ea1743657277553846ca4ff5de3bbd17b7d353017b23420558fd99072b2066f9",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20231004",
+        "source_sha256": "ea1743657277553846ca4ff5de3bbd17b7d353017b23420558fd99072b2066f9",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:f8d440319382a180a7c758c722eb09591a96ecb42c4f3a44cfdd6cd1c5bd7c0b",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20211013",
+        "source_sha256": "f8d440319382a180a7c758c722eb09591a96ecb42c4f3a44cfdd6cd1c5bd7c0b",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:f8e729ac62c6b3838674e54299b2ca7d51d2ae4c3f16c7f8e79600234ea84b5a",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20221012",
+        "source_sha256": "f8e729ac62c6b3838674e54299b2ca7d51d2ae4c3f16c7f8e79600234ea84b5a",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:fdc272b04238002251a48fe70c9f9483fb5b396b7dca5a24352dd17e4378a776",
+        "source_ordinal": 0,
+        "raw_row_sha256": "f6e1908f5e222b0146769d60be25f4704b3f4f7d0402cce593d4166d04d85735",
+        "source_day": "20221005",
+        "source_sha256": "fdc272b04238002251a48fe70c9f9483fb5b396b7dca5a24352dd17e4378a776",
+        "vintage": "CFTC archive as retrieved"
+      }
+    ],
+    "disposition": "CFTC_HISTORICAL_EVIDENCE"
+  },
+  "cot.0233AG": {
+    "normalized_sha256": "38c8ab567dc087562d8b7b9a332b383fa4b2642f3ea5460032bea2e551cbadd5",
+    "point_name": "cot.0233AG",
+    "scope_id": "223997195f2c91411a62e4ec944ea74b191ecb518ca37e217d88b71bf3dd6a4d",
+    "observation_id": "1a2f5e776a2fc5aad57c903c4671fa8873fe7eede5fe12728c1c35bc2fe18c0b",
+    "available_ns": 1515184200000000000,
+    "event_ns": 1514930400000000000,
+    "source_published_ns": 1515184200000000000,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "report_date": "2018-01-02"
+    },
+    "numeric": {
+      "managed_money_long": 10912.0,
+      "managed_money_net": 10602.0,
+      "managed_money_net_chg_wow": null,
+      "managed_money_net_pctile_1y": null,
+      "managed_money_net_pctile_3y": null,
+      "managed_money_short": 310.0,
+      "open_interest": 135119.0,
+      "other_reportable_net": 2460.0,
+      "pctile_1y_n_obs": 1.0,
+      "pctile_3y_n_obs": 1.0,
+      "producer_merchant_net": 6395.0,
+      "swap_dealer_net": -16683.0
+    },
+    "states": {
+      "managed_money_long": "PRESENT",
+      "managed_money_net": "PRESENT",
+      "managed_money_net_chg_wow": "SOURCE_NULL",
+      "managed_money_net_pctile_1y": "SOURCE_NULL",
+      "managed_money_net_pctile_3y": "SOURCE_NULL",
+      "managed_money_short": "PRESENT",
+      "open_interest": "PRESENT",
+      "other_reportable_net": "PRESENT",
+      "pctile_1y_n_obs": "PRESENT",
+      "pctile_3y_n_obs": "PRESENT",
+      "producer_merchant_net": "PRESENT",
+      "swap_dealer_net": "PRESENT"
+    },
+    "categories": {
+      "market_name": "HENRY HUB - TAILGATE LOUISIANA (BASIS) - ICE FUTURES ENERGY DIV",
+      "publication_confidence": "derived",
+      "publication_delayed": false,
+      "store_publication_confidence": "derived",
+      "store_publication_delayed": false
+    },
+    "provenance": {
+      "publication_ts": "2018-01-05T15:30:00-05:00"
+    },
+    "scope": {
+      "contract_code": "0233AG"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:1ee038440136246133a5e0a4427b4fe9e34e8c8192008557173238660b80ffb2",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20221011",
+        "source_sha256": "1ee038440136246133a5e0a4427b4fe9e34e8c8192008557173238660b80ffb2",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:2073697e3a3b9be12330a3d83b5c0c3e114ec2be6a5a0ec0db5ba96f72129409",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20231011",
+        "source_sha256": "2073697e3a3b9be12330a3d83b5c0c3e114ec2be6a5a0ec0db5ba96f72129409",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:30f044e1c65cf3d32fbd950d10e78e9b084bcb1fd213e3ee52cff404df35821a",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20221018",
+        "source_sha256": "30f044e1c65cf3d32fbd950d10e78e9b084bcb1fd213e3ee52cff404df35821a",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:3b169f86b0b433528381e407012aac496c407e7d0cbf3f5adb7c3b87bbeccaf0",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20231018",
+        "source_sha256": "3b169f86b0b433528381e407012aac496c407e7d0cbf3f5adb7c3b87bbeccaf0",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:45f14d5d8d1efa0e7480fed38318536383d3e0e922db0ac839a47df599e9de31",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20211005",
+        "source_sha256": "45f14d5d8d1efa0e7480fed38318536383d3e0e922db0ac839a47df599e9de31",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:4b10ea92eb368e723768272f539304761c2cb5310b36b0855cd0a7b76c049639",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20221004",
+        "source_sha256": "4b10ea92eb368e723768272f539304761c2cb5310b36b0855cd0a7b76c049639",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:75451caf9b525422f3f6f9dc6151cc0d68babcff8f620b8f4b1cb7659e818219",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20211020",
+        "source_sha256": "75451caf9b525422f3f6f9dc6151cc0d68babcff8f620b8f4b1cb7659e818219",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:944376d372fb92f036287b40182c7d036425ecf9958afa0685a57c67e4dff369",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20231017",
+        "source_sha256": "944376d372fb92f036287b40182c7d036425ecf9958afa0685a57c67e4dff369",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:9ce963a69b6883a44ffce9d8b2a6d58ae16ddee61b3c54e733480a24d4e3d57f",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20211006",
+        "source_sha256": "9ce963a69b6883a44ffce9d8b2a6d58ae16ddee61b3c54e733480a24d4e3d57f",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:b5308e408ff0fdd8b558c6365b1553df55f2151f5d0672bf032cc704fc039870",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20221019",
+        "source_sha256": "b5308e408ff0fdd8b558c6365b1553df55f2151f5d0672bf032cc704fc039870",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:d9d9a7bdfe8395f3b0da0a3b848b454088147941a37f98c3bdfa63791776fcf0",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20211012",
+        "source_sha256": "d9d9a7bdfe8395f3b0da0a3b848b454088147941a37f98c3bdfa63791776fcf0",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:da894f0a26f2f6c29bf57fb210a16d0c8342c38cb0e56e79e9f2ffe7d5df173c",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20231010",
+        "source_sha256": "da894f0a26f2f6c29bf57fb210a16d0c8342c38cb0e56e79e9f2ffe7d5df173c",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:ea1743657277553846ca4ff5de3bbd17b7d353017b23420558fd99072b2066f9",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20231004",
+        "source_sha256": "ea1743657277553846ca4ff5de3bbd17b7d353017b23420558fd99072b2066f9",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:f8d440319382a180a7c758c722eb09591a96ecb42c4f3a44cfdd6cd1c5bd7c0b",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20211013",
+        "source_sha256": "f8d440319382a180a7c758c722eb09591a96ecb42c4f3a44cfdd6cd1c5bd7c0b",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:f8e729ac62c6b3838674e54299b2ca7d51d2ae4c3f16c7f8e79600234ea84b5a",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20221012",
+        "source_sha256": "f8e729ac62c6b3838674e54299b2ca7d51d2ae4c3f16c7f8e79600234ea84b5a",
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "manifest:fdc272b04238002251a48fe70c9f9483fb5b396b7dca5a24352dd17e4378a776",
+        "source_ordinal": 0,
+        "raw_row_sha256": "6275ac4a30431b4788dda20f1c6f163c7bc9a43bd040a57ddec9d3ba1284d186",
+        "source_day": "20221005",
+        "source_sha256": "fdc272b04238002251a48fe70c9f9483fb5b396b7dca5a24352dd17e4378a776",
+        "vintage": "CFTC archive as retrieved"
+      }
+    ],
+    "disposition": "CFTC_HISTORICAL_EVIDENCE"
+  },
+  "cot.0233AH": {
+    "normalized_sha256": "268768eef4f78bfc9de99b879e0a2077113a1089d5bf7045cede1754997fd6fc",
+    "point_name": "cot.0233AH",
+    "scope_id": "6d0f8ad9769975d7ded03cbe25f13b3050f6f6b2dd98dd1d61d6f259aaad42c2",
+    "observation_id": "6d6cc7f5ff60f97085141fda52804f3bafda5a8869a79469f2169555bf6b2d14",
+    "available_ns": 1515184200000000000,
+    "event_ns": 1514930400000000000,
+    "source_published_ns": 1515184200000000000,
+    "clock_rule": "SOURCE_READER_STAMP",
+    "observation": {
+      "report_date": "2018-01-02"
+    },
+    "numeric": {
+      "managed_money_long": 32837.0,
+      "managed_money_net": 32713.0,
+      "managed_money_net_chg_wow": null,
+      "managed_money_net_pctile_1y": null,
+      "managed_money_net_pctile_3y": null,
+      "managed_money_short": 124.0,
+      "open_interest": 146007.0,
+      "other_reportable_net": 3565.0,
+      "pctile_1y_n_obs": 1.0,
+      "pctile_3y_n_obs": 1.0,
+      "producer_merchant_net": -45629.0,
+      "swap_dealer_net": 10103.0
+    },
+    "states": {
+      "managed_money_long": "PRESENT",
+      "managed_money_net": "PRESENT",
+      "managed_money_net_chg_wow": "SOURCE_NULL",
+      "managed_money_net_pctile_1y": "SOURCE_NULL",
+      "managed_money_net_pctile_3y": "SOURCE_NULL",
+      "managed_money_short": "PRESENT",
+      "open_interest": "PRESENT",
+      "other_reportable_net": "PRESENT",
+      "pctile_1y_n_obs": "PRESENT",
+      "pctile_3y_n_obs": "PRESENT",
+      "producer_merchant_net": "PRESENT",
+      "swap_dealer_net": "PRESENT"
+    },
+    "categories": {
+      "market_name": "HENRY HUB - TAILGATE LOUISIANA (INDEX) - ICE FUTURES ENERGY DIV",
+      "publication_confidence": "derived",
+      "publication_delayed": false,
+      "store_publication_confidence": "derived",
+      "store_publication_delayed": false
+    },
+    "provenance": {
+      "publication_ts": "2018-01-05T15:30:00-05:00"
+    },
+    "scope": {
+      "contract_code": "0233AH"
+    },
+    "occurrences": [
+      {
+        "source_id": "pinned-current-db",
+        "source_ordinal": 0,
+        "raw_row_sha256": "b8161d683408b42b6cb94b0b4c7dbd198903ae5b780ce1042e12f777fbf41eb1",
+        "source_day": "20231018",
+        "source_sha256": null,
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "s3-sha256:8c9bf49fda3adf984c191ed06c13ee7c04117777a9535b485c9cbe15400e2c71",
+        "source_ordinal": 0,
+        "raw_row_sha256": "b8161d683408b42b6cb94b0b4c7dbd198903ae5b780ce1042e12f777fbf41eb1",
+        "source_day": "20231017",
+        "source_sha256": "8c9bf49fda3adf984c191ed06c13ee7c04117777a9535b485c9cbe15400e2c71",
+        "vintage": "CFTC archive as retrieved"
+      }
+    ],
+    "disposition": "CFTC_HISTORICAL_EVIDENCE"
+  },
+  "cot.023651": {
+    "normalized_sha256": "4517be2f253af88aa741c3d7103b20a35189cbe05f7fe6bb7f8dcdf8a58afc24",
+    "point_name": "cot.023651",
+    "scope_id": "868d6da2cb64c8deeba5e3f5a512d14ad58469c0b860ffb73ef5f80d83909ae2",
+    "observation_id": "d4b083ec1cdfb0ad52af1b2a6a6e8b974df1d68069e3eeddd64ddbcbbcf2ed89",
+    "available_ns": 1515184200000000000,
+    "event_ns": 1514930400000000000,
+    "source_published_ns": 1515184200000000000,
+    "clock_rule": "SOURCE_READER_STAMP",
+    "observation": {
+      "report_date": "2018-01-02"
+    },
+    "numeric": {
+      "managed_money_long": 268064.0,
+      "managed_money_net": 5208.0,
+      "managed_money_net_chg_wow": null,
+      "managed_money_net_pctile_1y": null,
+      "managed_money_net_pctile_3y": null,
+      "managed_money_short": 262856.0,
+      "open_interest": 1422917.0,
+      "other_reportable_net": -146408.0,
+      "pctile_1y_n_obs": 1.0,
+      "pctile_3y_n_obs": 1.0,
+      "producer_merchant_net": -55360.0,
+      "swap_dealer_net": 170973.0
+    },
+    "states": {
+      "managed_money_long": "PRESENT",
+      "managed_money_net": "PRESENT",
+      "managed_money_net_chg_wow": "SOURCE_NULL",
+      "managed_money_net_pctile_1y": "SOURCE_NULL",
+      "managed_money_net_pctile_3y": "SOURCE_NULL",
+      "managed_money_short": "PRESENT",
+      "open_interest": "PRESENT",
+      "other_reportable_net": "PRESENT",
+      "pctile_1y_n_obs": "PRESENT",
+      "pctile_3y_n_obs": "PRESENT",
+      "producer_merchant_net": "PRESENT",
+      "swap_dealer_net": "PRESENT"
+    },
+    "categories": {
+      "market_name": "NATURAL GAS - NEW YORK MERCANTILE EXCHANGE",
+      "publication_confidence": "derived",
+      "publication_delayed": false,
+      "store_publication_confidence": "derived",
+      "store_publication_delayed": false
+    },
+    "provenance": {
+      "publication_ts": "2018-01-05T15:30:00-05:00"
+    },
+    "scope": {
+      "contract_code": "023651"
+    },
+    "occurrences": [
+      {
+        "source_id": "pinned-current-db",
+        "source_ordinal": 0,
+        "raw_row_sha256": "3710ae598c0a13271baa3818c367289d5955e510ac09edf8e0202c9d4b20f546",
+        "source_day": "20231018",
+        "source_sha256": null,
+        "vintage": "CFTC archive as retrieved"
+      },
+      {
+        "source_id": "s3-sha256:8c9bf49fda3adf984c191ed06c13ee7c04117777a9535b485c9cbe15400e2c71",
+        "source_ordinal": 0,
+        "raw_row_sha256": "3710ae598c0a13271baa3818c367289d5955e510ac09edf8e0202c9d4b20f546",
+        "source_day": "20231017",
+        "source_sha256": "8c9bf49fda3adf984c191ed06c13ee7c04117777a9535b485c9cbe15400e2c71",
+        "vintage": "CFTC archive as retrieved"
+      }
+    ],
+    "disposition": "CFTC_HISTORICAL_EVIDENCE"
+  },
+  "curve.settled_shape": {
+    "normalized_sha256": "49f5c0e9a83a98d0895ebfe03f8ff9e96f9671996302951c1ccf91a92931db33",
+    "point_name": "curve.settled_shape",
+    "scope_id": "085c13cc13ba4afb759f6b9d1cc4409d0403458351dc1134e1563285b72ad5be",
+    "observation_id": "a4d30eec91362746f43538121be0d0e18802cb07bf1ce11299c1c5fe78ffca61",
+    "available_ns": 1696271441368405763,
+    "event_ns": 1696271441368405763,
+    "source_published_ns": 1696271441368405763,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "source_published_ns": 1696271441368405763
+    },
+    "numeric": {
+      "back": 3.336,
+      "back_rank": 5.0,
+      "c1": 3.427,
+      "curvature": -0.1626,
+      "front": 2.84,
+      "front_next_spread": -0.587,
+      "n_ranks": 6.0,
+      "slope_1": 0.587,
+      "slope_back": 0.496
+    },
+    "states": {
+      "back": "PRESENT",
+      "back_rank": "PRESENT",
+      "c1": "PRESENT",
+      "curvature": "PRESENT",
+      "front": "PRESENT",
+      "front_next_spread": "PRESENT",
+      "n_ranks": "PRESENT",
+      "slope_1": "PRESENT",
+      "slope_back": "PRESENT"
+    },
+    "categories": {
+      "regime": "contango"
+    },
+    "provenance": {},
+    "scope": {
+      "front_symbol": "NGX3",
+      "next_symbol": "NGG4"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 4,
+        "raw_row_sha256": "b277ce6e0e31e0e78a5228c589441a4481161edc4f335c260530c0c8d34d4f3d",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "exchange"
+      }
+    ],
+    "disposition": "HELD_FULL_CURVE_SOURCE_AND_CAUSAL_COMPONENT_CHECK"
+  },
+  "curve.statistics": {
+    "normalized_sha256": "1fbf765ae1f867697ff41d5998162069e370ea0ce3b3263ed5d9709ce6e40399",
+    "point_name": "curve.statistics",
+    "scope_id": "001ce6ddd53412e85a408f61700bdd345f9f192735b64022bef1b480cb188207",
+    "observation_id": "9fac5f3376fccbe81b54e46150a0644fd474a976b2695fbe006bf138805b14a2",
+    "available_ns": 1696255794613706642,
+    "event_ns": 1696255794613527925,
+    "source_published_ns": 1696255794613706642,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "source_published_ns": 1696255794613706642,
+      "ts_event": 1696255794613527925,
+      "ts_ref": 1695945600000000000
+    },
+    "numeric": {
+      "price": null,
+      "quantity": 0.0
+    },
+    "states": {
+      "price": "SOURCE_NULL",
+      "quantity": "PRESENT"
+    },
+    "categories": {
+      "stat_flags": 0,
+      "update_action": 1
+    },
+    "provenance": {
+      "reference_ns": 1695945600000000000
+    },
+    "scope": {
+      "instrument_id": 4467,
+      "raw_symbol": "NGM32",
+      "stat_type": 6
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 5986,
+        "raw_row_sha256": "0daefd18527bc1562dc5e3076c8caa773cb0ac9cf757a6cc8ba040970d1ec03f",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "exchange"
+      }
+    ],
+    "disposition": "HELD_FULL_CURVE_SOURCE_AND_CAUSAL_COMPONENT_CHECK"
+  },
+  "curve.traded_shape": {
+    "normalized_sha256": "0cd39c69c07df1d7b20326d50975ce99622e018c32f9a1cd971d122b1d6e9769",
+    "point_name": "curve.traded_shape",
+    "scope_id": "cd4ad7f67972ab73355088352d99b8da1b64eaf7999ea3eb82fb5fff32f292c2",
+    "observation_id": "e7b351108131709183a957002a224bb64e0f8e25389f22ce08d46ccf16c8b9b8",
+    "available_ns": 1696204806699477154,
+    "event_ns": 1696204806699477154,
+    "source_published_ns": 1696204806699477154,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "source_published_ns": 1696204806699477154
+    },
+    "numeric": {
+      "back": 3.287,
+      "back_rank": 1.0,
+      "c1": 3.287,
+      "curvature": 0.0,
+      "front": 2.912,
+      "front_next_spread": -0.375,
+      "n_ranks": 2.0,
+      "slope_1": 0.375,
+      "slope_back": 0.375
+    },
+    "states": {
+      "back": "PRESENT",
+      "back_rank": "PRESENT",
+      "c1": "PRESENT",
+      "curvature": "PRESENT",
+      "front": "PRESENT",
+      "front_next_spread": "PRESENT",
+      "n_ranks": "PRESENT",
+      "slope_1": "PRESENT",
+      "slope_back": "PRESENT"
+    },
+    "categories": {
+      "regime": "contango"
+    },
+    "provenance": {},
+    "scope": {
+      "front_symbol": "NGX3",
+      "next_symbol": "NGZ3"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 0,
+        "raw_row_sha256": "dc28ad95d618bdf01ead9cc22deef66925e55c44a3c4bd2f4447cea074e957fa",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "exchange"
+      }
+    ],
+    "disposition": "HELD_FULL_CURVE_SOURCE_AND_CAUSAL_COMPONENT_CHECK"
+  },
+  "curve.trades": {
+    "normalized_sha256": "cfd8c447561d21c7d460e00a8eeebb9e17c4bc6f187147e6f953091557385c73",
+    "point_name": "curve.trades",
+    "scope_id": "004e5115cc9cda1eb172e3a8023f8c0f426ecd0305ea9c0364c66007e938df65",
+    "observation_id": "fa731c1fbd92ba204a20c34b7e6621ce28a53f793474ff1e9f14ccf3067a533b",
+    "available_ns": 1696261859310086164,
+    "event_ns": 1696261859309746637,
+    "source_published_ns": 1696261859310086164,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "source_published_ns": 1696261859310086164,
+      "ts_event": 1696261859309746637
+    },
+    "numeric": {
+      "price": 0.0055,
+      "size": 24.0
+    },
+    "states": {
+      "price": "PRESENT",
+      "size": "PRESENT"
+    },
+    "categories": {
+      "side": "A"
+    },
+    "provenance": {},
+    "scope": {
+      "instrument_id": 85959,
+      "raw_symbol": "NGZ4-HHZ4"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 49007,
+        "raw_row_sha256": "d82a27cce16a9a11c9817c9fd5018b46193d2d98829f49029cf4bf537d76ac14",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "exchange"
+      }
+    ],
+    "disposition": "HELD_FULL_CURVE_SOURCE_AND_CAUSAL_COMPONENT_CHECK"
+  },
+  "eia930.hourly": {
+    "normalized_sha256": "79f32f6432bd80cdc21c051e20211b4563a743ea9498ef5490c5c89ebc9b3fa2",
+    "point_name": "eia930.hourly",
+    "scope_id": "04ae07735d91bf80d7420371f0ec781c61a36e925906a7b7b90c033c4383ef7d",
+    "observation_id": "148a3bca6a85d85b28f2b3d164469d3ed3ce36d2544b121c8313ee9f21bdcab7",
+    "available_ns": 1695600000000000000,
+    "event_ns": 1695592800000000000,
+    "source_published_ns": 1695600000000000000,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "period_utc": "2023-09-24T22"
+    },
+    "numeric": {
+      "value": 81083.0
+    },
+    "states": {
+      "value": "PRESENT"
+    },
+    "categories": {},
+    "provenance": {},
+    "scope": {
+      "fueltype_or_type": "D",
+      "respondent": "MISO",
+      "route": "region-data",
+      "units": "megawatthours"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 30,
+        "raw_row_sha256": "9d3a84380e57238c67a63af6d933e1b22aa66f3b8eb689366977dfc5f12c8d33",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "current revision (the first-published value is not recoverable)"
+      }
+    ],
+    "disposition": "HELD_REVISED_VINTAGE_AND_NOMINAL_CLOCK"
+  },
+  "eia930.us48": {
+    "normalized_sha256": "98a496450b455c53b4ad4896b8bce613fa45342877e748f37e3e27a4ccdee557",
+    "point_name": "eia930.us48",
+    "scope_id": "c28b4999d058a4798981c6ec5207578a76186ca4f10547f78ef001826216c81a",
+    "observation_id": "4d3758ac232aa755ec16adf3dd7de528d05919aa7379e7f01815ab6f168fefdd",
+    "available_ns": 1695600000000000000,
+    "event_ns": 1695592800000000000,
+    "source_published_ns": 1695600000000000000,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "period_utc": "2023-09-24T22"
+    },
+    "numeric": {
+      "est_gas_burn_bcfd_rate": 41.361,
+      "gas_mwh": 225784.0,
+      "wind_mwh": 23427.0
+    },
+    "states": {
+      "est_gas_burn_bcfd_rate": "PRESENT",
+      "gas_mwh": "PRESENT",
+      "wind_mwh": "PRESENT"
+    },
+    "categories": {},
+    "provenance": {},
+    "scope": {},
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 0,
+        "raw_row_sha256": "5e9c4ed2eb314eaa771958871887e964e9caccde7c51829dfdc40e93a75b833c",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "current revision"
+      }
+    ],
+    "disposition": "HELD_REVISED_VINTAGE_AND_NOMINAL_CLOCK"
+  },
+  "mos.disagreement_by_cycle": {
+    "normalized_sha256": "24fb6c740d637f910de7f1e2025902959045e6fe71baba8e4b7b95d7869c34b7",
+    "point_name": "mos.disagreement_by_cycle",
+    "scope_id": "3647c88a6dc6c3e21dfa88fc8c2a6870eda2e55c24befe31e52c3eb828b6095b",
+    "observation_id": "fab02d54b41722cedb0a26e1a8eaf219164aae68c8da7c299f2c8e038b7edf98",
+    "available_ns": 1696134600000000000,
+    "event_ns": 1696118400000000000,
+    "source_published_ns": 1696134600000000000,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "runtime_utc": "2023-10-01 00:00:00"
+    },
+    "numeric": {
+      "max_abs_spread_gw_hdd": 0.025,
+      "max_spread_target_offset_from_aligned_session_days": -15,
+      "target_session_offset_days_-15.common_metros": 16.0,
+      "target_session_offset_days_-15.spread_gw_hdd": -0.025
+    },
+    "states": {
+      "max_abs_spread_gw_hdd": "PRESENT",
+      "max_spread_target_offset_from_aligned_session_days": "PRESENT",
+      "target_session_offset_days_-15.common_metros": "PRESENT",
+      "target_session_offset_days_-15.spread_gw_hdd": "PRESENT"
+    },
+    "categories": {},
+    "provenance": {
+      "source_at_horizon_days": 0
+    },
+    "scope": {
+      "source_target_session": "2023-10-03"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 0,
+        "raw_row_sha256": "cbd6fb82a44357692a8583597d88c60fb7f386fb9e24d3cca4b53bfa22e23aec",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "archive as retrieved"
+      }
+    ],
+    "disposition": "HELD_ARCHIVE_CLOCK_OR_TARGET_SCOPE"
+  },
+  "mos.gw_by_cycle": {
+    "normalized_sha256": "0d2c7b4399813f0a5b5053e1d86680fd453ff7bf88bdb6ffb900925c186e1e82",
+    "point_name": "mos.gw_by_cycle",
+    "scope_id": "00df5f2d44c0fe9cce5d8c08b626099226efe794743bab508e67110b39441cb5",
+    "observation_id": "33f290f44b415548bb6a626628419e931c84066fc349c993a7fa80b6c191b327",
+    "available_ns": 1696048200000000000,
+    "event_ns": 1696032000000000000,
+    "source_published_ns": 1696048200000000000,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "runtime_utc": "2023-09-30 00:00:00"
+    },
+    "numeric": {
+      "coverage": 1.0,
+      "gw_cdd": 6.284,
+      "gw_hdd": 0.865,
+      "metros_missing_count": 0,
+      "n_metros": 16.0,
+      "target_offset_from_aligned_session_days": -15
+    },
+    "states": {
+      "coverage": "PRESENT",
+      "gw_cdd": "PRESENT",
+      "gw_hdd": "PRESENT",
+      "metros_missing_count": "PRESENT",
+      "n_metros": "PRESENT",
+      "target_offset_from_aligned_session_days": "PRESENT"
+    },
+    "categories": {
+      "metros_missing": []
+    },
+    "provenance": {
+      "source_horizon_days": 0
+    },
+    "scope": {
+      "model": "MEX",
+      "target_day": "2023-10-03"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 0,
+        "raw_row_sha256": "cf50a26a764c5d3ddd79d8fbf7a7921f2819d72db253d3df83e815915c406e1f",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "archive as retrieved"
+      }
+    ],
+    "disposition": "HELD_ARCHIVE_CLOCK_OR_TARGET_SCOPE"
+  },
+  "mos.raw": {
+    "normalized_sha256": "2fa0c1a4940dbc7806018548f6b2bbe8fa933243d3400bdf4021c9a5bf5ac1b0",
+    "point_name": "mos.raw",
+    "scope_id": "0007ca6fe21b5168060bb3111bcc6d1dd3949b02721703b99dedd2de008d2cf0",
+    "observation_id": "e1a00d9ca9cd05cf5cbfc2a505365417cabe1cfd304951a6cba96b976a51a45e",
+    "available_ns": 1696264200000000000,
+    "event_ns": 1696248000000000000,
+    "source_published_ns": 1696264200000000000,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "runtime_utc": "2023-10-02 12:00:00"
+    },
+    "numeric": {
+      "tmp_f": 65.0
+    },
+    "states": {
+      "tmp_f": "PRESENT"
+    },
+    "categories": {},
+    "provenance": {
+      "forecast_valid_ns": 1696507200000000000
+    },
+    "scope": {
+      "model": "GFS",
+      "station": "STL",
+      "valid_utc": "2023-10-05 12:00:00"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 7115,
+        "raw_row_sha256": "7a79349e8cd5f26a865ccfeee5cf748076333efddb6b45c34eb30b9324eb74e0",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "archive as retrieved"
+      },
+      {
+        "source_id": "manifest:ea1743657277553846ca4ff5de3bbd17b7d353017b23420558fd99072b2066f9",
+        "source_ordinal": 4619,
+        "raw_row_sha256": "7a79349e8cd5f26a865ccfeee5cf748076333efddb6b45c34eb30b9324eb74e0",
+        "source_day": "20231004",
+        "source_sha256": "ea1743657277553846ca4ff5de3bbd17b7d353017b23420558fd99072b2066f9",
+        "vintage": "archive as retrieved"
+      }
+    ],
+    "disposition": "HELD_ARCHIVE_CLOCK_OR_TARGET_SCOPE"
+  },
+  "storage.estimate": {
+    "normalized_sha256": "efe4557b5c23833d036f7cf5d26b426a286f548d2b10e2cade0e6d75c43436e4",
+    "point_name": "storage.estimate",
+    "scope_id": "04c2609a7a14853161f71a18dfe83bd5c98c7bd64007477f46afa582527179e7",
+    "observation_id": "e08d0af0c7ae2fcfd3cbc36b47290c1f532fe91c0c2f9574b4259e776eea82ad",
+    "available_ns": 1633012200000000000,
+    "event_ns": 1633012200000000000,
+    "source_published_ns": 1633012200000000000,
+    "clock_rule": "SOURCE_READER_STAMP",
+    "observation": {
+      "print_date": "2021-09-30",
+      "print_ns": 1633012200000000000,
+      "week_ending": "2021-09-24"
+    },
+    "numeric": {
+      "actual_bcf": 88.0,
+      "estimate_bcf": 87.0,
+      "surprise_bcf": 1.0
+    },
+    "states": {
+      "actual_bcf": "PRESENT",
+      "estimate_bcf": "PRESENT",
+      "surprise_bcf": "PRESENT"
+    },
+    "categories": {
+      "missing_reason": null
+    },
+    "provenance": {
+      "source": "street estimate: TradingEconomics (tradingeconomics.com/united-states/natural-gas-stocks-change) calendar row (archived page, capture 20211019041134 UTC); actual: EIA WNGSR as released 2021-09-30 (archived page, capture 20210930181325 UTC)"
+    },
+    "scope": {},
+    "occurrences": [
+      {
+        "source_id": "pinned-current-db",
+        "source_ordinal": 0,
+        "raw_row_sha256": "88b09f05f4451dc37274aef3db49df1b76f1838038c1748757d53b0fdfa8c787",
+        "source_day": "20231018",
+        "source_sha256": null,
+        "vintage": "as published"
+      },
+      {
+        "source_id": "s3-sha256:8c9bf49fda3adf984c191ed06c13ee7c04117777a9535b485c9cbe15400e2c71",
+        "source_ordinal": 0,
+        "raw_row_sha256": "88b09f05f4451dc37274aef3db49df1b76f1838038c1748757d53b0fdfa8c787",
+        "source_day": "20231017",
+        "source_sha256": "8c9bf49fda3adf984c191ed06c13ee7c04117777a9535b485c9cbe15400e2c71",
+        "vintage": "as published"
+      }
+    ],
+    "disposition": "SEPARATE_STORAGE_VINTAGE_EVIDENCE"
+  },
+  "storage.estimate_captures": {
+    "normalized_sha256": "57ade80c42e85edbf5d8c0a741d7eff15cb7f1ad20992ea4a49d00de9d7e596e",
+    "point_name": "storage.estimate_captures",
+    "scope_id": "217a8566248221fd04f5f185b4c76a7881a008727827f67450e79d4dfc5a6e07",
+    "observation_id": "d8f9ca23bee7848d2b47c49f9d099cf9ea94c312596806f07f2f46f6c5697b0a",
+    "available_ns": 1664906400000000000,
+    "event_ns": null,
+    "source_published_ns": 1664485270000000000,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "print": "2022-09-29"
+    },
+    "numeric": {},
+    "states": {},
+    "categories": {},
+    "provenance": {
+      "capture_key": "frankie/day_history/36576414768/consensus/snapshots/investing_www/2022-09-29/20220929210110.html",
+      "sha256": "d1ab162489cdb5baf54203bc94e62fb76dcc38bedd2b1b031f22a308b3b53d99"
+    },
+    "scope": {
+      "house": "investing_www"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:4b10ea92eb368e723768272f539304761c2cb5310b36b0855cd0a7b76c049639",
+        "source_ordinal": 3,
+        "raw_row_sha256": "f8b9d6b08b2bfbedd9a4e0dc58cb7217be56bb8aca1222875a9d07c2a354df06",
+        "source_day": "20221004",
+        "source_sha256": "4b10ea92eb368e723768272f539304761c2cb5310b36b0855cd0a7b76c049639",
+        "vintage": "archived capture"
+      }
+    ],
+    "disposition": "SEPARATE_STORAGE_VINTAGE_EVIDENCE"
+  },
+  "storage.weekly": {
+    "normalized_sha256": "daea8ad60ea3737d5e8f204c4bed50666fded44d71fb7908c404600a99351eb3",
+    "point_name": "storage.weekly",
+    "scope_id": "ffc690dc8bb7374c0b37d4b1a4866095ea9fd513e73d561d4e58792469b3705e",
+    "observation_id": "85514fc7f46bf863fbac08c989c46e49371c5342a078129d9122671463f87315",
+    "available_ns": 1444314600000000000,
+    "event_ns": 1443819600000000000,
+    "source_published_ns": 1444314600000000000,
+    "clock_rule": "SOURCE_READER_STAMP",
+    "observation": {
+      "week_ending": "2015-10-02"
+    },
+    "numeric": {
+      "five_yr_avg_bcf": null,
+      "level_bcf": 3634.0,
+      "same_week_prior_5y_levels_count": 0,
+      "vs_5yr_bcf": null,
+      "weekly_chg_bcf": null,
+      "year_ago_bcf": null
+    },
+    "states": {
+      "five_yr_avg_bcf": "SOURCE_NULL",
+      "level_bcf": "PRESENT",
+      "same_week_prior_5y_levels_count": "PRESENT",
+      "vs_5yr_bcf": "SOURCE_NULL",
+      "weekly_chg_bcf": "SOURCE_NULL",
+      "year_ago_bcf": "SOURCE_NULL"
+    },
+    "categories": {},
+    "provenance": {
+      "source": "EIA API v2 natural-gas/stor/wkly NW2_EPG0_SWO_R48_BCF"
+    },
+    "scope": {},
+    "occurrences": [
+      {
+        "source_id": "pinned-current-db",
+        "source_ordinal": 0,
+        "raw_row_sha256": "1f1eee3bb4af50566f77374e5f7725c35e28435e49eb15426cbcc87920dd2923",
+        "source_day": "20231018",
+        "source_sha256": null,
+        "vintage": "as published"
+      },
+      {
+        "source_id": "s3-sha256:8c9bf49fda3adf984c191ed06c13ee7c04117777a9535b485c9cbe15400e2c71",
+        "source_ordinal": 0,
+        "raw_row_sha256": "1f1eee3bb4af50566f77374e5f7725c35e28435e49eb15426cbcc87920dd2923",
+        "source_day": "20231017",
+        "source_sha256": "8c9bf49fda3adf984c191ed06c13ee7c04117777a9535b485c9cbe15400e2c71",
+        "vintage": "as published"
+      }
+    ],
+    "disposition": "SEPARATE_STORAGE_VINTAGE_EVIDENCE"
+  },
+  "weather.gw_daily": {
+    "normalized_sha256": "2372c5fd3ccddb22b4a86a1a860e00b76028583fbd7f5dbf660848e823bacbc2",
+    "point_name": "weather.gw_daily",
+    "scope_id": "59ba6d2ddaea1997173f565d7637a4a700472f34fe80599cd658b105edd33b9f",
+    "observation_id": "a5b6b4f95662b9901825230eea8f8010a7c837c34817c4492fb7b86aac94dab9",
+    "available_ns": 1696137000000000000,
+    "event_ns": 1696136400000000000,
+    "source_published_ns": 1696137000000000000,
+    "clock_rule": "SOURCE_READER_STAMP",
+    "observation": {
+      "gas_day": "2023-09-30"
+    },
+    "numeric": {
+      "coverage": 1.0,
+      "gw_cdd": 6.511,
+      "gw_hdd": 1.419,
+      "gw_precip": 0.0,
+      "n_stations": 16.0
+    },
+    "states": {
+      "coverage": "PRESENT",
+      "gw_cdd": "PRESENT",
+      "gw_hdd": "PRESENT",
+      "gw_precip": "PRESENT",
+      "n_stations": "PRESENT"
+    },
+    "categories": {
+      "regime": "mod_cool"
+    },
+    "provenance": {},
+    "scope": {},
+    "occurrences": [
+      {
+        "source_id": "pinned-current-db",
+        "source_ordinal": 0,
+        "raw_row_sha256": "2c3aac2ed5e36115363a1b72f0b1f26bf605aa12092e009916b6e681f7f0f458",
+        "source_day": "20231018",
+        "source_sha256": null,
+        "vintage": "archive as retrieved"
+      },
+      {
+        "source_id": "s3-sha256:8c9bf49fda3adf984c191ed06c13ee7c04117777a9535b485c9cbe15400e2c71",
+        "source_ordinal": 0,
+        "raw_row_sha256": "2c3aac2ed5e36115363a1b72f0b1f26bf605aa12092e009916b6e681f7f0f458",
+        "source_day": "20231017",
+        "source_sha256": "8c9bf49fda3adf984c191ed06c13ee7c04117777a9535b485c9cbe15400e2c71",
+        "vintage": "archive as retrieved"
+      }
+    ],
+    "disposition": "HELD_ARCHIVE_CLOCK_OR_TARGET_SCOPE"
+  },
+  "weather.obs_hourly": {
+    "normalized_sha256": "74fb9b54a900fe573c167b74fe731de791cc2b799485aebd03bccc0cd91e17b9",
+    "point_name": "weather.obs_hourly",
+    "scope_id": "018f719c20f9ac038b6d35fbabd6f765498f6cf1ba69a2d835db0de412ce92de",
+    "observation_id": "dbd5703ab9679ff8a9cb9bb8fa2c60fb9cbb7cc335ddbe3e9c8c475f19b867b9",
+    "available_ns": 1696119000000000000,
+    "event_ns": 1696118400000000000,
+    "source_published_ns": 1696119000000000000,
+    "clock_rule": "SOURCE_PUBLICATION_PLUS_EXPLICIT_READER_EVENT_PLACEMENT",
+    "observation": {
+      "valid_utc": "2023-10-01 00:00"
+    },
+    "numeric": {
+      "alti": 30.19,
+      "drct": 350.0,
+      "dwpf": null,
+      "feel": null,
+      "gust": null,
+      "ice_accretion_1hr": null,
+      "ice_accretion_3hr": null,
+      "ice_accretion_6hr": null,
+      "mslp": null,
+      "p01i": null,
+      "peak_wind_drct": null,
+      "peak_wind_gust": null,
+      "relh": null,
+      "sknt": 7.0,
+      "skyl1": 3700.0,
+      "skyl2": null,
+      "skyl3": null,
+      "skyl4": null,
+      "snowdepth": null,
+      "tmpf": null,
+      "vsby": 10.0
+    },
+    "states": {
+      "alti": "PRESENT",
+      "drct": "PRESENT",
+      "dwpf": "SOURCE_MISSING_MARKER_M",
+      "feel": "SOURCE_MISSING_MARKER_M",
+      "gust": "SOURCE_MISSING_MARKER_M",
+      "ice_accretion_1hr": "SOURCE_MISSING_MARKER_M",
+      "ice_accretion_3hr": "SOURCE_MISSING_MARKER_M",
+      "ice_accretion_6hr": "SOURCE_MISSING_MARKER_M",
+      "mslp": "SOURCE_MISSING_MARKER_M",
+      "p01i": "SOURCE_MISSING_MARKER_M",
+      "peak_wind_drct": "SOURCE_MISSING_MARKER_M",
+      "peak_wind_gust": "SOURCE_MISSING_MARKER_M",
+      "relh": "SOURCE_MISSING_MARKER_M",
+      "sknt": "PRESENT",
+      "skyl1": "PRESENT",
+      "skyl2": "SOURCE_MISSING_MARKER_M",
+      "skyl3": "SOURCE_MISSING_MARKER_M",
+      "skyl4": "SOURCE_MISSING_MARKER_M",
+      "snowdepth": "SOURCE_MISSING_MARKER_M",
+      "tmpf": "SOURCE_MISSING_MARKER_M",
+      "vsby": "PRESENT"
+    },
+    "categories": {
+      "skyc1": "SCT",
+      "skyc2": "M",
+      "skyc3": "M",
+      "skyc4": "M"
+    },
+    "provenance": {
+      "peak_wind_time": "M"
+    },
+    "scope": {
+      "station": "BOS"
+    },
+    "occurrences": [
+      {
+        "source_id": "manifest:1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "source_ordinal": 2,
+        "raw_row_sha256": "1fe2e92d51987c23e86ac7171e1688e4aa9232f47026619a5cd0c60226d4d133",
+        "source_day": "20231003",
+        "source_sha256": "1d4a6eebd6f7982b6978bfda412c041e23e8dce989971ea792ffd24733ab9104",
+        "vintage": "archive as retrieved"
+      },
+      {
+        "source_id": "manifest:ea1743657277553846ca4ff5de3bbd17b7d353017b23420558fd99072b2066f9",
+        "source_ordinal": 2,
+        "raw_row_sha256": "1fe2e92d51987c23e86ac7171e1688e4aa9232f47026619a5cd0c60226d4d133",
+        "source_day": "20231004",
+        "source_sha256": "ea1743657277553846ca4ff5de3bbd17b7d353017b23420558fd99072b2066f9",
+        "vintage": "archive as retrieved"
+      }
+    ],
+    "disposition": "HELD_ARCHIVE_CLOCK_OR_TARGET_SCOPE"
+  }
+}
