@@ -1,0 +1,26 @@
+{
+  "status": "PREPARATION_ONLY_AWAIT_EXPLICIT_USER_START",
+  "analysis_authorized": false,
+  "evidence_frozen": false,
+  "registry_match": true,
+  "bindings_match": true,
+  "pin_map_match": true,
+  "registry_layers": 99,
+  "bound_points": 13,
+  "prior_clock_inventory_files": 553,
+  "source_coordinates": 604,
+  "unique_file_contents": 590,
+  "duplicate_file_aliases_removed": 14,
+  "duplicate_groups": 12,
+  "annotation_ledger_contents": 8,
+  "physical_source_deletions": 0,
+  "unavailable_archive_references": 3,
+  "remaining": [
+    "Ccode final completion handoff and changed-file list",
+    "Refresh this manifest against final revisions",
+    "Resolve remaining row-level overlap from exact source coordinates before counting pooled observations",
+    "Check clocks on new timed files",
+    "Explicit user instruction to begin reanalysis"
+  ],
+  "dedup_scope": "byte-identical file copies only; repeated equal-valued rows are not assumed the same event; related projections remain distinct views"
+}

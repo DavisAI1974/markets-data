@@ -1,0 +1,91 @@
+{
+  "registry": {
+    "canonical": {
+      "repository": "DavisAI1974/Markets",
+      "revision": "c93895e22a2388112404f0122e37eee4947c5c45",
+      "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-99-registry.json",
+      "bytes": 37242,
+      "sha256": "7ee754f1f9b080cdc5b7b68cf75829897d6216a1fadbb4b8a5ecd7b4f2133e06"
+    },
+    "equivalent_copies": [
+      {
+        "repository": "DavisAI1974/Markets",
+        "revision": "4cf6e85de5de2a9fb479c90b7afb8dd50f1748cb",
+        "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-99-registry.json",
+        "bytes": 37242,
+        "sha256": "7ee754f1f9b080cdc5b7b68cf75829897d6216a1fadbb4b8a5ecd7b4f2133e06"
+      },
+      {
+        "repository": "DavisAI1974/Markets",
+        "revision": "59f92066984935ada5693ba91a9f04fa4f2248ef",
+        "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-99-registry.json",
+        "bytes": 37242,
+        "sha256": "7ee754f1f9b080cdc5b7b68cf75829897d6216a1fadbb4b8a5ecd7b4f2133e06"
+      },
+      {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "2f1c3c72f9e3f15916135bca37ffcad87477e1d6",
+        "path": "tasks/family-research-20261022/lifecycle-data-links/run-42583801329-1/external/canonical-99-registry.json",
+        "bytes": 37242,
+        "sha256": "7ee754f1f9b080cdc5b7b68cf75829897d6216a1fadbb4b8a5ecd7b4f2133e06"
+      }
+    ],
+    "byte_identical": true,
+    "embedded_registry_sha256": "239a14808850d9cc9ba589165e4263c0e3f11a0c574052f39bfaa133adf296b1"
+  },
+  "bindings": {
+    "canonical": {
+      "repository": "DavisAI1974/Markets",
+      "revision": "c93895e22a2388112404f0122e37eee4947c5c45",
+      "path": "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/all-13-input-bindings.json",
+      "bytes": 20927,
+      "sha256": "0a20b791b8c2d98fd125ead50870dbdcf4408172c9d71f839ed798282ffcb7a8"
+    },
+    "equivalent_copies": [
+      {
+        "repository": "DavisAI1974/Markets",
+        "revision": "4cf6e85de5de2a9fb479c90b7afb8dd50f1748cb",
+        "path": "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/all-13-input-bindings.json",
+        "bytes": 20927,
+        "sha256": "0a20b791b8c2d98fd125ead50870dbdcf4408172c9d71f839ed798282ffcb7a8"
+      },
+      {
+        "repository": "DavisAI1974/Markets",
+        "revision": "59f92066984935ada5693ba91a9f04fa4f2248ef",
+        "path": "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/all-13-input-bindings.json",
+        "bytes": 20927,
+        "sha256": "0a20b791b8c2d98fd125ead50870dbdcf4408172c9d71f839ed798282ffcb7a8"
+      },
+      {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "2f1c3c72f9e3f15916135bca37ffcad87477e1d6",
+        "path": "tasks/family-research-20261022/lifecycle-data-links/run-42583801329-1/external/all-13-input-bindings.json",
+        "bytes": 20927,
+        "sha256": "0a20b791b8c2d98fd125ead50870dbdcf4408172c9d71f839ed798282ffcb7a8"
+      }
+    ],
+    "byte_identical": true,
+    "embedded_registry_sha256": null
+  },
+  "unassigned_field_patterns": [
+    "^sec$|^epoch_s$|^seed$",
+    "^hour_utc$|^hour_class$|^vol_tercile$|^tercile$|^session$|^day0_epoch_s$|^mode$|^file$",
+    "^(occurrence_count|start_basis|instrument_id|sample_id|start_utc|recorded_forecast_rows|forecast_disposition|continuous_book_replay|snapshot_member|reset_member|bad_receive_clock_member|in_member|utc_hour|settle_tag|chg_ticks)$"
+  ],
+  "pin_map": {
+    "repository": "DavisAI1974/markets-data",
+    "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+    "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pin-map.json",
+    "bytes": 29368,
+    "sha256": "b436d222cac06a50eb6fcde165b8d21a6e349e6abf28b580a64d7b57c8b1f5e7"
+  },
+  "tier1_pin_summary": {
+    "repository": "DavisAI1974/markets-data",
+    "revision": "67b7a6afaaaa7bf77bb4048011b1da28af2875b1",
+    "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-summary.json",
+    "bytes": 12036,
+    "sha256": "3661c126e20c7c89bbaf10b08d4c8db5749d16c8b937fc93a40a26ad44985507"
+  },
+  "pin_map_hash_matches_registry_file_bytes": true,
+  "hash_note": "The registry's embedded registry_sha256 is a separate declared digest, not its complete-file byte SHA256. Ledger pin maps are checked against the complete-file digest."
+}
