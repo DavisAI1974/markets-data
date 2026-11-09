@@ -1,0 +1,57 @@
+name: Recover omitted four-day book and FIFO layers
+on:
+  push:
+    branches: [codex/frankie-four-day-audit-20261109]
+    paths: [.github/workflows/recover-book-layers.yml]
+permissions:
+  contents: write
+concurrency:
+  group: frankie-missing-book-layers
+  cancel-in-progress: false
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        day: ['20231002', '20231003', '20231017', '20231018']
+    env:
+      DAY: ${{ matrix.day }}
+      CODE_REV: 0e96846b09995e3a550f55838aebbddf31e5d61a
+      OUTPUT_PATH: tasks/family-research-20261022/frankie-four-day-pins/book-recovery-${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.day }}
+      OUTPUT_BRANCH: codex/frankie-book-recovery-${{ matrix.day }}-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github
+      - name: Install original replay reader
+        run: pip install databento==0.81.0 pyarrow==22.0.0
+      - name: Recover full book and FIFO with original calculations
+        run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/research/kalshi/frankie_boss/four_day_pins/recover_book_layers.py" -o /tmp/recover_book_layers.py
+          python /tmp/recover_book_layers.py "$DAY" "$OUTPUT_PATH"
+      - name: Publish verified recovery in bounded batches
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$OUTPUT_BRANCH"
+          python - <<'PY'
+          import json,os,pathlib,subprocess
+          root=pathlib.Path(os.environ['OUTPUT_PATH'])
+          receipt=json.loads((root/'RECOVERY_RECEIPT.json').read_text())
+          assert receipt['completed_book_fifo_recovery']
+          assert receipt['expected_trades']==receipt['recovered_trades']
+          files=sorted(str(p) for p in root.iterdir() if p.is_file() and p.name!='RECOVERY_RECEIPT.json')
+          files.append(str(root/'RECOVERY_RECEIPT.json'))
+          for index in range(0,len(files),24):
+              subprocess.run(['git','add','--sparse','--',*files[index:index+24]],check=True)
+              subprocess.run(['git','commit','-m',f'data: retain recovered book and FIFO {os.environ["DAY"]} batch {index//24+1} [skip ci]'],check=True)
+              subprocess.run(['git','push','origin','HEAD:'+os.environ['OUTPUT_BRANCH']],check=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: partial-book-recovery-${{ matrix.day }}
+          path: ${{ env.OUTPUT_PATH }}
+          retention-days: 3
