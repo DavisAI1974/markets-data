@@ -1,0 +1,12 @@
+ID,Hypothesis,Operational distinction,Evidence and limits,Paper inclusion
+R1,Fresh native flow with touch,Original flow/price-confirmation rule,D03/D05; exact composite execution not tested,Included
+R2,Surviving order support,At touch on arm; original order may remain behind improved best at confirmation,D01 plus geometric correction; log size/replenishment strata,Included
+R3,Quiet-flow touch,Trade nonzero touch direction when native 5s classified volume is zero,D04/D09; distinguish known-empty from feed missing,Included
+R4,Delayed follow,Follow touch direction after one-tick midpoint confirmation at +1s,D12; only post-confirmation fills/outcomes count,Included
+R5,Delayed fade,Opposite direction to R4 after the same confirmation,"D12; comparative hypothesis, no net profit established",Included
+R6A,Flow with cancellation support,5s native flow direction when cancellation support agrees,D13; source-defined native cancel events,Included
+R6B,Flow against cancellation support,5s native flow direction when cancellation support opposes,D13; preserves adverse and contradictory regime,Included
+R7,Baseline model,Frozen count/price/book prediction sign; 20s maximum hold,D11; trained on all four historical discovery dates,Included
+R8,Information model,Same model plus information features; same hold,D10/D11; keep zero-MI and sparse cases tagged,Included
+R9,Expiry-driven flow,R1 comparison triggered by expiry-only native 5s sign flip,D03; fresh-arrival requirement removed only for this variant,Included
+R10,One-lot retreat,Standing best shrinks to one through size-cut; trade away from that resting side,"D06; source-defined onset, never future fate",Included

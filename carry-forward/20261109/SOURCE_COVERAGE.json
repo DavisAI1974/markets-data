@@ -1,0 +1,38 @@
+{
+  "source_records": 14712,
+  "inventory_record_counts": {
+    "published_source_catalog": 10800,
+    "source_inventory.json": 12867,
+    "active_sources.json": 8955,
+    "expanded_sources.json": 1845,
+    "workflow_sources.json": 448,
+    "remaining_research_sources.json": 47
+  },
+  "unique_markdown_documents": 895,
+  "document_sections": 6400,
+  "document_errors": [],
+  "user_excluded_blob_count": 0,
+  "semantic_reconciliation_complete": false,
+  "all_strategies_executable": false,
+  "policy": "Preserve all source records and all defined hypotheses; no evidence-based paper admission veto.",
+  "registered_entries": 82,
+  "entry_types": {
+    "encoded_strategy_variant": 11,
+    "model_comparison_arm": 15,
+    "conditional_comparison": 28,
+    "source_defined_play": 1,
+    "candidate_family": 17,
+    "source_defined_management": 1,
+    "recurrence_candidate": 9
+  },
+  "encoded_strategy_variants": 11,
+  "platform_active_strategies": 0,
+  "findings_retained": 13,
+  "gap_workstreams_retained": 12,
+  "sections_with_named_item_links": 18,
+  "sections_requiring_full_semantic_review": 6400,
+  "original_markdown_blobs_verified": 895,
+  "counts_are_not_unique_executable_strategy_totals": true,
+  "migration_status": "paused_by_user",
+  "workers_restarted": false
+}

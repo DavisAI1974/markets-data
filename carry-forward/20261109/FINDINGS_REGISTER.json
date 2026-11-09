@@ -1,0 +1,144 @@
+[
+  {
+    "claim_id": "D01",
+    "question": "Fills mean different things for small and large residuals",
+    "newly_quantified_finding": "At +5ms, one-lot starts with observed fills survived to +25ms in 69/76 cases (90.8%); without fills, 361/703 (51.4%). For larger starts the comparison reverses: 150/269 (55.8%) versus 978/1396 (70.1%). The direction of both contrasts holds on all four dates.",
+    "contrary_or_limiting_evidence": "All 76 one-lot filled survivors had source-accounted implied added display by the decision, with zero unmatched fills. Price direction after observation remains mixed; larger filled survivors have negative mean 20s oriented changes on all four dates.",
+    "evidence": "P04 + P05; 38,736 existing original outcomes",
+    "paper_implication": "Recommend R2 observation-only pending a direct test of the complete price-confirmed rule; log initial display, residual and replenishment separately.",
+    "dates": "2023-10-02;2023-10-03;2023-10-17;2023-10-18",
+    "supporting_tables": "resting_price_results.csv; all_conditional_results.csv; resting_prefix_audit.json",
+    "case_file": "CASES.csv (claim_id)",
+    "source_authority": "priority_selection.json at input commit 1c234d511e26a0d1d054a39dbafc8a436232e7bb; supplementary_source_manifest.json",
+    "measured_warning_lead": "Not established; source intervals/recognition delays/outcome horizons are separate quantities",
+    "current_policy": "All hypotheses remain included for paper testing. Original observation-only/admission wording is superseded; original measurements and limitations remain intact."
+  },
+  {
+    "claim_id": "D02",
+    "question": "Interval definitions change the timing interpretation",
+    "newly_quantified_finding": "Corrected source-interval comparison: 1,139 aggression intervals precede quote intervals; 682 quote intervals precede aggression; 1,335 overlap; one is censored.",
+    "contrary_or_limiting_evidence": "The old smaller-index comparison conflated interval starts with sampled quote boundaries. Even non-overlap describes sampled source intervals, not proof about every native event. No verified 0.5s warning.",
+    "evidence": "P08 x07 producer + every saved event row",
+    "paper_implication": "Supersedes the earlier event-order wording and active summary counts; raw source cells remain intact.",
+    "dates": "2023-10-02;2023-10-03;2023-10-17;2023-10-18",
+    "supporting_tables": "event_interval_order_counts.csv; timing_definition_correction.json",
+    "case_file": "CASES.csv (claim_id)",
+    "source_authority": "priority_selection.json at input commit 1c234d511e26a0d1d054a39dbafc8a436232e7bb; supplementary_source_manifest.json",
+    "measured_warning_lead": "Not established; source intervals/recognition delays/outcome horizons are separate quantities",
+    "current_policy": "All hypotheses remain included for paper testing. Original observation-only/admission wording is superseded; original measurements and limitations remain intact."
+  },
+  {
+    "claim_id": "D03",
+    "question": "The cause of a flow flip changes its short-term persistence",
+    "newly_quantified_finding": "After sign flips caused by classified arrivals without expiry, 5s same-sign persistence is 80.6–83.0% across dates; expiry without classified arrivals gives 62.0–65.8%. At 20s the advantage shrinks and is slightly reversed on Oct 3.",
+    "contrary_or_limiting_evidence": "This concerns rolling flow state, not price. Window aging mechanically explains part of the contrast; unknown-side prints may still occur.",
+    "evidence": "P01; all 316,800 seconds; independent loop recount",
+    "paper_implication": "Retain fresh/expiry/mixed provenance and update the state continuously; do not turn persistence into a price-return claim.",
+    "dates": "2023-10-02;2023-10-03;2023-10-17;2023-10-18",
+    "supporting_tables": "all_conditional_results.csv; INDEPENDENT_CHECKS.json",
+    "case_file": "CASES.csv (claim_id)",
+    "source_authority": "priority_selection.json at input commit 1c234d511e26a0d1d054a39dbafc8a436232e7bb; supplementary_source_manifest.json",
+    "measured_warning_lead": "Not established; source intervals/recognition delays/outcome horizons are separate quantities",
+    "current_policy": "All hypotheses remain included for paper testing. Original observation-only/admission wording is superseded; original measurements and limitations remain intact."
+  },
+  {
+    "claim_id": "D04",
+    "question": "Missing recent flow does not mean an empty market state",
+    "newly_quantified_finding": "Fresh 5s flow is missing in 2,367/3,176 recognition contexts. With nonzero touch imbalance and available 20s outcomes in that group, touch-oriented means are positive on all four dates; they remain positive in the 60s-separated subset.",
+    "contrary_or_limiting_evidence": "On identical jointly defined rows, touch beats fresh flow at 20s on three dates and loses on Oct 18. The small midpoint effects are not net executable returns.",
+    "evidence": "Exact P09–P10 candidate/time join; no unmatched identities",
+    "paper_implication": "Retain quiet-flow book/price observations. R1 fresh-flow gating remains a hypothesis to evaluate, not universal decision coverage.",
+    "dates": "2023-10-02;2023-10-03;2023-10-17;2023-10-18",
+    "supporting_tables": "recognition_paired_comparison.csv; all_conditional_results.csv",
+    "case_file": "CASES.csv (claim_id)",
+    "source_authority": "priority_selection.json at input commit 1c234d511e26a0d1d054a39dbafc8a436232e7bb; supplementary_source_manifest.json",
+    "measured_warning_lead": "Not established; source intervals/recognition delays/outcome horizons are separate quantities",
+    "current_policy": "All hypotheses remain included for paper testing. Original observation-only/admission wording is superseded; original measurements and limitations remain intact."
+  },
+  {
+    "claim_id": "D05",
+    "question": "Short-flow direction depends on the longer flow state",
+    "newly_quantified_finding": "Family 5s/60s flow agreement produces higher 20s flow-oriented mean movement than disagreement on all four dates: differences 0.709, 0.461, 0.119 and 0.485 ticks. Disagreement itself is negative on Oct 2/3 and positive on Oct 17/18.",
+    "contrary_or_limiting_evidence": "Retrospective family selection and an outcome reference before the family start include onset mechanics. This does not test R1 execution or isolate causality. The agreement advantage also holds at 5s, but reverses at 60s on Oct 17 and Oct 18; it is horizon-dependent.",
+    "evidence": "P02 complete families; P03 pressure/side/volume and separated-event comparisons",
+    "paper_implication": "Useful context for the R1 hypothesis, with disagreement retained for comparison. No threshold optimization or new performance promise.",
+    "dates": "2023-10-02;2023-10-03;2023-10-17;2023-10-18",
+    "supporting_tables": "all_conditional_results.csv; candidate_control_results.csv",
+    "case_file": "CASES.csv (claim_id)",
+    "source_authority": "priority_selection.json at input commit 1c234d511e26a0d1d054a39dbafc8a436232e7bb; supplementary_source_manifest.json",
+    "measured_warning_lead": "Not established; source intervals/recognition delays/outcome horizons are separate quantities",
+    "current_policy": "All hypotheses remain included for paper testing. Original observation-only/admission wording is superseded; original measurements and limitations remain intact."
+  },
+  {
+    "claim_id": "D06",
+    "question": "How a quote became thin changes the interpretation",
+    "newly_quantified_finding": "The pooled origin comparison mixes NEW_BEST with STANDING_BEST_SHRANK. Within first-observed orders whose standing best shrank, size-cut origins retreat more often than older-resting origins on every date. Older resting at NEW_BEST is not uniformly worse than fresh adds.",
+    "contrary_or_limiting_evidence": "Origin and onset mechanism are strongly entangled. The same one-lot size is not the same state. Outcomes describe the source quote episode, not our trade PnL.",
+    "evidence": "P07 all 101,066 onsets; 89,072 unique day/order first observations",
+    "paper_implication": "Log onset mechanism and prior history; avoid a generic one-lot weakness trigger.",
+    "dates": "2023-10-02;2023-10-03;2023-10-17;2023-10-18",
+    "supporting_tables": "origin_onset_results.csv; all_conditional_results.csv",
+    "case_file": "CASES.csv (claim_id)",
+    "source_authority": "priority_selection.json at input commit 1c234d511e26a0d1d054a39dbafc8a436232e7bb; supplementary_source_manifest.json",
+    "measured_warning_lead": "Not established; source intervals/recognition delays/outcome horizons are separate quantities",
+    "current_policy": "All hypotheses remain included for paper testing. Original observation-only/admission wording is superseded; original measurements and limitations remain intact."
+  },
+  {
+    "claim_id": "D07",
+    "question": "Apparent confirmation often repeats the same execution",
+    "newly_quantified_finding": "Bid-side passive fills and sell-aggressor quantities over 5s have Spearman correlations 0.990–0.994 across dates. Their separate associations with later price are not independent confirmations.",
+    "contrary_or_limiting_evidence": "The 137-field screen is exploratory and highly dependent. Small associations remain visible; no row-level significance or best-feature claim is used.",
+    "evidence": "P02 field screen, all 548 field/day comparisons and redundancy checks",
+    "paper_implication": "Prevent double counting flow, passive fills and matched display reductions in a score.",
+    "dates": "2023-10-02;2023-10-03;2023-10-17;2023-10-18",
+    "supporting_tables": "family_field_screen.csv; field_redundancy.csv",
+    "case_file": "CASES.csv (claim_id)",
+    "source_authority": "priority_selection.json at input commit 1c234d511e26a0d1d054a39dbafc8a436232e7bb; supplementary_source_manifest.json",
+    "measured_warning_lead": "Not established; source intervals/recognition delays/outcome horizons are separate quantities",
+    "current_policy": "All hypotheses remain included for paper testing. Original observation-only/admission wording is superseded; original measurements and limitations remain intact."
+  },
+  {
+    "claim_id": "D08",
+    "question": "Birth-aligned buildup and recognition-time information differ",
+    "newly_quantified_finding": "At −5s from retrospective birth, median birth-oriented lean is 0.419–0.500 versus zero in matched-control medians. Yet defined-flow share at −5s is near the controls and at recognition fresh flow is often empty.",
+    "contrary_or_limiting_evidence": "Birth identity and orientation are retrospective; control bands summarize 200 draws, not independent-day confidence. Prebirth 20s total-volume differences are below controls on all four dates, while direction/depth differences vary.",
+    "evidence": "P06 matched pairs + P08 all 404 cohort/control boundary pairs + P09/P10",
+    "paper_implication": "Retain formation explanations without presenting future-aligned curves as an online early warning or sufficient market model.",
+    "dates": "2023-10-02;2023-10-03;2023-10-17;2023-10-18",
+    "supporting_tables": "lean_control_comparisons.csv; all_conditional_results.csv",
+    "case_file": "CASES.csv (claim_id)",
+    "source_authority": "priority_selection.json at input commit 1c234d511e26a0d1d054a39dbafc8a436232e7bb; supplementary_source_manifest.json",
+    "measured_warning_lead": "Not established; source intervals/recognition delays/outcome horizons are separate quantities",
+    "current_policy": "All hypotheses remain included for paper testing. Original observation-only/admission wording is superseded; original measurements and limitations remain intact."
+  },
+  {
+    "claim_id": "D09",
+    "full_source_section": "## D09 — Different flow definitions mostly agree in this cohort\n\nP10’s original producer assigns each print by its price relative to the preceding complete-group midpoint. P01 retains native exchange-side classification. They are distinct measurements and must retain their names and provenance.\n\nAt identical recognition cutoffs, the 5-second buy/sell quantities match exactly in **3,159/3,176 contexts (99.46%)**. Of the 778 contexts where both measures give a nonzero direction, **777 agree and one disagrees**. At 20 seconds there is also one opposite-sign context. This source-definition distinction is real, but does not broadly overturn the earlier quiet-flow finding in this cohort: the proxy has 2,367 empty 5-second windows; native classification has 2,366.\n\nEvery compared native 5/20-second window has completion known-by times no later than the recognition decision. That was checked using integer nanoseconds, not inferred from calendar bin labels. The exact opposite-sign 5-second example is Oct 2 candidate `dip-19632-1696235372`, Excel row 327 in both P09 and P10: proxy imbalance −0.6667, native imbalance +0.1667. Native source rows are pinned in Reanalysis cases.\n\n**Implication:** keep native and midpoint-classified paper variants identifiable. Their near-agreement is cohort-specific evidence, not permission to mix definitions globally.\n",
+    "source": "prior/reanalysis-20261109/REPORT.md",
+    "current_policy": "All paper hypotheses included; discovery evidence is not platform fills or untouched validation."
+  },
+  {
+    "claim_id": "D10",
+    "full_source_section": "## D10 — Large information ratios often describe sparse activity\n\nThe operator is defined in 1,818 of 3,176 contexts. Of those defined windows, **965 (53.1%) have activity in at most two of the twenty one-second bins**. In **631 (34.7%)**, estimated mutual information is zero; all 631 also have an absolute logged C ratio above 15 and nearly extreme entropy asymmetry. The remaining 1,358 contexts have no classified flow in the 20-second window and remain undefined.\n\nThe pinned operator defines C as signed mean marginal entropy divided by mutual information plus 1e−9. Consequently, a large C can arise from a near-zero denominator. It is not automatically strong directional conviction, hidden liquidity, or evidence of market influence. Zero MI here is an estimate from sparse binned observations, not proof of independence. The early-versus-late MI change is zero in 760 defined contexts.\n\n**Implication:** paper-test the information features, while logging activity-bin counts, MI and the denominator condition. Keep both information-enhanced and simpler comparator rules.\n",
+    "source": "prior/reanalysis-20261109/REPORT.md",
+    "current_policy": "All paper hypotheses included; discovery evidence is not platform fills or untouched validation."
+  },
+  {
+    "claim_id": "D11",
+    "full_source_section": "## D11 — Information features do not yet show consistent incremental forecasting value\n\nA fixed ridge model (penalty 10, no tuning) used price context, touch quantities/order counts and raw early/late/fresh flow quantities. We then added entropy asymmetry, MI change, logged C and imbalance change. Each later date was predicted using strictly earlier dates for fitting, imputation and scaling. Every available outcome remained in the test population.\n\n| Test date | Baseline MAE, ticks | With information MAE, ticks | Test rows |\n|---|---:|---:|---:|\n| Oct 3 | 0.6817 | 0.7042 | 832 |\n| Oct 17 | 0.8102 | 0.8188 | 740 |\n| Oct 18 | 0.8408 | 0.8425 | 862 |\n\nMean absolute error worsened on all three dates and in all three 60-second-separated subsets. Squared error improved slightly on Oct 18, and directional summaries are mixed; all results are retained. Adding display-change features is also inconsistent. This tests one declared linear model and feature set, not whether all information-theoretic or nonlinear models are useless.\n\n**Implication:** test the baseline and information-enhanced versions side by side in paper. No feature earns extra confidence merely because its definition is more elaborate.\n",
+    "source": "prior/reanalysis-20261109/REPORT.md",
+    "current_policy": "All paper hypotheses included; discovery evidence is not platform fills or untouched validation."
+  },
+  {
+    "claim_id": "D12",
+    "full_source_section": "## D12 — Confirmation can consume the apparent advantage\n\nTake the touch-imbalance direction at recognition, wait one second, and select cases whose midpoint has moved at least one tick in that direction. The table separates movement from recognition from the movement remaining **after** confirmation, both ending at recognition +20 seconds.\n\n| Date | Confirmed cases | From recognition, ticks | Remaining after confirmation, ticks |\n|---|---:|---:|---:|\n| Oct 2 | 39 | +0.974 | −0.449 |\n| Oct 3 | 39 | +1.962 | +0.474 |\n| Oct 17 | 30 | +1.067 | −0.033 |\n| Oct 18 | 54 | +0.852 | −0.519 |\n\nThe apparent advantage reverses on three dates once the already-consumed move is removed. At five-second confirmation, the 60-second-separated subset likewise has negative remaining 20-second movement on three dates. Results at 60 seconds are mixed. Native-flow confirmation has very small separated samples: 2–7 cases/day at one second, so it cannot support a stable conclusion.\n\nThis is a delayed midpoint diagnostic, not the exact R1/R2 sequence, a bid/ask fill, or net PnL. All opposite, flat, subtick and unavailable states are retained. The one-second value is used only at the later decision; using it to select an entry at recognition would be look-ahead.\n\n**Implication:** paper-test immediate, delayed-follow and delayed-fade versions separately. Measure actual entry prices and subsequent moves; never credit the confirmation move to the later entry.\n",
+    "source": "prior/reanalysis-20261109/REPORT.md",
+    "current_policy": "All paper hypotheses included; discovery evidence is not platform fills or untouched validation."
+  },
+  {
+    "claim_id": "D13",
+    "full_source_section": "## D13 — More book confirmation is not uniformly better\n\nP02 distinguishes native touch additions and cancellation-derived removals. Define cancellation support as ask cancellations minus bid cancellations. Comparing subsequent movement in the **flow direction**, its agreement with 5-second flow improves the 20-second mean on three dates, but not Oct 17:\n\n| Date | Cancellation support agrees with flow | Cancellation support opposes flow |\n|---|---:|---:|\n| Oct 2 | +0.432 (n=338) | −0.058 (n=231) |\n| Oct 3 | +0.119 (n=306) | +0.071 (n=274) |\n| Oct 17 | +0.124 (n=384) | +0.311 (n=235) |\n| Oct 18 | +0.624 (n=287) | +0.397 (n=195) |\n\nAddition agreement and net add/cancel agreement also fail to dominate on all dates. In contrast, P10’s display additions/removals are derived from changes in same-price aggregate sizes; those fields do not uniquely identify order cancellations, executions or individual additions. The two representations must not be treated as equivalent mechanisms.\n\nThese are family-conditioned comparisons using the retained pre-start reference and source event selection. They do not establish executable incremental returns. Neutral, missing and zero-direction populations remain in the comparison table; a missing directional outcome is not a flat return.\n\n**Implication:** include aligned and opposed book/flow paper arms, and compare them on identical horizons. Do not require every apparent confirmation to agree before allowing a strategy to be tested.\n",
+    "source": "prior/reanalysis-20261109/REPORT.md",
+    "current_policy": "All paper hypotheses included; discovery evidence is not platform fills or untouched validation."
+  }
+]

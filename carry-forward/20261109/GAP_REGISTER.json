@@ -1,0 +1,110 @@
+[
+  {
+    "gap_id": "G01",
+    "workstream": "Every-trade dipole map",
+    "scope": "All four days",
+    "affected_count": "80932",
+    "input": "dipole_trade_gaps.csv",
+    "work": "Recover prebirth, birth, recognition, continuation and terminal observations for each listed trade; preserve overlaps and no-dipole observations.",
+    "completion_check": "Every trade has an explicit result; source clocks and complete path or precise missing segment are recorded."
+  },
+  {
+    "gap_id": "G02",
+    "workstream": "19-field reuse and bindings",
+    "scope": "All four days",
+    "affected_count": "19",
+    "input": "nineteen_field_reuse.csv",
+    "work": "Inspect existing 19-field values, both new workflow outputs, original order queues and structural histories before launching replay. Reuse exact equivalent values; do not treat a related feature as equivalent.",
+    "completion_check": "Per field: definition, units, lookback, row/phase key, availability clock, existing coverage, missing operands and cheapest necessary calculation."
+  },
+  {
+    "gap_id": "G03",
+    "workstream": "Clock and relative-offset repairs",
+    "scope": "All four days",
+    "affected_count": "See clock_gaps.csv",
+    "input": "clock_gaps.csv",
+    "work": "Resolve float/scientific-notation clocks by source cursor or record identity; verify session origins, duration offsets and second-boundary meanings. Replace incorrect current values.",
+    "completion_check": "Every corrected record enters the Excel pins; scheduled cutoffs and observed endpoints remain distinct; no stale alternatives."
+  },
+  {
+    "gap_id": "G04",
+    "workstream": "Both new workflow outputs",
+    "scope": "Exact runs to be bound",
+    "affected_count": "Run inventory",
+    "input": "source_catalog.json",
+    "work": "Bind the exact two completed/current calculation outputs by run and commit, ingest every output field, join event clocks and attach aggregates. Audit whether they close G01/G02/G05/G06.",
+    "completion_check": "Each output row is pinned or attached; run completeness, exact source hashes and gap closure counts verified."
+  },
+  {
+    "gap_id": "G05",
+    "workstream": "Full order and FIFO context",
+    "scope": "All four days",
+    "affected_count": "Per-trade gaps",
+    "input": "trade_spine.csv",
+    "work": "Recover order identity, age, size, priority loss, volume ahead, refill/depletion and reset continuity at each decision clock from retained full-book/order sources.",
+    "completion_check": "Exact trade/cursor binding and missing/reset states; no top-of-book proxy substituted for far-queue definitions."
+  },
+  {
+    "gap_id": "G06",
+    "workstream": "External-point availability",
+    "scope": "All four days",
+    "affected_count": "13",
+    "input": "Existing workbook: Recovered external / Forecast recovered / Disagreement recovered",
+    "work": "Recover original publication/dissemination timestamps and contract/expiry matches for weather, model disagreement, COT, EIA and curve context; retain modeled clocks as modeled until replaced.",
+    "completion_check": "All 13 fields retain source, units, valid date and first availability; absent or modeled publication evidence is explicit."
+  },
+  {
+    "gap_id": "G07",
+    "workstream": "99-layer per-trade bindings",
+    "scope": "All four days",
+    "affected_count": "99",
+    "input": "Existing workbook: Layer directory / Layer coverage",
+    "work": "Replace example-only coverage with full trade-level values or exact evidence links; distinguish static knowledge, computed market observations and runtime receipts.",
+    "completion_check": "All 143270 saved trades have a state for every named layer; no placeholder presented as a computed value."
+  },
+  {
+    "gap_id": "G08",
+    "workstream": "Research attachment and field closure",
+    "scope": "All four days",
+    "affected_count": "All retained sources",
+    "input": "source_catalog.json / field_inventory.csv",
+    "work": "Keep comparisons, correlations, controls and every candidate family attached with their full denominators and fields; resolve unresolved variables without ranking candidates out.",
+    "completion_check": "All source rows reconcile to pinned + attached rows; every field preserved; all candidates passed to paper testing."
+  },
+  {
+    "gap_id": "G09",
+    "workstream": "NG dipole dive and directional phase shapes",
+    "scope": "October 2, 3, 17 and 18; every retained candidate and mapped trade",
+    "affected_count": "All directions and outcomes",
+    "input": "Historical crypto screenshots; NG chronological paths; Desktop x07/x09; native shape-forms",
+    "work": "Calculate NG-specific signed flow, dive and elapsed-time rates. Preserve distinct prebirth, event and tail/exhaustion paths by direction and original outcome labels. Recover the exact historical generator; distinguish amplitude difference from derivative definition. Keep observed clocks separate from scheduled boundaries; retain all cases including missing/censored. Do not import Bitcoin values, normalized time, fitted constants or winner-only admission.",
+    "completion_check": "Source-linked per-event rows and original-scale curves on all four days; phase definitions and end conventions stated; ties/missing cases retained; rolling-window effects measured separately; all hypotheses remain for paper testing."
+  },
+  {
+    "gap_id": "G10",
+    "workstream": "Recalculate NG subsecond warning lead",
+    "scope": "All four NG dates; native resolution",
+    "affected_count": "Unverified approximately 0.5 seconds",
+    "input": "Screenshot 1000144857.jpg row 2; prior math and source clocks",
+    "work": "Recover exact prior calculation. Measure earliest observable exhaustion/collapse evidence to independently defined turn at native event/receive/known-by clocks. Preserve full lead distribution, late signals, misses and censoring. Do not hardcode 0.5 seconds. Do not substitute fixed 1/5/30-second outcome horizons.",
+    "completion_check": "Exact per-event source rows, formula, distribution and corrected Excel values; claimed lead replaces approximate old value only after measured."
+  },
+  {
+    "gap_id": "G11",
+    "workstream": "S90 exhaustion canary and S94 NG entry",
+    "scope": "NG portions of screenshot rows 4 and 5",
+    "affected_count": "Every retained case",
+    "input": "NG timing.subsecond_reversal_exhaustion; S90 one-second contrast",
+    "work": "Repeat the NG exhaustion-versus-strengthening contrast with source-defined cells, then native-resolution reversal/exhaustion timing. Preserve all directions and outcomes and distinguish canary bins from causal lead. Retain original measured values as original study; no Bitcoin thresholds transferred.",
+    "completion_check": "Per-case rows and clock/definition/denominator reconciliation for both NG items on all four dates."
+  },
+  {
+    "gap_id": "G12",
+    "workstream": "NG dipole authority crosswalk",
+    "scope": "NG screenshot row 6; all four days",
+    "affected_count": "Every retained case",
+    "input": "Dipole brain crosswalk and chronological NG paths",
+    "work": "Map prior flow authority weakening near a turn, collapse and recovery to individual prebirth/event/tail paths. Keep family runway separate from warning lead; connect to G09 and G10.",
+    "completion_check": "Exact source and candidate/trade links, per-direction paths, missing/contrary cases, and no fixed-delay proxy."
+  }
+]

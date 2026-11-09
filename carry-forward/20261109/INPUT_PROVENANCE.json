@@ -1,0 +1,50 @@
+{
+  "scope": "Inherited source inventories across original research, desktop, codex and preserved workflow aliases; this is not a fresh branch-head certification.",
+  "metadata_archive": "https://github.com/DavisAI1974/markets-data/releases/tag/market-data-consolidation-20261109",
+  "inventory_members": [
+    {
+      "path": "active_sources.json",
+      "bytes": 6849236,
+      "sha256": "77e98f33095930c3f98d1cc4032dc21b32b639978bbc46d997e971f2c48bb8e6",
+      "asset": "research-union-001.zip",
+      "mtime_ns": 1794243280000000000
+    },
+    {
+      "path": "expanded_sources.json",
+      "bytes": 1306188,
+      "sha256": "2e45781cbd4fa8dee820390ff7bff874de53ddebe788a0263dbbdac16b4a8116",
+      "asset": "research-union-001.zip",
+      "mtime_ns": 1794244642000000000
+    },
+    {
+      "path": "remaining_research_sources.json",
+      "bytes": 42906,
+      "sha256": "953f0c302da20807993e88ea885fe07f6cd1443deac026eb46629eba4473b499",
+      "asset": "research-union-001.zip",
+      "mtime_ns": 1794247440000000000
+    },
+    {
+      "path": "source_inventory.json",
+      "bytes": 9893097,
+      "sha256": "a2025552e0007d7c25a56525275d5954e352d44a694a60906b365b5bbe99f145",
+      "asset": "research-union-001.zip",
+      "mtime_ns": 1794243004000000000
+    },
+    {
+      "path": "workflow_sources.json",
+      "bytes": 423281,
+      "sha256": "1b9b282b9fe6ab6552fc16a7a81b5830f5c5816e0a8e882f5080fb276565ffd9",
+      "asset": "research-union-001.zip",
+      "mtime_ns": 1794246280000000000
+    }
+  ],
+  "published_catalog_sha256": "1f8bec27162b687cb842ee500cea4c8bb36fc8293534d0e4fd041663de82238f",
+  "published_catalog_source": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/published_source_catalog.json",
+  "raw_document_integrity": "Every original MD document Git blob hash verified before archive creation; full original bytes preserved.",
+  "source_exclusion": "Other analyst new reanalysis remains excluded. No matching excluded path or SHA alias appeared in these inherited inventories; this does not revoke the exclusion.",
+  "prior_reports": "PRIOR_SOURCE_RECEIPTS.json",
+  "current_policy": "All source-defined hypotheses included for paper; no observation-only performance gate.",
+  "migration": "Paused; existing verified archive metadata was read, jobs were not resumed.",
+  "published_catalog_git_blob_sha": "c52185564ffe90e7509dd4bb30361f88d361c59e",
+  "local_catalog_note": "JSON-equivalent to published Git blob; local serialization differs."
+}
