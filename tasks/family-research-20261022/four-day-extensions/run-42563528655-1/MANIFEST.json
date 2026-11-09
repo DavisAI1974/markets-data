@@ -1,0 +1,769 @@
+{
+  "schema": "ng.four_day_extensions.v1",
+  "code_commit": "c4ca63f2816a50e051f70f6219f2378bd9530777",
+  "workflow_run": "42563528655",
+  "files": [
+    {
+      "path": "20231002/input-manifest.json",
+      "bytes": 4973,
+      "sha256": "e8dcb816f95eac985af46a74b91b5b5fc33626a9414c0eaedb77e016308a0345"
+    },
+    {
+      "path": "20231002/research-atlas-v2/continuous-prebirth-v1/active-events.csv.gz",
+      "bytes": 2273265,
+      "sha256": "4bdbdd2c498f3b72c508b8af9d1592541c96d3012f0cecc9b492b61ca6d00ea0"
+    },
+    {
+      "path": "20231002/research-atlas-v2/continuous-prebirth-v1/birth-links.csv.gz",
+      "bytes": 62426,
+      "sha256": "798798f1b724266d642681285b1fe980c88ee7f51ff919593c07df6409673b45"
+    },
+    {
+      "path": "20231002/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "bytes": 2098,
+      "sha256": "7138cfbd9409884ae4f0570d7bb1a7b03bc0e5cd98a7e63c4adc1df63bb330ec"
+    },
+    {
+      "path": "20231002/research-atlas-v2/continuous-prebirth-v1/observations.csv.gz",
+      "bytes": 1885028,
+      "sha256": "191793480de0e28bcd3e8f261663996bcec3c8bc191ef883c49cbf784bab1144"
+    },
+    {
+      "path": "20231002/research-atlas-v2/continuous-prebirth-v1/onset-birth-labels.csv.gz",
+      "bytes": 69472,
+      "sha256": "524f5478f323dc090c382fd94b54ccb636445b893a6fb54505f9080f08b70de1"
+    },
+    {
+      "path": "20231002/research-atlas-v2/continuous-prebirth-v1/onsets.csv.gz",
+      "bytes": 1704649,
+      "sha256": "5649f96298906c7e274180ae26eaaa79ce97c806d2f80b97fb1f27f5c67d6cc2"
+    },
+    {
+      "path": "20231002/research-atlas-v2/continuous-prebirth-v1/outcome-summary.csv",
+      "bytes": 2892,
+      "sha256": "a88129a372452de63895355e300bcd62b8234ccb6acbef8e2d5dd39a653615c1"
+    },
+    {
+      "path": "20231002/research-atlas-v2/continuous-prebirth-v1/outcomes.csv.gz",
+      "bytes": 2478706,
+      "sha256": "4335b06b77e074133f32df9ddb59249db072c70199fc3c44974b1b593c74bf4b"
+    },
+    {
+      "path": "20231002/research-atlas-v2/continuous-prebirth-v1/summary.csv",
+      "bytes": 1171,
+      "sha256": "cfb79341d61616963f5110707073dcaf180d5ab9bc5e7a51e4ae98eac0f92745"
+    },
+    {
+      "path": "20231002/research-atlas-v2/primer-application-method.json",
+      "bytes": 1690,
+      "sha256": "04dd6699a96bf5b9769b7ba4293818349f6168b9635138d1c748dc1bc153c957"
+    },
+    {
+      "path": "20231002/research-atlas-v2/primer-prebirth-sensitivity.csv",
+      "bytes": 1108,
+      "sha256": "d4952315173e9d0eb940624290d49b574d0cde21b0d54a66af058217d5fc1f96"
+    },
+    {
+      "path": "20231002/research-atlas-v2/primer-spread-event-outcomes.csv.gz",
+      "bytes": 170762,
+      "sha256": "da82d4a64e1f24d7b2744b9621e758dc7ec7adcc31029d1ad995ec34bb8843e0"
+    },
+    {
+      "path": "20231002/research-atlas-v2/primer-spread-event-summary.csv",
+      "bytes": 4878,
+      "sha256": "500dd9bb24e22efe53f8d60ae39d17bc13936166ee12f8daef9611db5304780a"
+    },
+    {
+      "path": "20231002/verification.json",
+      "bytes": 334,
+      "sha256": "8c1eddf8f1fcfe07555be26fb4875a6f169155e288c04a99918e927b7ba4a241"
+    },
+    {
+      "path": "20231003/input-manifest.json",
+      "bytes": 4973,
+      "sha256": "209fa62dab45f19dab1955e0cb10561e74d49d10bf11aa3f864b0e788a99489b"
+    },
+    {
+      "path": "20231003/research-atlas-v2/continuous-prebirth-v1/active-events.csv.gz",
+      "bytes": 2515263,
+      "sha256": "d754f6aa07204e6a7ace6fa32ef019d08295cdd11fd6ebee01f745238b2c0ff0"
+    },
+    {
+      "path": "20231003/research-atlas-v2/continuous-prebirth-v1/birth-links.csv.gz",
+      "bytes": 70367,
+      "sha256": "2d06739e5dc30e2655696b30723c2e5b546aae2cacb8c5c5072ea0f387d4da4b"
+    },
+    {
+      "path": "20231003/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "bytes": 2098,
+      "sha256": "5841d6ff5a3283c89cfb96a597c78a03621b1fc222d32ba751cc0fcb14184842"
+    },
+    {
+      "path": "20231003/research-atlas-v2/continuous-prebirth-v1/observations.csv.gz",
+      "bytes": 2070975,
+      "sha256": "1adcf9f1d040cae14d0ff7079e9f962b264676d4807567e507a422585d7e4ab8"
+    },
+    {
+      "path": "20231003/research-atlas-v2/continuous-prebirth-v1/onset-birth-labels.csv.gz",
+      "bytes": 75754,
+      "sha256": "f3f5fadb80a3148f1c85055ed6b96ae184c5c88b6de4f4490b5d5cc8e42cb640"
+    },
+    {
+      "path": "20231003/research-atlas-v2/continuous-prebirth-v1/onsets.csv.gz",
+      "bytes": 1880617,
+      "sha256": "20b3d663b167e4c3255eeed43068537e00c3146b7948e11dfab5279c7be45dbe"
+    },
+    {
+      "path": "20231003/research-atlas-v2/continuous-prebirth-v1/outcome-summary.csv",
+      "bytes": 2902,
+      "sha256": "4db40acf37f6d1ed1c007e1de55525746331948743a23c302ea5cb2be70026b1"
+    },
+    {
+      "path": "20231003/research-atlas-v2/continuous-prebirth-v1/outcomes.csv.gz",
+      "bytes": 2717954,
+      "sha256": "60df5dbaa643ae9fe21b842a702c756eb7abd543ef4500705f342734ec9be2ec"
+    },
+    {
+      "path": "20231003/research-atlas-v2/continuous-prebirth-v1/summary.csv",
+      "bytes": 1179,
+      "sha256": "aad54f1aa11f7f89cc867f2a80ae903a53bd6d9b42ebce7f60392fb05e6808ec"
+    },
+    {
+      "path": "20231003/research-atlas-v2/primer-application-method.json",
+      "bytes": 1704,
+      "sha256": "dc7b3b0ac042f87c235fb62d1a3ed94c1ff1a9258554202df187e0afaf209e3f"
+    },
+    {
+      "path": "20231003/research-atlas-v2/primer-prebirth-sensitivity.csv",
+      "bytes": 1070,
+      "sha256": "1aedd61274c3b441e068e99d14536622e368bf4a51899503c0e3c58f55d44142"
+    },
+    {
+      "path": "20231003/research-atlas-v2/primer-spread-event-outcomes.csv.gz",
+      "bytes": 182807,
+      "sha256": "1a0ff020b199ffa673646119992ceb41a0841ae39d27f8a6e2c398e0e4c45592"
+    },
+    {
+      "path": "20231003/research-atlas-v2/primer-spread-event-summary.csv",
+      "bytes": 3556,
+      "sha256": "b136fc9633185de183d58ecab43877797836b330e805534e89d546153f9c2743"
+    },
+    {
+      "path": "20231003/verification.json",
+      "bytes": 348,
+      "sha256": "8c972b605c3276421b092a5f3ef5a7323a305392c9e0263e54a068263e90ae68"
+    },
+    {
+      "path": "20231017/input-manifest.json",
+      "bytes": 4973,
+      "sha256": "3c4ec5447d2e45d1b05973f0da340d6b475158ebc37847b4b53d7dd786a7cf94"
+    },
+    {
+      "path": "20231017/research-atlas-v2/continuous-prebirth-v1/active-events.csv.gz",
+      "bytes": 2140712,
+      "sha256": "bbc6004129c866a654dcc78034ac5bee469a9c0102529c1bfae442e03c191d0f"
+    },
+    {
+      "path": "20231017/research-atlas-v2/continuous-prebirth-v1/birth-links.csv.gz",
+      "bytes": 62480,
+      "sha256": "6710310a731734b457d2e14a478d78272d6b0182a166a8bd8b9be1fce2eed99d"
+    },
+    {
+      "path": "20231017/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "bytes": 2098,
+      "sha256": "384abf98407b5d0a6bcd9c0dcbb67400f5ae34c8a8dd23a8f961c0174774649f"
+    },
+    {
+      "path": "20231017/research-atlas-v2/continuous-prebirth-v1/observations.csv.gz",
+      "bytes": 1831903,
+      "sha256": "903440671a701712bbcae4c7b1be491bc32f6ec364e07d0ee1a153d27e3d5937"
+    },
+    {
+      "path": "20231017/research-atlas-v2/continuous-prebirth-v1/onset-birth-labels.csv.gz",
+      "bytes": 67111,
+      "sha256": "c01ff10858bb2c6fccfcfd7cdbd4192fd4a03cc7feb7af472cd5c85931658fa1"
+    },
+    {
+      "path": "20231017/research-atlas-v2/continuous-prebirth-v1/onsets.csv.gz",
+      "bytes": 1640975,
+      "sha256": "131695ad4a6ff44c513ab0feb7eafcf26f2285ec2dc1acaab919744438712631"
+    },
+    {
+      "path": "20231017/research-atlas-v2/continuous-prebirth-v1/outcome-summary.csv",
+      "bytes": 2888,
+      "sha256": "8da6f8441078cd6b13078a0c1823c0667656040ac09cd3e72e17796b4aa53787"
+    },
+    {
+      "path": "20231017/research-atlas-v2/continuous-prebirth-v1/outcomes.csv.gz",
+      "bytes": 2386323,
+      "sha256": "2264846191ac14ca7b3d11f098642b15052b2db160bd0a2b4cd5579c9384b043"
+    },
+    {
+      "path": "20231017/research-atlas-v2/continuous-prebirth-v1/summary.csv",
+      "bytes": 1192,
+      "sha256": "5d4df249bf410819dfb7e4ddcaf2d489c3af99d2c371ddf83d62b786a60c1df5"
+    },
+    {
+      "path": "20231017/research-atlas-v2/primer-application-method.json",
+      "bytes": 1690,
+      "sha256": "73d5dd9666afceb46acc9b7abb6342dde01e15054ba6aebd2a99100416e3d3df"
+    },
+    {
+      "path": "20231017/research-atlas-v2/primer-prebirth-sensitivity.csv",
+      "bytes": 1097,
+      "sha256": "698cffc287dd022164382334ba0b1f4143eea2faa3382818bd904935cc04b598"
+    },
+    {
+      "path": "20231017/research-atlas-v2/primer-spread-event-outcomes.csv.gz",
+      "bytes": 153339,
+      "sha256": "d66e9dd8453c904a8ff7c4d72cc97fc1c8fbe9c0d5b7ab55bea8b5245b6bacca"
+    },
+    {
+      "path": "20231017/research-atlas-v2/primer-spread-event-summary.csv",
+      "bytes": 3528,
+      "sha256": "c34f4a2164b9fe8d3dd1e9883abf5a5a964ad4bcd5d302fb436dafa9163e3efb"
+    },
+    {
+      "path": "20231017/verification.json",
+      "bytes": 334,
+      "sha256": "90a1af757ac6606cdadc3d81a7aecc8a03ad42f1b17722edcb889ee5a90da7a4"
+    },
+    {
+      "path": "20231018/input-manifest.json",
+      "bytes": 10414,
+      "sha256": "85b2e027579929b7b872cd3c41f5ff83e411a98ee9131ce83cef13a7333e87ea"
+    },
+    {
+      "path": "20231018/research-atlas-v2/continuous-prebirth-v1/active-events.csv.gz",
+      "bytes": 2000954,
+      "sha256": "16eb4470fffb6d2bd191004921bb0e57b78cfc8fb6d7a77c2ba8e20f176d6991"
+    },
+    {
+      "path": "20231018/research-atlas-v2/continuous-prebirth-v1/birth-links.csv.gz",
+      "bytes": 72708,
+      "sha256": "db6ef19fc085effda9c895e7686ac2ebe412b30841cec291c8ae6113f8696db7"
+    },
+    {
+      "path": "20231018/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "bytes": 2098,
+      "sha256": "6aeb72821d5c256f6346ac86fbdb5f60cf9b2d0bbe2738f57eced3baf5343a1b"
+    },
+    {
+      "path": "20231018/research-atlas-v2/continuous-prebirth-v1/observations.csv.gz",
+      "bytes": 1997874,
+      "sha256": "2bca084705bfd7f0ea6504911e78e894f64fa17ee3f63ce47cedf5a878af4597"
+    },
+    {
+      "path": "20231018/research-atlas-v2/continuous-prebirth-v1/onset-birth-labels.csv.gz",
+      "bytes": 67000,
+      "sha256": "9bff3b6f1b9e25a8aed4522dd54e66d484c1df36dc1409c5f4e214c4b0501bd7"
+    },
+    {
+      "path": "20231018/research-atlas-v2/continuous-prebirth-v1/onsets.csv.gz",
+      "bytes": 1525434,
+      "sha256": "4d7b04961d514f3e855762edd0d22d5975cb219b9156686a10bc6dde5e7557c7"
+    },
+    {
+      "path": "20231018/research-atlas-v2/continuous-prebirth-v1/outcome-summary.csv",
+      "bytes": 2887,
+      "sha256": "eb00d2d6bcca8cf2c6bfc3a0fd47bcad44e06e05042e6289dc37ce47f5b08190"
+    },
+    {
+      "path": "20231018/research-atlas-v2/continuous-prebirth-v1/outcomes.csv.gz",
+      "bytes": 2278504,
+      "sha256": "bb29857ed1293ad292bbf51d3983e1a6bd5c67728c67efdbbafa469d0b1310a3"
+    },
+    {
+      "path": "20231018/research-atlas-v2/continuous-prebirth-v1/summary.csv",
+      "bytes": 1179,
+      "sha256": "b1429ae3894dd44ff0199befbe97f3404ff4871206a210ca197005d3477e1c15"
+    },
+    {
+      "path": "20231018/research-atlas-v2/primer-application-method.json",
+      "bytes": 1658,
+      "sha256": "7e5010cf3a2f61c8507320d6de3375dabf111b019422260d33b4fdcb88808188"
+    },
+    {
+      "path": "20231018/research-atlas-v2/primer-prebirth-sensitivity.csv",
+      "bytes": 1985,
+      "sha256": "22669815ba7ea88743f868aa3be33a573a0681145e2f9a35820fd174b6a427f1"
+    },
+    {
+      "path": "20231018/research-atlas-v2/primer-spread-event-outcomes.csv.gz",
+      "bytes": 257151,
+      "sha256": "6698516406ce595bd530718a9106fdcbce02974b396e437d9815110d9d55fea2"
+    },
+    {
+      "path": "20231018/research-atlas-v2/primer-spread-event-summary.csv",
+      "bytes": 8673,
+      "sha256": "ebb681dd880d56d457c1d01f0e27c058e9f03e033c02dab7e2b7c925c820de18"
+    },
+    {
+      "path": "20231018/verification.json",
+      "bytes": 755,
+      "sha256": "9f9e95b879888ef4e911977cb8ab7fd5d2e57677bac7098949e7ba42c8444cab"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1921,
+      "sha256": "65ba6f97c51168cf8875cb901032d84b8a72e8d57982af277cfa0335ee912b1b"
+    },
+    {
+      "path": "continuous-onsets-four-days.png",
+      "bytes": 201889,
+      "sha256": "ace6e16e5d3884793c5da9913d7ccef06d322c34a0affc0f5a90bca72162b100"
+    },
+    {
+      "path": "four-day-continuous-summary.csv",
+      "bytes": 4393,
+      "sha256": "c74bdef10f88fa8038c135a75af4f6e1d551d5b1aaf17b035d97cbb9e7a4f64c"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 1912,
+      "sha256": "c9d7e796e65df45d744ba6752a75c0913d4c28ab273e73368a22986ec8dc3a7c"
+    }
+  ],
+  "source_reads": [
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/flow_book_discovery.py",
+      "bytes": 19049,
+      "sha256": "d6888f270dc8d0bbfca27bed4467eb82c6974ae0fb525b0eb7fcdc6f3ad76e17",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/flow_book_discovery.py"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research_atlas.py",
+      "bytes": 17607,
+      "sha256": "37765c75a72bb0e5e244dfffdc95ba7058f6aad1a78f16857afd17778baf7d1b",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research_atlas.py"
+    },
+    {
+      "repository": "markets-data",
+      "revision": "968fa11324f66b70cd318140c51bf19e23f9ee4e",
+      "path": "MANIFEST.json",
+      "bytes": 16602,
+      "sha256": "d0f095005af93b6642d0c02e70fdd87755055f8e0fc2482507f3e26b57c694a8",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/markets-data/968fa11324f66b70cd318140c51bf19e23f9ee4e/MANIFEST.json"
+    },
+    {
+      "repository": "markets-data",
+      "revision": "968fa11324f66b70cd318140c51bf19e23f9ee4e",
+      "path": "tasks/family-research-20261022/replay-artifacts/20231018/standalone-inputs/groups.jsonl.gz",
+      "bytes": 18751004,
+      "sha256": "f03255af6121568165843504965cf1ad2e482178ad9995e5727ef99336d90143",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/markets-data/968fa11324f66b70cd318140c51bf19e23f9ee4e/tasks/family-research-20261022/replay-artifacts/20231018/standalone-inputs/groups.jsonl.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/october18-candidate-inputs.jsonl.gz",
+      "bytes": 127477,
+      "sha256": "9145da768edf19ffe5bc8068ae92d848099d151d903d3a923f6f8b940e480105",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/october18-candidate-inputs.jsonl.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/research-atlas-v2/dipole-completed-group-flow.csv.gz",
+      "bytes": 412630,
+      "sha256": "cb96144d12bb70cb5972365435672d917d80490a031fee1db623281f007fcf43",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/research-atlas-v2/dipole-completed-group-flow.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/research-atlas-v2/dipole-application-method.json",
+      "bytes": 1616,
+      "sha256": "eddecadb6fbef16249ac40456dbf457f538540f21e663a90dee0fee7a8b7c0d0",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/research-atlas-v2/dipole-application-method.json"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/research-atlas-v2/aggression-to-rest-events.csv",
+      "bytes": 257317,
+      "sha256": "3a35ffdc67822d5405792e592c12031d4466a8c09ed6888bc30e2bb5b0de71e5",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/research-atlas-v2/aggression-to-rest-events.csv"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/research-atlas-v2/prebirth-cases.csv.gz",
+      "bytes": 269139,
+      "sha256": "d8234ea2de83ed51d002803cb0b7c41a05f88316e21ba1f93528df245f4b11f7",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/research-atlas-v2/prebirth-cases.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/research-atlas-v2/prebirth-matched-pairs.csv.gz",
+      "bytes": 329498,
+      "sha256": "724ead6900d79d40c4d79e14a809b82f79a30813e125f3ea946b660465dd03a5",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/research-atlas-v2/prebirth-matched-pairs.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/research-atlas-v2/prebirth-dipole_birth-control-grid.csv.gz",
+      "bytes": 102394,
+      "sha256": "92195dc4ccf9982ce2bcd133003e3a86e8a98c2f84614c33e7719136ad85e647",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/research-atlas-v2/prebirth-dipole_birth-control-grid.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/research-atlas-v2/prebirth-family_start-control-grid.csv.gz",
+      "bytes": 240891,
+      "sha256": "6e123cb89c5c40cad3eeb3b97850e3cc835df187c2b35cefa309d93399c3c90a",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/research-atlas-v2/prebirth-family_start-control-grid.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "b5f28bd57de5ed4ff889335edb9a33216b67eb6a",
+      "path": "odcore/info_dipole.py",
+      "bytes": 9291,
+      "sha256": "0fb1f3d868973fcf0ee25be30d7ffe1f7b388a9235a19d893f8495012c0df23b",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/b5f28bd57de5ed4ff889335edb9a33216b67eb6a/odcore/info_dipole.py"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/flow-book-discovery-v1/opportunities.csv.gz",
+      "bytes": 157580,
+      "sha256": "c106ebac9ce9f46910260a779db5c574c5e2bbc7c7b7a12a9759049a1e08eb37",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/flow-book-discovery-v1/opportunities.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/observations.csv.gz",
+      "bytes": 1998576,
+      "sha256": "1afb9ca66fff3d78a5ffa7b8b6afd659aeed3ad0f023c84c3299d9ea099e4fe9",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/observations.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/active-events.csv.gz",
+      "bytes": 2001300,
+      "sha256": "84fc80181e0e9f49d0863a029ea2b9f61cd627686eeafff77edc8cd39dfa4bc8",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/active-events.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/onsets.csv.gz",
+      "bytes": 1526588,
+      "sha256": "7e5b6b67b5ec2a616784d581c9296d4d8bbbbefe0ae85ccb3f51c42fa03fcad2",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/onsets.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/birth-links.csv.gz",
+      "bytes": 72634,
+      "sha256": "48a97401d74aa4408b4c9c10f7b81a1865eb1a6d6d499271a11425f63f0a8377",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/birth-links.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/onset-birth-labels.csv.gz",
+      "bytes": 66822,
+      "sha256": "70b41f73aed50ebb3018f5cff86dfcdfee5ddf13f139b769cd270844bd956841",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/onset-birth-labels.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/outcomes.csv.gz",
+      "bytes": 2280580,
+      "sha256": "81d181a1c2199c1cb931d8ea7d4c421c22f006c06b33b37b2ea27a0bf7ad79fc",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/outcomes.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/summary.csv",
+      "bytes": 1179,
+      "sha256": "b1429ae3894dd44ff0199befbe97f3404ff4871206a210ca197005d3477e1c15",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/summary.csv"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/outcome-summary.csv",
+      "bytes": 2887,
+      "sha256": "eb00d2d6bcca8cf2c6bfc3a0fd47bcad44e06e05042e6289dc37ce47f5b08190",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research-atlas-v2/continuous-prebirth-v1/outcome-summary.csv"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research-atlas-v2/primer-spread-event-outcomes.csv.gz",
+      "bytes": 257421,
+      "sha256": "af2377a6c01b7979df70d1b0e0c83dc5b8cfd6d211563d1a837d7bf671ab9581",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research-atlas-v2/primer-spread-event-outcomes.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research-atlas-v2/primer-spread-event-summary.csv",
+      "bytes": 8673,
+      "sha256": "ebb681dd880d56d457c1d01f0e27c058e9f03e033c02dab7e2b7c925c820de18",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research-atlas-v2/primer-spread-event-summary.csv"
+    },
+    {
+      "repository": "Markets",
+      "revision": "407a23379",
+      "path": "tasks/family-research-20261022/research-atlas-v2/primer-prebirth-sensitivity.csv",
+      "bytes": 1985,
+      "sha256": "22669815ba7ea88743f868aa3be33a573a0681145e2f9a35820fd174b6a427f1",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/407a23379/tasks/family-research-20261022/research-atlas-v2/primer-prebirth-sensitivity.csv"
+    },
+    {
+      "repository": "markets-data",
+      "revision": "968fa11324f66b70cd318140c51bf19e23f9ee4e",
+      "path": "MANIFEST.json",
+      "bytes": 16602,
+      "sha256": "d0f095005af93b6642d0c02e70fdd87755055f8e0fc2482507f3e26b57c694a8",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/markets-data/968fa11324f66b70cd318140c51bf19e23f9ee4e/MANIFEST.json"
+    },
+    {
+      "repository": "markets-data",
+      "revision": "968fa11324f66b70cd318140c51bf19e23f9ee4e",
+      "path": "tasks/family-research-20261022/replay-artifacts/20231002/standalone-inputs/groups.jsonl.gz",
+      "bytes": 19758887,
+      "sha256": "ae0c8778503ebd1169b6f737b6992f8f9a006c65d26f13a75ee8bf51727029e3",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/markets-data/968fa11324f66b70cd318140c51bf19e23f9ee4e/tasks/family-research-20261022/replay-artifacts/20231002/standalone-inputs/groups.jsonl.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231002/candidate-inputs.jsonl.gz",
+      "bytes": 69711,
+      "sha256": "7cfd46759f4112875aa70464dab738773d62a6f64b0cf26182d2ae3de36e034a",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231002/candidate-inputs.jsonl.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/dipole-completed-group-flow.csv.gz",
+      "bytes": 417130,
+      "sha256": "660ed9e695dc76d8e04dd08adbdace578a8acc9a5e32bf2756b91730cfab3ce5",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/dipole-completed-group-flow.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/dipole-application-method.json",
+      "bytes": 1834,
+      "sha256": "6b4016d42315ce53a83811ee60a337087919a5c4925e65f1823a724389405ef2",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/dipole-application-method.json"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/aggression-to-rest-events.csv",
+      "bytes": 296095,
+      "sha256": "4823d81941f8dbe7a037f89a0cd9789e49254736a5557493b2b34dabae5f77e4",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/aggression-to-rest-events.csv"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/prebirth-cases.csv.gz",
+      "bytes": 114109,
+      "sha256": "a45e84bfc3ddb247ddd50e1836065591a90f7cdd38a1fe3d02b5b4bf6ed40e79",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/prebirth-cases.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/prebirth-matched-pairs.csv.gz",
+      "bytes": 130054,
+      "sha256": "cca0426019253ff55dc1d4de009500c01789d81fa5c5ba0c9797e54829458ef4",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/prebirth-matched-pairs.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/prebirth-dipole_birth-control-grid.csv.gz",
+      "bytes": 135661,
+      "sha256": "4fce33900d328d7bc38bbc6e0a61a3065ff0d9b89cb88ba4b95d4fc9d2916e0b",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/prebirth-dipole_birth-control-grid.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "b5f28bd57de5ed4ff889335edb9a33216b67eb6a",
+      "path": "odcore/info_dipole.py",
+      "bytes": 9291,
+      "sha256": "0fb1f3d868973fcf0ee25be30d7ffe1f7b388a9235a19d893f8495012c0df23b",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/b5f28bd57de5ed4ff889335edb9a33216b67eb6a/odcore/info_dipole.py"
+    },
+    {
+      "repository": "markets-data",
+      "revision": "968fa11324f66b70cd318140c51bf19e23f9ee4e",
+      "path": "MANIFEST.json",
+      "bytes": 16602,
+      "sha256": "d0f095005af93b6642d0c02e70fdd87755055f8e0fc2482507f3e26b57c694a8",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/markets-data/968fa11324f66b70cd318140c51bf19e23f9ee4e/MANIFEST.json"
+    },
+    {
+      "repository": "markets-data",
+      "revision": "968fa11324f66b70cd318140c51bf19e23f9ee4e",
+      "path": "tasks/family-research-20261022/replay-artifacts/20231003/standalone-inputs/groups.jsonl.gz",
+      "bytes": 21484199,
+      "sha256": "1589974b8d6a3f70d8459ed764fac087c7395b13c8d1c9de4fe70d520f42a6ef",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/markets-data/968fa11324f66b70cd318140c51bf19e23f9ee4e/tasks/family-research-20261022/replay-artifacts/20231003/standalone-inputs/groups.jsonl.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231003/candidate-inputs.jsonl.gz",
+      "bytes": 78439,
+      "sha256": "f7f4c1278bd48244b60ab16d401dfbb35ea4b534a9371215eac869ba74e0cde4",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231003/candidate-inputs.jsonl.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/dipole-completed-group-flow.csv.gz",
+      "bytes": 459702,
+      "sha256": "dcaf58c94d1fca7a26b6826da8672ca6e53f24e5aa2049609069c810ffa777e5",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/dipole-completed-group-flow.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/dipole-application-method.json",
+      "bytes": 1813,
+      "sha256": "9f6cbe5085f8f02b29cc8f07db78e0fa43bb96836bb707b31f1f6870c090ca69",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/dipole-application-method.json"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/aggression-to-rest-events.csv",
+      "bytes": 315316,
+      "sha256": "43d8e6613e6f523c699412b4b65a2fb93710de3637d5dcdcbce0b7fcf2691029",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/aggression-to-rest-events.csv"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/prebirth-cases.csv.gz",
+      "bytes": 128958,
+      "sha256": "1a4fce040e909ecc83ac15843c97d9db3150f6adcaea21aa87024c989b8defb4",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/prebirth-cases.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/prebirth-matched-pairs.csv.gz",
+      "bytes": 127768,
+      "sha256": "65d3a33a2ca7660652006520115b35a834b0cd07108c7a0389552031f4cd1f99",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/prebirth-matched-pairs.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/prebirth-dipole_birth-control-grid.csv.gz",
+      "bytes": 138313,
+      "sha256": "a77195ccd6481acee906a0968b527e74b9d37cdfc27aeca54314169a865792b3",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/prebirth-dipole_birth-control-grid.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "b5f28bd57de5ed4ff889335edb9a33216b67eb6a",
+      "path": "odcore/info_dipole.py",
+      "bytes": 9291,
+      "sha256": "0fb1f3d868973fcf0ee25be30d7ffe1f7b388a9235a19d893f8495012c0df23b",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/b5f28bd57de5ed4ff889335edb9a33216b67eb6a/odcore/info_dipole.py"
+    },
+    {
+      "repository": "markets-data",
+      "revision": "968fa11324f66b70cd318140c51bf19e23f9ee4e",
+      "path": "MANIFEST.json",
+      "bytes": 16602,
+      "sha256": "d0f095005af93b6642d0c02e70fdd87755055f8e0fc2482507f3e26b57c694a8",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/markets-data/968fa11324f66b70cd318140c51bf19e23f9ee4e/MANIFEST.json"
+    },
+    {
+      "repository": "markets-data",
+      "revision": "968fa11324f66b70cd318140c51bf19e23f9ee4e",
+      "path": "tasks/family-research-20261022/replay-artifacts/20231017/standalone-inputs/groups.jsonl.gz",
+      "bytes": 20408748,
+      "sha256": "30364aaecfbbe1f3d58c25e9b645ee240c299065bb46222bd6d3ca5a0f471c74",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/markets-data/968fa11324f66b70cd318140c51bf19e23f9ee4e/tasks/family-research-20261022/replay-artifacts/20231017/standalone-inputs/groups.jsonl.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231017/candidate-inputs.jsonl.gz",
+      "bytes": 69690,
+      "sha256": "4a2a5af0be04877d863c37ed4e021860561c6d401705baa7a01f38e1861f5753",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231017/candidate-inputs.jsonl.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/dipole-completed-group-flow.csv.gz",
+      "bytes": 407996,
+      "sha256": "adcf96bcaf6c7308a0a67e12aa8a62b62ed897b6475ecd4f50d7b67aab9b08c9",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/dipole-completed-group-flow.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/dipole-application-method.json",
+      "bytes": 1834,
+      "sha256": "bf06e78682d5124c6af7ab50459f3affcdc19c9378992525025520353da82ab9",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/dipole-application-method.json"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/aggression-to-rest-events.csv",
+      "bytes": 265467,
+      "sha256": "1e656beb6719f0867e7ca4477ff85645bbd0e470987fdef0cb6648fb05bb71ec",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/aggression-to-rest-events.csv"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/prebirth-cases.csv.gz",
+      "bytes": 111600,
+      "sha256": "0e920710bf0608372ffd6a3065e3eb02186584e16ab8ee75dcc5f98740513773",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/prebirth-cases.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/prebirth-matched-pairs.csv.gz",
+      "bytes": 126830,
+      "sha256": "d3850b728daa7dd6eabd44b1a498e7a4e2693b4155156e679cebd1ea4cc5f948",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/prebirth-matched-pairs.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "2ab66b7ab865e5c433a0140e81d693dd54da4903",
+      "path": "tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/prebirth-dipole_birth-control-grid.csv.gz",
+      "bytes": 127332,
+      "sha256": "4c750bdbd5707827fa371477102cf1c9ab00cc713f415cf38dd7e73a358a1407",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/2ab66b7ab865e5c433a0140e81d693dd54da4903/tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/prebirth-dipole_birth-control-grid.csv.gz"
+    },
+    {
+      "repository": "Markets",
+      "revision": "b5f28bd57de5ed4ff889335edb9a33216b67eb6a",
+      "path": "odcore/info_dipole.py",
+      "bytes": 9291,
+      "sha256": "0fb1f3d868973fcf0ee25be30d7ffe1f7b388a9235a19d893f8495012c0df23b",
+      "url": "https://raw.githubusercontent.com/DavisAI1974/Markets/b5f28bd57de5ed4ff889335edb9a33216b67eb6a/odcore/info_dipole.py"
+    }
+  ]
+}

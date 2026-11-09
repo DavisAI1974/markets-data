@@ -1,0 +1,69 @@
+[
+  {
+    "observation_seconds": 82800,
+    "input_available_seconds": 82758,
+    "unique_onset_seconds": 10383,
+    "onset_rows": 19839,
+    "retained_births": 863,
+    "birth_link_rows": 8630,
+    "all_availability_and_denominator_checks": "passed",
+    "october18_continuous_reproduced": [
+      "observations.csv.gz",
+      "active-events.csv.gz",
+      "onsets.csv.gz",
+      "birth-links.csv.gz",
+      "onset-birth-labels.csv.gz",
+      "outcomes.csv.gz",
+      "summary.csv",
+      "outcome-summary.csv"
+    ],
+    "october18_primer_reproduced": [
+      "primer-spread-event-outcomes.csv.gz",
+      "primer-spread-event-summary.csv",
+      "primer-prebirth-sensitivity.csv"
+    ],
+    "day": "20231018",
+    "completed_groups": 583688,
+    "finalization_only": 0,
+    "scope": "full archived session"
+  },
+  {
+    "observation_seconds": 75600,
+    "input_available_seconds": 75579,
+    "unique_onset_seconds": 10932,
+    "onset_rows": 20959,
+    "retained_births": 741,
+    "birth_link_rows": 7410,
+    "all_availability_and_denominator_checks": "passed",
+    "day": "20231002",
+    "completed_groups": 600291,
+    "finalization_only": 0,
+    "scope": "partial"
+  },
+  {
+    "observation_seconds": 82800,
+    "input_available_seconds": 82758,
+    "unique_onset_seconds": 11928,
+    "onset_rows": 22918,
+    "retained_births": 833,
+    "birth_link_rows": 8330,
+    "all_availability_and_denominator_checks": "passed",
+    "day": "20231003",
+    "completed_groups": 653912,
+    "finalization_only": 1,
+    "scope": "full archived session"
+  },
+  {
+    "observation_seconds": 75600,
+    "input_available_seconds": 75579,
+    "unique_onset_seconds": 10602,
+    "onset_rows": 20245,
+    "retained_births": 741,
+    "birth_link_rows": 7410,
+    "all_availability_and_denominator_checks": "passed",
+    "day": "20231017",
+    "completed_groups": 635170,
+    "finalization_only": 1,
+    "scope": "partial"
+  }
+]
