@@ -10,7 +10,7 @@ concurrency:
   group: ng-dipole-renders
   cancel-in-progress: false
 env:
-  CODE_REV: 38d676bd6433d6362e8cc5363dd0ba3e8fa3048b
+  CODE_REV: e406ae4fcec5653ecc496e81c4e7bc21ff1c78f6
   SOURCE_REV: 2fd55ea1276d00530f8cdbd1caf5918910494f19
   SOURCE_RUN: '42569937357'
   ANALYSIS_REV: f82e5c747195a03ba28aa2778b80df1d191c91ba
@@ -25,7 +25,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        day: ['20231002', '20231003', '20231017', '20231018', 'archive']
+        day: ['20231002', '20231003', '20231017', '20231018']
     steps:
       - uses: actions/setup-python@v5
         with:
