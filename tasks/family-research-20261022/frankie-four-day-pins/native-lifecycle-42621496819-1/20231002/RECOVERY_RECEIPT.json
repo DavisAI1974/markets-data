@@ -1,0 +1,29 @@
+{
+ "schema": "FRANKIE_NATIVE_LIFECYCLE_RECOVERY_V1",
+ "day": "20231002",
+ "source_repository": "DavisAI1974/Markets",
+ "source_revision": "bebd939d99171ef747febdee4029aa729a8786fe",
+ "source_member": "work/bedrock/recovery-177e06a555494fb19fa1c63cee97ae5f/ledgers/exact_lifecycle_rows.jsonl",
+ "source_member_bytes": 7629582880,
+ "reconstructed_source_sha256": "8e786344be6b0071ccad7f84d954f4b87b6e8cef04ac18ca9a3a4bb21ae8ac02",
+ "source_rows": 5289814,
+ "sections": {
+  "recurrence": 600291,
+  "mirror": 1200582,
+  "ladder": 1200582,
+  "absorption": 600291,
+  "replenishment": 987321,
+  "queue": 292091,
+  "flow_substrate": 75600,
+  "candidate": 741,
+  "episode": 1482,
+  "response": 5186,
+  "detector_coverage": 1,
+  "lineage": 325646
+ },
+ "archive_parts_verified": 5,
+ "complete_retained_lifecycle_ledger": true,
+ "complete_all_layers": false,
+ "producer_rerun": false,
+ "rule": "Original rows preserved in order. Each row retains its original emission clock and source cursor; no later state is substituted into earlier inputs."
+}
