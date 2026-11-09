@@ -1,0 +1,208 @@
+{
+  "status": "PASS",
+  "analysis_authorized": false,
+  "code_revision": "418462afeaf0f14aa8129f6f4d02c3867d772fd0",
+  "suite_revision": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+  "checks": [
+    {
+      "session": "oct02",
+      "rows": 795,
+      "pins": 135945,
+      "corrected_integer_clock_values": 2374,
+      "all_source_rows_and_pins_verified": true,
+      "non_clock_values_unchanged": true
+    },
+    {
+      "session": "oct03",
+      "rows": 848,
+      "pins": 145008,
+      "corrected_integer_clock_values": 2531,
+      "all_source_rows_and_pins_verified": true,
+      "non_clock_values_unchanged": true
+    },
+    {
+      "session": "oct17",
+      "rows": 823,
+      "pins": 140733,
+      "corrected_integer_clock_values": 2461,
+      "all_source_rows_and_pins_verified": true,
+      "non_clock_values_unchanged": true
+    },
+    {
+      "session": "oct18",
+      "rows": 749,
+      "pins": 133322,
+      "corrected_integer_clock_values": 4486,
+      "all_source_rows_and_pins_verified": true,
+      "non_clock_values_unchanged": true
+    }
+  ],
+  "total_rows": 3215,
+  "total_pins": 555008,
+  "sources": [
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "418462afeaf0f14aa8129f6f4d02c3867d772fd0",
+      "path": "tasks/family-research-20261022/claude-code/pin_tier1_rows_to_99.py",
+      "bytes": 9182,
+      "sha256": "c8a7597e6552597ae6879e2919e258b13e872a0473084b97ad239442de130a54"
+    },
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "418462afeaf0f14aa8129f6f4d02c3867d772fd0",
+      "path": "tasks/family-research-20261022/claude-code/pin_rows_to_99.py",
+      "bytes": 26788,
+      "sha256": "0e53712154472c6f912570d61dc5293369d162ac4d3a3d214b51f100ab164e58"
+    },
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "418462afeaf0f14aa8129f6f4d02c3867d772fd0",
+      "path": "tasks/family-research-20261022/claude-code/data-manifest.json",
+      "bytes": 37694,
+      "sha256": "3cd2e96fe3f0206dc815b53a70f1c580eccad0dce9d572de3688b5eae73623d6"
+    },
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "418462afeaf0f14aa8129f6f4d02c3867d772fd0",
+      "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-99-registry.json",
+      "bytes": 37242,
+      "sha256": "7ee754f1f9b080cdc5b7b68cf75829897d6216a1fadbb4b8a5ecd7b4f2133e06"
+    },
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "path": "tasks/family-research-20261022/claude-pass-3day/tables/20231002/t1_family_master_flags.csv",
+      "bytes": 1082846,
+      "sha256": "fa54501627b061ebc6effb834e51f889bb293cb5c1f9dcf743bd076862715597"
+    },
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "path": "tasks/family-research-20261022/claude-pass-3day/tables/20231002/t1_receipt.json",
+      "bytes": 1848,
+      "sha256": "386a96418a6bd780efd471a7511409135d5bdb1284e8a21ce848506490bf66d5"
+    },
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "path": "tasks/family-research-20261022/claude-pass-3day/tables/20231003/t1_family_master_flags.csv",
+      "bytes": 1133730,
+      "sha256": "ea8b2c20c1964311438c08c12e01ea3f24b68abaf892adf74a05b3200c990462"
+    },
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "path": "tasks/family-research-20261022/claude-pass-3day/tables/20231003/t1_receipt.json",
+      "bytes": 1841,
+      "sha256": "233197dd21713ec42e846ffcec96cf4ac473274d8004607b75f09f2c81ee9bfd"
+    },
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "path": "tasks/family-research-20261022/claude-pass-3day/tables/20231017/t1_family_master_flags.csv",
+      "bytes": 1120731,
+      "sha256": "579d5767223532e9b595649978817d63448a07b88ad4def73201152a1ad7b9c6"
+    },
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "path": "tasks/family-research-20261022/claude-pass-3day/tables/20231017/t1_receipt.json",
+      "bytes": 1849,
+      "sha256": "40c50a5db1603ad6a825b5fb775694faf20269f98abb97be26b4914c0749a7e2"
+    },
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "path": "tasks/family-research-20261022/claude-pass-3day/tables/20231018/t1_family_master_flags.csv",
+      "bytes": 1147414,
+      "sha256": "29f3993d902e58f27fa32b77831b6146aec3a6cdcabb4124eb5eed76942bfcd0"
+    },
+    {
+      "repository": "DavisAI1974/Markets",
+      "revision": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "path": "tasks/family-research-20261022/claude-pass-3day/tables/20231018/t1_receipt.json",
+      "bytes": 1648,
+      "sha256": "e10a0e9f92dadcbfd9cda4eb508cb4b22e688b56e396739fdec9386dd182b9b0"
+    },
+    {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "c01caaf4f327e8fdff21e4e8b9c5153aba8604a8",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct02.jsonl.gz",
+      "bytes": 3552869,
+      "sha256": "e08ddb84fdcca441fe6c00d100c2a7a5d7bc7030632d872c62458b728817459c"
+    },
+    {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "c01caaf4f327e8fdff21e4e8b9c5153aba8604a8",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct03.jsonl.gz",
+      "bytes": 3736544,
+      "sha256": "e1ae859dda18993ffccf3ac5e562574e085e1665f44ea73e00c19e2ae3d1b53d"
+    },
+    {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "c01caaf4f327e8fdff21e4e8b9c5153aba8604a8",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct17.jsonl.gz",
+      "bytes": 3674276,
+      "sha256": "f0a58dd4e08c17046c9f35a5f9432b4e334390f47404b4ab6bf2a3e9f765e63f"
+    },
+    {
+      "repository": "DavisAI1974/markets-data",
+      "revision": "c01caaf4f327e8fdff21e4e8b9c5153aba8604a8",
+      "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct18.jsonl.gz",
+      "bytes": 3468543,
+      "sha256": "5ad103811fe7b68d71da01ef302e3faeb22fcef2c4b9a3d4b8e8baadfb3e017f"
+    }
+  ],
+  "files": [
+    {
+      "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct02.jsonl.gz",
+      "bytes": 3555715,
+      "sha256": "cb99f0f5c3a77c783c55dc3c251977de0f5f76293edb17a16a6bf576bbe543ee",
+      "supersedes": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "c01caaf4f327e8fdff21e4e8b9c5153aba8604a8",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct02.jsonl.gz"
+      }
+    },
+    {
+      "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct03.jsonl.gz",
+      "bytes": 3739326,
+      "sha256": "ee0bdd5f7e9aabd3700393b58f62e0db09a8f1e0ee8d726ba134df68bc416cdb",
+      "supersedes": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "c01caaf4f327e8fdff21e4e8b9c5153aba8604a8",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct03.jsonl.gz"
+      }
+    },
+    {
+      "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct17.jsonl.gz",
+      "bytes": 3677144,
+      "sha256": "d56cf0d3492fe304aa08b185785596b9e7b8b6196b6855c79588717e8bbb95ab",
+      "supersedes": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "c01caaf4f327e8fdff21e4e8b9c5153aba8604a8",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct17.jsonl.gz"
+      }
+    },
+    {
+      "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-oct18.jsonl.gz",
+      "bytes": 3470449,
+      "sha256": "b7ee8c9cf6f1d2c9ff01028125cd5438abb20cda98ceaac2882d0d30d777c2d8",
+      "supersedes": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "c01caaf4f327e8fdff21e4e8b9c5153aba8604a8",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-oct18.jsonl.gz"
+      }
+    },
+    {
+      "path": "tasks/family-research-20261022/claude-code-pins/precision-fix-42592319662-1/ninety-nine-pins-tier1-summary.json",
+      "bytes": 12036,
+      "sha256": "11ae487125e7bbfe5da9c450dfee9e44ee6ec99261c72e6317552ae33c5c8ac2",
+      "supersedes": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "c01caaf4f327e8fdff21e4e8b9c5153aba8604a8",
+        "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-tier1-summary.json"
+      }
+    }
+  ]
+}
