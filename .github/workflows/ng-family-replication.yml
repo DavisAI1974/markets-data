@@ -6,33 +6,83 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: ng-family-replication
+  cancel-in-progress: false
+env:
+  CODE_REV: 3c0cb9f334ca42da8026fad419b02ec7e213bcae
+  MPLBACKEND: Agg
 jobs:
-  recover:
+  preflight:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-    env:
-      OUTPUT_PATH: tasks/family-research-20261022/family-replication/probe-${{ github.run_id }}-${{ github.run_attempt }}
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-        with:
-          sparse-checkout: .github
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install zstandard==0.25.0
-      - name: Inspect sealed archive schema
-        run: |
-          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/1969612e8c88a75902df6bf11d6cda2148069dd8/agent-pass/replication/probe_family_archive.py" -o "$RUNNER_TEMP/probe_family_archive.py"
-          python -u "$RUNNER_TEMP/probe_family_archive.py"
+      - run: python -m pip install numpy==2.2.6 pandas==2.2.3 pyarrow==20.0.0 zstandard==0.25.0
+      - run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/replication/finish_family_replication.py" -o "$RUNNER_TEMP/finish_family_replication.py"
+          python -u "$RUNNER_TEMP/finish_family_replication.py" preflight --output "$RUNNER_TEMP/preflight"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: family-source-probe
+          name: family-preflight
+          path: ${{ runner.temp }}/preflight
+  extract:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        day: ['20231002', '20231003', '20231017']
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: family-preflight
+          path: ${{ runner.temp }}/preflight
+      - run: python -m pip install numpy==2.2.6 pandas==2.2.3 pyarrow==20.0.0 zstandard==0.25.0
+      - name: Verify and extract full sealed archive; run retained analyses
+        run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/replication/finish_family_replication.py" -o "$RUNNER_TEMP/finish_family_replication.py"
+          python -u "$RUNNER_TEMP/finish_family_replication.py" extract --day "${{ matrix.day }}" --populations "$RUNNER_TEMP/preflight" --output "$RUNNER_TEMP/results"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: family-${{ matrix.day }}
+          path: ${{ runner.temp }}/results
+  publish:
+    if: always()
+    needs: [preflight, extract]
+    runs-on: ubuntu-latest
+    env:
+      OUTPUT_PATH: tasks/family-research-20261022/family-replication/run-${{ github.run_id }}-${{ github.run_attempt }}
+      JOB_RESULTS: ${{ toJSON(needs) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/native-dipole-artifacts-20261108
+          sparse-checkout: .github
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: family-*
           path: ${{ env.OUTPUT_PATH }}
-      - name: Publish source inspection
+      - name: Record exact completion status
+        run: |
+          python - <<'PY'
+          import os,json,pathlib
+          p=pathlib.Path(os.environ["OUTPUT_PATH"])
+          p.mkdir(parents=True,exist_ok=True)
+          (p/"RUN_STATUS.json").write_text(json.dumps({"code_revision":os.environ["CODE_REV"],"jobs":json.loads(os.environ["JOB_RESULTS"])},indent=2))
+          PY
+      - name: Preserve all returned evidence
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add --sparse "$OUTPUT_PATH"
-          git commit -m "Preserve sealed ROOT family source inspection"
+          git commit -m "Preserve family replication evidence and actual completion status"
           git push origin HEAD:codex/native-dipole-artifacts-20261108
