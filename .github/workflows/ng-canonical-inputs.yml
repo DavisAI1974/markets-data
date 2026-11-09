@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      CODE_REV: 239666bae4e33ec386a7004d7b988f1629962605
+      CODE_REV: 9d573525e5789d0c942e51c6c5b7dfa6582d680d
       OUTPUT_PATH: tasks/family-research-20261022/shared-reanalysis-inputs/run-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@v4
