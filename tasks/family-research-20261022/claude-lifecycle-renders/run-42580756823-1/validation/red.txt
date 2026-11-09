@@ -1,0 +1,96 @@
+test_cap_does_not_change_marker (test_render_core.RenderContracts.test_cap_does_not_change_marker) ... ERROR
+test_censored_tail (test_render_core.RenderContracts.test_censored_tail) ... ERROR
+test_elapsed_time_not_row_count (test_render_core.RenderContracts.test_elapsed_time_not_row_count) ... ERROR
+test_empty_at_birth (test_render_core.RenderContracts.test_empty_at_birth) ... ERROR
+test_missing_recognition (test_render_core.RenderContracts.test_missing_recognition) ... ERROR
+test_missing_values_remain_missing (test_render_core.RenderContracts.test_missing_values_remain_missing) ... ERROR
+test_nanosecond_anchor (test_render_core.RenderContracts.test_nanosecond_anchor) ... ERROR
+
+======================================================================
+ERROR: test_cap_does_not_change_marker (test_render_core.RenderContracts.test_cap_does_not_change_marker)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/_temp/red/test_render_core.py", line 27, in test_cap_does_not_change_marker
+    m=lifecycle_markers([100,2100,2200],[1,-1,float('nan')],100,1)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_temp/red/render_core.py", line 2, in lifecycle_markers
+    def lifecycle_markers(seconds,ratio,birth,polarity): raise NotImplementedError
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+======================================================================
+ERROR: test_censored_tail (test_render_core.RenderContracts.test_censored_tail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/_temp/red/test_render_core.py", line 22, in test_censored_tail
+    m=lifecycle_markers([100,101],[1,1],100,1)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_temp/red/render_core.py", line 2, in lifecycle_markers
+    def lifecycle_markers(seconds,ratio,birth,polarity): raise NotImplementedError
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+======================================================================
+ERROR: test_elapsed_time_not_row_count (test_render_core.RenderContracts.test_elapsed_time_not_row_count)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/_temp/red/test_render_core.py", line 14, in test_elapsed_time_not_row_count
+    m=lifecycle_markers([99,100,105,112],[1,1,-1,float('nan')],100,1)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_temp/red/render_core.py", line 2, in lifecycle_markers
+    def lifecycle_markers(seconds,ratio,birth,polarity): raise NotImplementedError
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+======================================================================
+ERROR: test_empty_at_birth (test_render_core.RenderContracts.test_empty_at_birth)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/_temp/red/test_render_core.py", line 18, in test_empty_at_birth
+    m=lifecycle_markers([100,101],[float('nan'),1],100,1)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_temp/red/render_core.py", line 2, in lifecycle_markers
+    def lifecycle_markers(seconds,ratio,birth,polarity): raise NotImplementedError
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+======================================================================
+ERROR: test_missing_recognition (test_render_core.RenderContracts.test_missing_recognition)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/_temp/red/test_render_core.py", line 8, in test_missing_recognition
+    self.assertIsNone(relative_seconds(None,1696197692999999999))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_temp/red/render_core.py", line 1, in relative_seconds
+    def relative_seconds(value,anchor): raise NotImplementedError
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+======================================================================
+ERROR: test_missing_values_remain_missing (test_render_core.RenderContracts.test_missing_values_remain_missing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/_temp/red/test_render_core.py", line 10, in test_missing_values_remain_missing
+    v=display_values([0,float('nan'),3])
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_temp/red/render_core.py", line 3, in display_values
+    def display_values(values): raise NotImplementedError
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+======================================================================
+ERROR: test_nanosecond_anchor (test_render_core.RenderContracts.test_nanosecond_anchor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/_temp/red/test_render_core.py", line 6, in test_nanosecond_anchor
+    self.assertEqual(relative_seconds(1696197693000000000,1696197692999999999),1e-9)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_temp/red/render_core.py", line 1, in relative_seconds
+    def relative_seconds(value,anchor): raise NotImplementedError
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+FAILED (errors=7)
