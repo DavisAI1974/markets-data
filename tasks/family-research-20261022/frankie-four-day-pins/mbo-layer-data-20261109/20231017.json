@@ -1,0 +1,537 @@
+{
+ "day": "20231017",
+ "source": {
+  "day": "20231017",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "f41a7de50c19ffc5875690542f87dac7d9cd90b3",
+  "prefix": "tasks/family-research-20261022/frankie-four-day-pins/book-recovery-42617700678-1/20231017",
+  "published": true,
+  "files": [
+   {
+    "path": "RECOVERY_RECEIPT.json",
+    "sha256": "e1f38bf9d96634879364b8755cb11fdc6a6c8ffb6ad1368e3da84169297116db",
+    "bytes": 1217
+   },
+   {
+    "path": "MANIFEST.json",
+    "sha256": "35777c5ff768c76f217537cdb06c185b90b1e596f02c7f5a99b9e4bec3166be5",
+    "bytes": 62815
+   },
+   {
+    "path": "REVIEW_SAMPLES.json",
+    "sha256": "b2af363c5b1df37ec008309de13270efa4afe566c2b3029573d7ea66eea45348",
+    "bytes": 1223820
+   },
+   {
+    "path": "SOURCE_PINS.json",
+    "sha256": "28abc8a0ae9638fc3fd5f17041ef4910936c67efffdcbc43bd781aac2339e6ad",
+    "bytes": 1965
+   }
+  ]
+ },
+ "counts": {
+  "opening_warmup": {},
+  "archived_session": {
+   "all_messages": 841601,
+   "R": 1,
+   "snapshot": 738,
+   "A": 306939,
+   "C": 306149,
+   "M": 47255,
+   "priority_lost": 34382,
+   "T": 33451,
+   "F": 55746,
+   "N": 92060
+  }
+ },
+ "first_original_examples": {
+  "archived_session/all_messages": {
+   "file": "native-messages-0000.jsonl.gz",
+   "file_row": 0,
+   "original": {
+    "source_stream_ordinal": 0,
+    "adapter_input_cursor": 0,
+    "original_message": {
+     "instrument_id": 150611,
+     "publisher_id": 1,
+     "channel_id": 31,
+     "order_id": 0,
+     "action": "R",
+     "side": "N",
+     "price_raw": 9223372036854775807,
+     "size": 0,
+     "flags": 40,
+     "sequence": 0,
+     "ts_event_ns": 1697374482688701461,
+     "ts_recv_ns": 1697500800000000000,
+     "ts_in_delta_ns": 0,
+     "raw_symbol": "NGX3",
+     "source_dbn_object": null,
+     "source_dbn_sha256": null,
+     "price": null,
+     "is_snapshot": true,
+     "is_last": false
+    },
+    "original_effect": {
+     "action": "R",
+     "side": "N",
+     "price_raw": 9223372036854775807,
+     "reported_size": 0,
+     "old_size": null,
+     "new_size": null,
+     "size_delta": null,
+     "priority_lost": false,
+     "removed": true,
+     "missing_reference": false,
+     "touched_or_improved_top_before": false,
+     "top_before_price_raw": null
+    },
+    "resting_order_after": null
+   }
+  },
+  "archived_session/R": {
+   "file": "native-messages-0000.jsonl.gz",
+   "file_row": 0,
+   "original": {
+    "source_stream_ordinal": 0,
+    "adapter_input_cursor": 0,
+    "original_message": {
+     "instrument_id": 150611,
+     "publisher_id": 1,
+     "channel_id": 31,
+     "order_id": 0,
+     "action": "R",
+     "side": "N",
+     "price_raw": 9223372036854775807,
+     "size": 0,
+     "flags": 40,
+     "sequence": 0,
+     "ts_event_ns": 1697374482688701461,
+     "ts_recv_ns": 1697500800000000000,
+     "ts_in_delta_ns": 0,
+     "raw_symbol": "NGX3",
+     "source_dbn_object": null,
+     "source_dbn_sha256": null,
+     "price": null,
+     "is_snapshot": true,
+     "is_last": false
+    },
+    "original_effect": {
+     "action": "R",
+     "side": "N",
+     "price_raw": 9223372036854775807,
+     "reported_size": 0,
+     "old_size": null,
+     "new_size": null,
+     "size_delta": null,
+     "priority_lost": false,
+     "removed": true,
+     "missing_reference": false,
+     "touched_or_improved_top_before": false,
+     "top_before_price_raw": null
+    },
+    "resting_order_after": null
+   }
+  },
+  "archived_session/snapshot": {
+   "file": "native-messages-0000.jsonl.gz",
+   "file_row": 0,
+   "original": {
+    "source_stream_ordinal": 0,
+    "adapter_input_cursor": 0,
+    "original_message": {
+     "instrument_id": 150611,
+     "publisher_id": 1,
+     "channel_id": 31,
+     "order_id": 0,
+     "action": "R",
+     "side": "N",
+     "price_raw": 9223372036854775807,
+     "size": 0,
+     "flags": 40,
+     "sequence": 0,
+     "ts_event_ns": 1697374482688701461,
+     "ts_recv_ns": 1697500800000000000,
+     "ts_in_delta_ns": 0,
+     "raw_symbol": "NGX3",
+     "source_dbn_object": null,
+     "source_dbn_sha256": null,
+     "price": null,
+     "is_snapshot": true,
+     "is_last": false
+    },
+    "original_effect": {
+     "action": "R",
+     "side": "N",
+     "price_raw": 9223372036854775807,
+     "reported_size": 0,
+     "old_size": null,
+     "new_size": null,
+     "size_delta": null,
+     "priority_lost": false,
+     "removed": true,
+     "missing_reference": false,
+     "touched_or_improved_top_before": false,
+     "top_before_price_raw": null
+    },
+    "resting_order_after": null
+   }
+  },
+  "archived_session/A": {
+   "file": "native-messages-0000.jsonl.gz",
+   "file_row": 1,
+   "original": {
+    "source_stream_ordinal": 1,
+    "adapter_input_cursor": 1,
+    "original_message": {
+     "instrument_id": 150611,
+     "publisher_id": 1,
+     "channel_id": 31,
+     "order_id": 788661412410,
+     "action": "A",
+     "side": "B",
+     "price_raw": 3050000000,
+     "size": 1,
+     "flags": 40,
+     "sequence": 54185,
+     "ts_event_ns": 1697374482688701461,
+     "ts_recv_ns": 1697500800000000000,
+     "ts_in_delta_ns": 0,
+     "raw_symbol": "NGX3",
+     "source_dbn_object": null,
+     "source_dbn_sha256": null,
+     "price": 3.05,
+     "is_snapshot": true,
+     "is_last": false
+    },
+    "original_effect": {
+     "action": "A",
+     "side": "B",
+     "price_raw": 3050000000,
+     "reported_size": 1,
+     "old_size": null,
+     "new_size": 1,
+     "size_delta": 1,
+     "priority_lost": false,
+     "removed": false,
+     "missing_reference": false,
+     "touched_or_improved_top_before": true,
+     "top_before_price_raw": null
+    },
+    "resting_order_after": {
+     "instrument_id": 150611,
+     "order_id": 788661412410,
+     "side": "B",
+     "price_raw": 3050000000,
+     "size": 1,
+     "priority_recv_ns": 1697500800000000000,
+     "last_update_recv_ns": 1697500800000000000,
+     "priority_sequence": 54185
+    }
+   }
+  },
+  "archived_session/C": {
+   "file": "native-messages-0000.jsonl.gz",
+   "file_row": 754,
+   "original": {
+    "source_stream_ordinal": 754,
+    "adapter_input_cursor": 754,
+    "original_message": {
+     "instrument_id": 150611,
+     "publisher_id": 1,
+     "channel_id": 31,
+     "order_id": 788696162898,
+     "action": "C",
+     "side": "A",
+     "price_raw": 3146000000,
+     "size": 1,
+     "flags": 128,
+     "sequence": 14258888,
+     "ts_event_ns": 1697500800059201107,
+     "ts_recv_ns": 1697500800059284072,
+     "ts_in_delta_ns": 15582,
+     "raw_symbol": "NGX3",
+     "source_dbn_object": null,
+     "source_dbn_sha256": null,
+     "price": 3.146,
+     "is_snapshot": false,
+     "is_last": true
+    },
+    "original_effect": {
+     "action": "C",
+     "side": "A",
+     "price_raw": 3146000000,
+     "reported_size": 1,
+     "old_size": 1,
+     "new_size": 0,
+     "size_delta": -1,
+     "priority_lost": false,
+     "removed": true,
+     "missing_reference": false,
+     "touched_or_improved_top_before": false,
+     "top_before_price_raw": 3120000000
+    },
+    "resting_order_after": null
+   }
+  },
+  "archived_session/M": {
+   "file": "native-messages-0000.jsonl.gz",
+   "file_row": 759,
+   "original": {
+    "source_stream_ordinal": 759,
+    "adapter_input_cursor": 759,
+    "original_message": {
+     "instrument_id": 150611,
+     "publisher_id": 1,
+     "channel_id": 31,
+     "order_id": 788696162325,
+     "action": "M",
+     "side": "A",
+     "price_raw": 3137000000,
+     "size": 2,
+     "flags": 128,
+     "sequence": 14259159,
+     "ts_event_ns": 1697500807455349727,
+     "ts_recv_ns": 1697500807455456003,
+     "ts_in_delta_ns": 16513,
+     "raw_symbol": "NGX3",
+     "source_dbn_object": null,
+     "source_dbn_sha256": null,
+     "price": 3.137,
+     "is_snapshot": false,
+     "is_last": true
+    },
+    "original_effect": {
+     "action": "M",
+     "side": "A",
+     "price_raw": 3137000000,
+     "reported_size": 2,
+     "old_size": 2,
+     "new_size": 2,
+     "size_delta": 0,
+     "priority_lost": true,
+     "removed": false,
+     "missing_reference": false,
+     "touched_or_improved_top_before": false,
+     "top_before_price_raw": 3120000000
+    },
+    "resting_order_after": {
+     "instrument_id": 150611,
+     "order_id": 788696162325,
+     "side": "A",
+     "price_raw": 3137000000,
+     "size": 2,
+     "priority_recv_ns": 1697500807455456003,
+     "last_update_recv_ns": 1697500807455456003,
+     "priority_sequence": 14259159
+    }
+   }
+  },
+  "archived_session/priority_lost": {
+   "file": "native-messages-0000.jsonl.gz",
+   "file_row": 759,
+   "original": {
+    "source_stream_ordinal": 759,
+    "adapter_input_cursor": 759,
+    "original_message": {
+     "instrument_id": 150611,
+     "publisher_id": 1,
+     "channel_id": 31,
+     "order_id": 788696162325,
+     "action": "M",
+     "side": "A",
+     "price_raw": 3137000000,
+     "size": 2,
+     "flags": 128,
+     "sequence": 14259159,
+     "ts_event_ns": 1697500807455349727,
+     "ts_recv_ns": 1697500807455456003,
+     "ts_in_delta_ns": 16513,
+     "raw_symbol": "NGX3",
+     "source_dbn_object": null,
+     "source_dbn_sha256": null,
+     "price": 3.137,
+     "is_snapshot": false,
+     "is_last": true
+    },
+    "original_effect": {
+     "action": "M",
+     "side": "A",
+     "price_raw": 3137000000,
+     "reported_size": 2,
+     "old_size": 2,
+     "new_size": 2,
+     "size_delta": 0,
+     "priority_lost": true,
+     "removed": false,
+     "missing_reference": false,
+     "touched_or_improved_top_before": false,
+     "top_before_price_raw": 3120000000
+    },
+    "resting_order_after": {
+     "instrument_id": 150611,
+     "order_id": 788696162325,
+     "side": "A",
+     "price_raw": 3137000000,
+     "size": 2,
+     "priority_recv_ns": 1697500807455456003,
+     "last_update_recv_ns": 1697500807455456003,
+     "priority_sequence": 14259159
+    }
+   }
+  },
+  "archived_session/T": {
+   "file": "native-messages-0000.jsonl.gz",
+   "file_row": 765,
+   "original": {
+    "source_stream_ordinal": 765,
+    "adapter_input_cursor": 765,
+    "original_message": {
+     "instrument_id": 150611,
+     "publisher_id": 1,
+     "channel_id": 31,
+     "order_id": 788696163549,
+     "action": "T",
+     "side": "B",
+     "price_raw": 3120000000,
+     "size": 1,
+     "flags": 0,
+     "sequence": 14260933,
+     "ts_event_ns": 1697500816145416029,
+     "ts_recv_ns": 1697500816145806525,
+     "ts_in_delta_ns": 20259,
+     "raw_symbol": "NGX3",
+     "source_dbn_object": null,
+     "source_dbn_sha256": null,
+     "price": 3.12,
+     "is_snapshot": false,
+     "is_last": false
+    },
+    "original_effect": {
+     "action": "T",
+     "side": "B",
+     "price_raw": 3120000000,
+     "reported_size": 1,
+     "old_size": null,
+     "new_size": null,
+     "size_delta": null,
+     "priority_lost": false,
+     "removed": false,
+     "missing_reference": false,
+     "touched_or_improved_top_before": true,
+     "top_before_price_raw": 3119000000
+    },
+    "resting_order_after": null
+   }
+  },
+  "archived_session/F": {
+   "file": "native-messages-0000.jsonl.gz",
+   "file_row": 766,
+   "original": {
+    "source_stream_ordinal": 766,
+    "adapter_input_cursor": 766,
+    "original_message": {
+     "instrument_id": 150611,
+     "publisher_id": 1,
+     "channel_id": 31,
+     "order_id": 788696149800,
+     "action": "F",
+     "side": "A",
+     "price_raw": 3120000000,
+     "size": 1,
+     "flags": 0,
+     "sequence": 14260933,
+     "ts_event_ns": 1697500816145416029,
+     "ts_recv_ns": 1697500816145806525,
+     "ts_in_delta_ns": 20259,
+     "raw_symbol": "NGX3",
+     "source_dbn_object": null,
+     "source_dbn_sha256": null,
+     "price": 3.12,
+     "is_snapshot": false,
+     "is_last": false
+    },
+    "original_effect": {
+     "action": "F",
+     "side": "A",
+     "price_raw": 3120000000,
+     "reported_size": 1,
+     "old_size": null,
+     "new_size": null,
+     "size_delta": null,
+     "priority_lost": false,
+     "removed": false,
+     "missing_reference": false,
+     "touched_or_improved_top_before": true,
+     "top_before_price_raw": 3120000000
+    },
+    "resting_order_after": {
+     "instrument_id": 150611,
+     "order_id": 788696149800,
+     "side": "A",
+     "price_raw": 3120000000,
+     "size": 1,
+     "priority_recv_ns": 1697500800000000000,
+     "last_update_recv_ns": 1697500800000000000,
+     "priority_sequence": 14217718
+    }
+   }
+  },
+  "archived_session/N": {
+   "file": "native-messages-0000.jsonl.gz",
+   "file_row": 773,
+   "original": {
+    "source_stream_ordinal": 773,
+    "adapter_input_cursor": 773,
+    "original_message": {
+     "instrument_id": 150611,
+     "publisher_id": 1,
+     "channel_id": 31,
+     "order_id": 0,
+     "action": "N",
+     "side": "N",
+     "price_raw": 9223372036854775807,
+     "size": 0,
+     "flags": 128,
+     "sequence": 14266166,
+     "ts_event_ns": 1697500826467683745,
+     "ts_recv_ns": 1697500826468258960,
+     "ts_in_delta_ns": 14858,
+     "raw_symbol": "NGX3",
+     "source_dbn_object": null,
+     "source_dbn_sha256": null,
+     "price": null,
+     "is_snapshot": false,
+     "is_last": true
+    },
+    "original_effect": {
+     "action": "N",
+     "side": "N",
+     "price_raw": 9223372036854775807,
+     "reported_size": 0,
+     "old_size": null,
+     "new_size": null,
+     "size_delta": null,
+     "priority_lost": false,
+     "removed": false,
+     "missing_reference": false,
+     "touched_or_improved_top_before": false,
+     "top_before_price_raw": null
+    },
+    "resting_order_after": null
+   }
+  }
+ },
+ "semantic_rules": {
+  "A": "add",
+  "C": "cancel/reduce",
+  "M": "replace the same order state; price changes or size increases lose priority",
+  "R": "clear/reset, not replace",
+  "T": "trade",
+  "F": "fill",
+  "N": "no displayed-book mutation"
+ },
+ "scope": "Complete restored stream; opening warmup counted separately. Daily totals are retrospective audit values, not earlier-trade causal features.",
+ "complete_restored_stream": true,
+ "complete_all_layers": false
+}
