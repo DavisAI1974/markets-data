@@ -1,0 +1,29 @@
+{
+ "schema": "FRANKIE_FOUR_DAY_PIN_AUDIT_V1",
+ "days": [
+  "20231002",
+  "20231003",
+  "20231017",
+  "20231018"
+ ],
+ "sources": 3092,
+ "verified_sources": 3092,
+ "failed_sources": [],
+ "registry_layers": 99,
+ "external_inputs": 13,
+ "external_series": 48,
+ "second_set_components": 19,
+ "layer_columns": 131,
+ "findings_documents": 25,
+ "retained_external_claims": 441,
+ "trades": 143270,
+ "complete_all_layers": false,
+ "limitations": [
+  "Three historical full ROOT archives are not available in the frozen GitHub packet.",
+  "Full FIFO saved members are only joined at exact retained matching cursors.",
+  "Second-set recovery is available for the retained October 18 population; other dates remain explicitly unavailable.",
+  "99 registry entries include static knowledge and runtime outputs, not 99 independent observed market variables.",
+  "Some earlier reports overstate completeness; original findings are retained with this correction.",
+  "Research findings are discovery knowledge, not independently confirmed trading rules."
+ ]
+}
