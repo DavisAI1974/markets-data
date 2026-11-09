@@ -20,7 +20,8 @@ def predict_frozen_linear(model,context,bindings,freeze_ns):
     for i,name in enumerate(names):
         f=context.get('fields',{}).get(name)
         if not available(f,context):return UNKNOWN
-        if name not in bindings or f.get('definition_id')!=bindings[name]:return UNKNOWN
+        binding=bindings.get(name)
+        if not isinstance(binding,str) or not binding or f.get('definition_id')!=binding:return UNKNOWN
         status=f.get('status');v=f['value']
         if status=='observed_undefined':
             if v is not None:raise ValueError('Observed-undefined must explicitly use null')

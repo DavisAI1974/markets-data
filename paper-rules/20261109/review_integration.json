@@ -1,0 +1,45 @@
+{
+  "review": "bounded_new_integration_artifact",
+  "artifact_state": "Builder inspected; PAPER_RULE_CORE.jsonl.gz and PAPER_UNIVERSE_MANIFEST.json absent at review time.",
+  "input_counts": {
+    "broad": 14711,
+    "chain": 15644,
+    "october_models": 2007,
+    "october_predicates": 328,
+    "initial": 11,
+    "total_records": 32701,
+    "unique_namespaced_ids": 32701,
+    "separate_report_cells": 1459
+  },
+  "checks": {
+    "all_input_records_included": true,
+    "all_report_cells_is_unique_strategy_false": true,
+    "all_328_predicate_cell_references_resolve": true,
+    "unique_broad_recipe_references_checked": 4882,
+    "unique_chain_recipe_references_checked": 10,
+    "recipe_file_pointer_and_broad_hash_errors": 0,
+    "builds_or_feed_tests_run": false
+  },
+  "issues": [
+    {
+      "id": "INT01",
+      "severity": "high",
+      "file": "build_universe.py",
+      "title": "Builder fails on twelve canonical model rows without needed_state",
+      "evidence": "The october_models branch reads r[needed_state]. Twelve OCTMODEL.CANONICAL rows instead expose train_rule/source metadata and omit needed_state. They are counts_price_book, plus_information, plus_display and plus_both, each for three test dates.",
+      "impact": "KeyError occurs before the core and manifest writes, so no complete integrated 32701-row artifact is produced.",
+      "requested_change": "Handle canonical model schemas explicitly: retain their train_rule/features/source and declare required unresolved state without silently discarding them. Regenerate and verify all 32701 ids."
+    },
+    {
+      "id": "INT02",
+      "severity": "medium",
+      "file": "build_universe.py",
+      "title": "Core strips controlling semantics without declaring mandatory source hydration",
+      "evidence": "Broad records lose state_machine_ref (18 nonnull), detector_state_contract (234), entry_reference_contract/target_deadline_contract (270), sampling policies, and historical activation prohibitions. October model cores lose features/train rules and active_math_allowed, which is false for 120 preserved historical rows. definition_ref preserves a path/hash/index to original data, but neither the current core schema nor manifest expressly says these definitions must be hydrated before interpretation.",
+      "impact": "A consumer treating program_type=restricted_predicate_ast as a complete program can omit state, entry timing or historical-math prohibitions. execution_enabled=false prevents present execution, so this is an integration contract loss rather than evidence of platform activity.",
+      "requested_change": "Copy controlling fields into core, or explicitly declare core non-standalone and require hash-verified source dereference/merge for all semantics before validation or activation. Retain explicit activation prohibitions and readiness flags at core level. Include model features and canonical train-rule requirements."
+    }
+  ],
+  "not_claimed": "No assertion of runtime-ready engines, full semantic closure, platform fills or independent strategy count. All source/report cells remain separate in the builder design.",
+  "pending": "Final output row-for-row/hash reference verification requires corrected build outputs."
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "paper-ledger-requirements-v1",
+  "required_columns": ["candidate_id", "rule_definition_hash", "source_version", "uniform_policy_id", "session_id", "simulation_account", "instrument", "feed_id", "signal_id", "episode_id", "event_ns", "receive_ns", "known_by_ns", "decision_ns", "decision_cursor", "feature_snapshot_hash", "input_status", "disposition", "platform_order_id", "platform_execution_id", "fill_ns", "fill_price", "fill_quantity", "exit_ns", "exit_price", "gross_ticks", "fees", "net_result", "censor_reason"],
+  "nanosecond_transport": "decimal_integer_string",
+  "nanosecond_float_allowed": false,
+  "zero_is_missing": false,
+  "no_fill_is_zero_return": false,
+  "unknown_fees_are_zero": false,
+  "unknown_net_result": null,
+  "report_all_candidates_including_zero_trades": true,
+  "report_failures_and_losses": true,
+  "aggregate_alias_fills_twice": false
+}

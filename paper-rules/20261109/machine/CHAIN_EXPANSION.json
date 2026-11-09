@@ -1,0 +1,375 @@
+{
+  "build_command": "python build_chain_instances.py",
+  "build_script": "../build_chain_instances.py",
+  "build_script_sha256": "6baaa95b33744951d46f0328e94ccd618cf5f72c43fa89a120886accb5e1599e",
+  "catalog_type": "SPECIFICATION_CATALOG",
+  "dimension_accounting": {
+    "CANONICAL_POX_PARENT": {
+      "absolute_polarity_strata": 3,
+      "clocks": 2,
+      "relations": 3,
+      "timings": 2
+    },
+    "CHAIN_ATLAS_DEPTH1_TO4": {
+      "clocks": 2,
+      "exits": 1,
+      "relations": 2,
+      "seed_strings": 340,
+      "source_side_axes": 1,
+      "timings": 2
+    },
+    "CHAIN_EXACT_SOURCE_SEARCH": {
+      "clocks": 2,
+      "exits": 2,
+      "relations": 3,
+      "seed_strings": 336,
+      "source_side_axes": 1,
+      "timings": 2
+    },
+    "D0_D5_CONTINUOUS_CAUSAL_FORECAST": {
+      "D1_path_targets": 2,
+      "D2_timing_family_targets": 3,
+      "D3_timing_family_targets": 2,
+      "depth_targets": 6,
+      "native_plus_long_short_hold_designs": 5
+    },
+    "FOCUSED_POX_FIXED3429": {
+      "branch_knowledge_modes": 2,
+      "branch_labels": 2,
+      "branch_native_plus_long_short_hold_designs": 5,
+      "delayed_same_native_plus_long_short_hold_designs": 5,
+      "initial_source_direction_new_hold_designs": 2,
+      "initial_source_unbound": 1
+    },
+    "FROZEN_SSOS": {
+      "clocks": 2,
+      "source_rule": 1,
+      "timings": 2
+    },
+    "PAIR_TRIPLET_MODULES": {
+      "absolute_polarity_strata": 3,
+      "native_plus_long_short_hold_designs": 5,
+      "pair_modules": 32,
+      "triplet_modules": 256
+    },
+    "POX_BANK_POSITIVE_PROXY": {
+      "bank_offsets": 2,
+      "management_bases": 1,
+      "parent_cells": 36
+    },
+    "POX_POSTEXIT_RECOVERY": {
+      "native_plus_long_short_hold_designs": 5,
+      "path_classes": 5,
+      "same_parent_cells": 12
+    },
+    "PREFIX_LADDERS": {
+      "native_plus_long_short_hold_designs": 5,
+      "source_prefixes": 7
+    }
+  },
+  "execution_enabled": false,
+  "gzip_mtime": 0,
+  "gzip_sha256": "19aa6cdbfa2dbcf8e5d7daefaff9f7a327e6a35aa0d565c549275d679970f91a",
+  "id_algorithm": "CHAIN_ + SHA256(canonical JSON of schema_version,recipe_id,recipe_definition_sha256,parameters)",
+  "instance_count": 15644,
+  "ordering": [
+    "recipe_id",
+    "id"
+  ],
+  "original_new_provenance": {
+    "new_design_axes": [
+      "DELAYED_AFTER_KNOWN_FILL_HOLD",
+      "nondirectional_LONG_SHORT_fill_hold",
+      "full_module_grammar_expansion",
+      "proxy_parent_branch_polarity_cross_product",
+      "focused_initial_source_direction_causal_timing_design"
+    ],
+    "orientation_scope": "RECOVERED_PLUS60_SIGNS_NOT_TRANSFERRED_TO_PLUS30;SSOS_PLUS30_ONLY;POX_PLUS60_ONLY",
+    "original_source_clock_versions": [
+      "DOC_ONSET",
+      "PRODUCER_CONFIRM"
+    ],
+    "source_manifest": {
+      "canonical": {
+        "git_blob_sha": "8342475429339d6c1ed326aaee4f6f8e1b1850b1",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/ng_exhaustion_chain_canonical_table_20260817.py",
+        "verified_git_blob_sha": "8342475429339d6c1ed326aaee4f6f8e1b1850b1"
+      },
+      "continuous": {
+        "git_blob_sha": "bf450aa8aa40743d54291965c2cac589f13b38e2",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_CONTINUOUS_INSTANCE_TIMING_CORRECTION_20260820.md",
+        "verified_git_blob_sha": "bf450aa8aa40743d54291965c2cac589f13b38e2"
+      },
+      "contract": {
+        "git_blob_sha": "eca142a055c98a6ca0fb0f2b52e3b3ee4ff51b58",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_CHAIN_STUDY_CONTRACT_20260817.json",
+        "verified_git_blob_sha": "eca142a055c98a6ca0fb0f2b52e3b3ee4ff51b58"
+      },
+      "d1_agents": {
+        "git_blob_sha": "0eb0bde679c92e6ec0af4c5dfeb5f86964fd323b",
+        "url": "https://github.com/DavisAI1974/Markets/blob/c493ae7388212fa3ce029c505d4a052d85cf5799/research/ng_exhaustion_exact_d1_agents_20260818.py",
+        "verified_git_blob_sha": "0eb0bde679c92e6ec0af4c5dfeb5f86964fd323b"
+      },
+      "d1_all_rawpath": {
+        "git_blob_sha": "e55f3e25cf2c8556462a28d04c85443a775a60a3",
+        "url": "https://github.com/DavisAI1974/Markets/blob/c493ae7388212fa3ce029c505d4a052d85cf5799/research/ng_exhaustion_d1_all_rawpath_entry_20260818.py",
+        "verified_git_blob_sha": "e55f3e25cf2c8556462a28d04c85443a775a60a3"
+      },
+      "d1_rawpath": {
+        "git_blob_sha": "8b9261f41419c80c8ef3731a2df56029b16ef41a",
+        "url": "https://github.com/DavisAI1974/Markets/blob/c493ae7388212fa3ce029c505d4a052d85cf5799/research/ng_exhaustion_exact_d1_rawpath_20260818.py",
+        "verified_git_blob_sha": "8b9261f41419c80c8ef3731a2df56029b16ef41a"
+      },
+      "entry_extension": {
+        "git_blob_sha": "697bcc48dd09f6cd39d3f0a1502b783739d826de",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/kalshi/knowledge/ng_brain_exhaustion_entry_timing_extension_20260818.json",
+        "verified_git_blob_sha": "697bcc48dd09f6cd39d3f0a1502b783739d826de"
+      },
+      "entry_protocol": {
+        "git_blob_sha": "503db9fcf2e13b441a72f8507022605092b17d99",
+        "url": "https://github.com/DavisAI1974/Markets/blob/c493ae7388212fa3ce029c505d4a052d85cf5799/research/NG_EXHAUSTION_ENTRY_TIMING_REVIVAL_PROTOCOL_20260818.md",
+        "verified_git_blob_sha": "503db9fcf2e13b441a72f8507022605092b17d99"
+      },
+      "focused_pox": {
+        "git_blob_sha": "8fe24304a9e47c3dc908182819f286e6b63c06cd",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/kalshi/knowledge/ng_brain_exhaustion_pox_focused_proposal_20260819.json",
+        "verified_git_blob_sha": "8fe24304a9e47c3dc908182819f286e6b63c06cd"
+      },
+      "index": {
+        "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md",
+        "verified_git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212"
+      },
+      "lineage": {
+        "git_blob_sha": "aee92e84e562c447bb9dfa059145f9e08d6351b0",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/ng_exhaustion_chain_phase1_lineage_54w_20260817.py",
+        "verified_git_blob_sha": "aee92e84e562c447bb9dfa059145f9e08d6351b0"
+      },
+      "management_proxy": {
+        "git_blob_sha": "4920610d97300e1a10ca560cb44bb69f93a3fa15",
+        "url": "https://github.com/DavisAI1974/Markets/blob/c493ae7388212fa3ce029c505d4a052d85cf5799/research/NG_EXHAUSTION_CHAIN_PHASE2_EXECUTE_RESET_REENTER_CONTRACT_20260818.json",
+        "verified_git_blob_sha": "4920610d97300e1a10ca560cb44bb69f93a3fa15"
+      },
+      "novelty": {
+        "git_blob_sha": "fd510cfeace56a56a6b8dba416afc6bf1a334c56",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_CHAIN_PHASE2_MODULE_NOVELTY_FINDINGS_20260818.md",
+        "verified_git_blob_sha": "fd510cfeace56a56a6b8dba416afc6bf1a334c56"
+      },
+      "phase2": {
+        "git_blob_sha": "0fcb24e77a1a2d441a6542cba721479fcb37b915",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_CHAIN_PHASE2_FINDINGS_20260817.md",
+        "verified_git_blob_sha": "0fcb24e77a1a2d441a6542cba721479fcb37b915"
+      },
+      "postexit": {
+        "git_blob_sha": "76181c241deb999628af222250d77e6669a6564e",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_CHAIN_PHASE2_POSTEXIT_RECURRENCE_FINDINGS_20260818.md",
+        "verified_git_blob_sha": "76181c241deb999628af222250d77e6669a6564e"
+      },
+      "pox_branches": {
+        "git_blob_sha": "78968bb102eecdde947ecb4bc970dcfb1fb27922",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_CHAIN_PHASE2_POX_BRANCH_RECONCILIATION_V2_20260818.md",
+        "verified_git_blob_sha": "78968bb102eecdde947ecb4bc970dcfb1fb27922"
+      },
+      "pox_correction": {
+        "git_blob_sha": "9ece0900e2c50f706575a53a551df4e595f6c7ca",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_CHAIN_PHASE2_FINDINGS_ADDENDUM_POX_20260818.md",
+        "verified_git_blob_sha": "9ece0900e2c50f706575a53a551df4e595f6c7ca"
+      },
+      "recovery": {
+        "git_blob_sha": "06d083ca94b7dc5011a9ad2678eedc5e1fee4cb2",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_CHAIN_PHASE2_POX_SAME_POSTEXIT_REEXPRESSION_20260818.md",
+        "verified_git_blob_sha": "06d083ca94b7dc5011a9ad2678eedc5e1fee4cb2"
+      },
+      "recurrence_producer": {
+        "git_blob_sha": "a5412ce2d09f4c70879bfe55b2224556adaf9b85",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/ng_exhaustion_chain_phase2_parallel_agents_20260818.py",
+        "verified_git_blob_sha": "a5412ce2d09f4c70879bfe55b2224556adaf9b85"
+      },
+      "shape_helper": {
+        "git_blob_sha": "2b3c6772d2e7114a7f6549eef3bd616050c503a0",
+        "url": "https://github.com/DavisAI1974/Markets/blob/c493ae7388212fa3ce029c505d4a052d85cf5799/research/ng_dipole_native_shape_audit.py",
+        "verified_git_blob_sha": "2b3c6772d2e7114a7f6549eef3bd616050c503a0"
+      },
+      "ssos_freeze": {
+        "git_blob_sha": "54eb0b268341a34005e9a29a7374c6f94193e839",
+        "url": "https://github.com/DavisAI1974/Markets/blob/c493ae7388212fa3ce029c505d4a052d85cf5799/research/NG_EXHAUSTION_CHAIN_PHASE2_PAPER_PLAY_FREEZE_20260817.json",
+        "verified_git_blob_sha": "54eb0b268341a34005e9a29a7374c6f94193e839"
+      },
+      "ssos_producer": {
+        "git_blob_sha": "d323aab34ba7771c8b07ef1d6b11022e470182fd",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/ng_exhaustion_chain_phase2_characterize_20260817.py",
+        "verified_git_blob_sha": "d323aab34ba7771c8b07ef1d6b11022e470182fd"
+      },
+      "timing": {
+        "git_blob_sha": "b7f70cc83c021b15d44eff8d76401664c520dc9d",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_CHAIN_PHASE2_TIMING_CONTEXT_FINDINGS_20260818.md",
+        "verified_git_blob_sha": "b7f70cc83c021b15d44eff8d76401664c520dc9d"
+      },
+      "v4": {
+        "git_blob_sha": "d91202800047d9d7e90d939df3f4357ebc2ea174",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_V4_BRAIN_TRADE_PROPOSAL_CLEAN_SOURCE_CURRENT_20260820.md",
+        "verified_git_blob_sha": "d91202800047d9d7e90d939df3f4357ebc2ea174"
+      },
+      "watch": {
+        "git_blob_sha": "62a12bd594846e627891906d1ee463701934545a",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_CHAIN_PHASE2_REAPPEARANCE_WATCH_MAP_20260818.json",
+        "verified_git_blob_sha": "62a12bd594846e627891906d1ee463701934545a"
+      }
+    }
+  },
+  "output": "CHAIN_INSTANCES.jsonl.gz",
+  "per_recipe_counts": [
+    {
+      "actual": 8064,
+      "expected": 8064,
+      "recipe_id": "CHAIN_EXACT_SOURCE_SEARCH",
+      "status": "EXACT_COUNT_MATCH"
+    },
+    {
+      "actual": 2720,
+      "expected": 2720,
+      "recipe_id": "CHAIN_ATLAS_DEPTH1_TO4",
+      "status": "EXACT_COUNT_MATCH"
+    },
+    {
+      "actual": 4,
+      "expected": 4,
+      "recipe_id": "FROZEN_SSOS",
+      "status": "EXACT_COUNT_MATCH"
+    },
+    {
+      "actual": 36,
+      "expected": 36,
+      "recipe_id": "CANONICAL_POX_PARENT",
+      "status": "EXACT_COUNT_MATCH"
+    },
+    {
+      "actual": 72,
+      "expected": 72,
+      "recipe_id": "POX_BANK_POSITIVE_PROXY",
+      "status": "EXACT_COUNT_MATCH"
+    },
+    {
+      "actual": 300,
+      "expected": 300,
+      "recipe_id": "POX_POSTEXIT_RECOVERY",
+      "status": "EXACT_COUNT_MATCH"
+    },
+    {
+      "actual": 4320,
+      "expected": 4320,
+      "recipe_id": "PAIR_TRIPLET_MODULES",
+      "status": "EXACT_COUNT_MATCH"
+    },
+    {
+      "actual": 35,
+      "expected": 35,
+      "recipe_id": "PREFIX_LADDERS",
+      "status": "EXACT_COUNT_MATCH"
+    },
+    {
+      "actual": 65,
+      "expected": 65,
+      "recipe_id": "D0_D5_CONTINUOUS_CAUSAL_FORECAST",
+      "status": "EXACT_COUNT_MATCH"
+    },
+    {
+      "actual": 28,
+      "expected": 28,
+      "recipe_id": "FOCUSED_POX_FIXED3429",
+      "status": "EXACT_COUNT_MATCH"
+    }
+  ],
+  "platform_execution_claim": false,
+  "report_output_heads_not_cartesian_trade_axes": [
+    "module_recurrence",
+    "module_D1_to_D2_extension",
+    "module_D2_to_D3_extension",
+    "module_timing_context",
+    "recovery_at120_or300",
+    "relapse",
+    "prefix_completion_failure_replacement_censoring"
+  ],
+  "schema_version": "CHAIN_EXPANSION_V1",
+  "source_direction_status_counts": {
+    "CANONICAL_POX_CONTINUATION_PLUS60": 92,
+    "EXPLICIT_RECIPE_SOURCE_DIRECTION": 40,
+    "FROZEN_SSOS_PLUS30": 4,
+    "NOT_SOURCE_SEARCH_DIRECTION_AXIS": 4748,
+    "RECOVERED_MOTIF_PLUS60": 160,
+    "UNRESOLVED_SOURCE_SELECTED_DIRECTION": 10600
+  },
+  "source_recipe_file": "../review_chain_recipes.json",
+  "source_recipe_sha256": "c1537b115f5179056817512222a5a0e9c8c2d922b714294db30fbe93c8df1075",
+  "source_review_file": "../review_chain.json",
+  "source_review_sha256": "e25c1a27c42f925989bb42673775fd3c0f232bcf9df9b8ae6267372098abe701",
+  "uncompressed_jsonl_sha256": "4543cdb9f9fda08ec410f7fec29d24468782319c3c38682c7a651e022bd660b8",
+  "unexpanded_recipe_axes": [
+    {
+      "axis": "trained_model_head_view_revision",
+      "reason_code": "EXACT_TRAINED_ARTIFACT_SET_UNBOUND",
+      "recipe_id": "D0_D5_CONTINUOUS_CAUSAL_FORECAST",
+      "retained_in_instances": true
+    },
+    {
+      "axis": "lock_rule_threshold_parameter_grid",
+      "reason_code": "NO_FINITE_SOURCE_PARAMETER_SET",
+      "recipe_id": "D0_D5_CONTINUOUS_CAUSAL_FORECAST",
+      "retained_in_instances": true
+    },
+    {
+      "axis": "D1_dynamic_GMM_timing_classes_and_D4_D5_timing_classes",
+      "reason_code": "NO_BOUND_FROZEN_CLASS_SET",
+      "recipe_id": "D0_D5_CONTINUOUS_CAUSAL_FORECAST",
+      "retained_in_instances": true
+    },
+    {
+      "axis": "individual3429_case_rows",
+      "future_label_counts": {
+        "FLIP": 1546,
+        "SAME": 1883
+      },
+      "reason_code": "CASE_LEDGER_NOT_BOUND_RULE_CATALOG_ONLY",
+      "recipe_id": "FOCUSED_POX_FIXED3429",
+      "source_case_count": 3429
+    },
+    {
+      "axis": "realized_event_case_ids_and_outcome_labels",
+      "reason_code": "SPECIFICATION_CATALOG_NOT_EVENT_LEDGER",
+      "recipe_id": "ALL"
+    },
+    {
+      "axis": "missing_source_selected_orientation_values",
+      "reason_code": "EXACT_SOURCE_DIRECTION_UNRESOLVED",
+      "recipe_id": "CHAIN_EXACT_SOURCE_SEARCH",
+      "retained_as_null_in_instances": true
+    },
+    {
+      "axis": "OVERLAY_EXECUTED_PNL_DESIGN",
+      "reason_code": "RECIPE_EXPLICITLY_NONDEFAULT_NOT_IN_GENERATE_AXIS",
+      "recipe_id": "POX_BANK_POSITIVE_PROXY"
+    },
+    {
+      "axis": "blanket_LONG_SHORT_contrary_controls",
+      "reason_code": "NOT_DECLARED_UNDER_CURRENT_DIRECTION_POLICY",
+      "recipe_id": "ALL_DIRECTIONAL_SOURCE_RULES"
+    }
+  ],
+  "validation": {
+    "all_execution_disabled": true,
+    "all_paper_included": true,
+    "atlas_cartesian_projection": true,
+    "bank_proxy_cartesian_projection": true,
+    "count_coverage": true,
+    "focused_all_declared_axes_projection": true,
+    "forecast_cartesian_projection": true,
+    "gzip_roundtrip": true,
+    "module_cartesian_projection": true,
+    "pox_parent_cartesian_projection": true,
+    "prefix_cartesian_projection": true,
+    "recovery_cartesian_projection": true,
+    "source_search_cartesian_projection": true,
+    "ssos_cartesian_projection": true,
+    "unique_ids": true
+  }
+}

@@ -1,0 +1,1282 @@
+{
+  "schema": "constant-state-resolution-v1",
+  "output": {
+    "path": "C:\\Users\\A\\markets-paper-rules-20261109\\machine\\CONSTANT_MODEL_STATE.json",
+    "sha256": "3760ff90e9028a58814228c582e612c6f80ebe0841509d5474045ece02672023",
+    "states": 117
+  },
+  "counts_by_model": {
+    "training_mean": 54,
+    "zero_change": 54,
+    "training_frequency": 9
+  },
+  "resolution_scope": "Scalar frozen prediction state resolved for117expanded tasks;all preexisting broad IDs and evidence bytes untouched. Supplemental resolver keyed by task ID,input version and fold.",
+  "remaining_expanded_model_state_counts": {
+    "weights_not_serialized_by_reviewed_completed_run_path": 1503,
+    "serialization_required_by_completed_run_and_archive_attested_individual_member_not_restored": 477,
+    "reference_requires_training_median_scalar_or_saved_predictions_not_train_label_mean": 54
+  },
+  "median_policy": "54training_median references are explicitly unresolved;train_label_mean never substitutes for median.",
+  "precision_recovery": {
+    "source": "Original source/all_model_fold_metrics.csv,not rounded tables/all_2151_fold_metrics.csv",
+    "tasks_with_different_source_literal": 108,
+    "differences": [
+      {
+        "task_id": "JM-expanded-0030",
+        "original_source_literal": "0.00042987804878045805",
+        "presentation_literal": "0.0004298780487804"
+      },
+      {
+        "task_id": "JM-expanded-0031",
+        "original_source_literal": "0.00042987804878045805",
+        "presentation_literal": "0.0004298780487804"
+      },
+      {
+        "task_id": "JM-expanded-0061",
+        "original_source_literal": "0.0006539682539682398",
+        "presentation_literal": "0.0006539682539682"
+      },
+      {
+        "task_id": "JM-expanded-0062",
+        "original_source_literal": "0.0006539682539682398",
+        "presentation_literal": "0.0006539682539682"
+      },
+      {
+        "task_id": "JM-expanded-0092",
+        "original_source_literal": "0.0007474563953488355",
+        "presentation_literal": "0.0007474563953488"
+      },
+      {
+        "task_id": "JM-expanded-0093",
+        "original_source_literal": "0.0007474563953488355",
+        "presentation_literal": "0.0007474563953488"
+      },
+      {
+        "task_id": "JM-expanded-0123",
+        "original_source_literal": "0.0013863636363636634",
+        "presentation_literal": "0.0013863636363636"
+      },
+      {
+        "task_id": "JM-expanded-0124",
+        "original_source_literal": "0.0013863636363636634",
+        "presentation_literal": "0.0013863636363636"
+      },
+      {
+        "task_id": "JM-expanded-0154",
+        "original_source_literal": "0.0017741228070175636",
+        "presentation_literal": "0.0017741228070175"
+      },
+      {
+        "task_id": "JM-expanded-0155",
+        "original_source_literal": "0.0017741228070175636",
+        "presentation_literal": "0.0017741228070175"
+      },
+      {
+        "task_id": "JM-expanded-0185",
+        "original_source_literal": "0.0035698412698412906",
+        "presentation_literal": "0.0035698412698412"
+      },
+      {
+        "task_id": "JM-expanded-0186",
+        "original_source_literal": "0.0035698412698412906",
+        "presentation_literal": "0.0035698412698412"
+      },
+      {
+        "task_id": "JM-expanded-0216",
+        "original_source_literal": "0.004961240310077493",
+        "presentation_literal": "0.0049612403100774"
+      },
+      {
+        "task_id": "JM-expanded-0217",
+        "original_source_literal": "0.004961240310077493",
+        "presentation_literal": "0.0049612403100774"
+      },
+      {
+        "task_id": "JM-expanded-0247",
+        "original_source_literal": "0.006361751152073708",
+        "presentation_literal": "0.0063617511520737"
+      },
+      {
+        "task_id": "JM-expanded-0248",
+        "original_source_literal": "0.006361751152073708",
+        "presentation_literal": "0.0063617511520737"
+      },
+      {
+        "task_id": "JM-expanded-0278",
+        "original_source_literal": "0.013969647251845737",
+        "presentation_literal": "0.0139696472518457"
+      },
+      {
+        "task_id": "JM-expanded-0279",
+        "original_source_literal": "0.013969647251845737",
+        "presentation_literal": "0.0139696472518457"
+      },
+      {
+        "task_id": "JM-expanded-0309",
+        "original_source_literal": "0.0008473282442748311",
+        "presentation_literal": "0.0008473282442748"
+      },
+      {
+        "task_id": "JM-expanded-0310",
+        "original_source_literal": "0.0008473282442748311",
+        "presentation_literal": "0.0008473282442748"
+      },
+      {
+        "task_id": "JM-expanded-0340",
+        "original_source_literal": "0.001097959183673479",
+        "presentation_literal": "0.0010979591836734"
+      },
+      {
+        "task_id": "JM-expanded-0341",
+        "original_source_literal": "0.001097959183673479",
+        "presentation_literal": "0.0010979591836734"
+      },
+      {
+        "task_id": "JM-expanded-0371",
+        "original_source_literal": "0.0018343677269200959",
+        "presentation_literal": "0.00183436772692"
+      },
+      {
+        "task_id": "JM-expanded-0372",
+        "original_source_literal": "0.0018343677269200959",
+        "presentation_literal": "0.00183436772692"
+      },
+      {
+        "task_id": "JM-expanded-0402",
+        "original_source_literal": "0.002558593749999973",
+        "presentation_literal": "0.0025585937499999"
+      },
+      {
+        "task_id": "JM-expanded-0403",
+        "original_source_literal": "0.002558593749999973",
+        "presentation_literal": "0.0025585937499999"
+      },
+      {
+        "task_id": "JM-expanded-0433",
+        "original_source_literal": "0.0029229074889867584",
+        "presentation_literal": "0.0029229074889867"
+      },
+      {
+        "task_id": "JM-expanded-0434",
+        "original_source_literal": "0.0029229074889867584",
+        "presentation_literal": "0.0029229074889867"
+      },
+      {
+        "task_id": "JM-expanded-0464",
+        "original_source_literal": "0.005535657051282053",
+        "presentation_literal": "0.005535657051282"
+      },
+      {
+        "task_id": "JM-expanded-0465",
+        "original_source_literal": "0.005535657051282053",
+        "presentation_literal": "0.005535657051282"
+      },
+      {
+        "task_id": "JM-expanded-0495",
+        "original_source_literal": "0.006654761904761857",
+        "presentation_literal": "0.0066547619047618"
+      },
+      {
+        "task_id": "JM-expanded-0496",
+        "original_source_literal": "0.006654761904761857",
+        "presentation_literal": "0.0066547619047618"
+      },
+      {
+        "task_id": "JM-expanded-0557",
+        "original_source_literal": "0.020202183406113502",
+        "presentation_literal": "0.0202021834061135"
+      },
+      {
+        "task_id": "JM-expanded-0558",
+        "original_source_literal": "0.020202183406113502",
+        "presentation_literal": "0.0202021834061135"
+      },
+      {
+        "task_id": "JM-expanded-0588",
+        "original_source_literal": "0.0006399999999999946",
+        "presentation_literal": "0.0006399999999999"
+      },
+      {
+        "task_id": "JM-expanded-0589",
+        "original_source_literal": "0.0006399999999999946",
+        "presentation_literal": "0.0006399999999999"
+      },
+      {
+        "task_id": "JM-expanded-0619",
+        "original_source_literal": "0.0008327645051194683",
+        "presentation_literal": "0.0008327645051194"
+      },
+      {
+        "task_id": "JM-expanded-0620",
+        "original_source_literal": "0.0008327645051194683",
+        "presentation_literal": "0.0008327645051194"
+      },
+      {
+        "task_id": "JM-expanded-0650",
+        "original_source_literal": "0.001098728496634254",
+        "presentation_literal": "0.0010987284966342"
+      },
+      {
+        "task_id": "JM-expanded-0651",
+        "original_source_literal": "0.001098728496634254",
+        "presentation_literal": "0.0010987284966342"
+      },
+      {
+        "task_id": "JM-expanded-0681",
+        "original_source_literal": "0.0013729508196721018",
+        "presentation_literal": "0.0013729508196721"
+      },
+      {
+        "task_id": "JM-expanded-0682",
+        "original_source_literal": "0.0013729508196721018",
+        "presentation_literal": "0.0013729508196721"
+      },
+      {
+        "task_id": "JM-expanded-0712",
+        "original_source_literal": "0.0015340425531914575",
+        "presentation_literal": "0.0015340425531914"
+      },
+      {
+        "task_id": "JM-expanded-0713",
+        "original_source_literal": "0.0015340425531914575",
+        "presentation_literal": "0.0015340425531914"
+      },
+      {
+        "task_id": "JM-expanded-0743",
+        "original_source_literal": "0.0027948616600790574",
+        "presentation_literal": "0.002794861660079"
+      },
+      {
+        "task_id": "JM-expanded-0744",
+        "original_source_literal": "0.0027948616600790574",
+        "presentation_literal": "0.002794861660079"
+      },
+      {
+        "task_id": "JM-expanded-0774",
+        "original_source_literal": "0.0031228813559321736",
+        "presentation_literal": "0.0031228813559321"
+      },
+      {
+        "task_id": "JM-expanded-0775",
+        "original_source_literal": "0.0031228813559321736",
+        "presentation_literal": "0.0031228813559321"
+      },
+      {
+        "task_id": "JM-expanded-0805",
+        "original_source_literal": "0.004159482758620685",
+        "presentation_literal": "0.0041594827586206"
+      },
+      {
+        "task_id": "JM-expanded-0806",
+        "original_source_literal": "0.004159482758620685",
+        "presentation_literal": "0.0041594827586206"
+      },
+      {
+        "task_id": "JM-expanded-0836",
+        "original_source_literal": "0.007987401574803146",
+        "presentation_literal": "0.0079874015748031"
+      },
+      {
+        "task_id": "JM-expanded-0837",
+        "original_source_literal": "0.007987401574803146",
+        "presentation_literal": "0.0079874015748031"
+      },
+      {
+        "task_id": "JM-expanded-1045",
+        "original_source_literal": "0.9558359621451105",
+        "presentation_literal": "0.9558359621451104"
+      },
+      {
+        "task_id": "JM-expanded-1071",
+        "original_source_literal": "0.9862036156041865",
+        "presentation_literal": "0.9862036156041863"
+      },
+      {
+        "task_id": "JM-expanded-1101",
+        "original_source_literal": "-7.012195121950853e-5",
+        "presentation_literal": "-7.012195121950853e-05"
+      },
+      {
+        "task_id": "JM-expanded-1102",
+        "original_source_literal": "-7.012195121950853e-5",
+        "presentation_literal": "-7.012195121950853e-05"
+      },
+      {
+        "task_id": "JM-expanded-1132",
+        "original_source_literal": "-6.66666666666706e-5",
+        "presentation_literal": "-6.66666666666706e-05"
+      },
+      {
+        "task_id": "JM-expanded-1133",
+        "original_source_literal": "-6.66666666666706e-5",
+        "presentation_literal": "-6.66666666666706e-05"
+      },
+      {
+        "task_id": "JM-expanded-1163",
+        "original_source_literal": "-7.01308139534992e-5",
+        "presentation_literal": "-7.01308139534992e-05"
+      },
+      {
+        "task_id": "JM-expanded-1164",
+        "original_source_literal": "-7.01308139534992e-5",
+        "presentation_literal": "-7.01308139534992e-05"
+      },
+      {
+        "task_id": "JM-expanded-1194",
+        "original_source_literal": "0.0007045454545454556",
+        "presentation_literal": "0.0007045454545454"
+      },
+      {
+        "task_id": "JM-expanded-1195",
+        "original_source_literal": "0.0007045454545454556",
+        "presentation_literal": "0.0007045454545454"
+      },
+      {
+        "task_id": "JM-expanded-1225",
+        "original_source_literal": "0.0003267543859649045",
+        "presentation_literal": "0.0003267543859649"
+      },
+      {
+        "task_id": "JM-expanded-1226",
+        "original_source_literal": "0.0003267543859649045",
+        "presentation_literal": "0.0003267543859649"
+      },
+      {
+        "task_id": "JM-expanded-1256",
+        "original_source_literal": "6.269841269841495e-5",
+        "presentation_literal": "6.269841269841495e-05"
+      },
+      {
+        "task_id": "JM-expanded-1257",
+        "original_source_literal": "6.269841269841495e-5",
+        "presentation_literal": "6.269841269841495e-05"
+      },
+      {
+        "task_id": "JM-expanded-1287",
+        "original_source_literal": "0.003829457364341073",
+        "presentation_literal": "0.003829457364341"
+      },
+      {
+        "task_id": "JM-expanded-1288",
+        "original_source_literal": "0.003829457364341073",
+        "presentation_literal": "0.003829457364341"
+      },
+      {
+        "task_id": "JM-expanded-1318",
+        "original_source_literal": "-0.00036175115207371847",
+        "presentation_literal": "-0.0003617511520737"
+      },
+      {
+        "task_id": "JM-expanded-1319",
+        "original_source_literal": "-0.00036175115207371847",
+        "presentation_literal": "-0.0003617511520737"
+      },
+      {
+        "task_id": "JM-expanded-1349",
+        "original_source_literal": "-0.0009786710418375599",
+        "presentation_literal": "-0.0009786710418375"
+      },
+      {
+        "task_id": "JM-expanded-1350",
+        "original_source_literal": "-0.0009786710418375599",
+        "presentation_literal": "-0.0009786710418375"
+      },
+      {
+        "task_id": "JM-expanded-1380",
+        "original_source_literal": "0.00010687022900763876",
+        "presentation_literal": "0.0001068702290076"
+      },
+      {
+        "task_id": "JM-expanded-1381",
+        "original_source_literal": "0.00010687022900763876",
+        "presentation_literal": "0.0001068702290076"
+      },
+      {
+        "task_id": "JM-expanded-1411",
+        "original_source_literal": "3.2653061224491636e-5",
+        "presentation_literal": "3.265306122449164e-05"
+      },
+      {
+        "task_id": "JM-expanded-1412",
+        "original_source_literal": "3.2653061224491636e-5",
+        "presentation_literal": "3.265306122449164e-05"
+      },
+      {
+        "task_id": "JM-expanded-1442",
+        "original_source_literal": "-9.425911559349689e-5",
+        "presentation_literal": "-9.425911559349689e-05"
+      },
+      {
+        "task_id": "JM-expanded-1443",
+        "original_source_literal": "-9.425911559349689e-5",
+        "presentation_literal": "-9.425911559349689e-05"
+      },
+      {
+        "task_id": "JM-expanded-1473",
+        "original_source_literal": "7.421875000005254e-5",
+        "presentation_literal": "7.421875000005254e-05"
+      },
+      {
+        "task_id": "JM-expanded-1474",
+        "original_source_literal": "7.421875000005254e-5",
+        "presentation_literal": "7.421875000005254e-05"
+      },
+      {
+        "task_id": "JM-expanded-1504",
+        "original_source_literal": "0.0002885462555066495",
+        "presentation_literal": "0.0002885462555066"
+      },
+      {
+        "task_id": "JM-expanded-1505",
+        "original_source_literal": "0.0002885462555066495",
+        "presentation_literal": "0.0002885462555066"
+      },
+      {
+        "task_id": "JM-expanded-1535",
+        "original_source_literal": "0.0004947916666666828",
+        "presentation_literal": "0.0004947916666666"
+      },
+      {
+        "task_id": "JM-expanded-1536",
+        "original_source_literal": "0.0004947916666666828",
+        "presentation_literal": "0.0004947916666666"
+      },
+      {
+        "task_id": "JM-expanded-1566",
+        "original_source_literal": "0.006178571428571384",
+        "presentation_literal": "0.0061785714285713"
+      },
+      {
+        "task_id": "JM-expanded-1567",
+        "original_source_literal": "0.006178571428571384",
+        "presentation_literal": "0.0061785714285713"
+      },
+      {
+        "task_id": "JM-expanded-1597",
+        "original_source_literal": "0.0005197368421052225",
+        "presentation_literal": "0.0005197368421052"
+      },
+      {
+        "task_id": "JM-expanded-1598",
+        "original_source_literal": "0.0005197368421052225",
+        "presentation_literal": "0.0005197368421052"
+      },
+      {
+        "task_id": "JM-expanded-1628",
+        "original_source_literal": "-0.00518122270742358",
+        "presentation_literal": "-0.0051812227074235"
+      },
+      {
+        "task_id": "JM-expanded-1629",
+        "original_source_literal": "-0.00518122270742358",
+        "presentation_literal": "-0.0051812227074235"
+      },
+      {
+        "task_id": "JM-expanded-1659",
+        "original_source_literal": "-0.0001399999999999994",
+        "presentation_literal": "-0.0001399999999999"
+      },
+      {
+        "task_id": "JM-expanded-1660",
+        "original_source_literal": "-0.0001399999999999994",
+        "presentation_literal": "-0.0001399999999999"
+      },
+      {
+        "task_id": "JM-expanded-1690",
+        "original_source_literal": "-0.00011604095563140473",
+        "presentation_literal": "-0.0001160409556314"
+      },
+      {
+        "task_id": "JM-expanded-1691",
+        "original_source_literal": "-0.00011604095563140473",
+        "presentation_literal": "-0.0001160409556314"
+      },
+      {
+        "task_id": "JM-expanded-1721",
+        "original_source_literal": "-9.424083769634994e-5",
+        "presentation_literal": "-9.424083769634994e-05"
+      },
+      {
+        "task_id": "JM-expanded-1722",
+        "original_source_literal": "-9.424083769634994e-5",
+        "presentation_literal": "-9.424083769634994e-05"
+      },
+      {
+        "task_id": "JM-expanded-1752",
+        "original_source_literal": "-0.00020081967213109083",
+        "presentation_literal": "-0.000200819672131"
+      },
+      {
+        "task_id": "JM-expanded-1753",
+        "original_source_literal": "-0.00020081967213109083",
+        "presentation_literal": "-0.000200819672131"
+      },
+      {
+        "task_id": "JM-expanded-1783",
+        "original_source_literal": "-0.00012127659574463442",
+        "presentation_literal": "-0.0001212765957446"
+      },
+      {
+        "task_id": "JM-expanded-1784",
+        "original_source_literal": "-0.00012127659574463442",
+        "presentation_literal": "-0.0001212765957446"
+      },
+      {
+        "task_id": "JM-expanded-1814",
+        "original_source_literal": "8.300395256914152e-6",
+        "presentation_literal": "8.300395256914152e-06"
+      },
+      {
+        "task_id": "JM-expanded-1815",
+        "original_source_literal": "8.300395256914152e-6",
+        "presentation_literal": "8.300395256914152e-06"
+      },
+      {
+        "task_id": "JM-expanded-1845",
+        "original_source_literal": "0.001639830508474533",
+        "presentation_literal": "0.0016398305084745"
+      },
+      {
+        "task_id": "JM-expanded-1846",
+        "original_source_literal": "0.001639830508474533",
+        "presentation_literal": "0.0016398305084745"
+      },
+      {
+        "task_id": "JM-expanded-1876",
+        "original_source_literal": "0.0004612068965517174",
+        "presentation_literal": "0.0004612068965517"
+      },
+      {
+        "task_id": "JM-expanded-1877",
+        "original_source_literal": "0.0004612068965517174",
+        "presentation_literal": "0.0004612068965517"
+      },
+      {
+        "task_id": "JM-expanded-1907",
+        "original_source_literal": "0.0007259842519684984",
+        "presentation_literal": "0.0007259842519684"
+      },
+      {
+        "task_id": "JM-expanded-1908",
+        "original_source_literal": "0.0007259842519684984",
+        "presentation_literal": "0.0007259842519684"
+      }
+    ],
+    "prediction_outputs_differing_from_rounded_table": 47,
+    "output_differences": [
+      {
+        "task_id": "JM-expanded-0030",
+        "rounded_table_output": 0.0004298780487804,
+        "recovered_original_output": 0.00042987804878045805,
+        "difference": 5.805902633659876e-17
+      },
+      {
+        "task_id": "JM-expanded-0061",
+        "rounded_table_output": 0.0006539682539682,
+        "recovered_original_output": 0.0006539682539682398,
+        "difference": 3.979021973021801e-17
+      },
+      {
+        "task_id": "JM-expanded-0092",
+        "rounded_table_output": 0.0007474563953488,
+        "recovered_original_output": 0.0007474563953488355,
+        "difference": 3.5453411040275995e-17
+      },
+      {
+        "task_id": "JM-expanded-0123",
+        "rounded_table_output": 0.0013863636363636,
+        "recovered_original_output": 0.0013863636363636634,
+        "difference": 6.331740687315346e-17
+      },
+      {
+        "task_id": "JM-expanded-0154",
+        "rounded_table_output": 0.0017741228070175,
+        "recovered_original_output": 0.0017741228070175636,
+        "difference": 6.353424730765056e-17
+      },
+      {
+        "task_id": "JM-expanded-0185",
+        "rounded_table_output": 0.0035698412698412,
+        "recovered_original_output": 0.0035698412698412906,
+        "difference": 9.063930161978817e-17
+      },
+      {
+        "task_id": "JM-expanded-0216",
+        "rounded_table_output": 0.0049612403100774,
+        "recovered_original_output": 0.004961240310077493,
+        "difference": 9.280770596475918e-17
+      },
+      {
+        "task_id": "JM-expanded-0247",
+        "rounded_table_output": 0.0063617511520737,
+        "recovered_original_output": 0.006361751152073708,
+        "difference": 8.673617379884035e-18
+      },
+      {
+        "task_id": "JM-expanded-0278",
+        "rounded_table_output": 0.0139696472518457,
+        "recovered_original_output": 0.013969647251845737,
+        "difference": 3.642919299551295e-17
+      },
+      {
+        "task_id": "JM-expanded-0309",
+        "rounded_table_output": 0.0008473282442748,
+        "recovered_original_output": 0.0008473282442748311,
+        "difference": 3.111660235033398e-17
+      },
+      {
+        "task_id": "JM-expanded-0340",
+        "rounded_table_output": 0.0010979591836734,
+        "recovered_original_output": 0.001097959183673479,
+        "difference": 7.892991815694472e-17
+      },
+      {
+        "task_id": "JM-expanded-0371",
+        "rounded_table_output": 0.00183436772692,
+        "recovered_original_output": 0.0018343677269200959,
+        "difference": 9.584347204771859e-17
+      },
+      {
+        "task_id": "JM-expanded-0402",
+        "rounded_table_output": 0.0025585937499999,
+        "recovered_original_output": 0.002558593749999973,
+        "difference": 7.32920668600201e-17
+      },
+      {
+        "task_id": "JM-expanded-0433",
+        "rounded_table_output": 0.0029229074889867,
+        "recovered_original_output": 0.0029229074889867584,
+        "difference": 5.854691731421724e-17
+      },
+      {
+        "task_id": "JM-expanded-0464",
+        "rounded_table_output": 0.005535657051282,
+        "recovered_original_output": 0.005535657051282053,
+        "difference": 5.2909066017292616e-17
+      },
+      {
+        "task_id": "JM-expanded-0495",
+        "rounded_table_output": 0.0066547619047618,
+        "recovered_original_output": 0.006654761904761857,
+        "difference": 5.724587470723463e-17
+      },
+      {
+        "task_id": "JM-expanded-0557",
+        "rounded_table_output": 0.0202021834061135,
+        "recovered_original_output": 0.020202183406113502,
+        "difference": 3.469446951953614e-18
+      },
+      {
+        "task_id": "JM-expanded-0588",
+        "rounded_table_output": 0.0006399999999999,
+        "recovered_original_output": 0.0006399999999999946,
+        "difference": 9.465084965798454e-17
+      },
+      {
+        "task_id": "JM-expanded-0619",
+        "rounded_table_output": 0.0008327645051194,
+        "recovered_original_output": 0.0008327645051194683,
+        "difference": 6.830473686658678e-17
+      },
+      {
+        "task_id": "JM-expanded-0650",
+        "rounded_table_output": 0.0010987284966342,
+        "recovered_original_output": 0.001098728496634254,
+        "difference": 5.421010862427522e-17
+      },
+      {
+        "task_id": "JM-expanded-0681",
+        "rounded_table_output": 0.0013729508196721,
+        "recovered_original_output": 0.0013729508196721018,
+        "difference": 1.951563910473908e-18
+      },
+      {
+        "task_id": "JM-expanded-0712",
+        "rounded_table_output": 0.0015340425531914,
+        "recovered_original_output": 0.0015340425531914575,
+        "difference": 5.746271514173174e-17
+      },
+      {
+        "task_id": "JM-expanded-0743",
+        "rounded_table_output": 0.002794861660079,
+        "recovered_original_output": 0.0027948616600790574,
+        "difference": 5.724587470723463e-17
+      },
+      {
+        "task_id": "JM-expanded-0774",
+        "rounded_table_output": 0.0031228813559321,
+        "recovered_original_output": 0.0031228813559321736,
+        "difference": 7.37257477290143e-17
+      },
+      {
+        "task_id": "JM-expanded-0805",
+        "rounded_table_output": 0.0041594827586206,
+        "recovered_original_output": 0.004159482758620685,
+        "difference": 8.500145032286355e-17
+      },
+      {
+        "task_id": "JM-expanded-0836",
+        "rounded_table_output": 0.0079874015748031,
+        "recovered_original_output": 0.007987401574803146,
+        "difference": 4.5102810375396984e-17
+      },
+      {
+        "task_id": "JM-expanded-1045",
+        "rounded_table_output": 0.9558359621451104,
+        "recovered_original_output": 0.9558359621451105,
+        "difference": 1.1102230246251565e-16
+      },
+      {
+        "task_id": "JM-expanded-1071",
+        "rounded_table_output": 0.9862036156041863,
+        "recovered_original_output": 0.9862036156041865,
+        "difference": 1.1102230246251565e-16
+      },
+      {
+        "task_id": "JM-expanded-1194",
+        "rounded_table_output": 0.0007045454545454,
+        "recovered_original_output": 0.0007045454545454556,
+        "difference": 5.561957144850638e-17
+      },
+      {
+        "task_id": "JM-expanded-1225",
+        "rounded_table_output": 0.0003267543859649,
+        "recovered_original_output": 0.0003267543859649045,
+        "difference": 4.4994390158148434e-18
+      },
+      {
+        "task_id": "JM-expanded-1287",
+        "rounded_table_output": 0.003829457364341,
+        "recovered_original_output": 0.003829457364341073,
+        "difference": 7.28583859910259e-17
+      },
+      {
+        "task_id": "JM-expanded-1318",
+        "rounded_table_output": -0.0003617511520737,
+        "recovered_original_output": -0.00036175115207371847,
+        "difference": -1.848564704087785e-17
+      },
+      {
+        "task_id": "JM-expanded-1349",
+        "rounded_table_output": -0.0009786710418375,
+        "recovered_original_output": -0.0009786710418375599,
+        "difference": -5.984795992119984e-17
+      },
+      {
+        "task_id": "JM-expanded-1380",
+        "rounded_table_output": 0.0001068702290076,
+        "recovered_original_output": 0.00010687022900763876,
+        "difference": 3.8760227666356784e-17
+      },
+      {
+        "task_id": "JM-expanded-1411",
+        "rounded_table_output": 3.265306122449164e-05,
+        "recovered_original_output": 3.2653061224491636e-05,
+        "difference": -6.776263578034403e-21
+      },
+      {
+        "task_id": "JM-expanded-1504",
+        "rounded_table_output": 0.0002885462555066,
+        "recovered_original_output": 0.0002885462555066495,
+        "difference": 4.949382917396328e-17
+      },
+      {
+        "task_id": "JM-expanded-1535",
+        "rounded_table_output": 0.0004947916666666,
+        "recovered_original_output": 0.0004947916666666828,
+        "difference": 8.272462576064399e-17
+      },
+      {
+        "task_id": "JM-expanded-1566",
+        "rounded_table_output": 0.0061785714285713,
+        "recovered_original_output": 0.006178571428571384,
+        "difference": 8.413408858487514e-17
+      },
+      {
+        "task_id": "JM-expanded-1597",
+        "rounded_table_output": 0.0005197368421052,
+        "recovered_original_output": 0.0005197368421052225,
+        "difference": 2.2442984970449942e-17
+      },
+      {
+        "task_id": "JM-expanded-1628",
+        "rounded_table_output": -0.0051812227074235,
+        "recovered_original_output": -0.00518122270742358,
+        "difference": -7.979727989493313e-17
+      },
+      {
+        "task_id": "JM-expanded-1659",
+        "rounded_table_output": -0.0001399999999999,
+        "recovered_original_output": -0.0001399999999999994,
+        "difference": -9.939423416260862e-17
+      },
+      {
+        "task_id": "JM-expanded-1690",
+        "rounded_table_output": -0.0001160409556314,
+        "recovered_original_output": -0.00011604095563140473,
+        "difference": -4.729831977468013e-18
+      },
+      {
+        "task_id": "JM-expanded-1752",
+        "rounded_table_output": -0.000200819672131,
+        "recovered_original_output": -0.00020081967213109083,
+        "difference": -9.082903699997313e-17
+      },
+      {
+        "task_id": "JM-expanded-1783",
+        "rounded_table_output": -0.0001212765957446,
+        "recovered_original_output": -0.00012127659574463442,
+        "difference": -3.4423418976414766e-17
+      },
+      {
+        "task_id": "JM-expanded-1845",
+        "rounded_table_output": 0.0016398305084745,
+        "recovered_original_output": 0.001639830508474533,
+        "difference": 3.2959746043559335e-17
+      },
+      {
+        "task_id": "JM-expanded-1876",
+        "rounded_table_output": 0.0004612068965517,
+        "recovered_original_output": 0.0004612068965517174,
+        "difference": 1.7401444868392346e-17
+      },
+      {
+        "task_id": "JM-expanded-1907",
+        "rounded_table_output": 0.0007259842519684,
+        "recovered_original_output": 0.0007259842519684984,
+        "difference": 9.84455572616838e-17
+      }
+    ],
+    "clarification": "The108differing train-statistic literals include zero-reference rows where train mean is not used;47prediction outputs differ in binary64from parsing the rounded table."
+  },
+  "producer_validation": "Original Julia assigns pred=fill(mu) for training_mean/frequency,zero for zero_change,records train_label_mean=mu and clamps binary predictions. Candidate wrapper preserves these expressions;only dispatch/matrix-preprocessing storage changed.",
+  "metric_identity_checks": [
+    {
+      "task_id": "JM-expanded-0030",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 0.0,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0061",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 4.235164736271502e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0092",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -2.117582368135751e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0123",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 4.235164736271502e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0154",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -6.776263578034403e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0185",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 0.0,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0216",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 5.421010862427522e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0247",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 0.0,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0278",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 4.0657581468206416e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0309",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -4.235164736271502e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0340",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -8.470329472543003e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0371",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -4.235164736271502e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0402",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 8.470329472543003e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0433",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -2.0328790734103208e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0464",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 8.470329472543003e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0495",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 5.421010862427522e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0526",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 0.0,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0557",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -1.6263032587282567e-19,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0588",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 0.0,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0619",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 4.235164736271502e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0650",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 2.117582368135751e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0681",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -4.235164736271502e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0712",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -1.6940658945086007e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0743",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 1.6940658945086007e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0774",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 6.776263578034403e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0805",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -6.776263578034403e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0836",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -1.3552527156068805e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0863",
+      "check": "Brier constant identity p^2-2p*test_mean+test_mean",
+      "difference": 2.7755575615628914e-17,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0889",
+      "check": "Brier constant identity p^2-2p*test_mean+test_mean",
+      "difference": -1.1102230246251565e-16,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0915",
+      "check": "Brier constant identity p^2-2p*test_mean+test_mean",
+      "difference": -2.7755575615628914e-17,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0941",
+      "check": "Brier constant identity p^2-2p*test_mean+test_mean",
+      "difference": -1.1102230246251565e-16,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0967",
+      "check": "Brier constant identity p^2-2p*test_mean+test_mean",
+      "difference": 0.0,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-0993",
+      "check": "Brier constant identity p^2-2p*test_mean+test_mean",
+      "difference": 1.5959455978986625e-16,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1019",
+      "check": "Brier constant identity p^2-2p*test_mean+test_mean",
+      "difference": -1.0408340855860843e-16,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1045",
+      "check": "Brier constant identity p^2-2p*test_mean+test_mean",
+      "difference": 4.0332320816460765e-17,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1071",
+      "check": "Brier constant identity p^2-2p*test_mean+test_mean",
+      "difference": -3.9898639947466563e-17,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1101",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 0.0,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1132",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 4.235164736271502e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1163",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -4.235164736271502e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1194",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 1.6940658945086007e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1225",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -3.3881317890172014e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1256",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -3.3881317890172014e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1287",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 5.421010862427522e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1318",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 5.421010862427522e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1349",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 1.6263032587282567e-19,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1380",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -2.541098841762901e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1411",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 0.0,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1442",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -1.2705494208814505e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1473",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 1.0164395367051604e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1504",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -2.710505431213761e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1535",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 1.3552527156068805e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1566",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -5.421010862427522e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1597",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 2.168404344971009e-19,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1628",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -5.421010862427522e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1659",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -8.470329472543003e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1690",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 8.470329472543003e-22,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1721",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 0.0,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1752",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 0.0,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1783",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 3.3881317890172014e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1814",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -1.6940658945086007e-21,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1845",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 2.710505431213761e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1876",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": -1.3552527156068805e-20,
+      "verification_only_not_inference_operand": true
+    },
+    {
+      "task_id": "JM-expanded-1907",
+      "check": "MSE(p)=MSE(0)-2p*test_mean+p^2",
+      "difference": 1.3552527156068805e-20,
+      "verification_only_not_inference_operand": true
+    }
+  ],
+  "field_binding_note": "Constant scalar inference has no feature-matrix dependency. Do not silently mark a broad model.input_contract_complete field observed:an adapter must explicitly bind the frozen constant prediction contract and separate opportunity/execution input requirements. This file changes no recipe or runtime binding.",
+  "original_artifacts_unchanged": {
+    "C:\\Users\\A\\markets-paper-rules-20261109\\review_broad_model_tasks.json": "cd217fe60d31a6dd745147f57fec9902abb0f5f2cbf914bca8067521fd0af576",
+    "C:\\Users\\A\\markets-paper-rules-20261109\\review_broad_recipes.json": "1279d62f2cc2a9f37b5e0979e117e2b0cb641cddf7fc1b33df10125ad272cbcd",
+    "C:\\Users\\A\\markets-paper-rules-20261109\\review_broad.json": "de172ea06e8b342f170d69b9dbbee33a158d25d42424ed4d0378471b926e3e1a",
+    "C:\\Users\\A\\markets-paper-rules-20261109\\machine\\BROAD_INSTANCES.jsonl.gz": "2257e8cbcffd5bfff495ebf62b20f16e686c493b2865d543522ef52a22fae9af",
+    "C:\\Users\\A\\markets-paper-rules-20261109\\machine\\BROAD_EXPANSION.json": "faa92b929732352c01b9ddb8bbfb3eed549ef6c89cdd427ab9bed69e044ef150"
+  },
+  "verified_original_sources": [
+    {
+      "git_blob_sha": "5d9e550ebccfd63bf47cbea93643d1325ccf0870",
+      "path": "artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/source/all_model_fold_metrics.csv",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/source/all_model_fold_metrics.csv",
+      "sha256": "ba1926f43bc142cad7a373ebb305bd8e8903b86df284761eee0b9279c24096fe",
+      "bytes": 504115,
+      "git_blob_verified": true
+    },
+    {
+      "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+      "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+      "sha256": "6ce0128a94ab5affd969235eee7eb22b99a584ed57df047e843aa27caeb9e979",
+      "bytes": 10667,
+      "git_blob_verified": true
+    },
+    {
+      "git_blob_sha": "e0cb217370e5727afc77f960623548f305bec313",
+      "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/redeploy_parallel_candidate.py",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/redeploy_parallel_candidate.py",
+      "sha256": "a0b6440026c2638c478d4648f1c0d21037581d28625619f564b3b447104e04cf",
+      "bytes": 14600,
+      "git_blob_verified": true
+    },
+    {
+      "git_blob_sha": "49758d03d1a77a309088ff831a0cfd6990296f11",
+      "path": "artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_2151_fold_metrics.csv",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_2151_fold_metrics.csv",
+      "sha256": "0c888f2a5cf6db4d3fa298f6a4b6a744244efc3d08c2349b07e060933c05afc5",
+      "bytes": 480267,
+      "git_blob_verified": true
+    }
+  ],
+  "build_script": {
+    "path": "C:\\Users\\A\\markets-paper-rules-20261109\\machine\\build_constant_model_state.py",
+    "sha256": "b6c0fe44cb7e33ea935ad9c03e4db6f1af470f4ee22e2411707d40aad7f3ccf0"
+  },
+  "no_refit": true,
+  "no_worker_or_aws_operation": true,
+  "platform_ready": false
+}

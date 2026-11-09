@@ -114,3 +114,93 @@ for i,f in enumerate(data['framework_recipes']):
 
 # Correction preserves unfinished PF06 indicator dimensions without inventing undocumented AST variants.
 corrections.append({'correction_id':'PF06-INNER-INDICATOR-DIMENSIONS','target_recipe_ref':ptr('/framework_recipes/'+str(next(i for i,f in enumerate(data['framework_recipes']) if f['id']=='PF06'))),'issue':'PF06 operand text names tsm20,carry,basis_momentum20,but frozen condition only tests daily_decision and has no separate machine indicator axis.','disposition':'Expand exact frozen31-framework directions/horizons as requested;PF06 records are contextual daily-opportunity trials,not proof that3indicator-specific strategies were materialized. Preserve all3input definitions via recipe pointer. Additional indicator-specific activation/direction variants require explicit supplemental recipe,not fabricated here.','blocks_claim':'Do not claim all3slow strategies executable from these PF06 records.'})
+# Separate inherited scientific caveats from a claim that an input artifact is physically absent.
+for x in records:
+ if x['kind']=='framework':
+  fi=int(x['recipe_ref']['json_pointer'].split('/')[-1]);f=data['framework_recipes'][fi]
+  x['source_limitations']=copy.deepcopy(f['irreducible_missing_inputs'])
+  x['unavailable_artifacts']=[{'artifact':'live causal feature producer bindings','status':'not_verified_or_bound'},{'artifact':'platform execution adapter','status':'not_bound'}]
+ if x['kind']=='model_task':
+  x['artifact_dependencies']=x.pop('unavailable_artifacts')
+  x['unavailable_artifacts']=[{'artifact':'platform execution adapter','status':'not_bound'}]
+  if x['model_artifact_status']=='weights_not_serialized_by_reviewed_completed_run_path':x['unavailable_artifacts'].append({'artifact':'frozen fitted coefficients/tree state','status':'not_serialized_by_reviewed_completed_run_path','substitution_allowed':False})
+
+# A detector opportunity is shared;one arm must never mutate another arm's onset state.
+corrections.append({'correction_id':'LC-EARLY-SHARED-STATE','target_recipe_refs':[ptr('/lifecycle_rules')],'issue':'LC03 and LC04 arms reuse previous_early_eligible;updating it per horizon/direction would erase later arms at the same group.','disposition':'Evaluate detector once per instrument/continuity/side/completed group against an immutable prior-state snapshot;broadcast the same eligible/onset result to every arm;commit next state once after all arm evaluations. No new signal math.'})
+for r in records:
+ r['correction_policy']={'known_wrong_math_or_clocks':'preserve_as_history_only_never_activate_as_alternative_claim','corrected_definition':'new_version_with_explicit_supersession_link','hypothesis_retained':True}
+ if r['kind']=='lifecycle' and r['identity']['source_candidate'] in ['LC03','LC04']:
+  r['detector_state_contract']={'scope':['instrument','continuity_id','side'],'evaluation_clock':'each completed book group','state_update_order':'read prior snapshot;evaluate once;broadcast to all arms;commit once','initialization':'Set previous_early_eligible=false at algorithm start/reset,tag ALGORITHMIC_INITIALIZATION;this is source detector initialization,not a claim that a prior tape predicate was observed false.','unavailable_history':'No eligibility until3consecutive complete books exist;after a gap reset algorithm state with explicit reset tag.','shared_detector':'LC03 early_falling_touch'}
+  r['supplemental_correction_ids'].append('LC-EARLY-SHARED-STATE')
+ if r['kind']=='framework':
+  r['activation_policy_ref']=ptr('/framework_edge_policy')
+  r['activation_policy']='Source recipe event/update/per-prefix schedule when explicitly stated;otherwise first-calculable false-to-true edge of continuous predicate. Initial computable eligible state labelled INITIAL_ELIGIBLE,not observed prior false.'
+ if r['kind']=='model_task':
+  v=r['identity']['input_version']
+  if v in ['joint-models-v1','joint-models-v3']:
+   r['implementation_role']='historical_projection_reference_not_current_execution_definition'
+   r['activation_allowed_from_this_version']=False
+   r['historical_scope_note']='Preserve executed model/output/fold identity as evidence. A historical projection is not a substitute for expanded corrected inputs. Proven erroneous clocks/math must remain history,not a new scientific strategy.'
+   if v=='joint-models-v1':r['known_version_correction']='Source checkpoint reports10valid elapsed-duration identities accidentally omitted;v2input corrected those omissions,no v2fits. Do not silently relabel v1 as corrected.'
+   else:r['known_version_correction']='V3 remains frozen partial-projection benchmark;expanded candidate preserves its values while adding native/ROOT/history inputs. Semantic completeness not certified.'
+  else:
+   r['implementation_role']='expanded_source_candidate_definition_pending_recovery_and_binding'
+   r['activation_allowed_from_this_expansion']=False
+   r['semantic_coverage_status']='NOT_PASSED_in_source;input_and_unit_consumer_ledger_unresolved'
+
+# Bounded validation:strict expressions,bindings,identity cardinalities and UNKNOWN handling. No market-data calculation.
+ids=set();raw_hash=hashlib.sha256();by_version=collections.Counter();by_template=collections.Counter();by_framework=collections.Counter();seen_model_instance=set()
+for r in records:
+ assert r['paper_included'] is True and r['execution_enabled'] is False
+ assert r['id'] not in ids;ids.add(r['id'])
+ validate_rule(r)
+ for e in r.get('context_tags',{}).values():validate_expression(e)
+ for metadata in r['requires'].values():
+  assert metadata['required_runtime_status']=='observed'
+  assert metadata['runtime_binding_verified'] is False and metadata['availability_asserted'] is False
+ unknown=evaluate_rule(r,{'decision_ns':'100','decision_cursor':'10','fields':{}})
+ assert unknown['condition'] is UNKNOWN
+ counts[r['kind']]+=1
+ if r['kind']=='model_task':
+  identity=r['identity'];key=canonical(identity);assert key not in seen_model_instance;seen_model_instance.add(key)
+  by_version[identity['input_version']]+=1;by_template[identity['template_id']]+=1
+ elif r['kind']=='framework':by_framework[r['identity']['framework_id']]+=1
+ for n in fields_in([r['entry'],r['direction'],r['exit']]):assert n in r['requires']
+ # Validate serialized form cannot contain nonfinite numbers.
+ canonical(r)
+assert counts['lifecycle']==270
+assert counts['model_task']==sum(mapping_expansion.values())
+assert counts['framework']==sum(framework_expansion.values())
+assert len(seen_tasks)==4581 and len(framework_expansion)==31
+assert dict(by_framework)==framework_expansion
+
+# Strict clock/status/role positive+negative smoke checks on exactly one source LC predicate.
+early=next(r for r in records if r['kind']=='lifecycle' and r['identity']['recipe_rule_id']=='LC03-B-h1-source_directed')
+vals={'book.instrument':1,'book.prev_instrument':1,'book.prev2_instrument':1,'book.continuity_id':'x','book.prev_continuity_id':'x','book.prev2_continuity_id':'x','book.group':12,'book.prev_group':11,'book.prev2_group':10,'book.cursor':120,'book.prev_cursor':110,'book.B.price0':100,'book.B.price1':100,'book.B.price2':100,'book.B.size0':2,'book.B.size1':3,'book.B.size2':4,'state.B.previous_early_eligible':False}
+ctx={'decision_ns':'1000','decision_cursor':'120','fields':{n:{'value':v,'known_by_ns':'1000','known_by_cursor':'120','definition_id':early['requires'][n]['definition_id'],'role':early['requires'][n]['role'],'status':'observed'} for n,v in vals.items()}}
+assert evaluate_rule(early,ctx)['condition'] is True
+for field,attribute,value in [('book.B.size0','status','missing'),('book.B.size0','role','outcome'),('book.B.size0','known_by_ns','1001'),('book.B.size0','known_by_cursor','121'),('book.B.size0','definition_id','different-definition')]:
+ c=copy.deepcopy(ctx);c['fields'][field][attribute]=value;assert evaluate_rule(early,c)['condition'] is UNKNOWN
+
+# Write deterministic gzip with no filename header and fixed mtime.
+gzip_path=DEST/'BROAD_INSTANCES.jsonl.gz'
+with gzip_path.open('wb') as rawout:
+ with gzip.GzipFile(filename='',fileobj=rawout,mode='wb',mtime=0,compresslevel=9) as out:
+  for r in records:
+   line=(canonical(r)+'\n').encode('utf-8');raw_hash.update(line);out.write(line)
+correction_doc={'schema':'broad-expansion-supplemental-corrections-v1','source_recipe':{'path':str(RECIPE),'sha256':recipe_sha},'evidence_policy':'Original recipe/evidence not overwritten;generated machine records apply these design-label corrections.','corrections':corrections}
+write_json(DEST/'BROAD_SUPPLEMENTAL_CORRECTIONS.json',correction_doc)
+# Read-back count/inclusion/IDs and uncompressed hash.
+backhash=hashlib.sha256();backids=set();backcounts=collections.Counter()
+with gzip.open(gzip_path,'rb') as f:
+ for line in f:
+  backhash.update(line);r=json.loads(line);assert r['id'] not in backids;backids.add(r['id']);backcounts[r['kind']]+=1
+  assert r['paper_included'] is True and r['execution_enabled'] is False
+assert backids==ids and backcounts==counts and backhash.hexdigest()==raw_hash.hexdigest()
+assert sha(RECIPE)==recipe_sha,'Source recipe was unexpectedly modified'
+manifest={'schema':'broad-expansion-manifest-v1','source_recipe':{'path':str(RECIPE),'sha256':recipe_sha},'build_script':{'path':str(Path(__file__).resolve()),'sha256':sha(Path(__file__))},'validator':{'path':str(CONTRACT),'sha256':sha(CONTRACT)},'output':{'path':str(gzip_path),'compressed_sha256':sha(gzip_path),'uncompressed_sha256':raw_hash.hexdigest(),'compressed_bytes':gzip_path.stat().st_size,'records':len(records)},'counts':dict(counts),'input_cardinality':{'model_task_mappings':4581,'lifecycle_expressions':270,'frameworks':31},'model_instances_by_input_version':dict(by_version),'model_instances_by_template':dict(by_template),'framework_instances_by_id':framework_expansion,'model_task_template_cardinalities':mapping_expansion,'lifecycle_supplemental_design_markings':dict(lifecycle_new_markings),'supplemental_corrections':{'path':str(DEST/'BROAD_SUPPLEMENTAL_CORRECTIONS.json'),'sha256':sha(DEST/'BROAD_SUPPLEMENTAL_CORRECTIONS.json'),'records':len(corrections)},'all_paper_included':True,'all_execution_enabled':False,'performance_filters_applied':False,'validation':{'unique_instance_ids':len(ids),'unique_model_task_mappings':len(seen_tasks),'strict_rule_validations':len(records),'empty_input_unknown_checks':len(records),'causal_status_role_clock_cursor_binding_checks':6,'gzip_readback_records':len(backids),'counts_and_hashes_match':True,'source_recipe_unchanged':True},'reproduction':'python machine/build_broad_instances.py;deterministic JSON order,gzip mtime0 and no gzip filename. Rebuild outputs only,does not alter original recipes or evidence.','scope_limits':['Machine expressions depend on unimplemented/unverified causal producers and missing fitted artifacts.','No platform API/import support or feature availability asserted.','No refit,AWS,workers,market-data suite,backtest or orders.','PF06 source recipe mentions3slow indicator operands but lacks a machine indicator axis;expanded daily contexts must not be claimed as3executable slow strategies. See supplemental correction.'],'commentary_policy':'Scientific interpretation/evidence remains in immutable recipe/source pointers and manifest;instance records contain only execution contracts,design identity and explicit dependencies.'}
+manifest['implementation_role_counts']=dict(collections.Counter(r.get('implementation_role',r['kind']) for r in records))
+manifest['historical_implementation_policy']='Every hypothesis remains included. Exact old version/fold/output records are provenance. Proven wrong math/clocks are not active alternate scientific claims;old projections do not substitute for expanded corrected inputs. No record is execution enabled.'
+manifest['detector_state_policy']='LC03/LC04 share one immutable prior-state snapshot per instrument/continuity/side/group;broadcast onset to all horizons/directions then commit once.'
+write_json(DEST/'BROAD_EXPANSION.json',manifest)
+print(json.dumps({'counts':dict(counts),'records':len(records),'output':str(gzip_path),'sha256':sha(gzip_path),'framework_counts':framework_expansion,'paired_lc_marked_new':lifecycle_new_markings['paired_direction_marked_new']},indent=2))

@@ -8,7 +8,7 @@ The [master carry-forward register](carry-forward/20261109/README.md) preserves 
 
 ## Full reconciliation and paper-rule translation
 
-[Current work and upload status](paper-rules/20261109/README.md). The complete original branch inventories are preserved; source-level rule review and runtime dependency recovery are being expanded. Every candidate remains included with the same paper-testing and reporting policy. This checkpoint is not a completed platform import or evidence of paper fills.
+[Current rules, remaining dependencies and upload status](paper-rules/20261109/README.md). All 14,712 inherited source identities reconcile; all 82 original candidates continue into the expanded package. The combined manifest contains 32,701 specification/model-version records, not that many independent strategies. It also preserves source/report cells and unresolved bindings separately. Every candidate remains included under the same paper-testing policy. Full semantic closure and a platform runner remain unfinished; no platform fills are claimed.
 
 ## Current four-day analysis
 

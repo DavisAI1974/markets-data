@@ -1,0 +1,49 @@
+{
+  "schema": "paper-universe-v1",
+  "all_paper_included": true,
+  "performance_exclusions": 0,
+  "observation_only_candidates": 0,
+  "source_records_preserved": 14712,
+  "inherited_candidates_carried": 82,
+  "core_record_count": 32701,
+  "core_counts": {
+    "broad": 14711,
+    "chain": 15644,
+    "october_models": 2007,
+    "october_predicates": 328,
+    "initial": 11
+  },
+  "validated_predicate_records": 15039,
+  "source_report_cells_separate": 1459,
+  "independent_strategy_count": null,
+  "count_interpretation": "Records include versions, folds, aliases, historical implementations and new protocols; counts are not independent strategies.",
+  "core": {
+    "path": "PAPER_RULE_CORE.jsonl.gz",
+    "sha256": "39046d9ba5e41a00a91131944500f3af1a93a7574e8aea6d57ad5078b3c4b9eb"
+  },
+  "source_cells": {
+    "path": "OCTOBER_SOURCE_CELLS.jsonl.gz",
+    "sha256": "c626c872937bbd44fdefd17be7dc2a560810ed22be48133471629df5d9618b72"
+  },
+  "execution_enabled": false,
+  "platform_adapter_bound": false,
+  "platform_fills": 0,
+  "full_semantic_reconciliation_certified": false,
+  "standalone_execution_allowed": false,
+  "full_definition_dereference_required": true,
+  "required_definition_fields": [
+    "detector_state_contract",
+    "entry_reference_contract",
+    "target_deadline_contract",
+    "runtime_requirements",
+    "sampling_policy_ref",
+    "activation_policy",
+    "correction_policy",
+    "source_clock",
+    "execution_design_ids",
+    "readiness"
+  ],
+  "unresolved_rule_definitions_retained": true,
+  "migration_status": "paused_by_user",
+  "research_worker_restarts": 0
+}

@@ -82,6 +82,60 @@ class RuntimeReviewRegressions(unittest.TestCase):
         with self.assertRaises(ValueError):
             contract.validate_rule(candidate)
 
+    def test_evaluate_rule_binds_required_definition_without_expression_repetition(self):
+        ctx = context()
+        ctx['definitions'] = {'x': 'caller-override/v1'}
+        self.assertEqual(contract.evaluate_rule(rule(), ctx),
+                         {'condition': True, 'direction': 1})
+        self.assertEqual(ctx['definitions'], {'x': 'caller-override/v1'})
+
+    def test_evaluate_rule_rejects_wrong_bound_feature(self):
+        result = contract.evaluate_rule(rule(), context(definition_id='wrong/v1'))
+        self.assertIs(result['condition'], contract.UNKNOWN)
+        self.assertEqual(result['direction'], 1)
+
+    def test_evaluate_rule_defaults_missing_status_or_role_to_unknown(self):
+        for key in ('status', 'role'):
+            with self.subTest(key=key):
+                ctx = context()
+                del ctx['fields']['x'][key]
+                self.assertIs(contract.evaluate_rule(rule(), ctx)['condition'],
+                              contract.UNKNOWN)
+
+    def test_standalone_field_without_definition_is_unknown(self):
+        self.assertIs(contract.evaluate({'field': 'x'}, context()), contract.UNKNOWN)
+
+    def test_malformed_expression_rejected(self):
+        cases = [
+            {'const': 1, 'field': 'x'},
+            {'field': 'x', 'typo': True},
+            {'op': 'gt', 'args': [{'const': 1}]},
+            {'op': 'and'},
+            {'op': 'add', 'args': []},
+        ]
+        for expression in cases:
+            with self.subTest(expression=expression):
+                with self.assertRaises(ValueError):
+                    contract.evaluate(expression, context())
+
+    def test_model_binding_cannot_be_empty_or_null(self):
+        for definition in (None, ''):
+            with self.subTest(definition=definition):
+                ctx = context(definition_id=definition)
+                if definition is None:
+                    del ctx['fields']['x']['definition_id']
+                try:
+                    result = predict_frozen_linear(MODEL, ctx, {'x': definition}, '90')
+                except ValueError:
+                    continue
+                self.assertIs(result, contract.UNKNOWN)
+
+    def test_exit_constant_condition_requires_boolean(self):
+        candidate = rule()
+        candidate['exit'] = {'condition': {'const': 1}}
+        with self.assertRaises(ValueError):
+            contract.validate_rule(candidate)
+
 
 if __name__ == '__main__':
     unittest.main()

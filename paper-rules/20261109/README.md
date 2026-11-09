@@ -1,17 +1,46 @@
-# Full research reconciliation and paper-rule translation
+# Research carry-forward and paper-rule expansion
 
-Work in progress under the user's instruction to finish the complete reconciliation and include every hypothesis in platform paper trading, without performance-based exclusions or special treatment.
+Every inherited candidate remains included in the same paper-testing and reporting policy. No profitability, confidence, sample-size or observation-only filter removes a candidate. The original eleven variants are a small starting subset.
 
-The [prior complete-preservation register](../../carry-forward/20261109/README.md) remains intact. Its 82 entries are an initial list, not the complete strategy universe. This continuation is checking original definitions and producer code before expanding machine rules.
+**This is a specification and preservation checkpoint, not a finished platform runner.** Exhaustive semantic reconciliation is not certified: unresolved original definitions, fitted states, feature producers and platform integration remain explicit. No platform paper fills are claimed.
 
-Current verified checkpoint:
+## Start here
 
-- Every one of the 14,712 inherited source records matches its exact path and blob in the pinned Git trees.
-- The three original task-directory branch inventories have 1,719 Desktop, 68 CCode and 1,396 Codex file entries, with zero missing from the union. These are overlapping source counts, not strategy counts.
-- Original branch heads still match the audited revisions. Additional historical/recovery references are preserved separately.
-- Independent reviews are identifying omitted candidate families and incorrect clock/feature assumptions. Metadata closure is not being presented as semantic or row-binding completion.
-- A restricted causal-expression validator has initial passing tests for exact nanosecond availability, undefined inputs, feature-definition mismatches and forbidden outcome inputs.
+- [Combined machine manifest](machine/PAPER_UNIVERSE_MANIFEST.json) and [rule core](machine/PAPER_RULE_CORE.jsonl.gz).
+- [Download the specification bundle](PAPER_SPECIFICATION_BUNDLE.zip). This is not a NinjaScript import ZIP.
+- [Upload instructions](UPLOAD_INSTRUCTIONS.md) and [platform limitations](PLATFORM_UPLOAD_STATUS.md).
+- [Recovered findings](RECOVERED_FINDINGS.md), [uniform paper protocol](UNIFORM_PAPER_PROTOCOL.md), and [remaining dependencies](REMAINING_DEPENDENCIES.md).
+- [Every inherited candidate's continuation](reconciliation/INHERITED_82_CROSSWALK.json).
+- [Next-chat handoff](NEXT_CHAT_HANDOFF.md) and [publication verification](PUBLICATION_VERIFICATION.json).
 
-Read [the uniform paper protocol](UNIFORM_PAPER_PROTOCOL.md), [platform upload status](PLATFORM_UPLOAD_STATUS.md), [plan](tasks/plan.md), and [task state](tasks/todo.md). All variants remain included. Losses, flat cases, failed signals and no fills stay in the report. No platform paper fills are claimed by this checkpoint.
+## Preserved and expanded coverage
 
-Bulk migration remains paused. Existing research workers were not restarted. New review work reads retained artifacts and writes separate findings. The other analyst's excluded new reanalysis is not read.
+| Artifact | Count | Meaning |
+|---|---:|---|
+| Inherited source register | 14,712 | Exact path/blob identities matched pinned Git trees |
+| Inherited hypothesis register | 82 | Every original candidate has a continuation link |
+| Broader model task inventory | 4,581 | Versions, folds, targets and references; not independent strategies |
+| Broad expansion | 14,711 | Model-template, lifecycle and new framework records |
+| Chain expansion | 15,644 | Finite motif/clock/timing/context specifications |
+| October predicate rules | 328 | Validated FC/DP/continuous-condition ASTs |
+| October model identities | 2,007 | Versioned fits, including 231 exact metric/split aliases |
+| October source/report cells | 1,459 | Separate descriptive inventory |
+| Initial variants | 11 | Original parameters plus explicit runtime clarifications |
+
+The combined core contains **32,701 records**. That is not a count of independent strategies or ready-to-run engines. Every core record requires its full, hash-bound definition before interpretation. The core is not a standalone execution program; it preserves links to sampling, detector state, activation corrections and source clocks. Findings and opinions do not drive its expressions.
+
+Original documents, sections and adverse cases remain in the [carry-forward register](../../carry-forward/20261109/README.md). The three task-directory branch inventories contain 1,719 Desktop, 68 CCode and 1,396 Codex entries, with no omitted inventory entries. These counts overlap. Source identity closure does not certify every table row or all 6,400 preserved sections as semantically reconciled.
+
+## Recoveries and checks
+
+The reviews recover the full-book selling-screen condition, ten continuous weakening/expiry predicates, two omitted recent model arms, causal one-lot onset context and separate chain clocks. They also identify retrospective event identities, missing model serialization and historical within-second price ordering. Original evidence and correction history remain intact.
+
+**117 frozen constant-reference states were recovered** from original full-precision statistics, without refitting: 54 training means, 9 frequencies and 54 zeros. See [state recovery](machine/CONSTANT_MODEL_STATE_README.md). These close scalar-state dependencies, not the platform integration.
+
+Pure logic checks cover nanosecond/cursor availability, missing-data handling, frozen inference, feature binding and malformed expressions. All 15,039 broad/October predicate records pass the restricted validator. These are not historical strategy backtests or platform paper trials. The helper evaluates expressions; it is not an order engine.
+
+The final bounded integration review verified all 32,701 record bindings, 82 inherited candidate links and 9,266 semantic pointers. See [integration review](review_integration_cycle2.json) and [package verification](PACKAGE_VERIFICATION.json). This certifies the index and its references, not missing producers, models or full semantic closure.
+
+CME has no established custom-strategy upload route for this package. NinjaTrader documents NinjaScript imports, but a compiled adapter and suitable feed are not yet built or verified. Native order identity cannot be replaced by aggregate depth changes.
+
+Bulk migration remains **paused**. Completed research workers were not restarted. New reviews read retained artifacts. No source data was deleted, paid compute launched or platform orders placed by this pass.

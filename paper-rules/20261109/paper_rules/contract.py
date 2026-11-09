@@ -103,7 +103,7 @@ def validate_rule(rule):
     if 'condition' in rule['exit']:expressions.append(rule['exit']['condition'])
     if rule.get('invalidation'):expressions.append(rule['invalidation'])
     for expr in expressions:validate_expression(expr)
-    for expr in [expressions[0]]+([rule['invalidation']] if rule.get('invalidation') else []):
+    for expr in [expressions[0]]+([rule['invalidation']] if rule.get('invalidation') else [])+([rule['exit']['condition']] if 'condition' in rule['exit'] else []):
         if 'const' in expr and type(expr['const']) is not bool:raise ValueError('Condition must be boolean')
     if 'const' in rule['direction'] and (type(rule['direction']['const']) is not int or rule['direction']['const'] not in {-1,0,1}):
         raise ValueError('Direction must be -1, 0 or 1')

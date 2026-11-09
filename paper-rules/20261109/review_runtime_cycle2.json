@@ -1,0 +1,63 @@
+{
+  "review_cycle": 2,
+  "scope": [
+    "paper_rules/contract.py",
+    "paper_rules/models.py",
+    "freeze_initial_runtime.py",
+    "machine/INITIAL_RULES_V2.json",
+    "machine/MODEL_BINDING_REQUIREMENTS.json",
+    "INITIAL_RULE_DECISIONS.md"
+  ],
+  "original_findings_status": {
+    "RT01": "resolved",
+    "RT02": "resolved_by_evaluate_rule_binding",
+    "RT03": "partially_resolved_remaining_exit_condition_type",
+    "RT04": "resolved",
+    "RT05": "resolved",
+    "RT06": "explicitly_unavailable_at_integration_boundary_pending_manifest",
+    "RT07": "resolved",
+    "RT08": "resolved",
+    "RT09": "resolved",
+    "RT10": "resolved"
+  },
+  "remaining_blocking_bugs": [
+    {
+      "id": "RT2-01",
+      "severity": "medium",
+      "file": "paper_rules/models.py",
+      "line": 23,
+      "title": "Empty model definition bindings bypass source identity checks",
+      "evidence": "The guard checks name membership then f.get(definition_id)!=bindings[name]. With bindings={x:None} and no definition_id in the field, both sides are None. An empty-string binding and empty-string field definition also pass. Both cases return 19.0 in the synthetic one-feature fixture.",
+      "impact": "A supplied frozen model can produce inference without an identified source definition, bypassing the model helper source-binding contract. The integration manifest currently blocks execution; this remains a unit-helper defect.",
+      "fix": "Require every model feature binding to be a nonempty string and require an explicitly matching nonempty field definition_id before any inference. Fail closed or raise ValueError for malformed bindings.",
+      "regression": "test_model_binding_cannot_be_empty_or_null"
+    },
+    {
+      "id": "RT2-02",
+      "severity": "medium",
+      "file": "paper_rules/contract.py",
+      "line": 107,
+      "title": "Exit constant condition is not checked for boolean type",
+      "evidence": "validate_rule adds exit.condition to expressions and validates its AST, but boolean checks iterate only entry and optional invalidation. exit={condition:{const:1}} passes validation.",
+      "impact": "An invalid declared exit survives the schema boundary, leaving consumers to choose truthiness versus rejection. evaluate_rule does not evaluate exits, so it cannot later supply the type guard used for entry.",
+      "fix": "Include exit.condition in boolean-constant validation. Any eventual exit evaluator must enforce boolean result types for nonconstant expressions too.",
+      "regression": "test_exit_constant_condition_requires_boolean"
+    }
+  ],
+  "tests": {
+    "file": "tests/test_runtime_review.py",
+    "total_tests": 16,
+    "failed_assertions": 3,
+    "failing_test_methods": 2,
+    "new_coverage": [
+      "evaluate_rule required-definition binding overrides caller map without mutating it",
+      "wrong definition returns UNKNOWN",
+      "missing status or role returns UNKNOWN",
+      "standalone unbound field returns UNKNOWN",
+      "malformed ASTs reject",
+      "empty/null model bindings reject",
+      "exit constant condition is boolean"
+    ]
+  },
+  "limits": "Only synthetic helper tests; no research replay, model fitting, workers, trading or platform adapter execution. Parent code unchanged."
+}

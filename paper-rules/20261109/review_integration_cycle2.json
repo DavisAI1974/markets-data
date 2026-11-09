@@ -1,0 +1,42 @@
+{
+  "review": "bounded_integration_cycle2",
+  "result": "No remaining blocking defects found within the requested integration/index scope.",
+  "prior_issues": {
+    "INT01": "resolved: all 12 canonical model identities retained; absent needed_state represented as null, original_fitted_state_required true and unavailable_binding retained",
+    "INT02": "resolved: every core row requires the full definition and disallows standalone execution; source reference hashes and indices resolve; controlling activation flags and semantic pointers preserved"
+  },
+  "verified_counts": {
+    "core_records": 32701,
+    "unique_core_ids": 32701,
+    "broad": 14711,
+    "chain": 15644,
+    "october_models": 2007,
+    "october_predicates": 328,
+    "initial": 11,
+    "crosswalk_records": 32701,
+    "inherited_crosswalk_records": 82,
+    "separate_report_cells": 1459,
+    "canonical_model_records_with_unspecified_required_state": 12,
+    "historical_model_records_retaining_active_math_allowed_false": 120
+  },
+  "checks": {
+    "source_and_core_id_sets_equal": true,
+    "every_core_definition_path_sha256_index_and_source_identity_matches": true,
+    "every_core_paper_included_true_execution_enabled_false": true,
+    "every_core_requires_full_definition_true_standalone_execution_allowed_false": true,
+    "copied_predicate_ast_fields_unchanged": true,
+    "copied_control_fields_match_sources": true,
+    "model_required_state_and_unavailable_binding_match_sources": true,
+    "crosswalk_ids_and_refs_match_core": true,
+    "manifest_core_and_report_cell_hashes_match": true,
+    "all_inherited_continuation_paths_exist": true,
+    "all_report_cells_marked_not_unique_strategies": true,
+    "distinct_copied_semantic_file_pointer_refs_checked": 9266,
+    "copied_reference_file_pointer_and_declared_file_hash_errors": 0,
+    "manifest_independent_strategy_count_is_null": true,
+    "manifest_semantic_completion_and_adapter_readiness_are_false": true
+  },
+  "reviewed_core_sha256": "39046d9ba5e41a00a91131944500f3af1a93a7574e8aea6d57ad5078b3c4b9eb",
+  "remaining_blocking_issues": [],
+  "limits": "Pure artifact counts, identity/field comparisons and local reference/hash inspection. This verifies an integrated predicate/index layer, not feature-producer correctness, complete executable strategies, runtime semantic completion or platform execution. No feeds, model fitting, research replay, worker actions or parent-code edits."
+}

@@ -1337,6 +1337,20 @@
     "no_model_refit": true,
     "no_replay": true,
     "no_new_performance_calculation": true,
-    "aggregate_independent_hypothesis_count": null
+    "aggregate_independent_hypothesis_count": null,
+    "generator_cardinalities_verified": {
+      "R": 11,
+      "ST": 77,
+      "FB": 40,
+      "FC": 259,
+      "DP": 39,
+      "OL_four_arm": 101,
+      "OL_identity": 26,
+      "RG01": 771,
+      "EX01_continuous": 30,
+      "supplemental_models": 4
+    },
+    "scoped_register_ids_accounted": 62,
+    "unresolved_does_not_mean_excluded": true
   }
 }

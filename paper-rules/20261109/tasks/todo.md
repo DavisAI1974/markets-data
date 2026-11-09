@@ -1,10 +1,15 @@
-# Completion checklist
+# Completion state
 
-- [ ] Reconcile inventories and branch references; classify all sources with exact identities.
-- [ ] Complete independent coverage review of October flow/book/order, chain/exhaustion, and broader model/source families.
-- [ ] Resolve findings and expand explicit rules with source provenance and labelled design choices.
-- [ ] Validate machine schema and deterministic causal/entry/exit acceptance cases.
-- [ ] Verify target platform capabilities and prepare supported upload artifacts/instructions.
-- [ ] Publish and read back all outputs; update central index and handoff with accurate completion boundaries.
+- [x] Reconcile inherited source identities and three branch inventories.
+- [x] Independently review October, chain and broader families; preserve corrections.
+- [x] Expand reviewed finite dimensions and preserve unresolved dimensions.
+- [x] Carry all 82 inherited candidates into continuation pointers.
+- [x] Validate available predicate ASTs and focused synthetic logic checks.
+- [x] Verify platform import constraints and write upload instructions.
+- [x] Publish and read back the first Git checkpoint.
+- Expanded-checkpoint publication is tracked by `PUBLICATION_VERIFICATION.json`; its immutable commit and per-file readbacks are the authority.
+- [ ] Certify exhaustive section/table-row semantic reconciliation.
+- [ ] Bind missing states and implement all producers/order state machines.
+- [ ] Compile/import the supported adapter and verify platform paper fills.
 
-Dependencies follow the numbered plan. No bulk migration or existing workers may be resumed. No standalone historical trading backtests are authorized as a replacement for platform paper testing.
+Unfinished items are real dependencies, not reasons to remove hypotheses. Migration remains paused; existing research workers remain untouched.

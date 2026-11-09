@@ -1,0 +1,82 @@
+{
+  "schema": "october-rule-decisions/v1",
+  "execution_enabled": false,
+  "decisions": [
+    {
+      "id": "OCT-EXEC-01",
+      "classification": "NEW_EXECUTION_DESIGN",
+      "entry": "Platform execution only after actual causal decision; no research midpoint treated as fill",
+      "exit": "Actual entry fill+h seconds, each original horizon separate. Original source anchor+h outcomes retained separately; no claim of equivalence to this entry-relative trade.",
+      "invalidation": "Observed reset/data failure requests platform exit; missing invalidation input is UNKNOWN",
+      "source_limits": "No original stop, fill, slippage, position collision or session risk rule invented here; inherit common parent paper protocol when bound."
+    },
+    {
+      "id": "OCT-DIRECTION-01",
+      "classification": "NEW_TRADE_TRANSLATION_OF_SOURCE_SCORING",
+      "FC": "sign(recent raw buy1-sell1), source follow-recent scoring direction",
+      "DP": "sign(current20 flow ratio), source current-flow scoring direction",
+      "EX01": "sign(current20 flow ratio), source flow-aligned scoring direction",
+      "empty_or_balanced": "Keep UNKNOWN or0 directional trial and report it; this file adds no unapproved fixed-side alternative and never pretends empty flow supplies a direction."
+    },
+    {
+      "id": "OCT-SAMPLING-FC",
+      "classification": "SOURCE_SELECTED_CLOCK_WITH_CAUSAL_GATE",
+      "source": "Family strict-pre snapshot and start+h outcomes",
+      "paper": "One attempt per source event ID only after family opportunity actually known; do not use retrospective family identity at strict-pre time",
+      "missing": "Causal family-opportunity producer unresolved; INPUT_UNAVAILABLE retained"
+    },
+    {
+      "id": "OCT-SAMPLING-DP",
+      "classification": "SOURCE_RECOGNITION_OPPORTUNITY",
+      "paper": "One attempt per causally emitted recognition candidate, all39 source cells evaluated; finalization-only identities unavailable live and retained"
+    },
+    {
+      "id": "OCT-SAMPLING-EX01_continuous",
+      "classification": "SOURCE_ONSET_SAMPLING",
+      "paper": "One attempt per source predicate onset; all active seconds separately logged; preserve first-eligible/gap left-censor label and no-birth events"
+    },
+    {
+      "id": "OCT-MISSING-01",
+      "classification": "EXPLICIT_SOURCE_IMPLEMENTATION_CORRECTION",
+      "source": "S00131:134 near_sign uses sign(fnum(value) or0); pandas comparisons with NaN also collapse toFalse in some original masks",
+      "paper": "Missing/undefined operands remain UNKNOWN in AST; observed empty counts are explicit0. Retain legacy source report values separately; do not use missing->equal or unknown->false entry gates."
+    }
+  ],
+  "unresolved_source_pointers": [
+    {
+      "ids": [
+        "RG02"
+      ],
+      "reason": "Next-burst/absorption source dimensions must be separately bound; do not import RG01 generator by name similarity."
+    },
+    {
+      "ids": [
+        "RG03"
+      ],
+      "reason": "Quiet-momentum source constraints and highlighted300/600 cells not fully enumerated here; no invented full grid."
+    },
+    {
+      "ids": [
+        "EX01"
+      ],
+      "version": "retrospective prebirth-control comparison",
+      "reason": "Source leads1/5/20/60 finite, but eligible control matching/date/method variants are separate and not exhaustively enumerated by continuous generator."
+    },
+    {
+      "ids": [
+        "EX02",
+        "EX03",
+        "EX04",
+        "EX05"
+      ],
+      "reason": "Earlier review prose is insufficient for authoritative finite full-source expansion; preserve IDs and unresolved axes, not count1 as completed implementation."
+    }
+  ],
+  "source_cells_without_new_predicate_ast": [
+    "R existing parent rules",
+    "ST/FB/supplemental model cells: exact model state required",
+    "OL source-domain cells: no new predicate invented here",
+    "RG01 report cells: future/whole-day operands not silently causalized"
+  ],
+  "interpretation": "Source-cell inventory is not a count of unique independent strategies.328 predicate/horizon ASTs are conditional templates with missing producers, not328 deployed strategies."
+}

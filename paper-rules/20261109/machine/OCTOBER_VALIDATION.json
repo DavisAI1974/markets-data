@@ -1,0 +1,60 @@
+{
+  "source_cell_count": 1459,
+  "source_cell_counts": {
+    "R": 11,
+    "ST": 77,
+    "FB": 40,
+    "FC": 259,
+    "DP": 39,
+    "OL_four_arm": 202,
+    "OL_identity": 26,
+    "RG01": 771,
+    "EX01_continuous": 30,
+    "supplemental_models": 4
+  },
+  "base_generator_counts": {
+    "R": 11,
+    "ST": 77,
+    "FB": 40,
+    "FC": 259,
+    "DP": 39,
+    "OL_four_arm": 101,
+    "OL_identity": 26,
+    "RG01": 771,
+    "EX01_continuous": 30,
+    "supplemental_models": 4
+  },
+  "predicate_rule_count": 328,
+  "predicate_counts": {
+    "FC": 259,
+    "DP": 39,
+    "EX01_continuous": 30
+  },
+  "checks": [
+    "original sell screen true",
+    "future-known flow cannot activate screen",
+    "observed zero recent direction is not eligible",
+    "missing near depth never equal",
+    "observed both-empty state true but price direction undefined",
+    "nonempty balanced flow is defined0, distinct from empty",
+    "flow vanished detected from counts without assigning direction",
+    "missing roll sell is not empty0"
+  ],
+  "model_instance_count": 2007,
+  "model_instances_by_family": {
+    "ST": 1155,
+    "FB": 840,
+    "canonical_supplemental": 12
+  },
+  "identical_metric_split_alias_count": 231,
+  "model_instance_uncompressed_sha256": "2399f581223259f2b8f2f4caf6d35893431581b8e82d01a3408611eca6539f36",
+  "contract_all_rules_valid": true,
+  "execution_enabled": false,
+  "replay_or_refit_performed": false,
+  "source_cell_uncompressed_sha256": "f4064a21b2b100a41ab3dddad21664a471c429a14b20a5178c358e0da7dd0a95",
+  "inputs_sha256": {
+    "october_expansion_index.json": "63543768daeb08ee7cef572d220f787706a9a7fb9fb7b6cf535db32241418983",
+    "review_october_recipes.json": "7454ec75dbbdf11281cab49f86561f5fc0f797c49b863d4e1648366b9f551150",
+    "supplemental_reanalysis_models.json": "d3392d6fd32009680ec682c9bd74dd9a7ac98844ea552f9822700f1feb6e4cfb"
+  }
+}

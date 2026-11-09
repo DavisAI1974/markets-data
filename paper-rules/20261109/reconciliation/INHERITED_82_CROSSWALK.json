@@ -1,0 +1,3656 @@
+[
+  {
+    "inherited_id": "R1",
+    "name": "Fresh native flow with touch",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "machine/INITIAL_RULES_V2.json"
+    ],
+    "original_record": {
+      "id": "R1",
+      "name": "Fresh native flow with touch",
+      "kind": "encoded_strategy_variant",
+      "paper_included": true,
+      "execution_status": "encoded_not_connected",
+      "platform_active": false,
+      "source_definition": {
+        "id": "R1",
+        "paper_enabled": true,
+        "engine": "flow_touch_confirmation",
+        "parameters": {
+          "flow_windows_seconds": [
+            5,
+            60
+          ],
+          "flow_source": "native",
+          "fresh_trade_required": true,
+          "arm_edge": "false_to_true",
+          "require_direction_agreement": [
+            "flow5",
+            "flow60",
+            "touch_imbalance"
+          ],
+          "confirm_bid_ticks": 1,
+          "confirm_ask_ticks": 1,
+          "confirmation_group": "strictly_later",
+          "confirmation_timeout_ms": 5000,
+          "invalidation_fields": [
+            "flow5",
+            "touch_imbalance"
+          ],
+          "invalidation_ms": 1000,
+          "invalidation_min_groups": 2
+        }
+      },
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Implement and verify the rule engine in a platform paper account; bind data and adapter."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "D03/D05; exact composite execution not tested",
+      "sources": [
+        {
+          "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+          "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+          "local_snapshot": "prior/reanalysis-20261109/TRADE_RULES.json"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "R2",
+    "name": "Surviving order support",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "machine/INITIAL_RULES_V2.json"
+    ],
+    "original_record": {
+      "id": "R2",
+      "name": "Surviving order support",
+      "kind": "encoded_strategy_variant",
+      "paper_included": true,
+      "execution_status": "encoded_not_connected",
+      "platform_active": false,
+      "source_definition": {
+        "id": "R2",
+        "paper_enabled": true,
+        "engine": "order_support_confirmation",
+        "parameters": {
+          "seed_actions": [
+            "T",
+            "A"
+          ],
+          "seed_same_group": true,
+          "seed_same_order_id": true,
+          "seed_same_side": true,
+          "arm_action": "F",
+          "arm_fill_group": "strictly_after_seed",
+          "arm_requires_positive_residual": true,
+          "arm_requires_at_touch": true,
+          "confirm_requires_original_price": true,
+          "confirm_requires_at_touch": false,
+          "confirm_requires_positive_residual": true,
+          "confirm_bid_ticks": 1,
+          "confirm_ask_ticks": 1,
+          "confirmation_group": "strictly_after_fill",
+          "confirmation_timeout_ms": 5000,
+          "require_direction_agreement": [
+            "resting_side",
+            "native_flow5",
+            "touch_imbalance"
+          ],
+          "cancel_invalidates": true,
+          "reprice_invalidates": true,
+          "zero_residual_invalidates": true,
+          "entries_per_order_per_session": 1,
+          "invalidation_fields": [
+            "native_flow5",
+            "touch_imbalance"
+          ],
+          "invalidation_ms": 1000,
+          "invalidation_min_groups": 2
+        }
+      },
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Implement and verify the rule engine in a platform paper account; bind data and adapter."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "D01 plus geometric correction; log size/replenishment strata",
+      "sources": [
+        {
+          "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+          "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+          "local_snapshot": "prior/reanalysis-20261109/TRADE_RULES.json"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "R3",
+    "name": "Quiet-flow touch",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "machine/INITIAL_RULES_V2.json"
+    ],
+    "original_record": {
+      "id": "R3",
+      "name": "Quiet-flow touch",
+      "kind": "encoded_strategy_variant",
+      "paper_included": true,
+      "execution_status": "encoded_not_connected",
+      "platform_active": false,
+      "source_definition": {
+        "id": "R3",
+        "paper_enabled": true,
+        "engine": "quiet_touch",
+        "parameters": {
+          "flow_source": "native",
+          "flow_window_seconds": 5,
+          "classified_quantity_equals": 0,
+          "direction": "touch_imbalance_sign",
+          "direction_nonzero": true,
+          "arm_edge": "false_to_true",
+          "invalidation_fields": [
+            "touch_imbalance"
+          ],
+          "invalidation_ms": 1000,
+          "invalidation_min_groups": 2
+        }
+      },
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Implement and verify the rule engine in a platform paper account; bind data and adapter."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "D04/D09; distinguish known-empty from feed missing",
+      "sources": [
+        {
+          "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+          "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+          "local_snapshot": "prior/reanalysis-20261109/TRADE_RULES.json"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "R4",
+    "name": "Delayed follow",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "machine/INITIAL_RULES_V2.json"
+    ],
+    "original_record": {
+      "id": "R4",
+      "name": "Delayed follow",
+      "kind": "encoded_strategy_variant",
+      "paper_included": true,
+      "execution_status": "encoded_not_connected",
+      "platform_active": false,
+      "source_definition": {
+        "id": "R4",
+        "paper_enabled": true,
+        "engine": "delayed_touch",
+        "parameters": {
+          "anchor": "causal_recognition",
+          "direction_at_anchor": "touch_imbalance_sign",
+          "delay_ms": 1000,
+          "max_observation_lateness_ms": 1000,
+          "confirmation_mid_ticks": 1,
+          "direction_multiplier": 1,
+          "exit_after_anchor_ms": 20000
+        }
+      },
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Implement and verify the rule engine in a platform paper account; bind data and adapter."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "D12; only post-confirmation fills/outcomes count",
+      "sources": [
+        {
+          "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+          "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+          "local_snapshot": "prior/reanalysis-20261109/TRADE_RULES.json"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "R5",
+    "name": "Delayed fade",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "machine/INITIAL_RULES_V2.json"
+    ],
+    "original_record": {
+      "id": "R5",
+      "name": "Delayed fade",
+      "kind": "encoded_strategy_variant",
+      "paper_included": true,
+      "execution_status": "encoded_not_connected",
+      "platform_active": false,
+      "source_definition": {
+        "id": "R5",
+        "paper_enabled": true,
+        "engine": "delayed_touch",
+        "parameters": {
+          "anchor": "causal_recognition",
+          "direction_at_anchor": "touch_imbalance_sign",
+          "delay_ms": 1000,
+          "max_observation_lateness_ms": 1000,
+          "confirmation_mid_ticks": 1,
+          "direction_multiplier": -1,
+          "exit_after_anchor_ms": 20000
+        }
+      },
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Implement and verify the rule engine in a platform paper account; bind data and adapter."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "D12; comparative hypothesis, no net profit established",
+      "sources": [
+        {
+          "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+          "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+          "local_snapshot": "prior/reanalysis-20261109/TRADE_RULES.json"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "R6A",
+    "name": "Flow with cancellation support",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "machine/INITIAL_RULES_V2.json"
+    ],
+    "original_record": {
+      "id": "R6A",
+      "name": "Flow with cancellation support",
+      "kind": "encoded_strategy_variant",
+      "paper_included": true,
+      "execution_status": "encoded_not_connected",
+      "platform_active": false,
+      "source_definition": {
+        "id": "R6A",
+        "paper_enabled": true,
+        "engine": "flow_cancel",
+        "parameters": {
+          "flow_source": "native",
+          "window_seconds": 5,
+          "direction": "flow_sign",
+          "cancel_balance": "ask_cancel_lots_minus_bid_cancel_lots",
+          "required_relation": "aligned",
+          "arm_edge": "false_to_true",
+          "max_hold_seconds": 20
+        }
+      },
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Implement and verify the rule engine in a platform paper account; bind data and adapter."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "D13; source-defined native cancel events",
+      "sources": [
+        {
+          "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+          "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+          "local_snapshot": "prior/reanalysis-20261109/TRADE_RULES.json"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "R6B",
+    "name": "Flow against cancellation support",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "machine/INITIAL_RULES_V2.json"
+    ],
+    "original_record": {
+      "id": "R6B",
+      "name": "Flow against cancellation support",
+      "kind": "encoded_strategy_variant",
+      "paper_included": true,
+      "execution_status": "encoded_not_connected",
+      "platform_active": false,
+      "source_definition": {
+        "id": "R6B",
+        "paper_enabled": true,
+        "engine": "flow_cancel",
+        "parameters": {
+          "flow_source": "native",
+          "window_seconds": 5,
+          "direction": "flow_sign",
+          "cancel_balance": "ask_cancel_lots_minus_bid_cancel_lots",
+          "required_relation": "opposed",
+          "arm_edge": "false_to_true",
+          "max_hold_seconds": 20
+        }
+      },
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Implement and verify the rule engine in a platform paper account; bind data and adapter."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "D13; preserves adverse and contradictory regime",
+      "sources": [
+        {
+          "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+          "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+          "local_snapshot": "prior/reanalysis-20261109/TRADE_RULES.json"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "R7",
+    "name": "Baseline model",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "machine/INITIAL_RULES_V2.json"
+    ],
+    "original_record": {
+      "id": "R7",
+      "name": "Baseline model",
+      "kind": "encoded_strategy_variant",
+      "paper_included": true,
+      "execution_status": "encoded_not_connected",
+      "platform_active": false,
+      "source_definition": {
+        "id": "R7",
+        "paper_enabled": true,
+        "engine": "frozen_linear_prediction",
+        "parameters": {
+          "anchor": "causal_recognition",
+          "model_id": "M0",
+          "direction": "prediction_sign",
+          "minimum_absolute_prediction_ticks": 0,
+          "max_hold_seconds": 20
+        }
+      },
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Implement and verify the rule engine in a platform paper account; bind data and adapter."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "D11; trained on all four historical discovery dates",
+      "sources": [
+        {
+          "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+          "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+          "local_snapshot": "prior/reanalysis-20261109/TRADE_RULES.json"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "R8",
+    "name": "Information model",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "machine/INITIAL_RULES_V2.json"
+    ],
+    "original_record": {
+      "id": "R8",
+      "name": "Information model",
+      "kind": "encoded_strategy_variant",
+      "paper_included": true,
+      "execution_status": "encoded_not_connected",
+      "platform_active": false,
+      "source_definition": {
+        "id": "R8",
+        "paper_enabled": true,
+        "engine": "frozen_linear_prediction",
+        "parameters": {
+          "anchor": "causal_recognition",
+          "model_id": "M1",
+          "direction": "prediction_sign",
+          "minimum_absolute_prediction_ticks": 0,
+          "max_hold_seconds": 20
+        }
+      },
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Implement and verify the rule engine in a platform paper account; bind data and adapter."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "D10/D11; keep zero-MI and sparse cases tagged",
+      "sources": [
+        {
+          "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+          "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+          "local_snapshot": "prior/reanalysis-20261109/TRADE_RULES.json"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "R9",
+    "name": "Expiry-driven flow",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "machine/INITIAL_RULES_V2.json"
+    ],
+    "original_record": {
+      "id": "R9",
+      "name": "Expiry-driven flow",
+      "kind": "encoded_strategy_variant",
+      "paper_included": true,
+      "execution_status": "encoded_not_connected",
+      "platform_active": false,
+      "source_definition": {
+        "id": "R9",
+        "paper_enabled": true,
+        "engine": "flow_touch_confirmation",
+        "parameters": {
+          "flow_windows_seconds": [
+            5,
+            60
+          ],
+          "flow_source": "native",
+          "fresh_trade_required": false,
+          "arm_edge": "false_to_true",
+          "require_direction_agreement": [
+            "flow5",
+            "flow60",
+            "touch_imbalance"
+          ],
+          "confirm_bid_ticks": 1,
+          "confirm_ask_ticks": 1,
+          "confirmation_group": "strictly_later",
+          "confirmation_timeout_ms": 5000,
+          "invalidation_fields": [
+            "flow5",
+            "touch_imbalance"
+          ],
+          "invalidation_ms": 1000,
+          "invalidation_min_groups": 2,
+          "flow_change_driver": "expiry_only",
+          "require_flow5_sign_flip": true
+        }
+      },
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Implement and verify the rule engine in a platform paper account; bind data and adapter."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "D03; fresh-arrival requirement removed only for this variant",
+      "sources": [
+        {
+          "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+          "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+          "local_snapshot": "prior/reanalysis-20261109/TRADE_RULES.json"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "R10",
+    "name": "One-lot retreat",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "machine/INITIAL_RULES_V2.json"
+    ],
+    "original_record": {
+      "id": "R10",
+      "name": "One-lot retreat",
+      "kind": "encoded_strategy_variant",
+      "paper_included": true,
+      "execution_status": "encoded_not_connected",
+      "platform_active": false,
+      "source_definition": {
+        "id": "R10",
+        "paper_enabled": true,
+        "engine": "one_lot_retreat",
+        "parameters": {
+          "anchor": "standing_best_shrank_to_one_lot",
+          "origin": "size_cut",
+          "direction_by_resting_side": {
+            "bid": -1,
+            "ask": 1
+          },
+          "entries_per_order_per_session": 1,
+          "max_hold_seconds": 20
+        }
+      },
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Implement and verify the rule engine in a platform paper account; bind data and adapter."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "D06; source-defined onset, never future fate",
+      "sources": [
+        {
+          "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+          "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+          "local_snapshot": "prior/reanalysis-20261109/TRADE_RULES.json"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "ST01",
+    "name": "baseline",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "ST01",
+      "name": "baseline",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "always_present": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks"
+        ],
+        "additional_layers": {},
+        "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters."
+      },
+      "dimensions_to_preserve": [
+        "midpoint ticks and absolute ticks at 5/20/60 seconds",
+        "absolute flow-strength change at 20 seconds, both ratios defined"
+      ],
+      "remaining_work": [
+        "Recover the frozen model/coefficients for each target and source revision; define how each target informs paper decisions (absolute movement and flow strength are not directional orders); bind a causal opportunity clock and entry/exit logic."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L878",
+          "line": 878,
+          "section_id": "SEC-e39bd353a57a-878"
+        },
+        {
+          "source_id": "S01758",
+          "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "ST02",
+    "name": "plus_dipole",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "ST02",
+      "name": "plus_dipole",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "always_present": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks"
+        ],
+        "additional_layers": {
+          "dipole": [
+            "imb_level",
+            "imb_flow",
+            "ent_dipole",
+            "mi_flow",
+            "log_signed_C",
+            "strength_change",
+            "early_empty",
+            "late_empty"
+          ]
+        },
+        "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters."
+      },
+      "dimensions_to_preserve": [
+        "midpoint ticks and absolute ticks at 5/20/60 seconds",
+        "absolute flow-strength change at 20 seconds, both ratios defined"
+      ],
+      "remaining_work": [
+        "Recover the frozen model/coefficients for each target and source revision; define how each target informs paper decisions (absolute movement and flow strength are not directional orders); bind a causal opportunity clock and entry/exit logic."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L878",
+          "line": 878,
+          "section_id": "SEC-e39bd353a57a-878"
+        },
+        {
+          "source_id": "S01758",
+          "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "ST03",
+    "name": "plus_fresh",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "ST03",
+      "name": "plus_fresh",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "always_present": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks"
+        ],
+        "additional_layers": {
+          "fresh": [
+            "fresh_imb5",
+            "log_fresh_lots5",
+            "log_unknown_lots5"
+          ]
+        },
+        "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters."
+      },
+      "dimensions_to_preserve": [
+        "midpoint ticks and absolute ticks at 5/20/60 seconds",
+        "absolute flow-strength change at 20 seconds, both ratios defined"
+      ],
+      "remaining_work": [
+        "Recover the frozen model/coefficients for each target and source revision; define how each target informs paper decisions (absolute movement and flow strength are not directional orders); bind a causal opportunity clock and entry/exit logic."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L878",
+          "line": 878,
+          "section_id": "SEC-e39bd353a57a-878"
+        },
+        {
+          "source_id": "S01758",
+          "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "ST04",
+    "name": "plus_book",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "ST04",
+      "name": "plus_book",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "always_present": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks"
+        ],
+        "additional_layers": {
+          "book": [
+            "touch_imb",
+            "touch_count_imb",
+            "log_touch_lots",
+            "log_touch_orders"
+          ]
+        },
+        "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters."
+      },
+      "dimensions_to_preserve": [
+        "midpoint ticks and absolute ticks at 5/20/60 seconds",
+        "absolute flow-strength change at 20 seconds, both ratios defined"
+      ],
+      "remaining_work": [
+        "Recover the frozen model/coefficients for each target and source revision; define how each target informs paper decisions (absolute movement and flow strength are not directional orders); bind a causal opportunity clock and entry/exit logic."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L878",
+          "line": 878,
+          "section_id": "SEC-e39bd353a57a-878"
+        },
+        {
+          "source_id": "S01758",
+          "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "ST05",
+    "name": "plus_display",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "ST05",
+      "name": "plus_display",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "always_present": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks"
+        ],
+        "additional_layers": {
+          "display": [
+            "bid_add5",
+            "bid_remove5",
+            "ask_add5",
+            "ask_remove5",
+            "quote_price_changes5"
+          ]
+        },
+        "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters."
+      },
+      "dimensions_to_preserve": [
+        "midpoint ticks and absolute ticks at 5/20/60 seconds",
+        "absolute flow-strength change at 20 seconds, both ratios defined"
+      ],
+      "remaining_work": [
+        "Recover the frozen model/coefficients for each target and source revision; define how each target informs paper decisions (absolute movement and flow strength are not directional orders); bind a causal opportunity clock and entry/exit logic."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L878",
+          "line": 878,
+          "section_id": "SEC-e39bd353a57a-878"
+        },
+        {
+          "source_id": "S01758",
+          "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "ST06",
+    "name": "dipole_book",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "ST06",
+      "name": "dipole_book",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "always_present": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks"
+        ],
+        "additional_layers": {
+          "dipole": [
+            "imb_level",
+            "imb_flow",
+            "ent_dipole",
+            "mi_flow",
+            "log_signed_C",
+            "strength_change",
+            "early_empty",
+            "late_empty"
+          ],
+          "book": [
+            "touch_imb",
+            "touch_count_imb",
+            "log_touch_lots",
+            "log_touch_orders"
+          ]
+        },
+        "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters."
+      },
+      "dimensions_to_preserve": [
+        "midpoint ticks and absolute ticks at 5/20/60 seconds",
+        "absolute flow-strength change at 20 seconds, both ratios defined"
+      ],
+      "remaining_work": [
+        "Recover the frozen model/coefficients for each target and source revision; define how each target informs paper decisions (absolute movement and flow strength are not directional orders); bind a causal opportunity clock and entry/exit logic."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L878",
+          "line": 878,
+          "section_id": "SEC-e39bd353a57a-878"
+        },
+        {
+          "source_id": "S01758",
+          "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "ST07",
+    "name": "full",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "ST07",
+      "name": "full",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "always_present": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks"
+        ],
+        "additional_layers": {
+          "dipole": [
+            "imb_level",
+            "imb_flow",
+            "ent_dipole",
+            "mi_flow",
+            "log_signed_C",
+            "strength_change",
+            "early_empty",
+            "late_empty"
+          ],
+          "fresh": [
+            "fresh_imb5",
+            "log_fresh_lots5",
+            "log_unknown_lots5"
+          ],
+          "book": [
+            "touch_imb",
+            "touch_count_imb",
+            "log_touch_lots",
+            "log_touch_orders"
+          ],
+          "display": [
+            "bid_add5",
+            "bid_remove5",
+            "ask_add5",
+            "ask_remove5",
+            "quote_price_changes5"
+          ]
+        },
+        "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters."
+      },
+      "dimensions_to_preserve": [
+        "midpoint ticks and absolute ticks at 5/20/60 seconds",
+        "absolute flow-strength change at 20 seconds, both ratios defined"
+      ],
+      "remaining_work": [
+        "Recover the frozen model/coefficients for each target and source revision; define how each target informs paper decisions (absolute movement and flow strength are not directional orders); bind a causal opportunity clock and entry/exit logic."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L878",
+          "line": 878,
+          "section_id": "SEC-e39bd353a57a-878"
+        },
+        {
+          "source_id": "S01758",
+          "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "ST08",
+    "name": "without_dipole",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "ST08",
+      "name": "without_dipole",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "always_present": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks"
+        ],
+        "additional_layers": {
+          "fresh": [
+            "fresh_imb5",
+            "log_fresh_lots5",
+            "log_unknown_lots5"
+          ],
+          "book": [
+            "touch_imb",
+            "touch_count_imb",
+            "log_touch_lots",
+            "log_touch_orders"
+          ],
+          "display": [
+            "bid_add5",
+            "bid_remove5",
+            "ask_add5",
+            "ask_remove5",
+            "quote_price_changes5"
+          ]
+        },
+        "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters."
+      },
+      "dimensions_to_preserve": [
+        "midpoint ticks and absolute ticks at 5/20/60 seconds",
+        "absolute flow-strength change at 20 seconds, both ratios defined"
+      ],
+      "remaining_work": [
+        "Recover the frozen model/coefficients for each target and source revision; define how each target informs paper decisions (absolute movement and flow strength are not directional orders); bind a causal opportunity clock and entry/exit logic."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L878",
+          "line": 878,
+          "section_id": "SEC-e39bd353a57a-878"
+        },
+        {
+          "source_id": "S01758",
+          "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "ST09",
+    "name": "without_fresh",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "ST09",
+      "name": "without_fresh",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "always_present": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks"
+        ],
+        "additional_layers": {
+          "dipole": [
+            "imb_level",
+            "imb_flow",
+            "ent_dipole",
+            "mi_flow",
+            "log_signed_C",
+            "strength_change",
+            "early_empty",
+            "late_empty"
+          ],
+          "book": [
+            "touch_imb",
+            "touch_count_imb",
+            "log_touch_lots",
+            "log_touch_orders"
+          ],
+          "display": [
+            "bid_add5",
+            "bid_remove5",
+            "ask_add5",
+            "ask_remove5",
+            "quote_price_changes5"
+          ]
+        },
+        "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters."
+      },
+      "dimensions_to_preserve": [
+        "midpoint ticks and absolute ticks at 5/20/60 seconds",
+        "absolute flow-strength change at 20 seconds, both ratios defined"
+      ],
+      "remaining_work": [
+        "Recover the frozen model/coefficients for each target and source revision; define how each target informs paper decisions (absolute movement and flow strength are not directional orders); bind a causal opportunity clock and entry/exit logic."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L878",
+          "line": 878,
+          "section_id": "SEC-e39bd353a57a-878"
+        },
+        {
+          "source_id": "S01758",
+          "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "ST10",
+    "name": "without_book",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "ST10",
+      "name": "without_book",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "always_present": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks"
+        ],
+        "additional_layers": {
+          "dipole": [
+            "imb_level",
+            "imb_flow",
+            "ent_dipole",
+            "mi_flow",
+            "log_signed_C",
+            "strength_change",
+            "early_empty",
+            "late_empty"
+          ],
+          "fresh": [
+            "fresh_imb5",
+            "log_fresh_lots5",
+            "log_unknown_lots5"
+          ],
+          "display": [
+            "bid_add5",
+            "bid_remove5",
+            "ask_add5",
+            "ask_remove5",
+            "quote_price_changes5"
+          ]
+        },
+        "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters."
+      },
+      "dimensions_to_preserve": [
+        "midpoint ticks and absolute ticks at 5/20/60 seconds",
+        "absolute flow-strength change at 20 seconds, both ratios defined"
+      ],
+      "remaining_work": [
+        "Recover the frozen model/coefficients for each target and source revision; define how each target informs paper decisions (absolute movement and flow strength are not directional orders); bind a causal opportunity clock and entry/exit logic."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L878",
+          "line": 878,
+          "section_id": "SEC-e39bd353a57a-878"
+        },
+        {
+          "source_id": "S01758",
+          "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "ST11",
+    "name": "without_display",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "ST11",
+      "name": "without_display",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "always_present": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks"
+        ],
+        "additional_layers": {
+          "dipole": [
+            "imb_level",
+            "imb_flow",
+            "ent_dipole",
+            "mi_flow",
+            "log_signed_C",
+            "strength_change",
+            "early_empty",
+            "late_empty"
+          ],
+          "fresh": [
+            "fresh_imb5",
+            "log_fresh_lots5",
+            "log_unknown_lots5"
+          ],
+          "book": [
+            "touch_imb",
+            "touch_count_imb",
+            "log_touch_lots",
+            "log_touch_orders"
+          ]
+        },
+        "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters."
+      },
+      "dimensions_to_preserve": [
+        "midpoint ticks and absolute ticks at 5/20/60 seconds",
+        "absolute flow-strength change at 20 seconds, both ratios defined"
+      ],
+      "remaining_work": [
+        "Recover the frozen model/coefficients for each target and source revision; define how each target informs paper decisions (absolute movement and flow strength are not directional orders); bind a causal opportunity clock and entry/exit logic."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L878",
+          "line": 878,
+          "section_id": "SEC-e39bd353a57a-878"
+        },
+        {
+          "source_id": "S01758",
+          "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FB01",
+    "name": "baseline",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "FB01",
+      "name": "baseline",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "features": [
+          "spread",
+          "activity1",
+          "activity60",
+          "prior_mid1",
+          "prior_mid5"
+        ],
+        "fit": "Ridge alpha 10; train-only scale/intercept; expanding 40/60/80% splits; horizon purge plus stated embargo; same eligible rows and targets in all arms; no hyperparameter search."
+      },
+      "dimensions_to_preserve": [
+        "All original signed and absolute targets, horizons and chronological folds"
+      ],
+      "remaining_work": [
+        "Recover model outputs and frozen coefficients, resolve causal opportunity availability, define target-to-order mapping and paper entry/exit."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L100",
+          "line": 100,
+          "section_id": "SEC-e39bd353a57a-100"
+        },
+        {
+          "source_id": "S00778",
+          "git_blob_sha": "d3c11baf47a9913537650f36423c2f6b85d2156f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FB02",
+    "name": "flow",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "FB02",
+      "name": "flow",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "features": [
+          "spread",
+          "activity1",
+          "activity60",
+          "prior_mid1",
+          "prior_mid5",
+          "flow1",
+          "flow5",
+          "flow60"
+        ],
+        "fit": "Ridge alpha 10; train-only scale/intercept; expanding 40/60/80% splits; horizon purge plus stated embargo; same eligible rows and targets in all arms; no hyperparameter search."
+      },
+      "dimensions_to_preserve": [
+        "All original signed and absolute targets, horizons and chronological folds"
+      ],
+      "remaining_work": [
+        "Recover model outputs and frozen coefficients, resolve causal opportunity availability, define target-to-order mapping and paper entry/exit."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L100",
+          "line": 100,
+          "section_id": "SEC-e39bd353a57a-100"
+        },
+        {
+          "source_id": "S00778",
+          "git_blob_sha": "d3c11baf47a9913537650f36423c2f6b85d2156f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FB03",
+    "name": "book",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "FB03",
+      "name": "book",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "features": [
+          "spread",
+          "activity1",
+          "activity60",
+          "prior_mid1",
+          "prior_mid5",
+          "touch_imbalance",
+          "touch_size_log",
+          "touch_delta1",
+          "touch_delta5",
+          "root.depth_imbalance_n",
+          "root.depth_imbalance_full",
+          "bid_same_price1",
+          "ask_same_price1",
+          "bid_display_change1",
+          "ask_display_change1",
+          "bid_same_price5",
+          "ask_same_price5",
+          "bid_display_change5",
+          "ask_display_change5"
+        ],
+        "fit": "Ridge alpha 10; train-only scale/intercept; expanding 40/60/80% splits; horizon purge plus stated embargo; same eligible rows and targets in all arms; no hyperparameter search."
+      },
+      "dimensions_to_preserve": [
+        "All original signed and absolute targets, horizons and chronological folds"
+      ],
+      "remaining_work": [
+        "Recover model outputs and frozen coefficients, resolve causal opportunity availability, define target-to-order mapping and paper entry/exit."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L100",
+          "line": 100,
+          "section_id": "SEC-e39bd353a57a-100"
+        },
+        {
+          "source_id": "S00778",
+          "git_blob_sha": "d3c11baf47a9913537650f36423c2f6b85d2156f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FB04",
+    "name": "both",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_MODEL_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "FB04",
+      "name": "both",
+      "kind": "model_comparison_arm",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": {
+        "features": [
+          "spread",
+          "activity1",
+          "activity60",
+          "prior_mid1",
+          "prior_mid5",
+          "flow1",
+          "flow5",
+          "flow60",
+          "touch_imbalance",
+          "touch_size_log",
+          "touch_delta1",
+          "touch_delta5",
+          "root.depth_imbalance_n",
+          "root.depth_imbalance_full",
+          "bid_same_price1",
+          "ask_same_price1",
+          "bid_display_change1",
+          "ask_display_change1",
+          "bid_same_price5",
+          "ask_same_price5",
+          "bid_display_change5",
+          "ask_display_change5"
+        ],
+        "fit": "Ridge alpha 10; train-only scale/intercept; expanding 40/60/80% splits; horizon purge plus stated embargo; same eligible rows and targets in all arms; no hyperparameter search."
+      },
+      "dimensions_to_preserve": [
+        "All original signed and absolute targets, horizons and chronological folds"
+      ],
+      "remaining_work": [
+        "Recover model outputs and frozen coefficients, resolve causal opportunity availability, define target-to-order mapping and paper entry/exit."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L100",
+          "line": 100,
+          "section_id": "SEC-e39bd353a57a-100"
+        },
+        {
+          "source_id": "S00778",
+          "git_blob_sha": "d3c11baf47a9913537650f36423c2f6b85d2156f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/method.json#L1",
+          "line": 1,
+          "section_id": null
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FC01",
+    "name": "Recent flow baseline",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "FC01",
+      "name": "Recent flow baseline",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "1s and 5s classified flow agree and are nonzero",
+      "dimensions_to_preserve": [
+        "Both sides where defined; original 1/60/600s outcomes and original additional horizons; empty/neutral/missing populations retained"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R1",
+        "R6A",
+        "R6B"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L149",
+          "line": 149,
+          "section_id": "SEC-817c07458db2-139"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FC02",
+    "name": "Long flow opposed",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "FC02",
+      "name": "Long flow opposed",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recent flow baseline with 60s flow opposed",
+      "dimensions_to_preserve": [
+        "Both sides where defined; original 1/60/600s outcomes and original additional horizons; empty/neutral/missing populations retained"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R1",
+        "R6A",
+        "R6B"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L149",
+          "line": 149,
+          "section_id": "SEC-817c07458db2-139"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FC03",
+    "name": "Long flow aligned",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "FC03",
+      "name": "Long flow aligned",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recent flow baseline with 60s flow aligned",
+      "dimensions_to_preserve": [
+        "Both sides where defined; original 1/60/600s outcomes and original additional horizons; empty/neutral/missing populations retained"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R1",
+        "R6A",
+        "R6B"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L149",
+          "line": 149,
+          "section_id": "SEC-817c07458db2-139"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FC04",
+    "name": "Touch aligned",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "FC04",
+      "name": "Touch aligned",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recent flow baseline with touch size imbalance aligned",
+      "dimensions_to_preserve": [
+        "Both sides where defined; original 1/60/600s outcomes and original additional horizons; empty/neutral/missing populations retained"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R1",
+        "R6A",
+        "R6B"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L149",
+          "line": 149,
+          "section_id": "SEC-817c07458db2-139"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FC05",
+    "name": "Touch opposed",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "FC05",
+      "name": "Touch opposed",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recent flow baseline with touch size imbalance opposed",
+      "dimensions_to_preserve": [
+        "Both sides where defined; original 1/60/600s outcomes and original additional horizons; empty/neutral/missing populations retained"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R1",
+        "R6A",
+        "R6B"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L149",
+          "line": 149,
+          "section_id": "SEC-817c07458db2-139"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FC06",
+    "name": "Near ladder aligned",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "FC06",
+      "name": "Near ladder aligned",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recent flow baseline with near-10 imbalance aligned",
+      "dimensions_to_preserve": [
+        "Both sides where defined; original 1/60/600s outcomes and original additional horizons; empty/neutral/missing populations retained"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R1",
+        "R6A",
+        "R6B"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L149",
+          "line": 149,
+          "section_id": "SEC-817c07458db2-139"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FC07",
+    "name": "Near ladder opposed",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "FC07",
+      "name": "Near ladder opposed",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recent flow baseline with near-10 imbalance opposed",
+      "dimensions_to_preserve": [
+        "Both sides where defined; original 1/60/600s outcomes and original additional horizons; empty/neutral/missing populations retained"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R1",
+        "R6A",
+        "R6B"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L149",
+          "line": 149,
+          "section_id": "SEC-817c07458db2-139"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FC08",
+    "name": "Long opposed / touch opposed",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "FC08",
+      "name": "Long opposed / touch opposed",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "60s flow opposed to recent and touch opposed to recent",
+      "dimensions_to_preserve": [
+        "Both sides where defined; original 1/60/600s outcomes and original additional horizons; empty/neutral/missing populations retained"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R1",
+        "R6A",
+        "R6B"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L149",
+          "line": 149,
+          "section_id": "SEC-817c07458db2-139"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FC09",
+    "name": "Long opposed / touch aligned",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "FC09",
+      "name": "Long opposed / touch aligned",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "60s flow opposed to recent and touch aligned with recent",
+      "dimensions_to_preserve": [
+        "Both sides where defined; original 1/60/600s outcomes and original additional horizons; empty/neutral/missing populations retained"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R1",
+        "R6A",
+        "R6B"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L149",
+          "line": 149,
+          "section_id": "SEC-817c07458db2-139"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FC10",
+    "name": "Saved selling screen",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "FC10",
+      "name": "Saved selling screen",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recent selling with 60s buy-heavy flow; retain original 50-case screen and full denominators",
+      "dimensions_to_preserve": [
+        "Both sides where defined; original 1/60/600s outcomes and original additional horizons; empty/neutral/missing populations retained"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R1",
+        "R6A",
+        "R6B"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L149",
+          "line": 149,
+          "section_id": "SEC-817c07458db2-139"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "FC11",
+    "name": "Buying mirror",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "FC11",
+      "name": "Buying mirror",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recent buying with 60s sell-heavy flow",
+      "dimensions_to_preserve": [
+        "Both sides where defined; original 1/60/600s outcomes and original additional horizons; empty/neutral/missing populations retained"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R1",
+        "R6A",
+        "R6B"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L149",
+          "line": 149,
+          "section_id": "SEC-817c07458db2-139"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "DP01",
+    "name": "Weakening / book aligned",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "DP01",
+      "name": "Weakening / book aligned",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Absolute imbalance decreases from early to late 10s half, both nonempty; book aligned",
+      "dimensions_to_preserve": [
+        "Original activity quantities, price context, book signs and outcome horizons"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R3",
+        "R7",
+        "R8"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L832",
+          "line": 832,
+          "section_id": "SEC-e39bd353a57a-832"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "DP02",
+    "name": "Weakening / book opposed",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "DP02",
+      "name": "Weakening / book opposed",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Same weakening definition; book opposed",
+      "dimensions_to_preserve": [
+        "Original activity quantities, price context, book signs and outcome horizons"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R3",
+        "R7",
+        "R8"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L832",
+          "line": 832,
+          "section_id": "SEC-e39bd353a57a-832"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "DP03",
+    "name": "Strengthening / book aligned",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "DP03",
+      "name": "Strengthening / book aligned",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Absolute imbalance increases from early to late 10s half, both nonempty; book aligned",
+      "dimensions_to_preserve": [
+        "Original activity quantities, price context, book signs and outcome horizons"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R3",
+        "R7",
+        "R8"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L832",
+          "line": 832,
+          "section_id": "SEC-e39bd353a57a-832"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "DP04",
+    "name": "Strengthening / book opposed",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "DP04",
+      "name": "Strengthening / book opposed",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Same strengthening definition; book opposed",
+      "dimensions_to_preserve": [
+        "Original activity quantities, price context, book signs and outcome horizons"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R3",
+        "R7",
+        "R8"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L832",
+          "line": 832,
+          "section_id": "SEC-e39bd353a57a-832"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "DP05",
+    "name": "One half empty / aligned",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "DP05",
+      "name": "One half empty / aligned",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Exactly one half-window empty; retain early-versus-late distinction; book aligned",
+      "dimensions_to_preserve": [
+        "Original activity quantities, price context, book signs and outcome horizons"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R3",
+        "R7",
+        "R8"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L832",
+          "line": 832,
+          "section_id": "SEC-e39bd353a57a-832"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "DP06",
+    "name": "One half empty / opposed",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "DP06",
+      "name": "One half empty / opposed",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Exactly one half-window empty; retain early-versus-late distinction; book opposed",
+      "dimensions_to_preserve": [
+        "Original activity quantities, price context, book signs and outcome horizons"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R3",
+        "R7",
+        "R8"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L832",
+          "line": 832,
+          "section_id": "SEC-e39bd353a57a-832"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "DP07",
+    "name": "Both halves empty",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "DP07",
+      "name": "Both halves empty",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Both flow halves empty; this is not measured balanced flow",
+      "dimensions_to_preserve": [
+        "Original activity quantities, price context, book signs and outcome horizons"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R3",
+        "R7",
+        "R8"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L832",
+          "line": 832,
+          "section_id": "SEC-e39bd353a57a-832"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "DP08",
+    "name": "Balanced and steady states",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "DP08",
+      "name": "Balanced and steady states",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Keep balanced, unchanged-strength and zero-direction states with their original definitions",
+      "dimensions_to_preserve": [
+        "Original activity quantities, price context, book signs and outcome horizons"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R3",
+        "R7",
+        "R8"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L832",
+          "line": 832,
+          "section_id": "SEC-e39bd353a57a-832"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CH01",
+    "name": "Frozen SSOS continuation",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CH01",
+      "name": "Frozen SSOS continuation",
+      "kind": "source_defined_play",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "NG_CHAIN_D4_SSOS_CONTINUATION_V1: four predecessor seed states S,S,O,S oldest to newest known before target t0; endpoint confirmed by onset+5 or no entry; stand down if successor starts before confirmation; enter with current polarity at onset+5, exit onset+30. Preserve detector and source-clock definitions.",
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Bind the frozen detector and seed availability to paper inputs; implement the original play without substituting hindsight identities; preserve the negative four-date result."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1308",
+          "line": 1308,
+          "section_id": "SEC-817c07458db2-1308"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CH02",
+    "name": "P-O-X opposite-current",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CH02",
+      "name": "P-O-X opposite-current",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Preserve every causally valid P-O-X case; opposite-current branch is a candidate, not frozen.",
+      "dimensions_to_preserve": [
+        "Original base and held populations; contrary outcomes"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L79",
+          "line": 79,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CH03",
+    "name": "P-O-X same-current / re-origin",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CH03",
+      "name": "P-O-X same-current / re-origin",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Retain delayed/re-origin thread. Parent still exits normally; later re-origin is a separate candidate.",
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L82",
+          "line": 82,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CH04",
+    "name": "P-O-X parent management and trusted re-entry",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CH04",
+      "name": "P-O-X parent management and trusted re-entry",
+      "kind": "source_defined_management",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Valid parent -> structural endpoint+60 exit -> reset -> later trusted full SSOS or P-O-X-opposite setup; no automatic reversal or use of successor identity before known.",
+      "dimensions_to_preserve": [
+        "Parent and later entry separate ledgers; no hindsight successor labels"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L85",
+          "line": 85,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CH05",
+    "name": "Shallow versus deep post-exit recovery",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CH05",
+      "name": "Shallow versus deep post-exit recovery",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Keep +30/+60 shallow-versus-deep adversity strata and +120/+300 recovery outcomes. Later recovery is not an entry input at the earlier clock.",
+      "dimensions_to_preserve": [
+        "Original shallow/deep/other cases; relapse, mean returns, trusted-entry conditions"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L89",
+          "line": 89,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CH06",
+    "name": "SSOS and P-O-X partial prefixes",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CH06",
+      "name": "SSOS and P-O-X partial prefixes",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Retain complete prefix ladders and partial states; prospective partial-prefix variants require an explicit causal rule.",
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L91",
+          "line": 91,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CM01",
+    "name": "OOSS -> FLIP",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CM01",
+      "name": "OOSS -> FLIP",
+      "kind": "recurrence_candidate",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "AGAINST_CURRENT",
+      "dimensions_to_preserve": [
+        "All original contexts, timing families and polarity cases; do not count each repeated observation as a new strategy"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L96",
+          "line": 96,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CM02",
+    "name": "SOOS -> SAME",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CM02",
+      "name": "SOOS -> SAME",
+      "kind": "recurrence_candidate",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "WITH_CURRENT",
+      "dimensions_to_preserve": [
+        "All original contexts, timing families and polarity cases; do not count each repeated observation as a new strategy"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L96",
+          "line": 96,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CM03",
+    "name": "OOO -> SAME",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CM03",
+      "name": "OOO -> SAME",
+      "kind": "recurrence_candidate",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "AGAINST_CURRENT",
+      "dimensions_to_preserve": [
+        "All original contexts, timing families and polarity cases; do not count each repeated observation as a new strategy"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L96",
+          "line": 96,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CM04",
+    "name": "XSX -> FLIP",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CM04",
+      "name": "XSX -> FLIP",
+      "kind": "recurrence_candidate",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "AGAINST_CURRENT",
+      "dimensions_to_preserve": [
+        "All original contexts, timing families and polarity cases; do not count each repeated observation as a new strategy"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L96",
+          "line": 96,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CM05",
+    "name": "OSP -> SAME",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CM05",
+      "name": "OSP -> SAME",
+      "kind": "recurrence_candidate",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recover source direction mapping",
+      "dimensions_to_preserve": [
+        "All original contexts, timing families and polarity cases; do not count each repeated observation as a new strategy"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L96",
+          "line": 96,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CM06",
+    "name": "OSP -> FLIP",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CM06",
+      "name": "OSP -> FLIP",
+      "kind": "recurrence_candidate",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recover source direction mapping",
+      "dimensions_to_preserve": [
+        "All original contexts, timing families and polarity cases; do not count each repeated observation as a new strategy"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L96",
+          "line": 96,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CM07",
+    "name": "PSOS -> FLIP",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CM07",
+      "name": "PSOS -> FLIP",
+      "kind": "recurrence_candidate",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recover source direction mapping",
+      "dimensions_to_preserve": [
+        "All original contexts, timing families and polarity cases; do not count each repeated observation as a new strategy"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L96",
+          "line": 96,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CM08",
+    "name": "SXOO -> FLIP",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CM08",
+      "name": "SXOO -> FLIP",
+      "kind": "recurrence_candidate",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Recover source direction mapping",
+      "dimensions_to_preserve": [
+        "All original contexts, timing families and polarity cases; do not count each repeated observation as a new strategy"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L96",
+          "line": 96,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CM09",
+    "name": "OOO -> FLIP",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CM09",
+      "name": "OOO -> FLIP",
+      "kind": "recurrence_candidate",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Decompose older predecessor and timing-family subtypes",
+      "dimensions_to_preserve": [
+        "All original contexts, timing families and polarity cases; do not count each repeated observation as a new strategy"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L96",
+          "line": 96,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CT01",
+    "name": "D1 directional population",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CT01",
+      "name": "D1 directional population",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Preserve all exact D1s; elapsed duration is an annotation, not an inclusion filter.",
+      "dimensions_to_preserve": [
+        "All original depths, horizons, failed folds and reverse-backcast tags"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L100",
+          "line": 100,
+          "section_id": "SEC-f2e4d5517b52-100"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CT02",
+    "name": "D1 chop / rotation",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CT02",
+      "name": "D1 chop / rotation",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Retain CHOP_ROTATION as an opportunity class separate from directional D1.",
+      "dimensions_to_preserve": [
+        "All original depths, horizons, failed folds and reverse-backcast tags"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L104",
+          "line": 104,
+          "section_id": "SEC-f2e4d5517b52-100"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CT03",
+    "name": "D2-D5 causal entry timing",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CT03",
+      "name": "D2-D5 causal entry timing",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Preserve all higher-order populations, predecessor availability, earliest causal entry and later-survivor fallback separately.",
+      "dimensions_to_preserve": [
+        "All original depths, horizons, failed folds and reverse-backcast tags"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L109",
+          "line": 109,
+          "section_id": "SEC-f2e4d5517b52-100"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CT04",
+    "name": "Chain-birth prior-horizon ladder",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CT04",
+      "name": "Chain-birth prior-horizon ladder",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Preserve the original predecessor-horizon ladder, causal rule_ready clocks and all target depths; do not substitute a fitted timing center for an entry.",
+      "dimensions_to_preserve": [
+        "All original depths, horizons, failed folds and reverse-backcast tags"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L114",
+          "line": 114,
+          "section_id": "SEC-f2e4d5517b52-114"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "CT05",
+    "name": "Timing families and rolling re-origin",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_chain.json",
+      "review_chain_recipes.json",
+      "machine/CHAIN_INSTANCES.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "CT05",
+      "name": "Timing families and rolling re-origin",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Retain persistent/fast-collapse runway, D2/D3 timing families, longer-context recurrence and state ownership resets.",
+      "dimensions_to_preserve": [
+        "All original depths, horizons, failed folds and reverse-backcast tags"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S13290",
+          "git_blob_sha": "f2e4d5517b52f6f6d44481487b48f2b2424af212",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/canonical-sources/research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md#L73",
+          "line": 73,
+          "section_id": "SEC-f2e4d5517b52-71"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "OL01",
+    "name": "Fresh new best",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "OL01",
+      "name": "Fresh new best",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "NEW_BEST with no reduction",
+      "dimensions_to_preserve": [
+        "Bid/ask, onset origin, still-open at actual arrival, original first-end outcomes and latency distribution"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R10"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1199",
+          "line": 1199,
+          "section_id": "SEC-817c07458db2-1199"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "OL02",
+    "name": "Standing fill-linked",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "OL02",
+      "name": "Standing fill-linked",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "STANDING_BEST_SHRANK with fill-linked reduction",
+      "dimensions_to_preserve": [
+        "Bid/ask, onset origin, still-open at actual arrival, original first-end outcomes and latency distribution"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R10"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1199",
+          "line": 1199,
+          "section_id": "SEC-817c07458db2-1199"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "OL03",
+    "name": "Standing unlinked",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "OL03",
+      "name": "Standing unlinked",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "STANDING_BEST_SHRANK with unlinked reduction",
+      "dimensions_to_preserve": [
+        "Bid/ask, onset origin, still-open at actual arrival, original first-end outcomes and latency distribution"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R10"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1199",
+          "line": 1199,
+          "section_id": "SEC-817c07458db2-1199"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "OL04",
+    "name": "Standing crowded prior touch",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "OL04",
+      "name": "Standing crowded prior touch",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Standing shrank with prior touch more than two orders",
+      "dimensions_to_preserve": [
+        "Bid/ask, onset origin, still-open at actual arrival, original first-end outcomes and latency distribution"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R10"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1199",
+          "line": 1199,
+          "section_id": "SEC-817c07458db2-1199"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "OL05",
+    "name": "Standing smaller prior touch",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "OL05",
+      "name": "Standing smaller prior touch",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Standing shrank with prior touch two or fewer orders",
+      "dimensions_to_preserve": [
+        "Bid/ask, onset origin, still-open at actual arrival, original first-end outcomes and latency distribution"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R10"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1199",
+          "line": 1199,
+          "section_id": "SEC-817c07458db2-1199"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "OL06",
+    "name": "New best / thin next level",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "OL06",
+      "name": "New best / thin next level",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "NEW_BEST with next displayed level under 10 lots",
+      "dimensions_to_preserve": [
+        "Bid/ask, onset origin, still-open at actual arrival, original first-end outcomes and latency distribution"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R10"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1199",
+          "line": 1199,
+          "section_id": "SEC-817c07458db2-1199"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "OL07",
+    "name": "New best / deeper next level",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "OL07",
+      "name": "New best / deeper next level",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "NEW_BEST with next displayed level at least 10 lots",
+      "dimensions_to_preserve": [
+        "Bid/ask, onset origin, still-open at actual arrival, original first-end outcomes and latency distribution"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R10"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1199",
+          "line": 1199,
+          "section_id": "SEC-817c07458db2-1199"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "OL08",
+    "name": "Fill-linked / thin next level",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "OL08",
+      "name": "Fill-linked / thin next level",
+      "kind": "conditional_comparison",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Fill-linked reduction and next displayed level under 10 lots, retain both onset arms",
+      "dimensions_to_preserve": [
+        "Bid/ask, onset origin, still-open at actual arrival, original first-end outcomes and latency distribution"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R10"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1199",
+          "line": 1199,
+          "section_id": "SEC-817c07458db2-1199"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "OL09",
+    "name": "Order-history survival and replenishment",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "OL09",
+      "name": "Order-history survival and replenishment",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Keep fresh adds, repriced arrivals, older resting orders, repeat survivors and original-order refill/depletion histories separately.",
+      "dimensions_to_preserve": [
+        "Original identity and queue history; distinguish observed replenishment from hidden-liquidity speculation"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [
+        "R2",
+        "R10"
+      ],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1258",
+          "line": 1258,
+          "section_id": "SEC-817c07458db2-1258"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "RG01",
+    "name": "State/activity direction matrix",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "RG01",
+      "name": "State/activity direction matrix",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Retain all nine direction sources, activity bands, state combinations and every two-source agreement, including sign reversals across dates.",
+      "dimensions_to_preserve": [
+        "Every original cell, not only the highlighted favorable cells"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L803",
+          "line": 803,
+          "section_id": "SEC-817c07458db2-803"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "RG02",
+    "name": "Expected versus unexpected burst absorption",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "RG02",
+      "name": "Expected versus unexpected burst absorption",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Preserve forecast-next-burst-side contrasts and the exact burst-window outcome; do not transfer the result to later play horizons.",
+      "dimensions_to_preserve": [
+        "Every original cell, not only the highlighted favorable cells"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L850",
+          "line": 850,
+          "section_id": "SEC-817c07458db2-850"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "RG03",
+    "name": "Quiet-tape momentum reversal",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "RG03",
+      "name": "Quiet-tape momentum reversal",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Preserve quiet/fast-collapse-low/persistent-mid momentum contrasts and contrary days; original 300/600s horizons remain outcomes.",
+      "dimensions_to_preserve": [
+        "Every original cell, not only the highlighted favorable cells"
+      ],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1066",
+          "line": 1066,
+          "section_id": "SEC-817c07458db2-1066"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "EX01",
+    "name": "Prebirth versus ordinary controls",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "machine/OCTOBER_PREDICATE_RULES.json"
+    ],
+    "original_record": {
+      "id": "EX01",
+      "name": "Prebirth versus ordinary controls",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Preserve prebirth flow/price/book paths, all controls and missing states. Retrospective birth orientation cannot be a live trigger.",
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L570",
+          "line": 570,
+          "section_id": "SEC-e39bd353a57a-570"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "EX02",
+    "name": "Window-aging versus fresh-arrival mechanisms",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "EX02",
+      "name": "Window-aging versus fresh-arrival mechanisms",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Preserve native arrivals, expiry, mixed and unknown-side causes; state persistence is distinct from price response.",
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L732",
+          "line": 732,
+          "section_id": "SEC-e39bd353a57a-732"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "EX03",
+    "name": "Event-clock versus fixed-time states",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "EX03",
+      "name": "Event-clock versus fixed-time states",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Retain original event-time and fixed-time definitions, quote age and reset/missing states.",
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L652",
+          "line": 652,
+          "section_id": "SEC-e39bd353a57a-652"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "EX04",
+    "name": "Fast-collapse mid-activity next-seed direction",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "EX04",
+      "name": "Fast-collapse mid-activity next-seed direction",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Retain favorable Oct17/18 and unfavorable Oct2/3 outcomes, weaker book variant and all other cells.",
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L1063",
+          "line": 1063,
+          "section_id": "SEC-e39bd353a57a-1063"
+        }
+      ]
+    }
+  },
+  {
+    "inherited_id": "EX05",
+    "name": "Order path and weakening authority",
+    "paper_included": true,
+    "dropped": false,
+    "continuation_refs": [
+      "review_october_recipes.json",
+      "october_expansion_index.json",
+      "machine/OCTOBER_SOURCE_CELLS.jsonl.gz"
+    ],
+    "original_record": {
+      "id": "EX05",
+      "name": "Order path and weakening authority",
+      "kind": "candidate_family",
+      "paper_included": true,
+      "execution_status": "definition_or_source_binding_pending",
+      "platform_active": false,
+      "source_definition": "Preserve same-order creation/removal, fixed-delay survival and flow/book changes; retain alternative mechanisms.",
+      "dimensions_to_preserve": [],
+      "remaining_work": [
+        "Recover and freeze the exact causal trigger, direction, entry, exit and reset definitions from the source; bind required inputs; implement platform paper execution."
+      ],
+      "related_current_rules": [],
+      "evidence_policy": "Retain favorable, adverse, flat, undefined, censored, missed and no-fill cases; no historical-performance admission threshold.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L545",
+          "line": 545,
+          "section_id": "SEC-e39bd353a57a-545"
+        }
+      ]
+    }
+  }
+]

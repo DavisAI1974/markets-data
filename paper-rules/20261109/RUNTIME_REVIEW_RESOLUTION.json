@@ -1,0 +1,13 @@
+{
+  "schema": "runtime-review-resolution-v1",
+  "reviews": ["review_runtime.json", "review_runtime_cycle2.json"],
+  "resolved_in_code": ["RT01", "RT02", "RT03", "RT04", "RT05", "RT10", "nonempty_model_definition_binding", "boolean_exit_constant"],
+  "resolved_in_specification": ["RT07", "RT08", "RT09"],
+  "explicit_unresolved_dependency": {"RT06": "machine/MODEL_BINDING_REQUIREMENTS.json"},
+  "logic_tests_passed_after_cycle_2_corrections": 34,
+  "scope": "Restricted expression and frozen-linear-inference helpers",
+  "order_engine_implemented": false,
+  "platform_adapter_implemented": false,
+  "platform_paper_fills": 0,
+  "historical_strategy_test_performed": false
+}
