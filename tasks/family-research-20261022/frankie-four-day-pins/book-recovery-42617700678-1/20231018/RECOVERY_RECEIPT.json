@@ -1,0 +1,33 @@
+{
+ "schema": "FRANKIE_MBO_BOOK_RECOVERY_V1",
+ "day": "20231018",
+ "expected_trades": 30739,
+ "recovered_trades": 30739,
+ "raw_messages_including_opening_warmup": 1613388,
+ "completed_book_fifo_recovery": true,
+ "complete_all_layers": false,
+ "original_replay_receipt": {
+  "session": "20231018",
+  "tape_git_commit": "1d15dc6f1b5bbb1fabb6389d18e8bedba2b77202",
+  "adapter_git_commit": "af36937d1e478831d4c7bc612c98d969e9a0848b",
+  "session_manifest_commit": "93895487c199b1e486d5407f9e103a0964903d2d",
+  "sealed_receipt_commit": "c28a4de13263b6354662cd376fecc7733b47a991",
+  "databento_version": "0.81.0",
+  "opening_warmup_records": 841601,
+  "opening_snapshot_records": 738,
+  "opening_resting_orders": 790,
+  "records": 771787,
+  "completed_groups": 583688,
+  "archived_books_compared": 22194,
+  "integrity": {
+   "150611": {}
+  },
+  "wall_seconds": 649.12
+ },
+ "snapshot_phase": "at_trade_input; no later group-close values substituted",
+ "scope": "original archived full session",
+ "limits": [
+  "FIFO is reconstructed by the original adapter, not exchange-exposed native priority.",
+  "This recovers MBO, book, FIFO and activity only; other missing calculations remain separate."
+ ]
+}
