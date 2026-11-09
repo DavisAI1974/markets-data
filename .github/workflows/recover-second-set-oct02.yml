@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           repository: DavisAI1974/Markets
-          ref: '0aa27d766d794a9d542ecdca7596efce1c458112'
+          ref: '7f34afaf6c9011ed7061f3989d52c70e98740402'
           persist-credentials: false
           sparse-checkout-cone-mode: false
           sparse-checkout: |
@@ -44,13 +44,25 @@ jobs:
           python -u -m research.kalshi.frankie_boss.four_day_pins.recover_second_set "$RUNNER_TEMP/check" --limit 2000
           python -c 'import json,sys; r=json.load(open(sys.argv[1])); assert r["metrics"]["rows"] == 2000 and r["metrics"]["book_samples"] == 1 and r["metrics"]["closed_trades"] > 0; print(r["metrics"])' "$RUNNER_TEMP/check/RECOVERY_RECEIPT.json"
       - name: Calculate all 19 layers for October 2
+        id: replay
         timeout-minutes: 325
-        run: python -u -m research.kalshi.frankie_boss.four_day_pins.recover_second_set "$RUNNER_TEMP/second-set"
+        run: |
+          python -u -m research.kalshi.frankie_boss.four_day_pins.recover_second_set "$RUNNER_TEMP/second-set" --max-seconds 18000
+          python -c 'import json,sys; print("complete="+str(json.load(open(sys.argv[1]))["complete_second_set_replay"]).lower())' "$RUNNER_TEMP/second-set/RECOVERY_RECEIPT.json" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: steps.replay.outputs.complete == 'true'
         with:
           name: verified-second-set-20231002
           path: ${{ runner.temp }}/second-set/
           retention-days: 3
+          if-no-files-found: error
+      - name: Upload the timed checkpoint for resume
+        if: steps.replay.outputs.complete == 'false'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: checkpoint-second-set-20231002
+          path: ${{ runner.temp }}/second-set/
+          retention-days: 7
           if-no-files-found: error
       - name: Retain incomplete outputs for diagnosis
         if: failure()
@@ -60,8 +72,11 @@ jobs:
           path: ${{ runner.temp }}/second-set/
           retention-days: 1
           if-no-files-found: ignore
+    outputs:
+      complete: ${{ steps.replay.outputs.complete }}
   publish:
     needs: october-02
+    if: needs.october-02.outputs.complete == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     permissions:
@@ -75,7 +90,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Fetch the pinned verified packet publisher
-        run: curl --fail --retry 3 -sS 'https://raw.githubusercontent.com/DavisAI1974/Markets/0aa27d766d794a9d542ecdca7596efce1c458112/research/kalshi/frankie_boss/four_day_pins/publish_verified_packet.py' -o publisher.py
+        run: curl --fail --retry 3 -sS 'https://raw.githubusercontent.com/DavisAI1974/Markets/7f34afaf6c9011ed7061f3989d52c70e98740402/research/kalshi/frankie_boss/four_day_pins/publish_verified_packet.py' -o publisher.py
       - name: Save the verified October 2 result in Git
         env:
           GH_TOKEN: ${{ github.token }}
