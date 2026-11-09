@@ -1,5 +1,9 @@
 # Continue after the discovery-focused reanalysis
 
+## Paper preparation after “Proceed” — 2026-11-09
+
+[Offline preparation report](paper-validation-20261109/README.md): 22 synthetic reference contract tests passed; [receipt](paper-validation-20261109/CHECK_RECEIPT.json) and [unset session template](paper-validation-20261109/SESSION_TEMPLATE.json) are saved. This is not a full runner, historical strategy backtest or adapter certification. Both rules remain disabled; R2 is observation-only. No adapter was connected and no order was sent. The user was asked for the paper platform, exact NG contract and session hours; no reply had arrived at this checkpoint. Read the report's remaining integration checks before claiming execution readiness. The existing crypto paper adapter is unsuitable; the native NG research adapter's inclusive flow cutoff differs from R1's exclusive cutoff. Existing research adapters and workbooks were not modified.
+
 Updated **2026-11-09T19:43:28.439837+00:00 UTC**. File/status clock, separate from market-event clocks.
 
 ## Latest instructions and completion

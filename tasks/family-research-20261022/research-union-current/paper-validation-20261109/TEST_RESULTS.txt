@@ -1,0 +1,27 @@
+test_agreement_resets_invalidation (test_contract_checks.ContractTests.test_agreement_resets_invalidation) ... ok
+test_arrival_required_and_same_group_excluded (test_contract_checks.ContractTests.test_arrival_required_and_same_group_excluded) ... ok
+test_at_deadline_disarms (test_contract_checks.ContractTests.test_at_deadline_disarms) ... ok
+test_balanced_is_zero (test_contract_checks.ContractTests.test_balanced_is_zero) ... ok
+test_both_quotes_must_move (test_contract_checks.ContractTests.test_both_quotes_must_move) ... ok
+test_clock_float_rejected (test_contract_checks.ContractTests.test_clock_float_rejected) ... ok
+test_consumed_confirmation_needs_new_edge (test_contract_checks.ContractTests.test_consumed_confirmation_needs_new_edge) ... ok
+test_empty_flow_requires_persistent_invalidation (test_contract_checks.ContractTests.test_empty_flow_requires_persistent_invalidation) ... ok
+test_empty_is_missing_unknown_is_separate (test_contract_checks.ContractTests.test_empty_is_missing_unknown_is_separate) ... ok
+test_expiry_alone_cannot_arm (test_contract_checks.ContractTests.test_expiry_alone_cannot_arm) ... ok
+test_failure_does_not_auto_resume (test_contract_checks.ContractTests.test_failure_does_not_auto_resume) ... ok
+test_flow_excludes_left_boundary_and_future (test_contract_checks.ContractTests.test_flow_excludes_left_boundary_and_future) ... ok
+test_gap_invalidates_immediately (test_contract_checks.ContractTests.test_gap_invalidates_immediately) ... ok
+test_input_guards (test_contract_checks.ContractTests.test_input_guards) ... ok
+test_invalid_quote_never_fills (test_contract_checks.ContractTests.test_invalid_quote_never_fills) ... ok
+test_later_group_confirms_long (test_contract_checks.ContractTests.test_later_group_confirms_long) ... ok
+test_r2_always_blocked_in_this_version (test_contract_checks.ContractTests.test_r2_always_blocked_in_this_version) ... ok
+test_same_group_never_confirms (test_contract_checks.ContractTests.test_same_group_never_confirms) ... ok
+test_short_is_symmetric (test_contract_checks.ContractTests.test_short_is_symmetric) ... ok
+test_sign_failure_consumes_arm (test_contract_checks.ContractTests.test_sign_failure_consumes_arm) ... ok
+test_unconfigured_activation_remains_blocked (test_contract_checks.ContractTests.test_unconfigured_activation_remains_blocked) ... ok
+test_unknown_fees_are_not_zero (test_contract_checks.ContractTests.test_unknown_fees_are_not_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
