@@ -1,0 +1,19 @@
+{
+ "status": "recovery_in_progress",
+ "complete_all_layers": false,
+ "static_layers_recovered": 25,
+ "static_sources_recovered": 72,
+ "book_recovery_run": "https://github.com/DavisAI1974/markets-data/actions/runs/42617700678",
+ "archive_correction": "Historical full ROOT frame archives exist at commits 82f177d6871af5bcb455096ab8c32dc6256ce5a7, df0091d5b0f6497cf4294c5973cd437938f41506 and 84dd11f48b9b5fe3546d3d92811bf92fc2ea3d22. Their exclusion from the frozen input packet was not proof the original data did not exist.",
+ "user_requirements": [
+  "Fill missing data and calculations for all four dates.",
+  "Label every Excel layer column.",
+  "Save Excel in Git for user review.",
+  "Only after all required values are verified, lock sheets and wire code to read sheets by layer identity and record the layers consumed."
+ ],
+ "restrictions": [
+  "Do not fabricate values or turn unavailable observations into zeros.",
+  "A completed export or source pin does not establish complete layer coverage.",
+  "Retain historical hypotheses, negative evidence, and source limitations; do not promote findings to confirmed trading rules."
+ ]
+}

@@ -1,0 +1,530 @@
+{
+ "schema": "FRANKIE_STATIC_SOURCE_RECOVERY_V1",
+ "recovered_layers": 25,
+ "recovered_source_files": 72,
+ "source_packet_revision": "d7807678b52e4e4f746d51a394c32f73b48a6c82",
+ "cause": "Registry original paths were not resolved to the already-pinned canonical-sources copies.",
+ "complete_all_layers": false,
+ "files": [
+  {
+   "path": "brain/20261109-search/F01-COMBINED_EVENT_STUDIES.md",
+   "bytes": 5997,
+   "sha256": "cd99fcd8b6b82f05f46eef141618d6992514b03323efad8625183be47e760db3"
+  },
+  {
+   "path": "brain/20261109-search/F02-DIPOLE_PINNING_PACKET.md",
+   "bytes": 9331,
+   "sha256": "edcfaaa361e547df535017a9e1fb3e98d49340cdf62888f1b61b7f9f913cd621"
+  },
+  {
+   "path": "brain/20261109-search/F03-FAMILY_REPLICATION.md",
+   "bytes": 6611,
+   "sha256": "0482129ead9d96383493a3275420830781c7b35e2d66f294b4912f1b4a398ed7"
+  },
+  {
+   "path": "brain/20261109-search/F04-FINDINGS.md",
+   "bytes": 86613,
+   "sha256": "90391c053f02d1f0bf628f43e069e7244720079e290d6cab9d20d4b896fd0dfd"
+  },
+  {
+   "path": "brain/20261109-search/F05-FOUR_DAY_REPLICATION.md",
+   "bytes": 4963,
+   "sha256": "11c7f6b181f607198867368218cb0e46d206c7c6aaaa442fabaab0698a35fe7f"
+  },
+  {
+   "path": "brain/20261109-search/F06-COMPLETION.md",
+   "bytes": 3221,
+   "sha256": "62df6bed767e567281c0c20feec68d3d1d9c074da0ffcd12d6390b059aeb8956"
+  },
+  {
+   "path": "brain/20261109-search/F07-OPEN_QUESTIONS.md",
+   "bytes": 6931,
+   "sha256": "aa207311516036fbc778863b3b9ea2235061ed14ef93d554d567a2f908544a30"
+  },
+  {
+   "path": "brain/20261109-search/F08-PAPER_READINESS.md",
+   "bytes": 4159,
+   "sha256": "f8daed9ef8b298ca07c1781b112d4154ebc4eb9a635d9b4b58c4975b60c0295a"
+  },
+  {
+   "path": "brain/20261109-search/F09-PAPER_STRATEGIES.md",
+   "bytes": 7104,
+   "sha256": "bfdc051a91ad233fd28cb28f973097048fce6497fc7ef5320d901649e4bf1ebd"
+  },
+  {
+   "path": "brain/20261109-search/F10-REPORT.md",
+   "bytes": 36672,
+   "sha256": "3a5ef0eccb58845b9a000d3bb6d201b6afe97d4a77e734730c8f51d21197c47e"
+  },
+  {
+   "path": "brain/20261109-search/F11-claude-october-discovery-20261108.md",
+   "bytes": 133879,
+   "sha256": "5914309ae8a40b6dd6b91d53f1dff94358d69cef72c1894b8de7662a561d1cd8"
+  },
+  {
+   "path": "brain/20261109-search/F12-codex-flow-book-discovery-20261108.md",
+   "bytes": 91075,
+   "sha256": "ec2a59526e5f68cfee486a0261cabd2829aa9e69a6d3b75bb17dce3b7035f4e3"
+  },
+  {
+   "path": "brain/20261109-search/F13-codex-research-memory.md",
+   "bytes": 11937,
+   "sha256": "5158242d144f92b4e8e73e72cc95acac86c814037e785f074a6033d8f071350a"
+  },
+  {
+   "path": "brain/20261109-search/F14-october-discovery-log-claude.md",
+   "bytes": 27504,
+   "sha256": "764e44049dc221fc590318599ba9b66c338e3f162eaa734675506599631d79b9"
+  },
+  {
+   "path": "brain/20261109-search/F15-october-discovery-log.md",
+   "bytes": 49848,
+   "sha256": "dac2f30b40d37b8f47108b84899482fef553dcf7c4107f340a31c15e435a788a"
+  },
+  {
+   "path": "brain/20261109-search/F16-october18-prebirth-and-exhaustion-log.md",
+   "bytes": 12988,
+   "sha256": "a5bf7ec870fd0e97b0dcf9b0c5e1f0303647ecb458fc18a1cac6ea55afa54415"
+  },
+  {
+   "path": "brain/20261109-search/F17-ng-continuous-timing-correction.md",
+   "bytes": 5256,
+   "sha256": "553c119d0809f5f36f98752ec601adef75eb04b1c80515885487c9a6a460ca24"
+  },
+  {
+   "path": "brain/20261109-search/F18-ng-v4-interpretation-correction.md",
+   "bytes": 3923,
+   "sha256": "e8e74ffd603faf6e9e75c9659a6e434e7a8da982bee7224ef4fabdd867f10b8f"
+  },
+  {
+   "path": "brain/20261109-search/F19-discovery-execution-20261108.md",
+   "bytes": 3629,
+   "sha256": "c565881119ac7cbe6b8cfac8a59527677a0dafba9c3668ae135fe0dc3b14fd5b"
+  },
+  {
+   "path": "brain/20261109-search/F20-why-october18-touch-behaved-differently.md",
+   "bytes": 12323,
+   "sha256": "089e44b68775bba12b271fdbdc1b8387629599c6131f1a9d36e370577e047018"
+  },
+  {
+   "path": "brain/20261109-search/F21-CCODE_FINAL_SUITE_RECEIPT.md",
+   "bytes": 6077,
+   "sha256": "b654973557dc9564d1ff4d5884f94ac5fbf8f04aa1c8398725f25e55211f5443"
+  },
+  {
+   "path": "brain/20261109-search/F22-FINDINGS_EVENT_STUDY_20261108.md",
+   "bytes": 12433,
+   "sha256": "c4a697f5fb15688ed0204fcec1710a69aed7412b7a91cf5e762857f1cbd971ea"
+  },
+  {
+   "path": "brain/20261109-search/F23-FINDINGS_THREE_DAYS_20261108.md",
+   "bytes": 10695,
+   "sha256": "0e30ae38b46761b1940d64f4d4468f1d54942418cefc83806ff1aa793d35fea6"
+  },
+  {
+   "path": "brain/20261109-search/F24-FINDINGS_TIER1_CROSSDAY_20261109.md",
+   "bytes": 10845,
+   "sha256": "9a399052712b87835d8900f6508713c7203df3e0cd1f176417f46f24143abfe3"
+  },
+  {
+   "path": "brain/20261109-search/F25-FINDINGS_TIER2_CROSSDAY_20261109.md",
+   "bytes": 15514,
+   "sha256": "d825f2141de55c22b0c465b78284254e88f4fe8b41f41b6e1121f82f5ec10a99"
+  },
+  {
+   "path": "brain/20261109-search/FOUR_DAY_INPUT_BINDING.json",
+   "bytes": 370,
+   "sha256": "c2d4954fa635566486b64badb3ec4673d6a916d6f611fb12864d443a0d5408f0"
+  },
+  {
+   "path": "brain/20261109-search/K-00875cb7ea46-NG_EXHAUSTION_D0_D5_V4_GEOMETRIC_SELF_ADAPTATION_CONTRACT_20260820.md",
+   "bytes": 17183,
+   "sha256": "00875cb7ea460e7f91cf2733cca47b9855bbb6bf2656da960c06c9311faf8e09"
+  },
+  {
+   "path": "brain/20261109-search/K-07cc6b9209e7-NG_EXHAUSTION_V3_V4_BRAIN_TRADE_PROPOSAL_ADDENDUM_20260820.md",
+   "bytes": 18591,
+   "sha256": "07cc6b9209e79f75f540a8a3b191f7fd9de99f6138d4e97ee247702a70f076e2"
+  },
+  {
+   "path": "brain/20261109-search/K-08f94ea20901-NG_EXHAUSTION_CHAIN_PHASE2_POX_SAME_POSTEXIT_REEXPRESSION_20260818.md",
+   "bytes": 4113,
+   "sha256": "08f94ea20901768fa64b82c39b023b3fab9845106cf1d17b14e5a74e3fd74d81"
+  },
+  {
+   "path": "brain/20261109-search/K-0e217af8983a-NG_EXHAUSTION_CHAIN_PHASE2_FINDINGS_20260817.md",
+   "bytes": 8166,
+   "sha256": "0e217af8983a5492bb6bff64f109b9b8b92622cc2d694b386784fd0d37c52bbc"
+  },
+  {
+   "path": "brain/20261109-search/K-1603a4bc329c-NG_EXHAUSTION_FRANKIE_SOURCE_FILE_INVENTORY_20260824.md",
+   "bytes": 13190,
+   "sha256": "1603a4bc329c6aabd9f62ee76c755651c1059a609c7cf8a52d21217a78cce24e"
+  },
+  {
+   "path": "brain/20261109-search/K-16be2b7249e6-ng_exhaustion_chain_phase1_lineage_54w_20260817.py",
+   "bytes": 8172,
+   "sha256": "16be2b7249e6cd74951670421308baf3e8c942d95b0f85aeb4228b51b201af3b"
+  },
+  {
+   "path": "brain/20261109-search/K-16f894dbb4be-NG_EXHAUSTION_V3_EXTRA_AGENT_INFORMATION_FINDINGS_20260820.json",
+   "bytes": 4332,
+   "sha256": "16f894dbb4be6857b8fa4cc01add3d4c8020a7a4c97b5efcc3c3564397f6eb6b"
+  },
+  {
+   "path": "brain/20261109-search/K-171acfe17f29-NG_EXHAUSTION_CHAIN_PHASE1_55W_RECONCILE_LAUNCH_20260817.json",
+   "bytes": 482,
+   "sha256": "171acfe17f29217e83706f2aa1c3303d473f8f35b6959984fc93cdb72aadcecd"
+  },
+  {
+   "path": "brain/20261109-search/K-1b9f161bfb5e-ng_brain_exhaustion_entry_timing_extension_20260818.json",
+   "bytes": 10176,
+   "sha256": "1b9f161bfb5e775e75bf49996a6448355bb0cbb6f9ecf670a5c27a1c582bc9b0"
+  },
+  {
+   "path": "brain/20261109-search/K-1dff5c5e2251-NG_EXHAUSTION_CHAIN_PHASE1_CAUSAL_PROTOCOL_20260817.json",
+   "bytes": 3139,
+   "sha256": "1dff5c5e22510d7770d6967aa494ec7c5b1e4f4f45a64d247ce0b174a442474d"
+  },
+  {
+   "path": "brain/20261109-search/K-1e26a726faeb-A_CLEAN_POSITIVE_KNOWLEDGE_20260828.md",
+   "bytes": 9543,
+   "sha256": "1e26a726faeb15ed5d0714c1bc850a4d347c77a324f7117fbc190910ec4b6a63"
+  },
+  {
+   "path": "brain/20261109-search/K-1f33be3e86ab-frankie_s137_cognitive_runtime.py",
+   "bytes": 13766,
+   "sha256": "1f33be3e86abb532035047a0456c8627b71dc220742ab5d89807bad312e53999"
+  },
+  {
+   "path": "brain/20261109-search/K-2922eda270bc-frankie_hipporag_p0_retrieval.py",
+   "bytes": 40656,
+   "sha256": "2922eda270bca543c54e5c987d93c8b268f16d2a72edc0230f6d72adf5291bc5"
+  },
+  {
+   "path": "brain/20261109-search/K-2b93cfeb39cc-ng_exhaustion_chain_phase1_structural_54w_20260817.py",
+   "bytes": 10492,
+   "sha256": "2b93cfeb39cc73409f04b9d9fc61e0fe02f79823fd1df064ae819a82c27d05d9"
+  },
+  {
+   "path": "brain/20261109-search/K-30d220ae1578-ng_exhaustion_chain_state_enrich_20260817.py",
+   "bytes": 2440,
+   "sha256": "30d220ae15786ef73e4d3a729723f932bbefdf00c238c3bb48778498c315ae9c"
+  },
+  {
+   "path": "brain/20261109-search/K-31ff5a9d7e5d-NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md",
+   "bytes": 7763,
+   "sha256": "31ff5a9d7e5d2f22cc2740f1f8010d36f37a32d2e17bee2b6794140823bddbec"
+  },
+  {
+   "path": "brain/20261109-search/K-389594824363-ng_exhaustion_chain_phase2_characterize_20260817.py",
+   "bytes": 11949,
+   "sha256": "389594824363d69daa1df85a0b36400d7caec3d6ce06e89949b3be59de664055"
+  },
+  {
+   "path": "brain/20261109-search/K-39b936ed132f-NG_EXHAUSTION_V4_BRAIN_TRADE_PROPOSAL_CLEAN_SOURCE_CURRENT_20260820.md",
+   "bytes": 14248,
+   "sha256": "39b936ed132fa1b066a37ed5a20432e5c9ccee96ab699fc54607720a26e1cd58"
+  },
+  {
+   "path": "brain/20261109-search/K-3a745e98378c-NG_EXHAUSTION_CHAIN_PHASE2_FINDINGS_ADDENDUM_POX_20260818.md",
+   "bytes": 5561,
+   "sha256": "3a745e98378c6abb64327175e35efbc8e36ff1eb2150c3bc842ef7731854011c"
+  },
+  {
+   "path": "brain/20261109-search/K-3f717ad70d56-NG_EXHAUSTION_CHAIN_STEP1_5Y_V4_NATIVE_CENSUS_PROTOCOL_20260820.md",
+   "bytes": 10291,
+   "sha256": "3f717ad70d56c9ee3e0a002b9ff4de22d1d7cd209485ef7c7f3c1d6165ef69d1"
+  },
+  {
+   "path": "brain/20261109-search/K-4325776b4d70-ng_exhaustion_chain_canonical_table_20260817.py",
+   "bytes": 22371,
+   "sha256": "4325776b4d70bfa3808bce1b9473d6da75cc18c8cbe00be3cf5652f849573ffa"
+  },
+  {
+   "path": "brain/20261109-search/K-45718cfff65b-ng_exhaustion_chain_phase1_falsifier_54w_20260817.py",
+   "bytes": 9210,
+   "sha256": "45718cfff65b8a1b5a09d7f05c9ab8af4dc6071b2483b710171c82c3546ebb79"
+  },
+  {
+   "path": "brain/20261109-search/K-47ad3db18b93-NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md",
+   "bytes": 20557,
+   "sha256": "47ad3db18b936050d26a7c21534c2648d43ff830db91f0c04e889d029c478f23"
+  },
+  {
+   "path": "brain/20261109-search/K-49036a33fd80-NG_EXHAUSTION_CHAIN_PHASE1_MECHANISM_ADDENDUM_20260817.json",
+   "bytes": 2798,
+   "sha256": "49036a33fd80a01da8a864f31c4dffb4faeb5934da16d832774c3d1c76709056"
+  },
+  {
+   "path": "brain/20261109-search/K-49133cbcbfcd-NG_EXHAUSTION_CHAIN_PHASE2_FINAL_FREEZE_20260818.md",
+   "bytes": 11140,
+   "sha256": "49133cbcbfcdf589201724ee1dc60fc0c0cb059593736a5ac97caa30c68093a1"
+  },
+  {
+   "path": "brain/20261109-search/K-553c119d0809-NG_EXHAUSTION_CONTINUOUS_INSTANCE_TIMING_CORRECTION_20260820.md",
+   "bytes": 5256,
+   "sha256": "553c119d0809f5f36f98752ec601adef75eb04b1c80515885487c9a6a460ca24"
+  },
+  {
+   "path": "brain/20261109-search/K-57897aa5af54-ng_exhaustion_chain_phase1_continuity_54w_20260817.py",
+   "bytes": 4460,
+   "sha256": "57897aa5af54c5afe6206117c9bf27cf961e6b9b413f7e26bea5b31948a0b94b"
+  },
+  {
+   "path": "brain/20261109-search/K-5c22e5ce72e3-NG_EXHAUSTION_CHAIN_PHASE2_REAPPEARANCE_WATCH_MAP_20260818.json",
+   "bytes": 7251,
+   "sha256": "5c22e5ce72e3a0863b16cbf469b6d491edadf1e161c494ca6d4a753e058da15c"
+  },
+  {
+   "path": "brain/20261109-search/K-5dddfbf77f1a-NG_EXHAUSTION_CHAIN_PHASE1_54W_EXECUTION_PROTOCOL_20260817.json",
+   "bytes": 2872,
+   "sha256": "5dddfbf77f1a60e30f567f2e91001cbdf7094a59aaa7e294a882ec7e4cd958d5"
+  },
+  {
+   "path": "brain/20261109-search/K-635e041b4a78-NG_EXHAUSTION_CHAIN_PHASE1_DISCOVERY_PROTOCOL_20260817.json",
+   "bytes": 4359,
+   "sha256": "635e041b4a78eea44116af1fc89352b762edd19c4b3cbd12e1c323729f35d37d"
+  },
+  {
+   "path": "brain/20261109-search/K-638a13b81548-ng_exhaustion_week_continuous_roster_20260817.py",
+   "bytes": 10767,
+   "sha256": "638a13b8154863deb3816e4406d4f0cd4a9a74a860cfecce2f74c440f840a0ca"
+  },
+  {
+   "path": "brain/20261109-search/K-67280c2bdf32-NG_EXHAUSTION_PRIOR_MODEL_PRICE_CORRECTION_20260819.md",
+   "bytes": 4731,
+   "sha256": "67280c2bdf3204c3ac93a52fd44df86ee951a1f17b62b3b284e7a3b4d77b7845"
+  },
+  {
+   "path": "brain/20261109-search/K-822d2cfdf8e7-frankie_native_raw_mbo_calculation_contract_20260828.md",
+   "bytes": 21908,
+   "sha256": "822d2cfdf8e78bfde0566f1a67929cc81a02611193167cf94a2171364b897865"
+  },
+  {
+   "path": "brain/20261109-search/K-82a95aadd0b0-NG_EXHAUSTION_CHAIN_PHASE2_FINALIZATION_CHECKLIST_20260818.json",
+   "bytes": 4158,
+   "sha256": "82a95aadd0b0e4593c35197fdd98b8c8d22dda919d7d8220f924524a744e7845"
+  },
+  {
+   "path": "brain/20261109-search/K-83028f75d80b-NG_EXHAUSTION_CHAIN_PHASE2_POX_BRANCH_RECONCILIATION_V2_20260818.md",
+   "bytes": 6300,
+   "sha256": "83028f75d80b787742bb4cacb9eb8935f1992bac3b5a0f734bf38fb6159efe48"
+  },
+  {
+   "path": "brain/20261109-search/K-842f2ca650f2-ng_exhaustion_chain_canonical_54w_merge_20260817.py",
+   "bytes": 6464,
+   "sha256": "842f2ca650f28b602e9b7f07208a692b092ae5e65aa574ebd79d1b5a84da1e8a"
+  },
+  {
+   "path": "brain/20261109-search/K-8d2d268401e1-NG_EXHAUSTION_CHAIN_STEP1_ORIGINAL_FILE_MAP_20260820.md",
+   "bytes": 7252,
+   "sha256": "8d2d268401e18410a9d77473c703d239b7fc1adc020d40e0b85c25415b328246"
+  },
+  {
+   "path": "brain/20261109-search/K-9251176dbb56-ng_brain_exhaustion_chain_birth_v2_proposal_20260819.json",
+   "bytes": 9289,
+   "sha256": "9251176dbb5657ab22107c8ab3e4c27a260a7ea995f3c745491a778e21066b14"
+  },
+  {
+   "path": "brain/20261109-search/K-925deedaec76-ng_brain_exhaustion_pox_focused_proposal_20260819.json",
+   "bytes": 6262,
+   "sha256": "925deedaec7687eed64e7b37aa9ed4c9515af8081f4fbbe5c856b3e5b59dcb3f"
+  },
+  {
+   "path": "brain/20261109-search/K-9325f8a83d2e-ng_exhaustion_chain_phase1_causal_54w_20260817.py",
+   "bytes": 6725,
+   "sha256": "9325f8a83d2e567d785af197468e2d865a8b44273c938408f58ea157e8652c6b"
+  },
+  {
+   "path": "brain/20261109-search/K-94d7fd214661-KNOWLEDGE_SOURCES_20260828.json",
+   "bytes": 45679,
+   "sha256": "94d7fd214661bc2a9e61340a3d1fe53049a04a9aaff42d4df7c79c6802fd6272"
+  },
+  {
+   "path": "brain/20261109-search/K-9e68f222832a-NG_EXHAUSTION_CHAIN_PHASE2_PARALLEL_RECURRENCE_RECONCILIATION_20260818.md",
+   "bytes": 3185,
+   "sha256": "9e68f222832a3136b750016a9253df213bf4b4dfe44a973c07b659fa55b1b7bf"
+  },
+  {
+   "path": "brain/20261109-search/K-a1853918a423-A_MEMORY_SEED_20260902.json",
+   "bytes": 316023,
+   "sha256": "a1853918a4230341f8fa99bd113a57635615502d8a1102f331b6ff916d41128b"
+  },
+  {
+   "path": "brain/20261109-search/K-a99cfaad0eab-NG_EXHAUSTION_V3_EXTRA_AGENT_INFORMATION_FINDINGS_20260820.md",
+   "bytes": 14357,
+   "sha256": "a99cfaad0eab23f19b17b59a98a16481c4ae9283bd5c66ced9f7e3cdd1d6f7ad"
+  },
+  {
+   "path": "brain/20261109-search/K-ab497ee95e4e-NG_EXHAUSTION_CHAIN_PHASE1_54W_BASE_FREEZE_20260817.json",
+   "bytes": 2617,
+   "sha256": "ab497ee95e4eede611c0bfdac677ec7324096cc47d838b7d69755f35983c4cb6"
+  },
+  {
+   "path": "brain/20261109-search/K-ac6018f9379f-NG_EXHAUSTION_V4_CLEAN_SOURCE_PRELAUNCH_GATES_20260820.md",
+   "bytes": 7565,
+   "sha256": "ac6018f9379f747d5a75108ab70bc4d129a589a327a9fbbbaf9031d79ab1180d"
+  },
+  {
+   "path": "brain/20261109-search/K-b3c0f05a3d43-NG_EXHAUSTION_EVENT_MARK_CLOCK_OPEN_BOUNDARY_20260819.md",
+   "bytes": 2218,
+   "sha256": "b3c0f05a3d43a384b7445553000234c08dcd8ba31c6ee75bc955c3547da07a2a"
+  },
+  {
+   "path": "brain/20261109-search/K-b3fa5af108ff-NG_EXHAUSTION_V3_NONAUTHORITATIVE_RESULTS_EXTRA_AGENT_V4_CARRYFORWARD_20260820.md",
+   "bytes": 6553,
+   "sha256": "b3fa5af108ffac6272aec5310edcdda83c80ce558541d56c1aafbe4a2eb933c4"
+  },
+  {
+   "path": "brain/20261109-search/K-b7d75c3f34e4-NG_EXHAUSTION_CONTINUOUS_LIVE_INFORMATION_CORRECTION_20260819.md",
+   "bytes": 2942,
+   "sha256": "b7d75c3f34e468c5a84503d80f2a964ba7a07653e16983050daf1844a9db98ce"
+  },
+  {
+   "path": "brain/20261109-search/K-bc84a77d3339-A_MEMORY_POSITIVE_KNOWLEDGE_20260828.md",
+   "bytes": 5380,
+   "sha256": "bc84a77d33393c7d04185fcbfa82794cef0efd45b4fd31f0b2ee245cfb8d9131"
+  },
+  {
+   "path": "brain/20261109-search/K-c0b226dae18b-ng_exhaustion_chain_phase1_reconcile_55w_20260817.py",
+   "bytes": 20813,
+   "sha256": "c0b226dae18b46d88ae6933cc8a450331210abf3e33f4a0d93281df3f5ddfdf9"
+  },
+  {
+   "path": "brain/20261109-search/K-c226eff3f993-NG_EXHAUSTION_CHAIN_STUDY_CONTRACT_20260817.json",
+   "bytes": 7321,
+   "sha256": "c226eff3f99347dc41f9ec32e04eaeb0d3451ee92fa5408fdf66c097e668ac79"
+  },
+  {
+   "path": "brain/20261109-search/K-c585312bf731-NG_EXHAUSTION_V3_V4_BRAIN_TRADE_PROPOSAL_FINAL_ADDENDUM_20260820.md",
+   "bytes": 6212,
+   "sha256": "c585312bf731a3c7ff47d26013c08ce411c3356620eed06d928bc1485c378e7f"
+  },
+  {
+   "path": "brain/20261109-search/K-c734c8c19c09-ng_brain_exhaustion_chain_phase2_proposal_20260818.json",
+   "bytes": 15263,
+   "sha256": "c734c8c19c0974650960308b5f836c9ed26ea5b3debfc832a604a99f695b4739"
+  },
+  {
+   "path": "brain/20261109-search/K-cb90d7db6e3e-KNOWLEDGE_MANIFEST_20260828.json",
+   "bytes": 55630,
+   "sha256": "cb90d7db6e3e258b71496eb21561a6818ae0536cf5f1e70825a36a65f103f028"
+  },
+  {
+   "path": "brain/20261109-search/K-cc40727f2753-NG_EXHAUSTION_CHAIN_STEP1_5Y_V4_NATIVE_CENSUS_PROTOCOL_20260820.json",
+   "bytes": 6035,
+   "sha256": "cc40727f275303dd1978bdf4e47bdfc19821d3d530c846e173d0f8eb953cef02"
+  },
+  {
+   "path": "brain/20261109-search/K-cc67e9d38de3-NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_ADDENDUM_20260820.md",
+   "bytes": 2665,
+   "sha256": "cc67e9d38de3433bde4d7ed0541c71350821819d714e2fbad6a933078f36a1c7"
+  },
+  {
+   "path": "brain/20261109-search/K-d312d582d84d-ng_brain.json",
+   "bytes": 7920,
+   "sha256": "d312d582d84d11910c3193004064922f95996d0d4eee089f8c67ebfac42bcf68"
+  },
+  {
+   "path": "brain/20261109-search/K-d3e273b934ef-NG_EXHAUSTION_CHAIN_PHASE2_ALL_AGENT_FINDINGS_20260818.md",
+   "bytes": 14018,
+   "sha256": "d3e273b934ef31312cf1fc5ddd67345da3efd4809f4da3cc770b8f3f80ef6d7b"
+  },
+  {
+   "path": "brain/20261109-search/K-d449ed24c0d2-NG_EXHAUSTION_POLARITY_NOT_PRIMARY_TARGET_CORRECTION_20260819.md",
+   "bytes": 2493,
+   "sha256": "d449ed24c0d2a6f51d11cd49fa734eef42d0d06440e50acb7bd0bc1f1b3b1cc7"
+  },
+  {
+   "path": "brain/20261109-search/K-da4f5c991251-NG_EXHAUSTION_CHAIN_PHASE2_POSTEXIT_RECURRENCE_FINDINGS_20260818.md",
+   "bytes": 9732,
+   "sha256": "da4f5c991251668344290ac10f319aabfa5df52e8f0b7321da0eefbea864d1eb"
+  },
+  {
+   "path": "brain/20261109-search/K-e36d82e245a7-NG_EXHAUSTION_D0_D5_V4_GEOMETRIC_SELF_ADAPTATION_CONTRACT_20260820.json",
+   "bytes": 9441,
+   "sha256": "e36d82e245a718624bb21a14ae1cd5d172b64630d38580d7fe4e66d9357909db"
+  },
+  {
+   "path": "brain/20261109-search/K-e64d05a25aee-ng_exhaustion_chain_phase1_discovery_20260817.py",
+   "bytes": 11897,
+   "sha256": "e64d05a25aee66047750fe1923162c3694c6fc3179d979352b95853806a04cc9"
+  },
+  {
+   "path": "brain/20261109-search/K-e8e74ffd603f-NG_EXHAUSTION_V4_INTERPRETATION_CORRECTION_20260820.md",
+   "bytes": 3923,
+   "sha256": "e8e74ffd603faf6e9e75c9659a6e434e7a8da982bee7224ef4fabdd867f10b8f"
+  },
+  {
+   "path": "brain/20261109-search/K-ebe7f9525aaa-ng_exhaustion_week_chain_state_roster_20260817.py",
+   "bytes": 4776,
+   "sha256": "ebe7f9525aaa48dff4374989e68c7cdc65e91f1d6145f3d3bb31aa684e4ec069"
+  },
+  {
+   "path": "brain/20261109-search/K-f6759964d9d6-NG_EXHAUSTION_V4_CONTINUOUS_ADAPTIVE_WALKFORWARD_CONTRACT_20260820.md",
+   "bytes": 8161,
+   "sha256": "f6759964d9d65a2f0322e7b74834c27a11460094a7f6af43b5d0de5a03f3278b"
+  },
+  {
+   "path": "brain/20261109-search/K-f6a80d415ba7-ng_exhaustion_chain_canonical_54w_shard_20260817.py",
+   "bytes": 5920,
+   "sha256": "f6a80d415ba71aee7ec002d3d97f0a17b13ecd3ea88883999a8edc180f5136d3"
+  },
+  {
+   "path": "brain/20261109-search/K-fc08cbe26dd2-NG_EXHAUSTION_FULL_CAUSAL_INFORMATION_CORRECTION_20260819.md",
+   "bytes": 4639,
+   "sha256": "fc08cbe26dd25f74f0438d218d201a370aef6448ef6da3df32647e6438c5bb16"
+  },
+  {
+   "path": "brain/20261109-search/K-fe1810198c24-NG_EXHAUSTION_CHAIN_PHASE2_TIMING_CONTEXT_FINDINGS_20260818.md",
+   "bytes": 5781,
+   "sha256": "fe1810198c249390a383434eec74c90aa854a07bfaefa26f5159c6b98af2eb18"
+  },
+  {
+   "path": "brain/20261109-search/K-fe9ea9cd380e-NG_EXHAUSTION_CHAIN_PHASE2_MODULE_NOVELTY_FINDINGS_20260818.md",
+   "bytes": 6255,
+   "sha256": "fe9ea9cd380e8ccfb3b861065ed3e5369fd1cded1aadfccd10337ea238f54e14"
+  },
+  {
+   "path": "brain/20261109-search/K-ff2b8103e2e0-frankie_native_raw_mbo_oct45_realtime_mission_20260828.md",
+   "bytes": 34562,
+   "sha256": "ff2b8103e2e0f7475db72d9f9b146f7f5196b7841a94af3190537e8016733e85"
+  },
+  {
+   "path": "brain/20261109-search/K-ffc4781a693f-ng_exhaustion_chain_phase2_parallel_agents_20260818.py",
+   "bytes": 6609,
+   "sha256": "ffc4781a693fa354185e1a240f4b7275b8248de3c336d33a858bac1d318150d9"
+  },
+  {
+   "path": "brain/20261109-search/MANIFEST.json",
+   "bytes": 98199,
+   "sha256": "b5069623376ef0089a560454581350255370479091eb9687316a922fa47af2d5"
+  },
+  {
+   "path": "brain/20261109-search/PINNING_SCOPE_AND_LIMITS.json",
+   "bytes": 1043,
+   "sha256": "bf8a3ea5d6da51d75de8fdbd02be3e46dbf009a8f1fbd68d2802e11e4cd77e61"
+  },
+  {
+   "path": "brain/20261109-search/RECOVERY_STATUS.json",
+   "bytes": 1140,
+   "sha256": "25d6cbb5bd9de577a7a552df097ae4170b7770260fb63f9fed5d99cbc32a50b5"
+  },
+  {
+   "path": "brain/20261109-search/retained-external-claims.json",
+   "bytes": 418761,
+   "sha256": "ed247dbc1571b60085acd5ba0ca2e4749d2d9e634ec9159f0460dd9421fd15eb"
+  },
+  {
+   "path": "BRAIN_LOAD_RECEIPT.json",
+   "bytes": 306,
+   "sha256": "c4d4309bdce8738d4387d89fa25e67efc02915080a53161012d0dd3bb23b572b"
+  },
+  {
+   "path": "LAYER_VALUES.json",
+   "bytes": 177005,
+   "sha256": "7a49c5d45d8ce5ba101f04218dd2df3dc78cd8ce7483905e8b17586befad90fe"
+  }
+ ]
+}
