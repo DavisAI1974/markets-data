@@ -31,6 +31,8 @@ const clockTables = JSON.parse(await fs.readFile(path.join(root, 'extended-revie
 Object.assign(tables, clockTables);
 const additional = JSON.parse(await fs.readFile(path.join(root, 'extended-review-data/ADDITIONAL_DIP_REVIEW.json'), 'utf8'));
 Object.assign(tables, additional.tables);
+const branchResearch = JSON.parse(await fs.readFile(path.join(root, 'extended-review-data/BRANCH_RESEARCH_TABLES.json'), 'utf8'));
+Object.assign(tables, branchResearch);
 function replaceTable(name, widths) {
   const old = workbook.worksheets.items.find(sheet => sheet.name === name);
   if (old) old.delete();
@@ -53,6 +55,17 @@ replaceTable('Late-session clock tables', [23, 26, 26, 72, 16, 16, 20, 17, 46, 6
 replaceTable('Late-session clock files', [16, 72, 18, 46, 46, 65, 65]);
 replaceTable('Desktop NG renders', [29, 72, 18, 46, 46, 57, 70]);
 replaceTable('Algebraic dipole research', [32, 70, 72, 46, 46, 57, 70]);
+replaceTable('Branch research pins', [32, 30, 75, 17, 46, 46, 62, 65]);
+replaceTable('CCode family source rows', [15, 18, 38, 25, 25, 25, 18, 18, 29,
+  ...Array(11).fill(26), 46, 65]);
+replaceTable('Desktop first event rows', [15, 18, 14, 22, 14, 17, 20, 24, 24, 23, 46, 65]);
+replaceTable('Render row checks', [43, 18, 16, 38, 38, 16, 16, 75, 46, 65]);
+replaceTable('Final lifecycle render pins', [15, 30, 17, 17, 24, 29, 20, 40, 20, 20, 20, 46, 65, 65]);
+replaceTable('Branch review findings', [14, 43, 56, 77, 73, 65]);
+const findingsSheet = workbook.worksheets.getItem('Branch review findings');
+const lastFinding = tables['Branch review findings'].rows.length + 1;
+findingsSheet.getRange(`A2:F${lastFinding}`).format.rowHeight = 64;
+findingsSheet.getRange(`A2:F${lastFinding}`).format.wrapText = true;
 const algebra = workbook.worksheets.getItem('Algebraic dipole research');
 algebra.getRange('A2:G7').format.rowHeight = 53;
 algebra.getRange('A2:G7').format.wrapText = true;
@@ -75,7 +88,7 @@ if (deltaOnly) {
   workbook.worksheets.getItem('Dipole lead timing').getRange('A7:G7').values = [timing.rows[5]];
 }
 const review = deltaOnly ? workbook.worksheets.add('Review') : workbook.worksheets.getItem('Review');
-review.getRange('A31:B38').values = [[
+review.getRange('A31:B39').values = [[
   'Saved dipole data',
   'Dipole coverage, candidates, episodes and stage series span all four dates. Generated dipole clocks retains the event-study clocks.'], [
   'Four-day workflow sources',
@@ -91,9 +104,11 @@ review.getRange('A31:B38').values = [[
   'Dipole verification hold',
   'The 193,124 archived stage records are on hold for reanalysis. Verify or recalculate dipole dive separately on NG. Timing row 2 needs an exact value. Rows 4–6 are selected research context.'], [
   'Desktop NG and algebraic dipole',
-  'Desktop NG renders links the chart files and their source tables. Algebraic dipole research links the equations and review controls. Four-day algebraic measurements remain open.']];
-review.getRange('A31:B38').format.rowHeight = 52;
-review.getRange('B31:B38').format.wrapText = true;
+  'Desktop NG renders links the chart files and their source tables. Algebraic dipole research links the equations and review controls. Four-day algebraic measurements remain open.'], [
+  'CCode, Desktop and Codex evidence',
+  'Branch research pins holds the immutable inventory. Separate tabs hold family clocks and book layers, Desktop event rows, render row checks, final lifecycle pages and review findings. Keep these populations separate.']];
+review.getRange('A31:B39').format.rowHeight = 52;
+review.getRange('B31:B39').format.wrapText = true;
 
 await fs.writeFile(path.join(root, 'extended-review-data/WORKFLOW_FINAL_TABLES.json'), JSON.stringify(tables));
 console.log('Saving final unlocked review');
