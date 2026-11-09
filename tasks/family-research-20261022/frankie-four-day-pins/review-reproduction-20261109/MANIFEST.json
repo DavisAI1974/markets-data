@@ -1,0 +1,69 @@
+{
+ "purpose": "Exact source used to restore, join, author and verify the four-day review. Paths identify this Windows task workspace; this is an audit copy, not deployed runtime code.",
+ "authoring": "Bundled @oai/artifact-tool; Python pyarrow reads source data; independent standard-library XML verification.",
+ "source_files": [
+  {
+   "path": "apply_flow_review.py",
+   "bytes": 1264,
+   "sha256": "bca6f1e1750d8cedb7eabf09d5cffe4e4010b4c0963d0ab062d6abc7bea072fa"
+  },
+  {
+   "path": "apply_native_review.py",
+   "bytes": 1959,
+   "sha256": "d9cba9197a203c1af7d54d58af0d3ec2446da07451aa825b41f01795227658c8"
+  },
+  {
+   "path": "build_review.mjs",
+   "bytes": 23122,
+   "sha256": "90093fc182130c242f0aa82c10741341ef28577bc19bb87acffe6ec4d7330a89"
+  },
+  {
+   "path": "consolidate_recovery.py",
+   "bytes": 5590,
+   "sha256": "deba60e9da0f4cf3b522bb65b110c734a5956b9271bb9b2784002eddd530e2f2"
+  },
+  {
+   "path": "finalize_recovery_record.py",
+   "bytes": 3901,
+   "sha256": "84d165eca5153dce93ee2610de4db39fdcaa1e08af78aae75b656644db02b31a"
+  },
+  {
+   "path": "inventory_mbo_layers.py",
+   "bytes": 3594,
+   "sha256": "b14485d2e7e636672429b3510d0e72dc601669f5ac12d3942ce89a7f6473a635"
+  },
+  {
+   "path": "join_native_review.py",
+   "bytes": 4421,
+   "sha256": "106ba4a24d323813f1555bac5bddd8af4e2d30d6d70975b20debe8ee04fab648"
+  },
+  {
+   "path": "prepare_filled_review.py",
+   "bytes": 7340,
+   "sha256": "2a2e1f1225ca1945f68e5190041d50d9f7e93dcc53ed194293290fbe45ae3b32"
+  },
+  {
+   "path": "restore_external.py",
+   "bytes": 2439,
+   "sha256": "9b66752e79646da43364be587842e316df444d12a531cf44e06a89f78bdd4d65"
+  },
+  {
+   "path": "restore_flow_inputs.py",
+   "bytes": 4856,
+   "sha256": "39a3564fe173533f4a465e56405d2167a7b4f7f1595658852bbd9bbce692b90e"
+  },
+  {
+   "path": "restore_oct18_flow.py",
+   "bytes": 3344,
+   "sha256": "07ba713ebc9c23bc0d45f0db773a99b2617f4a5a82cf5b691704f77864574f10"
+  },
+  {
+   "path": "verify_workbook.py",
+   "bytes": 5012,
+   "sha256": "59631d9240ff147db90effb2a3cace6eb49df472ef1c1d250bbb6ba8666eb6c0"
+  }
+ ],
+ "code_branch": "codex/frankie-brain-four-day-pins-20261109",
+ "recovery_code_revision": "9b9ff41d1cf072559f3bd10eddd3e1964b2dd3ff",
+ "complete_all_layers": false
+}
