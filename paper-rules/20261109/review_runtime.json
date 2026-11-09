@@ -1,0 +1,112 @@
+{
+  "review_type": "adversarial_runtime_contract",
+  "scope": [
+    "paper_rules/contract.py",
+    "paper_rules/models.py",
+    "machine/INITIAL_RULES_V2.json",
+    "INITIAL_RULE_DECISIONS.md"
+  ],
+  "issues": [
+    {
+      "id": "RT01",
+      "severity": "high",
+      "file": "paper_rules/contract.py",
+      "line": 26,
+      "title": "Field availability status is ignored by expression evaluation",
+      "evidence": "The field branch checks value, known_by_ns, role and optional definition_id, but never status. A field with value=7, known_by_ns=99, status=feed_missing at decision 100 evaluates to 7 and can make entry true.",
+      "impact": "An explicitly unavailable feed value, including a retained stale numeric value, can arm or confirm a candidate instead of recording input_unavailable. This disagrees with the model helper and the missing-data contract.",
+      "requested_change": "Validate field status before returning its value; disallow feed_missing, unknown_availability, future_known_by and definition_mismatch regardless of retained value. Require observed_undefined to carry explicit null and return UNKNOWN in ordinary expressions. Preserve reason/status in reporting."
+    },
+    {
+      "id": "RT02",
+      "severity": "high",
+      "file": "paper_rules/contract.py",
+      "line": 31,
+      "title": "Required source definitions do not constrain evaluated fields",
+      "evidence": "validate_rule requires requires[x].definition_id, but evaluate only compares expr.get(definition_id). A validated rule requiring EXPECTED and using {field:x} accepts context x definition_id=WRONG. The existing definition-mismatch test only covers expressions that repeat definition_id.",
+      "impact": "A native-flow field can silently replace a required midpoint-source field, or vice versa, even after the rule passes validation.",
+      "requested_change": "Bind field expressions to the declared requires definitions during validation/compilation, or pass the binding map to evaluate and enforce it. Reject disagreement between expression definition_id and requires metadata."
+    },
+    {
+      "id": "RT03",
+      "severity": "medium",
+      "file": "paper_rules/contract.py",
+      "line": 65,
+      "title": "Rule validation accepts malformed expression trees and invalid direction types",
+      "evidence": "A rule with entry.condition={op:nonsense,args:[]} and direction={const:LONG} returns True from validate_rule. Only field references and optional after_ns are inspected; no AST discriminator, operator/arity, entry-result type or direction-domain validation occurs.",
+      "impact": "The advertised validation boundary can admit rules that fail at first evaluation or yield a non-direction, producing adapter-dependent admission/reporting behavior.",
+      "requested_change": "Recursively validate entry/direction/invalidation expression structure, reject multiple expression discriminators, check supported operators/arity, and specify boolean condition and direction {-1,0,1} domains. Validate exit structure independently."
+    },
+    {
+      "id": "RT04",
+      "severity": "medium",
+      "file": "paper_rules/models.py",
+      "line": 22,
+      "title": "Missing value key is accepted as explicitly observed-undefined",
+      "evidence": "v=f.get(value) makes absent value indistinguishable from explicit null. A field with known_by_ns=99, definition_id=EXPECTED and status=observed_undefined but no value key returns prediction 18.0 in the one-feature fixture, despite the exception text saying explicit null is required.",
+      "impact": "Malformed or incomplete field records can be imputed and traded instead of being classified unavailable.",
+      "requested_change": "Require value to be present before status handling; allow imputation only for an explicitly present null with observed_undefined status. Add a tiny regression for absent value."
+    },
+    {
+      "id": "RT05",
+      "severity": "high",
+      "file": "paper_rules/models.py",
+      "line": 18,
+      "title": "Model inference does not reject outcome-role inputs",
+      "evidence": "Unlike evaluate, predict_frozen_linear never examines role. The one-feature fixture accepts role=outcome, value=4, known_by_ns=99 and matching definition_id at decision 100, returning 19.0.",
+      "impact": "A tagged outcome/control field can enter inference despite the causal-feature contract; schema metadata is not enough because the helper receives only string bindings.",
+      "requested_change": "Enforce allowed input roles in inference and bind model features to immutable feature definitions rather than only matching caller-supplied strings. Reject outcome-role inputs even when timestamps and names pass."
+    },
+    {
+      "id": "RT06",
+      "severity": "medium",
+      "file": "machine/INITIAL_RULES_V2.json",
+      "line": 70,
+      "title": "Frozen model declaration lacks the exact availability and feature bindings required by its predictor",
+      "evidence": "The predictor requires bindings and freeze_ns arguments. INITIAL_RULES_V2 names MODEL_FREEZE.json, but that file contains training dates, rows, target and descriptive features_source only: no exact model-known-by/freeze timestamp and no per-feature definition bindings. SOURCE_DEFINITIONS lists three producer files without these bindings.",
+      "impact": "The declared M0/M1 inference cannot be instantiated under the exact availability/identity contract without a caller inventing inputs. A freeze timestamp can be set arbitrarily while still passing the helper. This is a declaration gap, not a claim that a full engine is missing.",
+      "requested_change": "Record a model manifest with exact model-available-by nanoseconds, immutable coefficient/source identity and ordered per-feature definition bindings. Distinguish training cutoff from availability of the fitted artifact. Keep inference unavailable until these exist."
+    },
+    {
+      "id": "RT07",
+      "severity": "medium",
+      "file": "machine/INITIAL_RULES_V2.json",
+      "line": 669,
+      "title": "Delayed-touch midpoint comparison has an unresolved factor-of-two convention",
+      "evidence": "The formula is anchor_direction*(current_mid_ticks-anchor_mid_ticks)>=1, while the next field defines midpoint_representation as twice_price_ticks_integer. No conversion or doubled threshold is specified.",
+      "impact": "An adapter applying the inequality directly to stored integers admits a half-tick move; an adapter dividing by two requires the intended one tick. R4/R5 then have different entries from the same quotes.",
+      "requested_change": "Specify the expression in doubled units with threshold 2, or explicitly require division by 2 before comparison. Include a half-tick and one-tick boundary example."
+    },
+    {
+      "id": "RT08",
+      "severity": "medium",
+      "file": "machine/INITIAL_RULES_V2.json",
+      "line": 628,
+      "title": "Same-event confirmation and invalidation precedence is unspecified",
+      "evidence": "Quote confirmation can complete in a later group while invalidation reaches both one second and two bad groups in that same group. while_pending says invalidate_no_entry and after_entry says request_platform_exit, but there is no transition ordering relative to confirmation/submission.",
+      "impact": "One valid implementation submits then immediately exits; another records invalidated without an entry attempt. That changes fills, denominator states and risk counters even with identical inputs.",
+      "requested_change": "Declare deterministic event processing priority, with data validity, order invalidators, signal invalidation, deadlines, confirmation and risk gates explicitly ordered. Cover simultaneous invalidation/confirmation and confirmation/deadline boundaries."
+    },
+    {
+      "id": "RT09",
+      "severity": "medium",
+      "file": "machine/INITIAL_RULES_V2.json",
+      "line": 79,
+      "title": "Cooldown clock origin and session loss-cap action are not defined",
+      "evidence": "risk declares cooldown_seconds=30 and session_loss_ticks=12. Other clocks have explicit origins (max_hold_origin, stop_origin, session_loss_origin), but cooldown has none; loss origin defines accounting without saying whether breach blocks new entries, exits an existing position, or latches for the session.",
+      "impact": "Cooldown from submission, first fill or close changes subsequent admissible episodes. Loss-cap implementations can differ on exits and resumption despite the common policy.",
+      "requested_change": "Declare cooldown start/reset events including rejection/no-fill, and explicit loss-cap threshold relation, scope, action and reset/latching policy. Label these decisions as new runtime choices in INITIAL_RULE_DECISIONS.md."
+    },
+    {
+      "id": "RT10",
+      "severity": "high",
+      "file": "paper_rules/contract.py",
+      "line": 29,
+      "title": "Equal-nanosecond later cursor is admitted",
+      "evidence": "INITIAL_RULES_V2 data.group_tie_break names original_complete_group_cursor, but both evaluate and predict_frozen_linear compare only known_by_ns to decision_ns and ignore supplied cursors. At equal nanoseconds, known_by_cursor=11 is accepted at decision_cursor=10.",
+      "impact": "A later complete group sharing a timestamp can provide a feature to an earlier decision, violating exact causal event ordering.",
+      "requested_change": "Define and enforce the same-timestamp ordering contract using compatible decision and known-by cursors, including how timer decisions and model artifact availability fit that ordering. Require the needed cursor information where timestamp equality cannot otherwise establish causality."
+    }
+  ],
+  "checks": "Read-only tiny synthetic helper calls; no replay, fitting, backtest or platform activity. Only this report was written."
+}

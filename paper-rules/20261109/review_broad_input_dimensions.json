@@ -1,0 +1,1512 @@
+{
+  "component_names": [
+    "extension_count_log",
+    "far_absorption_share_1024",
+    "far_absorption_share_64",
+    "far_front_age_log",
+    "far_identity_survival_1024",
+    "far_identity_survival_64",
+    "far_priority_loss_rate_1024",
+    "far_priority_loss_rate_64",
+    "far_queue_age_p90_log",
+    "far_replenish_log1p_1024",
+    "far_replenish_log1p_64",
+    "far_size_hhi",
+    "far_size_retention_1024",
+    "far_size_retention_64",
+    "pullback_ticks_last_log",
+    "pullback_ticks_prev_log",
+    "step_duration_groups_log",
+    "step_ratio_log",
+    "unresolved_age_groups_log"
+  ],
+  "component_dispositions": [
+    {
+      "component": "extension_count_log",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "extension_count_log",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "extension_count_log",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "87955"
+    },
+    {
+      "component": "far_absorption_share_1024",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "far_absorption_share_1024",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_absorption_share_1024",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_absorption_share_1024",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_absorption_share_64",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "far_absorption_share_64",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_absorption_share_64",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_absorption_share_64",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_front_age_log",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "far_front_age_log",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_front_age_log",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_front_age_log",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_identity_survival_1024",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "far_identity_survival_1024",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_identity_survival_1024",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_identity_survival_1024",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_identity_survival_64",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "far_identity_survival_64",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_identity_survival_64",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_identity_survival_64",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_priority_loss_rate_1024",
+      "state": "0",
+      "reason": "",
+      "rows": "495623"
+    },
+    {
+      "component": "far_priority_loss_rate_1024",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_priority_loss_rate_1024",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_priority_loss_rate_1024",
+      "state": "1",
+      "reason": "NO_MODIFIES",
+      "rows": "110"
+    },
+    {
+      "component": "far_priority_loss_rate_1024",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_priority_loss_rate_64",
+      "state": "0",
+      "reason": "",
+      "rows": "409538"
+    },
+    {
+      "component": "far_priority_loss_rate_64",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_priority_loss_rate_64",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_priority_loss_rate_64",
+      "state": "1",
+      "reason": "NO_MODIFIES",
+      "rows": "86195"
+    },
+    {
+      "component": "far_priority_loss_rate_64",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_queue_age_p90_log",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "far_queue_age_p90_log",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_queue_age_p90_log",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_queue_age_p90_log",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_replenish_log1p_1024",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "far_replenish_log1p_1024",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_replenish_log1p_1024",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_replenish_log1p_1024",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_replenish_log1p_64",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "far_replenish_log1p_64",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_replenish_log1p_64",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_replenish_log1p_64",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_size_hhi",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "far_size_hhi",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_size_hhi",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_size_hhi",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_size_retention_1024",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "far_size_retention_1024",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_size_retention_1024",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_size_retention_1024",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "far_size_retention_64",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "far_size_retention_64",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "far_size_retention_64",
+      "state": "1",
+      "reason": "NO_FLOW",
+      "rows": "51976"
+    },
+    {
+      "component": "far_size_retention_64",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "35979"
+    },
+    {
+      "component": "pullback_ticks_last_log",
+      "state": "0",
+      "reason": "",
+      "rows": "48794"
+    },
+    {
+      "component": "pullback_ticks_last_log",
+      "state": "1",
+      "reason": "CHAIN_BROKEN",
+      "rows": "1889"
+    },
+    {
+      "component": "pullback_ticks_last_log",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "pullback_ticks_last_log",
+      "state": "1",
+      "reason": "NO_COMPLETED_STEP",
+      "rows": "445050"
+    },
+    {
+      "component": "pullback_ticks_last_log",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "87955"
+    },
+    {
+      "component": "pullback_ticks_prev_log",
+      "state": "0",
+      "reason": "",
+      "rows": "4600"
+    },
+    {
+      "component": "pullback_ticks_prev_log",
+      "state": "1",
+      "reason": "CHAIN_BROKEN",
+      "rows": "1889"
+    },
+    {
+      "component": "pullback_ticks_prev_log",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "pullback_ticks_prev_log",
+      "state": "1",
+      "reason": "NO_COMPLETED_STEP",
+      "rows": "489244"
+    },
+    {
+      "component": "pullback_ticks_prev_log",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "87955"
+    },
+    {
+      "component": "step_duration_groups_log",
+      "state": "0",
+      "reason": "",
+      "rows": "48794"
+    },
+    {
+      "component": "step_duration_groups_log",
+      "state": "1",
+      "reason": "CHAIN_BROKEN",
+      "rows": "1889"
+    },
+    {
+      "component": "step_duration_groups_log",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "step_duration_groups_log",
+      "state": "1",
+      "reason": "NO_COMPLETED_STEP",
+      "rows": "445050"
+    },
+    {
+      "component": "step_duration_groups_log",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "87955"
+    },
+    {
+      "component": "step_ratio_log",
+      "state": "0",
+      "reason": "",
+      "rows": "4600"
+    },
+    {
+      "component": "step_ratio_log",
+      "state": "1",
+      "reason": "CHAIN_BROKEN",
+      "rows": "1889"
+    },
+    {
+      "component": "step_ratio_log",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "step_ratio_log",
+      "state": "1",
+      "reason": "NO_COMPLETED_STEP",
+      "rows": "489244"
+    },
+    {
+      "component": "step_ratio_log",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "87955"
+    },
+    {
+      "component": "unresolved_age_groups_log",
+      "state": "0",
+      "reason": "",
+      "rows": "495733"
+    },
+    {
+      "component": "unresolved_age_groups_log",
+      "state": "1",
+      "reason": "NOT_F_LAST",
+      "rows": "188099"
+    },
+    {
+      "component": "unresolved_age_groups_log",
+      "state": "1",
+      "reason": "SIDE_UNDEFINED",
+      "rows": "87955"
+    }
+  ],
+  "external_13_bindings": [
+    {
+      "point_id": "1",
+      "name": "cot.managed_money_net_pctile_1y",
+      "bound_tables": "[\"cot.023651\"]",
+      "asof_series": "1",
+      "present_records": "749",
+      "variable_series": "0",
+      "relationship": "shared_positioning_source",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "2",
+      "name": "weather_forecast.forecast_gw_hdd",
+      "bound_tables": "[\"mos.gw_by_cycle\", \"mos.raw\"]",
+      "asof_series": "14",
+      "present_records": "10189",
+      "variable_series": "13",
+      "relationship": "shared_weather_source",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "3",
+      "name": "cot.managed_money_net_chg_wow",
+      "bound_tables": "[\"cot.023651\"]",
+      "asof_series": "1",
+      "present_records": "749",
+      "variable_series": "0",
+      "relationship": "shared_positioning_source",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "4",
+      "name": "cot.managed_money_net_pctile_3y",
+      "bound_tables": "[\"cot.023651\"]",
+      "asof_series": "1",
+      "present_records": "749",
+      "variable_series": "0",
+      "relationship": "shared_positioning_source",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "5",
+      "name": "grid_stack.bas.US48.wind_mwh",
+      "bound_tables": "[\"eia930.us48\", \"eia930.hourly\"]",
+      "asof_series": "1",
+      "present_records": "749",
+      "variable_series": "1",
+      "relationship": "shared_power_source",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "6",
+      "name": "squeeze_watch.sessions_since_prompt_expiry",
+      "bound_tables": "[\"calendar.sessions_since_prompt_expiry\"]",
+      "asof_series": "1",
+      "present_records": "90",
+      "variable_series": "0",
+      "relationship": "context_or_transmission",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "7",
+      "name": "grid_stack.bas.US48.est_gas_burn_bcfd",
+      "bound_tables": "[\"eia930.us48\", \"eia930.hourly\"]",
+      "asof_series": "1",
+      "present_records": "749",
+      "variable_series": "1",
+      "relationship": "shared_power_source",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "8",
+      "name": "cot.ice.ld1.managed_money_net_pctile_1y",
+      "bound_tables": "[\"cot.023391\"]",
+      "asof_series": "1",
+      "present_records": "749",
+      "variable_series": "0",
+      "relationship": "context_or_transmission",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "9",
+      "name": "model_disagreement.summary.max_abs_spread_gw_hdd",
+      "bound_tables": "[\"mos.disagreement_by_cycle\"]",
+      "asof_series": "1",
+      "present_records": "749",
+      "variable_series": "1",
+      "relationship": "shared_weather_source",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "10",
+      "name": "weather.gw_hdd (observed)",
+      "bound_tables": "[\"weather.gw_daily\", \"weather.obs_hourly\"]",
+      "asof_series": "19",
+      "present_records": "14231",
+      "variable_series": "19",
+      "relationship": "context_or_transmission",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "11",
+      "name": "EIA weekly storage (level, weekly change, vs 5-year)",
+      "bound_tables": "[\"storage.weekly\"]",
+      "asof_series": "1",
+      "present_records": "749",
+      "variable_series": "0",
+      "relationship": "context_or_transmission",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "12",
+      "name": "storage estimate vs actual",
+      "bound_tables": "[\"storage.estimate\", \"storage.estimate_captures\", \"storage.weekly\"]",
+      "asof_series": "1",
+      "present_records": "749",
+      "variable_series": "0",
+      "relationship": "context_or_transmission",
+      "admission": "exploratory_declared_asof_only"
+    },
+    {
+      "point_id": "13",
+      "name": "the futures curve shape",
+      "bound_tables": "[\"curve.definitions\", \"curve.statistics\", \"curve.trades\", \"curve.settled_shape\", \"curve.traded_shape\"]",
+      "asof_series": "22",
+      "present_records": "16478",
+      "variable_series": "2",
+      "relationship": "same_instrument_overlap_and_other_legs",
+      "admission": "exploratory_declared_asof_only"
+    }
+  ],
+  "external_context_contract": {
+    "series_order": [
+      "cot.managed_money_net_pctile_1y",
+      "cot.managed_money_net_chg_wow",
+      "cot.managed_money_net_pctile_3y",
+      "cot.ice.ld1.managed_money_net_pctile_1y",
+      "mos.GFS.gw_hdd_D",
+      "mos.NAM.gw_hdd_D",
+      "mos.GFS.gw_hdd_D1",
+      "mos.MEX.gw_hdd_D3",
+      "mos.max_abs_spread_gw_hdd",
+      "eia930.US48.wind_mwh",
+      "eia930.US48.est_gas_burn_bcfd_rate",
+      "calendar.sessions_since_prompt_expiry",
+      "weather.gw_hdd",
+      "storage.level_bcf",
+      "storage.weekly_chg_bcf",
+      "storage.vs_5yr_bcf",
+      "storage.estimate_bcf",
+      "storage.actual_bcf",
+      "storage.surprise_bcf",
+      "curve.settled.front",
+      "curve.settled.slope_1",
+      "curve.settled.slope_back",
+      "curve.settled.curvature",
+      "curve.settled.front_next_spread",
+      "curve.traded.front",
+      "curve.traded.c1",
+      "curve.traded.slope_1",
+      "curve.traded.slope_back",
+      "curve.traded.curvature",
+      "curve.traded.front_next_spread",
+      "weather.tmpf.ATL",
+      "weather.tmpf.AUS",
+      "weather.tmpf.BOS",
+      "weather.tmpf.DCA",
+      "weather.tmpf.DEN",
+      "weather.tmpf.DFW",
+      "weather.tmpf.DTW",
+      "weather.tmpf.IAH",
+      "weather.tmpf.LAX",
+      "weather.tmpf.MSP",
+      "weather.tmpf.NYC",
+      "weather.tmpf.ORD",
+      "weather.tmpf.PHL",
+      "weather.tmpf.PHX",
+      "weather.tmpf.SAT",
+      "weather.tmpf.SEA",
+      "weather.tmpf.SFO",
+      "weather.tmpf.STL"
+    ],
+    "context_index_rule": "searchsorted(publication_ns,clock_ns,side='right')",
+    "chosen": "previous_original_index[context_index,series_index] points into original series.known; -1 means no published observation",
+    "ties": "last original row at tied publication wins",
+    "state_policy": "original numeric state/value/reason unchanged; never fall back to older PRESENT",
+    "scope": "original stored targets and publication confidence retained; D/D1/D3 are not retargeted to another day; declared publication is not proof of live ingestion",
+    "sample_clocks": "plot cuts and second labels are not asserted to be information-availability clocks"
+  },
+  "registry_99_roles": [
+    {
+      "ordinal": "0",
+      "entry_id": "controlling_rt_mission",
+      "original_role": "control",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "1",
+      "entry_id": "native_calculation_contract",
+      "original_role": "control",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "2",
+      "entry_id": "anchored_knowledge_manifest",
+      "original_role": "control",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "3",
+      "entry_id": "selected_same_arm_profile",
+      "original_role": "control",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "control",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "4",
+      "entry_id": "a_clean_promoted_positive_capsule",
+      "original_role": "arm",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "not_applicable",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "5",
+      "entry_id": "a_memory_promoted_positive_capsule",
+      "original_role": "arm",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "retired",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "6",
+      "entry_id": "a_memory_prior_lessons_package",
+      "original_role": "arm",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "retired",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "7",
+      "entry_id": "a_memory_prior_package_proof",
+      "original_role": "arm",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "retired",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "8",
+      "entry_id": "authoritative_s135_construction",
+      "original_role": "knowledge",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "9",
+      "entry_id": "complete_s105_9_brain",
+      "original_role": "knowledge",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "10",
+      "entry_id": "doctrine_reasoning_play_index_evidence",
+      "original_role": "knowledge",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "11",
+      "entry_id": "lawful_prior_session_carry",
+      "original_role": "knowledge",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "12",
+      "entry_id": "october_outcome_wall_enforcement",
+      "original_role": "knowledge",
+      "relationship_class": "outcome_or_selection_boundary",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "13",
+      "entry_id": "learned_d_structures_and_families",
+      "original_role": "knowledge",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "14",
+      "entry_id": "learned_dipoles_and_geometry",
+      "original_role": "knowledge",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "15",
+      "entry_id": "learned_pair_triplet_recurrence",
+      "original_role": "knowledge",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "16",
+      "entry_id": "learned_chains_extensions_reappearances_ancestry",
+      "original_role": "knowledge",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "17",
+      "entry_id": "phase1_discoveries_structural_falsifiers",
+      "original_role": "knowledge",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "18",
+      "entry_id": "phase2_findings_modules_timing_pox_negatives",
+      "original_role": "knowledge",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "19",
+      "entry_id": "predecessor_ancestry_unresolved_chain_state",
+      "original_role": "knowledge",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "20",
+      "entry_id": "historical_timing_lifespan_context",
+      "original_role": "knowledge",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "21",
+      "entry_id": "learned_structure_proposal_index_material",
+      "original_role": "knowledge",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "22",
+      "entry_id": "extra_agent_corrected_information_and_gap_diagnoses",
+      "original_role": "knowledge",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "23",
+      "entry_id": "canonical_sep_nov_2021_dbn_mbo_objects",
+      "original_role": "raw",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "arrived",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "24",
+      "entry_id": "october_first_source_window",
+      "original_role": "raw",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "arrived",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "25",
+      "entry_id": "canonical_predecessor_bootstrap_objects",
+      "original_role": "raw",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "26",
+      "entry_id": "native_acmrtfn_messages",
+      "original_role": "raw",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "arrived",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "27",
+      "entry_id": "snapshot_bootstrap_reset_messages",
+      "original_role": "raw",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "arrived",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "28",
+      "entry_id": "raw_source_identity_provenance_clocks_integrity",
+      "original_role": "raw",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "arrived",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "29",
+      "entry_id": "order_lifecycle_adds",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "30",
+      "entry_id": "order_lifecycle_cancels",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "31",
+      "entry_id": "order_lifecycle_modifies",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "thin",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "32",
+      "entry_id": "order_lifecycle_replaces",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "33",
+      "entry_id": "order_lifecycle_trades",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "34",
+      "entry_id": "order_lifecycle_fills",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "thin",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "35",
+      "entry_id": "order_lifecycle_clears",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "36",
+      "entry_id": "order_identity_transitions",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "37",
+      "entry_id": "contract_session_roll_state",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "38",
+      "entry_id": "full_bid_ask_depth",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "39",
+      "entry_id": "price_level_and_order_counts",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "40",
+      "entry_id": "fifo_queues",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "41",
+      "entry_id": "queue_age_and_survival",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "thin",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "42",
+      "entry_id": "queue_concentration",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "thin",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "43",
+      "entry_id": "orders_and_volume_ahead",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "44",
+      "entry_id": "spread_and_depth_imbalance",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "45",
+      "entry_id": "complete_state_reset_bootstrap_receipts",
+      "original_role": "calculation",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "46",
+      "entry_id": "mechanics_actions_by_side_and_level",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "47",
+      "entry_id": "aggressor_and_native_signed_flow",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "48",
+      "entry_id": "depletion_and_replenishment",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "thin",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "49",
+      "entry_id": "resilience_and_recovery",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "thin",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "50",
+      "entry_id": "churn_and_queue_turnover",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "51",
+      "entry_id": "price_and_book_path",
+      "original_role": "calculation",
+      "relationship_class": "market_mechanism_or_state",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "52",
+      "entry_id": "missingness_and_integrity_flags",
+      "original_role": "calculation",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "thin",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "53",
+      "entry_id": "legacy_price",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "54",
+      "entry_id": "legacy_native_signed_flow",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "completed_only",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "55",
+      "entry_id": "legacy_per_second_roll20",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "completed_only",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "56",
+      "entry_id": "legacy_book_imbalance",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "57",
+      "entry_id": "legacy_structure_observables",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "58",
+      "entry_id": "derived_roll20_and_dipole_state",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "thin",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "59",
+      "entry_id": "derived_d_family_geometry",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "60",
+      "entry_id": "derived_open_world_predecessor_state",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "61",
+      "entry_id": "derived_ancestry_gaps",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "62",
+      "entry_id": "derived_unresolved_age_chain_trajectory",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "thin",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "63",
+      "entry_id": "derived_price_flow_book_paths",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "64",
+      "entry_id": "derived_v4_mechanics_fifo_features",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "65",
+      "entry_id": "derived_feature_availability_timestamps",
+      "original_role": "calculation",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "66",
+      "entry_id": "prebirth_predecessor_at_risk_state",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "67",
+      "entry_id": "prebirth_unresolved_chain_extension_state",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "thin",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "68",
+      "entry_id": "prebirth_ancestry_successor_opportunity",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "69",
+      "entry_id": "prebirth_stopped_chain_false_context_controls",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "70",
+      "entry_id": "prebirth_negative_opportunity_cases",
+      "original_role": "calculation",
+      "relationship_class": "derived_transform_or_lifecycle_context",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "71",
+      "entry_id": "clock_event_time",
+      "original_role": "clock",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "arrived",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "72",
+      "entry_id": "clock_receive_time",
+      "original_role": "clock",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "arrived",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "73",
+      "entry_id": "clock_event_known_by",
+      "original_role": "clock",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "74",
+      "entry_id": "clock_feature_availability",
+      "original_role": "clock",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "75",
+      "entry_id": "clock_prospective_discovery_confirmation",
+      "original_role": "clock",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "exposed",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "76",
+      "entry_id": "clock_model_evaluation",
+      "original_role": "clock",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "not_read_by_this_piece",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "77",
+      "entry_id": "clock_lock_time",
+      "original_role": "clock",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "arrived",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "78",
+      "entry_id": "later_outcome_reveal",
+      "original_role": "sealed_answer",
+      "relationship_class": "outcome_or_selection_boundary",
+      "original_disposition": "withheld_by_role",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "79",
+      "entry_id": "target_ground_truth_onset_time",
+      "original_role": "sealed_answer",
+      "relationship_class": "outcome_or_selection_boundary",
+      "original_disposition": "withheld_by_role",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "80",
+      "entry_id": "s137_cognitive_shadow_runtime",
+      "original_role": "shadow",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "disabled",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "81",
+      "entry_id": "hipporag_associative_retrieval",
+      "original_role": "shadow",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "disabled",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "82",
+      "entry_id": "step1_existing_october_seconds",
+      "original_role": "sealed_answer",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "withheld_by_role",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "83",
+      "entry_id": "step1_populations",
+      "original_role": "sealed_answer",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "withheld_by_role",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "84",
+      "entry_id": "step1_crosswalks",
+      "original_role": "sealed_answer",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "withheld_by_role",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "85",
+      "entry_id": "step1_target_membership_receipts",
+      "original_role": "sealed_answer",
+      "relationship_class": "outcome_or_selection_boundary",
+      "original_disposition": "withheld_by_role",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "86",
+      "entry_id": "step1_labels_and_classifications",
+      "original_role": "sealed_answer",
+      "relationship_class": "outcome_or_selection_boundary",
+      "original_disposition": "withheld_by_role",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "87",
+      "entry_id": "step1_result_prefixes",
+      "original_role": "sealed_answer",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "withheld_by_role",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "88",
+      "entry_id": "step1_reconciliation_outputs",
+      "original_role": "sealed_answer",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "withheld_by_role",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "89",
+      "entry_id": "output_state_and_state_delta_movie",
+      "original_role": "output",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "output_not_written_here",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "90",
+      "entry_id": "output_frankie_reasoning_movie",
+      "original_role": "output",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "output_not_written_here",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "91",
+      "entry_id": "output_probability_movie",
+      "original_role": "output",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "output_not_written_here",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "92",
+      "entry_id": "output_candidate_discoveries",
+      "original_role": "output",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "output_not_written_here",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "93",
+      "entry_id": "output_first_locks_and_no_locks",
+      "original_role": "output",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "output_not_written_here",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "94",
+      "entry_id": "output_negative_sparse_inconclusive_ledger",
+      "original_role": "output",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "output_not_written_here",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "95",
+      "entry_id": "output_knowledge_retrieval_receipts",
+      "original_role": "output",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "output_not_written_here",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "96",
+      "entry_id": "output_provider_invocation_response_receipts",
+      "original_role": "output",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "output_not_written_here",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "97",
+      "entry_id": "output_answer_wall_access_receipts",
+      "original_role": "output",
+      "relationship_class": "control_runtime_or_unresolved_context",
+      "original_disposition": "output_not_written_here",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    },
+    {
+      "ordinal": "98",
+      "entry_id": "output_source_state_manifest_code_model_run_hashes",
+      "original_role": "output",
+      "relationship_class": "availability_or_provenance",
+      "original_disposition": "produced",
+      "status": "in_scope; mapping is not numerical or semantic admission"
+    }
+  ],
+  "meaning": "Input roles, not99+13+19 independent trade strategies. Link every field/state to actual consumer; policy/control/output roles remain evidence.",
+  "sources": [
+    {
+      "git_blob_sha": "25663ec88985f807d85e34a3ef49b27648a23676",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/descriptive-v1/all_second_set_component_dispositions.csv",
+      "path": "artifacts/sqlite-triage/20261022/families/descriptive-v1/all_second_set_component_dispositions.csv"
+    },
+    {
+      "git_blob_sha": "24487c30349d38901fb399ee8f6a9869a04ceac9",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/all-13-point-coverage.csv",
+      "path": "tasks/family-research-20261022/flow-book-discovery-v1/all-13-point-coverage.csv"
+    },
+    {
+      "git_blob_sha": "c2abf8d863290b864f66dbbce792426ab01d08c0",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/all-99-relationship-roles.csv",
+      "path": "tasks/family-research-20261022/flow-book-discovery-v1/all-99-relationship-roles.csv"
+    },
+    {
+      "git_blob_sha": "ea6b9e9210db84d53fa8a198a8c551a5a0292833",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/lifecycle-data-links/run-42583801329-1/external/external-context-contract.json",
+      "path": "tasks/family-research-20261022/lifecycle-data-links/run-42583801329-1/external/external-context-contract.json"
+    }
+  ]
+}

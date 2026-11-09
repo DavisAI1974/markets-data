@@ -1,0 +1,97 @@
+{
+  "source_records": 14712,
+  "roles": {
+    "research_or_handoff_document": 1047,
+    "implementation_or_runtime_definition": 555,
+    "structured_definition_data_or_receipt": 1617,
+    "data_or_model_artifact": 3436,
+    "other_preserved_source": 800,
+    "visual_or_reference_evidence": 7257
+  },
+  "exact_tree_match": 14712,
+  "identity_issues": [],
+  "three_branch_inventory_coverage": [
+    {
+      "tree": "desktop-tree.json",
+      "commit": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "declared_scope": "tasks/family-research-20261022/",
+      "file_count": 1719,
+      "missing_from_union": []
+    },
+    {
+      "tree": "ccode-tree.json",
+      "commit": "47b62f934e3bfa20328dd7456971693bb7a99fef",
+      "declared_scope": "tasks/family-research-20261022/",
+      "file_count": 68,
+      "missing_from_union": []
+    },
+    {
+      "tree": "codex-tree.json",
+      "commit": "4cf6e85de5de2a9fb479c90b7afb8dd50f1748cb",
+      "declared_scope": "tasks/family-research-20261022/",
+      "file_count": 1396,
+      "missing_from_union": []
+    }
+  ],
+  "tree_receipts": [
+    {
+      "name": "desktop-tree.json",
+      "repository": "Markets",
+      "commit": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "tree_sha": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "sha256": "8b2678dd3d390d2474be56c18915fd9366126d920adfc92bef97a769f4028f4b",
+      "file_count": 4595
+    },
+    {
+      "name": "desktop_handoff-tree.json",
+      "repository": "Markets",
+      "commit": "beb2104c079045c24832f2279eac5e8e69bc576e",
+      "tree_sha": "beb2104c079045c24832f2279eac5e8e69bc576e",
+      "sha256": "74cbef3c978765ee8ce9d51030093b068dc18e04af342dec676d7ffab2cde7d1",
+      "file_count": 4501
+    },
+    {
+      "name": "ccode-tree.json",
+      "repository": "Markets",
+      "commit": "47b62f934e3bfa20328dd7456971693bb7a99fef",
+      "tree_sha": "47b62f934e3bfa20328dd7456971693bb7a99fef",
+      "sha256": "e165521fe661d721853a8ef12ad2648edb4f401b2d0811815fa837e087c1d926",
+      "file_count": 2911
+    },
+    {
+      "name": "codex-tree.json",
+      "repository": "Markets",
+      "commit": "4cf6e85de5de2a9fb479c90b7afb8dd50f1748cb",
+      "tree_sha": "4cf6e85de5de2a9fb479c90b7afb8dd50f1748cb",
+      "sha256": "3c2f1501992173b617083ede833b98b76598ac3041e43f77eede28f10e09c6f6",
+      "file_count": 4391
+    },
+    {
+      "name": "original_research-tree.json",
+      "repository": "Markets",
+      "commit": "418462afeaf0f14aa8129f6f4d02c3867d772fd0",
+      "tree_sha": "418462afeaf0f14aa8129f6f4d02c3867d772fd0",
+      "sha256": "b1796e161dc29ca2659f4912033b5402825c445dcbb5837a5095dbba88cddd14",
+      "file_count": 4353
+    },
+    {
+      "name": "workbook-tree.json",
+      "repository": "markets-data",
+      "commit": "586b31f65a12fb9215095a9af6851f8e95e7653b",
+      "tree_sha": "586b31f65a12fb9215095a9af6851f8e95e7653b",
+      "sha256": "b7a7f7ee61f0770f289be786d659dbaf8244b9a2f66bfe7523af15ce80eef153",
+      "file_count": 11059
+    },
+    {
+      "name": "latest-data-tree.json",
+      "repository": "markets-data",
+      "commit": "c01caaf4f327e8fdff21e4e8b9c5153aba8604a8",
+      "tree_sha": "c01caaf4f327e8fdff21e4e8b9c5153aba8604a8",
+      "sha256": "003d165d4203fc1aff6b57a6b69cbc5e301b23cbb8d3060f0e3e3d6c056c197f",
+      "file_count": 116
+    }
+  ],
+  "semantic_reconciliation_complete": false,
+  "identity_checks_are_not_content_review": true,
+  "migration_paused": true
+}

@@ -1,0 +1,1443 @@
+{
+  "review": "Original October Codex and Claude source-to-paper-rule adversarial review",
+  "artifact": "C:\\Users\\A\\markets-carry-forward-20261109\\delivery\\HYPOTHESIS_REGISTER.json",
+  "scope": {
+    "ids": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6A",
+      "R6B",
+      "R7",
+      "R8",
+      "R9",
+      "R10",
+      "ST01",
+      "ST02",
+      "ST03",
+      "ST04",
+      "ST05",
+      "ST06",
+      "ST07",
+      "ST08",
+      "ST09",
+      "ST10",
+      "ST11",
+      "FB01",
+      "FB02",
+      "FB03",
+      "FB04",
+      "FC01",
+      "FC02",
+      "FC03",
+      "FC04",
+      "FC05",
+      "FC06",
+      "FC07",
+      "FC08",
+      "FC09",
+      "FC10",
+      "FC11",
+      "DP01",
+      "DP02",
+      "DP03",
+      "DP04",
+      "DP05",
+      "DP06",
+      "DP07",
+      "DP08",
+      "OL01",
+      "OL02",
+      "OL03",
+      "OL04",
+      "OL05",
+      "OL06",
+      "OL07",
+      "OL08",
+      "OL09",
+      "RG01",
+      "RG02",
+      "RG03",
+      "EX01",
+      "EX02",
+      "EX03",
+      "EX04",
+      "EX05"
+    ],
+    "count": 62,
+    "coverage": "Read both original Markdown documents through all sections and pertinent methods/producers listed below; no analysis or producer rerun. No excluded new reanalysis/claude path read. Original claude-code research is included.",
+    "limits": "Scoped review, not exhaustive source-catalog audit or platform implementation. CH/CM/CT are outside this review; no claim their hypotheses are absent globally."
+  },
+  "sources": [
+    {
+      "source_id": "S00730",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md",
+      "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+      "local_path": "C:\\Users\\A\\markets-carry-forward-20261109\\documents\\e39bd353a57a0559b3e41a683fc4f2abcf0f8b92.md",
+      "bytes": 91075,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S00307",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md",
+      "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+      "local_path": "C:\\Users\\A\\markets-carry-forward-20261109\\documents\\817c07458db274af51e561e5b4c32ba9a5f09352.md",
+      "bytes": 133879,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S01758",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json",
+      "git_blob_sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\f393297bf8b47b10fb1d00636ee9363662b78570",
+      "bytes": 2919,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S00778",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/method.json",
+      "git_blob_sha": "d3c11baf47a9913537650f36423c2f6b85d2156f",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\d3c11baf47a9913537650f36423c2f6b85d2156f",
+      "bytes": 3093,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S00296",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/stack_direction_sources_oct18.py",
+      "git_blob_sha": "276491238497a2cd54e6d3c7323afe9aca2fc096",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\276491238497a2cd54e6d3c7323afe9aca2fc096",
+      "bytes": 10914,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S01764",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_dipole.py",
+      "git_blob_sha": "0a1670a391c68fc5ff972e282545461c94768d63",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\0a1670a391c68fc5ff972e282545461c94768d63",
+      "bytes": 8614,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S01770",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_stack.py",
+      "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+      "bytes": 13847,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S00279",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_four_arm_days.py",
+      "git_blob_sha": "78f2549153f0e390a79ea0d3cbbb77c415adef0f",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\78f2549153f0e390a79ea0d3cbbb77c415adef0f",
+      "bytes": 5472,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S00280",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_from_groups.py",
+      "git_blob_sha": "f4df76efd4e64fa6d2410e163321d38df939bbdf",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\f4df76efd4e64fa6d2410e163321d38df939bbdf",
+      "bytes": 6657,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S00281",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/size_one_order_identity.py",
+      "git_blob_sha": "8ef19eea655e2c7eab2b09dbb7242c20b170b8e8",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\8ef19eea655e2c7eab2b09dbb7242c20b170b8e8",
+      "bytes": 8623,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S00131",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/four_arm_first_family_days.py",
+      "git_blob_sha": "205c9eccee3f4fd150fe3419b259fa70264c7ce9",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\205c9eccee3f4fd150fe3419b259fa70264c7ce9",
+      "bytes": 18729,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S00160",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/next_burst_forecast_oct18.py",
+      "git_blob_sha": "1aecf13339847e8ad708d2a0e4cd7c70b93ded0e",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\1aecf13339847e8ad708d2a0e4cd7c70b93ded0e",
+      "bytes": 7269,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S00061",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/chain_play_filter.py",
+      "git_blob_sha": "6fa8c0dd45ff810ac057f9230bd1ac0f7ceccb0c",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\6fa8c0dd45ff810ac057f9230bd1ac0f7ceccb0c",
+      "bytes": 6658,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S00784",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow_book_discovery.py",
+      "git_blob_sha": "aab74e1f3899be14b69784f8d9f659b269ef9fc8",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\aab74e1f3899be14b69784f8d9f659b269ef9fc8",
+      "bytes": 19049,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "S01746",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/sources/info_dipole_pinned.py",
+      "git_blob_sha": "c04751cbe5f92952e33328f6c04fcae6392e05e5",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\c04751cbe5f92952e33328f6c04fcae6392e05e5",
+      "bytes": 9291,
+      "verification": "Git blob SHA-1 verified"
+    },
+    {
+      "source_id": "R_RULES",
+      "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+      "local_path": "C:\\Users\\A\\markets-carry-forward-20261109\\delivery\\prior\\reanalysis-20261109\\TRADE_RULES.json",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+      "verification": "Git blob SHA-1 verified"
+    }
+  ],
+  "issues": [
+    {
+      "id": "OCT01",
+      "entries": "all62",
+      "title": "Paper inclusion is not an executable contract",
+      "evidence": "51 scoped rows are pending source binding; R rows omit global execution/risk/model dependencies. Future-work sentences supply no causal entry/exit/invalidation.",
+      "correction": "Keep paper_included=true. Expand every source arm/cell/target with explicit state transitions, bindings, hashes and common paper wrapper. Limitations are opportunity outcomes, not admission exclusions.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L956-L970",
+          "lines": [
+            956,
+            970
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT02",
+      "entries": "FC10/FC11/FC01-FC09",
+      "title": "Full-depth original stack and inverse lost",
+      "evidence": "FC10 omits bid_depth_full>ask_depth_full. FC11 is flow-only buying mirror, not exact inverse requiring ask_depth_full>bid_depth_full. Named FC rows omit full-depth agreeing/opposing, long-flow/full-depth crosses and equal alternatives.",
+      "correction": "Correct FC10. Retain FC11 and add exact inverse. Enumerate S00131 arms and alternative-book layers including equal/no-recent/missing states and both sides.",
+      "sources": [
+        {
+          "source_id": "S00131",
+          "git_blob_sha": "205c9eccee3f4fd150fe3419b259fa70264c7ce9",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/four_arm_first_family_days.py#L144-L160",
+          "lines": [
+            144,
+            160
+          ]
+        },
+        {
+          "source_id": "S00131",
+          "git_blob_sha": "205c9eccee3f4fd150fe3419b259fa70264c7ce9",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/four_arm_first_family_days.py#L193-L227",
+          "lines": [
+            193,
+            227
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1526-L1558",
+          "lines": [
+            1526,
+            1558
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT03",
+      "entries": "FC01-FC11/FB01-FB04/EX01",
+      "title": "Strict-pre feature clock is not a causal entry clock",
+      "evidence": "A family start is selected after it exists. Features use start_recv_ns-1, but original outcome includes family-group movement. Entry at that cutoff presumes future family identity.",
+      "correction": "Freeze strict-pre features but act only after actual family notification and adapter arrival. Keep source midpoint outcomes separately. Prebirth variants need a causal scheduled stream independent of future birth labels.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L40-L50",
+          "lines": [
+            40,
+            50
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L668-L674",
+          "lines": [
+            668,
+            674
+          ]
+        },
+        {
+          "source_id": "S00131",
+          "git_blob_sha": "205c9eccee3f4fd150fe3419b259fa70264c7ce9",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/four_arm_first_family_days.py#L95-L120",
+          "lines": [
+            95,
+            120
+          ]
+        },
+        {
+          "source_id": "S00784",
+          "git_blob_sha": "aab74e1f3899be14b69784f8d9f659b269ef9fc8",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow_book_discovery.py#L95-L147",
+          "lines": [
+            95,
+            147
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT04",
+      "entries": "ST01-ST11/FB01-FB04/R7/R8",
+      "title": "Model target, units and frozen dependencies unresolved",
+      "evidence": "ST has7 targets; FB has signed/absolute at5 horizons. Absolute-price prediction sign is not price direction; strength-change sign means weakening/strengthening. M0 is not ST01: it includes book/raw flow. Method files and fitting code do not export frozen ST/FB coefficients. R model arrays exist in TRADE_RULES.models, outside register rows.",
+      "correction": "Expand target/horizon arms and bind exact transforms, arrays, coefficients, intercept, target units, training cutoff and artifact hash. Magnitude/strength stay their declared tasks; directional translations are explicitly new common protocol. Do not replace11 arms with M0/M1.",
+      "sources": [
+        {
+          "source_id": "S01770",
+          "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_stack.py#L33-L43",
+          "lines": [
+            33,
+            43
+          ]
+        },
+        {
+          "source_id": "S01770",
+          "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_stack.py#L110-L137",
+          "lines": [
+            110,
+            137
+          ]
+        },
+        {
+          "source_id": "S00784",
+          "git_blob_sha": "aab74e1f3899be14b69784f8d9f659b269ef9fc8",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow_book_discovery.py#L166-L200",
+          "lines": [
+            166,
+            200
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L880-L895",
+          "lines": [
+            880,
+            895
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT05",
+      "entries": "ST/DP/R7/R8",
+      "title": "Native-flow mandate is incompatible with original model substrate",
+      "evidence": "ST/DP companion classifies print against previous completed-group midpoint and bins at containing-group close; original detector uses action-time quotes. Operands differed21/863. Native-aggressor requirement cannot silently substitute.",
+      "correction": "Declare substrate per feature/model. Keep exact original companion equations for parity; native variants need separate model identities. Empty/unknown is not balanced zero.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L703-L730",
+          "lines": [
+            703,
+            730
+          ]
+        },
+        {
+          "source_id": "S01764",
+          "git_blob_sha": "0a1670a391c68fc5ff972e282545461c94768d63",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_dipole.py#L31-L40",
+          "lines": [
+            31,
+            40
+          ]
+        },
+        {
+          "source_id": "S01764",
+          "git_blob_sha": "0a1670a391c68fc5ff972e282545461c94768d63",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_dipole.py#L48-L69",
+          "lines": [
+            48,
+            69
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT06",
+      "entries": "DP01-DP08",
+      "title": "DP state and current direction compressed incorrectly",
+      "evidence": "Weakening is change in absolute half-window imbalance with both denominators positive, not signed imb_flow or path weakening. Source direction is current full20 sign, not birth. Early-empty and late-empty differ; DP07/08 combine steady, balanced-book, balanced-flow and both-empty.",
+      "correction": "Enumerate state x book relation x5/20/60 outcomes. Preserve separate half flags. Source-follow direction=sign(current20 imbalance); null/zero retained. Do not infer sell from negative strength-change.",
+      "sources": [
+        {
+          "source_id": "S01770",
+          "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_stack.py#L70-L98",
+          "lines": [
+            70,
+            98
+          ]
+        },
+        {
+          "source_id": "S01770",
+          "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_stack.py#L167-L183",
+          "lines": [
+            167,
+            183
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L832-L876",
+          "lines": [
+            832,
+            876
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT07",
+      "entries": "RG01/RG03/EX04",
+      "title": "Full-day cuts and completed +60 bins leak",
+      "evidence": "Source computes activity terciles/strong-flow cut from all day rows. State/seed uses t0+41..60 and full t0+60 price/book bin. Anchor+60 precedes completed-bin availability at+61 and actual emission.",
+      "correction": "Freeze pre-paper cuts or separately declare past-only adaptation. decision=max(actual recognition,last required bin availability,classifier/seed emission). Preserve historical+60 coordinates but never use them as causal entry. Apply corrected event-relative horizons, never verified DAY0/1ns bugs.",
+      "sources": [
+        {
+          "source_id": "S00296",
+          "git_blob_sha": "276491238497a2cd54e6d3c7323afe9aca2fc096",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/stack_direction_sources_oct18.py#L85-L119",
+          "lines": [
+            85,
+            119
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L485-L488",
+          "lines": [
+            485,
+            488
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L521-L552",
+          "lines": [
+            521,
+            552
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L1126-L1131",
+          "lines": [
+            1126,
+            1131
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT08",
+      "entries": "RG01/RG02/RG03/EX04",
+      "title": "Nine direction sources and all pair cells undefined",
+      "evidence": "next_state and next_seed differ; next_seed undefined for S/X. Pair agreement uses all/high_vol/fast_high. first3 is first3-tick excursion, not3seconds.",
+      "correction": "Use exact formulas S00296:95-102/119. Expand all9 sources,36 pairs and their source populations, no highlighted-cell admission. Keep net300/net600/first3/next-polarity distinct. Quiet-momentum fade is separate multiplier=-1, not inversion of every momentum arm.",
+      "sources": [
+        {
+          "source_id": "S00296",
+          "git_blob_sha": "276491238497a2cd54e6d3c7323afe9aca2fc096",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/stack_direction_sources_oct18.py#L93-L150",
+          "lines": [
+            93,
+            150
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1078-L1084",
+          "lines": [
+            1078,
+            1084
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT09",
+      "entries": "RG02",
+      "title": "Forecast correctness is future information",
+      "evidence": "Expected/unexpected side, next t0, next confirm and next_after_anchor are future facts at current anchor. Source retrospectively conditions on them.",
+      "correction": "Issue state/seed forecasts at causal anchor; attach correctness after successor recognition. Any entry at successor recognition is a new later-clock variant; cannot credit next_t0-to-confirmation movement. Preserve all5 original segment outcomes.",
+      "sources": [
+        {
+          "source_id": "S00160",
+          "git_blob_sha": "1aecf13339847e8ad708d2a0e4cd7c70b93ded0e",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/next_burst_forecast_oct18.py#L44-L102",
+          "lines": [
+            44,
+            102
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L968-L978",
+          "lines": [
+            968,
+            978
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1332-L1338",
+          "lines": [
+            1332,
+            1338
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT10",
+      "entries": "OL01/OL09/R10",
+      "title": "Fresh label false and repeat survivors suppressed",
+      "evidence": "NEW_BEST/no reduction does not imply fresh add: repriced-in and older resting exist. R10 one-entry/order/session removes repeated survivors. R10 size_cut does not equal exact source enum size_cut_in_place.",
+      "correction": "Rename OL01 to source condition; preserve all origins and prior-onset0/1/2/3+. Natural key=session+segment+onset group+side, not order ID alone. R10 remains narrowed new variant, never proxy for OL09.",
+      "sources": [
+        {
+          "source_id": "S00280",
+          "git_blob_sha": "f4df76efd4e64fa6d2410e163321d38df939bbdf",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_from_groups.py#L43-L55",
+          "lines": [
+            43,
+            55
+          ]
+        },
+        {
+          "source_id": "S00281",
+          "git_blob_sha": "8ef19eea655e2c7eab2b09dbb7242c20b170b8e8",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/size_one_order_identity.py#L74-L92",
+          "lines": [
+            74,
+            92
+          ]
+        },
+        {
+          "source_id": "S00281",
+          "git_blob_sha": "8ef19eea655e2c7eab2b09dbb7242c20b170b8e8",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/size_one_order_identity.py#L113-L124",
+          "lines": [
+            113,
+            124
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1262-L1306",
+          "lines": [
+            1262,
+            1306
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT11",
+      "entries": "OL01-OL09",
+      "title": "Highlighted cells omit full one-lot experiment",
+      "evidence": "Missing source products include standing/no reduction, no_next, fill-linked/deep, unlinked crosses, prior-order crosses, age bins. S00279 filters missing tape and CENSORED before output.",
+      "correction": "Enumerate all original product cells. Outer paper opportunity ledger retains missing/censored/empty cells. Preserve NEW_BEST better/worse, both sides, source hour/session/ledger scopes. Do not equate usable completed101000 with total raw opportunities.",
+      "sources": [
+        {
+          "source_id": "S00279",
+          "git_blob_sha": "78f2549153f0e390a79ea0d3cbbb77c415adef0f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_four_arm_days.py#L42-L79",
+          "lines": [
+            42,
+            79
+          ]
+        },
+        {
+          "source_id": "S00280",
+          "git_blob_sha": "f4df76efd4e64fa6d2410e163321d38df939bbdf",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_from_groups.py#L43-L83",
+          "lines": [
+            43,
+            83
+          ]
+        },
+        {
+          "source_id": "S00281",
+          "git_blob_sha": "8ef19eea655e2c7eab2b09dbb7242c20b170b8e8",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/size_one_order_identity.py#L113-L124",
+          "lines": [
+            113,
+            124
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT12",
+      "entries": "OL/R10",
+      "title": "1ms timing and first-end labels are not fills",
+      "evidence": "Synthetic entry is first group at/after onset+1ms. BY_ENTRY includes equal-group end. Episode first-end and later order fate are separate; R10 20s is a different horizon.",
+      "correction": "At actual arrival recheck known episode status. Ended-by-arrival stays missed. First-end paper exit is first observed end after fill;20s R10 stays separate. Never use future filled-first or cancel<=5ms at onset.",
+      "sources": [
+        {
+          "source_id": "S00280",
+          "git_blob_sha": "f4df76efd4e64fa6d2410e163321d38df939bbdf",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_from_groups.py#L3-L13",
+          "lines": [
+            3,
+            13
+          ]
+        },
+        {
+          "source_id": "S00280",
+          "git_blob_sha": "f4df76efd4e64fa6d2410e163321d38df939bbdf",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_from_groups.py#L56-L80",
+          "lines": [
+            56,
+            80
+          ]
+        },
+        {
+          "source_id": "S00281",
+          "git_blob_sha": "8ef19eea655e2c7eab2b09dbb7242c20b170b8e8",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/size_one_order_identity.py#L54-L62",
+          "lines": [
+            54,
+            62
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1604-L1607",
+          "lines": [
+            1604,
+            1607
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT13",
+      "entries": "R1-R10",
+      "title": "R composites are new choices, not frozen original math",
+      "evidence": "One-tick dual-quote confirmation,5s timeout,1s/two-group invalidation and risk caps belong to November wrapper. R9 expiry-flip5s differs from original20s aging/weakening.",
+      "correction": "Label R as new protocol hypotheses. Keep source-only original arms. Bind globals/models by hash; specify arm quote, confirmation comparator, zero sign, timeout ties, rearm/reset. Do not claim original October supplies those constants.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L432-L453",
+          "lines": [
+            432,
+            453
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L465-L481",
+          "lines": [
+            465,
+            481
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L545-L557",
+          "lines": [
+            545,
+            557
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT14",
+      "entries": "R6A/R6B/R2/EX05",
+      "title": "Cancellation/support operands conflate mechanisms",
+      "evidence": "C can be fill cleanup. Native C size alone is not voluntary withdrawal. Modify reductions, reprices and unmatched reductions differ. R2 any-cancel versus positive residual conflict is undefined.",
+      "correction": "Specify same-order/price group fill-link accounting. Keep fill-linked/unmatched/reprice separately. State any-C versus residual-clear invalidation explicitly. Preserve ordinary aggression/no-rest and no-fill controls.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L411-L422",
+          "lines": [
+            411,
+            422
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L529-L534",
+          "lines": [
+            529,
+            534
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L220-L241",
+          "lines": [
+            220,
+            241
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT15",
+      "entries": "EX01",
+      "title": "Retrospective prebirth selection cannot drive online entry",
+      "evidence": "Controls exclude birth+/-60s, known only later. Birth-minus-lead times do not schedule causal opportunities; source provides no threshold or direction.",
+      "correction": "Use continuous/grid decisions and past-only features. Attach future birth labels/control exclusions only as outcomes. Retain leads1/5/20/60, missing/unmatched, quote-age and control-weight sensitivities. New detector/threshold must be labeled new.",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L570-L643",
+          "lines": [
+            570,
+            643
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L680-L701",
+          "lines": [
+            680,
+            701
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT16",
+      "entries": "EX02/EX03/EX05",
+      "title": "Narrative EX buckets hide tested dimensions",
+      "evidence": "EX02 includes weakening, became-undefined, fresh/expiry/mixed, saturation/participation. EX03 includes next-change and9 delays. EX05 has fixed delays and surviving/non-surviving populations.",
+      "correction": "Expand these source dimensions by trigger, timing and direction. Retain no-event/missing outcomes. Never assign pre-recognition next-change results to post-fill P&L.",
+      "sources": [
+        {
+          "source_id": "S01764",
+          "git_blob_sha": "0a1670a391c68fc5ff972e282545461c94768d63",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_dipole.py#L11-L22",
+          "lines": [
+            11,
+            22
+          ]
+        },
+        {
+          "source_id": "S01764",
+          "git_blob_sha": "0a1670a391c68fc5ff972e282545461c94768d63",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_dipole.py#L71-L109",
+          "lines": [
+            71,
+            109
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L549-L553",
+          "lines": [
+            549,
+            553
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L652-L674",
+          "lines": [
+            652,
+            674
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L432-L463",
+          "lines": [
+            432,
+            463
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT17",
+      "entries": "scoped inventory",
+      "title": "Original recognition baseline/contrasts not enumerated",
+      "evidence": "No scoped ID explicitly covers birth polarity after recognition crossed with same/reversed/balanced/undefined flow, predecessor SAME/FLIP, quantity, touch aligned/opposed/equal, prebirth depth, realized displacement and active-second touch controls. Narrow R and different DP studies are not equivalents.",
+      "correction": "Add complete original dipole-post-recognition cells at1/5/20/60/300. Birth polarity is known at recognition but not actionable at retrospective birth. Keep no-call/unavailable.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L35-L104",
+          "lines": [
+            35,
+            104
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L134-L137",
+          "lines": [
+            134,
+            137
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1560-L1578",
+          "lines": [
+            1560,
+            1578
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT18",
+      "entries": "scoped inventory",
+      "title": "Attachments do not prove every October hypothesis included",
+      "evidence": "Other named hypotheses: volume-floored detector; activity/state persistence and next-sequence outputs; sweep refill/chasing/withdrawal; large-jump/refill/external comparisons; negative S90/S92 applications. Broad EX/RG headings do not map these cells.",
+      "correction": "Explicitly map to existing other-family rows or add IDs; retain missing threshold operands rather than invent frozen values. Preserve original scope and source version.",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L270-L301",
+          "lines": [
+            270,
+            301
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L460-L478",
+          "lines": [
+            460,
+            478
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L584-L598",
+          "lines": [
+            584,
+            598
+          ]
+        },
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L729-L801",
+          "lines": [
+            729,
+            801
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L973-L1051",
+          "lines": [
+            973,
+            1051
+          ]
+        }
+      ]
+    }
+  ],
+  "proposed_source_to_rule_map": [
+    {
+      "entries": "ST01-ST11",
+      "trigger": "Actual archived recognition, original group/cursor binding",
+      "direction": "Signed midpoint prediction sign; absolute and flow-strength targets have no source price direction",
+      "entry": "After actual recognition, required features and model available",
+      "exit": "5/20/60s signed/absolute and20s strength; preserve source recognition origin separately",
+      "invalidation": "No source signal-dependent early exit; operational reset only",
+      "known_by_inputs": "Exact model/preprocessing; companion20 bins, current touch,20s price context,5s display changes",
+      "mandatory_expansion": "11 arms x7 targets; source folds/dates kept; no voting",
+      "sources": [
+        {
+          "source_id": "S01770",
+          "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_stack.py#L7-L17",
+          "lines": [
+            7,
+            17
+          ]
+        },
+        {
+          "source_id": "S01770",
+          "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_stack.py#L33-L137",
+          "lines": [
+            33,
+            137
+          ]
+        }
+      ],
+      "new_protocol_choices": "Future frozen coefficient artifact still missing for these original arms. No fit/rerun performed. Direction/exit wrapper new."
+    },
+    {
+      "entries": "FB01-FB04",
+      "trigger": "First-observed family notification; preserve source strict-pre feature cutoff",
+      "direction": "Signed prediction sign; absolute target magnitude only",
+      "entry": "After family known; never start-1ns",
+      "exit": "1/5/20/60/300s; paper actual-decision/fill origin explicit",
+      "invalidation": "No source early exit",
+      "known_by_inputs": "ROOT classified lots, full/near depth, strict-pre quote and cursor cap, fitted artifact",
+      "mandatory_expansion": "4 arms x2 targets x5 horizons; full outer ledger retains incomplete rows",
+      "sources": [
+        {
+          "source_id": "S00784",
+          "git_blob_sha": "aab74e1f3899be14b69784f8d9f659b269ef9fc8",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow_book_discovery.py#L49-L69",
+          "lines": [
+            49,
+            69
+          ]
+        },
+        {
+          "source_id": "S00784",
+          "git_blob_sha": "aab74e1f3899be14b69784f8d9f659b269ef9fc8",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow_book_discovery.py#L91-L200",
+          "lines": [
+            91,
+            200
+          ]
+        }
+      ],
+      "new_protocol_choices": "Future model coefficients/training cutoff must be bound. Original common-input comparison is retained but does not exclude missing paper opportunities."
+    },
+    {
+      "entries": "FC01-FC11 plus missing cells",
+      "trigger": "At family notification d=sign(B1-S1)=sign(B5-S5) nonzero with known volumes; each cell predicate evaluated separately",
+      "direction": "d continuation; FC10=-1, FC11=+1",
+      "entry": "After family notification and common adapter timing",
+      "exit": "1/5/20/60/120/300/600s",
+      "invalidation": "No source early exit",
+      "known_by_inputs": "Strict-pre ROOT1/5/20/60 lots; touch,near10,full-depth signs; actual family notification",
+      "mandatory_expansion": "FC10 requires d=-1,d60=+1,full_depth>0; FC11 flow-only mirror remains; exact inverse requires d=+1,d60=-1,full_depth<0; every full-depth and alt-book cross/equal/missing state",
+      "sources": [
+        {
+          "source_id": "S00131",
+          "git_blob_sha": "205c9eccee3f4fd150fe3419b259fa70264c7ce9",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/four_arm_first_family_days.py#L95-L160",
+          "lines": [
+            95,
+            160
+          ]
+        },
+        {
+          "source_id": "S00131",
+          "git_blob_sha": "205c9eccee3f4fd150fe3419b259fa70264c7ce9",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/four_arm_first_family_days.py#L193-L240",
+          "lines": [
+            193,
+            240
+          ]
+        }
+      ],
+      "new_protocol_choices": "Common paper execution wrapper is new, not a recovered source trading result."
+    },
+    {
+      "entries": "DP01-DP08",
+      "trigger": "Recognition state D<0 weakening,D>0 strengthening,D=0 steady when halves nonempty; otherwise early/late/both_empty; touch relation from full20 ratio",
+      "direction": "sign(full20) for follow; fade is explicit new multiplier; zero/null retained",
+      "entry": "Common recognition entry",
+      "exit": "5/20/60s independent variants",
+      "invalidation": "No source early exit",
+      "known_by_inputs": "Companion bins, pinned operator, recognition quote",
+      "mandatory_expansion": "All state x relation x horizon; preserve balanced book/flow and early/late empty separately",
+      "sources": [
+        {
+          "source_id": "S01770",
+          "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_stack.py#L70-L98",
+          "lines": [
+            70,
+            98
+          ]
+        },
+        {
+          "source_id": "S01770",
+          "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_stack.py#L167-L183",
+          "lines": [
+            167,
+            183
+          ]
+        }
+      ],
+      "new_protocol_choices": "Common paper execution wrapper is new, not a recovered source trading result."
+    },
+    {
+      "entries": "OL01-OL09/R10",
+      "trigger": "At group close touch_lots=1; prior_price differs=>NEW_BEST else prior_lots>1=>STANDING_BEST_SHRANK. Order origin from group actions only",
+      "direction": "Retreat orientation bid=-1/ask=+1; recovery/holding itself not directional; same overlay policy",
+      "entry": "Actual arrival: episode still open by observed groups; source1ms kept as timing comparator",
+      "exit": "First later observed group changing original(price,1lot); R10 20s separate timer",
+      "invalidation": "End by arrival=>missed. First-end after fill=>exit. Reset/segment=>limitation. No future fate predictor.",
+      "known_by_inputs": "Prior/current groups, order history, fill links, next level, prior-order count, past-onset count",
+      "mandatory_expansion": "side x onset x fill_linked/unlinked/no_reduction/missing x next_lt10/ge10/no_next/missing; prior_orders<=2/>2; origin enum; past-onsets0/1/2/3+; age buckets; source scopes",
+      "sources": [
+        {
+          "source_id": "S00280",
+          "git_blob_sha": "f4df76efd4e64fa6d2410e163321d38df939bbdf",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_from_groups.py#L43-L80",
+          "lines": [
+            43,
+            80
+          ]
+        },
+        {
+          "source_id": "S00279",
+          "git_blob_sha": "78f2549153f0e390a79ea0d3cbbb77c415adef0f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_four_arm_days.py#L42-L79",
+          "lines": [
+            42,
+            79
+          ]
+        },
+        {
+          "source_id": "S00281",
+          "git_blob_sha": "8ef19eea655e2c7eab2b09dbb7242c20b170b8e8",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/size_one_order_identity.py#L74-L124",
+          "lines": [
+            74,
+            124
+          ]
+        }
+      ],
+      "new_protocol_choices": "Common paper execution wrapper is new, not a recovered source trading result."
+    },
+    {
+      "entries": "RG01",
+      "trigger": "Frozen state at actual availability; activity/strong cuts frozen using only pre-paper data",
+      "direction": "pol; next_state=pol persistent else-pol; next_seed=pol P else-pol O else null; dip300=sign(I300); strong=dip300 onlyabs(I300)>=cut; book10 sign; touch sign; recruit=pol*sign(delta_toward-delta_away); mom300=sign(price(a)-price(a-300))",
+      "entry": "After required bins and state emission; completed+60 earliest+61 boundary plus delay",
+      "exit": "net300/net600 and first abs3tick excursion; next polarity remains label",
+      "invalidation": "No source early exit; first3 resolves as observed; session no-event/censor explicit",
+      "known_by_inputs": "Frozen detector/classifier artifacts+lineage;61 completed samples; prior300volume; prices/depth; fixed cuts",
+      "mandatory_expansion": "9 sources x all/state/tercile/state-tercile/hour;36 pairs x all/high_vol/fast_high; flat/no-call retained",
+      "sources": [
+        {
+          "source_id": "S00296",
+          "git_blob_sha": "276491238497a2cd54e6d3c7323afe9aca2fc096",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/stack_direction_sources_oct18.py#L85-L150",
+          "lines": [
+            85,
+            150
+          ]
+        }
+      ],
+      "new_protocol_choices": "Past-only cuts and causal entry are necessary new protocol corrections to descriptive full-day/+60 counts. Original frozen classifier equations remain unchanged."
+    },
+    {
+      "entries": "RG02",
+      "trigger": "Issue state/seed next-side forecast at causal current anchor; successor recognition creates later expected/unexpected annotation",
+      "direction": "State and seed forecasts separate; never future correct/wrong to choose direction",
+      "entry": "At causal forecast issue; optional successor-known variant is a distinct new later-clock entry",
+      "exit": "Preserve5 source segments. Fixed1800/3600 and observed-next-confirm+60 execution variants declared separately; cannot enter at unknown next t0",
+      "invalidation": "No successor by session end=>censored; next_after_anchor not prior gate",
+      "known_by_inputs": "Current polarity/state/seed; successor clock/identity only when observed",
+      "mandatory_expansion": "State/seed x A/seed/activity groups; next-before/after and right/wrong diagnostics; all5segments",
+      "sources": [
+        {
+          "source_id": "S00160",
+          "git_blob_sha": "1aecf13339847e8ad708d2a0e4cd7c70b93ded0e",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/next_burst_forecast_oct18.py#L44-L102",
+          "lines": [
+            44,
+            102
+          ]
+        }
+      ],
+      "new_protocol_choices": "Segments anchor_to_next_t0 and next_t0_to_confirm are historical measurements, not directly executable entry/exit schedules."
+    },
+    {
+      "entries": "RG03",
+      "trigger": "Causal RG01 cell low activity OR fast-collapse+low OR persistent+mid with mom300 nonzero",
+      "direction": "-sign(mom300), retain +momentum RG01 comparator",
+      "entry": "Common RG01 known-by entry",
+      "exit": "300s low and fast-low;600s persistent-mid; RG01 retains both targets",
+      "invalidation": "No source early exit",
+      "known_by_inputs": "Same causal state/cuts as RG01",
+      "mandatory_expansion": "Three cells, both sides, all days including contrary",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L1078-L1084",
+          "lines": [
+            1078,
+            1084
+          ]
+        }
+      ],
+      "new_protocol_choices": "Fade multiplier is declared hypothesis translation, never inferred from future day results."
+    },
+    {
+      "entries": "EX04",
+      "trigger": "RG01 fast-collapse x mid cell",
+      "direction": "next_seed only P/O; independent book10 variant",
+      "entry": "Common causal RG01 entry",
+      "exit": "300s and first3; source600 via RG01",
+      "invalidation": "No source early exit",
+      "known_by_inputs": "Same RG01 dependencies; hourly adjusted lift is retrospective label, never input",
+      "mandatory_expansion": "Both direction sources; all4days; no-call,flat,unavailable",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L1053-L1096",
+          "lines": [
+            1053,
+            1096
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L1126-L1131",
+          "lines": [
+            1126,
+            1131
+          ]
+        }
+      ],
+      "new_protocol_choices": "Common paper execution wrapper is new, not a recovered source trading result."
+    },
+    {
+      "entries": "EX01",
+      "trigger": "Ordinary-time causal grid independent of future birth",
+      "direction": "No source direction/detector threshold; same declared directional overlay as all other hypotheses",
+      "entry": "At causal grid decision, never future birth-minus-lead schedule",
+      "exit": "Declared common paper horizons; original birth leads measured later",
+      "invalidation": "Never use future +/-60s birth exclusion as entry filter",
+      "known_by_inputs": "Past1/5/20 classified/unknown lots, ratios, midpoint, touch/delta; strictly earlier completed groups",
+      "mandatory_expansion": "Family/dipole separate; leads1/5/20/60; unmatched/missing; quote-age/control-weight sensitivities",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L570-L643",
+          "lines": [
+            570,
+            643
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L680-L701",
+          "lines": [
+            680,
+            701
+          ]
+        }
+      ],
+      "new_protocol_choices": "Continuous/grid trigger, learned detector and direction are new operands; original source supplies descriptions, not frozen entry thresholds."
+    },
+    {
+      "entries": "EX02",
+      "trigger": "Closed-second roll20 transition, incoming and expiring lots; separately candidate-path summaries at recognition",
+      "direction": "Current roll20 sign when defined; balanced/null retain no-call and common overlay",
+      "entry": "After bin closed/known; whole path classification only at recognition",
+      "exit": "Original postrecognition1/5/20/60/300; separately declared continuous timers",
+      "invalidation": "Reset/warm-up; no classified volume not reversal",
+      "known_by_inputs": "B/S/unknown bins and expired bins20s earlier; actual closed-bin known-by",
+      "mandatory_expansion": "Weakening vs became_undefined; fresh_only/expiry_only/fresh_and_expiry/no_classified_change; one-lot saturation/participation; event/unique-second counts",
+      "sources": [
+        {
+          "source_id": "S01764",
+          "git_blob_sha": "0a1670a391c68fc5ff972e282545461c94768d63",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_dipole.py#L11-L22",
+          "lines": [
+            11,
+            22
+          ]
+        },
+        {
+          "source_id": "S01764",
+          "git_blob_sha": "0a1670a391c68fc5ff972e282545461c94768d63",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_dipole.py#L71-L109",
+          "lines": [
+            71,
+            109
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L549-L550",
+          "lines": [
+            549,
+            550
+          ]
+        }
+      ],
+      "new_protocol_choices": "Continuous paper timing and wrapper new; R9 5s flip is not source20s parity."
+    },
+    {
+      "entries": "EX03",
+      "trigger": "Aggression-to-rest recognition or actual family notification, populations separate",
+      "direction": "Touch sign source contrast; zero/null explicit",
+      "entry": "After actual recognition, never source strict-pre birth artifact",
+      "exit": "Next changed midpoint plus1/5/25/100/250/500ms,1/5/20s; no-next at session censored",
+      "invalidation": "Source segment/reset/missing limitations",
+      "known_by_inputs": "Completed quotes, group/cursor, quote age/spread",
+      "mandatory_expansion": "All fixed delays and event target; source populations/spread strata",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L652-L678",
+          "lines": [
+            652,
+            678
+          ]
+        }
+      ],
+      "new_protocol_choices": "Adapter fill/exit translation is new; measurement grid is not predictive lead."
+    },
+    {
+      "entries": "EX05",
+      "trigger": "T then A same order ID/side in completed group; fixed observation delays0/5/25/100ms",
+      "direction": "Original aggressive direction for continuation contrast; resting-side support is separate R2 composite",
+      "entry": "After timer and available group; ended-before-arrival retained missed",
+      "exit": "Bind full original outcome grid from method before running; source commonly1/5/20/60/300s",
+      "invalidation": "Tracked original-order cancel/reprice/zero residual; distinguish fill-linked versus unmatched clear",
+      "known_by_inputs": "Same-order history, observed passive fills, original price/residual, at-touch state known by timer",
+      "mandatory_expansion": "Timer x survived/ended x filled/not-yet-filled x at/off-touch; initial size/multi-price; same-order refill; ordinary aggression without remainder controls",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L387-L463",
+          "lines": [
+            387,
+            463
+          ]
+        },
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L529-L534",
+          "lines": [
+            529,
+            534
+          ]
+        }
+      ],
+      "new_protocol_choices": "Exact complete source method horizon set remains binding work; entry/exit execution wrapper is new."
+    },
+    {
+      "entries": "R1/R2/R3/R4/R5/R6A/R6B/R7/R8/R9/R10",
+      "trigger": "Use verified R_RULES strategies as November protocol variants, not original October frozen equations",
+      "direction": "R1/R9 agreed5/60/touch; R2 resting-side(+bid/-ask); R3 touch; R4 anchor touch; R5 negative anchor touch; R6A/B flow5; R7/M0,R8/M1 prediction sign; R10 bid=-1/ask=+1",
+      "entry": "R1/R2/R9 strictly later confirmation versus frozen arm quote; R3/R6/R10 causal trigger; R4/R5 first observation >=anchor+1s with<=1s lateness; R7/R8 actual recognition",
+      "exit": "R_RULES max120s default;20sR6/R7/R8/R10; R4/R5 anchor+20s;4tick stop and12tick session loss are new protocol choices",
+      "invalidation": "R1/R2/R3/R9 named adverse fields >=1s and>=2groups; R2 order validity; exact neutral/opposed, AND/OR, timer reset and partial-C rules still undefined",
+      "known_by_inputs": "Entire R_RULES global execution/data/risk/cost/model dependency; M0/M1 arrays/order/units. Native substrate only for native features; do not silently replace companion model inputs.",
+      "mandatory_expansion": "11 variants retain distinct IDs; no original broad hypothesis represented only by narrowed R variant",
+      "sources": [
+        {
+          "source_id": "S00730",
+          "git_blob_sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md#L956-L970",
+          "lines": [
+            956,
+            970
+          ]
+        }
+      ],
+      "new_protocol_choices": "Must freeze confirmation baseline/comparator, fresh-trade meaning, expiry scheduling, missing-input policy, invalidation Boolean semantics, rearming. R2 any-C invalidation requires explicit choice. These are not supplied by original source equations."
+    }
+  ],
+  "integration_notes": [
+    "All hypotheses and outcomes remain paper included with the same execution/reporting protocol. Performance does not control admission.",
+    "Superseded verified wrong clocks/math are replaced with correction provenance, not retained as active alternatives.",
+    "Original frozen equations and newly chosen execution/calibration rules must carry distinct versions.",
+    "Full-session raw-tape research and archived partial export populations remain distinct. Finalization-only events remain included with no causal live-recognition clock."
+  ],
+  "common_proposed_protocol": {
+    "status": "PROPOSED_NEW_PAPER_PROTOCOL_NOT_ORIGINAL_RESULT",
+    "paper_included": true,
+    "performance_admission": null,
+    "opportunity_record": "One record per rule x natural opportunity including false/unknown/neutral, input failures, missed, no-fill, flat, boundary-censored. Undefined never becomes balanced zero.",
+    "known_by": "Every operand carries event/receive/available ns, cursor, source version/hash and units. decision>=max(required available_ns). Ties ordered by close cursor. Completed second is unavailable at its start.",
+    "entry": "After actual notification and required inputs known, submit the same marketable-limit IOC policy using contemporaneous side quote. Record actual send/arrival/ack/fill; old midpoint never assumed filled.",
+    "exit": "Independent identified horizon variants. Paper origin (decision or fill) explicitly declared; source historical origins remain separate. First-event exit occurs only on observed event; no-event session end is censored. Same operational safety policy for all; original outcomes still measured if safety closes early.",
+    "invalidation": "Invalid book/reset/gap records limitation and ends causal episode. Hypothesis signal failure is used only where explicitly defined. Fixed-horizon source has no recovered early-exit rule.",
+    "direction_translation": "Use source direction where it exists. Absolute/strength/precursor conditions may not have buy/sell direction. If universal directional paper trials are required, apply the SAME declared LONG and SHORT overlay to EVERY hypothesis with independent IDs. Never relabel magnitude sign as price direction. This is a new protocol, not source performance.",
+    "risk": "Independent hypothesis opportunity records. Execution caps may cause explicit cap/no-fill dispositions, never delete opportunities or introduce performance admission.",
+    "versioning": "Replace verified bad active clocks/math; retain correction provenance, not active wrong alternatives."
+  },
+  "exact_feature_contract": {
+    "ratio": "I=(B-S)/(B+S) if denominator>0 else null",
+    "companion": "20 completed second bins; print compared with previous valid completed-group midpoint; assign to containing group close second; retain unknown; same continuous segment",
+    "strength": "D=abs(I_late10)-abs(I_early10); null if either half empty",
+    "touch": "(bid_lots-ask_lots)/(bid_lots+ask_lots), likewise counts",
+    "operator": "Exact pinned signed_flow_features; NumPy histogram bin defaults; EPS1e-9. Internal empty-half imbalance0 retained as operator output with empty flags; full-window balanced orientation positive internally is not a long-trade signal.",
+    "source": {
+      "source_id": "S01746",
+      "git_blob_sha": "c04751cbe5f92952e33328f6c04fcae6392e05e5",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/sources/info_dipole_pinned.py#L58-L114",
+      "lines": [
+        58,
+        114
+      ]
+    }
+  },
+  "missing_original_hypothesis_candidates": [
+    {
+      "id": "OCT_RECOGNITION_MATRIX",
+      "scope": "Birth-polarity/current-flow/predecessor/quantity/touch/preprice and active-second controls",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L35-L104",
+          "lines": [
+            35,
+            104
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT_FULL_DEPTH_FC_MATRIX",
+      "scope": "Full-depth3x3 cells,exact inverse,both-side alternatives",
+      "sources": [
+        {
+          "source_id": "S00131",
+          "git_blob_sha": "205c9eccee3f4fd150fe3419b259fa70264c7ce9",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/four_arm_first_family_days.py#L193-L227",
+          "lines": [
+            193,
+            227
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT_SIZE_ONE_FULL_MATRIX",
+      "scope": "Complete cell crosses,origins,ages,prior-onset0/1/2/3+",
+      "sources": [
+        {
+          "source_id": "S00279",
+          "git_blob_sha": "78f2549153f0e390a79ea0d3cbbb77c415adef0f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_four_arm_days.py#L42-L79",
+          "lines": [
+            42,
+            79
+          ]
+        },
+        {
+          "source_id": "S00281",
+          "git_blob_sha": "8ef19eea655e2c7eab2b09dbb7242c20b170b8e8",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/size_one_order_identity.py#L113-L124",
+          "lines": [
+            113,
+            124
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT_ACTIVITY_NON_DIRECTION",
+      "scope": "State/pre300volume/path vs future volume/range/path/hold/time-to-first-tick,next sequence,including null direction/depth",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L729-L801",
+          "lines": [
+            729,
+            801
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT_SWEEP_RESPONSE",
+      "scope": "Sweep vs single-level,hit-side refill,opposite chasing,deeper unmatched reductions,absorption; later-known observation clock",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L270-L301",
+          "lines": [
+            270,
+            301
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OCT_VOLUME_FLOOR",
+      "scope": "Volume-floored/non-saturating detector candidate; threshold absent, not invented",
+      "sources": [
+        {
+          "source_id": "S00307",
+          "git_blob_sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md#L584-L598",
+          "lines": [
+            584,
+            598
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage_invariant": "62 existing scoped IDs covered by14 family maps; new missing-cell expansions do not replace existing IDs. No historical return or predictive performance calculated. No source artifact altered."
+}

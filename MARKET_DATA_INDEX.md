@@ -6,6 +6,10 @@ This repository is the single home for market data, tables, workbooks, renders, 
 
 The [master carry-forward register](carry-forward/20261109/README.md) preserves the broader research universe. The original 11 encoded variants are an initial subset, not the full strategy inventory. It includes source evidence, named candidates, contrary findings, missing definitions and the full remaining-work queue.
 
+## Full reconciliation and paper-rule translation
+
+[Current work and upload status](paper-rules/20261109/README.md). The complete original branch inventories are preserved; source-level rule review and runtime dependency recovery are being expanded. Every candidate remains included with the same paper-testing and reporting policy. This checkpoint is not a completed platform import or evidence of paper fills.
+
 ## Current four-day analysis
 
 Canonical research branch: `codex/research-union-four-days-20261109`. Completed analysis checkpoint: `27bad4ef402ade3c5f02a1d7e255d3790aed1888`.
@@ -34,4 +38,5 @@ Local deletion requires verified remote preservation. Migration is not complete.
 3. Distinguish current, historical, unfinished, and superseded artifacts. Do not restart completed workers.
 4. Local storage is temporary workspace. Remove copies only after remote verification; never leave unique research only on E:.
 5. Platform paper testing remains the proving ground. Do not replace it with a standalone historical backtest. CME Practice Mode was opened with NGZ6, but no automated strategy runner or platform fills are established. Session scheduling remains deferred.
+
 

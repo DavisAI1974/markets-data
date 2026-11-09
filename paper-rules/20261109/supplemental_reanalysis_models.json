@@ -1,0 +1,228 @@
+{
+  "schema": "supplemental-reanalysis-model-inventory/v1",
+  "scope": "Canonical retained reanalysis-20261109 only; excludes other analyst reanalysis/claude",
+  "source_revision": "5332476ece1432586c09e06e6e2898227a4ba959",
+  "repository": "DavisAI1974/markets-data",
+  "sources": {
+    "analyze.py": {
+      "path": "tasks/family-research-20261022/research-union-current/reanalysis-20261109/analyze.py",
+      "git_blob_sha": "6bdb77329d437d0cc1122cd3c9123bbbf9c37976",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/5332476ece1432586c09e06e6e2898227a4ba959/tasks/family-research-20261022/research-union-current/reanalysis-20261109/analyze.py",
+      "raw": "\"\"\"Reanalysis on frozen, cell-verified populations; no execution or native replay.\"\"\"\nimport gzip, hashlib, json, math, sys, types\nfrom pathlib import Path\nimport numpy as np\nimport pandas as pd\n\nO=Path(__file__).parent; R=O.parent\nsys.path.insert(0,str(R))\nfrom priority_cell_analysis import sheets, rows\nimport zipfile\n\ndef sign(v):\n    return 'missing' if pd.isna(v) else '+' if v>1e-10 else '-' if v< -1e-10 else '0'\n\ndef relation(a,b):\n    return 'missing' if 'missing' in (a,b) else 'neutral' if '0' in (a,b) else 'aligned' if a==b else 'opposed'\n\ndef stats(v):\n    v=pd.to_numeric(v,errors='coerce').dropna()\n    return dict(n=len(v),mean=float(v.mean()) if len(v) else None,median=float(v.median()) if len(v) else None,\n                positive=int((v>1e-9).sum()),negative=int((v< -1e-9).sum()),flat=int((v.abs()<=1e-9).sum()))\n\ndef ridge(train,y,test):\n    finite=np.isfinite(train)\n    m=np.divide(np.where(finite,train,0).sum(axis=0),finite.sum(axis=0),out=np.zeros(train.shape[1]),where=finite.sum(axis=0)>0)\n    a=np.c_[np.where(finite,train,m),~finite];b=np.c_[np.where(np.isfinite(test),test,m),~np.isfinite(test)]\n    mean=a.mean(axis=0);std=a.std(axis=0);std[std==0]=1\n    a=(a-mean)/std;b=(b-mean)/std;ym=y.mean()\n    coef=np.linalg.solve(a.T@a+10*np.eye(a.shape[1]),a.T@(y-ym))\n    return ym+b@coef\n\ndef delayed_return(final,confirmation,direction):\n    return direction*(final-confirmation)\n\ndef window_availability(values,decision_ns):\n    if not all(v is not None for v in values):return False,'missing_bins',None\n    if not all(v[3] is not None for v in values):return False,'unknown_completion',None\n    latest=max(v[3] for v in values)\n    return latest<=decision_ns,'available' if latest<=decision_ns else 'not_yet_known',latest\n\ndef main():\n    x=pd.read_csv(R/'discovery-depth/recognition_joined.csv',dtype=str)\n    numeric=['early_buy','early_sell','late_buy','late_sell','fresh_buy5','fresh_sell5','fresh_imb5','touch_imb','touch_count_imb','prior_ticks20','range_ticks20','spread_ticks','ent_dipole','mi_flow','imb_flow','imb_level','log_signed_C','strength_change','bid_add5','bid_remove5','ask_add5','ask_remove5','quote_price_changes5','log_touch_lots','log_touch_orders','log_unknown_lots5']\n    for c in numeric+[f'future{h}' for h in (1,5,20,60,300)]:x[c]=pd.to_numeric(x[c],errors='coerce')\n    assert len(x)==3176 and not x.duplicated(['day','candidate_id']).any()\n    # Check consequential original worksheet values directly, not only cached CSVs.\n    checked=0\n    with zipfile.ZipFile(R/'current/Frankie_four_day_research_current.xlsx') as z:\n        mapping=sheets(z)\n        for rank,cols,suffix in [(9,[f'move_ticks_after_recognition.{h}' for h in (1,5,20,60,300)],'left'),(10,numeric+['decision_ns','quote_known_by_ns','flow_closed_by_ns'],'right')]:\n            selection=json.loads((R/'priority-now/priority_selection.json').read_text())['families'][rank-1]\n            byrow=x.set_index('excel_row_'+suffix)\n            for n,rec in rows(z,mapping[selection['sheet']]):\n                row=byrow.loc[str(n)]\n                for c in cols:\n                    actual=rec.get(c);expected=row[c] if c in row else None\n                    if c.startswith('move_ticks_after_recognition.'):\n                        expected=row['future'+c.rsplit('.',1)[1]]\n                    if c.endswith('_ns'):\n                        assert int(actual)==int(expected)\n                    elif expected is None or pd.isna(expected):assert actual in (None,'','nan','None','NA')\n                    else:assert np.isclose(float(actual),float(expected),atol=1e-12,rtol=1e-12),(n,c,actual,expected)\n                    checked+=1\n    sources=json.loads((R/'active_sources.json').read_text(encoding='utf-8'))\n    src={v['path'].split('/')[3]:v for v in sources if 'replay-comparison/' in v['path'] and v['path'].endswith('dipole-completed-group-flow.csv.gz')}\n    native={};native_locations={}\n    with gzip.open(R/'priority-now/P01.jsonl.gz','rt',encoding='utf-8') as f:\n        for excelrow,line in enumerate(f,2):\n            rec=json.loads(line);v=rec['values'];key=(rec['day'],int(v['second']))\n            clock=v['completed_second_known_by_ns']\n            native[key]=(float(v['native_buy']),float(v['native_sell']),float(v['native_unknown']),int(clock) if clock is not None else None)\n            native_locations[key]=(excelrow,rec['source_id'],rec['source_row'])\n    raw=(R/'objects/c04751cbe5f92952e33328f6c04fcae6392e05e5').read_bytes()\n    assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\\0'+raw).hexdigest()=='c04751cbe5f92952e33328f6c04fcae6392e05e5'\n    operator=types.ModuleType('pinned_operator');exec(compile(raw,'pinned_operator','exec'),operator.__dict__)\n    audits=[];data=[]\n    for day,part in x.groupby('day'):\n        source=src[day];blob=R/'objects'/source['sha'];blobraw=blob.read_bytes()\n        assert hashlib.sha1(b'blob '+str(len(blobraw)).encode()+b'\\0'+blobraw).hexdigest()==source['sha']\n        f=pd.read_csv(blob,compression='gzip').set_index('second')\n        for idx,row in part.iterrows():\n            end=int(row.flow_closed_by_ns)//10**9-1;t=int(row.decision_ns)\n            bins=f.loc[end-19:end];assert len(bins)==20\n            b=bins.buy.to_numpy();s=bins.sell.to_numpy()\n            op=operator.signed_flow_features(b,s)\n            base=dict(index=idx,active_buy_bins=int((b>0).sum()),active_sell_bins=int((s>0).sum()),active_either_bins=int(((b+s)>0).sum()),\n                      source_flow_id=source['id'],source_flow_sha=source['sha'],source_flow_url=source['url'],proxy_first_second=end-19,proxy_last_second=end)\n            assert np.isclose(b[-5:].sum(),row.fresh_buy5) and np.isclose(s[-5:].sum(),row.fresh_sell5)\n            for feature in ['imb_level','ent_dipole','mi_flow','imb_flow']:\n                expected=None if op is None else op[feature];actual=row[feature]\n                assert pd.isna(actual) if expected is None else np.isclose(actual,expected,atol=1e-10),feature\n            if op is not None:\n                logged=np.sign(op['C_signed'])*np.log1p(abs(op['C_signed']))\n                assert np.isclose(row.log_signed_C,logged)\n            base['mi_level']=operator.mutual_info(b,s)\n            base['total_proxy20']=float((b+s).sum())\n            base['entropy_defined']=op is not None\n            for window in (5,20):\n                keys=[(day,sec) for sec in range(end-window+1,end+1)]\n                vals=[native.get(k) for k in keys]\n                present=all(v is not None for v in vals)\n                known,reason,latest=window_availability(vals,t)\n                base[f'native{window}_available']=known\n                base[f'native{window}_max_known_by_ns']=str(latest) if latest is not None else ''\n                base[f'native{window}_reason']=reason\n                for j,label in enumerate(['buy','sell','unknown']):base[f'native{window}_{label}']=sum(v[j] for v in vals) if known else np.nan\n                buy=base[f'native{window}_buy'];sell=base[f'native{window}_sell']\n                base[f'native{window}_imb']=(buy-sell)/(buy+sell) if known and buy+sell else np.nan\n                base[f'native{window}_first_excel']=native_locations[keys[0]][0] if present else None\n                base[f'native{window}_last_excel']=native_locations[keys[-1]][0] if present else None\n            data.append(base)\n        audits.append(dict(day=day,source_id=source['id'],sha=source['sha'],rows=len(f)))\n    x=x.join(pd.DataFrame(data).set_index('index'))\n    x['native5_sign']=x.native5_imb.map(sign);x['proxy5_sign']=x.fresh_imb5.map(sign)\n    x['native20_sign']=x.native20_imb.map(sign);x['proxy20_sign']=x.imb_level.map(sign)\n    x['native_proxy5_relation']=[relation(a,b) for a,b in zip(x.native5_sign,x.proxy5_sign)]\n    x['native_proxy20_relation']=[relation(a,b) for a,b in zip(x.native20_sign,x.proxy20_sign)]\n    x['display5']=(x.bid_add5-x.bid_remove5)-(x.ask_add5-x.ask_remove5)\n    table=[]\n    for window in (5,20):\n        for key,g in x.groupby(['day',f'native{window}_reason',f'native{window}_sign',f'proxy{window}_sign'],dropna=False):\n            table.append(dict(day=key[0],window=window,availability=key[1],native_sign=key[2],proxy_sign=key[3],rows=len(g)))\n    pd.DataFrame(table).to_csv(O/'classification_comparison.csv',index=False)\n    entropy=[]\n    for day,g in x.groupby('day'):\n        defined=g[g.entropy_defined]\n        entropy.append(dict(day=day,rows=len(g),defined=len(defined),both_empty=int((g.total_proxy20==0).sum()),\n            active_at_most2=int((defined.active_either_bins<=2).sum()),mi_zero=int((defined.mi_level.abs()<1e-12).sum()),\n            mi_flow_zero=int((defined.mi_flow.abs()<1e-12).sum()),log_C_gt15=int((defined.log_signed_C.abs()>15).sum()),\n            ent_exact_extreme=int(np.isclose(defined.ent_dipole.abs(),1,atol=1e-7).sum())))\n    pd.DataFrame(entropy).to_csv(O/'entropy_sparsity.csv',index=False)\n    # Fixed earlier-day training; no search, test-set scaling or complete-case deletion.\n    baseline=['prior_ticks20','range_ticks20','spread_ticks','touch_imb','touch_count_imb','log_touch_lots','log_touch_orders','early_buy','early_sell','late_buy','late_sell','fresh_buy5','fresh_sell5']\n    info=['ent_dipole','mi_flow','log_signed_C','imb_flow']\n    display=['bid_add5','bid_remove5','ask_add5','ask_remove5','quote_price_changes5']\n    models={'counts_price_book':baseline,'plus_information':baseline+info,'plus_display':baseline+display,'plus_both':baseline+info+display}\n    model_results=[];predictions=[]\n    days=sorted(x.day.unique())\n    for day in days[1:]:\n        train=x[(x.day<day)&x.future20.notna()];test=x[(x.day==day)&x.future20.notna()]\n        for name,cols in models.items():\n            pred=ridge(train[cols].to_numpy(float),train.future20.to_numpy(float),test[cols].to_numpy(float))\n            for subset,mask in [('all',np.ones(len(test),dtype=bool)),('separated60',test.separated60.eq('True').to_numpy())]:\n                y=test.future20.to_numpy()[mask];pr=pred[mask]\n                model_results.append(dict(day=day,model=name,subset=subset,train_rows=len(train),test_rows=len(y),\n                    mse=float(np.mean((y-pr)**2)),mae=float(np.mean(abs(y-pr))),mean_prediction=float(pr.mean()),\n                    directional_mean_ticks=float(np.mean(np.sign(pr)*y)),positive=int((np.sign(pr)*y>0).sum()),negative=int((np.sign(pr)*y<0).sum()),flat=int((y==0).sum())))\n            for (_,row),pr in zip(test.iterrows(),pred):predictions.append(dict(day=day,candidate_id=row.candidate_id,model=name,prediction=pr,actual=row.future20))\n    pd.DataFrame(model_results).to_csv(O/'incremental_models.csv',index=False)\n    pd.DataFrame(predictions).to_csv(O/'model_predictions.csv',index=False)\n    delay_results=[]\n    for label,col in [('touch','touch_imb'),('proxy_flow','fresh_imb5'),('native_flow','native5_imb')]:\n        direction=np.sign(x[col]).replace(0,np.nan)\n        for delay in (1,5):\n            first=direction*x[f'future{delay}']\n            state=np.where(first.isna(),'unavailable',np.where(first>=1-1e-9,'confirmed_1tick',np.where(first<=-1+1e-9,'opposite_1tick',np.where(first.abs()<1e-9,'flat','subtick'))))\n            temp=x.assign(confirm_state=state)\n            for horizon in (20,60):\n                temp['remaining']=delayed_return(x[f'future{horizon}'],x[f'future{delay}'],direction)\n                temp['from_recognition']=direction*x[f'future{horizon}']\n                for subset,mask in [('all',np.ones(len(x),dtype=bool)),('separated60',x.separated60.eq('True').to_numpy())]:\n                    for (day,st),g in temp[mask].groupby(['day','confirm_state']):\n                        delay_results.append(dict(day=day,direction=label,delay=delay,horizon=horizon,subset=subset,state=st,population=len(g),\n                            from_recognition_mean=float(g.from_recognition.mean()) if g.from_recognition.notna().any() else None,**stats(g.remaining)))\n    pd.DataFrame(delay_results).to_csv(O/'confirmation_remaining.csv',index=False)\n    f=pd.read_csv(R/'discovery-depth/family_derived.csv',dtype=str)\n    for c in ['f5','f60']:f[c+'_direction']=f[c].map({'+':1,'-':-1,'0':0})\n    for c in ['touch_imb','tk_5s','tk_20s','tk_60s','root.mid','ref_mid','ob_add_touch_b_5s','ob_add_touch_a_5s','ob_rm_cx_touch_b_5s','ob_rm_cx_touch_a_5s']:\n        f[c]=pd.to_numeric(f[c],errors='coerce')\n    f['addition_balance']=f.ob_add_touch_b_5s-f.ob_add_touch_a_5s\n    f['cancel_support_balance']=f.ob_rm_cx_touch_a_5s-f.ob_rm_cx_touch_b_5s\n    f['net_add_cancel']=f.addition_balance+f.cancel_support_balance\n    family_results=[]\n    for driver in ('addition_balance','cancel_support_balance','net_add_cancel'):\n        f[driver+'_vs_flow']=[relation(sign(a),sign(b)) for a,b in zip(f[driver],f.f5_direction)]\n        f[driver+'_vs_touch']=[relation(sign(a),sign(b)) for a,b in zip(f[driver],f.touch_imb)]\n        for grouping in (driver+'_vs_flow',driver+'_vs_touch'):\n            for (day,state),g in f.groupby(['day',grouping]):\n                for horizon in (5,20,60):\n                    outcome=g[f'tk_{horizon}s']\n                    family_results.append(dict(day=day,driver=driver,comparison=grouping,state=state,horizon=horizon,population=len(g),**stats(np.sign(g[driver]).replace(0,np.nan)*outcome)))\n    pd.DataFrame(family_results).to_csv(O/'family_book_activity.csv',index=False)\n    x.to_csv(O/'reanalysis_rows.csv',index=False)\n    f[['day','family_id','source_id','excel_row','addition_balance','cancel_support_balance','net_add_cancel','f5_direction','touch_imb','tk_5s','tk_20s','tk_60s']].to_csv(O/'family_activity_rows.csv',index=False)\n    audit=dict(recognition_rows=len(x),family_rows=len(f),direct_excel_cells_checked=checked,entropy_operator_reproduced_rows=len(x),source_flow=audits,\n        parameters=dict(ridge_penalty=10,confirmation_ticks=1,delays=[1,5],horizons=[20,60],model_train='all strictly earlier dates',evaluation='already-used discovery dates'),\n        paper_policy='Every defined strategy is included in paper testing. Weak or conflicting results are retained.',session_setup='Deferred by user; Henry Hub December 2026 assumed; Tradovate demo selected.')\n    (O/'AUDIT.json').write_text(json.dumps(audit,indent=2),encoding='utf-8')\n    print(json.dumps(audit,indent=2),flush=True)\n\nif __name__=='__main__':main()\n"
+    },
+    "MODEL_FREEZE.json": {
+      "path": "tasks/family-research-20261022/research-union-current/reanalysis-20261109/MODEL_FREEZE.json",
+      "git_blob_sha": "d8e9cac5a90904183dbdd3fd19dc6f35e8d8229c",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/5332476ece1432586c09e06e6e2898227a4ba959/tasks/family-research-20261022/research-union-current/reanalysis-20261109/MODEL_FREEZE.json",
+      "raw": "{\n  \"version\": \"priority-paper-v1.3-reanalysis-20261109\",\n  \"training_dates\": [\n    \"20231002\",\n    \"20231003\",\n    \"20231017\",\n    \"20231018\"\n  ],\n  \"training_rows\": 3175,\n  \"target\": \"midpoint change from recognition to +20s, ticks\",\n  \"features_source\": \"P10; original midpoint-classified flow\",\n  \"prospective_validation\": false\n}"
+    },
+    "incremental_models.csv": {
+      "path": "tasks/family-research-20261022/research-union-current/reanalysis-20261109/incremental_models.csv",
+      "git_blob_sha": "1e7048facfa3b1be1e5dbb9243f62f1c0650ea64",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/5332476ece1432586c09e06e6e2898227a4ba959/tasks/family-research-20261022/research-union-current/reanalysis-20261109/incremental_models.csv",
+      "raw": "day,model,subset,train_rows,test_rows,mse,mae,mean_prediction,directional_mean_ticks,positive,negative,flat\r\n20231003,counts_price_book,all,741,832,1.3462546685858512,0.681725691449878,-0.07254742906247756,0.07211538461538461,239,194,399\r\n20231003,counts_price_book,separated60,741,603,1.235636802234741,0.6709312312874111,-0.07360498507511899,0.04892205638474295,167,142,294\r\n20231003,plus_information,all,741,832,1.3623886790009208,0.7041625100265677,-0.08544956074044383,0.0733173076923077,245,188,399\r\n20231003,plus_information,separated60,741,603,1.26183638589577,0.6941181259364698,-0.08972327383555,0.0472636815920398,174,135,294\r\n20231003,plus_display,all,741,832,1.3595956281019093,0.6868997927283852,-0.06954021923678705,0.04567307692307692,230,203,399\r\n20231003,plus_display,separated60,741,603,1.2501317289692124,0.6759432678021389,-0.07221773860886023,0.019071310116086235,161,148,294\r\n20231003,plus_both,all,741,832,1.3842874271543217,0.7128968324009339,-0.08014330611852992,0.0625,233,200,399\r\n20231003,plus_both,separated60,741,603,1.284622153126109,0.701793506239167,-0.08654453594484139,0.0439469320066335,165,144,294\r\n20231017,counts_price_book,all,1573,740,1.7817954681629145,0.8101961488465094,0.0013850396335775173,0.10945945945945947,232,184,324\r\n20231017,counts_price_book,separated60,1573,549,1.8625714626227798,0.8331002049054875,0.00033633390881526303,0.13296903460837886,176,141,232\r\n20231017,plus_information,all,1573,740,1.8002755759794256,0.8188080446809497,0.0010423507586415043,0.07297297297297298,221,195,324\r\n20231017,plus_information,separated60,1573,549,1.8866199050449028,0.8428222290492429,0.0006278490963583476,0.08014571948998178,167,150,232\r\n20231017,plus_display,all,1573,740,1.782829425016938,0.8109546175211572,0.00180820835464228,0.12162162162162163,230,186,324\r\n20231017,plus_display,separated60,1573,549,1.8623126910920476,0.8335405546197101,0.00037922155359938786,0.14207650273224043,174,143,232\r\n20231017,plus_both,all,1573,740,1.801301062235666,0.8187745262573831,0.0021459605787320234,0.0891891891891892,225,191,324\r\n20231017,plus_both,separated60,1573,549,1.886257012289085,0.8424368839401749,0.0013456637133388593,0.10200364298724955,171,146,232\r\n20231018,counts_price_book,all,2313,862,2.2206469560540802,0.8408335539653955,-0.028520222502141146,0.08584686774941995,295,210,357\r\n20231018,counts_price_book,separated60,2313,631,2.3816265180568585,0.836540499440071,-0.030112354289688042,0.1386687797147385,226,144,261\r\n20231018,plus_information,all,2313,862,2.2190337694341142,0.8424973529122376,-0.02493571838613055,0.10440835266821345,296,209,357\r\n20231018,plus_information,separated60,2313,631,2.3824258327485137,0.8397265928423039,-0.024882722994854847,0.1434231378763867,223,147,261\r\n20231018,plus_display,all,2313,862,2.218859351233239,0.8402346578058353,-0.026733200968740076,0.10324825986078887,297,208,357\r\n20231018,plus_display,separated60,2313,631,2.3798367433357455,0.8362786529840956,-0.028493789971733068,0.16402535657686212,227,143,261\r\n20231018,plus_both,all,2313,862,2.2166226916061853,0.8422349244996331,-0.023117732089913218,0.12412993039443156,296,209,357\r\n20231018,plus_both,separated60,2313,631,2.379775459177204,0.8399239374104921,-0.023154565400047143,0.17036450079239301,221,149,261\r\n"
+    },
+    "TRADE_RULES.json": {
+      "path": "tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+      "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/5332476ece1432586c09e06e6e2898227a4ba959/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json",
+      "raw": "{\n  \"schema\": \"markets-paper-rules/1\",\n  \"version\": \"priority-paper-v1.3-reanalysis-20261109\",\n  \"mode\": \"paper\",\n  \"execution_enabled\": false,\n  \"instrument\": {\n    \"exchange\": \"NYMEX\",\n    \"product\": \"NG\",\n    \"contract_month\": \"2026-12\",\n    \"symbol_hint\": \"NGZ6\",\n    \"broker_contract_id\": null\n  },\n  \"execution\": {\n    \"adapter\": null,\n    \"account_id\": null,\n    \"ledger_mode\": \"independent_per_strategy\",\n    \"quantity\": 1,\n    \"order_type\": \"marketable_limit\",\n    \"time_in_force\": \"IOC\",\n    \"buy_limit\": \"current_ask\",\n    \"sell_limit\": \"current_bid\",\n    \"entry_fill_source\": \"adapter_execution_report\",\n    \"exit_fill_source\": \"adapter_execution_report\",\n    \"live_orders_enabled\": false\n  },\n  \"session\": {\n    \"start_utc\": null,\n    \"end_utc\": null,\n    \"timezone\": \"America/New_York\"\n  },\n  \"data\": {\n    \"clock_encoding\": \"integer_ns\",\n    \"complete_groups_required\": true,\n    \"continuous_snapshot_replay_required\": true,\n    \"admit_future_known_by\": false,\n    \"native_aggressor_classification_required\": true,\n    \"order_id_ledger_required\": true,\n    \"flow_window_left_boundary\": \"exclusive\",\n    \"flow_window_right_boundary\": \"inclusive\",\n    \"warmup_seconds\": 60,\n    \"max_quote_age_ms\": 1000,\n    \"max_group_silence_ms\": 1000,\n    \"max_spread_ticks\": 2,\n    \"minimum_quote_lots\": 1\n  },\n  \"risk\": {\n    \"scope\": \"per_strategy\",\n    \"max_open_contracts\": 1,\n    \"max_entries_per_session\": 20,\n    \"stop_ticks\": 4,\n    \"session_loss_ticks\": 12,\n    \"max_hold_seconds\": 120,\n    \"cooldown_seconds\": 30,\n    \"entry_cutoff_before_session_end_seconds\": 120,\n    \"profit_target_ticks\": null,\n    \"exit_unfilled_action\": \"retry_next_valid_group\",\n    \"data_failure_action\": \"cancel_entries_request_exit_pause\",\n    \"resume\": \"explicit_operator_after_snapshot_and_warmup\"\n  },\n  \"costs\": {\n    \"tick_size\": \"0.001\",\n    \"tick_value_usd\": 10,\n    \"round_turn_fees_usd\": null,\n    \"stress_entry_ticks\": 1,\n    \"stress_exit_ticks\": 1\n  },\n  \"strategies\": [\n    {\n      \"id\": \"R1\",\n      \"paper_enabled\": true,\n      \"engine\": \"flow_touch_confirmation\",\n      \"parameters\": {\n        \"flow_windows_seconds\": [\n          5,\n          60\n        ],\n        \"flow_source\": \"native\",\n        \"fresh_trade_required\": true,\n        \"arm_edge\": \"false_to_true\",\n        \"require_direction_agreement\": [\n          \"flow5\",\n          \"flow60\",\n          \"touch_imbalance\"\n        ],\n        \"confirm_bid_ticks\": 1,\n        \"confirm_ask_ticks\": 1,\n        \"confirmation_group\": \"strictly_later\",\n        \"confirmation_timeout_ms\": 5000,\n        \"invalidation_fields\": [\n          \"flow5\",\n          \"touch_imbalance\"\n        ],\n        \"invalidation_ms\": 1000,\n        \"invalidation_min_groups\": 2\n      }\n    },\n    {\n      \"id\": \"R2\",\n      \"paper_enabled\": true,\n      \"engine\": \"order_support_confirmation\",\n      \"parameters\": {\n        \"seed_actions\": [\n          \"T\",\n          \"A\"\n        ],\n        \"seed_same_group\": true,\n        \"seed_same_order_id\": true,\n        \"seed_same_side\": true,\n        \"arm_action\": \"F\",\n        \"arm_fill_group\": \"strictly_after_seed\",\n        \"arm_requires_positive_residual\": true,\n        \"arm_requires_at_touch\": true,\n        \"confirm_requires_original_price\": true,\n        \"confirm_requires_at_touch\": false,\n        \"confirm_requires_positive_residual\": true,\n        \"confirm_bid_ticks\": 1,\n        \"confirm_ask_ticks\": 1,\n        \"confirmation_group\": \"strictly_after_fill\",\n        \"confirmation_timeout_ms\": 5000,\n        \"require_direction_agreement\": [\n          \"resting_side\",\n          \"native_flow5\",\n          \"touch_imbalance\"\n        ],\n        \"cancel_invalidates\": true,\n        \"reprice_invalidates\": true,\n        \"zero_residual_invalidates\": true,\n        \"entries_per_order_per_session\": 1,\n        \"invalidation_fields\": [\n          \"native_flow5\",\n          \"touch_imbalance\"\n        ],\n        \"invalidation_ms\": 1000,\n        \"invalidation_min_groups\": 2\n      }\n    },\n    {\n      \"id\": \"R3\",\n      \"paper_enabled\": true,\n      \"engine\": \"quiet_touch\",\n      \"parameters\": {\n        \"flow_source\": \"native\",\n        \"flow_window_seconds\": 5,\n        \"classified_quantity_equals\": 0,\n        \"direction\": \"touch_imbalance_sign\",\n        \"direction_nonzero\": true,\n        \"arm_edge\": \"false_to_true\",\n        \"invalidation_fields\": [\n          \"touch_imbalance\"\n        ],\n        \"invalidation_ms\": 1000,\n        \"invalidation_min_groups\": 2\n      }\n    },\n    {\n      \"id\": \"R4\",\n      \"paper_enabled\": true,\n      \"engine\": \"delayed_touch\",\n      \"parameters\": {\n        \"anchor\": \"causal_recognition\",\n        \"direction_at_anchor\": \"touch_imbalance_sign\",\n        \"delay_ms\": 1000,\n        \"max_observation_lateness_ms\": 1000,\n        \"confirmation_mid_ticks\": 1,\n        \"direction_multiplier\": 1,\n        \"exit_after_anchor_ms\": 20000\n      }\n    },\n    {\n      \"id\": \"R5\",\n      \"paper_enabled\": true,\n      \"engine\": \"delayed_touch\",\n      \"parameters\": {\n        \"anchor\": \"causal_recognition\",\n        \"direction_at_anchor\": \"touch_imbalance_sign\",\n        \"delay_ms\": 1000,\n        \"max_observation_lateness_ms\": 1000,\n        \"confirmation_mid_ticks\": 1,\n        \"direction_multiplier\": -1,\n        \"exit_after_anchor_ms\": 20000\n      }\n    },\n    {\n      \"id\": \"R6A\",\n      \"paper_enabled\": true,\n      \"engine\": \"flow_cancel\",\n      \"parameters\": {\n        \"flow_source\": \"native\",\n        \"window_seconds\": 5,\n        \"direction\": \"flow_sign\",\n        \"cancel_balance\": \"ask_cancel_lots_minus_bid_cancel_lots\",\n        \"required_relation\": \"aligned\",\n        \"arm_edge\": \"false_to_true\",\n        \"max_hold_seconds\": 20\n      }\n    },\n    {\n      \"id\": \"R6B\",\n      \"paper_enabled\": true,\n      \"engine\": \"flow_cancel\",\n      \"parameters\": {\n        \"flow_source\": \"native\",\n        \"window_seconds\": 5,\n        \"direction\": \"flow_sign\",\n        \"cancel_balance\": \"ask_cancel_lots_minus_bid_cancel_lots\",\n        \"required_relation\": \"opposed\",\n        \"arm_edge\": \"false_to_true\",\n        \"max_hold_seconds\": 20\n      }\n    },\n    {\n      \"id\": \"R7\",\n      \"paper_enabled\": true,\n      \"engine\": \"frozen_linear_prediction\",\n      \"parameters\": {\n        \"anchor\": \"causal_recognition\",\n        \"model_id\": \"M0\",\n        \"direction\": \"prediction_sign\",\n        \"minimum_absolute_prediction_ticks\": 0,\n        \"max_hold_seconds\": 20\n      }\n    },\n    {\n      \"id\": \"R8\",\n      \"paper_enabled\": true,\n      \"engine\": \"frozen_linear_prediction\",\n      \"parameters\": {\n        \"anchor\": \"causal_recognition\",\n        \"model_id\": \"M1\",\n        \"direction\": \"prediction_sign\",\n        \"minimum_absolute_prediction_ticks\": 0,\n        \"max_hold_seconds\": 20\n      }\n    },\n    {\n      \"id\": \"R9\",\n      \"paper_enabled\": true,\n      \"engine\": \"flow_touch_confirmation\",\n      \"parameters\": {\n        \"flow_windows_seconds\": [\n          5,\n          60\n        ],\n        \"flow_source\": \"native\",\n        \"fresh_trade_required\": false,\n        \"arm_edge\": \"false_to_true\",\n        \"require_direction_agreement\": [\n          \"flow5\",\n          \"flow60\",\n          \"touch_imbalance\"\n        ],\n        \"confirm_bid_ticks\": 1,\n        \"confirm_ask_ticks\": 1,\n        \"confirmation_group\": \"strictly_later\",\n        \"confirmation_timeout_ms\": 5000,\n        \"invalidation_fields\": [\n          \"flow5\",\n          \"touch_imbalance\"\n        ],\n        \"invalidation_ms\": 1000,\n        \"invalidation_min_groups\": 2,\n        \"flow_change_driver\": \"expiry_only\",\n        \"require_flow5_sign_flip\": true\n      }\n    },\n    {\n      \"id\": \"R10\",\n      \"paper_enabled\": true,\n      \"engine\": \"one_lot_retreat\",\n      \"parameters\": {\n        \"anchor\": \"standing_best_shrank_to_one_lot\",\n        \"origin\": \"size_cut\",\n        \"direction_by_resting_side\": {\n          \"bid\": -1,\n          \"ask\": 1\n        },\n        \"entries_per_order_per_session\": 1,\n        \"max_hold_seconds\": 20\n      }\n    }\n  ],\n  \"models\": {\n    \"M0\": {\n      \"features\": [\n        \"prior_ticks20\",\n        \"range_ticks20\",\n        \"spread_ticks\",\n        \"touch_imb\",\n        \"touch_count_imb\",\n        \"log_touch_lots\",\n        \"log_touch_orders\",\n        \"early_buy\",\n        \"early_sell\",\n        \"late_buy\",\n        \"late_sell\",\n        \"fresh_buy5\",\n        \"fresh_sell5\"\n      ],\n      \"missing_indicators\": \"append_in_feature_order\",\n      \"imputation\": [\n        -0.01937007874015748,\n        0.9834645669291339,\n        1.4922834645669292,\n        -0.027744048788103857,\n        -0.02541484738579175,\n        2.4284032246106695,\n        2.1790584948876845,\n        2.9823622047244096,\n        3.0525984251968503,\n        2.973543307086614,\n        2.876220472440945,\n        1.350236220472441,\n        1.3716535433070867\n      ],\n      \"center\": [\n        -0.01937007874015748,\n        0.9834645669291339,\n        1.4922834645669292,\n        -0.027744048788103857,\n        -0.02541484738579175,\n        2.4284032246106695,\n        2.1790584948876845,\n        2.9823622047244096,\n        3.0525984251968503,\n        2.973543307086614,\n        2.876220472440945,\n        1.350236220472441,\n        1.3716535433070867,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"scale\": [\n        1.1460385367031316,\n        1.297044719602994,\n        0.5738558475968226,\n        0.4171891075729518,\n        0.37613872641664564,\n        0.6107821243854696,\n        0.4678499415843278,\n        8.8008770551391,\n        9.714770247654956,\n        9.977514525491417,\n        9.47637517738576,\n        5.2501679710012565,\n        6.156628815200469,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0\n      ],\n      \"coefficients\": [\n        -0.0666607660438023,\n        -0.02497297379515986,\n        -0.0030243522032325147,\n        0.10326974660003875,\n        0.008304970406751358,\n        -0.07220402887851614,\n        0.041666785618808454,\n        0.01755626661260133,\n        -0.05562429755266413,\n        -0.026981906074225584,\n        0.07092986202856899,\n        0.06198340278588569,\n        -0.08548014734331323,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"intercept\": -0.012755905511811024,\n      \"ridge_penalty\": 10\n    },\n    \"M1\": {\n      \"features\": [\n        \"prior_ticks20\",\n        \"range_ticks20\",\n        \"spread_ticks\",\n        \"touch_imb\",\n        \"touch_count_imb\",\n        \"log_touch_lots\",\n        \"log_touch_orders\",\n        \"early_buy\",\n        \"early_sell\",\n        \"late_buy\",\n        \"late_sell\",\n        \"fresh_buy5\",\n        \"fresh_sell5\",\n        \"ent_dipole\",\n        \"mi_flow\",\n        \"log_signed_C\",\n        \"imb_flow\"\n      ],\n      \"missing_indicators\": \"append_in_feature_order\",\n      \"imputation\": [\n        -0.01937007874015748,\n        0.9834645669291339,\n        1.4922834645669292,\n        -0.027744048788103857,\n        -0.02541484738579175,\n        2.4284032246106695,\n        2.1790584948876845,\n        2.9823622047244096,\n        3.0525984251968503,\n        2.973543307086614,\n        2.876220472440945,\n        1.350236220472441,\n        1.3716535433070867,\n        0.027627412061105146,\n        0.0009471345181208283,\n        0.7112201586874665,\n        0.005596520111812595\n      ],\n      \"center\": [\n        -0.01937007874015748,\n        0.9834645669291339,\n        1.4922834645669292,\n        -0.027744048788103857,\n        -0.02541484738579175,\n        2.4284032246106695,\n        2.1790584948876845,\n        2.9823622047244096,\n        3.0525984251968503,\n        2.973543307086614,\n        2.876220472440945,\n        1.350236220472441,\n        1.3716535433070867,\n        0.02762741206110514,\n        0.0009471345181208284,\n        0.7112201586874667,\n        0.005596520111812592,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.42771653543307087,\n        0.42771653543307087,\n        0.42771653543307087,\n        0.42771653543307087\n      ],\n      \"scale\": [\n        1.1460385367031316,\n        1.297044719602994,\n        0.5738558475968226,\n        0.4171891075729518,\n        0.37613872641664564,\n        0.6107821243854696,\n        0.4678499415843278,\n        8.8008770551391,\n        9.714770247654956,\n        9.977514525491417,\n        9.47637517738576,\n        5.2501679710012565,\n        6.156628815200469,\n        0.4732860675718372,\n        0.1511136169357758,\n        8.385647536635679,\n        0.6838510392177829,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        1.0,\n        0.4947475121212854,\n        0.4947475121212854,\n        0.4947475121212854,\n        0.4947475121212854\n      ],\n      \"coefficients\": [\n        -0.07737267292784455,\n        -0.02243019687297596,\n        -0.003970971768832014,\n        0.10275459943268074,\n        0.004912342327691896,\n        -0.07323934428796564,\n        0.042968628966717284,\n        0.020383536478161744,\n        -0.057532527338312524,\n        -0.03842910132540839,\n        0.08335819873410527,\n        0.059812631173164606,\n        -0.08354360873578234,\n        -0.049928568858592225,\n        0.019915863996376428,\n        0.10138211718681561,\n        0.014096594554707517,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0011746322107260253,\n        0.0011746322107259823,\n        0.001174632210713003,\n        0.0011746322107131677\n      ],\n      \"intercept\": -0.012755905511811024,\n      \"ridge_penalty\": 10\n    }\n  }\n}\n"
+    }
+  },
+  "source_coordinates": {
+    "analyze.py": [
+      "23-30 ridge preprocessing/formula",
+      "132-150 four models, earlier-day fits and two reporting subsets"
+    ],
+    "TRADE_RULES.json": [
+      "/models/M0",
+      "/models/M1",
+      "/strategies[id=R7]",
+      "/strategies[id=R8]"
+    ],
+    "MODEL_FREEZE.json": "/ target,training_dates,training_rows"
+  },
+  "conclusion": {
+    "source_model_arms": 4,
+    "feature_architectures_already_present_in_R7_R8": 2,
+    "genuinely_additional_feature_arms": 2,
+    "additional_names": [
+      "plus_display",
+      "plus_both"
+    ],
+    "source_fit_instances": 12,
+    "reporting_rows": 24,
+    "additional_fit_instances": 6,
+    "additional_reporting_rows": 12,
+    "warning": "Historical earlier-day fitted baseline/information versions and all-four-date M0/M1 freeze share feature architectures, not coefficients or fit scope. Do not overwrite model-version identities or count all four as four additional architectures."
+  },
+  "target": {
+    "name": "future20",
+    "definition": "signed midpoint change recognition to recognition+20s in ticks",
+    "horizon_seconds": 20,
+    "flow_classification": "original midpoint-classified proxy flow; native flow diagnostics are separate, not substituted into these model features"
+  },
+  "common_fit": {
+    "formula": "finite=train finite; impute train-column finite mean (0 if none); append missing flags to every column; train-centered/scaled augmented matrix, std0->1; ym=mean(y); coef=solve(A.T A+10I,A.T(y-ym)); predict=ym+B coef",
+    "ridge_alpha": 10,
+    "training": "all strictly earlier source dates with future20 defined",
+    "test": "current source date with future20 defined",
+    "test_dates": [
+      "20231003",
+      "20231017",
+      "20231018"
+    ],
+    "reporting_subsets": [
+      "all",
+      "separated60"
+    ],
+    "subsets_are_not_new_fits": true,
+    "source_first_day": "20231002 training-only for this evaluation; retained no-prior-model outcome in outer paper ledger",
+    "no_source_embargo_claim": "This producer uses date exclusion, not ST intraday600s embargo."
+  },
+  "arms": [
+    {
+      "name": "counts_price_book",
+      "features": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "touch_imb",
+        "touch_count_imb",
+        "log_touch_lots",
+        "log_touch_orders",
+        "early_buy",
+        "early_sell",
+        "late_buy",
+        "late_sell",
+        "fresh_buy5",
+        "fresh_sell5"
+      ],
+      "feature_count": 13,
+      "related_current_rule": "R7",
+      "frozen_model": "M0",
+      "additional_architecture": false,
+      "model_state": "all-four-date freeze available; earlier-day fit state not serialized here"
+    },
+    {
+      "name": "plus_information",
+      "features": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "touch_imb",
+        "touch_count_imb",
+        "log_touch_lots",
+        "log_touch_orders",
+        "early_buy",
+        "early_sell",
+        "late_buy",
+        "late_sell",
+        "fresh_buy5",
+        "fresh_sell5",
+        "ent_dipole",
+        "mi_flow",
+        "log_signed_C",
+        "imb_flow"
+      ],
+      "feature_count": 17,
+      "related_current_rule": "R8",
+      "frozen_model": "M1",
+      "additional_architecture": false,
+      "model_state": "all-four-date freeze available; earlier-day fit state not serialized here"
+    },
+    {
+      "name": "plus_display",
+      "features": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "touch_imb",
+        "touch_count_imb",
+        "log_touch_lots",
+        "log_touch_orders",
+        "early_buy",
+        "early_sell",
+        "late_buy",
+        "late_sell",
+        "fresh_buy5",
+        "fresh_sell5",
+        "bid_add5",
+        "bid_remove5",
+        "ask_add5",
+        "ask_remove5",
+        "quote_price_changes5"
+      ],
+      "feature_count": 18,
+      "related_current_rule": null,
+      "frozen_model": null,
+      "additional_architecture": true,
+      "model_state": "Original definitions and stored historical predictions/metrics exist; original deployable imputation/center/scale/coefficients/intercept absent from TRADE_RULES and MODEL_FREEZE"
+    },
+    {
+      "name": "plus_both",
+      "features": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "touch_imb",
+        "touch_count_imb",
+        "log_touch_lots",
+        "log_touch_orders",
+        "early_buy",
+        "early_sell",
+        "late_buy",
+        "late_sell",
+        "fresh_buy5",
+        "fresh_sell5",
+        "ent_dipole",
+        "mi_flow",
+        "log_signed_C",
+        "imb_flow",
+        "bid_add5",
+        "bid_remove5",
+        "ask_add5",
+        "ask_remove5",
+        "quote_price_changes5"
+      ],
+      "feature_count": 22,
+      "related_current_rule": null,
+      "frozen_model": null,
+      "additional_architecture": true,
+      "model_state": "Original definitions and stored historical predictions/metrics exist; original deployable imputation/center/scale/coefficients/intercept absent from TRADE_RULES and MODEL_FREEZE"
+    }
+  ],
+  "missing_state": [
+    "Historical fold-specific trained parameters for each arm, unless recovered from another preserved artifact.",
+    "Original all-four-date deployment model states for plus_display and plus_both.",
+    "Explicit original execution wrapper and strategy IDs for added arms."
+  ],
+  "paper_inclusion": {
+    "all_arms": true,
+    "missing_inputs_or_model_state": "Retained attempted paper trial with INPUT_UNAVAILABLE/MODEL_ARTIFACT_UNAVAILABLE, never admission rejection.",
+    "suggested_wrapper": "NEW DESIGN: mirror R7/R8 causal-recognition prediction-sign entry and20s hold, same shared execution protocol; attach distinct model IDs only when exact known-by frozen state exists.",
+    "no_refit_performed": true,
+    "no_performance_selection": true,
+    "no_claim_missing_models_were_frozen": true
+  },
+  "retained_prediction_artifact": {
+    "name": "model_predictions.csv",
+    "path": "tasks/family-research-20261022/research-union-current/reanalysis-20261109/model_predictions.csv",
+    "sha": "4b8ccf6e1b4c3e80a3de008ec1f28be41eed1e3c",
+    "size": 685037,
+    "url": "https://api.github.com/repos/DavisAI1974/markets-data/contents/tasks/family-research-20261022/research-union-current/reanalysis-20261109/model_predictions.csv?ref=5332476ece1432586c09e06e6e2898227a4ba959",
+    "html_url": "https://github.com/DavisAI1974/markets-data/blob/5332476ece1432586c09e06e6e2898227a4ba959/tasks/family-research-20261022/research-union-current/reanalysis-20261109/model_predictions.csv",
+    "git_url": "https://api.github.com/repos/DavisAI1974/markets-data/git/blobs/4b8ccf6e1b4c3e80a3de008ec1f28be41eed1e3c",
+    "download_url": "https://raw.githubusercontent.com/DavisAI1974/markets-data/5332476ece1432586c09e06e6e2898227a4ba959/tasks/family-research-20261022/research-union-current/reanalysis-20261109/model_predictions.csv",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/DavisAI1974/markets-data/contents/tasks/family-research-20261022/research-union-current/reanalysis-20261109/model_predictions.csv?ref=5332476ece1432586c09e06e6e2898227a4ba959",
+      "git": "https://api.github.com/repos/DavisAI1974/markets-data/git/blobs/4b8ccf6e1b4c3e80a3de008ec1f28be41eed1e3c",
+      "html": "https://github.com/DavisAI1974/markets-data/blob/5332476ece1432586c09e06e6e2898227a4ba959/tasks/family-research-20261022/research-union-current/reanalysis-20261109/model_predictions.csv"
+    }
+  },
+  "validation": {
+    "method": "Read producer and frozen definitions; inspect existing metric CSV keys; verify original Git blob bytes; no model execution/reanalysis.",
+    "pending_blob_verification": true
+  }
+}

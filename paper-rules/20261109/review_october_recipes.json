@@ -1,0 +1,4786 @@
+{
+  "schema": "october-paper-recipes-review.v2",
+  "date": "2026-11-09",
+  "status": "source translation proposal; no replay, refit, or performance recomputation",
+  "supersedes": [
+    {
+      "artifact": "review_october.json",
+      "claim": "EX01 lacks any recovered causal onset implementation",
+      "correction": "Retrospective birth-relative version remains diagnostic; separate retained continuous-prebirth-v1 supplies 10 exact causal predicates. Preserve both version identities."
+    },
+    {
+      "claim": "blanket paired long/short overlays for all hypotheses",
+      "correction": "Rejected. Common admission, disposition accounting and execution/reporting conventions do not require identical orders or extra direction variants for existing directional hypotheses."
+    },
+    {
+      "artifact": "review_october.json",
+      "claim": "Any treatment of S00279 size-one flow classes as future-only",
+      "correction": "S00283 size_one_tape_pass.py captures the ONSET GROUP mutations and next displayed level at onset group close. These are causal if exact tape/group/order linkage is available. Future episode end/outcome remains unavailable at onset."
+    }
+  ],
+  "overlay_audit": [
+    {
+      "id": "O1",
+      "issue": "Context-only model predictions plus identical long/short orders make every ST/FB arm execute the same trial, so order P&L cannot test added model information.",
+      "correction": "Retain exact forecast-target scoring for every source cell and make any prediction-dependent trading translation explicit, with source cell and translation IDs."
+    },
+    {
+      "id": "O2",
+      "issue": "Adding paired orders to a source-direction rule duplicates its matching side and creates an extra contrary rule absent from source.",
+      "correction": "Preserve source direction without blanket overlays. Only add target-type direction variants when original target has no price direction, and label them new design."
+    },
+    {
+      "id": "O3",
+      "issue": "Original horizon can mean recognition-relative, birth-relative, anchor-relative, first3 barrier, next-burst boundary or terminal lifetime; these are not interchangeable entry+h exits.",
+      "correction": "Store original outcome anchor separately from execution entry/exit anchor. Do not schedule an order using future next-burst boundary; reactive known-by exit or fixed alternative is a new protocol."
+    },
+    {
+      "id": "O4",
+      "issue": "INPUT_UNAVAILABLE conflates structurally undefined ratio, missing feed, absent model coefficients, not-yet-known, corrupted source, boundary and no-fill.",
+      "correction": "Use one common top-level disposition plus operand-specific reason fields; retain every attempted opportunity and source hypothesis, including false predicates, balanced directions, censored endpoints and no fills."
+    },
+    {
+      "id": "O5",
+      "issue": "Source test folds were cut using eligible labeled cohort size; membership and final coefficients cannot automatically be treated as known live at arbitrary historical time.",
+      "correction": "Recorded predictions remain research evidence. A live frozen artifact must carry model version, fit cutoff, train-label known-by, feature-order, imputation, scale, coefficients, intercept. If unavailable record MODEL_ARTIFACT_UNAVAILABLE; no hidden refit."
+    },
+    {
+      "id": "O6",
+      "issue": "Whole-day activity terciles, future seed realization, birth-minus-lead and finalized family labels remain hindsight even with symmetric directions.",
+      "correction": "Keep as evaluation labels. Use source causal versions where recovered; any prior-training threshold replacement is a distinct declared protocol, never silently call it the original cell."
+    },
+    {
+      "id": "O7",
+      "issue": "An absolute forecast <=spread must not disappear when translating abs>spread to a trial; probabilities below .5 are also source outcomes.",
+      "correction": "Retain both exhaustive condition strata and all forecasts; identical admission and reporting. Threshold is a design choice, not evidence filter."
+    },
+    {
+      "id": "O8",
+      "issue": "Per-rule attribution does not make overlapping windows, nested predicates, shared models, or opposite orders independent evidence.",
+      "correction": "Attach shared opportunity/lineage/window IDs; report per rule without pooling as independent trades. Common resource/collision policy must not privilege ranked strategies."
+    }
+  ],
+  "common_protocol": {
+    "classification": "NEW PAPER DESIGN unless explicitly supplied by source",
+    "admission": "Every source hypothesis and all source cells retained regardless historical sign, weakness, null result or undefined/no-fill case.",
+    "identity": [
+      "source_version",
+      "scope",
+      "hypothesis_id",
+      "source_cell",
+      "target",
+      "horizon",
+      "model_arm",
+      "fit_fold_or_model_version",
+      "translation_version",
+      "opportunity_id"
+    ],
+    "ledger": "Every evaluated opportunity records predicate TRUE/FALSE/UNDEFINED, operand values and known-by/cursor, input reason, forecast status, order intent, fill/no-fill, invalidation and observed/censored outcome.",
+    "causal_rule": "All entry operands known_by <= decision; execution earliest platform fill after decision. Future targets isolated from entry feature map.",
+    "execution": "Use parent common paper execution protocol, with explicit tick conversion and identical cost/fill/collision accounting. Never inherit research midpoint changes as fills.",
+    "same_process_not_same_orders": true,
+    "target_translation": {
+      "signed_price": {
+        "condition": "finite prediction",
+        "direction": "sign(prediction)",
+        "zero": "DIRECTION_BALANCED; retained",
+        "scoring": [
+          "squared_error",
+          "absolute_error",
+          "sign_vs_target"
+        ],
+        "note": "Direction from regression forecast is new paper translation unless source trade rule already directs it."
+      },
+      "absolute_price": {
+        "stratum": "prediction > current_spread_in_target_units versus prediction <= current_spread_in_target_units",
+        "variants": [
+          "LONG",
+          "SHORT"
+        ],
+        "negative": "Retain raw negative magnitude forecast in lower stratum; do not abs/clamp or treat negative as short.",
+        "scoring": [
+          "squared_error",
+          "absolute_error",
+          "negative_magnitude_prediction"
+        ],
+        "note": "Both strata retained. Threshold and paired directions are new design; paired returns test conditional execution, forecast scores test magnitude model."
+      },
+      "flow_strength_change": {
+        "target": "abs(I_future)-abs(I_now), signed strength change not abs(I_future-I_now)",
+        "direction_variants": [
+          "sign(prediction)*sign(I_now)",
+          "-sign(prediction)*sign(I_now)"
+        ],
+        "undefined": "I_now undefined/zero or prediction zero -> retained unavailable/balanced directional trial; forecast target separately scored when defined",
+        "note": "Continuation/reversal link is new unvalidated assumption; not source price law."
+      },
+      "binary_probability": {
+        "strata": [
+          "p>=0.5",
+          "p<0.5"
+        ],
+        "direction": "Requires declared mapping from target class to price direction; probability sign itself has no such meaning.",
+        "scoring": [
+          "Brier_score",
+          "class_target",
+          "probability"
+        ],
+        "note": "No calibrated probability claim for ridge outputs. Do not apply to ST/FB regression output."
+      },
+      "nondirectional_state": {
+        "direction": "Use explicit target-type NEW design only, preserve original source condition/state and source outcomes; absent direction remains a recorded limitation until that mapping exists."
+      }
+    }
+  },
+  "recipes": {
+    "FC": {
+      "sources": [
+        "S00131:95-227",
+        "S00784:58-65",
+        "S00307:149-211"
+      ],
+      "clock": "family strict-pre; input cutoff both receive time and evidence cursor before family event",
+      "features": {
+        "recent": "sign(flow1)==sign(flow5) and sign(flow1)!=0, both defined",
+        "flow_opposes": "sign(flow60)==-recent",
+        "flow_agrees": "sign(flow60)==recent",
+        "full_depth_opposes": "sign(root.depth_imbalance_full)==-recent",
+        "full_depth_agrees": "sign(root.depth_imbalance_full)==recent"
+      },
+      "original": "flow1<0 AND flow5<0 AND flow60>0 AND full_depth>0",
+      "exact_inverse": "flow1>0 AND flow5>0 AND flow60<0 AND full_depth<0",
+      "flow_mirror_distinction": "Claude flow mirror recent buy with long flow sell is not necessarily exact inverse with negative full book; Oct18 book all bid-heavy.",
+      "source_arms": [
+        "baseline",
+        "baseline_plus_flow",
+        "baseline_flow_agrees",
+        "baseline_plus_book",
+        "baseline_book_agrees",
+        "baseline_plus_both",
+        "both_agree",
+        "flow_opposes_depth_agrees",
+        "flow_agrees_depth_opposes",
+        "original_stack_sell_side",
+        "inverse_stack_buy_side",
+        "both_recent_sell",
+        "both_recent_buy"
+      ],
+      "alternatives": {
+        "depth": [
+          "near",
+          "touch"
+        ],
+        "relation": [
+          "agrees",
+          "opposes",
+          "equal"
+        ],
+        "subset": [
+          "all",
+          "recent_sell",
+          "recent_buy",
+          "60s_opposes"
+        ]
+      },
+      "horizons_s": [
+        1,
+        5,
+        20,
+        60,
+        120,
+        300,
+        600
+      ],
+      "direction": "source recent-flow aligned response; explicit trade follow-recent translation is NEW unless attached source rule defines entry",
+      "missing": "zero denominator UNDEFINED, not balanced zero; retain missing family records and missing depth"
+    },
+    "DP": {
+      "sources": [
+        "S01770:58-98,167-183",
+        "S01764:11-109",
+        "S01746:58-114"
+      ],
+      "clock": "recognition; completed20 bins ending last_closed_second; known quote group at recognition",
+      "features": {
+        "imb_level": "(sumB20-sumS20)/(sumB20+sumS20), undefined if total0",
+        "early": "I over first10 of20; undefined if empty",
+        "late": "I over last10 of20; undefined if empty",
+        "strength_change": "abs(late)-abs(early)",
+        "fresh_imb5": "I over last5completed bins",
+        "log_signed_C": "sign(C_signed)*log1p(abs(C_signed))",
+        "book": "(bid_touch_lots-ask_touch_lots)/(sum)",
+        "display": "same-price group lot increases/removals over5s; price changes counted separately, not attributed fills/cancels"
+      },
+      "state": "both_empty if total20==0; one_half_empty if strength_change undefined; weakening if <0; strengthening if >0; steady if ==0",
+      "book_relation": "undefined_flow if imb_level undefined; balanced if imb_level*touch_imb==0; aligned if product>0; opposed otherwise",
+      "price_relation": "same with prior_ticks20; zero class flat_or_balanced",
+      "direction": "sign(current imb_level), never birth polarity for current-state cells",
+      "horizons_s": [
+        5,
+        20,
+        60
+      ],
+      "retention": "all states including empty and balanced; preserve separate fresh/expiry/mixed and flow-vanished/resumed versions"
+    },
+    "OL": {
+      "sources": [
+        "S00279:42-77",
+        "S00280:43-80",
+        "S00281:74-124",
+        "S00307:1199-1338",
+        "S00283:1-10,73-135"
+      ],
+      "onset": "current touch lots==1 AND (price changes OR previous same-price lots>1); changed price is NEW_BEST even if worse; same-price reduction is standing",
+      "direction": "bid side -1; ask side +1 for retreat hypothesis",
+      "entry": "first completed valid group >= onset+1ms in original synthetic assay; actual platform fill NEW execution mapping",
+      "first_end": "first later group whose (touch_price,touch_lots)!=(onset_price,1); end<=entry group -> BY_ENTRY retained; bid lower/ask higher retreat, same price recovery, other improved",
+      "identity": "older_resting default; last matching A fresh_add; M price-change repriced_in; M size-cut size_cut_in_place; C partial_cancel_in_place",
+      "age_bins": [
+        "under10ms",
+        "10ms_to1s",
+        "1s_to60s",
+        "over60s",
+        "missing"
+      ],
+      "prior_onsets": [
+        "0",
+        "1",
+        "2",
+        "3+"
+      ],
+      "arms": {
+        "baseline": [
+          "side",
+          "onset"
+        ],
+        "baseline_plus_flow": [
+          "side",
+          "onset",
+          "flow"
+        ],
+        "baseline_plus_book_next": [
+          "side",
+          "onset",
+          "book_next"
+        ],
+        "baseline_plus_book_prior_orders": [
+          "side",
+          "onset",
+          "book_prior_orders"
+        ],
+        "baseline_plus_both": [
+          "side",
+          "onset",
+          "flow",
+          "book_next"
+        ],
+        "standing_only_both_prior_orders": "(side,flow,book_prior_orders) if standing else (new_best,)",
+        "flow_pooled": [
+          "onset",
+          "flow"
+        ],
+        "book_next_pooled": [
+          "onset",
+          "book_next"
+        ],
+        "prior_orders_pooled": [
+          "onset",
+          "book_prior_orders"
+        ]
+      },
+      "buckets": {
+        "next": [
+          "next_lt10",
+          "next_ge10",
+          "no_next"
+        ],
+        "prior_orders": [
+          "prior_orders_le2",
+          "prior_orders_gt2"
+        ],
+        "disposition": "fill_linked if reductions_fill_linked>0 else unlinked_reduction if reductions_unlinked>0 else no_reduction; all captured only during onset group"
+      },
+      "leak": "Later episode end, lifetime, retreat and next-burst success cannot gate onset; onset-group fill linkage is causal.",
+      "known_by": "S00279 flow class and next_level captured at onset group close from raw onset-group mutations. Size-one prior_touch is preceding group. Do not confuse these with later terminal reduction outcome.",
+      "source_cells_scopes": [
+        "all",
+        "hour13"
+      ]
+    },
+    "RG": {
+      "sources": [
+        "S00296:85-153",
+        "S00307:803-860,968-978,1066-1084"
+      ],
+      "anchor": "source a=t0+60 completed source-second label; event seed including second60 known no earlier than +61 (plus delivery). Source +60 outcome retained as separate convention.",
+      "directions": {
+        "pol": "polarity",
+        "next_state": "polarity if A-persistent else -polarity",
+        "next_seed": "polarity if P; -polarity if O; undefined otherwise",
+        "dip300": "sign(I300)",
+        "dip300_strong": "dip300 if abs(I300)>=whole-day2/3quantile else undefined",
+        "book10": "sign(book10_imbalance)",
+        "touch": "sign(bid_touch_lots-ask_touch_lots)",
+        "recruit": "polarity*sign((toward_depth[a]-toward_depth[t0])-(away_depth[a]-away_depth[t0])); toward=ask if pol>0 else bid",
+        "mom300": "sign(price[a]-price[max(0,a-300)])"
+      },
+      "cells": [
+        "all",
+        "A-fast-collapse",
+        "A-persistent",
+        "low",
+        "mid",
+        "high",
+        "state_x_tercile:2x3",
+        "overnight",
+        "us_day_13_20",
+        "release_14_15"
+      ],
+      "pairs": "All36 unordered direction-source pairs in all/high_vol/fast_high; no expansion beyond source pair grid.",
+      "activity": "pre300_volume includes t0-299..t0; low<=whole-day tercile1, mid<=tercile2 else high",
+      "hour": "t0 UTC hour:14 release;13..20 us day except14; otherwise overnight",
+      "outcomes": "source fixed net horizons and first absolute3tick move through end; next_pol future scoring only",
+      "limitations": "Whole-day cuts unavailable live; A-state exact classifier/seed must be bound to retained frozen version. Keep original cells as retrospective labels, new prior-training-threshold versions separately.",
+      "horizons_s": [
+        300,
+        600
+      ]
+    },
+    "EX01": {
+      "source_version": "continuous-prebirth-v1",
+      "cross_map": [
+        "EX01",
+        "DP weakening/expiry/fresh/empty state families; separate continuous opportunity identity"
+      ],
+      "source": {
+        "path": "agent-pass/replication/research_atlas_continuous.py",
+        "commit": "c4ca63f2816a50e051f70f6219f2378bd9530777",
+        "blob": "9efd0ef52cee211dd9ba04b50e507d237e3787ed",
+        "sha256": "9ec2a0a0a0f13f6522b5400d7e261d6710c27098af44b50a3be333b8fd751e4a",
+        "lines": "23-101,120-139,175-212",
+        "local": "review_sources/research_atlas_continuous.py"
+      },
+      "method_ids": [
+        "S11566",
+        "S11581",
+        "S11596",
+        "S11611"
+      ],
+      "features": {
+        "decision": "(second+1)*NS",
+        "available": "21consecutive seconds AND last valid quote strictly <decision AND valid quote strictly <decision-21s AND same segment",
+        "ratio": "I(current20bins)",
+        "before_ratio": "previous20bin I",
+        "expired": "buy/sell shifted20",
+        "early_ratio": "first10 of current20",
+        "late_ratio": "last10 of current20",
+        "fresh_ratio5": "last5",
+        "prior_ticks20": "(mid_raw2(strictpredecision)-mid_raw2(strictpredecision-20s))/2e6",
+        "touch_imb": "(strictprebidlots-strictpreasklots)/sum"
+      },
+      "predicates": {
+        "step_weakening": "valid AND abs(ratio)<abs(before_ratio)",
+        "expiry_only_weakening": "step_weakening AND buy+sell==0 AND expired_buy+expired_sell>0",
+        "fresh_opposed_weakening": "step_weakening AND (buy-sell)*before_ratio<0",
+        "flow_vanished": "valid AND before_ratio defined AND ratio undefined",
+        "flow_resumed": "valid AND before_ratio undefined AND ratio defined",
+        "half_weakening": "valid AND abs(late_ratio)<abs(early_ratio)",
+        "half_weakening_book_aligned": "half_weakening AND touch_imb*ratio>0",
+        "half_weakening_book_opposed": "half_weakening AND touch_imb*ratio<0",
+        "half_weakening_price_opposed": "half_weakening AND prior_ticks20*ratio<0",
+        "half_weakening_fresh_book_opposed": "half_weakening AND fresh_ratio5*ratio<0 AND touch_imb*ratio<0"
+      },
+      "onset": "first true observed second after false/unavailable/gap per predicate; first eligible true is left_censored_onset",
+      "horizons_s": [
+        5,
+        20,
+        60
+      ],
+      "outcomes": [
+        "change_ticks",
+        "flow_aligned_ticks=change_ticks*sign(ratio)",
+        "flow_strength_change=abs(future_ratio)-abs(ratio)"
+      ],
+      "direction": "No original execution direction. Follow current ratio is source scoring convention; execution direction NEW design. flow_vanished has no current direction; do not substitute zero or future ratio.",
+      "retention": "All active seconds and onsets, zero-next-birth onsets, left-censored starts, undefined direction, flat/nonflat balanced, outcome unavailable, futureflow undefined retained. Keep birth-relative1/5/20/60 diagnostic source version separately.",
+      "future_labels": "births_in_next60 and birth_at_same_ns isolated from causal features, no gating; links [birth-60,birth) diagnostic only"
+    },
+    "R": {
+      "sources": [
+        "delivery/prior/reanalysis-20261109/TRADE_RULES.json"
+      ],
+      "boundary": "R1-R10 rule wrappers are separate from ST/FB original regressions. M0/M1 are not ST baseline/full. Copy global model feature/scale/coefficients contract as well as strategy subobject. Existing explicit rule direction, stop, confirmation and invalidation take precedence over generic overlays.",
+      "known_by": "R2 later confirmation must not be backdated to initial T/A; delayed R4/R5 evaluation and anchor20 exit must preserve original clocks; expiry flips distinct from native-flow reversals."
+    }
+  },
+  "unresolved": [
+    "Exact future deployment coefficients are not reconstructed by this audit; retained research predictions are not automatically frozen live models.",
+    "Other EX subfamilies retain prior review source maps; this follow-up adds exact continuous version only.",
+    "Full source hypotheses beyond targeted October families belong to parent catalog; do not interpret this scoped recipe inventory as universal completeness."
+  ],
+  "verified_remote_blobs": {
+    "S01559": {
+      "sha": "ea39d17acbffc1ac42a15d70d2d69df35e904b94",
+      "raw": "{\n  \"source_revision\": \"2f12d6d47\",\n  \"source_groups\": \"tasks/family-research-20261022/replay-artifacts/20231002/standalone-inputs/groups.jsonl.gz\",\n  \"layers\": {\n    \"context\": [\n      \"prior_ticks20\",\n      \"range_ticks20\",\n      \"spread_ticks\"\n    ],\n    \"dipole\": [\n      \"imb_level\",\n      \"imb_flow\",\n      \"ent_dipole\",\n      \"mi_flow\",\n      \"log_signed_C\",\n      \"strength_change\",\n      \"early_empty\",\n      \"late_empty\"\n    ],\n    \"fresh\": [\n      \"fresh_imb5\",\n      \"log_fresh_lots5\",\n      \"log_unknown_lots5\"\n    ],\n    \"book\": [\n      \"touch_imb\",\n      \"touch_count_imb\",\n      \"log_touch_lots\",\n      \"log_touch_orders\"\n    ],\n    \"display\": [\n      \"bid_add5\",\n      \"bid_remove5\",\n      \"ask_add5\",\n      \"ask_remove5\",\n      \"quote_price_changes5\"\n    ]\n  },\n  \"arms\": {\n    \"baseline\": [],\n    \"plus_dipole\": [\n      \"dipole\"\n    ],\n    \"plus_fresh\": [\n      \"fresh\"\n    ],\n    \"plus_book\": [\n      \"book\"\n    ],\n    \"plus_display\": [\n      \"display\"\n    ],\n    \"dipole_book\": [\n      \"dipole\",\n      \"book\"\n    ],\n    \"full\": [\n      \"dipole\",\n      \"fresh\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_dipole\": [\n      \"fresh\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_fresh\": [\n      \"dipole\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_book\": [\n      \"dipole\",\n      \"fresh\",\n      \"display\"\n    ],\n    \"without_display\": [\n      \"dipole\",\n      \"fresh\",\n      \"book\"\n    ]\n  },\n  \"targets\": [\n    \"midpoint ticks and absolute ticks at 5/20/60 seconds\",\n    \"absolute flow-strength change at 20 seconds, both ratios defined\"\n  ],\n  \"trials\": {\n    \"arms\": 11,\n    \"target_horizon_pairs\": 7,\n    \"chronological_folds\": 3\n  },\n  \"fit\": \"Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters.\",\n  \"interpretation\": \"Compare added layers and full-stack ablations; complementary stories do not automatically imply additional predictive value.\",\n  \"limits\": [\n    \"Repeated/overlapping observations; interval clusters reported, no iid significance or calibrated probabilities.\",\n    \"Same-price displayed additions/removals are aggregate changes, not proven same-order replenishment or executed absorption.\",\n    \"Fresh and dipole features share trade observations; redundancy correlations and ablations retain this.\",\n    \"Flow-strength target excludes undefined endpoint/start ratios; report empty flow separately.\",\n    \"No future family, birth polarity, final duration, identity, timestamp or source cursor is a predictor.\",\n    \"Price response is a separate target; no universal law or execution rule is admitted.\",\n    \"Each date is discovery; same model and folds, separately fitted. All hypotheses retained for paper comparison.\"\n  ],\n  \"trade_date\": \"20231002\",\n  \"scope\": \"partial UTC snapshot through halt\",\n  \"candidates\": 741,\n  \"all_recorded_candidates\": 741,\n  \"unavailable_finalize_only\": 0\n}\n"
+    },
+    "S01596": {
+      "sha": "c8178e701eebe2122c9c9ec945a209d32eba246a",
+      "raw": "{\n  \"source_revision\": \"2f12d6d47\",\n  \"source_groups\": \"tasks/family-research-20261022/replay-artifacts/20231003/standalone-inputs/groups.jsonl.gz\",\n  \"layers\": {\n    \"context\": [\n      \"prior_ticks20\",\n      \"range_ticks20\",\n      \"spread_ticks\"\n    ],\n    \"dipole\": [\n      \"imb_level\",\n      \"imb_flow\",\n      \"ent_dipole\",\n      \"mi_flow\",\n      \"log_signed_C\",\n      \"strength_change\",\n      \"early_empty\",\n      \"late_empty\"\n    ],\n    \"fresh\": [\n      \"fresh_imb5\",\n      \"log_fresh_lots5\",\n      \"log_unknown_lots5\"\n    ],\n    \"book\": [\n      \"touch_imb\",\n      \"touch_count_imb\",\n      \"log_touch_lots\",\n      \"log_touch_orders\"\n    ],\n    \"display\": [\n      \"bid_add5\",\n      \"bid_remove5\",\n      \"ask_add5\",\n      \"ask_remove5\",\n      \"quote_price_changes5\"\n    ]\n  },\n  \"arms\": {\n    \"baseline\": [],\n    \"plus_dipole\": [\n      \"dipole\"\n    ],\n    \"plus_fresh\": [\n      \"fresh\"\n    ],\n    \"plus_book\": [\n      \"book\"\n    ],\n    \"plus_display\": [\n      \"display\"\n    ],\n    \"dipole_book\": [\n      \"dipole\",\n      \"book\"\n    ],\n    \"full\": [\n      \"dipole\",\n      \"fresh\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_dipole\": [\n      \"fresh\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_fresh\": [\n      \"dipole\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_book\": [\n      \"dipole\",\n      \"fresh\",\n      \"display\"\n    ],\n    \"without_display\": [\n      \"dipole\",\n      \"fresh\",\n      \"book\"\n    ]\n  },\n  \"targets\": [\n    \"midpoint ticks and absolute ticks at 5/20/60 seconds\",\n    \"absolute flow-strength change at 20 seconds, both ratios defined\"\n  ],\n  \"trials\": {\n    \"arms\": 11,\n    \"target_horizon_pairs\": 7,\n    \"chronological_folds\": 3\n  },\n  \"fit\": \"Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters.\",\n  \"interpretation\": \"Compare added layers and full-stack ablations; complementary stories do not automatically imply additional predictive value.\",\n  \"limits\": [\n    \"Repeated/overlapping observations; interval clusters reported, no iid significance or calibrated probabilities.\",\n    \"Same-price displayed additions/removals are aggregate changes, not proven same-order replenishment or executed absorption.\",\n    \"Fresh and dipole features share trade observations; redundancy correlations and ablations retain this.\",\n    \"Flow-strength target excludes undefined endpoint/start ratios; report empty flow separately.\",\n    \"No future family, birth polarity, final duration, identity, timestamp or source cursor is a predictor.\",\n    \"Price response is a separate target; no universal law or execution rule is admitted.\",\n    \"Each date is discovery; same model and folds, separately fitted. All hypotheses retained for paper comparison.\"\n  ],\n  \"trade_date\": \"20231003\",\n  \"scope\": \"full session\",\n  \"candidates\": 832,\n  \"all_recorded_candidates\": 833,\n  \"unavailable_finalize_only\": 1\n}\n"
+    },
+    "S01633": {
+      "sha": "61fc650c780e9a674f99f0ad487688365d854993",
+      "raw": "{\n  \"source_revision\": \"2f12d6d47\",\n  \"source_groups\": \"tasks/family-research-20261022/replay-artifacts/20231017/standalone-inputs/groups.jsonl.gz\",\n  \"layers\": {\n    \"context\": [\n      \"prior_ticks20\",\n      \"range_ticks20\",\n      \"spread_ticks\"\n    ],\n    \"dipole\": [\n      \"imb_level\",\n      \"imb_flow\",\n      \"ent_dipole\",\n      \"mi_flow\",\n      \"log_signed_C\",\n      \"strength_change\",\n      \"early_empty\",\n      \"late_empty\"\n    ],\n    \"fresh\": [\n      \"fresh_imb5\",\n      \"log_fresh_lots5\",\n      \"log_unknown_lots5\"\n    ],\n    \"book\": [\n      \"touch_imb\",\n      \"touch_count_imb\",\n      \"log_touch_lots\",\n      \"log_touch_orders\"\n    ],\n    \"display\": [\n      \"bid_add5\",\n      \"bid_remove5\",\n      \"ask_add5\",\n      \"ask_remove5\",\n      \"quote_price_changes5\"\n    ]\n  },\n  \"arms\": {\n    \"baseline\": [],\n    \"plus_dipole\": [\n      \"dipole\"\n    ],\n    \"plus_fresh\": [\n      \"fresh\"\n    ],\n    \"plus_book\": [\n      \"book\"\n    ],\n    \"plus_display\": [\n      \"display\"\n    ],\n    \"dipole_book\": [\n      \"dipole\",\n      \"book\"\n    ],\n    \"full\": [\n      \"dipole\",\n      \"fresh\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_dipole\": [\n      \"fresh\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_fresh\": [\n      \"dipole\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_book\": [\n      \"dipole\",\n      \"fresh\",\n      \"display\"\n    ],\n    \"without_display\": [\n      \"dipole\",\n      \"fresh\",\n      \"book\"\n    ]\n  },\n  \"targets\": [\n    \"midpoint ticks and absolute ticks at 5/20/60 seconds\",\n    \"absolute flow-strength change at 20 seconds, both ratios defined\"\n  ],\n  \"trials\": {\n    \"arms\": 11,\n    \"target_horizon_pairs\": 7,\n    \"chronological_folds\": 3\n  },\n  \"fit\": \"Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters.\",\n  \"interpretation\": \"Compare added layers and full-stack ablations; complementary stories do not automatically imply additional predictive value.\",\n  \"limits\": [\n    \"Repeated/overlapping observations; interval clusters reported, no iid significance or calibrated probabilities.\",\n    \"Same-price displayed additions/removals are aggregate changes, not proven same-order replenishment or executed absorption.\",\n    \"Fresh and dipole features share trade observations; redundancy correlations and ablations retain this.\",\n    \"Flow-strength target excludes undefined endpoint/start ratios; report empty flow separately.\",\n    \"No future family, birth polarity, final duration, identity, timestamp or source cursor is a predictor.\",\n    \"Price response is a separate target; no universal law or execution rule is admitted.\",\n    \"Each date is discovery; same model and folds, separately fitted. All hypotheses retained for paper comparison.\"\n  ],\n  \"trade_date\": \"20231017\",\n  \"scope\": \"partial UTC snapshot through halt\",\n  \"candidates\": 740,\n  \"all_recorded_candidates\": 741,\n  \"unavailable_finalize_only\": 1\n}\n"
+    },
+    "S01669": {
+      "sha": "1fe32e25d93b80496bd30868037c8c40921c5c11",
+      "raw": "{\n  \"source_revision\": \"b5f28bd57de5ed4ff889335edb9a33216b67eb6a\",\n  \"source_groups\": \"research/kalshi/adaptive_wavepacket_20261108/markets_bridge/tasks/root-bounded-replay/retained/october18-standalone-inputs/groups.jsonl.gz\",\n  \"layers\": {\n    \"context\": [\n      \"prior_ticks20\",\n      \"range_ticks20\",\n      \"spread_ticks\"\n    ],\n    \"dipole\": [\n      \"imb_level\",\n      \"imb_flow\",\n      \"ent_dipole\",\n      \"mi_flow\",\n      \"log_signed_C\",\n      \"strength_change\",\n      \"early_empty\",\n      \"late_empty\"\n    ],\n    \"fresh\": [\n      \"fresh_imb5\",\n      \"log_fresh_lots5\",\n      \"log_unknown_lots5\"\n    ],\n    \"book\": [\n      \"touch_imb\",\n      \"touch_count_imb\",\n      \"log_touch_lots\",\n      \"log_touch_orders\"\n    ],\n    \"display\": [\n      \"bid_add5\",\n      \"bid_remove5\",\n      \"ask_add5\",\n      \"ask_remove5\",\n      \"quote_price_changes5\"\n    ]\n  },\n  \"arms\": {\n    \"baseline\": [],\n    \"plus_dipole\": [\n      \"dipole\"\n    ],\n    \"plus_fresh\": [\n      \"fresh\"\n    ],\n    \"plus_book\": [\n      \"book\"\n    ],\n    \"plus_display\": [\n      \"display\"\n    ],\n    \"dipole_book\": [\n      \"dipole\",\n      \"book\"\n    ],\n    \"full\": [\n      \"dipole\",\n      \"fresh\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_dipole\": [\n      \"fresh\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_fresh\": [\n      \"dipole\",\n      \"book\",\n      \"display\"\n    ],\n    \"without_book\": [\n      \"dipole\",\n      \"fresh\",\n      \"display\"\n    ],\n    \"without_display\": [\n      \"dipole\",\n      \"fresh\",\n      \"book\"\n    ]\n  },\n  \"targets\": [\n    \"midpoint ticks and absolute ticks at 5/20/60 seconds\",\n    \"absolute flow-strength change at 20 seconds, both ratios defined\"\n  ],\n  \"trials\": {\n    \"arms\": 11,\n    \"target_horizon_pairs\": 7,\n    \"chronological_folds\": 3\n  },\n  \"fit\": \"Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters.\",\n  \"interpretation\": \"Compare added layers and full-stack ablations; complementary stories do not automatically imply additional predictive value.\",\n  \"limits\": [\n    \"Repeated/overlapping observations; interval clusters reported, no iid significance or calibrated probabilities.\",\n    \"Same-price displayed additions/removals are aggregate changes, not proven same-order replenishment or executed absorption.\",\n    \"Fresh and dipole features share trade observations; redundancy correlations and ablations retain this.\",\n    \"Flow-strength target excludes undefined endpoint/start ratios; report empty flow separately.\",\n    \"No future family, birth polarity, final duration, identity, timestamp or source cursor is a predictor.\",\n    \"Price response is a separate target; no universal law or execution rule is admitted.\",\n    \"Each date is discovery; same model and folds, separately fitted. All hypotheses retained for paper comparison.\"\n  ],\n  \"trade_date\": \"20231018\",\n  \"scope\": \"full session\",\n  \"candidates\": 863,\n  \"all_recorded_candidates\": 863,\n  \"unavailable_finalize_only\": 0\n}\n"
+    },
+    "S11464": {
+      "sha": "d3d7ac9602b126e0e341e6e76513cfaa3c696239",
+      "raw": "{\n  \"day\": \"20231002\",\n  \"families\": 796,\n  \"four_arm_eligible\": 510,\n  \"model_fits\": 120,\n  \"prebirth_case_rows\": 3184,\n  \"checks\": \"passed\",\n  \"primer_missing_prior\": 2,\n  \"cohorts\": {\n    \"other\": 472,\n    \"missing\": 282,\n    \"original\": 40,\n    \"inverse\": 2\n  },\n  \"scope\": \"all observed date-specific structural families\"\n}\n"
+    },
+    "S11489": {
+      "sha": "b4153bc7172c18c4e80c2b50ba5d8c5bb7c7571d",
+      "raw": "{\n  \"day\": \"20231003\",\n  \"families\": 849,\n  \"four_arm_eligible\": 535,\n  \"model_fits\": 120,\n  \"prebirth_case_rows\": 3396,\n  \"checks\": \"passed\",\n  \"primer_missing_prior\": 4,\n  \"cohorts\": {\n    \"other\": 484,\n    \"missing\": 308,\n    \"original\": 57\n  },\n  \"scope\": \"all observed date-specific structural families\"\n}\n"
+    },
+    "S11514": {
+      "sha": "53d49e0efa729d13d4937224b2942e1b3bd82761",
+      "raw": "{\n  \"day\": \"20231017\",\n  \"families\": 824,\n  \"four_arm_eligible\": 517,\n  \"model_fits\": 120,\n  \"prebirth_case_rows\": 3296,\n  \"checks\": \"passed\",\n  \"primer_missing_prior\": 2,\n  \"cohorts\": {\n    \"other\": 468,\n    \"missing\": 307,\n    \"original\": 46,\n    \"inverse\": 3\n  },\n  \"scope\": \"all observed date-specific structural families\"\n}\n"
+    },
+    "S11539": {
+      "sha": "9f73bfd3bd6cb4107fdffadfab7a851d670fabe5",
+      "raw": "{\n  \"day\": \"20231018\",\n  \"families\": 749,\n  \"four_arm_eligible\": 437,\n  \"model_fits\": 120,\n  \"prebirth_case_rows\": 2996,\n  \"checks\": \"passed\",\n  \"primer_missing_prior\": 0,\n  \"cohorts\": {\n    \"other\": 387,\n    \"missing\": 312,\n    \"original\": 50\n  },\n  \"scope\": \"reference749\"\n}\n"
+    }
+  },
+  "ST_inventory": {
+    "versions": [
+      {
+        "method": {
+          "id": "S01758",
+          "path": "tasks/family-research-20261022/research-atlas-v2/stack-method.json",
+          "sha": "f393297bf8b47b10fb1d00636ee9363662b78570",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-method.json",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "metrics": {
+          "id": "S01759",
+          "path": "tasks/family-research-20261022/research-atlas-v2/stack-metrics.csv",
+          "sha": "9ce007cee9e5814d3505bf4695776954edb4b4f7",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-metrics.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "splits": {
+          "id": "S01761",
+          "path": "tasks/family-research-20261022/research-atlas-v2/stack-splits.csv",
+          "sha": "03f0be4951135b6f8bc9b1b7961e0acc86ba3c1f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/stack-splits.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "scope": "original Oct18",
+        "role": "retained source version",
+        "method_content": {
+          "source_revision": "b5f28bd57de5ed4ff889335edb9a33216b67eb6a",
+          "source_groups": "research/kalshi/adaptive_wavepacket_20261108/markets_bridge/tasks/root-bounded-replay/retained/october18-standalone-inputs/groups.jsonl.gz",
+          "layers": {
+            "context": [
+              "prior_ticks20",
+              "range_ticks20",
+              "spread_ticks"
+            ],
+            "dipole": [
+              "imb_level",
+              "imb_flow",
+              "ent_dipole",
+              "mi_flow",
+              "log_signed_C",
+              "strength_change",
+              "early_empty",
+              "late_empty"
+            ],
+            "fresh": [
+              "fresh_imb5",
+              "log_fresh_lots5",
+              "log_unknown_lots5"
+            ],
+            "book": [
+              "touch_imb",
+              "touch_count_imb",
+              "log_touch_lots",
+              "log_touch_orders"
+            ],
+            "display": [
+              "bid_add5",
+              "bid_remove5",
+              "ask_add5",
+              "ask_remove5",
+              "quote_price_changes5"
+            ]
+          },
+          "arms": {
+            "baseline": [],
+            "plus_dipole": [
+              "dipole"
+            ],
+            "plus_fresh": [
+              "fresh"
+            ],
+            "plus_book": [
+              "book"
+            ],
+            "plus_display": [
+              "display"
+            ],
+            "dipole_book": [
+              "dipole",
+              "book"
+            ],
+            "full": [
+              "dipole",
+              "fresh",
+              "book",
+              "display"
+            ],
+            "without_dipole": [
+              "fresh",
+              "book",
+              "display"
+            ],
+            "without_fresh": [
+              "dipole",
+              "book",
+              "display"
+            ],
+            "without_book": [
+              "dipole",
+              "fresh",
+              "display"
+            ],
+            "without_display": [
+              "dipole",
+              "fresh",
+              "book"
+            ]
+          },
+          "targets": [
+            "midpoint ticks and absolute ticks at 5/20/60 seconds",
+            "absolute flow-strength change at 20 seconds, both ratios defined"
+          ],
+          "trials": {
+            "arms": 11,
+            "target_horizon_pairs": 7,
+            "chronological_folds": 3
+          },
+          "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters.",
+          "interpretation": "Compare added layers and full-stack ablations; complementary stories do not automatically imply additional predictive value.",
+          "limits": [
+            "One selected October 18 discovery cohort; other three days pending comparable final inputs.",
+            "Repeated/overlapping observations; interval clusters reported, no iid significance or calibrated probabilities.",
+            "Same-price displayed additions/removals are aggregate changes, not proven same-order replenishment or executed absorption.",
+            "Fresh and dipole features share trade observations; redundancy correlations and ablations retain this.",
+            "Flow-strength target excludes undefined endpoint/start ratios; report empty flow separately.",
+            "No future family, birth polarity, final duration, identity, timestamp or source cursor is a predictor.",
+            "Price response is a separate target; no universal law or execution rule is admitted."
+          ]
+        },
+        "metric_rows": 308,
+        "arms": [
+          "baseline",
+          "dipole_book",
+          "full",
+          "plus_book",
+          "plus_dipole",
+          "plus_display",
+          "plus_fresh",
+          "without_book",
+          "without_dipole",
+          "without_display",
+          "without_fresh"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute_ticks",
+            5
+          ],
+          [
+            "absolute_ticks",
+            20
+          ],
+          [
+            "absolute_ticks",
+            60
+          ],
+          [
+            "flow_strength_change",
+            20
+          ],
+          [
+            "midpoint_ticks",
+            5
+          ],
+          [
+            "midpoint_ticks",
+            20
+          ],
+          [
+            "midpoint_ticks",
+            60
+          ]
+        ],
+        "metric_fold_ids": [
+          -1,
+          0,
+          1,
+          2
+        ],
+        "splits_content": [
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "0",
+            "train": "336",
+            "test": "172",
+            "test_start_ns": "1697613483288155384",
+            "last_train_target_ns": "1697612874133933834",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "1",
+            "train": "509",
+            "test": "173",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625707694401497",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "2",
+            "train": "685",
+            "test": "173",
+            "test_start_ns": "1697646584505846192",
+            "last_train_target_ns": "1697645968003137315",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "0",
+            "train": "336",
+            "test": "172",
+            "test_start_ns": "1697613483288155384",
+            "last_train_target_ns": "1697612874133933834",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "1",
+            "train": "509",
+            "test": "173",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625707694401497",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "2",
+            "train": "685",
+            "test": "173",
+            "test_start_ns": "1697646584505846192",
+            "last_train_target_ns": "1697645968003137315",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "335",
+            "test": "173",
+            "test_start_ns": "1697613427242486083",
+            "last_train_target_ns": "1697612784967656351",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "509",
+            "test": "172",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625722694401497",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "683",
+            "test": "173",
+            "test_start_ns": "1697646402951731713",
+            "last_train_target_ns": "1697645573468890600",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "335",
+            "test": "173",
+            "test_start_ns": "1697613427242486083",
+            "last_train_target_ns": "1697612784967656351",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "509",
+            "test": "172",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625722694401497",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "683",
+            "test": "173",
+            "test_start_ns": "1697646402951731713",
+            "last_train_target_ns": "1697645573468890600",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "0",
+            "train": "334",
+            "test": "172",
+            "test_start_ns": "1697613483288155384",
+            "last_train_target_ns": "1697612824967656351",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "1",
+            "train": "507",
+            "test": "172",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625680436051208",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "2",
+            "train": "682",
+            "test": "173",
+            "test_start_ns": "1697646402951731713",
+            "last_train_target_ns": "1697645613468890600",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "0",
+            "train": "334",
+            "test": "172",
+            "test_start_ns": "1697613483288155384",
+            "last_train_target_ns": "1697612824967656351",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "1",
+            "train": "507",
+            "test": "172",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625680436051208",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "2",
+            "train": "682",
+            "test": "173",
+            "test_start_ns": "1697646402951731713",
+            "last_train_target_ns": "1697645613468890600",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "167",
+            "test": "86",
+            "test_start_ns": "1697629833787484186",
+            "last_train_target_ns": "1697629165340667371",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "252",
+            "test": "87",
+            "test_start_ns": "1697642640063032340",
+            "last_train_target_ns": "1697641976208980577",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "343",
+            "test": "87",
+            "test_start_ns": "1697652217524532685",
+            "last_train_target_ns": "1697651601233474744",
+            "embargo_s": "600"
+          }
+        ],
+        "all_listed_blobs_verified": true
+      },
+      {
+        "method": {
+          "id": "S01559",
+          "path": "tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/stack-method.json",
+          "sha": "ea39d17acbffc1ac42a15d70d2d69df35e904b94",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/stack-method.json",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "metrics": {
+          "id": "S01560",
+          "path": "tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/stack-metrics.csv",
+          "sha": "07cb970e7084a3aeff27c05cab7cc1d2d676555e",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/stack-metrics.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "splits": {
+          "id": "S01562",
+          "path": "tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/stack-splits.csv",
+          "sha": "0e9891ccc2cd6cc8ecbcc2d6dd6a62aa3f0d98b1",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231002/research-atlas-v2/stack-splits.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "scope": "replay Oct2 partial",
+        "role": "retained source version",
+        "method_content": {
+          "source_revision": "2f12d6d47",
+          "source_groups": "tasks/family-research-20261022/replay-artifacts/20231002/standalone-inputs/groups.jsonl.gz",
+          "layers": {
+            "context": [
+              "prior_ticks20",
+              "range_ticks20",
+              "spread_ticks"
+            ],
+            "dipole": [
+              "imb_level",
+              "imb_flow",
+              "ent_dipole",
+              "mi_flow",
+              "log_signed_C",
+              "strength_change",
+              "early_empty",
+              "late_empty"
+            ],
+            "fresh": [
+              "fresh_imb5",
+              "log_fresh_lots5",
+              "log_unknown_lots5"
+            ],
+            "book": [
+              "touch_imb",
+              "touch_count_imb",
+              "log_touch_lots",
+              "log_touch_orders"
+            ],
+            "display": [
+              "bid_add5",
+              "bid_remove5",
+              "ask_add5",
+              "ask_remove5",
+              "quote_price_changes5"
+            ]
+          },
+          "arms": {
+            "baseline": [],
+            "plus_dipole": [
+              "dipole"
+            ],
+            "plus_fresh": [
+              "fresh"
+            ],
+            "plus_book": [
+              "book"
+            ],
+            "plus_display": [
+              "display"
+            ],
+            "dipole_book": [
+              "dipole",
+              "book"
+            ],
+            "full": [
+              "dipole",
+              "fresh",
+              "book",
+              "display"
+            ],
+            "without_dipole": [
+              "fresh",
+              "book",
+              "display"
+            ],
+            "without_fresh": [
+              "dipole",
+              "book",
+              "display"
+            ],
+            "without_book": [
+              "dipole",
+              "fresh",
+              "display"
+            ],
+            "without_display": [
+              "dipole",
+              "fresh",
+              "book"
+            ]
+          },
+          "targets": [
+            "midpoint ticks and absolute ticks at 5/20/60 seconds",
+            "absolute flow-strength change at 20 seconds, both ratios defined"
+          ],
+          "trials": {
+            "arms": 11,
+            "target_horizon_pairs": 7,
+            "chronological_folds": 3
+          },
+          "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters.",
+          "interpretation": "Compare added layers and full-stack ablations; complementary stories do not automatically imply additional predictive value.",
+          "limits": [
+            "Repeated/overlapping observations; interval clusters reported, no iid significance or calibrated probabilities.",
+            "Same-price displayed additions/removals are aggregate changes, not proven same-order replenishment or executed absorption.",
+            "Fresh and dipole features share trade observations; redundancy correlations and ablations retain this.",
+            "Flow-strength target excludes undefined endpoint/start ratios; report empty flow separately.",
+            "No future family, birth polarity, final duration, identity, timestamp or source cursor is a predictor.",
+            "Price response is a separate target; no universal law or execution rule is admitted.",
+            "Each date is discovery; same model and folds, separately fitted. All hypotheses retained for paper comparison."
+          ],
+          "trade_date": "20231002",
+          "scope": "partial UTC snapshot through halt",
+          "candidates": 741,
+          "all_recorded_candidates": 741,
+          "unavailable_finalize_only": 0
+        },
+        "metric_rows": 308,
+        "arms": [
+          "baseline",
+          "dipole_book",
+          "full",
+          "plus_book",
+          "plus_dipole",
+          "plus_display",
+          "plus_fresh",
+          "without_book",
+          "without_dipole",
+          "without_display",
+          "without_fresh"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute_ticks",
+            5
+          ],
+          [
+            "absolute_ticks",
+            20
+          ],
+          [
+            "absolute_ticks",
+            60
+          ],
+          [
+            "flow_strength_change",
+            20
+          ],
+          [
+            "midpoint_ticks",
+            5
+          ],
+          [
+            "midpoint_ticks",
+            20
+          ],
+          [
+            "midpoint_ticks",
+            60
+          ]
+        ],
+        "metric_fold_ids": [
+          -1,
+          0,
+          1,
+          2
+        ],
+        "splits_content": [
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1696233378023914349",
+            "last_train_target_ns": "1696232715300884885",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "1",
+            "train": "435",
+            "test": "148",
+            "test_start_ns": "1696244760164306952",
+            "last_train_target_ns": "1696244105016620499",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "2",
+            "train": "584",
+            "test": "149",
+            "test_start_ns": "1696266800149180117",
+            "last_train_target_ns": "1696266186012182231",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1696233378023914349",
+            "last_train_target_ns": "1696232715300884885",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "1",
+            "train": "435",
+            "test": "148",
+            "test_start_ns": "1696244760164306952",
+            "last_train_target_ns": "1696244105016620499",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "2",
+            "train": "584",
+            "test": "149",
+            "test_start_ns": "1696266800149180117",
+            "last_train_target_ns": "1696266186012182231",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1696233378023914349",
+            "last_train_target_ns": "1696232730300884885",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "435",
+            "test": "148",
+            "test_start_ns": "1696244760164306952",
+            "last_train_target_ns": "1696244120016620499",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "583",
+            "test": "149",
+            "test_start_ns": "1696266800149180117",
+            "last_train_target_ns": "1696265943152714220",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1696233378023914349",
+            "last_train_target_ns": "1696232730300884885",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "435",
+            "test": "148",
+            "test_start_ns": "1696244760164306952",
+            "last_train_target_ns": "1696244120016620499",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "583",
+            "test": "149",
+            "test_start_ns": "1696266800149180117",
+            "last_train_target_ns": "1696265943152714220",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1696233378023914349",
+            "last_train_target_ns": "1696232770300884885",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "1",
+            "train": "435",
+            "test": "148",
+            "test_start_ns": "1696244760164306952",
+            "last_train_target_ns": "1696244160016620499",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "2",
+            "train": "583",
+            "test": "148",
+            "test_start_ns": "1696266800149180117",
+            "last_train_target_ns": "1696265983152714220",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1696233378023914349",
+            "last_train_target_ns": "1696232770300884885",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "1",
+            "train": "435",
+            "test": "148",
+            "test_start_ns": "1696244760164306952",
+            "last_train_target_ns": "1696244160016620499",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "2",
+            "train": "583",
+            "test": "148",
+            "test_start_ns": "1696266800149180117",
+            "last_train_target_ns": "1696265983152714220",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "129",
+            "test": "68",
+            "test_start_ns": "1696247846441996574",
+            "last_train_target_ns": "1696247140538893032",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "203",
+            "test": "69",
+            "test_start_ns": "1696261858480019792",
+            "last_train_target_ns": "1696261137010696049",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "268",
+            "test": "69",
+            "test_start_ns": "1696269641393093136",
+            "last_train_target_ns": "1696269000266912449",
+            "embargo_s": "600"
+          }
+        ],
+        "all_listed_blobs_verified": true
+      },
+      {
+        "method": {
+          "id": "S01596",
+          "path": "tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/stack-method.json",
+          "sha": "c8178e701eebe2122c9c9ec945a209d32eba246a",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/stack-method.json",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "metrics": {
+          "id": "S01597",
+          "path": "tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/stack-metrics.csv",
+          "sha": "ff082f2b32b78d046338411b0bb72fc33a3ce00b",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/stack-metrics.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "splits": {
+          "id": "S01599",
+          "path": "tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/stack-splits.csv",
+          "sha": "c2ea7ab4f480efa43a82f8f64619aeafe4ea5dd4",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231003/research-atlas-v2/stack-splits.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "scope": "replay Oct3 full",
+        "role": "retained source version",
+        "method_content": {
+          "source_revision": "2f12d6d47",
+          "source_groups": "tasks/family-research-20261022/replay-artifacts/20231003/standalone-inputs/groups.jsonl.gz",
+          "layers": {
+            "context": [
+              "prior_ticks20",
+              "range_ticks20",
+              "spread_ticks"
+            ],
+            "dipole": [
+              "imb_level",
+              "imb_flow",
+              "ent_dipole",
+              "mi_flow",
+              "log_signed_C",
+              "strength_change",
+              "early_empty",
+              "late_empty"
+            ],
+            "fresh": [
+              "fresh_imb5",
+              "log_fresh_lots5",
+              "log_unknown_lots5"
+            ],
+            "book": [
+              "touch_imb",
+              "touch_count_imb",
+              "log_touch_lots",
+              "log_touch_orders"
+            ],
+            "display": [
+              "bid_add5",
+              "bid_remove5",
+              "ask_add5",
+              "ask_remove5",
+              "quote_price_changes5"
+            ]
+          },
+          "arms": {
+            "baseline": [],
+            "plus_dipole": [
+              "dipole"
+            ],
+            "plus_fresh": [
+              "fresh"
+            ],
+            "plus_book": [
+              "book"
+            ],
+            "plus_display": [
+              "display"
+            ],
+            "dipole_book": [
+              "dipole",
+              "book"
+            ],
+            "full": [
+              "dipole",
+              "fresh",
+              "book",
+              "display"
+            ],
+            "without_dipole": [
+              "fresh",
+              "book",
+              "display"
+            ],
+            "without_fresh": [
+              "dipole",
+              "book",
+              "display"
+            ],
+            "without_book": [
+              "dipole",
+              "fresh",
+              "display"
+            ],
+            "without_display": [
+              "dipole",
+              "fresh",
+              "book"
+            ]
+          },
+          "targets": [
+            "midpoint ticks and absolute ticks at 5/20/60 seconds",
+            "absolute flow-strength change at 20 seconds, both ratios defined"
+          ],
+          "trials": {
+            "arms": 11,
+            "target_horizon_pairs": 7,
+            "chronological_folds": 3
+          },
+          "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters.",
+          "interpretation": "Compare added layers and full-stack ablations; complementary stories do not automatically imply additional predictive value.",
+          "limits": [
+            "Repeated/overlapping observations; interval clusters reported, no iid significance or calibrated probabilities.",
+            "Same-price displayed additions/removals are aggregate changes, not proven same-order replenishment or executed absorption.",
+            "Fresh and dipole features share trade observations; redundancy correlations and ablations retain this.",
+            "Flow-strength target excludes undefined endpoint/start ratios; report empty flow separately.",
+            "No future family, birth polarity, final duration, identity, timestamp or source cursor is a predictor.",
+            "Price response is a separate target; no universal law or execution rule is admitted.",
+            "Each date is discovery; same model and folds, separately fitted. All hypotheses retained for paper comparison."
+          ],
+          "trade_date": "20231003",
+          "scope": "full session",
+          "candidates": 832,
+          "all_recorded_candidates": 833,
+          "unavailable_finalize_only": 1
+        },
+        "metric_rows": 308,
+        "arms": [
+          "baseline",
+          "dipole_book",
+          "full",
+          "plus_book",
+          "plus_dipole",
+          "plus_display",
+          "plus_fresh",
+          "without_book",
+          "without_dipole",
+          "without_display",
+          "without_fresh"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute_ticks",
+            5
+          ],
+          [
+            "absolute_ticks",
+            20
+          ],
+          [
+            "absolute_ticks",
+            60
+          ],
+          [
+            "flow_strength_change",
+            20
+          ],
+          [
+            "midpoint_ticks",
+            5
+          ],
+          [
+            "midpoint_ticks",
+            20
+          ],
+          [
+            "midpoint_ticks",
+            60
+          ]
+        ],
+        "metric_fold_ids": [
+          -1,
+          0,
+          1,
+          2
+        ],
+        "splits_content": [
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "0",
+            "train": "324",
+            "test": "167",
+            "test_start_ns": "1696316673932087316",
+            "last_train_target_ns": "1696315998377548112",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "1",
+            "train": "491",
+            "test": "166",
+            "test_start_ns": "1696328870578665041",
+            "last_train_target_ns": "1696328245175728754",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "2",
+            "train": "659",
+            "test": "167",
+            "test_start_ns": "1696353336340164486",
+            "last_train_target_ns": "1696352369249558094",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "0",
+            "train": "324",
+            "test": "167",
+            "test_start_ns": "1696316673932087316",
+            "last_train_target_ns": "1696315998377548112",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "1",
+            "train": "491",
+            "test": "166",
+            "test_start_ns": "1696328870578665041",
+            "last_train_target_ns": "1696328245175728754",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "2",
+            "train": "659",
+            "test": "167",
+            "test_start_ns": "1696353336340164486",
+            "last_train_target_ns": "1696352369249558094",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "324",
+            "test": "167",
+            "test_start_ns": "1696316673932087316",
+            "last_train_target_ns": "1696316013377548112",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "491",
+            "test": "166",
+            "test_start_ns": "1696328870578665041",
+            "last_train_target_ns": "1696328260175728754",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "659",
+            "test": "167",
+            "test_start_ns": "1696353336340164486",
+            "last_train_target_ns": "1696352384249558094",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "324",
+            "test": "167",
+            "test_start_ns": "1696316673932087316",
+            "last_train_target_ns": "1696316013377548112",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "491",
+            "test": "166",
+            "test_start_ns": "1696328870578665041",
+            "last_train_target_ns": "1696328260175728754",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "659",
+            "test": "167",
+            "test_start_ns": "1696353336340164486",
+            "last_train_target_ns": "1696352384249558094",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "0",
+            "train": "324",
+            "test": "167",
+            "test_start_ns": "1696316673932087316",
+            "last_train_target_ns": "1696316053377548112",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "1",
+            "train": "490",
+            "test": "166",
+            "test_start_ns": "1696328870578665041",
+            "last_train_target_ns": "1696328218099025328",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "2",
+            "train": "659",
+            "test": "167",
+            "test_start_ns": "1696353336340164486",
+            "last_train_target_ns": "1696352424249558094",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "0",
+            "train": "324",
+            "test": "167",
+            "test_start_ns": "1696316673932087316",
+            "last_train_target_ns": "1696316053377548112",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "1",
+            "train": "490",
+            "test": "166",
+            "test_start_ns": "1696328870578665041",
+            "last_train_target_ns": "1696328218099025328",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "2",
+            "train": "659",
+            "test": "167",
+            "test_start_ns": "1696353336340164486",
+            "last_train_target_ns": "1696352424249558094",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "160",
+            "test": "83",
+            "test_start_ns": "1696331184517119771",
+            "last_train_target_ns": "1696330408111542994",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "244",
+            "test": "82",
+            "test_start_ns": "1696349140052129951",
+            "last_train_target_ns": "1696348451542849376",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "324",
+            "test": "83",
+            "test_start_ns": "1696358484337021183",
+            "last_train_target_ns": "1696357320199275842",
+            "embargo_s": "600"
+          }
+        ],
+        "all_listed_blobs_verified": true
+      },
+      {
+        "method": {
+          "id": "S01633",
+          "path": "tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/stack-method.json",
+          "sha": "61fc650c780e9a674f99f0ad487688365d854993",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/stack-method.json",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "metrics": {
+          "id": "S01634",
+          "path": "tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/stack-metrics.csv",
+          "sha": "dbbd29f1839d45c1e09686ae36f3b12d1d3dc421",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/stack-metrics.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "splits": {
+          "id": "S01636",
+          "path": "tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/stack-splits.csv",
+          "sha": "a7cef971102e9216ce8fb221a7b8975fb17f0f90",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231017/research-atlas-v2/stack-splits.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "scope": "replay Oct17 partial",
+        "role": "retained source version",
+        "method_content": {
+          "source_revision": "2f12d6d47",
+          "source_groups": "tasks/family-research-20261022/replay-artifacts/20231017/standalone-inputs/groups.jsonl.gz",
+          "layers": {
+            "context": [
+              "prior_ticks20",
+              "range_ticks20",
+              "spread_ticks"
+            ],
+            "dipole": [
+              "imb_level",
+              "imb_flow",
+              "ent_dipole",
+              "mi_flow",
+              "log_signed_C",
+              "strength_change",
+              "early_empty",
+              "late_empty"
+            ],
+            "fresh": [
+              "fresh_imb5",
+              "log_fresh_lots5",
+              "log_unknown_lots5"
+            ],
+            "book": [
+              "touch_imb",
+              "touch_count_imb",
+              "log_touch_lots",
+              "log_touch_orders"
+            ],
+            "display": [
+              "bid_add5",
+              "bid_remove5",
+              "ask_add5",
+              "ask_remove5",
+              "quote_price_changes5"
+            ]
+          },
+          "arms": {
+            "baseline": [],
+            "plus_dipole": [
+              "dipole"
+            ],
+            "plus_fresh": [
+              "fresh"
+            ],
+            "plus_book": [
+              "book"
+            ],
+            "plus_display": [
+              "display"
+            ],
+            "dipole_book": [
+              "dipole",
+              "book"
+            ],
+            "full": [
+              "dipole",
+              "fresh",
+              "book",
+              "display"
+            ],
+            "without_dipole": [
+              "fresh",
+              "book",
+              "display"
+            ],
+            "without_fresh": [
+              "dipole",
+              "book",
+              "display"
+            ],
+            "without_book": [
+              "dipole",
+              "fresh",
+              "display"
+            ],
+            "without_display": [
+              "dipole",
+              "fresh",
+              "book"
+            ]
+          },
+          "targets": [
+            "midpoint ticks and absolute ticks at 5/20/60 seconds",
+            "absolute flow-strength change at 20 seconds, both ratios defined"
+          ],
+          "trials": {
+            "arms": 11,
+            "target_horizon_pairs": 7,
+            "chronological_folds": 3
+          },
+          "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters.",
+          "interpretation": "Compare added layers and full-stack ablations; complementary stories do not automatically imply additional predictive value.",
+          "limits": [
+            "Repeated/overlapping observations; interval clusters reported, no iid significance or calibrated probabilities.",
+            "Same-price displayed additions/removals are aggregate changes, not proven same-order replenishment or executed absorption.",
+            "Fresh and dipole features share trade observations; redundancy correlations and ablations retain this.",
+            "Flow-strength target excludes undefined endpoint/start ratios; report empty flow separately.",
+            "No future family, birth polarity, final duration, identity, timestamp or source cursor is a predictor.",
+            "Price response is a separate target; no universal law or execution rule is admitted.",
+            "Each date is discovery; same model and folds, separately fitted. All hypotheses retained for paper comparison."
+          ],
+          "trade_date": "20231017",
+          "scope": "partial UTC snapshot through halt",
+          "candidates": 740,
+          "all_recorded_candidates": 741,
+          "unavailable_finalize_only": 1
+        },
+        "metric_rows": 308,
+        "arms": [
+          "baseline",
+          "dipole_book",
+          "full",
+          "plus_book",
+          "plus_dipole",
+          "plus_display",
+          "plus_fresh",
+          "without_book",
+          "without_dipole",
+          "without_display",
+          "without_fresh"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute_ticks",
+            5
+          ],
+          [
+            "absolute_ticks",
+            20
+          ],
+          [
+            "absolute_ticks",
+            60
+          ],
+          [
+            "flow_strength_change",
+            20
+          ],
+          [
+            "midpoint_ticks",
+            5
+          ],
+          [
+            "midpoint_ticks",
+            20
+          ],
+          [
+            "midpoint_ticks",
+            60
+          ]
+        ],
+        "metric_fold_ids": [
+          -1,
+          0,
+          1,
+          2
+        ],
+        "splits_content": [
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1697529664186552368",
+            "last_train_target_ns": "1697529007222941336",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "1",
+            "train": "435",
+            "test": "148",
+            "test_start_ns": "1697541576157047968",
+            "last_train_target_ns": "1697540946332958957",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "2",
+            "train": "587",
+            "test": "148",
+            "test_start_ns": "1697563852548083873",
+            "last_train_target_ns": "1697563173634768791",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1697529664186552368",
+            "last_train_target_ns": "1697529007222941336",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "1",
+            "train": "435",
+            "test": "148",
+            "test_start_ns": "1697541576157047968",
+            "last_train_target_ns": "1697540946332958957",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "2",
+            "train": "587",
+            "test": "148",
+            "test_start_ns": "1697563852548083873",
+            "last_train_target_ns": "1697563173634768791",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1697529664186552368",
+            "last_train_target_ns": "1697529022222941336",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "435",
+            "test": "148",
+            "test_start_ns": "1697541576157047968",
+            "last_train_target_ns": "1697540961332958957",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "587",
+            "test": "148",
+            "test_start_ns": "1697563852548083873",
+            "last_train_target_ns": "1697563188634768791",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1697529664186552368",
+            "last_train_target_ns": "1697529022222941336",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "435",
+            "test": "148",
+            "test_start_ns": "1697541576157047968",
+            "last_train_target_ns": "1697540961332958957",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "587",
+            "test": "148",
+            "test_start_ns": "1697563852548083873",
+            "last_train_target_ns": "1697563188634768791",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1697529664186552368",
+            "last_train_target_ns": "1697529062222941336",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "1",
+            "train": "434",
+            "test": "148",
+            "test_start_ns": "1697541576157047968",
+            "last_train_target_ns": "1697540932065454212",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "2",
+            "train": "587",
+            "test": "148",
+            "test_start_ns": "1697563852548083873",
+            "last_train_target_ns": "1697563228634768791",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "0",
+            "train": "289",
+            "test": "148",
+            "test_start_ns": "1697529664186552368",
+            "last_train_target_ns": "1697529062222941336",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "1",
+            "train": "434",
+            "test": "148",
+            "test_start_ns": "1697541576157047968",
+            "last_train_target_ns": "1697540932065454212",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "2",
+            "train": "587",
+            "test": "148",
+            "test_start_ns": "1697563852548083873",
+            "last_train_target_ns": "1697563228634768791",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "134",
+            "test": "68",
+            "test_start_ns": "1697545735288625503",
+            "last_train_target_ns": "1697544534046410299",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "201",
+            "test": "68",
+            "test_start_ns": "1697559017000508209",
+            "last_train_target_ns": "1697558220965545805",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "270",
+            "test": "68",
+            "test_start_ns": "1697567823426295133",
+            "last_train_target_ns": "1697567120000852784",
+            "embargo_s": "600"
+          }
+        ],
+        "all_listed_blobs_verified": true
+      },
+      {
+        "method": {
+          "id": "S01669",
+          "path": "tasks/family-research-20261022/replay-comparison/20231018/research-atlas-v2/stack-method.json",
+          "sha": "1fe32e25d93b80496bd30868037c8c40921c5c11",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231018/research-atlas-v2/stack-method.json",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "metrics": {
+          "id": "S01670",
+          "path": "tasks/family-research-20261022/replay-comparison/20231018/research-atlas-v2/stack-metrics.csv",
+          "sha": "9ce007cee9e5814d3505bf4695776954edb4b4f7",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231018/research-atlas-v2/stack-metrics.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "splits": {
+          "id": "S01672",
+          "path": "tasks/family-research-20261022/replay-comparison/20231018/research-atlas-v2/stack-splits.csv",
+          "sha": "03f0be4951135b6f8bc9b1b7961e0acc86ba3c1f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay-comparison/20231018/research-atlas-v2/stack-splits.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "scope": "replay Oct18 full",
+        "role": "retained source version",
+        "method_content": {
+          "source_revision": "b5f28bd57de5ed4ff889335edb9a33216b67eb6a",
+          "source_groups": "research/kalshi/adaptive_wavepacket_20261108/markets_bridge/tasks/root-bounded-replay/retained/october18-standalone-inputs/groups.jsonl.gz",
+          "layers": {
+            "context": [
+              "prior_ticks20",
+              "range_ticks20",
+              "spread_ticks"
+            ],
+            "dipole": [
+              "imb_level",
+              "imb_flow",
+              "ent_dipole",
+              "mi_flow",
+              "log_signed_C",
+              "strength_change",
+              "early_empty",
+              "late_empty"
+            ],
+            "fresh": [
+              "fresh_imb5",
+              "log_fresh_lots5",
+              "log_unknown_lots5"
+            ],
+            "book": [
+              "touch_imb",
+              "touch_count_imb",
+              "log_touch_lots",
+              "log_touch_orders"
+            ],
+            "display": [
+              "bid_add5",
+              "bid_remove5",
+              "ask_add5",
+              "ask_remove5",
+              "quote_price_changes5"
+            ]
+          },
+          "arms": {
+            "baseline": [],
+            "plus_dipole": [
+              "dipole"
+            ],
+            "plus_fresh": [
+              "fresh"
+            ],
+            "plus_book": [
+              "book"
+            ],
+            "plus_display": [
+              "display"
+            ],
+            "dipole_book": [
+              "dipole",
+              "book"
+            ],
+            "full": [
+              "dipole",
+              "fresh",
+              "book",
+              "display"
+            ],
+            "without_dipole": [
+              "fresh",
+              "book",
+              "display"
+            ],
+            "without_fresh": [
+              "dipole",
+              "book",
+              "display"
+            ],
+            "without_book": [
+              "dipole",
+              "fresh",
+              "display"
+            ],
+            "without_display": [
+              "dipole",
+              "fresh",
+              "book"
+            ]
+          },
+          "targets": [
+            "midpoint ticks and absolute ticks at 5/20/60 seconds",
+            "absolute flow-strength change at 20 seconds, both ratios defined"
+          ],
+          "trials": {
+            "arms": 11,
+            "target_horizon_pairs": 7,
+            "chronological_folds": 3
+          },
+          "fit": "Ridge alpha 10; train-only mean imputation, missingness flags and scaling. Expanding 40/60/80 percent cuts; label purge plus 600-second embargo. Same eligible rows in every arm within target/fold; no search for hyperparameters.",
+          "interpretation": "Compare added layers and full-stack ablations; complementary stories do not automatically imply additional predictive value.",
+          "limits": [
+            "Repeated/overlapping observations; interval clusters reported, no iid significance or calibrated probabilities.",
+            "Same-price displayed additions/removals are aggregate changes, not proven same-order replenishment or executed absorption.",
+            "Fresh and dipole features share trade observations; redundancy correlations and ablations retain this.",
+            "Flow-strength target excludes undefined endpoint/start ratios; report empty flow separately.",
+            "No future family, birth polarity, final duration, identity, timestamp or source cursor is a predictor.",
+            "Price response is a separate target; no universal law or execution rule is admitted.",
+            "Each date is discovery; same model and folds, separately fitted. All hypotheses retained for paper comparison."
+          ],
+          "trade_date": "20231018",
+          "scope": "full session",
+          "candidates": 863,
+          "all_recorded_candidates": 863,
+          "unavailable_finalize_only": 0
+        },
+        "metric_rows": 308,
+        "arms": [
+          "baseline",
+          "dipole_book",
+          "full",
+          "plus_book",
+          "plus_dipole",
+          "plus_display",
+          "plus_fresh",
+          "without_book",
+          "without_dipole",
+          "without_display",
+          "without_fresh"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute_ticks",
+            5
+          ],
+          [
+            "absolute_ticks",
+            20
+          ],
+          [
+            "absolute_ticks",
+            60
+          ],
+          [
+            "flow_strength_change",
+            20
+          ],
+          [
+            "midpoint_ticks",
+            5
+          ],
+          [
+            "midpoint_ticks",
+            20
+          ],
+          [
+            "midpoint_ticks",
+            60
+          ]
+        ],
+        "metric_fold_ids": [
+          -1,
+          0,
+          1,
+          2
+        ],
+        "splits_content": [
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "0",
+            "train": "336",
+            "test": "172",
+            "test_start_ns": "1697613483288155384",
+            "last_train_target_ns": "1697612874133933834",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "1",
+            "train": "509",
+            "test": "173",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625707694401497",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "5",
+            "fold": "2",
+            "train": "685",
+            "test": "173",
+            "test_start_ns": "1697646584505846192",
+            "last_train_target_ns": "1697645968003137315",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "0",
+            "train": "336",
+            "test": "172",
+            "test_start_ns": "1697613483288155384",
+            "last_train_target_ns": "1697612874133933834",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "1",
+            "train": "509",
+            "test": "173",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625707694401497",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "5",
+            "fold": "2",
+            "train": "685",
+            "test": "173",
+            "test_start_ns": "1697646584505846192",
+            "last_train_target_ns": "1697645968003137315",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "335",
+            "test": "173",
+            "test_start_ns": "1697613427242486083",
+            "last_train_target_ns": "1697612784967656351",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "509",
+            "test": "172",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625722694401497",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "683",
+            "test": "173",
+            "test_start_ns": "1697646402951731713",
+            "last_train_target_ns": "1697645573468890600",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "335",
+            "test": "173",
+            "test_start_ns": "1697613427242486083",
+            "last_train_target_ns": "1697612784967656351",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "509",
+            "test": "172",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625722694401497",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "683",
+            "test": "173",
+            "test_start_ns": "1697646402951731713",
+            "last_train_target_ns": "1697645573468890600",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "0",
+            "train": "334",
+            "test": "172",
+            "test_start_ns": "1697613483288155384",
+            "last_train_target_ns": "1697612824967656351",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "1",
+            "train": "507",
+            "test": "172",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625680436051208",
+            "embargo_s": "600"
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": "60",
+            "fold": "2",
+            "train": "682",
+            "test": "173",
+            "test_start_ns": "1697646402951731713",
+            "last_train_target_ns": "1697645613468890600",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "0",
+            "train": "334",
+            "test": "172",
+            "test_start_ns": "1697613483288155384",
+            "last_train_target_ns": "1697612824967656351",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "1",
+            "train": "507",
+            "test": "172",
+            "test_start_ns": "1697626353481409099",
+            "last_train_target_ns": "1697625680436051208",
+            "embargo_s": "600"
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": "60",
+            "fold": "2",
+            "train": "682",
+            "test": "173",
+            "test_start_ns": "1697646402951731713",
+            "last_train_target_ns": "1697645613468890600",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "0",
+            "train": "167",
+            "test": "86",
+            "test_start_ns": "1697629833787484186",
+            "last_train_target_ns": "1697629165340667371",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "1",
+            "train": "252",
+            "test": "87",
+            "test_start_ns": "1697642640063032340",
+            "last_train_target_ns": "1697641976208980577",
+            "embargo_s": "600"
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": "20",
+            "fold": "2",
+            "train": "343",
+            "test": "87",
+            "test_start_ns": "1697652217524532685",
+            "last_train_target_ns": "1697651601233474744",
+            "embargo_s": "600"
+          }
+        ],
+        "all_listed_blobs_verified": true
+      }
+    ],
+    "fit_cells_per_version": 231,
+    "metric_rows_per_version": 308,
+    "fitted_folds": [
+      0,
+      1,
+      2
+    ],
+    "aggregate_fold": -1,
+    "targets": {
+      "midpoint_ticks": [
+        5,
+        20,
+        60
+      ],
+      "absolute_ticks": [
+        5,
+        20,
+        60
+      ],
+      "flow_strength_change": [
+        20
+      ]
+    },
+    "producer": {
+      "id": "S01770",
+      "path": "tasks/family-research-20261022/research_atlas_stack.py",
+      "sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_stack.py",
+      "repo": "Markets",
+      "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+    },
+    "source_lines": "7-43,58-98,110-137",
+    "expanded_features": {
+      "baseline": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks"
+      ],
+      "plus_dipole": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "imb_level",
+        "imb_flow",
+        "ent_dipole",
+        "mi_flow",
+        "log_signed_C",
+        "strength_change",
+        "early_empty",
+        "late_empty"
+      ],
+      "plus_fresh": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "fresh_imb5",
+        "log_fresh_lots5",
+        "log_unknown_lots5"
+      ],
+      "plus_book": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "touch_imb",
+        "touch_count_imb",
+        "log_touch_lots",
+        "log_touch_orders"
+      ],
+      "plus_display": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "bid_add5",
+        "bid_remove5",
+        "ask_add5",
+        "ask_remove5",
+        "quote_price_changes5"
+      ],
+      "dipole_book": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "imb_level",
+        "imb_flow",
+        "ent_dipole",
+        "mi_flow",
+        "log_signed_C",
+        "strength_change",
+        "early_empty",
+        "late_empty",
+        "touch_imb",
+        "touch_count_imb",
+        "log_touch_lots",
+        "log_touch_orders"
+      ],
+      "full": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "imb_level",
+        "imb_flow",
+        "ent_dipole",
+        "mi_flow",
+        "log_signed_C",
+        "strength_change",
+        "early_empty",
+        "late_empty",
+        "fresh_imb5",
+        "log_fresh_lots5",
+        "log_unknown_lots5",
+        "touch_imb",
+        "touch_count_imb",
+        "log_touch_lots",
+        "log_touch_orders",
+        "bid_add5",
+        "bid_remove5",
+        "ask_add5",
+        "ask_remove5",
+        "quote_price_changes5"
+      ],
+      "without_dipole": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "fresh_imb5",
+        "log_fresh_lots5",
+        "log_unknown_lots5",
+        "touch_imb",
+        "touch_count_imb",
+        "log_touch_lots",
+        "log_touch_orders",
+        "bid_add5",
+        "bid_remove5",
+        "ask_add5",
+        "ask_remove5",
+        "quote_price_changes5"
+      ],
+      "without_fresh": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "imb_level",
+        "imb_flow",
+        "ent_dipole",
+        "mi_flow",
+        "log_signed_C",
+        "strength_change",
+        "early_empty",
+        "late_empty",
+        "touch_imb",
+        "touch_count_imb",
+        "log_touch_lots",
+        "log_touch_orders",
+        "bid_add5",
+        "bid_remove5",
+        "ask_add5",
+        "ask_remove5",
+        "quote_price_changes5"
+      ],
+      "without_book": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "imb_level",
+        "imb_flow",
+        "ent_dipole",
+        "mi_flow",
+        "log_signed_C",
+        "strength_change",
+        "early_empty",
+        "late_empty",
+        "fresh_imb5",
+        "log_fresh_lots5",
+        "log_unknown_lots5",
+        "bid_add5",
+        "bid_remove5",
+        "ask_add5",
+        "ask_remove5",
+        "quote_price_changes5"
+      ],
+      "without_display": [
+        "prior_ticks20",
+        "range_ticks20",
+        "spread_ticks",
+        "imb_level",
+        "imb_flow",
+        "ent_dipole",
+        "mi_flow",
+        "log_signed_C",
+        "strength_change",
+        "early_empty",
+        "late_empty",
+        "fresh_imb5",
+        "log_fresh_lots5",
+        "log_unknown_lots5",
+        "touch_imb",
+        "touch_count_imb",
+        "log_touch_lots",
+        "log_touch_orders"
+      ]
+    },
+    "fit": "Train mean impute, all-missing mean0; missing flags on every feature; train standardize std0->1; alpha10 centered ridge; strict train_time+(h+600)s<test_start; chronological40/60/80%cuts; target-valid rows same across arms. No probability or live deployment artifact implied.",
+    "dedup": "Oct18 replay/original identical metric and split hashes retained as source aliases, not independent replication."
+  },
+  "FB_inventory": {
+    "versions": [
+      {
+        "method": {
+          "id": "S00776",
+          "path": "tasks/family-research-20261022/flow-book-discovery-v1/initial-no-embargo/method.json",
+          "sha": "91dfacc6560bb18d8c876e381814b9e4de1bdffc",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/initial-no-embargo/method.json",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "metrics": {
+          "id": "S00773",
+          "path": "tasks/family-research-20261022/flow-book-discovery-v1/initial-no-embargo/arm-metrics.csv",
+          "sha": "2dd2e55b458ecbea2506d9e4cfaf241e98e0bc1d",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/initial-no-embargo/arm-metrics.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "splits": {
+          "id": "S00775",
+          "path": "tasks/family-research-20261022/flow-book-discovery-v1/initial-no-embargo/chronological-splits.csv",
+          "sha": "66a3014d76d5426f0257654f6ae72a1f55066fad",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/initial-no-embargo/chronological-splits.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "scope": "original Oct18 no embargo",
+        "role": "superseded faulty method evidence; not active duplicate",
+        "method_content": {
+          "version": "NG-FLOW-BOOK-v1",
+          "source_revision": "b5f28bd57de5ed4ff889335edb9a33216b67eb6a",
+          "groups_source": "research/kalshi/adaptive_wavepacket_20261108/markets_bridge/tasks/root-bounded-replay/retained/october18-standalone-inputs/groups.jsonl.gz",
+          "opportunity_source": "artifacts/sqlite-triage/20261022/families/instance-market-review-20261023/chronological-instance-index.csv",
+          "n_groups": 583688,
+          "n_opportunities": 749,
+          "cohort_counts": {
+            "other": 387,
+            "missing": 312,
+            "original": 50
+          },
+          "n_common_inputs": 437,
+          "arms": {
+            "baseline": [
+              "spread",
+              "activity1",
+              "activity60",
+              "prior_mid1",
+              "prior_mid5"
+            ],
+            "flow": [
+              "spread",
+              "activity1",
+              "activity60",
+              "prior_mid1",
+              "prior_mid5",
+              "flow1",
+              "flow5",
+              "flow60"
+            ],
+            "book": [
+              "spread",
+              "activity1",
+              "activity60",
+              "prior_mid1",
+              "prior_mid5",
+              "touch_imbalance",
+              "touch_size_log",
+              "touch_delta1",
+              "touch_delta5",
+              "root.depth_imbalance_n",
+              "root.depth_imbalance_full",
+              "bid_same_price1",
+              "ask_same_price1",
+              "bid_display_change1",
+              "ask_display_change1",
+              "bid_same_price5",
+              "ask_same_price5",
+              "bid_display_change5",
+              "ask_display_change5"
+            ],
+            "both": [
+              "spread",
+              "activity1",
+              "activity60",
+              "prior_mid1",
+              "prior_mid5",
+              "flow1",
+              "flow5",
+              "flow60",
+              "touch_imbalance",
+              "touch_size_log",
+              "touch_delta1",
+              "touch_delta5",
+              "root.depth_imbalance_n",
+              "root.depth_imbalance_full",
+              "bid_same_price1",
+              "ask_same_price1",
+              "bid_display_change1",
+              "ask_display_change1",
+              "bid_same_price5",
+              "ask_same_price5",
+              "bid_display_change5",
+              "ask_display_change5"
+            ]
+          },
+          "baseline_note": "Includes unsigned classified activity and prior price response; flow arm adds signed ratios.",
+          "book_note": "Displayed changes at unchanged touch prices; zero encoded on price moves with explicit same-price flags. No fill/cancel attribution.",
+          "fit": "Ridge alpha 10; train-only scale/intercept; expanding 40/60/80% splits; horizon purge; same eligible rows and targets in all arms; no hyperparameter search.",
+          "endpoint": "Last eligible group at or before anchor+h; integer clocks; target beyond session or crossing a reset/halt censored; staleness retained.",
+          "limitations": [
+            "Family-selected opportunities, not all market opportunities.",
+            "All four dates are discovery; this comparison contains October 18 only.",
+            "Ratios with zero classified volume are missing; common-input cohort excludes them.",
+            "Adjacent cases/outcome windows dependent; no independent significance claim.",
+            "Negative absolute predictions retained; ridge is an explanatory probe, not an admitted scoring model.",
+            "Matching uses replacement, activity distance has no caliper; inspect balance.",
+            "No simulator entries, costs or fills."
+          ]
+        },
+        "metric_rows": 120,
+        "arms": [
+          "baseline",
+          "book",
+          "both",
+          "flow"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute",
+            1
+          ],
+          [
+            "absolute",
+            5
+          ],
+          [
+            "absolute",
+            20
+          ],
+          [
+            "absolute",
+            60
+          ],
+          [
+            "absolute",
+            300
+          ],
+          [
+            "signed",
+            1
+          ],
+          [
+            "signed",
+            5
+          ],
+          [
+            "signed",
+            20
+          ],
+          [
+            "signed",
+            60
+          ],
+          [
+            "signed",
+            300
+          ]
+        ],
+        "metric_fold_ids": [
+          1,
+          2,
+          3
+        ],
+        "splits_content": [
+          {
+            "horizon_s": "1",
+            "fold": "1",
+            "eligible": "437",
+            "n_train": "163",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697634003350089565"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "2",
+            "eligible": "437",
+            "n_train": "262",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697636580658301846"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "3",
+            "eligible": "437",
+            "n_train": "349",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645811406106000"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "1",
+            "eligible": "437",
+            "n_train": "162",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633798561842074"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "2",
+            "eligible": "437",
+            "n_train": "262",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697636584658301846"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "3",
+            "eligible": "437",
+            "n_train": "349",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645815406106000"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "1",
+            "eligible": "437",
+            "n_train": "162",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633813561842074"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "2",
+            "eligible": "437",
+            "n_train": "262",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697636599658301846"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "3",
+            "eligible": "437",
+            "n_train": "349",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645830406106000"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "1",
+            "eligible": "437",
+            "n_train": "162",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633853561842074"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "2",
+            "eligible": "437",
+            "n_train": "260",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697636612747200757"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "3",
+            "eligible": "437",
+            "n_train": "346",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645825675213025"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "1",
+            "eligible": "433",
+            "n_train": "161",
+            "n_test": "86",
+            "test_start_ns": "1697634006609649903",
+            "last_train_label_target_ns": "1697634001591750276"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "2",
+            "eligible": "433",
+            "n_train": "253",
+            "n_test": "87",
+            "test_start_ns": "1697636552747200757",
+            "last_train_label_target_ns": "1697636428254157392"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "3",
+            "eligible": "433",
+            "n_train": "336",
+            "n_test": "87",
+            "test_start_ns": "1697645809892753998",
+            "last_train_label_target_ns": "1697645726503171778"
+          }
+        ],
+        "all_listed_blobs_verified": true,
+        "split_membership_pointer": "Exact original train_instances/test_instances retained at splits immutable URL; compact recipe stores cutoffs/counts."
+      },
+      {
+        "method": {
+          "id": "S00778",
+          "path": "tasks/family-research-20261022/flow-book-discovery-v1/method.json",
+          "sha": "d3c11baf47a9913537650f36423c2f6b85d2156f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/method.json",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "metrics": {
+          "id": "S00751",
+          "path": "tasks/family-research-20261022/flow-book-discovery-v1/arm-metrics.csv",
+          "sha": "5864c7e98afa246f658c0c4e70c1118b1572114b",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/arm-metrics.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "splits": {
+          "id": "S00756",
+          "path": "tasks/family-research-20261022/flow-book-discovery-v1/chronological-splits.csv",
+          "sha": "ce3bf865f1409032d15c3d3542569187e69d15d7",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/chronological-splits.csv",
+          "repo": "Markets",
+          "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+        },
+        "scope": "original Oct18 corrected600s embargo",
+        "role": "active corrected source method",
+        "method_content": {
+          "version": "NG-FLOW-BOOK-v1",
+          "source_revision": "b5f28bd57de5ed4ff889335edb9a33216b67eb6a",
+          "groups_source": "research/kalshi/adaptive_wavepacket_20261108/markets_bridge/tasks/root-bounded-replay/retained/october18-standalone-inputs/groups.jsonl.gz",
+          "opportunity_source": "artifacts/sqlite-triage/20261022/families/instance-market-review-20261023/chronological-instance-index.csv",
+          "n_groups": 583688,
+          "n_opportunities": 749,
+          "cohort_counts": {
+            "other": 387,
+            "missing": 312,
+            "original": 50
+          },
+          "n_common_inputs": 437,
+          "arms": {
+            "baseline": [
+              "spread",
+              "activity1",
+              "activity60",
+              "prior_mid1",
+              "prior_mid5"
+            ],
+            "flow": [
+              "spread",
+              "activity1",
+              "activity60",
+              "prior_mid1",
+              "prior_mid5",
+              "flow1",
+              "flow5",
+              "flow60"
+            ],
+            "book": [
+              "spread",
+              "activity1",
+              "activity60",
+              "prior_mid1",
+              "prior_mid5",
+              "touch_imbalance",
+              "touch_size_log",
+              "touch_delta1",
+              "touch_delta5",
+              "root.depth_imbalance_n",
+              "root.depth_imbalance_full",
+              "bid_same_price1",
+              "ask_same_price1",
+              "bid_display_change1",
+              "ask_display_change1",
+              "bid_same_price5",
+              "ask_same_price5",
+              "bid_display_change5",
+              "ask_display_change5"
+            ],
+            "both": [
+              "spread",
+              "activity1",
+              "activity60",
+              "prior_mid1",
+              "prior_mid5",
+              "flow1",
+              "flow5",
+              "flow60",
+              "touch_imbalance",
+              "touch_size_log",
+              "touch_delta1",
+              "touch_delta5",
+              "root.depth_imbalance_n",
+              "root.depth_imbalance_full",
+              "bid_same_price1",
+              "ask_same_price1",
+              "bid_display_change1",
+              "ask_display_change1",
+              "bid_same_price5",
+              "ask_same_price5",
+              "bid_display_change5",
+              "ask_display_change5"
+            ]
+          },
+          "baseline_note": "Includes unsigned classified activity and prior price response; flow arm adds signed ratios.",
+          "book_note": "Displayed changes at unchanged touch prices; zero encoded on price moves with explicit same-price flags. No fill/cancel attribution.",
+          "fit": "Ridge alpha 10; train-only scale/intercept; expanding 40/60/80% splits; horizon purge plus stated embargo; same eligible rows and targets in all arms; no hyperparameter search.",
+          "embargo_seconds": 600,
+          "endpoint": "Last eligible group at or before anchor+h; integer clocks; target beyond session or crossing a reset/halt censored; staleness retained.",
+          "limitations": [
+            "Family-selected opportunities, not all market opportunities.",
+            "All four dates are discovery; this comparison contains October 18 only.",
+            "Ratios with zero classified volume are missing; common-input cohort excludes them.",
+            "Adjacent cases/outcome windows dependent; no independent significance claim.",
+            "Negative absolute predictions retained; ridge is an explanatory probe, not an admitted scoring model.",
+            "Matching uses replacement, activity distance has no caliper; inspect balance.",
+            "No simulator entries, costs or fills."
+          ]
+        },
+        "metric_rows": 120,
+        "arms": [
+          "baseline",
+          "book",
+          "both",
+          "flow"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute",
+            1
+          ],
+          [
+            "absolute",
+            5
+          ],
+          [
+            "absolute",
+            20
+          ],
+          [
+            "absolute",
+            60
+          ],
+          [
+            "absolute",
+            300
+          ],
+          [
+            "signed",
+            1
+          ],
+          [
+            "signed",
+            5
+          ],
+          [
+            "signed",
+            20
+          ],
+          [
+            "signed",
+            60
+          ],
+          [
+            "signed",
+            300
+          ]
+        ],
+        "metric_fold_ids": [
+          1,
+          2,
+          3
+        ],
+        "splits_content": [
+          {
+            "horizon_s": "1",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633337291398747"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635792890116043"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645111624048757"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633341291398747"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635796890116043"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645115624048757"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633356291398747"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635811890116043"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645130624048757"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633396291398747"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635851890116043"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645170624048757"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "433",
+            "n_train": "145",
+            "n_test": "86",
+            "test_start_ns": "1697634006609649903",
+            "last_train_label_target_ns": "1697633383542472308"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "433",
+            "n_train": "248",
+            "n_test": "87",
+            "test_start_ns": "1697636552747200757",
+            "last_train_label_target_ns": "1697635877790157183"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "433",
+            "n_train": "331",
+            "n_test": "87",
+            "test_start_ns": "1697645809892753998",
+            "last_train_label_target_ns": "1697644785870136009"
+          }
+        ],
+        "all_listed_blobs_verified": true,
+        "split_membership_pointer": "Exact original train_instances/test_instances retained at splits immutable URL; compact recipe stores cutoffs/counts."
+      },
+      {
+        "method": null,
+        "metrics": {
+          "id": "S11441",
+          "path": "tasks/family-research-20261022/family-replication/run-42564821790-1/family-preflight/20231018-reference/flow-book-discovery-v1/arm-metrics.csv",
+          "sha": "e8864c6b1321fe2902783e5f3518b692c7708be5",
+          "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42564821790-1/family-preflight/20231018-reference/flow-book-discovery-v1/arm-metrics.csv",
+          "repo": "markets-data",
+          "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+        },
+        "splits": {
+          "id": "S11443",
+          "path": "tasks/family-research-20261022/family-replication/run-42564821790-1/family-preflight/20231018-reference/flow-book-discovery-v1/chronological-splits.csv",
+          "sha": "ce3bf865f1409032d15c3d3542569187e69d15d7",
+          "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42564821790-1/family-preflight/20231018-reference/flow-book-discovery-v1/chronological-splits.csv",
+          "repo": "markets-data",
+          "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+        },
+        "scope": "preflight Oct18 run42564821790",
+        "role": "retained replication",
+        "metric_rows": 120,
+        "arms": [
+          "baseline",
+          "book",
+          "both",
+          "flow"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute",
+            1
+          ],
+          [
+            "absolute",
+            5
+          ],
+          [
+            "absolute",
+            20
+          ],
+          [
+            "absolute",
+            60
+          ],
+          [
+            "absolute",
+            300
+          ],
+          [
+            "signed",
+            1
+          ],
+          [
+            "signed",
+            5
+          ],
+          [
+            "signed",
+            20
+          ],
+          [
+            "signed",
+            60
+          ],
+          [
+            "signed",
+            300
+          ]
+        ],
+        "metric_fold_ids": [
+          1,
+          2,
+          3
+        ],
+        "splits_content": [
+          {
+            "horizon_s": "1",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633337291398747"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635792890116043"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645111624048757"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633341291398747"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635796890116043"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645115624048757"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633356291398747"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635811890116043"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645130624048757"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633396291398747"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635851890116043"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645170624048757"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "433",
+            "n_train": "145",
+            "n_test": "86",
+            "test_start_ns": "1697634006609649903",
+            "last_train_label_target_ns": "1697633383542472308"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "433",
+            "n_train": "248",
+            "n_test": "87",
+            "test_start_ns": "1697636552747200757",
+            "last_train_label_target_ns": "1697635877790157183"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "433",
+            "n_train": "331",
+            "n_test": "87",
+            "test_start_ns": "1697645809892753998",
+            "last_train_label_target_ns": "1697644785870136009"
+          }
+        ],
+        "all_listed_blobs_verified": true,
+        "split_membership_pointer": "Exact original train_instances/test_instances retained at splits immutable URL; compact recipe stores cutoffs/counts."
+      },
+      {
+        "method": null,
+        "metrics": {
+          "id": "S11468",
+          "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/flow-book-discovery-v1/arm-metrics.csv",
+          "sha": "d8fa733ad81c058aa6bbcc64d6944cf2c8d07c49",
+          "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/flow-book-discovery-v1/arm-metrics.csv",
+          "repo": "markets-data",
+          "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+        },
+        "splits": {
+          "id": "S11470",
+          "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/flow-book-discovery-v1/chronological-splits.csv",
+          "sha": "47562cb7277a22ff0a4e36e5968cd23d83ec75cf",
+          "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/flow-book-discovery-v1/chronological-splits.csv",
+          "repo": "markets-data",
+          "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+        },
+        "scope": "family replication Oct2 run42566535537",
+        "role": "retained replication",
+        "metric_rows": 120,
+        "arms": [
+          "baseline",
+          "book",
+          "both",
+          "flow"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute",
+            1
+          ],
+          [
+            "absolute",
+            5
+          ],
+          [
+            "absolute",
+            20
+          ],
+          [
+            "absolute",
+            60
+          ],
+          [
+            "absolute",
+            300
+          ],
+          [
+            "signed",
+            1
+          ],
+          [
+            "signed",
+            5
+          ],
+          [
+            "signed",
+            20
+          ],
+          [
+            "signed",
+            60
+          ],
+          [
+            "signed",
+            300
+          ]
+        ],
+        "metric_fold_ids": [
+          1,
+          2,
+          3
+        ],
+        "splits_content": [
+          {
+            "horizon_s": "1",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "181",
+            "n_test": "102",
+            "test_start_ns": "1696251758253477528",
+            "last_train_label_target_ns": "1696251090825083652"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "275",
+            "n_test": "102",
+            "test_start_ns": "1696255989542865090",
+            "last_train_label_target_ns": "1696255203362851925"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "407",
+            "n_test": "102",
+            "test_start_ns": "1696262912644468950",
+            "last_train_label_target_ns": "1696262305639064127"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "181",
+            "n_test": "102",
+            "test_start_ns": "1696251758253477528",
+            "last_train_label_target_ns": "1696251094825083652"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "275",
+            "n_test": "102",
+            "test_start_ns": "1696255989542865090",
+            "last_train_label_target_ns": "1696255207362851925"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "407",
+            "n_test": "102",
+            "test_start_ns": "1696262912644468950",
+            "last_train_label_target_ns": "1696262309639064127"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "181",
+            "n_test": "102",
+            "test_start_ns": "1696251758253477528",
+            "last_train_label_target_ns": "1696251109825083652"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "275",
+            "n_test": "102",
+            "test_start_ns": "1696255989542865090",
+            "last_train_label_target_ns": "1696255222362851925"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "406",
+            "n_test": "102",
+            "test_start_ns": "1696262912644468950",
+            "last_train_label_target_ns": "1696262094573390553"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "181",
+            "n_test": "102",
+            "test_start_ns": "1696251758253477528",
+            "last_train_label_target_ns": "1696251149825083652"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "275",
+            "n_test": "102",
+            "test_start_ns": "1696255989542865090",
+            "last_train_label_target_ns": "1696255262362851925"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "406",
+            "n_test": "102",
+            "test_start_ns": "1696262912644468950",
+            "last_train_label_target_ns": "1696262134573390553"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "176",
+            "n_test": "102",
+            "test_start_ns": "1696251758253477528",
+            "last_train_label_target_ns": "1696251005876627795"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "271",
+            "n_test": "102",
+            "test_start_ns": "1696255989542865090",
+            "last_train_label_target_ns": "1696255271603353739"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "510",
+            "n_train": "405",
+            "n_test": "102",
+            "test_start_ns": "1696262912644468950",
+            "last_train_label_target_ns": "1696262063525081730"
+          }
+        ],
+        "all_listed_blobs_verified": true,
+        "split_membership_pointer": "Exact original train_instances/test_instances retained at splits immutable URL; compact recipe stores cutoffs/counts."
+      },
+      {
+        "method": null,
+        "metrics": {
+          "id": "S11493",
+          "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/flow-book-discovery-v1/arm-metrics.csv",
+          "sha": "bf26fbf1fe98227f3ca98fc0688358eb71d014b5",
+          "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/flow-book-discovery-v1/arm-metrics.csv",
+          "repo": "markets-data",
+          "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+        },
+        "splits": {
+          "id": "S11495",
+          "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/flow-book-discovery-v1/chronological-splits.csv",
+          "sha": "8e779e5c6befba5865fc02631cd13dfcb7e1b492",
+          "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/flow-book-discovery-v1/chronological-splits.csv",
+          "repo": "markets-data",
+          "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+        },
+        "scope": "family replication Oct3 run42566535537",
+        "role": "retained replication",
+        "metric_rows": 120,
+        "arms": [
+          "baseline",
+          "book",
+          "both",
+          "flow"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute",
+            1
+          ],
+          [
+            "absolute",
+            5
+          ],
+          [
+            "absolute",
+            20
+          ],
+          [
+            "absolute",
+            60
+          ],
+          [
+            "absolute",
+            300
+          ],
+          [
+            "signed",
+            1
+          ],
+          [
+            "signed",
+            5
+          ],
+          [
+            "signed",
+            20
+          ],
+          [
+            "signed",
+            60
+          ],
+          [
+            "signed",
+            300
+          ]
+        ],
+        "metric_fold_ids": [
+          1,
+          2,
+          3
+        ],
+        "splits_content": [
+          {
+            "horizon_s": "1",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "202",
+            "n_test": "107",
+            "test_start_ns": "1696337674231389434",
+            "last_train_label_target_ns": "1696337069705831988"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "320",
+            "n_test": "107",
+            "test_start_ns": "1696344620863698596",
+            "last_train_label_target_ns": "1696343925043444895"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "419",
+            "n_test": "107",
+            "test_start_ns": "1696351205055773270",
+            "last_train_label_target_ns": "1696350352533715575"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "202",
+            "n_test": "107",
+            "test_start_ns": "1696337674231389434",
+            "last_train_label_target_ns": "1696337073705831988"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "320",
+            "n_test": "107",
+            "test_start_ns": "1696344620863698596",
+            "last_train_label_target_ns": "1696343929043444895"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "419",
+            "n_test": "107",
+            "test_start_ns": "1696351205055773270",
+            "last_train_label_target_ns": "1696350356533715575"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "200",
+            "n_test": "107",
+            "test_start_ns": "1696337674231389434",
+            "last_train_label_target_ns": "1696337060519196322"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "320",
+            "n_test": "107",
+            "test_start_ns": "1696344620863698596",
+            "last_train_label_target_ns": "1696343944043444895"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "419",
+            "n_test": "107",
+            "test_start_ns": "1696351205055773270",
+            "last_train_label_target_ns": "1696350371533715575"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "195",
+            "n_test": "107",
+            "test_start_ns": "1696337674231389434",
+            "last_train_label_target_ns": "1696337073582892164"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "320",
+            "n_test": "107",
+            "test_start_ns": "1696344620863698596",
+            "last_train_label_target_ns": "1696343984043444895"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "535",
+            "n_train": "419",
+            "n_test": "107",
+            "test_start_ns": "1696351205055773270",
+            "last_train_label_target_ns": "1696350411533715575"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "532",
+            "n_train": "183",
+            "n_test": "107",
+            "test_start_ns": "1696337674231389434",
+            "last_train_label_target_ns": "1696337011930101627"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "532",
+            "n_train": "317",
+            "n_test": "106",
+            "test_start_ns": "1696344620863698596",
+            "last_train_label_target_ns": "1696343784433160789"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "532",
+            "n_train": "416",
+            "n_test": "107",
+            "test_start_ns": "1696351199929496692",
+            "last_train_label_target_ns": "1696350511564319527"
+          }
+        ],
+        "all_listed_blobs_verified": true,
+        "split_membership_pointer": "Exact original train_instances/test_instances retained at splits immutable URL; compact recipe stores cutoffs/counts."
+      },
+      {
+        "method": null,
+        "metrics": {
+          "id": "S11518",
+          "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/flow-book-discovery-v1/arm-metrics.csv",
+          "sha": "3bd0707c984bb3ebadf5298548aec5aabea0b92b",
+          "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/flow-book-discovery-v1/arm-metrics.csv",
+          "repo": "markets-data",
+          "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+        },
+        "splits": {
+          "id": "S11520",
+          "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/flow-book-discovery-v1/chronological-splits.csv",
+          "sha": "0c74c1dbf6db10b9f19ae80ede029210b25c9de3",
+          "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/flow-book-discovery-v1/chronological-splits.csv",
+          "repo": "markets-data",
+          "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+        },
+        "scope": "family replication Oct17 run42566535537",
+        "role": "retained replication",
+        "metric_rows": 120,
+        "arms": [
+          "baseline",
+          "book",
+          "both",
+          "flow"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute",
+            1
+          ],
+          [
+            "absolute",
+            5
+          ],
+          [
+            "absolute",
+            20
+          ],
+          [
+            "absolute",
+            60
+          ],
+          [
+            "absolute",
+            300
+          ],
+          [
+            "signed",
+            1
+          ],
+          [
+            "signed",
+            5
+          ],
+          [
+            "signed",
+            20
+          ],
+          [
+            "signed",
+            60
+          ],
+          [
+            "signed",
+            300
+          ]
+        ],
+        "metric_fold_ids": [
+          1,
+          2,
+          3
+        ],
+        "splits_content": [
+          {
+            "horizon_s": "1",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "187",
+            "n_test": "104",
+            "test_start_ns": "1697547553474256624",
+            "last_train_label_target_ns": "1697546523686864583"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "292",
+            "n_test": "103",
+            "test_start_ns": "1697551356635538549",
+            "last_train_label_target_ns": "1697550747046627686"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "402",
+            "n_test": "104",
+            "test_start_ns": "1697560569585417375",
+            "last_train_label_target_ns": "1697559707889612758"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "187",
+            "n_test": "104",
+            "test_start_ns": "1697547553474256624",
+            "last_train_label_target_ns": "1697546527686864583"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "292",
+            "n_test": "103",
+            "test_start_ns": "1697551356635538549",
+            "last_train_label_target_ns": "1697550751046627686"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "402",
+            "n_test": "104",
+            "test_start_ns": "1697560569585417375",
+            "last_train_label_target_ns": "1697559711889612758"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "187",
+            "n_test": "104",
+            "test_start_ns": "1697547553474256624",
+            "last_train_label_target_ns": "1697546542686864583"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "291",
+            "n_test": "103",
+            "test_start_ns": "1697551356635538549",
+            "last_train_label_target_ns": "1697550732200120006"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "402",
+            "n_test": "104",
+            "test_start_ns": "1697560569585417375",
+            "last_train_label_target_ns": "1697559726889612758"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "187",
+            "n_test": "104",
+            "test_start_ns": "1697547553474256624",
+            "last_train_label_target_ns": "1697546582686864583"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "290",
+            "n_test": "103",
+            "test_start_ns": "1697551356635538549",
+            "last_train_label_target_ns": "1697550748398643054"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "517",
+            "n_train": "402",
+            "n_test": "104",
+            "test_start_ns": "1697560569585417375",
+            "last_train_label_target_ns": "1697559766889612758"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "515",
+            "n_train": "187",
+            "n_test": "103",
+            "test_start_ns": "1697547553474256624",
+            "last_train_label_target_ns": "1697546822686864583"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "515",
+            "n_train": "284",
+            "n_test": "103",
+            "test_start_ns": "1697551282806263462",
+            "last_train_label_target_ns": "1697550661023897730"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "515",
+            "n_train": "399",
+            "n_test": "103",
+            "test_start_ns": "1697560569253085855",
+            "last_train_label_target_ns": "1697559615926778326"
+          }
+        ],
+        "all_listed_blobs_verified": true,
+        "split_membership_pointer": "Exact original train_instances/test_instances retained at splits immutable URL; compact recipe stores cutoffs/counts."
+      },
+      {
+        "method": null,
+        "metrics": {
+          "id": "S11543",
+          "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/flow-book-discovery-v1/arm-metrics.csv",
+          "sha": "4e4cab9198ce3c5f6916ce7b8c26c09c756322d5",
+          "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/flow-book-discovery-v1/arm-metrics.csv",
+          "repo": "markets-data",
+          "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+        },
+        "splits": {
+          "id": "S11545",
+          "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/flow-book-discovery-v1/chronological-splits.csv",
+          "sha": "ce3bf865f1409032d15c3d3542569187e69d15d7",
+          "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/flow-book-discovery-v1/chronological-splits.csv",
+          "repo": "markets-data",
+          "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+        },
+        "scope": "family replication Oct18 run42566535537",
+        "role": "retained replication",
+        "metric_rows": 120,
+        "arms": [
+          "baseline",
+          "book",
+          "both",
+          "flow"
+        ],
+        "target_horizon_pairs": [
+          [
+            "absolute",
+            1
+          ],
+          [
+            "absolute",
+            5
+          ],
+          [
+            "absolute",
+            20
+          ],
+          [
+            "absolute",
+            60
+          ],
+          [
+            "absolute",
+            300
+          ],
+          [
+            "signed",
+            1
+          ],
+          [
+            "signed",
+            5
+          ],
+          [
+            "signed",
+            20
+          ],
+          [
+            "signed",
+            60
+          ],
+          [
+            "signed",
+            300
+          ]
+        ],
+        "metric_fold_ids": [
+          1,
+          2,
+          3
+        ],
+        "splits_content": [
+          {
+            "horizon_s": "1",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633337291398747"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635792890116043"
+          },
+          {
+            "horizon_s": "1",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645111624048757"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633341291398747"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635796890116043"
+          },
+          {
+            "horizon_s": "5",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645115624048757"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633356291398747"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635811890116043"
+          },
+          {
+            "horizon_s": "20",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645130624048757"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "149",
+            "n_test": "88",
+            "test_start_ns": "1697634006637093938",
+            "last_train_label_target_ns": "1697633396291398747"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "251",
+            "n_test": "87",
+            "test_start_ns": "1697636636789029584",
+            "last_train_label_target_ns": "1697635851890116043"
+          },
+          {
+            "horizon_s": "60",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "437",
+            "n_train": "333",
+            "n_test": "88",
+            "test_start_ns": "1697645841937553573",
+            "last_train_label_target_ns": "1697645170624048757"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "1",
+            "embargo_s": "600",
+            "eligible": "433",
+            "n_train": "145",
+            "n_test": "86",
+            "test_start_ns": "1697634006609649903",
+            "last_train_label_target_ns": "1697633383542472308"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "2",
+            "embargo_s": "600",
+            "eligible": "433",
+            "n_train": "248",
+            "n_test": "87",
+            "test_start_ns": "1697636552747200757",
+            "last_train_label_target_ns": "1697635877790157183"
+          },
+          {
+            "horizon_s": "300",
+            "fold": "3",
+            "embargo_s": "600",
+            "eligible": "433",
+            "n_train": "331",
+            "n_test": "87",
+            "test_start_ns": "1697645809892753998",
+            "last_train_label_target_ns": "1697644785870136009"
+          }
+        ],
+        "all_listed_blobs_verified": true,
+        "split_membership_pointer": "Exact original train_instances/test_instances retained at splits immutable URL; compact recipe stores cutoffs/counts."
+      }
+    ],
+    "fit_cells_per_version": 120,
+    "fitted_folds": [
+      1,
+      2,
+      3
+    ],
+    "targets": {
+      "signed": [
+        1,
+        5,
+        20,
+        60,
+        300
+      ],
+      "absolute": [
+        1,
+        5,
+        20,
+        60,
+        300
+      ]
+    },
+    "target_units": "price units (NG ticks=price/.001), unlike ST ticks",
+    "producer": {
+      "id": "S00784",
+      "path": "tasks/family-research-20261022/flow_book_discovery.py",
+      "sha": "aab74e1f3899be14b69784f8d9f659b269ef9fc8",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow_book_discovery.py",
+      "repo": "Markets",
+      "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+    },
+    "source_lines": "49-65,91-200",
+    "fit": "Source complete-case common all-input cohort, train-only standardization std<1e-12->1, alpha10 centered ridge; corrected horizon purge+600s embargo; negative magnitude predictions retained. New paper outer ledger must retain incomplete cases without changing original fit semantics.",
+    "method_arms": {
+      "baseline": [
+        "spread",
+        "activity1",
+        "activity60",
+        "prior_mid1",
+        "prior_mid5"
+      ],
+      "flow": [
+        "spread",
+        "activity1",
+        "activity60",
+        "prior_mid1",
+        "prior_mid5",
+        "flow1",
+        "flow5",
+        "flow60"
+      ],
+      "book": [
+        "spread",
+        "activity1",
+        "activity60",
+        "prior_mid1",
+        "prior_mid5",
+        "touch_imbalance",
+        "touch_size_log",
+        "touch_delta1",
+        "touch_delta5",
+        "root.depth_imbalance_n",
+        "root.depth_imbalance_full",
+        "bid_same_price1",
+        "ask_same_price1",
+        "bid_display_change1",
+        "ask_display_change1",
+        "bid_same_price5",
+        "ask_same_price5",
+        "bid_display_change5",
+        "ask_display_change5"
+      ],
+      "both": [
+        "spread",
+        "activity1",
+        "activity60",
+        "prior_mid1",
+        "prior_mid5",
+        "flow1",
+        "flow5",
+        "flow60",
+        "touch_imbalance",
+        "touch_size_log",
+        "touch_delta1",
+        "touch_delta5",
+        "root.depth_imbalance_n",
+        "root.depth_imbalance_full",
+        "bid_same_price1",
+        "ask_same_price1",
+        "bid_display_change1",
+        "ask_display_change1",
+        "bid_same_price5",
+        "ask_same_price5",
+        "bid_display_change5",
+        "ask_display_change5"
+      ]
+    },
+    "distinct_from": "Claude four-arm sign cohorts in S00131 are NOT these ridge arms; retain separate family IDs.",
+    "replication_receipts": {
+      "S11464": {
+        "day": "20231002",
+        "families": 796,
+        "four_arm_eligible": 510,
+        "model_fits": 120,
+        "prebirth_case_rows": 3184,
+        "checks": "passed",
+        "primer_missing_prior": 2,
+        "cohorts": {
+          "other": 472,
+          "missing": 282,
+          "original": 40,
+          "inverse": 2
+        },
+        "scope": "all observed date-specific structural families"
+      },
+      "S11489": {
+        "day": "20231003",
+        "families": 849,
+        "four_arm_eligible": 535,
+        "model_fits": 120,
+        "prebirth_case_rows": 3396,
+        "checks": "passed",
+        "primer_missing_prior": 4,
+        "cohorts": {
+          "other": 484,
+          "missing": 308,
+          "original": 57
+        },
+        "scope": "all observed date-specific structural families"
+      },
+      "S11514": {
+        "day": "20231017",
+        "families": 824,
+        "four_arm_eligible": 517,
+        "model_fits": 120,
+        "prebirth_case_rows": 3296,
+        "checks": "passed",
+        "primer_missing_prior": 2,
+        "cohorts": {
+          "other": 468,
+          "missing": 307,
+          "original": 46,
+          "inverse": 3
+        },
+        "scope": "all observed date-specific structural families"
+      },
+      "S11539": {
+        "day": "20231018",
+        "families": 749,
+        "four_arm_eligible": 437,
+        "model_fits": 120,
+        "prebirth_case_rows": 2996,
+        "checks": "passed",
+        "primer_missing_prior": 0,
+        "cohorts": {
+          "other": 387,
+          "missing": 312,
+          "original": 50
+        },
+        "scope": "reference749"
+      }
+    },
+    "replication_method_limitation": "No separate method.json cataloged in replication output directories. Metrics and splits independently verified; exact inherited producer revision must be resolved from run manifest before assigning deployable model identity."
+  },
+  "source_index": {
+    "S00730": {
+      "id": "S00730",
+      "path": "tasks/family-research-20261022/codex-flow-book-discovery-20261108.md",
+      "sha": "e39bd353a57a0559b3e41a683fc4f2abcf0f8b92",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/codex-flow-book-discovery-20261108.md",
+      "repo": "Markets",
+      "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+    },
+    "S00307": {
+      "id": "S00307",
+      "path": "tasks/family-research-20261022/claude-october-discovery-20261108.md",
+      "sha": "817c07458db274af51e561e5b4c32ba9a5f09352",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-october-discovery-20261108.md",
+      "repo": "Markets",
+      "ref": "418462afeaf0f14aa8129f6f4d02c3867d772fd0"
+    },
+    "S00131": {
+      "id": "S00131",
+      "path": "tasks/family-research-20261022/claude-code/four_arm_first_family_days.py",
+      "sha": "205c9eccee3f4fd150fe3419b259fa70264c7ce9",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/four_arm_first_family_days.py",
+      "repo": "Markets",
+      "ref": "418462afeaf0f14aa8129f6f4d02c3867d772fd0"
+    },
+    "S00784": {
+      "id": "S00784",
+      "path": "tasks/family-research-20261022/flow_book_discovery.py",
+      "sha": "aab74e1f3899be14b69784f8d9f659b269ef9fc8",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow_book_discovery.py",
+      "repo": "Markets",
+      "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+    },
+    "S01770": {
+      "id": "S01770",
+      "path": "tasks/family-research-20261022/research_atlas_stack.py",
+      "sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_stack.py",
+      "repo": "Markets",
+      "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+    },
+    "S01764": {
+      "id": "S01764",
+      "path": "tasks/family-research-20261022/research_atlas_dipole.py",
+      "sha": "0a1670a391c68fc5ff972e282545461c94768d63",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research_atlas_dipole.py",
+      "repo": "Markets",
+      "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+    },
+    "S01746": {
+      "id": "S01746",
+      "path": "tasks/family-research-20261022/research-atlas-v2/sources/info_dipole_pinned.py",
+      "sha": "c04751cbe5f92952e33328f6c04fcae6392e05e5",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/research-atlas-v2/sources/info_dipole_pinned.py",
+      "repo": "Markets",
+      "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+    },
+    "S00279": {
+      "id": "S00279",
+      "path": "tasks/family-research-20261022/claude-code/size_one_four_arm_days.py",
+      "sha": "78f2549153f0e390a79ea0d3cbbb77c415adef0f",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_four_arm_days.py",
+      "repo": "Markets",
+      "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+    },
+    "S00280": {
+      "id": "S00280",
+      "path": "tasks/family-research-20261022/claude-code/size_one_from_groups.py",
+      "sha": "f4df76efd4e64fa6d2410e163321d38df939bbdf",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/size_one_from_groups.py",
+      "repo": "Markets",
+      "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+    },
+    "S00281": {
+      "id": "S00281",
+      "path": "tasks/family-research-20261022/claude-code/size_one_order_identity.py",
+      "sha": "8ef19eea655e2c7eab2b09dbb7242c20b170b8e8",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/size_one_order_identity.py",
+      "repo": "Markets",
+      "ref": "418462afeaf0f14aa8129f6f4d02c3867d772fd0"
+    },
+    "S00296": {
+      "id": "S00296",
+      "path": "tasks/family-research-20261022/claude-code/stack_direction_sources_oct18.py",
+      "sha": "276491238497a2cd54e6d3c7323afe9aca2fc096",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/stack_direction_sources_oct18.py",
+      "repo": "Markets",
+      "ref": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2"
+    },
+    "S11566": {
+      "id": "S11566",
+      "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231002/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "sha": "92c46e083be579a5c3baa5f5c79956ae8a956684",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231002/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "repo": "markets-data",
+      "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+    },
+    "S11581": {
+      "id": "S11581",
+      "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231003/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "sha": "a9bffcf4dcadb1d070210596149eeff9f5d04370",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231003/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "repo": "markets-data",
+      "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+    },
+    "S11596": {
+      "id": "S11596",
+      "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231017/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "sha": "1401ec270c14b1e8c4c6e99cf593fe707cb59cc7",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231017/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "repo": "markets-data",
+      "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+    },
+    "S11611": {
+      "id": "S11611",
+      "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231018/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "sha": "8b3e52e5d0bedc7f3d3fcc51988276b5eb8c4a9e",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231018/research-atlas-v2/continuous-prebirth-v1/method.json",
+      "repo": "markets-data",
+      "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+    },
+    "S11623": {
+      "id": "S11623",
+      "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/MANIFEST.json",
+      "sha": "c4083890d98c6d4e56dbddf31f898ecc8575240d",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/four-day-extensions/run-42563528655-1/MANIFEST.json",
+      "repo": "markets-data",
+      "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+    },
+    "S11464": {
+      "id": "S11464",
+      "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/analysis-receipt.json",
+      "sha": "d3d7ac9602b126e0e341e6e76513cfaa3c696239",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/analysis-receipt.json",
+      "repo": "markets-data",
+      "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+    },
+    "S11489": {
+      "id": "S11489",
+      "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/analysis-receipt.json",
+      "sha": "b4153bc7172c18c4e80c2b50ba5d8c5bb7c7571d",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/analysis-receipt.json",
+      "repo": "markets-data",
+      "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+    },
+    "S11514": {
+      "id": "S11514",
+      "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/analysis-receipt.json",
+      "sha": "53d49e0efa729d13d4937224b2942e1b3bd82761",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/analysis-receipt.json",
+      "repo": "markets-data",
+      "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+    },
+    "S11539": {
+      "id": "S11539",
+      "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/analysis-receipt.json",
+      "sha": "9f73bfd3bd6cb4107fdffadfab7a851d670fabe5",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/analysis-receipt.json",
+      "repo": "markets-data",
+      "ref": "586b31f65a12fb9215095a9af6851f8e95e7653b"
+    },
+    "S00283": {
+      "id": "S00283",
+      "path": "tasks/family-research-20261022/claude-code/size_one_tape_pass.py",
+      "sha": "5db6c4b51715fe611a46459e9c8549f2ed6de7a8",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/tasks/family-research-20261022/claude-code/size_one_tape_pass.py",
+      "repo": "Markets",
+      "ref": "418462afeaf0f14aa8129f6f4d02c3867d772fd0"
+    }
+  },
+  "inventory_validation": {
+    "ST_versions": 5,
+    "FB_versions": 7,
+    "all_metric_and_split_blobs_sha_verified": true,
+    "no_analysis_rerun": true,
+    "no_source_performance_values_invented": true
+  }
+}

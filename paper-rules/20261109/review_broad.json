@@ -1,0 +1,1820 @@
+{
+  "audit_scope": "Coverage audit of initial82 entries,selected original source families. Not certification of14712records or6400sections. No analyst NEW reanalysis read. Supplied primer/framework used only as hypothesis provenance. No workers,fitting,migration or agents started.",
+  "conclusion": "Material broad coverage gaps remain. Every candidate included irrespective of adverse/flat/weak/no-fill result;input/state limitations separate from admission.",
+  "issues": [
+    {
+      "id": "B01",
+      "severity": "coverage_gap",
+      "title": "Julia model universe absent",
+      "finding": "82 entries have no exact Julia architecture/task inventory;R7/R8 are different engines and cannot substitute.",
+      "sources": [
+        {
+          "git_blob_sha": "49758d03d1a77a309088ff831a0cfd6990296f11",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_2151_fold_metrics.csv",
+          "path": "artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_2151_fold_metrics.csv"
+        },
+        {
+          "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+          "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl"
+        },
+        {
+          "git_blob_sha": "5a37a9d8128f5f97049612b24453ca1fe98a172d",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_neural_models.jl",
+          "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_neural_models.jl"
+        }
+      ],
+      "proposed_resolution": "Import2151 task keys with exact version/model/target/horizon/fold/feature removal. Keep v1/v2/v3 provenance separately;v2 corrected inputs had no fits. No refitting.",
+      "performance_admission": false
+    },
+    {
+      "id": "B02",
+      "severity": "coverage_gap",
+      "title": "Completed task is not retained executable model",
+      "finding": "Final wrappers reuse original kernels. ridge beta and dropgroup/drop_history tree weights are not serialized by reviewed path. completed() requires weights only for standard evotrees and nonconstant neural. Archive completion does not prove2151 deployable predictors.",
+      "sources": [
+        {
+          "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+          "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl"
+        },
+        {
+          "git_blob_sha": "8f92338f2a96baac8d2f50af46ff6fc7858cd346",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/resume_multibox_candidate.py",
+          "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/resume_multibox_candidate.py"
+        },
+        {
+          "git_blob_sha": "e0cb217370e5727afc77f960623548f305bec313",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/redeploy_parallel_candidate.py",
+          "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/redeploy_parallel_candidate.py"
+        },
+        {
+          "git_blob_sha": "c9d9db0ef18d90b968f40fa178e9a887f347c94d",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/verified-save-stop-completion-20261023.json",
+          "path": "tasks/family-research-20261022/verified-save-stop-completion-20261023.json"
+        }
+      ],
+      "proposed_resolution": "Keep mathematical rule,missing-state and archive attestation separate. Recover exact A/B/C/D members without workers. No silent refit/generic replacement.",
+      "performance_admission": false
+    },
+    {
+      "id": "B03",
+      "severity": "coverage_gap",
+      "title": "Targets and nondirectional outputs conflated",
+      "finding": "Occurrence,signed,absolute,quantiles and clusters answer different questions. Negative magnitudes,crossed intervals and constant predictions remain recorded.",
+      "sources": [
+        {
+          "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+          "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl"
+        },
+        {
+          "git_blob_sha": "c89ce3c87c1da40df06f09cb0e2accfbe3662b3a",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/full-model-perspectives.md",
+          "path": "artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/full-model-perspectives.md"
+        }
+      ],
+      "proposed_resolution": "Use separate candidates below. Any directional execution translation for nondirectional outputs is a new design choice.",
+      "performance_admission": false
+    },
+    {
+      "id": "B04",
+      "severity": "coverage_gap",
+      "title": "Interactions/removals/contradictions missing",
+      "finding": "629 contrasts,480 removal contexts and contradiction registries absent;only43 supported contrasts would drop586 cases.",
+      "sources": [
+        {
+          "git_blob_sha": "61e25f6e7550368906f216b564b0d1d285f24414",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_629_interaction_support.csv",
+          "path": "artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_629_interaction_support.csv"
+        },
+        {
+          "git_blob_sha": "197cf83e0db970fc6c8f67d40145cd788531f49d",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/layer-review-v1/contradiction_research_registry.csv",
+          "path": "artifacts/sqlite-triage/20261022/families/layer-review-v1/contradiction_research_registry.csv"
+        },
+        {
+          "git_blob_sha": "c52a7eb8290274e03caf5498657b48d94543d732",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/external-classroom-audit-v1/external_contradiction_research_registry.csv",
+          "path": "artifacts/sqlite-triage/20261022/families/external-classroom-audit-v1/external_contradiction_research_registry.csv"
+        }
+      ],
+      "proposed_resolution": "Preserve exact feature and cell coordinates,all signs/flat/undefined support. Contradiction evidence links compared candidates rather than duplicating trade hypotheses.",
+      "performance_admission": false
+    },
+    {
+      "id": "B05",
+      "severity": "coverage_gap",
+      "title": "99/13/19 retention is not semantic consumption",
+      "finding": "99 roles include nonmeasurement roles;13 concepts expand by model/station/vintage/target/instrument;19 components have distinct missingness reasons. Registry counts are not inputs.",
+      "sources": [
+        {
+          "git_blob_sha": "de6b52b59ffd6e55f120d5a9ff86281e55da5a79",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/full-context-coverage-spec.md",
+          "path": "tasks/family-research-20261022/full-context-coverage-spec.md"
+        },
+        {
+          "git_blob_sha": "25663ec88985f807d85e34a3ef49b27648a23676",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/descriptive-v1/all_second_set_component_dispositions.csv",
+          "path": "artifacts/sqlite-triage/20261022/families/descriptive-v1/all_second_set_component_dispositions.csv"
+        },
+        {
+          "git_blob_sha": "ea6b9e9210db84d53fa8a198a8c551a5a0292833",
+          "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/lifecycle-data-links/run-42583801329-1/external/external-context-contract.json",
+          "path": "tasks/family-research-20261022/lifecycle-data-links/run-42583801329-1/external/external-context-contract.json"
+        }
+      ],
+      "proposed_resolution": "Use full dimension ledger;latest published state wins without fallback to older PRESENT;no-source,stale,NO_FLOW,NO_MODIFIES,NO_COMPLETED_STEP,CHAIN_BROKEN remain distinct.",
+      "performance_admission": false
+    },
+    {
+      "id": "B06",
+      "severity": "coverage_gap",
+      "title": "Early falling and prior-second continuation missing",
+      "finding": "R10 cannot cover size-one onset,retreat-to-prior-second continuation and early falling>1. All2850 early calls including never-one paths preserved.",
+      "sources": [
+        {
+          "git_blob_sha": "7c5c06ef3c90333e120dd4d922739d450e81d7fa",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay_early_falling_touch.py",
+          "path": "tasks/family-research-20261022/replay_early_falling_touch.py"
+        },
+        {
+          "git_blob_sha": "a4dc5578d3adfa8216fe0402a29d686d1ccc1815",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay_local_liquidity.py",
+          "path": "tasks/family-research-20261022/replay_local_liquidity.py"
+        },
+        {
+          "git_blob_sha": "2b02a918e33393b95a12cebcde5713e643c4469f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/historical-paper-replay-v1/README.md",
+          "path": "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/historical-paper-replay-v1/README.md"
+        }
+      ],
+      "proposed_resolution": "AddLC01-LC04;1/5/30s,bid/ask,T/noT,prior flat/falling/building/mixed/unavailable. Later thinness is outcome,not early filter.",
+      "performance_admission": false
+    },
+    {
+      "id": "B07",
+      "severity": "coverage_gap",
+      "title": "Observable primer/framework hypotheses omitted",
+      "finding": "Original supplied primer/framework contains independent observable hypotheses,distinct from background theory and from later analyst claims. No evidence quality admission.",
+      "sources": [
+        {
+          "git_blob_sha": "1d2b7bb97da19912a2ca6fe495013b888fa95152",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+          "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.md"
+        },
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md"
+        }
+      ],
+      "proposed_resolution": "Add proposed candidates with design choices labelled,missing math honest. Narrative-only mechanisms remain source-linked unresolved,not fabricated exact strategies.",
+      "performance_admission": false
+    }
+  ],
+  "candidate_definitions": [
+    {
+      "id": "LC01",
+      "name": "Size-one touch onset",
+      "paper_included": true,
+      "observable_inputs": [
+        "adjacent complete books",
+        "best prices/sizes",
+        "known_by/cursor"
+      ],
+      "trigger": "size[t]==1 AND(size[t-1]!=1 OR best_price changed)",
+      "direction_rule": "Bid=>short;ask=>long",
+      "exit_rule": "First later completed book>=1ms after signal;first subsequent completed quote>=1/5/30s after entry. Integer raw prices;long ask-to-bid,short bid-to-ask. Censor missing entry/exit. No actual fill claim.",
+      "sources": [
+        {
+          "git_blob_sha": "a4dc5578d3adfa8216fe0402a29d686d1ccc1815",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay_local_liquidity.py",
+          "path": "tasks/family-research-20261022/replay_local_liquidity.py"
+        }
+      ],
+      "new_design_choices": [],
+      "unresolved_inputs_or_math": [],
+      "dimensions_to_preserve": [
+        "B/A",
+        "standing/new-best",
+        "same-group T/noT",
+        "retreat/recover/improve/censored"
+      ],
+      "performance_admission": false
+    },
+    {
+      "id": "LC02",
+      "name": "Retreat to prior second level",
+      "paper_included": true,
+      "observable_inputs": [
+        "old best at absolute price",
+        "prior second price",
+        "new best"
+      ],
+      "trigger": "Old best absent and new best==prior second",
+      "direction_rule": "Bid retreat=>short;ask retreat=>long",
+      "exit_rule": "First later completed book>=1ms after signal;first subsequent completed quote>=1/5/30s after entry. Integer raw prices;long ask-to-bid,short bid-to-ask. Censor missing entry/exit. No actual fill claim.",
+      "sources": [
+        {
+          "git_blob_sha": "a4dc5578d3adfa8216fe0402a29d686d1ccc1815",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay_local_liquidity.py",
+          "path": "tasks/family-research-20261022/replay_local_liquidity.py"
+        }
+      ],
+      "new_design_choices": [],
+      "unresolved_inputs_or_math": [],
+      "dimensions_to_preserve": [
+        "B/A",
+        "T/noT",
+        "prior-second/deeper/new-level source evidence"
+      ],
+      "performance_admission": false
+    },
+    {
+      "id": "LC03",
+      "name": "Early falling touch above one",
+      "paper_included": true,
+      "observable_inputs": [
+        "3 consecutive completed books on same side"
+      ],
+      "trigger": "First eligible close per run:p[-2]==p[-1]==p[0] AND s[-2]>=s[-1]>=s[0]>1 AND s[-2]>s[0];reset on failure;never require later size-one",
+      "direction_rule": "Bid=>short;ask=>long",
+      "exit_rule": "First later completed book>=1ms after signal;first subsequent completed quote>=1/5/30s after entry. Integer raw prices;long ask-to-bid,short bid-to-ask. Censor missing entry/exit. No actual fill claim.",
+      "sources": [
+        {
+          "git_blob_sha": "7c5c06ef3c90333e120dd4d922739d450e81d7fa",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay_early_falling_touch.py#L11-L21",
+          "path": "tasks/family-research-20261022/replay_early_falling_touch.py",
+          "line_range": [
+            11,
+            21
+          ]
+        }
+      ],
+      "new_design_choices": [],
+      "unresolved_inputs_or_math": [],
+      "dimensions_to_preserve": [
+        "B/A",
+        "T/noT",
+        "later one/retreat/improve/censored"
+      ],
+      "performance_admission": false
+    },
+    {
+      "id": "LC04",
+      "name": "Early falling fresh/rolling flow contexts",
+      "paper_included": true,
+      "observable_inputs": [
+        "LC03",
+        "fresh net/count",
+        "rolling sign",
+        "instrument,clock,cursor"
+      ],
+      "trigger": "Retain everyLC03;classify exact usable prior-second flow as aligned/opposed/zero/no-fresh/unavailable. Original strict match requires same signal-close clock/cursor.",
+      "direction_rule": "LC03 direction in each context",
+      "exit_rule": "First later completed book>=1ms after signal;first subsequent completed quote>=1/5/30s after entry. Integer raw prices;long ask-to-bid,short bid-to-ask. Censor missing entry/exit. No actual fill claim.",
+      "sources": [
+        {
+          "git_blob_sha": "2b02a918e33393b95a12cebcde5713e643c4469f",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/historical-paper-replay-v1/README.md",
+          "path": "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/historical-paper-replay-v1/README.md"
+        }
+      ],
+      "new_design_choices": [
+        "Prospective context arms are new;source comparison did not select entries."
+      ],
+      "unresolved_inputs_or_math": [
+        "Only8 exact flow matches;no full dipole exact-close matches;earlier lawful dipole eligibility unresolved."
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "JM01",
+      "name": "Signed frozen model spread-crossing rule",
+      "paper_included": true,
+      "observable_inputs": [
+        "exact trained model/preprocessing/feature order",
+        "current spread"
+      ],
+      "trigger": "For each signed task:abs(prediction)>spread",
+      "direction_rule": "sign(prediction)",
+      "exit_rule": "Source target horizon;deadline fixed by decision clock.",
+      "sources": [
+        {
+          "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl#L86-L90",
+          "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+          "line_range": [
+            86,
+            90
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Actual one-unit later paper order is new execution design;source is quote diagnostic."
+      ],
+      "unresolved_inputs_or_math": [
+        "Per-task fitted-state availability in exported task mapping;causal live sampling clock required."
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "JM02",
+      "name": "All signed predictions weak/flat control",
+      "paper_included": true,
+      "observable_inputs": [
+        "same asJM01"
+      ],
+      "trigger": "Every lawful sample;retain weak and zero predictions",
+      "direction_rule": "sign(prediction);zero=>flat/no-order recorded",
+      "exit_rule": "Task horizon",
+      "sources": [
+        {
+          "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+          "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl"
+        }
+      ],
+      "new_design_choices": [
+        "Unthresholded control is new;never performance-based candidate admission."
+      ],
+      "unresolved_inputs_or_math": [],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "JM03",
+      "name": "Occurrence,magnitude,quantile context paper arms",
+      "paper_included": true,
+      "observable_inputs": [
+        "each exact task output",
+        "raw invalid/unknown states"
+      ],
+      "trigger": "Same lawful decisions;retain full raw output;no output thresholds derived from outcomes",
+      "direction_rule": "No source direction;proposed paired long/short or cross with every retained signed candidate",
+      "exit_rule": "Source task horizon",
+      "sources": [
+        {
+          "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+          "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl"
+        }
+      ],
+      "new_design_choices": [
+        "Directional pairing/context cross-product is new."
+      ],
+      "unresolved_inputs_or_math": [
+        "Magnitude is absolute endpoint change,not intrahorizon range;quantile risk calibration absent."
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "JM04",
+      "name": "PCA/kmeans context arms",
+      "paper_included": true,
+      "observable_inputs": [
+        "frozen prep/PCA<=12 components",
+        "k3/k5 centroids"
+      ],
+      "trigger": "Nearest saved centroid by squared distance in PCA scores",
+      "direction_rule": "No source direction;cross each cluster with retained directional rules",
+      "exit_rule": "Rule horizon",
+      "sources": [
+        {
+          "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl#L103-L119",
+          "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+          "line_range": [
+            103,
+            119
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Cluster-conditioned execution new."
+      ],
+      "unresolved_inputs_or_math": [
+        "Final archived states not individually restored."
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "JM05",
+      "name": "Exact feature-pair quadrants",
+      "paper_included": true,
+      "observable_inputs": [
+        "all629 pairs",
+        "original training quartile thresholds"
+      ],
+      "trigger": "LL/LH/HL/HH,intermediate,missing separately;do not select support-qualified only",
+      "direction_rule": "Observed contrast not coefficient;paired long/short proposed",
+      "exit_rule": "Exact source horizon",
+      "sources": [
+        {
+          "git_blob_sha": "61e25f6e7550368906f216b564b0d1d285f24414",
+          "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_629_interaction_support.csv",
+          "path": "artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_629_interaction_support.csv"
+        }
+      ],
+      "new_design_choices": [
+        "Paired directional paper trials new."
+      ],
+      "unresolved_inputs_or_math": [
+        "Numerical thresholds absent from support CSV;recover original strata."
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF01",
+      "name": "Arrival/cancel-rate liquidity",
+      "paper_included": true,
+      "observable_inputs": [
+        "market-order,limit-add,cancel rates;spread;volatility"
+      ],
+      "trigger": "Completed rolling rate ratios change",
+      "direction_rule": "Paired directional contexts;source predicts spread/volatility,not sign",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L53-L59",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            53,
+            59
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "ZI scaling coefficients/window absent"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF02",
+      "name": "Flow stop/reversal impact decay",
+      "paper_included": true,
+      "observable_inputs": [
+        "signed lots,causal run duration,size,midquote path"
+      ],
+      "trigger": "Previously observed one-sided flow stops/reverses now",
+      "direction_rule": "Fade stopped flow;follow/fade reversal separately",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L53-L59",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            53,
+            59
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Metaorder identities unavailable;stop timeout new;never use eventual run end"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF03",
+      "name": "Hawkes clustering",
+      "paper_included": true,
+      "observable_inputs": [
+        "price-change event times;frozen intensity/kernel"
+      ],
+      "trigger": "Conditional intensity rises",
+      "direction_rule": "Follow last move and fade control",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L53-L59",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            53,
+            59
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Kernel parameters absent;both kernel families and switching-Poisson null required"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF04",
+      "name": "Crowding response-lag decay",
+      "paper_included": true,
+      "observable_inputs": [
+        "trigger-response lag,far-side depth,volume"
+      ],
+      "trigger": "Lag shortens with faster one-sided response",
+      "direction_rule": "Original signal and mirror",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L94-L98",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            94,
+            98
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Strategy capital not observed;lag only proxy"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF05",
+      "name": "Trend/reversion regime switching",
+      "paper_included": true,
+      "observable_inputs": [
+        "signed-flow autocorrelation,realized volatility"
+      ],
+      "trigger": "Causal positive/zero/negative autocorrelation regime",
+      "direction_rule": "Follow flow in positive;fade in negative;retain mirrors",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L94-L98",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            94,
+            98
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Lookback/boundaries new"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF06",
+      "name": "Dealer-gamma momentum/reversal",
+      "paper_included": true,
+      "observable_inputs": [
+        "matched options OI/strike/expiry/gamma;day return;far depth"
+      ],
+      "trigger": "Last30min conditional on prior-known dealer gamma proxy",
+      "direction_rule": "Short gamma follow day move;long gamma fade",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L146-L151",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            146,
+            151
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Dealer position unknown;missing options cannot become assumed gamma"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF07",
+      "name": "Round-level stop continuation and sweep reversal",
+      "paper_included": true,
+      "observable_inputs": [
+        "NG round-price crossing,aggressive burst,OFI"
+      ],
+      "trigger": "First declared round-level crossing with fresh burst",
+      "direction_rule": "Follow and fade retained;low-OFI sweep separate",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L146-L151",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            146,
+            151
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Grid/burst threshold new;latent stops unobservable"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF08",
+      "name": "Cross-contract liquidity spiral",
+      "paper_included": true,
+      "observable_inputs": [
+        "synchronized NG/CL/RB/metals spreads/depth;margin release"
+      ],
+      "trigger": "Simultaneous widening/withdrawal",
+      "direction_rule": "Paired directions or own flow direction and mirror",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L146-L151",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            146,
+            151
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Cross-contract inputs and margin clocks may be absent"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF09",
+      "name": "Vol-targeting lagged selling",
+      "paper_included": true,
+      "observable_inputs": [
+        "prior volatility jump,next-session flow,release context"
+      ],
+      "trigger": "Next session after prior observed volatility jump",
+      "direction_rule": "Short and long control",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L146-L151",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            146,
+            151
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Threshold/new-session rule new;actual mandates absent"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF10",
+      "name": "Touch-size entropy and refill cessation",
+      "paper_included": true,
+      "observable_inputs": [
+        "touch-size distribution,same-ID refill,trades,depletion"
+      ],
+      "trigger": "Low entropy with refill then observed cessation/depletion",
+      "direction_rule": "Away from depleted side;ask=>long,bid=>short",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L175-L179",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            175,
+            179
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Entropy bins/window/timeout absent;low entropy not participant identity"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF11",
+      "name": "NYMEX-Kalshi transfer entropy/lag",
+      "paper_included": true,
+      "observable_inputs": [
+        "causal NYMEX and Kalshi quotes,matching expiry"
+      ],
+      "trigger": "NYMEX move precedes unrevised corresponding Kalshi quote",
+      "direction_rule": "Corresponding Kalshi direction;reverse-lead control",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L175-L179",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            175,
+            179
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "NG subminute lag unmeasured;estimator/history/contract mapping absent"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF12",
+      "name": "Flow impact versus fundamental context",
+      "paper_included": true,
+      "observable_inputs": [
+        "signed aggressive flow,midquote,as-of releases"
+      ],
+      "trigger": "Nonzero recent aggression by sign/strength",
+      "direction_rule": "Follow/fade separately",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L201-L206",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            201,
+            206
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "N-second window new;inventory unobserved"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF13",
+      "name": "Intermediary-capacity impact",
+      "paper_included": true,
+      "observable_inputs": [
+        "dealer capital proxy,depth,impact per flow"
+      ],
+      "trigger": "Constrained proxy with higher lambda",
+      "direction_rule": "Follow/fade flow contexts",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L201-L206",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            201,
+            206
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Proxy and lambda estimator absent"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF14",
+      "name": "Index-roll spread impact",
+      "paper_included": true,
+      "observable_inputs": [
+        "published roll schedule,front/next prices,spread flow"
+      ],
+      "trigger": "Roll window with current spread flow",
+      "direction_rule": "Follow spread flow and mirror",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L201-L206",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            201,
+            206
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Exact index weights/calendar/leg execution missing"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF15",
+      "name": "Burst-versus-patient horizon effect",
+      "paper_included": true,
+      "observable_inputs": [
+        "aggressive burst,resting age,size persistence"
+      ],
+      "trigger": "Burst-aggressive versus patient-resting context",
+      "direction_rule": "Opposite-return hypothesis;paired directions",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L201-L206",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            201,
+            206
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Participant identities cannot be inferred;thresholds/horizon new"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF16",
+      "name": "Release stale-quote race",
+      "paper_included": true,
+      "observable_inputs": [
+        "publication/ingestion clock,resting fills,cancels,spread"
+      ],
+      "trigger": "First stale-touch executions after observed release",
+      "direction_rule": "Follow fresh aggressive direction and fade",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L227-L230",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            227,
+            230
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Microsecond clock alignment/quote age threshold missing"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF17",
+      "name": "Invariance residual impact",
+      "paper_included": true,
+      "observable_inputs": [
+        "dollar volume,volatility,trade count,size,impact"
+      ],
+      "trigger": "Impact differs from frozen invariance baseline",
+      "direction_rule": "Follow/fade flow by residual context",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L227-L230",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            227,
+            230
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Exact exponents/units not recovered;do not invent established formula"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF18",
+      "name": "Volume-node reentry to POC",
+      "paper_included": true,
+      "observable_inputs": [
+        "prior-only volume-at-price,node boundaries,POC"
+      ],
+      "trigger": "Reenter previously known high-volume node",
+      "direction_rule": "Toward prior POC;mirror",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L252-L257",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            252,
+            257
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Value-area/node/hold definitions new"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF19",
+      "name": "New extreme on weaker aggression",
+      "paper_included": true,
+      "observable_inputs": [
+        "causal price extremes and aggressive imbalance"
+      ],
+      "trigger": "New extreme with lower same-direction imbalance",
+      "direction_rule": "Fade extreme and follow control",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L252-L257",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            252,
+            257
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Extreme lookback/shortfall new;no final-leg labels"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF20",
+      "name": "Iceberg refill then depletion",
+      "paper_included": true,
+      "observable_inputs": [
+        "order-ID refresh,executed/displayed discrepancy,refill delay"
+      ],
+      "trigger": "Repeated refill then observed depletion",
+      "direction_rule": "Away from depleted side",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L252-L257",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            252,
+            257
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Native/synthetic detection recipe missing;hidden remainder unknown"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF21",
+      "name": "Transient versus persistent inventory flow",
+      "paper_included": true,
+      "observable_inputs": [
+        "flow size/persistence,as-of OI/position if present"
+      ],
+      "trigger": "Transient flow versus persistent flow plus OI change",
+      "direction_rule": "Fade transient;follow persistent;mirrors retained",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L277-L281",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            277,
+            281
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Tape cannot tag opening/closing or holder;proxy is not identity"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF22",
+      "name": "Far-side recruitment versus distance",
+      "paper_included": true,
+      "observable_inputs": [
+        "fixed-price far queues,price distance"
+      ],
+      "trigger": "Price approaches fixed levels while visible size grows",
+      "direction_rule": "Fade approaching move and follow control",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L277-L281",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            277,
+            281
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Latent slopeL and proportional coefficient absent"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "NF23",
+      "name": "Release impact-per-contract liquidity state",
+      "paper_included": true,
+      "observable_inputs": [
+        "first1s release price change/contracts,surprise,depth"
+      ],
+      "trigger": "First complete postrelease1s window",
+      "direction_rule": "Follow/fade impact conditional on ratio/surprise",
+      "exit_rule": "Proposed1/5/20/60/120/300/600/1800/3600s exits;framework has no execution horizon.",
+      "sources": [
+        {
+          "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md#L277-L281",
+          "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+          "line_range": [
+            277,
+            281
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Thresholds/windows,paired direction,one-unit order policy and exit ladder are new;freeze before use."
+      ],
+      "unresolved_inputs_or_math": [
+        "Observable ratio not proven1/L;zero volume undefined"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "PF01",
+      "name": "Storage-surprise asymmetry",
+      "paper_included": true,
+      "observable_inputs": [
+        "actual minus prerelease estimate;release quote;prior flow"
+      ],
+      "trigger": "Actual becomes known;surplus/shortfall/zero and flow agreement",
+      "direction_rule": "Negative surprise long;positive short;mirror and reaction reversal",
+      "exit_rule": "Source lacks execution horizon;declare prospective event-appropriate horizon and retain all outcomes.",
+      "sources": [
+        {
+          "git_blob_sha": "1d2b7bb97da19912a2ca6fe495013b888fa95152",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/market-fundamentals-primer.md#L87-L145",
+          "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+          "line_range": [
+            87,
+            145
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Mechanical execution translations beyond source hypothesis are new."
+      ],
+      "unresolved_inputs_or_math": [
+        "Cents/Bcf coefficient absent;publication is not ingestion"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "PF02",
+      "name": "Weather demand/revision regime",
+      "paper_included": true,
+      "observable_inputs": [
+        "HDD revision by model/station/vintage/target;storage/weather"
+      ],
+      "trigger": "New published revision;GFS/NAM/MEX/disagreement/observed separate",
+      "direction_rule": "Higher heating demand long;lower short;inverse retained",
+      "exit_rule": "Source lacks execution horizon;declare prospective event-appropriate horizon and retain all outcomes.",
+      "sources": [
+        {
+          "git_blob_sha": "1d2b7bb97da19912a2ca6fe495013b888fa95152",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/market-fundamentals-primer.md#L87-L145",
+          "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+          "line_range": [
+            87,
+            145
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Mechanical execution translations beyond source hypothesis are new."
+      ],
+      "unresolved_inputs_or_math": [
+        "Heating/cooling threshold new;no retargeting forecast day"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "PF03",
+      "name": "Storage versus hedging-pressure curve",
+      "paper_included": true,
+      "observable_inputs": [
+        "storage/deviation,basis/curve,known COT"
+      ],
+      "trigger": "Lawful update and storage-position disagreement",
+      "direction_rule": "Spread direction and mirror;source lacks exact entry",
+      "exit_rule": "Source lacks execution horizon;declare prospective event-appropriate horizon and retain all outcomes.",
+      "sources": [
+        {
+          "git_blob_sha": "1d2b7bb97da19912a2ca6fe495013b888fa95152",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/market-fundamentals-primer.md#L52-L86",
+          "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+          "line_range": [
+            52,
+            86
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Mechanical execution translations beyond source hypothesis are new."
+      ],
+      "unresolved_inputs_or_math": [
+        "Curve legs and numerical interaction rule missing"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "PF04",
+      "name": "News/no-known-news jump relaxation",
+      "paper_included": true,
+      "observable_inputs": [
+        "jump,release arrival,postjump vol,flow/depth"
+      ],
+      "trigger": "Observed jump in release/no-known-release contexts",
+      "direction_rule": "Follow/fade jump all cells",
+      "exit_rule": "Source lacks execution horizon;declare prospective event-appropriate horizon and retain all outcomes.",
+      "sources": [
+        {
+          "git_blob_sha": "1d2b7bb97da19912a2ca6fe495013b888fa95152",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/market-fundamentals-primer.md#L345-L391",
+          "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+          "line_range": [
+            345,
+            391
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Mechanical execution translations beyond source hypothesis are new."
+      ],
+      "unresolved_inputs_or_math": [
+        "No-known-news not proof no information;threshold new"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "PF05",
+      "name": "Square-root impact participation dependence",
+      "paper_included": true,
+      "observable_inputs": [
+        "causal run size,participation,impact"
+      ],
+      "trigger": "Every completed run prefix,continuing and stopped",
+      "direction_rule": "Follow/fade impact-size context",
+      "exit_rule": "Source lacks execution horizon;declare prospective event-appropriate horizon and retain all outcomes.",
+      "sources": [
+        {
+          "git_blob_sha": "1d2b7bb97da19912a2ca6fe495013b888fa95152",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/market-fundamentals-primer.md#L345-L391",
+          "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+          "line_range": [
+            345,
+            391
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Mechanical execution translations beyond source hypothesis are new."
+      ],
+      "unresolved_inputs_or_math": [
+        "Metaorder ID absent;Q^0.5-0.6 hypothesis not fitted NG coefficient"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "PF06",
+      "name": "Carry,basis momentum,time-series momentum",
+      "paper_included": true,
+      "observable_inputs": [
+        "point-in-time curve,same-contract history"
+      ],
+      "trigger": "Scheduled causal decisions with slow inputs",
+      "direction_rule": "Exact source signs must be recovered;paired tests proposed",
+      "exit_rule": "Source lacks execution horizon;declare prospective event-appropriate horizon and retain all outcomes.",
+      "sources": [
+        {
+          "git_blob_sha": "1d2b7bb97da19912a2ca6fe495013b888fa95152",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/market-fundamentals-primer.md#L276-L344",
+          "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+          "line_range": [
+            276,
+            344
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Mechanical execution translations beyond source hypothesis are new."
+      ],
+      "unresolved_inputs_or_math": [
+        "Lookback/contract/roll/weight formula missing"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "PF07",
+      "name": "Basis-conditioned forecast/maturity",
+      "paper_included": true,
+      "observable_inputs": [
+        "basis,known reference price,days-to-expiry"
+      ],
+      "trigger": "Basis above/below5% and maturity contexts",
+      "direction_rule": "Convergence and opposite control",
+      "exit_rule": "Source lacks execution horizon;declare prospective event-appropriate horizon and retain all outcomes.",
+      "sources": [
+        {
+          "git_blob_sha": "1d2b7bb97da19912a2ca6fe495013b888fa95152",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/market-fundamentals-primer.md#L345-L391",
+          "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+          "line_range": [
+            345,
+            391
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Mechanical execution translations beyond source hypothesis are new."
+      ],
+      "unresolved_inputs_or_math": [
+        "Literature5% is context;NG reference/horizon unresolved"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    },
+    {
+      "id": "PF08",
+      "name": "Settlement/expiry concentration",
+      "paper_included": true,
+      "observable_inputs": [
+        "contract schedule,volume,curve spread,depth"
+      ],
+      "trigger": "Known settlement/expiry context window",
+      "direction_rule": "Follow/fade contemporaneous flow",
+      "exit_rule": "Source lacks execution horizon;declare prospective event-appropriate horizon and retain all outcomes.",
+      "sources": [
+        {
+          "git_blob_sha": "1d2b7bb97da19912a2ca6fe495013b888fa95152",
+          "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/market-fundamentals-primer.md#L16-L51",
+          "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+          "line_range": [
+            16,
+            51
+          ]
+        }
+      ],
+      "new_design_choices": [
+        "Mechanical execution translations beyond source hypothesis are new."
+      ],
+      "unresolved_inputs_or_math": [
+        "Historical schedule verification and execution rule missing;clock bucket not mechanism"
+      ],
+      "dimensions_to_preserve": [],
+      "performance_admission": false
+    }
+  ],
+  "exact_model_task_mapping": "review_broad_model_tasks.json",
+  "input_dimension_mapping": "review_broad_input_dimensions.json",
+  "all_interaction_candidates": "review_broad_interactions.json",
+  "all_scoped_contradiction_evidence": "review_broad_contradictions.json",
+  "model_state_evidence": {
+    "completed_archives_attested_by_original_receipt": [
+      {
+        "key": "host-deliveries/family-research-20261022/dual-box/cce6f548f09f50f00caaca396a213e9f2d42d5a7ff85c0644be311eb83e708f4/B-results.tar.gz",
+        "bytes": 8501429125,
+        "sha256": "03d928675014cc1321bc41938a87ff288210dfe99f55d9b57600f1280a0f30f8",
+        "full_hash_verified_by_callback": true,
+        "live_content_length_matches": true,
+        "encryption": "AES256"
+      },
+      {
+        "key": "host-deliveries/family-research-20261022/dual-box/cce6f548f09f50f00caaca396a213e9f2d42d5a7ff85c0644be311eb83e708f4/C-results.tar.gz",
+        "bytes": 2474372646,
+        "sha256": "a509f22ab2b71f6c4de80109d2e757425d85defe9db57446bf79d2f9efe299c7",
+        "full_hash_verified_by_callback": true,
+        "live_content_length_matches": true,
+        "encryption": "AES256"
+      },
+      {
+        "key": "host-deliveries/family-research-20261022/dual-box/cce6f548f09f50f00caaca396a213e9f2d42d5a7ff85c0644be311eb83e708f4/D-results.tar.gz",
+        "bytes": 2844410905,
+        "sha256": "354cfe2d4dd5204f2ae3af001cd667d565e965c630347e019be9b39f2156646b",
+        "full_hash_verified_by_callback": true,
+        "live_content_length_matches": true,
+        "encryption": "AES256"
+      },
+      {
+        "key": "host-deliveries/family-research-20261022/save-stop/cce6f548f09f50f00caaca396a213e9f2d42d5a7ff85c0644be311eb83e708f4/A-final-1792717045761634343.tar.gz",
+        "bytes": 20696923225,
+        "sha256": "fa195668b0d9ca489639efb60b0c07596c55865dab82d449ba04663a027b6d5d",
+        "full_hash_verified_by_callback": true,
+        "live_content_length_matches": true,
+        "encryption": "AES256"
+      }
+    ],
+    "bucket": "frankie-granite42-568968024170-us-east-1",
+    "final_collection": {
+      "artifact_bytes": 94100147420,
+      "files": 10216,
+      "frozen_input_snapshot": "snap-0d3e867c1240b6528",
+      "restoration": "Extract A at OUT; extract each verified shard separately; recreate external_links from owner/member."
+    },
+    "source": {
+      "git_blob_sha": "c9d9db0ef18d90b968f40fa178e9a887f347c94d",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/verified-save-stop-completion-20261023.json",
+      "path": "tasks/family-research-20261022/verified-save-stop-completion-20261023.json"
+    },
+    "individual_final_state_members_restored": false,
+    "do_not_conflate": "Frozen-v3 manifest ffd2f877ae9d978efff6628ade87dcbe191a4041 is older partial-projection states,not expanded candidate.",
+    "state_counts": {
+      "weights_not_serialized_by_reviewed_completed_run_path": 1503,
+      "serialization_required_by_completed_run_and_archive_attested_individual_member_not_restored": 477,
+      "constant_reference_reconstructable_from_recorded_training_statistic": 117,
+      "reference_requires_training_median_scalar_or_saved_predictions_not_train_label_mean": 54
+    },
+    "required_runtime_contract": [
+      "Exact Julia environment/model and feature order",
+      "Training medians/scales/missing masks,target scaling",
+      "Raw/categorical fields,depth ranks,scope IDs,120/300/600 delta semantics",
+      "Known-by/cursor caps;retrospective sample phase is provenance not input",
+      "Fixed target deadline passed before input known=>NO_ENTRY;fill-relative variant separately labelled",
+      "No platform adapter exists in this audit;NinjaTrader absent locally per parent"
+    ]
+  },
+  "evidence_not_separate_trade_hypotheses": [
+    {
+      "family": "Workflow receipts/manifests/hashes/indices/chunks/plots",
+      "classification": "support/provenance",
+      "preservation": "Retain with source/candidate links;output file alone not new strategy."
+    },
+    {
+      "family": "749 instance records,forecasts,30739 trades,book/action ledgers",
+      "classification": "individual observations/counterexamples",
+      "preservation": "All rows remain linked;distinct premise needed for distinct strategy."
+    },
+    {
+      "family": "354 contradiction rows and202 model-conflict subset",
+      "classification": "research questions/support",
+      "preservation": "Keep IDs,both answers;do not double count subset."
+    },
+    {
+      "family": "1128 overlapping external flags across441 original claims",
+      "classification": "methodological/mechanistic evidence",
+      "preservation": "Retain endpoint/step,chronology,precision,gap,matched-support coordinates."
+    },
+    {
+      "family": "99 registry roles,13 concepts,19 components",
+      "classification": "inputs/roles",
+      "preservation": "Full state/field/consumer link required;nonpredictive policy/control/output retained as evidence."
+    },
+    {
+      "family": "LPPLS,minority game,Soros/Minsky,Wyckoff,AMH,power-law criticality",
+      "classification": "preserved unresolved hypotheses/background",
+      "preservation": "Exact operational math missing. Keep links;do not invent LPPLS equation or Wyckoff detector or psychological identities."
+    }
+  ],
+  "unresolved_limits": [
+    "Full source-register semantic reconciliation not certified.",
+    "Final archive member SHA256 restoration not performed;historical completion receipt is attestation.",
+    "99 semantic gate remainsNOT_PASSED.",
+    "Primer literature not externally fact-checked in coverage audit.",
+    "Proposed designs are not tested simulator executions."
+  ],
+  "sources_inspected": [
+    {
+      "git_blob_sha": "49758d03d1a77a309088ff831a0cfd6990296f11",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_2151_fold_metrics.csv",
+      "path": "artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_2151_fold_metrics.csv",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\49758d03d1a77a309088ff831a0cfd6990296f11",
+      "bytes": 480267,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+      "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\dc94b4ded3be7318d7457be9a79cce96c097a76e",
+      "bytes": 10667,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "5a37a9d8128f5f97049612b24453ca1fe98a172d",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_neural_models.jl",
+      "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_neural_models.jl",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\5a37a9d8128f5f97049612b24453ca1fe98a172d",
+      "bytes": 6853,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "8f92338f2a96baac8d2f50af46ff6fc7858cd346",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/resume_multibox_candidate.py",
+      "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/resume_multibox_candidate.py",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\8f92338f2a96baac8d2f50af46ff6fc7858cd346",
+      "bytes": 36444,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "c9d9db0ef18d90b968f40fa178e9a887f347c94d",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/verified-save-stop-completion-20261023.json",
+      "path": "tasks/family-research-20261022/verified-save-stop-completion-20261023.json",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\c9d9db0ef18d90b968f40fa178e9a887f347c94d",
+      "bytes": 9283,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "e4487b3fb417413b9574d29a2ce49f3a981c3901",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/family_final_backup.py",
+      "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/family_final_backup.py",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\e4487b3fb417413b9574d29a2ce49f3a981c3901",
+      "bytes": 8373,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "e0cb217370e5727afc77f960623548f305bec313",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/redeploy_parallel_candidate.py",
+      "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/redeploy_parallel_candidate.py",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\e0cb217370e5727afc77f960623548f305bec313",
+      "bytes": 14600,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "4fef64dfb6ae158035ba1cca9d8b25a029015974",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-inputs-v2/scripts/model_rules.jl",
+      "path": "artifacts/sqlite-triage/20261022/families/joint-inputs-v2/scripts/model_rules.jl",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\4fef64dfb6ae158035ba1cca9d8b25a029015974",
+      "bytes": 2809,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "05d5007317c60f95f5eca0612205ff4e7e66a8a1",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/parallel_artifact_helpers.jl",
+      "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/parallel_artifact_helpers.jl",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\05d5007317c60f95f5eca0612205ff4e7e66a8a1",
+      "bytes": 2894,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "91854d4f79e8446bdcc28ea0f45765517a6de561",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/build_expanded_candidate.jl",
+      "path": "artifacts/sqlite-triage/20261022/families/full-context-audit/scripts/build_expanded_candidate.jl",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\91854d4f79e8446bdcc28ea0f45765517a6de561",
+      "bytes": 7950,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "c89ce3c87c1da40df06f09cb0e2accfbe3662b3a",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/full-model-perspectives.md",
+      "path": "artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/full-model-perspectives.md",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\c89ce3c87c1da40df06f09cb0e2accfbe3662b3a",
+      "bytes": 26649,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "820b6e9878f8a059ed8f75a33f12a095c9457afd",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/model-comparison-plan.md",
+      "path": "tasks/family-research-20261022/model-comparison-plan.md",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\820b6e9878f8a059ed8f75a33f12a095c9457afd",
+      "bytes": 3103,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "de6b52b59ffd6e55f120d5a9ff86281e55da5a79",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/full-context-coverage-spec.md",
+      "path": "tasks/family-research-20261022/full-context-coverage-spec.md",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\de6b52b59ffd6e55f120d5a9ff86281e55da5a79",
+      "bytes": 6252,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "1d2b7bb97da19912a2ca6fe495013b888fa95152",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+      "path": "tasks/family-research-20261022/claude-code/market-fundamentals-primer.md",
+      "local_path": "C:\\Users\\A\\markets-carry-forward-20261109\\documents\\1d2b7bb97da19912a2ca6fe495013b888fa95152.md",
+      "bytes": 43740,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "d118de5d26e153ee9b0dd87007390f92d4250715",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+      "path": "tasks/family-research-20261022/claude-code/research-notes/novel_frameworks.md",
+      "local_path": "C:\\Users\\A\\markets-carry-forward-20261109\\documents\\d118de5d26e153ee9b0dd87007390f92d4250715.md",
+      "bytes": 68458,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "7c5c06ef3c90333e120dd4d922739d450e81d7fa",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay_early_falling_touch.py",
+      "path": "tasks/family-research-20261022/replay_early_falling_touch.py",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\7c5c06ef3c90333e120dd4d922739d450e81d7fa",
+      "bytes": 4318,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "a4dc5578d3adfa8216fe0402a29d686d1ccc1815",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/replay_local_liquidity.py",
+      "path": "tasks/family-research-20261022/replay_local_liquidity.py",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\a4dc5578d3adfa8216fe0402a29d686d1ccc1815",
+      "bytes": 9040,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "2b02a918e33393b95a12cebcde5713e643c4469f",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/historical-paper-replay-v1/README.md",
+      "path": "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/historical-paper-replay-v1/README.md",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\2b02a918e33393b95a12cebcde5713e643c4469f",
+      "bytes": 22388,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "61e25f6e7550368906f216b564b0d1d285f24414",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_629_interaction_support.csv",
+      "path": "artifacts/sqlite-triage/20261022/families/final-model-analysis-20261023/tables/all_629_interaction_support.csv",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\61e25f6e7550368906f216b564b0d1d285f24414",
+      "bytes": 172714,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "197cf83e0db970fc6c8f67d40145cd788531f49d",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/layer-review-v1/contradiction_research_registry.csv",
+      "path": "artifacts/sqlite-triage/20261022/families/layer-review-v1/contradiction_research_registry.csv",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\197cf83e0db970fc6c8f67d40145cd788531f49d",
+      "bytes": 264496,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "03305c69fd93e8f55f02256e8563a1ef32aa1dae",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/layer-review-v1/model_conflict_research_registry.csv",
+      "path": "artifacts/sqlite-triage/20261022/families/layer-review-v1/model_conflict_research_registry.csv",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\03305c69fd93e8f55f02256e8563a1ef32aa1dae",
+      "bytes": 158139,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "c52a7eb8290274e03caf5498657b48d94543d732",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/external-classroom-audit-v1/external_contradiction_research_registry.csv",
+      "path": "artifacts/sqlite-triage/20261022/families/external-classroom-audit-v1/external_contradiction_research_registry.csv",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\c52a7eb8290274e03caf5498657b48d94543d732",
+      "bytes": 7471308,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "25663ec88985f807d85e34a3ef49b27648a23676",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/descriptive-v1/all_second_set_component_dispositions.csv",
+      "path": "artifacts/sqlite-triage/20261022/families/descriptive-v1/all_second_set_component_dispositions.csv",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\25663ec88985f807d85e34a3ef49b27648a23676",
+      "bytes": 3307,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "24487c30349d38901fb399ee8f6a9869a04ceac9",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/all-13-point-coverage.csv",
+      "path": "tasks/family-research-20261022/flow-book-discovery-v1/all-13-point-coverage.csv",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\24487c30349d38901fb399ee8f6a9869a04ceac9",
+      "bytes": 1954,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "c2abf8d863290b864f66dbbce792426ab01d08c0",
+      "url": "https://github.com/DavisAI1974/Markets/blob/3d0b06aa29781d5e39cc3eb45c6d09e174f195a2/tasks/family-research-20261022/flow-book-discovery-v1/all-99-relationship-roles.csv",
+      "path": "tasks/family-research-20261022/flow-book-discovery-v1/all-99-relationship-roles.csv",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\c2abf8d863290b864f66dbbce792426ab01d08c0",
+      "bytes": 14633,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "ea6b9e9210db84d53fa8a198a8c551a5a0292833",
+      "url": "https://github.com/DavisAI1974/markets-data/blob/586b31f65a12fb9215095a9af6851f8e95e7653b/tasks/family-research-20261022/lifecycle-data-links/run-42583801329-1/external/external-context-contract.json",
+      "path": "tasks/family-research-20261022/lifecycle-data-links/run-42583801329-1/external/external-context-contract.json",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\ea6b9e9210db84d53fa8a198a8c551a5a0292833",
+      "bytes": 1927,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "ffd2f877ae9d978efff6628ade87dcbe191a4041",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/full-context-frozen-v3-state-manifest.json",
+      "path": "artifacts/sqlite-triage/20261022/families/full-context-frozen-v3-state-manifest.json",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\ffd2f877ae9d978efff6628ade87dcbe191a4041",
+      "bytes": 107595,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "8630517bcc1edaadeea3670b68eeca5bcdd58889",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v1/all_model_fold_metrics.csv",
+      "path": "artifacts/sqlite-triage/20261022/families/joint-models-v1/all_model_fold_metrics.csv",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\8630517bcc1edaadeea3670b68eeca5bcdd58889",
+      "bytes": 419598,
+      "verified_git_blob": true
+    },
+    {
+      "git_blob_sha": "419d320125e7027f3892fe2d51372b2eb34b1cad",
+      "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/all_model_fold_metrics.csv",
+      "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/all_model_fold_metrics.csv",
+      "local_path": "E:\\Markets\\outputs\\research-union-20261109\\objects\\419d320125e7027f3892fe2d51372b2eb34b1cad",
+      "bytes": 147366,
+      "verified_git_blob": true
+    }
+  ],
+  "historical_projection_task_mapping": "review_broad_historical_model_tasks.json",
+  "historical_projection_counts": {
+    "joint-models-v1": 1815,
+    "joint-models-v3": 615
+  },
+  "model_math": {
+    "preprocess": {
+      "source": {
+        "git_blob_sha": "4fef64dfb6ae158035ba1cca9d8b25a029015974",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-inputs-v2/scripts/model_rules.jl",
+        "path": "artifacts/sqlite-triage/20261022/families/joint-inputs-v2/scripts/model_rules.jl"
+      },
+      "formula": "Train-only: retain finite nonconstant columns(std>1e-12);median impute,standardize,clamp[-20,20];append missing indicators for partly missing train columns. Do not replace raw source states."
+    },
+    "ridge100": {
+      "source": {
+        "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl#L59-L67",
+        "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+        "line_range": [
+          59,
+          67
+        ]
+      },
+      "formula": "mu=mean(train_y);centered=y-mu;beta=A.T @ solve(A@A.T+100I,centered) when rows<=cols,else solve(A.T@A+100I,A.T@centered);prediction=mu+B@beta. Binary predictions clamped[1e-6,1-1e-6].",
+      "artifact_gap": "Beta not serialized by reviewed completed path. Recomputing beta is a refit,not recovery of an existing executable artifact."
+    },
+    "evotrees": {
+      "source": {
+        "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl#L71-L80",
+        "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+        "line_range": [
+          71,
+          80
+        ]
+      },
+      "configuration": {
+        "depth3": {
+          "max_depth": 3,
+          "nrounds": 80
+        },
+        "depth5": {
+          "max_depth": 5,
+          "nrounds": 120
+        },
+        "common": {
+          "nbins": 32,
+          "min_weight": 10,
+          "lambda": 1,
+          "eta": 0.05,
+          "rowsample": 1,
+          "colsample": 1,
+          "rng": 20261022,
+          "device": "cpu"
+        },
+        "loss": "logloss for occurrence;mae for evotrees_mae;quantile alpha0.1/0.9 for q10/q90;otherwise mse"
+      },
+      "prediction": "Nonbinary train target z=(y-mu)/max(std(y),1e-8);prediction=mu+scale*tree(B);binary raw output then clamp. dropgroup/drop_history use depth3 default with exact source columns removed,not score masking.",
+      "artifact_gap": "Standard tree fitted states serialized;dropgroup/drop_history fit states deliberately not serialized."
+    },
+    "neural": {
+      "source": {
+        "git_blob_sha": "5a37a9d8128f5f97049612b24453ca1fe98a172d",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_neural_models.jl#L22-L24",
+        "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_neural_models.jl",
+        "line_range": [
+          22,
+          24
+        ]
+      },
+      "architectures": {
+        "neural_tree": {
+          "depth": 3,
+          "ntrees": 8,
+          "actA": "tanh"
+        },
+        "residual_mlp": {
+          "stack_size": 2,
+          "hidden_size": 32,
+          "dropout": 0.1
+        },
+        "tabm_ensemble": {
+          "k": 8,
+          "n_blocks": 2,
+          "d_block": 32,
+          "dropout": 0.1,
+          "arch_type": "tabm"
+        }
+      },
+      "fit_configuration": {
+        "nrounds": 25,
+        "lr": 0.003,
+        "wd": 0.001,
+        "batchsize": 128,
+        "seed": 20261022,
+        "device": "cpu",
+        "backend": "zygote",
+        "scale_target": "not binary"
+      },
+      "inference": "Per observation,freeze original prep/model/target normalization;binary clamp;constant target uses mean,no fit. Raw negative magnitudes retained."
+    },
+    "pca_kmeans": {
+      "source": {
+        "git_blob_sha": "dc94b4ded3be7318d7457be9a79cce96c097a76e",
+        "url": "https://github.com/DavisAI1974/Markets/blob/418462afeaf0f14aa8129f6f4d02c3867d772fd0/artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl#L103-L119",
+        "path": "artifacts/sqlite-triage/20261022/families/joint-models-v3/scripts/run_joint_models.jl",
+        "line_range": [
+          103,
+          119
+        ]
+      },
+      "formula": "Train earliest chronological quarter and phases before_start/near_before/near_after;train-only prep;PCA SVD maxoutdim=min(12,n_train-1),pratio1;KMeans k3/k5,maxiter200,seeds20261022+k. Score frozen projection and nearest center by squared Euclidean distance. No source direction."
+    }
+  }
+}

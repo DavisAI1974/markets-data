@@ -1,0 +1,1342 @@
+{
+  "schema": "october-recipe-expansion-index/v1",
+  "classification": "Finite source-inventory generators, NOT executable trading rules",
+  "parent_recipe": "review_october_recipes.json",
+  "counting_rules": [
+    "Count source named cells separately from fitted model instances, report subsets, forecasts and live execution variants.",
+    "Source dates/version aliases are provenance, not new feature architectures. Do not add all counts into one independent-hypothesis total.",
+    "Products below generate only stated original axes. Missing input, false predicate, no-fill and censored outcome are ledger dispositions, not extra strategy crossproducts.",
+    "For data-driven groupby sources, finite domain completion is labeled a NEW reporting choice and never claimed as observed original source cells.",
+    "No blanket LONG/SHORT multiplication. New target-type translation variants require their own versioned generator, separate from source counts.",
+    "A generator is countable metadata. Feature code, causal operand bindings, model state and platform adapter are separate execution requirements."
+  ],
+  "generators": {
+    "R": {
+      "register_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6A",
+        "R6B",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "op": "literal",
+      "records": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6A",
+        "R6B",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "count": 11,
+      "source": "TRADE_RULES.json /strategies; no source horizon multiplication"
+    },
+    "ST": {
+      "register_ids": [
+        "ST01",
+        "ST02",
+        "ST03",
+        "ST04",
+        "ST05",
+        "ST06",
+        "ST07",
+        "ST08",
+        "ST09",
+        "ST10",
+        "ST11"
+      ],
+      "source": "S01770:7-17,110-137; methods/metrics/splits in recipe",
+      "op": "product",
+      "axes": {
+        "arm": [
+          "baseline",
+          "plus_dipole",
+          "plus_fresh",
+          "plus_book",
+          "plus_display",
+          "dipole_book",
+          "full",
+          "without_dipole",
+          "without_fresh",
+          "without_book",
+          "without_display"
+        ],
+        "target_horizon_pair": [
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": 5
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": 20
+          },
+          {
+            "target": "midpoint_ticks",
+            "horizon_s": 60
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": 5
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": 20
+          },
+          {
+            "target": "absolute_ticks",
+            "horizon_s": 60
+          },
+          {
+            "target": "flow_strength_change",
+            "horizon_s": 20
+          }
+        ]
+      },
+      "logical_cell_count": 77,
+      "fit_axis": {
+        "fold": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fit_count_per_date": 231,
+      "source_date_scopes": [
+        "20231002:partial",
+        "20231003:full",
+        "20231017:partial",
+        "20231018:full"
+      ],
+      "fit_count_four_dates": 924,
+      "metadata_versions": 5,
+      "aggregate_fold_minus1": "Reporting only, not fourth fit",
+      "alias": "Original Oct18 and replayOct18 identical metric/split blobs; retain both citations, no fifth independent date."
+    },
+    "FB": {
+      "register_ids": [
+        "FB01",
+        "FB02",
+        "FB03",
+        "FB04"
+      ],
+      "source": "S00784:156-200; source methods/metrics/splits in recipe",
+      "op": "product",
+      "axes": {
+        "arm": [
+          "baseline",
+          "flow",
+          "book",
+          "both"
+        ],
+        "target": [
+          "signed",
+          "absolute"
+        ],
+        "horizon_s": [
+          1,
+          5,
+          20,
+          60,
+          300
+        ]
+      },
+      "logical_cell_count": 40,
+      "fit_axis": {
+        "fold": [
+          1,
+          2,
+          3
+        ]
+      },
+      "fit_count_per_source_version": 120,
+      "provenance_versions": 7,
+      "provenance_fit_records": 840,
+      "warning": "840 counts versioned fit records including superseded no-embargo and repeated Oct18 scopes, not840 independent hypotheses. Four arm architectures only.",
+      "active_math": "corrected600s embargo; no-embargo retained history but not active alternate"
+    },
+    "FC": {
+      "register_ids": [
+        "FC01",
+        "FC02",
+        "FC03",
+        "FC04",
+        "FC05",
+        "FC06",
+        "FC07",
+        "FC08",
+        "FC09",
+        "FC10",
+        "FC11"
+      ],
+      "source": "S00131:193-227",
+      "op": "product",
+      "axes": {
+        "named_cell": [
+          {
+            "family": "main",
+            "arm": "baseline"
+          },
+          {
+            "family": "main",
+            "arm": "baseline_plus_flow"
+          },
+          {
+            "family": "main",
+            "arm": "baseline_flow_agrees"
+          },
+          {
+            "family": "main",
+            "arm": "baseline_plus_book"
+          },
+          {
+            "family": "main",
+            "arm": "baseline_book_agrees"
+          },
+          {
+            "family": "main",
+            "arm": "baseline_plus_both"
+          },
+          {
+            "family": "main",
+            "arm": "both_agree"
+          },
+          {
+            "family": "main",
+            "arm": "flow_opposes_depth_agrees"
+          },
+          {
+            "family": "main",
+            "arm": "flow_agrees_depth_opposes"
+          },
+          {
+            "family": "main",
+            "arm": "original_stack_sell_side"
+          },
+          {
+            "family": "main",
+            "arm": "inverse_stack_buy_side"
+          },
+          {
+            "family": "main",
+            "arm": "both_recent_sell"
+          },
+          {
+            "family": "main",
+            "arm": "both_recent_buy"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "opposes",
+            "subset": "all"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "opposes",
+            "subset": "recent_sell"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "opposes",
+            "subset": "recent_buy"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "opposes",
+            "subset": "60s_opposes"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "agrees",
+            "subset": "all"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "agrees",
+            "subset": "recent_sell"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "agrees",
+            "subset": "recent_buy"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "agrees",
+            "subset": "60s_opposes"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "equal",
+            "subset": "all"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "equal",
+            "subset": "recent_sell"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "equal",
+            "subset": "recent_buy"
+          },
+          {
+            "family": "alternative_book",
+            "book": "near_sign",
+            "relation": "equal",
+            "subset": "60s_opposes"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "opposes",
+            "subset": "all"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "opposes",
+            "subset": "recent_sell"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "opposes",
+            "subset": "recent_buy"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "opposes",
+            "subset": "60s_opposes"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "agrees",
+            "subset": "all"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "agrees",
+            "subset": "recent_sell"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "agrees",
+            "subset": "recent_buy"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "agrees",
+            "subset": "60s_opposes"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "equal",
+            "subset": "all"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "equal",
+            "subset": "recent_sell"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "equal",
+            "subset": "recent_buy"
+          },
+          {
+            "family": "alternative_book",
+            "book": "touch_sign",
+            "relation": "equal",
+            "subset": "60s_opposes"
+          }
+        ],
+        "horizon_s": [
+          1,
+          5,
+          20,
+          60,
+          120,
+          300,
+          600
+        ]
+      },
+      "main_named_cells": 13,
+      "alternative_named_cells": 24,
+      "total_named_cells": 37,
+      "report_cell_count_per_date": 259,
+      "alias_warning": "Several named source subsets can be identical; namedcell count is not independent-condition count.",
+      "register_warning": "FC01-11 are incomplete umbrella labels; source expansion must retain extra main and equal/no-data alternative cells."
+    },
+    "DP": {
+      "register_ids": [
+        "DP01",
+        "DP02",
+        "DP03",
+        "DP04",
+        "DP05",
+        "DP06",
+        "DP07",
+        "DP08"
+      ],
+      "source": "S01770:89-90,167-183; verified S01554/S01591/S01628/S01664/S01753",
+      "op": "product",
+      "axes": {
+        "state_book_pair": [
+          {
+            "state": "both_empty",
+            "book": "undefined_flow"
+          },
+          {
+            "state": "one_half_empty",
+            "book": "aligned"
+          },
+          {
+            "state": "one_half_empty",
+            "book": "balanced"
+          },
+          {
+            "state": "one_half_empty",
+            "book": "opposed"
+          },
+          {
+            "state": "steady",
+            "book": "aligned"
+          },
+          {
+            "state": "steady",
+            "book": "balanced"
+          },
+          {
+            "state": "steady",
+            "book": "opposed"
+          },
+          {
+            "state": "strengthening",
+            "book": "aligned"
+          },
+          {
+            "state": "strengthening",
+            "book": "balanced"
+          },
+          {
+            "state": "strengthening",
+            "book": "opposed"
+          },
+          {
+            "state": "weakening",
+            "book": "aligned"
+          },
+          {
+            "state": "weakening",
+            "book": "balanced"
+          },
+          {
+            "state": "weakening",
+            "book": "opposed"
+          }
+        ],
+        "horizon_s": [
+          5,
+          20,
+          60
+        ]
+      },
+      "state_book_pairs": 13,
+      "cell_count_per_date": 39,
+      "cell_count_four_distinct_dates": 156,
+      "observed_original_key_count_verified": true,
+      "not_product": "Do not create5states*4bookrelations=20; both_empty only undefined_flow, four nonempty states only aligned/balanced/opposed in these retained tables.",
+      "scope": "Recognition conditional-state source only. Fresh/expiry/price relation independent sources not automatically crossed into this table."
+    },
+    "OL_four_arm": {
+      "register_ids": [
+        "OL01",
+        "OL02",
+        "OL03",
+        "OL04",
+        "OL05",
+        "OL06",
+        "OL07",
+        "OL08"
+      ],
+      "source": "S00279:42-79; S00283 onset-clock clarification",
+      "op": "union",
+      "children": [
+        {
+          "name": "baseline",
+          "op": "product",
+          "axes": {
+            "side": [
+              "B",
+              "A"
+            ],
+            "onset": [
+              "NEW_BEST",
+              "STANDING_BEST_SHRANK"
+            ]
+          },
+          "declared_domain_count": 4
+        },
+        {
+          "name": "baseline_plus_flow",
+          "op": "product",
+          "axes": {
+            "side": [
+              "B",
+              "A"
+            ],
+            "onset": [
+              "NEW_BEST",
+              "STANDING_BEST_SHRANK"
+            ],
+            "flow": [
+              "fill_linked",
+              "unlinked_reduction",
+              "no_reduction"
+            ]
+          },
+          "declared_domain_count": 12
+        },
+        {
+          "name": "baseline_plus_book_next",
+          "op": "product",
+          "axes": {
+            "side": [
+              "B",
+              "A"
+            ],
+            "onset": [
+              "NEW_BEST",
+              "STANDING_BEST_SHRANK"
+            ],
+            "book_next": [
+              "next_lt10",
+              "next_ge10",
+              "no_next"
+            ]
+          },
+          "declared_domain_count": 12
+        },
+        {
+          "name": "baseline_plus_book_prior_orders",
+          "op": "product",
+          "axes": {
+            "side": [
+              "B",
+              "A"
+            ],
+            "onset": [
+              "NEW_BEST",
+              "STANDING_BEST_SHRANK"
+            ],
+            "book_prior_orders": [
+              "prior_orders_le2",
+              "prior_orders_gt2"
+            ]
+          },
+          "declared_domain_count": 8
+        },
+        {
+          "name": "baseline_plus_both",
+          "op": "product",
+          "axes": {
+            "side": [
+              "B",
+              "A"
+            ],
+            "onset": [
+              "NEW_BEST",
+              "STANDING_BEST_SHRANK"
+            ],
+            "flow": [
+              "fill_linked",
+              "unlinked_reduction",
+              "no_reduction"
+            ],
+            "book_next": [
+              "next_lt10",
+              "next_ge10",
+              "no_next"
+            ]
+          },
+          "declared_domain_count": 36
+        },
+        {
+          "name": "flow_pooled",
+          "op": "product",
+          "axes": {
+            "onset": [
+              "NEW_BEST",
+              "STANDING_BEST_SHRANK"
+            ],
+            "flow": [
+              "fill_linked",
+              "unlinked_reduction",
+              "no_reduction"
+            ]
+          },
+          "declared_domain_count": 6
+        },
+        {
+          "name": "book_next_pooled",
+          "op": "product",
+          "axes": {
+            "onset": [
+              "NEW_BEST",
+              "STANDING_BEST_SHRANK"
+            ],
+            "book_next": [
+              "next_lt10",
+              "next_ge10",
+              "no_next"
+            ]
+          },
+          "declared_domain_count": 6
+        },
+        {
+          "name": "prior_orders_pooled",
+          "op": "product",
+          "axes": {
+            "onset": [
+              "NEW_BEST",
+              "STANDING_BEST_SHRANK"
+            ],
+            "book_prior_orders": [
+              "prior_orders_le2",
+              "prior_orders_gt2"
+            ]
+          },
+          "declared_domain_count": 4
+        },
+        {
+          "name": "standing_only_both_prior_orders",
+          "op": "union",
+          "children": [
+            {
+              "op": "product",
+              "fixed": {
+                "onset": "STANDING_BEST_SHRANK"
+              },
+              "axes": {
+                "side": [
+                  "B",
+                  "A"
+                ],
+                "flow": [
+                  "fill_linked",
+                  "unlinked_reduction",
+                  "no_reduction"
+                ],
+                "book_prior_orders": [
+                  "prior_orders_le2",
+                  "prior_orders_gt2"
+                ]
+              }
+            },
+            {
+              "op": "literal",
+              "records": [
+                {
+                  "sentinel": "new_best"
+                }
+              ]
+            }
+          ],
+          "declared_domain_count": 13
+        }
+      ],
+      "domain_count_per_scope": 101,
+      "scope_axis": [
+        "all",
+        "hour13"
+      ],
+      "domain_count_two_scopes_per_date": 202,
+      "count_status": "Exact finite declared label domain, NOT observed cell count. Producer emits only observed groupby keys. Filling absent keys with n0 is NEW common reporting policy.",
+      "source_filter": "Original missing-tape/censored exclusions retained as historical behavior; outer paper ledger must retain these outcomes separately without extra strategy multiplication.",
+      "horizons": "first-end outcome; no fixed-horizon axis supplied here."
+    },
+    "OL_identity": {
+      "register_ids": [
+        "OL09"
+      ],
+      "source": "S00281:113-124",
+      "op": "union",
+      "children": [
+        {
+          "name": "by_origin",
+          "op": "product",
+          "axes": {
+            "onset": [
+              "NEW_BEST",
+              "STANDING_BEST_SHRANK"
+            ],
+            "origin": [
+              "older_resting",
+              "fresh_add",
+              "repriced_in",
+              "size_cut_in_place",
+              "partial_cancel_in_place"
+            ]
+          },
+          "domain_count": 10,
+          "count_status": "origin keys observed-only in producer; full domain completion is NEW reporting"
+        },
+        {
+          "name": "by_age",
+          "op": "product",
+          "axes": {
+            "onset": [
+              "NEW_BEST",
+              "STANDING_BEST_SHRANK"
+            ],
+            "age": [
+              "under_10ms",
+              "10ms_to_1s",
+              "1s_to_60s",
+              "over_60s"
+            ]
+          },
+          "count": 8
+        },
+        {
+          "name": "by_prior_onsets",
+          "op": "product",
+          "axes": {
+            "onset": [
+              "NEW_BEST",
+              "STANDING_BEST_SHRANK"
+            ],
+            "prior_onsets": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "count": 8
+        }
+      ],
+      "declared_domain_count": 26,
+      "missing_age": "none is returned by helper but excluded from by_age output loop; retain missing-age disposition in paper ledger, do not silently label original fifth age-arm.",
+      "not_cartesian": "No origin*age*prior*side crossproduct. Fate is outcome, not entry axis."
+    },
+    "RG01": {
+      "register_ids": [
+        "RG01"
+      ],
+      "source": "S00296:95-150",
+      "directions": [
+        "pol",
+        "next_state",
+        "next_seed",
+        "dip300",
+        "dip300_strong",
+        "book10",
+        "touch",
+        "recruit",
+        "mom300"
+      ],
+      "report_scopes": [
+        {
+          "type": "all",
+          "value": "all"
+        },
+        {
+          "type": "state",
+          "value": "A-fast-collapse"
+        },
+        {
+          "type": "state",
+          "value": "A-persistent"
+        },
+        {
+          "type": "tercile",
+          "value": "low"
+        },
+        {
+          "type": "tercile",
+          "value": "mid"
+        },
+        {
+          "type": "tercile",
+          "value": "high"
+        },
+        {
+          "type": "state_x_tercile",
+          "value": {
+            "state": "A-fast-collapse",
+            "tercile": "low"
+          }
+        },
+        {
+          "type": "state_x_tercile",
+          "value": {
+            "state": "A-fast-collapse",
+            "tercile": "mid"
+          }
+        },
+        {
+          "type": "state_x_tercile",
+          "value": {
+            "state": "A-fast-collapse",
+            "tercile": "high"
+          }
+        },
+        {
+          "type": "state_x_tercile",
+          "value": {
+            "state": "A-persistent",
+            "tercile": "low"
+          }
+        },
+        {
+          "type": "state_x_tercile",
+          "value": {
+            "state": "A-persistent",
+            "tercile": "mid"
+          }
+        },
+        {
+          "type": "state_x_tercile",
+          "value": {
+            "state": "A-persistent",
+            "tercile": "high"
+          }
+        },
+        {
+          "type": "hour",
+          "value": "overnight"
+        },
+        {
+          "type": "hour",
+          "value": "us_day_13_20"
+        },
+        {
+          "type": "hour",
+          "value": "release_14_15"
+        }
+      ],
+      "op": "union",
+      "children": [
+        {
+          "name": "direction_vs_price",
+          "op": "product",
+          "axes": {
+            "direction": [
+              "pol",
+              "next_state",
+              "next_seed",
+              "dip300",
+              "dip300_strong",
+              "book10",
+              "touch",
+              "recruit",
+              "mom300"
+            ],
+            "scope": [
+              {
+                "type": "all",
+                "value": "all"
+              },
+              {
+                "type": "state",
+                "value": "A-fast-collapse"
+              },
+              {
+                "type": "state",
+                "value": "A-persistent"
+              },
+              {
+                "type": "tercile",
+                "value": "low"
+              },
+              {
+                "type": "tercile",
+                "value": "mid"
+              },
+              {
+                "type": "tercile",
+                "value": "high"
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-fast-collapse",
+                  "tercile": "low"
+                }
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-fast-collapse",
+                  "tercile": "mid"
+                }
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-fast-collapse",
+                  "tercile": "high"
+                }
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-persistent",
+                  "tercile": "low"
+                }
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-persistent",
+                  "tercile": "mid"
+                }
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-persistent",
+                  "tercile": "high"
+                }
+              },
+              {
+                "type": "hour",
+                "value": "overnight"
+              },
+              {
+                "type": "hour",
+                "value": "us_day_13_20"
+              },
+              {
+                "type": "hour",
+                "value": "release_14_15"
+              }
+            ],
+            "target": [
+              "net300",
+              "net600",
+              "first3"
+            ]
+          },
+          "count": 405
+        },
+        {
+          "name": "next_prediction_vs_next_realized_polarity",
+          "op": "product",
+          "axes": {
+            "direction": [
+              "next_state",
+              "next_seed"
+            ],
+            "scope": [
+              {
+                "type": "all",
+                "value": "all"
+              },
+              {
+                "type": "state",
+                "value": "A-fast-collapse"
+              },
+              {
+                "type": "state",
+                "value": "A-persistent"
+              },
+              {
+                "type": "tercile",
+                "value": "low"
+              },
+              {
+                "type": "tercile",
+                "value": "mid"
+              },
+              {
+                "type": "tercile",
+                "value": "high"
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-fast-collapse",
+                  "tercile": "low"
+                }
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-fast-collapse",
+                  "tercile": "mid"
+                }
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-fast-collapse",
+                  "tercile": "high"
+                }
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-persistent",
+                  "tercile": "low"
+                }
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-persistent",
+                  "tercile": "mid"
+                }
+              },
+              {
+                "type": "state_x_tercile",
+                "value": {
+                  "state": "A-persistent",
+                  "tercile": "high"
+                }
+              },
+              {
+                "type": "hour",
+                "value": "overnight"
+              },
+              {
+                "type": "hour",
+                "value": "us_day_13_20"
+              },
+              {
+                "type": "hour",
+                "value": "release_14_15"
+              }
+            ],
+            "target": [
+              "realised_next_polarity"
+            ]
+          },
+          "count": 30
+        },
+        {
+          "name": "two_source_agreement",
+          "op": "product",
+          "axes": {
+            "unordered_pair": [
+              [
+                "pol",
+                "next_state"
+              ],
+              [
+                "pol",
+                "next_seed"
+              ],
+              [
+                "pol",
+                "dip300"
+              ],
+              [
+                "pol",
+                "dip300_strong"
+              ],
+              [
+                "pol",
+                "book10"
+              ],
+              [
+                "pol",
+                "touch"
+              ],
+              [
+                "pol",
+                "recruit"
+              ],
+              [
+                "pol",
+                "mom300"
+              ],
+              [
+                "next_state",
+                "next_seed"
+              ],
+              [
+                "next_state",
+                "dip300"
+              ],
+              [
+                "next_state",
+                "dip300_strong"
+              ],
+              [
+                "next_state",
+                "book10"
+              ],
+              [
+                "next_state",
+                "touch"
+              ],
+              [
+                "next_state",
+                "recruit"
+              ],
+              [
+                "next_state",
+                "mom300"
+              ],
+              [
+                "next_seed",
+                "dip300"
+              ],
+              [
+                "next_seed",
+                "dip300_strong"
+              ],
+              [
+                "next_seed",
+                "book10"
+              ],
+              [
+                "next_seed",
+                "touch"
+              ],
+              [
+                "next_seed",
+                "recruit"
+              ],
+              [
+                "next_seed",
+                "mom300"
+              ],
+              [
+                "dip300",
+                "dip300_strong"
+              ],
+              [
+                "dip300",
+                "book10"
+              ],
+              [
+                "dip300",
+                "touch"
+              ],
+              [
+                "dip300",
+                "recruit"
+              ],
+              [
+                "dip300",
+                "mom300"
+              ],
+              [
+                "dip300_strong",
+                "book10"
+              ],
+              [
+                "dip300_strong",
+                "touch"
+              ],
+              [
+                "dip300_strong",
+                "recruit"
+              ],
+              [
+                "dip300_strong",
+                "mom300"
+              ],
+              [
+                "book10",
+                "touch"
+              ],
+              [
+                "book10",
+                "recruit"
+              ],
+              [
+                "book10",
+                "mom300"
+              ],
+              [
+                "touch",
+                "recruit"
+              ],
+              [
+                "touch",
+                "mom300"
+              ],
+              [
+                "recruit",
+                "mom300"
+              ]
+            ],
+            "scope": [
+              "all",
+              "high_vol",
+              "fast_high"
+            ],
+            "target": [
+              "net300",
+              "net600",
+              "first3"
+            ]
+          },
+          "count": 324
+        },
+        {
+          "name": "absolute_move_by_cell",
+          "op": "product",
+          "axes": {
+            "state": [
+              "A-fast-collapse",
+              "A-persistent"
+            ],
+            "tercile": [
+              "low",
+              "mid",
+              "high"
+            ],
+            "target": [
+              "net300",
+              "net600"
+            ]
+          },
+          "count": 12
+        }
+      ],
+      "report_value_cell_count_per_date": 771,
+      "entry_condition_group_count": 243,
+      "entry_condition_group_formula": "9*15 single-source scope groups +36*3 pair-scope groups; target metrics are not separate directions",
+      "causality": "Whole-day thresholds remain retrospective; source grid count does not make them causal."
+    },
+    "EX01_continuous": {
+      "register_ids": [
+        "EX01"
+      ],
+      "source": "review_sources/research_atlas_continuous.py:72-101,120-139",
+      "op": "product",
+      "axes": {
+        "predicate": [
+          "step_weakening",
+          "expiry_only_weakening",
+          "fresh_opposed_weakening",
+          "flow_vanished",
+          "flow_resumed",
+          "half_weakening",
+          "half_weakening_book_aligned",
+          "half_weakening_book_opposed",
+          "half_weakening_price_opposed",
+          "half_weakening_fresh_book_opposed"
+        ],
+        "horizon_s": [
+          5,
+          20,
+          60
+        ]
+      },
+      "predicate_count": 10,
+      "outcome_cell_count_per_date": 30,
+      "outcome_cell_count_four_dates": 120,
+      "views": [
+        "active_seconds",
+        "onsets"
+      ],
+      "views_are_not_extra_strategies": true,
+      "left_censored_and_zero_birth": "Preserved dispositions/labels; not extra predicate arms.",
+      "mapping": "This is additional source version under EX01. Retrospective birth-minus-lead control version remains separate, not replaced."
+    },
+    "supplemental_models": {
+      "source": "supplemental_reanalysis_models.json",
+      "op": "product",
+      "axes": {
+        "model": [
+          "counts_price_book",
+          "plus_information",
+          "plus_display",
+          "plus_both"
+        ],
+        "target_horizon_pair": [
+          {
+            "target": "future20",
+            "horizon_s": 20
+          }
+        ]
+      },
+      "architecture_count": 4,
+      "additional_over_R7_R8": 2,
+      "fit_dates": [
+        "20231003",
+        "20231017",
+        "20231018"
+      ],
+      "fit_count": 12,
+      "report_subset_axis": [
+        "all",
+        "separated60"
+      ],
+      "report_row_count": 24
+    }
+  },
+  "nonfinite_or_not_resolved_here": [
+    {
+      "ids": [
+        "RG02"
+      ],
+      "reason": "Next-burst/absorption source dimensions must be separately bound; do not import RG01 generator by name similarity."
+    },
+    {
+      "ids": [
+        "RG03"
+      ],
+      "reason": "Quiet-momentum source constraints and highlighted300/600 cells not fully enumerated here; no invented full grid."
+    },
+    {
+      "ids": [
+        "EX01"
+      ],
+      "version": "retrospective prebirth-control comparison",
+      "reason": "Source leads1/5/20/60 finite, but eligible control matching/date/method variants are separate and not exhaustively enumerated by continuous generator."
+    },
+    {
+      "ids": [
+        "EX02",
+        "EX03",
+        "EX04",
+        "EX05"
+      ],
+      "reason": "Earlier review prose is insufficient for authoritative finite full-source expansion; preserve IDs and unresolved axes, not count1 as completed implementation."
+    }
+  ],
+  "coverage": "All62 scoped register IDs accounted for by generator or explicit unresolved entry. Coverage is inventory accounting, not complete executable coverage.",
+  "validation": {
+    "no_model_refit": true,
+    "no_replay": true,
+    "no_new_performance_calculation": true,
+    "aggregate_independent_hypothesis_count": null
+  }
+}

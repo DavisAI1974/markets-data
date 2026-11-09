@@ -1,0 +1,13 @@
+{
+  "schema": "model-binding-requirements-v1",
+  "models": ["M0", "M1"],
+  "paper_included": true,
+  "execution_enabled": false,
+  "coefficient_evidence": "MODEL_FREEZE.json",
+  "required_unresolved_fields": ["ordered_feature_definition_ids", "artifact_available_by_ns", "artifact_content_sha256", "producer_revision_binding", "paper_session_clock_mapping"],
+  "availability_status": "MODEL_BINDING_UNAVAILABLE",
+  "training_cutoff_is_artifact_available_by": false,
+  "replay_clock_may_be_backdated": false,
+  "substitute_native_for_midpoint_features": false,
+  "refit_substitution_allowed": false
+}
