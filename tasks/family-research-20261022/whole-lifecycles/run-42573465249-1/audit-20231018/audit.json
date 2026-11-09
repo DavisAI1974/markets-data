@@ -1,0 +1,38 @@
+{
+  "day": "20231018",
+  "status": "passed",
+  "candidates": 863,
+  "whole_parents": 2589,
+  "candidate_parents": 863,
+  "control_parents": 1726,
+  "whole_path_points": 109757,
+  "component_windows": 2589,
+  "individual_tables_checked": 43,
+  "candidate_table_references_checked": 2710107,
+  "trades": 30739,
+  "stretches": 9109,
+  "legs": 5120,
+  "pressure_signals": 109754,
+  "quote_episodes": 27551,
+  "outcome_children": 329262,
+  "trade_dipole_links": 10451,
+  "corrections": [],
+  "anchor_points_added": 2576,
+  "checks": [
+    "Original life endpoints reproduced",
+    "Every original lifecycle second retained in order",
+    "Original values verified; undefined seconds kept",
+    "Anchor points included in whole path",
+    "Every sampled window retains parent ID and original cut/cursor",
+    "All candidate table references resolve",
+    "Trade/stretch/leg membership and whole endpoints verified",
+    "Pressure outcomes resolve to their signal parents",
+    "Trade/dipole IDs and four source clocks agree"
+  ],
+  "limits": [
+    "The three-opposite-second rule is an explicit research endpoint, not established natural death.",
+    "Control instances are separate parents tied to their candidate; no invented control detector recognition.",
+    "Sample windows can extend outside a lifecycle and are labelled context, never replacements for the whole.",
+    "Finalization-only candidate lifecycles recovered from original flow; actual recognition stays absent."
+  ]
+}
