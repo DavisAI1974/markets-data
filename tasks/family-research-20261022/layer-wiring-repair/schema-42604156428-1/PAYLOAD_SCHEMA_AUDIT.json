@@ -1,0 +1,2525 @@
+{
+  "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/every-trade-evidence-bundle.jsonl.gz": {
+    "bytes": 8998589,
+    "sha256": "1d689eb6f7bf28ea12e0b43428a1d7f2f4804b6d9faa6cb909cd9c61de7908ea",
+    "rows": 30739,
+    "first": {
+      "trade_ordinal": 0,
+      "original_trade": {
+        "source_ordinal": "0",
+        "trade_input_cursor": "622",
+        "trade_journal_ordinal": "1244",
+        "group_close_input_cursor": "625",
+        "instrument_id": "150611",
+        "event_ns": "1697580003381906641",
+        "receive_ns": "1697580003382399708",
+        "available_ns": "1697580003382463363",
+        "price": "3.061",
+        "price_raw": "3061000000",
+        "size": "1",
+        "entry_hash": "9527ffcecf8a460813eefa2f692ca90347ea2775db7b3a98662d1964250104e1",
+        "block_start": "1157",
+        "block_sha256": "5aac92fc2f51cea60b8f61bd6baef60d6dd7f7af797b503d3e6a6370932d3ca4",
+        "issues_json": "[]",
+        "timestamp_basis": "original journal integer nanoseconds; availability at emitted group close"
+      },
+      "exact_clocks": {
+        "event_ns": 1697580003381906641,
+        "receive_ns": 1697580003382399708,
+        "available_ns": 1697580003382463363,
+        "trade_input_cursor": 622,
+        "group_close_input_cursor": 625,
+        "trade_journal_ordinal": 1244
+      },
+      "sequence": {
+        "previous_trade_ordinal": null,
+        "next_trade_ordinal": 1,
+        "source_order": "original trade ordinal, exact input cursor; equal clocks do not merge trades"
+      },
+      "original_emission_record_refs": {
+        "absorption": {
+          "count": 1,
+          "first": {
+            "file": "source-absorption.jsonl.gz",
+            "line_number": 35,
+            "record_sha256": "1562f1a937ffeed92b54f6a8fd98575bfd159a3753f94451f9e6d2fa1810c66a",
+            "known_by_ns": 1697580003382463363,
+            "input_cursor": 625
+          }
+        },
+        "ladder": {
+          "count": 2,
+          "first": {
+            "file": "source-ladder.jsonl.gz",
+            "line_number": 69,
+            "record_sha256": "5cee7024877684e4c752ca20e2497924bfc0196988b938829389c204b620f849",
+            "known_by_ns": 1697580003382463363,
+            "input_cursor": 625
+          }
+        },
+        "mirror": {
+          "count": 1,
+          "first": {
+            "file": "source-mirror.jsonl.gz",
+            "line_number": 35,
+            "record_sha256": "05889787691d06b8c03843a3d13eda783c6a2cfb35a0b2b2177c5c7d73d82957",
+            "known_by_ns": 1697580003382463363,
+            "input_cursor": 625
+          }
+        },
+        "recurrence": {
+          "count": 1,
+          "first": {
+            "file": "source-recurrence.jsonl.gz",
+            "line_number": 35,
+            "record_sha256": "79f6ad80e1f2d5315ff859e182cfacbf308a3e5c928e7d8ed88ae4cd643ef6c0",
+            "known_by_ns": 1697580003382463363,
+            "input_cursor": 625
+          }
+        }
+      },
+      "last_completed_group_before_trade": {
+        "source_ordinal": "216",
+        "input_cursor": "621",
+        "event_ns": "1697580003155677493",
+        "known_by_ns": "1697580003156258382",
+        "source_offset": "87234946",
+        "original_record_refs": {
+          "absorption": {
+            "count": 1,
+            "first": {
+              "file": "source-absorption.jsonl.gz",
+              "line_number": 34,
+              "record_sha256": "df800c0e1bb93707048aa7245d517a123b76c4a302d934379c8b672c5f6546d1",
+              "known_by_ns": 1697580003156258382,
+              "input_cursor": 621
+            }
+          },
+          "ladder": {
+            "count": 2,
+            "first": {
+              "file": "source-ladder.jsonl.gz",
+              "line_number": 67,
+              "record_sha256": "395588cf5467a7a07af012131e1a92fdaaf15d3739690827e54be05cc532c66e",
+              "known_by_ns": 1697580003156258382,
+              "input_cursor": 621
+            }
+          },
+          "mirror": {
+            "count": 1,
+            "first": {
+              "file": "source-mirror.jsonl.gz",
+              "line_number": 34,
+              "record_sha256": "47d7d2903885443f25a76cd7b6cb822c2090055ab229a20f34ed453a1083a86d",
+              "known_by_ns": 1697580003156258382,
+              "input_cursor": 621
+            }
+          },
+          "queue": {
+            "count": 1,
+            "first": {
+              "file": "source-queue.jsonl.gz",
+              "line_number": 6,
+              "record_sha256": "5b0bbf00f964d2c37f3a3ffbaf1f3bb85929cdc529ae88d58cf49f92446a8c39",
+              "known_by_ns": 1697580003156258382,
+              "input_cursor": 621
+            }
+          },
+          "recurrence": {
+            "count": 1,
+            "first": {
+              "file": "source-recurrence.jsonl.gz",
+              "line_number": 34,
+              "record_sha256": "d5f9c0466b661fa073eff4a084e336a5ecc784d5d4db930b365c7a65f399c289",
+              "known_by_ns": 1697580003156258382,
+              "input_cursor": 621
+            }
+          },
+          "replenishment": {
+            "count": 1,
+            "first": {
+              "file": "source-replenishment.jsonl.gz",
+              "line_number": 33,
+              "record_sha256": "b6ba9104646c90879162b8115c448ca34de08ef4c2a2cb41724c773aedc5c798",
+              "known_by_ns": 1697580003156258382,
+              "input_cursor": 621
+            }
+          }
+        }
+      },
+      "original_second_set": {
+        "file": "every-trade-original-second-set.jsonl.gz",
+        "line_number": 1,
+        "scope": "all four preserved source views of original 19-number compact subset; not a fabricated full second-set payload"
+      },
+      "supporting_paths": {
+        "count": 0,
+        "first": null
+      },
+      "complete_run_inventory_ref": "../completed-run-source-list.json",
+      "original_models": "Saved forecasts are at original model contexts; no forecast invented or averaged for this trade",
+      "coverage": "Missing record references mean not materialized in this local projection, not zero; original pins and every trade remain retained",
+      "interpretation_policy": "All available later/earlier data and Frankie knowledge may inform retrospective explanation; source identity and event sequence remain explicit"
+    }
+  },
+  "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/every-trade-original-second-set.jsonl.gz": {
+    "bytes": 30054411,
+    "sha256": "45a78ab2c59097772bf036fe4704105376aa5a4fa775226ec86a3a2a8d59ced2",
+    "rows": 30739,
+    "first": {
+      "trade_ordinal": 0,
+      "trade_input_cursor": 622,
+      "at_trade_input": {
+        "source_row_index": 622,
+        "clocks": {
+          "input_cursor": 622,
+          "instrument_id": 150611,
+          "event_ns": 1697580003381906641,
+          "receive_ns": 1697580003382399708,
+          "known_by_ns": 1697580003382399708,
+          "group_ordinal_or_minus_one": -1,
+          "source_offset": 87345503
+        },
+        "numbers": {
+          "far_front_age_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_queue_age_p90_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_hhi": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_replenish_log1p_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_replenish_log1p_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_priority_loss_rate_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_priority_loss_rate_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_absorption_share_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_absorption_share_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_identity_survival_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_identity_survival_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_retention_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_retention_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "unresolved_age_groups_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "extension_count_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "step_ratio_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "pullback_ticks_last_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "step_duration_groups_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "pullback_ticks_prev_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          }
+        },
+        "scope": "original 19-number compact selected-cohort representation; full second-set payload is richer"
+      },
+      "at_emission_group_close": {
+        "source_row_index": 625,
+        "clocks": {
+          "input_cursor": 625,
+          "instrument_id": 150611,
+          "event_ns": 1697580003381906641,
+          "receive_ns": 1697580003382463363,
+          "known_by_ns": 1697580003382463363,
+          "group_ordinal_or_minus_one": 217,
+          "source_offset": 87642915
+        },
+        "numbers": {
+          "far_front_age_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_queue_age_p90_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_hhi": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_replenish_log1p_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_replenish_log1p_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_priority_loss_rate_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_priority_loss_rate_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_absorption_share_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_absorption_share_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_identity_survival_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_identity_survival_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_retention_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_retention_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "unresolved_age_groups_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "extension_count_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "step_ratio_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "pullback_ticks_last_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "step_duration_groups_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "pullback_ticks_prev_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          }
+        },
+        "scope": "original 19-number compact selected-cohort representation; full second-set payload is richer"
+      },
+      "previous_input": {
+        "source_row_index": 621,
+        "clocks": {
+          "input_cursor": 621,
+          "instrument_id": 150611,
+          "event_ns": 1697580003155677493,
+          "receive_ns": 1697580003156258382,
+          "known_by_ns": 1697580003156258382,
+          "group_ordinal_or_minus_one": 216,
+          "source_offset": 87234946
+        },
+        "numbers": {
+          "far_front_age_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_queue_age_p90_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_hhi": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_replenish_log1p_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_replenish_log1p_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_priority_loss_rate_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_priority_loss_rate_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_absorption_share_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_absorption_share_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_identity_survival_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_identity_survival_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_retention_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_retention_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "unresolved_age_groups_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "extension_count_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "step_ratio_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "pullback_ticks_last_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "step_duration_groups_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "pullback_ticks_prev_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          }
+        },
+        "scope": "original 19-number compact selected-cohort representation; full second-set payload is richer"
+      },
+      "last_completed_group_before_trade": {
+        "source_row_index": 621,
+        "clocks": {
+          "input_cursor": 621,
+          "instrument_id": 150611,
+          "event_ns": 1697580003155677493,
+          "receive_ns": 1697580003156258382,
+          "known_by_ns": 1697580003156258382,
+          "group_ordinal_or_minus_one": 216,
+          "source_offset": 87234946
+        },
+        "numbers": {
+          "far_front_age_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_queue_age_p90_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_hhi": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_replenish_log1p_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_replenish_log1p_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_priority_loss_rate_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_priority_loss_rate_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_absorption_share_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_absorption_share_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_identity_survival_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_identity_survival_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_retention_64": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "far_size_retention_1024": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "unresolved_age_groups_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "extension_count_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "step_ratio_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "pullback_ticks_last_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "step_duration_groups_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          },
+          "pullback_ticks_prev_log": {
+            "raw_float64": 0.0,
+            "raw_float64_hex": "0x0.0p+0",
+            "source_float32": 0.0,
+            "state_code": 1,
+            "state": "MISSING",
+            "reason": "Not present in compact projection; do not invent a reason"
+          }
+        },
+        "scope": "original 19-number compact selected-cohort representation; full second-set payload is richer"
+      },
+      "interpretation": "Original values and explicit states, without averaging, imputation or replacing this trade by a family/dipole average"
+    }
+  },
+  "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/every-trade-root-record-links.jsonl.gz": {
+    "bytes": 4537030,
+    "sha256": "004d2f4fec30d28c38f6760a093305aeeabf6dd32e68b067561e0eab628dcc86",
+    "rows": 30739,
+    "first": {
+      "trade_ordinal": 0,
+      "original_source_record_file": "original-root-native-measurement-rows.jsonl.gz",
+      "last_completed_group_original_record_lines": {
+        "count": 465,
+        "first": 4789
+      },
+      "emission_group_original_record_lines": {
+        "count": 1064,
+        "first": 5254
+      },
+      "interpretation": "Exact original selected-context measurements; repeated source occurrences retained. Missing links do not delete the trade or assert a zero."
+    }
+  },
+  "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/original-root-native-measurement-rows.jsonl.gz": {
+    "bytes": 20419495,
+    "sha256": "5e004c16543632d47c25603a82ca2b80e3cb921925d9ed680a3ce75c412ede54",
+    "rows": 1872499,
+    "first": {
+      "original_source": "descriptive-v1/complete_context_measurements.csv.gz",
+      "original_csv_row": 17234,
+      "original_measurement_row": {
+        "sample_id": "3:near_after",
+        "lag_s": "120",
+        "feature": "root.best_bid",
+        "value": "3.057",
+        "age_s": "0.620571834",
+        "anchor_basis": "",
+        "source_ordinal": "524"
+      }
+    }
+  },
+  "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/completed-run-connections-v1/every-trade-completed-run-and-lineage-links.jsonl.gz": {
+    "bytes": 4268221,
+    "sha256": "6a0e5ea80dd526f6ffe2e86c13398d1734282084d0d7401c41bbccd6d4cd8e5a",
+    "rows": 30739,
+    "first": {
+      "trade_ordinal": 0,
+      "original_trade": {
+        "source_ordinal": "0",
+        "trade_input_cursor": "622",
+        "trade_journal_ordinal": "1244",
+        "group_close_input_cursor": "625",
+        "instrument_id": "150611",
+        "event_ns": "1697580003381906641",
+        "receive_ns": "1697580003382399708",
+        "available_ns": "1697580003382463363",
+        "price": "3.061",
+        "price_raw": "3061000000",
+        "size": "1",
+        "entry_hash": "9527ffcecf8a460813eefa2f692ca90347ea2775db7b3a98662d1964250104e1",
+        "block_start": "1157",
+        "block_sha256": "5aac92fc2f51cea60b8f61bd6baef60d6dd7f7af797b503d3e6a6370932d3ca4",
+        "issues_json": "[]",
+        "timestamp_basis": "original journal integer nanoseconds; availability at emitted group close"
+      },
+      "exact_clocks": {
+        "event_ns": 1697580003381906641,
+        "receive_ns": 1697580003382399708,
+        "available_ns": 1697580003382463363,
+        "trade_input_cursor": 622,
+        "group_close_input_cursor": 625,
+        "trade_journal_ordinal": 1244
+      },
+      "all_run_evidence_index": "run-evidence-index.json",
+      "original_model_context_index": "all-749-original-model-context-links.jsonl.gz",
+      "model_context_navigation": {
+        "nearest_prior_or_equal_start_line": 7,
+        "nearest_later_start_line": 8,
+        "all_prior_or_equal_start_line_range": {
+          "count": 2,
+          "first": 1
+        },
+        "all_later_start_line_range": {
+          "count": 2,
+          "first": 8
+        }
+      },
+      "exact_shared_model_pre_group_lines": {
+        "count": 0,
+        "first": null
+      },
+      "model_context_rule": "Temporal neighbors and a shared group are context links, not model attribution or per-trade predictions. All earlier and later contexts remain eligible.",
+      "same_emission_removal_refs": {
+        "count": 0,
+        "first": null
+      },
+      "order_lineage_refs": {
+        "count": 0,
+        "first": null
+      },
+      "bounded_original_T_identity": null,
+      "shared_group_limit": "A group can contain several prints and removals. Do not allocate a removal or its descendants to an individual execution merely from this join.",
+      "quantity_gap_status": "NO_NEW_QUANTITY_RESOLUTION_CLAIM",
+      "semantic_coverage": "NOT_PASSED"
+    }
+  },
+  "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/quote-order-gapfill-v1/native.member.chunk001.jsonl.gz": {
+    "bytes": 9559288,
+    "sha256": "8c442f88664fe0bf9be216d349f4509ce4963c1488ad628bfcee8e8a0e22eced",
+    "rows": 267,
+    "first": {
+      "activity_since": {
+        "last_book_reset": {
+          "action_count": {
+            "A": 1689,
+            "C": 1712,
+            "F": 171,
+            "M": 104,
+            "N": 413,
+            "T": 118
+          },
+          "action_qty": {
+            "A": 2096,
+            "C": 2682,
+            "F": 198,
+            "M": 155,
+            "N": 0,
+            "T": 203
+          },
+          "action_side_count": {
+            "A_A": 768,
+            "A_B": 921,
+            "C_A": 794,
+            "C_B": 918,
+            "F_A": 90,
+            "F_B": 77,
+            "F_N": 4,
+            "M_A": 36,
+            "M_B": 68,
+            "N_N": 413,
+            "T_A": 55,
+            "T_B": 59,
+            "T_N": 4
+          },
+          "action_side_qty": {
+            "A_A": 918,
+            "A_B": 1178,
+            "C_A": 1081,
+            "C_B": 1601,
+            "F_A": 94,
+            "F_B": 100,
+            "F_N": 4,
+            "M_A": 68,
+            "M_B": 87,
+            "N_N": 0,
+            "T_A": 98,
+            "T_B": 101,
+            "T_N": 4
+          },
+          "add_cancel_churn": 0.5613227291753872,
+          "anchor_basis": "UNKNOWN_SINCE_RESUME",
+          "anchor_event_ns": null,
+          "anchor_recv_ns": null,
+          "anchor_sequence": null,
+          "elapsed_event_ns": null,
+          "elapsed_recv_ns": null,
+          "event_count": 4207,
+          "groups_since_anchor": 3047,
+          "missing_reference_count": 0,
+          "priority_lost_modify_count": 90,
+          "receive_order_clean": true,
+          "records_since_anchor": 4207,
+          "top_level_add_qty_derived": 878,
+          "top_level_cancel_qty_derived": 817,
+          "top_level_qty_by_action": {
+            "A": 878,
+            "C": 817,
+            "F": 180,
+            "M": 50,
+            "T": 199
+          },
+          "trade_aggressor_imbalance": 0.01507537688442211,
+          "trade_buy_aggressor_qty": 101,
+          "trade_sell_aggressor_qty": 98
+        },
+        "last_f_last_same_side": {
+          "action_count": {
+            "A": 1
+          },
+          "action_qty": {
+            "A": 1
+          },
+          "action_side_count": {
+            "A_B": 1
+          },
+          "action_side_qty": {
+            "A_B": 1
+          },
+          "add_cancel_churn": 0.0,
+          "anchor_basis": "OBSERVED",
+          "anchor_event_ns": 1697581431640068451,
+          "anchor_recv_ns": 1697581431640213315,
+          "anchor_sequence": 26436664,
+          "elapsed_event_ns": 1143338018,
+          "elapsed_recv_ns": 1143362987,
+          "event_count": 1,
+          "groups_since_anchor": 1,
+          "missing_reference_count": 0,
+          "priority_lost_modify_count": 0,
+          "receive_order_clean": true,
+          "records_since_anchor": 1,
+          "side_orientation": "B",
+          "top_level_add_qty_derived": 1,
+          "top_level_cancel_qty_derived": 0,
+          "top_level_qty_by_action": {
+            "A": 1
+          },
+          "trade_aggressor_imbalance": null,
+          "trade_buy_aggressor_qty": 0,
+          "trade_sell_aggressor_qty": 0
+        },
+        "last_touch_change": {
+          "action_count": {
+            "A": 69,
+            "C": 64,
+            "M": 1,
+            "N": 1
+          },
+          "action_qty": {
+            "A": 69,
+            "C": 64,
+            "M": 2,
+            "N": 0
+          },
+          "action_side_count": {
+            "A_A": 5,
+            "A_B": 64,
+            "C_A": 2,
+            "C_B": 62,
+            "M_B": 1,
+            "N_N": 1
+          },
+          "action_side_qty": {
+            "A_A": 5,
+            "A_B": 64,
+            "C_A": 2,
+            "C_B": 62,
+            "M_B": 2,
+            "N_N": 0
+          },
+          "add_cancel_churn": 0.48120300751879697,
+          "anchor_basis": "OBSERVED",
+          "anchor_event_ns": 1697581362560380805,
+          "anchor_recv_ns": 1697581362560625366,
+          "anchor_sequence": 26436256,
+          "elapsed_event_ns": 70223025664,
+          "elapsed_recv_ns": 70222950936,
+          "event_count": 135,
+          "groups_since_anchor": 135,
+          "missing_reference_count": 0,
+          "priority_lost_modify_count": 1,
+          "receive_order_clean": true,
+          "records_since_anchor": 135,
+          "top_level_add_qty_derived": 56,
+          "top_level_cancel_qty_derived": 54,
+          "top_level_qty_by_action": {
+            "A": 56,
+            "C": 54
+          },
+          "trade_aggressor_imbalance": null,
+          "trade_buy_aggressor_qty": 0,
+          "trade_sell_aggressor_qty": 0
+        },
+        "last_trade": {
+          "action_count": {
+            "A": 419,
+            "C": 413,
+            "F": 1,
+            "M": 1,
+            "N": 123
+          },
+          "action_qty": {
+            "A": 420,
+            "C": 413,
+            "F": 1,
+            "M": 2,
+            "N": 0
+          },
+          "action_side_count": {
+            "A_A": 248,
+            "A_B": 171,
+            "C_A": 245,
+            "C_B": 168,
+            "F_A": 1,
+            "M_B": 1,
+            "N_N": 123
+          },
+          "action_side_qty": {
+            "A_A": 248,
+            "A_B": 172,
+            "C_A": 245,
+            "C_B": 168,
+            "F_A": 1,
+            "M_B": 2,
+            "N_N": 0
+          },
+          "add_cancel_churn": 0.4957983193277311,
+          "anchor_basis": "OBSERVED",
+          "anchor_event_ns": 1697581210082619701,
+          "anchor_recv_ns": 1697581210083028516,
+          "anchor_sequence": 26434463,
+          "elapsed_event_ns": 222700786768,
+          "elapsed_recv_ns": 222700547786,
+          "event_count": 957,
+          "groups_since_anchor": 833,
+          "missing_reference_count": 0,
+          "priority_lost_modify_count": 1,
+          "receive_order_clean": true,
+          "records_since_anchor": 957,
+          "top_level_add_qty_derived": 244,
+          "top_level_cancel_qty_derived": 223,
+          "top_level_qty_by_action": {
+            "A": 244,
+            "C": 223,
+            "F": 1
+          },
+          "trade_aggressor_imbalance": null,
+          "trade_buy_aggressor_qty": 0,
+          "trade_sell_aggressor_qty": 0
+        },
+        "session_open": {
+          "action_count": {
+            "A": 1604,
+            "C": 1308,
+            "F": 171,
+            "M": 104,
+            "N": 412,
+            "T": 118
+          },
+          "action_qty": {
+            "A": 1766,
+            "C": 1373,
+            "F": 198,
+            "M": 155,
+            "N": 0,
+            "T": 203
+          },
+          "action_side_count": {
+            "A_A": 728,
+            "A_B": 876,
+            "C_A": 589,
+            "C_B": 719,
+            "F_A": 90,
+            "F_B": 77,
+            "F_N": 4,
+            "M_A": 36,
+            "M_B": 68,
+            "N_N": 412,
+            "T_A": 55,
+            "T_B": 59,
+            "T_N": 4
+          },
+          "action_side_qty": {
+            "A_A": 792,
+            "A_B": 974,
+            "C_A": 593,
+            "C_B": 780,
+            "F_A": 94,
+            "F_B": 100,
+            "F_N": 4,
+            "M_A": 68,
+            "M_B": 87,
+            "N_N": 0,
+            "T_A": 98,
+            "T_B": 101,
+            "T_N": 4
+          },
+          "add_cancel_churn": 0.4374004460019114,
+          "anchor_basis": "EXCHANGE_CALENDAR",
+          "anchor_event_ns": 1697580000000000000,
+          "anchor_recv_ns": null,
+          "anchor_sequence": null,
+          "elapsed_event_ns": 1432783406469,
+          "elapsed_recv_ns": null,
+          "event_count": 3717,
+          "groups_since_anchor": 2955,
+          "missing_reference_count": 0,
+          "priority_lost_modify_count": 90,
+          "receive_order_clean": true,
+          "records_since_anchor": 3717,
+          "top_level_add_qty_derived": 869,
+          "top_level_cancel_qty_derived": 804,
+          "top_level_qty_by_action": {
+            "A": 869,
+            "C": 804,
+            "F": 180,
+            "M": 50,
+            "T": 199
+          },
+          "trade_aggressor_imbalance": 0.01507537688442211,
+          "trade_buy_aggressor_qty": 101,
+          "trade_sell_aggressor_qty": 98
+        }
+      },
+      "adapter_revision": "NG_EXHAUSTION_MBO_V4_STATE_ADAPTER_V2_20260823",
+      "book": {
+        "ask_depth_full": 728,
+        "ask_depth_n": 68,
+        "ask_levels": {
+          "count": 10,
+          "first": {
+            "front_order_age_s": 70.222950936,
+            "front_order_size": 1,
+            "largest_order_share": 0.5,
+            "order_count": 2,
+            "price": 3.062,
+            "price_raw": 3062000000,
+            "queue_age_median_s": 70.222730706,
+            "queue_age_p90_s": 70.22290689,
+            "side": "A",
+            "size": 2
+          }
+        },
+        "ask_order_count_full": 373,
+        "ask_price_level_count_full": 218,
+        "best_ask": 3.062,
+        "best_bid": 3.06,
+        "bid_depth_full": 1041,
+        "bid_depth_n": 37,
+        "bid_levels": {
+          "count": 10,
+          "first": {
+            "front_order_age_s": 340.646436281,
+            "front_order_size": 1,
+            "largest_order_share": 0.3333333333333333,
+            "order_count": 3,
+            "price": 3.06,
+            "price_raw": 3060000000,
+            "queue_age_median_s": 47.605321091,
+            "queue_age_p90_s": 282.03821324300003,
+            "side": "B",
+            "size": 3
+          }
+        },
+        "bid_order_count_full": 394,
+        "bid_price_level_count_full": 205,
+        "depth_imbalance_full": 0.17693612210288298,
+        "depth_imbalance_n": -0.29523809523809524,
+        "mid": 3.061,
+        "spread": 0.0019999999999997797,
+        "top_n": 10
+      },
+      "book_full": {
+        "ask_depth_full": 728,
+        "ask_depth_n": 68,
+        "ask_levels": {
+          "count": 10,
+          "first": {
+            "fifo_queue": {
+              "count": 2,
+              "first": {
+                "order_id": {
+                  "type": "int",
+                  "count": null
+                },
+                "priority_age_s": {
+                  "type": "float",
+                  "count": null
+                },
+                "priority_recv_ns": {
+                  "type": "int",
+                  "count": null
+                },
+                "priority_sequence": {
+                  "type": "int",
+                  "count": null
+                },
+                "size": {
+                  "type": "int",
+                  "count": null
+                },
+                "volume_ahead": {
+                  "type": "int",
+                  "count": null
+                }
+              }
+            },
+            "front_order_age_s": 70.222950936,
+            "front_order_size": 1,
+            "largest_order_share": 0.5,
+            "order_count": 2,
+            "price": 3.062,
+            "price_raw": 3062000000,
+            "queue_age_median_s": 70.222730706,
+            "queue_age_p90_s": 70.22290689,
+            "side": "A",
+            "size": 2
+          }
+        },
+        "ask_levels_full": {
+          "count": 218,
+          "first": {
+            "fifo_queue": {
+              "count": 2,
+              "first": {
+                "order_id": {
+                  "type": "int",
+                  "count": null
+                },
+                "priority_age_s": {
+                  "type": "float",
+                  "count": null
+                },
+                "priority_recv_ns": {
+                  "type": "int",
+                  "count": null
+                },
+                "priority_sequence": {
+                  "type": "int",
+                  "count": null
+                },
+                "size": {
+                  "type": "int",
+                  "count": null
+                },
+                "volume_ahead": {
+                  "type": "int",
+                  "count": null
+                }
+              }
+            },
+            "front_order_age_s": 70.222950936,
+            "front_order_size": 1,
+            "largest_order_share": 0.5,
+            "order_count": 2,
+            "price": 3.062,
+            "price_raw": 3062000000,
+            "queue_age_median_s": 70.222730706,
+            "queue_age_p90_s": 70.22290689,
+            "side": "A",
+            "size": 2
+          }
+        },
+        "ask_order_count_full": 373,
+        "ask_price_level_count_full": 218,
+        "best_ask": 3.062,
+        "best_bid": 3.06,
+        "bid_depth_full": 1041,
+        "bid_depth_n": 37,
+        "bid_levels": {
+          "count": 10,
+          "first": {
+            "fifo_queue": {
+              "count": 3,
+              "first": {
+                "order_id": {
+                  "type": "int",
+                  "count": null
+                },
+                "priority_age_s": {
+                  "type": "float",
+                  "count": null
+                },
+                "priority_recv_ns": {
+                  "type": "int",
+                  "count": null
+                },
+                "priority_sequence": {
+                  "type": "int",
+                  "count": null
+                },
+                "size": {
+                  "type": "int",
+                  "count": null
+                },
+                "volume_ahead": {
+                  "type": "int",
+                  "count": null
+                }
+              }
+            },
+            "front_order_age_s": 340.646436281,
+            "front_order_size": 1,
+            "largest_order_share": 0.3333333333333333,
+            "order_count": 3,
+            "price": 3.06,
+            "price_raw": 3060000000,
+            "queue_age_median_s": 47.605321091,
+            "queue_age_p90_s": 282.03821324300003,
+            "side": "B",
+            "size": 3
+          }
+        },
+        "bid_levels_full": {
+          "count": 205,
+          "first": {
+            "fifo_queue": {
+              "count": 3,
+              "first": {
+                "order_id": {
+                  "type": "int",
+                  "count": null
+                },
+                "priority_age_s": {
+                  "type": "float",
+                  "count": null
+                },
+                "priority_recv_ns": {
+                  "type": "int",
+                  "count": null
+                },
+                "priority_sequence": {
+                  "type": "int",
+                  "count": null
+                },
+                "size": {
+                  "type": "int",
+                  "count": null
+                },
+                "volume_ahead": {
+                  "type": "int",
+                  "count": null
+                }
+              }
+            },
+            "front_order_age_s": 340.646436281,
+            "front_order_size": 1,
+            "largest_order_share": 0.3333333333333333,
+            "order_count": 3,
+            "price": 3.06,
+            "price_raw": 3060000000,
+            "queue_age_median_s": 47.605321091,
+            "queue_age_p90_s": 282.03821324300003,
+            "side": "B",
+            "size": 3
+          }
+        },
+        "bid_order_count_full": 394,
+        "bid_price_level_count_full": 205,
+        "depth_imbalance_full": 0.17693612210288298,
+        "depth_imbalance_n": -0.29523809523809524,
+        "mid": 3.061,
+        "spread": 0.0019999999999997797,
+        "top_n": 10
+      },
+      "book_regime": {
+        "ask_depth": 728,
+        "best_ask": 3,
+        "best_bid": 3,
+        "bid_depth": 1041,
+        "clock": "ts_recv_ns",
+        "level_count": 423,
+        "order_count": 767,
+        "recv_ns": 1697581432783576302,
+        "relative_imbalance": 0.17693612210288298,
+        "spread_raw": 0,
+        "total_depth": 1769
+      },
+      "capture_observations": {
+        "sequence_gap": 1955,
+        "sequence_gap_messages": 28871
+      },
+      "causal_availability_clock": "ts_recv_ns",
+      "causal_clocks": {
+        "clock_event_known_by": {
+          "basis": "F_LAST_RECEIVE_OF_THE_GROUP",
+          "clock": "ts_recv_ns",
+          "value_ns": 1697581432783576302
+        },
+        "clock_event_time": {
+          "basis": "OBSERVED_ON_THE_RECORD",
+          "clock": "ts_event_ns",
+          "f_last_ns": 1697581432783406469,
+          "first_component_ns": 1697581432783406469
+        },
+        "clock_feature_availability": {
+          "basis": "REPLAY_EARLIEST_LAWFUL_AVAILABILITY",
+          "clock": "ts_recv_ns",
+          "feature_cutoff_ts_recv_ns": 1697581432783576302,
+          "max_contributing_ts_recv_ns": 1697581432783576302,
+          "scope": "MEMBER_ROW_DERIVED_BLOCKS",
+          "value_ns": 1697581432783576302
+        },
+        "clock_lock_time": {
+          "basis": "STAMPED_BY_THE_PRINCIPAL_FIRST_LOCK",
+          "clock": "ts_recv_ns",
+          "value_ns": null
+        },
+        "clock_model_evaluation": {
+          "basis": "NO_INVOCATION_AT_THIS_CUTOFF",
+          "clock": "ts_recv_ns",
+          "value_ns": null
+        },
+        "clock_prospective_discovery_confirmation": {
+          "basis": "NO_RECOGNITION_EMITTED_AT_THIS_CUTOFF",
+          "clock": "ts_recv_ns",
+          "confirmed_at_this_cutoff": {
+            "count": 0,
+            "first": null
+          }
+        },
+        "clock_receive_time": {
+          "basis": "OBSERVED_ON_THE_RECORD",
+          "clock": "ts_recv_ns",
+          "f_last_ns": 1697581432783576302,
+          "first_component_ns": 1697581432783576302
+        }
+      },
+      "census_view": "V4_NATIVE_FULL",
+      "channel_count": 1,
+      "channel_id": 31,
+      "channels": {
+        "count": 1,
+        "first": 31
+      },
+      "clocks": {
+        "decision_ts_recv_ns": 1697581432783576302,
+        "f_last_ts_recv_ns": 1697581432783576302,
+        "first_component_ts_event_ns": 1697581432783406469,
+        "first_component_ts_recv_ns": 1697581432783576302,
+        "first_lawful_availability_ns": 1697581432783576302
+      },
+      "component_count": 1,
+      "continuity_segment": 19648,
+      "decision_basis": "REPLAY_EARLIEST_LAWFUL_AVAILABILITY",
+      "event_group_complete_f_last": true,
+      "event_to_receive_latency_ns": {
+        "count": 1,
+        "first": 169833
+      },
+      "f_last_to_decision_delay_ns": 0,
+      "family_id": "ow-3a12d9bd4a731b597f0d",
+      "fifo_priority_reconstructed": true,
+      "formation_latency_ns": 0,
+      "frankie_emission": {
+        "group_index": 3046,
+        "input_cursor": 4206,
+        "instrument_id": 150611,
+        "phase": "GROUP_CLOSE",
+        "schema": "FRANKIE_NATIVE_EMISSION_V1",
+        "ts_recv_ns": 1697581432783576302
+      },
+      "group_index": 3046,
+      "instrument_id": 150611,
+      "integrity": {},
+      "integrity_delta": {},
+      "interpretation_domain": "SERIALIZATION_FEED",
+      "max_within_group_receive_gap_ns": 0,
+      "native_priority_id_exposed": false,
+      "publisher_id": 1,
+      "raw_actions": {
+        "count": 1,
+        "first": {
+          "action": "A",
+          "book_effect": {
+            "action": "A",
+            "missing_reference": false,
+            "new_size": 1,
+            "old_size": null,
+            "price_raw": 3060000000,
+            "priority_lost": false,
+            "removed": false,
+            "reported_size": 1,
+            "sequence_gap_messages": 1,
+            "side": "B",
+            "size_delta": 1,
+            "top_before_price_raw": 3060000000,
+            "touched_or_improved_top_before": true
+          },
+          "channel_id": 31,
+          "flags": 128,
+          "instrument_id": 150611,
+          "is_last": true,
+          "is_snapshot": false,
+          "order_id": 788699914573,
+          "price": 3.06,
+          "price_raw": 3060000000,
+          "publisher_id": 1,
+          "raw_symbol": null,
+          "sequence": 26436666,
+          "side": "B",
+          "size": 1,
+          "source_dbn_object": "journal:20231018:/opt/frankie-box/work/ingest-20231018-gh-36571235912-1/journal.compact.sqlite",
+          "source_dbn_sha256": "46ca9fa0f046c3c22c958c66f4a3bfdfc3876a4d7bc2c010b9f163003f6c0319",
+          "source_missing_fields": {
+            "count": 0,
+            "first": null
+          },
+          "source_null_fields": {
+            "count": 0,
+            "first": null
+          },
+          "source_record": {
+            "action": "A",
+            "channel_id": 31,
+            "dbn_extraction_hash": "d4b0b14f648ec94b804b87d4abf30e350ab1106a1e3a69782e8c297cf2cd512f",
+            "dbn_length": 14,
+            "flags": 128,
+            "instrument_id": 150611,
+            "order_id": 788699914573,
+            "price": 3060000000,
+            "publisher_id": 1,
+            "raw_symbol": null,
+            "rtype": 160,
+            "sequence": 26436666,
+            "side": "B",
+            "size": 1,
+            "source_dbn_object": "journal:20231018:/opt/frankie-box/work/ingest-20231018-gh-36571235912-1/journal.compact.sqlite",
+            "source_dbn_sha256": "46ca9fa0f046c3c22c958c66f4a3bfdfc3876a4d7bc2c010b9f163003f6c0319",
+            "ts_event": 1697581432783406469,
+            "ts_in_delta": 18922,
+            "ts_out": null,
+            "ts_recv": 1697581432783576302
+          },
+          "ts_event_ns": 1697581432783406469,
+          "ts_in_delta_ns": 18922,
+          "ts_recv_ns": 1697581432783576302
+        }
+      },
+      "raw_symbol": null,
+      "schema": "NG_MBO_V4_NATIVE_EVENT_FRAME_V1",
+      "sequence": 26436666,
+      "sequence_contiguous": true,
+      "sequence_first": 26436666,
+      "sequence_last": 26436666,
+      "sequence_span": 0,
+      "session_phase": "PRE_SETTLEMENT",
+      "side_orientation": "B",
+      "single_channel_group": true,
+      "snapshot_bootstrap_only": false,
+      "source_day": "20231018",
+      "source_role": "SCORED_FINDINGS_DAY",
+      "structure": {
+        "action_counts": {
+          "A": 1
+        },
+        "action_string": "A",
+        "candidate_family_id": "ow-3a12d9bd4a731b597f0d",
+        "carried_native_family": "A",
+        "component_count": 1,
+        "discovery_status": "CARRIED_SEED_MATCH",
+        "distinct_order_id_count": 1,
+        "distinct_price_count": 1,
+        "fill_disposition": {
+          "cancelled_fill_order_ids": {
+            "count": 0,
+            "first": null
+          },
+          "class": "NO_FILL_IDS",
+          "filled_order_ids": {
+            "count": 0,
+            "first": null
+          },
+          "modified_fill_order_ids": {
+            "count": 0,
+            "first": null
+          },
+          "same_id_cancel_modify_order_ids": {
+            "count": 0,
+            "first": null
+          },
+          "signature": {
+            "cancelled_fill_id_count": 0,
+            "fill_id_count": 0,
+            "modified_fill_id_count": 0,
+            "same_id_cancel_modify_count": 0,
+            "unresolved_fill_id_count": 0
+          },
+          "unresolved_fill_order_ids": {
+            "count": 0,
+            "first": null
+          }
+        },
+        "fill_disposition_signature": {
+          "cancelled_fill_id_count": 0,
+          "fill_id_count": 0,
+          "modified_fill_id_count": 0,
+          "same_id_cancel_modify_count": 0,
+          "unresolved_fill_id_count": 0
+        },
+        "matches_carried_native_family": true,
+        "mirror": {
+          "mirror_pair_key": "A|B",
+          "mirror_side_string": "A",
+          "orientation": "MIRROR",
+          "side_string": "B"
+        },
+        "order_ids": {
+          "count": 1,
+          "first": 788699914573
+        },
+        "price_raw_max": 3060000000,
+        "price_raw_min": 3060000000,
+        "price_raw_span": 0,
+        "side_counts": {
+          "B": 1
+        },
+        "side_string": "B",
+        "terminal_action": "A",
+        "terminal_side": "B"
+      },
+      "ts_event_ns": 1697581432783406469,
+      "ts_in_delta_ns": 18922,
+      "ts_recv_ns": 1697581432783576302,
+      "within_group_receive_gaps_ns": {
+        "count": 0,
+        "first": null
+      }
+    }
+  },
+  "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/quote-order-gapfill-v1/second_set.chunk001.jsonl.gz": {
+    "bytes": 9072612,
+    "sha256": "bc615aec10d8396790915aafe4627a2555bfd0d3c454a3491afbdd0f09efab20",
+    "rows": 530,
+    "first": {
+      "cursor": 4206,
+      "target_hash": "2c1569263a33135003a0ae5b090209d5ed24e5293dcb7d322f2438687c78721e",
+      "source_manifest_hash": "f7bf0845d544e50cffffa7d5d4eec8772006c5c64109fcd1fbf946f493911fef",
+      "source_prefix_hash": "32427a1a1480d76971e9574fb3e0d0ba76a3b753e63f31fa15f62afaeed82e03",
+      "as_of_ts_recv_ns": 1697581432783576302,
+      "ts_recv_ns": 1697581432783576302,
+      "components": {
+        "count": 19,
+        "first": {
+          "name": "far_front_age_log",
+          "unit": "log_seconds",
+          "value": null,
+          "state": "MISSING",
+          "raw_reason": "NO_FLOW"
+        }
+      },
+      "step_receipt_hash": "a3f07f4f1b7877725b3a9acbc1d2ebffa6985d4eacd87e1e0aefa0ad564781b1",
+      "dstate": {
+        "schema": "FRANKIE_TEACHER_DSTATE_ROWS_V1",
+        "cursor": 4206,
+        "source_prefix_hash": "32427a1a1480d76971e9574fb3e0d0ba76a3b753e63f31fa15f62afaeed82e03",
+        "ts_recv_ns": 1697581432783576302,
+        "publisher_id": 1,
+        "instrument_id": 150611,
+        "source_member_index": 0,
+        "session_id": "20231018",
+        "status": "GROUP_STATE",
+        "group_ordinal": 3046,
+        "tick_raw": 1000000,
+        "state": {
+          "anchor_dir": 1,
+          "E": {
+            "numerator": 3062,
+            "denominator": 1
+          },
+          "E_prev": null,
+          "armed": false,
+          "broken": false,
+          "pull_depth": {
+            "numerator": 0,
+            "denominator": 1
+          },
+          "n_ext": 0,
+          "m_last": null,
+          "m_prev": null,
+          "p_last": null,
+          "p_prev": null,
+          "g_E": 2214,
+          "g_E_prev": null,
+          "age": 63,
+          "duration_last": null
+        }
+      },
+      "raw_components": {
+        "far_front_age_log": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW",
+          "unknown_side_trades": 0,
+          "unknown_side_volume": 0
+        },
+        "far_queue_age_p90_log": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW"
+        },
+        "far_size_hhi": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW"
+        },
+        "far_replenish_log1p_64": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW"
+        },
+        "far_replenish_log1p_1024": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW"
+        },
+        "far_priority_loss_rate_64": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW"
+        },
+        "far_priority_loss_rate_1024": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW"
+        },
+        "far_absorption_share_64": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW",
+          "unknown_side_trades": 0,
+          "unknown_side_volume": 0
+        },
+        "far_absorption_share_1024": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW",
+          "unknown_side_trades": 0,
+          "unknown_side_volume": 0
+        },
+        "far_identity_survival_64": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW",
+          "unknown_side_trades": 0,
+          "unknown_side_volume": 0
+        },
+        "far_identity_survival_1024": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW",
+          "unknown_side_trades": 0,
+          "unknown_side_volume": 0
+        },
+        "far_size_retention_64": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW",
+          "unknown_side_trades": 0,
+          "unknown_side_volume": 0
+        },
+        "far_size_retention_1024": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "NO_FLOW",
+          "unknown_side_trades": 0,
+          "unknown_side_volume": 0
+        },
+        "unresolved_age_groups_log": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "SIDE_UNDEFINED"
+        },
+        "extension_count_log": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "SIDE_UNDEFINED"
+        },
+        "step_ratio_log": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "SIDE_UNDEFINED"
+        },
+        "pullback_ticks_last_log": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "SIDE_UNDEFINED"
+        },
+        "step_duration_groups_log": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "SIDE_UNDEFINED"
+        },
+        "pullback_ticks_prev_log": {
+          "value": 0.0,
+          "state": 1,
+          "reason": "SIDE_UNDEFINED"
+        }
+      },
+      "key": {
+        "adapter_cursor": 4206,
+        "input_cursor": 4206,
+        "input_journal_ordinal": 8412,
+        "source_input_index": 4206,
+        "source_member_index": 0,
+        "session_id": "20231018",
+        "instrument_id": 150611,
+        "terminal_prefix_hash": "32427a1a1480d76971e9574fb3e0d0ba76a3b753e63f31fa15f62afaeed82e03"
+      },
+      "clocks": {
+        "clock_event_time": {
+          "ts_event_ns": 1697581432783406469,
+          "raw_event_clock": 1697581432783406469
+        },
+        "clock_receive_time": {
+          "ts_recv_ns": 1697581432783576302,
+          "raw_receive_clock": 1697581432783576302
+        },
+        "clock_event_known_by": 1697581432783576302,
+        "clock_feature_availability": {
+          "count": 10,
+          "first": {
+            "count": 4,
+            "first": "root.frames"
+          }
+        },
+        "clock_prospective_discovery_confirmation": {
+          "count": 7,
+          "first": {
+            "count": 3,
+            "first": 26633
+          }
+        },
+        "clock_model_evaluation": {
+          "count": 1,
+          "first": {
+            "count": 2,
+            "first": 3046
+          }
+        },
+        "clock_lock_time": {
+          "label": "teacher_as_of (lock time does not exist before Frankie reads)",
+          "teacher_as_of": 1697582098977988070
+        }
+      },
+      "clocks_absent": {
+        "clock_lock_time": "teacher_as_of (lock time does not exist before Frankie reads): not a picture element; the teacher's as_of is stamped at publication"
+      },
+      "planes": {
+        "canonical_sep_nov_2021_dbn_mbo_objects": {
+          "carrier": "input",
+          "element": "the row itself (its APPLIED payload, key and clocks)"
+        },
+        "october_first_source_window": {
+          "carrier": "input",
+          "element": "the row itself (its APPLIED payload, key and clocks)"
+        },
+        "native_acmrtfn_messages": {
+          "carrier": "input",
+          "element": "the row itself (its APPLIED payload, key and clocks)"
+        },
+        "snapshot_bootstrap_reset_messages": {
+          "carrier": "input",
+          "element": "the row itself (its APPLIED payload, key and clocks)"
+        },
+        "raw_source_identity_provenance_clocks_integrity": {
+          "carrier": "input",
+          "element": "the row itself (its APPLIED payload, key and clocks)"
+        },
+        "canonical_predecessor_bootstrap_objects": {
+          "carrier": "opening",
+          "element": "picture.opening_state"
+        },
+        "order_lifecycle_adds": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "order_lifecycle_cancels": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "order_lifecycle_modifies": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "order_lifecycle_replaces": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "order_lifecycle_trades": {
+          "count": 0,
+          "first": null
+        },
+        "order_lifecycle_fills": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "native.member"
+          }
+        },
+        "order_lifecycle_clears": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "native.member"
+          }
+        },
+        "order_identity_transitions": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.structures"
+          }
+        },
+        "contract_session_roll_state": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "native.member"
+          }
+        },
+        "full_bid_ask_depth": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "price_level_and_order_counts": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "fifo_queues": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "queue_age_and_survival": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "queue_concentration": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "orders_and_volume_ahead": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "spread_and_depth_imbalance": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "complete_state_reset_bootstrap_receipts": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "native.member"
+          }
+        },
+        "mechanics_actions_by_side_and_level": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "aggressor_and_native_signed_flow": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "depletion_and_replenishment": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "native.lifecycle"
+          }
+        },
+        "resilience_and_recovery": {
+          "count": 2,
+          "first": {
+            "count": 5,
+            "first": "native.lifecycle"
+          }
+        },
+        "churn_and_queue_turnover": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "price_and_book_path": {
+          "count": 3,
+          "first": {
+            "count": 5,
+            "first": "native.member"
+          }
+        },
+        "missingness_and_integrity_flags": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.frames"
+          }
+        },
+        "legacy_price": {
+          "count": 0,
+          "first": null
+        },
+        "legacy_native_signed_flow": {
+          "count": 0,
+          "first": null
+        },
+        "legacy_per_second_roll20": {
+          "count": 0,
+          "first": null
+        },
+        "legacy_book_imbalance": {
+          "count": 0,
+          "first": null
+        },
+        "legacy_structure_observables": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.structures"
+          }
+        },
+        "derived_d_family_geometry": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.structures"
+          }
+        },
+        "derived_open_world_predecessor_state": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "root.structures"
+          }
+        },
+        "derived_ancestry_gaps": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "native.lifecycle"
+          }
+        },
+        "derived_unresolved_age_chain_trajectory": {
+          "count": 0,
+          "first": null
+        },
+        "derived_price_flow_book_paths": {
+          "count": 4,
+          "first": {
+            "count": 5,
+            "first": "native.member"
+          }
+        },
+        "derived_v4_mechanics_fifo_features": {
+          "count": 1,
+          "first": {
+            "count": 5,
+            "first": "native.member"
+          }
+        },
+        "derived_feature_availability_timestamps": {
+          "carrier": "availability",
+          "element": "the row itself (its APPLIED payload, key and clocks)"
+        },
+        "prebirth_predecessor_at_risk_state": {
+          "count": 0,
+          "first": null
+        },
+        "prebirth_unresolved_chain_extension_state": {
+          "count": 0,
+          "first": null
+        },
+        "prebirth_ancestry_successor_opportunity": {
+          "count": 0,
+          "first": null
+        },
+        "prebirth_stopped_chain_false_context_controls": {
+          "count": 0,
+          "first": null
+        },
+        "prebirth_negative_opportunity_cases": {
+          "count": 0,
+          "first": null
+        },
+        "clock_event_time": {
+          "carrier": "clock",
+          "element": "the row itself (its APPLIED payload, key and clocks)"
+        },
+        "clock_receive_time": {
+          "carrier": "clock",
+          "element": "the row itself (its APPLIED payload, key and clocks)"
+        },
+        "clock_event_known_by": {
+          "carrier": "clock",
+          "element": "the row itself (its APPLIED payload, key and clocks)"
+        },
+        "clock_feature_availability": {
+          "carrier": "availability",
+          "element": "the row itself (its APPLIED payload, key and clocks)"
+        },
+        "clock_prospective_discovery_confirmation": {
+          "count": 0,
+          "first": null
+        }
+      },
+      "planes_state": {
+        "last_observed": {
+          "count": 2,
+          "first": {
+            "count": 2,
+            "first": "root.frames"
+          }
+        },
+        "active_instrument": {
+          "count": 2,
+          "first": {
+            "count": 2,
+            "first": "root.frames"
+          }
+        },
+        "published": {
+          "count": 2260,
+          "first": {
+            "count": 2,
+            "first": "external.storage.weekly"
+          }
+        }
+      },
+      "planes_absent": {
+        "order_lifecycle_trades": "no root.prices row was placed at this instant",
+        "legacy_price": "no root.prices row was placed at this instant",
+        "legacy_native_signed_flow": "completed-only: a post-stream aggregate (report.completed_sources), never a value in a live picture",
+        "legacy_per_second_roll20": "completed-only: a post-stream aggregate (report.completed_sources), never a value in a live picture",
+        "legacy_book_imbalance": "no root.prices row was placed at this instant",
+        "derived_unresolved_age_chain_trajectory": "no native.lifecycle row was placed at this instant",
+        "prebirth_predecessor_at_risk_state": "no native.lifecycle row was placed at this instant",
+        "prebirth_unresolved_chain_extension_state": "no native.lifecycle row was placed at this instant",
+        "prebirth_ancestry_successor_opportunity": "no native.lifecycle row was placed at this instant",
+        "prebirth_stopped_chain_false_context_controls": "no native.lifecycle row was placed at this instant",
+        "prebirth_negative_opportunity_cases": "no native.lifecycle row was placed at this instant",
+        "clock_prospective_discovery_confirmation": "no native.lifecycle row was placed at this instant"
+      },
+      "invalidated": {
+        "count": 0,
+        "first": null
+      },
+      "coverage": {
+        "source_status": "applied",
+        "placement": "exact",
+        "exact_clocks": true,
+        "absent_layers": {
+          "count": 0,
+          "first": null
+        },
+        "last_observed_state": "rows_with_original_cursors",
+        "active_instrument_state": "rows_with_original_cursors"
+      },
+      "match": {
+        "status": "matched",
+        "mismatches": {
+          "count": 0,
+          "first": null
+        }
+      },
+      "state_labels": {
+        "root.structures|discovery_status": "CARRIED_SEED_MATCH",
+        "root.structures|candidate_family_id": "ow-3a12d9bd4a731b597f0d",
+        "root.structures|carried_native_family": "A",
+        "root.structures|matches_carried_native_family": true,
+        "root.structures|fill_disposition.class": "NO_FILL_IDS",
+        "root.structures|mirror.orientation": "MIRROR",
+        "root.structures|terminal_action": "A",
+        "root.structures|terminal_side": "B",
+        "native.member|session_phase": "PRE_SETTLEMENT",
+        "native.member|side_orientation": "B",
+        "native.member|family_id": "ow-3a12d9bd4a731b597f0d",
+        "native.member|decision_basis": "REPLAY_EARLIEST_LAWFUL_AVAILABILITY",
+        "native.member|continuity_segment": 19648,
+        "native.member|snapshot_bootstrap_only": false,
+        "native.member|event_group_complete_f_last": true,
+        "native.member|sequence_contiguous": true,
+        "native.member|fifo_priority_reconstructed": true,
+        "native.lifecycle:flow_substrate|classification": "NO_DIRECTION",
+        "native.lifecycle:flow_substrate|window_direction": "NO_DIRECTION",
+        "native.lifecycle:flow_substrate|status": "RESOLVED",
+        "native.lifecycle:flow_substrate|no_direction_reason": "NO_TRADES",
+        "native.lifecycle:flow_substrate|roll20_defined": false,
+        "native.lifecycle:flow_substrate|polarity": 0,
+        "native.lifecycle:mirror|disposition": "PENDING",
+        "native.lifecycle:mirror|orientation": "MIRROR",
+        "native.lifecycle:ladder|ladder_scope": {
+          "count": 2,
+          "first": "FULL_BOOK_TRANSITION"
+        },
+        "native.lifecycle:ladder|side": {
+          "count": 2,
+          "first": "B"
+        },
+        "native.lifecycle:ladder|touch_state": {
+          "count": 2,
+          "first": "UNCHANGED"
+        },
+        "native.lifecycle:ladder|best_price_moved": {
+          "count": 2,
+          "first": false
+        },
+        "native.lifecycle:absorption|price_moved": false,
+        "native.lifecycle:replenishment|action": "A",
+        "native.lifecycle:replenishment|liquidity_kind": "NEW_ID_ADD",
+        "native.lifecycle:replenishment|liquidity_kind_basis": "ORDER_ID_NOT_RESTING_BEFORE_ROW",
+        "native.lifecycle:replenishment|observation": "REFILL",
+        "native.lifecycle:replenishment|price_is_sentinel": false
+      },
+      "state_label_origin": {
+        "root.structures": "placed",
+        "native.member": "placed",
+        "native.lifecycle:flow_substrate": "placed",
+        "native.lifecycle:recurrence": "placed",
+        "native.lifecycle:mirror": "placed",
+        "native.lifecycle:ladder": "placed",
+        "native.lifecycle:absorption": "placed",
+        "native.lifecycle:replenishment": "placed"
+      },
+      "book_columns": {
+        "status": "GROUP",
+        "key": {
+          "count": 2,
+          "first": 1
+        },
+        "ordinal": 3046,
+        "group": {
+          "format": 1,
+          "sides": {
+            "A": {
+              "book": {
+                "added": {
+                  "type": "int",
+                  "count": null
+                },
+                "removed": {
+                  "type": "int",
+                  "count": null
+                },
+                "modifies": {
+                  "type": "int",
+                  "count": null
+                },
+                "fills": {
+                  "type": "int",
+                  "count": null
+                }
+              },
+              "events": {
+                "added": {
+                  "type": "int",
+                  "count": null
+                },
+                "removed": {
+                  "type": "int",
+                  "count": null
+                },
+                "modifies": {
+                  "type": "int",
+                  "count": null
+                },
+                "fills": {
+                  "type": "int",
+                  "count": null
+                },
+                "lost": {
+                  "type": "int",
+                  "count": null
+                },
+                "absorption_removed": {
+                  "type": "int",
+                  "count": null
+                }
+              },
+              "differs": {},
+              "incomplete": {}
+            },
+            "B": {
+              "book": {
+                "added": {
+                  "type": "int",
+                  "count": null
+                },
+                "removed": {
+                  "type": "int",
+                  "count": null
+                },
+                "modifies": {
+                  "type": "int",
+                  "count": null
+                },
+                "fills": {
+                  "type": "int",
+                  "count": null
+                }
+              },
+              "events": {
+                "added": {
+                  "type": "int",
+                  "count": null
+                },
+                "removed": {
+                  "type": "int",
+                  "count": null
+                },
+                "modifies": {
+                  "type": "int",
+                  "count": null
+                },
+                "fills": {
+                  "type": "int",
+                  "count": null
+                },
+                "lost": {
+                  "type": "int",
+                  "count": null
+                },
+                "absorption_removed": {
+                  "type": "int",
+                  "count": null
+                }
+              },
+              "differs": {},
+              "incomplete": {}
+            }
+          },
+          "depth": {
+            "A": {
+              "count": 218,
+              "first": {
+                "count": 3,
+                "first": {
+                  "type": "int",
+                  "count": null
+                }
+              }
+            },
+            "B": {
+              "count": 205,
+              "first": {
+                "count": 3,
+                "first": {
+                  "type": "int",
+                  "count": null
+                }
+              }
+            }
+          },
+          "touches": {
+            "count": 1,
+            "first": {
+              "count": 6,
+              "first": 0
+            }
+          },
+          "listing": {}
+        },
+        "windows_absent": "NO_FLOW",
+        "windows": {}
+      },
+      "state_split": {}
+    }
+  }
+}
