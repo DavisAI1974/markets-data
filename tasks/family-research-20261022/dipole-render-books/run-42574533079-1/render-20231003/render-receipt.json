@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "day": "20231003",
+  "parents": 2497,
+  "counts": {
+    "candidate": 833,
+    "control1": 832,
+    "control2": 832
+  },
+  "pdf_books": [
+    "20231003-candidate-whole-lifecycles-01.pdf",
+    "20231003-candidate-whole-lifecycles-02.pdf",
+    "20231003-candidate-whole-lifecycles-03.pdf",
+    "20231003-candidate-whole-lifecycles-04.pdf",
+    "20231003-candidate-whole-lifecycles-05.pdf",
+    "20231003-candidate-whole-lifecycles-06.pdf",
+    "20231003-candidate-whole-lifecycles-07.pdf",
+    "20231003-candidate-whole-lifecycles-08.pdf",
+    "20231003-candidate-whole-lifecycles-09.pdf",
+    "20231003-control1-whole-lifecycles-01.pdf",
+    "20231003-control1-whole-lifecycles-02.pdf",
+    "20231003-control1-whole-lifecycles-03.pdf",
+    "20231003-control1-whole-lifecycles-04.pdf",
+    "20231003-control1-whole-lifecycles-05.pdf",
+    "20231003-control1-whole-lifecycles-06.pdf",
+    "20231003-control1-whole-lifecycles-07.pdf",
+    "20231003-control1-whole-lifecycles-08.pdf",
+    "20231003-control1-whole-lifecycles-09.pdf",
+    "20231003-control2-whole-lifecycles-01.pdf",
+    "20231003-control2-whole-lifecycles-02.pdf",
+    "20231003-control2-whole-lifecycles-03.pdf",
+    "20231003-control2-whole-lifecycles-04.pdf",
+    "20231003-control2-whole-lifecycles-05.pdf",
+    "20231003-control2-whole-lifecycles-06.pdf",
+    "20231003-control2-whole-lifecycles-07.pdf",
+    "20231003-control2-whole-lifecycles-08.pdf",
+    "20231003-control2-whole-lifecycles-09.pdf"
+  ],
+  "pages": 2497,
+  "audit": {
+    "day": "20231003",
+    "status": "passed",
+    "candidates": 833,
+    "whole_parents": 2497,
+    "candidate_parents": 833,
+    "control_parents": 1664,
+    "whole_path_points": 106478,
+    "component_windows": 2496,
+    "individual_tables_checked": 41,
+    "candidate_table_references_checked": 2606696,
+    "trades": 41410,
+    "stretches": 10573,
+    "legs": 6907,
+    "pressure_signals": 116187,
+    "quote_episodes": 24349,
+    "outcome_children": 348561,
+    "trade_dipole_links": 10352,
+    "corrections": [
+      {
+        "parent_id": "20231003:dip-19633-1696366763:candidate",
+        "correction": "Added full original-flow path for finalization-only candidate; no live recognition invented."
+      }
+    ],
+    "anchor_points_added": 2497,
+    "checks": [
+      "Original life endpoints reproduced",
+      "Every original lifecycle second retained in order",
+      "Original values verified; undefined seconds kept",
+      "Anchor points included in whole path",
+      "Every sampled window retains parent ID and original cut/cursor",
+      "All candidate table references resolve",
+      "Trade/stretch/leg membership and whole endpoints verified",
+      "Pressure outcomes resolve to their signal parents",
+      "Trade/dipole IDs and four source clocks agree"
+    ],
+    "limits": [
+      "The three-opposite-second rule is an explicit research endpoint, not established natural death.",
+      "Control instances are separate parents tied to their candidate; no invented control detector recognition.",
+      "Sample windows can extend outside a lifecycle and are labelled context, never replacements for the whole.",
+      "Finalization-only candidate lifecycles recovered from original flow; actual recognition stays absent."
+    ]
+  },
+  "whole_paths_retained": true,
+  "whole_path_points": 106478,
+  "note": "Every parent has one complete page. PDF file volumes are packaging only; no lifecycle crosses pages."
+}
