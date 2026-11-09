@@ -1,0 +1,4428 @@
+{
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-02.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-02.parquet",
+      "git_blob": "1d820b596a64174b1c91a0a768f3b278a70eb1d4",
+      "bytes": 578146,
+      "day": "20231018",
+      "sha256": "03c61ade72f9a1a7c565c3315abe78e65643ad5912836eed8ef262dfa8d36469",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/9eeb98f720b6138da2c5/TABLE.json",
+        "counts": {
+          "rows": 9596,
+          "direct_clocks": 9596,
+          "clocks": 28788,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "group_ordinal": 200003,
+          "first_cursor": 256902,
+          "close_cursor": 256903,
+          "event_ns": 1697633869988205269,
+          "receive_ns": 1697633869988590505,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 0,
+          "day": "20231018",
+          "known_by_ns": 1697633869988590505,
+          "bid_price_raw": 3128000000,
+          "bid_size": 13,
+          "bid_orders": 8,
+          "bid_full_size": 2060,
+          "bid_full_orders": 697,
+          "bid_top10_json": "[[3128000000,13,8],[3127000000,7,7],[3126000000,16,9],[3125000000,9,8],[3124000000,27,13],[3123000000,11,10],[3122000000,11,8],[3121000000,20,9],[3120000000,12,8],[3119000000,14,9]]",
+          "bid_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":0,\"leaving_size\":0}",
+          "bid_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3129000000,
+          "ask_size": 1,
+          "ask_orders": 1,
+          "ask_full_size": 1249,
+          "ask_full_orders": 540,
+          "ask_top10_json": "[[3129000000,1,1],[3130000000,6,6],[3131000000,8,8],[3132000000,31,12],[3133000000,23,15],[3134000000,24,17],[3135000000,49,12],[3136000000,18,9],[3137000000,20,10],[3138000000,11,8]]",
+          "ask_rank_change_json": "{\"delta\":-13,\"shared_price_delta\":0,\"entering_size\":1,\"leaving_size\":14}",
+          "ask_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":1,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "group_ordinal": 200004,
+          "first_cursor": 256904,
+          "close_cursor": 256907,
+          "event_ns": 1697633869988569357,
+          "receive_ns": 1697633869988958847,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 1,
+          "day": "20231018",
+          "known_by_ns": 1697633869988958847,
+          "bid_price_raw": 3128000000,
+          "bid_size": 13,
+          "bid_orders": 8,
+          "bid_full_size": 2060,
+          "bid_full_orders": 697,
+          "bid_top10_json": "[[3128000000,13,8],[3127000000,7,7],[3126000000,16,9],[3125000000,9,8],[3124000000,27,13],[3123000000,11,10],[3122000000,11,8],[3121000000,20,9],[3120000000,12,8],[3119000000,14,9]]",
+          "bid_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":0,\"leaving_size\":0}",
+          "bid_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3130000000,
+          "ask_size": 6,
+          "ask_orders": 6,
+          "ask_full_size": 1248,
+          "ask_full_orders": 539,
+          "ask_top10_json": "[[3130000000,6,6],[3131000000,8,8],[3132000000,31,12],[3133000000,23,15],[3134000000,24,17],[3135000000,49,12],[3136000000,18,9],[3137000000,20,10],[3138000000,11,8],[3139000000,14,7]]",
+          "ask_rank_change_json": "{\"delta\":13,\"shared_price_delta\":0,\"entering_size\":14,\"leaving_size\":1}",
+          "ask_old_touch_effect_json": "{\"added\":0,\"removed\":1,\"fill_linked\":1,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-large-quote-events.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-large-quote-events.parquet",
+      "git_blob": "7a7daaa4f295ae7d16ca149b4176e51dd2034093",
+      "bytes": 71693,
+      "day": "20231018",
+      "sha256": "0598227e7ac08a4c60ce0739bab1fa53f682a32dbd5746366b538d6aea333ccc",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/543daa85747ff2611e26/TABLE.json",
+        "counts": {
+          "rows": 64,
+          "direct_clocks": 64,
+          "clocks": 1842,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "event_id": "20231018:large_quote:1287",
+          "event_type": "large_quote_move",
+          "prior_clocks": {
+            "ask_raw": 3054000000,
+            "bid_raw": 3053000000,
+            "close_cursor": 2115,
+            "event_ns": 1697580797970775933,
+            "first_cursor": 2115,
+            "group": 1286,
+            "known_by_ns": 1697580797970977307,
+            "receive_ns": 1697580797970977307,
+            "segment": 0
+          },
+          "move_clocks": {
+            "ask_raw": 3058000000,
+            "bid_raw": 3053000000,
+            "close_cursor": 2146,
+            "event_ns": 1697580798615496281,
+            "first_cursor": 2116,
+            "group": 1287,
+            "known_by_ns": 1697580798616417369,
+            "receive_ns": 1697580798616417369,
+            "segment": 0
+          },
+          "direction": 1,
+          "move_half_ticks": 4,
+          "first_disjoint_20s": true,
+          "print_count": 4,
+          "responses": [
+            {
+              "available": true,
+              "endpoint_age_ns": 120321416,
+              "endpoint_clocks": {
+                "ask_raw": 3059000000,
+                "bid_raw": 3057000000,
+                "close_cursor": 2295,
+                "event_ns": 1697580799495878647,
+                "first_cursor": 2295,
+                "group": 1395,
+                "known_by_ns": 1697580799496095953,
+                "receive_ns": 1697580799496095953,
+                "segment": 0
+              },
+              "full_retrace": false,
+              "horizon_s": 1,
+              "response": "with",
+              "signed_change_twice_raw": 5000000,
+              "target_ns": 1697580799616417369
+            },
+            {
+              "available": false,
+              "endpoint_age_ns": 1110843841,
+              "endpoint_clocks": {
+                "ask_raw": 3059000000,
+                "bid_raw": 3057000000,
+                "close_cursor": 2304,
+                "event_ns": 1697580802505391427,
+                "first_cursor": 2304,
+                "group": 1404,
+                "known_by_ns": 1697580802505573528,
+                "receive_ns": 1697580802505573528,
+                "segment": 0
+              },
+              "full_retrace": false,
+              "horizon_s": 5,
+              "response": "unavailable",
+              "signed_change_twice_raw": null,
+              "target_ns": 1697580803616417369
+            },
+            {
+              "remaining": 1
+            }
+          ],
+          "extreme_first5s_clocks": {
+            "ask_raw": 3059000000,
+            "bid_raw": 3057000000,
+            "close_cursor": 2288,
+            "event_ns": 1697580799484548597,
+            "first_cursor": 2283,
+            "group": 1388,
+            "known_by_ns": 1697580799485027245,
+            "receive_ns": 1697580799485027245,
+            "segment": 0
+          },
+          "extreme_midpoint_twice_raw": 6116000000,
+          "half_recovery_clocks": null,
+          "full_recovery_clocks": null,
+          "half_recovery_elapsed_ns": null,
+          "full_recovery_elapsed_ns": null,
+          "recovery_observation_end": {
+            "ask_raw": 3062000000,
+            "bid_raw": 3060000000,
+            "close_cursor": 4161,
+            "event_ns": 1697581398574954761,
+            "first_cursor": 4161,
+            "group": 3001,
+            "known_by_ns": 1697581398575102488,
+            "receive_ns": 1697581398575102488,
+            "segment": 0
+          },
+          "recovery_window_complete": true,
+          "half_not_observed": true,
+          "full_not_observed": true,
+          "book_context_group": 1287,
+          "source_action_group": 1287,
+          "side_effects": {
+            "ask": {
+              "new": {
+                "added": 0,
+                "fill_linked": 0,
+                "removed": 0,
+                "unchanged_display_fill": 0,
+                "unlinked": 0
+              },
+              "old": {
+                "added": 0,
+                "fill_linked": 1,
+                "removed": 1,
+                "unchanged_display_fill": 0,
+                "unlinked": 0
+              }
+            },
+            "bid": {
+              "new": {
+                "added": 0,
+                "fill_linked": 0,
+                "removed": 0,
+                "unchanged_display_fill": 0,
+                "unlinked": 0
+              },
+              "old": {
+                "added": 0,
+                "fill_linked": 0,
+                "removed": 0,
+                "unchanged_display_fill": 0,
+                "unlinked": 0
+              }
+            }
+          },
+          "rank_changes": {
+            "ask": {
+              "delta": 1,
+              "entering_size": 14,
+              "leaving_size": 13,
+              "shared_price_delta": 0
+            },
+            "bid": {
+              "delta": 0,
+              "entering_size": 0,
+              "leaving_size": 0,
+              "shared_price_delta": 0
+            }
+          }
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "event_id": "20231018:large_quote:29223",
+          "event_type": "large_quote_move",
+          "prior_clocks": {
+            "ask_raw": 3082000000,
+            "bid_raw": 3080000000,
+            "close_cursor": 35633,
+            "event_ns": 1697599922176889547,
+            "first_cursor": 35633,
+            "group": 29222,
+            "known_by_ns": 1697599922177280174,
+            "receive_ns": 1697599922177280174,
+            "segment": 1
+          },
+          "move_clocks": {
+            "ask_raw": 3080000000,
+            "bid_raw": 3078000000,
+            "close_cursor": 35658,
+            "event_ns": 1697599925498505115,
+            "first_cursor": 35634,
+            "group": 29223,
+            "known_by_ns": 1697599925503120968,
+            "receive_ns": 1697599925503120968,
+            "segment": 1
+          },
+          "direction": -1,
+          "move_half_ticks": -4,
+          "first_disjoint_20s": true,
+          "print_count": 6,
+          "responses": [
+            {
+              "available": true,
+              "endpoint_age_ns": 48362665,
+              "endpoint_clocks": {
+                "ask_raw": 3077000000,
+                "bid_raw": 3075000000,
+                "close_cursor": 36079,
+                "event_ns": 1697599926454560803,
+                "first_cursor": 36079,
+                "group": 29554,
+                "known_by_ns": 1697599926454758303,
+                "receive_ns": 1697599926454758303,
+                "segment": 1
+              },
+              "full_retrace": false,
+              "horizon_s": 1,
+              "response": "with",
+              "signed_change_twice_raw": 6000000,
+              "target_ns": 1697599926503120968
+            },
+            {
+              "available": false,
+              "endpoint_age_ns": 1501050895,
+              "endpoint_clocks": {
+                "ask_raw": 3077000000,
+                "bid_raw": 3075000000,
+                "close_cursor": 36097,
+                "event_ns": 1697599929001719773,
+                "first_cursor": 36097,
+                "group": 29572,
+                "known_by_ns": 1697599929002070073,
+                "receive_ns": 1697599929002070073,
+                "segment": 1
+              },
+              "full_retrace": false,
+              "horizon_s": 5,
+              "response": "unavailable",
+              "signed_change_twice_raw": null,
+              "target_ns": 1697599930503120968
+            },
+            {
+              "remaining": 1
+            }
+          ],
+          "extreme_first5s_clocks": {
+            "ask_raw": 3076000000,
+            "bid_raw": 3075000000,
+            "close_cursor": 35980,
+            "event_ns": 1697599925815936511,
+            "first_cursor": 35979,
+            "group": 29476,
+            "known_by_ns": 1697599925816252138,
+            "receive_ns": 1697599925816252138,
+            "segment": 1
+          },
+          "extreme_midpoint_twice_raw": 6151000000,
+          "half_recovery_clocks": null,
+          "full_recovery_clocks": null,
+          "half_recovery_elapsed_ns": null,
+          "full_recovery_elapsed_ns": null,
+          "recovery_observation_end": {
+            "ask_raw": 3076000000,
+            "bid_raw": 3074000000,
+            "close_cursor": 36546,
+            "event_ns": 1697600500112006061,
+            "first_cursor": 36546,
+            "group": 29947,
+            "known_by_ns": 1697600500112255468,
+            "receive_ns": 1697600500112255468,
+            "segment": 1
+          },
+          "recovery_window_complete": true,
+          "half_not_observed": true,
+          "full_not_observed": true,
+          "book_context_group": 29223,
+          "source_action_group": 29223,
+          "side_effects": {
+            "ask": {
+              "new": {
+                "added": 1,
+                "fill_linked": 0,
+                "removed": 0,
+                "unchanged_display_fill": 0,
+                "unlinked": 0
+              },
+              "old": {
+                "added": 0,
+                "fill_linked": 0,
+                "removed": 0,
+                "unchanged_display_fill": 0,
+                "unlinked": 0
+              }
+            },
+            "bid": {
+              "new": {
+                "added": 0,
+                "fill_linked": 0,
+                "removed": 0,
+                "unchanged_display_fill": 0,
+                "unlinked": 0
+              },
+              "old": {
+                "added": 0,
+                "fill_linked": 8,
+                "removed": 8,
+                "unchanged_display_fill": 0,
+                "unlinked": 0
+              }
+            }
+          },
+          "rank_changes": {
+            "ask": {
+              "delta": -21,
+              "entering_size": 1,
+              "leaving_size": 22,
+              "shared_price_delta": 0
+            },
+            "bid": {
+              "delta": 2,
+              "entering_size": 14,
+              "leaving_size": 12,
+              "shared_price_delta": 0
+            }
+          }
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-04.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-04.parquet",
+      "git_blob": "2ebf29885d36755e280c415a50d62ecc06b8ed26",
+      "bytes": 644815,
+      "day": "20231018",
+      "sha256": "0edb04fa02ab48c2046e40565e81078ef4a8df3a63a17dc7f7697241f8891a64",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/c90a40cc5b7f1c355516/TABLE.json",
+        "counts": {
+          "rows": 16154,
+          "direct_clocks": 16154,
+          "clocks": 48462,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 382663,
+          "cursor": 400038,
+          "event_ns": 1697637494814310927,
+          "receive_ns": 1697637494815894992,
+          "action": "A",
+          "side": "A",
+          "price_raw": 3105000000,
+          "size": 1,
+          "order_id": 788701657148,
+          "flags": 0,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "A",
+          "after_price": 3105000000,
+          "after_size": 1,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 305407,
+          "known_by_ns": 1697637494815923555,
+          "group_close_cursor": 400039
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 382664,
+          "cursor": 400039,
+          "event_ns": 1697637494814310927,
+          "receive_ns": 1697637494815923555,
+          "action": "N",
+          "side": "N",
+          "price_raw": 9223372036854775807,
+          "size": 0,
+          "order_id": 0,
+          "flags": 128,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "",
+          "after_price": 0,
+          "after_size": 0,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 305407,
+          "known_by_ns": 1697637494815923555,
+          "group_close_cursor": 400039
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/b-delayed-outcomes.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/b-delayed-outcomes.parquet",
+      "git_blob": "cb17d1575209e339bec913535cf86665e8d2b55a",
+      "bytes": 10695027,
+      "day": "20231018",
+      "sha256": "14b7826e5fc15a9ca49acb0c270bb601fb3305328ca51c97e721076f0ebac21e",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/ea357c907c3bb5452a71/TABLE.json",
+        "counts": {
+          "rows": 329262,
+          "direct_clocks": 329262,
+          "clocks": 1975401,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "event_id": "20231018:size_one:B:150",
+          "event_type": "size_one",
+          "side": "B",
+          "horizon_s": 1,
+          "entry_clocks": {
+            "ask_raw": 3063000000,
+            "bid_raw": 3061000000,
+            "close_cursor": 552,
+            "event_ns": 1697580000869161229,
+            "first_cursor": 552,
+            "group": 151,
+            "known_by_ns": 1697580000869251165,
+            "receive_ns": 1697580000869251165,
+            "segment": 0
+          },
+          "exit_clocks": {
+            "ask_raw": 3063000000,
+            "bid_raw": 3061000000,
+            "close_cursor": 605,
+            "event_ns": 1697580002200622795,
+            "first_cursor": 605,
+            "group": 204,
+            "known_by_ns": 1697580002200833832,
+            "receive_ns": 1697580002200833832,
+            "segment": 0
+          },
+          "disposition": "observed",
+          "signed_midpoint_change_twice_raw": 0,
+          "spread_crossing_raw": -2000000
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "event_id": "20231018:size_one:B:150",
+          "event_type": "size_one",
+          "side": "B",
+          "horizon_s": 5,
+          "entry_clocks": {
+            "ask_raw": 3063000000,
+            "bid_raw": 3061000000,
+            "close_cursor": 552,
+            "event_ns": 1697580000869161229,
+            "first_cursor": 552,
+            "group": 151,
+            "known_by_ns": 1697580000869251165,
+            "receive_ns": 1697580000869251165,
+            "segment": 0
+          },
+          "exit_clocks": {
+            "ask_raw": 3059000000,
+            "bid_raw": 3056000000,
+            "close_cursor": 970,
+            "event_ns": 1697580006446524681,
+            "first_cursor": 968,
+            "group": 480,
+            "known_by_ns": 1697580006447108841,
+            "receive_ns": 1697580006447108841,
+            "segment": 0
+          },
+          "disposition": "observed",
+          "signed_midpoint_change_twice_raw": 9000000,
+          "spread_crossing_raw": 2000000
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/b-signals.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/b-signals.parquet",
+      "git_blob": "dafe8bc36569c756f5e8f59776ea363efb7daea0",
+      "bytes": 14459189,
+      "day": "20231018",
+      "sha256": "158ee04220904d6cd1ec92ea47c785a88ad9289c2270714026e09eb7d97e8b3e",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/c9a2d84e923bb6f844eb/TABLE.json",
+        "counts": {
+          "rows": 109754,
+          "direct_clocks": 109754,
+          "clocks": 987786,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "event_id": "20231018:size_one:B:150",
+          "event_type": "size_one",
+          "side": "B",
+          "signal_group": 150,
+          "signal_clocks": {
+            "ask_raw": 3063000000,
+            "bid_raw": 3061000000,
+            "close_cursor": 551,
+            "event_ns": 1697580000861497815,
+            "first_cursor": 551,
+            "group": 150,
+            "known_by_ns": 1697580000861662899,
+            "receive_ns": 1697580000861662899,
+            "segment": 0
+          },
+          "price_raw": 3061000000,
+          "size": 1,
+          "entry_group": 151,
+          "previous_two_group_clocks": [
+            {
+              "ask_raw": 3063000000,
+              "bid_raw": 3061000000,
+              "close_cursor": 549,
+              "event_ns": 1697580000856455895,
+              "first_cursor": 549,
+              "group": 148,
+              "known_by_ns": 1697580000856558571,
+              "receive_ns": 1697580000856558571,
+              "segment": 0
+            },
+            {
+              "ask_raw": 3063000000,
+              "bid_raw": 3061000000,
+              "close_cursor": 550,
+              "event_ns": 1697580000856457903,
+              "first_cursor": 550,
+              "group": 149,
+              "known_by_ns": 1697580000856575262,
+              "receive_ns": 1697580000856575262,
+              "segment": 0
+            }
+          ],
+          "all_prior_print_groups": [],
+          "all_gap_trend": "insufficient_history",
+          "attacking_same_price_prior_print_groups": [],
+          "attacking_same_price_gap_trend": "insufficient_history",
+          "flow1_complete_history": false,
+          "flow1_buy_lots": 0,
+          "flow1_sell_lots": 0,
+          "flow1_unknown_lots": 0,
+          "flow5_complete_history": false,
+          "flow5_buy_lots": 0,
+          "flow5_sell_lots": 0,
+          "flow5_unknown_lots": 0,
+          "flow20_complete_history": false,
+          "flow20_buy_lots": 0,
+          "flow20_sell_lots": 0,
+          "flow20_unknown_lots": 0,
+          "flow60_complete_history": false,
+          "flow60_buy_lots": 0,
+          "flow60_sell_lots": 0,
+          "flow60_unknown_lots": 0,
+          "fresh_group_print_count": 0
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "event_id": "20231018:size_one:B:217",
+          "event_type": "size_one",
+          "side": "B",
+          "signal_group": 217,
+          "signal_clocks": {
+            "ask_raw": 3062000000,
+            "bid_raw": 3061000000,
+            "close_cursor": 625,
+            "event_ns": 1697580003381906641,
+            "first_cursor": 622,
+            "group": 217,
+            "known_by_ns": 1697580003382463363,
+            "receive_ns": 1697580003382463363,
+            "segment": 0
+          },
+          "price_raw": 3061000000,
+          "size": 1,
+          "entry_group": 222,
+          "previous_two_group_clocks": [
+            {
+              "ask_raw": 3062000000,
+              "bid_raw": 3061000000,
+              "close_cursor": 620,
+              "event_ns": 1697580003155676053,
+              "first_cursor": 620,
+              "group": 215,
+              "known_by_ns": 1697580003156206815,
+              "receive_ns": 1697580003156206815,
+              "segment": 0
+            },
+            {
+              "ask_raw": 3062000000,
+              "bid_raw": 3061000000,
+              "close_cursor": 621,
+              "event_ns": 1697580003155677493,
+              "first_cursor": 621,
+              "group": 216,
+              "known_by_ns": 1697580003156258382,
+              "receive_ns": 1697580003156258382,
+              "segment": 0
+            }
+          ],
+          "all_prior_print_groups": [],
+          "all_gap_trend": "insufficient_history",
+          "attacking_same_price_prior_print_groups": [],
+          "attacking_same_price_gap_trend": "insufficient_history",
+          "flow1_complete_history": true,
+          "flow1_buy_lots": 0,
+          "flow1_sell_lots": 0,
+          "flow1_unknown_lots": 1,
+          "flow5_complete_history": false,
+          "flow5_buy_lots": 0,
+          "flow5_sell_lots": 0,
+          "flow5_unknown_lots": 1,
+          "flow20_complete_history": false,
+          "flow20_buy_lots": 0,
+          "flow20_sell_lots": 0,
+          "flow20_unknown_lots": 1,
+          "flow60_complete_history": false,
+          "flow60_buy_lots": 0,
+          "flow60_sell_lots": 0,
+          "flow60_unknown_lots": 1,
+          "fresh_group_print_count": 1
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/b-quote-episodes.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/b-quote-episodes.parquet",
+      "git_blob": "aec57580ba091f64ec12fcfeb3e85766a8e471bf",
+      "bytes": 3184313,
+      "day": "20231018",
+      "sha256": "19a1957424db2e4db71316c13eed2a9936cc7cd1d0df7be35908fa16aaed327f",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/3a13672becdba30f69df/TABLE.json",
+        "counts": {
+          "rows": 27551,
+          "direct_clocks": 27551,
+          "clocks": 165306,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "event_id": "20231018:size_one:B:150",
+          "side": "B",
+          "onset_group": 150,
+          "onset_clocks": {
+            "ask_raw": 3063000000,
+            "bid_raw": 3061000000,
+            "close_cursor": 551,
+            "event_ns": 1697580000861497815,
+            "first_cursor": 551,
+            "group": 150,
+            "known_by_ns": 1697580000861662899,
+            "receive_ns": 1697580000861662899,
+            "segment": 0
+          },
+          "onset_type": "standing_best_shrank",
+          "prior_three_close_history": "flat",
+          "onset_has_print": false,
+          "ending": "recovered_same_price",
+          "end_group": 205,
+          "end_clocks": {
+            "ask_raw": 3063000000,
+            "bid_raw": 3061000000,
+            "close_cursor": 606,
+            "event_ns": 1697580002289274867,
+            "first_cursor": 606,
+            "group": 205,
+            "known_by_ns": 1697580002289447486,
+            "receive_ns": 1697580002289447486,
+            "segment": 0
+          },
+          "duration_known_by_ns": 1427784587,
+          "end_by_entry": false,
+          "end_not_observed": false,
+          "all_prior_print_groups": [],
+          "all_gap_trend": "insufficient_history",
+          "attacking_same_price_prior_print_groups": [],
+          "attacking_same_price_gap_trend": "insufficient_history",
+          "flow1_complete_history": false,
+          "flow1_buy_lots": 0,
+          "flow1_sell_lots": 0,
+          "flow1_unknown_lots": 0,
+          "flow5_complete_history": false,
+          "flow5_buy_lots": 0,
+          "flow5_sell_lots": 0,
+          "flow5_unknown_lots": 0,
+          "flow20_complete_history": false,
+          "flow20_buy_lots": 0,
+          "flow20_sell_lots": 0,
+          "flow20_unknown_lots": 0,
+          "flow60_complete_history": false,
+          "flow60_buy_lots": 0,
+          "flow60_sell_lots": 0,
+          "flow60_unknown_lots": 0,
+          "fresh_group_print_count": 0
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "event_id": "20231018:size_one:B:217",
+          "side": "B",
+          "onset_group": 217,
+          "onset_clocks": {
+            "ask_raw": 3062000000,
+            "bid_raw": 3061000000,
+            "close_cursor": 625,
+            "event_ns": 1697580003381906641,
+            "first_cursor": 622,
+            "group": 217,
+            "known_by_ns": 1697580003382463363,
+            "receive_ns": 1697580003382463363,
+            "segment": 0
+          },
+          "onset_type": "standing_best_shrank",
+          "prior_three_close_history": "flat",
+          "onset_has_print": true,
+          "ending": "recovered_same_price",
+          "end_group": 219,
+          "end_clocks": {
+            "ask_raw": 3063000000,
+            "bid_raw": 3061000000,
+            "close_cursor": 628,
+            "event_ns": 1697580003382414471,
+            "first_cursor": 628,
+            "group": 219,
+            "known_by_ns": 1697580003383175348,
+            "receive_ns": 1697580003383175348,
+            "segment": 0
+          },
+          "duration_known_by_ns": 711985,
+          "end_by_entry": true,
+          "end_not_observed": false,
+          "all_prior_print_groups": [],
+          "all_gap_trend": "insufficient_history",
+          "attacking_same_price_prior_print_groups": [],
+          "attacking_same_price_gap_trend": "insufficient_history",
+          "flow1_complete_history": true,
+          "flow1_buy_lots": 0,
+          "flow1_sell_lots": 0,
+          "flow1_unknown_lots": 1,
+          "flow5_complete_history": false,
+          "flow5_buy_lots": 0,
+          "flow5_sell_lots": 0,
+          "flow5_unknown_lots": 1,
+          "flow20_complete_history": false,
+          "flow20_buy_lots": 0,
+          "flow20_sell_lots": 0,
+          "flow20_unknown_lots": 1,
+          "flow60_complete_history": false,
+          "flow60_buy_lots": 0,
+          "flow60_sell_lots": 0,
+          "flow60_unknown_lots": 1,
+          "fresh_group_print_count": 1
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/b-next-group-arrival.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/b-next-group-arrival.parquet",
+      "git_blob": "7a598909a5bbea6ff4e50c8a4698740b153164ba",
+      "bytes": 12657396,
+      "day": "20231018",
+      "sha256": "1cf112ae84893ed540083566242ed464dc6625841f6ef60f12ad1290416a5b58",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/e027ab3405353ea80e83/TABLE.json",
+        "counts": {
+          "rows": 583593,
+          "direct_clocks": 583593,
+          "clocks": 1196983,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "decision_group": 92,
+          "decision_known_by_ns": 1697580000321967098,
+          "decision_cursor": 490,
+          "next_group": 93,
+          "next_known_by_ns": 1697580000331927776,
+          "elapsed_known_by_ns": 9960678,
+          "current_has_print": false,
+          "next_has_print": false,
+          "first_next_print_receive_ns": null,
+          "next_print_lead_ns": null,
+          "standalone_falling_touch": false,
+          "falling_direction": 0,
+          "queue_direction": 0,
+          "midpoint_direction": 0,
+          "spread_raw": 3000000,
+          "utc_hour": 471550
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "decision_group": 93,
+          "decision_known_by_ns": 1697580000331927776,
+          "decision_cursor": 491,
+          "next_group": 94,
+          "next_known_by_ns": 1697580000332097428,
+          "elapsed_known_by_ns": 169652,
+          "current_has_print": false,
+          "next_has_print": false,
+          "first_next_print_receive_ns": null,
+          "next_print_lead_ns": null,
+          "standalone_falling_touch": false,
+          "falling_direction": 0,
+          "queue_direction": 0,
+          "midpoint_direction": 0,
+          "spread_raw": 3000000,
+          "utc_hour": 471550
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-06.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-06.parquet",
+      "git_blob": "1db5b87402156be4399c5a3f2588a5d928a3b101",
+      "bytes": 633240,
+      "day": "20231018",
+      "sha256": "1da892872ba7e30d6ee67e2d5e0e1869a8b84d6122d80157c8eeeaae20c936b9",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/0be5d1af612793a9f598/TABLE.json",
+        "counts": {
+          "rows": 15910,
+          "direct_clocks": 15910,
+          "clocks": 47730,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 582666,
+          "cursor": 600041,
+          "event_ns": 1697648384670217819,
+          "receive_ns": 1697648384684774696,
+          "action": "A",
+          "side": "B",
+          "price_raw": 3092000000,
+          "size": 1,
+          "order_id": 788702582161,
+          "flags": 0,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "B",
+          "after_price": 3092000000,
+          "after_size": 1,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 454201,
+          "known_by_ns": 1697648384684795631,
+          "group_close_cursor": 600042
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 582667,
+          "cursor": 600042,
+          "event_ns": 1697648384670217819,
+          "receive_ns": 1697648384684795631,
+          "action": "N",
+          "side": "N",
+          "price_raw": 9223372036854775807,
+          "size": 0,
+          "order_id": 0,
+          "flags": 128,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "",
+          "after_price": 0,
+          "after_size": 0,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 454201,
+          "known_by_ns": 1697648384684795631,
+          "group_close_cursor": 600042
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-07.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-07.parquet",
+      "git_blob": "66a5ba1ef712610634d5a43d51dbff3076b37547",
+      "bytes": 453053,
+      "day": "20231018",
+      "sha256": "226853688558728a558529145c2a8ba8bec32fcb6d10863c550b384554d61503",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/a1ffebc3af5bc607c3ae/TABLE.json",
+        "counts": {
+          "rows": 11365,
+          "direct_clocks": 11365,
+          "clocks": 34095,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 682679,
+          "cursor": 700054,
+          "event_ns": 1697653872100128457,
+          "receive_ns": 1697653872100471855,
+          "action": "T",
+          "side": "A",
+          "price_raw": 3054000000,
+          "size": 2,
+          "order_id": 788703058619,
+          "flags": 0,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "",
+          "after_price": 0,
+          "after_size": 0,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 528920,
+          "known_by_ns": 1697653872100631159,
+          "group_close_cursor": 700057
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 682680,
+          "cursor": 700055,
+          "event_ns": 1697653872100128457,
+          "receive_ns": 1697653872100471855,
+          "action": "F",
+          "side": "B",
+          "price_raw": 3054000000,
+          "size": 2,
+          "order_id": 788703058616,
+          "flags": 0,
+          "before_side": "B",
+          "before_price": 3054000000,
+          "before_size": 2,
+          "after_side": "B",
+          "after_price": 3054000000,
+          "after_size": 2,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 528920,
+          "known_by_ns": 1697653872100631159,
+          "group_close_cursor": 700057
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/claude-pass-3day/tables/20231018/t1_family_master.csv": {
+    "source": {
+      "repository": "DavisAI1974/Markets",
+      "revision": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "path": "tasks/family-research-20261022/claude-pass-3day/tables/20231018/t1_family_master.csv",
+      "bytes": 1134408,
+      "sha256": "33039ce4f7135daba55d5feb0de24071c51dba0305bcca0d1448fb52074ae9f6",
+      "git_blob": "fed4fc7def315ae633c7425b29aebd0fbd6466fc",
+      "role": "source_data",
+      "collection": "final_source_packet",
+      "checksum_evidence": "downloaded, SHA256 measured and Git blob verified during final freeze",
+      "clock_status": "preserve source clocks; aggregates and retrospective labels are not decision-time inputs"
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "family_id": "ow-f6ba7eaa9e45ef1b68cf",
+          "occurrence_count": "115575",
+          "start_recv_ns": "1697579103329548912",
+          "start_event_ns": "1697579103329442865",
+          "window_start_ns": "1697578983329548912",
+          "input_cursor": "399",
+          "source_ordinal": "1",
+          "start_basis": "FIRST_OBSERVED_STRUCTURAL_FAMILY",
+          "instrument_id": "150611",
+          "instance": "1",
+          "sample_id": "1:before_start",
+          "cutoff_ns": "1697579103329548911",
+          "cursor_cap": "398",
+          "chronological_quarter": "1",
+          "price": "",
+          "price_age_s": "",
+          "pre120_change": "",
+          "pre_direction": "missing",
+          "start_utc": "2023-10-17T21:45:03.329548912+00:00",
+          "root.activity.1.event_count": "454.0",
+          "root.activity.1.top_level_cancel_qty_derived": "13.0",
+          "root.activity.1.trade_aggressor_imbalance": "",
+          "root.activity.1.trade_buy_aggressor_qty": "0.0",
+          "root.activity.1.trade_sell_aggressor_qty": "0.0",
+          "root.activity.20.event_count": "633.0",
+          "root.activity.20.top_level_cancel_qty_derived": "36.0",
+          "root.activity.20.trade_aggressor_imbalance": "0.2",
+          "root.activity.20.trade_buy_aggressor_qty": "3.0",
+          "root.activity.20.trade_sell_aggressor_qty": "2.0",
+          "root.activity.300.event_count": "2220.0",
+          "root.activity.300.top_level_cancel_qty_derived": "257.0",
+          "root.activity.300.trade_aggressor_imbalance": "-0.4285714285714285",
+          "root.activity.300.trade_buy_aggressor_qty": "48.0",
+          "root.activity.300.trade_sell_aggressor_qty": "120.0",
+          "root.activity.5.event_count": "561.0",
+          "root.activity.5.top_level_cancel_qty_derived": "25.0",
+          "root.activity.5.trade_aggressor_imbalance": "",
+          "root.activity.5.trade_buy_aggressor_qty": "0.0",
+          "root.activity.5.trade_sell_aggressor_qty": "0.0",
+          "root.activity.60.event_count": "719.0",
+          "root.activity.60.top_level_cancel_qty_derived": "52.0",
+          "root.activity.60.trade_aggressor_imbalance": "0.0",
+          "root.activity.60.trade_buy_aggressor_qty": "3.0",
+          "root.activity.60.trade_sell_aggressor_qty": "3.0",
+          "root.ask_depth_full": "405.0",
+          "root.best_ask": "3.079",
+          "root.best_bid": "3.04",
+          "root.bid_depth_full": "645.0",
+          "root.depth_imbalance_full": "0.2285714285714285",
+          "root.depth_imbalance_n": "-0.1891891891891892",
+          "root.mid": "3.0595",
+          "root.spread": "0.0390000000000001",
+          "pre_source_ordinal": "0",
+          "known_by_ns": "1697576400191664816",
+          "pre_input_cursor": "398",
+          "pre_book_age_s": "2703.137884095",
+          "recorded_forecast_rows": "0",
+          "forecast_disposition": "no_saved_heldout_forecasts_for_this_sample",
+          "continuous_book_replay": "no_dedicated_full_window_some_events_overlap_instance375_window",
+          "ref_group": "0",
+          "ref_recv_ns": "1697576400191664816",
+          "ref_mid": "3.0595",
+          "ref_spread": "0.039",
+          "ref_bid_sz": "3",
+          "ref_ask_sz": "1",
+          "ref_bid_n": "3",
+          "ref_ask_n": "1",
+          "chg_1s": "0.0",
+          "grp_1s": "2",
+          "chg_5s": "0.0",
+          "grp_5s": "18",
+          "chg_20s": "0.0024999999999999467",
+          "grp_20s": "37",
+          "chg_60s": "0.0024999999999999467",
+          "grp_60s": "37",
+          "chg_120s": "0.0024999999999999467",
+          "grp_120s": "37",
+          "chg_300s": "0.010000000000000231",
+          "grp_300s": "48",
+          "chg_600s": "0.010000000000000231",
+          "grp_600s": "72",
+          "tk_1s": "0.0",
+          "tk_5s": "0.0",
+          "tk_20s": "2.4999999999999467",
+          "tk_60s": "2.4999999999999467",
+          "tk_120s": "2.4999999999999467",
+          "tk_300s": "10.000000000000231",
+          "tk_600s": "10.000000000000231",
+          "prior_tk_5s": "0.0",
+          "quote_changes_5s": "0.0",
+          "groups_5s": "0.0",
+          "prior_tk_20s": "0.0",
+          "quote_changes_20s": "0.0",
+          "groups_20s": "0.0",
+          "prior_tk_60s": "0.0",
+          "quote_changes_60s": "0.0",
+          "groups_60s": "0.0",
+          "touch_imb": "0.5",
+          "touch_n_imb": "0.5",
+          "spread_ticks": "39",
+          "ob_trade_sellagg_1s": "",
+          "ob_trade_buyagg_1s": "",
+          "ob_fill_b_1s": "",
+          "ob_fill_a_1s": "",
+          "ob_rm_fill_b_1s": "",
+          "ob_rm_fill_a_1s": "",
+          "ob_rm_cx_touch_b_1s": "",
+          "ob_rm_cx_touch_a_1s": "",
+          "ob_rm_cx_near_b_1s": "",
+          "ob_rm_cx_near_a_1s": "",
+          "ob_add_touch_b_1s": "",
+          "ob_add_touch_a_1s": "",
+          "ob_add_near_b_1s": "",
+          "ob_add_near_a_1s": "",
+          "ob_mod_touch_b_1s": "",
+          "ob_mod_touch_a_1s": "",
+          "ob_n_add_touch_b_1s": "",
+          "ob_n_add_touch_a_1s": "",
+          "ob_trade_sellagg_5s": "",
+          "ob_trade_buyagg_5s": "",
+          "ob_fill_b_5s": "",
+          "ob_fill_a_5s": "",
+          "ob_rm_fill_b_5s": "",
+          "ob_rm_fill_a_5s": "",
+          "ob_rm_cx_touch_b_5s": "",
+          "ob_rm_cx_touch_a_5s": "",
+          "ob_rm_cx_near_b_5s": "",
+          "ob_rm_cx_near_a_5s": "",
+          "ob_add_touch_b_5s": "",
+          "ob_add_touch_a_5s": "",
+          "ob_add_near_b_5s": "",
+          "ob_add_near_a_5s": "",
+          "ob_mod_touch_b_5s": "",
+          "ob_mod_touch_a_5s": "",
+          "ob_n_add_touch_b_5s": "",
+          "ob_n_add_touch_a_5s": "",
+          "ob_trade_sellagg_20s": "",
+          "ob_trade_buyagg_20s": "",
+          "ob_fill_b_20s": "",
+          "ob_fill_a_20s": "",
+          "ob_rm_fill_b_20s": "",
+          "ob_rm_fill_a_20s": "",
+          "ob_rm_cx_touch_b_20s": "",
+          "ob_rm_cx_touch_a_20s": "",
+          "ob_rm_cx_near_b_20s": "",
+          "ob_rm_cx_near_a_20s": "",
+          "ob_add_touch_b_20s": "",
+          "ob_add_touch_a_20s": "",
+          "ob_add_near_b_20s": "",
+          "ob_add_near_a_20s": "",
+          "ob_mod_touch_b_20s": "",
+          "ob_mod_touch_a_20s": "",
+          "ob_n_add_touch_b_20s": "",
+          "ob_n_add_touch_a_20s": "",
+          "ob_trade_sellagg_60s": "",
+          "ob_trade_buyagg_60s": "",
+          "ob_fill_b_60s": "",
+          "ob_fill_a_60s": "",
+          "ob_rm_fill_b_60s": "",
+          "ob_rm_fill_a_60s": "",
+          "ob_rm_cx_touch_b_60s": "",
+          "ob_rm_cx_touch_a_60s": "",
+          "ob_rm_cx_near_b_60s": "",
+          "ob_rm_cx_near_a_60s": "",
+          "ob_add_touch_b_60s": "",
+          "ob_add_touch_a_60s": "",
+          "ob_add_near_b_60s": "",
+          "ob_add_near_a_60s": "",
+          "ob_mod_touch_b_60s": "",
+          "ob_mod_touch_a_60s": "",
+          "ob_n_add_touch_b_60s": "",
+          "ob_n_add_touch_a_60s": "",
+          "in_member": "False",
+          "ob_net_bid_1s": "",
+          "ob_net_ask_1s": "",
+          "ob_net_bid_5s": "",
+          "ob_net_ask_5s": "",
+          "ob_net_bid_20s": "",
+          "ob_net_ask_20s": "",
+          "ob_net_bid_60s": "",
+          "ob_net_ask_60s": "",
+          "utc_hour": "21.75",
+          "settle_tag": "False"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "family_id": "ow-3a12d9bd4a731b597f0d",
+          "occurrence_count": "124872",
+          "start_recv_ns": "1697579104449573970",
+          "start_event_ns": "1697579104449477331",
+          "window_start_ns": "1697578984449573970",
+          "input_cursor": "401",
+          "source_ordinal": "3",
+          "start_basis": "FIRST_OBSERVED_STRUCTURAL_FAMILY",
+          "instrument_id": "150611",
+          "instance": "2",
+          "sample_id": "2:before_start",
+          "cutoff_ns": "1697579104449573969",
+          "cursor_cap": "400",
+          "chronological_quarter": "1",
+          "price": "",
+          "price_age_s": "",
+          "pre120_change": "",
+          "pre_direction": "missing",
+          "start_utc": "2023-10-17T21:45:04.449573970+00:00",
+          "root.activity.1.event_count": "2.0",
+          "root.activity.1.top_level_cancel_qty_derived": "0.0",
+          "root.activity.1.trade_aggressor_imbalance": "",
+          "root.activity.1.trade_buy_aggressor_qty": "0.0",
+          "root.activity.1.trade_sell_aggressor_qty": "0.0",
+          "root.activity.20.event_count": "2.0",
+          "root.activity.20.top_level_cancel_qty_derived": "0.0",
+          "root.activity.20.trade_aggressor_imbalance": "",
+          "root.activity.20.trade_buy_aggressor_qty": "0.0",
+          "root.activity.20.trade_sell_aggressor_qty": "0.0",
+          "root.activity.300.event_count": "2.0",
+          "root.activity.300.top_level_cancel_qty_derived": "0.0",
+          "root.activity.300.trade_aggressor_imbalance": "",
+          "root.activity.300.trade_buy_aggressor_qty": "0.0",
+          "root.activity.300.trade_sell_aggressor_qty": "0.0",
+          "root.activity.5.event_count": "2.0",
+          "root.activity.5.top_level_cancel_qty_derived": "0.0",
+          "root.activity.5.trade_aggressor_imbalance": "",
+          "root.activity.5.trade_buy_aggressor_qty": "0.0",
+          "root.activity.5.trade_sell_aggressor_qty": "0.0",
+          "root.activity.60.event_count": "2.0",
+          "root.activity.60.top_level_cancel_qty_derived": "0.0",
+          "root.activity.60.trade_aggressor_imbalance": "",
+          "root.activity.60.trade_buy_aggressor_qty": "0.0",
+          "root.activity.60.trade_sell_aggressor_qty": "0.0",
+          "root.ask_depth_full": "407.0",
+          "root.best_ask": "3.079",
+          "root.best_bid": "3.04",
+          "root.bid_depth_full": "645.0",
+          "root.depth_imbalance_full": "0.2262357414448669",
+          "root.depth_imbalance_n": "-0.1891891891891892",
+          "root.mid": "3.0595",
+          "root.spread": "0.0390000000000001",
+          "pre_source_ordinal": "2",
+          "known_by_ns": "1697579103555318793",
+          "pre_input_cursor": "400",
+          "pre_book_age_s": "0.894255176",
+          "recorded_forecast_rows": "0",
+          "forecast_disposition": "no_saved_heldout_forecasts_for_this_sample",
+          "continuous_book_replay": "no_dedicated_full_window_some_events_overlap_instance375_window",
+          "ref_group": "2",
+          "ref_recv_ns": "1697579103555318793",
+          "ref_mid": "3.0595",
+          "ref_spread": "0.039",
+          "ref_bid_sz": "3",
+          "ref_ask_sz": "1",
+          "ref_bid_n": "3",
+          "ref_ask_n": "1",
+          "chg_1s": "0.0",
+          "grp_1s": "3",
+          "chg_5s": "0.0",
+          "grp_5s": "26",
+          "chg_20s": "0.0024999999999999467",
+          "grp_20s": "37",
+          "chg_60s": "0.0024999999999999467",
+          "grp_60s": "37",
+          "chg_120s": "0.0024999999999999467",
+          "grp_120s": "37",
+          "chg_300s": "0.010000000000000231",
+          "grp_300s": "48",
+          "chg_600s": "0.010000000000000231",
+          "grp_600s": "72",
+          "tk_1s": "0.0",
+          "tk_5s": "0.0",
+          "tk_20s": "2.4999999999999467",
+          "tk_60s": "2.4999999999999467",
+          "tk_120s": "2.4999999999999467",
+          "tk_300s": "10.000000000000231",
+          "tk_600s": "10.000000000000231",
+          "prior_tk_5s": "0.0",
+          "quote_changes_5s": "0.0",
+          "groups_5s": "2.0",
+          "prior_tk_20s": "0.0",
+          "quote_changes_20s": "0.0",
+          "groups_20s": "2.0",
+          "prior_tk_60s": "0.0",
+          "quote_changes_60s": "0.0",
+          "groups_60s": "2.0",
+          "touch_imb": "0.5",
+          "touch_n_imb": "0.5",
+          "spread_ticks": "39",
+          "ob_trade_sellagg_1s": "",
+          "ob_trade_buyagg_1s": "",
+          "ob_fill_b_1s": "",
+          "ob_fill_a_1s": "",
+          "ob_rm_fill_b_1s": "",
+          "ob_rm_fill_a_1s": "",
+          "ob_rm_cx_touch_b_1s": "",
+          "ob_rm_cx_touch_a_1s": "",
+          "ob_rm_cx_near_b_1s": "",
+          "ob_rm_cx_near_a_1s": "",
+          "ob_add_touch_b_1s": "",
+          "ob_add_touch_a_1s": "",
+          "ob_add_near_b_1s": "",
+          "ob_add_near_a_1s": "",
+          "ob_mod_touch_b_1s": "",
+          "ob_mod_touch_a_1s": "",
+          "ob_n_add_touch_b_1s": "",
+          "ob_n_add_touch_a_1s": "",
+          "ob_trade_sellagg_5s": "",
+          "ob_trade_buyagg_5s": "",
+          "ob_fill_b_5s": "",
+          "ob_fill_a_5s": "",
+          "ob_rm_fill_b_5s": "",
+          "ob_rm_fill_a_5s": "",
+          "ob_rm_cx_touch_b_5s": "",
+          "ob_rm_cx_touch_a_5s": "",
+          "ob_rm_cx_near_b_5s": "",
+          "ob_rm_cx_near_a_5s": "",
+          "ob_add_touch_b_5s": "",
+          "ob_add_touch_a_5s": "",
+          "ob_add_near_b_5s": "",
+          "ob_add_near_a_5s": "",
+          "ob_mod_touch_b_5s": "",
+          "ob_mod_touch_a_5s": "",
+          "ob_n_add_touch_b_5s": "",
+          "ob_n_add_touch_a_5s": "",
+          "ob_trade_sellagg_20s": "",
+          "ob_trade_buyagg_20s": "",
+          "ob_fill_b_20s": "",
+          "ob_fill_a_20s": "",
+          "ob_rm_fill_b_20s": "",
+          "ob_rm_fill_a_20s": "",
+          "ob_rm_cx_touch_b_20s": "",
+          "ob_rm_cx_touch_a_20s": "",
+          "ob_rm_cx_near_b_20s": "",
+          "ob_rm_cx_near_a_20s": "",
+          "ob_add_touch_b_20s": "",
+          "ob_add_touch_a_20s": "",
+          "ob_add_near_b_20s": "",
+          "ob_add_near_a_20s": "",
+          "ob_mod_touch_b_20s": "",
+          "ob_mod_touch_a_20s": "",
+          "ob_n_add_touch_b_20s": "",
+          "ob_n_add_touch_a_20s": "",
+          "ob_trade_sellagg_60s": "",
+          "ob_trade_buyagg_60s": "",
+          "ob_fill_b_60s": "",
+          "ob_fill_a_60s": "",
+          "ob_rm_fill_b_60s": "",
+          "ob_rm_fill_a_60s": "",
+          "ob_rm_cx_touch_b_60s": "",
+          "ob_rm_cx_touch_a_60s": "",
+          "ob_rm_cx_near_b_60s": "",
+          "ob_rm_cx_near_a_60s": "",
+          "ob_add_touch_b_60s": "",
+          "ob_add_touch_a_60s": "",
+          "ob_add_near_b_60s": "",
+          "ob_add_near_a_60s": "",
+          "ob_mod_touch_b_60s": "",
+          "ob_mod_touch_a_60s": "",
+          "ob_n_add_touch_b_60s": "",
+          "ob_n_add_touch_a_60s": "",
+          "in_member": "False",
+          "ob_net_bid_1s": "",
+          "ob_net_ask_1s": "",
+          "ob_net_bid_5s": "",
+          "ob_net_ask_5s": "",
+          "ob_net_bid_20s": "",
+          "ob_net_ask_20s": "",
+          "ob_net_bid_60s": "",
+          "ob_net_ask_60s": "",
+          "utc_hour": "21.75",
+          "settle_tag": "False"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/claude-pass-3day/tables/20231018/t2_state_cells.csv": {
+    "source": {
+      "repository": "DavisAI1974/Markets",
+      "revision": "3d0b06aa29781d5e39cc3eb45c6d09e174f195a2",
+      "path": "tasks/family-research-20261022/claude-pass-3day/tables/20231018/t2_state_cells.csv",
+      "bytes": 4750,
+      "sha256": "348fcd7e533444de49dc5854d8047deb5d77b261ffd89e08d428e2bb02b0ccd8",
+      "git_blob": "680ddae287e4811a8dcb16d81509d1948b97f989",
+      "role": "source_data",
+      "collection": "final_source_packet",
+      "checksum_evidence": "downloaded, SHA256 measured and Git blob verified during final freeze",
+      "clock_status": "preserve source clocks; aggregates and retrospective labels are not decision-time inputs"
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "cell": "down|ask-heavy|sell",
+          "horizon": "next1s",
+          "support": "557",
+          "up": "57",
+          "flat": "394",
+          "down": "106",
+          "net_share": "-0.08797127468581688",
+          "null_mean": "0.00016756433273488948",
+          "z": "-6.645288746711187",
+          "chunks": "15",
+          "same_sign_chunks": "12",
+          "median_ticks": "0.0"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "cell": "down|ask-heavy|sell",
+          "horizon": "next5s",
+          "support": "557",
+          "up": "137",
+          "flat": "252",
+          "down": "168",
+          "net_share": "-0.05565529622980251",
+          "null_mean": "-0.003925792938360264",
+          "z": "-2.358645991618766",
+          "chunks": "15",
+          "same_sign_chunks": "9",
+          "median_ticks": "0.0"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-family-neighbors.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-family-neighbors.parquet",
+      "git_blob": "212887047423b178f75c6e98913e8fc9d98a4d75",
+      "bytes": 853108,
+      "day": "20231018",
+      "sha256": "3d1bf004ed0a9cc2bccfac76e3ed38031bc97d3b0fe0acdee9403ca7c78f1f87",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/1fffc2ebd16a4ec4cb43/TABLE.json",
+        "counts": {
+          "rows": 93762,
+          "aggregate_or_unclocked_retained": 93762,
+          "clocks": 0,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "family_id": "ow-5ea67c25fd9bab07f27e",
+          "neighbor_family_id": "ow-f6ba7eaa9e45ef1b68cf",
+          "receive_delta_ns": 2703137884096,
+          "within120": false,
+          "within600": false
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "family_id": "ow-5ea67c25fd9bab07f27e",
+          "neighbor_family_id": "ow-3a12d9bd4a731b597f0d",
+          "receive_delta_ns": 2704257909154,
+          "within120": false,
+          "within600": false
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-04.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-04.parquet",
+      "git_blob": "719a9581de30c3d9380c1daa52ceeeb57ba6d5b0",
+      "bytes": 577151,
+      "day": "20231018",
+      "sha256": "3d93c97619bd4a01904c4388978e4f6bcba3733320fe45e38f0f6b5d44565131",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/d5ef330f6e2d51f91106/TABLE.json",
+        "counts": {
+          "rows": 8760,
+          "direct_clocks": 8760,
+          "clocks": 26280,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "group_ordinal": 400026,
+          "first_cursor": 524993,
+          "close_cursor": 525000,
+          "event_ns": 1697644572096125983,
+          "receive_ns": 1697644572096702187,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 1,
+          "day": "20231018",
+          "known_by_ns": 1697644572096702187,
+          "bid_price_raw": 3086000000,
+          "bid_size": 1,
+          "bid_orders": 1,
+          "bid_full_size": 1960,
+          "bid_full_orders": 577,
+          "bid_top10_json": "[[3086000000,1,1],[3085000000,17,11],[3084000000,26,13],[3083000000,41,20],[3082000000,53,14],[3081000000,27,10],[3080000000,25,13],[3079000000,31,9],[3078000000,17,9],[3077000000,17,7]]",
+          "bid_rank_change_json": "{\"delta\":-2,\"shared_price_delta\":-2,\"entering_size\":0,\"leaving_size\":0}",
+          "bid_old_touch_effect_json": "{\"added\":0,\"removed\":2,\"fill_linked\":2,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":0,\"removed\":2,\"fill_linked\":2,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3087000000,
+          "ask_size": 10,
+          "ask_orders": 5,
+          "ask_full_size": 1433,
+          "ask_full_orders": 642,
+          "ask_top10_json": "[[3087000000,10,5],[3088000000,11,11],[3089000000,11,9],[3090000000,28,16],[3091000000,12,8],[3092000000,23,18],[3093000000,20,13],[3094000000,17,7],[3095000000,13,11],[3096000000,15,7]]",
+          "ask_rank_change_json": "{\"delta\":-2,\"shared_price_delta\":-2,\"entering_size\":0,\"leaving_size\":0}",
+          "ask_old_touch_effect_json": "{\"added\":0,\"removed\":2,\"fill_linked\":0,\"unlinked\":2,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":0,\"removed\":2,\"fill_linked\":0,\"unlinked\":2,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "group_ordinal": 400029,
+          "first_cursor": 525003,
+          "close_cursor": 525006,
+          "event_ns": 1697644572096706261,
+          "receive_ns": 1697644572098586939,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 1,
+          "day": "20231018",
+          "known_by_ns": 1697644572098586939,
+          "bid_price_raw": 3085000000,
+          "bid_size": 17,
+          "bid_orders": 11,
+          "bid_full_size": 1956,
+          "bid_full_orders": 575,
+          "bid_top10_json": "[[3085000000,17,11],[3084000000,23,12],[3083000000,41,20],[3082000000,53,14],[3081000000,27,10],[3080000000,25,13],[3079000000,31,9],[3078000000,17,9],[3077000000,17,7],[3076000000,43,10]]",
+          "bid_rank_change_json": "{\"delta\":42,\"shared_price_delta\":0,\"entering_size\":43,\"leaving_size\":1}",
+          "bid_old_touch_effect_json": "{\"added\":0,\"removed\":1,\"fill_linked\":1,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3087000000,
+          "ask_size": 9,
+          "ask_orders": 4,
+          "ask_full_size": 1432,
+          "ask_full_orders": 641,
+          "ask_top10_json": "[[3087000000,9,4],[3088000000,11,11],[3089000000,11,9],[3090000000,28,16],[3091000000,12,8],[3092000000,23,18],[3093000000,20,13],[3094000000,17,7],[3095000000,13,11],[3096000000,15,7]]",
+          "ask_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":0,\"leaving_size\":0}",
+          "ask_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-price-stretches.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-price-stretches.parquet",
+      "git_blob": "5828ddfa8d62bb776af2fe136b21b2eb29e57601",
+      "bytes": 857187,
+      "day": "20231018",
+      "sha256": "5c800695179ad780a056ab7a2576a016a180e89b16db70831d12dc6e8c50b192",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/d62bf53b24806ff388f3/TABLE.json",
+        "counts": {
+          "rows": 9109,
+          "direct_clocks": 9109,
+          "clocks": 54654,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "stretch_ordinal": 0,
+          "price_raw": 3061000000,
+          "first_trade_ordinal": 0,
+          "last_trade_ordinal": 1,
+          "incoming_step_raw": null,
+          "outgoing_step_raw": -2000000,
+          "print_direction_turn": null,
+          "day": "20231018",
+          "first_clocks": {
+            "available_ns": 1697580003382463363,
+            "event_ns": 1697580003381906641,
+            "group_close_input_cursor": 625,
+            "group_ordinal": 217,
+            "receive_ns": 1697580003382399708,
+            "trade_input_cursor": 622
+          },
+          "last_clocks": {
+            "available_ns": 1697580003385459100,
+            "event_ns": 1697580003384062195,
+            "group_close_input_cursor": 649,
+            "group_ordinal": 232,
+            "receive_ns": 1697580003385366820,
+            "trade_input_cursor": 646
+          },
+          "duration_receive_ns": 2967112,
+          "duration_event_ns": 2155554,
+          "next_different_trade": 2,
+          "overlapping_leg_ids": [
+            0
+          ]
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "stretch_ordinal": 1,
+          "price_raw": 3059000000,
+          "first_trade_ordinal": 2,
+          "last_trade_ordinal": 2,
+          "incoming_step_raw": -2000000,
+          "outgoing_step_raw": -1000000,
+          "print_direction_turn": false,
+          "day": "20231018",
+          "first_clocks": {
+            "available_ns": 1697580003392535334,
+            "event_ns": 1697580003392213717,
+            "group_close_input_cursor": 702,
+            "group_ordinal": 272,
+            "receive_ns": 1697580003392495138,
+            "trade_input_cursor": 699
+          },
+          "last_clocks": {
+            "available_ns": 1697580003392535334,
+            "event_ns": 1697580003392213717,
+            "group_close_input_cursor": 702,
+            "group_ordinal": 272,
+            "receive_ns": 1697580003392495138,
+            "trade_input_cursor": 699
+          },
+          "duration_receive_ns": 0,
+          "duration_event_ns": 0,
+          "next_different_trade": 3,
+          "overlapping_leg_ids": [
+            0
+          ]
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-02.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-02.parquet",
+      "git_blob": "cf212d6181a529d8b9965aec887f776987ed1db8",
+      "bytes": 808253,
+      "day": "20231018",
+      "sha256": "6a21d98d1fcb49e3b18f113a23e4b8e672e97f28fb4f16193caa23426842f473",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/0778d8d3ffe35254c017/TABLE.json",
+        "counts": {
+          "rows": 20044,
+          "direct_clocks": 20044,
+          "clocks": 60132,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 182636,
+          "cursor": 200011,
+          "event_ns": 1697631140790025111,
+          "receive_ns": 1697631140790354505,
+          "action": "A",
+          "side": "A",
+          "price_raw": 3105000000,
+          "size": 1,
+          "order_id": 788700880874,
+          "flags": 0,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "A",
+          "after_price": 3105000000,
+          "after_size": 1,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 158228,
+          "known_by_ns": 1697631140790378569,
+          "group_close_cursor": 200012
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 182637,
+          "cursor": 200012,
+          "event_ns": 1697631140790025111,
+          "receive_ns": 1697631140790378569,
+          "action": "N",
+          "side": "N",
+          "price_raw": 9223372036854775807,
+          "size": 0,
+          "order_id": 0,
+          "flags": 128,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "",
+          "after_price": 0,
+          "after_size": 0,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 158228,
+          "known_by_ns": 1697631140790378569,
+          "group_close_cursor": 200012
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-00.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-00.parquet",
+      "git_blob": "73f9ce0758922d39e99160c0c79860eefef585d2",
+      "bytes": 851853,
+      "day": "20231018",
+      "sha256": "6dfc954a865e0c4ed0803d7f9bf462db14d63d949d1f35c612409f4dc93d5a96",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/c12e674516cd0e8e92bc/TABLE.json",
+        "counts": {
+          "rows": 19895,
+          "direct_clocks": 19895,
+          "clocks": 59685,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231017",
+          "source_record_index": 842119,
+          "cursor": 518,
+          "event_ns": 1697580000674019631,
+          "receive_ns": 1697580000674292954,
+          "action": "A",
+          "side": "A",
+          "price_raw": 3063000000,
+          "size": 1,
+          "order_id": 788699905991,
+          "flags": 0,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "A",
+          "after_price": 3063000000,
+          "after_size": 1,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 119,
+          "known_by_ns": 1697580000674314698,
+          "group_close_cursor": 519
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231017",
+          "source_record_index": 842120,
+          "cursor": 519,
+          "event_ns": 1697580000674019631,
+          "receive_ns": 1697580000674314698,
+          "action": "N",
+          "side": "N",
+          "price_raw": 9223372036854775807,
+          "size": 0,
+          "order_id": 0,
+          "flags": 128,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "",
+          "after_price": 0,
+          "after_size": 0,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 119,
+          "known_by_ns": 1697580000674314698,
+          "group_close_cursor": 519
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-05.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-05.parquet",
+      "git_blob": "9efc000b8ae2fcc4d782f004c78d2b94e5382c0f",
+      "bytes": 379224,
+      "day": "20231018",
+      "sha256": "73ac14e2d7f97686a71a5e7989684e3856579fb844fbf26b288062ecbeeffd69",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/a7597fd6bf23231e08a0/TABLE.json",
+        "counts": {
+          "rows": 6079,
+          "direct_clocks": 6079,
+          "clocks": 18237,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "group_ordinal": 500003,
+          "first_cursor": 661375,
+          "close_cursor": 661376,
+          "event_ns": 1697652720341590271,
+          "receive_ns": 1697652720341909769,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 0,
+          "day": "20231018",
+          "known_by_ns": 1697652720341909769,
+          "bid_price_raw": 3061000000,
+          "bid_size": 1,
+          "bid_orders": 1,
+          "bid_full_size": 1905,
+          "bid_full_orders": 520,
+          "bid_top10_json": "[[3061000000,1,1],[3060000000,63,18],[3059000000,13,8],[3058000000,25,13],[3057000000,26,11],[3056000000,33,9],[3055000000,22,11],[3054000000,17,8],[3053000000,18,9],[3052000000,21,8]]",
+          "bid_rank_change_json": "{\"delta\":-26,\"shared_price_delta\":0,\"entering_size\":1,\"leaving_size\":27}",
+          "bid_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":1,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3062000000,
+          "ask_size": 7,
+          "ask_orders": 7,
+          "ask_full_size": 1548,
+          "ask_full_orders": 668,
+          "ask_top10_json": "[[3062000000,7,7],[3063000000,21,8],[3064000000,16,12],[3065000000,21,12],[3066000000,21,13],[3067000000,24,15],[3068000000,14,11],[3069000000,16,11],[3070000000,22,13],[3071000000,8,7]]",
+          "ask_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":0,\"leaving_size\":0}",
+          "ask_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "group_ordinal": 500004,
+          "first_cursor": 661377,
+          "close_cursor": 661378,
+          "event_ns": 1697652720341590967,
+          "receive_ns": 1697652720342058807,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 0,
+          "day": "20231018",
+          "known_by_ns": 1697652720342058807,
+          "bid_price_raw": 3061000000,
+          "bid_size": 2,
+          "bid_orders": 2,
+          "bid_full_size": 1906,
+          "bid_full_orders": 521,
+          "bid_top10_json": "[[3061000000,2,2],[3060000000,63,18],[3059000000,13,8],[3058000000,25,13],[3057000000,26,11],[3056000000,33,9],[3055000000,22,11],[3054000000,17,8],[3053000000,18,9],[3052000000,21,8]]",
+          "bid_rank_change_json": "{\"delta\":1,\"shared_price_delta\":1,\"entering_size\":0,\"leaving_size\":0}",
+          "bid_old_touch_effect_json": "{\"added\":1,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":1,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3062000000,
+          "ask_size": 7,
+          "ask_orders": 7,
+          "ask_full_size": 1548,
+          "ask_full_orders": 668,
+          "ask_top10_json": "[[3062000000,7,7],[3063000000,21,8],[3064000000,16,12],[3065000000,21,12],[3066000000,21,13],[3067000000,24,15],[3068000000,14,11],[3069000000,16,11],[3070000000,22,13],[3071000000,8,7]]",
+          "ask_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":0,\"leaving_size\":0}",
+          "ask_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-00.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-00.parquet",
+      "git_blob": "7bc9580abbafd0adddd7d8a02348311774f43f0e",
+      "bytes": 646157,
+      "day": "20231018",
+      "sha256": "83776bab8a12c22bdc1adbb754ad45b45d4b75c987f09c2eba460544e3e99ecf",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/09d0551da0b581b88063/TABLE.json",
+        "counts": {
+          "rows": 11258,
+          "direct_clocks": 11258,
+          "clocks": 33774,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "group_ordinal": 119,
+          "first_cursor": 518,
+          "close_cursor": 519,
+          "event_ns": 1697580000674019631,
+          "receive_ns": 1697580000674314698,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 0,
+          "day": "20231018",
+          "known_by_ns": 1697580000674314698,
+          "bid_price_raw": 3061000000,
+          "bid_size": 1,
+          "bid_orders": 1,
+          "bid_full_size": 866,
+          "bid_full_orders": 252,
+          "bid_top10_json": "[[3061000000,1,1],[3059000000,1,1],[3058000000,2,2],[3057000000,2,2],[3056000000,1,1],[3054000000,1,1],[3052000000,1,1],[3050000000,1,1],[3049000000,1,1],[3046000000,3,3]]",
+          "bid_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":0,\"leaving_size\":0}",
+          "bid_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3063000000,
+          "ask_size": 1,
+          "ask_orders": 1,
+          "ask_full_size": 531,
+          "ask_full_orders": 238,
+          "ask_top10_json": "[[3063000000,1,1],[3064000000,1,1],[3065000000,1,1],[3066000000,1,1],[3068000000,1,1],[3071000000,1,1],[3073000000,1,1],[3074000000,1,1],[3077000000,1,1],[3078000000,1,1]]",
+          "ask_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":1,\"leaving_size\":1}",
+          "ask_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":1,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "group_ordinal": 120,
+          "first_cursor": 520,
+          "close_cursor": 520,
+          "event_ns": 1697580000674020131,
+          "receive_ns": 1697580000674363705,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 0,
+          "day": "20231018",
+          "known_by_ns": 1697580000674363705,
+          "bid_price_raw": 3061000000,
+          "bid_size": 1,
+          "bid_orders": 1,
+          "bid_full_size": 866,
+          "bid_full_orders": 252,
+          "bid_top10_json": "[[3061000000,1,1],[3059000000,1,1],[3058000000,2,2],[3057000000,2,2],[3056000000,1,1],[3054000000,1,1],[3052000000,1,1],[3050000000,1,1],[3049000000,1,1],[3046000000,3,3]]",
+          "bid_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":0,\"leaving_size\":0}",
+          "bid_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3063000000,
+          "ask_size": 2,
+          "ask_orders": 2,
+          "ask_full_size": 532,
+          "ask_full_orders": 239,
+          "ask_top10_json": "[[3063000000,2,2],[3064000000,1,1],[3065000000,1,1],[3066000000,1,1],[3068000000,1,1],[3071000000,1,1],[3073000000,1,1],[3074000000,1,1],[3077000000,1,1],[3078000000,1,1]]",
+          "ask_rank_change_json": "{\"delta\":1,\"shared_price_delta\":1,\"entering_size\":0,\"leaving_size\":0}",
+          "ask_old_touch_effect_json": "{\"added\":1,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":1,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-prior-signal-to-large-move.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-prior-signal-to-large-move.parquet",
+      "git_blob": "671cbce9915b971ede3e364d58e133bebc8f875b",
+      "bytes": 84342,
+      "day": "20231018",
+      "sha256": "8602154c3735f8ff04be247bc394a3a37d943a0dddaa2c46d8bb1cd83ae6c1c9",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/892d8aae83f1f81ab6fc/TABLE.json",
+        "counts": {
+          "rows": 4822,
+          "aggregate_or_unclocked_retained": 4822,
+          "clocks": 0,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "later_event_id": "20231018:large_quote:1287",
+          "earlier_event_id": "20231018:early_falling:A:1254",
+          "earlier_type": "early_falling",
+          "earlier_side": "A",
+          "earlier_group": 1254,
+          "later_group": 1287,
+          "lag_known_by_ns": 9454476970,
+          "cursor_difference": 81,
+          "earlier_signal_direction_agrees": true
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "later_event_id": "20231018:large_quote:1287",
+          "earlier_event_id": "20231018:retreat_previous_second:A:1255",
+          "earlier_type": "retreat_previous_second",
+          "earlier_side": "A",
+          "earlier_group": 1255,
+          "later_group": 1287,
+          "lag_known_by_ns": 6548713212,
+          "cursor_difference": 71,
+          "earlier_signal_direction_agrees": true
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-family-prechanges.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-family-prechanges.parquet",
+      "git_blob": "11e512e7e6ef0ab5c48a59b34c90cf3232c00d2d",
+      "bytes": 143786,
+      "day": "20231018",
+      "sha256": "87992dbc06db25be147070b7f1b9f731345490e4cf187d521b7f4e6bee233ec7",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/a917f916abe314e75700/TABLE.json",
+        "counts": {
+          "rows": 2292,
+          "direct_clocks": 2292,
+          "clocks": 16026,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "family_id": "ow-5ea67c25fd9bab07f27e",
+          "start_ns": 1697576400191664816,
+          "lookback_s": 120,
+          "prior_clocks": null,
+          "last_pre_clocks": null,
+          "available": false,
+          "midpoint_change_twice_raw": null
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "family_id": "ow-5ea67c25fd9bab07f27e",
+          "start_ns": 1697576400191664816,
+          "lookback_s": 300,
+          "prior_clocks": null,
+          "last_pre_clocks": null,
+          "available": false,
+          "midpoint_change_twice_raw": null
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-quote-ending-mechanisms.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-quote-ending-mechanisms.parquet",
+      "git_blob": "c673a20176e8f414d2c0806a8845d487a0c1aa2d",
+      "bytes": 874277,
+      "day": "20231018",
+      "sha256": "90a0b86e8a1a0dc86887f1caa251f5446564246a1652dc517c506c40fd42d1ce",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/22c14c1af4ed317d6744/TABLE.json",
+        "counts": {
+          "rows": 27551,
+          "direct_clocks": 27551,
+          "clocks": 55102,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "event_id": "20231018:size_one:B:150",
+          "side": "B",
+          "ending": "recovered_same_price",
+          "onset_group": 150,
+          "end_group": 205,
+          "onset_known_by_ns": 1697580000861662899,
+          "end_known_by_ns": 1697580002289447486,
+          "onset_effect": {
+            "added": 0,
+            "fill_linked": 0,
+            "removed": 1,
+            "unchanged_display_fill": 0,
+            "unlinked": 1
+          },
+          "ending_old_touch_effect": {
+            "added": 1,
+            "fill_linked": 0,
+            "removed": 0,
+            "unchanged_display_fill": 0,
+            "unlinked": 0
+          },
+          "ending_new_touch_effect": {
+            "added": 1,
+            "fill_linked": 0,
+            "removed": 0,
+            "unchanged_display_fill": 0,
+            "unlinked": 0
+          },
+          "ending_fill_linked": false,
+          "ending_unlinked_reduction": false,
+          "evidence_scope": "source-group actions; terminal mechanism is not a pre-event signal"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "event_id": "20231018:size_one:B:217",
+          "side": "B",
+          "ending": "recovered_same_price",
+          "onset_group": 217,
+          "end_group": 219,
+          "onset_known_by_ns": 1697580003382463363,
+          "end_known_by_ns": 1697580003383175348,
+          "onset_effect": {
+            "added": 0,
+            "fill_linked": 1,
+            "removed": 1,
+            "unchanged_display_fill": 0,
+            "unlinked": 0
+          },
+          "ending_old_touch_effect": {
+            "added": 1,
+            "fill_linked": 0,
+            "removed": 0,
+            "unchanged_display_fill": 0,
+            "unlinked": 0
+          },
+          "ending_new_touch_effect": {
+            "added": 1,
+            "fill_linked": 0,
+            "removed": 0,
+            "unchanged_display_fill": 0,
+            "unlinked": 0
+          },
+          "ending_fill_linked": false,
+          "ending_unlinked_reduction": false,
+          "evidence_scope": "source-group actions; terminal mechanism is not a pre-event signal"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-family-firsts.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-family-firsts.parquet",
+      "git_blob": "997d811e309cfe2e3823e5f9d3ce4a5a2d827822",
+      "bytes": 42396,
+      "day": "20231018",
+      "sha256": "922e3b9b0aba397894280361871415e3c6bd6ee55f6fdb8b71dba2a85810cee9",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/385f22ff7b925bf539f0/TABLE.json",
+        "counts": {
+          "rows": 764,
+          "direct_clocks": 764,
+          "clocks": 764,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "family_id": "ow-5ea67c25fd9bab07f27e",
+          "start_recv_ns": 1697576400191664816,
+          "input_cursor": 398,
+          "first_cursor": 0,
+          "source_ordinal": 0,
+          "pre_source_ordinal": -1,
+          "pre_input_cursor": null,
+          "cursor_cap": 397,
+          "start_basis": "FIRST_OBSERVED_STRUCTURAL_FAMILY",
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "occurrence_count": 1,
+          "instance": "1",
+          "sample_id": "1:before_start",
+          "start_utc": "2023-10-17T21:00:00+00:00"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "family_id": "ow-f6ba7eaa9e45ef1b68cf",
+          "start_recv_ns": 1697579103329548912,
+          "input_cursor": 399,
+          "first_cursor": 399,
+          "source_ordinal": 1,
+          "pre_source_ordinal": 0,
+          "pre_input_cursor": 398,
+          "cursor_cap": 398,
+          "start_basis": "FIRST_OBSERVED_STRUCTURAL_FAMILY",
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "occurrence_count": 115575,
+          "instance": "2",
+          "sample_id": "2:before_start",
+          "start_utc": "2023-10-17T21:45:03+00:00"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/cross-study-event-links.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/cross-study-event-links.parquet",
+      "git_blob": "7df7964fd55e0f4f7aca62c2e4efc8bd629cc630",
+      "bytes": 6194091,
+      "day": "20231018",
+      "sha256": "a1199899dfb66b4bf0dbb24ca5aaee445fd9891e05ed541449639608eb525663",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/157597aef5df38b7dff0/TABLE.json",
+        "counts": {
+          "rows": 109754,
+          "direct_clocks": 109754,
+          "clocks": 438595,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "event_id": "20231018:size_one:B:150",
+          "event_type": "size_one",
+          "side": "B",
+          "group": 150,
+          "signal_event_ns": 1697580000861497815,
+          "signal_receive_ns": 1697580000861662899,
+          "signal_known_by_ns": 1697580000861662899,
+          "signal_cursor": 551,
+          "structural_family_at_group": "ow-40540069fe5aeddc127b",
+          "observed_family_occurrence_number": 3,
+          "latest_recognized_dipole_id": null,
+          "latest_dipole_recognition_ns": null,
+          "latest_dipole_recognition_cursor": null,
+          "dipole_recognition_age_ns": null,
+          "dipole_selection": "latest actually recognized by signal; no future lifetime filter",
+          "latest_known_trade_ordinal": null,
+          "retrospective_print_leg_ids": [],
+          "leg_ids_use": "retrospective navigation only; final leg endpoints are not signal inputs",
+          "fresh_wire_flow_vs_signal": "undefined",
+          "displayed_touch_vs_signal": "flat",
+          "prior_print_gap_trend": "insufficient_history",
+          "fresh_buy_lots": 0,
+          "fresh_sell_lots": 0,
+          "fresh_unknown_lots": 0,
+          "rolling20_buy_lots": 0,
+          "rolling20_sell_lots": 0,
+          "current_group_no_print": true
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "event_id": "20231018:size_one:B:217",
+          "event_type": "size_one",
+          "side": "B",
+          "group": 217,
+          "signal_event_ns": 1697580003381906641,
+          "signal_receive_ns": 1697580003382463363,
+          "signal_known_by_ns": 1697580003382463363,
+          "signal_cursor": 625,
+          "structural_family_at_group": "ow-cfe843eaab70d95e30bf",
+          "observed_family_occurrence_number": 1,
+          "latest_recognized_dipole_id": null,
+          "latest_dipole_recognition_ns": null,
+          "latest_dipole_recognition_cursor": null,
+          "dipole_recognition_age_ns": null,
+          "dipole_selection": "latest actually recognized by signal; no future lifetime filter",
+          "latest_known_trade_ordinal": 0,
+          "retrospective_print_leg_ids": [
+            0
+          ],
+          "leg_ids_use": "retrospective navigation only; final leg endpoints are not signal inputs",
+          "fresh_wire_flow_vs_signal": "undefined",
+          "displayed_touch_vs_signal": "flat",
+          "prior_print_gap_trend": "insufficient_history",
+          "fresh_buy_lots": 0,
+          "fresh_sell_lots": 0,
+          "fresh_unknown_lots": 1,
+          "rolling20_buy_lots": 0,
+          "rolling20_sell_lots": 0,
+          "current_group_no_print": false
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-01.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-01.parquet",
+      "git_blob": "1ebbf5f45efc29a5e2fa4250d9c1d57a918c8a28",
+      "bytes": 653418,
+      "day": "20231018",
+      "sha256": "bbef62c9e62c73274e1bd1f6cc585c6d7302808a7a39cf14036e9ca3e24756fe",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/fb271bdd46aba93ba4f3/TABLE.json",
+        "counts": {
+          "rows": 10901,
+          "direct_clocks": 10901,
+          "clocks": 32703,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "group_ordinal": 100002,
+          "first_cursor": 124872,
+          "close_cursor": 124873,
+          "event_ns": 1697624062730623469,
+          "receive_ns": 1697624062730881855,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 0,
+          "day": "20231018",
+          "known_by_ns": 1697624062730881855,
+          "bid_price_raw": 3065000000,
+          "bid_size": 3,
+          "bid_orders": 3,
+          "bid_full_size": 1659,
+          "bid_full_orders": 518,
+          "bid_top10_json": "[[3065000000,3,3],[3064000000,4,4],[3063000000,8,8],[3062000000,7,6],[3061000000,10,7],[3060000000,10,9],[3059000000,12,8],[3058000000,11,8],[3057000000,5,4],[3056000000,7,4]]",
+          "bid_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":0,\"leaving_size\":0}",
+          "bid_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3066000000,
+          "ask_size": 1,
+          "ask_orders": 1,
+          "ask_full_size": 1008,
+          "ask_full_orders": 431,
+          "ask_top10_json": "[[3066000000,1,1],[3067000000,6,5],[3068000000,6,5],[3069000000,6,5],[3070000000,12,6],[3071000000,9,6],[3072000000,6,3],[3073000000,6,5],[3074000000,8,6],[3075000000,7,6]]",
+          "ask_rank_change_json": "{\"delta\":-12,\"shared_price_delta\":0,\"entering_size\":1,\"leaving_size\":13}",
+          "ask_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":1,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "group_ordinal": 100006,
+          "first_cursor": 124877,
+          "close_cursor": 124878,
+          "event_ns": 1697624062731234721,
+          "receive_ns": 1697624062731524103,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 0,
+          "day": "20231018",
+          "known_by_ns": 1697624062731524103,
+          "bid_price_raw": 3065000000,
+          "bid_size": 1,
+          "bid_orders": 1,
+          "bid_full_size": 1657,
+          "bid_full_orders": 516,
+          "bid_top10_json": "[[3065000000,1,1],[3064000000,4,4],[3063000000,8,8],[3062000000,7,6],[3061000000,10,7],[3060000000,10,9],[3059000000,12,8],[3058000000,11,8],[3057000000,5,4],[3056000000,7,4]]",
+          "bid_rank_change_json": "{\"delta\":-1,\"shared_price_delta\":-1,\"entering_size\":0,\"leaving_size\":0}",
+          "bid_old_touch_effect_json": "{\"added\":0,\"removed\":1,\"fill_linked\":0,\"unlinked\":1,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":0,\"removed\":1,\"fill_linked\":0,\"unlinked\":1,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3066000000,
+          "ask_size": 1,
+          "ask_orders": 1,
+          "ask_full_size": 1011,
+          "ask_full_orders": 433,
+          "ask_top10_json": "[[3066000000,1,1],[3067000000,6,5],[3068000000,7,6],[3069000000,6,5],[3070000000,14,7],[3071000000,9,6],[3072000000,6,3],[3073000000,6,5],[3074000000,8,6],[3075000000,7,6]]",
+          "ask_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":0,\"leaving_size\":0}",
+          "ask_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-03.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-03.parquet",
+      "git_blob": "16ed7b3dea38cef8608e5183ad586450b1f923f4",
+      "bytes": 551263,
+      "day": "20231018",
+      "sha256": "bff374a96b951ab2585737138800e140f1305aee6eac8fd9db69ce9d9ed75e1e",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/70790e1f2443c418d1bb/TABLE.json",
+        "counts": {
+          "rows": 8251,
+          "direct_clocks": 8251,
+          "clocks": 24753,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "group_ordinal": 300020,
+          "first_cursor": 392766,
+          "close_cursor": 392767,
+          "event_ns": 1697637297670310167,
+          "receive_ns": 1697637297670682802,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 0,
+          "day": "20231018",
+          "known_by_ns": 1697637297670682802,
+          "bid_price_raw": 3112000000,
+          "bid_size": 1,
+          "bid_orders": 1,
+          "bid_full_size": 1924,
+          "bid_full_orders": 609,
+          "bid_top10_json": "[[3112000000,1,1],[3111000000,14,13],[3110000000,13,12],[3109000000,15,14],[3108000000,24,13],[3107000000,9,8],[3106000000,18,9],[3105000000,14,9],[3104000000,18,8],[3103000000,18,7]]",
+          "bid_rank_change_json": "{\"delta\":-1,\"shared_price_delta\":-1,\"entering_size\":0,\"leaving_size\":0}",
+          "bid_old_touch_effect_json": "{\"added\":0,\"removed\":1,\"fill_linked\":0,\"unlinked\":1,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":0,\"removed\":1,\"fill_linked\":0,\"unlinked\":1,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3113000000,
+          "ask_size": 5,
+          "ask_orders": 5,
+          "ask_full_size": 1390,
+          "ask_full_orders": 655,
+          "ask_top10_json": "[[3113000000,5,5],[3114000000,15,11],[3115000000,16,13],[3116000000,26,17],[3117000000,30,17],[3118000000,18,9],[3119000000,19,14],[3120000000,32,9],[3121000000,22,11],[3122000000,20,13]]",
+          "ask_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":0,\"leaving_size\":0}",
+          "ask_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "group_ordinal": 300021,
+          "first_cursor": 392768,
+          "close_cursor": 392771,
+          "event_ns": 1697637297670683523,
+          "receive_ns": 1697637297671052756,
+          "snapshot_member": false,
+          "reset_member": false,
+          "bad_receive_clock_member": false,
+          "print_count": 1,
+          "day": "20231018",
+          "known_by_ns": 1697637297671052756,
+          "bid_price_raw": 3111000000,
+          "bid_size": 14,
+          "bid_orders": 13,
+          "bid_full_size": 1923,
+          "bid_full_orders": 608,
+          "bid_top10_json": "[[3111000000,14,13],[3110000000,13,12],[3109000000,15,14],[3108000000,24,13],[3107000000,9,8],[3106000000,18,9],[3105000000,14,9],[3104000000,18,8],[3103000000,18,7],[3102000000,13,7]]",
+          "bid_rank_change_json": "{\"delta\":12,\"shared_price_delta\":0,\"entering_size\":13,\"leaving_size\":1}",
+          "bid_old_touch_effect_json": "{\"added\":0,\"removed\":1,\"fill_linked\":1,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "bid_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_price_raw": 3113000000,
+          "ask_size": 5,
+          "ask_orders": 5,
+          "ask_full_size": 1390,
+          "ask_full_orders": 655,
+          "ask_top10_json": "[[3113000000,5,5],[3114000000,15,11],[3115000000,16,13],[3116000000,26,17],[3117000000,30,17],[3118000000,18,9],[3119000000,19,14],[3120000000,32,9],[3121000000,22,11],[3122000000,20,13]]",
+          "ask_rank_change_json": "{\"delta\":0,\"shared_price_delta\":0,\"entering_size\":0,\"leaving_size\":0}",
+          "ask_old_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}",
+          "ask_new_touch_effect_json": "{\"added\":0,\"removed\":0,\"fill_linked\":0,\"unlinked\":0,\"unchanged_display_fill\":0}"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-all-family-occurrences.csv.gz": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-all-family-occurrences.csv.gz",
+      "git_blob": "cad56d6a29e8780bbcc338c63c781237599c08bd",
+      "bytes": 7162893,
+      "day": "20231018",
+      "sha256": "c187c0bcca2f6a28d740451c208581901cc33ced0ba0b87e4520e0c5c38219dd",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/17cdccec70b25cb7f267/TABLE.json",
+        "counts": {
+          "rows": 583688,
+          "direct_clocks": 583688,
+          "clocks": 583688,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "source_ordinal": "0",
+          "input_cursor": "398",
+          "receive_ns": "1697576400191664816",
+          "family_id": "ow-5ea67c25fd9bab07f27e"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "source_ordinal": "1",
+          "input_cursor": "399",
+          "receive_ns": "1697579103329548912",
+          "family_id": "ow-f6ba7eaa9e45ef1b68cf"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-01.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-01.parquet",
+      "git_blob": "22747ac2be41adec6e38cfc4bf4892fd833a3c5b",
+      "bytes": 876456,
+      "day": "20231018",
+      "sha256": "c515626d1d0b33c4ed62291e3b3266d32f448a2aa4a483cc4e9ee549a8613b27",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/e134f35ed2d45b129acc/TABLE.json",
+        "counts": {
+          "rows": 20825,
+          "direct_clocks": 20825,
+          "clocks": 62475,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 82626,
+          "cursor": 100001,
+          "event_ns": 1697619967538533937,
+          "receive_ns": 1697619967539536907,
+          "action": "A",
+          "side": "B",
+          "price_raw": 3071000000,
+          "size": 1,
+          "order_id": 788700363691,
+          "flags": 128,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "B",
+          "after_price": 3071000000,
+          "after_size": 1,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 80369,
+          "known_by_ns": 1697619967539536907,
+          "group_close_cursor": 100001
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 82635,
+          "cursor": 100010,
+          "event_ns": 1697619967789990863,
+          "receive_ns": 1697619967790254976,
+          "action": "T",
+          "side": "A",
+          "price_raw": 3071000000,
+          "size": 1,
+          "order_id": 788700363745,
+          "flags": 0,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "",
+          "after_price": 0,
+          "after_size": 0,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 80378,
+          "known_by_ns": 1697619967790321468,
+          "group_close_cursor": 100013
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "agent-pass/tables/20231018-candidate-operands.csv": {
+    "source": {
+      "repository": "DavisAI1974/Markets",
+      "revision": "43aa3ec3a925d27d805eb69320c8fdd68fe0e6d0",
+      "path": "agent-pass/tables/20231018-candidate-operands.csv",
+      "bytes": 143226,
+      "sha256": "d0024eb7f7f2ec463fc911462a38e91a17dba7834e12c7bf3d4e14a6d1626f11",
+      "git_blob": "ca54a62629b09c1bb90b14b14a1f5813a37087d8",
+      "role": "source_data",
+      "collection": "final_source_packet",
+      "checksum_evidence": "downloaded, SHA256 measured and Git blob verified during final freeze",
+      "clock_status": "preserve source clocks; aggregates and retrospective labels are not decision-time inputs"
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "candidate_id": "dip-19648-1697581215",
+          "birth_second": "1697581215",
+          "recognition_ns": "1697581262250387132",
+          "available_second": "1697581261",
+          "polarity": "1",
+          "orientation": "NO_PREDECESSOR",
+          "original_coverage": "20231017",
+          "flow_state": "undefined_at_emission",
+          "quote_move": "flat",
+          "baseline": "0.0",
+          "magnitude": "1.0",
+          "observations_behind_threshold": "604",
+          "prominence": "1.0",
+          "searched_span_seconds": "1213",
+          "threshold": "1.0",
+          "window_truncated": "False"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "candidate_id": "dip-19648-1697581432",
+          "birth_second": "1697581432",
+          "recognition_ns": "1697581483042753905",
+          "available_second": "1697581482",
+          "polarity": "1",
+          "orientation": "SAME",
+          "original_coverage": "20231017",
+          "flow_state": "undefined_at_emission",
+          "quote_move": "flat",
+          "baseline": "0.0",
+          "magnitude": "1.0",
+          "observations_behind_threshold": "619",
+          "prominence": "1.0",
+          "searched_span_seconds": "1430",
+          "threshold": "1.0",
+          "window_truncated": "False"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-family-windows.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-family-windows.parquet",
+      "git_blob": "039171cdc34dbf391a1c4123b69c33eb238c88db",
+      "bytes": 1372227,
+      "day": "20231018",
+      "sha256": "d1e09ab347f1777da1e93fb5143aadf56c81ab3ea6e4aab20d48632b5a54b0e5",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/60b0ae5303ba6986f3d5/TABLE.json",
+        "counts": {
+          "rows": 20628,
+          "direct_clocks": 20628,
+          "clocks": 185580,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "family_id": "ow-5ea67c25fd9bab07f27e",
+          "family_start_receive_ns": 1697576400191664816,
+          "anchor_shift_s": -600,
+          "anchor_ns": 1697575800191664816,
+          "horizon_s": 1,
+          "target_ns": 1697575801191664816,
+          "anchor_group": -1,
+          "anchor_clocks": null,
+          "endpoint_group": -1,
+          "endpoint_clocks": null,
+          "midpoint_available": false,
+          "midpoint_change_twice_raw": null,
+          "anchor_quote_age_ns": null,
+          "endpoint_quote_age_ns": null,
+          "prior_trade": null,
+          "endpoint_trade": null,
+          "transaction_available": false,
+          "transaction_change_raw": null,
+          "transaction_anchor_age_ns": null,
+          "transaction_endpoint_age_ns": null,
+          "trade_and_quote_fresh5s": false
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "family_id": "ow-5ea67c25fd9bab07f27e",
+          "family_start_receive_ns": 1697576400191664816,
+          "anchor_shift_s": -600,
+          "anchor_ns": 1697575800191664816,
+          "horizon_s": 5,
+          "target_ns": 1697575805191664816,
+          "anchor_group": -1,
+          "anchor_clocks": null,
+          "endpoint_group": -1,
+          "endpoint_clocks": null,
+          "midpoint_available": false,
+          "midpoint_change_twice_raw": null,
+          "anchor_quote_age_ns": null,
+          "endpoint_quote_age_ns": null,
+          "prior_trade": null,
+          "endpoint_trade": null,
+          "transaction_available": false,
+          "transaction_change_raw": null,
+          "transaction_anchor_age_ns": null,
+          "transaction_endpoint_age_ns": null,
+          "trade_and_quote_fresh5s": false
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-03.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-03.parquet",
+      "git_blob": "e4faf89c22d4a4e80b96fc1a9c281310f0eafabe",
+      "bytes": 714121,
+      "day": "20231018",
+      "sha256": "d6336e1ee2b0e1db9eff78a54e9734129baeade9e4e9293704351e43e25a74b4",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/81490befb176599f6ceb/TABLE.json",
+        "counts": {
+          "rows": 17715,
+          "direct_clocks": 17715,
+          "clocks": 53145,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 282628,
+          "cursor": 300003,
+          "event_ns": 1697634463454907589,
+          "receive_ns": 1697634463475573000,
+          "action": "C",
+          "side": "B",
+          "price_raw": 3156000000,
+          "size": 1,
+          "order_id": 788701283244,
+          "flags": 0,
+          "before_side": "B",
+          "before_price": 3156000000,
+          "before_size": 1,
+          "after_side": "",
+          "after_price": 0,
+          "after_size": 0,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 230768,
+          "known_by_ns": 1697634463475589855,
+          "group_close_cursor": 300004
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 282629,
+          "cursor": 300004,
+          "event_ns": 1697634463454907589,
+          "receive_ns": 1697634463475589855,
+          "action": "N",
+          "side": "N",
+          "price_raw": 9223372036854775807,
+          "size": 0,
+          "order_id": 0,
+          "flags": 128,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "",
+          "after_price": 0,
+          "after_size": 0,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 230768,
+          "known_by_ns": 1697634463475589855,
+          "group_close_cursor": 300004
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231018-life-measurements.csv": {
+    "source": {
+      "collection": "native",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+      "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231018-life-measurements.csv",
+      "git_blob": "d3a23a91c62fa05718fda5768073f269cdea51b0",
+      "bytes": 267409,
+      "day": "20231018",
+      "sha256": "d8be363cb9ea65265bd512bfc50d6712b71cc90ce529716179ab2c3b6f3bff00",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/bb5060acde8bee1632dc/TABLE.json",
+        "counts": {
+          "rows": 2589,
+          "direct_clocks": 2576,
+          "clocks": 2589,
+          "corrections": 0,
+          "explicit_parent_context_only": 13
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "candidate_id": "dip-19648-1697581215",
+          "kind": "candidate",
+          "orientation": "NO_PREDECESSOR",
+          "anchor_ratio": "1.0",
+          "life_seconds": "313.0",
+          "life_end_second": "1697581528.0",
+          "disposition": "opposite_hold3",
+          "first_undefined_after_anchor_s": "15.0",
+          "finite_adjacent_pairs": "35",
+          "magnitude_increases": "0",
+          "magnitude_decreases": "0",
+          "magnitude_unchanged": "35",
+          "max_net_change": "1.0"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "candidate_id": "dip-19648-1697581215",
+          "kind": "control1",
+          "orientation": "NO_PREDECESSOR",
+          "anchor_ratio": "",
+          "life_seconds": "",
+          "life_end_second": "1697601963.0",
+          "disposition": "undefined_anchor_direction",
+          "first_undefined_after_anchor_s": "0.0",
+          "finite_adjacent_pairs": "0",
+          "magnitude_increases": "0",
+          "magnitude_decreases": "0",
+          "magnitude_unchanged": "0",
+          "max_net_change": ""
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/cross-study-condition-outcomes.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/cross-study-condition-outcomes.parquet",
+      "git_blob": "c9e8cb69ae259f95b29e780583d984916be11c38",
+      "bytes": 12426,
+      "day": "20231018",
+      "sha256": "dd8a35022de36157c205ab765a59b47eda85c9a4355f05f2854f102279e0a4b0",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/850eb2888381499da19b/TABLE.json",
+        "counts": {
+          "rows": 453,
+          "aggregate_or_unclocked_retained": 453,
+          "clocks": 0,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "event_type": "early_falling",
+          "side": "A",
+          "fresh_wire_flow_vs_signal": "aligned",
+          "displayed_touch_vs_signal": "aligned",
+          "prior_print_gap_trend": "narrowing",
+          "horizon_s": 1,
+          "scenarios": 2650,
+          "observed": 2649,
+          "signed_midpoint_change_twice_raw_flat": 1225,
+          "spread_crossing_raw_negative": 2229,
+          "signed_midpoint_change_twice_raw_negative": 539,
+          "signed_midpoint_change_twice_raw_positive": 885,
+          "spread_crossing_raw_positive": 120,
+          "spread_crossing_raw_flat": 300,
+          "exit_censored": 1
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "event_type": "early_falling",
+          "side": "A",
+          "fresh_wire_flow_vs_signal": "aligned",
+          "displayed_touch_vs_signal": "aligned",
+          "prior_print_gap_trend": "narrowing",
+          "horizon_s": 5,
+          "scenarios": 2650,
+          "observed": 2649,
+          "signed_midpoint_change_twice_raw_flat": 815,
+          "spread_crossing_raw_negative": 2071,
+          "signed_midpoint_change_twice_raw_negative": 823,
+          "signed_midpoint_change_twice_raw_positive": 1011,
+          "spread_crossing_raw_positive": 232,
+          "spread_crossing_raw_flat": 346,
+          "exit_censored": 1
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-print-legs.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-print-legs.parquet",
+      "git_blob": "023d34f4ce09737e315b4aa9123e5e0e6f04b38f",
+      "bytes": 510492,
+      "day": "20231018",
+      "sha256": "e2dbb0cb31ba8c64e52329f019deac366990702bd012a6dd33ac79fdcdaa5065",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/78d7ebbfdf1041ddb072/TABLE.json",
+        "counts": {
+          "rows": 5120,
+          "direct_clocks": 5120,
+          "clocks": 30720,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "leg_ordinal": 0,
+          "first_stretch_ordinal": 0,
+          "last_stretch_ordinal": 2,
+          "step_sign": -1,
+          "day": "20231018",
+          "first_trade": 0,
+          "last_trade": 3,
+          "first_clocks": {
+            "available_ns": 1697580003382463363,
+            "event_ns": 1697580003381906641,
+            "group_close_input_cursor": 625,
+            "group_ordinal": 217,
+            "receive_ns": 1697580003382399708,
+            "trade_input_cursor": 622
+          },
+          "last_clocks": {
+            "available_ns": 1697580003491276500,
+            "event_ns": 1697580003490718453,
+            "group_close_input_cursor": 719,
+            "group_ordinal": 286,
+            "receive_ns": 1697580003491201986,
+            "trade_input_cursor": 717
+          },
+          "duration_receive_ns": 108802278,
+          "duration_event_ns": 108811812,
+          "raw_price_change": -3000000,
+          "left_boundary": true,
+          "right_boundary": false,
+          "endpoint": "observed same-sign print-step leg; not natural event death"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "leg_ordinal": 1,
+          "first_stretch_ordinal": 2,
+          "last_stretch_ordinal": 5,
+          "step_sign": 1,
+          "day": "20231018",
+          "first_trade": 3,
+          "last_trade": 11,
+          "first_clocks": {
+            "available_ns": 1697580003491276500,
+            "event_ns": 1697580003490718453,
+            "group_close_input_cursor": 719,
+            "group_ordinal": 286,
+            "receive_ns": 1697580003491201986,
+            "trade_input_cursor": 717
+          },
+          "last_clocks": {
+            "available_ns": 1697580003714395601,
+            "event_ns": 1697580003714146825,
+            "group_close_input_cursor": 899,
+            "group_ordinal": 426,
+            "receive_ns": 1697580003714368436,
+            "trade_input_cursor": 896
+          },
+          "duration_receive_ns": 223166450,
+          "duration_event_ns": 223428372,
+          "raw_price_change": 3000000,
+          "left_boundary": false,
+          "right_boundary": false,
+          "endpoint": "observed same-sign print-step leg; not natural event death"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-05.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-05.parquet",
+      "git_blob": "f3bad6ef313b3b108b8ca0089dccfb5e5e9b6188",
+      "bytes": 661778,
+      "day": "20231018",
+      "sha256": "eb19c760f09b4072482df990cbafe399e76a6ddc311e22b80bbb08528962ef0c",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/734cb811b41ddfe34e42/TABLE.json",
+        "counts": {
+          "rows": 16602,
+          "direct_clocks": 16602,
+          "clocks": 49806,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 482682,
+          "cursor": 500057,
+          "event_ns": 1697643008342980663,
+          "receive_ns": 1697643008351088810,
+          "action": "A",
+          "side": "A",
+          "price_raw": 3109000000,
+          "size": 1,
+          "order_id": 788702141887,
+          "flags": 0,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "A",
+          "after_price": 3109000000,
+          "after_size": 1,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 381744,
+          "known_by_ns": 1697643008351118940,
+          "group_close_cursor": 500058
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "source_tape_day": "20231018",
+          "source_record_index": 482683,
+          "cursor": 500058,
+          "event_ns": 1697643008342980663,
+          "receive_ns": 1697643008351118940,
+          "action": "N",
+          "side": "N",
+          "price_raw": 9223372036854775807,
+          "size": 0,
+          "order_id": 0,
+          "flags": 128,
+          "before_side": "",
+          "before_price": 0,
+          "before_size": 0,
+          "after_side": "",
+          "after_price": 0,
+          "after_size": 0,
+          "fill_linked_reduction": 0,
+          "fill_unchanged_display": 0,
+          "group_ordinal": 381744,
+          "known_by_ns": 1697643008351118940,
+          "group_close_cursor": 500058
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-trades.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-trades.parquet",
+      "git_blob": "a5d8cdaf0469b2e02a26fe869c996d03607ac34a",
+      "bytes": 3103125,
+      "day": "20231018",
+      "sha256": "eb274a3e9d81c1589a1038a96b6097f9f6dac2ef34f1ef9407d522d532696977",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/2c8290c12cc41766b329/TABLE.json",
+        "counts": {
+          "rows": 30739,
+          "direct_clocks": 30739,
+          "clocks": 184434,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "trade_input_cursor": 622,
+          "group_close_input_cursor": 625,
+          "group_ordinal": 217,
+          "instrument_id": 150611,
+          "event_ns": 1697580003381906641,
+          "receive_ns": 1697580003382399708,
+          "available_ns": 1697580003382463363,
+          "price_raw": 3061000000,
+          "size": 1,
+          "aggressor_side": "N",
+          "order_id": 0,
+          "sequence": 26416376,
+          "flags": 0,
+          "source_ordinal": 0,
+          "day": "20231018",
+          "source_tape_day": "20231017",
+          "source_record_index": 842223,
+          "stretch_id": 0,
+          "overlapping_leg_ids": [
+            0
+          ],
+          "strict_prior_group": 216,
+          "strict_prior_clocks": {
+            "ask_raw": 3062000000,
+            "bid_raw": 3061000000,
+            "close_cursor": 621,
+            "event_ns": 1697580003155677493,
+            "first_cursor": 621,
+            "group": 216,
+            "known_by_ns": 1697580003156258382,
+            "receive_ns": 1697580003156258382,
+            "segment": 0
+          },
+          "print_step_raw": null,
+          "receive_gap_ns": null,
+          "event_gap_ns": null
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "trade_input_cursor": 646,
+          "group_close_input_cursor": 649,
+          "group_ordinal": 232,
+          "instrument_id": 150611,
+          "event_ns": 1697580003384062195,
+          "receive_ns": 1697580003385366820,
+          "available_ns": 1697580003385459100,
+          "price_raw": 3061000000,
+          "size": 1,
+          "aggressor_side": "A",
+          "order_id": 788699906538,
+          "sequence": 26416459,
+          "flags": 0,
+          "source_ordinal": 1,
+          "day": "20231018",
+          "source_tape_day": "20231017",
+          "source_record_index": 842247,
+          "stretch_id": 0,
+          "overlapping_leg_ids": [
+            0
+          ],
+          "strict_prior_group": 231,
+          "strict_prior_clocks": {
+            "ask_raw": 3062000000,
+            "bid_raw": 3061000000,
+            "close_cursor": 645,
+            "event_ns": 1697580003383834797,
+            "first_cursor": 645,
+            "group": 231,
+            "known_by_ns": 1697580003385092355,
+            "receive_ns": 1697580003385092355,
+            "segment": 0
+          },
+          "print_step_raw": 0,
+          "receive_gap_ns": 2967112,
+          "event_gap_ns": 2155554
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-trade-dipole-overlaps.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-trade-dipole-overlaps.parquet",
+      "git_blob": "bf3216c8eb3f894077f3dc0c8574dd937f94a2f0",
+      "bytes": 286696,
+      "day": "20231018",
+      "sha256": "edcf8299d738ce4e73025c80a4ac99d1f4b1f3736b4a98085b875ee41680f9b1",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/cfab55a2d8c8e28ceab3/TABLE.json",
+        "counts": {
+          "rows": 10451,
+          "direct_clocks": 10451,
+          "clocks": 62706,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "candidate_id": "dip-19648-1697581215",
+          "trade_ordinal": 118,
+          "trade_event_ns": 1697581432943451591,
+          "trade_receive_ns": 1697581432943921023,
+          "trade_known_by_ns": 1697581432943995594,
+          "trade_cursor": 4207,
+          "birth_label_ns": 1697581215000000000,
+          "recognition_ns": 1697581262250387132,
+          "lifetime_end_label_ns": 1697581528000000000,
+          "recognition_before_trade": true,
+          "overlap_basis": "retrospective lifetime labels; not online selection"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "candidate_id": "dip-19648-1697581215",
+          "trade_ordinal": 119,
+          "trade_event_ns": 1697581526066746739,
+          "trade_receive_ns": 1697581526067136130,
+          "trade_known_by_ns": 1697581526067228988,
+          "trade_cursor": 4381,
+          "birth_label_ns": 1697581215000000000,
+          "recognition_ns": 1697581262250387132,
+          "lifetime_end_label_ns": 1697581528000000000,
+          "recognition_before_trade": true,
+          "overlap_basis": "retrospective lifetime labels; not online selection"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231018-life-paths.csv.gz": {
+    "source": {
+      "collection": "native",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+      "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231018-life-paths.csv.gz",
+      "git_blob": "822d12444357fbab10516f4ea4dc0693a00db556",
+      "bytes": 800442,
+      "day": "20231018",
+      "sha256": "f4c37fcd269d5d1a084f98aaede05574d2a8d5f9213efa807da31a0106bc202e",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/6a03ec2f2a1eec2f1a76/TABLE.json",
+        "counts": {
+          "rows": 107181,
+          "direct_clocks": 107181,
+          "clocks": 107181,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "candidate_id": "dip-19648-1697581215",
+          "kind": "candidate",
+          "orientation": "NO_PREDECESSOR",
+          "relative_s": "1",
+          "second": "1697581216",
+          "ratio": "1.0",
+          "net": "1.0",
+          "total": "1.0",
+          "fresh_buy": "0.0",
+          "fresh_sell": "0.0",
+          "expired_buy": "0.0",
+          "expired_sell": "0.0",
+          "net_recurrence_residual": "0.0",
+          "magnitude_delta": "0.0"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "candidate_id": "dip-19648-1697581215",
+          "kind": "candidate",
+          "orientation": "NO_PREDECESSOR",
+          "relative_s": "2",
+          "second": "1697581217",
+          "ratio": "1.0",
+          "net": "1.0",
+          "total": "1.0",
+          "fresh_buy": "0.0",
+          "fresh_sell": "0.0",
+          "expired_buy": "0.0",
+          "expired_sell": "0.0",
+          "net_recurrence_residual": "0.0",
+          "magnitude_delta": "0.0"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231018-candidate-operands.csv": {
+    "source": {
+      "collection": "native",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+      "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231018-candidate-operands.csv",
+      "git_blob": "a124c86b603b0e494d08f1f6c7d5f5e74cc30559",
+      "bytes": 144090,
+      "day": "20231018",
+      "sha256": "f9931541cddeb4bd250ca77445fa305b0ad7588028d6f95565c8f5bde38abe6a",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/520304c6128689f9b581/TABLE.json",
+        "counts": {
+          "rows": 863,
+          "direct_clocks": 863,
+          "clocks": 2589,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "day": "20231018",
+          "candidate_id": "dip-19648-1697581215",
+          "birth_second": "1697581215",
+          "recognition_ns": "1697581262250387132",
+          "available_second": "1697581261",
+          "polarity": "1",
+          "orientation": "NO_PREDECESSOR",
+          "original_coverage": "20231017",
+          "flow_state": "undefined_at_emission",
+          "quote_move": "flat",
+          "baseline": "0.0",
+          "magnitude": "1.0",
+          "observations_behind_threshold": "604",
+          "prominence": "1.0",
+          "searched_span_seconds": "1213",
+          "threshold": "1.0",
+          "window_truncated": "False"
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "day": "20231018",
+          "candidate_id": "dip-19648-1697581432",
+          "birth_second": "1697581432",
+          "recognition_ns": "1697581483042753905",
+          "available_second": "1697581482",
+          "polarity": "1",
+          "orientation": "SAME",
+          "original_coverage": "20231017",
+          "flow_state": "undefined_at_emission",
+          "quote_move": "flat",
+          "baseline": "0.0",
+          "magnitude": "1.0",
+          "observations_behind_threshold": "619",
+          "prominence": "1.0",
+          "searched_span_seconds": "1430",
+          "threshold": "1.0",
+          "window_truncated": "False"
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-dipole-clocks.parquet": {
+    "source": {
+      "collection": "events",
+      "repository": "DavisAI1974/markets-data",
+      "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+      "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-dipole-clocks.parquet",
+      "git_blob": "aa62974a74bfa1c1cad36dddd5e2ef2f7a9044eb",
+      "bytes": 60868,
+      "day": "20231018",
+      "sha256": "fe27180516229984ea8b1a5a286686c9950e42b8dc2a90bf98f55a45b57e8f65",
+      "checksum_evidence": "measured and blob-verified by completed source-clock run",
+      "role": "source_data",
+      "clock_sidecar": {
+        "repository": "DavisAI1974/markets-data",
+        "revision": "9bfffd6d0b0679cccbbc7a1115ecd8d81d589a0d",
+        "path": "tasks/family-research-20261022/all-row-clock-pins/run-42584823565-1/20231018/rows/9fe547c4b8e9f364f034/TABLE.json",
+        "counts": {
+          "rows": 863,
+          "direct_clocks": 863,
+          "clocks": 5178,
+          "corrections": 0
+        }
+      }
+    },
+    "samples": [
+      {
+        "ordinal": 0,
+        "row": {
+          "candidate_id": "dip-19648-1697581215",
+          "birth_label_ns": 1697581215000000000,
+          "recognition_ns": 1697581262250387132,
+          "recognition_clocks": {
+            "ask_raw": 3062000000,
+            "bid_raw": 3060000000,
+            "close_cursor": 3411,
+            "event_ns": 1697581262250159119,
+            "first_cursor": 3411,
+            "group": 2363,
+            "known_by_ns": 1697581262250387132,
+            "receive_ns": 1697581262250387132,
+            "segment": 0
+          },
+          "live_recognition": true,
+          "lifetime_end_label_ns": 1697581528000000000,
+          "lifetime_end_definition": "opposite_hold3",
+          "end_label_is_not_full_path_availability": true,
+          "orientation": "NO_PREDECESSOR",
+          "polarity": 1
+        }
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "candidate_id": "dip-19648-1697581432",
+          "birth_label_ns": 1697581432000000000,
+          "recognition_ns": 1697581483042753905,
+          "recognition_clocks": {
+            "ask_raw": 3062000000,
+            "bid_raw": 3060000000,
+            "close_cursor": 4302,
+            "event_ns": 1697581483042609647,
+            "first_cursor": 4302,
+            "group": 3133,
+            "known_by_ns": 1697581483042753905,
+            "receive_ns": 1697581483042753905,
+            "segment": 0
+          },
+          "live_recognition": true,
+          "lifetime_end_label_ns": 1697581528000000000,
+          "lifetime_end_definition": "opposite_hold3",
+          "end_label_is_not_full_path_availability": true,
+          "orientation": "SAME",
+          "polarity": 1
+        }
+      },
+      {
+        "remaining": 2
+      }
+    ]
+  },
+  "20231018/trade-links.parquet": {
+    "schema": "candidate_id: string\ntrade_ordinal: int64\ntrade_event_ns: int64\ntrade_receive_ns: int64\ntrade_known_by_ns: int64\ntrade_cursor: int64\nbirth_label_ns: int64\nrecognition_ns: int64\nlifetime_end_label_ns: int64\nrecognition_before_trade: bool\noverlap_basis: string\nwhole_parent_id: string\noriginal_row_ordinal: int64\ntrade_event_ns_external_context: int32\ntrade_receive_ns_external_context: int32\ntrade_known_by_ns_external_context: int32\nrecognition_ns_external_context: int32",
+    "rows": 10451,
+    "samples": [
+      {
+        "candidate_id": "dip-19648-1697581215",
+        "trade_ordinal": 118,
+        "trade_event_ns": 1697581432943451591,
+        "trade_receive_ns": 1697581432943921023,
+        "trade_known_by_ns": 1697581432943995594,
+        "trade_cursor": 4207,
+        "birth_label_ns": 1697581215000000000,
+        "recognition_ns": 1697581262250387132,
+        "lifetime_end_label_ns": 1697581528000000000,
+        "recognition_before_trade": true,
+        "overlap_basis": "retrospective lifetime labels; not online selection",
+        "whole_parent_id": "20231018:dip-19648-1697581215:candidate",
+        "original_row_ordinal": 0,
+        "trade_event_ns_external_context": 16951,
+        "trade_receive_ns_external_context": 16951,
+        "trade_known_by_ns_external_context": 16951,
+        "recognition_ns_external_context": 16951
+      }
+    ]
+  },
+  "20231018/signal-links.parquet": {
+    "schema": "event_id: string\nevent_type: string\nside: string\ngroup: int64\nsignal_event_ns: int64\nsignal_receive_ns: int64\nsignal_known_by_ns: int64\nsignal_cursor: int64\nstructural_family_at_group: string\nobserved_family_occurrence_number: int64\nlatest_recognized_dipole_id: string\nlatest_dipole_recognition_ns: int64\nlatest_dipole_recognition_cursor: int64\ndipole_recognition_age_ns: int64\ndipole_selection: string\nlatest_known_trade_ordinal: int64\nretrospective_print_leg_ids: list<element: int64>\n  child 0, element: int64\nleg_ids_use: string\nfresh_wire_flow_vs_signal: string\ndisplayed_touch_vs_signal: string\nprior_print_gap_trend: string\nfresh_buy_lots: int64\nfresh_sell_lots: int64\nfresh_unknown_lots: int64\nrolling20_buy_lots: int64\nrolling20_sell_lots: int64\ncurrent_group_no_print: bool\nwhole_parent_id: string\noriginal_row_ordinal: int64\nsignal_event_ns_external_context: int32\nsignal_receive_ns_external_context: int32\nsignal_known_by_ns_external_context: int32\nlatest_dipole_recognition_ns_external_context: int32\ndipole_recognition_age_ns_external_context: int32",
+    "rows": 109754,
+    "samples": [
+      {
+        "event_id": "20231018:size_one:B:150",
+        "event_type": "size_one",
+        "side": "B",
+        "group": 150,
+        "signal_event_ns": 1697580000861497815,
+        "signal_receive_ns": 1697580000861662899,
+        "signal_known_by_ns": 1697580000861662899,
+        "signal_cursor": 551,
+        "structural_family_at_group": "ow-40540069fe5aeddc127b",
+        "observed_family_occurrence_number": 3,
+        "latest_recognized_dipole_id": null,
+        "latest_dipole_recognition_ns": null,
+        "latest_dipole_recognition_cursor": null,
+        "dipole_recognition_age_ns": null,
+        "dipole_selection": "latest actually recognized by signal; no future lifetime filter",
+        "latest_known_trade_ordinal": null,
+        "retrospective_print_leg_ids": [],
+        "leg_ids_use": "retrospective navigation only; final leg endpoints are not signal inputs",
+        "fresh_wire_flow_vs_signal": "undefined",
+        "displayed_touch_vs_signal": "flat",
+        "prior_print_gap_trend": "insufficient_history",
+        "fresh_buy_lots": 0,
+        "fresh_sell_lots": 0,
+        "fresh_unknown_lots": 0,
+        "rolling20_buy_lots": 0,
+        "rolling20_sell_lots": 0,
+        "current_group_no_print": true,
+        "whole_parent_id": null,
+        "original_row_ordinal": 0,
+        "signal_event_ns_external_context": 16868,
+        "signal_receive_ns_external_context": 16868,
+        "signal_known_by_ns_external_context": 16868,
+        "latest_dipole_recognition_ns_external_context": -1,
+        "dipole_recognition_age_ns_external_context": -1
+      }
+    ]
+  },
+  "99-layer-attachments.json": [
+    {
+      "layer_id": "controlling_rt_mission",
+      "source_paths": [
+        "research/kalshi/agents/frankie_native_raw_mbo_oct45_realtime_mission_20260828.md"
+      ],
+      "linked_fields": [],
+      "disposition": "registry_context_only_no_measured_render_field"
+    },
+    {
+      "layer_id": "native_calculation_contract",
+      "source_paths": [
+        "research/kalshi/agents/frankie_native_raw_mbo_calculation_contract_20260828.md"
+      ],
+      "linked_fields": [],
+      "disposition": "registry_context_only_no_measured_render_field"
+    },
+    {
+      "remaining": 97
+    }
+  ],
+  "external/external-context-contract.json": {
+    "series_order": [
+      "cot.managed_money_net_pctile_1y",
+      "cot.managed_money_net_chg_wow",
+      {
+        "remaining": 46
+      }
+    ],
+    "context_index_rule": "searchsorted(publication_ns,clock_ns,side='right')",
+    "chosen": "previous_original_index[context_index,series_index] points into original series.known; -1 means no published observation",
+    "ties": "last original row at tied publication wins",
+    "state_policy": "original numeric state/value/reason unchanged; never fall back to older PRESENT",
+    "scope": "original stored targets and publication confidence retained; D/D1/D3 are not retargeted to another day; declared publication is not proof of live ingestion",
+    "sample_clocks": "plot cuts and second labels are not asserted to be information-availability clocks"
+  },
+  "external/all-13-input-bindings.json": {
+    "counts": {
+      "used": 13
+    },
+    "cutoff_ns": 1697662799696377528,
+    "external_key_hash": "6532b9d6f1a5e35748b55492fc570547b7af1dfb94ad52f099e2de79e16336b2",
+    "points": [
+      {
+        "missing": [],
+        "name": "cot.managed_money_net_pctile_1y",
+        "point_id": 1,
+        "reason": "771787 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+        "rows_used": 771787,
+        "series": [
+          {
+            "present_rows": 771787,
+            "series": "cot.managed_money_net_pctile_1y",
+            "state_counts": {
+              "ABLATED": 0,
+              "INVALID": 0,
+              "MISSING": 0,
+              "PRESENT": 771787
+            }
+          }
+        ],
+        "tables": [
+          {
+            "absent": null,
+            "not_yet_known": 0,
+            "reason": null,
+            "rows_known": 302,
+            "table": "cot.023651"
+          }
+        ],
+        "use": "used"
+      },
+      {
+        "missing": [],
+        "name": "weather_forecast.forecast_gw_hdd",
+        "point_id": 2,
+        "reason": "3087148 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+        "rows_used": 3087148,
+        "series": [
+          {
+            "present_rows": 771787,
+            "series": "mos.GFS.gw_hdd_D",
+            "state_counts": {
+              "ABLATED": 0,
+              "INVALID": 0,
+              "MISSING": 0,
+              "PRESENT": 771787
+            }
+          },
+          {
+            "present_rows": 771787,
+            "series": "mos.NAM.gw_hdd_D",
+            "state_counts": {
+              "ABLATED": 0,
+              "INVALID": 0,
+              "MISSING": 0,
+              "PRESENT": 771787
+            }
+          },
+          {
+            "remaining": 2
+          }
+        ],
+        "tables": [
+          {
+            "absent": null,
+            "not_yet_known": 0,
+            "reason": null,
+            "rows_known": 81,
+            "table": "mos.gw_by_cycle"
+          },
+          {
+            "absent": null,
+            "not_yet_known": 0,
+            "reason": null,
+            "rows_known": 9648,
+            "table": "mos.raw"
+          }
+        ],
+        "use": "used"
+      },
+      {
+        "remaining": 11
+      }
+    ],
+    "reason": null,
+    "rows": 771787,
+    "rule": "per point as the external section key records it: used = a PRESENT value of its series reached a Dipole row; missing = none did (or the section does not read the point's table), with the reason; never a zero filled in",
+    "schema": "FRANKIE_TEACHER_EXTERNAL_POINTS_V1",
+    "status": "built"
+  },
+  "external/canonical-99-registry.json": {
+    "schema": "FRANKIE_NATIVE_RAW_MBO_INGESTION_LAYER_REGISTRY_V1",
+    "version": "a-arms-20260828-v1",
+    "hard_minimum_concrete_layer_count": 90,
+    "source_authority": "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md",
+    "permitted_v3_source_paths": [
+      "research/NG_EXHAUSTION_V3_EXTRA_AGENT_INFORMATION_FINDINGS_20260820.json",
+      "research/NG_EXHAUSTION_V3_EXTRA_AGENT_INFORMATION_FINDINGS_20260820.md",
+      {
+        "remaining": 3
+      }
+    ],
+    "groups": [
+      {
+        "group_id": "binding_common_controls",
+        "policy": "STATIC_REQUIRED_INPUT",
+        "activation_stage": "PRE_CALL",
+        "authority": "BINDING_CURRENT",
+        "arms": [
+          "A_CLEAN",
+          "A_MEMORY"
+        ],
+        "principal_route": "DIRECT",
+        "proof_mode": "CONTENT_SHA256",
+        "entries": [
+          {
+            "layer_id": "controlling_rt_mission",
+            "description": "Concise controlling native RT mission",
+            "source_paths": [
+              "research/kalshi/agents/frankie_native_raw_mbo_oct45_realtime_mission_20260828.md"
+            ],
+            "v3_derived": false
+          },
+          {
+            "layer_id": "native_calculation_contract",
+            "description": "Member-first open-world native calculation contract",
+            "source_paths": [
+              "research/kalshi/agents/frankie_native_raw_mbo_calculation_contract_20260828.md"
+            ],
+            "v3_derived": false
+          },
+          {
+            "remaining": 2
+          }
+        ]
+      },
+      {
+        "group_id": "a_clean_overlay",
+        "policy": "ARM_REQUIRED_INPUT",
+        "activation_stage": "PRE_CALL",
+        "authority": "PROMOTED_POSITIVE_NATIVE_KNOWLEDGE",
+        "arms": [
+          "A_CLEAN"
+        ],
+        "principal_route": "DIRECT",
+        "proof_mode": "CONTENT_SHA256",
+        "entries": [
+          {
+            "layer_id": "a_clean_promoted_positive_capsule",
+            "description": "Pared-down A-clean promoted positive knowledge",
+            "source_paths": [
+              "research/kalshi/agents/frankie_native_raw_mbo_knowledge/A_CLEAN_POSITIVE_KNOWLEDGE_20260828.md"
+            ],
+            "v3_derived": false
+          }
+        ]
+      },
+      {
+        "remaining": 16
+      }
+    ],
+    "registry_sha256": "239a14808850d9cc9ba589165e4263c0e3f11a0c574052f39bfaa133adf296b1"
+  },
+  "external/original-external-series.json.gz": {
+    "series": [
+      {
+        "name": "cot.managed_money_net_pctile_1y",
+        "table": "cot.023651",
+        "column": "managed_money_net_pctile_1y",
+        "where": null,
+        "known": [
+          {
+            "published_ns": 1515184200000000000,
+            "state": 1,
+            "value": null,
+            "reason": "VALUE_IS_NULL_IN_DAY_FILE",
+            "source_ordinal": 0,
+            "row": {
+              "published_ns": 1515184200000000000,
+              "event_time_ns": 1514930400000000000,
+              "publication_confidence": "derived",
+              "publication_delayed": false,
+              "contract_code": "023651",
+              "managed_money_long": 268064,
+              "managed_money_net": 5208,
+              "managed_money_net_chg_wow": null,
+              "managed_money_net_pctile_1y": null,
+              "managed_money_net_pctile_3y": null,
+              "managed_money_short": 262856,
+              "market_name": "NATURAL GAS - NEW YORK MERCANTILE EXCHANGE",
+              "open_interest": 1422917,
+              "other_reportable_net": -146408,
+              "pctile_1y_n_obs": 1,
+              "pctile_3y_n_obs": 1,
+              "producer_merchant_net": -55360,
+              "store_publication_confidence": "derived",
+              "store_publication_delayed": false,
+              "publication_ts": "2018-01-05T15:30:00-05:00",
+              "report_date": "2018-01-02",
+              "swap_dealer_net": 170973
+            }
+          },
+          {
+            "published_ns": 1515789000000000000,
+            "state": 1,
+            "value": null,
+            "reason": "VALUE_IS_NULL_IN_DAY_FILE",
+            "source_ordinal": 1,
+            "row": {
+              "published_ns": 1515789000000000000,
+              "event_time_ns": 1515535200000000000,
+              "publication_confidence": "derived",
+              "publication_delayed": false,
+              "contract_code": "023651",
+              "managed_money_long": 279250,
+              "managed_money_net": 45077,
+              "managed_money_net_chg_wow": 39869,
+              "managed_money_net_pctile_1y": null,
+              "managed_money_net_pctile_3y": null,
+              "managed_money_short": 234173,
+              "market_name": "NATURAL GAS - NEW YORK MERCANTILE EXCHANGE",
+              "open_interest": 1429598,
+              "other_reportable_net": -181788,
+              "pctile_1y_n_obs": 2,
+              "pctile_3y_n_obs": 2,
+              "producer_merchant_net": -52120,
+              "store_publication_confidence": "derived",
+              "store_publication_delayed": false,
+              "publication_ts": "2018-01-12T15:30:00-05:00",
+              "report_date": "2018-01-09",
+              "swap_dealer_net": 163529
+            }
+          },
+          {
+            "remaining": 300
+          }
+        ],
+        "absent_reason": null
+      },
+      {
+        "name": "cot.managed_money_net_chg_wow",
+        "table": "cot.023651",
+        "column": "managed_money_net_chg_wow",
+        "where": null,
+        "known": [
+          {
+            "published_ns": 1515184200000000000,
+            "state": 1,
+            "value": null,
+            "reason": "VALUE_IS_NULL_IN_DAY_FILE",
+            "source_ordinal": 0,
+            "row": {
+              "published_ns": 1515184200000000000,
+              "event_time_ns": 1514930400000000000,
+              "publication_confidence": "derived",
+              "publication_delayed": false,
+              "contract_code": "023651",
+              "managed_money_long": 268064,
+              "managed_money_net": 5208,
+              "managed_money_net_chg_wow": null,
+              "managed_money_net_pctile_1y": null,
+              "managed_money_net_pctile_3y": null,
+              "managed_money_short": 262856,
+              "market_name": "NATURAL GAS - NEW YORK MERCANTILE EXCHANGE",
+              "open_interest": 1422917,
+              "other_reportable_net": -146408,
+              "pctile_1y_n_obs": 1,
+              "pctile_3y_n_obs": 1,
+              "producer_merchant_net": -55360,
+              "store_publication_confidence": "derived",
+              "store_publication_delayed": false,
+              "publication_ts": "2018-01-05T15:30:00-05:00",
+              "report_date": "2018-01-02",
+              "swap_dealer_net": 170973
+            }
+          },
+          {
+            "published_ns": 1515789000000000000,
+            "state": 0,
+            "value": 39869.0,
+            "reason": null,
+            "source_ordinal": 1,
+            "row": {
+              "published_ns": 1515789000000000000,
+              "event_time_ns": 1515535200000000000,
+              "publication_confidence": "derived",
+              "publication_delayed": false,
+              "contract_code": "023651",
+              "managed_money_long": 279250,
+              "managed_money_net": 45077,
+              "managed_money_net_chg_wow": 39869,
+              "managed_money_net_pctile_1y": null,
+              "managed_money_net_pctile_3y": null,
+              "managed_money_short": 234173,
+              "market_name": "NATURAL GAS - NEW YORK MERCANTILE EXCHANGE",
+              "open_interest": 1429598,
+              "other_reportable_net": -181788,
+              "pctile_1y_n_obs": 2,
+              "pctile_3y_n_obs": 2,
+              "producer_merchant_net": -52120,
+              "store_publication_confidence": "derived",
+              "store_publication_delayed": false,
+              "publication_ts": "2018-01-12T15:30:00-05:00",
+              "report_date": "2018-01-09",
+              "swap_dealer_net": 163529
+            }
+          },
+          {
+            "remaining": 300
+          }
+        ],
+        "absent_reason": null
+      },
+      {
+        "remaining": 46
+      }
+    ],
+    "claims": [
+      {
+        "evidence_refs": [
+          {
+            "kind": "EXTERNAL_RELATIONSHIP",
+            "left": "mos.GFS.gw_hdd_D",
+            "right": "far_queue_age_p90_log",
+            "steps": {
+              "left_moved_only": 0,
+              "neither_moved": 420499,
+              "opposite_direction": 2,
+              "right_moved_only": 75230,
+              "same_direction": 1
+            }
+          }
+        ],
+        "finding_id": "steps-vs-endpoints:mos.GFS.gw_hdd_D:far_queue_age_p90_log",
+        "future_outcome_claimed": false,
+        "premise": "HYPOTHESIS: mos.GFS.gw_hdd_D and far_queue_age_p90_log end this window SAME_DIRECTION first-to-last, while their consecutive both-PRESENT steps moved the same way 1 times and the opposite way 2 times.",
+        "schema": "FRANKIE_DIPOLE_EXTERNAL_NOVEL_FINDING_V1",
+        "why_novel": "Computed by Frankie's code from the pair's co-movement counts; the key grades the first-to-last relation only. One window; kept as a hypothesis for later windows (rule R06).",
+        "declared_endpoint_relation": "SAME_DIRECTION"
+      },
+      {
+        "evidence_refs": [
+          {
+            "kind": "EXTERNAL_RELATIONSHIP",
+            "left": "mos.GFS.gw_hdd_D",
+            "right": "far_size_hhi",
+            "steps": {
+              "left_moved_only": 2,
+              "neither_moved": 274353,
+              "opposite_direction": 1,
+              "right_moved_only": 221376,
+              "same_direction": 0
+            }
+          }
+        ],
+        "finding_id": "steps-vs-endpoints:mos.GFS.gw_hdd_D:far_size_hhi",
+        "future_outcome_claimed": false,
+        "premise": "HYPOTHESIS: mos.GFS.gw_hdd_D and far_size_hhi end this window SAME_DIRECTION first-to-last, while their consecutive both-PRESENT steps moved the same way 0 times and the opposite way 1 times.",
+        "schema": "FRANKIE_DIPOLE_EXTERNAL_NOVEL_FINDING_V1",
+        "why_novel": "Computed by Frankie's code from the pair's co-movement counts; the key grades the first-to-last relation only. One window; kept as a hypothesis for later windows (rule R06).",
+        "declared_endpoint_relation": "SAME_DIRECTION"
+      },
+      {
+        "remaining": 439
+      }
+    ]
+  },
+  "external/external-contexts.npz": {
+    "publication_ns": {
+      "shape": [
+        31331
+      ],
+      "dtype": "int64",
+      "sample": [
+        1444314600000000000,
+        1444919400000000000,
+        1445524200000000000
+      ]
+    },
+    "previous_original_index": {
+      "shape": [
+        31332,
+        48
+      ],
+      "dtype": "int32",
+      "sample": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "next_original_index": {
+      "shape": [
+        31332,
+        48
+      ],
+      "dtype": "int32",
+      "sample": [
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}
