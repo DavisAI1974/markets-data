@@ -1,0 +1,79 @@
+name: Recover October 2 Frankie second set
+on:
+  push:
+    branches: [codex/frankie-four-day-audit-20261109]
+    paths: [.github/workflows/recover-second-set-oct02.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: frankie-second-set-recovery
+  cancel-in-progress: false
+jobs:
+  october-02:
+    if: github.repository == 'DavisAI1974/markets-data' && github.ref == 'refs/heads/codex/frankie-four-day-audit-20261109'
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: DavisAI1974/Markets
+          ref: '0aa27d766d794a9d542ecdca7596efce1c458112'
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /research/__init__.py
+            /research/kalshi/__init__.py
+            /research/ng_exhaustion_mbo_v4_state_adapter_20260820.py
+            /research/kalshi/frankie_boss/*.py
+            /research/kalshi/frankie_boss/four_day_pins/
+            /research/kalshi/frankie_boss/parallel_r3_contracts/
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install pyarrow==22.0.0
+      - name: Verify first 2,000 messages against the original book and trade records
+        run: |
+          python -u -m research.kalshi.frankie_boss.four_day_pins.recover_second_set "$RUNNER_TEMP/check" --limit 2000
+          python -c 'import json,sys; r=json.load(open(sys.argv[1])); assert r["metrics"]["rows"] == 2000 and r["metrics"]["book_samples"] == 1 and r["metrics"]["closed_trades"] > 0; print(r["metrics"])' "$RUNNER_TEMP/check/RECOVERY_RECEIPT.json"
+      - name: Calculate all 19 layers for October 2
+        timeout-minutes: 325
+        run: python -u -m research.kalshi.frankie_boss.four_day_pins.recover_second_set "$RUNNER_TEMP/second-set"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-second-set-20231002
+          path: ${{ runner.temp }}/second-set/
+          retention-days: 3
+          if-no-files-found: error
+      - name: Retain incomplete outputs for diagnosis
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: diagnostic-second-set-20231002
+          path: ${{ runner.temp }}/second-set/
+          retention-days: 1
+          if-no-files-found: ignore
+  publish:
+    needs: october-02
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: verified-second-set-20231002
+          path: second-set
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Fetch the pinned verified packet publisher
+        run: curl --fail --retry 3 -sS 'https://raw.githubusercontent.com/DavisAI1974/Markets/0aa27d766d794a9d542ecdca7596efce1c458112/research/kalshi/frankie_boss/four_day_pins/publish_verified_packet.py' -o publisher.py
+      - name: Save the verified October 2 result in Git
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python publisher.py second-set "codex/frankie-second-set-20231002-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" "tasks/family-research-20261022/frankie-four-day-pins/second-set-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}/20231002"
