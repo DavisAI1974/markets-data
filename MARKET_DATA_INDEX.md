@@ -19,7 +19,7 @@ Every defined strategy is included for platform paper testing. The JSON is a spe
 
 Requested November 9, 2026. The inventory found 64,571 non-dependency files, approximately 54.8 GB, across 18 Markets/research folders. These totals include duplicates and already-published files, not just missing research.
 
-Bulk preservation archives are being uploaded to this repository's `market-data-consolidation-20261109` release. File manifests include original paths, byte sizes, and SHA-256 checksums. GitHub server digests verify uploaded archives. Preservation does not certify unfinished scientific work as complete.
+[Preservation archives](https://github.com/DavisAI1974/markets-data/releases/tag/market-data-consolidation-20261109), the [complete research-workroot manifest](consolidation/20261109/MANIFEST.json), and [restore instructions and verification receipts](consolidation/20261109/README.md) are available. Upload and wider-folder reconciliation are still in progress. File manifests include original paths, byte sizes, and SHA-256 checksums. GitHub server digests verify uploaded archives. Preservation does not certify unfinished scientific work as complete.
 
 Local deletion requires verified remote preservation. Migration is not complete. Credentials, machine configuration, and private agent histories are excluded from public publication and must not be silently deleted. Remaining exceptions will be recorded here.
 
