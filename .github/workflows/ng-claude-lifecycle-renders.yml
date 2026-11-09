@@ -10,7 +10,7 @@ concurrency:
   group: ng-claude-lifecycle-renders
   cancel-in-progress: false
 env:
-  CODE_REV: 141d876541aae7e04e5de242d0af0a9e047228b9
+  CODE_REV: e4dda3e7bbeb55895263dcb2719bb2180523f1e0
   RED_REV: ea4d8487434c901781969d706ae44265d6d2d005
   SOURCE_REV: beb2104c079045c24832f2279eac5e8e69bc576e
 jobs:
@@ -55,6 +55,14 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install numpy==2.2.6 matplotlib==3.10.3 pillow==11.2.1
+      - name: Reuse completed pages from original attempt
+        if: ${{ !(matrix.shard == 0 && (matrix.day == '20231003' || matrix.day == '20231017')) }}
+        uses: actions/download-artifact@v4
+        with:
+          name: claude-render-${{ matrix.day }}-${{ matrix.shard }}
+          run-id: 42578942166
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/results
       - name: Render saved individual arrays
         env:
           DAY: ${{ matrix.day }}
