@@ -10,7 +10,7 @@ concurrency:
   group: ng-claude-lifecycle-renders
   cancel-in-progress: false
 env:
-  CODE_REV: e4dda3e7bbeb55895263dcb2719bb2180523f1e0
+  CODE_REV: 23b639926577248f202abecf3b0e66e0531bb7ad
   RED_REV: ea4d8487434c901781969d706ae44265d6d2d005
   SOURCE_REV: beb2104c079045c24832f2279eac5e8e69bc576e
 jobs:
@@ -60,7 +60,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: claude-render-${{ matrix.day }}-${{ matrix.shard }}
-          run-id: 42578942166
+          run-id: 42579579018
           github-token: ${{ github.token }}
           path: ${{ runner.temp }}/results
       - name: Render saved individual arrays
