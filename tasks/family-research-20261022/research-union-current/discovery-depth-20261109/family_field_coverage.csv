@@ -1,0 +1,194 @@
+field,rows,finite_numeric,unique_numeric,univariate_review,role
+family_id,3215,0,0,False,outcome or administrative/clock
+start_recv_ns,3215,3215,3215,False,outcome or administrative/clock
+input_cursor,3215,3215,3207,False,outcome or administrative/clock
+first_cursor,3215,2466,2461,False,outcome or administrative/clock
+source_ordinal,3215,3215,3198,False,outcome or administrative/clock
+pre_source_ordinal,3215,3215,3198,False,outcome or administrative/clock
+pre_input_cursor,3215,3215,3207,False,outcome or administrative/clock
+cursor_cap,3215,3215,3207,False,outcome or administrative/clock
+start_basis,3215,0,0,False,categorical/provenance context
+snapshot_member,3215,0,0,False,categorical/provenance context
+reset_member,3215,0,0,False,categorical/provenance context
+bad_receive_clock_member,3215,0,0,False,categorical/provenance context
+occurrence_count,3215,3215,266,True,numeric context
+instance,3215,3215,849,False,outcome or administrative/clock
+sample_id,3215,0,0,False,outcome or administrative/clock
+start_utc,3215,0,0,False,categorical/provenance context
+root.best_bid,3215,3215,272,True,numeric context
+root.best_ask,3215,3215,273,True,numeric context
+root.mid,3215,3215,498,True,numeric context
+root.spread,3215,3215,14,True,numeric context
+root.depth_imbalance_n,3215,3215,2741,True,numeric context
+root.depth_imbalance_full,3215,3215,3185,True,numeric context
+root.bid_depth_full,3215,3215,1224,True,numeric context
+root.ask_depth_full,3215,3215,1023,True,numeric context
+root.activity.1.trade_buy_aggressor_qty,3215,3215,131,True,numeric context
+root.activity.1.trade_sell_aggressor_qty,3215,3215,126,True,numeric context
+root.activity.1.trade_aggressor_imbalance,3215,2009,428,True,numeric context
+root.activity.1.event_count,3215,3215,465,True,numeric context
+root.activity.1.top_level_cancel_qty_derived,3215,3215,198,True,numeric context
+root.activity.5.trade_buy_aggressor_qty,3215,3215,163,True,numeric context
+root.activity.5.trade_sell_aggressor_qty,3215,3215,158,True,numeric context
+root.activity.5.trade_aggressor_imbalance,3215,2689,785,True,numeric context
+root.activity.5.event_count,3215,3215,759,True,numeric context
+root.activity.5.top_level_cancel_qty_derived,3215,3215,296,True,numeric context
+root.activity.20.trade_buy_aggressor_qty,3215,3215,262,True,numeric context
+root.activity.20.trade_sell_aggressor_qty,3215,3215,266,True,numeric context
+root.activity.20.trade_aggressor_imbalance,3215,3005,1462,True,numeric context
+root.activity.20.event_count,3215,3215,1382,True,numeric context
+root.activity.20.top_level_cancel_qty_derived,3215,3215,587,True,numeric context
+root.activity.60.trade_buy_aggressor_qty,3215,3215,399,True,numeric context
+root.activity.60.trade_sell_aggressor_qty,3215,3215,416,True,numeric context
+root.activity.60.trade_aggressor_imbalance,3215,3127,2039,True,numeric context
+root.activity.60.event_count,3215,3215,2139,True,numeric context
+root.activity.60.top_level_cancel_qty_derived,3215,3215,992,True,numeric context
+root.activity.300.trade_buy_aggressor_qty,3215,3215,944,True,numeric context
+root.activity.300.trade_sell_aggressor_qty,3215,3215,936,True,numeric context
+root.activity.300.trade_aggressor_imbalance,3215,3188,2690,True,numeric context
+root.activity.300.event_count,3215,3215,2854,True,numeric context
+root.activity.300.top_level_cancel_qty_derived,3215,3215,2027,True,numeric context
+cutoff_ns,3215,3215,3215,False,outcome or administrative/clock
+chronological_quarter,3215,3215,4,False,outcome or administrative/clock
+ref_group,3215,3215,3201,False,outcome or administrative/clock
+ref_recv_ns,3215,3215,3215,False,outcome or administrative/clock
+ref_mid,3215,3215,493,True,numeric context
+ref_spread,3215,3215,10,True,numeric context
+ref_bid_sz,3215,3215,64,True,numeric context
+ref_ask_sz,3215,3215,60,True,numeric context
+ref_bid_n,3215,3215,31,True,numeric context
+ref_ask_n,3215,3215,29,True,numeric context
+chg_1s,3215,3215,63,False,outcome or administrative/clock
+grp_1s,3215,3215,2850,False,outcome or administrative/clock
+chg_5s,3215,3215,69,False,outcome or administrative/clock
+grp_5s,3215,3215,2720,False,outcome or administrative/clock
+chg_20s,3215,3215,84,False,outcome or administrative/clock
+grp_20s,3215,3215,2697,False,outcome or administrative/clock
+chg_60s,3215,3215,104,False,outcome or administrative/clock
+grp_60s,3215,3215,2661,False,outcome or administrative/clock
+chg_120s,3215,3213,136,False,outcome or administrative/clock
+grp_120s,3215,3215,2645,False,outcome or administrative/clock
+chg_300s,3215,3206,188,False,outcome or administrative/clock
+grp_300s,3215,3215,2616,False,outcome or administrative/clock
+chg_600s,3215,3205,205,False,outcome or administrative/clock
+grp_600s,3215,3215,2612,False,outcome or administrative/clock
+tk_1s,3215,3215,63,False,outcome or administrative/clock
+tk_5s,3215,3215,69,False,outcome or administrative/clock
+tk_20s,3215,3215,84,False,outcome or administrative/clock
+tk_60s,3215,3215,104,False,outcome or administrative/clock
+tk_120s,3215,3213,136,False,outcome or administrative/clock
+tk_300s,3215,3206,188,False,outcome or administrative/clock
+tk_600s,3215,3205,205,False,outcome or administrative/clock
+prior_tk_5s,3215,3215,67,True,numeric context
+quote_changes_5s,3215,3215,94,True,numeric context
+groups_5s,3215,3215,596,True,numeric context
+prior_tk_20s,3215,3215,91,True,numeric context
+quote_changes_20s,3215,3215,178,True,numeric context
+groups_20s,3215,3215,1164,True,numeric context
+prior_tk_60s,3215,3215,133,True,numeric context
+quote_changes_60s,3215,3215,298,True,numeric context
+groups_60s,3215,3215,1854,True,numeric context
+touch_imb,3215,3215,466,True,numeric context
+touch_n_imb,3215,3215,197,True,numeric context
+spread_ticks,3215,3215,10,True,numeric context
+ob_trade_sellagg_1s,3215,3097,126,True,numeric context
+ob_trade_buyagg_1s,3215,3097,131,True,numeric context
+ob_fill_b_1s,3215,3097,115,True,numeric context
+ob_fill_a_1s,3215,3097,114,True,numeric context
+ob_rm_fill_b_1s,3215,3097,99,True,numeric context
+ob_rm_fill_a_1s,3215,3097,101,True,numeric context
+ob_rm_cx_touch_b_1s,3215,3097,78,True,numeric context
+ob_rm_cx_touch_a_1s,3215,3097,73,True,numeric context
+ob_rm_cx_near_b_1s,3215,3097,157,True,numeric context
+ob_rm_cx_near_a_1s,3215,3097,143,True,numeric context
+ob_add_touch_b_1s,3215,3097,137,True,numeric context
+ob_add_touch_a_1s,3215,3097,112,True,numeric context
+ob_add_near_b_1s,3215,3097,184,True,numeric context
+ob_add_near_a_1s,3215,3097,165,True,numeric context
+ob_mod_touch_b_1s,3215,3097,38,True,numeric context
+ob_mod_touch_a_1s,3215,3097,33,True,numeric context
+ob_n_add_touch_b_1s,3215,3097,103,True,numeric context
+ob_n_add_touch_a_1s,3215,3097,94,True,numeric context
+ob_trade_sellagg_5s,3215,3096,158,True,numeric context
+ob_trade_buyagg_5s,3215,3096,163,True,numeric context
+ob_fill_b_5s,3215,3096,145,True,numeric context
+ob_fill_a_5s,3215,3096,143,True,numeric context
+ob_rm_fill_b_5s,3215,3096,118,True,numeric context
+ob_rm_fill_a_5s,3215,3096,127,True,numeric context
+ob_rm_cx_touch_b_5s,3215,3096,116,True,numeric context
+ob_rm_cx_touch_a_5s,3215,3096,110,True,numeric context
+ob_rm_cx_near_b_5s,3215,3096,253,True,numeric context
+ob_rm_cx_near_a_5s,3215,3096,242,True,numeric context
+ob_add_touch_b_5s,3215,3096,192,True,numeric context
+ob_add_touch_a_5s,3215,3096,171,True,numeric context
+ob_add_near_b_5s,3215,3096,294,True,numeric context
+ob_add_near_a_5s,3215,3096,261,True,numeric context
+ob_mod_touch_b_5s,3215,3096,47,True,numeric context
+ob_mod_touch_a_5s,3215,3096,49,True,numeric context
+ob_n_add_touch_b_5s,3215,3096,138,True,numeric context
+ob_n_add_touch_a_5s,3215,3096,133,True,numeric context
+ob_trade_sellagg_20s,3215,3090,265,True,numeric context
+ob_trade_buyagg_20s,3215,3090,260,True,numeric context
+ob_fill_b_20s,3215,3090,257,True,numeric context
+ob_fill_a_20s,3215,3090,256,True,numeric context
+ob_rm_fill_b_20s,3215,3090,218,True,numeric context
+ob_rm_fill_a_20s,3215,3090,217,True,numeric context
+ob_rm_cx_touch_b_20s,3215,3090,245,True,numeric context
+ob_rm_cx_touch_a_20s,3215,3090,233,True,numeric context
+ob_rm_cx_near_b_20s,3215,3090,521,True,numeric context
+ob_rm_cx_near_a_20s,3215,3090,482,True,numeric context
+ob_add_touch_b_20s,3215,3090,372,True,numeric context
+ob_add_touch_a_20s,3215,3090,341,True,numeric context
+ob_add_near_b_20s,3215,3090,570,True,numeric context
+ob_add_near_a_20s,3215,3090,528,True,numeric context
+ob_mod_touch_b_20s,3215,3090,85,True,numeric context
+ob_mod_touch_a_20s,3215,3090,85,True,numeric context
+ob_n_add_touch_b_20s,3215,3090,283,True,numeric context
+ob_n_add_touch_a_20s,3215,3090,268,True,numeric context
+ob_trade_sellagg_60s,3215,3080,418,True,numeric context
+ob_trade_buyagg_60s,3215,3080,399,True,numeric context
+ob_fill_b_60s,3215,3080,402,True,numeric context
+ob_fill_a_60s,3215,3080,391,True,numeric context
+ob_rm_fill_b_60s,3215,3080,353,True,numeric context
+ob_rm_fill_a_60s,3215,3080,332,True,numeric context
+ob_rm_cx_touch_b_60s,3215,3080,461,True,numeric context
+ob_rm_cx_touch_a_60s,3215,3080,420,True,numeric context
+ob_rm_cx_near_b_60s,3215,3080,923,True,numeric context
+ob_rm_cx_near_a_60s,3215,3080,892,True,numeric context
+ob_add_touch_b_60s,3215,3080,630,True,numeric context
+ob_add_touch_a_60s,3215,3080,607,True,numeric context
+ob_add_near_b_60s,3215,3080,996,True,numeric context
+ob_add_near_a_60s,3215,3080,924,True,numeric context
+ob_mod_touch_b_60s,3215,3080,136,True,numeric context
+ob_mod_touch_a_60s,3215,3080,150,True,numeric context
+ob_n_add_touch_b_60s,3215,3080,505,True,numeric context
+ob_n_add_touch_a_60s,3215,3080,482,True,numeric context
+in_member,3215,0,0,False,categorical/provenance context
+ob_net_bid_1s,3215,3097,271,True,numeric context
+ob_net_ask_1s,3215,3097,245,True,numeric context
+ob_net_bid_5s,3215,3096,315,True,numeric context
+ob_net_ask_5s,3215,3096,285,True,numeric context
+ob_net_bid_20s,3215,3090,416,True,numeric context
+ob_net_ask_20s,3215,3090,399,True,numeric context
+ob_net_bid_60s,3215,3080,543,True,numeric context
+ob_net_ask_60s,3215,3080,548,True,numeric context
+utc_hour,3215,3215,868,False,outcome or administrative/clock
+settle_tag,3215,0,0,False,categorical/provenance context
+f60,3215,71,1,False,numeric context
+f5,3215,86,1,False,numeric context
+f1,3215,46,1,False,numeric context
+dsg,3215,1,1,False,numeric context
+dsg_n,3215,31,1,False,numeric context
+pattern,3215,0,0,False,categorical/provenance context
+start_event_ns,3215,749,749,False,outcome or administrative/clock
+window_start_ns,3215,749,749,False,outcome or administrative/clock
+instrument_id,3215,749,1,False,outcome or administrative/clock
+price,3215,741,118,True,numeric context
+price_age_s,3215,741,741,True,numeric context
+pre120_change,3215,723,64,True,numeric context
+pre_direction,3215,0,0,False,categorical/provenance context
+known_by_ns,3215,749,749,False,outcome or administrative/clock
+pre_book_age_s,3215,749,749,True,numeric context
+recorded_forecast_rows,3215,749,11,True,numeric context
+forecast_disposition,3215,0,0,False,categorical/provenance context
+continuous_book_replay,3215,0,0,False,categorical/provenance context

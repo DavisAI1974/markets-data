@@ -1,19 +1,27 @@
-# Continue after the priority-ten Excel and paper-rule delivery
+# Continue after the discovery-focused reanalysis
 
-Updated **2026-11-09T18:58:47.737899+00:00 UTC**. This is a file/status timestamp, not a market-event clock.
+Updated **2026-11-09T19:43:28.439837+00:00 UTC**. File/status clock, separate from market-event clocks.
 
-## Latest user scope — authoritative
+## Latest instructions and completion
 
-Search all three branches, select the ten most impactful or gap-filling additions, include them in Excel now, inspect the cells and reanalyze using the prior shared brief (improvements allowed), and define the first paper-trade rules. The rest of exhaustive reconciliation is deferred for a day or two. Do not restart or duplicate existing workers. Do not claim exhaustive completion.
+The user clarified that reanalysis must seek new discoveries from the depth of the data and new additions, not merely summarize/check known relationships. Finish the prior delivery first. This was done: priority-ten publication 1c234d511e26a0d1d054a39dbafc8a436232e7bb was remotely verified before starting this extension. Exhaustive branch reconciliation remains deferred for a day or two. Do not restart completed workers or read the other analyst's new report.
 
-## Delivered checkpoint
+The discovery extension is complete for the selected priority populations, with explicit remaining interpretation gaps. All 628,672 original priority records remain accounted for, plus 38,736 already-existing original order-outcome rows used as later evaluation evidence. There are 3,176 exact candidate/time joins, 17,284 verified order-state prefixes, 137 family numeric fields screened across four dates, 10,643 retained group/target comparison rows and 215 source-linked illustrative cases covering all eight claims. Do not call this exhaustive interpretation of all historical sources or proof of a profitable strategy.
 
-- Main: [Frankie_four_day_research_current.xlsx](Frankie_four_day_research_current.xlsx). It now opens with Priority findings and Paper rules v1, followed by metrics/counts/source references and the original master sheets. Original research worksheet payloads are unchanged.
-- P01 complete flow table: [Priority_native_flow.xlsx](Priority_native_flow.xlsx). P02–P10 are in the main workbook. Total 628,672 selected source records; every newly added cell compared against its frozen source projection. Both workbooks are below 100 MB.
-- [Reanalysis](priority-ten-20261109/PRIORITY_REANALYSIS.md), [paper rules](priority-ten-20261109/PAPER_STRATEGIES.md), [machine-readable rules](priority-ten-20261109/PAPER_STRATEGIES.json), [readiness](priority-ten-20261109/PAPER_READINESS.md), [manifest](priority-ten-20261109/PUBLICATION_MANIFEST.json).
-- Rule version priority-paper-v1-20261109: fresh-flow/touch agreement with later quote confirmation; observed surviving-order absorption with later quote confirmation. These are untested prospective paper hypotheses, not deployed or connected. Exact contract, adapter, UTC session, fees and measured arrival clocks remain to be configured and adapter acceptance cases run. No trade was submitted.
+## Current deliverables and authority
 
-41.3% of observed flow-ratio changes had no fresh classified buy/sell volume. Only 1,558/4,321 episodes remained eligible at scheduled +25ms; that is not our fill probability. Flow/book agreement does not consistently dominate disagreement; all four days are discovery data. Recognition median is roughly 52 seconds after retrospective birth. The ~0.5-second warning remains unverified.
+- [Main Excel](Frankie_four_day_research_current.xlsx) opens with Discovery findings, Discovery evidence, Paper discovery update, comparisons and field coverage. 131,374 new summary cells were read back; 83 pre-existing worksheet payloads remain identical. Three derived reader views were explicitly corrected/annotated. All raw source-data sheets are unchanged.
+- [Native flow companion](Priority_native_flow.xlsx) is unchanged.
+- [Discovery report](discovery-depth-20261109/REPORT.md), [claims](discovery-depth-20261109/CLAIMS.csv), [cases](discovery-depth-20261109/CASES.csv), [coverage](discovery-depth-20261109/COVERAGE.csv), [open questions](discovery-depth-20261109/OPEN_QUESTIONS.md), [receipt](discovery-depth-20261109/RECEIPT.json).
+- [Current paper readiness](discovery-depth-20261109/PAPER_READINESS.md) and [version 1.1 specification](discovery-depth-20261109/PAPER_STRATEGIES_v1_1.json) supersede the prior readiness classification. R1: execution check required; R2: observation-only. Both paper_enabled flags are false. No adapter connected and no trade submitted.
+
+New findings distinguish one-lot replenishment from larger-order depletion, survival from later price direction, flow expiry from arrivals, missing recent flow from absent book/price information, and onset mechanism from the one-lot label. Cross-window flow agreement has a horizon-dependent association. Mechanically related fills/aggressor quantities are highly redundant, not independent confirmation.
+
+**Correction:** prior P08 smaller-index ordering is superseded. Aggressor index a is interval (a,a+1]; quote index q is sampled boundary with transition in (q-1,q]. Corrected totals: 1,139 aggression intervals before quote intervals, 682 quote intervals before aggression intervals, 1,335 overlapping/unresolved and one censored. This is sampled-interval correspondence, not proof of native event order or a 0.5-second warning. Raw source values never changed. The main workbook's active Priority findings and Priority counts views are corrected; the preceding version remains only as historical provenance in Git and the prior-version directory.
+
+The rule version was revised because all 76 one-lot filled survivors at +5ms had prefix-accounted replenishment, but improved survival did not establish consistent subsequent price advantage. R2 now logs signals only until a direct complete-rule execution test. Original v1 remains frozen for audit; risk limits were not optimized. Empty classified-flow windows are ordinary signal invalidation states, distinct from feed corruption.
+
+Local discovery work: E:/Markets/outputs/research-union-20261109/discovery-depth. Source bytes and verified projections remain at the parent workroot. New scripts and complete comparison tables are published under discovery-depth-20261109. Six focused tests and independent Excel/loop recounts passed. See WORKBOOK_VERIFICATION.json and INDEPENDENT_CHECKS.json.
 
 ## Preserved constraints
 
@@ -33,6 +41,6 @@ All workers observed in this turn finished; check actual processes and logs befo
 
 ## Next session
 
-If continuing paper setup, use the frozen rules and configure the actual adapter; do not silently change thresholds. If resuming reconciliation, inventory live workers first, inspect completed manifests and checkpoints, verify Oct2 workflow Excel, then complete other dates and unbound-source disposition. Publish only explicitly verified artifacts. Do not use the older bulk publisher blindly; it has a different scope. The next untouched paper session supplies the first prospective evidence for these rule combinations.
+If continuing paper setup, use discovery readiness version 1.1: R1 requires execution checks and R2 is observation-only. Both paper_enabled flags are false. Configure the actual adapter; do not silently change thresholds. If resuming reconciliation, inventory live workers first, inspect completed manifests and checkpoints, verify Oct2 workflow Excel, then complete other dates and unbound-source disposition. Publish only explicitly verified artifacts. Do not use the older bulk publisher blindly; it has a different scope. The next untouched paper session supplies the first prospective evidence for these rule combinations.
 
 The pre-priority handoff remains in Git history at ef5466792f6eecc0fe32879e42bacc450cf4e75b. That older running-worker status is superseded here.

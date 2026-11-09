@@ -1,6 +1,6 @@
 {
-  "status_as_of_utc": "2026-11-09T19:00:19.651175+00:00",
-  "status_as_of_eastern": "2026-11-09T14:00:19.651175-05:00",
+  "status_as_of_utc": "2026-11-09T19:43:28.439837+00:00",
+  "status_as_of_eastern": "2026-11-09T14:43:28.439837-05:00",
   "clock_meaning": "File/status time, distinct from exact market event, receive, known-by and scheduled clocks inside records",
   "verified_workbooks": [
     {
@@ -1435,7 +1435,7 @@
     "research_rows": 5075640,
     "trade_layer_rows": 143270
   },
-  "previous_status_as_of_utc": "2026-11-09T18:17:22.070668+00:00",
+  "previous_status_as_of_utc": "2026-11-09T19:00:19.651175+00:00",
   "historical_worker_log_snapshot": {
     "publication-progress.log": [
       "remote: warning: File tasks/family-research-20261022/research-union-current/trade-layers/20231017-all-trade-layer-values-03.xlsx is 55.12 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        ",
@@ -1547,5 +1547,16 @@
     "paper_rule_version": "priority-paper-v1-20261109",
     "paper_execution": "Not connected or running",
     "publication_parent": "ef5466792f6eecc0fe32879e42bacc450cf4e75b"
+  },
+  "discovery_delivery": {
+    "status": "Discovery extension complete; broader exhaustive interpretation/reconciliation deferred",
+    "input_publication": "1c234d511e26a0d1d054a39dbafc8a436232e7bb",
+    "receipt": "discovery-depth-20261109/RECEIPT.json",
+    "workbook_verification": "discovery-depth-20261109/WORKBOOK_VERIFICATION.json",
+    "readiness_version": "priority-paper-v1.1-discovery-20261109",
+    "R1": "execution check required; disabled",
+    "R2": "observation-only; disabled",
+    "trading_started": false,
+    "timing_correction": "Prior P08 raw-index order superseded by interval-bound comparison"
   }
 }

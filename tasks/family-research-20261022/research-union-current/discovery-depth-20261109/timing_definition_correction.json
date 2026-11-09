@@ -1,0 +1,7 @@
+{
+  "source_definition": "aggressor k is interval (birth+k,birth+k+1]; quote q is first sampled boundary with changed best quote, so its observed transition lies in (birth+q-1,birth+q]. Transient earlier quote changes may be missed. These are not native event clocks.",
+  "correction": "The prior smaller-k comparison overstated distinct-bin ordering; replacement counts use non-overlapping intervals and explicitly unresolved overlap. No raw cell values change.",
+  "producer_git_blob": "98287f18f68139baedb6e063fce088379477d6bc",
+  "lean_producer_git_blob": "f0f8fb57d32bf99b55fe520a11ec082800511453",
+  "lean_band_meaning": "2.5/50/97.5 percentiles across 200 matched-control draws, not uncertainty over independent trading days and not multiple-testing-adjusted significance."
+}

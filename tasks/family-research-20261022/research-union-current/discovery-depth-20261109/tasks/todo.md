@@ -1,0 +1,9 @@
+- [x] Confirm prior publication and remote workbook hashes.
+- [x] Recover shared analytical instructions and record discovery questions before viewing new comparisons.
+- [x] Load frozen projections, verify source counts, establish exact joins and clock checks.
+- [x] Analyze recognition/context interactions and family flow/depth/price feedback.
+- [x] Analyze prospective order-state transitions and one-lot origins; check repeated-order dependence.
+- [x] Analyze flow expiry/persistence and prebirth/control implications; retain inconclusive comparisons.
+- [x] Verify consequential results against actual cells and independent arithmetic.
+- [x] Write discovery claims, cases, source/field coverage, dipole map, gaps and paper-rule implications.
+- [x] Add verified discovery views to Excel and publish the addendum with explicit paper-readiness versioning. This checkpoint is the publication; remote confirmation is recorded separately.
