@@ -1,0 +1,52 @@
+name: Review informational dipole PDF
+on:
+  push:
+    branches: [codex/native-dipole-artifacts-20261108]
+    paths: [.github/workflows/review-informational-dipole.yml]
+permissions:
+  contents: write
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/native-dipole-artifacts-20261108
+          sparse-checkout: .github
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install PyMuPDF==1.25.5
+      - name: Read and render original attachment
+        run: |
+          python - <<'PY'
+          import fitz,hashlib,json,pathlib,urllib.request
+          root="tasks/family-research-20261022/user-informational-renders/20261109-c598f788"
+          rev="5d79f06fde9d0b402c089005d6f421888aecb316"
+          path=root+"/ng-dipole-renders.pdf"
+          raw=urllib.request.urlopen("https://raw.githubusercontent.com/DavisAI1974/markets-data/"+rev+"/"+path).read()
+          sha=hashlib.sha256(raw).hexdigest()
+          assert sha=="c598f78849a36642f51373e47abb3ec3ff98dfe6d8baaf2bfc4c0e9262a71bc5" and len(raw)==210352
+          out=pathlib.Path(root+"/review");out.mkdir(parents=True,exist_ok=True)
+          doc=fitz.open(stream=raw,filetype="pdf")
+          texts=[];pages=[]
+          for i,p in enumerate(doc):
+              name=f"page-{i+1:02d}.png";p.get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).save(out/name)
+              text=p.get_text();texts.append(f"PAGE {i+1}\n"+text)
+              pages.append(dict(page=i+1,width=p.rect.width,height=p.rect.height,text_characters=len(text),render=name))
+          (out/"text.txt").write_text("\n\n".join(texts))
+          receipt=dict(source_revision=rev,source_path=path,source_sha256=sha,source_bytes=len(raw),pages=pages,
+          user_context="User supplied averaged renders for informational purposes. Preserve as contextual views alongside individual whole-lifecycle evidence; not a replacement for it.")
+          (out/"receipt.json").write_text(json.dumps(receipt,indent=2)+"\n")
+          manifest=[]
+          for p in sorted(out.iterdir()):
+              b=p.read_bytes();manifest.append(dict(path=p.name,bytes=len(b),sha256=hashlib.sha256(b).hexdigest()))
+          (out/"MANIFEST.json").write_text(json.dumps(manifest,indent=2)+"\n")
+          print(json.dumps(receipt))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --sparse tasks/family-research-20261022/user-informational-renders/20261109-c598f788/review
+          git commit -m "docs: render and verify informational PDF without changing source"
+          git pull --rebase origin codex/native-dipole-artifacts-20261108
+          git push origin HEAD:codex/native-dipole-artifacts-20261108
