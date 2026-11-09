@@ -1,0 +1,40 @@
+{
+  "trading_dates": [
+    "20231002",
+    "20231003",
+    "20231017",
+    "20231018"
+  ],
+  "workbook": "https://github.com/DavisAI1974/markets-data/blob/9ef34355e8af7d956a811e4a0b26c4c5cee2d8e5/tasks/family-research-20261022/frankie-four-day-pins/extended-review-20261109/Frankie_four_day_layer_review.xlsx",
+  "workbook_state": "Unlocked for user review. Runtime sheet and layer bindings pending.",
+  "desktop_original": "https://github.com/DavisAI1974/Markets/tree/beb2104c079045c24832f2279eac5e8e69bc576e/tasks/family-research-20261022/claude-pass-3day",
+  "desktop_audit": "https://github.com/DavisAI1974/markets-data/blob/c1fcab162d8bb711d781c069722a591da8698b94/tasks/family-research-20261022/frankie-four-day-pins/extended-review-20261109/desktop-source-audit/DESKTOP_BRANCH_AUDIT.json",
+  "ccode_v2": "https://github.com/DavisAI1974/Markets/tree/47b62f934e3bfa20328dd7456971693bb7a99fef/agent-pass/reanalysis/claude",
+  "ccode_review_disposition": "Hold CCode interpretations, winner/loser choices, curated cohorts and derived claims from reanalysis. Retain independently verified source data and clocks.",
+  "ccode_v2_checks": {
+    "claims_csv_rows": 3942,
+    "dependence_claim_rows": 19,
+    "cases_csv_rows": 76,
+    "new_price_response_cases": 20,
+    "case_outcome_clocks_in_scientific_notation": 64,
+    "new_price_response_outcome_clocks_wrong_by_one_ns": 16,
+    "outcome_clock_issue": "m15 constructs a nominal cut plus 20 seconds. Keep it distinct from the actual observed endpoint and recover exact timestamps from source observations.",
+    "coverage_rows_inventoried_not_separately_analyzed": 79,
+    "uninterpreted_field_names": 290,
+    "unresolved": "Within-second message ordering, per-order lifetimes, and incomplete substantive review of source files and visuals."
+  },
+  "databento_pull": "https://github.com/DavisAI1974/Markets/commit/b9ed76186a75b597a507451bc8e9949b9c156d19",
+  "verified_prior_evening_mbo_records": {
+    "oct17": 4805,
+    "oct02": 12189
+  },
+  "analysis_rules": [
+    "Use Git only. No AWS. Keep all eligible NG rows and record weak, flat, inverse, adverse and unresolved cases.",
+    "Keep the archived 193,124 dipole stages out until verified. Recalculate dipole dive from NG observations. Keep the exact row 2 lead out pending verification. Timing rows 4, 5, 6 are research context.",
+    "Derive actual outcomes from observed MBO and FIFO replay, with exact decision and outcome clocks. Exclude the earlier delayed outcomes and old second-workflow calculations.",
+    "Correct the ten-case view clock bindings from saved sources. Case 4 confirmation is beyond the saved window. Admit its continuation view only with a verified post-confirmation path.",
+    "Keep reanalysis on hold until review and the workbook gate are satisfied."
+  ],
+  "independent_git_replay": "https://github.com/DavisAI1974/markets-data/actions/runs/42640458600",
+  "initial_reanalysis_exclusion": "Pending outputs of the separate Git second-set replay."
+}
