@@ -1,0 +1,105 @@
+name: Run one October 2 replay segment
+on:
+  workflow_call:
+    inputs:
+      segment:
+        required: true
+        type: number
+      seconds:
+        required: true
+        type: number
+      previous:
+        required: false
+        type: number
+        default: 0
+      previous_sha256:
+        required: false
+        type: string
+        default: ''
+    outputs:
+      complete:
+        value: ${{ jobs.replay.outputs.complete }}
+      checkpoint_sha256:
+        value: ${{ jobs.replay.outputs.checkpoint_sha256 }}
+permissions:
+  contents: read
+jobs:
+  replay:
+    name: Replay segment ${{ inputs.segment }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    outputs:
+      complete: ${{ steps.calculate.outputs.complete }}
+      checkpoint_sha256: ${{ steps.calculate.outputs.checkpoint_sha256 }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: DavisAI1974/Markets
+          ref: '7f34afaf6c9011ed7061f3989d52c70e98740402'
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /markets_adapter.py
+            /research/refrag/__init__.py
+            /research/refrag/qsv_registry.py
+            /research/__init__.py
+            /research/kalshi/__init__.py
+            /research/ng_exhaustion_mbo_v4_state_adapter_20260820.py
+            /research/kalshi/frankie_boss/*.py
+            /research/kalshi/frankie_boss/SPEC-c15-teacher-r3.md
+            /research/kalshi/frankie_boss/four_day_pins/
+            /research/kalshi/frankie_boss/parallel_r3_contracts/
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 pyarrow==22.0.0
+      - name: Download the previous checkpoint
+        if: inputs.previous > 0
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: checkpoint-second-set-20231002-${{ inputs.previous }}
+          path: ${{ runner.temp }}/previous-checkpoint/
+      - name: Replay and save at the next closed group after the timer
+        id: calculate
+        timeout-minutes: 132
+        env:
+          SEGMENT_SECONDS: ${{ inputs.seconds }}
+          PREVIOUS_SEGMENT: ${{ inputs.previous }}
+          CHECKPOINT_SHA256: ${{ inputs.previous_sha256 }}
+        run: |
+          set -euo pipefail
+          args=("$RUNNER_TEMP/second-set" --max-seconds "$SEGMENT_SECONDS")
+          if [[ "$PREVIOUS_SEGMENT" != 0 ]]; then
+            args+=(--resume-from "$RUNNER_TEMP/previous-checkpoint" --resume-sha256 "$CHECKPOINT_SHA256")
+          fi
+          python -u -m research.kalshi.frankie_boss.four_day_pins.recover_second_set "${args[@]}"
+          python - "$RUNNER_TEMP/second-set/RECOVERY_RECEIPT.json" >> "$GITHUB_OUTPUT" <<'PY'
+          import json, sys
+          with open(sys.argv[1]) as f:
+              receipt = json.load(f)
+          complete = receipt['complete_second_set_replay']
+          digest = receipt['checkpoint_sha256']
+          if not complete and not digest:
+              raise ValueError('Partial replay did not produce a checkpoint')
+          print('complete=' + str(complete).lower())
+          print('checkpoint_sha256=' + (digest or ''))
+          PY
+      - name: Upload the verified day
+        if: steps.calculate.outputs.complete == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-second-set-20231002
+          path: ${{ runner.temp }}/second-set/
+          retention-days: 3
+          if-no-files-found: error
+      - name: Upload the checkpoint before the next segment
+        if: steps.calculate.outputs.complete == 'false'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: checkpoint-second-set-20231002-${{ inputs.segment }}
+          path: ${{ runner.temp }}/second-set/
+          retention-days: 7
+          if-no-files-found: error

@@ -10,73 +10,87 @@ concurrency:
   group: frankie-second-set-recovery
   cancel-in-progress: false
 jobs:
-  october-02:
+  segment_1:
     if: github.repository == 'DavisAI1974/markets-data' && github.ref == 'refs/heads/codex/frankie-four-day-audit-20261109'
-    runs-on: ubuntu-latest
-    timeout-minutes: 355
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-        with:
-          repository: DavisAI1974/Markets
-          ref: '7f34afaf6c9011ed7061f3989d52c70e98740402'
-          persist-credentials: false
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            /markets_adapter.py
-            /research/refrag/__init__.py
-            /research/refrag/qsv_registry.py
-            /research/__init__.py
-            /research/kalshi/__init__.py
-            /research/ng_exhaustion_mbo_v4_state_adapter_20260820.py
-            /research/kalshi/frankie_boss/*.py
-            /research/kalshi/frankie_boss/SPEC-c15-teacher-r3.md
-            /research/kalshi/frankie_boss/four_day_pins/
-            /research/kalshi/frankie_boss/parallel_r3_contracts/
-      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
-        with:
-          python-version: '3.12'
-      - name: Install CPU dependencies
-        run: |
-          python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
-          python -m pip install numpy==2.2.6 pyarrow==22.0.0
-      - name: Verify first 2,000 messages against the original book and trade records
-        run: |
-          python -u -m research.kalshi.frankie_boss.four_day_pins.recover_second_set "$RUNNER_TEMP/check" --limit 2000
-          python -c 'import json,sys; r=json.load(open(sys.argv[1])); assert r["metrics"]["rows"] == 2000 and r["metrics"]["book_samples"] == 1 and r["metrics"]["closed_trades"] > 0; print(r["metrics"])' "$RUNNER_TEMP/check/RECOVERY_RECEIPT.json"
-      - name: Calculate all 19 layers for October 2
-        id: replay
-        timeout-minutes: 325
-        run: |
-          python -u -m research.kalshi.frankie_boss.four_day_pins.recover_second_set "$RUNNER_TEMP/second-set" --max-seconds 18000
-          python -c 'import json,sys; print("complete="+str(json.load(open(sys.argv[1]))["complete_second_set_replay"]).lower())' "$RUNNER_TEMP/second-set/RECOVERY_RECEIPT.json" >> "$GITHUB_OUTPUT"
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        if: steps.replay.outputs.complete == 'true'
-        with:
-          name: verified-second-set-20231002
-          path: ${{ runner.temp }}/second-set/
-          retention-days: 3
-          if-no-files-found: error
-      - name: Upload the timed checkpoint for resume
-        if: steps.replay.outputs.complete == 'false'
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: checkpoint-second-set-20231002
-          path: ${{ runner.temp }}/second-set/
-          retention-days: 7
-          if-no-files-found: error
-      - name: Retain incomplete outputs for diagnosis
-        if: failure()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: diagnostic-second-set-20231002
-          path: ${{ runner.temp }}/second-set/
-          retention-days: 1
-          if-no-files-found: ignore
-    outputs:
-      complete: ${{ steps.replay.outputs.complete }}
+    uses: ./.github/workflows/frankie-second-set-segment.yml
+    with:
+      segment: 1
+      seconds: 75
+  segment_2:
+    needs: segment_1
+    if: needs.segment_1.outputs.complete == 'false'
+    uses: ./.github/workflows/frankie-second-set-segment.yml
+    with:
+      segment: 2
+      seconds: 7200
+      previous: 1
+      previous_sha256: ${{ needs.segment_1.outputs.checkpoint_sha256 }}
+  segment_3:
+    needs: segment_2
+    if: needs.segment_2.outputs.complete == 'false'
+    uses: ./.github/workflows/frankie-second-set-segment.yml
+    with:
+      segment: 3
+      seconds: 7200
+      previous: 2
+      previous_sha256: ${{ needs.segment_2.outputs.checkpoint_sha256 }}
+  segment_4:
+    needs: segment_3
+    if: needs.segment_3.outputs.complete == 'false'
+    uses: ./.github/workflows/frankie-second-set-segment.yml
+    with:
+      segment: 4
+      seconds: 7200
+      previous: 3
+      previous_sha256: ${{ needs.segment_3.outputs.checkpoint_sha256 }}
+  segment_5:
+    needs: segment_4
+    if: needs.segment_4.outputs.complete == 'false'
+    uses: ./.github/workflows/frankie-second-set-segment.yml
+    with:
+      segment: 5
+      seconds: 7200
+      previous: 4
+      previous_sha256: ${{ needs.segment_4.outputs.checkpoint_sha256 }}
+  segment_6:
+    needs: segment_5
+    if: needs.segment_5.outputs.complete == 'false'
+    uses: ./.github/workflows/frankie-second-set-segment.yml
+    with:
+      segment: 6
+      seconds: 7200
+      previous: 5
+      previous_sha256: ${{ needs.segment_5.outputs.checkpoint_sha256 }}
+  segment_7:
+    needs: segment_6
+    if: needs.segment_6.outputs.complete == 'false'
+    uses: ./.github/workflows/frankie-second-set-segment.yml
+    with:
+      segment: 7
+      seconds: 7200
+      previous: 6
+      previous_sha256: ${{ needs.segment_6.outputs.checkpoint_sha256 }}
+  segment_8:
+    needs: segment_7
+    if: needs.segment_7.outputs.complete == 'false'
+    uses: ./.github/workflows/frankie-second-set-segment.yml
+    with:
+      segment: 8
+      seconds: 7200
+      previous: 7
+      previous_sha256: ${{ needs.segment_7.outputs.checkpoint_sha256 }}
+  segment_9:
+    needs: segment_8
+    if: needs.segment_8.outputs.complete == 'false'
+    uses: ./.github/workflows/frankie-second-set-segment.yml
+    with:
+      segment: 9
+      seconds: 7200
+      previous: 8
+      previous_sha256: ${{ needs.segment_8.outputs.checkpoint_sha256 }}
   publish:
-    needs: october-02
-    if: needs.october-02.outputs.complete == 'true'
+    needs: [segment_1, segment_2, segment_3, segment_4, segment_5, segment_6, segment_7, segment_8, segment_9]
+    if: ${{ !cancelled() && contains(needs.*.outputs.complete, 'true') }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     permissions:
