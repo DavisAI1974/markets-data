@@ -1,0 +1,40 @@
+name: Recover saved Native lifecycle layers
+on:
+  push:
+    branches: [codex/frankie-four-day-audit-20261109]
+    paths: [.github/workflows/recover-native-lifecycle.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        day: ['20231002','20231003','20231017']
+    env:
+      GH_TOKEN: ${{ github.token }}
+      CODE_REV: 576138361aa27c111b2b5ccc47639e73c827465c
+      DAY: ${{ matrix.day }}
+      OUTPUT_PATH: /tmp/lifecycle-recovery
+      OUTPUT_PREFIX: tasks/family-research-20261022/frankie-four-day-pins/native-lifecycle-${{ github.run_id }}-1/${{ matrix.day }}
+      OUTPUT_BRANCH: codex/frankie-lifecycle-recovery-${{ matrix.day }}-${{ github.run_id }}
+    steps:
+      - name: Install exact archive and index readers
+        run: pip install zstandard==0.25.0 pyarrow==22.0.0
+      - name: Recover original saved rows without producer execution
+        run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/research/kalshi/frankie_boss/four_day_pins/recover_native_lifecycle.py" -o /tmp/recover_native_lifecycle.py
+          python /tmp/recover_native_lifecycle.py "$DAY" "$OUTPUT_PATH"
+      - name: Publish verified ledger and exact source-clock index
+        run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/research/kalshi/frankie_boss/four_day_pins/publish_verified_packet.py" -o /tmp/publish_verified_packet.py
+          python /tmp/publish_verified_packet.py "$OUTPUT_PATH" "$OUTPUT_BRANCH" "$OUTPUT_PREFIX"
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: retained-native-lifecycle-${{ matrix.day }}
+          path: ${{ env.OUTPUT_PATH }}
+          retention-days: 3
