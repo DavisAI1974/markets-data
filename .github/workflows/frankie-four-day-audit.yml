@@ -1,0 +1,42 @@
+name: Frankie four-day evidence assembly
+on:
+  push:
+    branches: [codex/frankie-four-day-audit-20261109]
+    paths: [.github/workflows/frankie-four-day-audit.yml]
+permissions:
+  contents: write
+concurrency:
+  group: frankie-four-day-audit
+  cancel-in-progress: false
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      CODE_REV: c79c45ff3b93c918f37688c01c76fffabe16ae7f
+      OUTPUT_PATH: tasks/family-research-20261022/frankie-four-day-pins/run-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/frankie-four-day-audit-20261109
+          sparse-checkout: .github
+      - name: Install saved-data reader
+        run: pip install pyarrow
+      - name: Verify and join original evidence
+        run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/research/kalshi/frankie_boss/four_day_pins/assemble.py" -o /tmp/assemble.py
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/research/kalshi/frankie_boss/four_day_pins/request.json" -o /tmp/request.json
+          python /tmp/assemble.py /tmp/request.json "$OUTPUT_PATH"
+      - name: Publish verified packet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --sparse "$OUTPUT_PATH"
+          git commit -m "data: save four-day Frankie source pins and joined original inputs"
+          git push origin HEAD:codex/frankie-four-day-audit-20261109
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: frankie-pin-progress
+          path: ${{ env.OUTPUT_PATH }}
+
