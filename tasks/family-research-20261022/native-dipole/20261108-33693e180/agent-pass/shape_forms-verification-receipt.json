@@ -1,0 +1,138 @@
+{
+  "observation_rows": 5085,
+  "defined_observations": 5079,
+  "fit_models": 192,
+  "fit_grid_rows": 1920,
+  "residual_rows": 271040,
+  "unavailable_residuals": 160,
+  "outside_source_rank_domain": 22664,
+  "environment_rows": 15255,
+  "paired_control_contrasts": 10170,
+  "versions": {
+    "scipy": "1.16.3",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3"
+  },
+  "source_inputs": [
+    {
+      "path": "tables\\20231002-candidate-operands.csv",
+      "bytes": 120059,
+      "sha256": "b022e836b5e38eec95ef65c369707caf4ee0d534bccd577ee31a0bc5b13e1095"
+    },
+    {
+      "path": "tables\\20231002-path-members.csv",
+      "bytes": 529341,
+      "sha256": "8ff369e85117c7cd0affeed67e93217d67fd5e8c5c81a08f331226ef9d131543"
+    },
+    {
+      "path": "tables\\20231002-matching-audit.csv",
+      "bytes": 128567,
+      "sha256": "750b1b70fefccbe91ad07b79a105eb05efc8fa367528c5bd7713d623798ee143"
+    },
+    {
+      "path": "tables\\20231002-lag-footprints.csv",
+      "bytes": 1171394,
+      "sha256": "abb709f2fff9dfd785172671b2d5f72c3d01957de0cd083aee943139e02131fd"
+    },
+    {
+      "path": "tables\\20231002-detector-free-events.csv.gz",
+      "bytes": 4390383,
+      "sha256": "47a6e583dd44aa4eabdff748eb89ca016376403d85b115976d724de9200e69b0"
+    },
+    {
+      "path": "tables\\20231002-detector-free-nearest.csv",
+      "bytes": 265452,
+      "sha256": "89a7a89c848345c35f1991849d2fec9886523629248b663d3291043d81377590"
+    },
+    {
+      "path": "tables\\20231003-candidate-operands.csv",
+      "bytes": 134687,
+      "sha256": "6e70936c98b2d8a3f693a70339dfc37962496809402c755b4226f2ee97c344b3"
+    },
+    {
+      "path": "tables\\20231003-path-members.csv",
+      "bytes": 590800,
+      "sha256": "cfd52e94909a5e8a3c5810e2012d98c94c9cc15ec1122b83fe3f3794b60b37d9"
+    },
+    {
+      "path": "tables\\20231003-matching-audit.csv",
+      "bytes": 144355,
+      "sha256": "dbbf03dd015e6187674cbba1734aab987425a04fb24801030bce5b00c5527dbd"
+    },
+    {
+      "path": "tables\\20231003-lag-footprints.csv",
+      "bytes": 1292151,
+      "sha256": "033e310267774a973e125974fb45792eea897ef838a848b2adbd9b599960e456"
+    },
+    {
+      "path": "tables\\20231003-detector-free-events.csv.gz",
+      "bytes": 4638678,
+      "sha256": "601f80a46ed9c77dd6b7ee9d06a60bbce6ec7da66d2c2a410201827184f0251b"
+    },
+    {
+      "path": "tables\\20231003-detector-free-nearest.csv",
+      "bytes": 298767,
+      "sha256": "a74132511a450d8befae611c3b4ca414a8dea68c418557ad21be5f06c0750b30"
+    },
+    {
+      "path": "tables\\20231017-candidate-operands.csv",
+      "bytes": 120096,
+      "sha256": "641d5764b887ea09ed562f226795bc658bc6db735a5312f376fe535b06230659"
+    },
+    {
+      "path": "tables\\20231017-path-members.csv",
+      "bytes": 528728,
+      "sha256": "5a5e5ebe5bce0b681bebe8ca31d188b2ec92f25c9f4befff07f076826dbf5495"
+    },
+    {
+      "path": "tables\\20231017-matching-audit.csv",
+      "bytes": 128278,
+      "sha256": "7c0d868faf1fb1d9571f6ca26c50277912d03d34c4e58fbb2cae75779b4c1f70"
+    },
+    {
+      "path": "tables\\20231017-lag-footprints.csv",
+      "bytes": 1170848,
+      "sha256": "217c82f39e4094c36d663a99023ce72814c77fbbe142c7fc968a617e756ee8e5"
+    },
+    {
+      "path": "tables\\20231017-detector-free-events.csv.gz",
+      "bytes": 4292613,
+      "sha256": "50fe6de7218be63287a26327d4115ae02c6585715c1382703f5ac744928764fc"
+    },
+    {
+      "path": "tables\\20231017-detector-free-nearest.csv",
+      "bytes": 265590,
+      "sha256": "f94ebe99b3d84c8030eb67c515172cdbcbd25b3409732a0c40fd8d00ce8fcfa4"
+    },
+    {
+      "path": "tables\\20231018-candidate-operands.csv",
+      "bytes": 144090,
+      "sha256": "f9931541cddeb4bd250ca77445fa305b0ad7588028d6f95565c8f5bde38abe6a"
+    },
+    {
+      "path": "tables\\20231018-path-members.csv",
+      "bytes": 628109,
+      "sha256": "33ee24eebe40432c2f3aa73843570228f278ff449142fcace934561aa75935b9"
+    },
+    {
+      "path": "tables\\20231018-matching-audit.csv",
+      "bytes": 149776,
+      "sha256": "b7c8e3f5814e620cbe9dbefbefac65ba061a1007c108ce377e47a8320ae1bf4b"
+    },
+    {
+      "path": "tables\\20231018-lag-footprints.csv",
+      "bytes": 1361721,
+      "sha256": "b10703058336939fab024ff984ed24071fb67a4cea72796b3a8694c73d06d194"
+    },
+    {
+      "path": "tables\\20231018-detector-free-events.csv.gz",
+      "bytes": 4036255,
+      "sha256": "e4db19db033440d83d49e2a21c24b0a2d29f452a99e12dd0e929cc98568b92fb"
+    },
+    {
+      "path": "tables\\20231018-detector-free-nearest.csv",
+      "bytes": 309064,
+      "sha256": "4842b6ee385d1936a1a88b406aa5dd86fa4f2dd8c253d58b7e1add6e38eb0dd4"
+    }
+  ]
+}
