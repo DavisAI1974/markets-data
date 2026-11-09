@@ -12,7 +12,7 @@ jobs:
     timeout-minutes: 240
     env:
       GH_TOKEN: ${{ github.token }}
-      CODE_REV: 26b508b39dc4b5cdbca98e170d3e2df071955ae3
+      CODE_REV: 9b9ff41d1cf072559f3bd10eddd3e1964b2dd3ff
     steps:
       - name: Publish retained calculations serially with rate-limit recovery
         run: |
