@@ -1,0 +1,15 @@
+test_durations_are_not_absolute_clocks (test_pin_core.ClockTests.test_durations_are_not_absolute_clocks) ... ok
+test_equal_publications_keep_last_source_order (test_pin_core.ClockTests.test_equal_publications_keep_last_source_order) ... ok
+test_flow_and_outcome_are_different_layers (test_pin_core.ClockTests.test_flow_and_outcome_are_different_layers) ... ok
+test_future_value_is_never_in_asof_context (test_pin_core.ClockTests.test_future_value_is_never_in_asof_context) ... ok
+test_horizon_is_relative_to_event_not_session (test_pin_core.ClockTests.test_horizon_is_relative_to_event_not_session) ... ok
+test_latest_invalid_is_not_replaced_by_older_present (test_pin_core.ClockTests.test_latest_invalid_is_not_replaced_by_older_present) ... ok
+test_missing_recognition_is_not_invented (test_pin_core.ClockTests.test_missing_recognition_is_not_invented) ... ok
+test_nanoseconds_are_not_rounded (test_pin_core.ClockTests.test_nanoseconds_are_not_rounded) ... ok
+test_nested_clocks_remain_distinct (test_pin_core.ClockTests.test_nested_clocks_remain_distinct) ... ok
+test_original_epoch_second_is_label_not_availability (test_pin_core.ClockTests.test_original_epoch_second_is_label_not_availability) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK
