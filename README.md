@@ -1,7 +1,9 @@
 # markets-data
 
-Pinned data inputs for DavisAI1974/Markets: Databento NG MBO UTC-day members, standalone group exports,
-sealed touch-print decisions and the October 18 candidate inputs and ledgers. Every file is listed in MANIFEST.json
-with its sha256; loaders verify on read (see Markets: tasks/family-research-20261022/claude-code/data_locator.py).
-ROOT frame spools are not here; MANIFEST.json lists them with their S3 targets and part hashes.
-No code lives here. No file is ever rewritten in place; a corrected file gets a new path and a new manifest entry.
+**[Start here: market data, current workbooks, findings, paper rules, and consolidation status](MARKET_DATA_INDEX.md).**
+
+This is the central repository for DavisAI market data and research artifacts. The index identifies current results, archived evidence, unfinished work, and exact source manifests across research branches. Local E-drive folders are migration sources, not authoritative storage.
+
+The original pinned-input catalog remains in [MANIFEST.json](MANIFEST.json). Preserve its immutable input paths and checksums. New research outputs and preservation archives have their own linked manifests; the original catalog does not enumerate every later artifact.
+
+[November 9 preservation archives](https://github.com/DavisAI1974/markets-data/releases/tag/market-data-consolidation-20261109) are being consolidated and verified. Consult the index for coverage and outstanding work.
