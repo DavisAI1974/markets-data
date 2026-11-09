@@ -1,0 +1,87 @@
+name: Pin all retained source rows
+on:
+  push:
+    branches: [codex/native-dipole-artifacts-20261108]
+    paths: [.github/workflows/ng-all-row-pins.yml]
+permissions:
+  contents: write
+concurrency:
+  group: ng-all-row-pins
+  cancel-in-progress: false
+env:
+  CODE_REV: e0acd837b5dae97f73a8eab64dbe0f822c14b61a
+jobs:
+  pin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ['20231002','20231003','20231017','20231018','cross']
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pyarrow==20.0.0 numpy==2.2.6
+      - name: Pin and independently read back every source row
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          mkdir -p code results
+          for f in bulk.py inputs.json pin_core.py test_pin_core.py link_io.py; do
+            curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/lifecycle-links/$f" -o "code/$f"
+          done
+          (cd code && python -m unittest -v test_pin_core.py)
+          python -u code/bulk.py --shard "$SHARD" --output "results/$SHARD"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: row-pins-${{ matrix.shard }}
+          path: results
+  publish:
+    needs: pin
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OUTPUT_PATH: tasks/family-research-20261022/all-row-clock-pins/run-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/native-dipole-artifacts-20261108
+          sparse-checkout: .github
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: row-pins-*
+          merge-multiple: true
+          path: ${{ env.OUTPUT_PATH }}
+      - name: Check file coverage and publish registry index
+        run: |
+          python - <<'PY'
+          import os,json,pathlib,urllib.request,hashlib,collections
+          root=pathlib.Path(os.environ["OUTPUT_PATH"])
+          rev=os.environ["CODE_REV"]
+          inp=json.load(urllib.request.urlopen(f"https://raw.githubusercontent.com/DavisAI1974/Markets/{rev}/agent-pass/lifecycle-links/inputs.json"))
+          cat=sum([json.loads(p.read_text()) for p in root.glob("*/CATALOG.json")],[])
+          key=lambda e:(e["repository"],e["revision"],e["path"])
+          assert sorted(key(e) for e in inp)==sorted(key(t["source"]) for t in cat)
+          reg=json.load(urllib.request.urlopen("https://raw.githubusercontent.com/DavisAI1974/markets-data/2f1c3c72f9e3f15916135bca37ffcad87477e1d6/tasks/family-research-20261022/lifecycle-data-links/run-42583801329-1/external/canonical-99-registry.json"))
+          layers=[e for g in reg["groups"] for e in g["entries"]];known={e["layer_id"] for e in layers};refs=collections.defaultdict(list)
+          for table in cat:
+              for field,ids in table["field_layer_ids"].items():
+                  for layer in ids:
+                      assert layer in known or layer=="UNMAPPED_FIELD_RETAINED",layer
+                      refs[layer].append({"table_id":table["table_id"],"field":field})
+              for part in table["parts"]:
+                  file=root/table["source"]["day"]/part["path"]
+                  assert file.stat().st_size==part["bytes"]
+                  assert hashlib.sha256(file.read_bytes()).hexdigest()==part["sha256"]
+          (root/"99-layer-index.json").write_text(json.dumps([dict(layer=e,field_links=refs[e["layer_id"]],disposition="has_field_links" if refs[e["layer_id"]] else "registry_context_only") for e in layers],indent=1))
+          sums=[json.loads(p.read_text()) for p in sorted(root.glob("*/SUMMARY.json"))]
+          (root/"SUMMARY.json").write_text(json.dumps({"source_files":len(cat),"shards":sums,"all_input_files_accounted_for":True},indent=2))
+          print(json.dumps(sums,indent=2))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --sparse "$OUTPUT_PATH"
+          git commit -m "data: preserve complete source-row clock and 99-layer pin index"
+          git pull --rebase origin codex/native-dipole-artifacts-20261108
+          git push origin HEAD:codex/native-dipole-artifacts-20261108
