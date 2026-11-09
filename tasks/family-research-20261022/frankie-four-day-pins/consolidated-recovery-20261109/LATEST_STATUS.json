@@ -1,0 +1,277 @@
+{
+ "schema": "FRANKIE_FINAL_RECOVERY_CHECKPOINT_V1",
+ "complete_all_layers": false,
+ "locked": false,
+ "saved_trade_rows": 143270,
+ "flow_joined_rows": 143266,
+ "true_not_yet_emitted_rows": 4,
+ "october18_flow_stream_scope": "retained historical projection; not asserted complete",
+ "mbo_archived_messages": 3301671,
+ "mbo_warmup_messages": 1650054,
+ "complete_source_pins": 6168,
+ "flow": [
+  {
+   "day": "20231002",
+   "trades": 37670,
+   "matched_original_emissions": 37666,
+   "not_yet_emitted": 4,
+   "original_flow_rows": 75600,
+   "trade_source_sha256": "a10f5928b0df415260bd93a1bf4475abf1aa6be1c49776553c1a5be80805f243",
+   "source": {
+    "day": "20231002",
+    "repository": "DavisAI1974/markets-data",
+    "revision": "5305008bb48160cd29d9e14887989e375449e4bb",
+    "prefix": "tasks/family-research-20261022/frankie-four-day-pins/native-lifecycle-42621496819-1/20231002",
+    "published": true,
+    "files": [
+     {
+      "path": "RECOVERY_RECEIPT.json",
+      "bytes": 1035,
+      "sha256": "9c80944979bf2ae09782c93fb346245a716c49a736c930f17fdf447161211707"
+     },
+     {
+      "path": "MANIFEST.json",
+      "bytes": 82222,
+      "sha256": "4e001a5d59d748642bd78d2d40a6be6e3715103d4d73be339b630a69286d92a1"
+     },
+     {
+      "path": "REVIEW_SAMPLES.json",
+      "bytes": 167057,
+      "sha256": "4b9338906490df49e13c7cf1336df9e51966303da1d55cf0d77bc197ed5b8278"
+     },
+     {
+      "path": "SECTION_FIELDS.json",
+      "bytes": 6722,
+      "sha256": "354c3c2abec86db759a618b5eb728535bb3e145da0bafa3ec10de003c2323f76"
+     },
+     {
+      "path": "SOURCE_PARTS.json",
+      "bytes": 1578,
+      "sha256": "823a555aa28350bb72d1559055d9deda52bab31e898c0f4faac0b3804080771d"
+     }
+    ]
+   },
+   "calculation_rerun": false,
+   "complete_all_layers": false
+  },
+  {
+   "day": "20231003",
+   "trades": 41410,
+   "matched_original_emissions": 41410,
+   "not_yet_emitted": 0,
+   "original_flow_rows": 86400,
+   "trade_source_sha256": "02c01d9bd080c89a34e0915a53221ebf6e92dbc8bad27211abe8cb6fec37dc5b",
+   "source": {
+    "day": "20231003",
+    "repository": "DavisAI1974/markets-data",
+    "revision": "146592a9cfb8834c2880cca2275fb0f36e36899f",
+    "prefix": "tasks/family-research-20261022/frankie-four-day-pins/native-lifecycle-42621496819-1/20231003",
+    "published": true,
+    "files": [
+     {
+      "path": "RECOVERY_RECEIPT.json",
+      "bytes": 1055,
+      "sha256": "b6ee84e2c05df40f4174a7d5ee50f2a7f61aa094a5da6702befd1171b88eee93"
+     },
+     {
+      "path": "MANIFEST.json",
+      "bytes": 93472,
+      "sha256": "ee56a574a9ac3f4b8c38e1efa535dc6b49768b78c3885cabdc40141bf6101df6"
+     },
+     {
+      "path": "REVIEW_SAMPLES.json",
+      "bytes": 77722,
+      "sha256": "d56c6201b27ca3954256cbd3650e22230b7eaa28e7b90b587f2063d98ff27506"
+     },
+     {
+      "path": "SECTION_FIELDS.json",
+      "bytes": 7346,
+      "sha256": "a33ef574f5fcb0aa9778a0910f8156ab018f6f091b9e3b69082c4745b2aa8ef5"
+     },
+     {
+      "path": "SOURCE_PARTS.json",
+      "bytes": 1871,
+      "sha256": "a88324777f4c7e3bc0bccbb1cf0e8ff53997a04d99edb4a5dc152364e6674896"
+     }
+    ]
+   },
+   "calculation_rerun": false,
+   "complete_all_layers": false
+  },
+  {
+   "day": "20231017",
+   "trades": 33451,
+   "matched_original_emissions": 33451,
+   "not_yet_emitted": 0,
+   "original_flow_rows": 75600,
+   "trade_source_sha256": "e9be9e78167e719a8b2070a041da297fe8f1aec5e98a9baa74a06341e0601854",
+   "source": {
+    "day": "20231017",
+    "repository": "DavisAI1974/markets-data",
+    "revision": "792ae74514012748f33bb680aa3a1b03e0439c0a",
+    "prefix": "tasks/family-research-20261022/frankie-four-day-pins/native-lifecycle-42621496819-1/20231017",
+    "published": true,
+    "files": [
+     {
+      "path": "RECOVERY_RECEIPT.json",
+      "bytes": 1055,
+      "sha256": "2ee2571b2f7d335aa2a5737fdba9dd5f0a5a608c3fdfe7baabad47b46c60e6b5"
+     },
+     {
+      "path": "MANIFEST.json",
+      "bytes": 83398,
+      "sha256": "2060825c84e58ce531141bdccf68a484cf447b0f7e7a21223c160dda21c436d9"
+     },
+     {
+      "path": "REVIEW_SAMPLES.json",
+      "bytes": 186292,
+      "sha256": "99e9e53dc70e761c37374c71f1daf8b2696d2cc3a63ebfaedebd3de550f10032"
+     },
+     {
+      "path": "SECTION_FIELDS.json",
+      "bytes": 7230,
+      "sha256": "f40cea8d217419e6c9805a95dfaf5eab518ca7728f3a6645e0ad4c4eff315266"
+     },
+     {
+      "path": "SOURCE_PARTS.json",
+      "bytes": 1578,
+      "sha256": "14f69f8ac5629be794407b139b3f471207916adcd5ba64f619c85a0927b9e696"
+     }
+    ]
+   },
+   "calculation_rerun": false,
+   "complete_all_layers": false
+  },
+  {
+   "day": "20231018",
+   "trades": 30739,
+   "matched_original_emissions": 30739,
+   "not_yet_emitted_in_retained_projection": 0,
+   "original_flow_rows": 8088,
+   "source": {
+    "repository": "DavisAI1974/Markets",
+    "revision": "ef89f83b6298983052f94080be64240d7abc0056",
+    "path": "artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/day-wide-mechanisms-v1/all-8088-original-flow-seconds-with-tape.jsonl.gz",
+    "bytes": 724928,
+    "sha256": "d916f91faae9b6b781d0b5ae2c4f519bc8c725887692bff419dbb0f9ceb64101",
+    "git_blob": "bd31792f957a99258b39f712a7c4e0a5e23c2a4b",
+    "role": "retained_full_context",
+    "content_id": null,
+    "aliases": [],
+    "status": "BYTES_VERIFIED"
+   },
+   "trade_source_sha256": "eb274a3e9d81c1589a1038a96b6097f9f6dac2ef34f1ef9407d522d532696977",
+   "complete_flow_stream": false,
+   "calculation_rerun": false,
+   "complete_all_layers": false
+  }
+ ],
+ "mbo_counts": [
+  {
+   "day": "20231002",
+   "counts": {
+    "opening_warmup": {},
+    "archived_session": {
+     "all_messages": 808453,
+     "R": 1,
+     "snapshot": 733,
+     "A": 292823,
+     "N": 80573,
+     "T": 37670,
+     "F": 62346,
+     "C": 292098,
+     "M": 42942,
+     "priority_lost": 28402
+    }
+   }
+  },
+  {
+   "day": "20231003",
+   "counts": {
+    "opening_warmup": {
+     "all_messages": 808453,
+     "R": 1,
+     "snapshot": 733,
+     "A": 292823,
+     "N": 80573,
+     "T": 37670,
+     "F": 62346,
+     "C": 292098,
+     "M": 42942,
+     "priority_lost": 28402
+    },
+    "archived_session": {
+     "all_messages": 879830,
+     "C": 316834,
+     "N": 83440,
+     "A": 317597,
+     "M": 50990,
+     "priority_lost": 36129,
+     "T": 41410,
+     "F": 69558,
+     "R": 1,
+     "snapshot": 741
+    }
+   }
+  },
+  {
+   "day": "20231017",
+   "counts": {
+    "opening_warmup": {},
+    "archived_session": {
+     "all_messages": 841601,
+     "R": 1,
+     "snapshot": 738,
+     "A": 306939,
+     "C": 306149,
+     "M": 47255,
+     "priority_lost": 34382,
+     "T": 33451,
+     "F": 55746,
+     "N": 92060
+    }
+   }
+  },
+  {
+   "day": "20231018",
+   "counts": {
+    "opening_warmup": {
+     "all_messages": 841601,
+     "R": 1,
+     "snapshot": 738,
+     "A": 306939,
+     "C": 306149,
+     "M": 47255,
+     "priority_lost": 34382,
+     "T": 33451,
+     "F": 55746,
+     "N": 92060
+    },
+    "archived_session": {
+     "all_messages": 771787,
+     "C": 281978,
+     "N": 86958,
+     "A": 282628,
+     "M": 40502,
+     "priority_lost": 29941,
+     "T": 30739,
+     "F": 48981,
+     "R": 1,
+     "snapshot": 718
+    }
+   }
+  }
+ ],
+ "access_blocker": {
+  "service": "AWS connector",
+  "operation": "S3 ListObjectsV2 under the known Frankie archive prefix",
+  "error": "This app connection requires reauthentication. Reconnect the app and try again.",
+  "effect": "Additional archive checks cannot proceed through the connected AWS app until it is reauthenticated."
+ },
+ "remaining": [
+  "Original second-set data for October 2, 3 and 17 remains unfilled.",
+  "Some named derived, prebirth, target and runtime-output layers remain unverified or unproduced. No source definition is represented as an executed result.",
+  "Held historical publication clocks and data vintages remain held even where numeric observations were restored.",
+  "Final locking and runtime sheet consumption remain deferred until completeness is verified."
+ ]
+}
