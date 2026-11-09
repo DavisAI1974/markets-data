@@ -10,7 +10,7 @@ concurrency:
   group: ng-dipole-renders
   cancel-in-progress: false
 env:
-  CODE_REV: e406ae4fcec5653ecc496e81c4e7bc21ff1c78f6
+  CODE_REV: 9275d915fd7d2b0f46cfc74a3699902fb965eb14
   SOURCE_REV: 2fd55ea1276d00530f8cdbd1caf5918910494f19
   SOURCE_RUN: '42569937357'
   ANALYSIS_REV: f82e5c747195a03ba28aa2778b80df1d191c91ba
@@ -25,7 +25,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        day: ['20231002', '20231003', '20231017', '20231018']
+        day: ['20231002', '20231003', '20231017', '20231018', 'archive']
     steps:
       - uses: actions/setup-python@v5
         with:
@@ -69,4 +69,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add --sparse "$OUTPUT_PATH"
           git commit -m "Preserve combined event study stage and exact status"
+          git pull --rebase origin codex/native-dipole-artifacts-20261108
           git push origin HEAD:codex/native-dipole-artifacts-20261108
