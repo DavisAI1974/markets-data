@@ -1,0 +1,70 @@
+test_day_and_kind_are_identity (test_links.JoinTests.test_day_and_kind_are_identity) ... ERROR
+test_invalid_latest_is_not_skipped (test_links.JoinTests.test_invalid_latest_is_not_skipped) ... ERROR
+test_nanosecond_precision (test_links.JoinTests.test_nanosecond_precision) ... ERROR
+test_no_future_and_equal_time (test_links.JoinTests.test_no_future_and_equal_time) ... ERROR
+test_tied_publications_keep_last (test_links.JoinTests.test_tied_publications_keep_last) ... ERROR
+
+======================================================================
+ERROR: test_day_and_kind_are_identity (test_links.JoinTests.test_day_and_kind_are_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/markets-data/markets-data/red/test_links.py", line 5, in test_day_and_kind_are_identity
+    self.assertNotEqual(parent_key("20231002","same"),parent_key("20231003","same"))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/markets-data/markets-data/red/link_io.py", line 3, in parent_key
+    def parent_key(day,cid,kind='candidate'): raise NotImplementedError
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_latest_is_not_skipped (test_links.JoinTests.test_invalid_latest_is_not_skipped)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/markets-data/markets-data/red/test_links.py", line 17, in test_invalid_latest_is_not_skipped
+    self.assertEqual(states[asof(times,21)],"INVALID")
+                            ^^^^^^^^^^^^^^
+  File "/home/runner/work/markets-data/markets-data/red/link_io.py", line 1, in asof
+    def asof(times,clock): raise NotImplementedError
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+======================================================================
+ERROR: test_nanosecond_precision (test_links.JoinTests.test_nanosecond_precision)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/markets-data/markets-data/red/test_links.py", line 14, in test_nanosecond_precision
+    self.assertEqual(asof([t-1,t],t-1),0)
+                     ^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/markets-data/markets-data/red/link_io.py", line 1, in asof
+    def asof(times,clock): raise NotImplementedError
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+======================================================================
+ERROR: test_no_future_and_equal_time (test_links.JoinTests.test_no_future_and_equal_time)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/markets-data/markets-data/red/test_links.py", line 8, in test_no_future_and_equal_time
+    self.assertEqual(asof([10,20],9),-1)
+                     ^^^^^^^^^^^^^^^
+  File "/home/runner/work/markets-data/markets-data/red/link_io.py", line 1, in asof
+    def asof(times,clock): raise NotImplementedError
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+======================================================================
+ERROR: test_tied_publications_keep_last (test_links.JoinTests.test_tied_publications_keep_last)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/markets-data/markets-data/red/test_links.py", line 11, in test_tied_publications_keep_last
+    self.assertEqual(asof([10,10,20],10),1)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/markets-data/markets-data/red/link_io.py", line 1, in asof
+    def asof(times,clock): raise NotImplementedError
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (errors=5)
