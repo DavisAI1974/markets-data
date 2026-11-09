@@ -1,0 +1,218 @@
+{
+ "table_id": "ccd503b264cf962b4443",
+ "source": {
+  "collection": "continuous",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "71240aa56a8b27f7d7f68acd154784579094e5c1",
+  "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231003/research-atlas-v2/continuous-prebirth-v1/onsets.csv.gz",
+  "git_blob": "cdb284bcbb66ec9d69204a5aab520162a3d39be9",
+  "bytes": 1880617,
+  "day": "20231003"
+ },
+ "source_sha256": "20b3d663b167e4c3255eeed43068537e00c3146b7948e11dfab5279c7be45dbe",
+ "source_fields": [
+  "C_signed",
+  "before_ratio",
+  "book_available",
+  "buy",
+  "decision_ns",
+  "early_buy",
+  "early_ratio",
+  "early_sell",
+  "ent_dipole",
+  "expired_buy",
+  "expired_sell",
+  "flow_available",
+  "fresh_buy5",
+  "fresh_ratio5",
+  "fresh_sell5",
+  "hypothesis",
+  "imb_flow",
+  "imb_level",
+  "input_available",
+  "late_buy",
+  "late_ratio",
+  "late_sell",
+  "left_censored_onset",
+  "mi_flow",
+  "mid_raw2",
+  "onset",
+  "operator_defined",
+  "prior_ticks20",
+  "quote_age_s",
+  "quote_known_by_ns",
+  "ratio",
+  "roll_buy",
+  "roll_sell",
+  "second",
+  "segment",
+  "sell",
+  "source_cursor",
+  "source_group",
+  "spread_ticks",
+  "touch_imb",
+  "unknown",
+  "unknown5"
+ ],
+ "field_layer_ids": {
+  "fresh_buy5": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "decision_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "expired_sell": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "fresh_sell5": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "fresh_ratio5": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "sell": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "quote_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "unknown5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "roll_buy": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "late_buy": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "input_available": [
+   "missingness_and_integrity_flags"
+  ],
+  "early_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "late_sell": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "late_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "unknown": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "second": [
+   "derived_feature_availability_timestamps"
+  ],
+  "early_buy": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "expired_buy": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "operator_defined": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "book_available": [
+   "missingness_and_integrity_flags"
+  ],
+  "hypothesis": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "roll_sell": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "source_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "quote_age_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "imb_level": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "imb_flow": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "ent_dipole": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "touch_imb": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "early_sell": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "C_signed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "source_group": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "prior_ticks20": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "left_censored_onset": [
+   "missingness_and_integrity_flags"
+  ],
+  "spread_ticks": [
+   "spread_and_depth_imbalance"
+  ],
+  "mi_flow": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "mid_raw2": [
+   "price_and_book_path"
+  ],
+  "buy": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "before_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "flow_available": [
+   "missingness_and_integrity_flags",
+   "aggressor_and_native_signed_flow"
+  ]
+ },
+ "counts": {
+  "rows": 22918,
+  "direct_clocks": 22918,
+  "clocks": 68754,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/ccd503b264cf962b4443/00000.parquet",
+   "rows": 20000,
+   "bytes": 695137,
+   "sha256": "7f126cf0c04fd4b2da81c25344d44a007fe19a838c6e6536f1a98866690416a1"
+  },
+  {
+   "path": "rows/ccd503b264cf962b4443/00001.parquet",
+   "rows": 2918,
+   "bytes": 126549,
+   "sha256": "72ac8b92b9b934a20fe129bf5fa3f73bb31bd5e38c0406bdb955966e6b8aa695"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

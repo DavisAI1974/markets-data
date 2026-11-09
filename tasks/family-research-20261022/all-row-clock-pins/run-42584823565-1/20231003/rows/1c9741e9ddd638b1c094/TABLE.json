@@ -1,0 +1,66 @@
+{
+ "table_id": "1c9741e9ddd638b1c094",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231003-figure-reconciliation.csv",
+  "git_blob": "1e2339d2e72b8155bb3577d83c4cd7531a2ec873",
+  "bytes": 29415,
+  "day": "20231003"
+ },
+ "source_sha256": "23e0c82e36cdffac8bcdf05f299ba29470e1bf2cb7df2064a810f9503c56debe",
+ "source_fields": [
+  "candidate_rows",
+  "endpoint_points_in_companion",
+  "figure",
+  "panel",
+  "points_plotted",
+  "reason",
+  "rows_excluded",
+  "rows_in"
+ ],
+ "field_layer_ids": {
+  "points_plotted": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "figure": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "rows_excluded": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "rows_in": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "candidate_rows": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "reason": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "panel": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "endpoint_points_in_companion": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 270,
+  "aggregate_or_unclocked_retained": 270,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/1c9741e9ddd638b1c094/00000.parquet",
+   "rows": 270,
+   "bytes": 5558,
+   "sha256": "a38f22ba8091cc17edfdfaa60d8d5a95820d14fa9fa823ce6c89ace941483da3"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

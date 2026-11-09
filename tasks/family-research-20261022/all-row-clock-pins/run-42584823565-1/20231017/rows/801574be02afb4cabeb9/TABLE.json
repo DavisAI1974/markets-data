@@ -1,0 +1,47 @@
+{
+ "table_id": "801574be02afb4cabeb9",
+ "source": {
+  "collection": "family",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+  "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/research-atlas-v2/primer-family-anchor-dispositions.csv",
+  "git_blob": "77ca27e83e70b45b1351f89b5ac1189708edafc8",
+  "bytes": 37009,
+  "day": "20231017"
+ },
+ "source_sha256": "6867071ff86fd5751eda7b110896934ae6dc2aa4991c61872d13c09d752e5c68",
+ "source_fields": [
+  "disposition",
+  "family_id",
+  "instance"
+ ],
+ "field_layer_ids": {
+  "disposition": [
+   "missingness_and_integrity_flags"
+  ],
+  "instance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "family_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_d_family_geometry"
+  ]
+ },
+ "counts": {
+  "rows": 824,
+  "aggregate_or_unclocked_retained": 824,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/801574be02afb4cabeb9/00000.parquet",
+   "rows": 824,
+   "bytes": 18080,
+   "sha256": "96da0b6a43e05a061e1e79eec79acd2f8bab9331fde783e88f3231511e86af6a"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

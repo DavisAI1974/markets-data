@@ -1,0 +1,282 @@
+{
+ "table_id": "3af03d2e632596f6751b",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/beyond-direction-prebirth-oct02-events.jsonl.gz",
+  "git_blob": "ee5c92ee52170edd206abec3f0c3bdeb4af012fe",
+  "bytes": 175748,
+  "day": "20231002"
+ },
+ "source_sha256": "ba947bdfcf2f28c7dce0dc44e0770b963e469a19a3b3e6e9051f1787b0d2ee51",
+ "source_fields": [
+  "a_state",
+  "arc_base10",
+  "arc_min",
+  "arc_slope",
+  "arc_t0",
+  "censor_time",
+  "day0_epoch_s",
+  "hour_utc",
+  "peak_abs",
+  "plus60_300_abs_imb",
+  "plus60_300_disp",
+  "plus60_300_efficiency",
+  "plus60_300_hold_share",
+  "plus60_300_max_abs",
+  "plus60_300_net",
+  "plus60_300_oriented_net",
+  "plus60_300_path",
+  "plus60_300_range",
+  "plus60_300_t_first_tick",
+  "plus60_300_volume",
+  "plus60_600_abs_imb",
+  "plus60_600_disp",
+  "plus60_600_efficiency",
+  "plus60_600_hold_share",
+  "plus60_600_max_abs",
+  "plus60_600_net",
+  "plus60_600_oriented_net",
+  "plus60_600_path",
+  "plus60_600_range",
+  "plus60_600_t_first_tick",
+  "plus60_600_volume",
+  "plus60_book_abs",
+  "polarity",
+  "pre300_oriented_change",
+  "pre300_path",
+  "pre300_range",
+  "pre300_volume",
+  "pre60_oriented_change",
+  "pre60_path",
+  "pre60_range",
+  "pre60_volume",
+  "pre_arc_defined",
+  "pre_book_abs",
+  "pre_book_oriented",
+  "pre_family",
+  "pre_family_dists",
+  "prev_gap_s",
+  "price_either_13t",
+  "price_either_3t",
+  "price_either_5t",
+  "price_either_8t",
+  "price_with_13t",
+  "price_with_3t",
+  "price_with_5t",
+  "price_with_8t",
+  "prominence",
+  "runway_s",
+  "seed",
+  "session",
+  "t0",
+  "t0_epoch_s",
+  "t0_utc"
+ ],
+ "field_layer_ids": {
+  "arc_min": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre60_range": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre_book_oriented": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_book_abs": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_with_13t": [
+   "price_and_book_path"
+  ],
+  "price_either_5t": [
+   "price_and_book_path"
+  ],
+  "plus60_300_efficiency": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre_book_abs": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_300_abs_imb": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_600_max_abs": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_600_abs_imb": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "plus60_600_volume": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_600_range": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "arc_slope": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "runway_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre300_volume": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre60_oriented_change": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_either_8t": [
+   "price_and_book_path"
+  ],
+  "prev_gap_s": [
+   "derived_open_world_predecessor_state"
+  ],
+  "arc_t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre60_path": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_300_range": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_300_path": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_300_hold_share": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_300_disp": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "hour_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "peak_abs": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_600_t_first_tick": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_600_oriented_net": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_300_oriented_net": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_with_3t": [
+   "price_and_book_path"
+  ],
+  "pre_family": [
+   "derived_d_family_geometry"
+  ],
+  "price_either_3t": [
+   "price_and_book_path"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "censor_time": [
+   "missingness_and_integrity_flags"
+  ],
+  "plus60_600_disp": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_600_path": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre_arc_defined": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_600_efficiency": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_600_net": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_either_13t": [
+   "price_and_book_path"
+  ],
+  "arc_base10": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_with_5t": [
+   "price_and_book_path"
+  ],
+  "pre60_volume": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "plus60_300_max_abs": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_300_volume": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "a_state": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_with_8t": [
+   "price_and_book_path"
+  ],
+  "prominence": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "pre_family_dists": [
+   "derived_d_family_geometry"
+  ],
+  "plus60_300_t_first_tick": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_600_hold_share": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_300_net": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre300_path": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre300_oriented_change": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre300_range": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 839,
+  "direct_clocks": 839,
+  "clocks": 1678,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/3af03d2e632596f6751b/00000.parquet",
+   "rows": 839,
+   "bytes": 23544,
+   "sha256": "852550680df3ac8039e25604e70363c7cfe3c2d4a51cb751e72f4850e00d08d3"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

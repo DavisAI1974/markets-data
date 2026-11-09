@@ -1,0 +1,127 @@
+{
+ "table_id": "0be5d1af612793a9f598",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-actions-06.parquet",
+  "git_blob": "1db5b87402156be4399c5a3f2588a5d928a3b101",
+  "bytes": 633240,
+  "day": "20231018"
+ },
+ "source_sha256": "1da892872ba7e30d6ee67e2d5e0e1869a8b84d6122d80157c8eeeaae20c936b9",
+ "source_fields": [
+  "action",
+  "after_price",
+  "after_side",
+  "after_size",
+  "before_price",
+  "before_side",
+  "before_size",
+  "cursor",
+  "day",
+  "event_ns",
+  "fill_linked_reduction",
+  "fill_unchanged_display",
+  "flags",
+  "group_close_cursor",
+  "group_ordinal",
+  "known_by_ns",
+  "order_id",
+  "price_raw",
+  "receive_ns",
+  "side",
+  "size",
+  "source_record_index",
+  "source_tape_day"
+ ],
+ "field_layer_ids": {
+  "flags": [
+   "native_acmrtfn_messages"
+  ],
+  "side": [
+   "native_acmrtfn_messages"
+  ],
+  "size": [
+   "native_acmrtfn_messages"
+  ],
+  "action": [
+   "native_acmrtfn_messages"
+  ],
+  "cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "source_tape_day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "source_record_index": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "after_size": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "receive_ns": [
+   "clock_receive_time"
+  ],
+  "event_ns": [
+   "clock_event_time"
+  ],
+  "fill_linked_reduction": [
+   "order_lifecycle_fills"
+  ],
+  "price_raw": [
+   "price_and_book_path"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "before_side": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "after_side": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "before_price": [
+   "price_and_book_path"
+  ],
+  "after_price": [
+   "price_and_book_path"
+  ],
+  "before_size": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "group_close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "group_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "fill_unchanged_display": [
+   "order_lifecycle_fills"
+  ],
+  "order_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "native_acmrtfn_messages"
+  ]
+ },
+ "counts": {
+  "rows": 15910,
+  "direct_clocks": 15910,
+  "clocks": 47730,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/0be5d1af612793a9f598/00000.parquet",
+   "rows": 15910,
+   "bytes": 458697,
+   "sha256": "04b9628af613358750027e5408c0965e0bfd2b4832b38423f6888cb888bbdd04"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

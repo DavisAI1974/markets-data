@@ -1,0 +1,210 @@
+{
+ "table_id": "a8e376f126e64eac9a49",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231002-paths.csv.gz",
+  "git_blob": "8770b787948d291a47ca858188bd35bcb0e139bb",
+  "bytes": 3834300,
+  "day": "20231002"
+ },
+ "source_sha256": "9fb9bc2c4aa3e74db9ed54a18b968252d997c10000f177eb65d1a00ace11da93",
+ "source_fields": [
+  "add_A",
+  "add_B",
+  "ask",
+  "ask_size",
+  "bid",
+  "bid_size",
+  "cancel_A",
+  "cancel_B",
+  "candidate_id",
+  "classified_lots_20",
+  "cursor",
+  "cut_ns",
+  "fill_A",
+  "fill_B",
+  "good",
+  "kind",
+  "modify_A",
+  "modify_B",
+  "orientation",
+  "original_coverage",
+  "quote_age_s",
+  "ratio",
+  "relative_s",
+  "trade_A",
+  "trade_B"
+ ],
+ "field_layer_ids": {
+  "original_coverage": [
+   "missingness_and_integrity_flags"
+  ],
+  "cancel_A": [
+   "order_lifecycle_cancels"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "ask": [
+   "price_and_book_path"
+  ],
+  "ask_size": [
+   "full_bid_ask_depth"
+  ],
+  "cancel_B": [
+   "order_lifecycle_cancels"
+  ],
+  "modify_A": [
+   "order_lifecycle_modifies"
+  ],
+  "cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "fill_B": [
+   "order_lifecycle_fills"
+  ],
+  "fill_A": [
+   "order_lifecycle_fills"
+  ],
+  "classified_lots_20": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "bid_size": [
+   "full_bid_ask_depth"
+  ],
+  "good": [
+   "missingness_and_integrity_flags"
+  ],
+  "quote_age_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "kind": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bid": [
+   "price_and_book_path"
+  ],
+  "trade_B": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "add_A": [
+   "order_lifecycle_adds"
+  ],
+  "add_B": [
+   "order_lifecycle_adds"
+  ],
+  "trade_A": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "cut_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "relative_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "modify_B": [
+   "order_lifecycle_modifies"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 254025,
+  "direct_clocks": 254025,
+  "clocks": 254025,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/a8e376f126e64eac9a49/00000.parquet",
+   "rows": 20000,
+   "bytes": 300231,
+   "sha256": "9c36caaa0f33dac16219c0eb5dbb1448541533cc1c4a1cbd3268356706c57885"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00001.parquet",
+   "rows": 20000,
+   "bytes": 294707,
+   "sha256": "e8339cc8657b11adbd8e8a598497d3403536769d5f987571d1b002ff1fbc7303"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00002.parquet",
+   "rows": 20000,
+   "bytes": 297871,
+   "sha256": "e00762328d3a3a6e390b731882e4eadc2de536ebf152a4b934abf913dee2cf04"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00003.parquet",
+   "rows": 20000,
+   "bytes": 304201,
+   "sha256": "c5f44e26151944071ec304b0c5f540d3f21d302a3f0fac0139cc5485c71d623f"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00004.parquet",
+   "rows": 20000,
+   "bytes": 284438,
+   "sha256": "9dfa478d0506379074300d57b4c2ffa3193766b7e748a3650e75505fea45b612"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00005.parquet",
+   "rows": 20000,
+   "bytes": 299127,
+   "sha256": "3d7e43b376e864d4c3cd5a3a9e8807a43ef4faa135b1072f93b08dd0e00b5bcb"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00006.parquet",
+   "rows": 20000,
+   "bytes": 291447,
+   "sha256": "d5abc8486fc842f0dd591fdcefa76b350e08f32c23a55f811de512663edd3771"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00007.parquet",
+   "rows": 20000,
+   "bytes": 289691,
+   "sha256": "5756a927edaf2ebecb809e777017183e033f1088774f8c74ac20d1ab0364cef5"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00008.parquet",
+   "rows": 20000,
+   "bytes": 313500,
+   "sha256": "fe50006212b410c045412a90e9d02e1c94d4b76e6d880417b7bce4ca9faf67fd"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00009.parquet",
+   "rows": 20000,
+   "bytes": 302642,
+   "sha256": "00200bb621066c66c58b29271bf4dc7d15b184da0feb709713974022d3a48cab"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00010.parquet",
+   "rows": 20000,
+   "bytes": 312013,
+   "sha256": "3ac6f282917626ea660967bc1efc8e5d5728d2c0617592902ea55fc2bc32cab7"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00011.parquet",
+   "rows": 20000,
+   "bytes": 298155,
+   "sha256": "5b603afa6706f7211be181268679e67a692998c67525e74a3408321230b1a8a9"
+  },
+  {
+   "path": "rows/a8e376f126e64eac9a49/00012.parquet",
+   "rows": 14025,
+   "bytes": 211098,
+   "sha256": "986dd80a90b63f30781e7bf419bcc60fea8960417d280b3c09489b9b707077d8"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

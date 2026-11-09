@@ -1,0 +1,214 @@
+{
+ "table_id": "1f6caf7301738e774880",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/runway-duration-oct17-events.jsonl.gz",
+  "git_blob": "cd2def0038b0a4f7f37902f55496977d6dc8b5a8",
+  "bytes": 63130,
+  "day": "20231017"
+ },
+ "source_sha256": "17142821025223573c84f623409e752242ac19edb5258a4d22f79ec737832133",
+ "source_fields": [
+  "censor_time",
+  "day0_epoch_s",
+  "family_proxy",
+  "mid_either_13t",
+  "mid_either_13t_censored",
+  "mid_either_3t",
+  "mid_either_3t_censored",
+  "mid_either_5t",
+  "mid_either_5t_censored",
+  "mid_either_8t",
+  "mid_either_8t_censored",
+  "mid_with_13t",
+  "mid_with_13t_censored",
+  "mid_with_3t",
+  "mid_with_3t_censored",
+  "mid_with_5t",
+  "mid_with_5t_censored",
+  "mid_with_8t",
+  "mid_with_8t_censored",
+  "polarity",
+  "price_either_13t",
+  "price_either_13t_censored",
+  "price_either_3t",
+  "price_either_3t_censored",
+  "price_either_5t",
+  "price_either_5t_censored",
+  "price_either_8t",
+  "price_either_8t_censored",
+  "price_with_13t",
+  "price_with_13t_censored",
+  "price_with_3t",
+  "price_with_3t_censored",
+  "price_with_5t",
+  "price_with_5t_censored",
+  "price_with_8t",
+  "price_with_8t_censored",
+  "seed",
+  "session",
+  "t0",
+  "t0_epoch_s",
+  "t0_utc"
+ ],
+ "field_layer_ids": {
+  "mid_either_5t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "t0_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_with_13t": [
+   "price_and_book_path"
+  ],
+  "t0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "mid_with_3t": [
+   "price_and_book_path"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_either_13t": [
+   "price_and_book_path"
+  ],
+  "price_either_5t": [
+   "price_and_book_path"
+  ],
+  "family_proxy": [
+   "derived_d_family_geometry"
+  ],
+  "price_with_3t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "mid_either_3t": [
+   "price_and_book_path"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "price_with_8t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "censor_time": [
+   "missingness_and_integrity_flags"
+  ],
+  "price_either_13t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "price_with_5t": [
+   "price_and_book_path"
+  ],
+  "session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "mid_with_13t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "mid_either_13t": [
+   "price_and_book_path"
+  ],
+  "price_with_8t": [
+   "price_and_book_path"
+  ],
+  "price_either_3t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "mid_with_13t": [
+   "price_and_book_path"
+  ],
+  "price_either_3t": [
+   "price_and_book_path"
+  ],
+  "mid_with_3t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "price_with_5t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "mid_either_13t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "seed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "mid_either_5t": [
+   "price_and_book_path"
+  ],
+  "price_either_5t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "price_with_3t": [
+   "price_and_book_path"
+  ],
+  "mid_with_5t": [
+   "price_and_book_path"
+  ],
+  "mid_either_8t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "price_either_8t": [
+   "price_and_book_path"
+  ],
+  "price_with_13t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "mid_with_5t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "price_either_8t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "mid_with_8t": [
+   "price_and_book_path"
+  ],
+  "mid_with_8t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "mid_either_3t_censored": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "mid_either_8t": [
+   "price_and_book_path"
+  ]
+ },
+ "counts": {
+  "rows": 830,
+  "direct_clocks": 830,
+  "clocks": 1660,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/1f6caf7301738e774880/00000.parquet",
+   "rows": 830,
+   "bytes": 26807,
+   "sha256": "2da81d53907cd079dd41b0a27a0aa3b5f82b4586f42ec81196d4a75eddae4245"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

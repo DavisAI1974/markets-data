@@ -1,0 +1,139 @@
+{
+ "table_id": "d62bf53b24806ff388f3",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-price-stretches.parquet",
+  "git_blob": "5828ddfa8d62bb776af2fe136b21b2eb29e57601",
+  "bytes": 857187,
+  "day": "20231018"
+ },
+ "source_sha256": "5c800695179ad780a056ab7a2576a016a180e89b16db70831d12dc6e8c50b192",
+ "source_fields": [
+  "day",
+  "duration_event_ns",
+  "duration_receive_ns",
+  "first_clocks.available_ns",
+  "first_clocks.event_ns",
+  "first_clocks.group_close_input_cursor",
+  "first_clocks.group_ordinal",
+  "first_clocks.receive_ns",
+  "first_clocks.trade_input_cursor",
+  "first_trade_ordinal",
+  "incoming_step_raw",
+  "last_clocks.available_ns",
+  "last_clocks.event_ns",
+  "last_clocks.group_close_input_cursor",
+  "last_clocks.group_ordinal",
+  "last_clocks.receive_ns",
+  "last_clocks.trade_input_cursor",
+  "last_trade_ordinal",
+  "next_different_trade",
+  "outgoing_step_raw",
+  "overlapping_leg_ids",
+  "price_raw",
+  "print_direction_turn",
+  "stretch_ordinal"
+ ],
+ "field_layer_ids": {
+  "stretch_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "overlapping_leg_ids": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "duration_receive_ns": [
+   "clock_receive_time",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "last_trade_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "order_lifecycle_trades"
+  ],
+  "last_clocks.group_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "first_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "print_direction_turn": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_raw": [
+   "price_and_book_path"
+  ],
+  "last_clocks.available_ns": [
+   "clock_event_known_by",
+   "missingness_and_integrity_flags"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "last_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "last_clocks.trade_input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "first_clocks.group_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "last_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "incoming_step_raw": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "duration_event_ns": [
+   "clock_event_time",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "last_clocks.group_close_input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "next_different_trade": [
+   "order_lifecycle_trades",
+   "derived_open_world_predecessor_state"
+  ],
+  "first_clocks.trade_input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "first_trade_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "order_lifecycle_trades"
+  ],
+  "outgoing_step_raw": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "first_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "first_clocks.available_ns": [
+   "clock_event_known_by",
+   "missingness_and_integrity_flags"
+  ],
+  "first_clocks.group_close_input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ]
+ },
+ "counts": {
+  "rows": 9109,
+  "direct_clocks": 9109,
+  "clocks": 54654,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/d62bf53b24806ff388f3/00000.parquet",
+   "rows": 9109,
+   "bytes": 884216,
+   "sha256": "c8312c513f42a720e78314d227452f542f40b010ce20e1793d9a8f86e407feb0"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

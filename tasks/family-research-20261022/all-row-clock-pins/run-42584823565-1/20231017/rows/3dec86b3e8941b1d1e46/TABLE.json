@@ -1,0 +1,305 @@
+{
+ "table_id": "3dec86b3e8941b1d1e46",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/inclusive-legacy-20231017-lag-footprints.csv",
+  "git_blob": "9b5b4cc25c4a92116df01a32074eed6293667a1d",
+  "bytes": 1033869,
+  "day": "20231017"
+ },
+ "source_sha256": "92d3a45f11ff7aedcdfa354fe3f0d4ebcde8fb3d5d0f1d460b67ccf531e7d31c",
+ "source_fields": [
+  "A_A_first_cursor",
+  "A_A_first_s",
+  "A_A_groups",
+  "A_A_lots_or_changes",
+  "A_B_first_cursor",
+  "A_B_first_s",
+  "A_B_groups",
+  "A_B_lots_or_changes",
+  "C_A_first_cursor",
+  "C_A_first_s",
+  "C_A_groups",
+  "C_A_lots_or_changes",
+  "C_B_first_cursor",
+  "C_B_first_s",
+  "C_B_groups",
+  "C_B_lots_or_changes",
+  "F_A_first_cursor",
+  "F_A_first_s",
+  "F_A_groups",
+  "F_A_lots_or_changes",
+  "F_B_first_cursor",
+  "F_B_first_s",
+  "F_B_groups",
+  "F_B_lots_or_changes",
+  "M_A_first_cursor",
+  "M_A_first_s",
+  "M_A_groups",
+  "M_A_lots_or_changes",
+  "M_B_first_cursor",
+  "M_B_first_s",
+  "M_B_groups",
+  "M_B_lots_or_changes",
+  "T_A_first_cursor",
+  "T_A_first_s",
+  "T_A_groups",
+  "T_A_lots_or_changes",
+  "T_B_first_cursor",
+  "T_B_first_s",
+  "T_B_groups",
+  "T_B_lots_or_changes",
+  "ask_add_vs_ask_cancel",
+  "ask_quote_first_cursor",
+  "ask_quote_first_s",
+  "ask_quote_groups",
+  "ask_quote_lots_or_changes",
+  "ask_touch_size_first_cursor",
+  "ask_touch_size_first_s",
+  "ask_touch_size_groups",
+  "ask_touch_size_lots_or_changes",
+  "bid_add_vs_bid_cancel",
+  "bid_quote_first_cursor",
+  "bid_quote_first_s",
+  "bid_quote_groups",
+  "bid_quote_lots_or_changes",
+  "bid_touch_size_first_cursor",
+  "bid_touch_size_first_s",
+  "bid_touch_size_groups",
+  "bid_touch_size_lots_or_changes",
+  "bid_vs_ask_quote",
+  "buy_vs_ask_quote",
+  "buy_vs_sell",
+  "candidate_id",
+  "day",
+  "kind",
+  "lag_s",
+  "orientation",
+  "sell_vs_bid_quote"
+ ],
+ "field_layer_ids": {
+  "M_B_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "C_A_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "T_A_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "bid_quote_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "C_B_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_quote_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "M_A_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "F_A_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bid_touch_size_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "M_A_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_touch_size_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "T_A_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "A_A_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "C_B_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "A_B_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "C_A_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "A_B_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "ask_touch_size_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "C_A_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "A_B_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "T_B_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "C_A_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "C_B_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "T_A_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_quote_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bid_touch_size_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "T_A_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "M_B_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bid_touch_size_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "A_B_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_quote_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "A_A_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "T_B_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "T_B_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "lag_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_touch_size_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "buy_vs_sell": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sell_vs_bid_quote": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "F_A_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "bid_quote_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bid_touch_size_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "kind": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "T_B_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_touch_size_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "ask_quote_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "buy_vs_ask_quote": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "M_A_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "M_A_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "bid_add_vs_bid_cancel": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "C_B_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "F_B_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "F_B_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "F_B_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "F_A_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "F_A_first_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "A_A_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bid_vs_ask_quote": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "F_B_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_add_vs_ask_cancel": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels"
+  ],
+  "bid_quote_lots_or_changes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "M_B_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "A_A_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "M_B_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bid_quote_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 2220,
+  "explicit_parent_context_only": 2220,
+  "clocks": 9620,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/3dec86b3e8941b1d1e46/00000.parquet",
+   "rows": 2220,
+   "bytes": 202476,
+   "sha256": "d6a2e4f5d781763e91c0787f0531a21972bfc0fa4857ce4aa4a3218b0de9434b"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

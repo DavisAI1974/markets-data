@@ -1,0 +1,110 @@
+{
+ "table_id": "21d6fe1c63e4f4c43d5b",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/dipole-post-recognition-oct18-rows.jsonl.gz",
+  "git_blob": "d593eadebb8da48e5c61691fb5de22894efe3056",
+  "bytes": 29631,
+  "day": "20231018"
+ },
+ "source_sha256": "b439eec159aab89f1df0bf942f6dc64fed11b1a5787e9f8123bcc0a2e8a9c209",
+ "source_fields": [
+  "birth_classified_lots",
+  "birth_second",
+  "candidate_id",
+  "flow_state",
+  "last_window_classified_lots",
+  "move_ticks_after_recognition.1",
+  "move_ticks_after_recognition.20",
+  "move_ticks_after_recognition.300",
+  "move_ticks_after_recognition.5",
+  "move_ticks_after_recognition.60",
+  "orientation",
+  "polarity",
+  "prebirth_depth_state",
+  "quote_move_by_recognition",
+  "realised_by_recognition_ticks_in_birth_direction",
+  "recognition_cursor",
+  "recognition_receive_ns",
+  "recognition_touch_relation"
+ ],
+ "field_layer_ids": {
+  "prebirth_depth_state": [
+   "full_bid_ask_depth",
+   "derived_roll20_and_dipole_state"
+  ],
+  "birth_classified_lots": [
+   "aggressor_and_native_signed_flow",
+   "derived_roll20_and_dipole_state"
+  ],
+  "move_ticks_after_recognition.1": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks_after_recognition.300": [
+   "later_outcome_reveal"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "recognition_receive_ns": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "birth_second": [
+   "derived_feature_availability_timestamps",
+   "derived_roll20_and_dipole_state"
+  ],
+  "realised_by_recognition_ticks_in_birth_direction": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "flow_state": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "last_window_classified_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "move_ticks_after_recognition.20": [
+   "later_outcome_reveal"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "recognition_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "move_ticks_after_recognition.5": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks_after_recognition.60": [
+   "later_outcome_reveal"
+  ],
+  "quote_move_by_recognition": [
+   "later_outcome_reveal"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "recognition_touch_relation": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 863,
+  "direct_clocks": 863,
+  "clocks": 1726,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/21d6fe1c63e4f4c43d5b/00000.parquet",
+   "rows": 863,
+   "bytes": 50184,
+   "sha256": "952b97bd621544254e8103e261fe3dda46244626f5b73b35626f790d7ac34a94"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

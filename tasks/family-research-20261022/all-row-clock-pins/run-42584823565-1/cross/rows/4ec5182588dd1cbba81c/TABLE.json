@@ -1,0 +1,105 @@
+{
+ "table_id": "4ec5182588dd1cbba81c",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/clock-decomposition-observations.csv",
+  "git_blob": "01b575e43da4cafd37c189c2246a7c0cb26216cf",
+  "bytes": 2129400,
+  "day": "cross"
+ },
+ "source_sha256": "9eadad82a9cf579995e8530fd4d640348776c6b83b12627fa6b6f91e8cfecc08",
+ "source_fields": [
+  "birth_second",
+  "candidate_id",
+  "day",
+  "definition",
+  "event_wait_ns",
+  "event_wait_s",
+  "exact_second",
+  "first_after_birth_receive_ns",
+  "orientation",
+  "recognition_advantage_s",
+  "recognition_delay_ns",
+  "recognition_delay_s",
+  "recognition_minus_event_ns",
+  "recognition_minus_event_s",
+  "recognition_ns",
+  "seconds_since_previous",
+  "seconds_until_next"
+ ],
+ "field_layer_ids": {
+  "seconds_since_previous": [
+   "derived_open_world_predecessor_state"
+  ],
+  "seconds_until_next": [
+   "derived_open_world_predecessor_state"
+  ],
+  "recognition_delay_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "event_wait_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "recognition_delay_ns": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "recognition_ns": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "definition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "recognition_minus_event_ns": [
+   "clock_event_time"
+  ],
+  "first_after_birth_receive_ns": [
+   "clock_receive_time",
+   "derived_roll20_and_dipole_state"
+  ],
+  "event_wait_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "birth_second": [
+   "derived_feature_availability_timestamps",
+   "derived_roll20_and_dipole_state"
+  ],
+  "recognition_advantage_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recognition_minus_event_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "exact_second": [
+   "derived_feature_availability_timestamps"
+  ]
+ },
+ "counts": {
+  "rows": 9534,
+  "direct_clocks": 9534,
+  "clocks": 28596,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/4ec5182588dd1cbba81c/00000.parquet",
+   "rows": 9534,
+   "bytes": 424015,
+   "sha256": "bde5d21aefde083a1f011bcdd0206bc4e9d2fc2ee4e4d15cc8ab5dc3d3e858b6"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

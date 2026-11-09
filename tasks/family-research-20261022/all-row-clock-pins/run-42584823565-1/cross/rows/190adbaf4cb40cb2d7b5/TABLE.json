@@ -1,0 +1,87 @@
+{
+ "table_id": "190adbaf4cb40cb2d7b5",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/trace-instance375-messages.jsonl.gz",
+  "git_blob": "792074d06cbe220ed41c0e120aba1d8871e37547",
+  "bytes": 32256,
+  "day": "cross"
+ },
+ "source_sha256": "faa0ef1b7be00a91934e51217d4d19edfe256480324b91651d5573b2a986e25f",
+ "source_fields": [
+  "action",
+  "after",
+  "before",
+  "cursor",
+  "flags",
+  "linked_display_reduction",
+  "linked_fill_unchanged_display",
+  "order_id",
+  "price_raw",
+  "side",
+  "size",
+  "ts_event",
+  "ts_recv"
+ ],
+ "field_layer_ids": {
+  "price_raw": [
+   "price_and_book_path"
+  ],
+  "flags": [
+   "native_acmrtfn_messages"
+  ],
+  "action": [
+   "native_acmrtfn_messages"
+  ],
+  "ts_recv": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "before": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "linked_display_reduction": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "order_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "native_acmrtfn_messages"
+  ],
+  "cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "after": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "size": [
+   "native_acmrtfn_messages"
+  ],
+  "ts_event": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "linked_fill_unchanged_display": [
+   "order_lifecycle_fills"
+  ],
+  "side": [
+   "native_acmrtfn_messages"
+  ]
+ },
+ "counts": {
+  "rows": 1650,
+  "direct_clocks": 1650,
+  "clocks": 3300,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/190adbaf4cb40cb2d7b5/00000.parquet",
+   "rows": 1650,
+   "bytes": 44399,
+   "sha256": "006c8e3960b7b52092a7ab8d1790ac714a67e9906c163b63af2355e66c686d1a"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

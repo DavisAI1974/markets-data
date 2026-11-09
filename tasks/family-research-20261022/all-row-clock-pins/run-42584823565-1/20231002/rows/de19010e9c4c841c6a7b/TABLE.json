@@ -1,0 +1,171 @@
+{
+ "table_id": "de19010e9c4c841c6a7b",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231002/a-trades.parquet",
+  "git_blob": "b3916f1142fbe24746cf20588ccc30ae16008b36",
+  "bytes": 3963497,
+  "day": "20231002"
+ },
+ "source_sha256": "a10f5928b0df415260bd93a1bf4475abf1aa6be1c49776553c1a5be80805f243",
+ "source_fields": [
+  "aggressor_side",
+  "available_ns",
+  "day",
+  "event_gap_ns",
+  "event_ns",
+  "flags",
+  "group_close_input_cursor",
+  "group_ordinal",
+  "instrument_id",
+  "order_id",
+  "overlapping_leg_ids",
+  "price_raw",
+  "print_step_raw",
+  "receive_gap_ns",
+  "receive_ns",
+  "sequence",
+  "size",
+  "source_ordinal",
+  "source_record_index",
+  "source_tape_day",
+  "stretch_id",
+  "strict_prior_clocks.ask_raw",
+  "strict_prior_clocks.bid_raw",
+  "strict_prior_clocks.close_cursor",
+  "strict_prior_clocks.event_ns",
+  "strict_prior_clocks.first_cursor",
+  "strict_prior_clocks.group",
+  "strict_prior_clocks.known_by_ns",
+  "strict_prior_clocks.receive_ns",
+  "strict_prior_clocks.segment",
+  "strict_prior_group",
+  "trade_input_cursor"
+ ],
+ "field_layer_ids": {
+  "instrument_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "strict_prior_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "strict_prior_clocks.bid_raw": [
+   "price_and_book_path"
+  ],
+  "strict_prior_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "event_ns": [
+   "clock_event_time"
+  ],
+  "strict_prior_clocks.segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_raw": [
+   "price_and_book_path"
+  ],
+  "source_record_index": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "strict_prior_clocks.known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "source_tape_day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "group_close_input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "strict_prior_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "size": [
+   "native_acmrtfn_messages"
+  ],
+  "trade_input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "order_lifecycle_trades"
+  ],
+  "stretch_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "overlapping_leg_ids": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "strict_prior_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "sequence": [
+   "native_acmrtfn_messages"
+  ],
+  "order_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "native_acmrtfn_messages"
+  ],
+  "receive_gap_ns": [
+   "clock_receive_time"
+  ],
+  "print_step_raw": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "available_ns": [
+   "clock_event_known_by",
+   "missingness_and_integrity_flags"
+  ],
+  "strict_prior_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "strict_prior_clocks.ask_raw": [
+   "price_and_book_path"
+  ],
+  "receive_ns": [
+   "clock_receive_time"
+  ],
+  "event_gap_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "group_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "source_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "aggressor_side": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "strict_prior_clocks.group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flags": [
+   "native_acmrtfn_messages"
+  ]
+ },
+ "counts": {
+  "rows": 37670,
+  "direct_clocks": 37670,
+  "clocks": 226020,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/de19010e9c4c841c6a7b/00000.parquet",
+   "rows": 20000,
+   "bytes": 1592529,
+   "sha256": "421af02102e43589b94a5ea62ebb5c772032e183e1b4d5fcf3e6dea33245a97f"
+  },
+  {
+   "path": "rows/de19010e9c4c841c6a7b/00001.parquet",
+   "rows": 17670,
+   "bytes": 1256629,
+   "sha256": "10ee02d627ca9b8bf7273cdce9c5654f6482dd871b96d654eaea161085038467"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

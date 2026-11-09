@@ -1,0 +1,218 @@
+{
+ "table_id": "6fb3a3e2ff2b95b7c244",
+ "source": {
+  "collection": "continuous",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "71240aa56a8b27f7d7f68acd154784579094e5c1",
+  "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231017/research-atlas-v2/continuous-prebirth-v1/onsets.csv.gz",
+  "git_blob": "6c4bbdeb7c3d30b21de780a4dbc8ab14b3c1df7e",
+  "bytes": 1640975,
+  "day": "20231017"
+ },
+ "source_sha256": "131695ad4a6ff44c513ab0feb7eafcf26f2285ec2dc1acaab919744438712631",
+ "source_fields": [
+  "C_signed",
+  "before_ratio",
+  "book_available",
+  "buy",
+  "decision_ns",
+  "early_buy",
+  "early_ratio",
+  "early_sell",
+  "ent_dipole",
+  "expired_buy",
+  "expired_sell",
+  "flow_available",
+  "fresh_buy5",
+  "fresh_ratio5",
+  "fresh_sell5",
+  "hypothesis",
+  "imb_flow",
+  "imb_level",
+  "input_available",
+  "late_buy",
+  "late_ratio",
+  "late_sell",
+  "left_censored_onset",
+  "mi_flow",
+  "mid_raw2",
+  "onset",
+  "operator_defined",
+  "prior_ticks20",
+  "quote_age_s",
+  "quote_known_by_ns",
+  "ratio",
+  "roll_buy",
+  "roll_sell",
+  "second",
+  "segment",
+  "sell",
+  "source_cursor",
+  "source_group",
+  "spread_ticks",
+  "touch_imb",
+  "unknown",
+  "unknown5"
+ ],
+ "field_layer_ids": {
+  "C_signed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "unknown": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "late_sell": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sell": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "decision_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "roll_buy": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "late_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "buy": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "imb_flow": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "input_available": [
+   "missingness_and_integrity_flags"
+  ],
+  "ent_dipole": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "expired_buy": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "roll_sell": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "expired_sell": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "source_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "left_censored_onset": [
+   "missingness_and_integrity_flags"
+  ],
+  "fresh_sell5": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "fresh_ratio5": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "book_available": [
+   "missingness_and_integrity_flags"
+  ],
+  "imb_level": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "mi_flow": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "early_buy": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "mid_raw2": [
+   "price_and_book_path"
+  ],
+  "late_buy": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow_available": [
+   "missingness_and_integrity_flags",
+   "aggressor_and_native_signed_flow"
+  ],
+  "before_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "operator_defined": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "second": [
+   "derived_feature_availability_timestamps"
+  ],
+  "spread_ticks": [
+   "spread_and_depth_imbalance"
+  ],
+  "source_group": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "touch_imb": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "quote_age_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "early_sell": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "fresh_buy5": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "quote_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "prior_ticks20": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "unknown5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "hypothesis": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "early_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 20245,
+  "direct_clocks": 20245,
+  "clocks": 60735,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/6fb3a3e2ff2b95b7c244/00000.parquet",
+   "rows": 20000,
+   "bytes": 769230,
+   "sha256": "cf790d883e65118af2b52454c56cf13dacb705eb23e5910bfea5b5c5817981e8"
+  },
+  {
+   "path": "rows/6fb3a3e2ff2b95b7c244/00001.parquet",
+   "rows": 245,
+   "bytes": 16841,
+   "sha256": "8ca55ed33f24349bb50a9ea51ac2c6130c1125d822047f3d2546ac7779deab7b"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

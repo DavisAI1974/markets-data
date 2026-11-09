@@ -1,0 +1,298 @@
+{
+ "table_id": "65d0330784b9e7507faa",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231017/b-signals.parquet",
+  "git_blob": "1ab3dc18bebf28711b4c25d83ae074c27cf52db6",
+  "bytes": 14891129,
+  "day": "20231017"
+ },
+ "source_sha256": "cd27a2b3b81541b17a6a85cc572d938a834cb6ab209486338af45e8eec17d329",
+ "source_fields": [
+  "all_gap_trend",
+  "all_prior_print_groups",
+  "attacking_same_price_gap_trend",
+  "attacking_same_price_prior_print_groups",
+  "entry_group",
+  "event_id",
+  "event_type",
+  "flow1_buy_lots",
+  "flow1_complete_history",
+  "flow1_sell_lots",
+  "flow1_unknown_lots",
+  "flow20_buy_lots",
+  "flow20_complete_history",
+  "flow20_sell_lots",
+  "flow20_unknown_lots",
+  "flow5_buy_lots",
+  "flow5_complete_history",
+  "flow5_sell_lots",
+  "flow5_unknown_lots",
+  "flow60_buy_lots",
+  "flow60_complete_history",
+  "flow60_sell_lots",
+  "flow60_unknown_lots",
+  "fresh_group_print_count",
+  "previous_two_group_clocks[0].ask_raw",
+  "previous_two_group_clocks[0].bid_raw",
+  "previous_two_group_clocks[0].close_cursor",
+  "previous_two_group_clocks[0].event_ns",
+  "previous_two_group_clocks[0].first_cursor",
+  "previous_two_group_clocks[0].group",
+  "previous_two_group_clocks[0].known_by_ns",
+  "previous_two_group_clocks[0].receive_ns",
+  "previous_two_group_clocks[0].segment",
+  "previous_two_group_clocks[1].ask_raw",
+  "previous_two_group_clocks[1].bid_raw",
+  "previous_two_group_clocks[1].close_cursor",
+  "previous_two_group_clocks[1].event_ns",
+  "previous_two_group_clocks[1].first_cursor",
+  "previous_two_group_clocks[1].group",
+  "previous_two_group_clocks[1].known_by_ns",
+  "previous_two_group_clocks[1].receive_ns",
+  "previous_two_group_clocks[1].segment",
+  "price_raw",
+  "side",
+  "signal_clocks.ask_raw",
+  "signal_clocks.bid_raw",
+  "signal_clocks.close_cursor",
+  "signal_clocks.event_ns",
+  "signal_clocks.first_cursor",
+  "signal_clocks.group",
+  "signal_clocks.known_by_ns",
+  "signal_clocks.receive_ns",
+  "signal_clocks.segment",
+  "signal_group",
+  "size"
+ ],
+ "field_layer_ids": {
+  "flow5_sell_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "signal_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow1_sell_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "previous_two_group_clocks[1].known_by_ns": [
+   "clock_event_known_by",
+   "derived_open_world_predecessor_state"
+  ],
+  "signal_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "previous_two_group_clocks[1].segment": [
+   "derived_open_world_predecessor_state"
+  ],
+  "attacking_same_price_prior_print_groups": [
+   "price_and_book_path"
+  ],
+  "flow20_buy_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "previous_two_group_clocks[1].event_ns": [
+   "clock_event_time",
+   "derived_open_world_predecessor_state"
+  ],
+  "flow60_sell_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "flow5_buy_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "previous_two_group_clocks[0].close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_open_world_predecessor_state"
+  ],
+  "flow20_sell_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "fresh_group_print_count": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "previous_two_group_clocks[0].event_ns": [
+   "clock_event_time",
+   "derived_open_world_predecessor_state"
+  ],
+  "signal_clocks.known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "previous_two_group_clocks[0].first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_open_world_predecessor_state"
+  ],
+  "previous_two_group_clocks[1].bid_raw": [
+   "price_and_book_path",
+   "derived_open_world_predecessor_state"
+  ],
+  "size": [
+   "native_acmrtfn_messages"
+  ],
+  "flow60_buy_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "previous_two_group_clocks[0].known_by_ns": [
+   "clock_event_known_by",
+   "derived_open_world_predecessor_state"
+  ],
+  "all_gap_trend": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_raw": [
+   "price_and_book_path"
+  ],
+  "flow1_buy_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "flow5_unknown_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "flow1_complete_history": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "previous_two_group_clocks[1].group": [
+   "derived_open_world_predecessor_state"
+  ],
+  "entry_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "event_type": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow5_complete_history": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "previous_two_group_clocks[1].ask_raw": [
+   "price_and_book_path",
+   "derived_open_world_predecessor_state"
+  ],
+  "flow20_unknown_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "all_prior_print_groups": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "previous_two_group_clocks[0].bid_raw": [
+   "price_and_book_path",
+   "derived_open_world_predecessor_state"
+  ],
+  "flow60_complete_history": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "previous_two_group_clocks[0].segment": [
+   "derived_open_world_predecessor_state"
+  ],
+  "flow1_unknown_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "side": [
+   "native_acmrtfn_messages"
+  ],
+  "previous_two_group_clocks[0].receive_ns": [
+   "clock_receive_time",
+   "derived_open_world_predecessor_state"
+  ],
+  "signal_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "signal_clocks.segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "signal_clocks.bid_raw": [
+   "price_and_book_path"
+  ],
+  "previous_two_group_clocks[0].group": [
+   "derived_open_world_predecessor_state"
+  ],
+  "attacking_same_price_gap_trend": [
+   "price_and_book_path"
+  ],
+  "flow60_unknown_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "previous_two_group_clocks[1].first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_open_world_predecessor_state"
+  ],
+  "previous_two_group_clocks[1].receive_ns": [
+   "clock_receive_time",
+   "derived_open_world_predecessor_state"
+  ],
+  "signal_clocks.ask_raw": [
+   "price_and_book_path"
+  ],
+  "signal_clocks.group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow20_complete_history": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "signal_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "previous_two_group_clocks[0].ask_raw": [
+   "price_and_book_path",
+   "derived_open_world_predecessor_state"
+  ],
+  "previous_two_group_clocks[1].close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_open_world_predecessor_state"
+  ],
+  "event_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "signal_clocks.receive_ns": [
+   "clock_receive_time"
+  ]
+ },
+ "counts": {
+  "rows": 114994,
+  "direct_clocks": 114994,
+  "clocks": 1034946,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/65d0330784b9e7507faa/00000.parquet",
+   "rows": 20000,
+   "bytes": 2270137,
+   "sha256": "69cd75b02388ee79c75a39434d6bad7eac875d988e06f7c69e8faf91de4dd204"
+  },
+  {
+   "path": "rows/65d0330784b9e7507faa/00001.parquet",
+   "rows": 20000,
+   "bytes": 2275571,
+   "sha256": "cf3fadca833b3f818c365540bdad8c281d0ad86c36f7076df5245c8104c64c9c"
+  },
+  {
+   "path": "rows/65d0330784b9e7507faa/00002.parquet",
+   "rows": 20000,
+   "bytes": 2307431,
+   "sha256": "77f1cd83b116050a43df0f645d428dfba4cb54ad9bbaf9c26d4442504de9e331"
+  },
+  {
+   "path": "rows/65d0330784b9e7507faa/00003.parquet",
+   "rows": 20000,
+   "bytes": 2188144,
+   "sha256": "090827d2134f480e64b94afe8d4b569ee1cc67cc53151c2a670873f6e9b4d001"
+  },
+  {
+   "path": "rows/65d0330784b9e7507faa/00004.parquet",
+   "rows": 20000,
+   "bytes": 2282568,
+   "sha256": "57bf83913d5d0425967bfaa1a8e6fb5ef86a93737ff7b6831a3777d0e9af9d22"
+  },
+  {
+   "path": "rows/65d0330784b9e7507faa/00005.parquet",
+   "rows": 14994,
+   "bytes": 1724621,
+   "sha256": "fdf0117b5dc38249db5501ce825161ea963791c16350e082373d0e9474045212"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

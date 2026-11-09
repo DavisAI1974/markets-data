@@ -1,0 +1,175 @@
+{
+ "table_id": "20ee6d96bf8e2cd1d933",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231003-detector-all-comparisons.csv",
+  "git_blob": "6f23ae3e57d93ac25ff6095bd47f5991f3f47d89",
+  "bytes": 502169,
+  "day": "20231003"
+ },
+ "source_sha256": "5a12c93f63b4308b7b28b93a1cf3c0f98b2440ad5e0fc993e4485771ed66395d",
+ "source_fields": [
+  "available_second_recorded",
+  "available_second_recovered",
+  "baseline_recorded",
+  "baseline_recovered",
+  "birth_disposition",
+  "birth_second",
+  "candidate_id",
+  "competing_peaks",
+  "day",
+  "flow_state",
+  "magnitude_recorded",
+  "magnitude_recovered",
+  "nominal_timing_difference_s",
+  "observations_behind_threshold_recorded",
+  "observations_behind_threshold_recovered",
+  "orientation",
+  "original_coverage",
+  "polarity_recorded",
+  "polarity_recovered",
+  "prominence_recorded",
+  "prominence_recovered",
+  "quote_move",
+  "recognition_ns",
+  "recovered_recognition_ns",
+  "searched_span_seconds_recorded",
+  "searched_span_seconds_recovered",
+  "threshold_recorded",
+  "threshold_recovered",
+  "variant",
+  "window_open",
+  "window_truncated_recorded",
+  "window_truncated_recovered"
+ ],
+ "field_layer_ids": {
+  "prominence_recovered": [
+   "derived_roll20_and_dipole_state",
+   "resilience_and_recovery"
+  ],
+  "threshold_recorded": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "baseline_recorded": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "original_coverage": [
+   "missingness_and_integrity_flags"
+  ],
+  "threshold_recovered": [
+   "derived_roll20_and_dipole_state",
+   "resilience_and_recovery"
+  ],
+  "observations_behind_threshold_recorded": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "window_truncated_recovered": [
+   "resilience_and_recovery"
+  ],
+  "prominence_recorded": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "quote_move": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recovered_recognition_ns": [
+   "clock_prospective_discovery_confirmation",
+   "resilience_and_recovery"
+  ],
+  "birth_second": [
+   "derived_feature_availability_timestamps",
+   "derived_roll20_and_dipole_state"
+  ],
+  "variant": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "available_second_recovered": [
+   "clock_event_known_by",
+   "missingness_and_integrity_flags",
+   "resilience_and_recovery"
+  ],
+  "birth_disposition": [
+   "missingness_and_integrity_flags",
+   "derived_roll20_and_dipole_state"
+  ],
+  "searched_span_seconds_recovered": [
+   "resilience_and_recovery"
+  ],
+  "window_open": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "available_second_recorded": [
+   "clock_event_known_by",
+   "missingness_and_integrity_flags"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "polarity_recorded": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "flow_state": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "polarity_recovered": [
+   "derived_roll20_and_dipole_state",
+   "resilience_and_recovery"
+  ],
+  "observations_behind_threshold_recovered": [
+   "derived_roll20_and_dipole_state",
+   "resilience_and_recovery"
+  ],
+  "window_truncated_recorded": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "baseline_recovered": [
+   "derived_roll20_and_dipole_state",
+   "resilience_and_recovery"
+  ],
+  "magnitude_recovered": [
+   "derived_roll20_and_dipole_state",
+   "resilience_and_recovery"
+  ],
+  "nominal_timing_difference_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recognition_ns": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "magnitude_recorded": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "searched_span_seconds_recorded": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "competing_peaks": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 1671,
+  "direct_clocks": 1671,
+  "clocks": 8331,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/20ee6d96bf8e2cd1d933/00000.parquet",
+   "rows": 1671,
+   "bytes": 72553,
+   "sha256": "1cc2f175876f127c07582918c0fe504d7c932a18b705477bbd9977db7afc298d"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

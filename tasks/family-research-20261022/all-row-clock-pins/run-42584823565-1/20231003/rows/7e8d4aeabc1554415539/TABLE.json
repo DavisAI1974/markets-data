@@ -1,0 +1,74 @@
+{
+ "table_id": "7e8d4aeabc1554415539",
+ "source": {
+  "collection": "family",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+  "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/research-atlas-v2/primer-prebirth-sensitivity.csv",
+  "git_blob": "4b989c9cb5d4e622170a2bbf11e25d6d5b8379c3",
+  "bytes": 1033,
+  "day": "20231003"
+ },
+ "source_sha256": "0b00206938c0bc20f96c480a547e4380afb09d049aeb59fc119112fc2a34f779",
+ "source_fields": [
+  "equal_control_weight_mean_difference",
+  "feature",
+  "lead_s",
+  "mean_difference",
+  "median_case_quote_age_ms",
+  "median_control_quote_age_ms",
+  "pairs",
+  "population",
+  "scope",
+  "unique_controls"
+ ],
+ "field_layer_ids": {
+  "feature": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "unique_controls": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "equal_control_weight_mean_difference": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "median_control_quote_age_ms": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "population": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "mean_difference": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "scope": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "median_case_quote_age_ms": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pairs": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "lead_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 8,
+  "aggregate_or_unclocked_retained": 8,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/7e8d4aeabc1554415539/00000.parquet",
+   "rows": 8,
+   "bytes": 4281,
+   "sha256": "297d8d55f385fbd228abe4ff988f0d042dd7c4abccaad064b94de50d5b2de4ff"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

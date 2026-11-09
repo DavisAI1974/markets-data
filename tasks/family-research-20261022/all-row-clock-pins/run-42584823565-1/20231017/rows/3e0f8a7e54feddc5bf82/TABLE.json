@@ -1,0 +1,71 @@
+{
+ "table_id": "3e0f8a7e54feddc5bf82",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231017-operator-residuals.csv",
+  "git_blob": "ad2ceee2efe614cea8343ed04d6640c0375077b7",
+  "bytes": 1004495,
+  "day": "20231017"
+ },
+ "source_sha256": "f7cf695d816276f9a2af774d52493e056d8673be066c93c5974bfa7a3e80ff5e",
+ "source_fields": [
+  "candidate_id",
+  "day",
+  "disposition",
+  "form",
+  "kind",
+  "observed",
+  "orientation",
+  "predicted",
+  "residual"
+ ],
+ "field_layer_ids": {
+  "disposition": [
+   "missingness_and_integrity_flags"
+  ],
+  "form": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "kind": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "residual": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "observed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "predicted": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 11100,
+  "explicit_parent_context_only": 11100,
+  "clocks": 48100,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/3e0f8a7e54feddc5bf82/00000.parquet",
+   "rows": 11100,
+   "bytes": 369341,
+   "sha256": "0e62a425217745ab00b4496303293f1d69664e441e05f0dbc8fd859ae450a83a"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

@@ -1,0 +1,287 @@
+{
+ "table_id": "04a453dfda8f14700e4c",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231017/b-next-group-arrival.parquet",
+  "git_blob": "e8760cbde861909cdae40665a6bd002b5ada2164",
+  "bytes": 12471033,
+  "day": "20231017"
+ },
+ "source_sha256": "2316abba7dd664aae5bd46de121d0bd2662c4b3b499c3cf89724489227b919d6",
+ "source_fields": [
+  "current_has_print",
+  "decision_cursor",
+  "decision_group",
+  "decision_known_by_ns",
+  "elapsed_known_by_ns",
+  "falling_direction",
+  "first_next_print_receive_ns",
+  "midpoint_direction",
+  "next_group",
+  "next_has_print",
+  "next_known_by_ns",
+  "next_print_lead_ns",
+  "queue_direction",
+  "spread_raw",
+  "standalone_falling_touch",
+  "utc_hour"
+ ],
+ "field_layer_ids": {
+  "falling_direction": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "next_known_by_ns": [
+   "clock_event_known_by",
+   "derived_open_world_predecessor_state"
+  ],
+  "queue_direction": [
+   "fifo_queues"
+  ],
+  "elapsed_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "current_has_print": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "midpoint_direction": [
+   "price_and_book_path"
+  ],
+  "decision_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "standalone_falling_touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "next_has_print": [
+   "derived_open_world_predecessor_state"
+  ],
+  "first_next_print_receive_ns": [
+   "clock_receive_time",
+   "derived_open_world_predecessor_state"
+  ],
+  "decision_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "next_print_lead_ns": [
+   "derived_feature_availability_timestamps",
+   "derived_open_world_predecessor_state"
+  ],
+  "utc_hour": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "next_group": [
+   "derived_open_world_predecessor_state"
+  ],
+  "decision_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "spread_raw": [
+   "spread_and_depth_imbalance"
+  ]
+ },
+ "counts": {
+  "rows": 635168,
+  "direct_clocks": 635168,
+  "clocks": 1302818,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/04a453dfda8f14700e4c/00000.parquet",
+   "rows": 20000,
+   "bytes": 480273,
+   "sha256": "83a83da36e81d754964aeda7e30569a469b18100d26235d36f03f6d9871b647f"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00001.parquet",
+   "rows": 20000,
+   "bytes": 469704,
+   "sha256": "737066e0ab1f8ab355d21c1da6a0a405cbd59e3f1a6af5af26822dbcd11aaf85"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00002.parquet",
+   "rows": 20000,
+   "bytes": 469802,
+   "sha256": "a9235e1c4fda2ac045c17e9651f00e35ded4924a7f810f7e6cf05bd142355eae"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00003.parquet",
+   "rows": 20000,
+   "bytes": 470123,
+   "sha256": "c8749ade13afdc70434c82b1d24572188fad18354994d9a3fe1ce53b1e575162"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00004.parquet",
+   "rows": 20000,
+   "bytes": 469193,
+   "sha256": "3e3408157b58d07a080ae67028e4fa15a1dce47b1a55a07af5f10c1df9441579"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00005.parquet",
+   "rows": 20000,
+   "bytes": 468087,
+   "sha256": "56c33df2736ef39eaa8ccabe044468bacea75f707968337782e9f78268e2741f"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00006.parquet",
+   "rows": 20000,
+   "bytes": 468961,
+   "sha256": "bc081f1d340089f13fb3155cb187a87b81dab8ae9487f2265e96da21ad10c9c9"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00007.parquet",
+   "rows": 20000,
+   "bytes": 469544,
+   "sha256": "41b55c97698880b5bb6d20a2a2ac4ad8a601a61dbd4e9be909645a1a1a851cf6"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00008.parquet",
+   "rows": 20000,
+   "bytes": 466772,
+   "sha256": "16ad53125c28b643b75b6089d104f832f267266cec21fb6f2960bd84960cfbce"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00009.parquet",
+   "rows": 20000,
+   "bytes": 464078,
+   "sha256": "94fbc5a6f116bbe6a686e398c1e7de7f428d3024d420449ced00b82e74258da9"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00010.parquet",
+   "rows": 20000,
+   "bytes": 469368,
+   "sha256": "e54f23ef8f048a8bd93f5a1ff84ca73b5eee49febaf539a4198099f06f9f759e"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00011.parquet",
+   "rows": 20000,
+   "bytes": 466476,
+   "sha256": "5a9c87e8fe652ac344fefca0800f2b7660c35b03ff53eaf4792532b1f3dda318"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00012.parquet",
+   "rows": 20000,
+   "bytes": 470072,
+   "sha256": "9212b397da27041d376ac5a379ddaf51de3396bf2b99e2b0ff602c1eb45d29fd"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00013.parquet",
+   "rows": 20000,
+   "bytes": 467185,
+   "sha256": "159095488b1d4d1f2456bb935d9e93f9cc8a78cdaf7b331498f7bce4a157fb22"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00014.parquet",
+   "rows": 20000,
+   "bytes": 472945,
+   "sha256": "d95167924a15a4494732679992b8fd2016c345ad4b025c9f245e7ae749fdc136"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00015.parquet",
+   "rows": 20000,
+   "bytes": 468440,
+   "sha256": "6efee91b5509030e6c379e45b7bdf3632aeca0448577f09efb7a19c6ed706cac"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00016.parquet",
+   "rows": 20000,
+   "bytes": 470248,
+   "sha256": "7fe2792b59c7468011b163ade6d249760d598580b6e99059ce8f0e1990a913ea"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00017.parquet",
+   "rows": 20000,
+   "bytes": 468506,
+   "sha256": "7d89407b66c1b7de2901f35992a9343515a98e5b55a12a272b3cb686878169a2"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00018.parquet",
+   "rows": 20000,
+   "bytes": 464746,
+   "sha256": "095af3e4b70515f9a66533e3e271724b890835009d01c205d0763d357effc6e4"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00019.parquet",
+   "rows": 20000,
+   "bytes": 467524,
+   "sha256": "cedd8dd1fe4d3930240cdf818b5376ebae2984ba5e6ac0931d835118734dc14b"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00020.parquet",
+   "rows": 20000,
+   "bytes": 475278,
+   "sha256": "432cccb6735cbddc27b47a43578b6034aa51a0e84c211dc3a4a0fe2dad2acc36"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00021.parquet",
+   "rows": 20000,
+   "bytes": 474258,
+   "sha256": "a879bee9e2a0d6fe5814df8404d434940b2d7a17b8e9bf9d23506ac6dffe2aa0"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00022.parquet",
+   "rows": 20000,
+   "bytes": 474338,
+   "sha256": "94e6455fae2049643242fd1cff2bebe94a18e4eaa83e239397f7b4b5868eb99a"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00023.parquet",
+   "rows": 20000,
+   "bytes": 470575,
+   "sha256": "7772fac3fcc522958ce8dcb1ce49e7cc0e016224242bf2e9842e3b817eda421d"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00024.parquet",
+   "rows": 20000,
+   "bytes": 470951,
+   "sha256": "b86d0b521e1fb8a7f327c19275f93ca698b54e65782ac38bacbd10f483a0b7f7"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00025.parquet",
+   "rows": 20000,
+   "bytes": 470102,
+   "sha256": "dbd03b50bec630e002be5e84c2b2a220de2c78f0df51a37c83c07d86b171bca5"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00026.parquet",
+   "rows": 20000,
+   "bytes": 470540,
+   "sha256": "cd936935a090f5067103a3221e68d5fc3af0d67cb44c1119124cc32b2f776948"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00027.parquet",
+   "rows": 20000,
+   "bytes": 473589,
+   "sha256": "f48ac83f318606114e0be9c6f44a3096323b706453a2c50d7084092bc223968d"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00028.parquet",
+   "rows": 20000,
+   "bytes": 470553,
+   "sha256": "8419bd4db32ed098d9ef313a31edb48f440122b5a2a6dde718f801a1d149682e"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00029.parquet",
+   "rows": 20000,
+   "bytes": 466684,
+   "sha256": "ee5c20b0b6b568c08a1fd63fc11377993f48bdf2c610d9d9e37a43040193a119"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00030.parquet",
+   "rows": 20000,
+   "bytes": 475153,
+   "sha256": "12464d284178827c6278ecd6febee3b30b725647299041767426050b8c9b667e"
+  },
+  {
+   "path": "rows/04a453dfda8f14700e4c/00031.parquet",
+   "rows": 15168,
+   "bytes": 349292,
+   "sha256": "56bf1ab019495bb0c742d411e1b506b7c925761262005eaddf89ebdf3819e5a5"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

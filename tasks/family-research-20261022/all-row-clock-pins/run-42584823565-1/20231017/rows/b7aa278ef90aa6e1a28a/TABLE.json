@@ -1,0 +1,99 @@
+{
+ "table_id": "b7aa278ef90aa6e1a28a",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231017/a-family-firsts.parquet",
+  "git_blob": "2ffe943de9af4ba7d75aa8d6425cbb34187e5e19",
+  "bytes": 45394,
+  "day": "20231017"
+ },
+ "source_sha256": "9319e7b729a625b4d91b6a143949a6a3a6c04b56c362f8c10cd8a6f5c711651a",
+ "source_fields": [
+  "bad_receive_clock_member",
+  "cursor_cap",
+  "family_id",
+  "first_cursor",
+  "input_cursor",
+  "instance",
+  "occurrence_count",
+  "pre_input_cursor",
+  "pre_source_ordinal",
+  "reset_member",
+  "sample_id",
+  "snapshot_member",
+  "source_ordinal",
+  "start_basis",
+  "start_recv_ns",
+  "start_utc"
+ ],
+ "field_layer_ids": {
+  "start_recv_ns": [
+   "clock_receive_time"
+  ],
+  "cursor_cap": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "start_basis": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "pre_source_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "source_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "start_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "family_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_d_family_geometry"
+  ],
+  "pre_input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "snapshot_member": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sample_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "reset_member": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "occurrence_count": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "instance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bad_receive_clock_member": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 824,
+  "direct_clocks": 824,
+  "clocks": 824,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/b7aa278ef90aa6e1a28a/00000.parquet",
+   "rows": 824,
+   "bytes": 35690,
+   "sha256": "9d7e72e0980be271994cf6ba3d29edc27193a923724c05ed1710de85a97d67c5"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

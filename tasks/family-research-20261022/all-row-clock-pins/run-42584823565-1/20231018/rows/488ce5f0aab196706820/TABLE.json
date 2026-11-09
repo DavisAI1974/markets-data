@@ -1,0 +1,222 @@
+{
+ "table_id": "488ce5f0aab196706820",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231018-paths.csv.gz",
+  "git_blob": "1538c000829887af234ac45418377326f403c1a5",
+  "bytes": 4460535,
+  "day": "20231018"
+ },
+ "source_sha256": "44ade163905089e9168075da60780673491c6e71ff3e1c6b84a181a374581bfe",
+ "source_fields": [
+  "add_A",
+  "add_B",
+  "ask",
+  "ask_size",
+  "bid",
+  "bid_size",
+  "cancel_A",
+  "cancel_B",
+  "candidate_id",
+  "classified_lots_20",
+  "cursor",
+  "cut_ns",
+  "fill_A",
+  "fill_B",
+  "good",
+  "kind",
+  "modify_A",
+  "modify_B",
+  "orientation",
+  "original_coverage",
+  "quote_age_s",
+  "ratio",
+  "relative_s",
+  "trade_A",
+  "trade_B"
+ ],
+ "field_layer_ids": {
+  "trade_A": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "original_coverage": [
+   "missingness_and_integrity_flags"
+  ],
+  "cut_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "modify_B": [
+   "order_lifecycle_modifies"
+  ],
+  "cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "bid": [
+   "price_and_book_path"
+  ],
+  "add_B": [
+   "order_lifecycle_adds"
+  ],
+  "modify_A": [
+   "order_lifecycle_modifies"
+  ],
+  "fill_A": [
+   "order_lifecycle_fills"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "cancel_A": [
+   "order_lifecycle_cancels"
+  ],
+  "ask_size": [
+   "full_bid_ask_depth"
+  ],
+  "good": [
+   "missingness_and_integrity_flags"
+  ],
+  "classified_lots_20": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "add_A": [
+   "order_lifecycle_adds"
+  ],
+  "fill_B": [
+   "order_lifecycle_fills"
+  ],
+  "bid_size": [
+   "full_bid_ask_depth"
+  ],
+  "cancel_B": [
+   "order_lifecycle_cancels"
+  ],
+  "relative_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "ask": [
+   "price_and_book_path"
+  ],
+  "quote_age_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "trade_B": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "kind": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 288144,
+  "direct_clocks": 288144,
+  "clocks": 288144,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/488ce5f0aab196706820/00000.parquet",
+   "rows": 20000,
+   "bytes": 314731,
+   "sha256": "576caece2228e18f23c1e6f99f89629318dc16df59d112d2e914636b0f572c08"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00001.parquet",
+   "rows": 20000,
+   "bytes": 312178,
+   "sha256": "efca6b19c24c53093eec1466d491486057da50e819980be4313c09e6c7f73521"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00002.parquet",
+   "rows": 20000,
+   "bytes": 315212,
+   "sha256": "f7121081e14c062b2e102ddaff31faac1b367233c4f20e43ef4ec055c726ee8b"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00003.parquet",
+   "rows": 20000,
+   "bytes": 312123,
+   "sha256": "71acf85613d39e5bd9aab1257c8ed1eac700563b4c182ea5091396fa42654ef7"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00004.parquet",
+   "rows": 20000,
+   "bytes": 296546,
+   "sha256": "4fe975fb530148952c9c36284a4407e2fe9382d2bd44f0bc0eea1258d0f17e1e"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00005.parquet",
+   "rows": 20000,
+   "bytes": 304920,
+   "sha256": "12fa8a4ab690bac99fe74fced506d6646cdc3fbeae821bad097ceb2d7823616a"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00006.parquet",
+   "rows": 20000,
+   "bytes": 291996,
+   "sha256": "00d5c45df9a9bad421fc2940360316dd6b918d2853fefb8ffa121a768d1e5fe4"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00007.parquet",
+   "rows": 20000,
+   "bytes": 311997,
+   "sha256": "9df45e94422a8cbe475d5ad06c810296262fdd989ae02d25235aa5fb31e53c68"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00008.parquet",
+   "rows": 20000,
+   "bytes": 311968,
+   "sha256": "b4413612efb9d4405df868e24403eb849ceccbadafd0b80e8db441615da146dc"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00009.parquet",
+   "rows": 20000,
+   "bytes": 316228,
+   "sha256": "e5ea7bdfba44cbfac04495b4fa158db6e73439948ea73e2dddf766e77ca6d16a"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00010.parquet",
+   "rows": 20000,
+   "bytes": 320006,
+   "sha256": "93ecfebd99d5e94469a3597e5bdd4ae3f7a083004f09f61b0f14d1890c76932a"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00011.parquet",
+   "rows": 20000,
+   "bytes": 316739,
+   "sha256": "1de3f0a6dd28b4edcbec03ef3c99c0cd41dd4ab97eba133d0772b9c2b47a8f76"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00012.parquet",
+   "rows": 20000,
+   "bytes": 316773,
+   "sha256": "56e062e784ca6c91f8d7e2f3de5a80965ceb97ec795afbbd04a65c4bcb6f8420"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00013.parquet",
+   "rows": 20000,
+   "bytes": 307248,
+   "sha256": "2924426c96bfbc13367dd2d07ad47678e4ead9552d37ad4f3471070207c7dba5"
+  },
+  {
+   "path": "rows/488ce5f0aab196706820/00014.parquet",
+   "rows": 8144,
+   "bytes": 133396,
+   "sha256": "83ae9a5068d99468c0b313c6763429af8a2fcc5e0768795c78cc0ab152dee357"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

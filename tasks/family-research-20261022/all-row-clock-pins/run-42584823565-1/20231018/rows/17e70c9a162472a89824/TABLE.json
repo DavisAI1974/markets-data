@@ -1,0 +1,200 @@
+{
+ "table_id": "17e70c9a162472a89824",
+ "source": {
+  "collection": "continuous",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "71240aa56a8b27f7d7f68acd154784579094e5c1",
+  "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231018/research-atlas-v2/continuous-prebirth-v1/observations.csv.gz",
+  "git_blob": "481ae7b3e3c3cd76a7a6294a8bcbdbc436c8cd74",
+  "bytes": 1997874,
+  "day": "20231018"
+ },
+ "source_sha256": "2bca084705bfd7f0ea6504911e78e894f64fa17ee3f63ce47cedf5a878af4597",
+ "source_fields": [
+  "before_ratio",
+  "book_available",
+  "buy",
+  "decision_ns",
+  "early_buy",
+  "early_ratio",
+  "early_sell",
+  "expired_buy",
+  "expired_sell",
+  "flow_available",
+  "fresh_buy5",
+  "fresh_ratio5",
+  "fresh_sell5",
+  "input_available",
+  "late_buy",
+  "late_ratio",
+  "late_sell",
+  "mid_raw2",
+  "prior_ticks20",
+  "quote_age_s",
+  "quote_known_by_ns",
+  "ratio",
+  "roll_buy",
+  "roll_sell",
+  "second",
+  "segment",
+  "sell",
+  "source_cursor",
+  "source_group",
+  "spread_ticks",
+  "touch_imb",
+  "unknown",
+  "unknown5"
+ ],
+ "field_layer_ids": {
+  "touch_imb": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "early_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "early_buy": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prior_ticks20": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "input_available": [
+   "missingness_and_integrity_flags"
+  ],
+  "spread_ticks": [
+   "spread_and_depth_imbalance"
+  ],
+  "unknown5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "book_available": [
+   "missingness_and_integrity_flags"
+  ],
+  "quote_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "flow_available": [
+   "missingness_and_integrity_flags",
+   "aggressor_and_native_signed_flow"
+  ],
+  "fresh_ratio5": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "early_sell": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "unknown": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "late_buy": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "late_sell": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "fresh_buy5": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "quote_age_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sell": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "before_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "decision_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "buy": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "roll_buy": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "expired_buy": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "source_group": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "late_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "fresh_sell5": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "expired_sell": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "second": [
+   "derived_feature_availability_timestamps"
+  ],
+  "mid_raw2": [
+   "price_and_book_path"
+  ],
+  "source_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "roll_sell": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 82800,
+  "direct_clocks": 82800,
+  "clocks": 248400,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/17e70c9a162472a89824/00000.parquet",
+   "rows": 20000,
+   "bytes": 623712,
+   "sha256": "39f6fd7d4637b6abe9147e6be1e69c80fd5057bc4510e8c46ac9edb6eb862bef"
+  },
+  {
+   "path": "rows/17e70c9a162472a89824/00001.parquet",
+   "rows": 20000,
+   "bytes": 579537,
+   "sha256": "6d7db414b8787cb73a084155a2cbe849d5af2e7b90b87346ec8a93399ee3d8ef"
+  },
+  {
+   "path": "rows/17e70c9a162472a89824/00002.parquet",
+   "rows": 20000,
+   "bytes": 684958,
+   "sha256": "d97a74f92e12b2a2b5061ad9802dd97a4575dc82ff994e4193fe017b5efa98b3"
+  },
+  {
+   "path": "rows/17e70c9a162472a89824/00003.parquet",
+   "rows": 20000,
+   "bytes": 698866,
+   "sha256": "7aa53d1121d541be190a6f0393cdbcaf966ecec99fe850c09f07f43643c7b047"
+  },
+  {
+   "path": "rows/17e70c9a162472a89824/00004.parquet",
+   "rows": 2800,
+   "bytes": 74620,
+   "sha256": "16cb0b8fec713732a8dea1d36c918bc0e9e3e33ae833c7171004298cb60c45d1"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

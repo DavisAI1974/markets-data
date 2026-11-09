@@ -1,0 +1,200 @@
+{
+ "table_id": "60b0ae5303ba6986f3d5",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-family-windows.parquet",
+  "git_blob": "039171cdc34dbf391a1c4123b69c33eb238c88db",
+  "bytes": 1372227,
+  "day": "20231018"
+ },
+ "source_sha256": "d1e09ab347f1777da1e93fb5143aadf56c81ab3ea6e4aab20d48632b5a54b0e5",
+ "source_fields": [
+  "anchor_clocks",
+  "anchor_clocks.ask_raw",
+  "anchor_clocks.bid_raw",
+  "anchor_clocks.close_cursor",
+  "anchor_clocks.event_ns",
+  "anchor_clocks.first_cursor",
+  "anchor_clocks.group",
+  "anchor_clocks.known_by_ns",
+  "anchor_clocks.receive_ns",
+  "anchor_clocks.segment",
+  "anchor_group",
+  "anchor_ns",
+  "anchor_quote_age_ns",
+  "anchor_shift_s",
+  "endpoint_clocks",
+  "endpoint_clocks.ask_raw",
+  "endpoint_clocks.bid_raw",
+  "endpoint_clocks.close_cursor",
+  "endpoint_clocks.event_ns",
+  "endpoint_clocks.first_cursor",
+  "endpoint_clocks.group",
+  "endpoint_clocks.known_by_ns",
+  "endpoint_clocks.receive_ns",
+  "endpoint_clocks.segment",
+  "endpoint_group",
+  "endpoint_quote_age_ns",
+  "endpoint_trade",
+  "family_id",
+  "family_start_receive_ns",
+  "horizon_s",
+  "midpoint_available",
+  "midpoint_change_twice_raw",
+  "prior_trade",
+  "target_ns",
+  "trade_and_quote_fresh5s",
+  "transaction_anchor_age_ns",
+  "transaction_available",
+  "transaction_change_raw",
+  "transaction_endpoint_age_ns"
+ ],
+ "field_layer_ids": {
+  "endpoint_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "anchor_quote_age_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "trade_and_quote_fresh5s": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "anchor_clocks": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "endpoint_clocks": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "endpoint_quote_age_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "horizon_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "transaction_anchor_age_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "endpoint_trade": [
+   "order_lifecycle_trades"
+  ],
+  "anchor_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "midpoint_available": [
+   "missingness_and_integrity_flags",
+   "price_and_book_path"
+  ],
+  "prior_trade": [
+   "order_lifecycle_trades"
+  ],
+  "midpoint_change_twice_raw": [
+   "price_and_book_path"
+  ],
+  "transaction_available": [
+   "missingness_and_integrity_flags"
+  ],
+  "transaction_change_raw": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "anchor_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "transaction_endpoint_age_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "target_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "anchor_shift_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "family_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_d_family_geometry"
+  ],
+  "family_start_receive_ns": [
+   "clock_receive_time",
+   "derived_d_family_geometry"
+  ],
+  "endpoint_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "endpoint_clocks.group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "endpoint_clocks.ask_raw": [
+   "price_and_book_path"
+  ],
+  "endpoint_clocks.known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "endpoint_clocks.segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "endpoint_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "endpoint_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "endpoint_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "endpoint_clocks.bid_raw": [
+   "price_and_book_path"
+  ],
+  "anchor_clocks.segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "anchor_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "anchor_clocks.known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "anchor_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "anchor_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "anchor_clocks.group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "anchor_clocks.bid_raw": [
+   "price_and_book_path"
+  ],
+  "anchor_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "anchor_clocks.ask_raw": [
+   "price_and_book_path"
+  ]
+ },
+ "counts": {
+  "rows": 20628,
+  "direct_clocks": 20628,
+  "clocks": 185580,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/60b0ae5303ba6986f3d5/00000.parquet",
+   "rows": 20000,
+   "bytes": 1380990,
+   "sha256": "6c475b16c7b058d38f7b477d8f49aad2d63bb174d5a82de276b538fe4a417a4c"
+  },
+  {
+   "path": "rows/60b0ae5303ba6986f3d5/00001.parquet",
+   "rows": 628,
+   "bytes": 40544,
+   "sha256": "6e95765a4a1eab714893879031a04c8da83dd3a6da1847aa075f49b06bf0ba3e"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

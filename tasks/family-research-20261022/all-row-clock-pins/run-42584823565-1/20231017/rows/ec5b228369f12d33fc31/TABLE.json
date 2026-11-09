@@ -1,0 +1,179 @@
+{
+ "table_id": "ec5b228369f12d33fc31",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231017/cross-study-event-links.parquet",
+  "git_blob": "9b0f8edc48810a005499270c1a98531a94de1a3d",
+  "bytes": 6487106,
+  "day": "20231017"
+ },
+ "source_sha256": "51d9c8e4da57bab837c484b5e6785d5e3ae9c6a8274e7fc80b4ed383d5251f86",
+ "source_fields": [
+  "current_group_no_print",
+  "dipole_recognition_age_ns",
+  "dipole_selection",
+  "displayed_touch_vs_signal",
+  "event_id",
+  "event_type",
+  "fresh_buy_lots",
+  "fresh_sell_lots",
+  "fresh_unknown_lots",
+  "fresh_wire_flow_vs_signal",
+  "group",
+  "latest_dipole_recognition_cursor",
+  "latest_dipole_recognition_ns",
+  "latest_known_trade_ordinal",
+  "latest_recognized_dipole_id",
+  "leg_ids_use",
+  "observed_family_occurrence_number",
+  "prior_print_gap_trend",
+  "retrospective_print_leg_ids",
+  "rolling20_buy_lots",
+  "rolling20_sell_lots",
+  "side",
+  "signal_cursor",
+  "signal_event_ns",
+  "signal_known_by_ns",
+  "signal_receive_ns",
+  "structural_family_at_group"
+ ],
+ "field_layer_ids": {
+  "current_group_no_print": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "signal_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "rolling20_buy_lots": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "rolling20_sell_lots": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "signal_receive_ns": [
+   "clock_receive_time"
+  ],
+  "latest_dipole_recognition_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "fresh_buy_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "signal_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "prior_print_gap_trend": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "fresh_wire_flow_vs_signal": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "latest_known_trade_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "order_lifecycle_trades"
+  ],
+  "structural_family_at_group": [
+   "derived_d_family_geometry"
+  ],
+  "side": [
+   "native_acmrtfn_messages"
+  ],
+  "observed_family_occurrence_number": [
+   "derived_d_family_geometry"
+  ],
+  "retrospective_print_leg_ids": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "dipole_recognition_age_ns": [
+   "clock_prospective_discovery_confirmation",
+   "derived_roll20_and_dipole_state"
+  ],
+  "dipole_selection": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "displayed_touch_vs_signal": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "latest_recognized_dipole_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "signal_event_ns": [
+   "clock_event_time"
+  ],
+  "latest_dipole_recognition_ns": [
+   "clock_prospective_discovery_confirmation",
+   "derived_roll20_and_dipole_state"
+  ],
+  "fresh_unknown_lots": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "fresh_sell_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "event_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "event_type": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "leg_ids_use": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 114994,
+  "direct_clocks": 114994,
+  "clocks": 459737,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/ec5b228369f12d33fc31/00000.parquet",
+   "rows": 20000,
+   "bytes": 1125263,
+   "sha256": "e315e88f9749c6277d488b9ffde3609010b978ccc77ff02c94e8cabdd27cf2f4"
+  },
+  {
+   "path": "rows/ec5b228369f12d33fc31/00001.parquet",
+   "rows": 20000,
+   "bytes": 1084944,
+   "sha256": "457a35a02f1698f4226b4eb953acea97aeee656c351e1c3e4846c1d13cccdfbe"
+  },
+  {
+   "path": "rows/ec5b228369f12d33fc31/00002.parquet",
+   "rows": 20000,
+   "bytes": 1115753,
+   "sha256": "5b09351ef7cfd75f9bbba81ad694a88d2968508636ae7ddef2d4a2bac3384f79"
+  },
+  {
+   "path": "rows/ec5b228369f12d33fc31/00003.parquet",
+   "rows": 20000,
+   "bytes": 1119118,
+   "sha256": "af8110552ff674aa8e7ddeffe5a4a220795982b391d655e88e0477d87d101c4b"
+  },
+  {
+   "path": "rows/ec5b228369f12d33fc31/00004.parquet",
+   "rows": 20000,
+   "bytes": 1090365,
+   "sha256": "5eb7ecf4cc0127c24803a0cabfafd6817f9173947c1c4ef2d8398dfec4f61f9d"
+  },
+  {
+   "path": "rows/ec5b228369f12d33fc31/00005.parquet",
+   "rows": 14994,
+   "bytes": 793773,
+   "sha256": "ea2e2031b43ff249bcf1bd1893260681b8430de050a04373bc82cbb2f6d090d8"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

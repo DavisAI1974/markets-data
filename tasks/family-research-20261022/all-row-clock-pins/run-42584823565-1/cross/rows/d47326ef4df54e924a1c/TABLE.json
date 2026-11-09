@@ -1,0 +1,110 @@
+{
+ "table_id": "d47326ef4df54e924a1c",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/dipole-post-recognition-rows.jsonl.gz",
+  "git_blob": "27779248356dfaa7e0e267439a188b1ff3a4760c",
+  "bytes": 29625,
+  "day": "cross"
+ },
+ "source_sha256": "8c17ff8aab05228c11fbf181d2e776908864a8b9478cc67fea92b03553661804",
+ "source_fields": [
+  "birth_classified_lots",
+  "birth_second",
+  "candidate_id",
+  "flow_state",
+  "last_window_classified_lots",
+  "move_ticks_after_recognition.1",
+  "move_ticks_after_recognition.20",
+  "move_ticks_after_recognition.300",
+  "move_ticks_after_recognition.5",
+  "move_ticks_after_recognition.60",
+  "orientation",
+  "polarity",
+  "prebirth_depth_state",
+  "quote_move_by_recognition",
+  "realised_by_recognition_ticks_in_birth_direction",
+  "recognition_cursor",
+  "recognition_receive_ns",
+  "recognition_touch_relation"
+ ],
+ "field_layer_ids": {
+  "prebirth_depth_state": [
+   "full_bid_ask_depth",
+   "derived_roll20_and_dipole_state"
+  ],
+  "last_window_classified_lots": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "move_ticks_after_recognition.1": [
+   "later_outcome_reveal"
+  ],
+  "flow_state": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "recognition_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "quote_move_by_recognition": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks_after_recognition.20": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks_after_recognition.300": [
+   "later_outcome_reveal"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "realised_by_recognition_ticks_in_birth_direction": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "move_ticks_after_recognition.5": [
+   "later_outcome_reveal"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "birth_classified_lots": [
+   "aggressor_and_native_signed_flow",
+   "derived_roll20_and_dipole_state"
+  ],
+  "birth_second": [
+   "derived_feature_availability_timestamps",
+   "derived_roll20_and_dipole_state"
+  ],
+  "recognition_touch_relation": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recognition_receive_ns": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "move_ticks_after_recognition.60": [
+   "later_outcome_reveal"
+  ]
+ },
+ "counts": {
+  "rows": 863,
+  "direct_clocks": 863,
+  "clocks": 1726,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/d47326ef4df54e924a1c/00000.parquet",
+   "rows": 863,
+   "bytes": 46183,
+   "sha256": "70488bf5ce837d6de5d285dea854ba62e7a0904abf5088000d813b76da406a0b"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

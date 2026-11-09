@@ -1,0 +1,62 @@
+{
+ "table_id": "4b12f11ce62d0c32d77d",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231018-detector-free-cases.csv",
+  "git_blob": "68a58df12a69a7307faf83278e93ed34a22cb33d",
+  "bytes": 529,
+  "day": "20231018"
+ },
+ "source_sha256": "6b0b5e814e26685976a980113cd864f9c811ae42bd6f92b3a0c51e8577471552",
+ "source_fields": [
+  "close_cursor",
+  "comparison",
+  "definition",
+  "first_cursor",
+  "group",
+  "raw_records",
+  "receive_ns"
+ ],
+ "field_layer_ids": {
+  "group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "raw_records": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "receive_ns": [
+   "clock_receive_time"
+  ],
+  "close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "definition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "comparison": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 6,
+  "direct_clocks": 6,
+  "clocks": 6,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/4b12f11ce62d0c32d77d/00000.parquet",
+   "rows": 6,
+   "bytes": 4815,
+   "sha256": "9973b9a608b941afd069e6e3292ddc7a7ce9524ac5dba123b8211e0173fe446e"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

@@ -1,0 +1,118 @@
+{
+ "table_id": "e9c92dee82b9f7a54a75",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/chain-play-filter-oct18-rows.jsonl.gz",
+  "git_blob": "fc6b3f4afe1e12e15046b33b572d8b0958274b74",
+  "bytes": 34645,
+  "day": "20231018"
+ },
+ "source_sha256": "0cbdd0bbf22fb80ba2735e27ac43b201da608760e975f1ced954ca6461bdfd68",
+ "source_fields": [
+  "confirm",
+  "confirm_epoch_s",
+  "confirm_utc",
+  "day0_epoch_s",
+  "eligible",
+  "expected_side",
+  "is_play",
+  "onset",
+  "onset_epoch_s",
+  "onset_utc",
+  "polarity",
+  "prev4",
+  "prev_a_state",
+  "prev_seed",
+  "reasons",
+  "return_ticks",
+  "same_as_prev",
+  "session",
+  "t0",
+  "t0_epoch_s",
+  "t0_utc"
+ ],
+ "field_layer_ids": {
+  "prev_seed": [
+   "derived_open_world_predecessor_state"
+  ],
+  "onset_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "prev4": [
+   "derived_open_world_predecessor_state"
+  ],
+  "confirm_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "same_as_prev": [
+   "derived_open_world_predecessor_state"
+  ],
+  "onset_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "return_ticks": [
+   "later_outcome_reveal"
+  ],
+  "eligible": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "expected_side": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "confirm": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "reasons": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "onset": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "confirm_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prev_a_state": [
+   "derived_open_world_predecessor_state"
+  ],
+  "is_play": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 890,
+  "direct_clocks": 890,
+  "clocks": 3560,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/e9c92dee82b9f7a54a75/00000.parquet",
+   "rows": 890,
+   "bytes": 50208,
+   "sha256": "c25501695c354aab2cb18feccdcde6aad47ee4179aa52584f4058634093be982"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

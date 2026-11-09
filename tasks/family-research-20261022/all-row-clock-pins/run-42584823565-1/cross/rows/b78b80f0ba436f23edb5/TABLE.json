@@ -1,0 +1,86 @@
+{
+ "table_id": "b78b80f0ba436f23edb5",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/shape_forms-environment-section-counts.csv",
+  "git_blob": "4668501ddd1c2200d6f1fdaa8d3e84388fb487a0",
+  "bytes": 8970,
+  "day": "cross"
+ },
+ "source_sha256": "a5c339fc37b1ac9ddc79b126b607c6953b73e87d31f43950ba8af32eaa57370d",
+ "source_fields": [
+  "any_wire_prints",
+  "candidate_section",
+  "day",
+  "definition",
+  "kind",
+  "own_lead_negative",
+  "own_lead_positive",
+  "own_lead_unavailable",
+  "own_lead_zero",
+  "quote_flat",
+  "quote_nonflat",
+  "quote_unavailable",
+  "rows"
+ ],
+ "field_layer_ids": {
+  "own_lead_positive": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "own_lead_zero": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "quote_nonflat": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "rows": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "quote_flat": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "candidate_section": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "kind": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "own_lead_unavailable": [
+   "missingness_and_integrity_flags"
+  ],
+  "own_lead_negative": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "quote_unavailable": [
+   "missingness_and_integrity_flags"
+  ],
+  "definition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "any_wire_prints": [
+   "aggressor_and_native_signed_flow"
+  ]
+ },
+ "counts": {
+  "rows": 126,
+  "aggregate_or_unclocked_retained": 126,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/b78b80f0ba436f23edb5/00000.parquet",
+   "rows": 126,
+   "bytes": 5126,
+   "sha256": "1d72a3a4dbad4791bf0fd0f1e3f969b67f425fb979bec655300b7624bbeff8d6"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

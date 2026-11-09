@@ -1,0 +1,60 @@
+{
+ "table_id": "042a09ffdb4bb80b90fd",
+ "source": {
+  "collection": "continuous",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "71240aa56a8b27f7d7f68acd154784579094e5c1",
+  "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231018/research-atlas-v2/continuous-prebirth-v1/birth-links.csv.gz",
+  "git_blob": "0511cc079ee49546337ff9c00c8aa4a64abb89b4",
+  "bytes": 72708,
+  "day": "20231018"
+ },
+ "source_sha256": "db6ef19fc085effda9c895e7686ac2ebe412b30841cec291c8ae6113f8696db7",
+ "source_fields": [
+  "birth_ns",
+  "candidate_id",
+  "first_lead_s",
+  "hypothesis",
+  "last_lead_s",
+  "signals_in_prior60"
+ ],
+ "field_layer_ids": {
+  "hypothesis": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "birth_ns": [
+   "derived_feature_availability_timestamps",
+   "derived_roll20_and_dipole_state"
+  ],
+  "first_lead_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "signals_in_prior60": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "last_lead_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 8630,
+  "direct_clocks": 8630,
+  "clocks": 8630,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/042a09ffdb4bb80b90fd/00000.parquet",
+   "rows": 8630,
+   "bytes": 87812,
+   "sha256": "61a120936224d5a9340c997068b6b5c97ccf19bb4bf84784e222c5beeaed7985"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

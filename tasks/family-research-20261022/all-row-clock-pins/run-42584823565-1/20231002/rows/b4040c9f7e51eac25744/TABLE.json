@@ -1,0 +1,66 @@
+{
+ "table_id": "b4040c9f7e51eac25744",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231002-detector-summary.csv",
+  "git_blob": "06da74d01f7eff38f7d57a7139ef11d8afe696df",
+  "bytes": 157,
+  "day": "20231002"
+ },
+ "source_sha256": "679f12b76ffd8755e1170af0d3b2c81bcd9c29eb1ba8bf43e4412bd5394dffd8",
+ "source_fields": [
+  "added",
+  "day",
+  "matched",
+  "missed",
+  "nominal_exact",
+  "recorded",
+  "recovered",
+  "variant"
+ ],
+ "field_layer_ids": {
+  "recorded": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "variant": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "nominal_exact": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recovered": [
+   "resilience_and_recovery"
+  ],
+  "added": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "matched": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "missed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 2,
+  "aggregate_or_unclocked_retained": 2,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/b4040c9f7e51eac25744/00000.parquet",
+   "rows": 2,
+   "bytes": 4326,
+   "sha256": "9680f2fc9ad26fe5e95b9fad79444c3b895d8530d8a7ad8ae60ccf2319341441"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

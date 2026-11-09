@@ -1,0 +1,88 @@
+{
+ "table_id": "0b656a8550b99c9aec37",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231003-detected-native_action.csv",
+  "git_blob": "7af0eea2b73bf3bf40d213dc5ea2cb53d7685dda",
+  "bytes": 82150,
+  "day": "20231003"
+ },
+ "source_sha256": "86fbc91f1321aeea2a2071702b792aa01891cb9f4fa4d6d28458b5edd0d3530c",
+ "source_fields": [
+  "available_second",
+  "baseline",
+  "birth_second",
+  "competing_peaks",
+  "magnitude",
+  "observations_behind_threshold",
+  "polarity",
+  "prominence",
+  "searched_span_seconds",
+  "threshold",
+  "variant",
+  "window_open",
+  "window_truncated"
+ ],
+ "field_layer_ids": {
+  "baseline": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "magnitude": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "searched_span_seconds": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "window_open": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "available_second": [
+   "clock_event_known_by",
+   "missingness_and_integrity_flags"
+  ],
+  "threshold": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "window_truncated": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "observations_behind_threshold": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "birth_second": [
+   "derived_feature_availability_timestamps",
+   "derived_roll20_and_dipole_state"
+  ],
+  "variant": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "competing_peaks": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prominence": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 833,
+  "direct_clocks": 833,
+  "clocks": 1666,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/0b656a8550b99c9aec37/00000.parquet",
+   "rows": 833,
+   "bytes": 26285,
+   "sha256": "83ab1bfd548cdf36f5ce1fb1255e2bd1704b6300bb6405c8ec2c1e90084f99ca"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

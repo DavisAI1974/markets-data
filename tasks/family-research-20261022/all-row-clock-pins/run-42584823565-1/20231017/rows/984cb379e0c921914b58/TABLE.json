@@ -1,0 +1,136 @@
+{
+ "table_id": "984cb379e0c921914b58",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/size-one-four-arm-oct17-rows.jsonl.gz",
+  "git_blob": "1382f5dbe1a839ebd81bcd00e311782b2c49f071",
+  "bytes": 1347889,
+  "day": "20231017"
+ },
+ "source_sha256": "dfc220f6ce8a6f29e1e5d4afefb4ccd530e6f0fcd5c5a95f5453cc1488f9b31d",
+ "source_fields": [
+  "book_next",
+  "book_prior_orders",
+  "day0_epoch_s",
+  "end_cursor",
+  "end_group",
+  "end_ns",
+  "end_vs_entry",
+  "ending_touch",
+  "entry_group",
+  "flow",
+  "hour_utc",
+  "new_best_is_better",
+  "next_gap_ticks",
+  "onset",
+  "onset_cursor",
+  "onset_first_cursor",
+  "onset_group",
+  "onset_ns",
+  "original_price_raw",
+  "other_touch",
+  "outcome",
+  "prior_touch",
+  "side",
+  "t_session"
+ ],
+ "field_layer_ids": {
+  "book_next": [
+   "derived_open_world_predecessor_state"
+  ],
+  "end_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "onset_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "next_gap_ticks": [
+   "derived_open_world_predecessor_state"
+  ],
+  "new_best_is_better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "outcome": [
+   "later_outcome_reveal"
+  ],
+  "prior_touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "end_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t_session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "side": [
+   "native_acmrtfn_messages"
+  ],
+  "flow": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "onset_first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "book_prior_orders": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "end_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "original_price_raw": [
+   "price_and_book_path"
+  ],
+  "other_touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ending_touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "end_vs_entry": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "hour_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "entry_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 27111,
+  "direct_clocks": 27111,
+  "clocks": 81333,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/984cb379e0c921914b58/00000.parquet",
+   "rows": 20000,
+   "bytes": 916449,
+   "sha256": "565ef049f92a3a59b853ba7ff2d99bdb0f0a4465b68c15d0589015c20c967275"
+  },
+  {
+   "path": "rows/984cb379e0c921914b58/00001.parquet",
+   "rows": 7111,
+   "bytes": 310431,
+   "sha256": "028dceeb271c40bf865c37b817763bc4dbff8f3dde8bc325a719deeee0001567"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

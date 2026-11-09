@@ -1,0 +1,84 @@
+{
+ "table_id": "17f1d637593d0a9ff523",
+ "source": {
+  "collection": "continuous",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "71240aa56a8b27f7d7f68acd154784579094e5c1",
+  "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231002/research-atlas-v2/continuous-prebirth-v1/summary.csv",
+  "git_blob": "8f1c07b7bc2bfba45dcbec96a861b961c5787e53",
+  "bytes": 1171,
+  "day": "20231002"
+ },
+ "source_sha256": "cfb79341d61616963f5110707073dcaf180d5ab9bc5e7a51e4ae98eac0f92745",
+ "source_fields": [
+  "active_seconds",
+  "births_with_prior_onset",
+  "hypothesis",
+  "input_available_seconds",
+  "left_censored_onsets",
+  "median_last_lead_s",
+  "median_quote_age_s",
+  "onsets",
+  "onsets_with_next_birth",
+  "onsets_without_next_birth",
+  "paper_disposition",
+  "retained_births"
+ ],
+ "field_layer_ids": {
+  "hypothesis": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "median_last_lead_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "input_available_seconds": [
+   "missingness_and_integrity_flags"
+  ],
+  "left_censored_onsets": [
+   "missingness_and_integrity_flags"
+  ],
+  "paper_disposition": [
+   "missingness_and_integrity_flags"
+  ],
+  "onsets_without_next_birth": [
+   "derived_open_world_predecessor_state",
+   "derived_roll20_and_dipole_state"
+  ],
+  "median_quote_age_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "retained_births": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "onsets_with_next_birth": [
+   "derived_open_world_predecessor_state",
+   "derived_roll20_and_dipole_state"
+  ],
+  "active_seconds": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "births_with_prior_onset": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "onsets": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 10,
+  "aggregate_or_unclocked_retained": 10,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/17f1d637593d0a9ff523/00000.parquet",
+   "rows": 10,
+   "bytes": 4300,
+   "sha256": "8f762465a21309958976bfb43a16cf5659681176ecf14ae29476cec7b0cfa699"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

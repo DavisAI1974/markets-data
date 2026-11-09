@@ -1,0 +1,127 @@
+{
+ "table_id": "8113198fd70ef427e309",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231003/c-selected-actions-06.parquet",
+  "git_blob": "50546735be8d8a4dc9b91d6536c7ceacfa7ac8cf",
+  "bytes": 489876,
+  "day": "20231003"
+ },
+ "source_sha256": "122d4c56e32c499575c9e4acfe15e9fafa27a3c8a1f92db0e9a7ebb8f9c6f837",
+ "source_fields": [
+  "action",
+  "after_price",
+  "after_side",
+  "after_size",
+  "before_price",
+  "before_side",
+  "before_size",
+  "cursor",
+  "day",
+  "event_ns",
+  "fill_linked_reduction",
+  "fill_unchanged_display",
+  "flags",
+  "group_close_cursor",
+  "group_ordinal",
+  "known_by_ns",
+  "order_id",
+  "price_raw",
+  "receive_ns",
+  "side",
+  "size",
+  "source_record_index",
+  "source_tape_day"
+ ],
+ "field_layer_ids": {
+  "before_price": [
+   "price_and_book_path"
+  ],
+  "before_size": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "side": [
+   "native_acmrtfn_messages"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "flags": [
+   "native_acmrtfn_messages"
+  ],
+  "fill_linked_reduction": [
+   "order_lifecycle_fills"
+  ],
+  "action": [
+   "native_acmrtfn_messages"
+  ],
+  "before_side": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "after_side": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "after_price": [
+   "price_and_book_path"
+  ],
+  "after_size": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "fill_unchanged_display": [
+   "order_lifecycle_fills"
+  ],
+  "source_record_index": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "price_raw": [
+   "price_and_book_path"
+  ],
+  "source_tape_day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "group_close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "event_ns": [
+   "clock_event_time"
+  ],
+  "group_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "order_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "native_acmrtfn_messages"
+  ],
+  "receive_ns": [
+   "clock_receive_time"
+  ],
+  "size": [
+   "native_acmrtfn_messages"
+  ],
+  "cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ]
+ },
+ "counts": {
+  "rows": 12602,
+  "direct_clocks": 12602,
+  "clocks": 37806,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/8113198fd70ef427e309/00000.parquet",
+   "rows": 12602,
+   "bytes": 322810,
+   "sha256": "f02472ee837cf1fc0a15223fd3c2e913cc265dc4b7258f3a525367ef4d2a91be"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

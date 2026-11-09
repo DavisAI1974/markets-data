@@ -1,0 +1,90 @@
+{
+ "table_id": "036fcf793cad5ac42040",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/a-state-direction-knowable-oct03-events.jsonl.gz",
+  "git_blob": "1b9a8a6d6b1431752c657e278b97b79eed8130f8",
+  "bytes": 15581,
+  "day": "20231003"
+ },
+ "source_sha256": "67fba951be0b7027fbba523c7507aed6b9bbcbaf4f6673cbf2992714f00ea472",
+ "source_fields": [
+  "a_state",
+  "day0_epoch_s",
+  "plus60_d300_oriented",
+  "plus60_d600_oriented",
+  "plus60_d60_oriented",
+  "plus60_first3t_with",
+  "plus60_first5t_with",
+  "plus60_first8t_with",
+  "polarity",
+  "seed",
+  "session",
+  "t0",
+  "t0_epoch_s",
+  "t0_utc"
+ ],
+ "field_layer_ids": {
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "plus60_first8t_with": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_d60_oriented": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_first3t_with": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_d600_oriented": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "seed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "plus60_d300_oriented": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "a_state": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_first5t_with": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 857,
+  "direct_clocks": 857,
+  "clocks": 1714,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/036fcf793cad5ac42040/00000.parquet",
+   "rows": 857,
+   "bytes": 23407,
+   "sha256": "3800e0b31b1e6708ec4d3ecb332dac8ffe09b484e2cf1ebfb8db4a3eafa2a9d3"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

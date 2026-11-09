@@ -1,0 +1,88 @@
+{
+ "table_id": "075c00afaa80a9ac6ed1",
+ "source": {
+  "collection": "continuous",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "71240aa56a8b27f7d7f68acd154784579094e5c1",
+  "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/four-day-continuous-summary.csv",
+  "git_blob": "75885c6bec0df74e24e028765f0074156a9ff831",
+  "bytes": 4393,
+  "day": "cross"
+ },
+ "source_sha256": "c74bdef10f88fa8038c135a75af4f6e1d551d5b1aaf17b035d97cbb9e7a4f64c",
+ "source_fields": [
+  "active_seconds",
+  "births_with_prior_onset",
+  "day",
+  "hypothesis",
+  "input_available_seconds",
+  "left_censored_onsets",
+  "median_last_lead_s",
+  "median_quote_age_s",
+  "onsets",
+  "onsets_with_next_birth",
+  "onsets_without_next_birth",
+  "paper_disposition",
+  "retained_births"
+ ],
+ "field_layer_ids": {
+  "active_seconds": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "left_censored_onsets": [
+   "missingness_and_integrity_flags"
+  ],
+  "onsets_with_next_birth": [
+   "derived_open_world_predecessor_state",
+   "derived_roll20_and_dipole_state"
+  ],
+  "births_with_prior_onset": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "retained_births": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "median_last_lead_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "median_quote_age_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "hypothesis": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onsets_without_next_birth": [
+   "derived_open_world_predecessor_state",
+   "derived_roll20_and_dipole_state"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "onsets": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "paper_disposition": [
+   "missingness_and_integrity_flags"
+  ],
+  "input_available_seconds": [
+   "missingness_and_integrity_flags"
+  ]
+ },
+ "counts": {
+  "rows": 40,
+  "aggregate_or_unclocked_retained": 40,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/075c00afaa80a9ac6ed1/00000.parquet",
+   "rows": 40,
+   "bytes": 4542,
+   "sha256": "1ced5eeb0837c1790cacc97685e3bd4caf60811be80cb6beb1319a71dc1307b0"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

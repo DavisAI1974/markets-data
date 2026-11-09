@@ -1,0 +1,365 @@
+{
+ "table_id": "21ddb6a35ba4bb86e9c8",
+ "source": {
+  "collection": "family",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+  "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/flow-book-discovery-v1/opportunities.csv.gz",
+  "git_blob": "f735d91f976964a84161b109fff4d9b2f75a336c",
+  "bytes": 183948,
+  "day": "20231003"
+ },
+ "source_sha256": "aa4dd06599dbd81fed207c8b21081816e54e6ae9f697babb434a419717f5357a",
+ "source_fields": [
+  "activity1",
+  "activity5",
+  "activity60",
+  "anchor_ns",
+  "ask_display_change1",
+  "ask_display_change5",
+  "ask_same_price1",
+  "ask_same_price5",
+  "bid_display_change1",
+  "bid_display_change5",
+  "bid_same_price1",
+  "bid_same_price5",
+  "cohort",
+  "cursor_cap",
+  "cutoff_ns",
+  "family_id",
+  "flow1",
+  "flow5",
+  "flow60",
+  "four_arm_eligible",
+  "input_disposition",
+  "instance",
+  "lag1_cursor",
+  "lag1_group",
+  "lag1_receive_ns",
+  "lag5_cursor",
+  "lag5_group",
+  "lag5_receive_ns",
+  "mid",
+  "pre_age_ns",
+  "pre_cursor",
+  "pre_group",
+  "pre_receive_ns",
+  "prior_mid1",
+  "prior_mid5",
+  "root.activity.1.event_count",
+  "root.activity.1.top_level_cancel_qty_derived",
+  "root.activity.1.trade_aggressor_imbalance",
+  "root.activity.1.trade_buy_aggressor_qty",
+  "root.activity.1.trade_sell_aggressor_qty",
+  "root.activity.20.event_count",
+  "root.activity.20.top_level_cancel_qty_derived",
+  "root.activity.20.trade_aggressor_imbalance",
+  "root.activity.20.trade_buy_aggressor_qty",
+  "root.activity.20.trade_sell_aggressor_qty",
+  "root.activity.300.event_count",
+  "root.activity.300.top_level_cancel_qty_derived",
+  "root.activity.300.trade_aggressor_imbalance",
+  "root.activity.300.trade_buy_aggressor_qty",
+  "root.activity.300.trade_sell_aggressor_qty",
+  "root.activity.5.event_count",
+  "root.activity.5.top_level_cancel_qty_derived",
+  "root.activity.5.trade_aggressor_imbalance",
+  "root.activity.5.trade_buy_aggressor_qty",
+  "root.activity.5.trade_sell_aggressor_qty",
+  "root.activity.60.event_count",
+  "root.activity.60.top_level_cancel_qty_derived",
+  "root.activity.60.trade_aggressor_imbalance",
+  "root.activity.60.trade_buy_aggressor_qty",
+  "root.activity.60.trade_sell_aggressor_qty",
+  "root.ask_depth_full",
+  "root.best_ask",
+  "root.best_bid",
+  "root.bid_depth_full",
+  "root.depth_imbalance_full",
+  "root.depth_imbalance_n",
+  "root.mid",
+  "root.spread",
+  "sample_id",
+  "spread",
+  "start_utc",
+  "touch_ask",
+  "touch_bid",
+  "touch_delta1",
+  "touch_delta5",
+  "touch_imbalance",
+  "touch_size_log"
+ ],
+ "field_layer_ids": {
+  "bid_same_price5": [
+   "price_and_book_path"
+  ],
+  "family_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_d_family_geometry"
+  ],
+  "flow1": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "lag5_receive_ns": [
+   "clock_receive_time"
+  ],
+  "root.mid": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "lag5_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "four_arm_eligible": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_same_price1": [
+   "price_and_book_path"
+  ],
+  "root.activity.1.top_level_cancel_qty_derived": [
+   "order_lifecycle_cancels"
+  ],
+  "lag5_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre_receive_ns": [
+   "clock_receive_time"
+  ],
+  "ask_display_change1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prior_mid1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.activity.60.trade_aggressor_imbalance": [
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "order_lifecycle_trades"
+  ],
+  "pre_age_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "root.activity.5.trade_buy_aggressor_qty": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "root.activity.60.event_count": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_display_change5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.activity.5.trade_sell_aggressor_qty": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "touch_size_log": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bid_same_price1": [
+   "price_and_book_path"
+  ],
+  "cohort": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.depth_imbalance_n": [
+   "full_bid_ask_depth",
+   "spread_and_depth_imbalance"
+  ],
+  "touch_imbalance": [
+   "spread_and_depth_imbalance"
+  ],
+  "flow60": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "root.best_bid": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prior_mid5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "lag1_receive_ns": [
+   "clock_receive_time"
+  ],
+  "anchor_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "root.activity.20.top_level_cancel_qty_derived": [
+   "order_lifecycle_cancels"
+  ],
+  "root.ask_depth_full": [
+   "full_bid_ask_depth"
+  ],
+  "root.best_ask": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "lag1_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "activity60": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.activity.300.event_count": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.activity.1.trade_sell_aggressor_qty": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "root.activity.1.trade_buy_aggressor_qty": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "root.activity.300.trade_aggressor_imbalance": [
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "order_lifecycle_trades"
+  ],
+  "touch_ask": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.activity.5.top_level_cancel_qty_derived": [
+   "order_lifecycle_cancels"
+  ],
+  "start_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "cursor_cap": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "root.activity.5.trade_aggressor_imbalance": [
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "order_lifecycle_trades"
+  ],
+  "activity5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.activity.60.top_level_cancel_qty_derived": [
+   "order_lifecycle_cancels"
+  ],
+  "root.activity.1.trade_aggressor_imbalance": [
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "order_lifecycle_trades"
+  ],
+  "flow5": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "mid": [
+   "price_and_book_path"
+  ],
+  "bid_display_change1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.spread": [
+   "spread_and_depth_imbalance"
+  ],
+  "touch_bid": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sample_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "root.bid_depth_full": [
+   "full_bid_ask_depth"
+  ],
+  "root.activity.300.top_level_cancel_qty_derived": [
+   "order_lifecycle_cancels"
+  ],
+  "bid_display_change5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "input_disposition": [
+   "missingness_and_integrity_flags"
+  ],
+  "pre_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "root.activity.5.event_count": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "spread": [
+   "spread_and_depth_imbalance"
+  ],
+  "root.activity.20.trade_sell_aggressor_qty": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "instance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "activity1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.depth_imbalance_full": [
+   "full_bid_ask_depth",
+   "spread_and_depth_imbalance"
+  ],
+  "lag1_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_same_price5": [
+   "price_and_book_path"
+  ],
+  "root.activity.60.trade_buy_aggressor_qty": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "cutoff_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "root.activity.300.trade_buy_aggressor_qty": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "root.activity.300.trade_sell_aggressor_qty": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "root.activity.20.event_count": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.activity.1.event_count": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.activity.20.trade_buy_aggressor_qty": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ],
+  "root.activity.20.trade_aggressor_imbalance": [
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "order_lifecycle_trades"
+  ],
+  "touch_delta1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "touch_delta5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "root.activity.60.trade_sell_aggressor_qty": [
+   "aggressor_and_native_signed_flow",
+   "order_lifecycle_trades"
+  ]
+ },
+ "counts": {
+  "rows": 849,
+  "direct_clocks": 849,
+  "clocks": 4213,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/21ddb6a35ba4bb86e9c8/00000.parquet",
+   "rows": 849,
+   "bytes": 74036,
+   "sha256": "94b1fb31878573979fe89ed317d626b6b06c82b4232faa35a608d28fbfe4e838"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

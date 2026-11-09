@@ -1,0 +1,78 @@
+{
+ "table_id": "19f9f02b15838be158e4",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/no-prefix-oct17/a-state-direction-knowable-oct17-events.jsonl.gz",
+  "git_blob": "a34f39d1e2991717d20280b0021145ab3de57ac5",
+  "bytes": 7396,
+  "day": "20231017"
+ },
+ "source_sha256": "888ed1e1f04eaee9e197a63f26047ec4c02f2d28f198410822cdb857304ba175",
+ "source_fields": [
+  "a_state",
+  "day0_epoch_s",
+  "plus60_d300_oriented",
+  "plus60_d600_oriented",
+  "plus60_d60_oriented",
+  "plus60_first3t_with",
+  "plus60_first5t_with",
+  "plus60_first8t_with",
+  "polarity",
+  "seed",
+  "t0"
+ ],
+ "field_layer_ids": {
+  "plus60_first3t_with": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "plus60_first5t_with": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_d60_oriented": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_first8t_with": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "a_state": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_d300_oriented": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "plus60_d600_oriented": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 765,
+  "direct_clocks": 765,
+  "clocks": 1530,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/19f9f02b15838be158e4/00000.parquet",
+   "rows": 765,
+   "bytes": 24631,
+   "sha256": "fb13e1b21c113736754d14e70e5666b07b8f42c5a6f0f26cc755442a73d568b8"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "historical_no_prefix"
+}

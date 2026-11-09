@@ -1,0 +1,52 @@
+{
+ "table_id": "865b21f80cc413976326",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231003-pair-distances-signed_ratio.csv.gz",
+  "git_blob": "30e8aa13a5a1cc6d0fb7cf32bb944ee4c44676fb",
+  "bytes": 290278,
+  "day": "20231003"
+ },
+ "source_sha256": "57040799a29abf0ef10cf08671f22adeeb7aece4b791ceeb64da36aaec7f4336",
+ "source_fields": [
+  "distance",
+  "left_candidate",
+  "right_candidate"
+ ],
+ "field_layer_ids": {
+  "distance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "right_candidate": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "left_candidate": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 21736,
+  "aggregate_or_unclocked_retained": 21736,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/865b21f80cc413976326/00000.parquet",
+   "rows": 20000,
+   "bytes": 110949,
+   "sha256": "d2f069115aee90a4e2cff4aab6f212cc3937f8b6fe3d16af85738114bafece76"
+  },
+  {
+   "path": "rows/865b21f80cc413976326/00001.parquet",
+   "rows": 1736,
+   "bytes": 11897,
+   "sha256": "7630ceaf32bedeabefe8756bbd5ccf3fde0b6be9cc081ce9a0646f91ec39083e"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

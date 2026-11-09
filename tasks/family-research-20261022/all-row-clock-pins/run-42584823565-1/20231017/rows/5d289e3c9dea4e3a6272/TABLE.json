@@ -1,0 +1,78 @@
+{
+ "table_id": "5d289e3c9dea4e3a6272",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/exhaustion-clock-20231017-flow-only-events.jsonl.gz",
+  "git_blob": "be9119cccab47f8c957c00318be953a2af562480",
+  "bytes": 16930,
+  "day": "20231017"
+ },
+ "source_sha256": "dfc83255dfcd62906666eee132d4ca4bf83a421a3342e4204335c075886da5a9",
+ "source_fields": [
+  "burst_vol",
+  "confirm",
+  "day0_epoch_s",
+  "dip300",
+  "dip300_vol",
+  "polarity",
+  "pre_arc_defined",
+  "runway",
+  "second",
+  "seed",
+  "t0"
+ ],
+ "field_layer_ids": {
+  "dip300": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "second": [
+   "derived_feature_availability_timestamps"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "burst_vol": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "runway": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre_arc_defined": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "dip300_vol": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "confirm": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 766,
+  "direct_clocks": 766,
+  "clocks": 3064,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/5d289e3c9dea4e3a6272/00000.parquet",
+   "rows": 766,
+   "bytes": 42763,
+   "sha256": "de3fe2b3ed131e55b4dd69e5db86bd7ed46ebf05a12c47c46f51c497fb82bf34"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

@@ -1,0 +1,80 @@
+{
+ "table_id": "cd16defa4f8396643b9f",
+ "source": {
+  "collection": "family",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+  "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/research-atlas-v2/prebirth-matched-pairs.csv.gz",
+  "git_blob": "b29d698361e5a36f49b55c1c780a995727c5a731",
+  "bytes": 203882,
+  "day": "20231017"
+ },
+ "source_sha256": "1379ab7960eab9a891f3329da020a19971030cd99f779fa1386d45ab770df370",
+ "source_fields": [
+  "case_decision_ns",
+  "case_id",
+  "case_value",
+  "control_decision_ns",
+  "control_value",
+  "difference",
+  "feature",
+  "lead_s",
+  "population",
+  "quarter"
+ ],
+ "field_layer_ids": {
+  "control_decision_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "case_decision_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "quarter": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "difference": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "case_value": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "control_value": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "population": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "lead_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "case_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "feature": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 26059,
+  "direct_clocks": 26059,
+  "clocks": 52118,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/cd16defa4f8396643b9f/00000.parquet",
+   "rows": 20000,
+   "bytes": 163069,
+   "sha256": "601fdc5d9c3b9fbf74f47ac4984586a4f9a2ac3a615a70b702f5a15ad2679d22"
+  },
+  {
+   "path": "rows/cd16defa4f8396643b9f/00001.parquet",
+   "rows": 6059,
+   "bytes": 53260,
+   "sha256": "c80852650298aef2d130e58614e6b8c92fdad31fef0e9a0e143591af22021c22"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

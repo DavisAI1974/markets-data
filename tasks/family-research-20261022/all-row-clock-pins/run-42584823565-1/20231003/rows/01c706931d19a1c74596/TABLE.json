@@ -1,0 +1,521 @@
+{
+ "table_id": "01c706931d19a1c74596",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/exhaustion-clock-oct03-events.jsonl.gz",
+  "git_blob": "86dbd3794910441fa2949b64ad76e37c995fd474",
+  "bytes": 288851,
+  "day": "20231003"
+ },
+ "source_sha256": "d3c0f17b748afda13d32ef6a211747511a381a80f193485b5796a5acf0bbd3fb",
+ "source_fields": [
+  "aftermath.10.censored",
+  "aftermath.10.cls",
+  "aftermath.10.mae",
+  "aftermath.10.mfe",
+  "aftermath.10.signed_ticks",
+  "aftermath.120.censored",
+  "aftermath.120.cls",
+  "aftermath.120.mae",
+  "aftermath.120.mfe",
+  "aftermath.120.signed_ticks",
+  "aftermath.20.censored",
+  "aftermath.20.cls",
+  "aftermath.20.mae",
+  "aftermath.20.mfe",
+  "aftermath.20.signed_ticks",
+  "aftermath.30.censored",
+  "aftermath.30.cls",
+  "aftermath.30.mae",
+  "aftermath.30.mfe",
+  "aftermath.30.signed_ticks",
+  "aftermath.300.censored",
+  "aftermath.300.cls",
+  "aftermath.300.mae",
+  "aftermath.300.mfe",
+  "aftermath.300.signed_ticks",
+  "aftermath.5.censored",
+  "aftermath.5.cls",
+  "aftermath.5.mae",
+  "aftermath.5.mfe",
+  "aftermath.5.signed_ticks",
+  "aftermath.60.censored",
+  "aftermath.60.cls",
+  "aftermath.60.mae",
+  "aftermath.60.mfe",
+  "aftermath.60.signed_ticks",
+  "archived_flow_state",
+  "archived_recognition_offset_s",
+  "archived_recognition_s",
+  "archived_recognition_s_epoch_s",
+  "archived_recognition_s_utc",
+  "book_t0_aligned",
+  "censored",
+  "confirm",
+  "confirm_epoch_s",
+  "confirm_offset_s",
+  "confirm_utc",
+  "confirmed_before_info50",
+  "confirmed_before_seed_known",
+  "day0_epoch_s",
+  "dip300_info50",
+  "dip300_t0",
+  "dip300_vol_info50",
+  "dip300_vol_t0",
+  "info_horizon_local_s",
+  "info_horizon_local_s_epoch_s",
+  "info_horizon_local_s_utc",
+  "info_horizon_refractory_s",
+  "info_horizon_refractory_s_epoch_s",
+  "info_horizon_refractory_s_utc",
+  "late_pressure_41_60",
+  "late_volume",
+  "mid_move_info50_plus30",
+  "mid_move_t0_to_confirm",
+  "mode",
+  "move_confirm5_to_30",
+  "move_info50_plus30",
+  "move_info50_plus60",
+  "move_seed_known_plus30",
+  "move_seed_known_plus300",
+  "move_seed_known_plus60",
+  "move_t0_to_confirm",
+  "move_t0_to_info50",
+  "next_starts_before_confirm",
+  "onset",
+  "onset_epoch_s",
+  "onset_utc",
+  "peak_abs",
+  "polarity",
+  "pre_arc_defined",
+  "prev3_states",
+  "prev4_states",
+  "prev_gap_s",
+  "prominence",
+  "remaining_runway_at_info50_s",
+  "runway_s",
+  "same_as_prev",
+  "seed_known_s",
+  "seed_known_s_epoch_s",
+  "seed_known_s_utc",
+  "seed_state",
+  "session",
+  "t0",
+  "t0_epoch_s",
+  "t0_utc",
+  "t10",
+  "t25",
+  "t50",
+  "zero_within_60"
+ ],
+ "field_layer_ids": {
+  "dip300_info50": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre_arc_defined": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.5.mfe": [
+   "later_outcome_reveal"
+  ],
+  "late_volume": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.60.mfe": [
+   "later_outcome_reveal"
+  ],
+  "seed_state": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "confirm_offset_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_seed_known_plus300": [
+   "later_outcome_reveal"
+  ],
+  "move_confirm5_to_30": [
+   "later_outcome_reveal"
+  ],
+  "move_seed_known_plus30": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.300.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "mid_move_t0_to_confirm": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "runway_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.300.mae": [
+   "later_outcome_reveal"
+  ],
+  "dip300_vol_info50": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.10.cls": [
+   "later_outcome_reveal"
+  ],
+  "move_info50_plus60": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.10.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "aftermath.5.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "archived_recognition_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.60.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "onset_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "seed_known_s_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "same_as_prev": [
+   "derived_open_world_predecessor_state"
+  ],
+  "info_horizon_local_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "info_horizon_local_s_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.60.mae": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.120.cls": [
+   "later_outcome_reveal"
+  ],
+  "prev4_states": [
+   "derived_open_world_predecessor_state"
+  ],
+  "prominence": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "aftermath.60.cls": [
+   "later_outcome_reveal"
+  ],
+  "mid_move_info50_plus30": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "dip300_vol_t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "book_t0_aligned": [
+   "spread_and_depth_imbalance"
+  ],
+  "aftermath.30.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.300.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "aftermath.20.mfe": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.20.mae": [
+   "later_outcome_reveal"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "peak_abs": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "aftermath.10.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "t0_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.30.mae": [
+   "later_outcome_reveal"
+  ],
+  "t25": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "confirm_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "late_pressure_41_60": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "next_starts_before_confirm": [
+   "derived_open_world_predecessor_state"
+  ],
+  "aftermath.20.cls": [
+   "later_outcome_reveal"
+  ],
+  "info_horizon_refractory_s_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "aftermath.10.mfe": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.30.mfe": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.30.cls": [
+   "later_outcome_reveal"
+  ],
+  "confirm": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.5.mae": [
+   "later_outcome_reveal"
+  ],
+  "move_seed_known_plus60": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.120.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "info_horizon_refractory_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.120.mae": [
+   "later_outcome_reveal"
+  ],
+  "t50": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seed_known_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.5.cls": [
+   "later_outcome_reveal"
+  ],
+  "confirm_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t10": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "info_horizon_local_s_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "aftermath.5.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "move_t0_to_info50": [
+   "later_outcome_reveal"
+  ],
+  "zero_within_60": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "confirmed_before_info50": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "archived_flow_state": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "aftermath.10.mae": [
+   "later_outcome_reveal"
+  ],
+  "mode": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "info_horizon_refractory_s_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.20.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.300.mfe": [
+   "later_outcome_reveal"
+  ],
+  "onset_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prev3_states": [
+   "derived_open_world_predecessor_state"
+  ],
+  "session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "aftermath.120.mfe": [
+   "later_outcome_reveal"
+  ],
+  "remaining_runway_at_info50_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.30.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "aftermath.120.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "archived_recognition_offset_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "censored": [
+   "missingness_and_integrity_flags"
+  ],
+  "move_info50_plus30": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.20.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "confirmed_before_seed_known": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.60.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "seed_known_s_epoch_s": [
+   "clock_event_known_by"
+  ],
+  "aftermath.300.cls": [
+   "later_outcome_reveal"
+  ],
+  "move_t0_to_confirm": [
+   "later_outcome_reveal"
+  ],
+  "dip300_t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prev_gap_s": [
+   "derived_open_world_predecessor_state"
+  ],
+  "archived_recognition_s_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "archived_recognition_s_epoch_s": [
+   "clock_prospective_discovery_confirmation"
+  ]
+ },
+ "counts": {
+  "rows": 1714,
+  "direct_clocks": 1714,
+  "clocks": 13598,
+  "corrections": 3428
+ },
+ "parts": [
+  {
+   "path": "rows/01c706931d19a1c74596/00000.parquet",
+   "rows": 1714,
+   "bytes": 121898,
+   "sha256": "3932ae5e4e042bfbe490d8656964ee606040d1ab6f1ca285a1bfdafcb74ef18b"
+  }
+ ],
+ "correction_examples": [
+  {
+   "row": 0,
+   "corrections": [
+    {
+     "field": "info_horizon_local_s_epoch_s",
+     "original": "1696280405",
+     "corrected": "1696284090",
+     "formula": "day0_epoch_s + t0 + info_horizon_local_s"
+    },
+    {
+     "field": "info_horizon_refractory_s_epoch_s",
+     "original": "1696280450",
+     "corrected": "1696284135",
+     "formula": "day0_epoch_s + t0 + info_horizon_refractory_s"
+    }
+   ]
+  },
+  {
+   "row": 1,
+   "corrections": [
+    {
+     "field": "info_horizon_local_s_epoch_s",
+     "original": "1696280405",
+     "corrected": "1696284246",
+     "formula": "day0_epoch_s + t0 + info_horizon_local_s"
+    },
+    {
+     "field": "info_horizon_refractory_s_epoch_s",
+     "original": "1696280450",
+     "corrected": "1696284291",
+     "formula": "day0_epoch_s + t0 + info_horizon_refractory_s"
+    }
+   ]
+  },
+  {
+   "row": 2,
+   "corrections": [
+    {
+     "field": "info_horizon_local_s_epoch_s",
+     "original": "1696280405",
+     "corrected": "1696284326",
+     "formula": "day0_epoch_s + t0 + info_horizon_local_s"
+    },
+    {
+     "field": "info_horizon_refractory_s_epoch_s",
+     "original": "1696280450",
+     "corrected": "1696284371",
+     "formula": "day0_epoch_s + t0 + info_horizon_refractory_s"
+    }
+   ]
+  },
+  {
+   "row": 3,
+   "corrections": [
+    {
+     "field": "info_horizon_local_s_epoch_s",
+     "original": "1696280405",
+     "corrected": "1696284584",
+     "formula": "day0_epoch_s + t0 + info_horizon_local_s"
+    },
+    {
+     "field": "info_horizon_refractory_s_epoch_s",
+     "original": "1696280450",
+     "corrected": "1696284629",
+     "formula": "day0_epoch_s + t0 + info_horizon_refractory_s"
+    }
+   ]
+  },
+  {
+   "row": 4,
+   "corrections": [
+    {
+     "field": "info_horizon_local_s_epoch_s",
+     "original": "1696280405",
+     "corrected": "1696284642",
+     "formula": "day0_epoch_s + t0 + info_horizon_local_s"
+    },
+    {
+     "field": "info_horizon_refractory_s_epoch_s",
+     "original": "1696280450",
+     "corrected": "1696284687",
+     "formula": "day0_epoch_s + t0 + info_horizon_refractory_s"
+    }
+   ]
+  }
+ ],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

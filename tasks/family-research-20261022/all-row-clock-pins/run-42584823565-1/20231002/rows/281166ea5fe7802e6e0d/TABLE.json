@@ -1,0 +1,150 @@
+{
+ "table_id": "281166ea5fe7802e6e0d",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/runway-clock-v2-oct02-events.jsonl.gz",
+  "git_blob": "f414a72665795b3f23362367ba3ea58e403d7868",
+  "bytes": 82763,
+  "day": "20231002"
+ },
+ "source_sha256": "8a4b66ed86c06ea9d6fd58ee25666017526c0c64222393ae8cc9f8d2fe4e5bab",
+ "source_fields": [
+  "activity_tercile_loo",
+  "day0_epoch_s",
+  "realised_with.13",
+  "realised_with.3",
+  "realised_with.5",
+  "realised_with.8",
+  "scale_v2a",
+  "scale_v2b",
+  "session",
+  "state",
+  "t0",
+  "t0_epoch_s",
+  "t0_utc",
+  "v1.13",
+  "v1.3",
+  "v1.5",
+  "v1.8",
+  "v2a.13",
+  "v2a.3",
+  "v2a.5",
+  "v2a.8",
+  "v2b.13",
+  "v2b.3",
+  "v2b.5",
+  "v2b.8",
+  "v3.13",
+  "v3.3",
+  "v3.5",
+  "v3.8"
+ ],
+ "field_layer_ids": {
+  "v2b.13": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2a.13": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v1.3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "realised_with.13": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "scale_v2a": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v3.5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "v2b.3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "realised_with.8": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "scale_v2b": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "realised_with.5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "activity_tercile_loo": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "realised_with.3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v1.8": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v3.13": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v3.8": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v3.3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "v2a.8": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v1.5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "state": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2a.5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2a.3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2b.5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2b.8": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v1.13": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 839,
+  "direct_clocks": 839,
+  "clocks": 1678,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/281166ea5fe7802e6e0d/00000.parquet",
+   "rows": 839,
+   "bytes": 23543,
+   "sha256": "9d2020e828908613b76b9375362a7a82921a663fd0dd020d98dd44830dd37c6b"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

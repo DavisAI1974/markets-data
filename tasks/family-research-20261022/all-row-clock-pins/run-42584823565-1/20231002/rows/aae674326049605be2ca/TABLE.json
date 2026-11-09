@@ -1,0 +1,2573 @@
+{
+ "table_id": "aae674326049605be2ca",
+ "source": {
+  "collection": "ccode_existing_pins",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "993cf54e09b06002d2c4554cd762e6887d9648c0",
+  "path": "tasks/family-research-20261022/claude-code-pins/ninety-nine-pins-oct02.jsonl.gz",
+  "git_blob": "2a4e5bcca3fa76a75a2da36cecd561ebcf3fdd41",
+  "bytes": 25764845,
+  "day": "20231002"
+ },
+ "source_sha256": "bcc170f5586dfaba252893105b2c420a49b3ecbb4c52fcbda12bdada5bc9da3f",
+ "source_fields": [
+  "a_state",
+  "action",
+  "activity_tercile_loo",
+  "add_A",
+  "add_A_lots",
+  "add_B",
+  "add_B_lots",
+  "additions",
+  "after",
+  "aftermath.10.censored",
+  "aftermath.10.cls",
+  "aftermath.10.mae",
+  "aftermath.10.mfe",
+  "aftermath.10.signed_ticks",
+  "aftermath.120.censored",
+  "aftermath.120.cls",
+  "aftermath.120.mae",
+  "aftermath.120.mfe",
+  "aftermath.120.signed_ticks",
+  "aftermath.20.censored",
+  "aftermath.20.cls",
+  "aftermath.20.mae",
+  "aftermath.20.mfe",
+  "aftermath.20.signed_ticks",
+  "aftermath.30.censored",
+  "aftermath.30.cls",
+  "aftermath.30.mae",
+  "aftermath.30.mfe",
+  "aftermath.30.signed_ticks",
+  "aftermath.300.censored",
+  "aftermath.300.cls",
+  "aftermath.300.mae",
+  "aftermath.300.mfe",
+  "aftermath.300.signed_ticks",
+  "aftermath.5.censored",
+  "aftermath.5.cls",
+  "aftermath.5.mae",
+  "aftermath.5.mfe",
+  "aftermath.5.signed_ticks",
+  "aftermath.60.censored",
+  "aftermath.60.cls",
+  "aftermath.60.mae",
+  "aftermath.60.mfe",
+  "aftermath.60.signed_ticks",
+  "age_ms",
+  "aggr_buy_lots",
+  "aggr_mid_lots",
+  "aggr_sell_lots",
+  "aggressor",
+  "arc_base10",
+  "arc_min",
+  "arc_slope",
+  "arc_t0",
+  "archived_flow_state",
+  "archived_recognition_offset_s",
+  "archived_recognition_s",
+  "archived_recognition_s_epoch_s",
+  "archived_recognition_s_utc",
+  "ask",
+  "ask_depth",
+  "ask_depth10",
+  "ask_depth_full",
+  "ask_touch",
+  "before",
+  "bid",
+  "bid_depth",
+  "bid_depth10",
+  "bid_depth_full",
+  "bid_touch",
+  "birth_classified_lots",
+  "birth_second",
+  "book_next",
+  "book_prior_orders",
+  "book_t0_aligned",
+  "burst_vol",
+  "buy",
+  "buy1",
+  "buy20",
+  "buy5",
+  "buy60",
+  "buy_expiring",
+  "cancel_A",
+  "cancel_A_lots",
+  "cancel_B",
+  "cancel_B_lots",
+  "candidate_id",
+  "censor_time",
+  "censored",
+  "chronological_quarter",
+  "confirm",
+  "confirm_epoch_s",
+  "confirm_offset_s",
+  "confirm_utc",
+  "confirmed_before_info50",
+  "confirmed_before_seed_known",
+  "cursor",
+  "cutoff_ns",
+  "d1",
+  "d20",
+  "d5",
+  "d60",
+  "day0_epoch_s",
+  "depth_sign",
+  "dip300",
+  "dip300_imb",
+  "dip300_info50",
+  "dip300_t0",
+  "dip300_vol",
+  "dip300_vol_info50",
+  "dip300_vol_t0",
+  "dist_fast",
+  "dist_persistent",
+  "eligible",
+  "end_cursor",
+  "end_group",
+  "end_ms",
+  "end_ns",
+  "end_vs_entry",
+  "ending_touch",
+  "entry_group",
+  "epoch_s",
+  "expected_side",
+  "family_id",
+  "family_proxy",
+  "far_touch",
+  "fate",
+  "fate_cursor",
+  "fate_delay_ms",
+  "fill_A",
+  "fill_A_lots",
+  "fill_B",
+  "fill_B_lots",
+  "fill_N",
+  "fill_N_lots",
+  "flags_last",
+  "flow",
+  "flow_state",
+  "hour_class",
+  "hour_utc",
+  "info_horizon_local_s",
+  "info_horizon_local_s_epoch_s",
+  "info_horizon_local_s_utc",
+  "info_horizon_refractory_s",
+  "info_horizon_refractory_s_epoch_s",
+  "info_horizon_refractory_s_utc",
+  "instance",
+  "is_play",
+  "kind",
+  "last_window_classified_lots",
+  "late_pressure_41_60",
+  "late_volume",
+  "linked_fill_reduction",
+  "marker",
+  "mid",
+  "mid_either_13t",
+  "mid_either_13t_censored",
+  "mid_either_3t",
+  "mid_either_3t_censored",
+  "mid_either_5t",
+  "mid_either_5t_censored",
+  "mid_either_8t",
+  "mid_either_8t_censored",
+  "mid_move_info50_plus30",
+  "mid_move_t0_to_confirm",
+  "mid_with_13t",
+  "mid_with_13t_censored",
+  "mid_with_3t",
+  "mid_with_3t_censored",
+  "mid_with_5t",
+  "mid_with_5t_censored",
+  "mid_with_8t",
+  "mid_with_8t_censored",
+  "mode",
+  "modify_A",
+  "modify_A_lots",
+  "modify_B",
+  "modify_B_lots",
+  "move_confirm5_to_30",
+  "move_info50_plus30",
+  "move_info50_plus60",
+  "move_seed_known_plus30",
+  "move_seed_known_plus300",
+  "move_seed_known_plus60",
+  "move_t0_to_confirm",
+  "move_t0_to_info50",
+  "move_ticks.1",
+  "move_ticks.120",
+  "move_ticks.20",
+  "move_ticks.300",
+  "move_ticks.5",
+  "move_ticks.60",
+  "move_ticks.600",
+  "move_ticks_after_recognition.1",
+  "move_ticks_after_recognition.20",
+  "move_ticks_after_recognition.300",
+  "move_ticks_after_recognition.5",
+  "move_ticks_after_recognition.60",
+  "mutations_in_group",
+  "near_best",
+  "near_depth_imbalance",
+  "near_sign",
+  "new_best_is_better",
+  "next_a_state",
+  "next_after_anchor",
+  "next_before_plus60",
+  "next_confirm",
+  "next_flip",
+  "next_gap_from_plus60_s",
+  "next_gap_s",
+  "next_gap_ticks",
+  "next_level",
+  "next_pol",
+  "next_seed",
+  "next_starts_before_confirm",
+  "next_t0",
+  "next_t0_epoch_s",
+  "next_t0_utc",
+  "onset",
+  "onset_cursor",
+  "onset_epoch_s",
+  "onset_first_cursor",
+  "onset_group",
+  "onset_ns",
+  "onset_utc",
+  "order_id",
+  "orientation",
+  "origin",
+  "original_price_raw",
+  "other_touch",
+  "outcome",
+  "pair_index",
+  "peak_abs",
+  "plus60_300_abs_imb",
+  "plus60_300_away_depth_change",
+  "plus60_300_away_depth_ratio",
+  "plus60_300_away_touch_change",
+  "plus60_300_away_touch_ratio",
+  "plus60_300_disp",
+  "plus60_300_efficiency",
+  "plus60_300_hold_share",
+  "plus60_300_max_abs",
+  "plus60_300_net",
+  "plus60_300_oriented_net",
+  "plus60_300_path",
+  "plus60_300_range",
+  "plus60_300_spread_change",
+  "plus60_300_spread_ratio",
+  "plus60_300_t_first_tick",
+  "plus60_300_toward_depth_change",
+  "plus60_300_toward_depth_ratio",
+  "plus60_300_toward_touch_change",
+  "plus60_300_toward_touch_ratio",
+  "plus60_300_volume",
+  "plus60_600_abs_imb",
+  "plus60_600_away_depth_change",
+  "plus60_600_away_depth_ratio",
+  "plus60_600_away_touch_change",
+  "plus60_600_away_touch_ratio",
+  "plus60_600_disp",
+  "plus60_600_efficiency",
+  "plus60_600_hold_share",
+  "plus60_600_max_abs",
+  "plus60_600_net",
+  "plus60_600_oriented_net",
+  "plus60_600_path",
+  "plus60_600_range",
+  "plus60_600_spread_change",
+  "plus60_600_spread_ratio",
+  "plus60_600_t_first_tick",
+  "plus60_600_toward_depth_change",
+  "plus60_600_toward_depth_ratio",
+  "plus60_600_toward_touch_change",
+  "plus60_600_toward_touch_ratio",
+  "plus60_600_volume",
+  "plus60_away_depth",
+  "plus60_away_touch",
+  "plus60_book_abs",
+  "plus60_d300_oriented",
+  "plus60_d600_oriented",
+  "plus60_d60_oriented",
+  "plus60_first3t_with",
+  "plus60_first5t_with",
+  "plus60_first8t_with",
+  "plus60_spread",
+  "plus60_toward_depth",
+  "plus60_toward_share",
+  "plus60_toward_touch",
+  "polarity",
+  "pre300_oriented_change",
+  "pre300_path",
+  "pre300_range",
+  "pre300_volume",
+  "pre60_oriented_change",
+  "pre60_path",
+  "pre60_range",
+  "pre60_volume",
+  "pre_arc_defined",
+  "pre_ask_raw",
+  "pre_ask_size",
+  "pre_bid_raw",
+  "pre_bid_size",
+  "pre_book_abs",
+  "pre_book_age_s",
+  "pre_book_oriented",
+  "pre_close_cursor",
+  "pre_cursor_agrees",
+  "pre_family",
+  "pre_family_dists",
+  "pre_receive_ns",
+  "prebirth_depth_state",
+  "prev3_states",
+  "prev4",
+  "prev4_states",
+  "prev_a_state",
+  "prev_gap_s",
+  "prev_seed",
+  "price",
+  "price_either_13t",
+  "price_either_13t_censored",
+  "price_either_3t",
+  "price_either_3t_censored",
+  "price_either_5t",
+  "price_either_5t_censored",
+  "price_either_8t",
+  "price_either_8t_censored",
+  "price_raw",
+  "price_with_13t",
+  "price_with_13t_censored",
+  "price_with_3t",
+  "price_with_3t_censored",
+  "price_with_5t",
+  "price_with_5t_censored",
+  "price_with_8t",
+  "price_with_8t_censored",
+  "print",
+  "print_lots",
+  "prior_move_ticks.1",
+  "prior_move_ticks.5",
+  "prior_move_ticks.60",
+  "prior_onsets_by_order",
+  "prior_touch",
+  "prominence",
+  "proxy",
+  "quote_move_by_recognition",
+  "realised_by_recognition_ticks_in_birth_direction",
+  "realised_with.13",
+  "realised_with.3",
+  "realised_with.5",
+  "realised_with.8",
+  "reasons",
+  "recent",
+  "recognition_cursor",
+  "recognition_receive_ns",
+  "recognition_touch_relation",
+  "recovered.fate",
+  "recovered.messages",
+  "recovered.onset_cursor",
+  "recovered.onset_group",
+  "recovered.onset_ns",
+  "recovered.order_id",
+  "recovered.outcome",
+  "recovered.side",
+  "reductions_fill_linked",
+  "reductions_unlinked",
+  "remaining_runway_at_info50_s",
+  "reprice_in",
+  "reprice_out",
+  "retreated.fate",
+  "retreated.messages",
+  "retreated.onset_cursor",
+  "retreated.onset_group",
+  "retreated.onset_ns",
+  "retreated.order_id",
+  "retreated.outcome",
+  "retreated.side",
+  "return_ticks",
+  "role",
+  "roll20",
+  "runway",
+  "runway_s",
+  "same_as_prev",
+  "saved_match",
+  "scale_v2a",
+  "scale_v2b",
+  "sec",
+  "second",
+  "seed",
+  "seed_anchor_to_next_confirm_plus60",
+  "seed_anchor_to_next_t0",
+  "seed_anchor_to_plus1800",
+  "seed_anchor_to_plus3600",
+  "seed_forecast",
+  "seed_hit",
+  "seed_known_s",
+  "seed_known_s_epoch_s",
+  "seed_known_s_utc",
+  "seed_next_t0_to_next_confirm",
+  "seed_state",
+  "sell",
+  "sell1",
+  "sell20",
+  "sell5",
+  "sell60",
+  "sell_expiring",
+  "session",
+  "side",
+  "size",
+  "sources.book10",
+  "sources.dip300",
+  "sources.dip300_strong",
+  "sources.mom300",
+  "sources.next_seed",
+  "sources.next_state",
+  "sources.pol",
+  "sources.recruit",
+  "sources.touch",
+  "spread",
+  "spread_ticks",
+  "start_recv_ns",
+  "state",
+  "state_anchor_to_next_confirm_plus60",
+  "state_anchor_to_next_t0",
+  "state_anchor_to_plus1800",
+  "state_anchor_to_plus3600",
+  "state_forecast",
+  "state_hit",
+  "state_next_t0_to_next_confirm",
+  "t0",
+  "t0_away_depth",
+  "t0_away_touch",
+  "t0_epoch_s",
+  "t0_spread",
+  "t0_to_60_away_depth_change",
+  "t0_to_60_away_depth_ratio",
+  "t0_to_60_away_touch_change",
+  "t0_to_60_away_touch_ratio",
+  "t0_to_60_spread_change",
+  "t0_to_60_spread_ratio",
+  "t0_to_60_toward_depth_change",
+  "t0_to_60_toward_depth_ratio",
+  "t0_to_60_toward_touch_change",
+  "t0_to_60_toward_touch_ratio",
+  "t0_toward_depth",
+  "t0_toward_touch",
+  "t0_utc",
+  "t10",
+  "t25",
+  "t50",
+  "t_ms",
+  "t_session",
+  "targets.first3",
+  "targets.net300",
+  "targets.net600",
+  "targets.next_pol",
+  "touch_check",
+  "touch_sign",
+  "ts_recv_ns",
+  "v1.13",
+  "v1.3",
+  "v1.5",
+  "v1.8",
+  "v2a.13",
+  "v2a.3",
+  "v2a.5",
+  "v2a.8",
+  "v2b.13",
+  "v2b.3",
+  "v2b.5",
+  "v2b.8",
+  "v3.13",
+  "v3.3",
+  "v3.5",
+  "v3.8",
+  "vol_tercile",
+  "zero_within_60"
+ ],
+ "field_layer_ids": {
+  "pre_arc_defined": [
+   "derived_roll20_and_dipole_state",
+   "legacy_per_second_roll20"
+  ],
+  "seed_known_s": [
+   "clock_feature_availability"
+  ],
+  "move_seed_known_plus30": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "move_seed_known_plus60": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "move_seed_known_plus300": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "confirmed_before_seed_known": [
+   "clock_feature_availability"
+  ],
+  "t0": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state",
+   "clock_receive_time"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "peak_abs": [
+   "derived_roll20_and_dipole_state",
+   "legacy_per_second_roll20"
+  ],
+  "prominence": [
+   "derived_roll20_and_dipole_state",
+   "legacy_per_second_roll20"
+  ],
+  "seed_state": [
+   "derived_open_world_predecessor_state",
+   "derived_roll20_and_dipole_state"
+  ],
+  "zero_within_60": [
+   "derived_roll20_and_dipole_state",
+   "legacy_per_second_roll20"
+  ],
+  "t50": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "t25": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "t10": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "late_pressure_41_60": [
+   "derived_open_world_predecessor_state",
+   "derived_roll20_and_dipole_state"
+  ],
+  "late_volume": [
+   "derived_open_world_predecessor_state",
+   "derived_roll20_and_dipole_state"
+  ],
+  "onset": [
+   "derived_roll20_and_dipole_state",
+   "clock_prospective_discovery_confirmation"
+  ],
+  "confirm": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "runway_s": [
+   "derived_roll20_and_dipole_state",
+   "clock_prospective_discovery_confirmation"
+  ],
+  "confirm_offset_s": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "censored": [
+   "clock_feature_availability"
+  ],
+  "info_horizon_local_s": [
+   "clock_feature_availability"
+  ],
+  "info_horizon_refractory_s": [
+   "clock_feature_availability"
+  ],
+  "confirmed_before_info50": [
+   "clock_feature_availability"
+  ],
+  "remaining_runway_at_info50_s": [
+   "clock_feature_availability"
+  ],
+  "dip300_t0": [
+   "aggressor_and_native_signed_flow",
+   "legacy_native_signed_flow"
+  ],
+  "dip300_vol_t0": [
+   "aggressor_and_native_signed_flow",
+   "legacy_native_signed_flow"
+  ],
+  "dip300_info50": [
+   "aggressor_and_native_signed_flow",
+   "legacy_native_signed_flow"
+  ],
+  "dip300_vol_info50": [
+   "aggressor_and_native_signed_flow",
+   "legacy_native_signed_flow"
+  ],
+  "book_t0_aligned": [
+   "spread_and_depth_imbalance",
+   "legacy_book_imbalance"
+  ],
+  "move_t0_to_confirm": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "move_t0_to_info50": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "move_info50_plus30": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "move_info50_plus60": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "move_confirm5_to_30": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_move_t0_to_confirm": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_move_info50_plus30": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "aftermath": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "prev_gap_s": [
+   "derived_open_world_predecessor_state"
+  ],
+  "same_as_prev": [
+   "derived_open_world_predecessor_state"
+  ],
+  "next_starts_before_confirm": [
+   "derived_open_world_predecessor_state"
+  ],
+  "prev4_states": [
+   "derived_open_world_predecessor_state"
+  ],
+  "prev3_states": [
+   "derived_open_world_predecessor_state"
+  ],
+  "aftermath.5.mfe": [
+   "later_outcome_reveal"
+  ],
+  "info_horizon_refractory_s_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.300.mfe": [
+   "later_outcome_reveal"
+  ],
+  "onset_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "aftermath.30.mfe": [
+   "later_outcome_reveal"
+  ],
+  "t0_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "info_horizon_refractory_s_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "aftermath.20.cls": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.30.mae": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.10.mae": [
+   "later_outcome_reveal"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "seed_known_s_epoch_s": [
+   "clock_event_known_by"
+  ],
+  "aftermath.30.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "aftermath.20.mfe": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.120.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "aftermath.20.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.10.cls": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.20.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "aftermath.120.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.300.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "aftermath.10.mfe": [
+   "later_outcome_reveal"
+  ],
+  "onset_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "aftermath.60.mfe": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.10.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "aftermath.30.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "mode": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seed_known_s_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "archived_recognition_offset_s": [
+   "clock_event_known_by"
+  ],
+  "aftermath.300.cls": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.20.mae": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.5.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.60.cls": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.5.mae": [
+   "later_outcome_reveal"
+  ],
+  "session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "aftermath.300.mae": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.5.cls": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.5.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "aftermath.60.mae": [
+   "later_outcome_reveal"
+  ],
+  "info_horizon_local_s_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "archived_flow_state": [
+   "legacy_structure_observables",
+   "aggressor_and_native_signed_flow"
+  ],
+  "confirm_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "info_horizon_local_s_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "aftermath.10.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.120.mae": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.30.cls": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.300.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.120.cls": [
+   "later_outcome_reveal"
+  ],
+  "aftermath.120.mfe": [
+   "later_outcome_reveal"
+  ],
+  "t0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "aftermath.60.censored": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "aftermath.60.signed_ticks": [
+   "later_outcome_reveal"
+  ],
+  "confirm_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "archived_recognition_s": [
+   "clock_event_known_by",
+   "legacy_structure_observables"
+  ],
+  "archived_recognition_s_epoch_s": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "archived_recognition_s_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_either_3t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_either_3t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "censor_time": [
+   "later_outcome_reveal"
+  ],
+  "price_either_5t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_either_5t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_either_8t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_either_8t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_either_13t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_either_13t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_with_3t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_with_3t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_with_5t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_with_5t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_with_8t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_with_8t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_with_13t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "price_with_13t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_either_3t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_either_3t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_either_5t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_either_5t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_either_8t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_either_8t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_either_13t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_either_13t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_with_3t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_with_3t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_with_5t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_with_5t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_with_8t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_with_8t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_with_13t": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "mid_with_13t_censored": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "seed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "family_proxy": [
+   "derived_d_family_geometry"
+  ],
+  "proxy": [
+   "learned_dipoles_and_geometry",
+   "derived_roll20_and_dipole_state"
+  ],
+  "a_state": [
+   "learned_dipoles_and_geometry",
+   "derived_roll20_and_dipole_state"
+  ],
+  "dist_fast": [
+   "learned_dipoles_and_geometry",
+   "derived_roll20_and_dipole_state"
+  ],
+  "dist_persistent": [
+   "learned_dipoles_and_geometry",
+   "derived_roll20_and_dipole_state"
+  ],
+  "plus60_first3t_with": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_first5t_with": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_first8t_with": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_d60_oriented": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_d300_oriented": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_d600_oriented": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "pre_family": [
+   "learned_d_structures_and_families",
+   "derived_d_family_geometry"
+  ],
+  "pre_family_dists": [
+   "learned_d_structures_and_families",
+   "derived_d_family_geometry"
+  ],
+  "pre300_volume": [
+   "aggressor_and_native_signed_flow",
+   "price_and_book_path"
+  ],
+  "pre60_oriented_change": [
+   "aggressor_and_native_signed_flow",
+   "price_and_book_path"
+  ],
+  "pre60_range": [
+   "aggressor_and_native_signed_flow",
+   "price_and_book_path"
+  ],
+  "pre60_path": [
+   "aggressor_and_native_signed_flow",
+   "price_and_book_path"
+  ],
+  "pre60_volume": [
+   "aggressor_and_native_signed_flow",
+   "price_and_book_path"
+  ],
+  "pre_book_oriented": [
+   "spread_and_depth_imbalance"
+  ],
+  "pre_book_abs": [
+   "spread_and_depth_imbalance"
+  ],
+  "arc_base10": [
+   "learned_d_structures_and_families",
+   "derived_d_family_geometry"
+  ],
+  "arc_min": [
+   "learned_d_structures_and_families",
+   "derived_d_family_geometry"
+  ],
+  "arc_slope": [
+   "learned_d_structures_and_families",
+   "derived_d_family_geometry"
+  ],
+  "arc_t0": [
+   "learned_d_structures_and_families",
+   "derived_d_family_geometry"
+  ],
+  "plus60_book_abs": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_range": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_max_abs": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_path": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_efficiency": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_disp": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_volume": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_abs_imb": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_t_first_tick": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_hold_share": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_net": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_oriented_net": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_range": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_max_abs": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_path": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_efficiency": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_disp": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_volume": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_abs_imb": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_t_first_tick": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_hold_share": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_net": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_oriented_net": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "hour_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre300_oriented_change": [
+   "aggressor_and_native_signed_flow",
+   "price_and_book_path"
+  ],
+  "pre300_range": [
+   "aggressor_and_native_signed_flow",
+   "price_and_book_path"
+  ],
+  "pre300_path": [
+   "aggressor_and_native_signed_flow",
+   "price_and_book_path"
+  ],
+  "t0_spread": [
+   "full_bid_ask_depth",
+   "price_level_and_order_counts",
+   "spread_and_depth_imbalance"
+  ],
+  "plus60_spread": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "t0_to_60_spread_change": [
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "full_bid_ask_depth"
+  ],
+  "t0_to_60_spread_ratio": [
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "full_bid_ask_depth"
+  ],
+  "plus60_300_spread_change": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_spread_ratio": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_spread_change": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_spread_ratio": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "t0_toward_depth": [
+   "full_bid_ask_depth",
+   "price_level_and_order_counts",
+   "spread_and_depth_imbalance"
+  ],
+  "plus60_toward_depth": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "t0_to_60_toward_depth_change": [
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "full_bid_ask_depth"
+  ],
+  "t0_to_60_toward_depth_ratio": [
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "full_bid_ask_depth"
+  ],
+  "plus60_300_toward_depth_change": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_toward_depth_ratio": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_toward_depth_change": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_toward_depth_ratio": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "t0_away_depth": [
+   "full_bid_ask_depth",
+   "price_level_and_order_counts",
+   "spread_and_depth_imbalance"
+  ],
+  "plus60_away_depth": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "t0_to_60_away_depth_change": [
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "full_bid_ask_depth"
+  ],
+  "t0_to_60_away_depth_ratio": [
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "full_bid_ask_depth"
+  ],
+  "plus60_300_away_depth_change": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_away_depth_ratio": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_away_depth_change": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_away_depth_ratio": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "t0_toward_touch": [
+   "full_bid_ask_depth",
+   "price_level_and_order_counts",
+   "spread_and_depth_imbalance"
+  ],
+  "plus60_toward_touch": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "t0_to_60_toward_touch_change": [
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "full_bid_ask_depth"
+  ],
+  "t0_to_60_toward_touch_ratio": [
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "full_bid_ask_depth"
+  ],
+  "plus60_300_toward_touch_change": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_toward_touch_ratio": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_toward_touch_change": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_toward_touch_ratio": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "t0_away_touch": [
+   "full_bid_ask_depth",
+   "price_level_and_order_counts",
+   "spread_and_depth_imbalance"
+  ],
+  "plus60_away_touch": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "t0_to_60_away_touch_change": [
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "full_bid_ask_depth"
+  ],
+  "t0_to_60_away_touch_ratio": [
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "full_bid_ask_depth"
+  ],
+  "plus60_300_away_touch_change": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_300_away_touch_ratio": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_away_touch_change": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_600_away_touch_ratio": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "plus60_toward_share": [
+   "price_and_book_path",
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "later_outcome_reveal"
+  ],
+  "next_before_plus60": [
+   "derived_open_world_predecessor_state"
+  ],
+  "next_seed": [
+   "derived_open_world_predecessor_state"
+  ],
+  "next_gap_from_plus60_s": [
+   "derived_open_world_predecessor_state"
+  ],
+  "next_gap_s": [
+   "derived_open_world_predecessor_state"
+  ],
+  "next_flip": [
+   "derived_open_world_predecessor_state"
+  ],
+  "next_a_state": [
+   "derived_open_world_predecessor_state"
+  ],
+  "dip300_imb": [
+   "aggressor_and_native_signed_flow",
+   "legacy_native_signed_flow"
+  ],
+  "dip300_vol": [
+   "aggressor_and_native_signed_flow",
+   "legacy_native_signed_flow"
+  ],
+  "sources": [
+   "aggressor_and_native_signed_flow",
+   "spread_and_depth_imbalance",
+   "price_level_and_order_counts",
+   "derived_open_world_predecessor_state"
+  ],
+  "targets": [
+   "later_outcome_reveal"
+  ],
+  "targets.net600": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.pol": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.next_state": [
+   "derived_open_world_predecessor_state"
+  ],
+  "sources.dip300_strong": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.dip300": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.book10": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "hour_class": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "targets.net300": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "vol_tercile": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.mom300": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "targets.next_pol": [
+   "derived_open_world_predecessor_state"
+  ],
+  "targets.first3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.recruit": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.next_seed": [
+   "derived_open_world_predecessor_state"
+  ],
+  "next_t0": [
+   "derived_open_world_predecessor_state",
+   "later_outcome_reveal"
+  ],
+  "next_pol": [
+   "derived_open_world_predecessor_state",
+   "later_outcome_reveal"
+  ],
+  "next_after_anchor": [
+   "derived_open_world_predecessor_state",
+   "later_outcome_reveal"
+  ],
+  "next_confirm": [
+   "derived_open_world_predecessor_state",
+   "later_outcome_reveal"
+  ],
+  "next_t0_epoch_s": [
+   "derived_open_world_predecessor_state",
+   "later_outcome_reveal"
+  ],
+  "next_t0_utc": [
+   "derived_open_world_predecessor_state",
+   "later_outcome_reveal"
+  ],
+  "state_hit": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "state_next_t0_to_next_confirm": [
+   "derived_open_world_predecessor_state"
+  ],
+  "state_anchor_to_next_t0": [
+   "derived_open_world_predecessor_state"
+  ],
+  "state_anchor_to_plus1800": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "state_forecast": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "state_anchor_to_next_confirm_plus60": [
+   "derived_open_world_predecessor_state"
+  ],
+  "state_anchor_to_plus3600": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seed_anchor_to_plus1800": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seed_next_t0_to_next_confirm": [
+   "derived_open_world_predecessor_state"
+  ],
+  "seed_anchor_to_next_t0": [
+   "derived_open_world_predecessor_state"
+  ],
+  "seed_anchor_to_next_confirm_plus60": [
+   "derived_open_world_predecessor_state"
+  ],
+  "seed_forecast": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seed_hit": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seed_anchor_to_plus3600": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "scale_v2a": [
+   "derived_roll20_and_dipole_state",
+   "derived_feature_availability_timestamps"
+  ],
+  "scale_v2b": [
+   "derived_roll20_and_dipole_state",
+   "derived_feature_availability_timestamps"
+  ],
+  "activity_tercile_loo": [
+   "derived_roll20_and_dipole_state",
+   "derived_feature_availability_timestamps"
+  ],
+  "v1": [
+   "derived_roll20_and_dipole_state",
+   "derived_feature_availability_timestamps"
+  ],
+  "v2a": [
+   "derived_roll20_and_dipole_state",
+   "derived_feature_availability_timestamps"
+  ],
+  "v2b": [
+   "derived_roll20_and_dipole_state",
+   "derived_feature_availability_timestamps"
+  ],
+  "v3": [
+   "derived_roll20_and_dipole_state",
+   "derived_feature_availability_timestamps"
+  ],
+  "realised_with": [
+   "derived_roll20_and_dipole_state",
+   "derived_feature_availability_timestamps"
+  ],
+  "v2a.13": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v1.3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v3.5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "realised_with.3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v1.8": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v3.13": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v3.8": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "state": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2a.5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2b.8": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v1.13": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2b.13": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "realised_with.13": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2b.3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "realised_with.8": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "realised_with.5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v3.3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2a.8": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v1.5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2a.3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "v2b.5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "eligible": [
+   "derived_open_world_predecessor_state"
+  ],
+  "reasons": [
+   "derived_open_world_predecessor_state"
+  ],
+  "prev4": [
+   "derived_open_world_predecessor_state"
+  ],
+  "is_play": [
+   "derived_open_world_predecessor_state"
+  ],
+  "return_ticks": [
+   "later_outcome_reveal"
+  ],
+  "expected_side": [
+   "derived_open_world_predecessor_state"
+  ],
+  "prev_seed": [
+   "derived_open_world_predecessor_state"
+  ],
+  "prev_a_state": [
+   "derived_open_world_predecessor_state"
+  ],
+  "birth_classified_lots": [
+   "legacy_structure_observables",
+   "derived_roll20_and_dipole_state"
+  ],
+  "birth_second": [
+   "legacy_structure_observables",
+   "derived_roll20_and_dipole_state"
+  ],
+  "candidate_id": [
+   "legacy_structure_observables",
+   "derived_roll20_and_dipole_state"
+  ],
+  "flow_state": [
+   "aggressor_and_native_signed_flow",
+   "price_level_and_order_counts",
+   "clock_event_known_by"
+  ],
+  "last_window_classified_lots": [
+   "legacy_structure_observables",
+   "derived_roll20_and_dipole_state"
+  ],
+  "orientation": [
+   "legacy_structure_observables",
+   "derived_roll20_and_dipole_state"
+  ],
+  "prebirth_depth_state": [
+   "legacy_structure_observables",
+   "derived_roll20_and_dipole_state"
+  ],
+  "quote_move_by_recognition": [
+   "legacy_structure_observables",
+   "derived_roll20_and_dipole_state"
+  ],
+  "realised_by_recognition_ticks_in_birth_direction": [
+   "legacy_structure_observables",
+   "derived_roll20_and_dipole_state"
+  ],
+  "recognition_cursor": [
+   "clock_event_known_by",
+   "clock_receive_time",
+   "legacy_structure_observables"
+  ],
+  "recognition_receive_ns": [
+   "clock_event_known_by",
+   "clock_receive_time",
+   "legacy_structure_observables"
+  ],
+  "recognition_touch_relation": [
+   "price_level_and_order_counts",
+   "spread_and_depth_imbalance"
+  ],
+  "move_ticks_after_recognition.1": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks_after_recognition.5": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks_after_recognition.20": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks_after_recognition.60": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks_after_recognition.300": [
+   "later_outcome_reveal"
+  ],
+  "ask_depth_full": [
+   "full_bid_ask_depth",
+   "spread_and_depth_imbalance"
+  ],
+  "bid_depth_full": [
+   "full_bid_ask_depth",
+   "spread_and_depth_imbalance"
+  ],
+  "buy1": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "buy20": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "buy5": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "buy60": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "chronological_quarter": [
+   "legacy_structure_observables",
+   "learned_d_structures_and_families"
+  ],
+  "cutoff_ns": [
+   "clock_event_known_by",
+   "clock_receive_time",
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "d1": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "d20": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "d5": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "d60": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "depth_sign": [
+   "full_bid_ask_depth",
+   "spread_and_depth_imbalance"
+  ],
+  "family_id": [
+   "legacy_structure_observables",
+   "learned_d_structures_and_families"
+  ],
+  "instance": [
+   "legacy_structure_observables",
+   "learned_d_structures_and_families"
+  ],
+  "near_depth_imbalance": [
+   "full_bid_ask_depth",
+   "spread_and_depth_imbalance"
+  ],
+  "near_sign": [
+   "full_bid_ask_depth",
+   "spread_and_depth_imbalance"
+  ],
+  "pre_ask_raw": [
+   "price_level_and_order_counts",
+   "spread_and_depth_imbalance"
+  ],
+  "pre_ask_size": [
+   "price_level_and_order_counts",
+   "spread_and_depth_imbalance"
+  ],
+  "pre_bid_raw": [
+   "price_level_and_order_counts",
+   "spread_and_depth_imbalance"
+  ],
+  "pre_bid_size": [
+   "price_level_and_order_counts",
+   "spread_and_depth_imbalance"
+  ],
+  "pre_close_cursor": [
+   "clock_event_known_by",
+   "clock_receive_time",
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "pre_cursor_agrees": [
+   "clock_event_known_by",
+   "clock_receive_time",
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "pre_receive_ns": [
+   "clock_event_known_by",
+   "clock_receive_time",
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "prior_move_ticks": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "recent": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "saved_match": [
+   "legacy_structure_observables",
+   "learned_d_structures_and_families"
+  ],
+  "sell1": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "sell20": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "sell5": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "sell60": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "start_recv_ns": [
+   "clock_event_known_by",
+   "clock_receive_time",
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "touch_sign": [
+   "price_level_and_order_counts",
+   "spread_and_depth_imbalance"
+  ],
+  "move_ticks.1": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks.20": [
+   "later_outcome_reveal"
+  ],
+  "pre_book_age_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_ticks.300": [
+   "later_outcome_reveal"
+  ],
+  "prior_move_ticks.60": [
+   "later_outcome_reveal"
+  ],
+  "spread_ticks": [
+   "spread_and_depth_imbalance"
+  ],
+  "move_ticks.120": [
+   "later_outcome_reveal"
+  ],
+  "prior_move_ticks.1": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks.5": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks.60": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks.600": [
+   "later_outcome_reveal"
+  ],
+  "prior_move_ticks.5": [
+   "later_outcome_reveal"
+  ],
+  "side": [
+   "price_level_and_order_counts",
+   "depletion_and_replenishment"
+  ],
+  "new_best_is_better": [
+   "price_level_and_order_counts",
+   "depletion_and_replenishment"
+  ],
+  "onset_group": [
+   "clock_receive_time",
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "onset_first_cursor": [
+   "clock_receive_time",
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "onset_cursor": [
+   "clock_receive_time",
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "onset_ns": [
+   "clock_receive_time",
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "original_price_raw": [
+   "price_level_and_order_counts",
+   "depletion_and_replenishment"
+  ],
+  "prior_touch": [
+   "price_level_and_order_counts",
+   "depletion_and_replenishment"
+  ],
+  "other_touch": [
+   "price_level_and_order_counts",
+   "depletion_and_replenishment"
+  ],
+  "end_group": [
+   "resilience_and_recovery",
+   "later_outcome_reveal",
+   "clock_event_known_by"
+  ],
+  "end_cursor": [
+   "resilience_and_recovery",
+   "later_outcome_reveal",
+   "clock_event_known_by"
+  ],
+  "end_ns": [
+   "resilience_and_recovery",
+   "later_outcome_reveal",
+   "clock_event_known_by"
+  ],
+  "ending_touch": [
+   "resilience_and_recovery",
+   "later_outcome_reveal",
+   "clock_event_known_by"
+  ],
+  "outcome": [
+   "resilience_and_recovery",
+   "later_outcome_reveal",
+   "clock_event_known_by"
+  ],
+  "entry_group": [
+   "resilience_and_recovery",
+   "later_outcome_reveal",
+   "clock_event_known_by"
+  ],
+  "end_vs_entry": [
+   "resilience_and_recovery",
+   "later_outcome_reveal",
+   "clock_event_known_by"
+  ],
+  "t_session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "touch_check": [
+   "full_bid_ask_depth",
+   "price_level_and_order_counts"
+  ],
+  "additions": [
+   "order_lifecycle_adds",
+   "order_lifecycle_modifies",
+   "order_identity_transitions"
+  ],
+  "reductions_fill_linked": [
+   "order_lifecycle_fills",
+   "order_lifecycle_cancels",
+   "order_identity_transitions",
+   "depletion_and_replenishment"
+  ],
+  "reductions_unlinked": [
+   "order_lifecycle_cancels",
+   "depletion_and_replenishment"
+  ],
+  "reprice_in": [
+   "order_lifecycle_adds",
+   "order_lifecycle_modifies",
+   "order_identity_transitions"
+  ],
+  "reprice_out": [
+   "order_lifecycle_adds",
+   "order_lifecycle_modifies",
+   "order_identity_transitions"
+  ],
+  "mutations_in_group": [
+   "order_lifecycle_adds",
+   "order_lifecycle_modifies",
+   "order_identity_transitions"
+  ],
+  "next_level": [
+   "derived_open_world_predecessor_state"
+  ],
+  "end_ms": [
+   "resilience_and_recovery",
+   "later_outcome_reveal",
+   "clock_event_known_by"
+  ],
+  "order_id": [
+   "order_identity_transitions",
+   "order_lifecycle_adds",
+   "order_lifecycle_modifies"
+  ],
+  "origin": [
+   "order_identity_transitions",
+   "order_lifecycle_adds",
+   "order_lifecycle_modifies"
+  ],
+  "age_ms": [
+   "queue_age_and_survival"
+  ],
+  "prior_onsets_by_order": [
+   "order_identity_transitions",
+   "order_lifecycle_adds",
+   "order_lifecycle_modifies"
+  ],
+  "fate": [
+   "order_lifecycle_cancels",
+   "order_lifecycle_fills",
+   "order_lifecycle_modifies",
+   "later_outcome_reveal"
+  ],
+  "fate_delay_ms": [
+   "order_lifecycle_cancels",
+   "order_lifecycle_fills",
+   "order_lifecycle_modifies",
+   "later_outcome_reveal"
+  ],
+  "fate_cursor": [
+   "order_lifecycle_cancels",
+   "order_lifecycle_fills",
+   "order_lifecycle_modifies",
+   "later_outcome_reveal"
+  ],
+  "flow": [
+   "order_lifecycle_fills",
+   "order_lifecycle_cancels",
+   "depletion_and_replenishment"
+  ],
+  "book_next": [
+   "full_bid_ask_depth",
+   "price_level_and_order_counts"
+  ],
+  "book_prior_orders": [
+   "full_bid_ask_depth",
+   "price_level_and_order_counts"
+  ],
+  "next_gap_ticks": [
+   "derived_open_world_predecessor_state"
+  ],
+  "second": [
+   "clock_receive_time"
+  ],
+  "runway": [
+   "derived_roll20_and_dipole_state",
+   "aggressor_and_native_signed_flow"
+  ],
+  "dip300": [
+   "derived_roll20_and_dipole_state",
+   "aggressor_and_native_signed_flow"
+  ],
+  "burst_vol": [
+   "derived_roll20_and_dipole_state",
+   "aggressor_and_native_signed_flow"
+  ],
+  "kind": [
+   "order_identity_transitions",
+   "depletion_and_replenishment",
+   "resilience_and_recovery"
+  ],
+  "pair_index": [
+   "order_identity_transitions",
+   "depletion_and_replenishment",
+   "resilience_and_recovery"
+  ],
+  "retreated": [
+   "order_identity_transitions",
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "later_outcome_reveal"
+  ],
+  "recovered": [
+   "order_identity_transitions",
+   "depletion_and_replenishment",
+   "resilience_and_recovery",
+   "later_outcome_reveal"
+  ],
+  "recovered.onset_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "resilience_and_recovery"
+  ],
+  "retreated.onset_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "retreated.messages": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recovered.onset_ns": [
+   "derived_feature_availability_timestamps",
+   "resilience_and_recovery"
+  ],
+  "retreated.onset_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recovered.outcome": [
+   "resilience_and_recovery",
+   "later_outcome_reveal"
+  ],
+  "retreated.fate": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "retreated.side": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recovered.fate": [
+   "resilience_and_recovery"
+  ],
+  "recovered.side": [
+   "resilience_and_recovery"
+  ],
+  "recovered.order_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "resilience_and_recovery"
+  ],
+  "recovered.messages": [
+   "resilience_and_recovery"
+  ],
+  "retreated.onset_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "recovered.onset_group": [
+   "resilience_and_recovery"
+  ],
+  "retreated.outcome": [
+   "later_outcome_reveal"
+  ],
+  "retreated.order_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "role": [
+   "order_identity_transitions",
+   "depletion_and_replenishment",
+   "resilience_and_recovery"
+  ],
+  "cursor": [
+   "clock_receive_time",
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "t_ms": [
+   "clock_receive_time"
+  ],
+  "action": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_identity_transitions"
+  ],
+  "price": [
+   "price_level_and_order_counts",
+   "order_lifecycle_trades"
+  ],
+  "size": [
+   "price_level_and_order_counts",
+   "order_lifecycle_trades"
+  ],
+  "flags_last": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "linked_fill_reduction": [
+   "order_lifecycle_fills",
+   "order_identity_transitions"
+  ],
+  "before": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_identity_transitions"
+  ],
+  "after": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_identity_transitions"
+  ],
+  "near_best": [
+   "price_level_and_order_counts",
+   "full_bid_ask_depth"
+  ],
+  "far_touch": [
+   "price_level_and_order_counts",
+   "full_bid_ask_depth"
+  ],
+  "marker": [
+   "price_level_and_order_counts",
+   "full_bid_ask_depth"
+  ],
+  "mid": [
+   "legacy_price",
+   "price_and_book_path"
+  ],
+  "roll20": [
+   "legacy_per_second_roll20"
+  ],
+  "buy": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "sell": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "buy_expiring": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "sell_expiring": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "bid_depth": [
+   "full_bid_ask_depth"
+  ],
+  "ask_depth": [
+   "full_bid_ask_depth"
+  ],
+  "bid_touch": [
+   "price_level_and_order_counts"
+  ],
+  "ask_touch": [
+   "price_level_and_order_counts"
+  ],
+  "sec": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "spread": [
+   "spread_and_depth_imbalance"
+  ],
+  "epoch_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "modify_A": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "modify_A_lots": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "add_A": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "add_A_lots": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "cancel_B": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "cancel_B_lots": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "cancel_A": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "cancel_A_lots": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "add_B": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "add_B_lots": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "print": [
+   "order_lifecycle_trades"
+  ],
+  "print_lots": [
+   "order_lifecycle_trades"
+  ],
+  "aggr_sell_lots": [
+   "order_lifecycle_trades"
+  ],
+  "fill_B": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "fill_B_lots": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "modify_B": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "modify_B_lots": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "fill_A": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "fill_A_lots": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "aggr_buy_lots": [
+   "order_lifecycle_trades"
+  ],
+  "aggr_mid_lots": [
+   "order_lifecycle_trades"
+  ],
+  "fill_N": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "fill_N_lots": [
+   "order_lifecycle_adds",
+   "order_lifecycle_cancels",
+   "order_lifecycle_modifies",
+   "order_lifecycle_fills"
+  ],
+  "bid": [
+   "price_level_and_order_counts"
+  ],
+  "ask": [
+   "price_level_and_order_counts"
+  ],
+  "bid_depth10": [
+   "full_bid_ask_depth"
+  ],
+  "ask_depth10": [
+   "full_bid_ask_depth"
+  ],
+  "ts_recv_ns": [
+   "clock_receive_time",
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "price_raw": [
+   "price_level_and_order_counts",
+   "order_lifecycle_trades"
+  ],
+  "aggressor": [
+   "order_lifecycle_trades"
+  ]
+ },
+ "counts": {
+  "rows": 108412,
+  "direct_clocks": 104509,
+  "clocks": 284971,
+  "corrections": 3356,
+  "aggregate_or_unclocked_retained": 3903
+ },
+ "parts": [
+  {
+   "path": "rows/aae674326049605be2ca/00000.parquet",
+   "rows": 20000,
+   "bytes": 1321075,
+   "sha256": "01882734a9b4c118dacc14c041984b00324529ab983480b8258022b6beaec4a6"
+  },
+  {
+   "path": "rows/aae674326049605be2ca/00001.parquet",
+   "rows": 20000,
+   "bytes": 1403940,
+   "sha256": "730d477563887ca03ba5b6ee78ceb05b1fc8fd19f4a8d899f04943997ef806c9"
+  },
+  {
+   "path": "rows/aae674326049605be2ca/00002.parquet",
+   "rows": 20000,
+   "bytes": 1449933,
+   "sha256": "f227f41b3db5a9ed800958ab020acf0f82b73bc89b74987c9262fa1c7c631edd"
+  },
+  {
+   "path": "rows/aae674326049605be2ca/00003.parquet",
+   "rows": 20000,
+   "bytes": 1547522,
+   "sha256": "2c6e8c89a02e16c2e2264ce077491f4c02e43720fbe1861816b1da5c828f44fa"
+  },
+  {
+   "path": "rows/aae674326049605be2ca/00004.parquet",
+   "rows": 20000,
+   "bytes": 1384638,
+   "sha256": "21d6039ca9a6fd9ccdd9027e168a1e2f71aed01052139991446ecf1a92712bba"
+  },
+  {
+   "path": "rows/aae674326049605be2ca/00005.parquet",
+   "rows": 8412,
+   "bytes": 313645,
+   "sha256": "cde9bed48f2f2378d0f6a6783bd7abae5934e9cab5956384f1fc6536b5986502"
+  }
+ ],
+ "correction_examples": [
+  {
+   "row": 0,
+   "corrections": [
+    {
+     "field": "info_horizon_local_s_epoch_s",
+     "original": "1696194005",
+     "corrected": "1696197698",
+     "formula": "day0_epoch_s + t0 + info_horizon_local_s"
+    },
+    {
+     "field": "info_horizon_refractory_s_epoch_s",
+     "original": "1696194050",
+     "corrected": "1696197743",
+     "formula": "day0_epoch_s + t0 + info_horizon_refractory_s"
+    }
+   ]
+  },
+  {
+   "row": 1,
+   "corrections": [
+    {
+     "field": "info_horizon_local_s_epoch_s",
+     "original": "1696194005",
+     "corrected": "1696197743",
+     "formula": "day0_epoch_s + t0 + info_horizon_local_s"
+    },
+    {
+     "field": "info_horizon_refractory_s_epoch_s",
+     "original": "1696194050",
+     "corrected": "1696197788",
+     "formula": "day0_epoch_s + t0 + info_horizon_refractory_s"
+    }
+   ]
+  },
+  {
+   "row": 2,
+   "corrections": [
+    {
+     "field": "info_horizon_local_s_epoch_s",
+     "original": "1696194005",
+     "corrected": "1696197823",
+     "formula": "day0_epoch_s + t0 + info_horizon_local_s"
+    },
+    {
+     "field": "info_horizon_refractory_s_epoch_s",
+     "original": "1696194050",
+     "corrected": "1696197868",
+     "formula": "day0_epoch_s + t0 + info_horizon_refractory_s"
+    }
+   ]
+  },
+  {
+   "row": 3,
+   "corrections": [
+    {
+     "field": "info_horizon_local_s_epoch_s",
+     "original": "1696194005",
+     "corrected": "1696197903",
+     "formula": "day0_epoch_s + t0 + info_horizon_local_s"
+    },
+    {
+     "field": "info_horizon_refractory_s_epoch_s",
+     "original": "1696194050",
+     "corrected": "1696197948",
+     "formula": "day0_epoch_s + t0 + info_horizon_refractory_s"
+    }
+   ]
+  },
+  {
+   "row": 4,
+   "corrections": [
+    {
+     "field": "info_horizon_local_s_epoch_s",
+     "original": "1696194005",
+     "corrected": "1696197982",
+     "formula": "day0_epoch_s + t0 + info_horizon_local_s"
+    },
+    {
+     "field": "info_horizon_refractory_s_epoch_s",
+     "original": "1696194050",
+     "corrected": "1696198027",
+     "formula": "day0_epoch_s + t0 + info_horizon_refractory_s"
+    }
+   ]
+  }
+ ],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

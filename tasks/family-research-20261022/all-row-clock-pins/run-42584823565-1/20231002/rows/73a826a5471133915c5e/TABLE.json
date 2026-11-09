@@ -1,0 +1,67 @@
+{
+ "table_id": "73a826a5471133915c5e",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231002-grouping-members.csv",
+  "git_blob": "b88024f88572c0fa003a22a72f99b6cd6b3530c8",
+  "bytes": 542215,
+  "day": "20231002"
+ },
+ "source_sha256": "8ff87f7ea0c692fe5e22c0057b90002c867d12eb3b54dc2fa52d5844d908fdc1",
+ "source_fields": [
+  "candidate_id",
+  "day",
+  "disposition",
+  "group",
+  "missing_pattern",
+  "orientation",
+  "representation",
+  "undefined_coordinates"
+ ],
+ "field_layer_ids": {
+  "disposition": [
+   "missingness_and_integrity_flags"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "missing_pattern": [
+   "missingness_and_integrity_flags"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "representation": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "undefined_coordinates": [
+   "missingness_and_integrity_flags"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 2964,
+  "explicit_parent_context_only": 2964,
+  "clocks": 14820,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/73a826a5471133915c5e/00000.parquet",
+   "rows": 2964,
+   "bytes": 119984,
+   "sha256": "64026eef70463ae0a2f6eb00ef34ee78e59b64f2b2aae2b1fb8753c074afa0b6"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

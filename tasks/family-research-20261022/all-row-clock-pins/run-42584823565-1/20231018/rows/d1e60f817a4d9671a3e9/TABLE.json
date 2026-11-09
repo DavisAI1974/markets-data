@@ -1,0 +1,101 @@
+{
+ "table_id": "d1e60f817a4d9671a3e9",
+ "source": {
+  "collection": "continuous",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "71240aa56a8b27f7d7f68acd154784579094e5c1",
+  "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231018/research-atlas-v2/continuous-prebirth-v1/outcomes.csv.gz",
+  "git_blob": "b3970d4d638c53bc3fda279aa7fec0f5c2794009",
+  "bytes": 2278504,
+  "day": "20231018"
+ },
+ "source_sha256": "bb29857ed1293ad292bbf51d3983e1a6bd5c67728c67efdbbafa469d0b1310a3",
+ "source_fields": [
+  "change_ticks",
+  "decision_ns",
+  "flow_aligned_ticks",
+  "flow_strength_change",
+  "future_ratio",
+  "horizon_s",
+  "hypothesis",
+  "outcome_available",
+  "target_cursor",
+  "target_group",
+  "target_ns",
+  "target_quote_age_s",
+  "target_quote_known_by_ns"
+ ],
+ "field_layer_ids": {
+  "target_quote_age_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "decision_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "outcome_available": [
+   "missingness_and_integrity_flags",
+   "later_outcome_reveal"
+  ],
+  "flow_aligned_ticks": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "target_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "horizon_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "hypothesis": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "target_quote_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "future_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state",
+   "later_outcome_reveal"
+  ],
+  "change_ticks": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow_strength_change": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "target_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "target_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 59517,
+  "direct_clocks": 59517,
+  "clocks": 178551,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/d1e60f817a4d9671a3e9/00000.parquet",
+   "rows": 20000,
+   "bytes": 764928,
+   "sha256": "7c0771f5652ef2166021b88bce08d69738e6ca4a78335e910583888e34d6073c"
+  },
+  {
+   "path": "rows/d1e60f817a4d9671a3e9/00001.parquet",
+   "rows": 20000,
+   "bytes": 762313,
+   "sha256": "ff5bb9afd2c724c78d1c68f286ed161f1bccaff706da1525f47a8c5ee085da2b"
+  },
+  {
+   "path": "rows/d1e60f817a4d9671a3e9/00002.parquet",
+   "rows": 19517,
+   "bytes": 757796,
+   "sha256": "29577a847c9ce46f508c078b1bb2137e74c59334d5f6e3400b22bd4c5c114492"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

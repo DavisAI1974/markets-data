@@ -1,0 +1,58 @@
+{
+ "table_id": "be675b2c20ca3a4391a0",
+ "source": {
+  "collection": "family",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+  "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/flow-book-discovery-v1/activity-controls.csv",
+  "git_blob": "291f4b76ed12d28b614bf2d744e4b6356a0063d8",
+  "bytes": 3173,
+  "day": "20231002"
+ },
+ "source_sha256": "f0a990996590532df5b0658e84201347976417e7e82d774f53f54e2b9df6bf98",
+ "source_fields": [
+  "activity_log_distance",
+  "clock_distance_ns",
+  "cohort",
+  "control_instance",
+  "disposition",
+  "instance"
+ ],
+ "field_layer_ids": {
+  "cohort": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "activity_log_distance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "clock_distance_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "disposition": [
+   "missingness_and_integrity_flags"
+  ],
+  "instance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "control_instance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 42,
+  "aggregate_or_unclocked_retained": 42,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/be675b2c20ca3a4391a0/00000.parquet",
+   "rows": 42,
+   "bytes": 4455,
+   "sha256": "8dc4d11c20868c19a45fa8f9c30a8bffbac8d9d0bd445fd44f50af82308973fa"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

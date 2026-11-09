@@ -1,0 +1,146 @@
+{
+ "table_id": "9b29738b2d66e7c8b6ae",
+ "source": {
+  "collection": "family",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+  "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231018/research-atlas-v2/prebirth-family_start-control-grid.csv.gz",
+  "git_blob": "d313de5138357082e0129108b6a034f01b9952d5",
+  "bytes": 240741,
+  "day": "20231018"
+ },
+ "source_sha256": "16b6720559327b7e920bd52ab34f3e452a180579060073e9408c6feb06348951",
+ "source_fields": [
+  "activity_bucket",
+  "buy1",
+  "buy20",
+  "buy5",
+  "decision_ns",
+  "displayed_lots",
+  "flow1",
+  "flow20",
+  "flow5",
+  "mid_change1",
+  "mid_change20",
+  "mid_change5",
+  "quote_age_ns",
+  "sell1",
+  "sell20",
+  "sell5",
+  "source_cursor",
+  "source_group",
+  "source_known_by_ns",
+  "spread_raw",
+  "total1",
+  "total20",
+  "total5",
+  "touch_change5",
+  "touch_imbalance",
+  "unknown1",
+  "unknown20",
+  "unknown5"
+ ],
+ "field_layer_ids": {
+  "touch_imbalance": [
+   "spread_and_depth_imbalance"
+  ],
+  "buy20": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow1": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "decision_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "displayed_lots": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "unknown5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow20": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "unknown20": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "source_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "source_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "total5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "touch_change5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "source_group": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "sell20": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "buy5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "activity_bucket": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "mid_change5": [
+   "price_and_book_path"
+  ],
+  "sell5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "total20": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "mid_change20": [
+   "price_and_book_path"
+  ],
+  "spread_raw": [
+   "spread_and_depth_imbalance"
+  ],
+  "total1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow5": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "quote_age_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "unknown1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "buy1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sell1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "mid_change1": [
+   "price_and_book_path"
+  ]
+ },
+ "counts": {
+  "rows": 9293,
+  "direct_clocks": 9293,
+  "clocks": 18586,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/9b29738b2d66e7c8b6ae/00000.parquet",
+   "rows": 9293,
+   "bytes": 313582,
+   "sha256": "c2aad683f3b62379e4607af18931cb99ec82646a461dcb2b3e1ec6273103c088"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

@@ -1,0 +1,216 @@
+{
+ "table_id": "7d9ab49a6875dda8abce",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/first-family-four-arm-events.jsonl.gz",
+  "git_blob": "d60a2357b5865940d88cd00c1149356383e7bfba",
+  "bytes": 82668,
+  "day": "cross"
+ },
+ "source_sha256": "c45c262e29f00d26e6d84ecc42c2cf0cce54f9d058fa61451aa1c34a79f8313a",
+ "source_fields": [
+  "ask_depth_full",
+  "bid_depth_full",
+  "buy1",
+  "buy20",
+  "buy5",
+  "buy60",
+  "chronological_quarter",
+  "cutoff_ns",
+  "d1",
+  "d20",
+  "d5",
+  "d60",
+  "depth_sign",
+  "family_id",
+  "hour_utc",
+  "instance",
+  "move_ticks.1",
+  "move_ticks.120",
+  "move_ticks.20",
+  "move_ticks.300",
+  "move_ticks.5",
+  "move_ticks.60",
+  "move_ticks.600",
+  "near_depth_imbalance",
+  "near_sign",
+  "pre_ask_raw",
+  "pre_ask_size",
+  "pre_bid_raw",
+  "pre_bid_size",
+  "pre_book_age_s",
+  "pre_close_cursor",
+  "pre_cursor_agrees",
+  "pre_receive_ns",
+  "prior_move_ticks.1",
+  "prior_move_ticks.5",
+  "prior_move_ticks.60",
+  "recent",
+  "saved_match",
+  "sell1",
+  "sell20",
+  "sell5",
+  "sell60",
+  "spread_ticks",
+  "start_recv_ns",
+  "touch_sign"
+ ],
+ "field_layer_ids": {
+  "move_ticks.300": [
+   "later_outcome_reveal"
+  ],
+  "sell20": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "depth_sign": [
+   "full_bid_ask_depth"
+  ],
+  "hour_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_ticks.60": [
+   "later_outcome_reveal"
+  ],
+  "bid_depth_full": [
+   "full_bid_ask_depth"
+  ],
+  "pre_close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "instance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_ticks.1": [
+   "later_outcome_reveal"
+  ],
+  "d20": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sell60": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_ticks.5": [
+   "later_outcome_reveal"
+  ],
+  "buy20": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prior_move_ticks.1": [
+   "later_outcome_reveal"
+  ],
+  "family_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_d_family_geometry"
+  ],
+  "saved_match": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "near_sign": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre_ask_size": [
+   "full_bid_ask_depth"
+  ],
+  "cutoff_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "buy5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "touch_sign": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre_receive_ns": [
+   "clock_receive_time"
+  ],
+  "move_ticks.600": [
+   "later_outcome_reveal"
+  ],
+  "near_depth_imbalance": [
+   "full_bid_ask_depth",
+   "spread_and_depth_imbalance"
+  ],
+  "pre_cursor_agrees": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "move_ticks.120": [
+   "later_outcome_reveal"
+  ],
+  "pre_book_age_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "chronological_quarter": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pre_ask_raw": [
+   "price_and_book_path"
+  ],
+  "prior_move_ticks.60": [
+   "later_outcome_reveal"
+  ],
+  "buy60": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "buy1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sell5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_depth_full": [
+   "full_bid_ask_depth"
+  ],
+  "pre_bid_size": [
+   "full_bid_ask_depth"
+  ],
+  "d5": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_ticks.20": [
+   "later_outcome_reveal"
+  ],
+  "d1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recent": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "spread_ticks": [
+   "spread_and_depth_imbalance"
+  ],
+  "start_recv_ns": [
+   "clock_receive_time"
+  ],
+  "pre_bid_raw": [
+   "price_and_book_path"
+  ],
+  "prior_move_ticks.5": [
+   "later_outcome_reveal"
+  ],
+  "d60": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sell1": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 749,
+  "direct_clocks": 749,
+  "clocks": 2247,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/7d9ab49a6875dda8abce/00000.parquet",
+   "rows": 749,
+   "bytes": 54355,
+   "sha256": "5a7673565befb79538cd7a44297780a58a7ed4241f42db43f0782a86115dc2ca"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

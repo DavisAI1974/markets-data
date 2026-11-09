@@ -1,0 +1,118 @@
+{
+ "table_id": "fe3d10a5de5e3fe6c5e9",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/chain-play-filter-oct03-rows.jsonl.gz",
+  "git_blob": "770184896ea941629920b9f7a9ee0c22015cf825",
+  "bytes": 33462,
+  "day": "20231003"
+ },
+ "source_sha256": "d3dd5bdfc81eaec0d9bfabe8a1d66ecf5c8fa3ea8b32a812016b67ea64418e34",
+ "source_fields": [
+  "confirm",
+  "confirm_epoch_s",
+  "confirm_utc",
+  "day0_epoch_s",
+  "eligible",
+  "expected_side",
+  "is_play",
+  "onset",
+  "onset_epoch_s",
+  "onset_utc",
+  "polarity",
+  "prev4",
+  "prev_a_state",
+  "prev_seed",
+  "reasons",
+  "return_ticks",
+  "same_as_prev",
+  "session",
+  "t0",
+  "t0_epoch_s",
+  "t0_utc"
+ ],
+ "field_layer_ids": {
+  "onset_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "confirm": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "return_ticks": [
+   "later_outcome_reveal"
+  ],
+  "prev_seed": [
+   "derived_open_world_predecessor_state"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "prev4": [
+   "derived_open_world_predecessor_state"
+  ],
+  "eligible": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "expected_side": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "confirm_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "t0_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prev_a_state": [
+   "derived_open_world_predecessor_state"
+  ],
+  "confirm_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "reasons": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "same_as_prev": [
+   "derived_open_world_predecessor_state"
+  ],
+  "onset": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "is_play": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 857,
+  "direct_clocks": 857,
+  "clocks": 3428,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/fe3d10a5de5e3fe6c5e9/00000.parquet",
+   "rows": 857,
+   "bytes": 40905,
+   "sha256": "0e09038adc39a8035f459351251bb0dbfac4db52ec9e7ba36987a0c42fd73f3d"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

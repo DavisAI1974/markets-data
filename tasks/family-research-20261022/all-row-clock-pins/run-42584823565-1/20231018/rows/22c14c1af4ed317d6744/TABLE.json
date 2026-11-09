@@ -1,0 +1,140 @@
+{
+ "table_id": "22c14c1af4ed317d6744",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-quote-ending-mechanisms.parquet",
+  "git_blob": "c673a20176e8f414d2c0806a8845d487a0c1aa2d",
+  "bytes": 874277,
+  "day": "20231018"
+ },
+ "source_sha256": "90a0b86e8a1a0dc86887f1caa251f5446564246a1652dc517c506c40fd42d1ce",
+ "source_fields": [
+  "end_group",
+  "end_known_by_ns",
+  "ending",
+  "ending_fill_linked",
+  "ending_new_touch_effect.added",
+  "ending_new_touch_effect.fill_linked",
+  "ending_new_touch_effect.removed",
+  "ending_new_touch_effect.unchanged_display_fill",
+  "ending_new_touch_effect.unlinked",
+  "ending_old_touch_effect.added",
+  "ending_old_touch_effect.fill_linked",
+  "ending_old_touch_effect.removed",
+  "ending_old_touch_effect.unchanged_display_fill",
+  "ending_old_touch_effect.unlinked",
+  "ending_unlinked_reduction",
+  "event_id",
+  "evidence_scope",
+  "onset_effect.added",
+  "onset_effect.fill_linked",
+  "onset_effect.removed",
+  "onset_effect.unchanged_display_fill",
+  "onset_effect.unlinked",
+  "onset_group",
+  "onset_known_by_ns",
+  "side"
+ ],
+ "field_layer_ids": {
+  "onset_effect.unchanged_display_fill": [
+   "order_lifecycle_fills"
+  ],
+  "side": [
+   "native_acmrtfn_messages"
+  ],
+  "ending_old_touch_effect.unlinked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ending_fill_linked": [
+   "order_lifecycle_fills"
+  ],
+  "ending_new_touch_effect.unchanged_display_fill": [
+   "order_lifecycle_fills"
+  ],
+  "ending_old_touch_effect.unchanged_display_fill": [
+   "order_lifecycle_fills"
+  ],
+  "ending_new_touch_effect.unlinked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset_effect.fill_linked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "end_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ending_new_touch_effect.added": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ending_old_touch_effect.added": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset_effect.removed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "end_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "onset_effect.unlinked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset_effect.added": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "evidence_scope": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ending_new_touch_effect.removed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ending_new_touch_effect.fill_linked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ending_unlinked_reduction": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ending": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ending_old_touch_effect.removed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ending_old_touch_effect.fill_linked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "event_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ]
+ },
+ "counts": {
+  "rows": 27551,
+  "direct_clocks": 27551,
+  "clocks": 55102,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/22c14c1af4ed317d6744/00000.parquet",
+   "rows": 20000,
+   "bytes": 957344,
+   "sha256": "2e7e21ca8ff1b560ff4e05d9aef64d4189dc0de71a6c867992611700d019e263"
+  },
+  {
+   "path": "rows/22c14c1af4ed317d6744/00001.parquet",
+   "rows": 7551,
+   "bytes": 315758,
+   "sha256": "23c4ba35e307d8b28d47d6cb9e1661b5612ab12cae9a6bdb1a81df0b7b0ffa4e"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

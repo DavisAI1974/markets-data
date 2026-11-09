@@ -1,0 +1,154 @@
+{
+ "table_id": "8f532cc4ac50f494d141",
+ "source": {
+  "collection": "whole",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "9e3365f76fb4d34d97eb193d35072aae5f51b709",
+  "path": "tasks/family-research-20261022/whole-lifecycles/run-42573465249-1/audit-20231018/whole-lifecycle-points.parquet",
+  "git_blob": "7ea59881e19cd3466204a39f9de6296bf60c3170",
+  "bytes": 1794805,
+  "day": "20231018"
+ },
+ "source_sha256": "7d2f28aee2095af98c1e5449432d66b845a11a5bc7d2249c2bd5838bc1c12e69",
+ "source_fields": [
+  "candidate_id",
+  "completed_second_known_by_ns",
+  "completion_cursor",
+  "completion_group",
+  "first_source_cursor",
+  "first_source_group",
+  "kind",
+  "label_ns",
+  "last_source_cursor",
+  "last_source_group",
+  "native_buy",
+  "native_ratio",
+  "native_roll_buy",
+  "native_roll_sell",
+  "native_sell",
+  "native_total",
+  "native_unknown",
+  "parent_id",
+  "point_ordinal",
+  "relative_second",
+  "second"
+ ],
+ "field_layer_ids": {
+  "last_source_group": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "relative_second": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "native_unknown": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "native_sell": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "native_total": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "first_source_group": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "parent_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "native_buy": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "native_roll_buy": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "last_source_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "second": [
+   "derived_feature_availability_timestamps"
+  ],
+  "native_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "completion_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "label_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "native_roll_sell": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "kind": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "completion_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "completed_second_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "first_source_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "point_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ]
+ },
+ "counts": {
+  "rows": 109757,
+  "direct_clocks": 109757,
+  "clocks": 329271,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/8f532cc4ac50f494d141/00000.parquet",
+   "rows": 20000,
+   "bytes": 494932,
+   "sha256": "816c4758810f662f56c2377ce3f6d1107de3ba0546392cc0fe901fc534dd97f8"
+  },
+  {
+   "path": "rows/8f532cc4ac50f494d141/00001.parquet",
+   "rows": 20000,
+   "bytes": 441876,
+   "sha256": "9ee893f51867d48cd703f31ee3155d0d5f42d38ff5ea1b27da5202ba7a7a1774"
+  },
+  {
+   "path": "rows/8f532cc4ac50f494d141/00002.parquet",
+   "rows": 20000,
+   "bytes": 468115,
+   "sha256": "832ee60ec3925fff71c64836022f674a0f82a560628cdb745c1924d88baa2e5e"
+  },
+  {
+   "path": "rows/8f532cc4ac50f494d141/00003.parquet",
+   "rows": 20000,
+   "bytes": 506697,
+   "sha256": "92b024ed960646637cd5dc51ae785de7684c67248a2b2626519fd4e1e704d21a"
+  },
+  {
+   "path": "rows/8f532cc4ac50f494d141/00004.parquet",
+   "rows": 20000,
+   "bytes": 605877,
+   "sha256": "8eea74e2d9d723f920b59f5ec02a6c46899c05354ffcddbf336e2519d5ccd66c"
+  },
+  {
+   "path": "rows/8f532cc4ac50f494d141/00005.parquet",
+   "rows": 9757,
+   "bytes": 271965,
+   "sha256": "ef90e1b3f4a23864f5772944843a86e458928ce0fab77753757bf08d6f39df3d"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

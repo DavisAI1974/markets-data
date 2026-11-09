@@ -1,0 +1,90 @@
+{
+ "table_id": "266dd5818d8da522d514",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231002/cross-study-condition-outcomes.parquet",
+  "git_blob": "0fdaed119f9d3d2e8183e63920d07607d933e311",
+  "bytes": 11562,
+  "day": "20231002"
+ },
+ "source_sha256": "004541e4f6b8a0974d5bc909a848a27ce6815ddd6fbc38dcdeae451339e285b6",
+ "source_fields": [
+  "displayed_touch_vs_signal",
+  "event_type",
+  "fresh_wire_flow_vs_signal",
+  "horizon_s",
+  "observed",
+  "prior_print_gap_trend",
+  "scenarios",
+  "side",
+  "signed_midpoint_change_twice_raw_flat",
+  "signed_midpoint_change_twice_raw_negative",
+  "signed_midpoint_change_twice_raw_positive",
+  "spread_crossing_raw_flat",
+  "spread_crossing_raw_negative",
+  "spread_crossing_raw_positive"
+ ],
+ "field_layer_ids": {
+  "scenarios": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "spread_crossing_raw_flat": [
+   "spread_and_depth_imbalance"
+  ],
+  "observed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "spread_crossing_raw_negative": [
+   "spread_and_depth_imbalance"
+  ],
+  "side": [
+   "native_acmrtfn_messages"
+  ],
+  "signed_midpoint_change_twice_raw_flat": [
+   "price_and_book_path"
+  ],
+  "fresh_wire_flow_vs_signal": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "prior_print_gap_trend": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "displayed_touch_vs_signal": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "signed_midpoint_change_twice_raw_negative": [
+   "price_and_book_path"
+  ],
+  "event_type": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "signed_midpoint_change_twice_raw_positive": [
+   "price_and_book_path"
+  ],
+  "spread_crossing_raw_positive": [
+   "spread_and_depth_imbalance"
+  ],
+  "horizon_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 393,
+  "aggregate_or_unclocked_retained": 393,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/266dd5818d8da522d514/00000.parquet",
+   "rows": 393,
+   "bytes": 6107,
+   "sha256": "341cc6d7b06d1a7ce234d2dfd5654cab52e719a7a8b294173031e53cdd48c640"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

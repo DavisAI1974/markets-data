@@ -1,0 +1,150 @@
+{
+ "table_id": "a7597fd6bf23231e08a0",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/c-selected-book-context-05.parquet",
+  "git_blob": "9efc000b8ae2fcc4d782f004c78d2b94e5382c0f",
+  "bytes": 379224,
+  "day": "20231018"
+ },
+ "source_sha256": "73ac14e2d7f97686a71a5e7989684e3856579fb844fbf26b288062ecbeeffd69",
+ "source_fields": [
+  "ask_full_orders",
+  "ask_full_size",
+  "ask_new_touch_effect_json",
+  "ask_old_touch_effect_json",
+  "ask_orders",
+  "ask_price_raw",
+  "ask_rank_change_json",
+  "ask_size",
+  "ask_top10_json",
+  "bad_receive_clock_member",
+  "bid_full_orders",
+  "bid_full_size",
+  "bid_new_touch_effect_json",
+  "bid_old_touch_effect_json",
+  "bid_orders",
+  "bid_price_raw",
+  "bid_rank_change_json",
+  "bid_size",
+  "bid_top10_json",
+  "close_cursor",
+  "day",
+  "event_ns",
+  "first_cursor",
+  "group_ordinal",
+  "known_by_ns",
+  "print_count",
+  "receive_ns",
+  "reset_member",
+  "snapshot_member"
+ ],
+ "field_layer_ids": {
+  "bid_full_orders": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bid_orders": [
+   "price_level_and_order_counts"
+  ],
+  "ask_top10_json": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "snapshot_member": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "bid_rank_change_json": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bad_receive_clock_member": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "bid_top10_json": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "event_ns": [
+   "clock_event_time"
+  ],
+  "close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "bid_old_touch_effect_json": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_size": [
+   "full_bid_ask_depth"
+  ],
+  "receive_ns": [
+   "clock_receive_time"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "ask_full_orders": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bid_full_size": [
+   "full_bid_ask_depth"
+  ],
+  "ask_rank_change_json": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_full_size": [
+   "full_bid_ask_depth"
+  ],
+  "bid_new_touch_effect_json": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ask_new_touch_effect_json": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "group_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "bid_size": [
+   "full_bid_ask_depth"
+  ],
+  "ask_old_touch_effect_json": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "reset_member": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "bid_price_raw": [
+   "price_and_book_path"
+  ],
+  "ask_orders": [
+   "price_level_and_order_counts"
+  ],
+  "ask_price_raw": [
+   "price_and_book_path"
+  ],
+  "print_count": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 6079,
+  "direct_clocks": 6079,
+  "clocks": 18237,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/a7597fd6bf23231e08a0/00000.parquet",
+   "rows": 6079,
+   "bytes": 231022,
+   "sha256": "3cf96165566e94894544a49efc913957636c3e03311addc367d68eb14b308e15"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

@@ -1,0 +1,90 @@
+{
+ "table_id": "7c894a3b061e982f7b3e",
+ "source": {
+  "collection": "family",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+  "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231002/research-atlas-v2/prebirth-summary.csv",
+  "git_blob": "97d08ae7530ec2ede5c624675f545b46134247d8",
+  "bytes": 19805,
+  "day": "20231002"
+ },
+ "source_sha256": "72e47f94deef53bc3f805a74f89c8608446d692bc9f880b6393442d4f06ec3d5",
+ "source_fields": [
+  "case_mean",
+  "control_mean",
+  "defined_pairs",
+  "equal",
+  "feature",
+  "greater",
+  "lead_s",
+  "less",
+  "matched_pairs",
+  "mean_difference",
+  "median_difference",
+  "population",
+  "quarter",
+  "unique_controls"
+ ],
+ "field_layer_ids": {
+  "mean_difference": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "unique_controls": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "equal": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "median_difference": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "matched_pairs": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "defined_pairs": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "feature": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "case_mean": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "population": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "lead_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "quarter": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "control_mean": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "greater": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "less": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 176,
+  "aggregate_or_unclocked_retained": 176,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/7c894a3b061e982f7b3e/00000.parquet",
+   "rows": 176,
+   "bytes": 5097,
+   "sha256": "4da61923a1ea23ee1bd9d98e1342a00808e320f325d44df014d88040bc58eb19"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

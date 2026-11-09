@@ -1,0 +1,125 @@
+{
+ "table_id": "5eb1c5832df3e5f620d2",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/size-one-orders-oct18.jsonl.gz",
+  "git_blob": "13d2e04a3300e1fe6ebc064ec16aea34b27a5cc5",
+  "bytes": 1452786,
+  "day": "20231018"
+ },
+ "source_sha256": "0572af98a8fb15a50966fdb81e962a9355a6e0d807a667d7e89af53b30c71836",
+ "source_fields": [
+  "age_ms",
+  "day0_epoch_s",
+  "end_cursor",
+  "end_ms",
+  "end_ns",
+  "end_vs_entry",
+  "fate",
+  "fate_cursor",
+  "fate_delay_ms",
+  "hour_utc",
+  "onset",
+  "onset_cursor",
+  "onset_group",
+  "onset_ns",
+  "onset_utc",
+  "order_id",
+  "origin",
+  "outcome",
+  "prior_onsets_by_order",
+  "session",
+  "side"
+ ],
+ "field_layer_ids": {
+  "side": [
+   "native_acmrtfn_messages"
+  ],
+  "onset_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "onset_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "end_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "end_vs_entry": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "end_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "onset_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "outcome": [
+   "later_outcome_reveal"
+  ],
+  "hour_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prior_onsets_by_order": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "end_ms": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "origin": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "age_ms": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "onset": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "order_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "native_acmrtfn_messages"
+  ],
+  "fate_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "fate_delay_ms": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "fate": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 27560,
+  "direct_clocks": 27560,
+  "clocks": 82680,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/5eb1c5832df3e5f620d2/00000.parquet",
+   "rows": 20000,
+   "bytes": 916218,
+   "sha256": "212a18a31c38c6969bb2f3008be57c92f67272b703978d7ba2d88be37f04504a"
+  },
+  {
+   "path": "rows/5eb1c5832df3e5f620d2/00001.parquet",
+   "rows": 7560,
+   "bytes": 290108,
+   "sha256": "db334803da135175be9cc8e2674efbdf12cb20fe4de236e38f6cc7a2e37c4bb4"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

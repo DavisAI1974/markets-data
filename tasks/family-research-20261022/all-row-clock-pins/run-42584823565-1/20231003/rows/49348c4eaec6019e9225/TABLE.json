@@ -1,0 +1,66 @@
+{
+ "table_id": "49348c4eaec6019e9225",
+ "source": {
+  "collection": "family",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+  "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/flow-book-discovery-v1/arm-predictions.csv.gz",
+  "git_blob": "97963dc00facc4d4c17de1467f8555f48c552138",
+  "bytes": 257271,
+  "day": "20231003"
+ },
+ "source_sha256": "d756fa70fae157e4368337696e3d6f879474781ef570a0647464b6e078daded3",
+ "source_fields": [
+  "absolute_error",
+  "arm",
+  "fold",
+  "horizon_s",
+  "instance",
+  "observed",
+  "prediction",
+  "target"
+ ],
+ "field_layer_ids": {
+  "arm": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "fold": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "instance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "observed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "horizon_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "target": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prediction": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "absolute_error": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 12832,
+  "aggregate_or_unclocked_retained": 12832,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/49348c4eaec6019e9225/00000.parquet",
+   "rows": 12832,
+   "bytes": 70140,
+   "sha256": "5728a4fb6150e323a5c01fbf06b7d848d4aef5cb685eddc95ecbede2572c7249"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

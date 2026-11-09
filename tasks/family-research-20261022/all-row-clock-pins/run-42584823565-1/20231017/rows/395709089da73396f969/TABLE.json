@@ -1,0 +1,142 @@
+{
+ "table_id": "395709089da73396f969",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/stack-direction-sources-oct17-events.jsonl.gz",
+  "git_blob": "274be111579350c2086cb9bb17689b39210c0c56",
+  "bytes": 29077,
+  "day": "20231017"
+ },
+ "source_sha256": "ed34a150133bf3a6b0ab7c78353fc4f456c9ef29e3003b6a757b6126602faeea",
+ "source_fields": [
+  "a_state",
+  "day0_epoch_s",
+  "dip300_imb",
+  "dip300_vol",
+  "hour_class",
+  "hour_utc",
+  "polarity",
+  "pre300_volume",
+  "seed",
+  "session",
+  "sources.book10",
+  "sources.dip300",
+  "sources.dip300_strong",
+  "sources.mom300",
+  "sources.next_seed",
+  "sources.next_state",
+  "sources.pol",
+  "sources.recruit",
+  "sources.touch",
+  "t0",
+  "t0_epoch_s",
+  "t0_utc",
+  "targets.first3",
+  "targets.net300",
+  "targets.net600",
+  "targets.next_pol",
+  "vol_tercile"
+ ],
+ "field_layer_ids": {
+  "hour_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "targets.net300": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "dip300_imb": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "hour_class": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.pol": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "targets.first3": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.dip300_strong": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "vol_tercile": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.dip300": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "targets.next_pol": [
+   "derived_open_world_predecessor_state"
+  ],
+  "sources.touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "sources.next_state": [
+   "derived_open_world_predecessor_state"
+  ],
+  "a_state": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "targets.net600": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.book10": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "dip300_vol": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "pre300_volume": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.next_seed": [
+   "derived_open_world_predecessor_state"
+  ],
+  "sources.mom300": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "sources.recruit": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 830,
+  "direct_clocks": 830,
+  "clocks": 1660,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/395709089da73396f969/00000.parquet",
+   "rows": 830,
+   "bytes": 26802,
+   "sha256": "a46c73daca6731331d14e1c66aa0ede0ef786599ea562cc3e6d5242390fa9233"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

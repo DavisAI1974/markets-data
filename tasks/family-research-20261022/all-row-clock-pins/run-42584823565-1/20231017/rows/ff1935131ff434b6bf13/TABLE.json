@@ -1,0 +1,72 @@
+{
+ "table_id": "ff1935131ff434b6bf13",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231017-detector-free-nearest.csv",
+  "git_blob": "e6964bcda75fd52bbbce382d2039feec481bd563",
+  "bytes": 265590,
+  "day": "20231017"
+ },
+ "source_sha256": "f94ebe99b3d84c8030eb67c515172cdbcbd25b3409732a0c40fd8d00ce8fcfa4",
+ "source_fields": [
+  "candidate_id",
+  "day",
+  "definition",
+  "exact_second",
+  "first_after_birth_receive_ns",
+  "orientation",
+  "recognition_advantage_s",
+  "seconds_since_previous",
+  "seconds_until_next"
+ ],
+ "field_layer_ids": {
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "seconds_until_next": [
+   "derived_open_world_predecessor_state"
+  ],
+  "recognition_advantage_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "first_after_birth_receive_ns": [
+   "clock_receive_time",
+   "derived_roll20_and_dipole_state"
+  ],
+  "definition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seconds_since_previous": [
+   "derived_open_world_predecessor_state"
+  ],
+  "exact_second": [
+   "derived_feature_availability_timestamps"
+  ]
+ },
+ "counts": {
+  "rows": 2223,
+  "direct_clocks": 2223,
+  "clocks": 2223,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/ff1935131ff434b6bf13/00000.parquet",
+   "rows": 2223,
+   "bytes": 63915,
+   "sha256": "ca79888b4e7ed96422e844ca06733e09012908ff008e70bd7647646e3803b30d"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

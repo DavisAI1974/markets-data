@@ -1,0 +1,70 @@
+{
+ "table_id": "c018095cd03a2b6b815e",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231002-moonshot-summary.csv",
+  "git_blob": "122af9aaa3de1422517a2a5394f8454ffbdaa96d",
+  "bytes": 350,
+  "day": "20231002"
+ },
+ "source_sha256": "7201af0f986c6399129217612c0df22121bb0bf64e025598a1524f7ecd07adb9",
+ "source_fields": [
+  "birth_seconds_with_event",
+  "birth_seconds_without_event",
+  "births",
+  "day",
+  "definition",
+  "events",
+  "events_in_birth_seconds",
+  "events_outside_birth_seconds",
+  "unique_event_seconds"
+ ],
+ "field_layer_ids": {
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "events": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "birth_seconds_with_event": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "birth_seconds_without_event": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "births": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "unique_event_seconds": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "definition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "events_outside_birth_seconds": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "events_in_birth_seconds": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 3,
+  "aggregate_or_unclocked_retained": 3,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/c018095cd03a2b6b815e/00000.parquet",
+   "rows": 3,
+   "bytes": 4338,
+   "sha256": "09a8adb91363c7deecc8113ccc31d74fe00accd5d5cdc9fbf6096f45a3334c68"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

@@ -1,0 +1,70 @@
+{
+ "table_id": "c9accc5c39ecc88db44c",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231017/c-prior-signal-to-large-move.parquet",
+  "git_blob": "381017167120153da9dae9818af84eb8165f3798",
+  "bytes": 91878,
+  "day": "20231017"
+ },
+ "source_sha256": "6a066e0fd53328e9ed4c6dc6bf2a2698f4728044de6785d5870d3a51089c59b0",
+ "source_fields": [
+  "cursor_difference",
+  "earlier_event_id",
+  "earlier_group",
+  "earlier_side",
+  "earlier_signal_direction_agrees",
+  "earlier_type",
+  "lag_known_by_ns",
+  "later_event_id",
+  "later_group"
+ ],
+ "field_layer_ids": {
+  "later_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "earlier_event_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "later_event_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "cursor_difference": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "earlier_side": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "earlier_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "earlier_signal_direction_agrees": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "lag_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "earlier_type": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 5052,
+  "aggregate_or_unclocked_retained": 5052,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/c9accc5c39ecc88db44c/00000.parquet",
+   "rows": 5052,
+   "bytes": 29460,
+   "sha256": "484c2491090d37977e37f344db2d82f595800b99fabced6f1d564622b21fb1a1"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

@@ -1,0 +1,87 @@
+{
+ "table_id": "60c7d27ca86c8fa49790",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231017-case-raw-records.csv.gz",
+  "git_blob": "b45ad3bfad4665bf9494948a96d2dac725bf7c05",
+  "bytes": 92763,
+  "day": "20231017"
+ },
+ "source_sha256": "671eb365c8ed1fed438dbe854f1064bcb4eb0763e9611a405e2b1250a597145d",
+ "source_fields": [
+  "action",
+  "case_id",
+  "case_kind",
+  "cursor",
+  "flags",
+  "group_ns",
+  "order_id",
+  "price",
+  "receive_ns",
+  "record_index",
+  "side",
+  "size",
+  "tape_day"
+ ],
+ "field_layer_ids": {
+  "tape_day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "record_index": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "size": [
+   "native_acmrtfn_messages"
+  ],
+  "receive_ns": [
+   "clock_receive_time"
+  ],
+  "action": [
+   "native_acmrtfn_messages"
+  ],
+  "group_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "order_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "native_acmrtfn_messages"
+  ],
+  "flags": [
+   "native_acmrtfn_messages"
+  ],
+  "case_kind": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "side": [
+   "native_acmrtfn_messages"
+  ],
+  "case_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "price": [
+   "price_and_book_path"
+  ]
+ },
+ "counts": {
+  "rows": 5345,
+  "direct_clocks": 5345,
+  "clocks": 10690,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/60c7d27ca86c8fa49790/00000.parquet",
+   "rows": 5345,
+   "bytes": 112344,
+   "sha256": "fd3eed6590759811cf5b6814acf2cf1c08b7e9e1332347d0d2c7a515a8fa3c96"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

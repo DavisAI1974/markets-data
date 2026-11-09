@@ -1,0 +1,140 @@
+{
+ "table_id": "78d7ebbfdf1041ddb072",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/a-print-legs.parquet",
+  "git_blob": "023d34f4ce09737e315b4aa9123e5e0e6f04b38f",
+  "bytes": 510492,
+  "day": "20231018"
+ },
+ "source_sha256": "e2dbb0cb31ba8c64e52329f019deac366990702bd012a6dd33ac79fdcdaa5065",
+ "source_fields": [
+  "day",
+  "duration_event_ns",
+  "duration_receive_ns",
+  "endpoint",
+  "first_clocks.available_ns",
+  "first_clocks.event_ns",
+  "first_clocks.group_close_input_cursor",
+  "first_clocks.group_ordinal",
+  "first_clocks.receive_ns",
+  "first_clocks.trade_input_cursor",
+  "first_stretch_ordinal",
+  "first_trade",
+  "last_clocks.available_ns",
+  "last_clocks.event_ns",
+  "last_clocks.group_close_input_cursor",
+  "last_clocks.group_ordinal",
+  "last_clocks.receive_ns",
+  "last_clocks.trade_input_cursor",
+  "last_stretch_ordinal",
+  "last_trade",
+  "left_boundary",
+  "leg_ordinal",
+  "raw_price_change",
+  "right_boundary",
+  "step_sign"
+ ],
+ "field_layer_ids": {
+  "duration_receive_ns": [
+   "clock_receive_time",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "last_clocks.group_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "leg_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "first_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "first_stretch_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "last_clocks.available_ns": [
+   "clock_event_known_by",
+   "missingness_and_integrity_flags"
+  ],
+  "last_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "first_trade": [
+   "order_lifecycle_trades"
+  ],
+  "last_clocks.trade_input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "left_boundary": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "first_clocks.group_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "last_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "last_stretch_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "right_boundary": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "duration_event_ns": [
+   "clock_event_time",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "last_clocks.group_close_input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "first_clocks.trade_input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "step_sign": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "raw_price_change": [
+   "price_and_book_path"
+  ],
+  "last_trade": [
+   "order_lifecycle_trades"
+  ],
+  "endpoint": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "first_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "first_clocks.available_ns": [
+   "clock_event_known_by",
+   "missingness_and_integrity_flags"
+  ],
+  "first_clocks.group_close_input_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ]
+ },
+ "counts": {
+  "rows": 5120,
+  "direct_clocks": 5120,
+  "clocks": 30720,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/78d7ebbfdf1041ddb072/00000.parquet",
+   "rows": 5120,
+   "bytes": 470842,
+   "sha256": "15fae9dc2da84818832e733ab416f2b9efba3253f98e2039c677aaa378a0349d"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

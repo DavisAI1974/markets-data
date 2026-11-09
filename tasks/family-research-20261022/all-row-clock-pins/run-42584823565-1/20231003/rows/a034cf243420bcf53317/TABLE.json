@@ -1,0 +1,83 @@
+{
+ "table_id": "a034cf243420bcf53317",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231003-detector-free-case-records.csv.gz",
+  "git_blob": "76aea0691a51d7e4d94f5649ecc88332826586b3",
+  "bytes": 612,
+  "day": "20231003"
+ },
+ "source_sha256": "cb67a44517883fc6811095f2c51720351aa6cedebccbe79d9e88602b41768950",
+ "source_fields": [
+  "action",
+  "comparison",
+  "cursor",
+  "definition",
+  "flags",
+  "order_id",
+  "price",
+  "receive_ns",
+  "record_index",
+  "side",
+  "size",
+  "tape_day"
+ ],
+ "field_layer_ids": {
+  "tape_day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "side": [
+   "native_acmrtfn_messages"
+  ],
+  "definition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "comparison": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flags": [
+   "native_acmrtfn_messages"
+  ],
+  "order_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "native_acmrtfn_messages"
+  ],
+  "action": [
+   "native_acmrtfn_messages"
+  ],
+  "record_index": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "price": [
+   "price_and_book_path"
+  ],
+  "receive_ns": [
+   "clock_receive_time"
+  ],
+  "size": [
+   "native_acmrtfn_messages"
+  ],
+  "cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ]
+ },
+ "counts": {
+  "rows": 23,
+  "direct_clocks": 23,
+  "clocks": 23,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/a034cf243420bcf53317/00000.parquet",
+   "rows": 23,
+   "bytes": 5016,
+   "sha256": "9850507e21963d0bc22c18a4650080bcd8a47937787b32c8d3aeedc38e79ae93"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

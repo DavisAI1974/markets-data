@@ -1,0 +1,112 @@
+{
+ "table_id": "7f0f3174923fff11e126",
+ "source": {
+  "collection": "continuous",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "71240aa56a8b27f7d7f68acd154784579094e5c1",
+  "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231018/research-atlas-v2/continuous-prebirth-v1/outcome-summary.csv",
+  "git_blob": "5b8d29497345c1bef2630012f57a3baa98b7fc36",
+  "bytes": 2887,
+  "day": "20231018"
+ },
+ "source_sha256": "eb00d2d6bcca8cf2c6bfc3a0fd47bcad44e06e05042e6289dc37ce47f5b08190",
+ "source_fields": [
+  "available",
+  "direction_balanced_nonflat",
+  "direction_undefined",
+  "down",
+  "flat",
+  "flow_comparable",
+  "flow_same",
+  "flow_stronger",
+  "flow_weaker",
+  "follows",
+  "future_flow_undefined",
+  "horizon_s",
+  "hypothesis",
+  "interval_clusters",
+  "median_abs_ticks",
+  "n",
+  "opposes",
+  "unavailable",
+  "up"
+ ],
+ "field_layer_ids": {
+  "flow_same": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "follows": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "down": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "n": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "unavailable": [
+   "missingness_and_integrity_flags"
+  ],
+  "horizon_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flat": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow_comparable": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "direction_undefined": [
+   "missingness_and_integrity_flags"
+  ],
+  "direction_balanced_nonflat": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "opposes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "up": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "median_abs_ticks": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "interval_clusters": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow_weaker": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "hypothesis": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "future_flow_undefined": [
+   "missingness_and_integrity_flags",
+   "aggressor_and_native_signed_flow",
+   "later_outcome_reveal"
+  ],
+  "flow_stronger": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "available": [
+   "missingness_and_integrity_flags"
+  ]
+ },
+ "counts": {
+  "rows": 30,
+  "aggregate_or_unclocked_retained": 30,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/7f0f3174923fff11e126/00000.parquet",
+   "rows": 30,
+   "bytes": 4406,
+   "sha256": "ee1ce3564d39b101e4c84e821f7af69c6f348cd1d0a3343b268bc4f1ee5bde7a"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

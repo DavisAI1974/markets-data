@@ -1,0 +1,74 @@
+{
+ "table_id": "d15bc3ff62de18b1dfe4",
+ "source": {
+  "collection": "family",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+  "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231003/flow-book-discovery-v1/chronological-splits.csv",
+  "git_blob": "8e779e5c6befba5865fc02631cd13dfcb7e1b492",
+  "bytes": 25704,
+  "day": "20231003"
+ },
+ "source_sha256": "ec3074fe00794894aa03544d3caa1e169fbfc424ebe05b5f29db741506895040",
+ "source_fields": [
+  "eligible",
+  "embargo_s",
+  "fold",
+  "horizon_s",
+  "last_train_label_target_ns",
+  "n_test",
+  "n_train",
+  "test_instances",
+  "test_start_ns",
+  "train_instances"
+ ],
+ "field_layer_ids": {
+  "last_train_label_target_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "embargo_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "fold": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "n_test": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "train_instances": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "eligible": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "n_train": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "test_start_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "horizon_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "test_instances": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 15,
+  "direct_clocks": 15,
+  "clocks": 30,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/d15bc3ff62de18b1dfe4/00000.parquet",
+   "rows": 15,
+   "bytes": 5257,
+   "sha256": "190a2aa8ac22d9b413d1649be3c91ba40f3957550ec1c7f463156ecce5392faf"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

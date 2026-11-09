@@ -1,0 +1,78 @@
+{
+ "table_id": "d404fa59924a1e33e641",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/clock-decomposition-summary.csv",
+  "git_blob": "fb3075dd889096d2af2ce9e8d651da1de51864ab",
+  "bytes": 2790,
+  "day": "cross"
+ },
+ "source_sha256": "c7f072acea16593271ca4e38afc666bbb72beea5c4f81ff52b5fb9a5156b9644",
+ "source_fields": [
+  "day",
+  "definition",
+  "event_in_birth_second",
+  "exact_identity_rows",
+  "first_event_after_recognition",
+  "first_event_at_recognition",
+  "first_event_before_recognition",
+  "orientation",
+  "pearson_original_with_recognition_delay",
+  "rows_in",
+  "unavailable"
+ ],
+ "field_layer_ids": {
+  "unavailable": [
+   "missingness_and_integrity_flags"
+  ],
+  "exact_identity_rows": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "event_in_birth_second": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "rows_in": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "first_event_before_recognition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "first_event_after_recognition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "first_event_at_recognition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "definition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "pearson_original_with_recognition_delay": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 36,
+  "aggregate_or_unclocked_retained": 36,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/d404fa59924a1e33e641/00000.parquet",
+   "rows": 36,
+   "bytes": 4544,
+   "sha256": "5352b6de767c0859f3f68d629d6466a65c82c04e421eb0da38c31f41228bca06"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

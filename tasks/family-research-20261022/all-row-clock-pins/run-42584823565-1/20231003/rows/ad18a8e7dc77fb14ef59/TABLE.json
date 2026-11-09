@@ -1,0 +1,112 @@
+{
+ "table_id": "ad18a8e7dc77fb14ef59",
+ "source": {
+  "collection": "continuous",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "71240aa56a8b27f7d7f68acd154784579094e5c1",
+  "path": "tasks/family-research-20261022/four-day-extensions/run-42563528655-1/20231003/research-atlas-v2/continuous-prebirth-v1/outcome-summary.csv",
+  "git_blob": "24e0af258bba47ff7984f2e492424f6c2b135b38",
+  "bytes": 2902,
+  "day": "20231003"
+ },
+ "source_sha256": "4db40acf37f6d1ed1c007e1de55525746331948743a23c302ea5cb2be70026b1",
+ "source_fields": [
+  "available",
+  "direction_balanced_nonflat",
+  "direction_undefined",
+  "down",
+  "flat",
+  "flow_comparable",
+  "flow_same",
+  "flow_stronger",
+  "flow_weaker",
+  "follows",
+  "future_flow_undefined",
+  "horizon_s",
+  "hypothesis",
+  "interval_clusters",
+  "median_abs_ticks",
+  "n",
+  "opposes",
+  "unavailable",
+  "up"
+ ],
+ "field_layer_ids": {
+  "direction_balanced_nonflat": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "hypothesis": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "available": [
+   "missingness_and_integrity_flags"
+  ],
+  "future_flow_undefined": [
+   "missingness_and_integrity_flags",
+   "aggressor_and_native_signed_flow",
+   "later_outcome_reveal"
+  ],
+  "flow_weaker": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "horizon_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "follows": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "median_abs_ticks": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flat": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow_comparable": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "unavailable": [
+   "missingness_and_integrity_flags"
+  ],
+  "opposes": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow_stronger": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "down": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "flow_same": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "n": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "up": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "interval_clusters": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "direction_undefined": [
+   "missingness_and_integrity_flags"
+  ]
+ },
+ "counts": {
+  "rows": 30,
+  "aggregate_or_unclocked_retained": 30,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/ad18a8e7dc77fb14ef59/00000.parquet",
+   "rows": 30,
+   "bytes": 4406,
+   "sha256": "f73ad17e0009426c836cf06b5cf310df86eaf3a38c87f4dd88dfece1f0a63119"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

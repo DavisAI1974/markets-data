@@ -1,0 +1,124 @@
+{
+ "table_id": "d91a2a02a3b4779d5028",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231002-pair-distances-wire_trade_lots.csv.gz",
+  "git_blob": "4652f41fdaae706b8fa989a5c0bb27eeb9f4ecda",
+  "bytes": 1276818,
+  "day": "20231002"
+ },
+ "source_sha256": "a987d28fdf4bd746c096227d5c65009ec3f8cdd7d756178ae0dc2d026b52e619",
+ "source_fields": [
+  "distance",
+  "left_candidate",
+  "right_candidate"
+ ],
+ "field_layer_ids": {
+  "right_candidate": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "distance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "left_candidate": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 274170,
+  "aggregate_or_unclocked_retained": 274170,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00000.parquet",
+   "rows": 20000,
+   "bytes": 110949,
+   "sha256": "246375b37d0654e852f5556c26f9305319d1a38f2c5e91c3317edfb392bcdae8"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00001.parquet",
+   "rows": 20000,
+   "bytes": 105443,
+   "sha256": "004e90dc770c6b2d923b468b0f47499235c6ce033e8da0a3e05ff8376e622d1a"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00002.parquet",
+   "rows": 20000,
+   "bytes": 105493,
+   "sha256": "693cc888a2b976177ff79e7fe4f05029a7a19cd5c5166c8bf04f98182ff112b9"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00003.parquet",
+   "rows": 20000,
+   "bytes": 105422,
+   "sha256": "0c6303cfa6c7edaff487fa5ba9250972a76a8c03046131aa94aef3789fedb43d"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00004.parquet",
+   "rows": 20000,
+   "bytes": 105378,
+   "sha256": "47af8628e9547ec53940e15337c24bdf5b9f748bbf3e29f4186ba09d91812ace"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00005.parquet",
+   "rows": 20000,
+   "bytes": 105485,
+   "sha256": "3ba575ef4517677a371d3ad263a63d45d1d4c98a6cb60f71591fa41c81d15685"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00006.parquet",
+   "rows": 20000,
+   "bytes": 105492,
+   "sha256": "84d44c92534568d61c0cea330e1522eae4e95134c23aae20183e4995f2b52475"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00007.parquet",
+   "rows": 20000,
+   "bytes": 105439,
+   "sha256": "a95d446107e3bb3000073460bbbdf70d5a2b454fff4ab3e99fb3b374b0cbef60"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00008.parquet",
+   "rows": 20000,
+   "bytes": 105438,
+   "sha256": "4c33d21cc150ab19de7f7b57e8794aa778e3c413326531eda9b070f669729f4b"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00009.parquet",
+   "rows": 20000,
+   "bytes": 105414,
+   "sha256": "c1f73dd9f87951a3f3b5390d124c760fc666be05e51599e035257908cf8e826b"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00010.parquet",
+   "rows": 20000,
+   "bytes": 105485,
+   "sha256": "7ebfbe1674df8a9d0d24e41054a1ec5a09a7fa3c4019f3ea8e84ece8779a1773"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00011.parquet",
+   "rows": 20000,
+   "bytes": 105481,
+   "sha256": "c5648c250c55a0c4b6dd824347f3d611a553a7d9f6e5b9df1eb3962a1c7b99f3"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00012.parquet",
+   "rows": 20000,
+   "bytes": 105561,
+   "sha256": "83a3fe4a72500d6c656fd7684332c68cd09aee9aad5cc8de3fe1978c57ab8006"
+  },
+  {
+   "path": "rows/d91a2a02a3b4779d5028/00013.parquet",
+   "rows": 14170,
+   "bytes": 74209,
+   "sha256": "f79e2ed082ef3153182f6a96ca747b6bdbbe77952a49080098d180161a0c35ae"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

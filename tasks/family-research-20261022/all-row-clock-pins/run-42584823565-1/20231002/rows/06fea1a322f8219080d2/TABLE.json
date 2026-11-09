@@ -1,0 +1,146 @@
+{
+ "table_id": "06fea1a322f8219080d2",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/frozen-a-classifier-oct02-events.jsonl.gz",
+  "git_blob": "466d21ce647152553b7a6225ea40c4fffcf930aa",
+  "bytes": 73174,
+  "day": "20231002"
+ },
+ "source_sha256": "74966cff075d294b956fde5f09fb932b3182c1d91ad4c0ac6c50b4755f39f1f9",
+ "source_fields": [
+  "a_state",
+  "censor_time",
+  "day0_epoch_s",
+  "dist_fast",
+  "dist_persistent",
+  "mid_either_13t",
+  "mid_either_3t",
+  "mid_either_5t",
+  "mid_either_8t",
+  "mid_with_13t",
+  "mid_with_3t",
+  "mid_with_5t",
+  "mid_with_8t",
+  "polarity",
+  "price_either_13t",
+  "price_either_3t",
+  "price_either_5t",
+  "price_either_8t",
+  "price_with_13t",
+  "price_with_3t",
+  "price_with_5t",
+  "price_with_8t",
+  "proxy",
+  "seed",
+  "session",
+  "t0",
+  "t0_epoch_s",
+  "t0_utc"
+ ],
+ "field_layer_ids": {
+  "mid_with_13t": [
+   "price_and_book_path"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "mid_either_13t": [
+   "price_and_book_path"
+  ],
+  "price_with_3t": [
+   "price_and_book_path"
+  ],
+  "mid_either_3t": [
+   "price_and_book_path"
+  ],
+  "price_either_3t": [
+   "price_and_book_path"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "price_with_13t": [
+   "price_and_book_path"
+  ],
+  "censor_time": [
+   "missingness_and_integrity_flags"
+  ],
+  "price_either_5t": [
+   "price_and_book_path"
+  ],
+  "mid_with_8t": [
+   "price_and_book_path"
+  ],
+  "proxy": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "session": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "price_either_13t": [
+   "price_and_book_path"
+  ],
+  "mid_with_5t": [
+   "price_and_book_path"
+  ],
+  "price_with_5t": [
+   "price_and_book_path"
+  ],
+  "mid_either_5t": [
+   "price_and_book_path"
+  ],
+  "seed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "price_either_8t": [
+   "price_and_book_path"
+  ],
+  "a_state": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_with_8t": [
+   "price_and_book_path"
+  ],
+  "mid_either_8t": [
+   "price_and_book_path"
+  ],
+  "dist_fast": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "t0_utc": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "mid_with_3t": [
+   "price_and_book_path"
+  ],
+  "dist_persistent": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 839,
+  "direct_clocks": 839,
+  "clocks": 1678,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/06fea1a322f8219080d2/00000.parquet",
+   "rows": 839,
+   "bytes": 23543,
+   "sha256": "816c698fe68795c70db383b13a0aa48697320dae51a1f16f37e67e8ed49e3b41"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

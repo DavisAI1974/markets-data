@@ -1,0 +1,127 @@
+{
+ "table_id": "ef01574389224de21a78",
+ "source": {
+  "collection": "whole",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "9e3365f76fb4d34d97eb193d35072aae5f51b709",
+  "path": "tasks/family-research-20261022/whole-lifecycles/run-42573465249-1/audit-20231003/native-flow-source-clocks.parquet",
+  "git_blob": "1f99c6b3ba8408f47801dcd37a79bd61d585e70b",
+  "bytes": 2024103,
+  "day": "20231003"
+ },
+ "source_sha256": "1763db694dc373ad04bc60789aa1ce100e992bf9bfdd923bbc4b170c0ba2ae06",
+ "source_fields": [
+  "completed_second_known_by_ns",
+  "completion_cursor",
+  "completion_group",
+  "first_source_cursor",
+  "first_source_group",
+  "label_ns",
+  "last_source_cursor",
+  "last_source_group",
+  "native_buy",
+  "native_ratio",
+  "native_roll_buy",
+  "native_roll_sell",
+  "native_sell",
+  "native_total",
+  "native_unknown",
+  "second"
+ ],
+ "field_layer_ids": {
+  "native_unknown": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "completion_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "last_source_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "label_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "native_total": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "completion_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "completed_second_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "native_roll_sell": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "native_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "second": [
+   "derived_feature_availability_timestamps"
+  ],
+  "native_sell": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "first_source_group": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "native_buy": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "first_source_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "last_source_group": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "native_roll_buy": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 82800,
+  "direct_clocks": 82800,
+  "clocks": 248399,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/ef01574389224de21a78/00000.parquet",
+   "rows": 20000,
+   "bytes": 526804,
+   "sha256": "cbe7939ffa1365e7486ab7d63e97fb0c7737d8542a8b7d64ab94cbb425906bdd"
+  },
+  {
+   "path": "rows/ef01574389224de21a78/00001.parquet",
+   "rows": 20000,
+   "bytes": 562125,
+   "sha256": "6223aad9d2e751c024e69c2b4f88173fce569f2765e3a750c7fb6ea502cddc23"
+  },
+  {
+   "path": "rows/ef01574389224de21a78/00002.parquet",
+   "rows": 20000,
+   "bytes": 670327,
+   "sha256": "ae07cf6d9b961797628c12e6e42490361c4ab42880e2e4195a9561d786e38464"
+  },
+  {
+   "path": "rows/ef01574389224de21a78/00003.parquet",
+   "rows": 20000,
+   "bytes": 699544,
+   "sha256": "ee682b19726916b5ee52ce7f88a56ed8ca6c93e8575b36ea7c84f69a9153bf5b"
+  },
+  {
+   "path": "rows/ef01574389224de21a78/00004.parquet",
+   "rows": 2800,
+   "bytes": 76864,
+   "sha256": "0025793341f26ffdb9660014aeedd139fa777306bae56744296e735b390877fc"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

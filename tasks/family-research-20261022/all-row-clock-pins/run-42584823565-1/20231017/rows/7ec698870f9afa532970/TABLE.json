@@ -1,0 +1,112 @@
+{
+ "table_id": "7ec698870f9afa532970",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231017/a-dipole-clocks.parquet",
+  "git_blob": "8f27ad4eb75f815b0df57872ccc967b1aeec7c96",
+  "bytes": 52243,
+  "day": "20231017"
+ },
+ "source_sha256": "c3160345d95468b8ede1840c06eb10787b9a2d677e525aceeef19b6658055a98",
+ "source_fields": [
+  "birth_label_ns",
+  "candidate_id",
+  "end_label_is_not_full_path_availability",
+  "lifetime_end_definition",
+  "lifetime_end_label_ns",
+  "live_recognition",
+  "orientation",
+  "polarity",
+  "recognition_clocks",
+  "recognition_clocks.ask_raw",
+  "recognition_clocks.bid_raw",
+  "recognition_clocks.close_cursor",
+  "recognition_clocks.event_ns",
+  "recognition_clocks.first_cursor",
+  "recognition_clocks.group",
+  "recognition_clocks.known_by_ns",
+  "recognition_clocks.receive_ns",
+  "recognition_clocks.segment",
+  "recognition_ns"
+ ],
+ "field_layer_ids": {
+  "recognition_clocks.bid_raw": [
+   "price_and_book_path"
+  ],
+  "recognition_clocks.known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "live_recognition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recognition_clocks.receive_ns": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "birth_label_ns": [
+   "derived_feature_availability_timestamps",
+   "derived_roll20_and_dipole_state"
+  ],
+  "recognition_ns": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "recognition_clocks.ask_raw": [
+   "price_and_book_path"
+  ],
+  "recognition_clocks.segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "end_label_is_not_full_path_availability": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recognition_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "recognition_clocks.group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "lifetime_end_definition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recognition_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "recognition_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "lifetime_end_label_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "recognition_clocks": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 741,
+  "direct_clocks": 741,
+  "clocks": 4441,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/7ec698870f9afa532970/00000.parquet",
+   "rows": 741,
+   "bytes": 71794,
+   "sha256": "1b14d31dff0c48a587436b54ddc559778dabf87dda5a16e67b0a8e4c452233e4"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

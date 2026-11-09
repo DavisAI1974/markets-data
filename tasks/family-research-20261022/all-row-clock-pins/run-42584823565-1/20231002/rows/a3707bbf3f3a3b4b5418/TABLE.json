@@ -1,0 +1,87 @@
+{
+ "table_id": "a3707bbf3f3a3b4b5418",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231002-case-raw-records.csv.gz",
+  "git_blob": "655ae8051324c948c803f2a5545deb2956e7a024",
+  "bytes": 104118,
+  "day": "20231002"
+ },
+ "source_sha256": "312110a77cb839799c748f62e39dc65c9f8c52c13ada8939a543bf96925b5172",
+ "source_fields": [
+  "action",
+  "case_id",
+  "case_kind",
+  "cursor",
+  "flags",
+  "group_ns",
+  "order_id",
+  "price",
+  "receive_ns",
+  "record_index",
+  "side",
+  "size",
+  "tape_day"
+ ],
+ "field_layer_ids": {
+  "receive_ns": [
+   "clock_receive_time"
+  ],
+  "side": [
+   "native_acmrtfn_messages"
+  ],
+  "price": [
+   "price_and_book_path"
+  ],
+  "size": [
+   "native_acmrtfn_messages"
+  ],
+  "group_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "case_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "case_kind": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "tape_day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "order_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "native_acmrtfn_messages"
+  ],
+  "record_index": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "flags": [
+   "native_acmrtfn_messages"
+  ],
+  "action": [
+   "native_acmrtfn_messages"
+  ]
+ },
+ "counts": {
+  "rows": 6161,
+  "direct_clocks": 6161,
+  "clocks": 12322,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/a3707bbf3f3a3b4b5418/00000.parquet",
+   "rows": 6161,
+   "bytes": 114159,
+   "sha256": "e2f5ef60668833007dca49d7b9d5879f43c15125c714c679d60ec1750ff6e232"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

@@ -1,0 +1,86 @@
+{
+ "table_id": "b554b3b9afef3c3ac4f9",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231003/a-family-neighbors.parquet",
+  "git_blob": "e3ea9e4017b40bc4f455eaf60eb1daa2b4012a5b",
+  "bytes": 945894,
+  "day": "20231003"
+ },
+ "source_sha256": "c36e4b3f1800ad51f4a25386a9bd95927af3a61b0d53077d4fe10b95812f97a9",
+ "source_fields": [
+  "family_id",
+  "neighbor_family_id",
+  "receive_delta_ns",
+  "within120",
+  "within600"
+ ],
+ "field_layer_ids": {
+  "family_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_d_family_geometry"
+  ],
+  "receive_delta_ns": [
+   "clock_receive_time"
+  ],
+  "within120": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "within600": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "neighbor_family_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_d_family_geometry"
+  ]
+ },
+ "counts": {
+  "rows": 103832,
+  "aggregate_or_unclocked_retained": 103832,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/b554b3b9afef3c3ac4f9/00000.parquet",
+   "rows": 20000,
+   "bytes": 115356,
+   "sha256": "42a947e7b10a21e8dc9f2f62192314ed234a1803f18bbee522926dc14d3a7597"
+  },
+  {
+   "path": "rows/b554b3b9afef3c3ac4f9/00001.parquet",
+   "rows": 20000,
+   "bytes": 106818,
+   "sha256": "e243f8c999bca6cf721e53227778505dc80bae792908fca1b941d7a3c1f05db4"
+  },
+  {
+   "path": "rows/b554b3b9afef3c3ac4f9/00002.parquet",
+   "rows": 20000,
+   "bytes": 106448,
+   "sha256": "7c4fc163c1aee9a012b1bbf40c9e0b3712d5249a74d7bc508ebf254c4706a100"
+  },
+  {
+   "path": "rows/b554b3b9afef3c3ac4f9/00003.parquet",
+   "rows": 20000,
+   "bytes": 107384,
+   "sha256": "29b6d479fb8011111701f15008279c998c748ee97d5059a66f3f8ba33111d2e6"
+  },
+  {
+   "path": "rows/b554b3b9afef3c3ac4f9/00004.parquet",
+   "rows": 20000,
+   "bytes": 107854,
+   "sha256": "ab079432ab13d8ab079a58864e22fca79f3553695300284258729e96bbd342de"
+  },
+  {
+   "path": "rows/b554b3b9afef3c3ac4f9/00005.parquet",
+   "rows": 3832,
+   "bytes": 23008,
+   "sha256": "ce0a41f8ea233bf57e0b0c902fd129b8f9ba997e2965ced8e2f5c56dfe850b54"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

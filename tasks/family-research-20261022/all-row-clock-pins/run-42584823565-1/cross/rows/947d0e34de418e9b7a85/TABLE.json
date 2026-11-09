@@ -1,0 +1,66 @@
+{
+ "table_id": "947d0e34de418e9b7a85",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/shape-overlay-figure-reconciliation.csv",
+  "git_blob": "28da05c16abc44deca6ac91165f40f7fa5331494",
+  "bytes": 1567,
+  "day": "cross"
+ },
+ "source_sha256": "bd4ebe95b445c6a88e6151cb298ae0a74870aba135698ccfd5ea37adb644bbb8",
+ "source_fields": [
+  "day",
+  "definition",
+  "figure",
+  "orientation",
+  "points_plotted",
+  "reason",
+  "rows_excluded",
+  "rows_in"
+ ],
+ "field_layer_ids": {
+  "points_plotted": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "reason": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "figure": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "rows_in": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "definition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "rows_excluded": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 12,
+  "aggregate_or_unclocked_retained": 12,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/947d0e34de418e9b7a85/00000.parquet",
+   "rows": 12,
+   "bytes": 4422,
+   "sha256": "39c5a96099073ea07bc9a110296ddbb29d08307d16ac453c6851d7793adc1ea1"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

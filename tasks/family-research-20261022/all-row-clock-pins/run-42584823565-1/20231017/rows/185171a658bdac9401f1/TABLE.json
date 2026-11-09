@@ -1,0 +1,648 @@
+{
+ "table_id": "185171a658bdac9401f1",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231017/c-large-quote-events.parquet",
+  "git_blob": "3e3d5c0bda15e9ceaff94c541e4172cff99cf346",
+  "bytes": 67642,
+  "day": "20231017"
+ },
+ "source_sha256": "e0b6ee4327cefa4630e23a7ae767bf4805dfd2a73cd33bfbdbfdfd969f08748d",
+ "source_fields": [
+  "book_context_group",
+  "direction",
+  "event_id",
+  "event_type",
+  "extreme_first5s_clocks.ask_raw",
+  "extreme_first5s_clocks.bid_raw",
+  "extreme_first5s_clocks.close_cursor",
+  "extreme_first5s_clocks.event_ns",
+  "extreme_first5s_clocks.first_cursor",
+  "extreme_first5s_clocks.group",
+  "extreme_first5s_clocks.known_by_ns",
+  "extreme_first5s_clocks.receive_ns",
+  "extreme_first5s_clocks.segment",
+  "extreme_midpoint_twice_raw",
+  "first_disjoint_20s",
+  "full_not_observed",
+  "full_recovery_clocks",
+  "full_recovery_clocks.ask_raw",
+  "full_recovery_clocks.bid_raw",
+  "full_recovery_clocks.close_cursor",
+  "full_recovery_clocks.event_ns",
+  "full_recovery_clocks.first_cursor",
+  "full_recovery_clocks.group",
+  "full_recovery_clocks.known_by_ns",
+  "full_recovery_clocks.receive_ns",
+  "full_recovery_clocks.segment",
+  "full_recovery_elapsed_ns",
+  "half_not_observed",
+  "half_recovery_clocks",
+  "half_recovery_clocks.ask_raw",
+  "half_recovery_clocks.bid_raw",
+  "half_recovery_clocks.close_cursor",
+  "half_recovery_clocks.event_ns",
+  "half_recovery_clocks.first_cursor",
+  "half_recovery_clocks.group",
+  "half_recovery_clocks.known_by_ns",
+  "half_recovery_clocks.receive_ns",
+  "half_recovery_clocks.segment",
+  "half_recovery_elapsed_ns",
+  "move_clocks.ask_raw",
+  "move_clocks.bid_raw",
+  "move_clocks.close_cursor",
+  "move_clocks.event_ns",
+  "move_clocks.first_cursor",
+  "move_clocks.group",
+  "move_clocks.known_by_ns",
+  "move_clocks.receive_ns",
+  "move_clocks.segment",
+  "move_half_ticks",
+  "print_count",
+  "prior_clocks.ask_raw",
+  "prior_clocks.bid_raw",
+  "prior_clocks.close_cursor",
+  "prior_clocks.event_ns",
+  "prior_clocks.first_cursor",
+  "prior_clocks.group",
+  "prior_clocks.known_by_ns",
+  "prior_clocks.receive_ns",
+  "prior_clocks.segment",
+  "rank_changes.ask.delta",
+  "rank_changes.ask.entering_size",
+  "rank_changes.ask.leaving_size",
+  "rank_changes.ask.shared_price_delta",
+  "rank_changes.bid.delta",
+  "rank_changes.bid.entering_size",
+  "rank_changes.bid.leaving_size",
+  "rank_changes.bid.shared_price_delta",
+  "recovery_observation_end.ask_raw",
+  "recovery_observation_end.bid_raw",
+  "recovery_observation_end.close_cursor",
+  "recovery_observation_end.event_ns",
+  "recovery_observation_end.first_cursor",
+  "recovery_observation_end.group",
+  "recovery_observation_end.known_by_ns",
+  "recovery_observation_end.receive_ns",
+  "recovery_observation_end.segment",
+  "recovery_window_complete",
+  "responses[0].available",
+  "responses[0].endpoint_age_ns",
+  "responses[0].endpoint_clocks.ask_raw",
+  "responses[0].endpoint_clocks.bid_raw",
+  "responses[0].endpoint_clocks.close_cursor",
+  "responses[0].endpoint_clocks.event_ns",
+  "responses[0].endpoint_clocks.first_cursor",
+  "responses[0].endpoint_clocks.group",
+  "responses[0].endpoint_clocks.known_by_ns",
+  "responses[0].endpoint_clocks.receive_ns",
+  "responses[0].endpoint_clocks.segment",
+  "responses[0].full_retrace",
+  "responses[0].horizon_s",
+  "responses[0].response",
+  "responses[0].signed_change_twice_raw",
+  "responses[0].target_ns",
+  "responses[1].available",
+  "responses[1].endpoint_age_ns",
+  "responses[1].endpoint_clocks.ask_raw",
+  "responses[1].endpoint_clocks.bid_raw",
+  "responses[1].endpoint_clocks.close_cursor",
+  "responses[1].endpoint_clocks.event_ns",
+  "responses[1].endpoint_clocks.first_cursor",
+  "responses[1].endpoint_clocks.group",
+  "responses[1].endpoint_clocks.known_by_ns",
+  "responses[1].endpoint_clocks.receive_ns",
+  "responses[1].endpoint_clocks.segment",
+  "responses[1].full_retrace",
+  "responses[1].horizon_s",
+  "responses[1].response",
+  "responses[1].signed_change_twice_raw",
+  "responses[1].target_ns",
+  "responses[2].available",
+  "responses[2].endpoint_age_ns",
+  "responses[2].endpoint_clocks.ask_raw",
+  "responses[2].endpoint_clocks.bid_raw",
+  "responses[2].endpoint_clocks.close_cursor",
+  "responses[2].endpoint_clocks.event_ns",
+  "responses[2].endpoint_clocks.first_cursor",
+  "responses[2].endpoint_clocks.group",
+  "responses[2].endpoint_clocks.known_by_ns",
+  "responses[2].endpoint_clocks.receive_ns",
+  "responses[2].endpoint_clocks.segment",
+  "responses[2].full_retrace",
+  "responses[2].horizon_s",
+  "responses[2].response",
+  "responses[2].signed_change_twice_raw",
+  "responses[2].target_ns",
+  "side_effects.ask.new.added",
+  "side_effects.ask.new.fill_linked",
+  "side_effects.ask.new.removed",
+  "side_effects.ask.new.unchanged_display_fill",
+  "side_effects.ask.new.unlinked",
+  "side_effects.ask.old.added",
+  "side_effects.ask.old.fill_linked",
+  "side_effects.ask.old.removed",
+  "side_effects.ask.old.unchanged_display_fill",
+  "side_effects.ask.old.unlinked",
+  "side_effects.bid.new.added",
+  "side_effects.bid.new.fill_linked",
+  "side_effects.bid.new.removed",
+  "side_effects.bid.new.unchanged_display_fill",
+  "side_effects.bid.new.unlinked",
+  "side_effects.bid.old.added",
+  "side_effects.bid.old.fill_linked",
+  "side_effects.bid.old.removed",
+  "side_effects.bid.old.unchanged_display_fill",
+  "side_effects.bid.old.unlinked",
+  "source_action_group"
+ ],
+ "field_layer_ids": {
+  "responses[1].endpoint_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "responses[0].endpoint_clocks.bid_raw": [
+   "price_and_book_path"
+  ],
+  "responses[0].full_retrace": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prior_clocks.group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[2].response": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "half_recovery_clocks.receive_ns": [
+   "clock_receive_time",
+   "resilience_and_recovery"
+  ],
+  "side_effects.ask.old.added": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "extreme_first5s_clocks.bid_raw": [
+   "price_and_book_path"
+  ],
+  "move_clocks.event_ns": [
+   "clock_event_time",
+   "later_outcome_reveal"
+  ],
+  "responses[2].endpoint_age_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "half_recovery_clocks.bid_raw": [
+   "price_and_book_path",
+   "resilience_and_recovery"
+  ],
+  "responses[0].endpoint_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "side_effects.ask.new.unchanged_display_fill": [
+   "order_lifecycle_fills"
+  ],
+  "event_type": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[2].target_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "responses[1].response": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[1].endpoint_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "half_recovery_clocks.ask_raw": [
+   "price_and_book_path",
+   "resilience_and_recovery"
+  ],
+  "responses[0].response": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recovery_observation_end.group": [
+   "resilience_and_recovery"
+  ],
+  "responses[1].signed_change_twice_raw": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "extreme_first5s_clocks.group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "half_recovery_clocks.known_by_ns": [
+   "clock_event_known_by",
+   "resilience_and_recovery"
+  ],
+  "full_recovery_clocks.event_ns": [
+   "clock_event_time",
+   "resilience_and_recovery"
+  ],
+  "responses[0].endpoint_clocks.known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "recovery_observation_end.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "resilience_and_recovery"
+  ],
+  "side_effects.bid.new.unlinked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "side_effects.ask.new.unlinked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[1].horizon_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_clocks.known_by_ns": [
+   "clock_event_known_by",
+   "later_outcome_reveal"
+  ],
+  "recovery_observation_end.event_ns": [
+   "clock_event_time",
+   "resilience_and_recovery"
+  ],
+  "full_recovery_elapsed_ns": [
+   "derived_feature_availability_timestamps",
+   "resilience_and_recovery"
+  ],
+  "half_recovery_elapsed_ns": [
+   "derived_feature_availability_timestamps",
+   "resilience_and_recovery"
+  ],
+  "responses[2].endpoint_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "recovery_observation_end.known_by_ns": [
+   "clock_event_known_by",
+   "resilience_and_recovery"
+  ],
+  "prior_clocks.bid_raw": [
+   "price_and_book_path"
+  ],
+  "recovery_window_complete": [
+   "resilience_and_recovery"
+  ],
+  "half_recovery_clocks.group": [
+   "resilience_and_recovery"
+  ],
+  "side_effects.bid.old.unlinked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "rank_changes.ask.leaving_size": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[2].endpoint_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "responses[1].endpoint_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "side_effects.ask.old.unlinked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "extreme_first5s_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "prior_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "prior_clocks.ask_raw": [
+   "price_and_book_path"
+  ],
+  "recovery_observation_end.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "resilience_and_recovery"
+  ],
+  "first_disjoint_20s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[0].target_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "recovery_observation_end.bid_raw": [
+   "price_and_book_path",
+   "resilience_and_recovery"
+  ],
+  "responses[0].endpoint_age_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "responses[0].endpoint_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "extreme_first5s_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "rank_changes.ask.entering_size": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[1].endpoint_clocks.ask_raw": [
+   "price_and_book_path"
+  ],
+  "half_not_observed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[1].endpoint_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "move_clocks.receive_ns": [
+   "clock_receive_time",
+   "later_outcome_reveal"
+  ],
+  "extreme_first5s_clocks.known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "responses[1].endpoint_clocks.group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "side_effects.ask.old.unchanged_display_fill": [
+   "order_lifecycle_fills"
+  ],
+  "responses[2].endpoint_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "recovery_observation_end.receive_ns": [
+   "clock_receive_time",
+   "resilience_and_recovery"
+  ],
+  "responses[2].endpoint_clocks.ask_raw": [
+   "price_and_book_path"
+  ],
+  "rank_changes.bid.leaving_size": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "later_outcome_reveal"
+  ],
+  "side_effects.bid.old.unchanged_display_fill": [
+   "order_lifecycle_fills"
+  ],
+  "recovery_observation_end.segment": [
+   "resilience_and_recovery"
+  ],
+  "recovery_observation_end.ask_raw": [
+   "price_and_book_path",
+   "resilience_and_recovery"
+  ],
+  "full_recovery_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "resilience_and_recovery"
+  ],
+  "prior_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "print_count": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[1].endpoint_clocks.bid_raw": [
+   "price_and_book_path"
+  ],
+  "responses[0].endpoint_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "move_clocks.ask_raw": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "side_effects.bid.new.fill_linked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prior_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "full_recovery_clocks.ask_raw": [
+   "price_and_book_path",
+   "resilience_and_recovery"
+  ],
+  "responses[0].endpoint_clocks.ask_raw": [
+   "price_and_book_path"
+  ],
+  "side_effects.bid.new.unchanged_display_fill": [
+   "order_lifecycle_fills"
+  ],
+  "responses[2].endpoint_clocks.known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "responses[2].horizon_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "extreme_first5s_clocks.segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[0].available": [
+   "missingness_and_integrity_flags"
+  ],
+  "move_half_ticks": [
+   "later_outcome_reveal"
+  ],
+  "side_effects.bid.old.removed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "rank_changes.bid.shared_price_delta": [
+   "price_and_book_path"
+  ],
+  "full_recovery_clocks.bid_raw": [
+   "price_and_book_path",
+   "resilience_and_recovery"
+  ],
+  "responses[0].endpoint_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "responses[0].endpoint_clocks.group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[1].target_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "direction": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "rank_changes.bid.delta": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "extreme_first5s_clocks.ask_raw": [
+   "price_and_book_path"
+  ],
+  "half_recovery_clocks.event_ns": [
+   "clock_event_time",
+   "resilience_and_recovery"
+  ],
+  "responses[2].endpoint_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "responses[0].endpoint_clocks.segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[2].available": [
+   "missingness_and_integrity_flags"
+  ],
+  "extreme_first5s_clocks.receive_ns": [
+   "clock_receive_time"
+  ],
+  "side_effects.bid.new.removed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[2].full_retrace": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prior_clocks.segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "rank_changes.ask.delta": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "prior_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "move_clocks.bid_raw": [
+   "price_and_book_path",
+   "later_outcome_reveal"
+  ],
+  "side_effects.ask.old.removed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[2].signed_change_twice_raw": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[1].full_retrace": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[1].available": [
+   "missingness_and_integrity_flags"
+  ],
+  "responses[1].endpoint_clocks.segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[2].endpoint_clocks.bid_raw": [
+   "price_and_book_path"
+  ],
+  "event_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "half_recovery_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "resilience_and_recovery"
+  ],
+  "full_recovery_clocks.segment": [
+   "resilience_and_recovery"
+  ],
+  "full_recovery_clocks.known_by_ns": [
+   "clock_event_known_by",
+   "resilience_and_recovery"
+  ],
+  "responses[2].endpoint_clocks.group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[1].endpoint_age_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "move_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "later_outcome_reveal"
+  ],
+  "extreme_midpoint_twice_raw": [
+   "price_and_book_path"
+  ],
+  "responses[0].horizon_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_clocks.segment": [
+   "later_outcome_reveal"
+  ],
+  "responses[0].signed_change_twice_raw": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "source_action_group": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "side_effects.ask.new.added": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "side_effects.bid.old.added": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "rank_changes.ask.shared_price_delta": [
+   "price_and_book_path"
+  ],
+  "side_effects.bid.new.added": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[2].endpoint_clocks.segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "rank_changes.bid.entering_size": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "responses[1].endpoint_clocks.known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "full_recovery_clocks.group": [
+   "resilience_and_recovery"
+  ],
+  "book_context_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "full_recovery_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "resilience_and_recovery"
+  ],
+  "move_clocks.group": [
+   "later_outcome_reveal"
+  ],
+  "side_effects.ask.new.removed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "side_effects.ask.new.fill_linked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "side_effects.bid.old.fill_linked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "full_not_observed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "side_effects.ask.old.fill_linked": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "half_recovery_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "resilience_and_recovery"
+  ],
+  "half_recovery_clocks.segment": [
+   "resilience_and_recovery"
+  ],
+  "extreme_first5s_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "full_recovery_clocks.receive_ns": [
+   "clock_receive_time",
+   "resilience_and_recovery"
+  ],
+  "prior_clocks.known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "full_recovery_clocks": [
+   "resilience_and_recovery"
+  ],
+  "half_recovery_clocks": [
+   "resilience_and_recovery"
+  ]
+ },
+ "counts": {
+  "rows": 57,
+  "direct_clocks": 57,
+  "clocks": 1638,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/185171a658bdac9401f1/00000.parquet",
+   "rows": 57,
+   "bytes": 25523,
+   "sha256": "6cb613a395e1284731ab73da543d75233d3b451270edf4d64c09fecfa803f58e"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

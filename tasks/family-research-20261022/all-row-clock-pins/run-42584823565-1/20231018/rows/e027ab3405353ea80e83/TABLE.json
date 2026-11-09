@@ -1,0 +1,275 @@
+{
+ "table_id": "e027ab3405353ea80e83",
+ "source": {
+  "collection": "events",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "87dc338f2e74646eb731b3cd6f8968a5a0a653e2",
+  "path": "tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018/b-next-group-arrival.parquet",
+  "git_blob": "7a598909a5bbea6ff4e50c8a4698740b153164ba",
+  "bytes": 12657396,
+  "day": "20231018"
+ },
+ "source_sha256": "1cf112ae84893ed540083566242ed464dc6625841f6ef60f12ad1290416a5b58",
+ "source_fields": [
+  "current_has_print",
+  "decision_cursor",
+  "decision_group",
+  "decision_known_by_ns",
+  "elapsed_known_by_ns",
+  "falling_direction",
+  "first_next_print_receive_ns",
+  "midpoint_direction",
+  "next_group",
+  "next_has_print",
+  "next_known_by_ns",
+  "next_print_lead_ns",
+  "queue_direction",
+  "spread_raw",
+  "standalone_falling_touch",
+  "utc_hour"
+ ],
+ "field_layer_ids": {
+  "utc_hour": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "decision_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "next_group": [
+   "derived_open_world_predecessor_state"
+  ],
+  "decision_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "falling_direction": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "next_has_print": [
+   "derived_open_world_predecessor_state"
+  ],
+  "current_has_print": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "next_known_by_ns": [
+   "clock_event_known_by",
+   "derived_open_world_predecessor_state"
+  ],
+  "first_next_print_receive_ns": [
+   "clock_receive_time",
+   "derived_open_world_predecessor_state"
+  ],
+  "next_print_lead_ns": [
+   "derived_feature_availability_timestamps",
+   "derived_open_world_predecessor_state"
+  ],
+  "midpoint_direction": [
+   "price_and_book_path"
+  ],
+  "spread_raw": [
+   "spread_and_depth_imbalance"
+  ],
+  "standalone_falling_touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "elapsed_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "decision_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "queue_direction": [
+   "fifo_queues"
+  ]
+ },
+ "counts": {
+  "rows": 583593,
+  "direct_clocks": 583593,
+  "clocks": 1196983,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/e027ab3405353ea80e83/00000.parquet",
+   "rows": 20000,
+   "bytes": 496571,
+   "sha256": "4c91aecbea294b3047d8ffb4631dd53162717d9f891dee9c0318a25d2f93c17a"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00001.parquet",
+   "rows": 20000,
+   "bytes": 474351,
+   "sha256": "f1375c35156c54a9a72a4b120453225ad279e2a19f829070ab0f148de4eecabd"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00002.parquet",
+   "rows": 20000,
+   "bytes": 468062,
+   "sha256": "6009904fd032afc1c3f9427da6b68c513a0cc6a7f147c7bbe7c5d4d1ccfadf2f"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00003.parquet",
+   "rows": 20000,
+   "bytes": 465784,
+   "sha256": "0c3d4e84e6e9576f52504bef6efdbbf39628502eb2ec705a506ac660bc515ee8"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00004.parquet",
+   "rows": 20000,
+   "bytes": 462390,
+   "sha256": "4ee31a3b094d75b0d3efc8ebdaec71d4f98eab7478132566268e1dc625b18dd3"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00005.parquet",
+   "rows": 20000,
+   "bytes": 462845,
+   "sha256": "2bdbea8e7b7587aa5582a5cfa91ac5836f27681eb58def1b6ee8937e2cba83e0"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00006.parquet",
+   "rows": 20000,
+   "bytes": 467088,
+   "sha256": "ccf5597512d9b7d2d44554f230b3b8808471d26d0433e805f19fa8adfc907954"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00007.parquet",
+   "rows": 20000,
+   "bytes": 463734,
+   "sha256": "1622f39c72d6ecd0a218a27b5fb9982fdc69f4c04eff851aab0854e462bd8aa9"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00008.parquet",
+   "rows": 20000,
+   "bytes": 466742,
+   "sha256": "799ed89ea8736ddbdc45cac2f33a2d51854a8a68ceaf25eced7bf6648e7f7254"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00009.parquet",
+   "rows": 20000,
+   "bytes": 472338,
+   "sha256": "319416160781fe1875473570dfb29af0a0b9192b3ad89c1e291dcb7337a64c97"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00010.parquet",
+   "rows": 20000,
+   "bytes": 473106,
+   "sha256": "3f86fc475d0d85e0f9662d3fc9cff1b97e9b01ea836b276656b22f1bae596b4d"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00011.parquet",
+   "rows": 20000,
+   "bytes": 472677,
+   "sha256": "c9441b8bcdd86e7ac39dc8d335f39feb8bdda2ec826f74c6959f160f2e0b8364"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00012.parquet",
+   "rows": 20000,
+   "bytes": 468141,
+   "sha256": "d229168e3f1f1e1154875ac098d96a78029ef7a1b5d0701ae9c9cafdd275a8f6"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00013.parquet",
+   "rows": 20000,
+   "bytes": 466135,
+   "sha256": "b3308822ba17289d9484d273b4d3fe2c48a5504b1f7e1541e0ed92066cec574b"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00014.parquet",
+   "rows": 20000,
+   "bytes": 466222,
+   "sha256": "d36a5412c19ba5accdb3a5ca057c00bd0d20b84d0d595b607e6cbdab49458c31"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00015.parquet",
+   "rows": 20000,
+   "bytes": 519685,
+   "sha256": "3289c22c60d4af7326f96b054d5ab288d17ab12bdd9e2cab2d9f517d6309f152"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00016.parquet",
+   "rows": 20000,
+   "bytes": 468702,
+   "sha256": "de8fda2a787042d574de524294eb9736128649cc185fe4eb125b41d979eb7d84"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00017.parquet",
+   "rows": 20000,
+   "bytes": 468132,
+   "sha256": "622383b220d70dd24ad37814ead87cc65e769a06206f44a50c5364a99c9d38fa"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00018.parquet",
+   "rows": 20000,
+   "bytes": 471407,
+   "sha256": "35c3fdd4d4e4da96bdd7accce53edb3d49c563d9ef1b4e75a9fa39f42fa76286"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00019.parquet",
+   "rows": 20000,
+   "bytes": 474719,
+   "sha256": "0b221e7c24fe0a9889aa7119de64ea9dc9cece4db05c201a03f5d1c83fbecbd1"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00020.parquet",
+   "rows": 20000,
+   "bytes": 477488,
+   "sha256": "3e784fc237d151e006586c31c1dc7b9ff98b3f98be8898ff6c9d94f3eaa6f492"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00021.parquet",
+   "rows": 20000,
+   "bytes": 475844,
+   "sha256": "3c5acdc2bad3bc54813c993530b655ec2448660fdb60d2f0865d975780533d7f"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00022.parquet",
+   "rows": 20000,
+   "bytes": 474262,
+   "sha256": "fdc5f9a0d60cf66dc21adcea76b9f94d03fc8b341f667632b64aed7b1e221cf3"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00023.parquet",
+   "rows": 20000,
+   "bytes": 468929,
+   "sha256": "de1b41a77cc992a402d1d027110e508aaf4b1e38bd396ff13972a499cccaaf08"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00024.parquet",
+   "rows": 20000,
+   "bytes": 470614,
+   "sha256": "c3eb7abc89665be9549c4e43af299a54cc6210f8e63fa410cef329b7d7902f64"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00025.parquet",
+   "rows": 20000,
+   "bytes": 477968,
+   "sha256": "9b3708b77dd06d9b0e1e4dfcfce14e68f40ae5ef5cfa580b523c3eb1de7cde7f"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00026.parquet",
+   "rows": 20000,
+   "bytes": 471314,
+   "sha256": "74a6086bd13020548b606b5ff8051f2ac9abb9a7c7d6ad22f0d812351238f57a"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00027.parquet",
+   "rows": 20000,
+   "bytes": 472626,
+   "sha256": "857f70a7c02b00cb4472f8701675bb0a0bf6b42e9314a52e05413b9b5d2b793c"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00028.parquet",
+   "rows": 20000,
+   "bytes": 468402,
+   "sha256": "e3b4e10f98f50513aab21913a9228d54fbb27a3070da14641e50915f25a4c4a5"
+  },
+  {
+   "path": "rows/e027ab3405353ea80e83/00029.parquet",
+   "rows": 3593,
+   "bytes": 79633,
+   "sha256": "c75f7d54b52901e13cb3ac1de572e13ec5feb30b0353d6110b54e7aa23a4d5e9"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

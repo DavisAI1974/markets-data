@@ -1,0 +1,70 @@
+{
+ "table_id": "d8e652a379f2c7818582",
+ "source": {
+  "collection": "family",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "7b50d634f94ea4777d1e772ac2b916b001019582",
+  "path": "tasks/family-research-20261022/family-replication/run-42566535537-1/family-20231017/flow-book-discovery-v1/arm-metrics.csv",
+  "git_blob": "3bd0707c984bb3ebadf5298548aec5aabea0b92b",
+  "bytes": 6499,
+  "day": "20231017"
+ },
+ "source_sha256": "f52fb1b20b6fe2f691ef11fac87be61016d9d520269b8d2465270c28fc0e44be",
+ "source_fields": [
+  "arm",
+  "direction_agreements",
+  "fold",
+  "horizon_s",
+  "mae",
+  "n_test",
+  "n_train",
+  "negative_magnitude_predictions",
+  "target"
+ ],
+ "field_layer_ids": {
+  "direction_agreements": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "n_train": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "n_test": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "negative_magnitude_predictions": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "fold": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "mae": [
+   "later_outcome_reveal"
+  ],
+  "target": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "horizon_s": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "arm": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 120,
+  "aggregate_or_unclocked_retained": 120,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/d8e652a379f2c7818582/00000.parquet",
+   "rows": 120,
+   "bytes": 4809,
+   "sha256": "73935811ea9ca5998795d6d4b5523d8db2916e002fa326311af0291e25a2a2cc"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

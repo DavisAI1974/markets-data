@@ -1,0 +1,148 @@
+{
+ "table_id": "510574c141afe2d3870f",
+ "source": {
+  "collection": "whole",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "9e3365f76fb4d34d97eb193d35072aae5f51b709",
+  "path": "tasks/family-research-20261022/whole-lifecycles/run-42573465249-1/audit-20231002/whole-lifecycle-points.parquet",
+  "git_blob": "b1029a47aa7d6d9045d5d9a88e1d3d887b426893",
+  "bytes": 1268460,
+  "day": "20231002"
+ },
+ "source_sha256": "215202a8a8893d199dbd2604edfb01bcc12e9665edb5364a554e6ed7dcc39ec6",
+ "source_fields": [
+  "candidate_id",
+  "completed_second_known_by_ns",
+  "completion_cursor",
+  "completion_group",
+  "first_source_cursor",
+  "first_source_group",
+  "kind",
+  "label_ns",
+  "last_source_cursor",
+  "last_source_group",
+  "native_buy",
+  "native_ratio",
+  "native_roll_buy",
+  "native_roll_sell",
+  "native_sell",
+  "native_total",
+  "native_unknown",
+  "parent_id",
+  "point_ordinal",
+  "relative_second",
+  "second"
+ ],
+ "field_layer_ids": {
+  "first_source_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "native_roll_buy": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "native_roll_sell": [
+   "aggressor_and_native_signed_flow",
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "last_source_group": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "parent_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "completion_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "label_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "native_total": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "completion_group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "first_source_group": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "native_unknown": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "completed_second_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "second": [
+   "derived_feature_availability_timestamps"
+  ],
+  "native_buy": [
+   "aggressor_and_native_signed_flow"
+  ],
+  "last_source_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "kind": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "point_ordinal": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "native_ratio": [
+   "legacy_per_second_roll20",
+   "derived_roll20_and_dipole_state"
+  ],
+  "relative_second": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "native_sell": [
+   "aggressor_and_native_signed_flow"
+  ]
+ },
+ "counts": {
+  "rows": 92779,
+  "direct_clocks": 92779,
+  "clocks": 278337,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/510574c141afe2d3870f/00000.parquet",
+   "rows": 20000,
+   "bytes": 423952,
+   "sha256": "583711fce133094b4306092ab8b24391337df98b34c93936c6a6afa65b446902"
+  },
+  {
+   "path": "rows/510574c141afe2d3870f/00001.parquet",
+   "rows": 20000,
+   "bytes": 424022,
+   "sha256": "32eaa05a503a1803c269644ad71784c27058991c79393b745d92f731299b1489"
+  },
+  {
+   "path": "rows/510574c141afe2d3870f/00002.parquet",
+   "rows": 20000,
+   "bytes": 440766,
+   "sha256": "05e9339e298437d316e16ba0012b54cb6273867e29fe17db95e9c51473036acc"
+  },
+  {
+   "path": "rows/510574c141afe2d3870f/00003.parquet",
+   "rows": 20000,
+   "bytes": 571467,
+   "sha256": "a579dd0091b646d12fba1d9db74466f4c99c0215fbea5e8b4c8f70318dbdfed2"
+  },
+  {
+   "path": "rows/510574c141afe2d3870f/00004.parquet",
+   "rows": 12779,
+   "bytes": 324432,
+   "sha256": "5cd10e5b39977c8f4fbe92a07d8bf1acdf4770f50e32bf68ca668fff7eeafa92"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

@@ -1,0 +1,66 @@
+{
+ "table_id": "e41a18fef3bf764277e3",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231003-seconds-disposition-completed_group.csv.gz",
+  "git_blob": "5c0b7b24c218495bf82405419755b83c348be382",
+  "bytes": 229223,
+  "day": "20231003"
+ },
+ "source_sha256": "2c0afc819315c8a264c4dceb81db0cafa666ddeab6e3c5ca737a8f8b765c6ba7",
+ "source_fields": [
+  "disposition",
+  "second"
+ ],
+ "field_layer_ids": {
+  "disposition": [
+   "missingness_and_integrity_flags"
+  ],
+  "second": [
+   "derived_feature_availability_timestamps"
+  ]
+ },
+ "counts": {
+  "rows": 82790,
+  "direct_clocks": 82790,
+  "clocks": 82790,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/e41a18fef3bf764277e3/00000.parquet",
+   "rows": 20000,
+   "bytes": 321970,
+   "sha256": "b67cf8ac0e9ec208178b3bf8caef85ab8179d97879f8be27f25f2eb141de7711"
+  },
+  {
+   "path": "rows/e41a18fef3bf764277e3/00001.parquet",
+   "rows": 20000,
+   "bytes": 317713,
+   "sha256": "ae31a79ad2b2ac40278d37a4728a3b8e6801d9a6197f0fcbaf704c5361118543"
+  },
+  {
+   "path": "rows/e41a18fef3bf764277e3/00002.parquet",
+   "rows": 20000,
+   "bytes": 318281,
+   "sha256": "e839ec53506a6a3ce7dc5df95db63af51d2ba236486af497cff304f5986fc364"
+  },
+  {
+   "path": "rows/e41a18fef3bf764277e3/00003.parquet",
+   "rows": 20000,
+   "bytes": 318233,
+   "sha256": "a2a8857c27c4accf3ff880a5eb327b68e961776d481c607f5d1f23458bf1a182"
+  },
+  {
+   "path": "rows/e41a18fef3bf764277e3/00004.parquet",
+   "rows": 2790,
+   "bytes": 44886,
+   "sha256": "6dcbe8c96b3f77d78bfc4d36ec03fecbc11f211eae024ffcb3369aae90e9c8ed"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

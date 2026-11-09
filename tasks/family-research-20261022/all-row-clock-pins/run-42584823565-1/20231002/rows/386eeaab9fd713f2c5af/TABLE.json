@@ -1,0 +1,74 @@
+{
+ "table_id": "386eeaab9fd713f2c5af",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231002-all-hierarchy-merges.csv",
+  "git_blob": "d90190168113cf7f89a1c05c7b5af7f1ddffb53d",
+  "bytes": 164709,
+  "day": "20231002"
+ },
+ "source_sha256": "ff2647c714c86cf95513dc4daed83154ad82025e7a1833c2b5d56a7d4e3ef54d",
+ "source_fields": [
+  "day",
+  "distance",
+  "gap",
+  "groups_before",
+  "largest_gap",
+  "left",
+  "members",
+  "merge",
+  "representation",
+  "right"
+ ],
+ "field_layer_ids": {
+  "merge": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "groups_before": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "largest_gap": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "gap": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "distance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "left": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "right": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "representation": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "members": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 2396,
+  "aggregate_or_unclocked_retained": 2396,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/386eeaab9fd713f2c5af/00000.parquet",
+   "rows": 2396,
+   "bytes": 16015,
+   "sha256": "13f11cfd14919680c07bf11c68fa3540afec6161e864d336d38d98fe2a2f0080"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

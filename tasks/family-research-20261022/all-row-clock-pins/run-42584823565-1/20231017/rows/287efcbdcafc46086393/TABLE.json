@@ -1,0 +1,173 @@
+{
+ "table_id": "287efcbdcafc46086393",
+ "source": {
+  "collection": "whole",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "9e3365f76fb4d34d97eb193d35072aae5f51b709",
+  "path": "tasks/family-research-20261022/whole-lifecycles/run-42573465249-1/audit-20231017/whole-lifecycles.parquet",
+  "git_blob": "a5d87fb2b737ad242096a803d5862b75e5db9a81",
+  "bytes": 134211,
+  "day": "20231017"
+ },
+ "source_sha256": "015e5a8e998e39f3adda40743f488154b8d9565152aa537d7943e35d60229d74",
+ "source_fields": [
+  "anchor_label_ns",
+  "candidate_id",
+  "candidate_recognition_reference_ns",
+  "clock_source_path",
+  "clock_source_revision",
+  "complete_original_second_sequence",
+  "day",
+  "endpoint_definition",
+  "flow_source",
+  "kind",
+  "lifecycle_end_known_by_ns",
+  "lifecycle_end_label_ns",
+  "lifecycle_start_known_by_ns",
+  "lifecycle_start_second",
+  "lifetime_rule",
+  "live_recognition",
+  "missing_live_recognition",
+  "orientation",
+  "original_lifecycle_present",
+  "parent_id",
+  "point_count",
+  "polarity",
+  "recognition_clocks",
+  "recognition_clocks.ask_raw",
+  "recognition_clocks.bid_raw",
+  "recognition_clocks.close_cursor",
+  "recognition_clocks.event_ns",
+  "recognition_clocks.first_cursor",
+  "recognition_clocks.group",
+  "recognition_clocks.known_by_ns",
+  "recognition_clocks.receive_ns",
+  "recognition_clocks.segment",
+  "recognition_ns",
+  "source_revision"
+ ],
+ "field_layer_ids": {
+  "kind": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recognition_clocks.bid_raw": [
+   "price_and_book_path"
+  ],
+  "missing_live_recognition": [
+   "missingness_and_integrity_flags"
+  ],
+  "anchor_label_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "recognition_clocks.receive_ns": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "lifecycle_end_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "clock_source_path": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "original_lifecycle_present": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "candidate_id": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "derived_roll20_and_dipole_state"
+  ],
+  "parent_id": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "lifecycle_end_label_ns": [
+   "derived_feature_availability_timestamps"
+  ],
+  "point_count": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "endpoint_definition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "source_revision": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "recognition_clocks.first_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "flow_source": [
+   "raw_source_identity_provenance_clocks_integrity",
+   "aggressor_and_native_signed_flow"
+  ],
+  "recognition_clocks.known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "lifetime_rule": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "candidate_recognition_reference_ns": [
+   "clock_prospective_discovery_confirmation",
+   "derived_roll20_and_dipole_state"
+  ],
+  "live_recognition": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "clock_source_revision": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "lifecycle_start_known_by_ns": [
+   "clock_event_known_by"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "recognition_ns": [
+   "clock_prospective_discovery_confirmation"
+  ],
+  "day": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "recognition_clocks.ask_raw": [
+   "price_and_book_path"
+  ],
+  "recognition_clocks.segment": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "complete_original_second_sequence": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recognition_clocks.group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "recognition_clocks.event_ns": [
+   "clock_event_time"
+  ],
+  "recognition_clocks.close_cursor": [
+   "raw_source_identity_provenance_clocks_integrity"
+  ],
+  "lifecycle_start_second": [
+   "derived_feature_availability_timestamps"
+  ],
+  "recognition_clocks": [
+   "UNMAPPED_FIELD_RETAINED"
+  ]
+ },
+ "counts": {
+  "rows": 2221,
+  "direct_clocks": 2221,
+  "clocks": 16284,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/287efcbdcafc46086393/00000.parquet",
+   "rows": 2221,
+   "bytes": 206962,
+   "sha256": "9933875866905dffbd764d6e655bc58c031d4e03e7702b59f79b1884146433e0"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

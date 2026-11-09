@@ -1,0 +1,782 @@
+{
+ "table_id": "175a237b0d708ab0fa5f",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/sweep-cohort-events.jsonl.gz",
+  "git_blob": "2ea0a49cc3bdf54eb1585b148ed7315fec77a626",
+  "bytes": 113509,
+  "day": "cross"
+ },
+ "source_sha256": "e3267602aa5fa4dbddf991c7518bf0e6e101b7b7b86643542538113f218d4378",
+ "source_fields": [
+  "counters.family:A:A:better",
+  "counters.family:A:A:deeper",
+  "counters.family:A:A:touch",
+  "counters.family:A:B:better",
+  "counters.family:A:B:deeper",
+  "counters.family:A:B:touch",
+  "counters.family:C_linked:A:better",
+  "counters.family:C_linked:A:deeper",
+  "counters.family:C_linked:A:touch",
+  "counters.family:C_linked:B:deeper",
+  "counters.family:C_linked:B:touch",
+  "counters.family:C_unlinked:A:deeper",
+  "counters.family:C_unlinked:A:touch",
+  "counters.family:C_unlinked:B:deeper",
+  "counters.family:C_unlinked:B:touch",
+  "counters.family:F:A:better",
+  "counters.family:F:A:deeper",
+  "counters.family:F:A:touch",
+  "counters.family:F:B:better",
+  "counters.family:F:B:deeper",
+  "counters.family:F:B:touch",
+  "counters.family:M_down:A:deeper",
+  "counters.family:M_down:A:touch",
+  "counters.family:M_down:B:deeper",
+  "counters.family:M_down:B:touch",
+  "counters.family:M_reprice:A",
+  "counters.family:M_reprice:B",
+  "counters.family:M_up:A:deeper",
+  "counters.family:M_up:A:touch",
+  "counters.family:M_up:B:deeper",
+  "counters.family:M_up:B:touch",
+  "counters.family:T:A",
+  "counters.family:T:B",
+  "counters.family:T:N",
+  "counters.family:remainder_posted",
+  "counters.post1s:A:A:better",
+  "counters.post1s:A:A:deeper",
+  "counters.post1s:A:A:touch",
+  "counters.post1s:A:B:better",
+  "counters.post1s:A:B:deeper",
+  "counters.post1s:A:B:touch",
+  "counters.post1s:C_linked:A:better",
+  "counters.post1s:C_linked:A:deeper",
+  "counters.post1s:C_linked:A:touch",
+  "counters.post1s:C_linked:B:better",
+  "counters.post1s:C_linked:B:deeper",
+  "counters.post1s:C_linked:B:touch",
+  "counters.post1s:C_unlinked:A:better",
+  "counters.post1s:C_unlinked:A:deeper",
+  "counters.post1s:C_unlinked:A:touch",
+  "counters.post1s:C_unlinked:B:better",
+  "counters.post1s:C_unlinked:B:deeper",
+  "counters.post1s:C_unlinked:B:touch",
+  "counters.post1s:F:A:better",
+  "counters.post1s:F:A:deeper",
+  "counters.post1s:F:A:touch",
+  "counters.post1s:F:B:better",
+  "counters.post1s:F:B:deeper",
+  "counters.post1s:F:B:touch",
+  "counters.post1s:M_down:A:better",
+  "counters.post1s:M_down:A:deeper",
+  "counters.post1s:M_down:A:touch",
+  "counters.post1s:M_down:B:better",
+  "counters.post1s:M_down:B:deeper",
+  "counters.post1s:M_down:B:touch",
+  "counters.post1s:M_reprice:A",
+  "counters.post1s:M_reprice:B",
+  "counters.post1s:M_up:A:better",
+  "counters.post1s:M_up:A:deeper",
+  "counters.post1s:M_up:A:touch",
+  "counters.post1s:M_up:B:better",
+  "counters.post1s:M_up:B:deeper",
+  "counters.post1s:M_up:B:touch",
+  "counters.post1s:T:A",
+  "counters.post1s:T:B",
+  "counters.post1s:T:N",
+  "counters.post250:A:A:better",
+  "counters.post250:A:A:deeper",
+  "counters.post250:A:A:touch",
+  "counters.post250:A:B:better",
+  "counters.post250:A:B:deeper",
+  "counters.post250:A:B:touch",
+  "counters.post250:C_linked:A:better",
+  "counters.post250:C_linked:A:deeper",
+  "counters.post250:C_linked:A:touch",
+  "counters.post250:C_linked:B:better",
+  "counters.post250:C_linked:B:deeper",
+  "counters.post250:C_linked:B:touch",
+  "counters.post250:C_unlinked:A:better",
+  "counters.post250:C_unlinked:A:deeper",
+  "counters.post250:C_unlinked:A:touch",
+  "counters.post250:C_unlinked:B:better",
+  "counters.post250:C_unlinked:B:deeper",
+  "counters.post250:C_unlinked:B:touch",
+  "counters.post250:F:A:better",
+  "counters.post250:F:A:deeper",
+  "counters.post250:F:A:touch",
+  "counters.post250:F:B:better",
+  "counters.post250:F:B:deeper",
+  "counters.post250:F:B:touch",
+  "counters.post250:M_down:A:better",
+  "counters.post250:M_down:A:deeper",
+  "counters.post250:M_down:A:touch",
+  "counters.post250:M_down:B:better",
+  "counters.post250:M_down:B:deeper",
+  "counters.post250:M_down:B:touch",
+  "counters.post250:M_reprice:A",
+  "counters.post250:M_reprice:B",
+  "counters.post250:M_up:A:better",
+  "counters.post250:M_up:A:deeper",
+  "counters.post250:M_up:A:touch",
+  "counters.post250:M_up:B:better",
+  "counters.post250:M_up:B:deeper",
+  "counters.post250:M_up:B:touch",
+  "counters.post250:T:A",
+  "counters.post250:T:B",
+  "counters.post250:T:N",
+  "counters.pre:A:A:better",
+  "counters.pre:A:A:deeper",
+  "counters.pre:A:A:touch",
+  "counters.pre:A:B:better",
+  "counters.pre:A:B:deeper",
+  "counters.pre:A:B:touch",
+  "counters.pre:C_linked:A:better",
+  "counters.pre:C_linked:A:deeper",
+  "counters.pre:C_linked:A:touch",
+  "counters.pre:C_linked:B:better",
+  "counters.pre:C_linked:B:deeper",
+  "counters.pre:C_linked:B:touch",
+  "counters.pre:C_unlinked:A:better",
+  "counters.pre:C_unlinked:A:deeper",
+  "counters.pre:C_unlinked:A:touch",
+  "counters.pre:C_unlinked:B:better",
+  "counters.pre:C_unlinked:B:deeper",
+  "counters.pre:C_unlinked:B:touch",
+  "counters.pre:F:A:better",
+  "counters.pre:F:A:deeper",
+  "counters.pre:F:A:touch",
+  "counters.pre:F:B:better",
+  "counters.pre:F:B:deeper",
+  "counters.pre:F:B:touch",
+  "counters.pre:M_down:A:better",
+  "counters.pre:M_down:A:deeper",
+  "counters.pre:M_down:A:touch",
+  "counters.pre:M_down:B:better",
+  "counters.pre:M_down:B:deeper",
+  "counters.pre:M_down:B:touch",
+  "counters.pre:M_reprice:A",
+  "counters.pre:M_reprice:B",
+  "counters.pre:M_up:A:better",
+  "counters.pre:M_up:A:deeper",
+  "counters.pre:M_up:A:touch",
+  "counters.pre:M_up:B:better",
+  "counters.pre:M_up:B:deeper",
+  "counters.pre:M_up:B:touch",
+  "counters.pre:T:A",
+  "counters.pre:T:B",
+  "counters.pre:T:N",
+  "family_aggressor_orders",
+  "family_close_ns",
+  "family_cursors",
+  "family_levels_printed",
+  "family_print_lots_buy",
+  "family_print_lots_sell",
+  "family_print_lots_unknown",
+  "family_remainder_posted_lots",
+  "has_tape",
+  "hit_side",
+  "instance",
+  "move_ticks.1",
+  "move_ticks.120",
+  "move_ticks.20",
+  "move_ticks.300",
+  "move_ticks.5",
+  "move_ticks.60",
+  "move_ticks.600",
+  "post1s_hit_side_unlinked_cancels_deeper",
+  "post1s_opp_side_fills_better_or_touch",
+  "post250_hit_side_adds_deeper",
+  "post250_hit_side_adds_touch_or_better",
+  "post250_hit_side_fills",
+  "post250_hit_side_unlinked_cancels_deeper",
+  "post250_opp_side_adds_better",
+  "post250_opp_side_fills_better_or_touch",
+  "recent",
+  "start_recv_ns"
+ ],
+ "field_layer_ids": {
+  "counters.post250:C_unlinked:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_ticks.300": [
+   "later_outcome_reveal"
+  ],
+  "move_ticks.60": [
+   "later_outcome_reveal"
+  ],
+  "instance": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "family_print_lots_buy": [
+   "derived_d_family_geometry"
+  ],
+  "move_ticks.1": [
+   "later_outcome_reveal"
+  ],
+  "family_levels_printed": [
+   "derived_d_family_geometry"
+  ],
+  "move_ticks.5": [
+   "later_outcome_reveal"
+  ],
+  "counters.post250:A:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "family_aggressor_orders": [
+   "aggressor_and_native_signed_flow",
+   "derived_d_family_geometry"
+  ],
+  "counters.post250:A:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:A:B:touch": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post1s:C_unlinked:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:A:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:C_unlinked:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "family_print_lots_sell": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:A:A:deeper": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:A:B:deeper": [
+   "derived_d_family_geometry"
+  ],
+  "has_tape": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_ticks.120": [
+   "later_outcome_reveal"
+  ],
+  "counters.post1s:A:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:A:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "family_print_lots_unknown": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:A:A:better": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:A:B:better": [
+   "derived_d_family_geometry"
+  ],
+  "family_close_ns": [
+   "derived_feature_availability_timestamps",
+   "derived_d_family_geometry"
+  ],
+  "counters.family:A:A:touch": [
+   "derived_d_family_geometry"
+  ],
+  "move_ticks.20": [
+   "later_outcome_reveal"
+  ],
+  "family_remainder_posted_lots": [
+   "derived_d_family_geometry"
+  ],
+  "recent": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "family_cursors": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post250:A:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:C_unlinked:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:A:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "start_recv_ns": [
+   "clock_receive_time"
+  ],
+  "counters.post250:C_unlinked:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "move_ticks.600": [
+   "later_outcome_reveal"
+  ],
+  "counters.post250:C_unlinked:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "post250_hit_side_adds_deeper": [
+   "order_lifecycle_adds"
+  ],
+  "post1s_hit_side_unlinked_cancels_deeper": [
+   "order_lifecycle_cancels"
+  ],
+  "post250_opp_side_adds_better": [
+   "order_lifecycle_adds"
+  ],
+  "post250_hit_side_unlinked_cancels_deeper": [
+   "order_lifecycle_cancels"
+  ],
+  "post1s_opp_side_fills_better_or_touch": [
+   "order_lifecycle_fills"
+  ],
+  "post250_hit_side_fills": [
+   "order_lifecycle_fills"
+  ],
+  "post250_opp_side_fills_better_or_touch": [
+   "order_lifecycle_fills"
+  ],
+  "post250_hit_side_adds_touch_or_better": [
+   "order_lifecycle_adds"
+  ],
+  "hit_side": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:A:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:C_unlinked:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:C_unlinked:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:A:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:C_unlinked:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:A:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:C_unlinked:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:M_down:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:F:A:touch": [
+   "derived_d_family_geometry"
+  ],
+  "counters.pre:A:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:M_down:A:touch": [
+   "derived_d_family_geometry"
+  ],
+  "counters.pre:A:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:C_unlinked:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:A:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:C_linked:A:touch": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:T:B": [
+   "derived_d_family_geometry"
+  ],
+  "counters.pre:C_unlinked:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:T:B": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:T:N": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post250:C_unlinked:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:M_down:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:C_linked:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:F:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:C_linked:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:T:N": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:M_reprice:B": [
+   "price_and_book_path"
+  ],
+  "counters.pre:F:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_down:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:T:B": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:C_linked:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:C_unlinked:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:T:A": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:M_reprice:A": [
+   "price_and_book_path"
+  ],
+  "counters.post250:M_down:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:C_linked:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:F:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:F:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:M_down:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:F:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:F:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:C_linked:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:remainder_posted": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post250:C_linked:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:F:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:A:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:M_down:B:deeper": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:F:B:touch": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:F:B:deeper": [
+   "derived_d_family_geometry"
+  ],
+  "counters.pre:M_down:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:C_linked:B:touch": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:T:A": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post1s:M_reprice:B": [
+   "price_and_book_path"
+  ],
+  "counters.pre:T:N": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:A:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:C_unlinked:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:A:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:F:B:better": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post1s:F:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:C_unlinked:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:T:B": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:F:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:T:A": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:A:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:C_unlinked:B:touch": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post1s:C_linked:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:M_down:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_reprice:B": [
+   "price_and_book_path"
+  ],
+  "counters.post1s:M_down:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:M_down:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:C_unlinked:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:M_reprice:A": [
+   "price_and_book_path"
+  ],
+  "counters.pre:F:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:C_linked:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:M_down:B:touch": [
+   "derived_d_family_geometry"
+  ],
+  "counters.pre:T:A": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:A:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:C_linked:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:C_unlinked:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_reprice:A": [
+   "price_and_book_path"
+  ],
+  "counters.family:M_reprice:B": [
+   "price_and_book_path",
+   "derived_d_family_geometry"
+  ],
+  "counters.family:C_linked:B:deeper": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:C_unlinked:A:touch": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:F:A:better": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:F:A:deeper": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:M_down:A:deeper": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post250:F:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:M_reprice:A": [
+   "price_and_book_path",
+   "derived_d_family_geometry"
+  ],
+  "counters.family:C_unlinked:B:deeper": [
+   "derived_d_family_geometry"
+  ],
+  "counters.pre:M_up:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:C_linked:A:deeper": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post250:C_linked:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:C_linked:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:M_down:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:F:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:M_down:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:C_linked:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:F:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:C_linked:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:M_down:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:C_linked:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:F:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:F:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_down:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:C_linked:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:C_linked:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_down:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:F:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:F:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:M_up:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:M_up:B:touch": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post250:M_up:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:M_up:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:M_up:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:T:N": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:M_down:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_down:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:F:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_up:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:C_linked:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_up:B:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:C_unlinked:A:deeper": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post1s:M_up:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:M_up:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:M_up:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:C_linked:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_down:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:M_down:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:C_linked:A:better": [
+   "derived_d_family_geometry"
+  ],
+  "counters.post250:M_up:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:M_up:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:M_up:A:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post250:M_up:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_up:B:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_up:A:better": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.pre:M_up:A:touch": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.post1s:M_up:B:deeper": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "counters.family:M_up:A:touch": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:M_up:A:deeper": [
+   "derived_d_family_geometry"
+  ],
+  "counters.family:M_up:B:deeper": [
+   "derived_d_family_geometry"
+  ]
+ },
+ "counts": {
+  "rows": 749,
+  "direct_clocks": 749,
+  "clocks": 1498,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/175a237b0d708ab0fa5f/00000.parquet",
+   "rows": 749,
+   "bytes": 26743,
+   "sha256": "74d3f7c719f6c26d5a7fc300c7650a71550514acf4b20e9f56413689d57333ee"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

@@ -1,0 +1,54 @@
+{
+ "table_id": "f75b6ebec42b2ba14739",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/inclusive-legacy-20231017-cross-side-ordering.csv",
+  "git_blob": "1e12ae1fba74d16d2d78686f085ca345fbbe673b",
+  "bytes": 11047,
+  "day": "20231017"
+ },
+ "source_sha256": "96d0bfe9d12ef88512377a514b7fb09e620dfbb9bd2343ae48692d36019d7228",
+ "source_fields": [
+  "kind",
+  "ordering",
+  "orientation",
+  "paths",
+  "relation"
+ ],
+ "field_layer_ids": {
+  "paths": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "kind": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "relation": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "ordering": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 221,
+  "aggregate_or_unclocked_retained": 221,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/f75b6ebec42b2ba14739/00000.parquet",
+   "rows": 221,
+   "bytes": 5433,
+   "sha256": "735c7e5161e13121c9908875fcb04ce11f51a597ef9cba0d091e246a62838a1d"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}

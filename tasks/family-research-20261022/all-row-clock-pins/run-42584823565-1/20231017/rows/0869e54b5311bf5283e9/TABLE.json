@@ -1,0 +1,134 @@
+{
+ "table_id": "0869e54b5311bf5283e9",
+ "source": {
+  "collection": "ccode",
+  "repository": "DavisAI1974/Markets",
+  "revision": "24da8788a3e05f851a266086a82d7315c1df5974",
+  "path": "tasks/family-research-20261022/claude-code/no-prefix-oct17/frozen-a-classifier-oct17-events.jsonl.gz",
+  "git_blob": "81817b44135c187639d13bfcacb86d3173a15432",
+  "bytes": 59179,
+  "day": "20231017"
+ },
+ "source_sha256": "8a8bef6997d585d2b3b89763f6521dbcf60b3bee4892bb0d3991dae8f785c279",
+ "source_fields": [
+  "a_state",
+  "censor_time",
+  "day0_epoch_s",
+  "dist_fast",
+  "dist_persistent",
+  "mid_either_13t",
+  "mid_either_3t",
+  "mid_either_5t",
+  "mid_either_8t",
+  "mid_with_13t",
+  "mid_with_3t",
+  "mid_with_5t",
+  "mid_with_8t",
+  "polarity",
+  "price_either_13t",
+  "price_either_3t",
+  "price_either_5t",
+  "price_either_8t",
+  "price_with_13t",
+  "price_with_3t",
+  "price_with_5t",
+  "price_with_8t",
+  "proxy",
+  "seed",
+  "t0"
+ ],
+ "field_layer_ids": {
+  "price_with_8t": [
+   "price_and_book_path"
+  ],
+  "dist_persistent": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_with_13t": [
+   "price_and_book_path"
+  ],
+  "mid_with_13t": [
+   "price_and_book_path"
+  ],
+  "price_either_3t": [
+   "price_and_book_path"
+  ],
+  "mid_with_3t": [
+   "price_and_book_path"
+  ],
+  "t0": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "a_state": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "price_either_13t": [
+   "price_and_book_path"
+  ],
+  "price_either_5t": [
+   "price_and_book_path"
+  ],
+  "mid_either_5t": [
+   "price_and_book_path"
+  ],
+  "dist_fast": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "seed": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "polarity": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "price_with_3t": [
+   "price_and_book_path"
+  ],
+  "mid_with_5t": [
+   "price_and_book_path"
+  ],
+  "proxy": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "mid_either_3t": [
+   "price_and_book_path"
+  ],
+  "price_either_8t": [
+   "price_and_book_path"
+  ],
+  "day0_epoch_s": [
+   "derived_feature_availability_timestamps"
+  ],
+  "censor_time": [
+   "missingness_and_integrity_flags"
+  ],
+  "price_with_5t": [
+   "price_and_book_path"
+  ],
+  "mid_either_8t": [
+   "price_and_book_path"
+  ],
+  "mid_with_8t": [
+   "price_and_book_path"
+  ],
+  "mid_either_13t": [
+   "price_and_book_path"
+  ]
+ },
+ "counts": {
+  "rows": 765,
+  "direct_clocks": 765,
+  "clocks": 1530,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/0869e54b5311bf5283e9/00000.parquet",
+   "rows": 765,
+   "bytes": 24630,
+   "sha256": "0c1feb43e7a447683fa4b531b70f51a170fe694472f9a8e368ba925dd8eabdf2"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "historical_no_prefix"
+}

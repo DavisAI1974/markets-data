@@ -1,0 +1,50 @@
+{
+ "table_id": "c13876b777f8e1cbd078",
+ "source": {
+  "collection": "native",
+  "repository": "DavisAI1974/markets-data",
+  "revision": "0487d83b1ddb1abe5e4cfae12e8b88797801f428",
+  "path": "tasks/family-research-20261022/native-dipole/20261108-33693e180/agent-pass/tables/20231003-grouping-orientation.csv",
+  "git_blob": "ba476114ef1d6790568fd445eaab8c02b9b1a72e",
+  "bytes": 606,
+  "day": "20231003"
+ },
+ "source_sha256": "a9c43d8143262a4c34509920dd180773d6da98d14a8047279da7d50fb0155274",
+ "source_fields": [
+  "candidates",
+  "group",
+  "orientation",
+  "representation"
+ ],
+ "field_layer_ids": {
+  "group": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "representation": [
+   "UNMAPPED_FIELD_RETAINED"
+  ],
+  "orientation": [
+   "derived_roll20_and_dipole_state"
+  ],
+  "candidates": [
+   "derived_roll20_and_dipole_state"
+  ]
+ },
+ "counts": {
+  "rows": 20,
+  "aggregate_or_unclocked_retained": 20,
+  "clocks": 0,
+  "corrections": 0
+ },
+ "parts": [
+  {
+   "path": "rows/c13876b777f8e1cbd078/00000.parquet",
+   "rows": 20,
+   "bytes": 4375,
+   "sha256": "20281cc588076706cc9b704d7f27c0102382c5571e7d9b47b459aa03f0382e1e"
+  }
+ ],
+ "correction_examples": [],
+ "row_values": "original immutable source; no values rescaled or recomputed",
+ "scope": "source_population_unchanged"
+}
