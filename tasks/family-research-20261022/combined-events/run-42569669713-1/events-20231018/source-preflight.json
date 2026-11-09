@@ -1,0 +1,105 @@
+{
+  "day": "20231018",
+  "groups": 583688,
+  "raw_actions": 771787,
+  "prints": 30739,
+  "columns": {
+    "receive_ns": "int64",
+    "cursor": "int64",
+    "record_index": "int64",
+    "tape_day": "object",
+    "action": "object",
+    "side": "object",
+    "price": "int64",
+    "size": "uint32",
+    "order_id": "uint64",
+    "flags": "uint8"
+  },
+  "raw_first": {
+    "receive_ns": 1697576400190836661,
+    "cursor": 0,
+    "record_index": 841601,
+    "tape_day": "20231017",
+    "action": "C",
+    "side": "B",
+    "price": 2950000000,
+    "size": 1,
+    "order_id": 788696102036,
+    "flags": 0
+  },
+  "raw_last": {
+    "receive_ns": 1697662799696377528,
+    "cursor": 771786,
+    "record_index": 754411,
+    "tape_day": "20231018",
+    "action": "C",
+    "side": "B",
+    "price": 2959000000,
+    "size": 8,
+    "order_id": 788702917539,
+    "flags": 128
+  },
+  "group_first": {
+    "group_ordinal": 0,
+    "first_cursor": 0,
+    "close_cursor": 398,
+    "event_ns": 1697576400078213167,
+    "receive_ns": 1697576400191664816,
+    "snapshot_member": false,
+    "reset_member": false,
+    "bad_receive_clock_member": false,
+    "bid": [
+      3040000000,
+      3,
+      3
+    ],
+    "ask": [
+      3079000000,
+      1,
+      1
+    ],
+    "print_count": 0,
+    "prints": []
+  },
+  "group_with_print": {
+    "group_ordinal": 217,
+    "first_cursor": 622,
+    "close_cursor": 625,
+    "event_ns": 1697580003381906641,
+    "receive_ns": 1697580003382463363,
+    "snapshot_member": false,
+    "reset_member": false,
+    "bad_receive_clock_member": false,
+    "bid": [
+      3061000000,
+      1,
+      1
+    ],
+    "ask": [
+      3062000000,
+      1,
+      1
+    ],
+    "print_count": 1,
+    "prints": [
+      {
+        "trade_input_cursor": 622,
+        "group_close_input_cursor": 625,
+        "group_ordinal": 217,
+        "instrument_id": 150611,
+        "event_ns": 1697580003381906641,
+        "receive_ns": 1697580003382399708,
+        "available_ns": 1697580003382463363,
+        "price_raw": 3061000000,
+        "size": 1,
+        "aggressor_side": "N",
+        "order_id": 0,
+        "sequence": 26416376,
+        "flags": 0,
+        "source_ordinal": 0
+      }
+    ]
+  },
+  "source_checks": "passed",
+  "compute": "GitHub-hosted CPU"
+}

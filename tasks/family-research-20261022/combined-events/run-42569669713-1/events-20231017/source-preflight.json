@@ -1,0 +1,105 @@
+{
+  "day": "20231017",
+  "groups": 635170,
+  "raw_actions": 841601,
+  "prints": 33451,
+  "columns": {
+    "receive_ns": "int64",
+    "cursor": "int64",
+    "record_index": "int64",
+    "tape_day": "object",
+    "action": "object",
+    "side": "object",
+    "price": "int64",
+    "size": "uint32",
+    "order_id": "uint64",
+    "flags": "uint8"
+  },
+  "raw_first": {
+    "receive_ns": 1697500800000000000,
+    "cursor": 0,
+    "record_index": 0,
+    "tape_day": "20231017",
+    "action": "R",
+    "side": "N",
+    "price": 9223372036854775807,
+    "size": 0,
+    "order_id": 0,
+    "flags": 40
+  },
+  "raw_last": {
+    "receive_ns": 1697576399806587111,
+    "cursor": 841600,
+    "record_index": 841600,
+    "tape_day": "20231017",
+    "action": "M",
+    "side": "B",
+    "price": 3058000000,
+    "size": 7,
+    "order_id": 788699828035,
+    "flags": 128
+  },
+  "group_first": {
+    "group_ordinal": 0,
+    "first_cursor": 0,
+    "close_cursor": 737,
+    "event_ns": 1697500799040391093,
+    "receive_ns": 1697500800000000000,
+    "snapshot_member": true,
+    "reset_member": true,
+    "bad_receive_clock_member": true,
+    "bid": [
+      3119000000,
+      3,
+      3
+    ],
+    "ask": [
+      3120000000,
+      2,
+      2
+    ],
+    "print_count": 0,
+    "prints": []
+  },
+  "group_with_print": {
+    "group_ordinal": 28,
+    "first_cursor": 765,
+    "close_cursor": 767,
+    "event_ns": 1697500816145416029,
+    "receive_ns": 1697500816146107669,
+    "snapshot_member": false,
+    "reset_member": false,
+    "bad_receive_clock_member": false,
+    "bid": [
+      3119000000,
+      3,
+      3
+    ],
+    "ask": [
+      3120000000,
+      2,
+      2
+    ],
+    "print_count": 1,
+    "prints": [
+      {
+        "trade_input_cursor": 765,
+        "group_close_input_cursor": 767,
+        "group_ordinal": 28,
+        "instrument_id": 150611,
+        "event_ns": 1697500816145416029,
+        "receive_ns": 1697500816145806525,
+        "available_ns": 1697500816146107669,
+        "price_raw": 3120000000,
+        "size": 1,
+        "aggressor_side": "B",
+        "order_id": 788696163549,
+        "sequence": 14260933,
+        "flags": 0,
+        "source_ordinal": 0
+      }
+    ]
+  },
+  "source_checks": "passed",
+  "compute": "GitHub-hosted CPU"
+}
