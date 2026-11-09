@@ -29,6 +29,8 @@ for (const row of research.rows) {
 }
 const clockTables = JSON.parse(await fs.readFile(path.join(root, 'extended-review-data/LATE_CLOCK_TABLES.json'), 'utf8'));
 Object.assign(tables, clockTables);
+const additional = JSON.parse(await fs.readFile(path.join(root, 'extended-review-data/ADDITIONAL_DIP_REVIEW.json'), 'utf8'));
+Object.assign(tables, additional.tables);
 function replaceTable(name, widths) {
   const old = workbook.worksheets.items.find(sheet => sheet.name === name);
   if (old) old.delete();
@@ -49,8 +51,17 @@ replaceTable('Workflow findings', [16, 35, 45, 60, 65]);
 replaceTable('Research sets', [58, 14, 18, 46, 65]);
 replaceTable('Late-session clock tables', [23, 26, 26, 72, 16, 16, 20, 17, 46, 65, 65]);
 replaceTable('Late-session clock files', [16, 72, 18, 46, 46, 65, 65]);
+replaceTable('Desktop NG renders', [29, 72, 18, 46, 46, 57, 70]);
+replaceTable('Algebraic dipole research', [32, 70, 72, 46, 46, 57, 70]);
+const algebra = workbook.worksheets.getItem('Algebraic dipole research');
+algebra.getRange('A2:G7').format.rowHeight = 53;
+algebra.getRange('A2:G7').format.wrapText = true;
 
 const timing = tables['Dipole lead timing'];
+timing.rows[0][3] = 'Exact NG warning lead pending. About half a second is the recalled estimate.';
+timing.rows[0][6] = 'Hold from calculations until the original exact value or a verified recomputation is available.';
+timing.rows[1][6] = 'Historical reference. Outside the selected timing rows.';
+for (const i of [2, 3, 4]) timing.rows[i][6] += ' Selected as research context.';
 timing.rows[5] = ['Outcome rule', 'Four archived NG dates', 'Observed result after each decision',
   'Derive the outcome from later observed MBO and FIFO replay for the event.',
   'Review and runtime binding pending', 'Pinned MBO and full-book sources',
@@ -64,7 +75,7 @@ if (deltaOnly) {
   workbook.worksheets.getItem('Dipole lead timing').getRange('A7:G7').values = [timing.rows[5]];
 }
 const review = deltaOnly ? workbook.worksheets.add('Review') : workbook.worksheets.getItem('Review');
-review.getRange('A31:B36').values = [[
+review.getRange('A31:B38').values = [[
   'Saved dipole data',
   'Dipole coverage, candidates, episodes and stage series span all four dates. Generated dipole clocks retains the event-study clocks.'], [
   'Four-day workflow sources',
@@ -76,9 +87,13 @@ review.getRange('A31:B36').values = [[
   'Second-workflow refresh',
   'Prior Whole lifecycle audit calculations for all four days are archived only. Refresh this workflow from the populated inputs. The separate in-progress Git replay will be omitted from the initial reanalysis.'], [
   'Review order',
-  'Review these unlocked sheets. Lock approved cells, bind Frankie to layer IDs and immutable source files, then reanalyze.']];
-review.getRange('A31:B36').format.rowHeight = 52;
-review.getRange('B31:B36').format.wrapText = true;
+  'Review these unlocked sheets. Lock approved cells, bind Frankie to layer IDs and immutable source files, then reanalyze.'], [
+  'Dipole verification hold',
+  'The 193,124 archived stage records are on hold for reanalysis. Verify or recalculate dipole dive separately on NG. Timing row 2 needs an exact value. Rows 4–6 are selected research context.'], [
+  'Desktop NG and algebraic dipole',
+  'Desktop NG renders links the chart files and their source tables. Algebraic dipole research links the equations and review controls. Four-day algebraic measurements remain open.']];
+review.getRange('A31:B38').format.rowHeight = 52;
+review.getRange('B31:B38').format.wrapText = true;
 
 await fs.writeFile(path.join(root, 'extended-review-data/WORKFLOW_FINAL_TABLES.json'), JSON.stringify(tables));
 console.log('Saving final unlocked review');
