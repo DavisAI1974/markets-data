@@ -1,0 +1,35 @@
+name: Codex independent source review
+on:
+  push:
+    branches: [codex/native-dipole-artifacts-20261108]
+    paths: [.github/workflows/ng-codex-source-review.yml]
+permissions:
+  contents: write
+concurrency:
+  group: ng-codex-source-review
+  cancel-in-progress: false
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      CODE_REV: 395a404e432deb7a79f62dbbaedebea0b7853c76
+      OUTPUT_PATH: tasks/family-research-20261022/codex-independent-review/run-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/native-dipole-artifacts-20261108
+          sparse-checkout: .github
+      - name: Install readers
+        run: pip install numpy pyarrow openpyxl
+      - name: Review all frozen source contents
+        run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/reanalysis/codex/source_review.py" -o /tmp/source_review.py
+          python /tmp/source_review.py "$OUTPUT_PATH"
+      - name: Save independent source inventory
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --sparse "$OUTPUT_PATH"
+          git commit -m "research: save Codex full-source inventory and explicit unassessed cases"
+          git push origin HEAD:codex/native-dipole-artifacts-20261108
