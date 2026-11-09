@@ -1,0 +1,38 @@
+name: Repair Tier 1 nanosecond precision
+on:
+  push:
+    branches: [codex/native-dipole-artifacts-20261108]
+    paths: [.github/workflows/ng-tier1-pin-precision.yml]
+permissions:
+  contents: write
+concurrency:
+  group: ng-tier1-pin-precision
+  cancel-in-progress: false
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CODE_REV: 31d27ec5769982eee3bc1927121e713784ca6b39
+      PINS_PATH: tasks/family-research-20261022/claude-code-pins/precision-fix-${{ github.run_id }}-${{ github.run_attempt }}
+      PACKET_PATH: tasks/family-research-20261022/shared-reanalysis-inputs/precision-fix-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/native-dipole-artifacts-20261108
+          sparse-checkout: .github
+      - name: Rebuild annotations and verify every source clock
+        run: |
+          curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/reanalysis/repair_tier1_pin_precision.py" -o /tmp/repair_tier1_pin_precision.py
+          python /tmp/repair_tier1_pin_precision.py repair "$PINS_PATH"
+      - name: Publish corrected immutable pins and replace their active references
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --sparse "$PINS_PATH"
+          git commit -m "fix: publish exact Tier 1 nanosecond annotations"
+          PINS_REV=$(git rev-parse HEAD)
+          python /tmp/repair_tier1_pin_precision.py refresh "$PINS_PATH" "$PINS_REV" "$PACKET_PATH"
+          git add --sparse "$PACKET_PATH"
+          git commit -m "fix: replace rounded Tier 1 pins in the shared input packet"
+          git push origin HEAD:codex/native-dipole-artifacts-20261108
