@@ -1,0 +1,35 @@
+{
+  "source_revision": "0408df44c4f106f7fda4ac4b92ae622d7d34cd7b",
+  "source_groups": "research/kalshi/adaptive_wavepacket_20261108/markets_bridge/tasks/root-bounded-replay/retained/october18-standalone-inputs/groups.jsonl.gz",
+  "source_family": "chronological-instance-index.csv in this immutable publication",
+  "birth_definitions": {
+    "family_start": "Recorded family start receive clock; not an executed trade.",
+    "dipole_birth": "Recorded birth second start; retrospective signal location, not actual recognition."
+  },
+  "leads_s": [
+    1,
+    5,
+    20,
+    60
+  ],
+  "lookbacks_s": [
+    1,
+    5,
+    20
+  ],
+  "availability": "Strictly earlier completed groups than the decision cutoff, itself earlier than birth. No birth polarity, later threshold, final disposition or future movement in features.",
+  "control": "Latest earlier five-second grid point within 30 minutes with same exact spread and floor(log2(1+classified lots20)); no recorded birth of this population within plus/minus 60 seconds.",
+  "limitations": [
+    "Controls may be reused; report unique controls. Pairs and leads overlap.",
+    "Control exclusion uses future labels retrospectively. It is not an online eligibility rule.",
+    "Matching may fail; retain unmatched case rows. No learned thresholds or test-set claims.",
+    "One discovery date; selected births do not exhaust market opportunities.",
+    "Only touch depth is in this input; deeper depth, order-ID turnover and external precursors remain pending.",
+    "This compares upcoming setup births, not future profitable trades or execution."
+  ],
+  "trade_date": "20231017",
+  "scope": "all observed structural families on the retained date span",
+  "populations": [
+    "family_start"
+  ]
+}
