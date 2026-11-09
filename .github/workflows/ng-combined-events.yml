@@ -10,7 +10,7 @@ concurrency:
   group: ng-combined-events
   cancel-in-progress: false
 env:
-  CODE_REV: 6a42a40ef6a37b8f93bbc946202861d0ebbd2771
+  CODE_REV: 5f694cf768b9f1937fed1e4e8fd6160578510726
   MPLBACKEND: Agg
 jobs:
   analyze:
@@ -24,13 +24,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install numpy==2.2.6 pandas==2.2.3 pyarrow==20.0.0 zstandard==0.25.0 sortedcontainers==2.4.0
+      - run: python -m pip install numpy==2.2.6 pandas==2.2.3 pyarrow==20.0.0 zstandard==0.25.0 sortedcontainers==2.4.0 databento
       - name: Run pinned combined study stage
         run: |
-          for script in finish_family_replication.py combined_event_studies.py; do
+          for script in finish_family_replication.py combined_event_sources.py; do
             curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/replication/$script" -o "$RUNNER_TEMP/$script"
           done
-          python -u "$RUNNER_TEMP/combined_event_studies.py" --day "${{ matrix.day }}" --output "$RUNNER_TEMP/results"
+          python -u "$RUNNER_TEMP/combined_event_sources.py" --day "${{ matrix.day }}" --output "$RUNNER_TEMP/results"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
