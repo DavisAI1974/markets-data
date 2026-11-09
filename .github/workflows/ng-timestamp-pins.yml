@@ -10,7 +10,7 @@ concurrency:
   group: ng-timestamp-pins
   cancel-in-progress: false
 env:
-  CODE_REV: 4b773dadcd0a90ca89b47c178293ab974a125f80
+  CODE_REV: d51e723cb37188ad90f579d87130b19f435df9b4
 jobs:
   inspect:
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install pyarrow==20.0.0
-      - name: Confirm timestamp regression tests expose missing implementation
+      - name: Confirm timestamp regression tests pass with exact-clock implementation
         run: |
           mkdir -p "$RUNNER_TEMP/results"
           cd "$RUNNER_TEMP"
@@ -28,11 +28,11 @@ jobs:
             curl --fail --retry 3 -sS "https://raw.githubusercontent.com/DavisAI1974/Markets/$CODE_REV/agent-pass/pinning/$file" -o "$file"
           done
           set +e
-          python -m unittest -v test_pin_core > results/red-tests.txt 2>&1
+          python -m unittest -v test_pin_core > results/green-tests.txt 2>&1
           result=$?
           set -e
-          cat results/red-tests.txt
-          test "$result" -eq 1
+          cat results/green-tests.txt
+          test "$result" -eq 0
       - uses: actions/upload-artifact@v4
         if: always()
         with:
