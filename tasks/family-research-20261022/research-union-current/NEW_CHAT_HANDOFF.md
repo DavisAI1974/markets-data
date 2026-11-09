@@ -1,7 +1,9 @@
 # Continue the four-day research Excel population
 
-Updated as of **2026-11-09T18:15:08.430308+00:00 UTC / 2026-11-09T13:15:08.430308-05:00 America/New_York**.
+Updated as of **2026-11-09T18:17:22.070668+00:00 UTC / 2026-11-09T13:17:22.070668-05:00 America/New_York**.
 This is a file/status clock. Market-event clocks remain separate exact integer text in the data.
+
+Latest original export status: **5,569,627 original rows exported across 68 completed files.** The 5,569,627-row original export completed in 68 files. Its final verification was launched with log verification-final-extra.log; inspect that process/log before launching another verifier. Those extra files are not yet published. The 448-source workflow processor remains a separate running job (workflow-progress.log). These fresh facts supersede the older recovery chronology below.
 
 ## User instructions
 
@@ -15,7 +17,7 @@ Use using-agent-skills and spreadsheets. Relevant skill files were already read 
 
 Work root: `E:\Markets\outputs\research-union-20261109`. Active deliverables: `current/`. Isolated publication checkout: `git-publication/`, branch `codex/research-union-four-days-20261109`.
 
-`Frankie_four_day_research_current.xlsx` preserves the original review sheets and adds full saved trade clocks, dipole associations, corrected price cases, full underlying ten-case tables, source attachments, gap queue, companion index and file clocks. `companion_verification.json` currently lists 58 locally verified companion workbooks: 41 research files contain 9,575,640 research observations; 17 full layer files contain all 143,270 saved trades and all 141 original fields. Consult latest_publication.json for the smaller set actually published so far. The first companion publication contains the 23 base research files (5,075,640 rows) and 17 layer files. Exact nanosecond clocks are text. Long cell values have complete SHA256-verified chunk sheets. The 143,270 trades are the saved older trade universe, not a claim of every trade in newer longer tapes.
+`Frankie_four_day_research_current.xlsx` preserves the original review sheets and adds full saved trade clocks, dipole associations, corrected price cases, full underlying ten-case tables, source attachments, gap queue, companion index and file clocks. `companion_verification.json` currently lists 108 locally verified companion workbooks: 91 research files contain 10,645,267 research observations; 17 full layer files contain all 143,270 saved trades and all 141 original fields. Consult latest_publication.json for the smaller set actually published so far. The first companion publication contains the 23 base research files (5,075,640 rows) and 17 layer files. Exact nanosecond clocks are text. Long cell values have complete SHA256-verified chunk sheets. The 143,270 trades are the saved older trade universe, not a claim of every trade in newer longer tapes.
 
 20 price-response examples are corrected and independently matched to source paths, groups and raw endpoint clocks. 16 exported scheduled cutoffs had a 1 ns error. Scheduled cutoffs and observed endpoints are now distinct. Another 6,832 CCode source records had horizon clocks derived from DAY0 instead of event t0. Corrected active files are evidence/S00092.jsonl.gz, S00096, S00101 and S00105. Each uses t0 + producer duration 5/50 seconds. See horizon_clock_corrections.json. Do not restore original faulty derived fields from immutable source copies.
 

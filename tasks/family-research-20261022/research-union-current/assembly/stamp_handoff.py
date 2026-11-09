@@ -5,6 +5,9 @@ O=ROOT/'current';now=datetime.datetime.now(datetime.timezone.utc)
 utc=now.isoformat();eastern=now.astimezone(ZoneInfo('America/New_York')).isoformat()
 verified=json.loads((O/'companion_verification.json').read_text())
 research=[r for r in verified if r['file'].startswith('research-pins/')];layers=[r for r in verified if r['file'].startswith('trade-layers/')]
+extra_manifest=O/'research_pin_workbooks-20231018-extra.json'
+extra=json.loads(extra_manifest.read_text()) if extra_manifest.exists() else []
+extra_status=f"{sum(r['rows'] for r in extra):,} original rows exported across {len(extra)} completed files."
 def tail(name):
  p=ROOT/name
  if not p.exists():return []
@@ -22,6 +25,8 @@ text=f'''# Continue the four-day research Excel population
 
 Updated as of **{utc} UTC / {eastern} America/New_York**.
 This is a file/status clock. Market-event clocks remain separate exact integer text in the data.
+
+Latest original export status: **{extra_status}** The 5,569,627-row original export completed in 68 files. Its final verification was launched with log verification-final-extra.log; inspect that process/log before launching another verifier. Those extra files are not yet published. The 448-source workflow processor remains a separate running job (workflow-progress.log). These fresh facts supersede the older recovery chronology below.
 
 ## User instructions
 
