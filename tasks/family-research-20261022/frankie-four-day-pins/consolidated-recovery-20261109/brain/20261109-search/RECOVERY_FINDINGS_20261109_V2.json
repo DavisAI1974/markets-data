@@ -1,0 +1,502 @@
+{
+ "schema": "FRANKIE_RECOVERY_FINDINGS_20261109_V2",
+ "complete_all_layers": false,
+ "verified_book_trades": 143270,
+ "recovered_native_rows": 16643979,
+ "restored_external_rows": 146800,
+ "calendar": {
+  "values": {
+   "20231002": {
+    "last_prompt_symbol": "NGV23",
+    "last_prompt_expiry": "2023-09-27",
+    "sessions_since_prompt_expiry": 3
+   },
+   "20231003": {
+    "last_prompt_symbol": "NGV23",
+    "last_prompt_expiry": "2023-09-27",
+    "sessions_since_prompt_expiry": 4
+   },
+   "20231017": {
+    "last_prompt_symbol": "NGV23",
+    "last_prompt_expiry": "2023-09-27",
+    "sessions_since_prompt_expiry": 14
+   },
+   "20231018": {
+    "last_prompt_symbol": "NGV23",
+    "last_prompt_expiry": "2023-09-27",
+    "sessions_since_prompt_expiry": 15
+   }
+  },
+  "calendar_blob": "06fa0ad2c73695da5311102ecc057a91afb8db66",
+  "builder_blob": "11e3d1436fb46bcd5a97cb433b73f8409a4c233d",
+  "availability_rule": "Deterministic calendar calculation for the labeled trading date. This is not a historical publication receipt."
+ },
+ "packets": [
+  {
+   "kind": "book",
+   "day": "20231002",
+   "repository": "DavisAI1974/markets-data",
+   "revision": "7eebebadef89c4281cdb25c236ac39f5da814839",
+   "prefix": "tasks/family-research-20261022/frankie-four-day-pins/book-recovery-42617700678-1/20231002",
+   "published": true,
+   "files": [
+    {
+     "path": "RECOVERY_RECEIPT.json",
+     "sha256": "f2483b648e01fef56bf2e03b277e214c0b5061d88afd1e921b751f65d6da9fd8",
+     "bytes": 1217
+    },
+    {
+     "path": "MANIFEST.json",
+     "sha256": "9af6f09cf333cd60250aadda29947b43165173c6ad82fc6434592f79207df9cb",
+     "bytes": 69781
+    },
+    {
+     "path": "REVIEW_SAMPLES.json",
+     "sha256": "b1661606ace19fcde54651342b8bb384a175980d0c672cadc8a2e1478fd48374",
+     "bytes": 1139368
+    },
+    {
+     "path": "SOURCE_PINS.json",
+     "sha256": "3b8d6b3d51e7f487911c253d3d52100f473cbfdc6b55144dc2fcd3089a0d7b4d",
+     "bytes": 1965
+    }
+   ],
+   "receipt": {
+    "schema": "FRANKIE_MBO_BOOK_RECOVERY_V1",
+    "day": "20231002",
+    "expected_trades": 37670,
+    "recovered_trades": 37670,
+    "raw_messages_including_opening_warmup": 808453,
+    "completed_book_fifo_recovery": true,
+    "complete_all_layers": false,
+    "original_replay_receipt": {
+     "session": "20231002",
+     "scope": "PARTIAL_TRADE_DATE",
+     "tape_git_commit": "1d15dc6f1b5bbb1fabb6389d18e8bedba2b77202",
+     "adapter_git_commit": "af36937d1e478831d4c7bc612c98d969e9a0848b",
+     "boundary_manifest_commit": "93895487c199b1e486d5407f9e103a0964903d2d",
+     "databento_version": "0.81.0",
+     "first_ts_recv_ns": 1696204800000000000,
+     "last_ts_recv_ns": 1696280399697648657,
+     "records": 808453,
+     "completed_groups": 600291,
+     "trades": 37670,
+     "opening_snapshot_records": 733,
+     "resting_orders_at_halt": 725,
+     "archived_books_compared": 0,
+     "integrity": {
+      "150611": {}
+     },
+     "wall_seconds": 310.51
+    },
+    "snapshot_phase": "at_trade_input; no later group-close values substituted",
+    "scope": "original archived partial span",
+    "limits": [
+     "FIFO is reconstructed by the original adapter, not exchange-exposed native priority.",
+     "This recovers MBO, book, FIFO and activity only; other missing calculations remain separate."
+    ]
+   }
+  },
+  {
+   "kind": "book",
+   "day": "20231003",
+   "repository": "DavisAI1974/markets-data",
+   "revision": "010a9970ff23e981b9870350177bb9ace7a3100b",
+   "prefix": "tasks/family-research-20261022/frankie-four-day-pins/book-recovery-42617700678-1/20231003",
+   "published": true,
+   "files": [
+    {
+     "path": "RECOVERY_RECEIPT.json",
+     "sha256": "d071cc8c24df7433ec5c6472e8d9b937d2857546ab4a40ddf3d0d12ca4aaee42",
+     "bytes": 1187
+    },
+    {
+     "path": "MANIFEST.json",
+     "sha256": "638faec5c0b51f31d0ace99d2f8557692aceecdbe3a7063f9cb3d62fdde8ca30",
+     "bytes": 82261
+    },
+    {
+     "path": "REVIEW_SAMPLES.json",
+     "sha256": "88aaf49ec64785163ff4d7101e28f1d813e287ae5bd5a94f7757c53a49177c9b",
+     "bytes": 1026503
+    },
+    {
+     "path": "SOURCE_PINS.json",
+     "sha256": "9296409ff13c1dc7a75f11102950a60ca0d38b18201a7135533a957eb237c049",
+     "bytes": 2238
+    }
+   ],
+   "receipt": {
+    "schema": "FRANKIE_MBO_BOOK_RECOVERY_V1",
+    "day": "20231003",
+    "expected_trades": 41410,
+    "recovered_trades": 41410,
+    "raw_messages_including_opening_warmup": 1688283,
+    "completed_book_fifo_recovery": true,
+    "complete_all_layers": false,
+    "original_replay_receipt": {
+     "session": "20231003",
+     "tape_git_commit": "1d15dc6f1b5bbb1fabb6389d18e8bedba2b77202",
+     "adapter_git_commit": "af36937d1e478831d4c7bc612c98d969e9a0848b",
+     "session_manifest_commit": "93895487c199b1e486d5407f9e103a0964903d2d",
+     "sealed_receipt_commit": "c28a4de13263b6354662cd376fecc7733b47a991",
+     "databento_version": "0.81.0",
+     "opening_warmup_records": 808453,
+     "opening_snapshot_records": 733,
+     "opening_resting_orders": 725,
+     "records": 879830,
+     "completed_groups": 653912,
+     "archived_books_compared": 0,
+     "integrity": {
+      "150611": {}
+     },
+     "wall_seconds": 454.68
+    },
+    "snapshot_phase": "at_trade_input; no later group-close values substituted",
+    "scope": "original archived full session",
+    "limits": [
+     "FIFO is reconstructed by the original adapter, not exchange-exposed native priority.",
+     "This recovers MBO, book, FIFO and activity only; other missing calculations remain separate."
+    ]
+   }
+  },
+  {
+   "kind": "book",
+   "day": "20231017",
+   "repository": "DavisAI1974/markets-data",
+   "revision": "f41a7de50c19ffc5875690542f87dac7d9cd90b3",
+   "prefix": "tasks/family-research-20261022/frankie-four-day-pins/book-recovery-42617700678-1/20231017",
+   "published": true,
+   "files": [
+    {
+     "path": "RECOVERY_RECEIPT.json",
+     "sha256": "e1f38bf9d96634879364b8755cb11fdc6a6c8ffb6ad1368e3da84169297116db",
+     "bytes": 1217
+    },
+    {
+     "path": "MANIFEST.json",
+     "sha256": "35777c5ff768c76f217537cdb06c185b90b1e596f02c7f5a99b9e4bec3166be5",
+     "bytes": 62815
+    },
+    {
+     "path": "REVIEW_SAMPLES.json",
+     "sha256": "b2af363c5b1df37ec008309de13270efa4afe566c2b3029573d7ea66eea45348",
+     "bytes": 1223820
+    },
+    {
+     "path": "SOURCE_PINS.json",
+     "sha256": "28abc8a0ae9638fc3fd5f17041ef4910936c67efffdcbc43bd781aac2339e6ad",
+     "bytes": 1965
+    }
+   ],
+   "receipt": {
+    "schema": "FRANKIE_MBO_BOOK_RECOVERY_V1",
+    "day": "20231017",
+    "expected_trades": 33451,
+    "recovered_trades": 33451,
+    "raw_messages_including_opening_warmup": 841601,
+    "completed_book_fifo_recovery": true,
+    "complete_all_layers": false,
+    "original_replay_receipt": {
+     "session": "20231017",
+     "scope": "PARTIAL_TRADE_DATE",
+     "tape_git_commit": "1d15dc6f1b5bbb1fabb6389d18e8bedba2b77202",
+     "adapter_git_commit": "af36937d1e478831d4c7bc612c98d969e9a0848b",
+     "boundary_manifest_commit": "93895487c199b1e486d5407f9e103a0964903d2d",
+     "databento_version": "0.81.0",
+     "first_ts_recv_ns": 1697500800000000000,
+     "last_ts_recv_ns": 1697576399806587111,
+     "records": 841601,
+     "completed_groups": 635170,
+     "trades": 33451,
+     "opening_snapshot_records": 738,
+     "resting_orders_at_halt": 790,
+     "archived_books_compared": 0,
+     "integrity": {
+      "150611": {}
+     },
+     "wall_seconds": 537.09
+    },
+    "snapshot_phase": "at_trade_input; no later group-close values substituted",
+    "scope": "original archived partial span",
+    "limits": [
+     "FIFO is reconstructed by the original adapter, not exchange-exposed native priority.",
+     "This recovers MBO, book, FIFO and activity only; other missing calculations remain separate."
+    ]
+   }
+  },
+  {
+   "kind": "book",
+   "day": "20231018",
+   "repository": "DavisAI1974/markets-data",
+   "revision": "02ea4b6e340ed1b35a43be23fe21bd01fc82c66f",
+   "prefix": "tasks/family-research-20261022/frankie-four-day-pins/book-recovery-42617700678-1/20231018",
+   "published": true,
+   "files": [
+    {
+     "path": "RECOVERY_RECEIPT.json",
+     "sha256": "d97f58ca3b5b6cce917b0c40ac332572b5eaf9f4bc1bec01cfe36df6e0517ec8",
+     "bytes": 1191
+    },
+    {
+     "path": "MANIFEST.json",
+     "sha256": "2a3c2f9ef3a13dac5f9c230736d3695fcf75b65d9b8a073fb4082d8227c6aeb4",
+     "bytes": 63556
+    },
+    {
+     "path": "REVIEW_SAMPLES.json",
+     "sha256": "9be263c3f6cbb746c64b9661783fb6649511b0e103524a9a00c4d11c3997a26d",
+     "bytes": 1097754
+    },
+    {
+     "path": "SOURCE_PINS.json",
+     "sha256": "7f5af3a7485d389e4dbdab901da86b32c9a3473e675b213f5f7dfaefce290f98",
+     "bytes": 2591
+    }
+   ],
+   "receipt": {
+    "schema": "FRANKIE_MBO_BOOK_RECOVERY_V1",
+    "day": "20231018",
+    "expected_trades": 30739,
+    "recovered_trades": 30739,
+    "raw_messages_including_opening_warmup": 1613388,
+    "completed_book_fifo_recovery": true,
+    "complete_all_layers": false,
+    "original_replay_receipt": {
+     "session": "20231018",
+     "tape_git_commit": "1d15dc6f1b5bbb1fabb6389d18e8bedba2b77202",
+     "adapter_git_commit": "af36937d1e478831d4c7bc612c98d969e9a0848b",
+     "session_manifest_commit": "93895487c199b1e486d5407f9e103a0964903d2d",
+     "sealed_receipt_commit": "c28a4de13263b6354662cd376fecc7733b47a991",
+     "databento_version": "0.81.0",
+     "opening_warmup_records": 841601,
+     "opening_snapshot_records": 738,
+     "opening_resting_orders": 790,
+     "records": 771787,
+     "completed_groups": 583688,
+     "archived_books_compared": 22194,
+     "integrity": {
+      "150611": {}
+     },
+     "wall_seconds": 649.12
+    },
+    "snapshot_phase": "at_trade_input; no later group-close values substituted",
+    "scope": "original archived full session",
+    "limits": [
+     "FIFO is reconstructed by the original adapter, not exchange-exposed native priority.",
+     "This recovers MBO, book, FIFO and activity only; other missing calculations remain separate."
+    ]
+   }
+  },
+  {
+   "kind": "native",
+   "day": "20231002",
+   "repository": "DavisAI1974/markets-data",
+   "revision": "5305008bb48160cd29d9e14887989e375449e4bb",
+   "prefix": "tasks/family-research-20261022/frankie-four-day-pins/native-lifecycle-42621496819-1/20231002",
+   "published": true,
+   "files": [
+    {
+     "path": "RECOVERY_RECEIPT.json",
+     "bytes": 1035,
+     "sha256": "9c80944979bf2ae09782c93fb346245a716c49a736c930f17fdf447161211707"
+    },
+    {
+     "path": "MANIFEST.json",
+     "bytes": 82222,
+     "sha256": "4e001a5d59d748642bd78d2d40a6be6e3715103d4d73be339b630a69286d92a1"
+    },
+    {
+     "path": "REVIEW_SAMPLES.json",
+     "bytes": 167057,
+     "sha256": "4b9338906490df49e13c7cf1336df9e51966303da1d55cf0d77bc197ed5b8278"
+    },
+    {
+     "path": "SECTION_FIELDS.json",
+     "bytes": 6722,
+     "sha256": "354c3c2abec86db759a618b5eb728535bb3e145da0bafa3ec10de003c2323f76"
+    },
+    {
+     "path": "SOURCE_PARTS.json",
+     "bytes": 1578,
+     "sha256": "823a555aa28350bb72d1559055d9deda52bab31e898c0f4faac0b3804080771d"
+    }
+   ],
+   "receipt": {
+    "schema": "FRANKIE_NATIVE_LIFECYCLE_RECOVERY_V1",
+    "day": "20231002",
+    "source_repository": "DavisAI1974/Markets",
+    "source_revision": "bebd939d99171ef747febdee4029aa729a8786fe",
+    "source_member": "work/bedrock/recovery-177e06a555494fb19fa1c63cee97ae5f/ledgers/exact_lifecycle_rows.jsonl",
+    "source_member_bytes": 7629582880,
+    "reconstructed_source_sha256": "8e786344be6b0071ccad7f84d954f4b87b6e8cef04ac18ca9a3a4bb21ae8ac02",
+    "source_rows": 5289814,
+    "sections": {
+     "recurrence": 600291,
+     "mirror": 1200582,
+     "ladder": 1200582,
+     "absorption": 600291,
+     "replenishment": 987321,
+     "queue": 292091,
+     "flow_substrate": 75600,
+     "candidate": 741,
+     "episode": 1482,
+     "response": 5186,
+     "detector_coverage": 1,
+     "lineage": 325646
+    },
+    "archive_parts_verified": 5,
+    "complete_retained_lifecycle_ledger": true,
+    "complete_all_layers": false,
+    "producer_rerun": false,
+    "rule": "Original rows preserved in order. Each row retains its original emission clock and source cursor; no later state is substituted into earlier inputs."
+   }
+  },
+  {
+   "kind": "native",
+   "day": "20231003",
+   "repository": "DavisAI1974/markets-data",
+   "revision": "146592a9cfb8834c2880cca2275fb0f36e36899f",
+   "prefix": "tasks/family-research-20261022/frankie-four-day-pins/native-lifecycle-42621496819-1/20231003",
+   "published": true,
+   "files": [
+    {
+     "path": "RECOVERY_RECEIPT.json",
+     "bytes": 1055,
+     "sha256": "b6ee84e2c05df40f4174a7d5ee50f2a7f61aa094a5da6702befd1171b88eee93"
+    },
+    {
+     "path": "MANIFEST.json",
+     "bytes": 93472,
+     "sha256": "ee56a574a9ac3f4b8c38e1efa535dc6b49768b78c3885cabdc40141bf6101df6"
+    },
+    {
+     "path": "REVIEW_SAMPLES.json",
+     "bytes": 77722,
+     "sha256": "d56c6201b27ca3954256cbd3650e22230b7eaa28e7b90b587f2063d98ff27506"
+    },
+    {
+     "path": "SECTION_FIELDS.json",
+     "bytes": 7346,
+     "sha256": "a33ef574f5fcb0aa9778a0910f8156ab018f6f091b9e3b69082c4745b2aa8ef5"
+    },
+    {
+     "path": "SOURCE_PARTS.json",
+     "bytes": 1871,
+     "sha256": "a88324777f4c7e3bc0bccbb1cf0e8ff53997a04d99edb4a5dc152364e6674896"
+    }
+   ],
+   "receipt": {
+    "schema": "FRANKIE_NATIVE_LIFECYCLE_RECOVERY_V1",
+    "day": "20231003",
+    "source_repository": "DavisAI1974/Markets",
+    "source_revision": "209f99ca3dab185bfdeca5db93e98036af0a56c5",
+    "source_member": "work/bedrock/recovery-bdfa3e944d094920953ebd19d179d9a4/ledgers/exact_lifecycle_rows.jsonl",
+    "source_member_bytes": 8710157080,
+    "reconstructed_source_sha256": "ec5ca8313ac19e86f7af567978493b66f0b81eab396b8327ad53ba5bf99190e4",
+    "source_rows": 5773925,
+    "sections": {
+     "recurrence": 653912,
+     "mirror": 1307824,
+     "ladder": 1307824,
+     "absorption": 653912,
+     "flow_substrate": 86400,
+     "replenishment": 1084740,
+     "detector_coverage": 2,
+     "queue": 316861,
+     "lineage": 354125,
+     "candidate": 833,
+     "episode": 1666,
+     "response": 5825,
+     "exhaustion": 1
+    },
+    "archive_parts_verified": 6,
+    "complete_retained_lifecycle_ledger": true,
+    "complete_all_layers": false,
+    "producer_rerun": false,
+    "rule": "Original rows preserved in order. Each row retains its original emission clock and source cursor; no later state is substituted into earlier inputs."
+   }
+  },
+  {
+   "kind": "native",
+   "day": "20231017",
+   "repository": "DavisAI1974/markets-data",
+   "revision": "792ae74514012748f33bb680aa3a1b03e0439c0a",
+   "prefix": "tasks/family-research-20261022/frankie-four-day-pins/native-lifecycle-42621496819-1/20231017",
+   "published": true,
+   "files": [
+    {
+     "path": "RECOVERY_RECEIPT.json",
+     "bytes": 1055,
+     "sha256": "2ee2571b2f7d335aa2a5737fdba9dd5f0a5a608c3fdfe7baabad47b46c60e6b5"
+    },
+    {
+     "path": "MANIFEST.json",
+     "bytes": 83398,
+     "sha256": "2060825c84e58ce531141bdccf68a484cf447b0f7e7a21223c160dda21c436d9"
+    },
+    {
+     "path": "REVIEW_SAMPLES.json",
+     "bytes": 186292,
+     "sha256": "99e9e53dc70e761c37374c71f1daf8b2696d2cc3a63ebfaedebd3de550f10032"
+    },
+    {
+     "path": "SECTION_FIELDS.json",
+     "bytes": 7230,
+     "sha256": "f40cea8d217419e6c9805a95dfaf5eab518ca7728f3a6645e0ad4c4eff315266"
+    },
+    {
+     "path": "SOURCE_PARTS.json",
+     "bytes": 1578,
+     "sha256": "14f69f8ac5629be794407b139b3f471207916adcd5ba64f619c85a0927b9e696"
+    }
+   ],
+   "receipt": {
+    "schema": "FRANKIE_NATIVE_LIFECYCLE_RECOVERY_V1",
+    "day": "20231017",
+    "source_repository": "DavisAI1974/Markets",
+    "source_revision": "f00fbac0dc1dcad53b349d43fc5ad4aa0c915c1e",
+    "source_member": "work/bedrock/recovery-f2934656d9db4f57b487bbf652bf0bf9/ledgers/exact_lifecycle_rows.jsonl",
+    "source_member_bytes": 7734605912,
+    "reconstructed_source_sha256": "eafe0c42100f928bee1e237fe6ac31536942bff1dd55a076b1c7bd64edcc3cc0",
+    "source_rows": 5580240,
+    "sections": {
+     "recurrence": 635170,
+     "mirror": 1270340,
+     "ladder": 1270340,
+     "absorption": 635170,
+     "replenishment": 1044817,
+     "queue": 306202,
+     "flow_substrate": 75600,
+     "candidate": 741,
+     "episode": 1482,
+     "response": 5181,
+     "detector_coverage": 1,
+     "exhaustion": 1,
+     "lineage": 335195
+    },
+    "archive_parts_verified": 5,
+    "complete_retained_lifecycle_ledger": true,
+    "complete_all_layers": false,
+    "producer_rerun": false,
+    "rule": "Original rows preserved in order. Each row retains its original emission clock and source cursor; no later state is substituted into earlier inputs."
+   }
+  }
+ ],
+ "causes": [
+  "The 99-layer registry contains mixed source, runtime-output, target and knowledge roles; a source pin alone is not a populated runtime output.",
+  "Static source paths were already retained under canonical-sources but the exporter failed to resolve that prefix.",
+  "The older exporter explicitly selected levels[0]; full depth and FIFO required the original adapter recovery.",
+  "The earlier assembly omitted the retained October 2 external-recovery directory.",
+  "The original Native ledger existed in the first archive parts despite incomplete publication of the larger remainder archive.",
+  "Large Git tree publication requests timed out; bounded tree batches preserve and verify every file."
+ ],
+ "remaining": [
+  "Complete full-population layer joins and independently verify their semantics.",
+  "Restore or execute missing original second-set calculations for October 2, 3 and 17.",
+  "Resolve held external availability/vintage requirements without promoting modeled clocks to verified historical release clocks.",
+  "Retain absent runtime outputs as unproduced; source code is not evidence of execution.",
+  "Only after every required input is complete, lock Excel and connect the code by layer identity with consumption receipts."
+ ],
+ "execution_claim": "Saved source recovery and native brain-loader verification only. No Frankie model invocation or live brain deployment is claimed."
+}
