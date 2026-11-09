@@ -1,0 +1,421 @@
+{
+  "registry_sha256": "7ee754f1f9b080cdc5b7b68cf75829897d6216a1fadbb4b8a5ecd7b4f2133e06",
+  "field_map_added": [
+    {
+      "pattern": "^root\\.activity\\.\\d+\\.(trade_buy_aggressor_qty|trade_sell_aggressor_qty|trade_aggressor_imbalance)$",
+      "layers": [
+        {
+          "index": 48,
+          "layer_id": "aggressor_and_native_signed_flow"
+        },
+        {
+          "index": 34,
+          "layer_id": "order_lifecycle_trades"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^root\\.activity\\.\\d+\\.event_count$",
+      "layers": [
+        {
+          "index": 29,
+          "layer_id": "raw_source_identity_provenance_clocks_integrity"
+        },
+        {
+          "index": 48,
+          "layer_id": "aggressor_and_native_signed_flow"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^root\\.activity\\.\\d+\\.top_level_cancel_qty_derived$",
+      "layers": [
+        {
+          "index": 31,
+          "layer_id": "order_lifecycle_cancels"
+        },
+        {
+          "index": 49,
+          "layer_id": "depletion_and_replenishment"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^root\\.(bid_depth_full|ask_depth_full|depth_imbalance_full|depth_imbalance_n)$",
+      "layers": [
+        {
+          "index": 39,
+          "layer_id": "full_bid_ask_depth"
+        },
+        {
+          "index": 45,
+          "layer_id": "spread_and_depth_imbalance"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^root\\.(best_bid|best_ask|mid|spread)$",
+      "layers": [
+        {
+          "index": 40,
+          "layer_id": "price_level_and_order_counts"
+        },
+        {
+          "index": 45,
+          "layer_id": "spread_and_depth_imbalance"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^(start_event_ns|window_start_ns|input_cursor|source_ordinal|cursor_cap|first_cursor|pre_source_ordinal|known_by_ns|pre_input_cursor|pre_book_age_s)$",
+      "layers": [
+        {
+          "index": 74,
+          "layer_id": "clock_event_known_by"
+        },
+        {
+          "index": 73,
+          "layer_id": "clock_receive_time"
+        },
+        {
+          "index": 29,
+          "layer_id": "raw_source_identity_provenance_clocks_integrity"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^(price|price_age_s|pre120_change|pre_direction)$",
+      "layers": [
+        {
+          "index": 54,
+          "layer_id": "legacy_price"
+        },
+        {
+          "index": 52,
+          "layer_id": "price_and_book_path"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^(ref_group|ref_recv_ns)$",
+      "layers": [
+        {
+          "index": 74,
+          "layer_id": "clock_event_known_by"
+        },
+        {
+          "index": 73,
+          "layer_id": "clock_receive_time"
+        }
+      ],
+      "clock_rule": "ref_recv_ns"
+    },
+    {
+      "pattern": "^(ref_mid|ref_spread|ref_bid_sz|ref_ask_sz|ref_bid_n|ref_ask_n|touch_imb|touch_n_imb|spread_ticks)$",
+      "layers": [
+        {
+          "index": 40,
+          "layer_id": "price_level_and_order_counts"
+        },
+        {
+          "index": 45,
+          "layer_id": "spread_and_depth_imbalance"
+        }
+      ],
+      "clock_rule": "ref_recv_ns"
+    },
+    {
+      "pattern": "^(chg|tk|grp)_(\\d+)s$",
+      "layers": [
+        {
+          "index": 52,
+          "layer_id": "price_and_book_path"
+        },
+        {
+          "index": 79,
+          "layer_id": "later_outcome_reveal"
+        }
+      ],
+      "clock_rule": "outcome_from_start_h"
+    },
+    {
+      "pattern": "^(prior_tk|quote_changes|groups)_\\d+s$",
+      "layers": [
+        {
+          "index": 52,
+          "layer_id": "price_and_book_path"
+        },
+        {
+          "index": 40,
+          "layer_id": "price_level_and_order_counts"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^ob_trade_(sell|buy)agg_\\d+s$",
+      "layers": [
+        {
+          "index": 34,
+          "layer_id": "order_lifecycle_trades"
+        },
+        {
+          "index": 48,
+          "layer_id": "aggressor_and_native_signed_flow"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^ob_fill_[ab]_\\d+s$",
+      "layers": [
+        {
+          "index": 35,
+          "layer_id": "order_lifecycle_fills"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^ob_rm_fill_[ab]_\\d+s$",
+      "layers": [
+        {
+          "index": 35,
+          "layer_id": "order_lifecycle_fills"
+        },
+        {
+          "index": 31,
+          "layer_id": "order_lifecycle_cancels"
+        },
+        {
+          "index": 37,
+          "layer_id": "order_identity_transitions"
+        },
+        {
+          "index": 49,
+          "layer_id": "depletion_and_replenishment"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^ob_rm_cx_(touch|near)_[ab]_\\d+s$",
+      "layers": [
+        {
+          "index": 31,
+          "layer_id": "order_lifecycle_cancels"
+        },
+        {
+          "index": 49,
+          "layer_id": "depletion_and_replenishment"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^ob_(n_)?add_(touch|near)_[ab]_\\d+s$",
+      "layers": [
+        {
+          "index": 30,
+          "layer_id": "order_lifecycle_adds"
+        },
+        {
+          "index": 50,
+          "layer_id": "resilience_and_recovery"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^ob_mod_touch_[ab]_\\d+s$",
+      "layers": [
+        {
+          "index": 32,
+          "layer_id": "order_lifecycle_modifies"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^ob_net_(bid|ask)_\\d+s$",
+      "layers": [
+        {
+          "index": 30,
+          "layer_id": "order_lifecycle_adds"
+        },
+        {
+          "index": 31,
+          "layer_id": "order_lifecycle_cancels"
+        },
+        {
+          "index": 50,
+          "layer_id": "resilience_and_recovery"
+        },
+        {
+          "index": 49,
+          "layer_id": "depletion_and_replenishment"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^(f60|f5|f1|pattern)$",
+      "layers": [
+        {
+          "index": 48,
+          "layer_id": "aggressor_and_native_signed_flow"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^(dsg|dsg_n)$",
+      "layers": [
+        {
+          "index": 39,
+          "layer_id": "full_bid_ask_depth"
+        },
+        {
+          "index": 45,
+          "layer_id": "spread_and_depth_imbalance"
+        }
+      ],
+      "clock_rule": "cutoff_ns"
+    },
+    {
+      "pattern": "^(occurrence_count|start_basis|instrument_id|sample_id|start_utc|recorded_forecast_rows|forecast_disposition|continuous_book_replay|snapshot_member|reset_member|bad_receive_clock_member|in_member|utc_hour|settle_tag|chg_ticks)$",
+      "layers": null,
+      "clock_rule": null
+    }
+  ],
+  "clock_kinds_added": [
+    "known_by_receive_ns (reference group at the cutoff)",
+    "outcome_window_start_plus_<h>s"
+  ],
+  "sessions": {
+    "oct02": {
+      "rows": 795,
+      "pins": 135945,
+      "fields_without_layer": [],
+      "pins_by_layer": {
+        "14 learned_d_structures_and_families": 2385,
+        "29 raw_source_identity_provenance_clocks_integrity": 10335,
+        "30 order_lifecycle_adds": 25440,
+        "31 order_lifecycle_cancels": 29415,
+        "32 order_lifecycle_modifies": 6360,
+        "34 order_lifecycle_trades": 18285,
+        "35 order_lifecycle_fills": 12720,
+        "37 order_identity_transitions": 6360,
+        "39 full_bid_ask_depth": 4770,
+        "40 price_level_and_order_counts": 17490,
+        "45 spread_and_depth_imbalance": 15105,
+        "48 aggressor_and_native_signed_flow": 25440,
+        "49 depletion_and_replenishment": 29415,
+        "50 resilience_and_recovery": 25440,
+        "52 price_and_book_path": 23850,
+        "58 legacy_structure_observables": 2385,
+        "73 clock_receive_time": 7950,
+        "74 clock_event_known_by": 7950,
+        "79 later_outcome_reveal": 16695
+      },
+      "output": "ninety-nine-pins-tier1-oct02.jsonl.gz",
+      "bytes": 3552869,
+      "sha256": "e08ddb84fdcca441fe6c00d100c2a7a5d7bc7030632d872c62458b728817459c"
+    },
+    "oct03": {
+      "rows": 848,
+      "pins": 145008,
+      "fields_without_layer": [],
+      "pins_by_layer": {
+        "14 learned_d_structures_and_families": 2544,
+        "29 raw_source_identity_provenance_clocks_integrity": 11024,
+        "30 order_lifecycle_adds": 27136,
+        "31 order_lifecycle_cancels": 31376,
+        "32 order_lifecycle_modifies": 6784,
+        "34 order_lifecycle_trades": 19504,
+        "35 order_lifecycle_fills": 13568,
+        "37 order_identity_transitions": 6784,
+        "39 full_bid_ask_depth": 5088,
+        "40 price_level_and_order_counts": 18656,
+        "45 spread_and_depth_imbalance": 16112,
+        "48 aggressor_and_native_signed_flow": 27136,
+        "49 depletion_and_replenishment": 31376,
+        "50 resilience_and_recovery": 27136,
+        "52 price_and_book_path": 25440,
+        "58 legacy_structure_observables": 2544,
+        "73 clock_receive_time": 8480,
+        "74 clock_event_known_by": 8480,
+        "79 later_outcome_reveal": 17808
+      },
+      "output": "ninety-nine-pins-tier1-oct03.jsonl.gz",
+      "bytes": 3736544,
+      "sha256": "e1ae859dda18993ffccf3ac5e562574e085e1665f44ea73e00c19e2ae3d1b53d"
+    },
+    "oct17": {
+      "rows": 823,
+      "pins": 140733,
+      "fields_without_layer": [],
+      "pins_by_layer": {
+        "14 learned_d_structures_and_families": 2469,
+        "29 raw_source_identity_provenance_clocks_integrity": 10699,
+        "30 order_lifecycle_adds": 26336,
+        "31 order_lifecycle_cancels": 30451,
+        "32 order_lifecycle_modifies": 6584,
+        "34 order_lifecycle_trades": 18929,
+        "35 order_lifecycle_fills": 13168,
+        "37 order_identity_transitions": 6584,
+        "39 full_bid_ask_depth": 4938,
+        "40 price_level_and_order_counts": 18106,
+        "45 spread_and_depth_imbalance": 15637,
+        "48 aggressor_and_native_signed_flow": 26336,
+        "49 depletion_and_replenishment": 30451,
+        "50 resilience_and_recovery": 26336,
+        "52 price_and_book_path": 24690,
+        "58 legacy_structure_observables": 2469,
+        "73 clock_receive_time": 8230,
+        "74 clock_event_known_by": 8230,
+        "79 later_outcome_reveal": 17283
+      },
+      "output": "ninety-nine-pins-tier1-oct17.jsonl.gz",
+      "bytes": 3674276,
+      "sha256": "f0a58dd4e08c17046c9f35a5f9432b4e334390f47404b4ab6bf2a3e9f765e63f"
+    },
+    "oct18": {
+      "rows": 749,
+      "pins": 133322,
+      "fields_without_layer": [],
+      "pins_by_layer": {
+        "14 learned_d_structures_and_families": 2247,
+        "29 raw_source_identity_provenance_clocks_integrity": 11984,
+        "30 order_lifecycle_adds": 23968,
+        "31 order_lifecycle_cancels": 27713,
+        "32 order_lifecycle_modifies": 5992,
+        "34 order_lifecycle_trades": 17227,
+        "35 order_lifecycle_fills": 11984,
+        "37 order_identity_transitions": 5992,
+        "39 full_bid_ask_depth": 4494,
+        "40 price_level_and_order_counts": 16478,
+        "45 spread_and_depth_imbalance": 14231,
+        "48 aggressor_and_native_signed_flow": 23968,
+        "49 depletion_and_replenishment": 27713,
+        "50 resilience_and_recovery": 23968,
+        "52 price_and_book_path": 25466,
+        "54 legacy_price": 2996,
+        "58 legacy_structure_observables": 2247,
+        "73 clock_receive_time": 9737,
+        "74 clock_event_known_by": 9737,
+        "79 later_outcome_reveal": 15729
+      },
+      "output": "ninety-nine-pins-tier1-oct18.jsonl.gz",
+      "bytes": 3468543,
+      "sha256": "5ad103811fe7b68d71da01ef302e3faeb22fcef2c4b9a3d4b8e8baadfb3e017f"
+    }
+  }
+}
