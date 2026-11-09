@@ -1,0 +1,42 @@
+{
+ "days": [
+  {
+   "day": "20231002",
+   "trades": 37670,
+   "joined": 37666,
+   "not_yet_emitted": 4
+  },
+  {
+   "day": "20231003",
+   "trades": 41410,
+   "joined": 41410,
+   "not_yet_emitted": 0
+  },
+  {
+   "day": "20231017",
+   "trades": 33451,
+   "joined": 33451,
+   "not_yet_emitted": 0
+  },
+  {
+   "day": "20231018",
+   "trades": 30739,
+   "joined": 30739,
+   "not_yet_emitted": 0
+  }
+ ],
+ "trade_rows": 143270,
+ "mbo": {
+  "opening_warmup": 1650054,
+  "archived_session": 3301671
+ },
+ "checks": [
+  "Every saved trade retained exactly once in source order",
+  "Every joined flow emission is known by its trade receive clock",
+  "All tied source records retain their original emission clock",
+  "Original flow payloads retain their original section and emission provenance",
+  "All A/C/M/R/T/F/N messages reconcile exactly, separately for session and warmup",
+  "Session trade-action counts match all four trade populations"
+ ],
+ "complete_all_layers": false
+}

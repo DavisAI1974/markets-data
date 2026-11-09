@@ -1,0 +1,300 @@
+{
+  "complete_all_layers": false,
+  "locked": false,
+  "source_policy": "Git only. User declined AWS access; reconnection is not requested or required for continued Git work.",
+  "historical_note": "AWS authentication wording in earlier checkpoint documents and workbook records describes an earlier attempted lookup. This status supersedes it.",
+  "missing_second_set": {
+    "days": [
+      "20231002",
+      "20231003",
+      "20231017"
+    ],
+    "layers": [
+      {
+        "number": 113,
+        "layer_id": "extension_count_log"
+      },
+      {
+        "number": 114,
+        "layer_id": "far_absorption_share_1024"
+      },
+      {
+        "number": 115,
+        "layer_id": "far_absorption_share_64"
+      },
+      {
+        "number": 116,
+        "layer_id": "far_front_age_log"
+      },
+      {
+        "number": 117,
+        "layer_id": "far_identity_survival_1024"
+      },
+      {
+        "number": 118,
+        "layer_id": "far_identity_survival_64"
+      },
+      {
+        "number": 119,
+        "layer_id": "far_priority_loss_rate_1024"
+      },
+      {
+        "number": 120,
+        "layer_id": "far_priority_loss_rate_64"
+      },
+      {
+        "number": 121,
+        "layer_id": "far_queue_age_p90_log"
+      },
+      {
+        "number": 122,
+        "layer_id": "far_replenish_log1p_1024"
+      },
+      {
+        "number": 123,
+        "layer_id": "far_replenish_log1p_64"
+      },
+      {
+        "number": 124,
+        "layer_id": "far_size_hhi"
+      },
+      {
+        "number": 125,
+        "layer_id": "far_size_retention_1024"
+      },
+      {
+        "number": 126,
+        "layer_id": "far_size_retention_64"
+      },
+      {
+        "number": 127,
+        "layer_id": "pullback_ticks_last_log"
+      },
+      {
+        "number": 128,
+        "layer_id": "pullback_ticks_prev_log"
+      },
+      {
+        "number": 129,
+        "layer_id": "step_duration_groups_log"
+      },
+      {
+        "number": 130,
+        "layer_id": "step_ratio_log"
+      },
+      {
+        "number": 131,
+        "layer_id": "unresolved_age_groups_log"
+      }
+    ],
+    "october18": "Original values and original missing/invalid states recovered."
+  },
+  "incomplete_derived_bindings": [
+    {
+      "number": 58,
+      "layer_id": "legacy_structure_observables"
+    },
+    {
+      "number": 59,
+      "layer_id": "derived_roll20_and_dipole_state"
+    },
+    {
+      "number": 60,
+      "layer_id": "derived_d_family_geometry"
+    },
+    {
+      "number": 61,
+      "layer_id": "derived_open_world_predecessor_state"
+    },
+    {
+      "number": 62,
+      "layer_id": "derived_ancestry_gaps"
+    },
+    {
+      "number": 63,
+      "layer_id": "derived_unresolved_age_chain_trajectory"
+    },
+    {
+      "number": 64,
+      "layer_id": "derived_price_flow_book_paths"
+    },
+    {
+      "number": 65,
+      "layer_id": "derived_v4_mechanics_fifo_features"
+    },
+    {
+      "number": 66,
+      "layer_id": "derived_feature_availability_timestamps"
+    },
+    {
+      "number": 67,
+      "layer_id": "prebirth_predecessor_at_risk_state"
+    },
+    {
+      "number": 68,
+      "layer_id": "prebirth_unresolved_chain_extension_state"
+    },
+    {
+      "number": 69,
+      "layer_id": "prebirth_ancestry_successor_opportunity"
+    },
+    {
+      "number": 70,
+      "layer_id": "prebirth_stopped_chain_false_context_controls"
+    },
+    {
+      "number": 71,
+      "layer_id": "prebirth_negative_opportunity_cases"
+    }
+  ],
+  "partial_or_unverified_bindings": [
+    {
+      "number": 24,
+      "layer_id": "canonical_sep_nov_2021_dbn_mbo_objects"
+    },
+    {
+      "number": 25,
+      "layer_id": "october_first_source_window"
+    },
+    {
+      "number": 26,
+      "layer_id": "canonical_predecessor_bootstrap_objects"
+    },
+    {
+      "number": 38,
+      "layer_id": "contract_session_roll_state"
+    },
+    {
+      "number": 42,
+      "layer_id": "queue_age_and_survival"
+    },
+    {
+      "number": 47,
+      "layer_id": "mechanics_actions_by_side_and_level"
+    },
+    {
+      "number": 48,
+      "layer_id": "aggressor_and_native_signed_flow"
+    },
+    {
+      "number": 49,
+      "layer_id": "depletion_and_replenishment"
+    },
+    {
+      "number": 50,
+      "layer_id": "resilience_and_recovery"
+    },
+    {
+      "number": 51,
+      "layer_id": "churn_and_queue_turnover"
+    },
+    {
+      "number": 52,
+      "layer_id": "price_and_book_path"
+    },
+    {
+      "number": 53,
+      "layer_id": "missingness_and_integrity_flags"
+    },
+    {
+      "number": 76,
+      "layer_id": "clock_prospective_discovery_confirmation"
+    }
+  ],
+  "binding_caveat": "These named layers are not proven complete. Recovered raw MBO, book, activity and Native sections already contain supporting data; an incomplete binding is not proof that the source data is absent. Layer 24 is historical 2021 scope.",
+  "evaluation_target_layers_not_fully_connected": [
+    {
+      "number": 77,
+      "layer_id": "clock_model_evaluation"
+    },
+    {
+      "number": 78,
+      "layer_id": "clock_lock_time"
+    },
+    {
+      "number": 79,
+      "layer_id": "later_outcome_reveal"
+    },
+    {
+      "number": 80,
+      "layer_id": "target_ground_truth_onset_time"
+    },
+    {
+      "number": 83,
+      "layer_id": "step1_existing_october_seconds"
+    },
+    {
+      "number": 84,
+      "layer_id": "step1_populations"
+    },
+    {
+      "number": 85,
+      "layer_id": "step1_crosswalks"
+    },
+    {
+      "number": 86,
+      "layer_id": "step1_target_membership_receipts"
+    },
+    {
+      "number": 87,
+      "layer_id": "step1_labels_and_classifications"
+    },
+    {
+      "number": 88,
+      "layer_id": "step1_result_prefixes"
+    },
+    {
+      "number": 89,
+      "layer_id": "step1_reconciliation_outputs"
+    }
+  ],
+  "runtime_outputs_not_proven_produced": [
+    {
+      "number": 90,
+      "layer_id": "output_state_and_state_delta_movie"
+    },
+    {
+      "number": 91,
+      "layer_id": "output_frankie_reasoning_movie"
+    },
+    {
+      "number": 92,
+      "layer_id": "output_probability_movie"
+    },
+    {
+      "number": 93,
+      "layer_id": "output_candidate_discoveries"
+    },
+    {
+      "number": 94,
+      "layer_id": "output_first_locks_and_no_locks"
+    },
+    {
+      "number": 95,
+      "layer_id": "output_negative_sparse_inconclusive_ledger"
+    },
+    {
+      "number": 96,
+      "layer_id": "output_knowledge_retrieval_receipts"
+    },
+    {
+      "number": 97,
+      "layer_id": "output_provider_invocation_response_receipts"
+    },
+    {
+      "number": 98,
+      "layer_id": "output_answer_wall_access_receipts"
+    },
+    {
+      "number": 99,
+      "layer_id": "output_source_state_manifest_code_model_run_hashes"
+    }
+  ],
+  "external_verification_gaps": "Some historical publication clocks, first vintages, percentile constituents and full futures-curve definitions remain unverified despite restored numeric observations.",
+  "other_limits": [
+    "October 18 flow uses a retained projection; full-stream completeness is not established.",
+    "October 2 and 17 recovery preserves the original partial-day scope.",
+    "Four October 2 flow inputs are correctly NOT_YET_EMITTED; no future values were substituted."
+  ],
+  "workbook_scope": "131 labeled layer columns, 13 explicit trade examples, full payloads for those examples, source pins and coverage summaries. Complete recovered trade inputs are separate pinned Git files; this workbook is not every trade copied into Excel."
+}

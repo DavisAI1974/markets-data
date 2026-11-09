@@ -70,6 +70,10 @@ for source,row in zip(mbo,tables['MBO layer data'][1:]):
     assert row[0]==source['day']
     ident=row[1].split('Full examples and immutable source: ')[1].split('\n')[0]
     assert json.loads(payloads[ident])==source
+external=json.loads((ROOT/'filled-review/EXTERNAL_VALUES.json').read_text())
+for source,cell in zip(external,tables['Recovered external'][1][1:]):
+    ident=cell.split('Full values and source clocks: ')[1]
+    assert json.loads(payloads[ident])==source
 receipt=dict(workbook_sha256=hashlib.sha256(book.read_bytes()).hexdigest(),bytes=book.stat().st_size,
              sheets=len(tables),layer_columns=len(labels),trade_examples=len(sources),
              payloads=len(payloads),payload_chunks=sum(map(len,chunks.values())),

@@ -68,6 +68,7 @@ for point in external['points']:
     external_values.append(dict(point_id=point['id'],status=point['status'],original_available_reconstruction=point['available_reconstruction'],latest_retained_examples=examples,
         example_rule='Latest declared availability before archived halt, separately per original table; held clocks and vintages remain held. These examples do not replace the 146800-row pinned dataset.'))
 dump('filled-review/EXTERNAL_VALUES.json',external_values)
+for point in external_values:dump(f'filled-review/external-point-{point["point_id"]:02d}.json',point)
 for sample in samples:
     if sample['day']!='20231002':continue
     for point in external['points']:

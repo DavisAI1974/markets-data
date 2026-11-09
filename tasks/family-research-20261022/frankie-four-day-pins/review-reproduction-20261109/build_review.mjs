@@ -180,10 +180,12 @@ for(const entry of brainManifest.entries){
 table('Brain contents',['Document','Original role and scope','Full text payload ID','Bytes','SHA-256','Original source'],brainRows,[74,80,22,14,72,120],{rowHeight:58,freezeColumns:1});
 sheets['Brain contents'].getRange(`D2:D${brainRows.length+1}`).setNumberFormat('#,##0');
 
-const externalPayloadIds=externalValues.map(r=>payload(JSON.stringify(r),'restored external value JSON'));
+const externalPayloadIds=[];
+for(const r of externalValues)externalPayloadIds.push(payload(await fs.readFile(path.join(root,`filled-review/external-point-${String(r.point_id).padStart(2,'0')}.json`),'utf8'),'restored external value JSON'));
 const forecastPayloadIds=forecastRecovery.forecast_rows.map(r=>payload(JSON.stringify(r),'restored forecast JSON'));
 const disagreementPayloadIds=forecastRecovery.disagreement_cycles.map(r=>payload(JSON.stringify(r),'restored model disagreement JSON'));
-const mboPayloadIds=mboDays.map(r=>payload(JSON.stringify(r),'complete MBO inventory and exact original message examples'));
+const mboPayloadIds=[];
+for(const r of mboDays)mboPayloadIds.push(payload(await fs.readFile(path.join(root,`mbo-layer-data/${r.day}.json`),'utf8'),'complete MBO inventory and exact original message examples'));
 const payloadRows=[];
 for(const p of payloadByHash.values())p.chunks.forEach((chunk,i)=>payloadRows.push([p.id,i+1,p.chunks.length,JSON.stringify(chunk)]));
 table('Payload text',['Payload ID','Chunk','Total chunks','JSON text chunk (decode, then concatenate in numeric order)'],payloadRows,[15,10,14,180],{rowHeight:42,headerHeight:34,freezeColumns:1});
