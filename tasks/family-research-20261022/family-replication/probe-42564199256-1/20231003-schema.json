@@ -1,0 +1,474 @@
+{
+  "day": "20231003",
+  "source_revision": "0408df44c4f106f7fda4ac4b92ae622d7d34cd7b",
+  "source_path": "tasks/family-research-20261022/replay-artifacts/20231003/root-frames",
+  "part_count": 236,
+  "first_part_sha256": "5262f6358caad57312f145f085b9e917b4d827cf9129f7c640a95bb69591cf49",
+  "first_part_bytes": 67108864,
+  "first_row_bytes": 786356,
+  "first_row_sha256": "65c29e674a40382d87c977e75cf4277cf615666f344cc54fcb3237e5e5f6f518",
+  "shape": {
+    "ts_recv_ns": 1696280400188871625,
+    "ts_event_ns": 1696280400078072199,
+    "best_bid": {
+      "list_length": 2,
+      "first": "float64"
+    },
+    "best_ask": {
+      "list_length": 2,
+      "first": "float64"
+    },
+    "mid": {
+      "list_length": 2,
+      "first": "float64"
+    },
+    "depth_imbalance_n": {
+      "list_length": 2,
+      "first": "float64"
+    },
+    "spread": {
+      "list_length": 2,
+      "first": "float64"
+    },
+    "depth_imbalance_full": {
+      "list_length": 2,
+      "first": "float64"
+    },
+    "bid_depth_full": 724,
+    "ask_depth_full": 448,
+    "bid_order_count_full": 190,
+    "ask_order_count_full": 177,
+    "bid_price_level_count_full": 110,
+    "ask_price_level_count_full": 118,
+    "transition": "spread:NA|depth_imbalance_full:NA|bid_depth_full:NA|ask_depth_full:NA|bid_order_count_full:NA|ask_order_count_full:NA|bid_price_level_count_full:NA|ask_price_level_count_full:NA",
+    "book": {
+      "best_bid": {
+        "list_length": 2,
+        "first": "float64"
+      },
+      "best_ask": {
+        "list_length": 2,
+        "first": "float64"
+      },
+      "spread": {
+        "list_length": 2,
+        "first": "float64"
+      },
+      "mid": {
+        "list_length": 2,
+        "first": "float64"
+      },
+      "top_n": 10,
+      "bid_levels": {
+        "list_length": 10,
+        "first": [
+          "side",
+          "price",
+          "price_raw",
+          "size",
+          "order_count",
+          "front_order_size",
+          "front_order_age_s",
+          "queue_age_median_s",
+          "queue_age_p90_s",
+          "largest_order_share"
+        ]
+      },
+      "ask_levels": {
+        "list_length": 10,
+        "first": [
+          "side",
+          "price",
+          "price_raw",
+          "size",
+          "order_count",
+          "front_order_size",
+          "front_order_age_s",
+          "queue_age_median_s",
+          "queue_age_p90_s",
+          "largest_order_share"
+        ]
+      },
+      "bid_depth_n": 35,
+      "ask_depth_n": 35,
+      "depth_imbalance_n": {
+        "list_length": 2,
+        "first": "float64"
+      },
+      "bid_depth_full": 724,
+      "ask_depth_full": 448,
+      "depth_imbalance_full": {
+        "list_length": 2,
+        "first": "float64"
+      },
+      "bid_price_level_count_full": 110,
+      "ask_price_level_count_full": 118,
+      "bid_order_count_full": 190,
+      "ask_order_count_full": 177,
+      "bid_levels_full": {
+        "list_length": 110,
+        "first": [
+          "side",
+          "price",
+          "price_raw",
+          "size",
+          "order_count",
+          "front_order_size",
+          "front_order_age_s",
+          "queue_age_median_s",
+          "queue_age_p90_s",
+          "largest_order_share",
+          "fifo_queue"
+        ]
+      },
+      "ask_levels_full": {
+        "list_length": 118,
+        "first": [
+          "side",
+          "price",
+          "price_raw",
+          "size",
+          "order_count",
+          "front_order_size",
+          "front_order_age_s",
+          "queue_age_median_s",
+          "queue_age_p90_s",
+          "largest_order_share",
+          "fifo_queue"
+        ]
+      }
+    },
+    "activity": {
+      "1": {
+        "event_count": 425,
+        "action_count": [
+          "C",
+          "A",
+          "N",
+          "M"
+        ],
+        "action_qty": [
+          "C",
+          "A",
+          "N",
+          "M"
+        ],
+        "action_side_qty": [
+          "C_B",
+          "C_A",
+          "A_A",
+          "N_N",
+          "M_B"
+        ],
+        "trade_buy_aggressor_qty": 0,
+        "trade_sell_aggressor_qty": 0,
+        "trade_aggressor_imbalance": null,
+        "add_cancel_churn": {
+          "list_length": 2,
+          "first": "float64"
+        },
+        "top_level_add_qty_derived": 0,
+        "top_level_cancel_qty_derived": 7,
+        "priority_lost_modify_count": 1,
+        "missing_reference_count": 0
+      },
+      "5": {
+        "event_count": 522,
+        "action_count": [
+          "C",
+          "A",
+          "N",
+          "T",
+          "F",
+          "M"
+        ],
+        "action_qty": [
+          "C",
+          "A",
+          "N",
+          "T",
+          "F",
+          "M"
+        ],
+        "action_side_qty": [
+          "C_B",
+          "C_A",
+          "A_B",
+          "A_A",
+          "N_N",
+          "T_B",
+          "F_A",
+          "M_B",
+          "M_A"
+        ],
+        "trade_buy_aggressor_qty": 1,
+        "trade_sell_aggressor_qty": 0,
+        "trade_aggressor_imbalance": {
+          "list_length": 2,
+          "first": "float64"
+        },
+        "add_cancel_churn": {
+          "list_length": 2,
+          "first": "float64"
+        },
+        "top_level_add_qty_derived": 13,
+        "top_level_cancel_qty_derived": 12,
+        "priority_lost_modify_count": 10,
+        "missing_reference_count": 0
+      },
+      "20": {
+        "event_count": 715,
+        "action_count": [
+          "C",
+          "A",
+          "N",
+          "T",
+          "F",
+          "M"
+        ],
+        "action_qty": [
+          "C",
+          "A",
+          "N",
+          "T",
+          "F",
+          "M"
+        ],
+        "action_side_qty": [
+          "C_B",
+          "C_A",
+          "A_B",
+          "A_A",
+          "N_N",
+          "T_B",
+          "F_A",
+          "M_B",
+          "M_A",
+          "T_N",
+          "F_N"
+        ],
+        "trade_buy_aggressor_qty": 9,
+        "trade_sell_aggressor_qty": 0,
+        "trade_aggressor_imbalance": {
+          "list_length": 2,
+          "first": "float64"
+        },
+        "add_cancel_churn": {
+          "list_length": 2,
+          "first": "float64"
+        },
+        "top_level_add_qty_derived": 76,
+        "top_level_cancel_qty_derived": 39,
+        "priority_lost_modify_count": 17,
+        "missing_reference_count": 0
+      },
+      "60": {
+        "event_count": 1202,
+        "action_count": [
+          "C",
+          "A",
+          "N",
+          "T",
+          "F",
+          "M"
+        ],
+        "action_qty": [
+          "C",
+          "A",
+          "N",
+          "T",
+          "F",
+          "M"
+        ],
+        "action_side_qty": [
+          "C_B",
+          "C_A",
+          "A_B",
+          "A_A",
+          "N_N",
+          "T_B",
+          "F_A",
+          "T_A",
+          "F_B",
+          "M_B",
+          "M_A",
+          "T_N",
+          "F_N"
+        ],
+        "trade_buy_aggressor_qty": 14,
+        "trade_sell_aggressor_qty": 13,
+        "trade_aggressor_imbalance": {
+          "list_length": 2,
+          "first": "float64"
+        },
+        "add_cancel_churn": {
+          "list_length": 2,
+          "first": "float64"
+        },
+        "top_level_add_qty_derived": 212,
+        "top_level_cancel_qty_derived": 112,
+        "priority_lost_modify_count": 34,
+        "missing_reference_count": 0
+      },
+      "300": {
+        "event_count": 2627,
+        "action_count": [
+          "C",
+          "A",
+          "N",
+          "T",
+          "F",
+          "M"
+        ],
+        "action_qty": [
+          "C",
+          "A",
+          "N",
+          "T",
+          "F",
+          "M"
+        ],
+        "action_side_qty": [
+          "C_B",
+          "C_A",
+          "A_B",
+          "A_A",
+          "N_N",
+          "T_B",
+          "F_A",
+          "T_A",
+          "F_B",
+          "M_B",
+          "M_A",
+          "T_N",
+          "F_N"
+        ],
+        "trade_buy_aggressor_qty": 46,
+        "trade_sell_aggressor_qty": 63,
+        "trade_aggressor_imbalance": {
+          "list_length": 2,
+          "first": "float64"
+        },
+        "add_cancel_churn": {
+          "list_length": 2,
+          "first": "float64"
+        },
+        "top_level_add_qty_derived": 421,
+        "top_level_cancel_qty_derived": 327,
+        "priority_lost_modify_count": 130,
+        "missing_reference_count": 0
+      }
+    },
+    "integrity": {},
+    "native_frame": {
+      "schema": "NG_MBO_V4_NATIVE_EVENT_FRAME_V1",
+      "adapter_revision": "NG_EXHAUSTION_MBO_V4_STATE_ADAPTER_V2_20260823",
+      "census_view": "V4_NATIVE_FULL",
+      "instrument_id": 150611,
+      "raw_symbol": null,
+      "publisher_id": 1,
+      "channel_id": 31,
+      "sequence": 10516412,
+      "ts_event_ns": 1696280400078072199,
+      "ts_recv_ns": 1696280400188871625,
+      "ts_in_delta_ns": 19057,
+      "causal_availability_clock": "ts_recv_ns",
+      "event_group_complete_f_last": true,
+      "snapshot_bootstrap_only": false,
+      "raw_actions": {
+        "list_length": 359,
+        "first": [
+          "instrument_id",
+          "publisher_id",
+          "channel_id",
+          "order_id",
+          "action",
+          "side",
+          "price_raw",
+          "size",
+          "flags",
+          "sequence",
+          "ts_event_ns",
+          "ts_recv_ns",
+          "ts_in_delta_ns",
+          "raw_symbol",
+          "source_dbn_object",
+          "source_dbn_sha256",
+          "price",
+          "is_snapshot",
+          "is_last"
+        ]
+      },
+      "native_priority_id_exposed": false,
+      "fifo_priority_reconstructed": true
+    },
+    "observation": {
+      "instrument_id": 150611,
+      "orders": {
+        "list_length": 367,
+        "first": [
+          "instrument_id",
+          "order_id",
+          "side",
+          "price_raw",
+          "size",
+          "priority_recv_ns",
+          "last_update_recv_ns",
+          "priority_sequence"
+        ]
+      },
+      "levels": {
+        "B": {
+          "list_length": 110,
+          "first": [
+            "price_raw",
+            "order_ids"
+          ]
+        },
+        "A": {
+          "list_length": 118,
+          "first": [
+            "price_raw",
+            "order_ids"
+          ]
+        }
+      },
+      "integrity": {},
+      "last_sequence": 10516412,
+      "last_recv_ns": 1696280400188871625,
+      "last_event_ns": 1696280400078072199,
+      "priority_time_semantics": "adapter-observed; consult action history for origin"
+    },
+    "input_records": {
+      "list_length": 359,
+      "first": {
+        "ts_event": 1696280400078072199,
+        "ts_recv": 1696280400188237569,
+        "rtype": 160,
+        "publisher_id": 1,
+        "instrument_id": 150611,
+        "price": 1548000000,
+        "size": 2,
+        "channel_id": 31,
+        "order_id": 788649666522,
+        "flags": 0,
+        "ts_in_delta": 18127,
+        "sequence": 10516336,
+        "action": "C",
+        "side": "B",
+        "dbn_length": 14,
+        "ts_out": null,
+        "dbn_wire_bytes": {
+          "list_length": 2,
+          "first": "bytes"
+        },
+        "dbn_extraction_hash": "25ea8178c1d8a787dbde8022f52f35b00e94566d2f1dc63c56f457085697ddb7"
+      }
+    },
+    "input_record_indices": {
+      "list_length": 359,
+      "first": 0
+    },
+    "input_cursor": 358
+  }
+}
