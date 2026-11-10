@@ -1,0 +1,13 @@
+{
+  "review": "review_recovered_runtime.json",
+  "resolved": [
+    "RR1: required last_closed_second and future-close rejection",
+    "RR2: exactly three consecutive prior groups with ordered cursors",
+    "RR3: reviewed binding and source manifest pinned SHA256",
+    "RR4: empty endpoint returns None"
+  ],
+  "tests": "tests/test_recovered_runtime.py",
+  "reproduced_failures_before_fixes": true,
+  "source_semantics_changed": false,
+  "platform_engine_complete": false
+}

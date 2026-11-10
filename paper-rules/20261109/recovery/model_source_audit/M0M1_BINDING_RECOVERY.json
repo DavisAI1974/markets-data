@@ -1,0 +1,631 @@
+{
+  "schema": "M0M1-source-binding-recovery/v1",
+  "recovered_at_utc": "2026-11-10T01:15:49.307908+00:00",
+  "canonical_revision": "5332476ece1432586c09e06e6e2898227a4ba959",
+  "paper_included": true,
+  "models": {
+    "M0": {
+      "state": {
+        "features": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks",
+          "touch_imb",
+          "touch_count_imb",
+          "log_touch_lots",
+          "log_touch_orders",
+          "early_buy",
+          "early_sell",
+          "late_buy",
+          "late_sell",
+          "fresh_buy5",
+          "fresh_sell5"
+        ],
+        "missing_indicators": "append_in_feature_order",
+        "imputation": [
+          -0.01937007874015748,
+          0.9834645669291339,
+          1.4922834645669292,
+          -0.027744048788103857,
+          -0.02541484738579175,
+          2.4284032246106695,
+          2.1790584948876845,
+          2.9823622047244096,
+          3.0525984251968503,
+          2.973543307086614,
+          2.876220472440945,
+          1.350236220472441,
+          1.3716535433070867
+        ],
+        "center": [
+          -0.01937007874015748,
+          0.9834645669291339,
+          1.4922834645669292,
+          -0.027744048788103857,
+          -0.02541484738579175,
+          2.4284032246106695,
+          2.1790584948876845,
+          2.9823622047244096,
+          3.0525984251968503,
+          2.973543307086614,
+          2.876220472440945,
+          1.350236220472441,
+          1.3716535433070867,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.1460385367031316,
+          1.297044719602994,
+          0.5738558475968226,
+          0.4171891075729518,
+          0.37613872641664564,
+          0.6107821243854696,
+          0.4678499415843278,
+          8.8008770551391,
+          9.714770247654956,
+          9.977514525491417,
+          9.47637517738576,
+          5.2501679710012565,
+          6.156628815200469,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "coefficients": [
+          -0.0666607660438023,
+          -0.02497297379515986,
+          -0.0030243522032325147,
+          0.10326974660003875,
+          0.008304970406751358,
+          -0.07220402887851614,
+          0.041666785618808454,
+          0.01755626661260133,
+          -0.05562429755266413,
+          -0.026981906074225584,
+          0.07092986202856899,
+          0.06198340278588569,
+          -0.08548014734331323,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "intercept": -0.012755905511811024,
+        "ridge_penalty": 10
+      },
+      "ordered_feature_definition_ids": [
+        "source-M0M1-prior_ticks20",
+        "source-M0M1-range_ticks20",
+        "source-M0M1-spread_ticks",
+        "source-M0M1-touch_imb",
+        "source-M0M1-touch_count_imb",
+        "source-M0M1-log_touch_lots",
+        "source-M0M1-log_touch_orders",
+        "source-M0M1-early_buy",
+        "source-M0M1-early_sell",
+        "source-M0M1-late_buy",
+        "source-M0M1-late_sell",
+        "source-M0M1-fresh_buy5",
+        "source-M0M1-fresh_sell5"
+      ],
+      "state_source": {
+        "file": "canonical_TRADE_RULES.json",
+        "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+        "sha256": "5d0fca7165c555dd16c4063da85ac5b264b38b6900a1b5951f2e2007bcd8a6f9",
+        "lines": "/models/M0"
+      }
+    },
+    "M1": {
+      "state": {
+        "features": [
+          "prior_ticks20",
+          "range_ticks20",
+          "spread_ticks",
+          "touch_imb",
+          "touch_count_imb",
+          "log_touch_lots",
+          "log_touch_orders",
+          "early_buy",
+          "early_sell",
+          "late_buy",
+          "late_sell",
+          "fresh_buy5",
+          "fresh_sell5",
+          "ent_dipole",
+          "mi_flow",
+          "log_signed_C",
+          "imb_flow"
+        ],
+        "missing_indicators": "append_in_feature_order",
+        "imputation": [
+          -0.01937007874015748,
+          0.9834645669291339,
+          1.4922834645669292,
+          -0.027744048788103857,
+          -0.02541484738579175,
+          2.4284032246106695,
+          2.1790584948876845,
+          2.9823622047244096,
+          3.0525984251968503,
+          2.973543307086614,
+          2.876220472440945,
+          1.350236220472441,
+          1.3716535433070867,
+          0.027627412061105146,
+          0.0009471345181208283,
+          0.7112201586874665,
+          0.005596520111812595
+        ],
+        "center": [
+          -0.01937007874015748,
+          0.9834645669291339,
+          1.4922834645669292,
+          -0.027744048788103857,
+          -0.02541484738579175,
+          2.4284032246106695,
+          2.1790584948876845,
+          2.9823622047244096,
+          3.0525984251968503,
+          2.973543307086614,
+          2.876220472440945,
+          1.350236220472441,
+          1.3716535433070867,
+          0.02762741206110514,
+          0.0009471345181208284,
+          0.7112201586874667,
+          0.005596520111812592,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.42771653543307087,
+          0.42771653543307087,
+          0.42771653543307087,
+          0.42771653543307087
+        ],
+        "scale": [
+          1.1460385367031316,
+          1.297044719602994,
+          0.5738558475968226,
+          0.4171891075729518,
+          0.37613872641664564,
+          0.6107821243854696,
+          0.4678499415843278,
+          8.8008770551391,
+          9.714770247654956,
+          9.977514525491417,
+          9.47637517738576,
+          5.2501679710012565,
+          6.156628815200469,
+          0.4732860675718372,
+          0.1511136169357758,
+          8.385647536635679,
+          0.6838510392177829,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.4947475121212854,
+          0.4947475121212854,
+          0.4947475121212854,
+          0.4947475121212854
+        ],
+        "coefficients": [
+          -0.07737267292784455,
+          -0.02243019687297596,
+          -0.003970971768832014,
+          0.10275459943268074,
+          0.004912342327691896,
+          -0.07323934428796564,
+          0.042968628966717284,
+          0.020383536478161744,
+          -0.057532527338312524,
+          -0.03842910132540839,
+          0.08335819873410527,
+          0.059812631173164606,
+          -0.08354360873578234,
+          -0.049928568858592225,
+          0.019915863996376428,
+          0.10138211718681561,
+          0.014096594554707517,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0011746322107260253,
+          0.0011746322107259823,
+          0.001174632210713003,
+          0.0011746322107131677
+        ],
+        "intercept": -0.012755905511811024,
+        "ridge_penalty": 10
+      },
+      "ordered_feature_definition_ids": [
+        "source-M0M1-prior_ticks20",
+        "source-M0M1-range_ticks20",
+        "source-M0M1-spread_ticks",
+        "source-M0M1-touch_imb",
+        "source-M0M1-touch_count_imb",
+        "source-M0M1-log_touch_lots",
+        "source-M0M1-log_touch_orders",
+        "source-M0M1-early_buy",
+        "source-M0M1-early_sell",
+        "source-M0M1-late_buy",
+        "source-M0M1-late_sell",
+        "source-M0M1-fresh_buy5",
+        "source-M0M1-fresh_sell5",
+        "source-M0M1-ent_dipole",
+        "source-M0M1-mi_flow",
+        "source-M0M1-log_signed_C",
+        "source-M0M1-imb_flow"
+      ],
+      "state_source": {
+        "file": "canonical_TRADE_RULES.json",
+        "git_blob_sha": "e17c21d77f219de143d308031b3bda88bba2c55a",
+        "sha256": "5d0fca7165c555dd16c4063da85ac5b264b38b6900a1b5951f2e2007bcd8a6f9",
+        "lines": "/models/M1"
+      }
+    }
+  },
+  "features": [
+    {
+      "id": "source-M0M1-prior_ticks20",
+      "name": "prior_ticks20",
+      "definition": "(a[j,2]-a[k,2])/2e6",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-range_ticks20",
+      "name": "range_ticks20",
+      "definition": "(max(a[k:j+1,2])-min(a[k:j+1,2]))/2e6",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-spread_ticks",
+      "name": "spread_ticks",
+      "definition": "(a[j,4]-a[j,3])/1e6",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-touch_imb",
+      "name": "touch_imb",
+      "definition": "(bid_lots-ask_lots)/(bid_lots+ask_lots); NaN when denominator zero",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-touch_count_imb",
+      "name": "touch_count_imb",
+      "definition": "(bid_orders-ask_orders)/(bid_orders+ask_orders); NaN when denominator zero",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-log_touch_lots",
+      "name": "log_touch_lots",
+      "definition": "log1p(bid_lots+ask_lots)",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-log_touch_orders",
+      "name": "log_touch_orders",
+      "definition": "log1p(bid_orders+ask_orders)",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-early_buy",
+      "name": "early_buy",
+      "definition": "sum(buy[end-19:end-10]) inclusive10 whole-second bins",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-early_sell",
+      "name": "early_sell",
+      "definition": "sum(sell[end-19:end-10]) inclusive10 whole-second bins",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-late_buy",
+      "name": "late_buy",
+      "definition": "sum(buy[end-9:end]) inclusive10 whole-second bins",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-late_sell",
+      "name": "late_sell",
+      "definition": "sum(sell[end-9:end]) inclusive10 whole-second bins",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-fresh_buy5",
+      "name": "fresh_buy5",
+      "definition": "sum(buy[end-4:end]) inclusive5 whole-second bins",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-fresh_sell5",
+      "name": "fresh_sell5",
+      "definition": "sum(sell[end-4:end]) inclusive5 whole-second bins",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": null
+    },
+    {
+      "id": "source-M0M1-ent_dipole",
+      "name": "ent_dipole",
+      "definition": "(shannon(A)-shannon(S))/(shannon(A)+shannon(S)+1e-9)",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": {
+        "file": "info_dipole_pinned.py",
+        "git_blob_sha": "c04751cbe5f92952e33328f6c04fcae6392e05e5",
+        "sha256": "0fb1f3d868973fcf0ee25be30d7ffe1f7b388a9235a19d893f8495012c0df23b",
+        "lines": "58-114"
+      }
+    },
+    {
+      "id": "source-M0M1-mi_flow",
+      "name": "mi_flow",
+      "definition": "sgn*(mutual_info(A[10:],S[10:])-mutual_info(A[:10],S[:10]))",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": {
+        "file": "info_dipole_pinned.py",
+        "git_blob_sha": "c04751cbe5f92952e33328f6c04fcae6392e05e5",
+        "sha256": "0fb1f3d868973fcf0ee25be30d7ffe1f7b388a9235a19d893f8495012c0df23b",
+        "lines": "58-114"
+      }
+    },
+    {
+      "id": "source-M0M1-log_signed_C",
+      "name": "log_signed_C",
+      "definition": "sign(C_signed)*log1p(abs(C_signed)); C_signed=sgn*0.5*(shannon(A)+shannon(S))/(mutual_info(A,S)+1e-9)",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": {
+        "file": "info_dipole_pinned.py",
+        "git_blob_sha": "c04751cbe5f92952e33328f6c04fcae6392e05e5",
+        "sha256": "0fb1f3d868973fcf0ee25be30d7ffe1f7b388a9235a19d893f8495012c0df23b",
+        "lines": "58-114"
+      }
+    },
+    {
+      "id": "source-M0M1-imb_flow",
+      "name": "imb_flow",
+      "definition": "imb(A[10:],S[10:])-imb(A[:10],S[:10]); imb returns0 for empty half",
+      "producer": {
+        "file": "research_atlas_stack.py",
+        "git_blob_sha": "ebf6c4c0968f7d077506c4cd8e009fe235a198cc",
+        "sha256": "90aefbed7693289d24ccc7b86ffb82ed105dc8e04536b41d2c26721ca5bb128d",
+        "lines": "49-90"
+      },
+      "operator": {
+        "file": "info_dipole_pinned.py",
+        "git_blob_sha": "c04751cbe5f92952e33328f6c04fcae6392e05e5",
+        "sha256": "0fb1f3d868973fcf0ee25be30d7ffe1f7b388a9235a19d893f8495012c0df23b",
+        "lines": "58-114"
+      }
+    }
+  ],
+  "freeze": {
+    "version": "priority-paper-v1.3-reanalysis-20261109",
+    "training_dates": [
+      "20231002",
+      "20231003",
+      "20231017",
+      "20231018"
+    ],
+    "training_rows": 3175,
+    "target": "midpoint change from recognition to +20s, ticks",
+    "features_source": "P10; original midpoint-classified flow",
+    "prospective_validation": false
+  },
+  "producer": {
+    "file": "canonical_build_deliverables.py",
+    "git_blob_sha": "770a30fe7b8846d3d494f6e8b0b06d2bf81e08c0",
+    "sha256": "ddab58e105fe39c9184582a1e30c2aea2ef07f76cdddfc03fc44fc362a8270f9",
+    "lines": "21-31"
+  },
+  "reanalysis": {
+    "file": "canonical_analyze.py",
+    "git_blob_sha": "6bdb77329d437d0cc1122cd3c9123bbbf9c37976",
+    "sha256": "4f11685001b554da1e74bf8a9d7c5198668c76d36caab097ab8fa70e2de5ee49",
+    "lines": "42-101"
+  },
+  "canonical_source_definitions": {
+    "file": "canonical_SOURCE_DEFINITIONS.json",
+    "git_blob_sha": "6ccd422fc05ddb20ec894eddbbfd6a53a2a7c38e",
+    "sha256": "b4adc49808bd5254b72d3d29203486445abb9f343c81edf0bb047bdde8e5f92e",
+    "lines": "all"
+  },
+  "input_contract": {
+    "clock": "t=recognition_receive_ns; j=recognition_group; end=last_closed_second; (end+1)*1e9<=t; quote_known_by_ns=a[j,0]=t",
+    "quote_matrix": "a[:,0]=group receive_ns;2=bid raw price+ask raw price;3=bid raw price;4=ask raw price;7=good flag;8=segment. Integer price raw tick=1e6; midpoint in ticks is column2/2e6.",
+    "prior_quote": "k=searchsorted(group receive_ns,t-20*1e9,side=right)-1, latest group at or before cutoff; range includes k through j",
+    "source_validity": "min(k,kflow)>=0 and good flags at k,kflow,j and equal segment; kflow=searchsorted(group receive_ns,(end-19)*1e9,side=left)-1",
+    "group_validity": "Within source session, bid and ask exist;0<bid<ask; no reset_member, snapshot_member, bad_receive_clock_member. Invalid group advances segment.",
+    "midpoint_flow": "Each print compared to immediately preceding completed-group midpoint; both groups must be good in same segment. delta=2*print.price_raw-previous_group.bid_raw-previous_group.ask_raw; positive buy,negative sell,zero/invalid unknown. Size assigned to containing group receive_ns floor second.",
+    "operator": "A,S are20 consecutive completed-second buy/sell arrays; empty total returns None. sgn=+1 if aggregate imbalance>=0 else-1. shannon natural-log entropy over histogram; default bins=max(3,round(sqrt(n))); size<2 or np.allclose constant=>0. Mutual information=max(0,Ha+Hb-Hab) using matching bins.",
+    "missingness": "Observed-undefined operator values use frozen imputation and indicator. A failed feed, future-known input, or invalid source context is not an observed-undefined value.",
+    "inference": "For ordered raw x: finite=isfinite(x); values=where(finite,x,imputation); augment with ~finite in feature order; z=(augmented-center)/scale; prediction=intercept+z dot coefficients. No refit.",
+    "no_native_substitution": true
+  },
+  "support_sources": [
+    {
+      "file": "research_atlas_dipole.py",
+      "git_blob_sha": "0a1670a391c68fc5ff972e282545461c94768d63",
+      "sha256": "14e0bfc3d426e760e84249a866135910f406f5a9ebd8f819eefaf70a15f20578",
+      "lines": "26-70"
+    },
+    {
+      "file": "research_atlas.py",
+      "git_blob_sha": "24e2037cd568eea0c4657375d29a82bdf79dc308",
+      "sha256": "37765c75a72bb0e5e244dfffdc95ba7058f6aad1a78f16857afd17778baf7d1b",
+      "lines": "160-169"
+    },
+    {
+      "file": "flow_book_discovery.py",
+      "git_blob_sha": "aab74e1f3899be14b69784f8d9f659b269ef9fc8",
+      "sha256": "d6888f270dc8d0bbfca27bed4467eb82c6974ae0fb525b0eb7fcdc6f3ad76e17",
+      "lines": "16-24"
+    }
+  ],
+  "resolved": [
+    "exact serialized M0 and M1 arrays",
+    "artifact SHA256 and canonical Git blob bindings",
+    "exact frozen producer source binding",
+    "ordered source feature definitions"
+  ],
+  "remaining": [
+    "Historical artifact_available_by_ns not proved by training cutoff or commit metadata. Use actual observed prospective availability; do not backdate.",
+    "Paper-session clock mapping and supported execution/feed adapter remain outside this source recovery.",
+    "Prospective causal recognition detector must bind equivalent source event and native clocks; candidate identity is not an input.",
+    "Floating library/version parity for histogram and arithmetic producers must be addressed by runtime implementation acceptance checks."
+  ],
+  "no_refit": true,
+  "no_historical_strategy_testing": true
+}

@@ -1,0 +1,27 @@
+{
+  "platform": "CME Group Practice Simulator",
+  "browser": "Microsoft Edge",
+  "observed_mode": "Practice Mode",
+  "observed_contract": "NGZ6",
+  "observed_practice_funds": 100000,
+  "observed_open_positions": 0,
+  "observed_orders": 0,
+  "custom_json_import": "NOT_ESTABLISHED",
+  "strategy_execution_api": "NOT_ESTABLISHED",
+  "complete_native_order_feed": "NOT_ESTABLISHED",
+  "computer_click_error": "coordinate input geometry is unavailable",
+  "browser_connector_access": "NOT_EXPOSED",
+  "paper_orders_submitted": 0,
+  "platform_fills": 0,
+  "official_sources": [
+    "https://www.cmegroup.com/education/brochures-and-handbooks/trading-simulator-guide",
+    "https://www.cmegroup.com/articles/faqs/trading-simulator-faq.html"
+  ],
+  "prohibited": [
+    "purchases",
+    "live trades",
+    "AWS",
+    "migration resume",
+    "completed research-worker restart"
+  ]
+}

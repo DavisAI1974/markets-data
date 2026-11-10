@@ -2,7 +2,7 @@
 import hashlib,json,pathlib,shutil
 ROOT=pathlib.Path(__file__).parent
 OUT=ROOT/'delivery';OUT.mkdir(exist_ok=True)
-DIRECTORIES={'machine','paper_rules','tests','tasks','reconciliation','review_sources','review_chain_sources'}
+DIRECTORIES={'machine','paper_rules','tests','tasks','reconciliation','review_sources','review_chain_sources','recovery','deferred','platform'}
 EXCLUDE={'MARKET_DATA_INDEX.md','PUBLISHED.json','PUBLICATION_VERIFICATION.json','publish-payload.json','ref-payload.json'}
 files=[]
 for f in sorted(ROOT.rglob('*')):

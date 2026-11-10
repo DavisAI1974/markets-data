@@ -1,0 +1,17 @@
+# Recovered definitions integrated into runtime helpers
+
+The supplemental [recovery bindings](machine/RECOVERY_BINDINGS.json) preserve all original candidate IDs and resolve another 22 median-reference scalars exactly as zero. The total is now 139 recovered constant-reference states. The other 32 median references retain their original diagnostic evidence; their original nonzero floating-point values are not certified, and no mean or newly fitted value substitutes for them.
+
+M0/M1 now have verified original coefficient arrays, producer revision, artifact hashes and 17 ordered feature definitions. `paper_rules/recovered.py` constructs their features from normalized complete-group quotes and 20 completed midpoint-classified flow bins. It requires the recognition event's explicit last closed second. Native flow cannot silently replace midpoint flow. Missing groups, reset segments, missing bins and future-known inputs remain unavailable. Complete observed empty flow retains the source's explicit undefined operator values and frozen missingness treatment.
+
+The original pure information operator is preserved separately from the original source's unrelated cryptocurrency deployment map. Its source bytes remain in recovery/model_source_audit. No old producer was rerun. Current acceptance uses NumPy 2.3.5; historical floating-library bit parity has not been established.
+
+Artifact availability uses an actual prospective paper-session clock. Feature availability continues to use the recording's market clock and event cursor. A playback date never becomes a fabricated historical model-load time. No actual session load receipt or market feed has been connected yet.
+
+OL/EX primitive implementations pass the 48 independent recovered boundary fixtures. Additional runtime tests cover empty endpoint history and exactly three adjacent, ordered prior groups. The recovered EX05 observation horizons (0.1, 1, 5, 20 seconds) and inventory horizons (1, 5, 20, 60, 300 seconds) remain separate. Outcome endpoint selection is not an order-fill rule or an entry feature. The original source's missing-entry labeling quirk is preserved in evidence; normalized missing entry is NO_OBSERVED_ENTRY.
+
+The bounded review found four issues, each corrected with a reproduced failing test: explicit recognition window, prior-history adjacency, recovered metadata hash binding, and empty endpoint handling. See review_recovered_runtime.json for the original review and review_recovered_runtime_resolution.json for corrections. These helpers are not the complete recognition, native order-state, risk, routing or execution engine.
+
+CME remains the selected platform. The signed-in Microsoft Edge screen was read successfully in Practice Mode with NGZ6, $100,000 practice funds and no positions or orders. Clicks failed with `coordinate input geometry is unavailable`; direct browser access was not exposed. Keyboard find could open, but the editable control was unavailable to the cached action API. No trade was submitted, no account setting changed, and no authenticated execution API or custom strategy import has been established.
+
+Everything remains included for paper testing. Full semantic reconciliation, remaining original fitted states and platform execution are unfinished. No backtest substitutes for platform paper fills. Migration remains paused; existing research workers were not restarted. AWS, purchases and live trades remain excluded by the user's instruction.

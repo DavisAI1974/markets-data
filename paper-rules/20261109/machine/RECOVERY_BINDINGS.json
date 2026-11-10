@@ -1,0 +1,906 @@
+{
+  "schema": "supplemental-source-recovery-v1",
+  "previous_constant_states": {
+    "path": "machine/CONSTANT_MODEL_STATE.json",
+    "sha256": "3760ff90e9028a58814228c582e612c6f80ebe0841509d5474045ece02672023"
+  },
+  "recovered_median_states": [
+    {
+      "task_id": "JM-expanded-2098",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 1,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/0",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2099",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 1,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/1",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2100",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 1,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/2",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2116",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 5,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/18",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2125",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 1,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/27",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2126",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 1,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/28",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2127",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 1,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/29",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2129",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 120,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/31",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2130",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 120,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/32",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2134",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 20,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/36",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2135",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 20,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/37",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2136",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 20,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/38",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2137",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 300,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/39",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2138",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 300,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/40",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2139",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 300,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/41",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2143",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 5,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/45",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2144",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 5,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/46",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2145",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 5,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/47",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2146",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 60,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/48",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2147",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 60,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/49",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2148",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 60,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/50",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    },
+    {
+      "task_id": "JM-expanded-2151",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 600,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/53",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "model": "training_median",
+      "value": 0.0,
+      "refit": false
+    }
+  ],
+  "unresolved_median_states": [
+    {
+      "task_id": "JM-expanded-2101",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 120,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/3",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2102",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 120,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/4",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2103",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 120,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/5",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2104",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 1800,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/6",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2105",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 1800,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/7",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2106",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 1800,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/8",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2107",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 20,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/9",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2108",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 20,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/10",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2109",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 20,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/11",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2110",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 300,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/12",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2111",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 300,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/13",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2112",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 300,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/14",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2113",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 3600,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/15",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2114",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 3600,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/16",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2115",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 3600,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/17",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2117",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 5,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/19",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2118",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 5,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/20",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2119",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 60,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/21",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2120",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 60,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/22",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2121",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 60,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/23",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2122",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 600,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/24",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2123",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 600,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/25",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2124",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "absolute_mid_price_change",
+      "horizon_s": 600,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/26",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2128",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 120,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/30",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2131",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 1800,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/33",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2132",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 1800,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/34",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2133",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 1800,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/35",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2140",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 3600,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/42",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2141",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 3600,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/43",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2142",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 3600,
+      "fold": 4,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/44",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2149",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 600,
+      "fold": 2,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/51",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    },
+    {
+      "task_id": "JM-expanded-2150",
+      "paper_included": true,
+      "execution_enabled": false,
+      "target": "mid_price_change",
+      "horizon_s": 600,
+      "fold": 3,
+      "input_version": "joint-inputs-v4-candidate-20261022",
+      "evidence_pointer": "/tasks/52",
+      "evidence": {
+        "path": "recovery/model_source_audit/MEDIAN_SCALAR_RECOVERY.json",
+        "sha256": "2c8e3d0b23ab003c9c786b652bb955da552bf9d599664f3767c8f0e848b89ec6"
+      },
+      "status": "ORIGINAL_NONZERO_SCALAR_BITS_UNCERTIFIED"
+    }
+  ],
+  "total_resolved_constant_states": 139,
+  "m0_m1_source_binding": {
+    "path": "recovery/model_source_audit/M0M1_BINDING_RECOVERY.json",
+    "sha256": "c6b315463845bbb09b94a33f24a2d51dd97499ba2554a2b79546268c7c4fd771"
+  },
+  "ol_ex_source_binding": {
+    "path": "recovery/ol_ex_source_bound_definitions.json",
+    "sha256": "92cd1d3a04eb3a199a2695a41736f4439eeb42b34e3b8d32d21fbeb3268826eb"
+  },
+  "ol_ex_boundary_checks": {
+    "path": "recovery/ol_ex_independent_boundary_fixtures.json",
+    "sha256": "2d3df4c3abe37a0f99090a3bf3b6b94ab403ec4b1480fd652c406947265e3436"
+  },
+  "runtime_components": [
+    {
+      "path": "paper_rules/recovered.py",
+      "sha256": "76effb6395e82cf25a72bd8d6191aa87f90052f9556187be41ce0ed7b9a07fc8"
+    },
+    {
+      "path": "paper_rules/source_events.py",
+      "sha256": "380a2da6e4bfdb44df6035b7d1c4f5e09347ff9d25a9dc7676ccbed9a344d57e"
+    },
+    {
+      "path": "paper_rules/source_information.py",
+      "sha256": "30878b353485c941832b95a136d54482e97d1de2ebafb36ab86da63da5de0394"
+    },
+    {
+      "path": "paper_rules/models.py",
+      "sha256": "5e6f3b1ae166c0161d91d302fff97b3ff8b4dd814eb5bfefb5bcaf5f063852d1"
+    }
+  ],
+  "paper_included": true,
+  "execution_enabled": false,
+  "remaining": [
+    "Source recognition detector and normalized complete-group/flow feed adapter",
+    "Historical floating-library bit parity is not established; present numpy version is recorded separately",
+    "Remaining fitted states, full corpus semantic reconciliation, order ownership and platform execution"
+  ],
+  "migration": "paused",
+  "research_workers_restarted": 0,
+  "platform_fills": 0
+}

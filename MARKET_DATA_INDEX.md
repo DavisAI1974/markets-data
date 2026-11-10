@@ -10,6 +10,8 @@ The [master carry-forward register](carry-forward/20261109/README.md) preserves 
 
 [Current rules, remaining dependencies and upload status](paper-rules/20261109/README.md). All 14,712 inherited source identities reconcile; all 82 original candidates continue into the expanded package. The combined manifest contains 32,701 specification/model-version records, not that many independent strategies. It also preserves source/report cells and unresolved bindings separately. Every candidate remains included under the same paper-testing policy. Full semantic closure and a platform runner remain unfinished; no platform fills are claimed.
 
+The [latest recovery/runtime update](paper-rules/20261109/RECOVERY_RUNTIME_UPDATE.md) adds 22 exact median states (139 constant references total), verified M0/M1 definitions and executable feature/boundary helpers. CME in Edge is signed in; strategy import and automated execution remain unestablished.
+
 ## Current four-day analysis
 
 Canonical research branch: `codex/research-union-four-days-20261109`. Completed analysis checkpoint: `27bad4ef402ade3c5f02a1d7e255d3790aed1888`.

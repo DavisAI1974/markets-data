@@ -10,6 +10,11 @@ def predict_frozen_linear(model,context,bindings,freeze_ns):
     # Caller supplies a verified artifact manifest time, not a training cutoff.
     # At equal ns no artifact ordering proof is available through this helper.
     if ns(freeze_ns)>=decision:return UNKNOWN
+    return _predict_values(model,context,bindings)
+
+
+def _predict_values(model,context,bindings):
+    """Internal arithmetic after a caller has checked artifact availability."""
     names=model['features'];n=len(names)
     if len(set(names))!=n or len(model['imputation'])!=n or any(len(model[k])!=2*n for k in ['center','scale','coefficients']):
         raise ValueError('Frozen model dimensions are inconsistent')

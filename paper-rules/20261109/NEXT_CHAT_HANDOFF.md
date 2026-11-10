@@ -1,5 +1,7 @@
 # Continue this checkpoint
 
+Latest continuation is RECOVERY_RUNTIME_UPDATE.md and machine/RECOVERY_BINDINGS.json. Use CME in Microsoft Edge; do not ask the user to install NinjaTrader. Free needed software/configuration/paper trades are authorized; AWS, purchases and live trades are forbidden. Another 22 median zeros are recovered, M0/M1 features and OL/EX primitives are implemented. Remaining original fitted states and full semantic closure are still unfinished. Desktop click geometry is unavailable; no automated execution route or paper fills is established.
+
 Start with README, machine/PAPER_UNIVERSE_MANIFEST.json, REMAINING_DEPENDENCIES.md and PUBLICATION_VERIFICATION.json. MARKET_DATA_INDEX.md at the repository root is central navigation. Earlier sources remain under carry-forward/20261109/.
 
 User policy: carry everything forward; every hypothesis enters platform paper testing under the same process. No performance exclusion or observation-only promotion path. Keep everything in Git. Do not restart completed research workers. Keep E-to-Git migration paused. No historical strategy test substitutes for platform paper trades. Session scheduling is deferred. CME showed NGZ6; playback must match its actual contract/feed identity.

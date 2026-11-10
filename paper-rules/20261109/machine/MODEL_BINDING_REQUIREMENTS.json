@@ -1,11 +1,27 @@
 {
-  "schema": "model-binding-requirements-v1",
-  "models": ["M0", "M1"],
+  "schema": "model-binding-requirements-v2",
+  "models": [
+    "M0",
+    "M1"
+  ],
   "paper_included": true,
   "execution_enabled": false,
-  "coefficient_evidence": "MODEL_FREEZE.json",
-  "required_unresolved_fields": ["ordered_feature_definition_ids", "artifact_available_by_ns", "artifact_content_sha256", "producer_revision_binding", "paper_session_clock_mapping"],
-  "availability_status": "MODEL_BINDING_UNAVAILABLE",
+  "recovered_binding": {
+    "path": "recovery/model_source_audit/M0M1_BINDING_RECOVERY.json",
+    "sha256": "c6b315463845bbb09b94a33f24a2d51dd97499ba2554a2b79546268c7c4fd771"
+  },
+  "resolved_fields": [
+    "ordered_feature_definition_ids",
+    "artifact_content_sha256",
+    "producer_revision_binding"
+  ],
+  "required_unresolved_fields": [
+    "actual_paper_session_artifact_load_receipt",
+    "causal_recognition_and_feed_binding",
+    "historical_library_bit_parity"
+  ],
+  "availability_status": "SOURCE_BOUND_RUNTIME_IMPLEMENTED_PLATFORM_UNBOUND",
+  "clock_policy": "Feature clocks retain original market time; artifact availability uses a separate recorded prospective session clock. Never backdate an artifact.",
   "training_cutoff_is_artifact_available_by": false,
   "replay_clock_may_be_backdated": false,
   "substitute_native_for_midpoint_features": false,

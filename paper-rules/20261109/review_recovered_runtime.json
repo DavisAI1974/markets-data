@@ -1,0 +1,61 @@
+{
+  "schema": "bounded-recovered-runtime-review/v1",
+  "scope": "Read-only adversarial review of recovered.py, models.py, source_events.py, source_information.py, and tests/test_recovered_runtime.py against preserved M0/M1 and OL/EX sources. No original producer imported or run, no data replay, workers, fitting, migration, AWS or trading.",
+  "cross_model": "Skipped: delegated non-interactive review; no external CLI invoked.",
+  "findings": [
+    {
+      "id": "RR1",
+      "severity": "P2",
+      "file": "paper_rules/recovered.py",
+      "symbol": "build_model_context",
+      "issue": "Derives source flow-window end from recognition timestamp instead of preserving the explicit source last_closed_second.",
+      "evidence": "research_atlas_stack.py lines 61-69 and M0M1_BINDING_RECOVERY.json/input_contract.clock use end=c[last_closed_second], requiring only (end+1)*NS <= recognition. A recognition at 22s with source end=20 and complete bins 1..20 is valid under that source contract but the helper rejects it because it demands bins 2..21. Replacing with newer bins would change model inputs.",
+      "recommendation": "Require explicit last_closed_second from the causal recognition event and verify closure <= recognition; do not silently substitute a newer window.",
+      "parent_status": "Parent accepted and is fixing."
+    },
+    {
+      "id": "RR2",
+      "severity": "P2",
+      "file": "paper_rules/source_events.py",
+      "symbol": "history_coordinates",
+      "issue": "Coordinate validator accepts sparse, duplicate or reordered prior book rows.",
+      "evidence": "signal=[10,10,100,1000], prior=[[6,6,60,600],[8,8,80,800],[9,9,90,900]] returns True; reordered [[9,9,90,900],[7,7,70,700],[8,8,80,800]] also returns True. OL_history requires exactly the three immediately preceding book closes in chronological order.",
+      "recommendation": "Require exactly three prior rows with book indices and group ordinals signal-3, signal-2, signal-1, preserving strict cursor order and causal clocks.",
+      "parent_status": "Parent accepted and is fixing."
+    },
+    {
+      "id": "RR3",
+      "severity": "P2",
+      "file": "paper_rules/recovered.py",
+      "symbol": "verify_recovery",
+      "issue": "Hash checks authenticate preserved source files but do not bind recovery metadata to those authenticated files or fixed feature semantics.",
+      "evidence": "M0M1_BINDING_RECOVERY.json is not in SOURCE_MANIFEST.json. Its feature definitions and producer/operator file/hash metadata are unused by verification; only feature id-to-name pairing is checked. In-memory mutation of a definition and producer.git_blob_sha to an incorrect value passes the current predicate. This is a provenance-verification gap, not evidence that current coefficients or formulas are wrong.",
+      "recommendation": "Validate every referenced source against the authenticated manifest and bind recovered IDs/semantics to a fixed verified runtime definition registry or pinned recovery digest. Alternatively narrow the verifier claim to source-file integrity and model-state/name ordering.",
+      "parent_status": "Sent to parent for reconciliation."
+    },
+    {
+      "id": "RR4",
+      "severity": "P2",
+      "file": "paper_rules/source_events.py",
+      "symbol": "endpoint",
+      "issue": "Empty retained quote history crashes rather than preserving missing endpoint state.",
+      "evidence": "endpoint([],100) raises IndexError at times[-1]. OL/EX missing contract says missing endpoints remain unavailable; other unavailable boundaries here return None.",
+      "recommendation": "Return None before indexing an empty sequence and add an empty-history synthetic boundary check.",
+      "parent_status": "Sent to parent for reconciliation."
+    }
+  ],
+  "verification": {
+    "command": "python -m unittest tests.test_recovered_runtime -v",
+    "result": "11 tests passed, including newly added group-contiguity and integer-price checks.",
+    "additional_synthetic_probes": [
+      "Older closed source window rejected",
+      "Sparse and reordered OL prior triples accepted",
+      "Empty endpoint raises IndexError",
+      "Modified recovered semantic/provenance metadata passes existing name-binding predicate",
+      "Observed scalar zero predicts 0.0 while explicit undefined imputes and raises indicator, predicting 107.0 in a one-feature synthetic model",
+      "Complete empty flow returns None; constant one-sided flow yields defined zero entropy/MI/C, matching source operator"
+    ],
+    "no_additional_findings": "No arithmetic divergence found in recovered linear inference or the copied histogram/information operator; observed numeric zero is not treated as missing. Session availability and market clocks are kept separate, with recorder identity and actual availability explicitly delegated to caller. No full execution adapter/engine claim inferred from these helpers."
+  },
+  "limits": "Findings refer to reviewed snapshot; parent is concurrently applying fixes. No producer parity run or market-data acceptance claimed."
+}

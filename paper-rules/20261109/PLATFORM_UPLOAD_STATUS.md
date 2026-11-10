@@ -4,9 +4,11 @@ The requested proving ground is automated trading in a platform paper account, w
 
 ## CME Practice Simulator
 
+Current account state was read in Microsoft Edge: Practice Mode, NGZ6 open, $100,000 practice funds, no positions or orders. Click input failed with `coordinate input geometry is unavailable`. Keyboard find opened, but its editable control was not available to the cached input API; no order or account change followed. The separate browser connector did not expose this browser. Login alone does not establish functioning automation.
+
 The official [CME simulator guide](https://www.cmegroup.com/education/brochures-and-handbooks/trading-simulator-guide) documents manual order tickets, charting, the price ladder, trade log and trade plan. It does not document importing custom JSON strategies or a strategy-execution API. We have not established a supported upload or automated execution route for this account. Do not give the user a fictional Upload JSON step or treat the Trade Plan form as an execution engine.
 
-## NinjaTrader Desktop
+## Deferred NinjaTrader research (user selected CME)
 
 NinjaTrader documents importing a NinjaScript ZIP through Control Center → Tools → Import → NinjaScript. That imports platform code, not arbitrary rule JSON. See the [official import instructions](https://static.ninjatrader.com/support/helpGuides/nt8/import.htm).
 
@@ -14,7 +16,7 @@ Its [strategy instructions](https://static.ninjatrader.com/support/helpGuides/nt
 
 Standard [market-depth events](https://static.ninjatrader.com/support/helpGuides/nt8/marketdeptheventargs.htm) expose ladder position, price, volume, side and market-maker metadata; this interface does not supply the source native exchange order-ID lifecycle required by every same-order hypothesis. A market-maker identifier is not a native order identity. Do not replace same-order fills/cancels/repricing with aggregate-size changes and call it the same rule. The [OnMarketDepth guide](https://static.ninjatrader.com/support/helpGuides/nt8/onmarketdepth.htm) also warns against assuming fixed ordering between trade and depth callbacks.
 
-A local read-only check found no NinjaTrader installation or .NET compiler in the standard locations/PATH on this machine. No platform compile, native import or automatic paper trade has been verified. No account, purchase, order or platform configuration was changed by this pass.
+No NinjaTrader installation was established. A later check located Windows .NET Framework C# compilers; the earlier PATH-only absence statement was incomplete. This platform route is deferred at the user's instruction. No platform compile, native import or automatic paper trade has been verified. No account, purchase, order or platform configuration was changed by this pass.
 
 ## What an honest upload handoff must contain
 

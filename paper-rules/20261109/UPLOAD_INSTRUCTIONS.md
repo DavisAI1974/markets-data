@@ -4,9 +4,9 @@ The package is a research and paper-rule specification. It is **not yet a CME or
 
 For the CME Practice Simulator already open on your computer, a supported custom JSON strategy upload or automation API has not been established. The [official simulator guide](https://www.cmegroup.com/education/brochures-and-handbooks/trading-simulator-guide) describes manual trading tools. There is no verified upload step to give you for this package.
 
-NinjaTrader's documented route is **Control Center → Tools → Import → NinjaScript** for a platform-specific ZIP. See the [official import guide](https://static.ninjatrader.com/support/helpGuides/nt8/import.htm). The ZIP in this repository is a specification archive, not a NinjaScript ZIP, and must not be imported as one.
+CME remains the selected platform. The NinjaTrader exploration is deferred. Keep the existing CME Practice Mode session open; no additional sign-in is currently needed. Browser login has been confirmed, but our desktop tool cannot reliably operate the controls.
 
-Before automated paper trials, the remaining implementation must bind the required data and model states, compile a platform adapter, and verify its import. Native order-ID rules require a suitable order-level feed; standard NinjaTrader depth callbacks do not establish that identity. Missing models and unavailable source fields remain attached to their candidates, with no substituted proxies.
+Before automated paper trials, the remaining implementation must bind the required data and model states, establish a supported CME execution route, and verify real platform execution reports. Native order-ID rules require a suitable order-level feed; the visible aggregate ladder does not establish that identity. Missing models and unavailable source fields remain attached to their candidates, with no substituted proxies.
 
 Once that adapter exists, the operational sequence is:
 

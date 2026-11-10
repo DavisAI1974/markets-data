@@ -4,6 +4,8 @@ Every inherited candidate remains included in the same paper-testing and reporti
 
 **This is a specification and preservation checkpoint, not a finished platform runner.** Exhaustive semantic reconciliation is not certified: unresolved original definitions, fitted states, feature producers and platform integration remain explicit. No platform paper fills are claimed.
 
+Latest continuation: [recovery and runtime update](RECOVERY_RUNTIME_UPDATE.md). Another 22 exact median states are recovered (139 constant references total), M0/M1 source bindings are resolved, and source feature/boundary helpers are implemented. CME in Microsoft Edge remains selected; no automatic import or platform fills are established.
+
 ## Start here
 
 - [Combined machine manifest](machine/PAPER_UNIVERSE_MANIFEST.json) and [rule core](machine/PAPER_RULE_CORE.jsonl.gz).
@@ -41,6 +43,6 @@ Pure logic checks cover nanosecond/cursor availability, missing-data handling, f
 
 The final bounded integration review verified all 32,701 record bindings, 82 inherited candidate links and 9,266 semantic pointers. See [integration review](review_integration_cycle2.json) and [package verification](PACKAGE_VERIFICATION.json). This certifies the index and its references, not missing producers, models or full semantic closure.
 
-CME has no established custom-strategy upload route for this package. NinjaTrader documents NinjaScript imports, but a compiled adapter and suitable feed are not yet built or verified. Native order identity cannot be replaced by aggregate depth changes.
+CME has no established custom-strategy upload route for this package. The user selected CME; NinjaTrader exploration is deferred. Native order identity cannot be replaced by aggregate depth changes.
 
 Bulk migration remains **paused**. Completed research workers were not restarted. New reviews read retained artifacts. No source data was deleted, paid compute launched or platform orders placed by this pass.

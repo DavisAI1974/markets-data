@@ -40,7 +40,7 @@ def publish():
         assert api('git/refs/heads/main',{'sha':sha,'force':False},'PATCH')['object']['sha']==sha
         return sha
     entries=[{'path':r['path'],'mode':'100644','type':'blob','sha':r['git_blob_sha']} for r in records]
-    content=commit(base,entries,'research: preserve complete paper-rule expansion and causal review checkpoint [skip ci]')
+    content=commit(base,entries,'research: bind recovered median states and M0/M1 source runtime; retain CME blockers [skip ci]')
     print('CONTENT_COMMIT',content,flush=True)
     def verify(r):
         b=base64.b64decode(api('git/blobs/'+r['git_blob_sha'])['content'])

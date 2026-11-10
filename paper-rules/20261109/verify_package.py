@@ -20,6 +20,13 @@ assert manifest['core']['sha256']==hashes['PAPER_RULE_CORE.jsonl.gz']
 coverage=read(ROOT/'reconciliation/INHERITED_82_CROSSWALK.json')
 assert len(coverage)==82 and all(r['paper_included'] and not r['dropped'] for r in coverage)
 assert len(rows(machine/'OCTOBER_SOURCE_CELLS.jsonl.gz'))==1459
+recovery=read(machine/'RECOVERY_BINDINGS.json')
+references=[recovery[k] for k in ['previous_constant_states','m0_m1_source_binding','ol_ex_source_binding','ol_ex_boundary_checks']]+recovery['runtime_components']
+references += [r['evidence'] for r in recovery['recovered_median_states']+recovery['unresolved_median_states']]
+for reference in references:
+    assert hashlib.sha256((ROOT/reference['path']).read_bytes()).hexdigest()==reference['sha256']
+assert len(recovery['recovered_median_states'])==22 and len(recovery['unresolved_median_states'])==32
+assert recovery['total_resolved_constant_states']==139
 run=subprocess.run([sys.executable,'-B','-m','unittest','discover','-s','tests'],cwd=ROOT,capture_output=True,text=True)
 assert run.returncode==0,run.stdout+run.stderr
 result={'schema':'package-verification-v1','machine_json_strict_parse':'passed','unique_core_ids':len(core),'all_included':True,'all_execution_disabled':True,'all_full_definition_hashes_match':True,'inherited_candidate_count':82,'source_report_cells_separate':1459,'unit_test_output':run.stdout+run.stderr,'validation_scope':'JSON,coverage,bindings,and synthetic logic','market_replay_performed':False,'platform_fills':0,'platform_ready':False}
