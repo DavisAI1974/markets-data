@@ -1,3 +1,5 @@
+Read RESTART_HANDOFF.md first for the user-requested shutdown checkpoint and the newest section-level findings.
+
 # Continue this checkpoint
 
 Latest continuation is RECOVERY_RUNTIME_UPDATE.md and machine/RECOVERY_BINDINGS.json. Use CME in Microsoft Edge; do not ask the user to install NinjaTrader. Free needed software/configuration/paper trades are authorized; AWS, purchases and live trades are forbidden. Another 22 median zeros are recovered, M0/M1 features and OL/EX primitives are implemented. Remaining original fitted states and full semantic closure are still unfinished. Desktop click geometry is unavailable; no automated execution route or paper fills is established.

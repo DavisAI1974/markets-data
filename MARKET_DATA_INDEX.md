@@ -1,4 +1,4 @@
-# Market data — start here
+# Market data â€” start here
 
 This repository is the single home for market data, tables, workbooks, renders, and provenance. Start here rather than a local E: folder or an old handoff. Application code remains in [DavisAI1974/Markets](https://github.com/DavisAI1974/Markets); data navigation belongs here.
 
@@ -12,20 +12,22 @@ The [master carry-forward register](carry-forward/20261109/README.md) preserves 
 
 The [latest recovery/runtime update](paper-rules/20261109/RECOVERY_RUNTIME_UPDATE.md) adds 22 exact median states (139 constant references total), verified M0/M1 definitions and executable feature/boundary helpers. CME in Edge is signed in; strategy import and automated execution remain unestablished.
 
+Latest continuation: [restart handoff and section-level reconciliation findings](paper-rules/20261109/RESTART_HANDOFF.md). Analysis continues independently of CME; migration remains paused.
+
 ## Current four-day analysis
 
 Canonical research branch: `codex/research-union-four-days-20261109`. Completed analysis checkpoint: `27bad4ef402ade3c5f02a1d7e255d3790aed1888`.
 
 - [Current Excel](https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/Frankie_four_day_research_current.xlsx)
 - [Native-flow companion](https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/Priority_native_flow.xlsx)
-- [New findings D09–D13](https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/REPORT.md)
+- [New findings D09â€“D13](https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/REPORT.md)
 - [Next-analysis pins](https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/PINNED_FINDINGS.json)
 - [Initial 11 encoded paper variants: JSON specification](https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/reanalysis-20261109/TRADE_RULES.json)
 - [Continuation handoff and deferred reconciliation](https://github.com/DavisAI1974/markets-data/blob/codex/research-union-four-days-20261109/tasks/family-research-20261022/research-union-current/NEW_CHAT_HANDOFF.md)
 
 Every defined strategy is included for platform paper testing. The JSON is a specification; no platform runner is connected and this work has recorded no platform paper fills. Old observation-only labels are superseded.
 
-## E-drive consolidation — paused by user
+## E-drive consolidation â€” paused by user
 
 Requested November 9, 2026. The inventory found 64,571 non-dependency files, approximately 54.8 GB, across 18 Markets/research folders. These totals include duplicates and already-published files, not just missing research.
 
