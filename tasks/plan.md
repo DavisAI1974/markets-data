@@ -1,0 +1,16 @@
+# Codex evidence and availability continuation
+
+LATEST USER PRIORITY: Rebuild missing field values from authoritative original/recovered sources first, before further strategy research. Publish the correction for Claude in Git. Do not treat the original-grid audit as a rebuild receipt. A concrete stale-join defect is located: later static/book/FIFO/native recoveries were omitted by the original case builder. Preserve original rows and hypotheses and add a separately verified rebuilt version.
+
+Continue the saved November 13 handoff and immutable fifteen-strategy specification at fe45d2eff9b389e00c80807b6e2240003ba4885d. The user authorized this research and publication. No new strategy execution is claimed. Claude's new independent exercise is outside the read set.
+
+1. Preserve the 32 complete case files, package, saved review and all original specifications. Verify compressed round trips and hashes, 141 source fields, 167 displayed columns, 5,513 tick appearances, four days and eight types. Do not alter the shared worktree.
+2. Examine every field in every case, including nested status/state and clocks. Keep exact integer nanoseconds and each day/type separate. Publish field-case and member ledgers plus all tick clock records. Test missing-zero handling and sub-nanosecond-integer precision boundaries before implementation.
+3. Map each C strategy, original five and eleven legacy arms to operands, source events, clocks and dependencies. Add useful hypotheses without deleting or ranking previous ones. Separate source located, source verified, feature reconstructed and strategy executed.
+4. Publish an evidence-led report, ordered recovery tasks and a static dependency diagram. Validate the package and commit it on an isolated markets-data branch, push and verify the remote commit and file hashes.
+
+Acceptance: every original field/case is accounted for; unavailable is never converted to zero or false; all tick and original hypothesis artifacts remain; the report states what was and was not run. Tests and integrity assertions pass. GitHub publication matches the local commit.
+
+Research risks: deliberately selected outcome cohorts, repeated/overlapping source events, trade-only views omit non-trade groups, duplicated operands, missing S states, declared external publication times rather than proven delivery, and retrospective birth/end labels. These remain annotations, never reasons to remove data or hypotheses.
+
+User steering: fixed 5s/60s windows must not define the new designs. Preserve them only in historical specifications. Learn strategy/stage-specific elapsed-time and event-count horizons from development data; freeze before untouched validation. The same review applies to confirmation, morphology and management horizons. No fitted horizon or execution is claimed by this availability pass.

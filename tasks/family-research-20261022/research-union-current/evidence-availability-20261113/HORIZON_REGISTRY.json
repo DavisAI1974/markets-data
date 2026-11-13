@@ -1,0 +1,205 @@
+{
+  "schema": "codex-learned-horizon-research/1",
+  "execution_enabled": false,
+  "fitting_executed": false,
+  "policy": "No fallback to 5s, 60s or other archived constants. Learn separately per strategy and observable trade stage. Preserve all variants and unresolved support.",
+  "parameters": [
+    {
+      "name": "W_fast",
+      "strategies": [
+        "C1",
+        "C2",
+        "C3",
+        "C5",
+        "C6",
+        "C9",
+        "C10",
+        "C11",
+        "C13",
+        "C14",
+        "C15"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    },
+    {
+      "name": "W_slow",
+      "strategies": [
+        "C1",
+        "C2",
+        "C6",
+        "C11",
+        "C14"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    },
+    {
+      "name": "W_book",
+      "strategies": [
+        "C1",
+        "C2",
+        "C6"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    },
+    {
+      "name": "W_quiet",
+      "strategies": [
+        "C5"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    },
+    {
+      "name": "confirmation_horizon",
+      "strategies": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C11",
+        "C13",
+        "C14",
+        "C15"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    },
+    {
+      "name": "recognition_observation_delay",
+      "strategies": [
+        "C7",
+        "C8"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    },
+    {
+      "name": "observation_lateness",
+      "strategies": [
+        "C7",
+        "C8"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    },
+    {
+      "name": "morphology_steps",
+      "strategies": [
+        "C13"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    },
+    {
+      "name": "morphology_elapsed_span",
+      "strategies": [
+        "C13"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    },
+    {
+      "name": "pullback_reference",
+      "strategies": [
+        "C15"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    },
+    {
+      "name": "participation_return_deadline",
+      "strategies": [
+        "C15"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    },
+    {
+      "name": "management_persistence",
+      "strategies": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15"
+      ],
+      "value": null,
+      "unit": null,
+      "candidate_derivation": null,
+      "training_source_hashes": [],
+      "training_cutoff_ns": null,
+      "validation_sessions": [],
+      "status": "unfitted research parameter"
+    }
+  ],
+  "protocol": "HORIZON_RESEARCH.md",
+  "archive_compatibility": "Original specifications and native ratio construction remain unchanged as historical evidence; new learned variants require distinct version IDs."
+}

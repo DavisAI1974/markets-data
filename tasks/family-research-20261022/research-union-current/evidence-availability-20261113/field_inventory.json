@@ -1,0 +1,5168 @@
+[
+  {
+    "field": "day",
+    "family": "metadata",
+    "statuses": {
+      "METADATA": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "METADATA": 1038
+      },
+      "20231003": {
+        "METADATA": 1754
+      },
+      "20231017": {
+        "METADATA": 1274
+      },
+      "20231018": {
+        "METADATA": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "trade metadata; event_ns != receive_ns != known_by_ns; cursor/ordinal identifies source, not signal",
+    "preserved": true,
+    "role": "source identity or clock metadata",
+    "original_cell_stream_sha256": "2051160c107d4aa3a8f0ff23cd71360d16e59ab1f33733b1f00367379b5828a2",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "trade_ordinal",
+    "family": "metadata",
+    "statuses": {
+      "METADATA": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "METADATA": 1038
+      },
+      "20231003": {
+        "METADATA": 1754
+      },
+      "20231017": {
+        "METADATA": 1274
+      },
+      "20231018": {
+        "METADATA": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "trade metadata; event_ns != receive_ns != known_by_ns; cursor/ordinal identifies source, not signal",
+    "preserved": true,
+    "role": "source identity or clock metadata",
+    "original_cell_stream_sha256": "2c416dac39927e1d3f4114a459294d22204386d75442beadd1933640e227cb75",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "trade_id",
+    "family": "metadata",
+    "statuses": {
+      "METADATA": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "METADATA": 1038
+      },
+      "20231003": {
+        "METADATA": 1754
+      },
+      "20231017": {
+        "METADATA": 1274
+      },
+      "20231018": {
+        "METADATA": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "trade metadata; event_ns != receive_ns != known_by_ns; cursor/ordinal identifies source, not signal",
+    "preserved": true,
+    "role": "source identity or clock metadata",
+    "original_cell_stream_sha256": "ec0600663ee151e0b535426b972c0fcbaed860e1d6f5b831a7f2348e17736f3b",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "trade_cursor",
+    "family": "metadata",
+    "statuses": {
+      "METADATA": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "METADATA": 1038
+      },
+      "20231003": {
+        "METADATA": 1754
+      },
+      "20231017": {
+        "METADATA": 1274
+      },
+      "20231018": {
+        "METADATA": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "trade metadata; event_ns != receive_ns != known_by_ns; cursor/ordinal identifies source, not signal",
+    "preserved": true,
+    "role": "source identity or clock metadata",
+    "original_cell_stream_sha256": "5e37e5c4f96600e5fcb51ada18e9e80aee1e2b6201336fa9658ad6f1c509f27f",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "event_ns",
+    "family": "metadata",
+    "statuses": {
+      "METADATA": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "METADATA": 1038
+      },
+      "20231003": {
+        "METADATA": 1754
+      },
+      "20231017": {
+        "METADATA": 1274
+      },
+      "20231018": {
+        "METADATA": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "trade metadata; event_ns != receive_ns != known_by_ns; cursor/ordinal identifies source, not signal",
+    "preserved": true,
+    "role": "source identity or clock metadata",
+    "original_cell_stream_sha256": "1687ff94564fd805a3c98740f8e5e08fde023c3ae44fb40fb3331dc644a22e3b",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "receive_ns",
+    "family": "metadata",
+    "statuses": {
+      "METADATA": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "METADATA": 1038
+      },
+      "20231003": {
+        "METADATA": 1754
+      },
+      "20231017": {
+        "METADATA": 1274
+      },
+      "20231018": {
+        "METADATA": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "trade metadata; event_ns != receive_ns != known_by_ns; cursor/ordinal identifies source, not signal",
+    "preserved": true,
+    "role": "source identity or clock metadata",
+    "original_cell_stream_sha256": "827c5f010935fec8657a366b55cecfcec869d87711b39bdc98b10aef0daea56f",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "known_by_ns",
+    "family": "metadata",
+    "statuses": {
+      "METADATA": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "METADATA": 1038
+      },
+      "20231003": {
+        "METADATA": 1754
+      },
+      "20231017": {
+        "METADATA": 1274
+      },
+      "20231018": {
+        "METADATA": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "trade metadata; event_ns != receive_ns != known_by_ns; cursor/ordinal identifies source, not signal",
+    "preserved": true,
+    "role": "source identity or clock metadata",
+    "original_cell_stream_sha256": "1738fc1f4a923bbee23efd4ed85e73dba69818266589985d42195c71a9a2ff72",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "coverage",
+    "family": "metadata",
+    "statuses": {
+      "METADATA": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "METADATA": 1038
+      },
+      "20231003": {
+        "METADATA": 1754
+      },
+      "20231017": {
+        "METADATA": 1274
+      },
+      "20231018": {
+        "METADATA": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "trade metadata; event_ns != receive_ns != known_by_ns; cursor/ordinal identifies source, not signal",
+    "preserved": true,
+    "role": "source identity or clock metadata",
+    "original_cell_stream_sha256": "3cf8456aa5484a856b6e340a27f56d62545cdc542690ed20677e793f943c30a4",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "source_trade_revision",
+    "family": "metadata",
+    "statuses": {
+      "METADATA": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "METADATA": 1038
+      },
+      "20231003": {
+        "METADATA": 1754
+      },
+      "20231017": {
+        "METADATA": 1274
+      },
+      "20231018": {
+        "METADATA": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "trade metadata; event_ns != receive_ns != known_by_ns; cursor/ordinal identifies source, not signal",
+    "preserved": true,
+    "role": "source identity or clock metadata",
+    "original_cell_stream_sha256": "330d3ede24789a2b0ce0ffdfda826d0e602c87fad39ba8c6ca1cefa28c2d871d",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "source_trade_path",
+    "family": "metadata",
+    "statuses": {
+      "METADATA": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "METADATA": 1038
+      },
+      "20231003": {
+        "METADATA": 1754
+      },
+      "20231017": {
+        "METADATA": 1274
+      },
+      "20231018": {
+        "METADATA": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "trade metadata; event_ns != receive_ns != known_by_ns; cursor/ordinal identifies source, not signal",
+    "preserved": true,
+    "role": "source identity or clock metadata",
+    "original_cell_stream_sha256": "27ee9027f651524286f1b94b0d6b6603edf993a75fd26cc864df541ea9da848d",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L001 | controlling_rt_mission",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L002 | native_calculation_contract",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L003 | anchored_knowledge_manifest",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L004 | selected_same_arm_profile",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L005 | a_clean_promoted_positive_capsule",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L006 | a_memory_promoted_positive_capsule",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L007 | a_memory_prior_lessons_package",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L008 | a_memory_prior_package_proof",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L009 | authoritative_s135_construction",
+    "family": "L",
+    "statuses": {
+      "STATIC_KNOWLEDGE_PINNED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "STATIC_KNOWLEDGE_PINNED": 1038
+      },
+      "20231003": {
+        "STATIC_KNOWLEDGE_PINNED": 1754
+      },
+      "20231017": {
+        "STATIC_KNOWLEDGE_PINNED": 1274
+      },
+      "20231018": {
+        "STATIC_KNOWLEDGE_PINNED": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "da2b533d5e277eda8b16f2586161f5d7ac4fffb4e97a1060df7dfba3164cd1b7",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L010 | complete_s105_9_brain",
+    "family": "L",
+    "statuses": {
+      "STATIC_KNOWLEDGE_PINNED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "STATIC_KNOWLEDGE_PINNED": 1038
+      },
+      "20231003": {
+        "STATIC_KNOWLEDGE_PINNED": 1754
+      },
+      "20231017": {
+        "STATIC_KNOWLEDGE_PINNED": 1274
+      },
+      "20231018": {
+        "STATIC_KNOWLEDGE_PINNED": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "da2b533d5e277eda8b16f2586161f5d7ac4fffb4e97a1060df7dfba3164cd1b7",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L011 | doctrine_reasoning_play_index_evidence",
+    "family": "L",
+    "statuses": {
+      "STATIC_KNOWLEDGE_PINNED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "STATIC_KNOWLEDGE_PINNED": 1038
+      },
+      "20231003": {
+        "STATIC_KNOWLEDGE_PINNED": 1754
+      },
+      "20231017": {
+        "STATIC_KNOWLEDGE_PINNED": 1274
+      },
+      "20231018": {
+        "STATIC_KNOWLEDGE_PINNED": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "da2b533d5e277eda8b16f2586161f5d7ac4fffb4e97a1060df7dfba3164cd1b7",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L012 | lawful_prior_session_carry",
+    "family": "L",
+    "statuses": {
+      "STATIC_KNOWLEDGE_PINNED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "STATIC_KNOWLEDGE_PINNED": 1038
+      },
+      "20231003": {
+        "STATIC_KNOWLEDGE_PINNED": 1754
+      },
+      "20231017": {
+        "STATIC_KNOWLEDGE_PINNED": 1274
+      },
+      "20231018": {
+        "STATIC_KNOWLEDGE_PINNED": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "da2b533d5e277eda8b16f2586161f5d7ac4fffb4e97a1060df7dfba3164cd1b7",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L013 | october_outcome_wall_enforcement",
+    "family": "L",
+    "statuses": {
+      "STATIC_KNOWLEDGE_PINNED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "STATIC_KNOWLEDGE_PINNED": 1038
+      },
+      "20231003": {
+        "STATIC_KNOWLEDGE_PINNED": 1754
+      },
+      "20231017": {
+        "STATIC_KNOWLEDGE_PINNED": 1274
+      },
+      "20231018": {
+        "STATIC_KNOWLEDGE_PINNED": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "da2b533d5e277eda8b16f2586161f5d7ac4fffb4e97a1060df7dfba3164cd1b7",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L014 | learned_d_structures_and_families",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L015 | learned_dipoles_and_geometry",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L016 | learned_pair_triplet_recurrence",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L017 | learned_chains_extensions_reappearances_ancestry",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L018 | phase1_discoveries_structural_falsifiers",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L019 | phase2_findings_modules_timing_pox_negatives",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L020 | predecessor_ancestry_unresolved_chain_state",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L021 | historical_timing_lifespan_context",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L022 | learned_structure_proposal_index_material",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L023 | extra_agent_corrected_information_and_gap_diagnoses",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "knowledge/provenance/policy context",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L025 | october_first_source_window",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L026 | canonical_predecessor_bootstrap_objects",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L027 | native_acmrtfn_messages",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L028 | snapshot_bootstrap_reset_messages",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L029 | raw_source_identity_provenance_clocks_integrity",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "clock/provenance, not predictor; exact integer nanoseconds; complete-group close controls current values",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "1392b79223d7efa70f1c416a52ce1522b0d67bc226d937c334101c4b818c926c",
+    "bindings": [
+      "B07",
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L030 | order_lifecycle_adds",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C4",
+      "C12"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L031 | order_lifecycle_cancels",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B04",
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L032 | order_lifecycle_modifies",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B04",
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L033 | order_lifecycle_replaces",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C4",
+      "C12"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L034 | order_lifecycle_trades",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 32,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "ef94b94f950e99ea2a2b389cb7f4e0d538971230409210d3db7848990ae31e59",
+    "bindings": [
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C4",
+      "C12"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "L035 | order_lifecycle_fills",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C4",
+      "C12"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L036 | order_lifecycle_clears",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C4",
+      "C12"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L037 | order_identity_transitions",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C4",
+      "C12"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L038 | contract_session_roll_state",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L039 | full_bid_ask_depth",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 32,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "650dd55d92c99be954fe09e1c1b5ecbf29c22520d161b2ce31eda62b087db5cd",
+    "bindings": [
+      "B01",
+      "B10"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "L040 | price_level_and_order_counts",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 32,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "87acfbdaaffc0d0dd22d42d64364ef8988b8ee42503bda2b54380c09998a4cf7",
+    "bindings": [
+      "B01",
+      "B02",
+      "B10"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "L041 | fifo_queues",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C4",
+      "C12"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L042 | queue_age_and_survival",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C4",
+      "C12"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L043 | queue_concentration",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C4",
+      "C12"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L044 | orders_and_volume_ahead",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C4",
+      "C12"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L045 | spread_and_depth_imbalance",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 32,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "33f1cc9684a32166436c8c39e85056d88956172036badc434822d6e9a0b9445a",
+    "bindings": [
+      "B02",
+      "B10"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "L046 | complete_state_reset_bootstrap_receipts",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L047 | mechanics_actions_by_side_and_level",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 32,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "e99241c42e23bf4da196334fdf4e2505cc1cc3e25edc97cdb3648754055f91ea",
+    "bindings": [
+      "B04"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "L048 | aggressor_and_native_signed_flow",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_TRADE_OPERANDS_ONLY": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_TRADE_OPERANDS_ONLY": 1038
+      },
+      "20231003": {
+        "ORIGINAL_TRADE_OPERANDS_ONLY": 1754
+      },
+      "20231017": {
+        "ORIGINAL_TRADE_OPERANDS_ONLY": 1274
+      },
+      "20231018": {
+        "ORIGINAL_TRADE_OPERANDS_ONLY": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 32,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "8267e7ddc98accf72b5e7b5cef9327fa1b0605ec3649ba7bd9647197f20704cc",
+    "bindings": [
+      "B03",
+      "B10"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "L049 | depletion_and_replenishment",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 32,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "19cd731b63fabd69e308525e0d797b8597c7f65b19bb6e47cf58c63aec71a68e",
+    "bindings": [
+      "B04",
+      "B05"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "L050 | resilience_and_recovery",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L051 | churn_and_queue_turnover",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L052 | price_and_book_path",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 32,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "fc72b06fa2a51ee9aebea9d683af52b5586f0e98146c621c93ac63ae671e22ae",
+    "bindings": [
+      "B02"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "L053 | missingness_and_integrity_flags",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "source, book, order or mechanics evidence",
+    "original_cell_stream_sha256": "ebbdb18d13cbbfbd0e7cbda96c4227c569f7d23a502dbdee2356b4968c2e061f",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L054 | legacy_price",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 32,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "36c50ad381c1df90f95d9736dd79e4817d51db70ea3e1a1b7d1a3dcfd4e26fd3",
+    "bindings": [
+      "B02"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "L055 | legacy_native_signed_flow",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B03"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L056 | legacy_per_second_roll20",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B03",
+      "B06"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L057 | legacy_book_imbalance",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 32,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "24ea35c31c206b9b4049617288425e33f6508af1590c1c47d2d42364baff2660",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "L058 | legacy_structure_observables",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B06",
+      "B10"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L059 | derived_roll20_and_dipole_state",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B03",
+      "B06",
+      "B10"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L060 | derived_d_family_geometry",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L061 | derived_open_world_predecessor_state",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L062 | derived_ancestry_gaps",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L063 | derived_unresolved_age_chain_trajectory",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L064 | derived_price_flow_book_paths",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B06",
+      "B10"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L065 | derived_v4_mechanics_fifo_features",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L066 | derived_feature_availability_timestamps",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B06",
+      "B10"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L067 | prebirth_predecessor_at_risk_state",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L068 | prebirth_unresolved_chain_extension_state",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L069 | prebirth_ancestry_successor_opportunity",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L070 | prebirth_stopped_chain_false_context_controls",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L071 | prebirth_negative_opportunity_cases",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "legacy/derived/prebirth research measurement",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L072 | clock_event_time",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "clock/provenance, not predictor; exact integer nanoseconds; complete-group close controls current values",
+    "preserved": true,
+    "role": "clock or later-label boundary",
+    "original_cell_stream_sha256": "a8c88911b594e9efc29f5bc875bcadd9346c8c72f16fc075e593a73f25081000",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L073 | clock_receive_time",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "clock/provenance, not predictor; exact integer nanoseconds; complete-group close controls current values",
+    "preserved": true,
+    "role": "clock or later-label boundary",
+    "original_cell_stream_sha256": "3bcf6ce51e9d418c5700ccdd6d9f4803a20b5dc30f97569b62a0f9a062f5caf3",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L074 | clock_event_known_by",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "clock/provenance, not predictor; exact integer nanoseconds; complete-group close controls current values",
+    "preserved": true,
+    "role": "clock or later-label boundary",
+    "original_cell_stream_sha256": "9e50880003d62b33d5c982060c68b78598d0a104eca7ced1893a6d229b9e1b0b",
+    "bindings": [
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L075 | clock_feature_availability",
+    "family": "L",
+    "statuses": {
+      "ORIGINAL_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "clock/provenance, not predictor; exact integer nanoseconds; complete-group close controls current values",
+    "preserved": true,
+    "role": "clock or later-label boundary",
+    "original_cell_stream_sha256": "2d5935774817c414e88152a0b27e2d108957ae314f254fa8d383cbd9af93a8ee",
+    "bindings": [
+      "B07",
+      "B11"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L076 | clock_prospective_discovery_confirmation",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "clock or later-label boundary",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [
+      "B07"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C7",
+      "C8"
+    ],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L077 | clock_model_evaluation",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "clock or later-label boundary",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L078 | clock_lock_time",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "clock or later-label boundary",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L079 | later_outcome_reveal",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "clock or later-label boundary",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L080 | target_ground_truth_onset_time",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "clock or later-label boundary",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L081 | s137_cognitive_shadow_runtime",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L082 | hipporag_associative_retrieval",
+    "family": "L",
+    "statuses": {
+      "MISSING_STATIC_SOURCE": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "MISSING_STATIC_SOURCE": 1038
+      },
+      "20231003": {
+        "MISSING_STATIC_SOURCE": 1754
+      },
+      "20231017": {
+        "MISSING_STATIC_SOURCE": 1274
+      },
+      "20231018": {
+        "MISSING_STATIC_SOURCE": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "6e82d0c92e5bd1c798337dd13aea5087aa206db19ab5b4d2ed2261f84ef562ec",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L083 | step1_existing_october_seconds",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L084 | step1_populations",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L085 | step1_crosswalks",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L086 | step1_target_membership_receipts",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L087 | step1_labels_and_classifications",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L088 | step1_result_prefixes",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L089 | step1_reconciliation_outputs",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L090 | output_state_and_state_delta_movie",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L091 | output_frankie_reasoning_movie",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L092 | output_probability_movie",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L093 | output_candidate_discoveries",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L094 | output_first_locks_and_no_locks",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L095 | output_negative_sparse_inconclusive_ledger",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L096 | output_knowledge_retrieval_receipts",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L097 | output_provider_invocation_response_receipts",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L098 | output_answer_wall_access_receipts",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "L099 | output_source_state_manifest_code_model_run_hashes",
+    "family": "L",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1447
+      }
+    },
+    "cases_with_numeric_members": 0,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "when before/during operands exist use L029.before.known_by_ns / values.during_known_by_ns; static/source/missing layers need their own admission proof; never assign trade receive clock by default",
+    "preserved": true,
+    "role": "runtime/retrieval/population/output evidence",
+    "original_cell_stream_sha256": "7756216134905a5b404a7257c29b474d1f79de07ebedfeb93846e87c4f4eb60d",
+    "bindings": [],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Keep missing/static state; locate authoritative source and admission clock before interpretation."
+  },
+  {
+    "field": "X01 | cot.managed_money_net_pctile_1y",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "cae0214c8cfebed710f28f1a5b6425ad1bfdaf36ad3155ab0a072a4d78da8159",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X02 | weather_forecast.forecast_gw_hdd",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 16,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "498ba618e75764c4cb3dfcf9a0ca4fb25c4d5048ed37463802b449e079f25539",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X03 | cot.managed_money_net_chg_wow",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "807b085009859c4cf762f76c7883b4c9f5ba9acac822f3141c8a3eee31209e3b",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X04 | cot.managed_money_net_pctile_3y",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "4bed99398c08b5e2ce9929a8dc1db05aa012fd2c4ba3e85469a59378489ee400",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X05 | grid_stack.bas.US48.wind_mwh",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 16,
+    "cases_with_varying_numeric_members": 1,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "fa4a5ad7970a9aca74818a28359e42c8ad2be7a260970c450bed9351321c5cab",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X06 | squeeze_watch.sessions_since_prompt_expiry",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 2,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "fa21cbf97e523e0b327e4ab23cc2d5b0d29bdec97d49242e6ebe039bbcb77664",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X07 | grid_stack.bas.US48.est_gas_burn_bcfd",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 16,
+    "cases_with_varying_numeric_members": 1,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "b5ac0fe1d22af053352777fa15467fd06e82f960399d89bd8a58685291bfd5b7",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X08 | cot.ice.ld1.managed_money_net_pctile_1y",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "07181402d3b3492642f02859e80dc10a628040252b30b77cb61e4b237798412c",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X09 | model_disagreement.summary.max_abs_spread_gw_hdd",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 16,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "47187bf701113f20e3014289696fcdee32f8d5380920161943993c34f5a76066",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X10 | weather.gw_hdd (observed)",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 2,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "250745f60890e7e510d9898f00a57f354c7fac633bb8b7c8d80d3ae64ec2ba37",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X11 | EIA weekly storage (level, weekly change, vs 5-year)",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "94ed5774b5a79a1f1cc9e93919187085a0b52d3adb279d6468595b09cc633eec",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X12 | storage estimate vs actual",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 32,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "9f6981f98dd70941dd608cfc2004b5133893729c64284374b818fcaf3204f768",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "X13 | the futures curve shape",
+    "family": "X",
+    "statuses": {
+      "ORIGINAL_PUBLICATION_VALUES_JOINED": 5513
+    },
+    "by_day_status": {
+      "20231002": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1038
+      },
+      "20231003": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1754
+      },
+      "20231017": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1274
+      },
+      "20231018": {
+        "ORIGINAL_PUBLICATION_VALUES_JOINED": 1447
+      }
+    },
+    "cases_with_numeric_members": 16,
+    "cases_with_varying_numeric_members": 16,
+    "clock_contract": "original.state=0 and original.published_ns <= values.asof_receive_ns; declared publication is not verified delivery; retain event_time_ns separately",
+    "preserved": true,
+    "role": "external context/vintage/state; not an automatically admitted predictor",
+    "original_cell_stream_sha256": "2ea6e1213919bb023bd4029c9de4c1cea532beb2b12e68b7c910656df588d5fc",
+    "bindings": [
+      "B09"
+    ],
+    "strategies_requiring_or_contextualizing": [],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S01 | extension_count_log",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 6,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "30f5122f4c0704b39df9fd6e4a3dd2c32f722d57ecfd865e447b74e37e7d9ee5",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S02 | far_absorption_share_1024",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "531218cde7a546ad8ffde308496a0cdb7ab78ddcff550c1d165444dc81e0f91f",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S03 | far_absorption_share_64",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "4d58d90c87a86dbb0c1bd9e06e016230fcd4e88e2b4320ba34e23e154f068f0d",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S04 | far_front_age_log",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "56d0091f1bb689761d300941200528670373a82b14451e67997d343c4b80b617",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S05 | far_identity_survival_1024",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "46f0b443a9d50812daa6a4ba423086b558c8bf9d0053554876e2e1efd86bba8f",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S06 | far_identity_survival_64",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "7a3d6b798ad32398af51a96eae76389aa02ac1e80a72e30d111e8664a805e696",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S07 | far_priority_loss_rate_1024",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "7e729e7a73a9beb379c9cb7f17fb03cda67d009d5926f86d3d331986177227f3",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S08 | far_priority_loss_rate_64",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "0ce30deaff77f2c1bbafae62cec91fc2ce535ee2648cf6f363616e4c6e6059dc",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S09 | far_queue_age_p90_log",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "cfdb1f89791e2f651cd14d93d41fd91ce732157d5f84871b5281b3b5984eee75",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S10 | far_replenish_log1p_1024",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "032e66567ca02bff38caabb8dd8ca42c0fb467ad0491d11bf2fd7d900d685472",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S11 | far_replenish_log1p_64",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "a9c205f8d3dfd3a1dec927ad0621829d6b29d43c83034d28f10e7c7857006499",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S12 | far_size_hhi",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "6e35d2384a7b17446046b1983db994b3eea5ef4f589d6f980d6e18515d3afc1b",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S13 | far_size_retention_1024",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "46f0b443a9d50812daa6a4ba423086b558c8bf9d0053554876e2e1efd86bba8f",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S14 | far_size_retention_64",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "5fed982ee4454f3adc5bb9cdbffcabacbc18e86565fa49ba99bdf8bd5e1e86c2",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S15 | pullback_ticks_last_log",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 6,
+    "cases_with_varying_numeric_members": 1,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "daf6c01203a110d29da0c07d559283c4da1ac0cdf08ea771cb81b9d7f6bfdce7",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S16 | pullback_ticks_prev_log",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 1,
+    "cases_with_varying_numeric_members": 0,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "7ec6adafe256c84fbb83a52a9b428f4dfeb2eba92cd1a69e1830df1105148718",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S17 | step_duration_groups_log",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 6,
+    "cases_with_varying_numeric_members": 4,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "6662988665bdcfba4b22339ad1b3cd14cb94889ca16a90d7f519cda025a89af3",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S18 | step_ratio_log",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 1,
+    "cases_with_varying_numeric_members": 1,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "c27dce9b497534ed5e5d5d24fcd55b335b71370bf302cf533ca46e7122a351c9",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  },
+  {
+    "field": "S19 | unresolved_age_groups_log",
+    "family": "S",
+    "statuses": {
+      "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 4066,
+      "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+    },
+    "by_day_status": {
+      "20231002": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1038
+      },
+      "20231003": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1754
+      },
+      "20231017": {
+        "NO_MATCHING_VALUE_IN_RETAINED_INPUT": 1274
+      },
+      "20231018": {
+        "ORIGINAL_SECOND_SET_WITH_STATES": 1447
+      }
+    },
+    "cases_with_numeric_members": 8,
+    "cases_with_varying_numeric_members": 8,
+    "clock_contract": "state= PRESENT AND state_code=0 required; emission-close joins to L029.during.known_by_ns; last-completed joins to L029.before.known_by_ns; previous_input availability unproven; at_trade_input cannot borrow emission-close",
+    "preserved": true,
+    "role": "individual second-set feature; inspect each clock slot and producer definition",
+    "original_cell_stream_sha256": "f7725f48cfccfce4d73a1116b08cb3606020ddb7fd136816294f837074efbebb",
+    "bindings": [
+      "B08"
+    ],
+    "strategies_requiring_or_contextualizing": [
+      "C3",
+      "C13",
+      "C15"
+    ],
+    "next_action": "Inspect member audit per case; apply states and clock contract; distinguish repeated source operands from independent evidence."
+  }
+]

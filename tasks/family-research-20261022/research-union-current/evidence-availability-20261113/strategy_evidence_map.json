@@ -1,0 +1,1924 @@
+{
+  "schema": "codex-evidence-map/1",
+  "source_commit": "fe45d2eff9b389e00c80807b6e2240003ba4885d",
+  "policy": "All hypotheses retained. No single winner, elimination, tick filtering or execution. Claude new results not consulted.",
+  "bindings": {
+    "B01": {
+      "name": "Full depth and counts",
+      "fields": [
+        "L039",
+        "L040"
+      ],
+      "operands": [
+        "before/during.bid_full_size",
+        "before/during.ask_full_size",
+        "before/during.bid_full_orders",
+        "before/during.ask_full_orders"
+      ],
+      "events": [
+        "groups-*.parquet"
+      ],
+      "clock": "L029.values.before.known_by_ns for before; values.during_known_by_ns for during; source group known_by_ns for complete replay",
+      "availability": "Original per-trade joins exist; complete non-trade groups are located, not reconstructed in this pass.",
+      "dependency": "D01",
+      "id": "B01",
+      "exact_grid_fields": [
+        "L039 | full_bid_ask_depth",
+        "L040 | price_level_and_order_counts"
+      ]
+    },
+    "B02": {
+      "name": "Quotes and touch liquidity",
+      "fields": [
+        "L045",
+        "L052",
+        "L054",
+        "L040"
+      ],
+      "operands": [
+        "bid_price_raw",
+        "ask_price_raw",
+        "bid_size",
+        "ask_size",
+        "bid_orders",
+        "ask_orders"
+      ],
+      "events": [
+        "groups-*.parquet"
+      ],
+      "clock": "Complete group known_by_ns; use group_ordinal/cursor for strict later-group confirmation, including tied nanoseconds.",
+      "availability": "Original before/during values; L054 repeats L052 prices and L045 overlaps both.",
+      "dependency": "D01",
+      "id": "B02",
+      "exact_grid_fields": [
+        "L045 | spread_and_depth_imbalance",
+        "L052 | price_and_book_path",
+        "L054 | legacy_price",
+        "L040 | price_level_and_order_counts"
+      ]
+    },
+    "B03": {
+      "name": "Fresh, expired and rolling native flow",
+      "fields": [
+        "L048",
+        "L055",
+        "L056",
+        "L059"
+      ],
+      "operands": [
+        "aggressor_side",
+        "size",
+        "trade_input_cursor",
+        "available_ns",
+        "incoming_buy/sell",
+        "expired_buy/sell",
+        "window_buy/sell"
+      ],
+      "events": [
+        "trades.parquet",
+        "actions-*.parquet",
+        "groups-*.parquet",
+        "native-flow-source-clocks.parquet"
+      ],
+      "clock": "Trade available_ns/group known_by_ns governs admission; (t-W,t] membership uses explicitly registered source time axis; expiry timer processing gets its own decision clock.",
+      "availability": "L048 is individual trade operands only. L055/L056/L059 are missing in the grid. Native completed-second ratio/roll operands are separate contextual columns; they are not arbitrary fast/slow windows.",
+      "dependency": "D02",
+      "id": "B03",
+      "exact_grid_fields": [
+        "L048 | aggressor_and_native_signed_flow",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state"
+      ]
+    },
+    "B04": {
+      "name": "Cancellation attribution",
+      "fields": [
+        "L031",
+        "L032",
+        "L047",
+        "L049"
+      ],
+      "operands": [
+        "action",
+        "order_id",
+        "before_side",
+        "before_price",
+        "before_size",
+        "after_side",
+        "after_price",
+        "after_size",
+        "fill_linked_reduction",
+        "old/new_touch_effect_json"
+      ],
+      "events": [
+        "actions-*.parquet",
+        "groups-*.parquet"
+      ],
+      "clock": "Action known_by_ns and group_close_cursor; classify touch against registered before/after quote context.",
+      "availability": "L047/L049 have aggregate touch effects; unlinked removal is not proof of cancellation. Raw action columns are located; action taxonomy and attribution still require verification.",
+      "dependency": "D03",
+      "id": "B04",
+      "exact_grid_fields": [
+        "L031 | order_lifecycle_cancels",
+        "L032 | order_lifecycle_modifies",
+        "L047 | mechanics_actions_by_side_and_level",
+        "L049 | depletion_and_replenishment"
+      ]
+    },
+    "B05": {
+      "name": "Tracked order survival and refill",
+      "fields": [
+        "L030",
+        "L031",
+        "L032",
+        "L033",
+        "L034",
+        "L035",
+        "L036",
+        "L037",
+        "L041",
+        "L042",
+        "L043",
+        "L044",
+        "L049"
+      ],
+      "operands": [
+        "order_id",
+        "action",
+        "before/after side/price/size",
+        "fill_linked_reduction",
+        "fill_unchanged_display",
+        "first_cursor",
+        "close_cursor"
+      ],
+      "events": [
+        "actions-*.parquet",
+        "groups-*.parquet",
+        "source-receipt.json"
+      ],
+      "clock": "Only order state available at current completed group; never join future survival or final fate into setup.",
+      "availability": "Grid aggregates cannot establish exact order identity, FIFO or seed lineage. Source action ledger exists; bootstrap/reset-aware order replay is unresolved.",
+      "dependency": "D04",
+      "id": "B05",
+      "exact_grid_fields": [
+        "L030 | order_lifecycle_adds",
+        "L031 | order_lifecycle_cancels",
+        "L032 | order_lifecycle_modifies",
+        "L033 | order_lifecycle_replaces",
+        "L034 | order_lifecycle_trades",
+        "L035 | order_lifecycle_fills",
+        "L036 | order_lifecycle_clears",
+        "L037 | order_identity_transitions",
+        "L041 | fifo_queues",
+        "L042 | queue_age_and_survival",
+        "L043 | queue_concentration",
+        "L044 | orders_and_volume_ahead",
+        "L049 | depletion_and_replenishment"
+      ]
+    },
+    "B06": {
+      "name": "Native morphology and its publication clock",
+      "fields": [
+        "L056",
+        "L058",
+        "L059",
+        "L064",
+        "L066"
+      ],
+      "operands": [
+        "context.Native dipole ratio at latest completed second",
+        "context.Native roll buy/sell",
+        "second_rows.native_buy/native_sell",
+        "completed_second_known_by_ns",
+        "completion_group",
+        "completion_cursor"
+      ],
+      "events": [
+        "native-flow-source-clocks.parquet",
+        "sample-clock-pins.npz"
+      ],
+      "clock": "completed_second_known_by_ns, not label_ns or sample_cut_ns; repeated tick attachments are not new ratio updates.",
+      "availability": "Contextual native series preserved. Named L layers are unavailable; alternative learned-window constructions must get separate version IDs and must not rewrite the archived native ratio.",
+      "dependency": "D05",
+      "id": "B06",
+      "exact_grid_fields": [
+        "L056 | legacy_per_second_roll20",
+        "L058 | legacy_structure_observables",
+        "L059 | derived_roll20_and_dipole_state",
+        "L064 | derived_price_flow_book_paths",
+        "L066 | derived_feature_availability_timestamps"
+      ]
+    },
+    "B07": {
+      "name": "Causal recognition",
+      "fields": [
+        "L076",
+        "L029",
+        "L075"
+      ],
+      "operands": [
+        "life.recognition_ns",
+        "life.recognition_clocks.group",
+        "life.recognition_clocks.close_cursor",
+        "life.recognition_clocks.known_by_ns"
+      ],
+      "events": [
+        "whole-lifecycles.parquet",
+        "a-dipole-clocks.parquet"
+      ],
+      "clock": "Actual recognition_ns; birth label is retrospective; final end cannot arm or time a live entry.",
+      "availability": "Exact case recognition clocks exist although L076 cells are missing; prior result places recognition after leg end in 25/32 cases.",
+      "dependency": "D06",
+      "id": "B07",
+      "exact_grid_fields": [
+        "L076 | clock_prospective_discovery_confirmation",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L075 | clock_feature_availability"
+      ]
+    },
+    "B08": {
+      "name": "State-masked S measurements",
+      "fields": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19"
+      ],
+      "operands": [
+        "previous_input",
+        "at_trade_input",
+        "at_emission_group_close",
+        "last_completed_group_before_trade",
+        "raw_float64",
+        "state_code",
+        "state"
+      ],
+      "events": [
+        "joined-inputs-*.parquet",
+        "compact feature projection (upstream source still to bind)"
+      ],
+      "clock": "Map emission close to L029.during.known_by_ns and last-completed to L029.before.known_by_ns; previous_input needs its precise input cursor/clock. State and producer semantics must also be verified.",
+      "availability": "Only Oct18 has these payloads; at_trade_input is missing throughout. PRESENT/state_code=0 is necessary but does not by itself prove live availability.",
+      "dependency": "D07",
+      "id": "B08",
+      "exact_grid_fields": [
+        "S01 | extension_count_log",
+        "S02 | far_absorption_share_1024",
+        "S03 | far_absorption_share_64",
+        "S04 | far_front_age_log",
+        "S05 | far_identity_survival_1024",
+        "S06 | far_identity_survival_64",
+        "S07 | far_priority_loss_rate_1024",
+        "S08 | far_priority_loss_rate_64",
+        "S09 | far_queue_age_p90_log",
+        "S10 | far_replenish_log1p_1024",
+        "S11 | far_replenish_log1p_64",
+        "S12 | far_size_hhi",
+        "S13 | far_size_retention_1024",
+        "S14 | far_size_retention_64",
+        "S15 | pullback_ticks_last_log",
+        "S16 | pullback_ticks_prev_log",
+        "S17 | step_duration_groups_log",
+        "S18 | step_ratio_log",
+        "S19 | unresolved_age_groups_log"
+      ]
+    },
+    "B09": {
+      "name": "External context and publication state",
+      "fields": [
+        "X01",
+        "X02",
+        "X03",
+        "X04",
+        "X05",
+        "X06",
+        "X07",
+        "X08",
+        "X09",
+        "X10",
+        "X11",
+        "X12",
+        "X13"
+      ],
+      "operands": [
+        "series[].original.state",
+        "series[].original.value",
+        "series[].original.published_ns",
+        "series[].original.row.event_time_ns",
+        "asof_receive_ns",
+        "publication_confidence"
+      ],
+      "events": [
+        "joined-inputs-*.parquet",
+        "external publication stores referenced by original payload"
+      ],
+      "clock": "Declared published_ns <= asof_receive_ns; keep release time, underlying observation time and actual receiver delivery separately.",
+      "availability": "Mixture of published, static and missing values. Some publication timestamps are derived; X13 includes price-derived curve operands. Not independent directional confirmation.",
+      "dependency": "D08",
+      "id": "B09",
+      "exact_grid_fields": [
+        "X01 | cot.managed_money_net_pctile_1y",
+        "X02 | weather_forecast.forecast_gw_hdd",
+        "X03 | cot.managed_money_net_chg_wow",
+        "X04 | cot.managed_money_net_pctile_3y",
+        "X05 | grid_stack.bas.US48.wind_mwh",
+        "X06 | squeeze_watch.sessions_since_prompt_expiry",
+        "X07 | grid_stack.bas.US48.est_gas_burn_bcfd",
+        "X08 | cot.ice.ld1.managed_money_net_pctile_1y",
+        "X09 | model_disagreement.summary.max_abs_spread_gw_hdd",
+        "X10 | weather.gw_hdd (observed)",
+        "X11 | EIA weekly storage (level, weekly change, vs 5-year)",
+        "X12 | storage estimate vs actual",
+        "X13 | the futures curve shape"
+      ]
+    },
+    "B10": {
+      "name": "Information-model inputs and frozen legacy models",
+      "fields": [
+        "L039",
+        "L040",
+        "L045",
+        "L048",
+        "L058",
+        "L059",
+        "L064",
+        "L066"
+      ],
+      "operands": [
+        "prior price/range",
+        "early/late/fresh buy and sell",
+        "entropy",
+        "MI",
+        "C",
+        "flow-change",
+        "original M0/M1 coefficient/transform definitions"
+      ],
+      "events": [
+        "TRADE_RULES.json.models",
+        "prior model input generation and source event tapes"
+      ],
+      "clock": "Each component must carry max(input known_by); preprocessing and model training cutoffs precede validation. Frozen R7/R8 remain archived; learned-window forks receive new model IDs.",
+      "availability": "Frozen models retained in prior rules; 141-field grid does not supply all original model features. No predictions generated here.",
+      "dependency": "D09",
+      "id": "B10",
+      "exact_grid_fields": [
+        "L039 | full_bid_ask_depth",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L048 | aggressor_and_native_signed_flow",
+        "L058 | legacy_structure_observables",
+        "L059 | derived_roll20_and_dipole_state",
+        "L064 | derived_price_flow_book_paths",
+        "L066 | derived_feature_availability_timestamps"
+      ]
+    },
+    "B11": {
+      "name": "Integrity, source identity and session continuity",
+      "fields": [
+        "L024",
+        "L025",
+        "L026",
+        "L027",
+        "L028",
+        "L029",
+        "L038",
+        "L046",
+        "L053",
+        "L072",
+        "L073",
+        "L074",
+        "L075"
+      ],
+      "operands": [
+        "day",
+        "trade_ordinal",
+        "trade_id",
+        "trade_cursor",
+        "event_ns",
+        "receive_ns",
+        "known_by_ns",
+        "source_trade_revision",
+        "source_trade_path",
+        "coverage",
+        "snapshot_member",
+        "reset_member",
+        "bad_receive_clock_member"
+      ],
+      "events": [
+        "joined-inputs-*.parquet",
+        "source-receipt.json",
+        "groups-*.parquet",
+        "actions-*.parquet"
+      ],
+      "clock": "Exact integer nanoseconds plus cursor order. Decisions cannot precede any required operand known_by or complete-group close.",
+      "availability": "Metadata and before/during integrity flags exist; snapshot/continuity proof must cover all relevant events, not only trade attachments.",
+      "dependency": "D01",
+      "id": "B11",
+      "exact_grid_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L053 | missingness_and_integrity_flags",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ]
+    },
+    "B12": {
+      "name": "Order submission, fills and costs",
+      "fields": [],
+      "operands": [
+        "decision_ns",
+        "submit_ns",
+        "ack_ns",
+        "fill_ns",
+        "fill_price",
+        "fill_size",
+        "no_fill_reason",
+        "fees",
+        "slippage",
+        "latency"
+      ],
+      "events": [
+        "future paper adapter execution reports"
+      ],
+      "clock": "decision <= submission <= observed fill; receipt and source event clocks retained independently.",
+      "availability": "No new strategy execution reports exist. Instrument identity, fees and adapter remain unresolved. No simulated midpoint fills claimed.",
+      "dependency": "D10",
+      "id": "B12",
+      "exact_grid_fields": []
+    }
+  },
+  "dependencies": {
+    "D01": {
+      "title": "Continuous complete-group book join",
+      "next_action": "Verify source continuity/reset handling and join every event group, including groups without prints. Preserve ties and original cursors. Validate before/during agreement against source.",
+      "binding": "B01/B02/B11"
+    },
+    "D02": {
+      "title": "Learned native-flow histories",
+      "next_action": "Reconstruct per-side arrivals and expiry from complete admitted trades. Learn fast/slow/quiet windows by strategy and stage; log source event time and availability time separately. Preserve unknown side, known-empty and balanced states.",
+      "binding": "B03"
+    },
+    "D03": {
+      "title": "Cancellation scope and mechanism",
+      "next_action": "Link actual action semantics to full-book, old-touch, new-touch and near/far scope; distinguish fill-linked reductions, cancels, reprices, reset and unknown removals. Preserve each scope as a separate branch.",
+      "binding": "B04"
+    },
+    "D04": {
+      "title": "Order identity and lineage",
+      "next_action": "Bootstrap order ledger; track seed, partial fill, residual, refill, reprice and cancellation across complete groups; scope IDs to contract/session/reset segment.",
+      "binding": "B05"
+    },
+    "D05": {
+      "title": "Morphology and learned observation scale",
+      "next_action": "Use each distinct completed update once for pattern state while retaining every tick attachment. Learn update-count and elapsed-time definitions separately; freeze their definitions and keep original native series.",
+      "binding": "B06"
+    },
+    "D06": {
+      "title": "Recognition cohort join",
+      "next_action": "Verify recognition group and quotes for all candidates, not only selected cases; retain missing/late recognition and never substitute birth. Learn delays and observation-lateness handling.",
+      "binding": "B07"
+    },
+    "D07": {
+      "title": "S producer/state/clock mapping",
+      "next_action": "Bind compact feature producer, units, lookbacks and exact input cursors; state-mask each slot independently. Recover other dates if possible without inventing observations.",
+      "binding": "B08"
+    },
+    "D08": {
+      "title": "External release and delivery proof",
+      "next_action": "Verify declared publication against source receipt/vintage, actual availability, revisions and contract mapping. Keep static levels and between-day shifts distinct from within-window changes.",
+      "binding": "B09"
+    },
+    "D09": {
+      "title": "Model input parity",
+      "next_action": "Reproduce original feature transformations and frozen M0/M1 parity before comparative use; new learned horizons require separate refit/version and untouched validation.",
+      "binding": "B10"
+    },
+    "D10": {
+      "title": "Paper execution contract",
+      "next_action": "Bind exact contract, executable quote/order model, latency and fees. Log all setups and no-fill/paused/capped states without deleting opportunities. No new adapter activated.",
+      "binding": "B12"
+    },
+    "D11": {
+      "title": "Horizon discovery and validation",
+      "next_action": "Follow HORIZON_RESEARCH.md: use complete development streams, event/time axes, nested temporal validation and untouched sessions. Do not optimize on these outcome-selected cases or report a universal winning horizon.",
+      "binding": "all learned-window strategies"
+    }
+  },
+  "strategies": [
+    {
+      "id": "C1",
+      "name": "Ask-side thinning continuation long",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C1",
+      "prior_evidence": "Ask size/orders fell across all four selected large-up-lasting legs. This is descriptive support, not the measured performance of this rule.",
+      "prior_sources": [
+        "R1",
+        "R6A/R6B",
+        "D05",
+        "D13",
+        "large_up_lasting"
+      ],
+      "required_bindings": [
+        "B01",
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B04",
+        "B06"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L039 | full_bid_ask_depth",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L048 | aggressor_and_native_signed_flow",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D03",
+        "D05"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C2",
+      "name": "Bid-side thinning continuation short",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C2",
+      "prior_evidence": "Bid size/orders fell across all four selected large-down-lasting legs. Brief declines showed a different book pattern.",
+      "prior_sources": [
+        "R1",
+        "R6A/R6B",
+        "D05",
+        "D13",
+        "large_down_lasting"
+      ],
+      "required_bindings": [
+        "B01",
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B04",
+        "B06"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L039 | full_bid_ask_depth",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L048 | aggressor_and_native_signed_flow",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D03",
+        "D05"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C3",
+      "name": "Defended liquidity reversal",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C3",
+      "prior_evidence": "R2's later correction resolves the impossible requirement that an unchanged support order remain at best after both quotes improve. Survival alone is not a reversal probability.",
+      "prior_sources": [
+        "R2",
+        "D01",
+        "D06",
+        "Claude five-view cases"
+      ],
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B05",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B01",
+        "B04",
+        "B08"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L030 | order_lifecycle_adds",
+        "L031 | order_lifecycle_cancels",
+        "L032 | order_lifecycle_modifies",
+        "L033 | order_lifecycle_replaces",
+        "L034 | order_lifecycle_trades",
+        "L035 | order_lifecycle_fills",
+        "L036 | order_lifecycle_clears",
+        "L037 | order_identity_transitions",
+        "L038 | contract_session_roll_state",
+        "L040 | price_level_and_order_counts",
+        "L041 | fifo_queues",
+        "L042 | queue_age_and_survival",
+        "L043 | queue_concentration",
+        "L044 | orders_and_volume_ahead",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L048 | aggressor_and_native_signed_flow",
+        "L049 | depletion_and_replenishment",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D04",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D01",
+        "D03",
+        "D07"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C4",
+      "name": "Failed continuation reversal, both directions",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C4",
+      "prior_evidence": "Upward failures have exploratory selected-case support. The mirrored downward failure is explicitly included as a hypothesis with different evidence strength, not excluded.",
+      "prior_sources": [
+        "R5",
+        "R6B",
+        "D12",
+        "individual forward screen",
+        "Claude failed-move case"
+      ],
+      "required_bindings": [
+        "B01",
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B04",
+        "B05",
+        "B06"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L039 | full_bid_ask_depth",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L048 | aggressor_and_native_signed_flow",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D03",
+        "D04",
+        "D05"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C5",
+      "name": "Quiet-flow book release",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C5",
+      "prior_evidence": "Quiet-flow touch information motivated R3. The prior C5 delayed-confirmation form remains in the archived five-rule package; this version explicitly tests the immediate release.",
+      "prior_sources": [
+        "R3",
+        "D04",
+        "D09"
+      ],
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B11",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B01",
+        "B04",
+        "B06"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L048 | aggressor_and_native_signed_flow",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D01",
+        "D03",
+        "D05"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C6",
+      "name": "Early flow-and-thinning entry",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C6",
+      "prior_evidence": "D12 shows waiting may consume the move. This is a timing experiment, not a claim that a feed can capture the observed 0.3ms bursts.",
+      "prior_sources": [
+        "R1",
+        "D12",
+        "C1/C2 timing comparison"
+      ],
+      "required_bindings": [
+        "B01",
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B04",
+        "B06"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L039 | full_bid_ask_depth",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L048 | aggressor_and_native_signed_flow",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D03",
+        "D05"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C7",
+      "name": "Recognition plus one-second follow",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C7",
+      "prior_evidence": "Uses R4's delayed-follow design and tests continuation after observed confirmation.",
+      "prior_sources": [
+        "R4",
+        "D12"
+      ],
+      "required_bindings": [
+        "B02",
+        "B07",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B01",
+        "B03",
+        "B04",
+        "B06"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability",
+        "L076 | clock_prospective_discovery_confirmation"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D06",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D01",
+        "D02",
+        "D03",
+        "D05"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C8",
+      "name": "Recognition plus one-second fade",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C8",
+      "prior_evidence": "Three discovery dates had negative mean remaining midpoint movement after the one-second confirmation. Those summaries motivate this arm but do not establish its net edge.",
+      "prior_sources": [
+        "R5",
+        "D12",
+        "large_up_brief",
+        "small_brief observations"
+      ],
+      "required_bindings": [
+        "B02",
+        "B07",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B01",
+        "B03",
+        "B04",
+        "B06"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability",
+        "L076 | clock_prospective_discovery_confirmation"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D06",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D01",
+        "D02",
+        "D03",
+        "D05"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C9",
+      "name": "Flow with cancellation support",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C9",
+      "prior_evidence": "R6A supported by D13's aligned regime, with Oct17 contrary evidence retained. Default source scope here is native touch cancellations; the October16 runner used book-wide cancellations, so that result is not the exact new rule.",
+      "prior_sources": [
+        "R6A",
+        "D13"
+      ],
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B01",
+        "B06"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L031 | order_lifecycle_cancels",
+        "L032 | order_lifecycle_modifies",
+        "L038 | contract_session_roll_state",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L047 | mechanics_actions_by_side_and_level",
+        "L048 | aggressor_and_native_signed_flow",
+        "L049 | depletion_and_replenishment",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D03",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D01",
+        "D05"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C10",
+      "name": "Flow despite opposing cancellations",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C10",
+      "prior_evidence": "D13's opposed regime outperformed aligned on Oct17 in its descriptive comparison. It is retained deliberately rather than screened out as contradictory.",
+      "prior_sources": [
+        "R6B",
+        "D13"
+      ],
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B01",
+        "B06"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L031 | order_lifecycle_cancels",
+        "L032 | order_lifecycle_modifies",
+        "L038 | contract_session_roll_state",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L047 | mechanics_actions_by_side_and_level",
+        "L048 | aggressor_and_native_signed_flow",
+        "L049 | depletion_and_replenishment",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D03",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D01",
+        "D05"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C11",
+      "name": "Expiry-driven flow transition",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C11",
+      "prior_evidence": "D03 separates flow persistence from price returns. The earlier October16 diagnostic had 116 R9 arms and no confirmations; preserve that outcome.",
+      "prior_sources": [
+        "R9",
+        "D03",
+        "Claude fresh-versus-expiring view"
+      ],
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B01",
+        "B04",
+        "B06"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L048 | aggressor_and_native_signed_flow",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D01",
+        "D03",
+        "D05"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C12",
+      "name": "Standing one-lot retreat",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C12",
+      "prior_evidence": "D06 motivates origin-dependent retreat. This takes the source-defined size-cut onset as the signal, not the future order fate.",
+      "prior_sources": [
+        "R10",
+        "D06"
+      ],
+      "required_bindings": [
+        "B02",
+        "B04",
+        "B05",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B01",
+        "B03"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L030 | order_lifecycle_adds",
+        "L031 | order_lifecycle_cancels",
+        "L032 | order_lifecycle_modifies",
+        "L033 | order_lifecycle_replaces",
+        "L034 | order_lifecycle_trades",
+        "L035 | order_lifecycle_fills",
+        "L036 | order_lifecycle_clears",
+        "L037 | order_identity_transitions",
+        "L038 | contract_session_roll_state",
+        "L040 | price_level_and_order_counts",
+        "L041 | fifo_queues",
+        "L042 | queue_age_and_survival",
+        "L043 | queue_concentration",
+        "L044 | orders_and_volume_ahead",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L047 | mechanics_actions_by_side_and_level",
+        "L049 | depletion_and_replenishment",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D03",
+        "D04",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D01",
+        "D02"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C13",
+      "name": "Observable dipole dive and rebound",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C13",
+      "prior_evidence": "Directly tests the user's shape hypothesis as timing/state information. No claim that the completed aggregate V predicts a live bottom, or that a 1s ratio resolves millisecond moves.",
+      "prior_sources": [
+        "R9 driver distinction",
+        "R8 information provenance",
+        "D03",
+        "D08",
+        "Claude lean/share plots",
+        "user V-shape hypothesis"
+      ],
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B06",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B01",
+        "B04",
+        "B08",
+        "B10"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L048 | aggressor_and_native_signed_flow",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L058 | legacy_structure_observables",
+        "L059 | derived_roll20_and_dipole_state",
+        "L064 | derived_price_flow_book_paths",
+        "L066 | derived_feature_availability_timestamps",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D05",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D01",
+        "D03",
+        "D07",
+        "D09"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C14",
+      "name": "Fresh flow handoff against the older trend",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C14",
+      "prior_evidence": "Closes the gap caused by requiring short/long flow agreement everywhere. A proposed flow-lead transition hypothesis, not an established symmetric prediction.",
+      "prior_sources": [
+        "R1 windows",
+        "R6B disagreement principle",
+        "R7/M0 early-late-fresh feature separation",
+        "D03",
+        "Claude event-sequence view"
+      ],
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B01",
+        "B04",
+        "B06",
+        "B10"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L048 | aggressor_and_native_signed_flow",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D01",
+        "D03",
+        "D05",
+        "D09"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    },
+    {
+      "id": "C15",
+      "name": "Pullback and renewed participation re-entry",
+      "retained": true,
+      "original_spec": "../fifteen-strategies-20261113/STRATEGIES_15.json#C15",
+      "prior_evidence": "Uses the archived models' raw input ideas without blending the 141 fields into a new score. The old frozen R7 and R8 remain separately retained unchanged; no claim their predictions validate this re-entry rule.",
+      "prior_sources": [
+        "R7/M0 prior-price/range/flow inputs",
+        "R8/M1 separate information inputs",
+        "D10/D11",
+        "Claude continuation/exhaustion view"
+      ],
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "context_bindings": [
+        "B01",
+        "B04",
+        "B06",
+        "B08",
+        "B10"
+      ],
+      "required_fields": [
+        "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+        "L025 | october_first_source_window",
+        "L026 | canonical_predecessor_bootstrap_objects",
+        "L027 | native_acmrtfn_messages",
+        "L028 | snapshot_bootstrap_reset_messages",
+        "L029 | raw_source_identity_provenance_clocks_integrity",
+        "L038 | contract_session_roll_state",
+        "L040 | price_level_and_order_counts",
+        "L045 | spread_and_depth_imbalance",
+        "L046 | complete_state_reset_bootstrap_receipts",
+        "L048 | aggressor_and_native_signed_flow",
+        "L052 | price_and_book_path",
+        "L053 | missingness_and_integrity_flags",
+        "L054 | legacy_price",
+        "L055 | legacy_native_signed_flow",
+        "L056 | legacy_per_second_roll20",
+        "L059 | derived_roll20_and_dipole_state",
+        "L072 | clock_event_time",
+        "L073 | clock_receive_time",
+        "L074 | clock_event_known_by",
+        "L075 | clock_feature_availability"
+      ],
+      "unresolved_dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "context_dependencies": [
+        "D01",
+        "D03",
+        "D05",
+        "D07",
+        "D09"
+      ],
+      "decision_clock": "max(required input known_by_ns, complete_group.known_by_ns); later confirmations require later group identity/cursor, not only a larger timestamp",
+      "horizon_policy": "Original constants archived only. New variants learn W_fast, W_slow, W_book, W_quiet, confirmation/observation and management horizons where applicable; none has a fixed 5s/60s default.",
+      "execution_status": "not implemented or executed; source/evidence map only"
+    }
+  ],
+  "original_five": [
+    {
+      "id": "original-C1",
+      "original_spec": "../fifteen-strategies-20261113/ORIGINAL_FIVE.json#C1",
+      "required_bindings": [
+        "B01",
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "difference_warning": "Original C4 upward-failure evidence and original C5 delayed-confirmation rule remain separate from revised mirrored C4/immediate C5; do not overwrite earlier definitions."
+    },
+    {
+      "id": "original-C2",
+      "original_spec": "../fifteen-strategies-20261113/ORIGINAL_FIVE.json#C2",
+      "required_bindings": [
+        "B01",
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "difference_warning": "Original C4 upward-failure evidence and original C5 delayed-confirmation rule remain separate from revised mirrored C4/immediate C5; do not overwrite earlier definitions."
+    },
+    {
+      "id": "original-C3",
+      "original_spec": "../fifteen-strategies-20261113/ORIGINAL_FIVE.json#C3",
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B05",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D04",
+        "D10",
+        "D11"
+      ],
+      "difference_warning": "Original C4 upward-failure evidence and original C5 delayed-confirmation rule remain separate from revised mirrored C4/immediate C5; do not overwrite earlier definitions."
+    },
+    {
+      "id": "original-C4",
+      "original_spec": "../fifteen-strategies-20261113/ORIGINAL_FIVE.json#C4",
+      "required_bindings": [
+        "B01",
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "difference_warning": "Original C4 upward-failure evidence and original C5 delayed-confirmation rule remain separate from revised mirrored C4/immediate C5; do not overwrite earlier definitions."
+    },
+    {
+      "id": "original-C5",
+      "original_spec": "../fifteen-strategies-20261113/ORIGINAL_FIVE.json#C5",
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B11",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D10",
+        "D11"
+      ],
+      "difference_warning": "Original C4 upward-failure evidence and original C5 delayed-confirmation rule remain separate from revised mirrored C4/immediate C5; do not overwrite earlier definitions."
+    }
+  ],
+  "legacy_eleven": [
+    {
+      "id": "R1",
+      "original_spec": "../reanalysis-20261109/TRADE_RULES.json#R1",
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D10"
+      ],
+      "clock": "complete group and per-binding clocks; R7/R8 feature provenance and training cutoff also required",
+      "status": "historical specification preserved verbatim; archived constants are baselines, not defaults for new variants"
+    },
+    {
+      "id": "R2",
+      "original_spec": "../reanalysis-20261109/TRADE_RULES.json#R2",
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B05",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D04",
+        "D10"
+      ],
+      "clock": "complete group and per-binding clocks; R7/R8 feature provenance and training cutoff also required",
+      "status": "historical specification preserved verbatim; archived constants are baselines, not defaults for new variants"
+    },
+    {
+      "id": "R3",
+      "original_spec": "../reanalysis-20261109/TRADE_RULES.json#R3",
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D10"
+      ],
+      "clock": "complete group and per-binding clocks; R7/R8 feature provenance and training cutoff also required",
+      "status": "historical specification preserved verbatim; archived constants are baselines, not defaults for new variants"
+    },
+    {
+      "id": "R4",
+      "original_spec": "../reanalysis-20261109/TRADE_RULES.json#R4",
+      "required_bindings": [
+        "B02",
+        "B07",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D06",
+        "D10"
+      ],
+      "clock": "complete group and per-binding clocks; R7/R8 feature provenance and training cutoff also required",
+      "status": "historical specification preserved verbatim; archived constants are baselines, not defaults for new variants"
+    },
+    {
+      "id": "R5",
+      "original_spec": "../reanalysis-20261109/TRADE_RULES.json#R5",
+      "required_bindings": [
+        "B02",
+        "B07",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D06",
+        "D10"
+      ],
+      "clock": "complete group and per-binding clocks; R7/R8 feature provenance and training cutoff also required",
+      "status": "historical specification preserved verbatim; archived constants are baselines, not defaults for new variants"
+    },
+    {
+      "id": "R6A",
+      "original_spec": "../reanalysis-20261109/TRADE_RULES.json#R6A",
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D03",
+        "D10"
+      ],
+      "clock": "complete group and per-binding clocks; R7/R8 feature provenance and training cutoff also required",
+      "status": "historical specification preserved verbatim; archived constants are baselines, not defaults for new variants"
+    },
+    {
+      "id": "R6B",
+      "original_spec": "../reanalysis-20261109/TRADE_RULES.json#R6B",
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D03",
+        "D10"
+      ],
+      "clock": "complete group and per-binding clocks; R7/R8 feature provenance and training cutoff also required",
+      "status": "historical specification preserved verbatim; archived constants are baselines, not defaults for new variants"
+    },
+    {
+      "id": "R7",
+      "original_spec": "../reanalysis-20261109/TRADE_RULES.json#R7",
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B07",
+        "B10",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D06",
+        "D09",
+        "D10"
+      ],
+      "clock": "complete group and per-binding clocks; R7/R8 feature provenance and training cutoff also required",
+      "status": "historical specification preserved verbatim; archived constants are baselines, not defaults for new variants"
+    },
+    {
+      "id": "R8",
+      "original_spec": "../reanalysis-20261109/TRADE_RULES.json#R8",
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B07",
+        "B10",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D06",
+        "D09",
+        "D10"
+      ],
+      "clock": "complete group and per-binding clocks; R7/R8 feature provenance and training cutoff also required",
+      "status": "historical specification preserved verbatim; archived constants are baselines, not defaults for new variants"
+    },
+    {
+      "id": "R9",
+      "original_spec": "../reanalysis-20261109/TRADE_RULES.json#R9",
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D02",
+        "D10"
+      ],
+      "clock": "complete group and per-binding clocks; R7/R8 feature provenance and training cutoff also required",
+      "status": "historical specification preserved verbatim; archived constants are baselines, not defaults for new variants"
+    },
+    {
+      "id": "R10",
+      "original_spec": "../reanalysis-20261109/TRADE_RULES.json#R10",
+      "required_bindings": [
+        "B02",
+        "B04",
+        "B05",
+        "B11",
+        "B12"
+      ],
+      "retained": true,
+      "dependencies": [
+        "D01",
+        "D03",
+        "D04",
+        "D10"
+      ],
+      "clock": "complete group and per-binding clocks; R7/R8 feature provenance and training cutoff also required",
+      "status": "historical specification preserved verbatim; archived constants are baselines, not defaults for new variants"
+    }
+  ],
+  "additive_hypotheses": [
+    {
+      "id": "H16",
+      "name": "Flow-to-price response delay",
+      "question": "Does fresh flow transmit to both quotes at different delays depending on refill/cancellation state?",
+      "research_protocol": "Keep every arrival, no-response, delayed-response and adverse-response episode. Estimate elapsed-time and complete-group response distributions, censored at known observation end. Use as timing/management information without assuming direction.",
+      "required_bindings": [
+        "B02",
+        "B03",
+        "B04"
+      ],
+      "dependencies": [
+        "D01",
+        "D02",
+        "D03",
+        "D11"
+      ],
+      "retained": true,
+      "origin": "independent Codex availability continuation",
+      "status": "new additive research hypothesis; no fitted rule or execution"
+    },
+    {
+      "id": "H17",
+      "name": "Displayed size versus order-count divergence",
+      "question": "Do falling lots with rising order counts, or the converse, distinguish fragmentation, resistance and later quote movement?",
+      "research_protocol": "Keep all four change-sign combinations and exact zero changes. Treat the ratio as optional derived context, with separate raw operands; resolve identities before attributing fragmentation to a mechanism.",
+      "required_bindings": [
+        "B01",
+        "B02",
+        "B05"
+      ],
+      "dependencies": [
+        "D01",
+        "D04",
+        "D11"
+      ],
+      "retained": true,
+      "origin": "independent Codex availability continuation",
+      "status": "new additive research hypothesis; no fitted rule or execution"
+    },
+    {
+      "id": "H18",
+      "name": "Liquidity withdrawal and return",
+      "question": "Does the time and event count from actual cancellation to same-price liquidity return distinguish continuation from failed release?",
+      "research_protocol": "Track same-order versus replacement-order return and original versus new touch. Retain absent return and unresolved identity. Learn time scales; never use eventual refill to classify a live setup.",
+      "required_bindings": [
+        "B02",
+        "B04",
+        "B05"
+      ],
+      "dependencies": [
+        "D01",
+        "D03",
+        "D04",
+        "D11"
+      ],
+      "retained": true,
+      "origin": "independent Codex availability continuation",
+      "status": "new additive research hypothesis; no fitted rule or execution"
+    },
+    {
+      "id": "H19",
+      "name": "Trade-print movement versus quote movement",
+      "question": "Can print-side alternation explain small/brief moves while quote relocation marks a different state?",
+      "research_protocol": "Preserve every print and bid/ask path. Record previous-price returns, same-side prints, spread changes and both-quote relocation separately across all types. This is an additional explanatory and management branch, never a rule for removing bounce-like cases.",
+      "required_bindings": [
+        "B02",
+        "B03"
+      ],
+      "dependencies": [
+        "D01",
+        "D02",
+        "D11"
+      ],
+      "retained": true,
+      "origin": "independent Codex availability continuation",
+      "status": "new additive research hypothesis; no fitted rule or execution"
+    },
+    {
+      "id": "H20",
+      "name": "Information-state context and lifecycle age",
+      "question": "Do separately observed age, survival, replenishment and information inputs distinguish stalls, renewed activity or management needs?",
+      "research_protocol": "Keep all 19 S fields and each state slot; do not make available-on-Oct18 observations a four-day claim. Missing and zero-MI states remain visible. Source-clock and producer dependencies precede any live use.",
+      "required_bindings": [
+        "B06",
+        "B08",
+        "B10"
+      ],
+      "dependencies": [
+        "D05",
+        "D07",
+        "D09",
+        "D11"
+      ],
+      "retained": true,
+      "origin": "independent Codex availability continuation",
+      "status": "new additive research hypothesis; no fitted rule or execution"
+    },
+    {
+      "id": "H21",
+      "name": "External vintage and market-state interaction",
+      "question": "Do publication-vintage context and contract curve state change the interpretation of local flow/liquidity response?",
+      "research_protocol": "Preserve all 13 X fields, revisions and original states. Four selected days cannot isolate a day-level external effect; expand independent sessions before fitting. Separate price-derived curve context from independent external observations.",
+      "required_bindings": [
+        "B01",
+        "B02",
+        "B03",
+        "B09"
+      ],
+      "dependencies": [
+        "D01",
+        "D02",
+        "D08",
+        "D11"
+      ],
+      "retained": true,
+      "origin": "independent Codex availability continuation",
+      "status": "new additive research hypothesis; no fitted rule or execution"
+    }
+  ]
+}
