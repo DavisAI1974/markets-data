@@ -1,0 +1,82 @@
+{
+  "publication": {
+    "day": "20231017",
+    "repository": "DavisAI1974/markets-data",
+    "revision": "f41a7de50c19ffc5875690542f87dac7d9cd90b3",
+    "prefix": "tasks/family-research-20261022/frankie-four-day-pins/book-recovery-42617700678-1/20231017",
+    "published": true,
+    "files": [
+      {
+        "path": "RECOVERY_RECEIPT.json",
+        "sha256": "e1f38bf9d96634879364b8755cb11fdc6a6c8ffb6ad1368e3da84169297116db",
+        "bytes": 1217
+      },
+      {
+        "path": "MANIFEST.json",
+        "sha256": "35777c5ff768c76f217537cdb06c185b90b1e596f02c7f5a99b9e4bec3166be5",
+        "bytes": 62815
+      },
+      {
+        "path": "REVIEW_SAMPLES.json",
+        "sha256": "b2af363c5b1df37ec008309de13270efa4afe566c2b3029573d7ea66eea45348",
+        "bytes": 1223820
+      },
+      {
+        "path": "SOURCE_PINS.json",
+        "sha256": "28abc8a0ae9638fc3fd5f17041ef4910936c67efffdcbc43bd781aac2339e6ad",
+        "bytes": 1965
+      }
+    ]
+  },
+  "shards": [
+    {
+      "path": "native-messages-0005.jsonl.gz",
+      "rows": 25000,
+      "bytes": 1659010,
+      "sha256": "c5f59ddf87721598adfc2ae942fba40069392d2aaff2ce2d59cbae17016e242d"
+    },
+    {
+      "path": "native-messages-0009.jsonl.gz",
+      "rows": 25000,
+      "bytes": 1628495,
+      "sha256": "dda96db2292295ccbf350a1ae059b02e95d746ea5a653e944b4106f04ed409da"
+    },
+    {
+      "path": "native-messages-0014.jsonl.gz",
+      "rows": 25000,
+      "bytes": 1617684,
+      "sha256": "162ef47177570e4385baac5a28194c94696b77ee27cdbd2c9e205ff21cd477d2"
+    },
+    {
+      "path": "native-messages-0015.jsonl.gz",
+      "rows": 25000,
+      "bytes": 1624877,
+      "sha256": "a4f8f4e50f2a5b66e891977af6e8bd8e5e6290c59958077ec2eaa69cef4a9af1"
+    },
+    {
+      "path": "native-messages-0016.jsonl.gz",
+      "rows": 25000,
+      "bytes": 1644577,
+      "sha256": "5465e65bb174c17fa23e0eb25cb44c22e3c85b0d91d756e6724420d060a99dcf"
+    },
+    {
+      "path": "native-messages-0019.jsonl.gz",
+      "rows": 25000,
+      "bytes": 1653031,
+      "sha256": "94b26aeef919c545818ca2a762d246f58173d145cf21f82c8c3938b74061c13f"
+    },
+    {
+      "path": "native-messages-0024.jsonl.gz",
+      "rows": 25000,
+      "bytes": 1634852,
+      "sha256": "5da1bf3c2e938728f4eacfd5da7e61452b1100471a62b7c44d18b3af992964d9"
+    },
+    {
+      "path": "native-messages-0029.jsonl.gz",
+      "rows": 25000,
+      "bytes": 1630203,
+      "sha256": "4476b7a9e2b402f09d417d66b3b7d7d6977e25063e0072603db42719ea1f4992"
+    }
+  ],
+  "scope": "Every message between consecutive retained trades within each case; first tick begins after its strict-prior group close. No fixed time horizon."
+}
