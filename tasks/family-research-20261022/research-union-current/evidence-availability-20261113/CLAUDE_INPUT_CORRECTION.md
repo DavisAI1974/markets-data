@@ -2,6 +2,16 @@
 
 User-requested correction, November 13, 2026. Both research exercises must preserve independence. This note uses the original sources and the user's correction; Claude's new independent results have not been read.
 
+## Latest user instructions and preserved workbook
+
+- The complete research population is **all 143,270 archived trades across all four dates**, not the 5,513 ticks in selected examples. Rebuild the full population before repeating the initial analysis. Preserve every original field and tick.
+- Keep the eight trade types for Claude. The exact original workbook is saved as [Claude-Eight-Trade-Types-Original.xlsx](../field-rebuild-20261113/Claude-Eight-Trade-Types-Original.xlsx); SHA256 `650824c6a43c376d0c8c84e18f197ae2c84c80dae9b47e9a87cc94fb7bc59217`, 34,890,015 bytes. It remains an original, incomplete-grid artifact, not the finished field rebuild.
+- **Do not restart the stopped S calculations.** Preserve existing S values and their missing states. Complete the other field recoveries.
+- **All four dates may inform one another in retrospective research, including later dates informing earlier dates.** Do not impose a one-way research-memory restriction. Keep the original historical availability clocks: a retrospective association does not become a signal known at that earlier time.
+- Keep all hypotheses and additions. There is no 15-hypothesis ceiling, no elimination, and no single-winner objective. Do not impose new fixed 5s/60s horizons.
+
+[Recovered input package](../field-rebuild-20261113/) now includes verified full book/FIFO source records for every selected tick, all 25 static source fields, and original flow-input tables for all 143,270 trades. Full-population field assembly and verification are in progress; input recovery alone is not a completed rebuild. See [Claude handoff](../field-rebuild-20261113/CLAUDE_HANDOFF.md).
+
 **Rebuild the fields before further strategy research.** The 141-column schema is not 141 populated measurements. Exactly 78 layer columns in the original 32-case grid are empty in every row: 58 `NO_MATCHING_VALUE_IN_RETAINED_INPUT` plus 20 `MISSING_STATIC_SOURCE`. Five further columns are static pinned knowledge. The populated tick-level material largely repeats a trade record, before/during aggregate book snapshots, mechanics operands and clocks. S fields have payloads only on October18. None of this establishes that the empty fields are unnecessary.
 
 **A specific assembly defect has now been located.** `prepare_data.py` read only the old `run-42608467894-1/.../joined-inputs-*.parquet` tables. Later recovery had already published static-source content, full book/FIFO snapshots and Native lifecycle/flow ledgers. Those recoveries were not joined into the 32-case field matrices. The evidence audit initially verified preservation of the incomplete matrices; it did not repair their missing content. Rebuild from the recovered source manifests and exact trade/clock identities, preserve the old matrices, and verify each newly filled field's actual meaning. Do not declare completion by filling cells with unrelated source pointers or fabricated zeroes.
