@@ -1,0 +1,2530 @@
+{
+  "publication": {
+    "day": "20231002",
+    "repository": "DavisAI1974/markets-data",
+    "revision": "7eebebadef89c4281cdb25c236ac39f5da814839",
+    "prefix": "tasks/family-research-20261022/frankie-four-day-pins/book-recovery-42617700678-1/20231002",
+    "published": true,
+    "files": [
+      {
+        "path": "RECOVERY_RECEIPT.json",
+        "sha256": "f2483b648e01fef56bf2e03b277e214c0b5061d88afd1e921b751f65d6da9fd8",
+        "bytes": 1217
+      },
+      {
+        "path": "MANIFEST.json",
+        "sha256": "9af6f09cf333cd60250aadda29947b43165173c6ad82fc6434592f79207df9cb",
+        "bytes": 69781
+      },
+      {
+        "path": "REVIEW_SAMPLES.json",
+        "sha256": "b1661606ace19fcde54651342b8bb384a175980d0c672cadc8a2e1478fd48374",
+        "bytes": 1139368
+      },
+      {
+        "path": "SOURCE_PINS.json",
+        "sha256": "3b8d6b3d51e7f487911c253d3d52100f473cbfdc6b55144dc2fcd3089a0d7b4d",
+        "bytes": 1965
+      }
+    ]
+  },
+  "manifest": {
+    "files": [
+      {
+        "path": "native-messages-0000.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1681574,
+        "sha256": "50b5b725bc5e91976f37c8ef34e38265faf70461727a5a3ede930064c63db1ee"
+      },
+      {
+        "path": "native-messages-0001.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1684977,
+        "sha256": "aa79de637f1d8b4b8bb76078f169c89993b9b50a4785c940a1dd740f3102177e"
+      },
+      {
+        "path": "native-messages-0002.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1690532,
+        "sha256": "4f995502627ee4debf75637c94d0a072740860c20ed27a92f296f72d4d9d07aa"
+      },
+      {
+        "path": "native-messages-0003.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1664704,
+        "sha256": "ced12bc085c7034930295b49948cfb96f1712dede219d9aa4362d88f28034956"
+      },
+      {
+        "path": "native-messages-0004.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1659494,
+        "sha256": "d5fe247bc76a20dda2b4510fd29d66cc0a825b13678b2a7986deeed7d10df839"
+      },
+      {
+        "path": "native-messages-0005.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1644186,
+        "sha256": "9bde176b549ca58c68f88a0a51e81246315c6dc0cb804b2611f50976f44b70ff"
+      },
+      {
+        "path": "native-messages-0006.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1609080,
+        "sha256": "c391c2397077c1d94f1d3a945ee320174d6c7b0f746f87739ed9aeaed4a9c32e"
+      },
+      {
+        "path": "native-messages-0007.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1626088,
+        "sha256": "b70e6586e7421836d347ccbec49a74a65b9d2b703d1ace453a25f773c1adb3fc"
+      },
+      {
+        "path": "native-messages-0008.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1620806,
+        "sha256": "ebc944ebe4bbad3e89efe72560fcb0918d3c3adf056278fb6e740f53af5ed73d"
+      },
+      {
+        "path": "native-messages-0009.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1613463,
+        "sha256": "76bd0dbcf73c26c241f87ccfd8a31ae4d5ce011bdad575c9a7f562c1dd7d57a2"
+      },
+      {
+        "path": "native-messages-0010.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1610727,
+        "sha256": "2c47860209bf6903eed9c7599f647fd30174f35e72def235315622839c89bca4"
+      },
+      {
+        "path": "native-messages-0011.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1624479,
+        "sha256": "61a6ec97e4234f156bc7f7d1c3cbcfc2a0a168fbdbc1c18d64180ce5fbbb1616"
+      },
+      {
+        "path": "native-messages-0012.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1634845,
+        "sha256": "a49edc55215092c939048a1ab130d21435818f7528c87b5ee73ad2d8152568ee"
+      },
+      {
+        "path": "native-messages-0013.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1591225,
+        "sha256": "34b3454c1cc09ee616d46946d94fd7447c62d187cd6849c15a7c6a77bbaad46f"
+      },
+      {
+        "path": "native-messages-0014.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1606791,
+        "sha256": "e6e38fea0d98d6257e6b0d565dd38aa712c69c3e28f52af0e189e22b992e9e12"
+      },
+      {
+        "path": "native-messages-0015.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1590873,
+        "sha256": "bc98a3a786c4de289c04965a4acb773f4fe776f5a9ecbf24213b9f34fe87c784"
+      },
+      {
+        "path": "native-messages-0016.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1615603,
+        "sha256": "360db0832c0a53a1e65653b0db386079cafe62683f8fbd87859e66e558b8b536"
+      },
+      {
+        "path": "native-messages-0017.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1628980,
+        "sha256": "bda00c49cf1270bfed58a5fd1b209e8830d7bf81e9fb8da2707908472969e83c"
+      },
+      {
+        "path": "native-messages-0018.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1633283,
+        "sha256": "d016f3c186e1ba6dec3f8b1e511707db37429b0303ee229b75e15bf23497e99d"
+      },
+      {
+        "path": "native-messages-0019.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1613695,
+        "sha256": "c9ed80bc16c448fed56bd9d8dbaf08f4921588be905796a0dcc0d42edf9d64a4"
+      },
+      {
+        "path": "native-messages-0020.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1613905,
+        "sha256": "989402d188c53250ef5db49b69ceae2098e9427eea74d16d8e4f33f5660f9954"
+      },
+      {
+        "path": "native-messages-0021.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1617882,
+        "sha256": "2e63d01deb6c89d81ea32ac5af722e400d90b067499981f1f6ab9df4db48dc20"
+      },
+      {
+        "path": "native-messages-0022.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1619850,
+        "sha256": "4012476bfbafa1897d3981a99e798935f8d44d6253d114c36e1e8f40d7d2bd2c"
+      },
+      {
+        "path": "native-messages-0023.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1604675,
+        "sha256": "b31e5185006ea22e636e9eba8a3fed65ef89363cae091553f6e78f8d137c8950"
+      },
+      {
+        "path": "native-messages-0024.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1620579,
+        "sha256": "e0d6ef4280de81d3db6ae7fe8d02ce69751d29f41c05a292c1b23154e2b25e5c"
+      },
+      {
+        "path": "native-messages-0025.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1623451,
+        "sha256": "498c2bce9737a6ff4d967b827b238f3ec407608686c9812c674c4c11040eafb9"
+      },
+      {
+        "path": "native-messages-0026.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1610750,
+        "sha256": "3ba4d53801393e49ad516f769f264607f9ffa400e64b6662393aa0e6499a2f83"
+      },
+      {
+        "path": "native-messages-0027.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1628740,
+        "sha256": "d25e314c72264b9dfc496d28cc57c44d79deec22a59cc2e29c62e85822b0940b"
+      },
+      {
+        "path": "native-messages-0028.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1674273,
+        "sha256": "f6d66c7549ec59e84aec0775a3c7a5542a3f9180b85f43a9223f7f74c78f7b66"
+      },
+      {
+        "path": "native-messages-0029.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1684708,
+        "sha256": "1cfeb99d34137c0f53083a1c577d1833295d57f0780828625a2e309de74a7845"
+      },
+      {
+        "path": "native-messages-0030.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1713372,
+        "sha256": "8e355b56cd188a1a542cd98d6b8a14cd56cb1e6221c7189bdf13f7d76ca88af5"
+      },
+      {
+        "path": "native-messages-0031.jsonl.gz",
+        "rows": 25000,
+        "bytes": 1718685,
+        "sha256": "3f91e9dcc1c526d5a23ed06a2f9a689f0ca0811a1c879d5ba7a01f66c90a30ad"
+      },
+      {
+        "path": "native-messages-0032.jsonl.gz",
+        "rows": 8453,
+        "bytes": 570062,
+        "sha256": "b58436308c729c0aab212a22567a6b4760044617676975ab3d4627a60936e767"
+      },
+      {
+        "path": "trade-book-fifo-0000.jsonl.gz",
+        "rows": 100,
+        "bytes": 2171633,
+        "sha256": "ad3e6a229842dbb9fa00ad579c89ce276ee288d7097b9db1010136a6ce69e99d"
+      },
+      {
+        "path": "trade-book-fifo-0001.jsonl.gz",
+        "rows": 100,
+        "bytes": 2466227,
+        "sha256": "d74842b47461e18f255b86c110c2b3adf9b29198d433409b768c2c66ff106c48"
+      },
+      {
+        "path": "trade-book-fifo-0002.jsonl.gz",
+        "rows": 100,
+        "bytes": 2521540,
+        "sha256": "2ba323b759d09b605f081399c551239a433a313fe0ff3458a7f14888d247431d"
+      },
+      {
+        "path": "trade-book-fifo-0003.jsonl.gz",
+        "rows": 100,
+        "bytes": 2653485,
+        "sha256": "278eada2e7fdd386489b6cee83ad1f4a9377ba84de782c9642ac84395a1b1f91"
+      },
+      {
+        "path": "trade-book-fifo-0004.jsonl.gz",
+        "rows": 100,
+        "bytes": 2722667,
+        "sha256": "483dea459f09e34101ab202311cebaeb118afb6794553491101bfc6fbf0c1d95"
+      },
+      {
+        "path": "trade-book-fifo-0005.jsonl.gz",
+        "rows": 100,
+        "bytes": 2807136,
+        "sha256": "ab59ddef28c5a7ea36002ac74a828ad0aaba3d39e66aa402ea83decacfa8f846"
+      },
+      {
+        "path": "trade-book-fifo-0006.jsonl.gz",
+        "rows": 100,
+        "bytes": 2837908,
+        "sha256": "daa390ce5ae7052b4d870456fd9a4d98791dba9d6ca060cce1f1483b02ab3306"
+      },
+      {
+        "path": "trade-book-fifo-0007.jsonl.gz",
+        "rows": 100,
+        "bytes": 2890677,
+        "sha256": "9b7fd08e5c2312cf8695bae7a67f6b140f5e9c459667c3dab0f9eccd2e6ce4dc"
+      },
+      {
+        "path": "trade-book-fifo-0008.jsonl.gz",
+        "rows": 100,
+        "bytes": 3040664,
+        "sha256": "0470a3ebf20fd4c31496db5f6196ec3b943aea95b5fa719bc67eddef6cd23231"
+      },
+      {
+        "path": "trade-book-fifo-0009.jsonl.gz",
+        "rows": 100,
+        "bytes": 3103013,
+        "sha256": "6dbbc18154a73d307b0a230b7f61630d4805f79781d4536c334f96f042bce793"
+      },
+      {
+        "path": "trade-book-fifo-0010.jsonl.gz",
+        "rows": 100,
+        "bytes": 3119544,
+        "sha256": "a51d88896a972bb3fe4b41781db8df433bcfb9ba55f05d2f81e866d01e7d19aa"
+      },
+      {
+        "path": "trade-book-fifo-0011.jsonl.gz",
+        "rows": 100,
+        "bytes": 3183688,
+        "sha256": "81bb7a3f648592d174e4f766cec6ff373f0c618fe170052a85b1ae6c90c547ef"
+      },
+      {
+        "path": "trade-book-fifo-0012.jsonl.gz",
+        "rows": 100,
+        "bytes": 3230085,
+        "sha256": "1e76f3945cbb2b719ab5859d56fc2c4591a3ea07af6ec08f4ea891a9c28e3365"
+      },
+      {
+        "path": "trade-book-fifo-0013.jsonl.gz",
+        "rows": 100,
+        "bytes": 3408629,
+        "sha256": "59793bcd08c75158ca58f7dc3feceaa40f639732ca4c1b6e996d18314c808678"
+      },
+      {
+        "path": "trade-book-fifo-0014.jsonl.gz",
+        "rows": 100,
+        "bytes": 3469148,
+        "sha256": "4069388cfb94c19d094094bdb2b5db5dde2fe130569be93acaab1f860aec2a0e"
+      },
+      {
+        "path": "trade-book-fifo-0015.jsonl.gz",
+        "rows": 100,
+        "bytes": 3426832,
+        "sha256": "fe28464b9141f9ca055951a71bcac091e6373d86c5e7a21bb8c34beaf9874bc6"
+      },
+      {
+        "path": "trade-book-fifo-0016.jsonl.gz",
+        "rows": 100,
+        "bytes": 3538349,
+        "sha256": "c57b4fab49601cfcd6903dfee0062462c20ed4373637d99ad6e4bb2f30b81b0d"
+      },
+      {
+        "path": "trade-book-fifo-0017.jsonl.gz",
+        "rows": 100,
+        "bytes": 3523474,
+        "sha256": "18388e88ff6b24b87df2203da2a38659d5efb68b2e8403b0baa237d936d5df4a"
+      },
+      {
+        "path": "trade-book-fifo-0018.jsonl.gz",
+        "rows": 100,
+        "bytes": 3544390,
+        "sha256": "222ef3e40bde21478acc45c2231759bcdbad5ba2c468a2a5362d5421a3b3c31b"
+      },
+      {
+        "path": "trade-book-fifo-0019.jsonl.gz",
+        "rows": 100,
+        "bytes": 3562882,
+        "sha256": "f1aff21e669e6c2b65a6992b6cc75c93036c3f107e1078e9dab234126355cb1c"
+      },
+      {
+        "path": "trade-book-fifo-0020.jsonl.gz",
+        "rows": 100,
+        "bytes": 3687699,
+        "sha256": "94e6fa452297b10df306e09d9c141a7e73f2f652a65f91327e0ceedba68514a3"
+      },
+      {
+        "path": "trade-book-fifo-0021.jsonl.gz",
+        "rows": 100,
+        "bytes": 3683604,
+        "sha256": "8efb00b9ca7467d4a21d051d7cad1d7cc83f896af84aaa1b942b9e1526323bdc"
+      },
+      {
+        "path": "trade-book-fifo-0022.jsonl.gz",
+        "rows": 100,
+        "bytes": 3617303,
+        "sha256": "15f4eaeaa7cf9c95df3f451c12374689e2acf208d16ed3a642312f7c9fcee23b"
+      },
+      {
+        "path": "trade-book-fifo-0023.jsonl.gz",
+        "rows": 100,
+        "bytes": 3689333,
+        "sha256": "bee83a32a516f9eb538d021131632b5de1238f16a2b7f92a544094f99e7a698a"
+      },
+      {
+        "path": "trade-book-fifo-0024.jsonl.gz",
+        "rows": 100,
+        "bytes": 3723654,
+        "sha256": "312bae251ecb119c1a9ef380b58264fbdf33ec70f2638cd51280aba6a97228a8"
+      },
+      {
+        "path": "trade-book-fifo-0025.jsonl.gz",
+        "rows": 100,
+        "bytes": 3715871,
+        "sha256": "2a75d279b4f9d446e42759c37b63a17fcd7cc89208cfd98a2d7ea02b6c453338"
+      },
+      {
+        "path": "trade-book-fifo-0026.jsonl.gz",
+        "rows": 100,
+        "bytes": 3753564,
+        "sha256": "94badab02c2b46a1479af8a92f1f4c1a5c31618b4265187c2315fbf8b833e796"
+      },
+      {
+        "path": "trade-book-fifo-0027.jsonl.gz",
+        "rows": 100,
+        "bytes": 3728482,
+        "sha256": "e869504c1170e14658499f4f3e10ca51c50ed498899da47a696bc3c634844209"
+      },
+      {
+        "path": "trade-book-fifo-0028.jsonl.gz",
+        "rows": 100,
+        "bytes": 3695770,
+        "sha256": "2ef66517adb6322950858d2406a428dadf78e30c93e69bcd1328140f2e564b2c"
+      },
+      {
+        "path": "trade-book-fifo-0029.jsonl.gz",
+        "rows": 100,
+        "bytes": 3774343,
+        "sha256": "26a5b821a437340633568b01bf509e2e9df16bda8580375b875871f679675f79"
+      },
+      {
+        "path": "trade-book-fifo-0030.jsonl.gz",
+        "rows": 100,
+        "bytes": 3839826,
+        "sha256": "08dc7b5af62f35cd09b8fd1f549767452281652f96d1b8a23e63f5434c5866e7"
+      },
+      {
+        "path": "trade-book-fifo-0031.jsonl.gz",
+        "rows": 100,
+        "bytes": 3832082,
+        "sha256": "265f5eec9cc9ab6c24410356a21ea69b475888fd32edbd7425070155592c4aab"
+      },
+      {
+        "path": "trade-book-fifo-0032.jsonl.gz",
+        "rows": 100,
+        "bytes": 3832062,
+        "sha256": "76acd6e3d1bff614ec4a700e359d42aae48a590eca3db3e7d696b9e4a28a1cfd"
+      },
+      {
+        "path": "trade-book-fifo-0033.jsonl.gz",
+        "rows": 100,
+        "bytes": 3837371,
+        "sha256": "85656f204c1a11396ec0a9455b09ba085f0ab6f6664130a9f3b96ebc4ae9f561"
+      },
+      {
+        "path": "trade-book-fifo-0034.jsonl.gz",
+        "rows": 100,
+        "bytes": 3884342,
+        "sha256": "eff3070ce86f05d5eb9a6264c4d39ab80c40b60dd882f450da4142aa18214555"
+      },
+      {
+        "path": "trade-book-fifo-0035.jsonl.gz",
+        "rows": 100,
+        "bytes": 3917371,
+        "sha256": "0d479f6b3d31b8f2bd3fbd3daa146ce5c51b6754d97ab491ec852ac9f43a3738"
+      },
+      {
+        "path": "trade-book-fifo-0036.jsonl.gz",
+        "rows": 100,
+        "bytes": 3968449,
+        "sha256": "1b65efe4e9e509ee01a6aeef873f62b295aed0d1c426d22cf45cb11d1237f1ba"
+      },
+      {
+        "path": "trade-book-fifo-0037.jsonl.gz",
+        "rows": 100,
+        "bytes": 3972432,
+        "sha256": "4fc334d59ea8cb5f63bc024920c1b0b0fd075b2726e6e686cc258a61ad9bcd3b"
+      },
+      {
+        "path": "trade-book-fifo-0038.jsonl.gz",
+        "rows": 100,
+        "bytes": 4004124,
+        "sha256": "bd253165bda98fe67051400166ce6defa479531510c20f4e5b43f1bec59e2bbe"
+      },
+      {
+        "path": "trade-book-fifo-0039.jsonl.gz",
+        "rows": 100,
+        "bytes": 3971415,
+        "sha256": "44349ea5ea7839ab60bc6bac0435ef07c5ef5f2c3afeb523f240df400abad1bf"
+      },
+      {
+        "path": "trade-book-fifo-0040.jsonl.gz",
+        "rows": 100,
+        "bytes": 3957443,
+        "sha256": "d8092e91849071e86f51545671dc7f6afab210662bdfc80435bf2f67ea4527be"
+      },
+      {
+        "path": "trade-book-fifo-0041.jsonl.gz",
+        "rows": 100,
+        "bytes": 4049663,
+        "sha256": "75c4ba2eaa8c798aee57aa8d573707ecf8840776e9ddaa6af6a20af26b1ac4a8"
+      },
+      {
+        "path": "trade-book-fifo-0042.jsonl.gz",
+        "rows": 100,
+        "bytes": 4107608,
+        "sha256": "28577b0512fc7cc6972e7cbf82408bed294e8c0def6e2f2d93b1afca71897280"
+      },
+      {
+        "path": "trade-book-fifo-0043.jsonl.gz",
+        "rows": 100,
+        "bytes": 4210730,
+        "sha256": "d157ddbf412801adef2ebcca1b76ddc6ac544e2d69c64e6e5ee2f4a26e6f3da1"
+      },
+      {
+        "path": "trade-book-fifo-0044.jsonl.gz",
+        "rows": 100,
+        "bytes": 4172496,
+        "sha256": "087e66e2602d0a193a3498c0f155c767f97c71daa693516fe0a64330e8293516"
+      },
+      {
+        "path": "trade-book-fifo-0045.jsonl.gz",
+        "rows": 100,
+        "bytes": 4184598,
+        "sha256": "218fd29d563a860e93e645d36f9b7f30e1d665cce750921642886bc4b2a684b2"
+      },
+      {
+        "path": "trade-book-fifo-0046.jsonl.gz",
+        "rows": 100,
+        "bytes": 4110179,
+        "sha256": "0ed0ff957d5821a3b547afbd649ad865b5af3adc64938cac0967c8dbb6c77b04"
+      },
+      {
+        "path": "trade-book-fifo-0047.jsonl.gz",
+        "rows": 100,
+        "bytes": 4161781,
+        "sha256": "eba7468b240779af9187ebc4a670dcd57937a17d5962488e1a6ba449b374a262"
+      },
+      {
+        "path": "trade-book-fifo-0048.jsonl.gz",
+        "rows": 100,
+        "bytes": 4144580,
+        "sha256": "9118c87742cba0af0a887bb54fcedb7d737730db4eb77ec31921a2ce4eb22b82"
+      },
+      {
+        "path": "trade-book-fifo-0049.jsonl.gz",
+        "rows": 100,
+        "bytes": 4157265,
+        "sha256": "a7bb6e77f93001146fc154cbf9b7311d9171490c31b247d179208dc86e0a557c"
+      },
+      {
+        "path": "trade-book-fifo-0050.jsonl.gz",
+        "rows": 100,
+        "bytes": 4115453,
+        "sha256": "0cc345a72b443435f74127c394cce6a7736af64d2c38b6c19c23658cd43dd796"
+      },
+      {
+        "path": "trade-book-fifo-0051.jsonl.gz",
+        "rows": 100,
+        "bytes": 4097126,
+        "sha256": "2063b527be82b366160bed1b57f6bd1ae6cf7e4e0adf412d60a91f27825b30b6"
+      },
+      {
+        "path": "trade-book-fifo-0052.jsonl.gz",
+        "rows": 100,
+        "bytes": 4200982,
+        "sha256": "dc63e74dae8d76cf1bc0325d35fd93a7b3612dbf3b5547cb4f0d35c8d8fa33cb"
+      },
+      {
+        "path": "trade-book-fifo-0053.jsonl.gz",
+        "rows": 100,
+        "bytes": 4155015,
+        "sha256": "b632a322ec88a0fa7e17d7fcb301db903f00980e8189fd3f265e6b934dd08070"
+      },
+      {
+        "path": "trade-book-fifo-0054.jsonl.gz",
+        "rows": 100,
+        "bytes": 4214395,
+        "sha256": "bb4b4db5450d4ef495e80eb4497e077fa49b4456490d4acea0b935b5cce60ae7"
+      },
+      {
+        "path": "trade-book-fifo-0055.jsonl.gz",
+        "rows": 100,
+        "bytes": 4344616,
+        "sha256": "524dd318388d94f75de9b6c6b1813ed572161c14ff02f95f037698b4b5f5cf76"
+      },
+      {
+        "path": "trade-book-fifo-0056.jsonl.gz",
+        "rows": 100,
+        "bytes": 4411916,
+        "sha256": "16af4ae5940e485b6273bd1004ae0905245524d66ffef7f4b8a89e7e4dcadaa4"
+      },
+      {
+        "path": "trade-book-fifo-0057.jsonl.gz",
+        "rows": 100,
+        "bytes": 4508091,
+        "sha256": "f37848e48b96c5e560abc54e863d96730b96912906efe4299cda64dd1a7de674"
+      },
+      {
+        "path": "trade-book-fifo-0058.jsonl.gz",
+        "rows": 100,
+        "bytes": 4584602,
+        "sha256": "b8bcc16508f9d4c2a0e178b1a9961930325651d4e551cb0ea5b7b133d2aba767"
+      },
+      {
+        "path": "trade-book-fifo-0059.jsonl.gz",
+        "rows": 100,
+        "bytes": 4610983,
+        "sha256": "6c900acb9bec8f2c332b32b2e4e2a93b8f1f69db846332821b7fcabd72e08685"
+      },
+      {
+        "path": "trade-book-fifo-0060.jsonl.gz",
+        "rows": 100,
+        "bytes": 4696475,
+        "sha256": "3afa91511a5b30d7c1cdc6a4a9bdcaa0c7808181b94ad45939cead7d9057f6ec"
+      },
+      {
+        "path": "trade-book-fifo-0061.jsonl.gz",
+        "rows": 100,
+        "bytes": 4653894,
+        "sha256": "461ee3f85e59249271b664ff3444792a72d70739a984c9aa38714022c6bf9c8b"
+      },
+      {
+        "path": "trade-book-fifo-0062.jsonl.gz",
+        "rows": 100,
+        "bytes": 4579670,
+        "sha256": "d2d410a6942f598cf2fa452a26dd46e68ec0c6d1c3d087e32e9fa45bd1524f54"
+      },
+      {
+        "path": "trade-book-fifo-0063.jsonl.gz",
+        "rows": 100,
+        "bytes": 4668160,
+        "sha256": "0e147d474b7e338a0f20114b57775b5468279944c74506c800a7510999bf2321"
+      },
+      {
+        "path": "trade-book-fifo-0064.jsonl.gz",
+        "rows": 100,
+        "bytes": 4715585,
+        "sha256": "f8b84e4941be453960d68f11a0edb675410a07c4d408216b8872c6a67493671b"
+      },
+      {
+        "path": "trade-book-fifo-0065.jsonl.gz",
+        "rows": 100,
+        "bytes": 4793854,
+        "sha256": "a34ebc6da7536969ef8010f6827f6ab61c341ac10e099d276430176078929475"
+      },
+      {
+        "path": "trade-book-fifo-0066.jsonl.gz",
+        "rows": 100,
+        "bytes": 4795371,
+        "sha256": "0960864895d6737fb0efb850ccb139faeebc9713621e054b229a16c4fc8068ec"
+      },
+      {
+        "path": "trade-book-fifo-0067.jsonl.gz",
+        "rows": 100,
+        "bytes": 4815256,
+        "sha256": "8be021a230a3a5a23ee2d54ce89ee15f2a5641a11db3982f0af3dbbcdbccd684"
+      },
+      {
+        "path": "trade-book-fifo-0068.jsonl.gz",
+        "rows": 100,
+        "bytes": 4790446,
+        "sha256": "edd310e054718a427caaa667034414041054a89fb3a5b78edf12c08424c5fead"
+      },
+      {
+        "path": "trade-book-fifo-0069.jsonl.gz",
+        "rows": 100,
+        "bytes": 4660328,
+        "sha256": "2a52b2c4be005cb25e3b1a8735e2a5c0e85a1e195f81d20c72385c834ad2a6c3"
+      },
+      {
+        "path": "trade-book-fifo-0070.jsonl.gz",
+        "rows": 100,
+        "bytes": 4707427,
+        "sha256": "c6fa200fd3e241e7cedd9a7c3dcaa457f3099095b13229b1c1a5aad662783d6a"
+      },
+      {
+        "path": "trade-book-fifo-0071.jsonl.gz",
+        "rows": 100,
+        "bytes": 4813024,
+        "sha256": "343c7c59c45376d7e93b5777e079a740a3d727f7fe9865f90d750b7332e907e3"
+      },
+      {
+        "path": "trade-book-fifo-0072.jsonl.gz",
+        "rows": 100,
+        "bytes": 4842604,
+        "sha256": "6d738390420de1c50959032e3120b4822a5e98af3c85ccc908d386c7b4101583"
+      },
+      {
+        "path": "trade-book-fifo-0073.jsonl.gz",
+        "rows": 100,
+        "bytes": 4911512,
+        "sha256": "db7d994e03c8d1fb34f197220ad7f0694eed06abb5dd0c184d9fd9d1b416a707"
+      },
+      {
+        "path": "trade-book-fifo-0074.jsonl.gz",
+        "rows": 100,
+        "bytes": 4878621,
+        "sha256": "4c09aeb33412dba6c5eedf59cb9f0b865b15b703c2f5f7a910120afb0ed7386a"
+      },
+      {
+        "path": "trade-book-fifo-0075.jsonl.gz",
+        "rows": 100,
+        "bytes": 4960164,
+        "sha256": "4097386f5ec8f55828c0b6c7bb720a434a1cfcdd0191eb424ac2e4227fd5779e"
+      },
+      {
+        "path": "trade-book-fifo-0076.jsonl.gz",
+        "rows": 100,
+        "bytes": 5049279,
+        "sha256": "1a1f7546a0f2b5d5688efbc20b16ee55ef6bb7f7a7ae2192a877671420c6a626"
+      },
+      {
+        "path": "trade-book-fifo-0077.jsonl.gz",
+        "rows": 100,
+        "bytes": 4939473,
+        "sha256": "678e585980ffd235d39165e1f341505873e5ccfbb8ea375c93b82be50791ef47"
+      },
+      {
+        "path": "trade-book-fifo-0078.jsonl.gz",
+        "rows": 100,
+        "bytes": 5071196,
+        "sha256": "10c79b36e89b4a6105a7f66d549b532684226e9ec2595324a6c857abc6a904c1"
+      },
+      {
+        "path": "trade-book-fifo-0079.jsonl.gz",
+        "rows": 100,
+        "bytes": 4979191,
+        "sha256": "98df5dc87b073ed657d7bd0e17f4aa68b6f71ddab21278675a3c1716635fe1b9"
+      },
+      {
+        "path": "trade-book-fifo-0080.jsonl.gz",
+        "rows": 100,
+        "bytes": 4950797,
+        "sha256": "4355a4547d41f1d1635854cc61674b395488674305fdcbc820179450bee31cf7"
+      },
+      {
+        "path": "trade-book-fifo-0081.jsonl.gz",
+        "rows": 100,
+        "bytes": 4879158,
+        "sha256": "f0027d08622462655b9f312ba2477afd504f71b88189edc66728eb9725502fe9"
+      },
+      {
+        "path": "trade-book-fifo-0082.jsonl.gz",
+        "rows": 100,
+        "bytes": 5045845,
+        "sha256": "0a8f286341d9815eec7fb09af7fabf13c0f7f22ed79bbe687d063631b37b3e6e"
+      },
+      {
+        "path": "trade-book-fifo-0083.jsonl.gz",
+        "rows": 100,
+        "bytes": 5161558,
+        "sha256": "c4638f39cc473cc8601e1cd58a919f4cefc3f21a98adfdc4ad6c40a0d06eeecc"
+      },
+      {
+        "path": "trade-book-fifo-0084.jsonl.gz",
+        "rows": 100,
+        "bytes": 5051435,
+        "sha256": "6e5fa129c13ef33c15cdf55b391fe159c2e483e7df7a3afbd348194970a7a4fd"
+      },
+      {
+        "path": "trade-book-fifo-0085.jsonl.gz",
+        "rows": 100,
+        "bytes": 5179948,
+        "sha256": "3bd58bb6bc87affcf6fa1d347e18bd35ede7794684ee9f04ac15fd5de0d6995b"
+      },
+      {
+        "path": "trade-book-fifo-0086.jsonl.gz",
+        "rows": 100,
+        "bytes": 5135034,
+        "sha256": "330164bd5a6b72e95f9cf509f205f11690e61d397ee58f7c1f7980b4d41db1b4"
+      },
+      {
+        "path": "trade-book-fifo-0087.jsonl.gz",
+        "rows": 100,
+        "bytes": 4895213,
+        "sha256": "ba80b7db301d206098a64bb0e9508fb024618eed52cc1d34610fa922a459e2cf"
+      },
+      {
+        "path": "trade-book-fifo-0088.jsonl.gz",
+        "rows": 100,
+        "bytes": 4994687,
+        "sha256": "2f472167d32ed30a146985fb5387b619bfd542b325a5e6db6a6761e66cfcce5a"
+      },
+      {
+        "path": "trade-book-fifo-0089.jsonl.gz",
+        "rows": 100,
+        "bytes": 5366214,
+        "sha256": "c46ab66e20e5e076528b734162d530be3c8d5a650e927be090e5aa80cff0bd7e"
+      },
+      {
+        "path": "trade-book-fifo-0090.jsonl.gz",
+        "rows": 100,
+        "bytes": 5435367,
+        "sha256": "15b25fb973c3589dc50b6fffd77cf7ba5bdb63fe6ee8bc393c287c24e78ea2cb"
+      },
+      {
+        "path": "trade-book-fifo-0091.jsonl.gz",
+        "rows": 100,
+        "bytes": 5390138,
+        "sha256": "062a7f8876bb384db47489d055731a8987b65558a189a94d70f7f8c17801279a"
+      },
+      {
+        "path": "trade-book-fifo-0092.jsonl.gz",
+        "rows": 100,
+        "bytes": 5427780,
+        "sha256": "375455ad025821dc9bbe97b69d8da7a1e308a86467f8ea41ea0e266265cbcbd6"
+      },
+      {
+        "path": "trade-book-fifo-0093.jsonl.gz",
+        "rows": 100,
+        "bytes": 5455697,
+        "sha256": "b9fb622cbc0b9c5254fea0fc34a459c6bc2c4275193eeb5470a838d42e2f0e25"
+      },
+      {
+        "path": "trade-book-fifo-0094.jsonl.gz",
+        "rows": 100,
+        "bytes": 5527259,
+        "sha256": "7d333adb8b50cd25c7cc2048f04972915faef6742c497960840a67f707d7843e"
+      },
+      {
+        "path": "trade-book-fifo-0095.jsonl.gz",
+        "rows": 100,
+        "bytes": 5562177,
+        "sha256": "31cf87487a1293b842a1b3d597ef9883dea281961a3897e9ad5c8a4625b3877c"
+      },
+      {
+        "path": "trade-book-fifo-0096.jsonl.gz",
+        "rows": 100,
+        "bytes": 5668522,
+        "sha256": "6c1dfb7ee55651aea97ec3b46a7fc1b8609d5fba3b10fac68050ae359a51eb4f"
+      },
+      {
+        "path": "trade-book-fifo-0097.jsonl.gz",
+        "rows": 100,
+        "bytes": 5607649,
+        "sha256": "97c76178105e2627e3623a6cd4ca1c54dfe0f551ba908c47f7477f956b940e7d"
+      },
+      {
+        "path": "trade-book-fifo-0098.jsonl.gz",
+        "rows": 100,
+        "bytes": 5556234,
+        "sha256": "8ee600134420a5a5664131225a547e216e77c86c8a174d6a4585f34233ec5fcd"
+      },
+      {
+        "path": "trade-book-fifo-0099.jsonl.gz",
+        "rows": 100,
+        "bytes": 5567315,
+        "sha256": "d22675e9ea36c98105ca6e4b1617e764609d10ab2dd2ae5327a9b00d1f944c53"
+      },
+      {
+        "path": "trade-book-fifo-0100.jsonl.gz",
+        "rows": 100,
+        "bytes": 5530683,
+        "sha256": "0727013b790dae91d0acbfc19c6b6a45ecd7782197f294e04d5396c356780a45"
+      },
+      {
+        "path": "trade-book-fifo-0101.jsonl.gz",
+        "rows": 100,
+        "bytes": 5537568,
+        "sha256": "7e954ec548f3effb912217f60975ea3749ea7e203833572d91e5c0063810f415"
+      },
+      {
+        "path": "trade-book-fifo-0102.jsonl.gz",
+        "rows": 100,
+        "bytes": 5532605,
+        "sha256": "e7d9ceb3159ef79eb0463884da2232d197b7dfe9079dea905eefcee5a9ff9aa5"
+      },
+      {
+        "path": "trade-book-fifo-0103.jsonl.gz",
+        "rows": 100,
+        "bytes": 5607831,
+        "sha256": "273c6afc83f3a34cb8438264e760fba7b79138f5e8cf1b27cb750a0b884a2837"
+      },
+      {
+        "path": "trade-book-fifo-0104.jsonl.gz",
+        "rows": 100,
+        "bytes": 5583855,
+        "sha256": "15db30247d459fd3074dd31d7b587d02488114d2ce06db495db563caaf9168c9"
+      },
+      {
+        "path": "trade-book-fifo-0105.jsonl.gz",
+        "rows": 100,
+        "bytes": 5545913,
+        "sha256": "81a3dde2d9791d62703852546b2f7c4aa3cc129eef58c5477f6230ad86c83f3d"
+      },
+      {
+        "path": "trade-book-fifo-0106.jsonl.gz",
+        "rows": 100,
+        "bytes": 5592731,
+        "sha256": "b47f1f1d6219b0756cbcbdd00ca01254461612a08e97b2c2d2c25d74369434aa"
+      },
+      {
+        "path": "trade-book-fifo-0107.jsonl.gz",
+        "rows": 100,
+        "bytes": 5619902,
+        "sha256": "21cb08e6dc9d79c5a4860176122f90785735ec547fc4f6079edb4cdabbc1b965"
+      },
+      {
+        "path": "trade-book-fifo-0108.jsonl.gz",
+        "rows": 100,
+        "bytes": 5649378,
+        "sha256": "520d398d1dc8fe431a802f20e2d162b87a597f244a6dfcda120ac268120a0b59"
+      },
+      {
+        "path": "trade-book-fifo-0109.jsonl.gz",
+        "rows": 100,
+        "bytes": 5709889,
+        "sha256": "9ce192436fcc399af41702ecc52b18a48442381bacdf5a94dbc5d316d84558c4"
+      },
+      {
+        "path": "trade-book-fifo-0110.jsonl.gz",
+        "rows": 100,
+        "bytes": 5536386,
+        "sha256": "790d48746696eed46b8b35014ade7633d038cb4811cc2ec99a6cf91d9b214e8a"
+      },
+      {
+        "path": "trade-book-fifo-0111.jsonl.gz",
+        "rows": 100,
+        "bytes": 5503894,
+        "sha256": "d61e17e5d8167018653a9f92c1a0d41ac7bcab69403a436f3526ae298854e5c0"
+      },
+      {
+        "path": "trade-book-fifo-0112.jsonl.gz",
+        "rows": 100,
+        "bytes": 5520496,
+        "sha256": "5ec870c363d2964967c4418208ec337f0e4ba79ebe68e67913608bb63ae118fa"
+      },
+      {
+        "path": "trade-book-fifo-0113.jsonl.gz",
+        "rows": 100,
+        "bytes": 5543713,
+        "sha256": "daa1e6206af8c2638b9bb1ae6061e4cc7ec0d352b7a1e714d50037e83f672784"
+      },
+      {
+        "path": "trade-book-fifo-0114.jsonl.gz",
+        "rows": 100,
+        "bytes": 5544626,
+        "sha256": "1f1c16b64ce875db190cb487f48d5063d9aefd5b356f82f7ec22a979877c8663"
+      },
+      {
+        "path": "trade-book-fifo-0115.jsonl.gz",
+        "rows": 100,
+        "bytes": 5568635,
+        "sha256": "e2c64e0344a27f8ae02be2ea389050a17efdfb28c161b0857b4c901113f7ded2"
+      },
+      {
+        "path": "trade-book-fifo-0116.jsonl.gz",
+        "rows": 100,
+        "bytes": 5543051,
+        "sha256": "14699b08a9d714b378264fd0c0d4924fe6a3224beee9e0c7f8e98c34a824168d"
+      },
+      {
+        "path": "trade-book-fifo-0117.jsonl.gz",
+        "rows": 100,
+        "bytes": 5556127,
+        "sha256": "29afbac3208a23b98a646d42f550b76fbb9f020f4efef81a6530ea4dbad34570"
+      },
+      {
+        "path": "trade-book-fifo-0118.jsonl.gz",
+        "rows": 100,
+        "bytes": 5513458,
+        "sha256": "8dd054a6ca7aee546ea18083326191462440b95c346f4d07b42b64b119f660e6"
+      },
+      {
+        "path": "trade-book-fifo-0119.jsonl.gz",
+        "rows": 100,
+        "bytes": 5302642,
+        "sha256": "e5e327ecbcc02a603d6d16c52f16b16fab80a781e62a4db1ca40181eb8a261f6"
+      },
+      {
+        "path": "trade-book-fifo-0120.jsonl.gz",
+        "rows": 100,
+        "bytes": 5164471,
+        "sha256": "4f01a12eb5c463d0073ebb4063e6ba7f4713f34b67541f0ac024efcc38a1cfb6"
+      },
+      {
+        "path": "trade-book-fifo-0121.jsonl.gz",
+        "rows": 100,
+        "bytes": 5159078,
+        "sha256": "d254664cc49bd075e997f2ce543d3d5a8109a7d93bcd5e41c75e2ed43f4e51cc"
+      },
+      {
+        "path": "trade-book-fifo-0122.jsonl.gz",
+        "rows": 100,
+        "bytes": 5017966,
+        "sha256": "a9987fd588f46ed5a74c2adfbb601e7f9395a5bedfaacfccc35ab254d64da330"
+      },
+      {
+        "path": "trade-book-fifo-0123.jsonl.gz",
+        "rows": 100,
+        "bytes": 4584602,
+        "sha256": "a7169233e9fa0a67fb3a1006978f592172502cee0614a6136c15cbe60c3a6b3b"
+      },
+      {
+        "path": "trade-book-fifo-0124.jsonl.gz",
+        "rows": 100,
+        "bytes": 4809588,
+        "sha256": "d1a899685765bd307dceafe08b0c7ccf64e1915ac85d45b8aff750f9099fa612"
+      },
+      {
+        "path": "trade-book-fifo-0125.jsonl.gz",
+        "rows": 100,
+        "bytes": 5231903,
+        "sha256": "24cabd05f3685242cf63d61b036ec640cea55b3209de22a6c2a98b90ec369e53"
+      },
+      {
+        "path": "trade-book-fifo-0126.jsonl.gz",
+        "rows": 100,
+        "bytes": 5359934,
+        "sha256": "b90d579f3dde7e30dd895a04a7967422511d5e12a2c6576ae693010507161427"
+      },
+      {
+        "path": "trade-book-fifo-0127.jsonl.gz",
+        "rows": 100,
+        "bytes": 5349474,
+        "sha256": "ec3e5fc708c9bc5f26608c99d7766297c1bb45ccaec1b103e5c63abfa4385caf"
+      },
+      {
+        "path": "trade-book-fifo-0128.jsonl.gz",
+        "rows": 100,
+        "bytes": 5362813,
+        "sha256": "46cb1138ce48a3c59ff5c6a73fd84f3370f48946109d90073144837a7892a6d8"
+      },
+      {
+        "path": "trade-book-fifo-0129.jsonl.gz",
+        "rows": 100,
+        "bytes": 5328818,
+        "sha256": "a688a1867d394599bef4b5b51fa7b68a325e31e88b07ce8da9619b5d9d88ff56"
+      },
+      {
+        "path": "trade-book-fifo-0130.jsonl.gz",
+        "rows": 100,
+        "bytes": 5262976,
+        "sha256": "56f6b5c1d52f80620b246d025e8bdd7b32156c4bd0802a3ddca5574d34100746"
+      },
+      {
+        "path": "trade-book-fifo-0131.jsonl.gz",
+        "rows": 100,
+        "bytes": 5121701,
+        "sha256": "4d1f41101af5e3725791e929354f1eca75fddad566a52af793f10b9bf7908416"
+      },
+      {
+        "path": "trade-book-fifo-0132.jsonl.gz",
+        "rows": 100,
+        "bytes": 4430927,
+        "sha256": "4705cd4e636ad66831e7e155eb3570e84ea5ae27a5f8e16c3c0ad8f385e11b52"
+      },
+      {
+        "path": "trade-book-fifo-0133.jsonl.gz",
+        "rows": 100,
+        "bytes": 4844041,
+        "sha256": "69d99b46244dee35f66d6fdc177585bffe096c836b581d2b9d1c9864d171a8ae"
+      },
+      {
+        "path": "trade-book-fifo-0134.jsonl.gz",
+        "rows": 100,
+        "bytes": 5257838,
+        "sha256": "265a9de8cd738762d7485ccada363e5368cc6d90bbe25f198711d50cab10c024"
+      },
+      {
+        "path": "trade-book-fifo-0135.jsonl.gz",
+        "rows": 100,
+        "bytes": 5286037,
+        "sha256": "9b7758199ab36321bfdb072f6d851ff2b0484d67a7223fb6429214008d69de30"
+      },
+      {
+        "path": "trade-book-fifo-0136.jsonl.gz",
+        "rows": 100,
+        "bytes": 5161249,
+        "sha256": "b0753fae233f1f8b1f7c73a195e0c25e34698c89e9cf37dceaea338686bc7090"
+      },
+      {
+        "path": "trade-book-fifo-0137.jsonl.gz",
+        "rows": 100,
+        "bytes": 5423629,
+        "sha256": "9340ce493530a6f5fac7c00220865494596d35feea28199b5414f539d6d9d9bb"
+      },
+      {
+        "path": "trade-book-fifo-0138.jsonl.gz",
+        "rows": 100,
+        "bytes": 5385918,
+        "sha256": "efeff0d8d28fda48cdaed39beee95a6a46de3f616e54b5790dd2d7f9d276f235"
+      },
+      {
+        "path": "trade-book-fifo-0139.jsonl.gz",
+        "rows": 100,
+        "bytes": 5431969,
+        "sha256": "4d6776ed16e77df7c105c5a7d104e3761a7c95d45e24e708fcfc9c5765765f1e"
+      },
+      {
+        "path": "trade-book-fifo-0140.jsonl.gz",
+        "rows": 100,
+        "bytes": 5513231,
+        "sha256": "4575985ae187738716756e8f4e979dd5d1baf3c961df307073dfee750b9da3de"
+      },
+      {
+        "path": "trade-book-fifo-0141.jsonl.gz",
+        "rows": 100,
+        "bytes": 5576010,
+        "sha256": "7b7321c95c59b8856c4e30d269f5f07b8b77d451463afbaea436b968749d87df"
+      },
+      {
+        "path": "trade-book-fifo-0142.jsonl.gz",
+        "rows": 100,
+        "bytes": 5615081,
+        "sha256": "4452d32c4fa7593a1cecf83a2450a6530336ed3c10386f52903231117bb8fb3d"
+      },
+      {
+        "path": "trade-book-fifo-0143.jsonl.gz",
+        "rows": 100,
+        "bytes": 5663849,
+        "sha256": "0dfd91fa379c8d78e4f5dd2b6faa546652308eda888e99e6597f4afdce012514"
+      },
+      {
+        "path": "trade-book-fifo-0144.jsonl.gz",
+        "rows": 100,
+        "bytes": 5737694,
+        "sha256": "1c89fb0fce4e0c4b52759995dd97d72a5ab682f3b16dd9bdcfbd0357ceebbdba"
+      },
+      {
+        "path": "trade-book-fifo-0145.jsonl.gz",
+        "rows": 100,
+        "bytes": 5783727,
+        "sha256": "aa2e272370509bb7a171d26bdb9aeb6416ce06bfbcb6e8fcb5e0e21f19973e93"
+      },
+      {
+        "path": "trade-book-fifo-0146.jsonl.gz",
+        "rows": 100,
+        "bytes": 5802301,
+        "sha256": "396426571769de4099685064fb5eb84c3e2c2b691038d156af5e2e080c3588bd"
+      },
+      {
+        "path": "trade-book-fifo-0147.jsonl.gz",
+        "rows": 100,
+        "bytes": 5828402,
+        "sha256": "10d5c18e341eaa77e834600a3215e69d8544d8d89cc33732d1f7a30dd5d099dc"
+      },
+      {
+        "path": "trade-book-fifo-0148.jsonl.gz",
+        "rows": 100,
+        "bytes": 5922709,
+        "sha256": "b9948beca86abc6d6681c780bf454cb0cdab632914d69d3b91358424d584977c"
+      },
+      {
+        "path": "trade-book-fifo-0149.jsonl.gz",
+        "rows": 100,
+        "bytes": 5940855,
+        "sha256": "dfc28d462b43d2756fa5cec8d71fac00f051c22e58a2f2a88af6f766037c206a"
+      },
+      {
+        "path": "trade-book-fifo-0150.jsonl.gz",
+        "rows": 100,
+        "bytes": 5947334,
+        "sha256": "fdaa09ae75a2ea4f63f906d483a778823b89d9fe4207bae2f8663a1c13c55893"
+      },
+      {
+        "path": "trade-book-fifo-0151.jsonl.gz",
+        "rows": 100,
+        "bytes": 6033341,
+        "sha256": "41fb8692fba80d3c0786413c9a8c0125ee8d87c0ff53e8e01871a00705446e24"
+      },
+      {
+        "path": "trade-book-fifo-0152.jsonl.gz",
+        "rows": 100,
+        "bytes": 6040866,
+        "sha256": "11545b0f1aa29db0e7c2471e2e7ca7583fd79770c023488f41ea05d1bad37ee2"
+      },
+      {
+        "path": "trade-book-fifo-0153.jsonl.gz",
+        "rows": 100,
+        "bytes": 6046495,
+        "sha256": "dc258f44502af0bd436e9049acce26a456ad3fe1c74de5b920c7dfb77f6c7776"
+      },
+      {
+        "path": "trade-book-fifo-0154.jsonl.gz",
+        "rows": 100,
+        "bytes": 6043509,
+        "sha256": "6a94fce85555b60ebea4df5ac52cbf35203525f3dfc8375ed541ff82b63c123f"
+      },
+      {
+        "path": "trade-book-fifo-0155.jsonl.gz",
+        "rows": 100,
+        "bytes": 6009812,
+        "sha256": "ef21a7c1cee080cb6f932ef281b32a16da0ebeddf0b0c72bfc1a5c5d0326cc36"
+      },
+      {
+        "path": "trade-book-fifo-0156.jsonl.gz",
+        "rows": 100,
+        "bytes": 6021401,
+        "sha256": "f5971cb8631c4bae153ec121a2335c7ceaa5be17f7940778708354f2565593e3"
+      },
+      {
+        "path": "trade-book-fifo-0157.jsonl.gz",
+        "rows": 100,
+        "bytes": 6040633,
+        "sha256": "2394f53e856b124d85fa54a90a5e805fd19d1e8aeb0a4fd72ae65bf837580987"
+      },
+      {
+        "path": "trade-book-fifo-0158.jsonl.gz",
+        "rows": 100,
+        "bytes": 5986996,
+        "sha256": "74370736445adde176b8dbde1c6bb989534d1a10d7f3a1de2aecf5fc14cbd8e3"
+      },
+      {
+        "path": "trade-book-fifo-0159.jsonl.gz",
+        "rows": 100,
+        "bytes": 6032202,
+        "sha256": "ce8d7c5b208b16e4f14172cc81f16dc5d814cc553432fc1c68c7a65990e925d9"
+      },
+      {
+        "path": "trade-book-fifo-0160.jsonl.gz",
+        "rows": 100,
+        "bytes": 5994265,
+        "sha256": "18ac2b4c6b52a13c7a3ffb831f3a58a77f47d084318a9464426969292e2f5375"
+      },
+      {
+        "path": "trade-book-fifo-0161.jsonl.gz",
+        "rows": 100,
+        "bytes": 5994647,
+        "sha256": "649ed68e2fec5ba307a5512aee7491d09aa536af37bd937d3ad19171fc966db6"
+      },
+      {
+        "path": "trade-book-fifo-0162.jsonl.gz",
+        "rows": 100,
+        "bytes": 5845608,
+        "sha256": "8809dd6b518f3982553d21b944cfcb8fecde55072e573023c978c0b6a6c2aa55"
+      },
+      {
+        "path": "trade-book-fifo-0163.jsonl.gz",
+        "rows": 100,
+        "bytes": 5892919,
+        "sha256": "6e9830a7091c6c802a667a9dc8b342380edd521b2cede21ad56c1ad6cdc02627"
+      },
+      {
+        "path": "trade-book-fifo-0164.jsonl.gz",
+        "rows": 100,
+        "bytes": 5821786,
+        "sha256": "b8480a465d7ce97e70c47d7563ce33dc2fbc8d4aff4d317df0b7a46de51b9112"
+      },
+      {
+        "path": "trade-book-fifo-0165.jsonl.gz",
+        "rows": 100,
+        "bytes": 5924194,
+        "sha256": "a5b7e24fa9bc8751fc628c953c512fd92555faffdda5732f22791fc7c9f2a5f5"
+      },
+      {
+        "path": "trade-book-fifo-0166.jsonl.gz",
+        "rows": 100,
+        "bytes": 5882943,
+        "sha256": "f90c0074fdc3050d5ab656ce53696a447f9aa04c60d42ebba8b2d80b1da30cc5"
+      },
+      {
+        "path": "trade-book-fifo-0167.jsonl.gz",
+        "rows": 100,
+        "bytes": 5964878,
+        "sha256": "63cffeda9cfb3560747c9022583493b24a2da7cdba7008b10c142f5437dcef68"
+      },
+      {
+        "path": "trade-book-fifo-0168.jsonl.gz",
+        "rows": 100,
+        "bytes": 5915632,
+        "sha256": "f27514649484ec5b301c4b5f446f8de7a99a4548ceec04b4644d0bece693487f"
+      },
+      {
+        "path": "trade-book-fifo-0169.jsonl.gz",
+        "rows": 100,
+        "bytes": 5883940,
+        "sha256": "be9f802f53e19db82692088e1d3e8836b21e157ed17e9684ba177ccceb91684e"
+      },
+      {
+        "path": "trade-book-fifo-0170.jsonl.gz",
+        "rows": 100,
+        "bytes": 5930605,
+        "sha256": "f2a3bcbb374ee97d769590fcc9da331c9ed5bc5c2b1eae39fc1fe344c5e43bdf"
+      },
+      {
+        "path": "trade-book-fifo-0171.jsonl.gz",
+        "rows": 100,
+        "bytes": 5979472,
+        "sha256": "313214d3734a4f2a4c13f44f3ef750667c2ca1dc0e3e2d448f448fee11a925b4"
+      },
+      {
+        "path": "trade-book-fifo-0172.jsonl.gz",
+        "rows": 100,
+        "bytes": 6001201,
+        "sha256": "05e9a9d86ae301b4f97219d75c9e40624d57f2b89c74c4fac1c2be114aa49185"
+      },
+      {
+        "path": "trade-book-fifo-0173.jsonl.gz",
+        "rows": 100,
+        "bytes": 5994623,
+        "sha256": "38de062be288a98d50aec8fd708ba596fdeb423a30cc4756857fa50305446f35"
+      },
+      {
+        "path": "trade-book-fifo-0174.jsonl.gz",
+        "rows": 100,
+        "bytes": 5933573,
+        "sha256": "f5e01d76b17a96787f5150654f3ebcdc374c590001a2f23cc1b9af66fe06781d"
+      },
+      {
+        "path": "trade-book-fifo-0175.jsonl.gz",
+        "rows": 100,
+        "bytes": 5997379,
+        "sha256": "7ff325d8fd9e4f42632d97bb5fea4c4f5f793ab34434831f884153c3dfbe7a7d"
+      },
+      {
+        "path": "trade-book-fifo-0176.jsonl.gz",
+        "rows": 100,
+        "bytes": 6051835,
+        "sha256": "0d80212eaa6fa8372caa418c340fda698d1b88194d048aea8ad263b48276f6c3"
+      },
+      {
+        "path": "trade-book-fifo-0177.jsonl.gz",
+        "rows": 100,
+        "bytes": 6112046,
+        "sha256": "8f5fe26aa3e84e5c66b35b9fba0af850c873a382ceb25c05552b2a29172b0e7c"
+      },
+      {
+        "path": "trade-book-fifo-0178.jsonl.gz",
+        "rows": 100,
+        "bytes": 6138220,
+        "sha256": "7b7f25d368548523b3678ffbbb71ae11f5ff0cb94cef6a80341c1c7fd7e62f1e"
+      },
+      {
+        "path": "trade-book-fifo-0179.jsonl.gz",
+        "rows": 100,
+        "bytes": 5828526,
+        "sha256": "fa67782a5570a8e887a3a527fda0fe8e4bc6f67deeb8cf0a590660081d15481d"
+      },
+      {
+        "path": "trade-book-fifo-0180.jsonl.gz",
+        "rows": 100,
+        "bytes": 6044298,
+        "sha256": "d30e2417876391a29d0f6a9dda1df3c1dd08c23754ebe3e4a693680d203e8b4b"
+      },
+      {
+        "path": "trade-book-fifo-0181.jsonl.gz",
+        "rows": 100,
+        "bytes": 6109675,
+        "sha256": "3a710240952f57c146708ec87893edbf71c1dc7206059d6d323c9a79a32f85d9"
+      },
+      {
+        "path": "trade-book-fifo-0182.jsonl.gz",
+        "rows": 100,
+        "bytes": 6029336,
+        "sha256": "738b7564034ed224e6f2753af686be4e4613b4c752cf63744a47faf2dc07800e"
+      },
+      {
+        "path": "trade-book-fifo-0183.jsonl.gz",
+        "rows": 100,
+        "bytes": 6029326,
+        "sha256": "9b0a6633c27709b4d220b881f828143d37c9bad1325e7e07798ff322266dbb05"
+      },
+      {
+        "path": "trade-book-fifo-0184.jsonl.gz",
+        "rows": 100,
+        "bytes": 6111471,
+        "sha256": "11e703eeee29cc8ed061dd562296fd92111ee6b42d1df947766238b8c9be4649"
+      },
+      {
+        "path": "trade-book-fifo-0185.jsonl.gz",
+        "rows": 100,
+        "bytes": 6116893,
+        "sha256": "892d5541c0fc076319bea211d76af56f2a5584446890d5fe221557c7e7bc924b"
+      },
+      {
+        "path": "trade-book-fifo-0186.jsonl.gz",
+        "rows": 100,
+        "bytes": 6147187,
+        "sha256": "fbf4a90daada120c396c5dbfbdfe3b527589af8ced07453009274d40f6160e53"
+      },
+      {
+        "path": "trade-book-fifo-0187.jsonl.gz",
+        "rows": 100,
+        "bytes": 6164909,
+        "sha256": "17d40ce649df7e92f8d90aaa1283375b3385014fd2b8ea496ea856b519192d9f"
+      },
+      {
+        "path": "trade-book-fifo-0188.jsonl.gz",
+        "rows": 100,
+        "bytes": 6104291,
+        "sha256": "a876efd2168099ecf6906f75b9f7403d2f918ca203f7939bd69d15ff882f7a0e"
+      },
+      {
+        "path": "trade-book-fifo-0189.jsonl.gz",
+        "rows": 100,
+        "bytes": 6160832,
+        "sha256": "59c54bdd17ac214cd45255cbffba5091bc660cbeee2d9301c9a86e8367818c01"
+      },
+      {
+        "path": "trade-book-fifo-0190.jsonl.gz",
+        "rows": 100,
+        "bytes": 6176850,
+        "sha256": "ae11226208a0401e0bd70a4d840c2813f4c5c909dd8a049fea69a2d89ac0f000"
+      },
+      {
+        "path": "trade-book-fifo-0191.jsonl.gz",
+        "rows": 100,
+        "bytes": 6277301,
+        "sha256": "e6ebc6edfb9a515b9169474738d3ebc1a8d2330e6fef0cc76873baadb2ccf832"
+      },
+      {
+        "path": "trade-book-fifo-0192.jsonl.gz",
+        "rows": 100,
+        "bytes": 6186612,
+        "sha256": "ec5b29c8652f3c7562780a47ad326afe902bc540a9c6d0e4469661e23c41ea9c"
+      },
+      {
+        "path": "trade-book-fifo-0193.jsonl.gz",
+        "rows": 100,
+        "bytes": 6195252,
+        "sha256": "0448b75d2c8c522a708224aed88eff320e3fd53c173c1aad409ee218f9e42c79"
+      },
+      {
+        "path": "trade-book-fifo-0194.jsonl.gz",
+        "rows": 100,
+        "bytes": 6206165,
+        "sha256": "e20baa0fba20739957bca1ccdf57ec370b790e95f5bef68c3a366101d8568884"
+      },
+      {
+        "path": "trade-book-fifo-0195.jsonl.gz",
+        "rows": 100,
+        "bytes": 6178830,
+        "sha256": "62b58384997e5c2c7defb47e66ab0b96fe46f93e3d1140fbad6e8418cadf79e8"
+      },
+      {
+        "path": "trade-book-fifo-0196.jsonl.gz",
+        "rows": 100,
+        "bytes": 6212634,
+        "sha256": "e1fc2a009b675b54aa0faf4e61ac02909eb11b490a56256ff8764762591ec27d"
+      },
+      {
+        "path": "trade-book-fifo-0197.jsonl.gz",
+        "rows": 100,
+        "bytes": 6229317,
+        "sha256": "4947948c638da4c96d1da059a26a92f4dd166de2c843ba654000d783e2cb9b94"
+      },
+      {
+        "path": "trade-book-fifo-0198.jsonl.gz",
+        "rows": 100,
+        "bytes": 6197117,
+        "sha256": "e24121210bb226f49ab3ddd976f019265afacf77a5d8abe3a5b4d21f9838b779"
+      },
+      {
+        "path": "trade-book-fifo-0199.jsonl.gz",
+        "rows": 100,
+        "bytes": 6176854,
+        "sha256": "9eb8df5cb5bf9935ad22864e5fd43cb788bf23fe6c6cd4608383707e760c571a"
+      },
+      {
+        "path": "trade-book-fifo-0200.jsonl.gz",
+        "rows": 100,
+        "bytes": 6166661,
+        "sha256": "7376cd28583015a47b10e71ce36a4fe5afede7c858fe87947f52b08b16af67af"
+      },
+      {
+        "path": "trade-book-fifo-0201.jsonl.gz",
+        "rows": 100,
+        "bytes": 6196097,
+        "sha256": "6f2667c357f46f870dea92cc103c6d21b1a0e567af6bc1a0952494c204095bee"
+      },
+      {
+        "path": "trade-book-fifo-0202.jsonl.gz",
+        "rows": 100,
+        "bytes": 6264813,
+        "sha256": "0e6caf062b1ba9ac04b8b5042fcddd6d14b9eb3e8f40502fc31cabb3e87cbc7b"
+      },
+      {
+        "path": "trade-book-fifo-0203.jsonl.gz",
+        "rows": 100,
+        "bytes": 6255654,
+        "sha256": "493b45c99727fa4af4b92b96fd748c96ddb147c01f4d881c2e63ff7c6033790e"
+      },
+      {
+        "path": "trade-book-fifo-0204.jsonl.gz",
+        "rows": 100,
+        "bytes": 6193842,
+        "sha256": "74c9280700040fb442db8193adcaa5c906db2905bfb32b99132afd37516aeee4"
+      },
+      {
+        "path": "trade-book-fifo-0205.jsonl.gz",
+        "rows": 100,
+        "bytes": 6011964,
+        "sha256": "3e222cbefe296db043bb32d9b3e19aed6d7fa1e576d368dc03372161ebf1c208"
+      },
+      {
+        "path": "trade-book-fifo-0206.jsonl.gz",
+        "rows": 100,
+        "bytes": 5720819,
+        "sha256": "97302d9d9eefca317975b23658d4b38fa506670813ff7e5f0dbc61d5036d9641"
+      },
+      {
+        "path": "trade-book-fifo-0207.jsonl.gz",
+        "rows": 100,
+        "bytes": 5713393,
+        "sha256": "6bceddcd1ff4890cc2ba7be18fae18b4d32e7929c91c61996128aa00b3ea49d8"
+      },
+      {
+        "path": "trade-book-fifo-0208.jsonl.gz",
+        "rows": 100,
+        "bytes": 5720723,
+        "sha256": "ccf4734d8584078a5dd2508815f2fbcc2f391678105061aefe9b9a58f30009ab"
+      },
+      {
+        "path": "trade-book-fifo-0209.jsonl.gz",
+        "rows": 100,
+        "bytes": 5756421,
+        "sha256": "30abebf866b81b0462596112ea60c0fd198d17ece20e3405c7b6e7cc32719b34"
+      },
+      {
+        "path": "trade-book-fifo-0210.jsonl.gz",
+        "rows": 100,
+        "bytes": 5581523,
+        "sha256": "5e9c6cbaa29b0f27bc0c16c7f8b128446aabce046a79fb0129d195f55b25d1cc"
+      },
+      {
+        "path": "trade-book-fifo-0211.jsonl.gz",
+        "rows": 100,
+        "bytes": 5613125,
+        "sha256": "714a29a7416f6cc8c71291e62e34725e963c63afa44709e1c19722c223c105ff"
+      },
+      {
+        "path": "trade-book-fifo-0212.jsonl.gz",
+        "rows": 100,
+        "bytes": 5641899,
+        "sha256": "c340f608e2a756e6118c0451eece657e0738287aa77b86075b3106240cbd1eaf"
+      },
+      {
+        "path": "trade-book-fifo-0213.jsonl.gz",
+        "rows": 100,
+        "bytes": 5681578,
+        "sha256": "8a8306649f9ed5b9d41e2060f379a04bbfe17e1a98bddbcc0adb5de67ed4b6a5"
+      },
+      {
+        "path": "trade-book-fifo-0214.jsonl.gz",
+        "rows": 100,
+        "bytes": 5721469,
+        "sha256": "b47a2bf7b77a0048e8027add8595af1bf89d22bed59e60db385739207c52c154"
+      },
+      {
+        "path": "trade-book-fifo-0215.jsonl.gz",
+        "rows": 100,
+        "bytes": 5689778,
+        "sha256": "e6a602ada70a76172b9d09338cfc241063abf377596a7615c919ed9a294e9c41"
+      },
+      {
+        "path": "trade-book-fifo-0216.jsonl.gz",
+        "rows": 100,
+        "bytes": 5612596,
+        "sha256": "cecc9eb0e9eef85e2a794b1dbe8e13f588dded168a0b5d0afa48964c5e23c618"
+      },
+      {
+        "path": "trade-book-fifo-0217.jsonl.gz",
+        "rows": 100,
+        "bytes": 5630693,
+        "sha256": "3d651a46487cc43dac2ff41e15f0fb115e4fb9e1a7908bf890425ce37eb0f351"
+      },
+      {
+        "path": "trade-book-fifo-0218.jsonl.gz",
+        "rows": 100,
+        "bytes": 5714168,
+        "sha256": "4ee3d5da7c4ab391a3e20a1a031463c5f120e47948d61cbca522f296f75756ef"
+      },
+      {
+        "path": "trade-book-fifo-0219.jsonl.gz",
+        "rows": 100,
+        "bytes": 5604735,
+        "sha256": "c6e178e846de027d5000c30a0913ba8b271165c3526c3f8fb8f876f5b50b979b"
+      },
+      {
+        "path": "trade-book-fifo-0220.jsonl.gz",
+        "rows": 100,
+        "bytes": 5625701,
+        "sha256": "869eafa4f19057240a03c3aa91baf395169313aa4e55adc0519324b72c6287ed"
+      },
+      {
+        "path": "trade-book-fifo-0221.jsonl.gz",
+        "rows": 100,
+        "bytes": 5669514,
+        "sha256": "15aeeb797e5617894a2d8944f87fa1945040c68703e72f7de6a49552e48dfa67"
+      },
+      {
+        "path": "trade-book-fifo-0222.jsonl.gz",
+        "rows": 100,
+        "bytes": 5691765,
+        "sha256": "a95c727041e92d8625e145d7ad917be3dbc4519b5ce5c29ad9be4ddcc8efc99a"
+      },
+      {
+        "path": "trade-book-fifo-0223.jsonl.gz",
+        "rows": 100,
+        "bytes": 5680275,
+        "sha256": "fd81f30f61749b00a46c4dcfb0f9e84c330115ecf6f067b28f4ef39c8ae1d18a"
+      },
+      {
+        "path": "trade-book-fifo-0224.jsonl.gz",
+        "rows": 100,
+        "bytes": 5695328,
+        "sha256": "f82a6604a658fd14074f5949f9e7a9b27e7d3efad4221948989d9e846ac519f3"
+      },
+      {
+        "path": "trade-book-fifo-0225.jsonl.gz",
+        "rows": 100,
+        "bytes": 5680014,
+        "sha256": "874a9930981ca507a0d286cabd5fa9ce2e5f1d99c9c75e2c1f00b934a9aa3168"
+      },
+      {
+        "path": "trade-book-fifo-0226.jsonl.gz",
+        "rows": 100,
+        "bytes": 5555362,
+        "sha256": "3ad62e0101e84429ac283aa6eb91f34f567ca9dfc3d34066e0c17cfb23ac550f"
+      },
+      {
+        "path": "trade-book-fifo-0227.jsonl.gz",
+        "rows": 100,
+        "bytes": 5577747,
+        "sha256": "70a389b54d227a35c0c26f2ef6d6e6e0f394bc8384344d678e5ee4ea87d8032e"
+      },
+      {
+        "path": "trade-book-fifo-0228.jsonl.gz",
+        "rows": 100,
+        "bytes": 5594491,
+        "sha256": "597536c63f92a5c8996ff4e6b04f3c8080f5b5147020c0db4cd3948784eb731f"
+      },
+      {
+        "path": "trade-book-fifo-0229.jsonl.gz",
+        "rows": 100,
+        "bytes": 5578909,
+        "sha256": "617b8befd16d1fdfd80e8898b6c5afe81b757d808653d5ad91dca8fbf3ac5bd5"
+      },
+      {
+        "path": "trade-book-fifo-0230.jsonl.gz",
+        "rows": 100,
+        "bytes": 5469546,
+        "sha256": "c7e8e4311ef778f30d74e2fd53a051b35a859deea07fcb59d9d3d9283c58cd6d"
+      },
+      {
+        "path": "trade-book-fifo-0231.jsonl.gz",
+        "rows": 100,
+        "bytes": 5445634,
+        "sha256": "934ab79d29a3ffe4e62c7a23e5f2768bfdf94a95de827a865ecb474a2a5e76d7"
+      },
+      {
+        "path": "trade-book-fifo-0232.jsonl.gz",
+        "rows": 100,
+        "bytes": 5535513,
+        "sha256": "c37a63ad08fd35234c7b982f79e212bdef564af8c8d485419aeb5663b7a71a63"
+      },
+      {
+        "path": "trade-book-fifo-0233.jsonl.gz",
+        "rows": 100,
+        "bytes": 5559818,
+        "sha256": "d68e152690a7a955020d15c81a8e0c06c7d7f7a4f5bd3a329c5cdb0feafe1096"
+      },
+      {
+        "path": "trade-book-fifo-0234.jsonl.gz",
+        "rows": 100,
+        "bytes": 5609827,
+        "sha256": "35a11ba89145abbb47fdbe324ffc586be0ebf6ae52c75e0365e085e93f98ed17"
+      },
+      {
+        "path": "trade-book-fifo-0235.jsonl.gz",
+        "rows": 100,
+        "bytes": 5642582,
+        "sha256": "dedcc3dc12e7c601cbe6b331252df937394456a49b256116b7ab0bf1a2f337ee"
+      },
+      {
+        "path": "trade-book-fifo-0236.jsonl.gz",
+        "rows": 100,
+        "bytes": 5703491,
+        "sha256": "44895a4f8e4c844eac04a278cd50d2b123147d9944dfee3e2885aff07e27e179"
+      },
+      {
+        "path": "trade-book-fifo-0237.jsonl.gz",
+        "rows": 100,
+        "bytes": 5702865,
+        "sha256": "e9e8bac4b38164bfff28c333cb29fe76979066a3258ebc37819602e287cee754"
+      },
+      {
+        "path": "trade-book-fifo-0238.jsonl.gz",
+        "rows": 100,
+        "bytes": 5708561,
+        "sha256": "4323d118335ebe8196decbe8ac617a68e7a381ec897ab1eb5b38958c8cb6334f"
+      },
+      {
+        "path": "trade-book-fifo-0239.jsonl.gz",
+        "rows": 100,
+        "bytes": 5791706,
+        "sha256": "4106f879e0c3af29ba983115350ba9a5f8e08a8059e2de3995e0b1541faa61d3"
+      },
+      {
+        "path": "trade-book-fifo-0240.jsonl.gz",
+        "rows": 100,
+        "bytes": 5963894,
+        "sha256": "93364cc93921d0595b7cd8688e37f8645097cf4390e27dea1153032fae7a5135"
+      },
+      {
+        "path": "trade-book-fifo-0241.jsonl.gz",
+        "rows": 100,
+        "bytes": 6015980,
+        "sha256": "b53cfe55db0e2e71d9796d36795ff3b0ee30bc42edf9d9911c093f9927bc75cd"
+      },
+      {
+        "path": "trade-book-fifo-0242.jsonl.gz",
+        "rows": 100,
+        "bytes": 5965560,
+        "sha256": "29df469d96444a4eb66de4c5bda644b6f58ff0dff02e0a2b1f233c7210f45c6b"
+      },
+      {
+        "path": "trade-book-fifo-0243.jsonl.gz",
+        "rows": 100,
+        "bytes": 5982811,
+        "sha256": "a393c3c814177c3efb70af4c8618053ef9e4b67dbdbc902d78f0b74005bcbc99"
+      },
+      {
+        "path": "trade-book-fifo-0244.jsonl.gz",
+        "rows": 100,
+        "bytes": 5988403,
+        "sha256": "c3cb969d38b5607b8ec81f30eea40b669e54baa32016d11de7b2711fec60210b"
+      },
+      {
+        "path": "trade-book-fifo-0245.jsonl.gz",
+        "rows": 100,
+        "bytes": 6044789,
+        "sha256": "89c89ec3868933d623a51862fc274b046e7c3b979bbe236c0cb4100ad812a1c3"
+      },
+      {
+        "path": "trade-book-fifo-0246.jsonl.gz",
+        "rows": 100,
+        "bytes": 6083199,
+        "sha256": "c3c124f0b6bf78ec8b77116ce09b7451ec252b74f2e4b168b252d9115879c180"
+      },
+      {
+        "path": "trade-book-fifo-0247.jsonl.gz",
+        "rows": 100,
+        "bytes": 6051247,
+        "sha256": "94c2b7a6695772b5f4ed495a8d85951f09ff6d18d2c4676135f256ebf0676570"
+      },
+      {
+        "path": "trade-book-fifo-0248.jsonl.gz",
+        "rows": 100,
+        "bytes": 6051476,
+        "sha256": "a84681086084a8219edcf2f32712fcfd765a467e97bfe1a18c1b310d453a68ac"
+      },
+      {
+        "path": "trade-book-fifo-0249.jsonl.gz",
+        "rows": 100,
+        "bytes": 5995456,
+        "sha256": "2b3e99c9582174d4196d60415413cec2a544945fff9c42f4dff45df90e9cfcb6"
+      },
+      {
+        "path": "trade-book-fifo-0250.jsonl.gz",
+        "rows": 100,
+        "bytes": 6080103,
+        "sha256": "7936363679ee1fd56922806bf1dba86aaab540789d2f046ff9fa1650f529529d"
+      },
+      {
+        "path": "trade-book-fifo-0251.jsonl.gz",
+        "rows": 100,
+        "bytes": 6061969,
+        "sha256": "e43e987e7c26e7e6f4388667fba7fd5721869b71763531476e40e112b9ce648b"
+      },
+      {
+        "path": "trade-book-fifo-0252.jsonl.gz",
+        "rows": 100,
+        "bytes": 6113857,
+        "sha256": "baea2efb0782e0fe177c642cbf3988d666e2eb01e82b3a4cf42002197a300a04"
+      },
+      {
+        "path": "trade-book-fifo-0253.jsonl.gz",
+        "rows": 100,
+        "bytes": 6194829,
+        "sha256": "962b19888457610a1f1e19c51c417d21f320324181a4ba3f1a7b03b73ba29a7c"
+      },
+      {
+        "path": "trade-book-fifo-0254.jsonl.gz",
+        "rows": 100,
+        "bytes": 6199790,
+        "sha256": "0d85b3ad09b08b688a340f2b7d1f2dc398bf7d25fe982698874fd974af4b360b"
+      },
+      {
+        "path": "trade-book-fifo-0255.jsonl.gz",
+        "rows": 100,
+        "bytes": 6266853,
+        "sha256": "a1184eeeed558671f3ae2cfd0737c4b6081565b213fa66f66138e1b82d7c2efc"
+      },
+      {
+        "path": "trade-book-fifo-0256.jsonl.gz",
+        "rows": 100,
+        "bytes": 6203419,
+        "sha256": "9591f41a7b682ab6c7dcdf689212b05e3cc3eb8216331d9ad87999eca197a5f7"
+      },
+      {
+        "path": "trade-book-fifo-0257.jsonl.gz",
+        "rows": 100,
+        "bytes": 6165731,
+        "sha256": "01c71d0655bc10a61181573d84e600ad362dccf18f2696740ecefc33a427aa20"
+      },
+      {
+        "path": "trade-book-fifo-0258.jsonl.gz",
+        "rows": 100,
+        "bytes": 6167668,
+        "sha256": "c7a977d836ac0a3c381f672edbca66b8b36554e9e1e414d725166a7de5c5a350"
+      },
+      {
+        "path": "trade-book-fifo-0259.jsonl.gz",
+        "rows": 100,
+        "bytes": 6093968,
+        "sha256": "ee96774ce0c3b99d4e2e99cebadd06498a9dad2396ae48ce33be82fbceaf88bd"
+      },
+      {
+        "path": "trade-book-fifo-0260.jsonl.gz",
+        "rows": 100,
+        "bytes": 6024627,
+        "sha256": "69c9d1d794ee6b5407d5e2d475d35b28b96977dcfc21d8416082ec503eeeb990"
+      },
+      {
+        "path": "trade-book-fifo-0261.jsonl.gz",
+        "rows": 100,
+        "bytes": 5978312,
+        "sha256": "4425c9b57b778008d16cbd944c9b327860a437a0fa4a41bb02a48e3346e1b3e9"
+      },
+      {
+        "path": "trade-book-fifo-0262.jsonl.gz",
+        "rows": 100,
+        "bytes": 6090943,
+        "sha256": "796f87f6331f950ae0c0bdf80a7d8c9478d34b81f63af712e6483ef1c82dcbbd"
+      },
+      {
+        "path": "trade-book-fifo-0263.jsonl.gz",
+        "rows": 100,
+        "bytes": 6096569,
+        "sha256": "4c5e6d5bd1bfc072c2e1f383c3db7deb94368f1a58ee005d2098fc710a720d07"
+      },
+      {
+        "path": "trade-book-fifo-0264.jsonl.gz",
+        "rows": 100,
+        "bytes": 6174203,
+        "sha256": "8c661dd513175ac494a673d8eed1e25732cc5e3d7662ed8f8b5d008a966b27bb"
+      },
+      {
+        "path": "trade-book-fifo-0265.jsonl.gz",
+        "rows": 100,
+        "bytes": 6185932,
+        "sha256": "45c6e765b78768d51fbf2868143ff0f6514c33e3eda9c39b9c10adba652d5c1e"
+      },
+      {
+        "path": "trade-book-fifo-0266.jsonl.gz",
+        "rows": 100,
+        "bytes": 6195842,
+        "sha256": "a1cb3069bc8aa8efa1192e5a50922780fcf8c486dc82db70a473eb4ddfcc2f87"
+      },
+      {
+        "path": "trade-book-fifo-0267.jsonl.gz",
+        "rows": 100,
+        "bytes": 6151405,
+        "sha256": "696afa7db91734f46cc63dfc9f7892b7ed2beed798b04bbf79a7315dce2806db"
+      },
+      {
+        "path": "trade-book-fifo-0268.jsonl.gz",
+        "rows": 100,
+        "bytes": 6126189,
+        "sha256": "95b4c5271f29edca30edcfb679a1abe1d2ee8b90c7b392baee0cec2f73cecb25"
+      },
+      {
+        "path": "trade-book-fifo-0269.jsonl.gz",
+        "rows": 100,
+        "bytes": 6053263,
+        "sha256": "b4e35e440cd36030265e48de59223fdbbf1283dd129f6c94dad4e4ebbde61a56"
+      },
+      {
+        "path": "trade-book-fifo-0270.jsonl.gz",
+        "rows": 100,
+        "bytes": 6046372,
+        "sha256": "403d8b6906f3e2f15754382001569140d01d9cc8d127a7cf60fd5da23337719b"
+      },
+      {
+        "path": "trade-book-fifo-0271.jsonl.gz",
+        "rows": 100,
+        "bytes": 5952656,
+        "sha256": "30e1dddaaa2f86589cb865c99efd7713036391ac31c07584e70bec7ee71a3bcf"
+      },
+      {
+        "path": "trade-book-fifo-0272.jsonl.gz",
+        "rows": 100,
+        "bytes": 5929374,
+        "sha256": "72175e60f5ad3e5e7f5ad43bf800c6ee8b3621e26cf9d976aa3022d1ecfae99c"
+      },
+      {
+        "path": "trade-book-fifo-0273.jsonl.gz",
+        "rows": 100,
+        "bytes": 5914153,
+        "sha256": "57d14c997cb5b3d190b9c8a8c602bb78f28e682a22a04446c9cc0b0593129e34"
+      },
+      {
+        "path": "trade-book-fifo-0274.jsonl.gz",
+        "rows": 100,
+        "bytes": 5980976,
+        "sha256": "f47cf260c7029ab0d3c3afc44acd4322b8a1016886a2076c57dcd0d60d927fa8"
+      },
+      {
+        "path": "trade-book-fifo-0275.jsonl.gz",
+        "rows": 100,
+        "bytes": 5937858,
+        "sha256": "0e1042c22850776ee73b99a05a1d4b50c92bc2e06432378cc04ee49b9aaf7b51"
+      },
+      {
+        "path": "trade-book-fifo-0276.jsonl.gz",
+        "rows": 100,
+        "bytes": 5933155,
+        "sha256": "eff18acaf5bf1a2b98ef4b2bc9bfc12ec0f783310f07470ba711421820a4580e"
+      },
+      {
+        "path": "trade-book-fifo-0277.jsonl.gz",
+        "rows": 100,
+        "bytes": 5996306,
+        "sha256": "faa0f776c5ac7dc432f3dd8f30c77ce15e096895ad482225a85ad978e7213b06"
+      },
+      {
+        "path": "trade-book-fifo-0278.jsonl.gz",
+        "rows": 100,
+        "bytes": 5887018,
+        "sha256": "504c0954262d69f1d599b8c32eb3c0e504d539e46f7a4a030c7eae0de8051bd5"
+      },
+      {
+        "path": "trade-book-fifo-0279.jsonl.gz",
+        "rows": 100,
+        "bytes": 5883201,
+        "sha256": "cb69b22a81b236305167de18e3183b09e944f15184263c14fa0886acfc93d184"
+      },
+      {
+        "path": "trade-book-fifo-0280.jsonl.gz",
+        "rows": 100,
+        "bytes": 5916466,
+        "sha256": "3569d9ca8e6c9db18678920f58b398dc2d11e593ea6c142a6b56971a1b37dc55"
+      },
+      {
+        "path": "trade-book-fifo-0281.jsonl.gz",
+        "rows": 100,
+        "bytes": 5868581,
+        "sha256": "950b5a9daaad4b80e5addc77f1c596167af5c06ee67e76580e88c3f912556c70"
+      },
+      {
+        "path": "trade-book-fifo-0282.jsonl.gz",
+        "rows": 100,
+        "bytes": 5832889,
+        "sha256": "d07695e3a85776bdca635f35eafe5d14a498f1eda724b6506ba52be883816ed7"
+      },
+      {
+        "path": "trade-book-fifo-0283.jsonl.gz",
+        "rows": 100,
+        "bytes": 5879830,
+        "sha256": "d5a5b7c3da356bf68812cd89457b1cebf0ac463e09befb90d3affcb484df3837"
+      },
+      {
+        "path": "trade-book-fifo-0284.jsonl.gz",
+        "rows": 100,
+        "bytes": 5981319,
+        "sha256": "08d90a3c72fdcad0f66694384bef45680ad0bee76edafa37760a0d19849c301b"
+      },
+      {
+        "path": "trade-book-fifo-0285.jsonl.gz",
+        "rows": 100,
+        "bytes": 6004046,
+        "sha256": "73d2cd974a00d63f7fe777924076d96fc02d3372a5214c02c9fc08b5791ba410"
+      },
+      {
+        "path": "trade-book-fifo-0286.jsonl.gz",
+        "rows": 100,
+        "bytes": 5974050,
+        "sha256": "65362f3d22dd8541bb3e7ddbb6e736c426dd58dd576665a30bf6374f6e3a3458"
+      },
+      {
+        "path": "trade-book-fifo-0287.jsonl.gz",
+        "rows": 100,
+        "bytes": 5938567,
+        "sha256": "32973ca6323137a529e6cc6083cc954124b690aee4931c978a5b40520ca17413"
+      },
+      {
+        "path": "trade-book-fifo-0288.jsonl.gz",
+        "rows": 100,
+        "bytes": 6003695,
+        "sha256": "94f36dfaf01c2411f2bb5abca0c0c5451e25910f7b7e67bc9c25147df79f5a55"
+      },
+      {
+        "path": "trade-book-fifo-0289.jsonl.gz",
+        "rows": 100,
+        "bytes": 6038377,
+        "sha256": "bfbb172015313aec0ea2f8ebbd70eba843131cc4dad5feb827ad7ad7736b43f1"
+      },
+      {
+        "path": "trade-book-fifo-0290.jsonl.gz",
+        "rows": 100,
+        "bytes": 6043768,
+        "sha256": "d39e6de5ffa4d0a2b533524ceb9581c3b362c8cc898d1dc9946dced74da3a6dc"
+      },
+      {
+        "path": "trade-book-fifo-0291.jsonl.gz",
+        "rows": 100,
+        "bytes": 6026484,
+        "sha256": "f5b3ec4bfe1c33bd079eaa2639fb6f7d79538ca41fc459b6b60a81eacaa368e6"
+      },
+      {
+        "path": "trade-book-fifo-0292.jsonl.gz",
+        "rows": 100,
+        "bytes": 6119285,
+        "sha256": "cc6ab14ac8d8d6992945a9efdf54e7f9c393ea07aadc61febe8cbe286b5a78d2"
+      },
+      {
+        "path": "trade-book-fifo-0293.jsonl.gz",
+        "rows": 100,
+        "bytes": 6139589,
+        "sha256": "8b142a4f3fb91c612a823dd3ef375d4a82fb966afe96b393dff06d6b7f28a7f8"
+      },
+      {
+        "path": "trade-book-fifo-0294.jsonl.gz",
+        "rows": 100,
+        "bytes": 6164254,
+        "sha256": "68ffb5875542015dfeda9153454a77d0336d14730b35c561b84f338dcf5b22e3"
+      },
+      {
+        "path": "trade-book-fifo-0295.jsonl.gz",
+        "rows": 100,
+        "bytes": 6190124,
+        "sha256": "d920fcb10a00d03add52e3b6ed68ed6ed0b832689e91804c0803aa7343dbdc7b"
+      },
+      {
+        "path": "trade-book-fifo-0296.jsonl.gz",
+        "rows": 100,
+        "bytes": 6217106,
+        "sha256": "61d9d59996ef164ec7234ecd43691c7697c4d8a16a038dc4a6cc8c5e29ca18f0"
+      },
+      {
+        "path": "trade-book-fifo-0297.jsonl.gz",
+        "rows": 100,
+        "bytes": 6223263,
+        "sha256": "31eacb3b4897a6f78a6d0cd0b5a5827485793ffdf528da0ab739b59b5d7839c4"
+      },
+      {
+        "path": "trade-book-fifo-0298.jsonl.gz",
+        "rows": 100,
+        "bytes": 6193495,
+        "sha256": "29c1f4ba59f5d79d5d21e006878ad4d7332e7160715ddc0020151db6fa0862b8"
+      },
+      {
+        "path": "trade-book-fifo-0299.jsonl.gz",
+        "rows": 100,
+        "bytes": 6212144,
+        "sha256": "0ef01057980ffaeee32ef930ef85f8cfba4403dcb938b85aa376d9c4517e75f0"
+      },
+      {
+        "path": "trade-book-fifo-0300.jsonl.gz",
+        "rows": 100,
+        "bytes": 6248787,
+        "sha256": "0c9000db232fbcaa873f146e97290984302c599c3172fdb0149d85c797bda1a1"
+      },
+      {
+        "path": "trade-book-fifo-0301.jsonl.gz",
+        "rows": 100,
+        "bytes": 6069725,
+        "sha256": "f3defd79a9b189cae1c7cd298087ace333ee40bb31b80fc8dfe3e8cdfc742a39"
+      },
+      {
+        "path": "trade-book-fifo-0302.jsonl.gz",
+        "rows": 100,
+        "bytes": 6097481,
+        "sha256": "ba3d6590356b9a7eff5be82e56f11efce08fd6719b0ffc077b8a41efbc5ca45f"
+      },
+      {
+        "path": "trade-book-fifo-0303.jsonl.gz",
+        "rows": 100,
+        "bytes": 6126955,
+        "sha256": "c83649be1e19849b9c37a481984f4e16e36d85ecccc08aea7e0360360be7971b"
+      },
+      {
+        "path": "trade-book-fifo-0304.jsonl.gz",
+        "rows": 100,
+        "bytes": 6122654,
+        "sha256": "ca06ac700e879084106767ecd69138e656a28079d0525df5ca6f9260ea540c36"
+      },
+      {
+        "path": "trade-book-fifo-0305.jsonl.gz",
+        "rows": 100,
+        "bytes": 6095640,
+        "sha256": "2f00a2050bf782d8b5054e392b68366f6b3966909ccf2a48dfd3c31c507163ad"
+      },
+      {
+        "path": "trade-book-fifo-0306.jsonl.gz",
+        "rows": 100,
+        "bytes": 6212282,
+        "sha256": "8df028035b8ccaaa7a4f3b1e823bc920292cce52fa390e21db657f5eb7466881"
+      },
+      {
+        "path": "trade-book-fifo-0307.jsonl.gz",
+        "rows": 100,
+        "bytes": 6194642,
+        "sha256": "cedff3240a6b87e7bfce7acc0b7aa5b9f5b6a9ab0ad5bab251687d6f97da4248"
+      },
+      {
+        "path": "trade-book-fifo-0308.jsonl.gz",
+        "rows": 100,
+        "bytes": 6218560,
+        "sha256": "5fe4a5d56efc4dee5a8c7d23fd23e219f944e961376502a11fc7ba76765c5f12"
+      },
+      {
+        "path": "trade-book-fifo-0309.jsonl.gz",
+        "rows": 100,
+        "bytes": 6189550,
+        "sha256": "f79f993fde8ba90b602bea2f7d2e2b4234c96b2913c523c1a149a04e32d79f1a"
+      },
+      {
+        "path": "trade-book-fifo-0310.jsonl.gz",
+        "rows": 100,
+        "bytes": 6006305,
+        "sha256": "8502e91cec1aa68c1d912d3bd93e7141d81d3b85800cc7365bb292bf94009355"
+      },
+      {
+        "path": "trade-book-fifo-0311.jsonl.gz",
+        "rows": 100,
+        "bytes": 6019699,
+        "sha256": "29e8193613b22e100d36b3582bbb37f779c4b4bd81ef0ffe5a0cbbbbb5ea0db6"
+      },
+      {
+        "path": "trade-book-fifo-0312.jsonl.gz",
+        "rows": 100,
+        "bytes": 5998328,
+        "sha256": "e12981b85a584a96ea33873bc9be1d204d9b3d71e8d39eaeb0275b7730bfc2e2"
+      },
+      {
+        "path": "trade-book-fifo-0313.jsonl.gz",
+        "rows": 100,
+        "bytes": 6011436,
+        "sha256": "6ecea13a9fcc25b9cd786d6b6b39c860d10b6112b6204fb7821102c639476432"
+      },
+      {
+        "path": "trade-book-fifo-0314.jsonl.gz",
+        "rows": 100,
+        "bytes": 6075211,
+        "sha256": "f1175ef4a842f1c60fb1750d54ebbd71592396a3e6028bbf9ac0e58f643af952"
+      },
+      {
+        "path": "trade-book-fifo-0315.jsonl.gz",
+        "rows": 100,
+        "bytes": 6073900,
+        "sha256": "fdefb00b1e8461932f9c43c1ff3377ad28a60ef860066d0ed471098a4515baca"
+      },
+      {
+        "path": "trade-book-fifo-0316.jsonl.gz",
+        "rows": 100,
+        "bytes": 6154934,
+        "sha256": "b67a6a1039d18856b562cdaf6d080b01ff5cabd56c20e5038adfb176239e956d"
+      },
+      {
+        "path": "trade-book-fifo-0317.jsonl.gz",
+        "rows": 100,
+        "bytes": 6137711,
+        "sha256": "dafa7b954180dfb5e61b0114d54e0ff8be38e29a05243ea7c1e06ef092d27385"
+      },
+      {
+        "path": "trade-book-fifo-0318.jsonl.gz",
+        "rows": 100,
+        "bytes": 6139021,
+        "sha256": "c3d246a44c00a12d51c23be78dc5bed71c8d261f9aac6517a3d37921c37db9db"
+      },
+      {
+        "path": "trade-book-fifo-0319.jsonl.gz",
+        "rows": 100,
+        "bytes": 6159584,
+        "sha256": "db40a5068315ef1990a51ddd6a1ec72b3c3d49b9a2f18d95c6f4ddb47e113d3a"
+      },
+      {
+        "path": "trade-book-fifo-0320.jsonl.gz",
+        "rows": 100,
+        "bytes": 6122353,
+        "sha256": "6a3af4070f67a36e6e99d7453fe878647b575689e69aaea6c236ce87866bc74c"
+      },
+      {
+        "path": "trade-book-fifo-0321.jsonl.gz",
+        "rows": 100,
+        "bytes": 6159051,
+        "sha256": "c707ccb30bf42496c4749fbd39b26999b951b606759e5e651487ed03786c41c0"
+      },
+      {
+        "path": "trade-book-fifo-0322.jsonl.gz",
+        "rows": 100,
+        "bytes": 6066680,
+        "sha256": "82404530004f1c70b073ac7d1960942ea1dffceb314334cd5540096660700123"
+      },
+      {
+        "path": "trade-book-fifo-0323.jsonl.gz",
+        "rows": 100,
+        "bytes": 6056922,
+        "sha256": "6353daa37deeb975dab99df1475c7f7f7e516a22150674c1e28b46663031aad6"
+      },
+      {
+        "path": "trade-book-fifo-0324.jsonl.gz",
+        "rows": 100,
+        "bytes": 6146329,
+        "sha256": "1848a35a8100e56b69d1d88b6b7821fdf11d7ed06ca5b9e48766f5411be64e1a"
+      },
+      {
+        "path": "trade-book-fifo-0325.jsonl.gz",
+        "rows": 100,
+        "bytes": 6288682,
+        "sha256": "0ff028d1ce7e46223a81e1a53f83128d1755863572fbb5c7af6ba38ee8307706"
+      },
+      {
+        "path": "trade-book-fifo-0326.jsonl.gz",
+        "rows": 100,
+        "bytes": 6286022,
+        "sha256": "fc95073380df1cd8caa611831ae79530c23017e5c78c22662c784b6462d0adea"
+      },
+      {
+        "path": "trade-book-fifo-0327.jsonl.gz",
+        "rows": 100,
+        "bytes": 6274609,
+        "sha256": "1230f84f06485f7930c8d1ba9bc4658969196666264facdb8c0b29159ddf942b"
+      },
+      {
+        "path": "trade-book-fifo-0328.jsonl.gz",
+        "rows": 100,
+        "bytes": 6319123,
+        "sha256": "3397b3a616c6feb8ed8e8d2bcaf182faf69d1496bb9546c2efdccea12c2f6bb4"
+      },
+      {
+        "path": "trade-book-fifo-0329.jsonl.gz",
+        "rows": 100,
+        "bytes": 6200353,
+        "sha256": "f96f503d52af2746e4cfcab3c6cf871868172b2d349a644576e9ae30517a1e91"
+      },
+      {
+        "path": "trade-book-fifo-0330.jsonl.gz",
+        "rows": 100,
+        "bytes": 6237695,
+        "sha256": "8b4f9afea65b874ee146dbd2fde54bdccb8838dc3abeca73a9ce10c7612dbaee"
+      },
+      {
+        "path": "trade-book-fifo-0331.jsonl.gz",
+        "rows": 100,
+        "bytes": 6307619,
+        "sha256": "7f56668a40622dc6a964371ca4d8dd67d070d4c5e6a075310c32a3441be111d0"
+      },
+      {
+        "path": "trade-book-fifo-0332.jsonl.gz",
+        "rows": 100,
+        "bytes": 6386364,
+        "sha256": "853b8bd21518d38f51e296c12f6b32400e6ff87e6c44529403b15a704da7a6f4"
+      },
+      {
+        "path": "trade-book-fifo-0333.jsonl.gz",
+        "rows": 100,
+        "bytes": 6419186,
+        "sha256": "ed8d8290905bbfe77dcd81dc985a6e196bcf481968a19bb21f6494d15c923e33"
+      },
+      {
+        "path": "trade-book-fifo-0334.jsonl.gz",
+        "rows": 100,
+        "bytes": 6331801,
+        "sha256": "9943f07b6f5d480c7643040a792fc458302afe4af3eb8a70c02579a1add11de7"
+      },
+      {
+        "path": "trade-book-fifo-0335.jsonl.gz",
+        "rows": 100,
+        "bytes": 6382065,
+        "sha256": "9912566d343e1c833d564eff47c508aa58320a6dcea96904e0eee9a57c27babb"
+      },
+      {
+        "path": "trade-book-fifo-0336.jsonl.gz",
+        "rows": 100,
+        "bytes": 6490374,
+        "sha256": "90e30d9c8be54b960095571a9aeed7c8ea30abf9b091edc530da75f076396d9c"
+      },
+      {
+        "path": "trade-book-fifo-0337.jsonl.gz",
+        "rows": 100,
+        "bytes": 6477883,
+        "sha256": "2cc77e80d342a33129725da017263229c4f271b5b64d0411e68f861030df17da"
+      },
+      {
+        "path": "trade-book-fifo-0338.jsonl.gz",
+        "rows": 100,
+        "bytes": 6656743,
+        "sha256": "9d0eadcc331eeeb3f875622e5898651a697e51f0152cede4af80e2aa221de442"
+      },
+      {
+        "path": "trade-book-fifo-0339.jsonl.gz",
+        "rows": 100,
+        "bytes": 7039650,
+        "sha256": "bc45c51d6e3e7f767088509900bddbd6d5d3516434e2f9b1c5cafdaeeefda02e"
+      },
+      {
+        "path": "trade-book-fifo-0340.jsonl.gz",
+        "rows": 100,
+        "bytes": 7384772,
+        "sha256": "3f2ed72dc5b4bece2648215d8b0aefd885b4d2196993da6ca940b37a054d95fc"
+      },
+      {
+        "path": "trade-book-fifo-0341.jsonl.gz",
+        "rows": 100,
+        "bytes": 7312707,
+        "sha256": "ab4c71d3851359911b1971f99aad0f4d7fe8d04f2ae34c3ebdb17d169eeaecab"
+      },
+      {
+        "path": "trade-book-fifo-0342.jsonl.gz",
+        "rows": 100,
+        "bytes": 7944836,
+        "sha256": "0e92b33af313c8becf07179297fcdc0ec05cb644851f6251416c20e6cd3b2db7"
+      },
+      {
+        "path": "trade-book-fifo-0343.jsonl.gz",
+        "rows": 100,
+        "bytes": 8211943,
+        "sha256": "c9b033cc7d41fa22bcd9999e1b97edc05e77648fe0fc1c14f157810d29edff13"
+      },
+      {
+        "path": "trade-book-fifo-0344.jsonl.gz",
+        "rows": 100,
+        "bytes": 8124378,
+        "sha256": "5ebe56d15b9ff1a1492a25bd178cabc0ef2749d1ea1d70b94533d24eaeb33a56"
+      },
+      {
+        "path": "trade-book-fifo-0345.jsonl.gz",
+        "rows": 100,
+        "bytes": 7949470,
+        "sha256": "85f5438901fc6f91f78b6b6d4aef7cfa36b159c347ccf72b0ddce5fb6e8f6ab9"
+      },
+      {
+        "path": "trade-book-fifo-0346.jsonl.gz",
+        "rows": 100,
+        "bytes": 7939036,
+        "sha256": "c6e26575f3b4a5a7f3dc316293009531fce53173d653a79d9546adfe6800aaff"
+      },
+      {
+        "path": "trade-book-fifo-0347.jsonl.gz",
+        "rows": 100,
+        "bytes": 7202814,
+        "sha256": "0cdbe26f3d1573eb9f1f439dc0860d6feb25a3be00deccf23c455063c083825d"
+      },
+      {
+        "path": "trade-book-fifo-0348.jsonl.gz",
+        "rows": 100,
+        "bytes": 6686343,
+        "sha256": "8ac5c8a7f293b31545b1a82c0e9eab2d33839caf6ec52d2d2d687fc38fec0911"
+      },
+      {
+        "path": "trade-book-fifo-0349.jsonl.gz",
+        "rows": 100,
+        "bytes": 6504393,
+        "sha256": "1352bb78034a0f8997d40fced76e6f8af5ee82d985892beb3802e2a729081840"
+      },
+      {
+        "path": "trade-book-fifo-0350.jsonl.gz",
+        "rows": 100,
+        "bytes": 6341032,
+        "sha256": "8fc921227786391a1384a924def73b9eaba35cc9a3d46c66f636749d6666b626"
+      },
+      {
+        "path": "trade-book-fifo-0351.jsonl.gz",
+        "rows": 100,
+        "bytes": 6032736,
+        "sha256": "19bc2facf3e22160b665d18824d5ecf90a2d0320a6888a78099f55553506dbce"
+      },
+      {
+        "path": "trade-book-fifo-0352.jsonl.gz",
+        "rows": 100,
+        "bytes": 6232746,
+        "sha256": "e84be059a81e8edbdbe21f595265c4b07e26701703c5be0b67669437d596192a"
+      },
+      {
+        "path": "trade-book-fifo-0353.jsonl.gz",
+        "rows": 100,
+        "bytes": 6173877,
+        "sha256": "5bf078fbe2f7cc4f3e96e587666425aea72bde90b839fafb02e6fd043e3cd283"
+      },
+      {
+        "path": "trade-book-fifo-0354.jsonl.gz",
+        "rows": 100,
+        "bytes": 6108644,
+        "sha256": "23786998932e08a5a1505b5eea2dbcfe68cb20715b6e24ebad86825b8c95c9c8"
+      },
+      {
+        "path": "trade-book-fifo-0355.jsonl.gz",
+        "rows": 100,
+        "bytes": 5861424,
+        "sha256": "d89b7286b99126fade171de9845161279670b409e883cbac1b2b977d55111447"
+      },
+      {
+        "path": "trade-book-fifo-0356.jsonl.gz",
+        "rows": 100,
+        "bytes": 5763568,
+        "sha256": "fb47556ddd69ca81baeb76a458518afc583fde126ce0bcded3d495ba4affd2aa"
+      },
+      {
+        "path": "trade-book-fifo-0357.jsonl.gz",
+        "rows": 100,
+        "bytes": 5804100,
+        "sha256": "5a85882d765dab535ea1fd8c87bf34e7129ab46ed65966b1e8839558030ed8d5"
+      },
+      {
+        "path": "trade-book-fifo-0358.jsonl.gz",
+        "rows": 100,
+        "bytes": 5797104,
+        "sha256": "830ed426fab806e7a2ac61e1be21ed219384abe6597e4f34d0567283d1c74a32"
+      },
+      {
+        "path": "trade-book-fifo-0359.jsonl.gz",
+        "rows": 100,
+        "bytes": 5819832,
+        "sha256": "f78dacad8b584a92efb5f95de5f65234bde9152afbce40c22d8ed8c1aa145358"
+      },
+      {
+        "path": "trade-book-fifo-0360.jsonl.gz",
+        "rows": 100,
+        "bytes": 5802491,
+        "sha256": "8dbdb6982feeefc89ea3914d1a2b12e24dd9309402ce7f8ef0e44937413a84de"
+      },
+      {
+        "path": "trade-book-fifo-0361.jsonl.gz",
+        "rows": 100,
+        "bytes": 5651427,
+        "sha256": "59ea60550837079b18ff192268d2bb0864d7613e13f7f0283c6e97c29893a094"
+      },
+      {
+        "path": "trade-book-fifo-0362.jsonl.gz",
+        "rows": 100,
+        "bytes": 5729672,
+        "sha256": "0209c694ff560c626bc2c2007a09c9cc8eb9adadbb1c73ee13f41d4e09abec9f"
+      },
+      {
+        "path": "trade-book-fifo-0363.jsonl.gz",
+        "rows": 100,
+        "bytes": 5711081,
+        "sha256": "51eb8ce9f58b352720d397b1ec4866f621775742a26efd07692bc62b72750484"
+      },
+      {
+        "path": "trade-book-fifo-0364.jsonl.gz",
+        "rows": 100,
+        "bytes": 5722054,
+        "sha256": "d4dd1412afaca0a653732c20c2cdbd51d13ced7fe0508d690a646317cb54a3fd"
+      },
+      {
+        "path": "trade-book-fifo-0365.jsonl.gz",
+        "rows": 100,
+        "bytes": 5667865,
+        "sha256": "96d6f8dc1338283c3ddca6843a50ff3ddb050163d96238cbf65b6e5c7b993fdd"
+      },
+      {
+        "path": "trade-book-fifo-0366.jsonl.gz",
+        "rows": 100,
+        "bytes": 5693991,
+        "sha256": "1547cbc81beddf792f138558ee5e05a2274a2367820e20adc870f1a1c079013b"
+      },
+      {
+        "path": "trade-book-fifo-0367.jsonl.gz",
+        "rows": 100,
+        "bytes": 5624322,
+        "sha256": "583878cae349e59e76ba54e3050c633480f356628fb3ab227bf6d6606c1b2c61"
+      },
+      {
+        "path": "trade-book-fifo-0368.jsonl.gz",
+        "rows": 100,
+        "bytes": 5608795,
+        "sha256": "47452b8cbf49f07e686063bf20dbf691dd80f24c1e19e465faca86e01c19d76b"
+      },
+      {
+        "path": "trade-book-fifo-0369.jsonl.gz",
+        "rows": 100,
+        "bytes": 5568732,
+        "sha256": "6706eb217f23e795224df3f40a24c688f061cb661528c9532505b6989f104175"
+      },
+      {
+        "path": "trade-book-fifo-0370.jsonl.gz",
+        "rows": 100,
+        "bytes": 5425999,
+        "sha256": "244adf332a10809447f295454d2308b900b63b53a73e066c19aefc65d6fb4db2"
+      },
+      {
+        "path": "trade-book-fifo-0371.jsonl.gz",
+        "rows": 100,
+        "bytes": 5136488,
+        "sha256": "1b99a0c6706d92ad90e1853013647458f766dc89b6ab38529ea90ff74caca812"
+      },
+      {
+        "path": "trade-book-fifo-0372.jsonl.gz",
+        "rows": 100,
+        "bytes": 5205739,
+        "sha256": "f7400f7569d243440eccf615f87f393923881c308a55663b64259861297f88ef"
+      },
+      {
+        "path": "trade-book-fifo-0373.jsonl.gz",
+        "rows": 100,
+        "bytes": 5110833,
+        "sha256": "546a328f4a3357e4d2f6b0dc6ddb280b3291dba1312c653bcc9035240e8fed06"
+      },
+      {
+        "path": "trade-book-fifo-0374.jsonl.gz",
+        "rows": 100,
+        "bytes": 5037107,
+        "sha256": "d96dc89f552071656899d8fc137db4ade8571a93f44f92f47ec573e11e2d558e"
+      },
+      {
+        "path": "trade-book-fifo-0375.jsonl.gz",
+        "rows": 100,
+        "bytes": 4721572,
+        "sha256": "aeb4f6a3de37146483844ce9e345801ca2c9c20d5e424b9b4ce8656c9cd1813b"
+      },
+      {
+        "path": "trade-book-fifo-0376.jsonl.gz",
+        "rows": 70,
+        "bytes": 2988764,
+        "sha256": "0cc593b5dd610092821f9afd117a40e9b2b63ee82b7d3f60386c10955fe4505d"
+      }
+    ]
+  },
+  "receipt": {
+    "schema": "FRANKIE_MBO_BOOK_RECOVERY_V1",
+    "day": "20231002",
+    "expected_trades": 37670,
+    "recovered_trades": 37670,
+    "raw_messages_including_opening_warmup": 808453,
+    "completed_book_fifo_recovery": true,
+    "complete_all_layers": false,
+    "original_replay_receipt": {
+      "session": "20231002",
+      "scope": "PARTIAL_TRADE_DATE",
+      "tape_git_commit": "1d15dc6f1b5bbb1fabb6389d18e8bedba2b77202",
+      "adapter_git_commit": "af36937d1e478831d4c7bc612c98d969e9a0848b",
+      "boundary_manifest_commit": "93895487c199b1e486d5407f9e103a0964903d2d",
+      "databento_version": "0.81.0",
+      "first_ts_recv_ns": 1696204800000000000,
+      "last_ts_recv_ns": 1696280399697648657,
+      "records": 808453,
+      "completed_groups": 600291,
+      "trades": 37670,
+      "opening_snapshot_records": 733,
+      "resting_orders_at_halt": 725,
+      "archived_books_compared": 0,
+      "integrity": {
+        "150611": {}
+      },
+      "wall_seconds": 310.51
+    },
+    "snapshot_phase": "at_trade_input; no later group-close values substituted",
+    "scope": "original archived partial span",
+    "limits": [
+      "FIFO is reconstructed by the original adapter, not exchange-exposed native priority.",
+      "This recovers MBO, book, FIFO and activity only; other missing calculations remain separate."
+    ]
+  }
+}

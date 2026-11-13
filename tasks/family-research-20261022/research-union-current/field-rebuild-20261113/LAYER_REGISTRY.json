@@ -1,0 +1,2355 @@
+[
+  {
+    "layer_id": "controlling_rt_mission",
+    "description": "Concise controlling native RT mission",
+    "source_paths": [
+      "research/kalshi/agents/frankie_native_raw_mbo_oct45_realtime_mission_20260828.md"
+    ],
+    "v3_derived": false,
+    "number": 1,
+    "group": "binding_common_controls",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L001 | controlling_rt_mission"
+  },
+  {
+    "layer_id": "native_calculation_contract",
+    "description": "Member-first open-world native calculation contract",
+    "source_paths": [
+      "research/kalshi/agents/frankie_native_raw_mbo_calculation_contract_20260828.md"
+    ],
+    "v3_derived": false,
+    "number": 2,
+    "group": "binding_common_controls",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L002 | native_calculation_contract"
+  },
+  {
+    "layer_id": "anchored_knowledge_manifest",
+    "description": "Content-addressed same-arm knowledge manifest",
+    "source_paths": [
+      "research/kalshi/agents/frankie_native_raw_mbo_knowledge/KNOWLEDGE_MANIFEST_20260828.json"
+    ],
+    "v3_derived": false,
+    "number": 3,
+    "group": "binding_common_controls",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L003 | anchored_knowledge_manifest"
+  },
+  {
+    "layer_id": "selected_same_arm_profile",
+    "description": "Exact selected arm and role knowledge profile",
+    "source_paths": [
+      "research/kalshi/agents/frankie_native_raw_mbo_knowledge/KNOWLEDGE_SOURCES_20260828.json"
+    ],
+    "v3_derived": false,
+    "number": 4,
+    "group": "binding_common_controls",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L004 | selected_same_arm_profile"
+  },
+  {
+    "layer_id": "a_clean_promoted_positive_capsule",
+    "description": "Pared-down A-clean promoted positive knowledge",
+    "source_paths": [
+      "research/kalshi/agents/frankie_native_raw_mbo_knowledge/A_CLEAN_POSITIVE_KNOWLEDGE_20260828.md"
+    ],
+    "v3_derived": false,
+    "number": 5,
+    "group": "a_clean_overlay",
+    "policy": "ARM_REQUIRED_INPUT",
+    "column": "L005 | a_clean_promoted_positive_capsule"
+  },
+  {
+    "layer_id": "a_memory_promoted_positive_capsule",
+    "description": "Pared-down A-memory promoted positive knowledge",
+    "source_paths": [
+      "research/kalshi/agents/frankie_native_raw_mbo_knowledge/A_MEMORY_POSITIVE_KNOWLEDGE_20260828.md"
+    ],
+    "v3_derived": false,
+    "number": 6,
+    "group": "a_memory_overlay",
+    "policy": "ARM_REQUIRED_INPUT",
+    "column": "L006 | a_memory_promoted_positive_capsule"
+  },
+  {
+    "layer_id": "a_memory_prior_lessons_package",
+    "description": "A-memory seed memory: every committed output of the past runs, provenance-labelled, UNVERIFIED (D86, D88); from day two his own prior-day frozen outputs plus the seed",
+    "source_paths": [
+      "research/kalshi/frankie_raw_mbo_benchmark/A_MEMORY_SEED_20260902.json"
+    ],
+    "v3_derived": false,
+    "number": 7,
+    "group": "a_memory_overlay",
+    "policy": "ARM_REQUIRED_INPUT",
+    "column": "L007 | a_memory_prior_lessons_package"
+  },
+  {
+    "layer_id": "a_memory_prior_package_proof",
+    "description": "Proof of the A-memory seed: its per-entry sha256 and byte list and seed_hash, bound as the seed file's own bytes (no external binding)",
+    "source_paths": [
+      "research/kalshi/frankie_raw_mbo_benchmark/A_MEMORY_SEED_20260902.json"
+    ],
+    "v3_derived": false,
+    "number": 8,
+    "group": "a_memory_overlay",
+    "policy": "ARM_REQUIRED_INPUT",
+    "column": "L008 | a_memory_prior_package_proof"
+  },
+  {
+    "layer_id": "authoritative_s135_construction",
+    "description": "S135 with retained S120, S126, S128, S132, and S133 improvements",
+    "source_paths": [
+      "research/kalshi/knowledge/ng_brain.json"
+    ],
+    "v3_derived": false,
+    "number": 9,
+    "group": "current_brain_runtime",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L009 | authoritative_s135_construction"
+  },
+  {
+    "layer_id": "complete_s105_9_brain",
+    "description": "Complete s105.9 NG brain with all 90 play bodies",
+    "source_paths": [
+      "research/kalshi/knowledge/ng_brain.json"
+    ],
+    "v3_derived": false,
+    "number": 10,
+    "group": "current_brain_runtime",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L010 | complete_s105_9_brain"
+  },
+  {
+    "layer_id": "doctrine_reasoning_play_index_evidence",
+    "description": "Doctrine, reasoning, play index, falsifiers, negatives, and contradictions",
+    "source_paths": [
+      "research/kalshi/knowledge/ng_brain.json"
+    ],
+    "v3_derived": false,
+    "number": 11,
+    "group": "current_brain_runtime",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L011 | doctrine_reasoning_play_index_evidence"
+  },
+  {
+    "layer_id": "lawful_prior_session_carry",
+    "description": "Prior-session carry allowed by current runtime contracts",
+    "source_paths": [
+      "research/kalshi/knowledge/ng_brain.json"
+    ],
+    "v3_derived": false,
+    "number": 12,
+    "group": "current_brain_runtime",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L012 | lawful_prior_session_carry"
+  },
+  {
+    "layer_id": "october_outcome_wall_enforcement",
+    "description": "Outcome-wall policy for the October target period",
+    "source_paths": [
+      "research/kalshi/knowledge/ng_brain.json",
+      "research/NG_EXHAUSTION_V4_CONTINUOUS_ADAPTIVE_WALKFORWARD_CONTRACT_20260820.md",
+      "research/NG_EXHAUSTION_V4_CLEAN_SOURCE_PRELAUNCH_GATES_20260820.md",
+      "research/NG_EXHAUSTION_D0_D5_V4_GEOMETRIC_SELF_ADAPTATION_CONTRACT_20260820.md",
+      "research/NG_EXHAUSTION_V4_BRAIN_TRADE_PROPOSAL_CLEAN_SOURCE_CURRENT_20260820.md"
+    ],
+    "v3_derived": false,
+    "number": 13,
+    "group": "current_brain_runtime",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L013 | october_outcome_wall_enforcement"
+  },
+  {
+    "layer_id": "learned_d_structures_and_families",
+    "description": "Frozen D structures and D families",
+    "source_paths": [
+      "research/NG_EXHAUSTION_CHAIN_STUDY_CONTRACT_20260817.json",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_FINAL_FREEZE_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_ALL_AGENT_FINDINGS_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_FINDINGS_20260817.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_TIMING_CONTEXT_FINDINGS_20260818.md",
+      "research/ng_exhaustion_chain_canonical_table_20260817.py",
+      "research/ng_exhaustion_week_chain_state_roster_20260817.py",
+      "research/ng_exhaustion_week_continuous_roster_20260817.py",
+      "research/NG_EXHAUSTION_D0_D5_V4_GEOMETRIC_SELF_ADAPTATION_CONTRACT_20260820.md",
+      "research/NG_EXHAUSTION_D0_D5_V4_GEOMETRIC_SELF_ADAPTATION_CONTRACT_20260820.json"
+    ],
+    "v3_derived": false,
+    "number": 14,
+    "group": "frozen_learned_structure",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L014 | learned_d_structures_and_families"
+  },
+  {
+    "layer_id": "learned_dipoles_and_geometry",
+    "description": "Frozen dipoles and geometry",
+    "source_paths": [
+      "research/ng_exhaustion_chain_canonical_table_20260817.py",
+      "research/NG_EXHAUSTION_V4_BRAIN_TRADE_PROPOSAL_CLEAN_SOURCE_CURRENT_20260820.md",
+      "research/NG_EXHAUSTION_D0_D5_V4_GEOMETRIC_SELF_ADAPTATION_CONTRACT_20260820.md",
+      "research/NG_EXHAUSTION_D0_D5_V4_GEOMETRIC_SELF_ADAPTATION_CONTRACT_20260820.json",
+      "research/NG_EXHAUSTION_EVENT_MARK_CLOCK_OPEN_BOUNDARY_20260819.md"
+    ],
+    "v3_derived": false,
+    "number": 15,
+    "group": "frozen_learned_structure",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L015 | learned_dipoles_and_geometry"
+  },
+  {
+    "layer_id": "learned_pair_triplet_recurrence",
+    "description": "Pair and triplet recurrence structures",
+    "source_paths": [
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_FINAL_FREEZE_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_ALL_AGENT_FINDINGS_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_TIMING_CONTEXT_FINDINGS_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_POSTEXIT_RECURRENCE_FINDINGS_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_PARALLEL_RECURRENCE_RECONCILIATION_20260818.md",
+      "research/ng_exhaustion_chain_phase2_parallel_agents_20260818.py",
+      "research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md",
+      "research/kalshi/knowledge/ng_brain_exhaustion_chain_phase2_proposal_20260818.json"
+    ],
+    "v3_derived": false,
+    "number": 16,
+    "group": "frozen_learned_structure",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L016 | learned_pair_triplet_recurrence"
+  },
+  {
+    "layer_id": "learned_chains_extensions_reappearances_ancestry",
+    "description": "Chains, extensions, reappearances, and successor ancestry",
+    "source_paths": [
+      "research/NG_EXHAUSTION_CHAIN_STUDY_CONTRACT_20260817.json",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_FINAL_FREEZE_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_ALL_AGENT_FINDINGS_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_POSTEXIT_RECURRENCE_FINDINGS_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_POX_SAME_POSTEXIT_REEXPRESSION_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_REAPPEARANCE_WATCH_MAP_20260818.json",
+      "research/ng_exhaustion_chain_phase1_lineage_54w_20260817.py",
+      "research/ng_exhaustion_chain_phase1_continuity_54w_20260817.py",
+      "research/ng_exhaustion_chain_state_enrich_20260817.py",
+      "research/ng_exhaustion_week_chain_state_roster_20260817.py",
+      "research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md",
+      "research/kalshi/knowledge/ng_brain_exhaustion_chain_phase2_proposal_20260818.json",
+      "research/kalshi/knowledge/ng_brain_exhaustion_chain_birth_v2_proposal_20260819.json"
+    ],
+    "v3_derived": false,
+    "number": 17,
+    "group": "frozen_learned_structure",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L017 | learned_chains_extensions_reappearances_ancestry"
+  },
+  {
+    "layer_id": "phase1_discoveries_structural_falsifiers",
+    "description": "Phase-1 discoveries plus structural and falsifier results",
+    "source_paths": [
+      "research/NG_EXHAUSTION_CHAIN_STUDY_CONTRACT_20260817.json",
+      "research/NG_EXHAUSTION_CHAIN_PHASE1_54W_BASE_FREEZE_20260817.json",
+      "research/NG_EXHAUSTION_CHAIN_PHASE1_54W_EXECUTION_PROTOCOL_20260817.json",
+      "research/NG_EXHAUSTION_CHAIN_PHASE1_CAUSAL_PROTOCOL_20260817.json",
+      "research/NG_EXHAUSTION_CHAIN_PHASE1_DISCOVERY_PROTOCOL_20260817.json",
+      "research/NG_EXHAUSTION_CHAIN_PHASE1_MECHANISM_ADDENDUM_20260817.json",
+      "research/NG_EXHAUSTION_CHAIN_PHASE1_55W_RECONCILE_LAUNCH_20260817.json",
+      "research/NG_EXHAUSTION_CHAIN_STEP1_ORIGINAL_FILE_MAP_20260820.md",
+      "research/ng_exhaustion_chain_canonical_54w_merge_20260817.py",
+      "research/ng_exhaustion_chain_canonical_54w_shard_20260817.py",
+      "research/ng_exhaustion_chain_phase1_discovery_20260817.py",
+      "research/ng_exhaustion_chain_phase1_causal_54w_20260817.py",
+      "research/ng_exhaustion_chain_phase1_continuity_54w_20260817.py",
+      "research/ng_exhaustion_chain_phase1_falsifier_54w_20260817.py",
+      "research/ng_exhaustion_chain_phase1_lineage_54w_20260817.py",
+      "research/ng_exhaustion_chain_phase1_structural_54w_20260817.py",
+      "research/ng_exhaustion_chain_phase1_reconcile_55w_20260817.py"
+    ],
+    "v3_derived": false,
+    "number": 18,
+    "group": "frozen_learned_structure",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L018 | phase1_discoveries_structural_falsifiers"
+  },
+  {
+    "layer_id": "phase2_findings_modules_timing_pox_negatives",
+    "description": "Phase-2 findings, timing, POX branches, and negative or stopped chains",
+    "source_paths": [
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_FINAL_FREEZE_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_ALL_AGENT_FINDINGS_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_FINDINGS_20260817.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_TIMING_CONTEXT_FINDINGS_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_MODULE_NOVELTY_FINDINGS_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_POSTEXIT_RECURRENCE_FINDINGS_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_PARALLEL_RECURRENCE_RECONCILIATION_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_FINDINGS_ADDENDUM_POX_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_POX_BRANCH_RECONCILIATION_V2_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_POX_SAME_POSTEXIT_REEXPRESSION_20260818.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_REAPPEARANCE_WATCH_MAP_20260818.json",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_FINALIZATION_CHECKLIST_20260818.json",
+      "research/ng_exhaustion_chain_phase2_characterize_20260817.py",
+      "research/ng_exhaustion_chain_phase2_parallel_agents_20260818.py",
+      "research/kalshi/knowledge/ng_brain_exhaustion_chain_phase2_proposal_20260818.json",
+      "research/kalshi/knowledge/ng_brain_exhaustion_pox_focused_proposal_20260819.json",
+      "research/kalshi/knowledge/ng_brain_exhaustion_entry_timing_extension_20260818.json"
+    ],
+    "v3_derived": false,
+    "number": 19,
+    "group": "frozen_learned_structure",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L019 | phase2_findings_modules_timing_pox_negatives"
+  },
+  {
+    "layer_id": "predecessor_ancestry_unresolved_chain_state",
+    "description": "Predecessor, ancestry, and unresolved-chain state",
+    "source_paths": [
+      "research/NG_EXHAUSTION_CHAIN_PHASE1_CAUSAL_PROTOCOL_20260817.json",
+      "research/NG_EXHAUSTION_CHAIN_STEP1_5Y_V4_NATIVE_CENSUS_PROTOCOL_20260820.md",
+      "research/NG_EXHAUSTION_CHAIN_STEP1_5Y_V4_NATIVE_CENSUS_PROTOCOL_20260820.json",
+      "research/NG_EXHAUSTION_V4_BRAIN_TRADE_PROPOSAL_CLEAN_SOURCE_CURRENT_20260820.md",
+      "research/NG_EXHAUSTION_V4_CLEAN_SOURCE_PRELAUNCH_GATES_20260820.md",
+      "research/NG_EXHAUSTION_D0_D5_V4_GEOMETRIC_SELF_ADAPTATION_CONTRACT_20260820.md",
+      "research/NG_EXHAUSTION_PRIOR_MODEL_PRICE_CORRECTION_20260819.md",
+      "research/NG_EXHAUSTION_FULL_CAUSAL_INFORMATION_CORRECTION_20260819.md",
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_FINDINGS_20260817.md",
+      "research/ng_exhaustion_chain_phase2_characterize_20260817.py",
+      "research/kalshi/knowledge/ng_brain_exhaustion_chain_birth_v2_proposal_20260819.json"
+    ],
+    "v3_derived": false,
+    "number": 20,
+    "group": "frozen_learned_structure",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L020 | predecessor_ancestry_unresolved_chain_state"
+  },
+  {
+    "layer_id": "historical_timing_lifespan_context",
+    "description": "Historical timing and lifespan as context, never target clock",
+    "source_paths": [
+      "research/NG_EXHAUSTION_CHAIN_PHASE2_TIMING_CONTEXT_FINDINGS_20260818.md",
+      "research/NG_EXHAUSTION_CONTINUOUS_INSTANCE_TIMING_CORRECTION_20260820.md",
+      "research/NG_EXHAUSTION_V4_CONTINUOUS_ADAPTIVE_WALKFORWARD_CONTRACT_20260820.md",
+      "research/NG_EXHAUSTION_EVENT_MARK_CLOCK_OPEN_BOUNDARY_20260819.md",
+      "research/NG_EXHAUSTION_FULL_CAUSAL_INFORMATION_CORRECTION_20260819.md",
+      "research/NG_EXHAUSTION_V4_BRAIN_TRADE_PROPOSAL_CLEAN_SOURCE_CURRENT_20260820.md",
+      "research/NG_EXHAUSTION_PRIOR_MODEL_PRICE_CORRECTION_20260819.md",
+      "research/ng_exhaustion_chain_phase2_characterize_20260817.py",
+      "research/kalshi/knowledge/ng_brain_exhaustion_chain_birth_v2_proposal_20260819.json",
+      "research/kalshi/knowledge/ng_brain_exhaustion_entry_timing_extension_20260818.json",
+      "research/kalshi/knowledge/ng_brain_exhaustion_chain_phase2_proposal_20260818.json"
+    ],
+    "v3_derived": false,
+    "number": 21,
+    "group": "frozen_learned_structure",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L021 | historical_timing_lifespan_context"
+  },
+  {
+    "layer_id": "learned_structure_proposal_index_material",
+    "description": "Proposal and index material required to interpret learned structures",
+    "source_paths": [
+      "research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_20260818.md",
+      "research/NG_EXHAUSTION_BRAIN_PROPOSAL_INDEX_ADDENDUM_20260820.md",
+      "research/NG_EXHAUSTION_V4_BRAIN_TRADE_PROPOSAL_CLEAN_SOURCE_CURRENT_20260820.md",
+      "research/NG_EXHAUSTION_V3_V4_BRAIN_TRADE_PROPOSAL_ADDENDUM_20260820.md",
+      "research/NG_EXHAUSTION_V3_V4_BRAIN_TRADE_PROPOSAL_FINAL_ADDENDUM_20260820.md",
+      "research/kalshi/knowledge/ng_brain_exhaustion_chain_phase2_proposal_20260818.json",
+      "research/kalshi/knowledge/ng_brain_exhaustion_chain_birth_v2_proposal_20260819.json",
+      "research/kalshi/knowledge/ng_brain_exhaustion_entry_timing_extension_20260818.json",
+      "research/kalshi/knowledge/ng_brain_exhaustion_pox_focused_proposal_20260819.json",
+      "research/NG_EXHAUSTION_V4_INTERPRETATION_CORRECTION_20260820.md",
+      "research/NG_EXHAUSTION_V4_CONTINUOUS_ADAPTIVE_WALKFORWARD_CONTRACT_20260820.md",
+      "research/NG_EXHAUSTION_D0_D5_V4_GEOMETRIC_SELF_ADAPTATION_CONTRACT_20260820.md",
+      "research/NG_EXHAUSTION_D0_D5_V4_GEOMETRIC_SELF_ADAPTATION_CONTRACT_20260820.json",
+      "research/NG_EXHAUSTION_EVENT_MARK_CLOCK_OPEN_BOUNDARY_20260819.md",
+      "research/NG_EXHAUSTION_V4_CLEAN_SOURCE_PRELAUNCH_GATES_20260820.md",
+      "research/NG_EXHAUSTION_CONTINUOUS_INSTANCE_TIMING_CORRECTION_20260820.md",
+      "research/NG_EXHAUSTION_CONTINUOUS_LIVE_INFORMATION_CORRECTION_20260819.md",
+      "research/NG_EXHAUSTION_FULL_CAUSAL_INFORMATION_CORRECTION_20260819.md",
+      "research/NG_EXHAUSTION_PRIOR_MODEL_PRICE_CORRECTION_20260819.md",
+      "research/NG_EXHAUSTION_POLARITY_NOT_PRIMARY_TARGET_CORRECTION_20260819.md",
+      "research/NG_EXHAUSTION_CHAIN_STEP1_ORIGINAL_FILE_MAP_20260820.md",
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md",
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_SOURCE_FILE_INVENTORY_20260824.md"
+    ],
+    "v3_derived": true,
+    "number": 22,
+    "group": "frozen_learned_structure",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L022 | learned_structure_proposal_index_material"
+  },
+  {
+    "layer_id": "extra_agent_corrected_information_and_gap_diagnoses",
+    "description": "Correction-approved extra-agent information and gap diagnoses",
+    "source_paths": [
+      "research/NG_EXHAUSTION_V3_EXTRA_AGENT_INFORMATION_FINDINGS_20260820.json",
+      "research/NG_EXHAUSTION_V3_EXTRA_AGENT_INFORMATION_FINDINGS_20260820.md",
+      "research/NG_EXHAUSTION_V3_NONAUTHORITATIVE_RESULTS_EXTRA_AGENT_V4_CARRYFORWARD_20260820.md"
+    ],
+    "v3_derived": true,
+    "number": 23,
+    "group": "corrected_extra_agent_carryforward",
+    "policy": "STATIC_REQUIRED_INPUT",
+    "column": "L023 | extra_agent_corrected_information_and_gap_diagnoses"
+  },
+  {
+    "layer_id": "canonical_sep_nov_2021_dbn_mbo_objects",
+    "description": "Canonical September-November 2021 DBN MBO objects",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 24,
+    "group": "canonical_raw_dbn_mbo",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L024 | canonical_sep_nov_2021_dbn_mbo_objects"
+  },
+  {
+    "layer_id": "october_first_source_window",
+    "description": "October-first source window boundaries",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 25,
+    "group": "canonical_raw_dbn_mbo",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L025 | october_first_source_window"
+  },
+  {
+    "layer_id": "canonical_predecessor_bootstrap_objects",
+    "description": "Canonical predecessor objects needed for continuous bootstrap",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 26,
+    "group": "canonical_raw_dbn_mbo",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L026 | canonical_predecessor_bootstrap_objects"
+  },
+  {
+    "layer_id": "native_acmrtfn_messages",
+    "description": "All relevant native A C M R T F N messages",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 27,
+    "group": "canonical_raw_dbn_mbo",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L027 | native_acmrtfn_messages"
+  },
+  {
+    "layer_id": "snapshot_bootstrap_reset_messages",
+    "description": "Snapshot messages limited to book bootstrap and reset",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 28,
+    "group": "canonical_raw_dbn_mbo",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L028 | snapshot_bootstrap_reset_messages"
+  },
+  {
+    "layer_id": "raw_source_identity_provenance_clocks_integrity",
+    "description": "Source identity, hashes, clocks, provenance, and integrity",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 29,
+    "group": "canonical_raw_dbn_mbo",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L029 | raw_source_identity_provenance_clocks_integrity"
+  },
+  {
+    "layer_id": "order_lifecycle_adds",
+    "description": "Order adds",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 30,
+    "group": "order_lifecycle",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L030 | order_lifecycle_adds"
+  },
+  {
+    "layer_id": "order_lifecycle_cancels",
+    "description": "Order cancels",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 31,
+    "group": "order_lifecycle",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L031 | order_lifecycle_cancels"
+  },
+  {
+    "layer_id": "order_lifecycle_modifies",
+    "description": "Order modifies",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 32,
+    "group": "order_lifecycle",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L032 | order_lifecycle_modifies"
+  },
+  {
+    "layer_id": "order_lifecycle_replaces",
+    "description": "Order replaces",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 33,
+    "group": "order_lifecycle",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L033 | order_lifecycle_replaces"
+  },
+  {
+    "layer_id": "order_lifecycle_trades",
+    "description": "Trades",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 34,
+    "group": "order_lifecycle",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L034 | order_lifecycle_trades"
+  },
+  {
+    "layer_id": "order_lifecycle_fills",
+    "description": "Fills",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 35,
+    "group": "order_lifecycle",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L035 | order_lifecycle_fills"
+  },
+  {
+    "layer_id": "order_lifecycle_clears",
+    "description": "Clears",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 36,
+    "group": "order_lifecycle",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L036 | order_lifecycle_clears"
+  },
+  {
+    "layer_id": "order_identity_transitions",
+    "description": "Order identity and lifecycle transitions",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 37,
+    "group": "order_lifecycle",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L037 | order_identity_transitions"
+  },
+  {
+    "layer_id": "contract_session_roll_state",
+    "description": "Contract, session, and roll state",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 38,
+    "group": "order_lifecycle",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L038 | contract_session_roll_state"
+  },
+  {
+    "layer_id": "full_bid_ask_depth",
+    "description": "Full bid and ask depth",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 39,
+    "group": "full_book_fifo_queue",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L039 | full_bid_ask_depth"
+  },
+  {
+    "layer_id": "price_level_and_order_counts",
+    "description": "Price-level and order counts",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 40,
+    "group": "full_book_fifo_queue",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L040 | price_level_and_order_counts"
+  },
+  {
+    "layer_id": "fifo_queues",
+    "description": "Full price-level FIFO queues",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 41,
+    "group": "full_book_fifo_queue",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L041 | fifo_queues"
+  },
+  {
+    "layer_id": "queue_age_and_survival",
+    "description": "Queue age and survival",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 42,
+    "group": "full_book_fifo_queue",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L042 | queue_age_and_survival"
+  },
+  {
+    "layer_id": "queue_concentration",
+    "description": "Queue concentration",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 43,
+    "group": "full_book_fifo_queue",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L043 | queue_concentration"
+  },
+  {
+    "layer_id": "orders_and_volume_ahead",
+    "description": "Orders and volume ahead",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 44,
+    "group": "full_book_fifo_queue",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L044 | orders_and_volume_ahead"
+  },
+  {
+    "layer_id": "spread_and_depth_imbalance",
+    "description": "Spread and full-depth imbalance",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 45,
+    "group": "full_book_fifo_queue",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L045 | spread_and_depth_imbalance"
+  },
+  {
+    "layer_id": "complete_state_reset_bootstrap_receipts",
+    "description": "Complete state reset and bootstrap receipts",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 46,
+    "group": "full_book_fifo_queue",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L046 | complete_state_reset_bootstrap_receipts"
+  },
+  {
+    "layer_id": "mechanics_actions_by_side_and_level",
+    "description": "Actions by side and level",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 47,
+    "group": "microstructure_mechanics",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L047 | mechanics_actions_by_side_and_level"
+  },
+  {
+    "layer_id": "aggressor_and_native_signed_flow",
+    "description": "Aggressor and native signed flow",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 48,
+    "group": "microstructure_mechanics",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L048 | aggressor_and_native_signed_flow"
+  },
+  {
+    "layer_id": "depletion_and_replenishment",
+    "description": "Depletion and replenishment",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 49,
+    "group": "microstructure_mechanics",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L049 | depletion_and_replenishment"
+  },
+  {
+    "layer_id": "resilience_and_recovery",
+    "description": "Resilience and recovery",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 50,
+    "group": "microstructure_mechanics",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L050 | resilience_and_recovery"
+  },
+  {
+    "layer_id": "churn_and_queue_turnover",
+    "description": "Churn and queue turnover",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 51,
+    "group": "microstructure_mechanics",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L051 | churn_and_queue_turnover"
+  },
+  {
+    "layer_id": "price_and_book_path",
+    "description": "Price path and book path",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 52,
+    "group": "microstructure_mechanics",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L052 | price_and_book_path"
+  },
+  {
+    "layer_id": "missingness_and_integrity_flags",
+    "description": "Missingness and integrity flags",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 53,
+    "group": "microstructure_mechanics",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L053 | missingness_and_integrity_flags"
+  },
+  {
+    "layer_id": "legacy_price",
+    "description": "Legacy price with native crosswalk",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 54,
+    "group": "legacy_observable_crosswalk",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L054 | legacy_price"
+  },
+  {
+    "layer_id": "legacy_native_signed_flow",
+    "description": "Legacy-compatible native signed flow",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 55,
+    "group": "legacy_observable_crosswalk",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L055 | legacy_native_signed_flow"
+  },
+  {
+    "layer_id": "legacy_per_second_roll20",
+    "description": "Legacy-compatible per-second roll20",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 56,
+    "group": "legacy_observable_crosswalk",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L056 | legacy_per_second_roll20"
+  },
+  {
+    "layer_id": "legacy_book_imbalance",
+    "description": "Legacy-compatible book imbalance",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 57,
+    "group": "legacy_observable_crosswalk",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L057 | legacy_book_imbalance"
+  },
+  {
+    "layer_id": "legacy_structure_observables",
+    "description": "D, dipole, family, chain, and predecessor observables",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 58,
+    "group": "legacy_observable_crosswalk",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L058 | legacy_structure_observables"
+  },
+  {
+    "layer_id": "derived_roll20_and_dipole_state",
+    "description": "roll20 and dipole state",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 59,
+    "group": "derived_geometry",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L059 | derived_roll20_and_dipole_state"
+  },
+  {
+    "layer_id": "derived_d_family_geometry",
+    "description": "D-family geometry",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 60,
+    "group": "derived_geometry",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L060 | derived_d_family_geometry"
+  },
+  {
+    "layer_id": "derived_open_world_predecessor_state",
+    "description": "P O S X seed and open-world predecessor state",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 61,
+    "group": "derived_geometry",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L061 | derived_open_world_predecessor_state"
+  },
+  {
+    "layer_id": "derived_ancestry_gaps",
+    "description": "Ancestry gaps",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 62,
+    "group": "derived_geometry",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L062 | derived_ancestry_gaps"
+  },
+  {
+    "layer_id": "derived_unresolved_age_chain_trajectory",
+    "description": "Unresolved age and chain or extension trajectory",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 63,
+    "group": "derived_geometry",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L063 | derived_unresolved_age_chain_trajectory"
+  },
+  {
+    "layer_id": "derived_price_flow_book_paths",
+    "description": "Price, signed-flow, and book paths",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 64,
+    "group": "derived_geometry",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L064 | derived_price_flow_book_paths"
+  },
+  {
+    "layer_id": "derived_v4_mechanics_fifo_features",
+    "description": "V4 mechanics and FIFO features",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 65,
+    "group": "derived_geometry",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L065 | derived_v4_mechanics_fifo_features"
+  },
+  {
+    "layer_id": "derived_feature_availability_timestamps",
+    "description": "Feature-availability timestamps",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 66,
+    "group": "derived_geometry",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L066 | derived_feature_availability_timestamps"
+  },
+  {
+    "layer_id": "prebirth_predecessor_at_risk_state",
+    "description": "Predecessor-defined at-risk state",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 67,
+    "group": "prebirth_opportunity",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L067 | prebirth_predecessor_at_risk_state"
+  },
+  {
+    "layer_id": "prebirth_unresolved_chain_extension_state",
+    "description": "Unresolved chain and extension state",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 68,
+    "group": "prebirth_opportunity",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L068 | prebirth_unresolved_chain_extension_state"
+  },
+  {
+    "layer_id": "prebirth_ancestry_successor_opportunity",
+    "description": "Ancestry and successor opportunity",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 69,
+    "group": "prebirth_opportunity",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L069 | prebirth_ancestry_successor_opportunity"
+  },
+  {
+    "layer_id": "prebirth_stopped_chain_false_context_controls",
+    "description": "Stopped-chain and false-context controls",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 70,
+    "group": "prebirth_opportunity",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L070 | prebirth_stopped_chain_false_context_controls"
+  },
+  {
+    "layer_id": "prebirth_negative_opportunity_cases",
+    "description": "Negative opportunity cases",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 71,
+    "group": "prebirth_opportunity",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L071 | prebirth_negative_opportunity_cases"
+  },
+  {
+    "layer_id": "clock_event_time",
+    "description": "Event-time clock",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 72,
+    "group": "causal_clocks",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L072 | clock_event_time"
+  },
+  {
+    "layer_id": "clock_receive_time",
+    "description": "Receive-time clock",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 73,
+    "group": "causal_clocks",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L073 | clock_receive_time"
+  },
+  {
+    "layer_id": "clock_event_known_by",
+    "description": "Event-known-by clock",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 74,
+    "group": "causal_clocks",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L074 | clock_event_known_by"
+  },
+  {
+    "layer_id": "clock_feature_availability",
+    "description": "Feature-availability clock",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 75,
+    "group": "causal_clocks",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L075 | clock_feature_availability"
+  },
+  {
+    "layer_id": "clock_prospective_discovery_confirmation",
+    "description": "Prospective discovery and confirmation clock",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 76,
+    "group": "causal_clocks",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L076 | clock_prospective_discovery_confirmation"
+  },
+  {
+    "layer_id": "clock_model_evaluation",
+    "description": "Model-evaluation clock",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 77,
+    "group": "causal_clocks",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L077 | clock_model_evaluation"
+  },
+  {
+    "layer_id": "clock_lock_time",
+    "description": "Lock-time clock",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 78,
+    "group": "causal_clocks",
+    "policy": "CAUSAL_STREAM_REQUIRED",
+    "column": "L078 | clock_lock_time"
+  },
+  {
+    "layer_id": "later_outcome_reveal",
+    "description": "Later realized outcome reveal",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 79,
+    "group": "sealed_target_timing",
+    "policy": "SEALED_FOR_A_SCOPE",
+    "column": "L079 | later_outcome_reveal"
+  },
+  {
+    "layer_id": "target_ground_truth_onset_time",
+    "description": "Answer-derived ground-truth onset time, distinct from causal candidate onset",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 80,
+    "group": "sealed_target_timing",
+    "policy": "SEALED_FOR_A_SCOPE",
+    "column": "L080 | target_ground_truth_onset_time"
+  },
+  {
+    "layer_id": "s137_cognitive_shadow_runtime",
+    "description": "S137 cognitive shadow runtime",
+    "source_paths": [
+      "research/kalshi/frankie_s137_cognitive_runtime.py"
+    ],
+    "v3_derived": false,
+    "number": 81,
+    "group": "provisional_shadow",
+    "policy": "PROVISIONAL_SHADOW",
+    "column": "L081 | s137_cognitive_shadow_runtime"
+  },
+  {
+    "layer_id": "hipporag_associative_retrieval",
+    "description": "HippoRAG associative-retrieval shadow component",
+    "source_paths": [
+      "research/kalshi/frankie_hipporag_p0_retrieval.py"
+    ],
+    "v3_derived": false,
+    "number": 82,
+    "group": "provisional_shadow",
+    "policy": "PROVISIONAL_SHADOW",
+    "column": "L082 | hipporag_associative_retrieval"
+  },
+  {
+    "layer_id": "step1_existing_october_seconds",
+    "description": "Existing October Step-1 seconds",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 83,
+    "group": "sealed_step1_answer",
+    "policy": "SEALED_FOR_A_SCOPE",
+    "column": "L083 | step1_existing_october_seconds"
+  },
+  {
+    "layer_id": "step1_populations",
+    "description": "Step-1 populations",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 84,
+    "group": "sealed_step1_answer",
+    "policy": "SEALED_FOR_A_SCOPE",
+    "column": "L084 | step1_populations"
+  },
+  {
+    "layer_id": "step1_crosswalks",
+    "description": "Step-1 crosswalks",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 85,
+    "group": "sealed_step1_answer",
+    "policy": "SEALED_FOR_A_SCOPE",
+    "column": "L085 | step1_crosswalks"
+  },
+  {
+    "layer_id": "step1_target_membership_receipts",
+    "description": "Receipts revealing target membership",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 86,
+    "group": "sealed_step1_answer",
+    "policy": "SEALED_FOR_A_SCOPE",
+    "column": "L086 | step1_target_membership_receipts"
+  },
+  {
+    "layer_id": "step1_labels_and_classifications",
+    "description": "Step-1 labels and classifications",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 87,
+    "group": "sealed_step1_answer",
+    "policy": "SEALED_FOR_A_SCOPE",
+    "column": "L087 | step1_labels_and_classifications"
+  },
+  {
+    "layer_id": "step1_result_prefixes",
+    "description": "Step-1 result prefixes",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 88,
+    "group": "sealed_step1_answer",
+    "policy": "SEALED_FOR_A_SCOPE",
+    "column": "L088 | step1_result_prefixes"
+  },
+  {
+    "layer_id": "step1_reconciliation_outputs",
+    "description": "Step-1 reconciliation outputs",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 89,
+    "group": "sealed_step1_answer",
+    "policy": "SEALED_FOR_A_SCOPE",
+    "column": "L089 | step1_reconciliation_outputs"
+  },
+  {
+    "layer_id": "output_state_and_state_delta_movie",
+    "description": "State movie and state-delta movie",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 90,
+    "group": "append_only_outputs",
+    "policy": "APPEND_ONLY_OUTPUT",
+    "column": "L090 | output_state_and_state_delta_movie"
+  },
+  {
+    "layer_id": "output_frankie_reasoning_movie",
+    "description": "Frankie reasoning movie",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 91,
+    "group": "append_only_outputs",
+    "policy": "APPEND_ONLY_OUTPUT",
+    "column": "L091 | output_frankie_reasoning_movie"
+  },
+  {
+    "layer_id": "output_probability_movie",
+    "description": "Probability movie",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 92,
+    "group": "append_only_outputs",
+    "policy": "APPEND_ONLY_OUTPUT",
+    "column": "L092 | output_probability_movie"
+  },
+  {
+    "layer_id": "output_candidate_discoveries",
+    "description": "Candidate discoveries",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 93,
+    "group": "append_only_outputs",
+    "policy": "APPEND_ONLY_OUTPUT",
+    "column": "L093 | output_candidate_discoveries"
+  },
+  {
+    "layer_id": "output_first_locks_and_no_locks",
+    "description": "First locks and no-locks",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 94,
+    "group": "append_only_outputs",
+    "policy": "APPEND_ONLY_OUTPUT",
+    "column": "L094 | output_first_locks_and_no_locks"
+  },
+  {
+    "layer_id": "output_negative_sparse_inconclusive_ledger",
+    "description": "Abstentions, weak findings, negatives, sparse and inconclusive cases",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 95,
+    "group": "append_only_outputs",
+    "policy": "APPEND_ONLY_OUTPUT",
+    "column": "L095 | output_negative_sparse_inconclusive_ledger"
+  },
+  {
+    "layer_id": "output_knowledge_retrieval_receipts",
+    "description": "Knowledge retrieval receipts",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 96,
+    "group": "append_only_outputs",
+    "policy": "APPEND_ONLY_OUTPUT",
+    "column": "L096 | output_knowledge_retrieval_receipts"
+  },
+  {
+    "layer_id": "output_provider_invocation_response_receipts",
+    "description": "Provider invocation and response receipts",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 97,
+    "group": "append_only_outputs",
+    "policy": "APPEND_ONLY_OUTPUT",
+    "column": "L097 | output_provider_invocation_response_receipts"
+  },
+  {
+    "layer_id": "output_answer_wall_access_receipts",
+    "description": "Answer-wall no-access receipts for current A scope",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 98,
+    "group": "append_only_outputs",
+    "policy": "APPEND_ONLY_OUTPUT",
+    "column": "L098 | output_answer_wall_access_receipts"
+  },
+  {
+    "layer_id": "output_source_state_manifest_code_model_run_hashes",
+    "description": "Source, state, manifest, code, model, and run hashes",
+    "source_paths": [
+      "research/kalshi/NG_EXHAUSTION_FRANKIE_DATA_FEED_INVENTORY_20260824.md"
+    ],
+    "v3_derived": false,
+    "number": 99,
+    "group": "append_only_outputs",
+    "policy": "APPEND_ONLY_OUTPUT",
+    "column": "L099 | output_source_state_manifest_code_model_run_hashes"
+  },
+  {
+    "number": 100,
+    "layer_id": "cot.managed_money_net_pctile_1y",
+    "description": "cot.managed_money_net_pctile_1y",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X01 | cot.managed_money_net_pctile_1y",
+    "point": {
+      "missing": [],
+      "name": "cot.managed_money_net_pctile_1y",
+      "point_id": 1,
+      "reason": "771787 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 771787,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "cot.managed_money_net_pctile_1y",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 302,
+          "table": "cot.023651"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 101,
+    "layer_id": "weather_forecast.forecast_gw_hdd",
+    "description": "weather_forecast.forecast_gw_hdd",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X02 | weather_forecast.forecast_gw_hdd",
+    "point": {
+      "missing": [],
+      "name": "weather_forecast.forecast_gw_hdd",
+      "point_id": 2,
+      "reason": "3087148 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 3087148,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "mos.GFS.gw_hdd_D",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "mos.NAM.gw_hdd_D",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "mos.GFS.gw_hdd_D1",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "mos.MEX.gw_hdd_D3",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 81,
+          "table": "mos.gw_by_cycle"
+        },
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 9648,
+          "table": "mos.raw"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 102,
+    "layer_id": "cot.managed_money_net_chg_wow",
+    "description": "cot.managed_money_net_chg_wow",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X03 | cot.managed_money_net_chg_wow",
+    "point": {
+      "missing": [],
+      "name": "cot.managed_money_net_chg_wow",
+      "point_id": 3,
+      "reason": "771787 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 771787,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "cot.managed_money_net_chg_wow",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 302,
+          "table": "cot.023651"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 103,
+    "layer_id": "cot.managed_money_net_pctile_3y",
+    "description": "cot.managed_money_net_pctile_3y",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X04 | cot.managed_money_net_pctile_3y",
+    "point": {
+      "missing": [],
+      "name": "cot.managed_money_net_pctile_3y",
+      "point_id": 4,
+      "reason": "771787 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 771787,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "cot.managed_money_net_pctile_3y",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 302,
+          "table": "cot.023651"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 104,
+    "layer_id": "grid_stack.bas.US48.wind_mwh",
+    "description": "grid_stack.bas.US48.wind_mwh",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X05 | grid_stack.bas.US48.wind_mwh",
+    "point": {
+      "missing": [],
+      "name": "grid_stack.bas.US48.wind_mwh",
+      "point_id": 5,
+      "reason": "771787 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 771787,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "eia930.US48.wind_mwh",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 213,
+          "table": "eia930.us48"
+        },
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 17464,
+          "table": "eia930.hourly"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 105,
+    "layer_id": "squeeze_watch.sessions_since_prompt_expiry",
+    "description": "squeeze_watch.sessions_since_prompt_expiry",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X06 | squeeze_watch.sessions_since_prompt_expiry",
+    "point": {
+      "missing": [],
+      "name": "squeeze_watch.sessions_since_prompt_expiry",
+      "point_id": 6,
+      "reason": "121440 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 121440,
+      "series": [
+        {
+          "present_rows": 121440,
+          "series": "calendar.sessions_since_prompt_expiry",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 650347,
+            "PRESENT": 121440
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 1,
+          "table": "calendar.sessions_since_prompt_expiry"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 106,
+    "layer_id": "grid_stack.bas.US48.est_gas_burn_bcfd",
+    "description": "grid_stack.bas.US48.est_gas_burn_bcfd",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X07 | grid_stack.bas.US48.est_gas_burn_bcfd",
+    "point": {
+      "missing": [],
+      "name": "grid_stack.bas.US48.est_gas_burn_bcfd",
+      "point_id": 7,
+      "reason": "771787 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 771787,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "eia930.US48.est_gas_burn_bcfd_rate",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 213,
+          "table": "eia930.us48"
+        },
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 17464,
+          "table": "eia930.hourly"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 107,
+    "layer_id": "cot.ice.ld1.managed_money_net_pctile_1y",
+    "description": "cot.ice.ld1.managed_money_net_pctile_1y",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X08 | cot.ice.ld1.managed_money_net_pctile_1y",
+    "point": {
+      "missing": [],
+      "name": "cot.ice.ld1.managed_money_net_pctile_1y",
+      "point_id": 8,
+      "reason": "771787 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 771787,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "cot.ice.ld1.managed_money_net_pctile_1y",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 302,
+          "table": "cot.023391"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 108,
+    "layer_id": "model_disagreement.summary.max_abs_spread_gw_hdd",
+    "description": "model_disagreement.summary.max_abs_spread_gw_hdd",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X09 | model_disagreement.summary.max_abs_spread_gw_hdd",
+    "point": {
+      "missing": [],
+      "name": "model_disagreement.summary.max_abs_spread_gw_hdd",
+      "point_id": 9,
+      "reason": "771787 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 771787,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "mos.max_abs_spread_gw_hdd",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 6,
+          "table": "mos.disagreement_by_cycle"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 109,
+    "layer_id": "weather.gw_hdd (observed)",
+    "description": "weather.gw_hdd (observed)",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X10 | weather.gw_hdd (observed)",
+    "point": {
+      "missing": [],
+      "name": "weather.gw_hdd (observed)",
+      "point_id": 10,
+      "reason": "2220978 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 2220978,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "weather.gw_hdd",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 44630,
+          "series": "weather.tmpf.ATL",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 727157,
+            "MISSING": 0,
+            "PRESENT": 44630
+          }
+        },
+        {
+          "present_rows": 31816,
+          "series": "weather.tmpf.AUS",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 739971,
+            "MISSING": 0,
+            "PRESENT": 31816
+          }
+        },
+        {
+          "present_rows": 12004,
+          "series": "weather.tmpf.BOS",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 759783,
+            "MISSING": 0,
+            "PRESENT": 12004
+          }
+        },
+        {
+          "present_rows": 44630,
+          "series": "weather.tmpf.DCA",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 727157,
+            "MISSING": 0,
+            "PRESENT": 44630
+          }
+        },
+        {
+          "present_rows": 31816,
+          "series": "weather.tmpf.DEN",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 739971,
+            "MISSING": 0,
+            "PRESENT": 31816
+          }
+        },
+        {
+          "present_rows": 31816,
+          "series": "weather.tmpf.DFW",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 739971,
+            "MISSING": 0,
+            "PRESENT": 31816
+          }
+        },
+        {
+          "present_rows": 31816,
+          "series": "weather.tmpf.DTW",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 739971,
+            "MISSING": 0,
+            "PRESENT": 31816
+          }
+        },
+        {
+          "present_rows": 31816,
+          "series": "weather.tmpf.IAH",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 739971,
+            "MISSING": 0,
+            "PRESENT": 31816
+          }
+        },
+        {
+          "present_rows": 59559,
+          "series": "weather.tmpf.LAX",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 712228,
+            "MISSING": 0,
+            "PRESENT": 59559
+          }
+        },
+        {
+          "present_rows": 31816,
+          "series": "weather.tmpf.MSP",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 739971,
+            "MISSING": 0,
+            "PRESENT": 31816
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "weather.tmpf.NYC",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 57661,
+          "series": "weather.tmpf.ORD",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 714126,
+            "MISSING": 0,
+            "PRESENT": 57661
+          }
+        },
+        {
+          "present_rows": 12004,
+          "series": "weather.tmpf.PHL",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 759783,
+            "MISSING": 0,
+            "PRESENT": 12004
+          }
+        },
+        {
+          "present_rows": 57661,
+          "series": "weather.tmpf.PHX",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 714126,
+            "MISSING": 0,
+            "PRESENT": 57661
+          }
+        },
+        {
+          "present_rows": 57661,
+          "series": "weather.tmpf.SAT",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 714126,
+            "MISSING": 0,
+            "PRESENT": 57661
+          }
+        },
+        {
+          "present_rows": 31816,
+          "series": "weather.tmpf.SEA",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 739971,
+            "MISSING": 0,
+            "PRESENT": 31816
+          }
+        },
+        {
+          "present_rows": 51221,
+          "series": "weather.tmpf.SFO",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 720566,
+            "MISSING": 0,
+            "PRESENT": 51221
+          }
+        },
+        {
+          "present_rows": 57661,
+          "series": "weather.tmpf.STL",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 714126,
+            "MISSING": 0,
+            "PRESENT": 57661
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 18,
+          "table": "weather.gw_daily"
+        },
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 21089,
+          "table": "weather.obs_hourly"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 110,
+    "layer_id": "EIA weekly storage (level, weekly change, vs 5-year)",
+    "description": "EIA weekly storage (level, weekly change, vs 5-year)",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X11 | EIA weekly storage (level, weekly change, vs 5-year)",
+    "point": {
+      "missing": [],
+      "name": "EIA weekly storage (level, weekly change, vs 5-year)",
+      "point_id": 11,
+      "reason": "2315361 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 2315361,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "storage.level_bcf",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "storage.weekly_chg_bcf",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "storage.vs_5yr_bcf",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 419,
+          "table": "storage.weekly"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 111,
+    "layer_id": "storage estimate vs actual",
+    "description": "storage estimate vs actual",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X12 | storage estimate vs actual",
+    "point": {
+      "missing": [],
+      "name": "storage estimate vs actual",
+      "point_id": 12,
+      "reason": "2315361 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 2315361,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "storage.estimate_bcf",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "storage.actual_bcf",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "storage.surprise_bcf",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 11,
+          "table": "storage.estimate"
+        },
+        {
+          "absent": true,
+          "not_yet_known": null,
+          "reason": "not in the day file (see missing)",
+          "rows_known": null,
+          "table": "storage.estimate_captures"
+        },
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 419,
+          "table": "storage.weekly"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 112,
+    "layer_id": "the futures curve shape",
+    "description": "the futures curve shape",
+    "group": "external_13_inputs",
+    "policy": "PUBLICATION_ASOF",
+    "column": "X13 | the futures curve shape",
+    "point": {
+      "missing": [],
+      "name": "the futures curve shape",
+      "point_id": 13,
+      "reason": "8489657 Dipole row(s) took a PRESENT value of its series (aligned at or before each row's own time) in the external section",
+      "rows_used": 8489657,
+      "series": [
+        {
+          "present_rows": 771787,
+          "series": "curve.settled.front",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "curve.settled.slope_1",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "curve.settled.slope_back",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "curve.settled.curvature",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "curve.settled.front_next_spread",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "curve.traded.front",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "curve.traded.c1",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "curve.traded.slope_1",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "curve.traded.slope_back",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "curve.traded.curvature",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        },
+        {
+          "present_rows": 771787,
+          "series": "curve.traded.front_next_spread",
+          "state_counts": {
+            "ABLATED": 0,
+            "INVALID": 0,
+            "MISSING": 0,
+            "PRESENT": 771787
+          }
+        }
+      ],
+      "tables": [
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 1997,
+          "table": "curve.definitions"
+        },
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 40407,
+          "table": "curve.statistics"
+        },
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 205631,
+          "table": "curve.trades"
+        },
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 15,
+          "table": "curve.settled_shape"
+        },
+        {
+          "absent": null,
+          "not_yet_known": 0,
+          "reason": null,
+          "rows_known": 31152,
+          "table": "curve.traded_shape"
+        }
+      ],
+      "use": "used"
+    }
+  },
+  {
+    "number": 113,
+    "layer_id": "extension_count_log",
+    "description": "Original second-set component extension_count_log",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S01 | extension_count_log"
+  },
+  {
+    "number": 114,
+    "layer_id": "far_absorption_share_1024",
+    "description": "Original second-set component far_absorption_share_1024",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S02 | far_absorption_share_1024"
+  },
+  {
+    "number": 115,
+    "layer_id": "far_absorption_share_64",
+    "description": "Original second-set component far_absorption_share_64",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S03 | far_absorption_share_64"
+  },
+  {
+    "number": 116,
+    "layer_id": "far_front_age_log",
+    "description": "Original second-set component far_front_age_log",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S04 | far_front_age_log"
+  },
+  {
+    "number": 117,
+    "layer_id": "far_identity_survival_1024",
+    "description": "Original second-set component far_identity_survival_1024",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S05 | far_identity_survival_1024"
+  },
+  {
+    "number": 118,
+    "layer_id": "far_identity_survival_64",
+    "description": "Original second-set component far_identity_survival_64",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S06 | far_identity_survival_64"
+  },
+  {
+    "number": 119,
+    "layer_id": "far_priority_loss_rate_1024",
+    "description": "Original second-set component far_priority_loss_rate_1024",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S07 | far_priority_loss_rate_1024"
+  },
+  {
+    "number": 120,
+    "layer_id": "far_priority_loss_rate_64",
+    "description": "Original second-set component far_priority_loss_rate_64",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S08 | far_priority_loss_rate_64"
+  },
+  {
+    "number": 121,
+    "layer_id": "far_queue_age_p90_log",
+    "description": "Original second-set component far_queue_age_p90_log",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S09 | far_queue_age_p90_log"
+  },
+  {
+    "number": 122,
+    "layer_id": "far_replenish_log1p_1024",
+    "description": "Original second-set component far_replenish_log1p_1024",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S10 | far_replenish_log1p_1024"
+  },
+  {
+    "number": 123,
+    "layer_id": "far_replenish_log1p_64",
+    "description": "Original second-set component far_replenish_log1p_64",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S11 | far_replenish_log1p_64"
+  },
+  {
+    "number": 124,
+    "layer_id": "far_size_hhi",
+    "description": "Original second-set component far_size_hhi",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S12 | far_size_hhi"
+  },
+  {
+    "number": 125,
+    "layer_id": "far_size_retention_1024",
+    "description": "Original second-set component far_size_retention_1024",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S13 | far_size_retention_1024"
+  },
+  {
+    "number": 126,
+    "layer_id": "far_size_retention_64",
+    "description": "Original second-set component far_size_retention_64",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S14 | far_size_retention_64"
+  },
+  {
+    "number": 127,
+    "layer_id": "pullback_ticks_last_log",
+    "description": "Original second-set component pullback_ticks_last_log",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S15 | pullback_ticks_last_log"
+  },
+  {
+    "number": 128,
+    "layer_id": "pullback_ticks_prev_log",
+    "description": "Original second-set component pullback_ticks_prev_log",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S16 | pullback_ticks_prev_log"
+  },
+  {
+    "number": 129,
+    "layer_id": "step_duration_groups_log",
+    "description": "Original second-set component step_duration_groups_log",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S17 | step_duration_groups_log"
+  },
+  {
+    "number": 130,
+    "layer_id": "step_ratio_log",
+    "description": "Original second-set component step_ratio_log",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S18 | step_ratio_log"
+  },
+  {
+    "number": 131,
+    "layer_id": "unresolved_age_groups_log",
+    "description": "Original second-set component unresolved_age_groups_log",
+    "group": "second_set_components",
+    "policy": "SOURCE_STATE_RETAINED",
+    "column": "S19 | unresolved_age_groups_log"
+  }
+]
