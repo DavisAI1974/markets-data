@@ -1,0 +1,81 @@
+{
+  "included": {
+    "selected_case_files": 32,
+    "tick_row_appearances": 5513,
+    "original_fields": 141,
+    "total_columns": 167,
+    "case_renderings": 64,
+    "referenced_source_artifacts": 57,
+    "historical_source_files": 83,
+    "days": {
+      "20231002": 8,
+      "20231003": 8,
+      "20231017": 8,
+      "20231018": 8
+    },
+    "types_by_day": {
+      "20231002": [
+        "Large price move \u2014 Down brief",
+        "Large price move \u2014 Down lasting",
+        "Large price move \u2014 Up brief",
+        "Large price move \u2014 Up lasting",
+        "Small price move \u2014 Down brief",
+        "Small price move \u2014 Down lasting",
+        "Small price move \u2014 Up brief",
+        "Small price move \u2014 Up lasting"
+      ],
+      "20231003": [
+        "Large price move \u2014 Down brief",
+        "Large price move \u2014 Down lasting",
+        "Large price move \u2014 Up brief",
+        "Large price move \u2014 Up lasting",
+        "Small price move \u2014 Down brief",
+        "Small price move \u2014 Down lasting",
+        "Small price move \u2014 Up brief",
+        "Small price move \u2014 Up lasting"
+      ],
+      "20231017": [
+        "Large price move \u2014 Down brief",
+        "Large price move \u2014 Down lasting",
+        "Large price move \u2014 Up brief",
+        "Large price move \u2014 Up lasting",
+        "Small price move \u2014 Down brief",
+        "Small price move \u2014 Down lasting",
+        "Small price move \u2014 Up brief",
+        "Small price move \u2014 Up lasting"
+      ],
+      "20231018": [
+        "Large price move \u2014 Down brief",
+        "Large price move \u2014 Down lasting",
+        "Large price move \u2014 Up brief",
+        "Large price move \u2014 Up lasting",
+        "Small price move \u2014 Down brief",
+        "Small price move \u2014 Down lasting",
+        "Small price move \u2014 Up brief",
+        "Small price move \u2014 Up lasting"
+      ]
+    }
+  },
+  "access_verified_here": "All original evidence files were opened, copied byte-identically and checked; content-addressed Git blobs were verified. Remote publication is verified separately after pushing. Claude account access is not guaranteed.",
+  "remote_source_provenance": "Pinned source URLs are retained per file. URLs are provenance references, not a guarantee of remote download or Claude account authorization.",
+  "not_included": [
+    "Codex strategies and candidate additions",
+    "Codex research findings, reports, field-screen results, and earlier handoffs",
+    "Codex answers to gap questions",
+    "entire raw archive or all full-session native order-book partitions",
+    "larger workbook collections",
+    "platform credentials or connector authorization",
+    "a working paper execution adapter",
+    "Other analysts' broader candidate libraries and derived findings, to preserve independent analysis"
+  ],
+  "scope_limits": [
+    "All 57 source artifacts referenced by the selected-case package are included; additional partition completeness is not asserted.",
+    "The 32 selected windows are preserved, not a claim of exhaustive market opportunity coverage.",
+    "Missing source values remain missing and unmodified.",
+    "Historical source images contain their original annotations; they are not Codex strategy interpretations."
+  ],
+  "independence": "Use a fresh Claude session. Do not read current Codex findings or strategy definitions. No comparison or filtering step is requested.",
+  "authoritative_repository": "DavisAI1974/markets-data",
+  "repository_path": "tasks/family-research-20261022/claude-independent-research-20261113",
+  "publication": "The repository directory and BUNDLE.zip are the delivery artifacts; local staging paths are not required."
+}

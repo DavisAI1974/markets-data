@@ -2,6 +2,12 @@
 
 This repository is the single home for market data, tables, workbooks, renders, and provenance. Start here rather than a local E: folder or an old handoff. Application code remains in [DavisAI1974/Markets](https://github.com/DavisAI1974/Markets); data navigation belongs here.
 
+## November 13 independent Claude exercise
+
+[Start Claude here: independent handoff and source evidence](tasks/family-research-20261022/claude-independent-research-20261113/HANDOFF.md). The directory includes all 32 selected tick cases, all 141 original fields, 57 referenced source artifacts, source renderings, integrity manifests, and a downloadable verified `BUNDLE.zip`. It excludes Codex strategy specifications and interpretations. Claude should open that handoff directly and follow its restricted source-reading scope, without using this broader index for research context.
+
+[Codex review and gap discussion](tasks/family-research-20261022/research-union-current/codex-review-and-gaps-20261113/REVIEW_AND_GAPS.md) is retained separately for the user and Codex. All existing and additional hypotheses remain included. There is no strategy-count cap, comparison between analysts' strategy sets, or elimination step. No new strategy paper execution was started. Future Claude outputs belong in this repository under a separate results path, not only on a local drive.
+
 ## Carry everything forward
 
 The [master carry-forward register](carry-forward/20261109/README.md) preserves the broader research universe. The original 11 encoded variants are an initial subset, not the full strategy inventory. It includes source evidence, named candidates, contrary findings, missing definitions and the full remaining-work queue.
