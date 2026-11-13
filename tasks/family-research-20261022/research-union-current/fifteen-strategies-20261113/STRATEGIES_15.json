@@ -1,0 +1,374 @@
+{
+  "schema": "markets-research-strategy-synthesis/2",
+  "objective": "Find multiple useful strategies for different instances, conditions and trade stages. No single-winner selection. All fifteen remain included.",
+  "next_chat": {"read_first":"STRATEGIES_15.json","review":"Present and review all fifteen, connecting each to the earlier evidence and recovered eleven arms. Continue toward paper testing without treating this specification as a running strategy engine.","grid":"https://four-day-full-tick-grid.chipperburr4.chatgpt.site","local_handoff":"E:/Markets/outputs/individual-field-review-20261113/HANDOFF.md","constraints":"Keep all141 fields, every tick, all8 trade types across Oct2/3/17/18. No averaging, sampling, reduced display or one-field selector. Preserve original hypotheses and conflicting signals in independent ledgers."},
+  "version": "fifteen-candidates-20261113",
+  "purpose": "Five strengthened candidates plus ten additions; all fifteen included in prospective paper-test design. Specification only, not executable runner configuration.",
+  "execution_enabled": false,
+  "live_orders_enabled": false,
+  "source_resolution": {
+    "requested_collection": "10800",
+    "resolved": "In the recovered Upload JSON to CME chat, 10800 is a time cutoff in an example selector, not a strategy count. The recoverable strategy package has eleven arms R1,R2,R3,R4,R5,R6A,R6B,R7,R8,R9,R10.",
+    "chat_id": "01a1c339-9abf-7020-b2f6-bace18a1cc0f",
+    "source_code": "https://github.com/DavisAI1974/Markets/blob/codex/native-dipole-agent-pass-20261108/tasks/family-research-20261022/research_four_day_watchlist.py",
+    "source_blob": "df47cd750d912ff421cd56fc48c2821c6eb3a4c5",
+    "cutoff_fix_status": "Prior chat records a local commit removing cutoff and a byte-identical recomputed watchlist; fetched branch still has cutoff. Do not claim remote fix verified.",
+    "rule_source": "../reanalysis-20261109/TRADE_RULES.json",
+    "rule_version": "priority-paper-v1.3-reanalysis-20261109",
+    "legacy_arm_count": 11
+  },
+  "working_explanation": "Participation changes, window aging and liquidity response jointly describe the trade stage. Similar dipole shapes can precede continuation, stalled pressure, reversal or quiet release. Price/book response and the source of the flow change distinguish these possibilities; dipole need not determine direction to be useful.",
+  "preservation": {
+    "original_five": "PROVISIONAL_STRATEGIES_20261113.json retained unchanged in individual-field-review output",
+    "legacy_eleven": "Unchanged, including both frozen models and all opposed/expiry hypotheses. Fifteen is the count of this new synthesis, not a replacement count for legacy experiments.",
+    "data": "All 141 fields and every consecutive tick retained. Raw grid unchanged. Explicit individual conditions only; no new combined field score, smoothing, sampling or reduced display.",
+    "eligibility": "All C1-C15 included. Weak, contrary, sparse, missing and no-fill cases remain recorded. Data unavailability is a logged inability to evaluate, not a failed signal and not evidence-based exclusion."
+  },
+  "shared_spec": {
+    "decision_clock": "Only complete event groups and features with known_by <= decision. Birth, final dipole end, completed future V, later order fate and final trade-type label cannot arm entries.",
+    "measurements": "Native buy and sell quantities remain separate source operands. Flow sign is the sign of admitted buys minus sells over (t-window,t]; an empty window is undefined, balanced nonempty is zero. Use reconstructed continuous book. One-second morphology uses every completed update, not sampled ticks.",
+    "quotes": "Quote movement means each of best bid and best ask moves the stated amount from its stored reference. Midpoint confirmation is used only where C7/C8 explicitly say so. Same-group movements never satisfy a required later-group check.",
+    "independent_ledgers": "One independent paper ledger per strategy; opposite signals can coexist across ledgers. Never combine them into a vote or silently reclassify C5 into C1/C2. Record shared event IDs for overlap accounting.",
+    "entry_fills": "Decision then submitted paper order then observed fill/no-fill. Default legacy marketable-limit IOC; no midpoint fill or backdated recognition price. Feed availability/latency must determine whether a brief opportunity remains executable.",
+    "base_limits": {
+      "quantity": 1,
+      "max_open_contracts_per_strategy": 1,
+      "max_entries_per_session": 20,
+      "stop_ticks": 4,
+      "session_loss_ticks": 12,
+      "max_hold_seconds": 120,
+      "cooldown_seconds": 30,
+      "max_spread_ticks": 2,
+      "fees_round_turn_usd": null
+    },
+    "limits_status": "Inherited provisional operating defaults, not measured optima. C6-C15 use stated shorter horizons when given. Log every setup even after an entry cap/session pause; do not erase opportunities. These values are a design record, not authorization to activate an execution adapter.",
+    "invalidation_execution": "Exits fire at observation of the condition and execute at later available fills, not at the stored threshold by assumption. Shared missing/reset handling remains separately recorded.",
+    "new_thresholds": "5s book lookback, 1-tick transitions, 2-step morphology and 20s horizons are explicit initial design choices. They are not fitted or proven by the four-day cases."
+  },
+  "strategies": [
+    {
+      "id": "C1",
+      "name": "Ask-side thinning continuation long",
+      "origin": "strengthened original",
+      "paper_test_included": true,
+      "sources": [
+        "R1",
+        "R6A/R6B",
+        "D05",
+        "D13",
+        "large_up_lasting"
+      ],
+      "setup": "Ask full size AND ask full order count are each below their latest known values at least 5s ago. A fresh native buy occurs, and native 5s and 60s flow are both positive. Bid buildup is optional. Log touch bid/ask sizes and cancellations separately; neither touch nor cancellation agreement is a mandatory new filter.",
+      "entry": "Arm on false-to-true. Enter long after both quotes rise >=1 tick in a strictly later completed group within 5s, with setup intact.",
+      "during_trade": "Track new buying, ask fills, cancellations and refill as different events. Ask rebuilding warns of reduced progress; expiry-driven lean decay alone does not mandate exit.",
+      "exit_signal": "Both quotes return to/below the armed pair, or fresh selling accompanies a >=1 tick retreat in both quotes from the most recently stored favorable pair; otherwise shared time/risk exit.",
+      "evidence": "Ask size/orders fell across all four selected large-up-lasting legs. This is descriptive support, not the measured performance of this rule."
+    },
+    {
+      "id": "C2",
+      "name": "Bid-side thinning continuation short",
+      "origin": "strengthened original",
+      "paper_test_included": true,
+      "sources": [
+        "R1",
+        "R6A/R6B",
+        "D05",
+        "D13",
+        "large_down_lasting"
+      ],
+      "setup": "Bid full size AND bid full order count fall relative to 5s earlier; fresh native sell and negative defined 5s/60s flow. Ask buildup optional. Preserve aligned/opposed cancellation observations.",
+      "entry": "Mirror C1 downward: later both-quote decline >=1 tick within 5s, setup intact.",
+      "during_trade": "Distinguish fresh selling from window expiry; record bid refill and whether selling still moves quotes.",
+      "exit_signal": "Both quotes regain the arm pair, or fresh buying accompanies a >=1 tick rise from the last favorable quote pair; shared limits also apply.",
+      "evidence": "Bid size/orders fell across all four selected large-down-lasting legs. Brief declines showed a different book pattern."
+    },
+    {
+      "id": "C3",
+      "name": "Defended liquidity reversal",
+      "origin": "strengthened original",
+      "paper_test_included": true,
+      "sources": [
+        "R2",
+        "D01",
+        "D06",
+        "Claude five-view cases"
+      ],
+      "setup": "At the best bid or ask, identify a source-linked passive fill and a positive surviving residual at the same price; record documented replenishment separately. Use exact order identity. Original R2 T/A seed lineage is a retained tag, not a claim that every defense has that origin.",
+      "entry": "Arm at the fill group's close. Within 5s, a later group moves both quotes >=1 tick away from the defended side and contains fresh aggression in that direction. Buy from defended bid, sell from defended ask. The order must survive at its original price, but may now be behind the improved best quote.",
+      "during_trade": "Track same order, original defended price, fills/refill, and subsequent price response. Separate new-best from standing-best origins and one-lot from larger residuals.",
+      "exit_signal": "Exit when the tracked order is cancelled, repriced or depleted, or both quotes reverse through the arm pair; shared limits also apply.",
+      "evidence": "R2's later correction resolves the impossible requirement that an unchanged support order remain at best after both quotes improve. Survival alone is not a reversal probability."
+    },
+    {
+      "id": "C4",
+      "name": "Failed continuation reversal, both directions",
+      "origin": "strengthened original",
+      "paper_test_included": true,
+      "sources": [
+        "R5",
+        "R6B",
+        "D12",
+        "individual forward screen",
+        "Claude failed-move case"
+      ],
+      "setup": "After both quotes progress >=1 tick from a recorded pair, a later fresh same-direction aggressor group fails to exceed both recorded quote extremes. Opposing full size AND order count increase relative to the prior completed group. A buy failure arms short; a sell failure arms long.",
+      "entry": "Within 5s of that failed attempt, require fresh opposite aggression and both quotes >=1 tick against the failed direction relative to the failed-attempt pair. Enter the reversal; do not require 60s flow agreement.",
+      "during_trade": "Use stalled price response as an exit warning for an existing continuation trade, while recording a separate reversal entry only when this rule fires. Distinguish fresh opposing flow from expiry.",
+      "exit_signal": "Exit if both quotes regain the failed-attempt pair against the reversal position, or at shared limits.",
+      "evidence": "Upward failures have exploratory selected-case support. The mirrored downward failure is explicitly included as a hypothesis with different evidence strength, not excluded."
+    },
+    {
+      "id": "C5",
+      "name": "Quiet-flow book release",
+      "origin": "strengthened original",
+      "paper_test_included": true,
+      "sources": [
+        "R3",
+        "D04",
+        "D09"
+      ],
+      "setup": "Feed is healthy and admitted native classified quantity in the last 5s is exactly zero. Direction is long if current best-bid lots exceed best-ask lots, short if ask lots exceed bid lots. Known-empty is distinct from missing.",
+      "entry": "On a false-to-true setup enter immediately after the completed decision group using the executable quote model. No extra price confirmation; this restores R3's immediate timing. Log any later C1/C2 signals without reassigning this trade.",
+      "during_trade": "Track touch size and order count separately and whether fresh activity subsequently joins the move. Keep an independent ledger even when another strategy fires.",
+      "exit_signal": "Exit when touch-lot direction no longer matches the entry for >=2 completed groups spanning >=1s; shared limits apply.",
+      "evidence": "Quiet-flow touch information motivated R3. The prior C5 delayed-confirmation form remains in the archived five-rule package; this version explicitly tests the immediate release."
+    },
+    {
+      "id": "C6",
+      "name": "Early flow-and-thinning entry",
+      "origin": "new",
+      "paper_test_included": true,
+      "sources": [
+        "R1",
+        "D12",
+        "C1/C2 timing comparison"
+      ],
+      "setup": "Use the exact directional setups of C1 or C2, including fresh flow and separate full size/count declines.",
+      "entry": "Enter at the first eligible completed setup group without waiting for quote relocation. Long/short is fixed by the qualifying setup.",
+      "during_trade": "Compare actual entry timing and remaining movement with C1/C2, preserving early-only, confirmed-only and common events. Do not select early entries based on eventual confirmation.",
+      "exit_signal": "Exit when both quotes move >=1 tick against the entry-decision pair, or native 5s flow changes against entry for >=2 groups spanning >=1s; shared limits.",
+      "evidence": "D12 shows waiting may consume the move. This is a timing experiment, not a claim that a feed can capture the observed 0.3ms bursts."
+    },
+    {
+      "id": "C7",
+      "name": "Recognition plus one-second follow",
+      "origin": "new",
+      "paper_test_included": true,
+      "sources": [
+        "R4",
+        "D12"
+      ],
+      "setup": "At actual causal recognition store best quotes, midpoint and nonzero touch-lot direction d. Retrospective birth does not qualify.",
+      "entry": "At the first valid completed group in [recognition+1s, recognition+2s], if midpoint advanced >=1 tick in d, enter in d. No retrospective fill at recognition.",
+      "during_trade": "Record fresh versus expiry, current bid/ask depth and counts, and whether the initial move keeps progressing.",
+      "exit_signal": "Exit at recognition+20s, or when both quotes cross the recognition pair against d, or shared risk limit; the horizon is from recognition, not entry.",
+      "evidence": "Uses R4's delayed-follow design and tests continuation after observed confirmation."
+    },
+    {
+      "id": "C8",
+      "name": "Recognition plus one-second fade",
+      "origin": "new",
+      "paper_test_included": true,
+      "sources": [
+        "R5",
+        "D12",
+        "large_up_brief",
+        "small_brief observations"
+      ],
+      "setup": "Use exactly the same recognition event and confirmation eligibility as C7.",
+      "entry": "At the same eligible +1s observation, enter opposite d after the >=1 tick move. Maintain a separate ledger; C7 and C8 can disagree on the same event.",
+      "during_trade": "Watch opposing liquidity refill and whether the original burst resumes. Mark trade-print bounce separately from actual quote relocation.",
+      "exit_signal": "Exit at recognition+20s, or if both quotes extend >=1 tick in original d beyond the fade-entry decision pair, or shared risk limit.",
+      "evidence": "Three discovery dates had negative mean remaining midpoint movement after the one-second confirmation. Those summaries motivate this arm but do not establish its net edge."
+    },
+    {
+      "id": "C9",
+      "name": "Flow with cancellation support",
+      "origin": "new",
+      "paper_test_included": true,
+      "sources": [
+        "R6A",
+        "D13"
+      ],
+      "setup": "Defined nonzero native 5s flow direction d. Native ask cancelled lots exceed bid cancelled lots for d=+1; bid cancelled lots exceed ask cancelled lots for d=-1. Keep the two quantities individually recorded. Do not infer cancellations from aggregate depth loss.",
+      "entry": "Enter in d on false-to-true completion of setup, without requiring C1/C2 full-depth thinning or another quote confirmation.",
+      "during_trade": "Track whether cancelled liquidity returns, and separate fill-linked reductions from cancellations. Log the cancellation scope explicitly.",
+      "exit_signal": "Exit if both quotes move >=1 tick against the decision pair, or at 20s from entry/shared risk limit.",
+      "evidence": "R6A supported by D13's aligned regime, with Oct17 contrary evidence retained. Default source scope here is native touch cancellations; the October16 runner used book-wide cancellations, so that result is not the exact new rule."
+    },
+    {
+      "id": "C10",
+      "name": "Flow despite opposing cancellations",
+      "origin": "new",
+      "paper_test_included": true,
+      "sources": [
+        "R6B",
+        "D13"
+      ],
+      "setup": "Same native 5s flow as C9, but cancellation direction opposes it: bid cancellations dominate during buying, or ask cancellations dominate during selling.",
+      "entry": "Enter in the FLOW direction on false-to-true completion. Keep this independent of C9; disagreement does not veto testing.",
+      "during_trade": "Observe whether new aggression overcomes the adverse liquidity changes. Record genuine continuation, stall and reversal.",
+      "exit_signal": "Exit on both-quote adverse move >=1 tick from decision pair, or at 20s/shared risk limit.",
+      "evidence": "D13's opposed regime outperformed aligned on Oct17 in its descriptive comparison. It is retained deliberately rather than screened out as contradictory."
+    },
+    {
+      "id": "C11",
+      "name": "Expiry-driven flow transition",
+      "origin": "new",
+      "paper_test_included": true,
+      "sources": [
+        "R9",
+        "D03",
+        "Claude fresh-versus-expiring view"
+      ],
+      "setup": "At a completed group, native 5s flow flips from a nonzero sign to its opposite with no fresh classified trades in that group; event accounting attributes the flip to expired lots. New 5s direction, defined 60s direction and touch-lot direction agree.",
+      "entry": "Arm at that group; within 5s require both quotes to move >=1 tick in the new direction in a later group while agreement persists. Enter in that direction.",
+      "during_trade": "Track whether fresh flow subsequently joins. A lack of fresh aggression at the original flip is the feature being tested, not an exclusion.",
+      "exit_signal": "Exit when 5s flow or touch-lot direction disagrees for >=2 groups spanning >=1s; otherwise 20s hold/shared limits.",
+      "evidence": "D03 separates flow persistence from price returns. The earlier October16 diagnostic had 116 R9 arms and no confirmations; preserve that outcome."
+    },
+    {
+      "id": "C12",
+      "name": "Standing one-lot retreat",
+      "origin": "new",
+      "paper_test_included": true,
+      "sources": [
+        "R10",
+        "D06"
+      ],
+      "setup": "A standing best quote shrinks from >1 total lot to exactly one through an explicit size-cut/cancellation/modification. Track the surviving order at the unchanged price; no same-group fill on that order. Distinguish this from a new best quote born with one lot.",
+      "entry": "Enter short after a bid-side shrink or long after ask-side shrink at the completed decision group, one entry per tracked order per session.",
+      "during_trade": "Watch removal, refill and whether the quote retreats. Record origin and linked fills rather than interpreting all one-lot quotes identically.",
+      "exit_signal": "Exit if the original best price regains >1 total displayed lot and both quotes move >=1 tick against the entry-decision pair; otherwise 20s/shared limits.",
+      "evidence": "D06 motivates origin-dependent retreat. This takes the source-defined size-cut onset as the signal, not the future order fate."
+    },
+    {
+      "id": "C13",
+      "name": "Observable dipole dive and rebound",
+      "origin": "new",
+      "paper_test_included": true,
+      "sources": [
+        "R9 driver distinction",
+        "R8 information provenance",
+        "D03",
+        "D08",
+        "Claude lean/share plots",
+        "user V-shape hypothesis"
+      ],
+      "setup": "Use completed native ratio updates, retaining every source tick. After two consecutive strictly falling ratio steps, two consecutive strictly rising steps define an observed valley recovery; mirror for a crest. Undefined updates break the sequence. This is a provisional local rule, not the aggregate share-above-anchor V.",
+      "entry": "At the completed recovery group, take direction from defined nonzero native 5s flow. Within 5s enter when both quotes move >=1 tick in that direction relative to recovery quotes. Both valley and crest may produce either price direction. Tag fresh-driven, expiry-driven and mixed recoveries; none is excluded.",
+      "during_trade": "Record trough/crest level, incoming/expiring buy and sell quantities separately, and whether a second recovery expands price response. Record the information features and sparse/zero-MI states without turning them into a mandatory confidence score.",
+      "exit_signal": "Exit if ratio breaches its already-observed trough/crest AND both quotes move >=1 tick against the entry-decision pair; otherwise 20s/shared limits.",
+      "evidence": "Directly tests the user's shape hypothesis as timing/state information. No claim that the completed aggregate V predicts a live bottom, or that a 1s ratio resolves millisecond moves."
+    },
+    {
+      "id": "C14",
+      "name": "Fresh flow handoff against the older trend",
+      "origin": "new",
+      "paper_test_included": true,
+      "sources": [
+        "R1 windows",
+        "R6B disagreement principle",
+        "R7/M0 early-late-fresh feature separation",
+        "D03",
+        "Claude event-sequence view"
+      ],
+      "setup": "Native 5s flow changes sign because a newly admitted opposing aggressor arrives while defined 60s flow still has the OLD sign. Distinguish this from expiry-only C11. No defended order or prior failed extension is required.",
+      "entry": "Arm on that fresh sign flip. Enter in the new 5s direction after both quotes move >=1 tick in it within 5s, with short flow still pointing new and 60s still old.",
+      "during_trade": "Track whether 60s flow subsequently turns too, stays opposed, or fresh activity fails to gain price response. Keep early, late and fresh buy/sell quantities separate.",
+      "exit_signal": "Exit on a fresh 5s flip back plus adverse quote movement >=1 tick from entry-decision pair, or 20s/shared limits.",
+      "evidence": "Closes the gap caused by requiring short/long flow agreement everywhere. A proposed flow-lead transition hypothesis, not an established symmetric prediction."
+    },
+    {
+      "id": "C15",
+      "name": "Pullback and renewed participation re-entry",
+      "origin": "new",
+      "paper_test_included": true,
+      "sources": [
+        "R7/M0 prior-price/range/flow inputs",
+        "R8/M1 separate information inputs",
+        "D10/D11",
+        "Claude continuation/exhaustion view"
+      ],
+      "setup": "From a rolling prior-20s quote pair, both quotes move >=1 tick in direction d. Store subsequent quote extremes; both then pull back >=1 tick from those observed extremes without crossing the original pair. Within 5s of the pullback, new native aggression in d returns and native 5s flow agrees.",
+      "entry": "Enter in d when both quotes move >=1 tick away from the stored pullback pair in a later completed group. This is a new entry decision, even after a prior trade exited.",
+      "during_trade": "Track fresh participation versus an expiry-only apparent recovery. Record prior20s change/range, touch sizes/counts and each available entropy/MI/C/flow-change input separately. Compare information-state outcomes without dropping sparse, zero-MI or missing-information cases.",
+      "exit_signal": "Exit if both quotes cross the pullback pair against d, or 20s/shared limits.",
+      "evidence": "Uses the archived models' raw input ideas without blending the 141 fields into a new score. The old frozen R7 and R8 remain separately retained unchanged; no claim their predictions validate this re-entry rule."
+    }
+  ],
+  "legacy_coverage": {
+    "R1": [
+      "C1",
+      "C2",
+      "C6",
+      "C14"
+    ],
+    "R2": [
+      "C3"
+    ],
+    "R3": [
+      "C5"
+    ],
+    "R4": [
+      "C7"
+    ],
+    "R5": [
+      "C4",
+      "C8"
+    ],
+    "R6A": [
+      "C1",
+      "C2",
+      "C9"
+    ],
+    "R6B": [
+      "C4",
+      "C10",
+      "C14"
+    ],
+    "R7": [
+      "C14",
+      "C15"
+    ],
+    "R8": [
+      "C13",
+      "C15"
+    ],
+    "R9": [
+      "C11",
+      "C13"
+    ],
+    "R10": [
+      "C12"
+    ]
+  },
+  "reporting": {
+    "first_split": "Eight realized trade types, each shown separately across Oct2/3/17/18, then all eligible prospective opportunities. Trade type is an outcome cohort, never an entry selector.",
+    "types": [
+      "large_up_lasting",
+      "large_up_brief",
+      "large_down_lasting",
+      "large_down_brief",
+      "small_up_lasting",
+      "small_up_brief",
+      "small_down_lasting",
+      "small_down_brief"
+    ],
+    "per_opportunity": [
+      "strategy and source event ID",
+      "all raw field/tick references",
+      "decision/known-by/recognition clocks",
+      "side and quote/print path",
+      "fresh versus expiry driver",
+      "quote/thinning/refill/cancellation origins",
+      "entry, no-fill and latency",
+      "during-trade warnings and exits",
+      "gross result, costs, stress result",
+      "missingness, pause and cap dispositions"
+    ],
+    "selected_case_limits": "32 selected legs, not all market opportunities. All16 small legs return to the preceding print price; preserve quote/bounce distinctions. Recognition was after leg end in25/32: no backdated named-dipole entries.",
+    "previous_holdout": "October16 old eleven-arm replay already exists in ../paper-validation-20261109/NG_HOLDOUT_20231016.md. Diagnostic traded arms lost after one-extra-tick-per-fill stress; strict R6A one trade was zero after stress. This is now known development evidence, not untouched validation for these fifteen."
+  },
+  "validation_status": "Source definitions and JSON count/reference integrity checked. No new strategy runner, backtest or prospective paper execution performed."
+}

@@ -1,0 +1,108 @@
+{
+  "version": "four-day-synthesis-v0.1-20261113",
+  "purpose": "Provisional strategy hypotheses combining individual trade-type evidence, Claude lifecycle renders, and prior flow/book research. No execution, deployment, or claim of strategy profitability.",
+  "working_explanation": "Changes in flow participation interact with displayed liquidity. Price response distinguishes continuation from a failed move; subsequent fresh flow, replenishment, and quote behavior distinguish persistence from exhaustion. Dipole/lean may provide stage and timing context without determining direction. This is a synthesis hypothesis, not an established universal causal sequence.",
+  "source_preservation": "Original 141 fields and all ticks remain unchanged. Keep raw measurements separate; use explicit conditions, not a blended score. Do not count duplicated operands or passive fills/aggressor sides of the same execution as independent confirmations.",
+  "evidence": {
+    "individual_cases": "trade_type_review.json and original 20231002/03/17/18 case JSONs in ../dipole-experiment-20261110",
+    "prior_discovery": "../research-union-20261109/discovery-depth/REPORT.md, D01-D08; prior analysis, not independently revalidated in this synthesis",
+    "prior_rules": "../research-union-20261109/discovery-depth/PAPER_STRATEGIES_v1_1.json; preserved without alteration",
+    "renders": "research-union-20261109 objects indexed by active_sources.json and expanded_sources.json",
+    "case_links": [
+      {"candidate": "dip-19647-1697551497", "current_case": "Oct 17 large up lasting", "claude_case": "6: absorbed pair, first burst", "meaning": "Same candidate, different selected portions and outcome horizons"},
+      {"candidate": "dip-19648-1697633986", "current_case": "Oct 18 large up brief", "claude_case": "2: reversal, US day", "meaning": "Reversal is relative to original sell orientation; not evidence that the brief up leg predicts a subsequent down move"}
+    ]
+  },
+  "shared_provisional_rules": {
+    "status": "Operational definitions for a reproducible first review, not fitted thresholds. No prior paper_enabled flag is changed.",
+    "availability": "Evaluate only at complete source-group availability. No retrospective birth, future trade-type label, complete V shape, final order fate, or future case selection may arm an entry. A recognized dipole may inform decisions from its actual recognition onward.",
+    "book_comparison": "Evaluate every complete group and retain every tick. For thinning candidates compare current full size and full order count individually against the latest known state at least 5 seconds earlier. Both must decline on the specified side. Five seconds is a proposed operational lookback, not an empirical optimum.",
+    "confirmation": "Store both quotes when a setup first becomes true. In a strictly later complete group within 5 seconds, require both best bid and best ask to move at least one tick in the entry direction while the setup remains true. Consume the arm. Same-group movement is not advance confirmation.",
+    "expiry": "Disarm after 5 seconds without confirmation, on a failed required condition, or on a data reset/gap. Require a new false-to-true setup for a new arm. Five seconds is a design choice.",
+    "execution_accounting": "Record confirmation, subsequent observed executable bid/ask, and measured arrival if any. A signal is not a fill. Never credit the retrospectively selected leg-start price or a midprice fill; costs and latency remain unresolved.",
+    "conflicts": "Keep candidate outputs separate. Conflicting continuation and reversal setups create an unresolved state, not an averaged direction. A position exit does not automatically create an opposite entry.",
+    "risk": "No sizing recommendation is inferred from this evidence. If later evaluated under the existing paper framework, retain its separately declared operating caps until explicitly versioned; those caps are not proven by these studies. Invalidation levels below are signal conditions, not guaranteed stop-fill prices.",
+    "field_limits": "S fields are unavailable on three dates and state masks matter on Oct 18. Do not use them as a required cross-day trigger. Static external X context is not an intratrade changing signal. Aggregate full-depth changes cannot by themselves identify fills, cancellations, hidden reserve, or a participant."
+  },
+  "strategies": [
+    {
+      "id": "C1",
+      "name": "Ask-side thinning continuation",
+      "direction": "long",
+      "setup": "Full ask depth and full ask order count both decline under the shared comparison. New classified buy-aggressor activity is observed; the 5-second and 60-second classified-flow directions are positive and defined. A rise in full bid depth is supporting information, not required.",
+      "entry": "Shared upward quote confirmation, with the thinning and flow conditions still true.",
+      "during_trade": "Monitor fresh buying separately from expiry, ask replenishment, bid support and both quotes. Dipole/lean weakening alone is not an exit when caused only by old flow leaving the window and quote progress continues.",
+      "exit_signal": "Both quotes return to or below the armed quote pair, or fresh selling arrives and both quotes relocate down from the last favorable quote pair. Log ask replenishment or lost flow agreement as early warnings, not automatic reversal entries.",
+      "support": "Ask full size and ask full orders decline over all four selected large-up-lasting legs; bid buildup fails on Oct 3. Prior D05 favors short/long flow agreement at short horizons, but does not validate this exact conjunction.",
+      "uncertainty": "Endpoint association is not proof of advance warning; requiring later quote confirmation may miss the initial move.",
+      "role": "Candidate for lasting rises; also an in-trade continuation assessment"
+    },
+    {
+      "id": "C2",
+      "name": "Bid-side thinning continuation",
+      "direction": "short",
+      "setup": "Full bid depth and full bid order count both decline under the shared comparison. New classified sell-aggressor activity is observed; the 5-second and 60-second classified-flow directions are negative and defined. Ask buildup is supporting information, not required.",
+      "entry": "Shared downward quote confirmation, with the thinning and flow conditions still true.",
+      "during_trade": "Track whether fresh selling is accompanied by lower quotes and continued loss of bid depth, and whether the bid begins to replenish and hold.",
+      "exit_signal": "Both quotes return to or above the armed pair, or fresh buying arrives and both quotes relocate up from the last favorable quote pair. A bid that replenishes despite selling is an early warning.",
+      "support": "Bid full depth and bid full orders decline in all four large-down-lasting selected legs. Ask depth/orders do not build in the Oct 18 example. Brief declines do not share this endpoint signature.",
+      "uncertainty": "No common forward signal was established across all four days for this type because timed-pair coverage is limited.",
+      "role": "Candidate for lasting declines; strongest shared selected-leg book pattern"
+    },
+    {
+      "id": "C3",
+      "name": "Observed absorption followed by quote reversal",
+      "direction": "long after failed selling; short after failed buying",
+      "setup": "At a fixed quote price, source-linked passive fills occur while displayed residual survives or documented replenishment restores it. Incoming aggression fails to move both quotes through that level. For a short, inspect the ask resisting buys; for a long, the bid resisting sells. Require actual order/quote evidence; full-depth changes alone are insufficient.",
+      "entry": "After arming at the defended quote, require shared quote confirmation away from the defended side and newly observed aggression in the reversal direction. The defended level must still hold. Do not require 60-second agreement for this counter-move hypothesis.",
+      "during_trade": "Monitor continued defense of the level and whether the opposing flow now gains price response. Keep initial displayed size and replenishment separate.",
+      "exit_signal": "Exit when the defended level fails or both quotes return through the armed quote pair against the entry. Disappearance of one order without failure of the whole quote is logged separately.",
+      "support": "Prior D01 shows filled one-lot residuals with replenishment survive differently from larger residuals; later directional benefit remains mixed. Claude's case views preserve absorption, quote response and later continuation as distinct events.",
+      "uncertainty": "Survival is not reversal probability. This broader candidate does not activate or supersede archived R2, which remains observation-only.",
+      "role": "Candidate for failed pressure and reversal; useful warning during an existing continuation trade"
+    },
+    {
+      "id": "C4",
+      "name": "Failed continuation after an upward move",
+      "direction": "exit long first; possible short only after a separate confirmation",
+      "setup": "After an observed upward quote move, another classified buying episode fails to raise both quotes above their already recorded high. Ask size/order count cease declining and begin rebuilding. Store the quote pair at this failed attempt. A high bid count alone never triggers the setup.",
+      "entry": "For a short, require shared downward quote confirmation plus new classified selling; book conditions must still indicate a failed upward attempt. Without that confirmation, record only an exit warning for a long.",
+      "during_trade": "A dipole/lean change caused by fresh opposing activity is stronger supporting evidence than expiry alone. If the original upward pressure resumes with higher quotes, the failure hypothesis is invalid.",
+      "exit_signal": "Exit the short if both quotes regain the failed-attempt pair or make a new high; also review when fresh selling stops producing lower quotes. Do not automatically reverse long.",
+      "support": "In selected large-up-lasting lifecycles bid order counts relate negatively and ask counts positively to 5-7s future price change on all four dates. Large-up-brief ask counts relate positively to 1-3s future change on all four dates. These suggest an exhaustion/mean-reversion question, not a calibrated threshold. Claude case 10 documents a failed move at a longer horizon.",
+      "uncertainty": "Most new conditions are a proposed mechanism, not directly tested. Oct 18 large-up-lasting forward screen has only nine pairs. Do not assume the mirrored downside version has equivalent evidence.",
+      "role": "Candidate for pullbacks following rises; strongest immediate use is in-trade warning"
+    },
+    {
+      "id": "C5",
+      "name": "Quiet-flow book release",
+      "direction": "determined by subsequent quote relocation",
+      "setup": "Feed and book are intact but no classified buy/sell lots exist in the last five seconds. Treat the flow ratio as undefined, not zero. Observe best-bid and best-ask sizes separately. Arm a long candidate when bid size exceeds ask size, or a short when ask size exceeds bid size; require the same inequality at confirmation.",
+      "entry": "Shared quote confirmation in the armed direction. Fresh flow is optional. If active aligned flow and thinning appear before entry, classify under C1/C2 instead to avoid double counting.",
+      "during_trade": "Observe whether fresh activity joins the quote move. Continuing quote relocation provides the evidence; an extreme stale dipole ratio is not sufficient.",
+      "exit_signal": "Exit if both quotes revert through the armed pair or the touch-size inequality reverses with adverse quote movement. Cancel unconfirmed setups under the shared timeout.",
+      "support": "Prior D04 found touch-book information in quiet classified-flow contexts across all four days; fresh 5s flow was undefined in 2367/3176 recognition contexts. This motivates a separate book-led rule rather than forcing a fresh-flow prerequisite on every setup.",
+      "uncertainty": "Earlier effects are small midpoint associations, not executable returns. Touch sizes change rapidly and this exact rule has not been measured.",
+      "role": "Candidate for quiet-to-active transitions and book-led moves"
+    }
+  ],
+  "dipole_information_roles": [
+    "Formation alert: an observable change in lean or participation raises attention without assuming direction or a future birth identity.",
+    "Fresh versus expiry: identify whether new activity or rolling-window aging caused the change. Prior same-sign flow persistence is not price continuation probability.",
+    "Response classification: compare flow development against separate quote, depth, and order-count behavior to distinguish progress from resistance.",
+    "Trade management: a growing disagreement between activity and price response is a warning; demand a separate price/book transition for a reverse entry.",
+    "Historical shape: use approach, bottom, rebound and persistence to organize investigation; a completed V is not available at its own bottom, and the aggregate anchor V is not an individual price reversal."
+  ],
+  "trade_type_mapping": {
+    "large_up_lasting": ["C1", "C4 for management or subsequent failure"],
+    "large_down_lasting": ["C2", "C3 when selling stops advancing"],
+    "large_up_brief": ["Observe the burst; C1 only if quote progress follows, C4 if the next upward attempt fails"],
+    "large_down_brief": ["Observe the burst; C2 only if bid thinning and quote progress follow, C3 if pressure is resisted"],
+    "small_up_lasting": ["C5 or C3 only with quote-level evidence; no common book-direction rule across all dates"],
+    "small_down_lasting": ["C5 or C3 only with quote-level evidence; Oct 3 contradicts the common endpoint pattern"],
+    "small_up_brief": ["No standalone entry from the print change; preserve as context for C1/C3/C5"],
+    "small_down_brief": ["No standalone entry from the print change; preserve as context for C2/C3/C5"]
+  },
+  "review_priority": ["C1 and C2 for observed continuation", "C4 as an exit warning before testing independent short entries", "C3 with linked order/quote evidence", "C5 with particular attention to spread and fills"],
+  "validation_status": "Evidence synthesis and rule specification only. No new backtest, hit rate, PnL, net edge, or holdout validation is claimed. Proposed sequencing/lookbacks are explicitly distinct from the empirical observations."
+}
