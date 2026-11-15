@@ -101,23 +101,26 @@
     {
       "field": "L077 | clock_model_evaluation",
       "newly_populated_rows": 0,
-      "status": "UNRESOLVED",
+      "status": "AWAITING_FRANKIE_RUN",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Needs actual model evaluation records bound to the intended run and market cutoff. The recovered native calculation runner explicitly does not execute Frankie."
+      "evidence_or_required_dependency": "Needs actual model evaluation records bound to the intended run and market cutoff. The recovered native calculation runner explicitly does not execute Frankie.",
+      "availability_reason": "Frankie has not yet run on these days, as confirmed by the user. Leave unavailable values empty; this is an expected post-run output, not a recovery failure."
     },
     {
       "field": "L078 | clock_lock_time",
       "newly_populated_rows": 0,
-      "status": "UNRESOLVED",
+      "status": "AWAITING_FRANKIE_RUN",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Needs actual immutable first-lock records from the intended model run. Candidate recognition times are not model lock times."
+      "evidence_or_required_dependency": "Needs actual immutable first-lock records from the intended model run. Candidate recognition times are not model lock times.",
+      "availability_reason": "Frankie has not yet run on these days, as confirmed by the user. Leave unavailable values empty; this is an expected post-run output, not a recovery failure."
     },
     {
       "field": "L079 | later_outcome_reveal",
       "newly_populated_rows": 0,
-      "status": "UNRESOLVED",
+      "status": "AWAITING_FRANKIE_RUN",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Needs the exact target outcome/reveal package and run binding. Retrospective printed-leg endpoints and native flow reversal labels are not substituted."
+      "evidence_or_required_dependency": "Needs the exact target outcome/reveal package and run binding. Retrospective printed-leg endpoints and native flow reversal labels are not substituted.",
+      "availability_reason": "Frankie has not yet run on these days, as confirmed by the user. Leave unavailable values empty; this is an expected post-run output, not a recovery failure."
     },
     {
       "field": "L080 | target_ground_truth_onset_time",
@@ -180,70 +183,83 @@
       "newly_populated_rows": 5513,
       "status": "SCOPED_CONTENT_RECOVERED",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "New hash-chained selected-tick state/delta movie for the recovered price/flow/book surface. Not a full experimental state movie or model run."
+      "evidence_or_required_dependency": "New hash-chained selected-tick state/delta movie for the recovered price/flow/book surface. Not a full experimental state movie or model run.",
+      "model_run_component_status": "AWAITING_FRANKIE_RUN",
+      "model_run_component_reason": "Frankie has not run on these days. Preserve recovered non-model evidence; do not invent model output or run identity."
     },
     {
       "field": "L091 | output_frankie_reasoning_movie",
       "newly_populated_rows": 0,
-      "status": "UNRESOLVED",
+      "status": "AWAITING_FRANKIE_RUN",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Needs actual Frankie reasoning records from the intended model run; native calculation evidence is not model reasoning."
+      "evidence_or_required_dependency": "Needs actual Frankie reasoning records from the intended model run; native calculation evidence is not model reasoning.",
+      "availability_reason": "Frankie has not yet run on these days, as confirmed by the user. Leave unavailable values empty; this is an expected post-run output, not a recovery failure."
     },
     {
       "field": "L092 | output_probability_movie",
       "newly_populated_rows": 0,
-      "status": "UNRESOLVED",
+      "status": "AWAITING_FRANKIE_RUN",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Needs actual immutable probability outputs from the intended model run. No fitted probabilities, zero vectors or unrelated forecasts were substituted."
+      "evidence_or_required_dependency": "Needs actual immutable probability outputs from the intended model run. No fitted probabilities, zero vectors or unrelated forecasts were substituted.",
+      "availability_reason": "Frankie has not yet run on these days, as confirmed by the user. Leave unavailable values empty; this is an expected post-run output, not a recovery failure."
     },
     {
       "field": "L093 | output_candidate_discoveries",
       "newly_populated_rows": 5513,
       "status": "SCOPED_CONTENT_RECOVERED",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Every original archived native candidate discovery eligible at each trade clock/cursor. Calculation discoveries are not principal-model execution."
+      "evidence_or_required_dependency": "Every original archived native candidate discovery eligible at each trade clock/cursor. Calculation discoveries are not principal-model execution.",
+      "model_run_component_status": "AWAITING_FRANKIE_RUN",
+      "model_run_component_reason": "Frankie has not run on these days. Preserve recovered non-model evidence; do not invent model output or run identity."
     },
     {
       "field": "L094 | output_first_locks_and_no_locks",
       "newly_populated_rows": 0,
-      "status": "UNRESOLVED",
+      "status": "AWAITING_FRANKIE_RUN",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Needs genuine first-lock/no-lock run ledgers; not-running is not evidence for a completed no-lock decision."
+      "evidence_or_required_dependency": "Needs genuine first-lock/no-lock run ledgers; not-running is not evidence for a completed no-lock decision.",
+      "availability_reason": "Frankie has not yet run on these days, as confirmed by the user. Leave unavailable values empty; this is an expected post-run output, not a recovery failure."
     },
     {
       "field": "L095 | output_negative_sparse_inconclusive_ledger",
       "newly_populated_rows": 0,
-      "status": "UNRESOLVED",
+      "status": "AWAITING_FRANKIE_RUN",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Needs actual model abstention/weak/negative/sparse/inconclusive results. Reconstruction missingness is not a model result."
+      "evidence_or_required_dependency": "Needs actual model abstention/weak/negative/sparse/inconclusive results. Reconstruction missingness is not a model result.",
+      "availability_reason": "Frankie has not yet run on these days, as confirmed by the user. Leave unavailable values empty; this is an expected post-run output, not a recovery failure."
     },
     {
       "field": "L096 | output_knowledge_retrieval_receipts",
       "newly_populated_rows": 0,
-      "status": "UNRESOLVED",
+      "status": "AWAITING_FRANKIE_RUN",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Needs actual knowledge-retrieval invocation receipts bound to the intended run. Static source files are not evidence the model retrieved them."
+      "evidence_or_required_dependency": "Needs actual knowledge-retrieval invocation receipts bound to the intended run. Static source files are not evidence the model retrieved them.",
+      "availability_reason": "Frankie has not yet run on these days, as confirmed by the user. Leave unavailable values empty; this is an expected post-run output, not a recovery failure."
     },
     {
       "field": "L097 | output_provider_invocation_response_receipts",
       "newly_populated_rows": 0,
-      "status": "UNRESOLVED",
+      "status": "AWAITING_FRANKIE_RUN",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Needs actual provider requests/responses and invocation receipts. No provider was invoked by this repair."
+      "evidence_or_required_dependency": "Needs actual provider requests/responses and invocation receipts. No provider was invoked by this repair.",
+      "availability_reason": "Frankie has not yet run on these days, as confirmed by the user. Leave unavailable values empty; this is an expected post-run output, not a recovery failure."
     },
     {
       "field": "L098 | output_answer_wall_access_receipts",
       "newly_populated_rows": 0,
-      "status": "UNRESOLVED",
+      "status": "AWAITING_FRANKIE_RUN",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Needs actual answer-wall access/no-access audit records for the intended run. The current retrospective user permission is not a historical no-access receipt."
+      "evidence_or_required_dependency": "Needs actual answer-wall access/no-access audit records for the intended run. The current retrospective user permission is not a historical no-access receipt.",
+      "availability_reason": "Frankie has not yet run on these days, as confirmed by the user. Leave unavailable values empty; this is an expected post-run output, not a recovery failure."
     },
     {
       "field": "L099 | output_source_state_manifest_code_model_run_hashes",
       "newly_populated_rows": 5513,
       "status": "SCOPED_CONTENT_RECOVERED",
       "full_named_semantics_complete": false,
-      "evidence_or_required_dependency": "Actual reconstruction source/state/manifest/code hashes. Model and primary experiment run remain absent and explicitly null."
+      "evidence_or_required_dependency": "Actual reconstruction source/state/manifest/code hashes. Model and primary experiment run remain absent and explicitly null.",
+      "model_run_component_status": "AWAITING_FRANKIE_RUN",
+      "model_run_component_reason": "Frankie has not run on these days. Preserve recovered non-model evidence; do not invent model output or run identity."
     }
   ],
   "exact_metadata_fields": 1,
@@ -252,5 +268,11 @@
   "all_35_complete": false,
   "aws_available": false,
   "no_s_calculations_started": true,
-  "no_new_claude_results_consulted": true
+  "no_new_claude_results_consulted": true,
+  "pre_run_fields_without_produced_values": 19,
+  "fields_awaiting_frankie_run": 10,
+  "partially_recovered_fields_with_model_component_awaiting_run": 3,
+  "frankie_has_run_on_requested_days": false,
+  "unavailable_value_policy": "Leave values empty/null. Populate only actual verified source content. Never substitute invented values, unrelated outputs, or non-execution for a negative model decision.",
+  "storage_policy": "New task results are published directly to GitHub; do not create local task data files."
 }
