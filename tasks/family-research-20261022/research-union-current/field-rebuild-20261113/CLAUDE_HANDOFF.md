@@ -1,5 +1,7 @@
 # Preserved eight-type material and corrected scope
 
+November 15 update: the repaired workbook has passed full byte/value readback. It contains 359,517 cell replacements and 128,082 complete payload chunks. The new recovery adds 33,078 cells in six previously empty fields: one exact source-window metadata field and five scoped recoveries. Twenty-nine of the former 35 fields still have no produced values. See [the exact status](REMAINING_FIELDS.md), [readback](WORKBOOK_READBACK_VERIFICATION.json), and [release notes](RELEASE_NOTES.md). The original workbook below remains preserved; do not confuse it with the repaired release asset.
+
 The user requested this Git handoff. Claude's new independent results were not consulted. No direct message or independent-result merge has occurred.
 
 Use [the correction](../evidence-availability-20261113/CLAUDE_INPUT_CORRECTION.md) before interpreting the [preserved original eight-type workbook](Claude-Eight-Trade-Types-Original.xlsx). Its 32 date/type cases and every tick remain unchanged. Workbook SHA256: `650824c6a43c376d0c8c84e18f197ae2c84c80dae9b47e9a87cc94fb7bc59217`.

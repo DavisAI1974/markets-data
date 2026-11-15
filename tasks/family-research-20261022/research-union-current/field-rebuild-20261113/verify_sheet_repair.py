@@ -7,7 +7,7 @@ import re
 import sqlite3
 import xml.etree.ElementTree as ET
 import zipfile
-from stream_sheet_repair import OUT,SOURCE,TARGET,NS,CELL,rows
+from stream_sheet_repair import OUT,SOURCE,TARGET,NS,CELL,rows,prepared_lines,preparation_report
 
 
 def digest(stream):
@@ -48,7 +48,8 @@ def main():
                         assert x[0]==y[0],address;unchanged+=1
         assert replaced==expected
         # Verify every complete payload chunk after XML escaping and ZIP round trip.
-        with new.open('xl/worksheets/sheet4.xml') as stream,gzip.open(OUT/'cache/workbook_payloads.jsonl.gz','rt',encoding='utf8') as expected_chunks:
+        expected_chunks=iter(prepared_lines('payloads'))
+        with new.open('xl/worksheets/sheet4.xml') as stream:
             for isrow,data in rows(stream):
                 if not isrow:continue
                 rownum=int(re.search(rb'<row\b[^>]*\br="(\d+)"',data).group(1))
@@ -59,7 +60,7 @@ def main():
             assert next(expected_chunks,None) is None
         book=ET.fromstring(new.read('xl/workbook.xml'))
         assert [s.attrib['name'] for s in book.find('{'+NS+'}sheets')]==['Tick comparison','Render seconds','Selection and fields','Recovered payloads']
-    report=json.loads((OUT/'WORKBOOK_REPAIR_PREPARATION.json').read_text())
+    report=preparation_report()
     assert payloads==report['payload_rows']
     result=dict(saved_cells_verified=replaced,unchanged_tick_cells_verified=unchanged,
         payload_chunks_verified=payloads,unchanged_zip_parts=len(unchanged_parts),

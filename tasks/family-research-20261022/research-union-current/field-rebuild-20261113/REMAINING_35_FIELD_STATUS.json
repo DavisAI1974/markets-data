@@ -1,0 +1,256 @@
+{
+  "fields": [
+    {
+      "field": "L024 | canonical_sep_nov_2021_dbn_mbo_objects",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Exact 2021 object identities/bytes/SHA256 are recovered in CANONICAL_2021_OBJECT_IDENTITIES.json. Raw DBN bytes were not fetched or replayed. The four 2023 tapes are not substitutes. AWS is unavailable per user."
+    },
+    {
+      "field": "L025 | october_first_source_window",
+      "newly_populated_rows": 5513,
+      "status": "EXACT_METADATA",
+      "full_named_semantics_complete": true,
+      "evidence_or_required_dependency": "Exact inventory metadata: [2021-10-01, 2021-11-01). Explicitly does not apply as the date window of a 2023 trade."
+    },
+    {
+      "field": "L026 | canonical_predecessor_bootstrap_objects",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs the exact bootstrap object selection and continuous replay receipt for the intended canonical run. A guessed predecessor date or a 2023 opening snapshot is insufficient."
+    },
+    {
+      "field": "L060 | derived_d_family_geometry",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs the binding D-family geometry producer and its full causal input sequence. The saved C15 D1-D6 implementation is a different, explicitly scoped surface and would also recompute stopped S components; it was not run."
+    },
+    {
+      "field": "L061 | derived_open_world_predecessor_state",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs the binding P/O/S/X predecessor-state producer and complete state transitions. Latest native observations do not establish active predecessor state."
+    },
+    {
+      "field": "L062 | derived_ancestry_gaps",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs structural ancestry identities and gap calculations under the same binding geometry definition. Native order lineage and inter-message recurrence gaps are not substitutes."
+    },
+    {
+      "field": "L063 | derived_unresolved_age_chain_trajectory",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs the complete unresolved-age and chain/extension state history from its exact producer. Existing S values were preserved, not recalculated or repurposed as full state."
+    },
+    {
+      "field": "L064 | derived_price_flow_book_paths",
+      "newly_populated_rows": 5513,
+      "status": "SCOPED_CONTENT_RECOVERED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Complete selected-case trade prefix, exact price/flow/book values and consecutive-tick deltas. Intervening non-trade/per-second state is not asserted."
+    },
+    {
+      "field": "L065 | derived_v4_mechanics_fifo_features",
+      "newly_populated_rows": 5513,
+      "status": "SCOPED_CONTENT_RECOVERED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Original full FIFO/book and adapter activity contents with archived window definitions. Not a complete V4 geometry feature vector."
+    },
+    {
+      "field": "L067 | prebirth_predecessor_at_risk_state",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs a prospective predecessor-defined risk-set producer and complete opportunity ledger, including opportunities with no later discovery."
+    },
+    {
+      "field": "L068 | prebirth_unresolved_chain_extension_state",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs prospective unresolved chain/extension state before onset, with explicit availability. A candidate emitted after detection is not pre-birth state."
+    },
+    {
+      "field": "L069 | prebirth_ancestry_successor_opportunity",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs causal ancestry/successor opportunity identities and the matching producer, not retrospective candidate membership."
+    },
+    {
+      "field": "L070 | prebirth_stopped_chain_false_context_controls",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs the exact stopped-chain/false-context control population and producer. No arbitrary timeout or fabricated negative label was introduced."
+    },
+    {
+      "field": "L071 | prebirth_negative_opportunity_cases",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs the complete prospectively defined negative-opportunity denominator and observation/censoring outcomes. Missing discoveries are not automatically negative cases."
+    },
+    {
+      "field": "L077 | clock_model_evaluation",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs actual model evaluation records bound to the intended run and market cutoff. The recovered native calculation runner explicitly does not execute Frankie."
+    },
+    {
+      "field": "L078 | clock_lock_time",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs actual immutable first-lock records from the intended model run. Candidate recognition times are not model lock times."
+    },
+    {
+      "field": "L079 | later_outcome_reveal",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs the exact target outcome/reveal package and run binding. Retrospective printed-leg endpoints and native flow reversal labels are not substituted."
+    },
+    {
+      "field": "L080 | target_ground_truth_onset_time",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs answer-derived Step-1 ground-truth onset values under the exact target definition. Native candidate event seconds are a different clock."
+    },
+    {
+      "field": "L083 | step1_existing_october_seconds",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs exact October Step-1 seconds from the sealed target package. Native 2023 flow seconds do not identify the canonical Step-1 package."
+    },
+    {
+      "field": "L084 | step1_populations",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs exact Step-1 target populations and population manifest, not the selected 32 cases or the trade population relabeled as Step-1."
+    },
+    {
+      "field": "L085 | step1_crosswalks",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs exact Step-1 identity crosswalks to the intended source/target run. No positional join or inferred identity was used."
+    },
+    {
+      "field": "L086 | step1_target_membership_receipts",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs target-membership receipts from the exact Step-1 package. Candidate membership is not Step-1 target membership."
+    },
+    {
+      "field": "L087 | step1_labels_and_classifications",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs original Step-1 labels/classifications and source identities. The eight print-leg category labels remain separate provenance."
+    },
+    {
+      "field": "L088 | step1_result_prefixes",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs the exact produced Step-1 result locations and artifact identities; launch configuration alone is not proof outputs exist."
+    },
+    {
+      "field": "L089 | step1_reconciliation_outputs",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs Step-1 reconciliation products tying the precise target population, clocks, classifications and source manifest together."
+    },
+    {
+      "field": "L090 | output_state_and_state_delta_movie",
+      "newly_populated_rows": 5513,
+      "status": "SCOPED_CONTENT_RECOVERED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "New hash-chained selected-tick state/delta movie for the recovered price/flow/book surface. Not a full experimental state movie or model run."
+    },
+    {
+      "field": "L091 | output_frankie_reasoning_movie",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs actual Frankie reasoning records from the intended model run; native calculation evidence is not model reasoning."
+    },
+    {
+      "field": "L092 | output_probability_movie",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs actual immutable probability outputs from the intended model run. No fitted probabilities, zero vectors or unrelated forecasts were substituted."
+    },
+    {
+      "field": "L093 | output_candidate_discoveries",
+      "newly_populated_rows": 5513,
+      "status": "SCOPED_CONTENT_RECOVERED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Every original archived native candidate discovery eligible at each trade clock/cursor. Calculation discoveries are not principal-model execution."
+    },
+    {
+      "field": "L094 | output_first_locks_and_no_locks",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs genuine first-lock/no-lock run ledgers; not-running is not evidence for a completed no-lock decision."
+    },
+    {
+      "field": "L095 | output_negative_sparse_inconclusive_ledger",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs actual model abstention/weak/negative/sparse/inconclusive results. Reconstruction missingness is not a model result."
+    },
+    {
+      "field": "L096 | output_knowledge_retrieval_receipts",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs actual knowledge-retrieval invocation receipts bound to the intended run. Static source files are not evidence the model retrieved them."
+    },
+    {
+      "field": "L097 | output_provider_invocation_response_receipts",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs actual provider requests/responses and invocation receipts. No provider was invoked by this repair."
+    },
+    {
+      "field": "L098 | output_answer_wall_access_receipts",
+      "newly_populated_rows": 0,
+      "status": "UNRESOLVED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Needs actual answer-wall access/no-access audit records for the intended run. The current retrospective user permission is not a historical no-access receipt."
+    },
+    {
+      "field": "L099 | output_source_state_manifest_code_model_run_hashes",
+      "newly_populated_rows": 5513,
+      "status": "SCOPED_CONTENT_RECOVERED",
+      "full_named_semantics_complete": false,
+      "evidence_or_required_dependency": "Actual reconstruction source/state/manifest/code hashes. Model and primary experiment run remain absent and explicitly null."
+    }
+  ],
+  "exact_metadata_fields": 1,
+  "scoped_content_fields": 5,
+  "fields_without_produced_values": 29,
+  "all_35_complete": false,
+  "aws_available": false,
+  "no_s_calculations_started": true,
+  "no_new_claude_results_consulted": true
+}

@@ -22,6 +22,24 @@ CELL=re.compile(rb'<c\b[^>]*\br="([A-Z]+)(\d+)"[^>]*(?:/>|>.*?</c>)',re.S)
 XML=b'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
 
 
+def prepared_lines(kind):
+    paths=[OUT/f'cache/workbook_{kind}.jsonl.gz']
+    if (OUT/'REMAINING_FIELD_RECOVERY.json').exists():
+        paths.append(OUT/f'cache/supplement_{kind}.jsonl.gz')
+    for path in paths:
+        with gzip.open(path,'rt',encoding='utf8') as stream:
+            yield from stream
+
+
+def preparation_report():
+    report=json.loads((OUT/'WORKBOOK_REPAIR_PREPARATION.json').read_text())
+    if (OUT/'REMAINING_FIELD_RECOVERY.json').exists():
+        extra=json.loads((OUT/'REMAINING_FIELD_RECOVERY.json').read_text())
+        report['payload_rows']+=extra['payload_rows_added']
+        report['formerly_empty_fields_with_recovered_content'].update(extra['fields_populated'])
+    return report
+
+
 def inline(address,value,style=None):
     s=f' s="{style}"' if style is not None else ''
     return f'<c r="{address}"{s} t="inlineStr"><is><t xml:space="preserve">{escape(value)}</t></is></c>'.encode()
@@ -50,15 +68,15 @@ def main():
     db=sqlite3.connect(OUT/'cache/repair_cells.sqlite')
     db.execute('DROP TABLE IF EXISTS cells')
     db.execute('CREATE TABLE cells (address TEXT PRIMARY KEY, rowno INTEGER, value TEXT)')
-    with gzip.open(OUT/'cache/workbook_updates.jsonl.gz','rt',encoding='utf8') as f:
-        for line in f:
-            r=json.loads(line);row=int(re.search(r'\d+',r['cell']).group())
-            db.execute('INSERT INTO cells VALUES (?,?,?)',(r['cell'],row,r['value']))
+    for line in prepared_lines('updates'):
+        r=json.loads(line);row=int(re.search(r'\d+',r['cell']).group())
+        db.execute('INSERT INTO cells VALUES (?,?,?)',(r['cell'],row,r['value']))
     db.execute('CREATE INDEX cell_rows ON cells(rowno)');db.commit()
     expected=db.execute('SELECT COUNT(*) FROM cells').fetchone()[0]
-    report=json.loads((OUT/'WORKBOOK_REPAIR_PREPARATION.json').read_text())
+    report=preparation_report()
     changed=0
-    with zipfile.ZipFile(SOURCE) as original, zipfile.ZipFile(TARGET,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=1,allowZip64=True) as result:
+    staging=TARGET.with_suffix('.partial.xlsx')
+    with zipfile.ZipFile(SOURCE) as original, zipfile.ZipFile(staging,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=1,allowZip64=True) as result:
         rels=ET.fromstring(original.read('xl/_rels/workbook.xml.rels'))
         ids={x.attrib['Id'] for x in rels};number=1
         while 'rId'+str(number) in ids:number+=1
@@ -109,15 +127,15 @@ def main():
         with result.open('xl/worksheets/sheet4.xml','w',force_zip64=True) as dst:
             dst.write(XML+f'<worksheet xmlns="{NS}"><dimension ref="A1:D{report["payload_rows"]+1}"/><sheetViews><sheetView workbookViewId="0" showGridLines="0"><pane ySplit="1" topLeftCell="A2" state="frozen"/></sheetView></sheetViews><sheetFormatPr defaultRowHeight="18"/><cols><col min="1" max="1" width="38" customWidth="1"/><col min="2" max="3" width="12" customWidth="1"/><col min="4" max="4" width="120" customWidth="1"/></cols><sheetData>'.encode())
             dst.write(b'<row r="1">'+b''.join(inline(chr(65+i)+'1',v) for i,v in enumerate(['Payload ID','Chunk','Chunks','Complete JSON: concatenate chunks in order']))+b'</row>')
-            with gzip.open(OUT/'cache/workbook_payloads.jsonl.gz','rt',encoding='utf8') as f:
-                for rownum,line in enumerate(f,2):
-                    values=json.loads(line)
-                    dst.write(f'<row r="{rownum}">'.encode())
-                    for i,value in enumerate(values):dst.write(inline(chr(65+i)+str(rownum),str(value)))
-                    dst.write(b'</row>')
+            for rownum,line in enumerate(prepared_lines('payloads'),2):
+                values=json.loads(line)
+                dst.write(f'<row r="{rownum}">'.encode())
+                for i,value in enumerate(values):dst.write(inline(chr(65+i)+str(rownum),str(value)))
+                dst.write(b'</row>')
             dst.write(b'</sheetData></worksheet>')
     assert changed==expected,(changed,expected)
     db.close()
+    staging.replace(TARGET)
     h=hashlib.sha256()
     with TARGET.open('rb') as f:
         while chunk:=f.read(1024*1024):h.update(chunk)
