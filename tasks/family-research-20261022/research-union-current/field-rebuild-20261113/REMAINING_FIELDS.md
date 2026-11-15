@@ -1,6 +1,6 @@
 # Remaining 35 fields: actual recovery and exact dependencies
 
-This repair adds 33,078 cell values across six previously empty fields and all 5,513 selected ticks. One is exact source-window metadata; five contain explicitly scoped recovered data. **This is not completion of all 35 fields.** Twenty-nine still have no produced values. Scope limitations remain inside the populated cells.
+This repair adds 33,078 cell values across six previously empty fields and all 5,513 selected ticks. One is exact source-window metadata; five contain explicitly scoped recovered data. **This is not completion of all 35 fields.** Nineteen pre-run fields still lack verified produced values. Ten additional fields await Frankie, who has not yet run on these days. Scope limitations remain inside the populated cells.
 
 All 32 cases, eight types, four dates and original S cells remain. No stopped S producer, model inference, new strategy, arbitrary horizon, or new independent Claude result was used. The complete 143,270-trade rebuild remains unfinished.
 
@@ -22,9 +22,9 @@ AWS is unavailable. Local archives and the pinned Git source catalog were inspec
 | L069 — prebirth_ancestry_successor_opportunity | 0 | UNRESOLVED | Needs causal ancestry/successor opportunity identities and the matching producer, not retrospective candidate membership. |
 | L070 — prebirth_stopped_chain_false_context_controls | 0 | UNRESOLVED | Needs the exact stopped-chain/false-context control population and producer. No arbitrary timeout or fabricated negative label was introduced. |
 | L071 — prebirth_negative_opportunity_cases | 0 | UNRESOLVED | Needs the complete prospectively defined negative-opportunity denominator and observation/censoring outcomes. Missing discoveries are not automatically negative cases. |
-| L077 — clock_model_evaluation | 0 | UNRESOLVED | Needs actual model evaluation records bound to the intended run and market cutoff. The recovered native calculation runner explicitly does not execute Frankie. |
-| L078 — clock_lock_time | 0 | UNRESOLVED | Needs actual immutable first-lock records from the intended model run. Candidate recognition times are not model lock times. |
-| L079 — later_outcome_reveal | 0 | UNRESOLVED | Needs the exact target outcome/reveal package and run binding. Retrospective printed-leg endpoints and native flow reversal labels are not substituted. |
+| L077 — clock_model_evaluation | 0 | AWAITING_FRANKIE_RUN | Frankie has not run on these days; values remain empty. Needs actual model evaluation records bound to the intended run and market cutoff. The recovered native calculation runner explicitly does not execute Frankie. |
+| L078 — clock_lock_time | 0 | AWAITING_FRANKIE_RUN | Frankie has not run on these days; values remain empty. Needs actual immutable first-lock records from the intended model run. Candidate recognition times are not model lock times. |
+| L079 — later_outcome_reveal | 0 | AWAITING_FRANKIE_RUN | Frankie has not run on these days; values remain empty. Needs the exact target outcome/reveal package and run binding. Retrospective printed-leg endpoints and native flow reversal labels are not substituted. |
 | L080 — target_ground_truth_onset_time | 0 | UNRESOLVED | Needs answer-derived Step-1 ground-truth onset values under the exact target definition. Native candidate event seconds are a different clock. |
 | L083 — step1_existing_october_seconds | 0 | UNRESOLVED | Needs exact October Step-1 seconds from the sealed target package. Native 2023 flow seconds do not identify the canonical Step-1 package. |
 | L084 — step1_populations | 0 | UNRESOLVED | Needs exact Step-1 target populations and population manifest, not the selected 32 cases or the trade population relabeled as Step-1. |
@@ -34,16 +34,18 @@ AWS is unavailable. Local archives and the pinned Git source catalog were inspec
 | L088 — step1_result_prefixes | 0 | UNRESOLVED | Needs the exact produced Step-1 result locations and artifact identities; launch configuration alone is not proof outputs exist. |
 | L089 — step1_reconciliation_outputs | 0 | UNRESOLVED | Needs Step-1 reconciliation products tying the precise target population, clocks, classifications and source manifest together. |
 | L090 — output_state_and_state_delta_movie | 5513 | SCOPED_CONTENT_RECOVERED | New hash-chained selected-tick state/delta movie for the recovered price/flow/book surface. Not a full experimental state movie or model run. |
-| L091 — output_frankie_reasoning_movie | 0 | UNRESOLVED | Needs actual Frankie reasoning records from the intended model run; native calculation evidence is not model reasoning. |
-| L092 — output_probability_movie | 0 | UNRESOLVED | Needs actual immutable probability outputs from the intended model run. No fitted probabilities, zero vectors or unrelated forecasts were substituted. |
+| L091 — output_frankie_reasoning_movie | 0 | AWAITING_FRANKIE_RUN | Frankie has not run on these days; values remain empty. Needs actual Frankie reasoning records from the intended model run; native calculation evidence is not model reasoning. |
+| L092 — output_probability_movie | 0 | AWAITING_FRANKIE_RUN | Frankie has not run on these days; values remain empty. Needs actual immutable probability outputs from the intended model run. No fitted probabilities, zero vectors or unrelated forecasts were substituted. |
 | L093 — output_candidate_discoveries | 5513 | SCOPED_CONTENT_RECOVERED | Every original archived native candidate discovery eligible at each trade clock/cursor. Calculation discoveries are not principal-model execution. |
-| L094 — output_first_locks_and_no_locks | 0 | UNRESOLVED | Needs genuine first-lock/no-lock run ledgers; not-running is not evidence for a completed no-lock decision. |
-| L095 — output_negative_sparse_inconclusive_ledger | 0 | UNRESOLVED | Needs actual model abstention/weak/negative/sparse/inconclusive results. Reconstruction missingness is not a model result. |
-| L096 — output_knowledge_retrieval_receipts | 0 | UNRESOLVED | Needs actual knowledge-retrieval invocation receipts bound to the intended run. Static source files are not evidence the model retrieved them. |
-| L097 — output_provider_invocation_response_receipts | 0 | UNRESOLVED | Needs actual provider requests/responses and invocation receipts. No provider was invoked by this repair. |
-| L098 — output_answer_wall_access_receipts | 0 | UNRESOLVED | Needs actual answer-wall access/no-access audit records for the intended run. The current retrospective user permission is not a historical no-access receipt. |
+| L094 — output_first_locks_and_no_locks | 0 | AWAITING_FRANKIE_RUN | Frankie has not run on these days; values remain empty. Needs genuine first-lock/no-lock run ledgers; not-running is not evidence for a completed no-lock decision. |
+| L095 — output_negative_sparse_inconclusive_ledger | 0 | AWAITING_FRANKIE_RUN | Frankie has not run on these days; values remain empty. Needs actual model abstention/weak/negative/sparse/inconclusive results. Reconstruction missingness is not a model result. |
+| L096 — output_knowledge_retrieval_receipts | 0 | AWAITING_FRANKIE_RUN | Frankie has not run on these days; values remain empty. Needs actual knowledge-retrieval invocation receipts bound to the intended run. Static source files are not evidence the model retrieved them. |
+| L097 — output_provider_invocation_response_receipts | 0 | AWAITING_FRANKIE_RUN | Frankie has not run on these days; values remain empty. Needs actual provider requests/responses and invocation receipts. No provider was invoked by this repair. |
+| L098 — output_answer_wall_access_receipts | 0 | AWAITING_FRANKIE_RUN | Frankie has not run on these days; values remain empty. Needs actual answer-wall access/no-access audit records for the intended run. The current retrospective user permission is not a historical no-access receipt. |
 | L099 — output_source_state_manifest_code_model_run_hashes | 5513 | SCOPED_CONTENT_RECOVERED | Actual reconstruction source/state/manifest/code hashes. Model and primary experiment run remain absent and explicitly null. |
 
-Oct18 L050/L051 also remain missing on 1,447 selected rows. Existing non-S partial semantics from the first repair remain documented in the cells.
+Oct18 L050/L051 recovery now preserves original queue and replenishment observations across all 30,739 Oct18 trades, with 2,894 supported workbook-cell updates across all 1,447 selected Oct18 ticks. Forty-one trades have no eligible earlier replenishment outcome and remain null. These are scoped observations, not proof of complete active-state semantics. See `../oct18-native-recovery-20261115/RECOVERY_VERIFICATION.json` and the verified R2 workbook release.
 
 Workbook readback is reported separately in WORKBOOK_READBACK_VERIFICATION.json. Supplemental source comparisons and hash-chain checks are in REMAINING_FIELD_VERIFICATION.json.
+
+Unavailable values must remain empty/null. No invented values or unrelated substitute results are permitted. New task results are persisted only to GitHub. Actual Frankie outputs and model/run identities remain pending; reconstructed source evidence is not model output.
