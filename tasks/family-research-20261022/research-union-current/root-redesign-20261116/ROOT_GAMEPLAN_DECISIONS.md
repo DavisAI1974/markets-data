@@ -233,7 +233,8 @@ Greg: "Option 2 if it's going to have the book in memory."
 - A full picture on every row (about 62 KB times about 3.3 million ticks, roughly 200 GB) is not written.
 - The complete book at any tick is the nearest saved picture plus the changes after it, exactly.
 
-**Group 3, the book columns (L039-L046): laid out for Greg, not yet closed.** Proposed row content: best bid, best ask
+**Group 3, the book columns (L039-L046): CLOSED by Greg** ("group 3 is closed as long as it holds all raw data that
+wasn't calculated"). Row content: best bid, best ask
 and the gap; total size, orders and levels on each side; size and orders at the best bid and ask; the full line at
 the touched price, with its totals before and after; for the touched order its size before and after, orders and size
 ahead just before, first-entry and last-place times on both clocks (marked "at least" when carried over the weekend),
@@ -348,12 +349,14 @@ carried orders are rows on the timeline, marked.)
 - Each order's life is followed row by row: it enters, shrinks, grows or changes price and goes to the back of the
   line, is filled, leaves. Each of those rows carries, for the order touched: which step of its life this is so far,
   the tick where it first entered, the tick of its previous step, and, on the row where it leaves, how it ended
-  (cancelled, filled completely, or still resting when the record ends).
+  (cancelled or filled completely). An order still resting when the record ends is shown in the last book picture,
+  not on a row.
 - An order carried over the weekend starts its history at the Sunday re-listing, marked.
 - The order number ties the rows together. It is a label, never an input to a calculation.
 - The tape shows that an order was cancelled, not who cancelled it or why. Cancels just after 5 pm are recorded as
   cancels in the 5 pm to 6 pm stretch, with no cause attached.
-- Each row carries its contract and expiry date, read from the tape, and the part of the exchange's session it falls
+- Each row carries its contract, read from the tape (the expiry date is not on the order tape; it joins when the
+  exchange's contract definitions are held), and the part of the exchange's session it falls
   in (the trade day, the 5 pm to 6 pm stretch, the 2:28 to 2:30 pm Eastern settlement window).
 
 ## Lifecycles: worked out ahead of time, then shown as they happen (Greg, 2026-11-16)
@@ -383,6 +386,23 @@ that has this behavior means and what it will do in the future."
   picture is side by side: the tape, the book, the outside data points and, later, the lifecycles.
 - For a single order the tape gives the stages. For the bigger lifecycles the stages have to be defined first; that
   work belongs to the stage after ROOT and its results go onto the same timeline.
+
+## All calculations in ROOT (Greg's idea, 2026-11-16)
+
+Greg: "I think we should figure out all of the calcs we're wanting to do including sql step and the other new
+workflow step and any dipole and anything else, and have those all done in root. Thoughts? That way the other steps
+are just analysis, pattern matching and logic." Earlier the same day: "That's just one part of root right? We still
+have root calcs to figure out."
+
+- The specification written so far (`SPEC-root.md`) is part 1, the foundation: the timeline, the book, one row per
+  tick with what the tape and the book say directly.
+- Part 2 is the ROOT calculations built on top. They are not designed yet.
+- Claude's proposed shape, awaiting Greg's yes: the foundation plus calculations added one at a time, each named,
+  run tick by tick over the timeline, pinning its own columns and passing its own checks; a calculation may only add
+  columns; anything that puts a value on a tick is a ROOT calculation, anything that reads rows and draws a
+  conclusion is analysis. Working out the calculations is the calculation inventory (old ROOT sections, the SQL
+  step, the other workflow step, dipoles, S fields).
+- This supersedes the earlier wording of the split ("after ROOT"): those calculations are part 2 of ROOT.
 
 ## Held for the later stage: figuring out what moves the market
 

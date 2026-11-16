@@ -81,7 +81,7 @@ that as a fault and report it.
 | Calculated columns (most of L037 to L071, L074 to L076, S01 to S19) | Each is filled only when its calculation has been built and checked. Until then it is empty, not zero. | As each calculation is completed. The status table below says which are done. |
 | Step 1 columns (L080, L083 to L089) | They belong to an earlier 2021 study and are being handled separately. | Later, in their own step. |
 | Frankie's output columns (L077 to L079, L090 to L099) | They hold a model's outputs, and that model has not been run on these trade days. | After such a run. |
-| Reference columns (L001 to L026, L081, L082) | They name background documents, not market data for a tick. | Not applicable to a row. |
+| Reference fields (L001 to L026, L081, L082) | They name background documents, not market data for a tick, so they are not columns on the trade-day sheets. | Not applicable. |
 
 ## Status of this build
 
