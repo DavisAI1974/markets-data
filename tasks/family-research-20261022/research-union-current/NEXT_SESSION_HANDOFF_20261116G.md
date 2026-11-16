@@ -92,6 +92,20 @@ by a different method, and playback at two cuts). A calculation can keep a table
 
 7. Then D and the rest of I, K, H (the renders, every instance), and the grouping with Greg.
 
+8. **Nine additions, approved by Greg ("Try them all")**, laid out in `STEP1_STEP2_LAYOUTS.md` under "Additions
+   from the look at Codex's two pieces". Four calculations, L to O: build **L (refilled orders) and M (sweeps, and
+   the quote touching or crossing) together with C and the quote's runs** (they need only the rows; L settles C's
+   open call on fills: such a fill counts as filled and added both); **N (orders that act together) with K**;
+   **O (what an outside figure changing did) after A, B and I**. Three ways of working apply to every piece (two
+   clocks on every fact; more than one way to end; the cases that did not happen). Two readings are made at the
+   grouping stage.
+
+9. **The two Codex pieces** (the SQL step and the family workflow, Markets `dd9c797a`,
+   `artifacts/sqlite-triage/20261022/`): Greg wants them judged on intent, whether the code does what the intent
+   says, whether the kind of output is useful, and which of their perspectives are worth using on the new data.
+   Their old numbers carry no weight. A read on those terms was running when this session ended; if its result is
+   not in the decisions file, run it again and bring the result to him.
+
 ## Pods
 
 Greg wants the step runs on pods, all four trade days at the same time. Shown to him on 2026-11-16 from the Runpod

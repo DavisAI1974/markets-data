@@ -1704,6 +1704,15 @@ still his to approve as their own pieces): refilled orders (proposal 6) are the 
 totals, per side and at the best price, on every row; the moments the best bid and ask touch or cross (part of
 proposal 7) are on every fact of the quote's runs as the gap at that tick.
 
+**All nine expansions approved to try (Greg, 2026-11-16, seventh session): "Try them all".** Laid out in full in
+`STEP1_STEP2_LAYOUTS.md`, "Additions from the look at Codex's two pieces", with Claude's calls, his to correct.
+Four are new calculations, named L to O so they do not collide with Step 2's A to K: L refilled orders; M sweeps
+and the moments the quote touches or crosses; N orders that act together; O what an outside figure changing did.
+Three are ways of working applied to every piece (two clocks on every fact; more than one way to end; the cases
+that did not happen). Two are readings made at the grouping stage (the earliest tell; order and how long between).
+Build order: L and M with C and the quote's runs (they need only the rows; L settles C's open call on fills); N
+with K; O after A, B and I. Nothing is built yet.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
