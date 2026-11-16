@@ -13,7 +13,7 @@ yet.
 - `fetch_sources.py`: the program that fetched them. It downloads and checks; it does not parse or calculate.
 - `pull_curve.py`: the program that pulled the futures-curve files from Databento (it quotes first, refuses above a
   ceiling, and never buys a file twice). The key is not in it.
-- `raw/`: the files, 127 in all, about 60 MB.
+- `raw/`: the files, 127 in all, about 47 MB.
 
 Every file is the source's revision as of the retrieval date. Where a source keeps only revised figures, the figure as
 first published cannot come from it; that is said below.
