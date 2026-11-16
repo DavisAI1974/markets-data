@@ -430,6 +430,90 @@ reached zero and not come back, and the tick of the high of the oldest, the newe
 | Tue Oct 17 | 20 | 19 |
 | Wed Oct 18 | 14 | 19 |
 
+## Additions from the look at Codex's two pieces (Greg, 2026-11-16: "Try them all")
+
+Status: all nine APPROVED to try by Greg, 2026-11-16, seventh session ("Try them all"), from the short form put
+to him. Laid out here in full with Claude's calls, his to correct. Nothing is built. They follow the same rules
+as everything else: only the four trade days; a row holds only what was known at its tick; nothing written back;
+no fixed marks, labels, caps or minimum counts; empty is never zero; every case individually; no cost of trading.
+Stored the same way: facts in a table beside the rows, one line per fact at the tick it became known; one check
+per part (a recount by a second method, and playback at two cuts).
+
+Named L to O so they do not collide with Step 2's A to K in `STEP2_PLAN.md`.
+
+### Four new calculations
+
+**L. Refilled orders.**
+- What we want: every time a resting order is traded against and shows the same size, or more, straight after.
+  It marks a price where someone is taking trades and reloading.
+- What the rows show (trade day Oct 2): 1,688 fill messages name an order that is not reduced in that exchange
+  event; the order's next row reads "stayed" (1,236), "size raised" (321) or "price changed" (126).
+- What is written: a fact at the tick of that next row, naming the order (a label): its side, its price, how many
+  price levels it was from the best, the size the fill took, its size after, how many times this order has been
+  refilled so far in the trade day and the total taken from it so far, and when the order first entered.
+- Claude's calls: a refill is a fill message that names a resting order whose next row, in the same exchange
+  event, leaves it the same size or larger. A fill followed by a change of price is written as its own kind of
+  moment, not as a refill. This also settles the open call in C: such a fill counts as filled and as added, both.
+- Needs: the rows. Built with C.
+
+**M. Sweeps, and the moments the quote touches or crosses.**
+- What we want: how hard a trade hit the book. A trade that fills through more than one price level is someone
+  paying up to get done.
+- What is written: one fact for every exchange event that holds a trade, at the tick that ends the event: the
+  side of the aggressor, the size traded, the number of resting orders filled, the number of price levels filled
+  through, the first and the last fill price, and whether the best price moved. And a fact when the best bid and
+  ask touch or cross, and another when they part again, with how long it lasted.
+- What the rows show (trade day Oct 2): fills at the best price 60,868; one level back 150; two to five levels
+  back 92. The gap is zero or less on 1,858 rows.
+- Claude's calls: every trade event gets a fact, not only the ones that go through several levels, so nothing is
+  picked in advance. The exchange's own event marks define an event.
+- Needs: the rows. Built with C and the quote's runs.
+
+**N. Orders that act together.**
+- What we want: which orders are one hand. Orders that enter, move or leave at the same instant are likely placed
+  by the same party.
+- What is written: a fact for each set of two or more orders whose entries carry the same exchange time, to the
+  nanosecond: the orders (labels), their sides, prices and sizes. The same for orders leaving at the same exchange
+  time. On a leaving fact: which of them had also entered together.
+- Claude's calls: "the same instant" is an exact match of the exchange's own time stamp, so no stretch of time is
+  picked. The fact is written at the first tick with a later exchange time, when the set is known to be complete.
+- Not promised: how many sets there are. Reported after the first trade day, and Greg hears before anything is
+  capped.
+- Needs: the rows. Built with K.
+
+**O. What an outside figure changing did.**
+- What we want: when one of the 13 outside data points changes inside a trade day, what the flow and the quote
+  were doing, and what they did next.
+- What is written: a fact at the first tick on which an outside figure on the row differs from the row before:
+  which figure, its old and new value, and the time it became known. On that fact line, the peaks in play and the
+  run of the quote in progress, as D and I write them.
+- Claude's calls: only real changes inside a trade day are written; nothing is written for a figure that does not
+  change. What happens after is read from the rows and facts that follow, not copied onto this line.
+- Needs: A, B and I.
+
+### Three ways of working, applied to every piece
+
+**Two clocks on every fact.** Each fact carries when it happened and when it could first be known, and so the
+time between them. In piece 1 that is the high and the tick the peak became known. For the dipole (D) it is
+Native's own time for a stage and the tick it is placed at.
+
+**More than one way to end.** Nothing is given an ending that its own definition forces. A peak can come back, be
+beaten, or stay open. For the dipole (D): beside Native's own ending, the fact line of each birth names the flow
+peak in play at that tick, so that peak's own ending (reached zero and came back, beaten, still open) stands
+beside Native's.
+
+**The cases that did not happen.** Wherever something is read backward from a birth, a peak, a leg or a dipole,
+the same reading is listed for the ticks where the same things were present and nothing followed. Every tick and
+every peak is kept, so the list exists; it is made at the grouping stage and kept case by case.
+
+### Two readings made at the grouping stage, from the facts
+
+**The earliest tell.** For every peak, leg and dipole: the first tick at which it could be told apart from the
+ones that came to nothing. Read from the facts in tick order.
+
+**Order, and how long between.** For any two kinds of fact: which came first and the time between, each case
+listed. Every fact carries its tick, so this is a subtraction, with no pairing picked in advance.
+
 ## Still to lay out
 
 5. Step 2: the chain, its stages, timing and recurrence. Greg, 2026-11-16: "We'll have to look at step 2 closer
