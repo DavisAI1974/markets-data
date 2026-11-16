@@ -560,6 +560,14 @@ correct data. And just delete old stuff so it doesn't creep back into the new ca
   his word on it. One earlier ruling is kept out of the delete unless he says otherwise: the Step 1 fields ("Step 1
   is going to be different initially don't wipe it").
 
+**Greg's condition for the delete (2026-11-16):** asked to sign off the delete list, he answered: "As long as we know
+how and why the old stuff exists we have the important part." That is taken as a condition, not as the sign-off. The
+condition is met by `root-audit-20261116/OLD_MATERIAL_REMOVAL_LIST.md`: for every path, what it is, how it was made,
+why it existed, how sure that is, and where copies remain. It also lists a fourth group not first shown to him: the
+old assembly programs, file lists and old handoffs that would rebuild or point back at the old workbooks. Found while
+writing it: the Step 1 fields are empty in the old workbooks, so no Step 1 value is lost; and `main` does not hold
+the old workbooks, but three older `codex/` branches do. **Nothing is deleted until Greg says "delete".**
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
