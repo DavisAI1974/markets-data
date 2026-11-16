@@ -1,18 +1,19 @@
 # ROOT stored rows: trade day Mon Oct 2, 2023 (6 pm Eastern the evening before to 5 pm Eastern)
 
-Built by the new ROOT (Markets branch `claude/root-session6-017eY1`, commit `fca77bb`) from the raw order tape
+Built by the new ROOT (Markets branch `claude/root-session6-017eY1`, commit `b39e10a`) from the raw order tape
 and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothing here comes from an old run.
 
 - Rows: 820,670 (one per tick), 217 fields each. Sections A to E from the tape and the book, section G the 13 outside data points.
 - Rows by label: 5 pm to 6 pm stretch 544, Sunday start-up 343, trade day 819,783.
 - Book pictures: one at each of 38,127 trade messages, one at the first written row and one at the last (47,069,561 order lines).
 - Only rows labelled "trade day" enter a calculation. The stretch and start-up rows are kept and marked; nothing is calculated on them.
-- An empty field is stored as empty (null): never 0, never blank text.
-- Checks, all passed: every record accounted for; the trade day cut; the book equals the vendor restatement; the book adds up at every trade; one history per order; the trade count; the outside points pinned right on every row; playback at four cuts.
+- An empty field is stored as empty (null): never 0, never blank text. A line that a tick emptied is the words "no orders".
+- Checks in `RECEIPT.json`, all passed: every record accounted for; the trade day cut; the book equals the vendor restatement; the book adds up at every trade; one history per order; the trade count; the outside points pinned right on every row and every section G column.
+- `playback-*.json` is the playback record (four cuts, all identical). It was made on the first build of this session (Markets `fca77bb`), before the emptied line was changed from a blank cell to the words "no orders". That change touches one text cell and was not run through playback again (one check per changed part).
 
 | File | Bytes | SHA256 |
 |---|---:|---|
-| `RECEIPT.json` | 8,555 | `b979f7b6fa4a1c09c92186de08c8c2e27b42e09c0a831597ac79250539633736` |
+| `RECEIPT.json` | 8,555 | `70c2ce013a4885070229206c0e7311629eb65b0a3028dfc828c9e43dbc30b2b2` |
 | `book-pictures-20231002-part000.parquet` | 10,629,137 | `3cd57f981710a2ba70922ba433876da798a7d696c1119dc2218282c07a771b8c` |
 | `book-pictures-20231002-part001.parquet` | 11,792,993 | `62f3be457bd3f626264ce2bdff03a745498b976553c127344938cecaece133ba` |
 | `book-pictures-20231002-part002.parquet` | 11,335,501 | `e225f15d191edb0379bcd2e568c6440dde08213cab4a61389de063e71e70fafa` |
@@ -26,8 +27,8 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `book-pictures-20231002-part010.parquet` | 11,857,180 | `79688805d6dbb7a84ce41f5164dd3a6ea59f9ed01afd26ae1a03234ccb6e72dc` |
 | `book-pictures-20231002-part011.parquet` | 2,804,135 | `f9906e1187df39dc8e1cd6a47e0541d96345a10e9027d0cffb005639600f2ed6` |
 | `playback-20231002.json` | 666 | `1271155b67fc7f95d72f8720e29b79908f34e38d3b71a4a850568aa818dd5f05` |
-| `rows-20231002-part000.parquet` | 19,792,639 | `52a49da9df564c3b712379def00c24e1433bf1b59c5535cbf510c1a39284af1b` |
-| `rows-20231002-part001.parquet` | 20,047,378 | `90ecd14b6d1b6baa52607b11a17c83a6351e49c9a3233953bcf836a99d2303bf` |
-| `rows-20231002-part002.parquet` | 20,390,862 | `4c2b78a36a89cb11a2faa4cd7e8fa0e85eb496dca91bb072dafa1522a5147fdb` |
-| `rows-20231002-part003.parquet` | 2,864,943 | `d961cbe98e59575309689926f89acf0bcfaeada66dcd4b305ed5161a6a614011` |
+| `rows-20231002-part000.parquet` | 19,837,787 | `5baee395161f79476c82a0f91035f48226782f5e8db4f55d81746ab8bf571c1b` |
+| `rows-20231002-part001.parquet` | 20,111,686 | `eec0368236f487b8624d49aeb3c9ad8cbaf174a0398a2fa2d68908392d149db9` |
+| `rows-20231002-part002.parquet` | 20,462,051 | `8e8f0e8ea3e24f80700f5db54d876b3330326bb2c0e57fed73c69271272e5ca2` |
+| `rows-20231002-part003.parquet` | 2,876,301 | `4fd041156d86ce815ba967537bba6c4853a09aea16a2d9400cb63a007f6963e4` |
 | `vendor-restatements-20231002.parquet` | 15,331 | `bfe15b673dce5d374c1c2e61cfdae19b07c27afaca128e364307b6921792ff6a` |
