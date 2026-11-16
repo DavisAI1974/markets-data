@@ -292,6 +292,41 @@ Not yet settled. What ROOT calculates after the book and the per-tick record is 
   because no trade falls in that hour. `SPEC-tape-stream.md` criteria 1 and 7 are to be rewritten accordingly.
 - `CAPABILITY_MAP.md` draft 2 is to be revised: ROOT calculates.
 
+## Group 4, the order histories (L037, L038): CLOSED by Greg, 2026-11-16
+
+- Each order's life is followed row by row: it enters, shrinks, grows or changes price and goes to the back of the
+  line, is filled, leaves. Each of those rows carries, for the order touched: which step of its life this is so far,
+  the tick where it first entered, the tick of its previous step, and, on the row where it leaves, how it ended
+  (cancelled, filled completely, or still resting when the record ends).
+- An order carried over the weekend starts its history at the Sunday re-listing, marked.
+- The order number ties the rows together. It is a label, never an input to a calculation.
+- The tape shows that an order was cancelled, not who cancelled it or why. Cancels just after 5 pm are recorded as
+  cancels in the 5 pm to 6 pm stretch, with no cause attached.
+- Each row carries its contract and expiry date, read from the tape, and the part of the exchange's session it falls
+  in (the trade day, the 5 pm to 6 pm stretch, the 2:28 to 2:30 pm Eastern settlement window).
+
+## Lifecycles: worked out ahead of time, then shown as they happen (Greg, 2026-11-16)
+
+Greg: "If we're doing lifecycles I do want us to figure out lifecycles in advance and populate the sheet as they
+happen by tick. So as time flows the fuller picture will be exposed but we'll have to figure that stuff out ahead of
+time. That way we can start seeing things as they happen and understand what comes next."
+
+Greg, on which lifecycles: "The bigger ones as well and prebirths and all that. Frankie has to learn to recognize
+this stuff and this is the only way to do it. All of the calc data that we have prefilled in for a trade day will be
+exposed to him 1 tick at a time but he'll be able to go over what just happened and how it got there and what a ramp
+that has this behavior means and what it will do in the future."
+
+- **What the timeline is for.** The calculated data for a trade day is filled in beforehand and then shown to
+  Frankie one tick at a time, so he learns to recognize orders, families, dipoles, pre-births, ramps and the rest as
+  they unfold, and what follows them.
+- **Two jobs.** (1) Ahead of time: work out the lifecycles, what kinds there are, what stages each goes through and
+  what each stage looks like while it is happening. A discovery from any trade day may be used on all of them.
+  (2) Tick by tick: fill the timeline as each lifecycle unfolds.
+- **Every row holds only what could be known at its tick.** Nothing from later ticks is written back onto earlier
+  rows. A row can say how far along something is so far; it cannot say how it will end.
+- For a single order the tape gives the stages. For the bigger lifecycles the stages have to be defined first; that
+  work belongs to the stage after ROOT and its results go onto the same timeline.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
