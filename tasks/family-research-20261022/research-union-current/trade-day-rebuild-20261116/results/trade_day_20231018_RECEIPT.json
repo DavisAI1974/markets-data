@@ -1,0 +1,321 @@
+{
+ "first_archive_cursor_offset": 0,
+ "trade_day": "20231018",
+ "definition": "17:00 ET prior evening to 17:00 ET named date (21:00-21:00 UTC, EDT)",
+ "sources": [
+  {
+   "utc_clock_day": "20231017",
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65",
+   "records": 858976,
+   "warmup_records": 841601,
+   "session_records": 17375
+  },
+  {
+   "utc_clock_day": "20231018",
+   "file": "NG_v0_mbo_20231018.dbn.zst",
+   "sha256": "54b2b14c4762a7e4160cc00ce1e70504961ea4e6954e28866dd1bfbaa140f5d5",
+   "records": 760803,
+   "session_records": 754412,
+   "after_halt_records_not_used": 6391
+  }
+ ],
+ "resting_orders_at_session_start": 790,
+ "midnight_utc_carry": {
+  "snapshot_records": 718,
+  "snapshot_orders": 717,
+  "carried_orders": 717,
+  "same_orders_sides_prices_sizes": true,
+  "price_levels": 411,
+  "levels_with_identical_queue_order": 411,
+  "carried_equals_snapshot": true,
+  "orders_whose_snapshot_event_time_is_over_1s_older_than_the_carried_priority_time": 278
+ },
+ "session_records": 771787,
+ "completed_groups": 583688,
+ "resting_orders_at_halt": 723,
+ "integrity": {},
+ "counts": {
+  "messages": 771787,
+  "archive_rows_compared": 771787,
+  "message_equal": 771787,
+  "effect_equal": 771069,
+  "order_after_equal": 770911,
+  "order_after_equal_except_priority_time": 48,
+  "order_after_other_difference": 110,
+  "snapshot_rows_not_applied": 718,
+  "new_evening_messages": 0
+ },
+ "trades_in_trade_day": 30739,
+ "trades_in_prior_trade_list": 30739,
+ "prior_trades_found": 30739,
+ "prior_trades_identical_at_mapped_cursor": 30739,
+ "new_trades_not_in_prior_list": 0,
+ "cursor_offset_new_minus_prior": 0,
+ "group_ordinal_offsets_new_minus_prior": [
+  0
+ ],
+ "order_after_difference_examples": [
+  {
+   "cursor": 18538,
+   "ours": {
+    "instrument_id": 150611,
+    "order_id": 788699906637,
+    "side": "A",
+    "price_raw": 3070000000,
+    "size": 1,
+    "priority_recv_ns": 1697580003478842770,
+    "last_update_recv_ns": 1697587199098963533,
+    "priority_sequence": 26416719
+   },
+   "archive": {
+    "instrument_id": 150611,
+    "order_id": 788699906637,
+    "side": "A",
+    "price_raw": 3070000000,
+    "size": 1,
+    "priority_recv_ns": 1697587200000000000,
+    "last_update_recv_ns": 1697587200000000000,
+    "priority_sequence": 26416719
+   },
+   "effect": {
+    "action": "F",
+    "side": "A",
+    "price_raw": 3070000000,
+    "reported_size": 1,
+    "old_size": null,
+    "new_size": null,
+    "size_delta": null,
+    "priority_lost": false,
+    "removed": false,
+    "missing_reference": false,
+    "touched_or_improved_top_before": true,
+    "top_before_price_raw": 3070000000
+   },
+   "archive_effect": {
+    "action": "F",
+    "side": "A",
+    "price_raw": 3070000000,
+    "reported_size": 1,
+    "old_size": null,
+    "new_size": null,
+    "size_delta": null,
+    "priority_lost": false,
+    "removed": false,
+    "missing_reference": false,
+    "touched_or_improved_top_before": true,
+    "top_before_price_raw": 3070000000
+   }
+  },
+  {
+   "cursor": 18539,
+   "ours": {
+    "instrument_id": 150611,
+    "order_id": 788699906689,
+    "side": "A",
+    "price_raw": 3070000000,
+    "size": 2,
+    "priority_recv_ns": 1697580003495132330,
+    "last_update_recv_ns": 1697580003495132330,
+    "priority_sequence": 26416879
+   },
+   "archive": {
+    "instrument_id": 150611,
+    "order_id": 788699906689,
+    "side": "A",
+    "price_raw": 3070000000,
+    "size": 2,
+    "priority_recv_ns": 1697587200000000000,
+    "last_update_recv_ns": 1697587200000000000,
+    "priority_sequence": 26416879
+   },
+   "effect": {
+    "action": "F",
+    "side": "A",
+    "price_raw": 3070000000,
+    "reported_size": 1,
+    "old_size": null,
+    "new_size": null,
+    "size_delta": null,
+    "priority_lost": false,
+    "removed": false,
+    "missing_reference": false,
+    "touched_or_improved_top_before": true,
+    "top_before_price_raw": 3070000000
+   },
+   "archive_effect": {
+    "action": "F",
+    "side": "A",
+    "price_raw": 3070000000,
+    "reported_size": 1,
+    "old_size": null,
+    "new_size": null,
+    "size_delta": null,
+    "priority_lost": false,
+    "removed": false,
+    "missing_reference": false,
+    "touched_or_improved_top_before": true,
+    "top_before_price_raw": 3070000000
+   }
+  },
+  {
+   "cursor": 18570,
+   "ours": {
+    "instrument_id": 150611,
+    "order_id": 788699906700,
+    "side": "A",
+    "price_raw": 3070000000,
+    "size": 3,
+    "priority_recv_ns": 1697580003496428658,
+    "last_update_recv_ns": 1697580003496428658,
+    "priority_sequence": 26416911
+   },
+   "archive": {
+    "instrument_id": 150611,
+    "order_id": 788699906700,
+    "side": "A",
+    "price_raw": 3070000000,
+    "size": 3,
+    "priority_recv_ns": 1697587200000000000,
+    "last_update_recv_ns": 1697587200000000000,
+    "priority_sequence": 26416911
+   },
+   "effect": {
+    "action": "F",
+    "side": "A",
+    "price_raw": 3070000000,
+    "reported_size": 3,
+    "old_size": null,
+    "new_size": null,
+    "size_delta": null,
+    "priority_lost": false,
+    "removed": false,
+    "missing_reference": false,
+    "touched_or_improved_top_before": true,
+    "top_before_price_raw": 3070000000
+   },
+   "archive_effect": {
+    "action": "F",
+    "side": "A",
+    "price_raw": 3070000000,
+    "reported_size": 3,
+    "old_size": null,
+    "new_size": null,
+    "size_delta": null,
+    "priority_lost": false,
+    "removed": false,
+    "missing_reference": false,
+    "touched_or_improved_top_before": true,
+    "top_before_price_raw": 3070000000
+   }
+  },
+  {
+   "cursor": 18571,
+   "ours": {
+    "instrument_id": 150611,
+    "order_id": 788699906714,
+    "side": "A",
+    "price_raw": 3070000000,
+    "size": 3,
+    "priority_recv_ns": 1697580003501748977,
+    "last_update_recv_ns": 1697580003501748977,
+    "priority_sequence": 26416931
+   },
+   "archive": {
+    "instrument_id": 150611,
+    "order_id": 788699906714,
+    "side": "A",
+    "price_raw": 3070000000,
+    "size": 3,
+    "priority_recv_ns": 1697587200000000000,
+    "last_update_recv_ns": 1697587200000000000,
+    "priority_sequence": 26416931
+   },
+   "effect": {
+    "action": "F",
+    "side": "A",
+    "price_raw": 3070000000,
+    "reported_size": 3,
+    "old_size": null,
+    "new_size": null,
+    "size_delta": null,
+    "priority_lost": false,
+    "removed": false,
+    "missing_reference": false,
+    "touched_or_improved_top_before": true,
+    "top_before_price_raw": 3070000000
+   },
+   "archive_effect": {
+    "action": "F",
+    "side": "A",
+    "price_raw": 3070000000,
+    "reported_size": 3,
+    "old_size": null,
+    "new_size": null,
+    "size_delta": null,
+    "priority_lost": false,
+    "removed": false,
+    "missing_reference": false,
+    "touched_or_improved_top_before": true,
+    "top_before_price_raw": 3070000000
+   }
+  },
+  {
+   "cursor": 18572,
+   "ours": {
+    "instrument_id": 150611,
+    "order_id": 788699906746,
+    "side": "A",
+    "price_raw": 3070000000,
+    "size": 2,
+    "priority_recv_ns": 1697580003504931696,
+    "last_update_recv_ns": 1697580003504931696,
+    "priority_sequence": 26417007
+   },
+   "archive": {
+    "instrument_id": 150611,
+    "order_id": 788699906746,
+    "side": "A",
+    "price_raw": 3070000000,
+    "size": 2,
+    "priority_recv_ns": 1697587200000000000,
+    "last_update_recv_ns": 1697587200000000000,
+    "priority_sequence": 26417007
+   },
+   "effect": {
+    "action": "F",
+    "side": "A",
+    "price_raw": 3070000000,
+    "reported_size": 1,
+    "old_size": null,
+    "new_size": null,
+    "size_delta": null,
+    "priority_lost": false,
+    "removed": false,
+    "missing_reference": false,
+    "touched_or_improved_top_before": true,
+    "top_before_price_raw": 3070000000
+   },
+   "archive_effect": {
+    "action": "F",
+    "side": "A",
+    "price_raw": 3070000000,
+    "reported_size": 1,
+    "old_size": null,
+    "new_size": null,
+    "size_delta": null,
+    "priority_lost": false,
+    "removed": false,
+    "missing_reference": false,
+    "touched_or_improved_top_before": true,
+    "top_before_price_raw": 3070000000
+   }
+  }
+ ],
+ "prior_archive": {
+  "revision": "02ea4b6e340ed1b35a43be23fe21bd01fc82c66f",
+  "path": "tasks/family-research-20261022/frankie-four-day-pins/book-recovery-42617700678-1/20231018",
+  "scope": "original archived full session"
+ },
+ "wall_seconds": 520.2
+}
