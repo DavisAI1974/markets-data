@@ -1436,6 +1436,15 @@ that or differently or the same but with additions. But the old family info will
 - So the frozen family rule is not dropped. It is used at the grouping stage, as the base, not inside the
   calculations. This sharpens the note above that left it open.
 
+**More than one grouping is expected (Greg, 2026-11-16, seventh session):** "And we will probably find they group
+themselves more ways than one with different pieces in different groups." So the grouping stage does not look for
+one set of families. The same peaks may fall into different groups depending on which of their recorded pieces is
+looked at, and each such grouping is kept.
+
+**Piece 2 (what each peak did before and after): APPROVED to build (Greg, same message): "Build".** As rewritten
+with no fixed marks and no names: the build-up, each new low of the fade, reaching zero, coming back, beaten;
+kept as a facts table beside the rows.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

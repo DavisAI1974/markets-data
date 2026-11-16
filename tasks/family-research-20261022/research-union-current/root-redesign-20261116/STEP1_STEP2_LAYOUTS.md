@@ -99,7 +99,8 @@ it was fixed before anything was stored.
 
 ## The rest of Step 1, laid out together (Greg, 2026-11-16: "Let's do the rest of the st 1 calcs plan in this next swoop so we aren't doing a piece at a time")
 
-Status of pieces 2, 3 and 4: PUT TO GREG 2026-11-16 (seventh session). Not approved yet. Not built.
+Status: piece 2 APPROVED to build by Greg 2026-11-16 ("Build"), as revised below. Piece 3 not built (his rule on
+labels). Piece 4 decided as B, to be laid out in detail after piece 2 exists.
 
 "What it did" is read from the same frozen detector and the programs it calls (the fade-timing functions, the
 frozen family rule and its two rule files), and from the lineage programs of 2026-08-17.
