@@ -57,3 +57,18 @@ That work existed only because the first build was cut on UTC clock days and had
 On all four: every message equals the archived message at its mapped position, every one of the 143,270 archived
 trades is found identical, and 709 trades the archives never held (18:00-20:00 ET on trade days Oct 2 and 17) are
 listed in `results/*_trades.parquet`.
+
+## Book record at every trade (2026-11-16)
+
+`scripts/build_book_records.py` builds, for every trade of a trade day, the full book at the moment the trade arrives:
+both sides, every price level's queue, each order's size, priority time, age and volume ahead, with every order whose
+age is only a lower bound marked. 143,979 records were built for the four trade days and every row check passed
+(`results/trade_day_*_BOOK_RECEIPT.json`; each record file's size and SHA256 is in `results/trade_day_*_BOOK_MANIFEST.json`).
+
+In git (Greg, 2026-11-16): the program, the receipts and manifests, and the full records for the 5,513 selected
+workbook ticks (`book_records/<case>.jsonl.gz`, 32 cases, built by `scripts/select_workbook_ticks.py`). The remaining
+record files (8.9 GB) are not stored; `build_book_records.py <trade day> <out dir>` rebuilds a trade day from the tape
+in about 12 minutes and the manifest confirms the bytes.
+
+The earlier selected-tick book records under `field-rebuild-20261113/book_records/` were built on the book that
+restarted every order's age at 00:00 UTC. They are removed; these replace them.
