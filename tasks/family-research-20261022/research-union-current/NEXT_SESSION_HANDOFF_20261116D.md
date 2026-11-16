@@ -36,8 +36,8 @@ as the starting point; C lists as open several things that are now closed.
 
 ## Waiting on Greg
 
-1. Approval of `SPEC-root.md` part 1.
-2. The word "delete" for `OLD_MATERIAL_REMOVAL_LIST.md` (four groups; group 4 was added after he first saw the list).
+(Part 1 was APPROVED and the old material DELETED later the same session; see the decisions file.)
+
 3. `web.archive.org` allowed on the "Markets" cloud environment, if X12 is wanted before the later update. Greg adds
    it by hand; the service rejected the request when it was in a list with other sites.
 4. Permission for Markets branches other than the session's, when old ROOT code is deleted there.

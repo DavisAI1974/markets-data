@@ -1,6 +1,6 @@
 # Spec: the new ROOT, part 1: the foundation
 
-Status: DRAFT for Greg's approval, 2026-11-16. No code is written until he approves it.
+Status: APPROVED by Greg, 2026-11-16 ("Foundation is good"). Built on Opus with the Fable advisor.
 This covers the foundation of ROOT. The calculations that are added on top of it are part 2 and are not designed
 yet (see "Part 2" below).
 Every decision in it is recorded, in Greg's words where he gave them, in `ROOT_GAMEPLAN_DECISIONS.md`.

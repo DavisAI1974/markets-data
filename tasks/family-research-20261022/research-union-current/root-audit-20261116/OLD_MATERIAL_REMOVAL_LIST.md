@@ -2,8 +2,9 @@
 
 Greg, 2026-11-16: "As long as we know how and why the old stuff exists we have the important part."
 
-This is that record, and it is the list of what is removed from the research folder when Greg says "delete". **Nothing
-has been removed yet.** It records what each thing is and where it came from. It records no result, number or finding.
+This is that record, and the list of what was removed from the research folder. **Removed on 2026-11-16 on Greg's
+word ("Delete for old data that wasn't entered this morning"), in one commit: 672 files, groups 1 to 4 below.** The
+last commit that holds them is the parent of that commit. It records what each thing is and where it came from. It records no result, number or finding.
 
 Every item is on branch `ccr-349e2ffe-07p8od` up to and including the commit that adds this file, so it can be found
 again there. Copies also sit on three older branches of markets-data (`codex/research-union-four-days-20261109`,

@@ -607,6 +607,20 @@ So:
   every trade), so nothing of Step 1 is lost when the old workbooks go. The 2021 base outputs themselves were
   reported in the second session to be in the sealed package on AWS, which cannot be reached today.
 
+**ROOT part 1 APPROVED by Greg, 2026-11-16: "Foundation is good."** The build starts on Opus with the Fable advisor:
+first the `outside` point tables (approved), then `calendar`, `tape`, `book`, `rows`, `store` and `checks`.
+
+**The old material DELETED, 2026-11-16 (Greg: "Delete for old data that wasn't entered this morning").** One commit,
+672 files: groups 1 to 4 of `root-audit-20261116/OLD_MATERIAL_REMOVAL_LIST.md`. The folder went from 2.1 GB to
+294 MB. Kept and checked after the delete: the raw order tape, the outside source files collected today, the redesign
+and audit folders, the field names and reference documents, the replay used to establish the book, the handoffs.
+The workbook frame tool still runs. A new folder README replaces the old one.
+
+**Why the Step 1 columns are empty (Greg, same message):** "We didn't do step1 in excel because we decided to wait
+until we entered the new data." So the empty Step 1 columns are by decision, not a gap; they are filled when the new
+data is entered, base and growth side by side. Greg: "Look in git for step 1": the search for where the 2021 base is
+kept in git is under way.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
