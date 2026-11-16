@@ -1314,6 +1314,18 @@ limits on the st1 and 2 outputs. I don't need a master list."**
 - Claude's reading notes on the old programs are working notes of the session and are not saved (his rule on what
   is saved).
 
+**The workbook frame DELETED (Greg, 2026-11-16, seventh session): "Delete frame."** `ROOT_workbook_frame.xlsx`
+(an empty workbook of 153 column headers made before the build) and `tools/make_workbook_frame.py`, the program
+that made it. Nothing used them: the rows have 217 columns and `root/sheet.py` writes its own READ ME and COLUMNS
+sheets. It held no market data.
+
+**Where the limits are (Greg, same message):** "I would think that the limits we need to eliminate are in the py
+files that run those 2 calcs." Yes. They are in the programs that ran Step 1 (the one that finds the events and
+the ones that link them into chains) and Step 2 (the ones that describe the chains). Those programs cannot be run
+as they stand on the four trade days: they read a one-second, top-10-level input cut on UTC clock days, which is
+itself a limit and is not held for these trade days. So each is carried into `root/calcs/` as the same calculation
+reading the tick rows, with its limits off, laid out and approved first.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
