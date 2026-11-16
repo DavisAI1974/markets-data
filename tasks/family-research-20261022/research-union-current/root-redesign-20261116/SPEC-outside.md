@@ -1,6 +1,7 @@
 # Spec: the `outside` part of ROOT (the 13 outside data points)
 
-Status: DRAFT for Greg's approval, 2026-11-16. No code is written until he approves it.
+Status: APPROVED by Greg, 2026-11-16 ("Yes I approve it"). Not built yet. The build is done on Opus with the Fable
+advisor; the first thing built is the point tables and their small workbook.
 It is one part of ROOT part 1 (`SPEC-root.md`, section G). Decisions behind it: `ROOT_GAMEPLAN_DECISIONS.md`.
 
 ## Objective

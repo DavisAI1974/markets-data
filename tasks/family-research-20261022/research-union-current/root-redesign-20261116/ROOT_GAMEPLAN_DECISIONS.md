@@ -566,6 +566,10 @@ authorities and no national row; adding them up ourselves would be a choice and 
   `SPEC-outside.md` are settled as stated calls in that file (the details of fix 3, and a small workbook of the point
   tables), for Greg to correct when he reads it.
 
+- **`SPEC-outside.md` APPROVED by Greg, 2026-11-16: "Yes I approve it."** This is the first approved part to build.
+  It is built on Opus with the Fable advisor. First the 13 point tables and their small workbook; pinning onto ticks
+  when the rows exist.
+
 **Making the 13 from these files is the `outside` part of ROOT and is a build:** it gets its short specification
 (each point's source, formula and timing, with the fixes already decided), Greg's approval, and then the switch to
 Opus. The old builder is not rerun, because it carries what was ruled wrong. The 13 go onto the sheet when the ROOT
