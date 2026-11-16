@@ -1,8 +1,12 @@
-# Crypto files: proposed move to the `archive/crypto` branch (2026-11-16)
+# Crypto files: moved to the `archive/crypto` branch (2026-11-16)
 
-For Greg's sign-off. **Nothing has been deleted from the trunk.** The branch `archive/crypto` exists and is a full
-snapshot of the trunk at `676322d` (taken after the fee and fill rules were stripped), so every file below is
-already safe there.
+**Done 2026-11-16, on Greg's go.** The 173 files below were removed from the trunk (`930a360`) and from the
+research and session branches (`b69c879`). All of them are on branch `archive/crypto`, a full snapshot of the
+trunk at `676322d` (taken after the fee and fill rules were stripped). Greg's decisions: keep `odcore/` whole on
+the trunk, and apply the same removal to the other two branches.
+
+Checked on each resulting commit: every remaining Python file compiles, the kept modules import (the `odcore`
+tools, the Kalshi programs, the news pipeline, the desk app), and both self-tests pass.
 
 How the list was made: every Python file on the trunk was parsed for its imports, and every workflow, deploy
 file, shell script and Claude skill was searched for file names. 107 Python files are reached from the live
@@ -70,13 +74,10 @@ The whole folder.
 | `desk/`, `deploy/`, `data/`, `artifacts/`, `tasks/`, `.github/`, `.claude/` | Live: the natural-gas desk service, the AWS units, the workflows. `desk/app.py` does not use `backend/` or `frontend/`. |
 | Kalshi-era kickoffs and handoffs (S78 on) | Not crypto. |
 
-## Edits that go with the delete
+## Edits made with the removal
 
-- `CLAUDE.md`: the pointers to `CLAUDE_ARCHIVE_OD.md`, `S36_NETCOST_BACKTEST_FINDINGS.md` and the S36 handoffs say "on branch `archive/crypto`".
-- `KALSHI_TRADING.md`: the same pointer, one line.
-- Nothing else needs to change. The remaining mentions of moved files are comments naming where a function was ported from. `odcore/fingerprint.py` tries to import a constant from `backend/api_server.py` that does not exist there, so that import already fails today and the move changes nothing.
-
-## Questions
-
-1. `odcore/`: keep the whole package on the trunk (default), or move the twelve modules nothing live imports, with `tests/` and `scripts/`?
-2. The same delete on the research branch `research/markets-adaptive-wavepacket-migration-20261108` and the session branch (default: yes, same list).
+- `CLAUDE.md`: the pointers to `CLAUDE_ARCHIVE_OD.md`, the S36 findings and the S36 handoffs say "on branch
+  `archive/crypto`", and the archive section states the rule: crypto files live on that branch; new crypto work,
+  if any, goes there and not on the trunk.
+- `KALSHI_TRADING.md` and the `full-run-orchestrator` skill: one pointer each.
+- The remaining mentions of moved files are comments naming where a function was ported from.

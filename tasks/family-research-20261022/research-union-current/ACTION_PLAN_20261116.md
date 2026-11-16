@@ -270,6 +270,9 @@ Greg expects this may be small, because some steps right after ROOT were redone 
   size-vs-fee wall, the spread toll and pooled hit-rate evaluation. Trunk `676322d`; research and session
   branches `b20ab9c`. Three documents built on them are gone and `release_signal_history.py` writes one record
   per read. Detail in the same record file.
+- **Crypto files live on branch `archive/crypto` (Greg, 2026-11-16).** 173 crypto-only files were removed from
+  the trunk (`930a360`) and the research and session branches (`b69c879`) after an import check. `odcore/` stays
+  whole on the trunk. List and checks: `root-audit-20261116/CRYPTO_ARCHIVE_MOVE_LIST.md`.
 - **Kalshi rules start fresh, for Kalshi only.** None is written yet, so none is assumed anywhere. This is now a
   standing rule in Markets `CLAUDE.md` and in the `kalshi-backtest` skill. Writing them is future work with Greg.
 - `level_hit_dataset.py` still prints a mean per cell, which is against the no-averages rule; left as it was.
@@ -307,9 +310,8 @@ Greg expects this may be small, because some steps right after ROOT were redone 
    research projects are listed by intended result and research angle only; their results are not kept.)
 4. Permission, or his own hand, for pushes to Markets branches other than the session's.
 5. Go and budget for pods when the first full run is ready.
-6. The items left in place after the rule removals (older handoffs and kickoffs, the old Kalshi study
-   scripts, the fixed numbers inside the Kalshi programs, five crypto files that read a fee-net label,
-   `odcore/sizing.py`, the crypto signal service, crypto collectors, other Markets branches): delete or keep. Listed in `root-audit-20261116/BITCOIN_ERA_RULES_REMOVAL.md`.
+6. The items left in place after the rule removals (Kalshi-era handoffs and kickoffs S78 to S92, the old
+   Kalshi study scripts, the fixed numbers inside the Kalshi programs, other Markets branches): delete or keep. Listed in `root-audit-20261116/BITCOIN_ERA_RULES_REMOVAL.md`.
 
 ---
 

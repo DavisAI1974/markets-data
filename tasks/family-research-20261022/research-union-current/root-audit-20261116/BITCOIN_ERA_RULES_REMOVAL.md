@@ -76,19 +76,15 @@ Checked: `research/kalshi` compiles; the edited module and its three importers i
 
 ## Left in place, for Greg to decide
 
-- **Older handoffs and kickoffs** (S20 to S92, about 60 files) and `S36_NETCOST_BACKTEST_FINDINGS.md`,
-  `CLAUDE_ARCHIVE_OD.md`: dated records that still carry the old rule text. `CLAUDE.md` says not to copy
-  from them. Delete the superseded ones whole?
+- **Older Kalshi-era handoffs and kickoffs** (S78 to S92, about 30 files): dated records that still carry the
+  old rule text. `CLAUDE.md` says not to copy from them. Delete the superseded ones whole? (The crypto-era
+  ones, S20 to S38, went to branch `archive/crypto` with the other crypto files; see
+  `CRYPTO_ARCHIVE_MOVE_LIST.md`.)
 - **Old Kalshi study scripts** in `research/kalshi/hist/` (7 scripts and their result files), listed in the
   file index as old and off the live path. Studies, not rules, so left.
 - **Fixed numbers inside the Kalshi programs** (60 s bins, a 20-bin window, a 1,800 s settle guard, a 120 s
   pause, the $350 and $500 play thresholds in the coach brain). These are the same kind of ahead-of-time
   decision the ROOT redesign removes, but they are the programs' working parts, not leftovers.
-- **Five crypto pipeline files that read a stored label already net of a fee** (`_build_episode_onsets`,
-  `_build_onset_coeff_lists`, `vendored_build_kit/_build_sameperiod_cand`, `_eligible_cross_section`,
-  `_run_clean_rerun`). They do no fee arithmetic themselves.
-- **`odcore/sizing.py`**: crypto-era position sizing with no cost term. Its only user was the removed executor.
-- **`backend/api_server.py`**: still a crypto signal service with a 30-minute hold and a 120-minute abandon rule.
-- **Crypto collectors and their runner scripts** (`phase1_progressive_run.sh`, `kraken_checkpoint_watcher.sh`,
-  the crypto pull in `scripts/session_start.sh`): no rule in them.
+- **`odcore/sizing.py`**: crypto-era position sizing with no cost term. It stays with the rest of `odcore/`,
+  which Greg kept whole on the trunk.
 - **Other Markets branches** (the Frankie branch, the Codex branches) were not touched.
