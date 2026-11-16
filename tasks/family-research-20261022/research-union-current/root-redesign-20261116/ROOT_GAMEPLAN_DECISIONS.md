@@ -259,9 +259,35 @@ Fingerprints of these two files recorded in older manifests in this folder are t
 Not done: the 500 MB R2 workbook is a GitHub release file, not a file in the repository, and this session has no
 tool that can replace a release file.
 
-## Piece 3
+## What ROOT contains: the split (AGREED by Greg, 2026-11-16)
 
-Not yet settled. What ROOT calculates after the book and the per-tick record is decided fresh.
+Greg: "Yes I agree with that split. We can keep roots purpose the same as before with the addition of pinning things
+together."
+
+**ROOT holds what the tape says directly at each tick. Anything that first needs a pattern to be defined waits for the
+stage after ROOT.**
+
+In ROOT:
+- the one timeline, with everything not calculated by ROOT pinned onto it (piece 0), including the 13 outside points;
+- the order book for the week (piece 1) and the book columns (group 3);
+- the per-tick record, the native tape one row per tick (piece 2, group 1), with our labels (group 2);
+- the order histories and the contract and session (group 4);
+- L047: each action's side and how many levels from the best price it happened at;
+- L048: each trade's side and size as the tape gives them (adding trades up into "flow" over a stretch waits);
+- L052: the path of the best prices and of trade prices, tick by tick;
+- L053: anything irregular or missing, flagged on its tick;
+- L074: when each tick could first be known.
+
+After ROOT (each needs a definition first): L049-L051 (depletion and refill, recovery, turnover); L059-L066 (dipoles,
+family geometry, ancestry, chains); L067-L071 (pre-births); L075, L076; S01-S19.
+
+With Step 1, handled separately: L054-L058 (the "legacy" columns made to match the 2021 work).
+
+**Vendor snapshot records.** Each raw file opens with the vendor's own restatement of the book. These are not
+messages from the exchange at that moment, so they are not ticks. They are kept in their own table beside the
+timeline, each compared with the carried book and the result recorded. Records in a raw file = tick rows + snapshot
+records, and the README page states both counts so they reconcile. (The Sunday clear and the exchange's re-listing of
+carried orders are rows on the timeline, marked.)
 
 ## Facts established in this session (real tape and exchange documents)
 
@@ -286,6 +312,8 @@ Not yet settled. What ROOT calculates after the book and the per-tick record is 
 
 ## Consequences to carry into the specs (not acted on yet)
 
+- Before any full line of orders is promised inside an Excel cell, measure the longest line at one price on the real
+  tape: a cell holds at most 32,767 characters. This does not block the gameplan; it does block writing the workbook.
 - The 2026-11-16 trade-day rebuild cut each trade day at 5 pm Eastern on both sides, so its message counts
   (820,642 / 879,830 / 846,406 / 771,787) include the 5 pm to 6 pm hour at the front. With the trade day as 6 pm to
   5 pm and that hour as its own stretch, the per-trade-day message counts are restated. Trade counts do not change,
