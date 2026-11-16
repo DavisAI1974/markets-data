@@ -411,6 +411,26 @@ have root calcs to figure out."
   playback. Greg, restating the idea: "So everything is calc and pinned correctly for the next steps and we
   eliminate some separate processes and do them all at once instead of split up."
 
+## What Frankie sees, and the answer key that is hidden from him (Greg, 2026-11-16)
+
+Greg: "He can still have the classroom where he learns about dipole and does things on his own to further research
+and for his own knowledge base to apply later on things that we have figured out ahead of time. He's still doing his
+thing but we have done it for the historical data so when he's doing his analysis in real time it's also been done
+already so we can check his analysis against it. We just have to hide that from him and the other calculated pieces.
+It'll be like the blind forecast where we know what happens and he's coming up with his answers and we'll score him."
+
+- Frankie keeps his classroom: he learns why and how things such as the dipole work, does his own research and
+  builds his own knowledge to apply later.
+- For the historical trade days we have already worked the same things out and calculated them in ROOT. That is the
+  answer key.
+- In playback Frankie does his own analysis tick by tick without seeing the answer key. His answers are then scored
+  against it, as in the blind forecast.
+- So every column on the timeline carries a mark: shown to Frankie in playback, or answer key (hidden from him, used
+  to score him). Playback serves only the shown columns.
+- Which calculated columns are shown and which are answer key is decided with Greg, calculation by calculation.
+  Until it is decided for a column, a calculated column is treated as hidden.
+- This corrects the earlier note in this file that the calculated data is all shown to Frankie one tick at a time.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

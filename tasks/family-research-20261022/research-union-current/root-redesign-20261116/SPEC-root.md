@@ -114,6 +114,17 @@ Each row carries the following. "Touched" means the order or price that this tic
 - Columns that later calculations will fill are present and empty until then. Reference fields that name
   background documents (L001 to L026, L081, L082) are not market data for a tick and are not on these sheets.
 
+### 4. Shown to Frankie, or answer key
+
+Greg: "We just have to hide that from him and the other calculated pieces. It'll be like the blind forecast where we
+know what happens and he's coming up with his answers and we'll score him."
+
+- Every column carries a mark: shown to Frankie in playback, or answer key (hidden from him, used to score his own
+  analysis).
+- Playback serves only the shown columns, one tick at a time.
+- Which calculated columns are shown is decided with Greg, calculation by calculation. Until then a calculated column
+  is treated as hidden. The message as the tape has it (section A) is shown.
+
 ## What the foundation does not do
 
 The foundation does not do these. They are part 2 or later work:
@@ -286,6 +297,9 @@ def trade_day_bounds(trade_day: date) -> tuple[int, int]:
    were stored yesterday.
 5. **The exact column list.** Sections A to G say what a row holds. The list of column names, their order and which
    workbook field each one fills is drafted at the planning step and brought to you before the `rows` part is built.
+6. **What Frankie sees.** Of the foundation's own columns (sections B to G), which are shown to him in playback and
+   which are answer key? Proposed for you to correct: the tape, the labels, the book facts and the 13 outside data
+   points are shown, since they are the market as it stood; anything that marks a pattern we worked out is hidden.
 
 ## Part 2: calculations added on top (not designed yet)
 

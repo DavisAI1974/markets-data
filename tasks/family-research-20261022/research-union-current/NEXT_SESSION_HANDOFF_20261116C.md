@@ -33,8 +33,11 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. Pushes to it work f
   time and calculated in ROOT; Frankie learns and recognizes, he does not calculate.
 - **Working out those calculations is the calculation inventory**, laid out Greg's way for every one: what we want it
   to calculate, what is calculated today, and what changes. It has not been started beyond reading.
-- **Why all of this:** the calculated data for a trade day is filled in beforehand and shown to Frankie one tick at
-  a time, so he learns to recognize things as they unfold and sees what else is changing at the same moment.
+- **Why all of this:** each trade day is worked out beforehand and played back to Frankie one tick at a time. He
+  sees the market as it stood and does his own analysis; our worked-out answers for that trade day are an answer key
+  hidden from him, and he is scored against it, like the blind forecast. He keeps his classroom, where he learns why
+  and how things such as the dipole work. So every column is marked either shown to Frankie or answer key; which
+  calculated columns are shown is decided with Greg, and until decided a calculated column is hidden.
 
 ## What was done to files in this session
 
