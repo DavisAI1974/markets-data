@@ -1538,6 +1538,17 @@ commit `092e77f`; that file is the fuller record and holds every layout).**
   Step 2 groupings of chains (lifespan, pieces, growth) are kept as the base for that stage, on his word.
 - "Finish your stuff first": the code session's own Step 1 work comes before the Step 2 build.
 
+**The chain link models: layout APPROVED (Greg, 2026-11-16, seventh session): "Do it."** The layout as put to him
+is in `STEP1_STEP2_LAYOUTS.md`, piece 4. In short: what a peak "did" is taken from piece 2 with no fixed moments;
+each trade day is scored by models taught on the other three; the peaks before are those whose stories had ended
+when the peak became known; nothing is thinned or dropped; no depth is written; the first six steps back are shown
+to him before going further. It is called "the chain link models" from here on (Step 2 has its own piece B). It is
+built after Step 2's piece A and is the piece for the pods; no pod starts without his go at the time.
+
+**A new chat (Greg, same message): "New chat first?"** Yes: this session had grown long. Handoff written as
+`NEXT_SESSION_HANDOFF_20261116G.md`. Nothing was left half built: Step 2's piece C and the quote's runs were
+being prepared (the counting rules read off trade day Oct 2 are in the handoff) and no code for them exists yet.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

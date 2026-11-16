@@ -266,6 +266,36 @@ The shape, as played back to him:
   go is settled with him from what the values show.
 - When it is known: a peak's link values are known when its own story has ended, and are recorded at that tick.
 
+**The layout, APPROVED by Greg 2026-11-16: "Do it." Not built. It is called "the chain link models" from here on,
+because Step 2 now has its own piece B.**
+
+What we want: for every peak, how much knowing the peaks before it helps say what it did. Written per peak, for
+each step back, for each of the three models. Full values and no depth number.
+
+What it did: three models (ridge, nearest neighbours, extra trees) predicted what an event did from the events
+before it. "What it did" was 22 numbers: same side as the next event or not, and the price move, best move and
+worst move at seven fixed moments after the ending. The gain at a step back was the error without that earlier
+event minus the error with it. Taught on 18 to 48 weeks; rows above a limit were thinned out; depth stopped at 12;
+an event missing any of the seven moments was dropped.
+
+What changes:
+1. What a peak "did" comes from piece 2, with no fixed moments. For every peak whose story has ended: its size,
+   the time from the low to the high, how its story ended (came back or beaten), how long that took, how far it
+   faded, the number of steps down, the price move from the high to the end, the best and worst price along the
+   way, and same side as the peak before or not.
+2. Taught on the other three trade days: each trade day's peaks are scored by models that never saw that trade
+   day.
+3. Only what was known: the peaks before are the ones whose stories had already ended when this peak became
+   known. A peak's own values are written at the tick its story ends.
+4. Nothing thinned, nothing dropped. Every peak with an ended story is scored. The one or two still open at 5 pm
+   are empty with that reason.
+5. No depth and no "member of a chain". Only the values.
+6. How far back: the first six steps back are run and shown to Greg; how much further is settled with him from
+   what they show.
+7. Model settings stay as the original's fixed lists, chosen inside the three teaching trade days.
+It reads the links of Step 2's piece A, so it is built after A. It is the piece for the pods: four at once, one
+per held-out trade day. No pod starts without his go at the time.
+
 The choice as it was put:
 
 **What it did.** A chain link was not read off the tape. Three models were taught, on blocks of 18 to 48 weeks,
