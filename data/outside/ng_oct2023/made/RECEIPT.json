@@ -7,9 +7,9 @@
   "2023-10-17",
   "2023-10-18"
  ],
- "last_halt_ns": 1697662800000000000,
- "last_halt_eastern": "2023-10-18T17:00:00-04:00",
- "rule_for_rows": "only values known before the last trade day halts; the source files hold the rest",
+ "cut_ns": 1697666400000000000,
+ "cut_eastern": "2023-10-18T18:00:00-04:00",
+ "rule_for_rows": "only values known before 6 pm Eastern on the last trade day (the end of the last written row); the pinning refuses a row received at or after it; the source files hold the rest",
  "inputs": [
   {
    "stored": "raw/cot/fut_disagg_txt_2020.zip",
@@ -534,8 +534,8 @@
   {
    "table": "forecast_city_runs.csv.gz",
    "rows": 72048,
-   "bytes": 1164782,
-   "sha256": "3ffdbfa3b17c8e2ffff677c92a8bede7b523852fc86c9512446439365e5b72f4"
+   "bytes": 1168306,
+   "sha256": "ddf0dcf1c3a76d7aa262b27e66b41025b552283637e31ffe06d6496a000b7d43"
   },
   {
    "table": "forecast_gas_weighted.csv",
@@ -546,8 +546,8 @@
   {
    "table": "forecast_on_row.csv",
    "rows": 16,
-   "bytes": 1870,
-   "sha256": "8e664fde228ee1c3686d07737895751a9f9084fabd70bb931aad06caf627de2c"
+   "bytes": 6533,
+   "sha256": "bf57279128dbcf19aa17a3cd8eb22db8597d90a6bafbbd4fa76286dc16c3fc67"
   },
   {
    "table": "forecast_disagreement.csv",
@@ -557,9 +557,9 @@
   },
   {
    "table": "weather_readings.csv.gz",
-   "rows": 53148,
-   "bytes": 1285169,
-   "sha256": "0cd2a9f400cb65ae528b9a9cf979232549d248a69bd707c1395aa4eb2ea62a04"
+   "rows": 53597,
+   "bytes": 1298519,
+   "sha256": "ba0f273cd4b3d04499f734d2251b4bdccfc6553e5bff492eec8e5db1e0c59aaf"
   },
   {
    "table": "weather_gas_day_city.csv",
@@ -574,16 +574,22 @@
    "sha256": "5aff6b054c1f325b7d55eb59b2cc671494b20d62d4f53395680754ccdcdd71b0"
   },
   {
+   "table": "weather_hourly_city.csv",
+   "rows": 4282,
+   "bytes": 556738,
+   "sha256": "752885b54d86b86af383b6638267a4a9270392a669c897632b97cc8fd0b22f31"
+  },
+  {
    "table": "grid_hourly_all.csv.gz",
-   "rows": 50755,
-   "bytes": 348339,
-   "sha256": "3bf893bd60f1e55360685fc1c1ee0943b988099f5d7e460edccfa32126ba903a"
+   "rows": 50837,
+   "bytes": 353156,
+   "sha256": "40010eae580d4a57d9ccbe3859b3c06292b52ccede5175d999295fe0795298e2"
   },
   {
    "table": "grid_us48.csv",
-   "rows": 619,
-   "bytes": 52004,
-   "sha256": "7b1f0a2fbd82c6883fbaa8a232b5782d7cd331ed32970939aedcdbe488eac9cc"
+   "rows": 620,
+   "bytes": 52088,
+   "sha256": "d04c2a80559c7963acfb251b4345f38500e86c4b23c98bfd5470aa3e6ae81040"
   },
   {
    "table": "expiry.csv",
@@ -594,20 +600,20 @@
   {
    "table": "curve_definitions.csv.gz",
    "rows": 44944,
-   "bytes": 189469,
-   "sha256": "6eb9684f4e56ed8e02b23095e0cde34a8c335708731c6caeadfe140c9f853697"
+   "bytes": 192470,
+   "sha256": "8ba2e3fcc7273d9d1b22b08be51d41645a8b17753ac15e6218105cf2e015c8d9"
   },
   {
    "table": "curve_statistics.csv.gz",
-   "rows": 157561,
-   "bytes": 2269389,
-   "sha256": "0f243ffd86cac87e556f6f20d5da7640b9724dcce63ac9c71a2272a9c626d49e"
+   "rows": 166223,
+   "bytes": 2412673,
+   "sha256": "e9e9b3629e6c885e21adadd85080de79aa46f99ded756fb9c7b923828f2cadf7"
   },
   {
    "table": "curve_trades.csv.gz",
    "rows": 600081,
-   "bytes": 8655443,
-   "sha256": "88de4456c13b4c3025caf109cda75eb63203f1246ee48071ec5a694c970efbe4"
+   "bytes": 8920825,
+   "sha256": "bb559c87042002e4098c80d6f47c4c92a8dd85248a1079a025487f7391e7277e"
   },
   {
    "table": "curve_settled_shape.csv",
@@ -618,8 +624,8 @@
   {
    "table": "curve_traded_shape.csv.gz",
    "rows": 93643,
-   "bytes": 1219258,
-   "sha256": "548ca780db51cc7723ea40714088c2b1adc860a3f53084e41f55337cea335284"
+   "bytes": 1262987,
+   "sha256": "5da8cbe23d33d18b59d416285f1e2ffeaf1264b4bed7361d0524096e42b2bd54"
   },
   {
    "table": "storage_weekly.csv",
@@ -701,7 +707,7 @@
   {
    "table": "curve_statistics.csv.gz",
    "cells_by_column": {
-    "price": 63982
+    "price": 70352
    },
    "reason": "price: the statistic has no price (a quantity only); raw_symbol: no definition known for that instrument"
   },
