@@ -1293,6 +1293,16 @@ programs it names are gone and where the same facts are proved now.
   are the view. Each part is read back against the stored rows (criterion 11), and the parts together must hold
   every row of the trade day once.
 
+**Standing rule (Greg, 2026-11-16, seventh session): "And we do not save any data that is bad or incomplete that
+we won't be using."**
+- Data that is wrong, or incomplete, and will not be used is not saved: not to git, not on a branch, not beside the
+  good data "just in case".
+- How it is applied: an output that fails its check is not pushed; when a rebuild replaces something, the old one
+  goes in the same change; scratch work of a session stays out of git.
+- This does not touch "we don't drop any data": that rule is about ticks and rows inside a build. This one is about
+  which outputs are kept.
+- A deletion of something already saved still goes to Greg first, with what it is and why it exists.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
