@@ -1206,6 +1206,29 @@ itself is not stored yet.
 **Not done in this session:** the delete list was not shown; no Step 1 or Step 2 calculation was laid out; the list
 of hard-coded limits in the Step 1 programs is still owed.
 
+## Seventh session (2026-11-16, in a code session, on Fable with the Fable advisor)
+
+Started from `NEXT_SESSION_HANDOFF_20261116F.md`.
+
+**Where the code is.** Markets branch `ccr-ebe7e38d-wwccru` (the session's own). The ROOT branch
+`claude/root-session6-017eY1` (`b39e10a`) was merged in as the handoff says (`2261e29`). One conflict, in Markets
+`CLAUDE.md`: the session branch did not have the paragraph "ONLY THE FOUR TRADE DAYS ENTER A CALCULATION"; the ROOT
+branch did. **Claude's call, stated to Greg:** the paragraph is kept. Nothing went to the trunk.
+
+**The four stored trade days: confirmed (a look only).** The newest commit on each of `root-rows-20231002`
+(`806ee43`), `-20231003` (`7b0f5d7`), `-20231017` (`cdcc525`) and `-20231018` (`aa226d1`) is the rebuild with the
+words "no orders". Nothing was rebuilt.
+
+**The short stretch of the sheet: STORED.** `ROOT_short_stretch_20231002_0900.xlsx` in this folder, written from
+the stored rows of trade day Oct 2 (`806ee43`) by `root/sheet.py`: 20,000 rows from 9:00:00 to 9:06:38 am Eastern,
+217 columns, 19,908,777 bytes (19.9 MB, 995 bytes a row), 19 seconds to write, read back equal to the stored rows.
+At today's 217 columns that implies about 817 MB for the sheet of trade day Oct 2 and about 3.3 GB for the four.
+The full workbook is written once, after the calculation columns exist, so it will be larger than that.
+
+**`using-agent-skills`** (the Markets router) did not load in this code session either: the plugin is named in
+Markets `.claude/settings.json` but was not installed in the session's container. The repository's own skills
+(`repo-conventions` and the others) did load and were used.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
