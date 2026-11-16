@@ -40,3 +40,29 @@ first published cannot come from it; that is said below.
 | X11 | the weekly change and the five-year comparison exactly as printed in each report | The EIA's files give the level before revision, region by region. The change and the five-year figures as printed were on the report page of that week, which the EIA does not keep; saved copies are on the Internet Archive. Whether they are taken from there or worked out from the levels is decided in the `outside` specification. |
 | X01, X03, X04, X08 | the time each October 2023 report was published | The CFTC's release schedule page as served today lists 2026 only (`raw/cot/cftc_release_schedule.html`). The published time for the 2023 reports needs another source. On the usual weekly timetable (Friday 3:30 pm Eastern, a business day later in a holiday week) no positioning report, and no Thursday storage report, comes out inside any of the four trade days, so this affects the time written beside a value, not which value a row holds. |
 | X05, X07 | the grid figures as first published | The EIA keeps the current revision only. |
+
+## Completeness check (2026-11-16, on Greg's word: "any raw data collected today stays but double check it")
+
+Every check below was run on the files as stored.
+
+- **Manifest:** all 142 files are present with the stated size and fingerprint; each compressed file unpacks to the
+  bytes as served; no file is on disk that the manifest does not list; no fetch was refused.
+- **Positioning:** 52 weekly reports in each of 2020, 2021, 2022 and 2023 for each of the five gas contract codes.
+- **Forecasts:** no model run is missing for any of the 16 stations and three models over Sep 20 to Oct 19, 2023.
+- **Curve:** on each of the four clock-day files checked (Oct 2, 3, 17, 18), the trades of the front contract in the
+  curve file are identical, in count, time, price and size, to the trades on the front-month order tape already held
+  (37,917 / 41,381 / 33,706 / 30,811).
+- **Grid data from the EIA service:** every page holds all the rows the service says exist. US48 and five regions have
+  every hour for every fuel. ERCO is short three hours in its demand table (Oct 4 05:00, Oct 12 16:00 and 17:00 UTC);
+  none is on one of the four trade days.
+- **Hourly station readings (1,464 hours per station):** 14 of the 18 stations have a routine reading with a
+  temperature in every hour. The gaps are in the station record itself, not in the fetch (the all-reports file has
+  nothing in those hours either):
+  - Boston: no routine reading in the hour of 12:00 UTC on Oct 2, 2023 (8 am Eastern, inside trade day Oct 2). The
+    readings on either side are 11:54 and 13:20 UTC.
+  - New York (Central Park): none in the hour of 06:00 UTC on Oct 1, 2023 (before trade day Oct 2 opens).
+  - Austin and Washington: one hour each, not near the four trade days.
+  - Seattle: three routine readings carry no temperature (Sep 6, Oct 19, Oct 21; the station flagged a sensor fault).
+  A missing hour stays missing. It is not filled from a neighbouring hour or another station.
+- **Still not held:** the street estimate of storage (X12), and a record of when each October 2023 positioning report
+  was published. Both are listed above with the reason.

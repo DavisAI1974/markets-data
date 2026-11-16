@@ -568,6 +568,14 @@ old assembly programs, file lists and old handoffs that would rebuild or point b
 writing it: the Step 1 fields are empty in the old workbooks, so no Step 1 value is lost; and `main` does not hold
 the old workbooks, but three older `codex/` branches do. **Nothing is deleted until Greg says "delete".**
 
+**The raw data collected on 2026-11-16 stays (Greg):** "Correct, any raw data collected today stays but double check it
+to make sure its complete." Checked the same hour; the result is in `data/outside/ng_oct2023/README.md` under
+"Completeness check". All 142 files match the manifest. Positioning, forecasts and the curve are complete (the curve
+trades of the front contract are identical to the trades on the order tape held, on all four clock-day files
+checked). The gaps found are in the sources themselves: a handful of single hours in the station records (one of
+them, Boston at 8 am Eastern on Oct 2, is inside a trade day) and three hours of one region's demand table. A missing
+hour stays missing.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
