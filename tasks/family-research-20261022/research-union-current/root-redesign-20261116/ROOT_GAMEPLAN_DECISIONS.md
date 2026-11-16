@@ -107,6 +107,38 @@ have full mbo, and anything else that isn't calc by root."
 calculated by ROOT, calculated by a later stage, or Frankie's; and find where the outside data files for the four
 trade days are kept. An outside value that cannot be found stays empty with a note.
 
+## The workbook's 141 fields: start fresh (Greg, 2026-11-16)
+
+Greg: "We should probably delete all of the column data that was calc from something else and just keep raw data
+that we get from historic data. Just start fresh and not try to sort out good and bad when most if not all calc data
+on there isn't right." And: "I don't know if the raw data is even fine because we didn't use the correct clock."
+And: "Step 1 is going to be different initially don't wipe it. Let's do the other column first."
+
+- **Nothing is carried over from the old sheet, not even its raw columns.** The sheet's raw columns came through the
+  old archive, which was cut on the wrong clock (two trade days missing their first two hours, numbering off, trades
+  only). The starting point is the raw MBO in the vendor's native format (`data/nymex_mbo/ng_v0_oct2023/`, seven UTC
+  clock-day files with fingerprints in `MANIFEST.json`) and the outside published numbers with their publication
+  times. Everything else is laid down fresh on the new timeline.
+- **Exception: the Step 1 fields are not wiped.** They are handled differently and later. The other columns are done
+  first.
+- **One run.** Greg: "there's no reason to do 2 separate runs." The old split into a "legacy" pass and a "bedrock"
+  pass, with a second trip over the tape, goes away. Every ROOT calculation is done in the one pass.
+- Nothing has been deleted. The old workbooks and their calculated columns are on the lineage delete list, which
+  still waits for Greg's sign-off.
+
+How the 141 fields fall (10 trade labels, L001-L099, X01-X13, S01-S19; names from
+`field-rebuild-20261113/LAYER_REGISTRY.json`):
+
+| Kind | Fields | Count | Treatment |
+|---|---|---:|---|
+| Straight from the tape | trade id, event clock, receive clock; L027, L028, L030-L036; L072, L073 | 14 | laid down fresh from the raw MBO |
+| Our own labels and bookkeeping | day, trade ordinal, trade cursor, known-by clock, coverage, source revision, source path; L029 | 8 | remade fresh |
+| Calculated from the tape | L037-L071; L074-L076; S01-S19 | 57 | start empty, calculated fresh |
+| 2021 Step 1 answers | L080, L083-L089 | 8 | NOT wiped; handled differently, later |
+| Frankie's outputs | L077-L079, L090-L099 | 13 | blank |
+| Reference documents, not data for these trade days | L001-L023, L025, L081, L082; L024, L026 (2021 tape objects) | 28 | not on a per-tick timeline; untouched |
+| Outside data points | X01-X13 | 13 | open: most are calculated by our own builder from published numbers (for example 1-year and 3-year positioning percentiles, a week-over-week change, estimate against actual, a curve shape). Claude's proposal: keep the published numbers as the raw data and redo the 13 fresh. Greg has not answered. Not yet checked: whether the underlying published numbers for the four trade days are held. |
+
 ## Piece 1: the order book (CLOSED by Greg, 2026-11-16)
 
 **What we want**
