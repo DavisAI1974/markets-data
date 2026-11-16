@@ -55,6 +55,9 @@ Greg: "I want to keep roots purpose the same. I don't believe we did that well b
   learned on the 1st." So: a value at a tick may use only data that had arrived by that tick. A discovery about how
   the market works (a definition, a family, what dictates what) may come from any of the trade days and be applied to
   all of them, in any order. The exchange calendar (holidays) is the exception, because it is a fact of its date.
+- **Old work that gets replaced is not written up.** Greg: "We don't need to document old work that gets replaced.
+  If something is wrong it gets fixed and we move on." This file records what is decided for the new build, not what
+  the old one did.
 - **The book is the week.** It is seated at the exchange's Sunday start-up and carried straight through to Friday. The
   only restart is the exchange's own on Sunday. The trade day is how work is cut and labelled; it is not a point where
   the book starts over.
@@ -88,13 +91,6 @@ have full mbo, and anything else that isn't calc by root."
   its own tick. The pinning is checked before the next stage starts.
 - Fields from later stages join the same timeline when those stages are rebuilt. No old calculated value is put on it.
 
-**What the old ROOT does today**
-- It takes in the tape and nothing else.
-- The 13 outside data points and the other fields were attached near the end of the chain, by a separate step, and
-  only to trades (the 141-field grid; `OLD_ROOT_LINEAGE.md` section B, steps 5 and 6).
-
-**What changes**
-- The pinning moves to the start, is done once, and covers every tick.
 
 **Proposed check for "pinned correctly"** (Claude's proposal; Greg has not corrected or confirmed it line by line)
 - Every value sits on the tick it was calculated at, with both clocks and its tape position.
@@ -158,12 +154,22 @@ change for the next hour."
   point changes at its own pace (the storage number weekly, a forecast temperature hourly).
 - They are pinned fresh onto the new timeline from the outside data files. The old sheet's copy, attached to trades
   only, is not carried.
-- Claude's earlier note stands as information only: several of the 13 are worked out by our own builder from published
-  numbers (1-year and 3-year positioning percentiles, a week-over-week change, estimate against actual, a curve
-  shape). Greg has chosen to pin the 13.
-- Still to do (reading only): read the builder (`frankie_day_external.py`, Markets `7f34afa`) for each point's
-  publication time and pace, and find where the outside data files for the four trade days are kept. A value that
-  cannot be found stays empty with a note.
+- What is wrong in the 13 gets fixed, not noted (Greg, same rule):
+  - X12 (storage estimate against actual) has no values: the numbers were never taken out of the saved pages. Fix:
+    take them out.
+  - The storage figures held are the later revised ones. Fix: use the figures as first printed, from the saved pages.
+  - The forecast is pinned in both forms held: per model run, and the hourly forecast temperature for each city.
+  - Where a source records the real time a value became public, that time is used. Where it does not, the value is
+    pinned at a stated assumed time (today: a forecast run 4.5 hours after it starts, a station reading 10 minutes
+    after, a grid hour 2 hours after).
+  - The published figures underneath each point are pinned as well, so nothing rests only on a fixed choice made
+    inside a worked-out value (the 1-year and 3-year positioning windows, the city weights, the gas-burn conversion,
+    the 12 contract months of the curve).
+  - One limit that cannot be fixed from what is held: the hourly grid figures are the current revision; the source
+    does not keep the first-published values.
+- The outside day files and their inputs are on S3 (`frankie/day_external/<trade day>/`, `frankie/day_history/`,
+  `nymex/ng_fut_parent_v0/`). The AWS connection needs Greg to sign in again; one attempt was made on 2026-11-16.
+  Whether the files exist for the four trade days is not yet confirmed.
 
 ## Piece 1: the order book (CLOSED by Greg, 2026-11-16)
 
@@ -178,24 +184,6 @@ change for the next hour."
 - Orders carried over the weekend are marked, because their true entry time is not on the tape.
 - Nothing is dropped.
 
-**What the old ROOT does today** (read at Markets `7f34afa`,
-`research/ng_exhaustion_mbo_v4_state_adapter_20260820.py`, and pin `2ebb8ce8`, `native_rt_book.py`,
-`native_full_capture_adapter.py`, `native_replay_driver.py`)
-- The rule that applies each message to the book is sound (adapter lines 421-531); it matched the exchange on every
-  order checked on 2026-11-16.
-- The book was restarted inside every trade day at 00:00 UTC (from the 2026-11-16 audit of the ingest; not re-read in
-  this session).
-- The book is only looked at when an exchange event closes (adapter 596-598, 709-735).
-- What is written out is the top 10 levels (adapter 648-659, 730), with each level summarized (front order, median and
-  90th-percentile queue age, largest share; 615-631) instead of listing its orders.
-- Each order keeps one time, the receive time at which it last took its place in line (adapter 157-166, 431-433,
-  483-485). Its first entry time is overwritten when it loses its place, and the exchange's event time is not kept on
-  the order.
-- Three separate books are kept for the same market (driver 505-516).
-
-**What changes**
-- One book. Read after every tick. Every level and every order. No restart except Sunday's.
-- Both clocks and both times (first entry, last place in line) on every order.
 
 ## Piece 2: what ROOT writes down for each tick (CLOSED by Greg, 2026-11-16)
 
@@ -211,23 +199,6 @@ Greg: "That is correct. We want the tape as it comes."
 - Anything irregular, recorded on the tick where it happens: a gap in the exchange's sequence numbers, a cancel for
   more than was resting, a message for an order the book does not know.
 
-**What the old ROOT does today** (read at the same two revisions)
-- The book rule works out, for every message, the size before and after, the change, whether the place in line was
-  lost, whether the order left, whether the reference was missing, and the best price just before (adapter 169-182,
-  439-531).
-- The basic adapter then discards it (adapter 827). The full-capture wrapper keeps it (wrapper 458-460) but hands it
-  out bundled at the close of an exchange event (wrapper 602-631), and only on the "bedrock" path, which the
-  experiment ROOT ran with switched off by default.
-- An order's place in line just before a message is worked out only in a second book, for the queue section
-  (`native_rt_book.py` 159-187; driver 1400-1405).
-- A message that fails to apply is written to a failure list and skipped, and the run carries on
-  (`frankie_box_boss_session.py` 836-840). The stand-alone adapter program skips records that are not order messages
-  without counting them (adapter 912-913).
-
-**What changes**
-- The record is written for every tick and kept, never bundled or discarded.
-- Place in line is on every tick.
-- Nothing is skipped; a message that cannot be applied is still recorded, with the reason.
 
 **A fact about this tape that the record must respect.** A trade arrives as several ticks: the trade itself, the fill
 of each resting order, then the cancel or modify that takes the filled size out of the book (trade, fill and "none"
@@ -279,14 +250,9 @@ Fingerprints of these two files recorded in older manifests in this folder are t
 Not done: the 500 MB R2 workbook is a GitHub release file, not a file in the repository, and this session has no
 tool that can replace a release file.
 
-## Piece 3 (WITHDRAWN as first drafted)
+## Piece 3
 
-The first draft of "what ROOT reads off the book" was the old ROOT's book readings with edits (best prices, top-10
-and whole-book totals, imbalance, per-level summaries, up/down labels). That carried the old ROOT forward, so it is
-withdrawn. What ROOT calculates after the book and the per-tick record is decided fresh. The shape agreed on
-2026-11-16 (second session) already names the next fresh piece: every change of state the tape shows (a level
-appears or empties, the best price moves, an order joins, shrinks, grows, moves or leaves, the front of a line
-changes), each at its own tick, defined from the tape and not from the old sections.
+Not yet settled. What ROOT calculates after the book and the per-tick record is decided fresh.
 
 ## Facts established in this session (real tape and exchange documents)
 

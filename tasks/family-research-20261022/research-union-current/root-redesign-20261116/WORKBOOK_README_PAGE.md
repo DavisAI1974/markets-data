@@ -16,8 +16,8 @@ that as a fault and report it.
 
 - Natural gas futures (NYMEX Henry Hub, front-month contract), order by order, for four trade days in October 2023:
   Monday Oct 2, Tuesday Oct 3, Tuesday Oct 17 and Wednesday Oct 18.
-- It was rebuilt from the raw order tape (the exchange's full order-by-order record, as delivered by the data vendor).
-  Nothing was copied from earlier versions of this workbook.
+- It is built from the raw order tape (the exchange's full order-by-order record, as delivered by the data vendor)
+  and from published outside figures.
 - One sheet per trade day. A trade day has about 770,000 to 880,000 rows.
 
 ## What a row is
@@ -78,17 +78,10 @@ that as a fault and report it.
 
 | Columns | Why they are empty | When they are filled |
 |---|---|---|
-| Calculated columns (most of L037 to L071, L074 to L076, S01 to S19) | The earlier values were worked out on a faulty foundation: the book was restarted in the middle of each trade day, whole seconds were used in place of ticks, only part of the book's depth was read, and fixed time windows were applied. Those values were discarded, not corrected. | As each calculation is rebuilt from the full record. The status table below says which are done. |
+| Calculated columns (most of L037 to L071, L074 to L076, S01 to S19) | Each is filled only when its calculation has been built and checked. Until then it is empty, not zero. | As each calculation is completed. The status table below says which are done. |
 | Step 1 columns (L080, L083 to L089) | They belong to an earlier 2021 study and are being handled separately. | Later, in their own step. |
 | Frankie's output columns (L077 to L079, L090 to L099) | They hold a model's outputs, and that model has not been run on these trade days. | After such a run. |
 | Reference columns (L001 to L026, L081, L082) | They name background documents, not market data for a tick. | Not applicable to a row. |
-
-## What was deliberately not carried over
-
-- Every value calculated by the earlier version.
-- The earlier row numbering.
-- The earlier copy of the raw messages, because it was cut on calendar days: two of the four trade days were missing
-  their first two hours, and only trades had rows.
 
 ## Status of this build
 
