@@ -145,6 +145,48 @@ had grown long; the chain link models were about to be built.
   trade cost; bad or unused data is not saved; AWS is off limits; Markets is code only and nothing goes to its
   trunk without his word; do not re-ask what he has decided.
 
+## Questions for Greg, saved for the next session (Greg, 2026-11-16: "Save remaining questions for next session")
+
+Put each to him once, with the recommendation, at the point the work reaches it. None blocks L and M.
+
+1. **Native's dipole record and the old print legs on trade days Oct 2 and Oct 17** (both miss the first two
+   hours). Recommendation: make the print legs again from the stored rows for all four trade days; place Native's
+   record for Oct 3 and Oct 18 as it is; for Oct 2 and Oct 17 his choice of: place what exists, marked; run Native
+   again from 6 pm; or leave them out of D until then. Blocks D and the print legs of I.
+2. **The fill call in C.** A fill the book shows no change for counts as filled and as added, with the size put
+   back in its own column. Is that right? (It makes the size filled equal the tape's fill messages exactly.)
+3. **C and the quote's runs were run in the session, not on pods**, before he asked about pods. They are the
+   actual runs, checked and stored. Read as: they stand. Does he want them made again on pods?
+4. **A and B ran on pods before the helpers were pinned** (one calculation after the other on each pod). Read as:
+   they stand, and pinning applies from the next launch. Correct?
+5. **scikit-learn** for the chain link models: a new dependency, which the spec says to ask for first. And his go
+   for that launch, with the price, at the time.
+6. **L, what gets a fact.** The layout says a refill is an order left the same size or larger. As written, every
+   row with any size put back gets a fact, with a yes/no for "same size or larger", so nothing is picked. Keep
+   that, or only the same-size-or-larger ones?
+7. **The place-in-line finding** (decisions file, eighth session), before K: a filled order had an untraded order
+   ahead of it in our line on roughly 1,100 to 1,900 rows a trade day. Does he want it run down before K is
+   built, and does anything about the foundation change?
+8. **The other calls under "Step 2 as built"**, his to correct: "at the best price" read just before the tick for
+   size that leaves and just after for size that joins; a crossed book followed as it stands; a move made by the
+   first tick of a trade day not counted as a run move; "still open" read once the tick is done.
+9. **The agent skills do not install in the cloud container.** Does he want a setup script saved on the "Markets"
+   environment that fetches the pinned skills (tag 0.6.8) at the start of every session?
+10. **Two approved items nobody has done:** the read of the two Codex pieces (handoff G, item 9) is with the
+    Desktop session; confirm it is not also wanted from the code session.
+11. Still open from before: the four old `trade-day-book-2023...` branches to delete; the Markets trunk does not
+    have the session branches' `CLAUDE.md` changes; the Markets repository is near its size quota.
+
+## Runpod at the end of the session (read from the account, 2026-11-16)
+
+- Pods: none. Network volumes: none. Global volumes: none. Nothing is being billed for compute or storage.
+- No storage was kept on Runpod and none is needed: every output is in git on the `root-rows` branches.
+- One serverless endpoint exists, `frankie-reading-granite42` (made 2026-09-21, not by this session), set to 0
+  workers. It was not touched.
+- The account's pod billing for the UTC clock day 2026-11-16 showed four pod records, about $0.05 in all, under
+  pod ids that are not the four this session created. Either they are pods another session ran that UTC clock
+  day, or the billing had not yet caught up with this session's four. Look once at the start of the next session.
+
 ## Waiting on Greg
 
 - His answer to the two checks (Native's record and the print legs on trade days Oct 2 and Oct 17).
