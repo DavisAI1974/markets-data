@@ -1,0 +1,153 @@
+{
+ "what": "ROOT part 2: the calculation peak_story on one trade day",
+ "laid_out_and_approved": "markets-data STEP1_STEP2_LAYOUTS.md, piece 2 as revised (Greg, 2026-11-16)",
+ "trade_day": "2023-10-17",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d"
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e"
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65"
+  }
+ ],
+ "columns": [
+  {
+   "column": "peak_facts_known",
+   "what": "How many facts about peaks became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "peak_high_position",
+    "fact",
+    "since_high_ns",
+    "share_of_peak_left",
+    "lowest_share_so_far",
+    "away_ns",
+    "low_position",
+    "low_size",
+    "low_flow",
+    "low_to_high_ns",
+    "low_price",
+    "price_at_high",
+    "price_now",
+    "highest_price_since_high",
+    "lowest_price_since_high",
+    "highest_price_since_zero",
+    "lowest_price_since_zero"
+   ],
+   "lines": 53106,
+   "files": [
+    {
+     "file": "calc-peak_story-facts-20231017-part000.parquet",
+     "rows": 53106,
+     "bytes": 1474998,
+     "sha256": "064f007725b82161aaecd46db29161fa148860ff919742785ea8cdd576822ad8"
+    }
+   ]
+  },
+  "open-at-the-end": {
+   "columns": [
+    "peak_high_position",
+    "reached_zero",
+    "lowest_share_so_far"
+   ],
+   "lines": 1,
+   "files": [
+    {
+     "file": "calc-peak_story-open-at-the-end-20231017-part000.parquet",
+     "rows": 1,
+     "bytes": 1110,
+     "sha256": "c1f2082ec94a9a7575aa30d1e0c72f5f76a4e153bad64aa9ab24468c794071f0"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 845246,
+ "rows": 846158,
+ "counts": {
+  "facts": {
+   "build-up": 8619,
+   "new low": 30453,
+   "reached zero": 5416,
+   "came back": 5415,
+   "beaten": 3203
+  },
+  "peaks": 8619,
+  "peaks_still_open_at_the_last_tick": 1
+ },
+ "files": [
+  {
+   "file": "calc-peak_story-20231017-part000.parquet",
+   "rows": 262144,
+   "bytes": 541475,
+   "sha256": "b714419ae72d3e6c4efaa542dab1f40c110638295572270bac6f152a062a4049",
+   "beside": "rows-20231017-part000.parquet",
+   "beside_sha256": "7c1559d5056070a4b91ffd4f7cf2928d1034a54fde3cb3a4e518438372416595"
+  },
+  {
+   "file": "calc-peak_story-20231017-part001.parquet",
+   "rows": 262144,
+   "bytes": 542945,
+   "sha256": "11df9b06ae9b664bad7e06a12d5ef76b44dc32c0927caf3e14d37d8f4811959c",
+   "beside": "rows-20231017-part001.parquet",
+   "beside_sha256": "a30f8b597209bd74a81ec426f678699e61a341099a1b66a9fa6e35299a7057f0"
+  },
+  {
+   "file": "calc-peak_story-20231017-part002.parquet",
+   "rows": 262144,
+   "bytes": 544446,
+   "sha256": "3357e08dbc030f7b105bf98a605ca46ba0acf50f8e67daf9514e1e6615767595",
+   "beside": "rows-20231017-part002.parquet",
+   "beside_sha256": "b1c9b234966d8874d4fec39567dbd483f47da3205209d03ccf57ca065722a36a"
+  },
+  {
+   "file": "calc-peak_story-20231017-part003.parquet",
+   "rows": 59726,
+   "bytes": 178194,
+   "sha256": "52576e840f333ce9a98f96979e969cda31652299b4f9200090474ff73b8f065a",
+   "beside": "rows-20231017-part003.parquet",
+   "beside_sha256": "efb7d6338879f8ad53224a307a882f4562cc5aafa797faf3a4ef07ef80c32313"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "peaks": 8619,
+   "facts_compared": 53106,
+   "facts_by_kind": {
+    "build-up": 8619,
+    "new low": 30453,
+    "reached zero": 5416,
+    "came back": 5415,
+    "beaten": 3203
+   },
+   "most_facts_on_one_tick": 22,
+   "peaks_still_open_at_the_last_tick": 1,
+   "method": "every fact found again by looking ahead along whole columns of the stored rows; shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 422623,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 446057,
+    "same_as_full_run": true
+   }
+  ]
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 25.4
+}
