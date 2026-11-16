@@ -146,7 +146,24 @@ How the 141 fields fall (10 trade labels, L001-L099, X01-X13, S01-S19; names fro
 | 2021 Step 1 answers | L080, L083-L089 | 8 | NOT wiped; handled differently, later |
 | Frankie's outputs | L077-L079, L090-L099 | 13 | blank |
 | Reference documents, not data for these trade days | L001-L023, L025, L081, L082; L024, L026 (2021 tape objects) | 28 | not on a per-tick timeline; untouched |
-| Outside data points | X01-X13 | 13 | open: most are calculated by our own builder from published numbers (for example 1-year and 3-year positioning percentiles, a week-over-week change, estimate against actual, a curve shape). Claude's proposal: keep the published numbers as the raw data and redo the 13 fresh. Greg has not answered. Not yet checked: whether the underlying published numbers for the four trade days are held. |
+| Outside data points | X01-X13 | 13 | pinned onto every tick, fresh (see below) |
+
+**The 13 outside data points (Greg, 2026-11-16):** "We should have the 13 dp files pinned when appropriately. Their
+values will just be handled a little differently. Like the storage number for that day will be the same thing for
+every tick until the number changes on a Thursday. Forecast temp will be that temp for every tick in that hour and
+change for the next hour."
+
+- The 13 stay, and are pinned onto every tick of the timeline.
+- Each value holds, unchanged, on every tick from the moment it takes effect until the next value replaces it. Each
+  point changes at its own pace (the storage number weekly, a forecast temperature hourly).
+- They are pinned fresh onto the new timeline from the outside data files. The old sheet's copy, attached to trades
+  only, is not carried.
+- Claude's earlier note stands as information only: several of the 13 are worked out by our own builder from published
+  numbers (1-year and 3-year positioning percentiles, a week-over-week change, estimate against actual, a curve
+  shape). Greg has chosen to pin the 13.
+- Still to do (reading only): read the builder (`frankie_day_external.py`, Markets `7f34afa`) for each point's
+  publication time and pace, and find where the outside data files for the four trade days are kept. A value that
+  cannot be found stays empty with a note.
 
 ## Piece 1: the order book (CLOSED by Greg, 2026-11-16)
 
