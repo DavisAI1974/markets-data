@@ -543,7 +543,10 @@ authorities and no national row; adding them up ourselves would be a choice and 
   the hourly readings on the gas day ending 10 am Eastern, with wind and carry-over from earlier days as their own
   columns; (4) the published figures underneath each point on the row as well.
 - Wind and gas burn (X05, X07): "as it was" means the EIA's own US48 figure, as in the original files, not our sum
-  of the regions. It needs `api.eia.gov` allowed and a free EIA key, which Greg sets up.
+  of the regions. Greg gave an EIA key and approved `api.eia.gov` on 2026-11-16; the hourly US48 and six-region data
+  and the weekly storage series were fetched the same day (`data/outside/ng_oct2023/raw/eia930/api/`,
+  `raw/storage/api/`). The key is in no file. With this, 12 of the 13 have their source files in git; only the
+  street estimate (X12) has none, and it waits on `web.archive.org`.
 
 - **`SPEC-outside.md` is drafted (2026-11-16) and is not yet approved.** It states what the original put beside a
   row (30 figures plus an hourly temperature for each of 18 cities), how each point is made, what the four fixes

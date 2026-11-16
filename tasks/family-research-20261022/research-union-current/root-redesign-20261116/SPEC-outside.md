@@ -64,7 +64,7 @@ Times are when a value becomes known. They are the original's, declared by name 
 | X02 | For each model run and each city: the forecast temperatures for a target date give that date's high and low; their mean gives degree days, base 65 F; the cities are combined with the 16 original weights, spread over the cities present. Target dates: the trade day's date and the 7 after. | the run's start time plus 4.5 hours | Fix 4: each city's forecast temperatures underneath. See questions 1 and 2. |
 | X09 | GFS minus NAM in gas-weighted heating degree days on the cities both have, per shared run; the largest gap over the 8 target dates and which one it is at. | as X02 | none, unless question 2 changes the day |
 | X10 | Observed gas-weighted heating and cooling degree days and precipitation per gas day, 16 cities with the original weights; every station reading underneath. | each reading 10 minutes after its time; the gas-day figure 10 minutes after that gas day ends | **Fix 3.** The gas day ends 10 am Eastern (it was midnight Central). The temperature comes from the hourly readings (it was the high and low averaged). Wind and carry-over are their own columns. The routine hourly reading of each hour is taken from the routine-only files, so the source identifies it. See question 3. |
-| X05, X07 | US48 wind generation by hour (X05). Gas burned for power, estimated as US48 gas generation in the hour x 24 x 7,900 / 1.035e9 (X07). The hourly rows of the six regions stay underneath. | the hour plus 2 hours | none. Waits on the EIA's own US48 figure. |
+| X05, X07 | US48 wind generation by hour (X05). Gas burned for power, estimated as US48 gas generation in the hour x 24 x 7,900 / 1.035e9 (X07). Both from the EIA's own US48 rows (`raw/eia930/api/`), as in the original. The hourly rows of the six regions stay underneath. | the hour plus 2 hours | none |
 | X06 | Trading sessions since the front contract last expired, with that contract's symbol and expiry date. | see call 1 | none |
 | X11 | Level, change on the week, comparison with the five-year average. The original took all of them from the printed report where a saved copy was held, and otherwise from the EIA's series. | Thursday 10:30 am Eastern after the week | **Fix 1.** Level: the EIA's original estimate before any revision (`revisions.xls`). Change: the difference of two such levels. See call 2 for the five-year comparison. |
 | X12 | The street estimate of the weekly change, the printed actual, actual minus estimate; one row per weekly report, and a report whose estimate was not found keeps its row empty with the reason. | the report's release time | **Fix 2.** Filled in. Waits on the saved pages. |
@@ -94,7 +94,6 @@ Oct 10. By those rules no storage or positioning report comes out inside any of 
 
 | Point | What | What it waits on |
 |---|---|---|
-| X05, X07 | the EIA's own US48 figure | `api.eia.gov` allowed on the cloud environment and a free EIA key. The file held has 62 regions and no national row; adding them up ourselves is not "as it was". |
 | X12 | the street estimate | `web.archive.org` allowed on the cloud environment. The estimates were read from saved copies of two web pages. |
 | X11 | the five-year average and year-ago level exactly as printed | `web.archive.org`, the saved report pages. |
 
