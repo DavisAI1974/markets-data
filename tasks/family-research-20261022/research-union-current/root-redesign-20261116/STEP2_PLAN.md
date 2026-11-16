@@ -11,14 +11,109 @@ This session builds nothing, runs nothing, and writes to this file only.
 
 ## Decisions (Greg's words)
 
-None yet.
+- 2026-11-16, on where this file is kept (it was pushed to markets-data, he had said "the markets repo"):
+  "That repo is fine also"
+- 2026-11-16, told that Step 2 found no new events and mostly waits for the grouping:
+  "Definitely new results haha. You tell me, what was the origional intent, does it add value, how do we create
+  those calcs and if the first things are of no value, then what can we do to create more value with what we have
+  and could we fill some possible gaps that you could see"
+  Read as: Step 2 is to give new results, not only a re-reading of the old ones, and Claude is to say what it was
+  for, what is worth keeping, and what could be added. Claude's answer is the next section. None of it is approved.
+
+## The original intent, what is worth keeping, and the gaps (Claude's view, put to Greg 2026-11-16)
+
+Everything in this section is Claude's reading and proposal. The two quoted purposes are from the old documents.
+
+### What Step 2 was meant to do
+
+From the study contract of 2026-08-17 (`NG_EXHAUSTION_CHAIN_STUDY_CONTRACT_20260817.json`):
+- Step 1 was to find the chains with nothing named or sorted in advance. The contract sets "no naming until
+  frozen" and marks predefined categories, a predefined long or short cut-off and a predefined number of groups all
+  as false.
+- Step 2 was then to "describe and categorize already-discovered chains based on the characteristics they actually
+  exhibit", with the names given afterwards.
+- It listed twelve characteristics to look at. They are in the table below.
+
+From the gate into Phase 2, the same day: after describing the chains, turn the strongest of what was found into a
+paper play.
+
+So the intent had two halves: describe the chains by everything they show, then make a paper play. The first half
+is the same rule Greg set on 2026-11-16: let the data be what it is, and group afterwards.
+
+### What it looked at, of the twelve
+
+As far as the 22 Step 2 documents and the two Step 2 programs show.
+
+| Characteristic the contract listed | Looked at in Step 2 | What ROOT holds for it now |
+|---|---|---|
+| The sequence of sides | Yes: same side or other side between neighbours | The side of every peak, off the tape |
+| Family A, B or C | Not found in any result | Not assigned; the base of the grouping later |
+| Family A's state after | Not found | Not assigned |
+| The four after-states | Yes. This was the main lens: the letters S, O, P, X | Replaced by what piece 2 records |
+| The shape of the exhaustion curve | Not found | Every new low of the fade and the low the rise started from (piece 2) |
+| Late flow | Only inside the letters (it split S from O) | Bought and sold size on every row |
+| The book, 10 levels, and its change | Once, as one of several inputs in a search for a rule to set some cases of one branch aside; no rule was found | The whole book at every tick |
+| When the ending came | Yes, as the point the entry was timed from | Reaching zero and coming back, as measured |
+| Price after the ending | Yes, at fixed seconds | The price on every row |
+| Time between events | Yes: the time a chain took, and the timing groups | Measured for every pair of peaks |
+| Time of day and place in the session | Not found | On every row |
+| Hours since the weekly reopen | Not found | On every row |
+
+About five of the twelve were looked at. The chains were read almost entirely through four letters, the side, and
+the price at fixed seconds. A good share of the work then went to the paper play and how to manage it (results 5,
+6, 7 and 12).
+
+### What is worth keeping
+
+Claude's view. These are leads to look at again, not answers: they were read from about a tenth of the peaks,
+through four letters.
+- **The recent few peaks carry it, not one old origin** (result 3). It says where to look: a short stretch of
+  recent stories.
+- **The same short pieces turn up inside different chains** (results 8 and 9). This fits Greg's word that the data
+  will group "more ways than one with different pieces in different groups".
+- **Chains come in distinct lengths of time** (result 10).
+- **Cases that go the other way are kept and taken apart** (result 11). Already his rule.
+
+What adds little at this stage: the paper play and what follows it (results 5, 6, 12) answer a trading question,
+which comes after we know what dictates what happens next. Result 1 is built into ROOT already, since a row holds
+only what was known at its tick.
+
+### How the calculations are made
+
+Two steps.
+1. **Now, with no labels: the links between peaks, as facts.** For every peak: the peak before and after, same
+   side or not, the times between, whether their stories overlap, and the three models' values at each step back
+   (piece 4). To this are added the characteristics below, measured on each link.
+2. **At the grouping stage: the descriptions.** How often a piece recurs, which pieces go on, what lengths of time
+   there are. Each is read from the facts of step 1 and keeps its list of individual cases.
+
+### Gaps that could be filled with what we hold
+
+Each is a proposal. None is approved and none is laid out in detail yet. Each would be a measured fact per peak or
+per pair of peaks, with no label and no fixed mark.
+
+1. **The book between two peaks.** From one peak's high to the next: how much resting size was added, pulled and
+   traded on each side, as it happened. The old Step 2 did not look at the book. We hold all of it at every tick;
+   the old work had 10 levels once a second.
+2. **The shape carried along the chain.** A peak's rise and fade as piece 2 records them, kept whole for each
+   peak in a chain and not reduced to a letter.
+3. **The state as it stands at each tick.** How many peak stories are open on each side at that tick, and how old
+   each is. This is result 3's "rolling state" recorded directly, without letters.
+4. **Where in the trade day.** Time since the 6 pm open, the settlement window, the 5 pm to 6 pm stretch. On the
+   rows already; Step 2 did not use it.
+5. **The small peaks.** About nine in ten of the peaks were never seen by the old Step 2. Whether small ones sit
+   between large ones in a way that repeats is open.
+6. **The dipole lifecycle beside the peaks** (speculative, and a larger piece). The Native dipole births are read
+   from the same 20-second flow. Whether each birth sits on or beside one of the 34,278 peaks is not measured; a
+   count would settle it.
 
 ## What reading Step 2 against the rules shows
 
 Put to Greg first, because it bears on all thirteen results.
 
-1. **Step 2 found no new events.** It read the Step 1 event table and described it: counted, timed and compared.
-   So Step 2 adds very little to a tick row. Almost all of it is a reading of what Step 1 wrote.
+1. **Step 2 made new results from the same events.** It found no new events: it read the Step 1 event table and
+   described it, by counting, timing and comparing. So the old Step 2 adds very little to a tick row. Almost all of
+   it is a reading of what Step 1 wrote.
 
 2. **Nearly all of it is written in state letters, chain depths, or both.** Under the rule "no labels, groups or
    identifiers until all four trade days have run all their calculations", neither exists while the calculations
@@ -277,13 +372,14 @@ Status: not yet gone through with Greg.
 
 **What we want.** Whether chains come in distinct lengths of time.
 
-**What it did.** Fitted a mixture model to the log of the time each chain took. The number of groups was set in
-the program: three at depth 2 (centres about 126 s, 215 s and 798 s; 947, 380 and 52 chains) and two at depth 3
-(about 211 s and 609 s; 83 and 10 chains). The freeze document calls the centres a description and not cut-offs.
+**What it did.** Fitted a mixture model to the log of the time each chain took. The number of groups was chosen
+by comparing fits with one, two and three groups, and then fixed in the program: three at depth 2 (centres about
+126 s, 215 s and 798 s; 947, 380 and 52 chains) and two at depth 3 (about 211 s and 609 s; 83 and 10 chains). The
+freeze document calls the centres a description and not cut-offs.
 
 **What changes.**
 - This is a grouping. It belongs to the grouping stage, after all four trade days have run.
-- The number of groups was picked in advance. Under "let the data be what it is" the times are looked at first.
+- The groups are a model's fit. Under "let the data be what it is" the times themselves are looked at first.
 - Claude's call, following his word on the old families: the old centres are the base that the new times are
   looked at against, to see the same groups, different ones, or the same with additions.
 
