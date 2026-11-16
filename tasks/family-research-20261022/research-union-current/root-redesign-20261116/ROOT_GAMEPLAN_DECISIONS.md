@@ -1426,6 +1426,16 @@ and 2."
 - What is not a label in this sense: which peak a fact is about (the tick of its high, a place on the tape), and
   the side of the flow (buy or sell, read off the tape).
 
+**The old families are the base for the grouping, once the runs are done (Greg, 2026-11-16, seventh session).** "We
+have the families from our original st1 run to start with once they are done. We'll see if they still group like
+that or differently or the same but with additions. But the old family info will be the base."
+- During the calculations nothing is labelled or grouped (his rule above).
+- When all four trade days have run all their calculations, the grouping starts from the families of the original
+  Step 1 run (A, B, C and their frozen rule, which is in git). The new outputs are then looked at against them:
+  the same groups, different groups, or the same with additions.
+- So the frozen family rule is not dropped. It is used at the grouping stage, as the base, not inside the
+  calculations. This sharpens the note above that left it open.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

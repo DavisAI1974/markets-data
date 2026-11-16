@@ -179,6 +179,11 @@ is assigned in advance. In its place, put to him as Claude's call: the build-up 
 the fade is, with no mark picked in advance: the low the rise started from (the tick, the flow there, the price
 there) and the time from that low to the high. The layout below is kept as the record of what the old rule did.
 
+Greg, same hour: "We have the families from our original st1 run to start with once they are done. We'll see if
+they still group like that or differently or the same but with additions. But the old family info will be the
+base." So the old family rule is used after all four trade days have run, as the base of the grouping, not inside
+the calculations.
+
 
 **What we want.** For every peak, at the moment it becomes known: which family its build-up belongs to, as Step 1
 originally defined families. This is the first of the two Step 1 columns. The growth column (new families from
