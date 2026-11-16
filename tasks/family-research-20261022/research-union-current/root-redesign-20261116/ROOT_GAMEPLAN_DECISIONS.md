@@ -527,6 +527,20 @@ the street estimate for X12 (needs `web.archive.org`), the time each
 October 2023 positioning report was published, and a US48 total for the grid data (the file holds 62 balancing
 authorities and no national row; adding them up ourselves would be a choice and is not made).
 
+**The `outside` part, group by group (started 2026-11-16).**
+
+- **Positioning (X01, X03, X04, X08): CLOSED by Greg.** "Yes that's right for positioning." On every row, from the
+  latest CFTC report known at that tick: the funds' net position (long minus short) in the NYMEX gas contract; its
+  change from the week before (X03); where it stands among the last one year (X01) and three years (X04) of weekly
+  reports; the same one-year standing for the ICE Henry Hub contract (X08). The published long, short and net
+  figures and the number of reports in each window are on the row as their own columns. Window lengths are declared
+  by name. Made fresh from the CFTC files in git and pinned on every tick.
+- **Greg, same message: "Keep everything as it was in the original 13 dp files."** The 13 keep their original
+  content and definitions; they are not redesigned group by group. Open, put to Greg: whether the fixes he ruled
+  earlier the same day (storage as first printed, the X12 numbers filled in, the temperature worked out from hourly
+  readings on the gas day ending 10 am Eastern, the figures underneath each point pinned as well) still stand on
+  top of "as it was", or are withdrawn.
+
 **Making the 13 from these files is the `outside` part of ROOT and is a build:** it gets its short specification
 (each point's source, formula and timing, with the fixes already decided), Greg's approval, and then the switch to
 Opus. The old builder is not rerun, because it carries what was ruled wrong. The 13 go onto the sheet when the ROOT
