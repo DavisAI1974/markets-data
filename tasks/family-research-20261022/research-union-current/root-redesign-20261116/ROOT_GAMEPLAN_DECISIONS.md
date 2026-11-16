@@ -972,9 +972,11 @@ it as part 2 calculations on the new rows, after the foundation.
 faster do that. Or use the git box." Then: **"We can use 4 boxes and run them all in parallel." "Do it."**
 - Four boxes, one per trade day, run at the same time.
 - The book is the week, so each box walks its own week from the Sunday start-up and writes rows only for its own
-  trade day (the Oct 3 box runs through Oct 2 first; the Oct 18 box through Oct 16 and 17). Anything a calculation
-  carries from an earlier trade day of the same week is worked through again on that box, so each box's output is
-  identical to one long run; the "same result twice" check proves it.
+  trade day. CORRECTED the same session (see "No commingling" below): the warm-up ticks go through the BOOK only.
+  A calculation starts at the first written row of its week (the Sunday start-up for week 1; 5 pm Eastern Mon Oct 16
+  for week 2). The Oct 3 box reruns its calculations over trade day Oct 2 (one of the four) so its output is identical
+  to one long run; the Oct 17 and Oct 18 boxes walk Oct 16 through the book only, and their calculations cover only
+  written rows (Oct 17, and for the Oct 18 box Oct 17 and 18). The "same result twice" check proves each box.
 - How it is started: a GitHub workflow uses the saved `RUNPOD_API_KEY` to start CPU pods; each pod takes the code
   from Markets and the tape from markets-data, runs, pushes its outputs to markets-data and shuts itself down.
 - Prices read 2026-11-16: CPU pods $0.03 per CPU-hour (compute-optimized), so about $1 an hour per 32-CPU pod, about
@@ -1026,6 +1028,23 @@ tables in `data/outside/ng_oct2023/made/` (`storage_weekly.csv`, `storage_estima
   Sunday one. Per box, every tick is written, warm-up or shelved, and the counts add up exactly.
 - **Speed:** a whole week reads, checks and labels in 8 to 22 seconds here (about 4.3 million records in the seven
   files). The foundation does not need pods; whether the calculations do is measured when they are built.
+
+**No commingling: the warm-up ticks are warm-up only (Greg, 2026-11-16).** "We are only running data runs that we
+will use for the 4 days. Any calculations that you need to fill in book data will be kept separate from the 4 day
+data. I want to make sure this is very clear. The warm up days are only warm up days. No data is comingled."
+- The warm-up ticks (Sunday Oct 15, trade day Mon Oct 16, the shelved hours after 6 pm Eastern on the evenings of
+  Oct 2, Oct 3, Oct 17 and Oct 18) are run through the book so that it is complete, and for nothing else. No row is
+  written for them; no calculation runs on them; nothing from them enters the four trade days' rows, counts, checks
+  or calculations.
+- The one thing that crosses is the book itself, as already ruled: an order that entered during warm-up and is still
+  resting shows on a written row in its line, with its entry time and the mark that it entered before the written
+  record. That is the true book, not a calculation.
+- Anything ever calculated on warm-up ticks to fill in book data is kept completely apart: its own output, its own
+  workbook, never joined to the four trade days.
+- The check-week records count warm-up and shelved ticks only to prove every record of a raw file is accounted for
+  (success criterion 1); those counts are bookkeeping about the input files, not data about the four trade days.
+- A statement written earlier the same session ("the Oct 18 box through Oct 16 and 17" for calculations) was wrong
+  and is corrected above.
 
 ## Held for the later stage: figuring out what moves the market
 
