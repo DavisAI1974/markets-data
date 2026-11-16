@@ -518,8 +518,11 @@ the 13 are rebuilt from it.
 `data/outside/ng_oct2023/` (84 files, about 30 MB, with `MANIFEST.json`, `README.md` and the fetch program). They
 are source files exactly as served; no value is calculated yet. Read and confirmed to cover the four trade days:
 positioning (X01, X03, X04, X08), forecasts (X02, X09), observed weather (X10), the hourly grid data for six regions
-(X05, X07) and weekly storage (X11). The EIA's own file `revisions.xls` holds each week's storage estimate as first
-released, so "as first printed" does not need the Internet Archive. Still missing, with the reason in the README:
+(X05, X07) and weekly storage (X11). The EIA's own file `revisions.xls` holds each week's storage LEVEL as estimated
+before any revision (checked on the week ending Jan 20, 2023: 2,729 there, 2,734 in the history), so the level as
+first printed does not need the Internet Archive. The weekly change and the five-year comparison exactly as printed
+are not in that file. On the usual weekly timetable no positioning report and no storage report comes out inside
+any of the four trade days. Still missing, with the reason in the README:
 the street estimate for X12 (needs `web.archive.org`), the futures curve X13 (Databento key entry), the time each
 October 2023 positioning report was published, and a US48 total for the grid data (the file holds 62 balancing
 authorities and no national row; adding them up ourselves would be a choice and is not made).
@@ -546,7 +549,7 @@ available.
 | X02, X09 | forecast temperature, disagreement between models | Iowa State weather archive, `mesonet.agron.iastate.edu` | yes |
 | X10 | observed weather, hourly station readings | the same archive | yes |
 | X05, X07 | wind, gas burned for power (hourly grid data) | EIA, `www.eia.gov` files or `api.eia.gov` with a free key | yes |
-| X11 | weekly storage, as first printed | EIA's weekly report page as saved on the Internet Archive, `web.archive.org`, `ir.eia.gov` | yes |
+| X11 | weekly storage, as first printed | the level: EIA's own file of original estimates, `ir.eia.gov`; the change and five-year figures as printed: the report page as saved on the Internet Archive | yes |
 | X12 | storage estimate against actual | saved pages on the Internet Archive (TradingEconomics, investing.com) and EIA's report | yes |
 | X06 | sessions since the front contract expired | the exchange calendar; nothing to fetch | n/a |
 | X13 | the futures curve, every contract month | Databento (definitions, statistics, order tape of every month) | paid |
