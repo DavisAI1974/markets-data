@@ -1,0 +1,89 @@
+{
+ "schema": "TRADE_DAY_BOOK_RECORDS_V1",
+ "trade_day": "20231003",
+ "trades_in_trade_day": 41410,
+ "records_written": 41410,
+ "first_trades_only": null,
+ "shards": 415,
+ "bytes": 2577447433,
+ "snapshot_phase": "at trade input; the book before any later message",
+ "book": "trade-day book: warmed from the Sunday open, carried through every 00:00 UTC, no opening snapshot applied after the first",
+ "counts": {
+  "trades_with_lower_bound_orders_in_book": 41410,
+  "trades_whose_best_bid_front_order_age_is_a_lower_bound": 23,
+  "trades_whose_best_ask_front_order_age_is_a_lower_bound": 0,
+  "trade_price_at_best_opposite": 37981,
+  "trade_price_through_best_opposite": 653,
+  "trade_price_inside_spread": 906,
+  "trade_with_empty_opposite_side": 0,
+  "trade_without_aggressor_side": 1870
+ },
+ "stream_receipt": {
+  "trade_day": "20231003",
+  "definition": "17:00 ET prior evening to 17:00 ET named date (21:00-21:00 UTC, EDT)",
+  "warmup": "from the earliest UTC clock-day file held for the trade week; later opening snapshots checked, not applied",
+  "sources": [
+   {
+    "utc_clock_day": "20231001",
+    "file": "NG_v0_mbo_20231001.dbn.zst",
+    "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78",
+    "records": 12532,
+    "warmup_records": 12532
+   },
+   {
+    "utc_clock_day": "20231002",
+    "file": "NG_v0_mbo_20231002.dbn.zst",
+    "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d",
+    "records": 813342,
+    "warmup_records": 808453,
+    "session_records": 4889
+   },
+   {
+    "utc_clock_day": "20231003",
+    "file": "NG_v0_mbo_20231003.dbn.zst",
+    "sha256": "8db4b0042d9324b299f616c5de5c6c66ff3bfa1d2a1288eb69cc575e7653c600",
+    "records": 879077,
+    "session_records": 874941,
+    "after_halt_records_not_used": 4136
+   }
+  ],
+  "warmup_midnight_utc_carries": [
+   {
+    "at_0000_utc_of": "20231002",
+    "snapshot_records": 733,
+    "snapshot_orders": 732,
+    "carried_orders": 732,
+    "same_orders_sides_prices_sizes": true,
+    "price_levels": 363,
+    "levels_with_identical_queue_order": 363,
+    "carried_equals_snapshot": true,
+    "orders_whose_snapshot_event_time_is_over_1s_older_than_the_carried_priority_time": 0,
+    "resting_orders_whose_priority_time_is_a_floor": {
+     "weekly_relisting_block": 319
+    }
+   }
+  ],
+  "resting_orders_at_session_start": 725,
+  "resting_orders_at_session_start_whose_priority_time_is_a_floor": 251,
+  "midnight_utc_carry": {
+   "at_0000_utc_of": "20231003",
+   "snapshot_records": 741,
+   "snapshot_orders": 740,
+   "carried_orders": 740,
+   "same_orders_sides_prices_sizes": true,
+   "price_levels": 348,
+   "levels_with_identical_queue_order": 348,
+   "carried_equals_snapshot": true,
+   "orders_whose_snapshot_event_time_is_over_1s_older_than_the_carried_priority_time": 0,
+   "resting_orders_whose_priority_time_is_a_floor": {
+    "weekly_relisting_block": 247
+   }
+  },
+  "session_records": 879830,
+  "completed_groups": 653912,
+  "resting_orders_at_halt": 748,
+  "resting_orders_at_halt_whose_priority_time_is_a_floor": 217,
+  "integrity": {}
+ },
+ "wall_seconds": 696.0
+}
