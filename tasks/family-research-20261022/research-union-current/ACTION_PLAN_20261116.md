@@ -1,7 +1,7 @@
-# Action plan going forward (written 2026-11-16, end of the second session)
+# Action plan going forward (written 2026-11-16, end of the second session; updated at the end of that day)
 
 Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. This is the document to read first in the next session.
-It says why we are doing this, what is already true, what happens next and in what order, what gets deleted, and
+**Where the next session starts: section 8.** It says why we are doing this, what is already true, what happens next and in what order, what gets deleted, and
 what is waiting on Greg. The two handoffs (`NEXT_SESSION_HANDOFF_20261116.md` and `...20261116B.md`) hold the detail
 behind each statement here.
 
@@ -104,15 +104,35 @@ Greg's instruction; it was costing $0.796 an hour. The account has no pods and n
 session. Four small CPU pods created in data center US-CA-2 never started; with the volume gone there is no reason
 to use that data center.
 
+**The two read-throughs of step 1 are finished**: `root-audit-20261116/OLD_ROOT_FILE_LIST.md`,
+`OLD_ROOT_LINEAGE.md` and `RESEARCH_INTENTIONS.md` exist and wait for Greg's sign-off.
+
+**Markets cleanup, done on 2026-11-16 and now PARKED.** Greg: "Leave everything for now ... I want to continue with
+our other progress and not get bogged down in the cleanup right now." Do not pick the cleanup back up unless he
+asks. What was done, in order (detail in step 7 and in the two record files named there):
+- The trade-day rule and the trade-cost rule are on the Markets trunk and the research branch.
+- The bitcoin-era trade rules and the code that applied them are removed (56 files removed, 28 edited).
+- The dead and old Kalshi rules are removed (net-of-fee at maker and taker, the size-vs-fee wall, the spread toll,
+  pooled hit-rate evaluation).
+- 173 crypto-only files were moved off the trunk; they live on Markets branch `archive/crypto` (a snapshot of the
+  trunk at `676322d`). `odcore/` stays whole on the trunk.
+- Standing rule now in Markets `CLAUDE.md`: no bitcoin-era rules; Kalshi rules start fresh, for Kalshi only; none
+  is written yet, so none is assumed.
+
+Markets tips at the end of the day: trunk `claude/kalshi-s79-kickoff-ij8t9o` at `930a360`; research branch
+`research/markets-adaptive-wavepacket-migration-20261108` and session branch `ccr-5317ce1c-hpqa9c` at `b69c879`
+(the two hold the same tree); `archive/crypto` at `676322d`. After each change the remaining Python compiled, the
+kept modules imported and the `lag_join.py` and `coach_replay.py` self-tests passed. No program was run on market
+data.
+
 **Not done.** The workbook cells still hold old values. The four old archive branches
-`codex/frankie-book-recovery-*` still exist. The trade-day rule is on the Markets trunk (`b827fbe`), the Markets research branch (`96ff7f3`) and branch
-`ccr-5317ce1c-hpqa9c`.
+`codex/frankie-book-recovery-*` still exist. No new ROOT code is written yet.
 
 ---
 
 ## 4. The plan, in order
 
-### Step 1. Finish the two read-throughs that were running when this was written
+### Step 1. Finish the two read-throughs that were running when this was written (DONE)
 
 Purpose: we cannot delete or rerun safely until we know exactly what the old ROOT touched.
 
@@ -310,8 +330,9 @@ Greg expects this may be small, because some steps right after ROOT were redone 
    research projects are listed by intended result and research angle only; their results are not kept.)
 4. Permission, or his own hand, for pushes to Markets branches other than the session's.
 5. Go and budget for pods when the first full run is ready.
-6. The items left in place after the rule removals (Kalshi-era handoffs and kickoffs S78 to S92, the old
-   Kalshi study scripts, the fixed numbers inside the Kalshi programs, other Markets branches): delete or keep. Listed in `root-audit-20261116/BITCOIN_ERA_RULES_REMOVAL.md`.
+6. PARKED by Greg (2026-11-16, "leave everything for now"): the items left in place after the rule removals
+   (Kalshi-era handoffs and kickoffs S78 to S92, the old Kalshi study scripts in `research/kalshi/hist/`, the
+   fixed numbers inside the Kalshi programs, other Markets branches). Not to be raised again unless he asks. Listed in `root-audit-20261116/BITCOIN_ERA_RULES_REMOVAL.md`.
 
 ---
 
@@ -327,11 +348,29 @@ Greg expects this may be small, because some steps right after ROOT were redone 
 
 ## 8. Starting the next session
 
+The cleanup is parked. The next session goes back to the main line: the calculation inventory and the new ROOT.
+
 1. Read this file, then `NEXT_SESSION_HANDOFF_20261116B.md`, then `root-redesign-20261116/CAPABILITY_MAP.md` and
-   `SPEC-tape-stream.md`, then `root-audit-20261116/ROOT_WINDOWS_AND_CAPS.md`.
+   `SPEC-tape-stream.md`, then `root-audit-20261116/ROOT_WINDOWS_AND_CAPS.md`, `OLD_ROOT_LINEAGE.md` and
+   `RESEARCH_INTENTIONS.md`.
 2. Work on branch `ccr-349e2ffe-07p8od` of markets-data. Do not fetch the `trade-day-book-*` branches whole.
-3. `pip install databento pyarrow pandas`. Pinned old code, for reading only: Markets `7f34afa` (branch
-   `codex/frankie-brain-four-day-pins-20261109`) and the producer package at Markets pin
-   `2ebb8ce8ef4834545ad99a4ecdff50c18c5b3134` (`research/kalshi/frankie_raw_mbo_benchmark/`).
-4. Use the "Markets" cloud environment; it allows the Databento and Runpod addresses.
-5. Begin at section 4, step 1.
+3. Markets code: the trunk is `claude/kalshi-s79-kickoff-ij8t9o` (`930a360`). The Frankie and ROOT code is on the
+   research branch `research/markets-adaptive-wavepacket-migration-20261108` (`b69c879`). Pinned old code, for
+   reading only: Markets `7f34afa` (branch `codex/frankie-brain-four-day-pins-20261109`) and the producer package
+   at Markets pin `2ebb8ce8ef4834545ad99a4ecdff50c18c5b3134` (`research/kalshi/frankie_raw_mbo_benchmark/`). The
+   Markets trunk is too large to check out in a cloud container; read single files with `git show`, and commit
+   with a temporary index if a change is needed there.
+4. `pip install databento pyarrow pandas scipy`. Use the "Markets" cloud environment; it allows the Databento and
+   Runpod addresses. The Databento key is in `~/.config/markets/env` only if the container is the same one;
+   otherwise ask Greg how to supply it, and never print it.
+5. Begin here, in this order:
+   a. Put the open questions of section 6 (items 1 and 2) in front of Greg: the three questions in
+      `SPEC-tape-stream.md`, whether the ingest is replaced together with ROOT, which copy of the order-book rule
+      survives, whether `c15_dstate.py` is ROOT or teacher, and the sign-off of the file list, the lineage list and
+      the research intentions.
+   b. Step 2b, the calculation inventory (`root-audit-20261116/CALCULATION_INVENTORY.md`). It does not depend on
+      the answers above and can start at once. Code and definitions only, never results.
+   c. Step 3, the new ROOT: finish `tape-stream` once its three questions are answered, then write the specs for
+      `book-core`, `event-ledger` and `change-points`.
+6. Nothing is deleted from the research folder or from the old ROOT code until Greg signs off the file list and
+   the lineage list. No pod starts until Greg has seen the pod type and price.

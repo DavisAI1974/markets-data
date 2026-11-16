@@ -1,5 +1,14 @@
 # Handoff, second session of 2026-11-16
 
+> **Update, end of 2026-11-16.** After this handoff was written, a cleanup of the Markets repository was done and
+> then parked on Greg's word ("Leave everything for now ... I want to continue with our other progress and not get
+> bogged down in the cleanup right now"). Bitcoin-era trade rules and their code are removed; the dead and old
+> Kalshi rules are removed; 173 crypto-only files live on Markets branch `archive/crypto`; Kalshi rules start
+> fresh, for Kalshi only. Markets trunk `930a360`, research and session branches `b69c879`. The state and the
+> starting order for the next session are in `ACTION_PLAN_20261116.md`, sections 3 and 8. Records:
+> `root-audit-20261116/BITCOIN_ERA_RULES_REMOVAL.md` and `CRYPTO_ARCHIVE_MOVE_LIST.md`. Where this handoff names
+> an older Markets commit, the action plan's is the current one.
+
 Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data` (Greg approved committing straight to it). Read
 `NEXT_SESSION_HANDOFF_20261116.md` first for the standing rules; this file is what changed after it.
 
