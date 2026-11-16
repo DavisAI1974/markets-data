@@ -92,12 +92,14 @@ have full mbo, and anything else that isn't calc by root."
 - Fields from later stages join the same timeline when those stages are rebuilt. No old calculated value is put on it.
 
 
-**Proposed check for "pinned correctly"** (Claude's proposal; Greg has not corrected or confirmed it line by line)
+**The check for "pinned correctly"** (agreed by Greg with the five additions, 2026-11-16)
 - Every value sits on the tick it was calculated at, with both clocks and its tape position.
 - No value used data that arrived after its tick.
 - Every tick is accounted for: where a value does not exist at a tick, that is marked with the reason.
 - The counts add up: ticks in, ticks on the timeline, values pinned.
 - Running the stage twice gives exactly the same result.
+- The playback check: run with the tape cut off at a tick, and every row up to that tick is identical to the same
+  row in the full run. This proves no row holds anything from later.
 
 **Still to do for this piece (reading only):** sort the workbook's 141 fields one by one into pinned at the start,
 calculated by ROOT, calculated by a later stage, or Frankie's; and find where the outside data files for the four
@@ -287,6 +289,21 @@ family geometry, ancestry, chains); L067-L071 (pre-births); L075, L076; S01-S19.
 
 With Step 1, handled separately: L054-L058 (the "legacy" columns made to match the 2021 work).
 
+**Five additions (Greg, 2026-11-16: "Yes add all five as long as 3 doesn't drop the rest of the bid ask depth when
+it's needed.")** Each is read straight off the tape at its tick, with nothing added up and no pattern defined first.
+
+1. A mark on the row whenever the state of the market changes: the best bid or best ask moves, a price level appears
+   or empties, or the order at the front of a line changes.
+2. The exchange's event label on every tick, saying which ticks belong to the same exchange event (a trade, its
+   fills, the cancels that follow). A label only; nothing is totalled.
+3. The front order at the best bid and at the best ask on every row: its size and its times. This is added to what
+   the row already holds. Nothing else about the depth is removed: the whole book, every level and every order, stays
+   in memory at every tick and every calculation reads all of it; the row still carries the whole-book figures and
+   the full line at the touched price; a full picture is still kept at every trade.
+4. The playback check, added to the checks for "pinned correctly" (piece 0), which Greg agreed as a whole.
+5. Trade day Monday Oct 16, 2023 is written out as well. It is fully held, and the week's book walks every one of its
+   ticks to reach Oct 17. That makes five trade days: Mon Oct 2, Tue Oct 3, Mon Oct 16, Tue Oct 17, Wed Oct 18.
+
 **Vendor snapshot records.** Each raw file opens with the vendor's own restatement of the book. These are not
 messages from the exchange at that moment, so they are not ticks. They are kept in their own table beside the
 timeline, each compared with the carried book and the result recorded. Records in a raw file = tick rows + snapshot
@@ -377,6 +394,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   European model runs and the many-run averages.
 - **Storage:** the expected figure against the actual one (the surprise, X12), the comparison with the five-year
   average, and a daily supply and demand balance (production, LNG plant intake, pipeline flows, gas burned for power).
+- **The exchange's own status and statistics messages** (when the market is in pre-open or open, the settlement
+  price as published, open interest). Raw exchange data, not in the MBO files held. Check whether the curve inputs on
+  S3 already hold them once AWS is reachable.
 
 ## Parked by Greg (do not raise unless he asks)
 
