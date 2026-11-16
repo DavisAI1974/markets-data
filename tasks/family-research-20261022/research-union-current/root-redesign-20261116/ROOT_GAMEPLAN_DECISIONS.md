@@ -1284,6 +1284,15 @@ that was tried. They are still on the remote and nothing reads them. Greg can re
 repository's Branches page), or say how he wants it done. Kept: `resting-order-age-20261116/` (the facts about how the book is carried), with a note that the
 programs it names are gone and where the same facts are proved now.
 
+**The workbook is written in parts, split by rows: DECIDED by Greg, 2026-11-16 (seventh session): "And parts."**
+- Each trade day's workbook is written as parts of about 80,000 rows, split on the clock, each part a normal
+  workbook with the READ ME and COLUMNS sheets and under GitHub's 100 MB limit. About 10 or 11 parts a trade day at
+  today's 217 columns; the number of rows a part holds is set when the calculation columns exist, so that a part
+  stays under the limit.
+- It is still written once, after the calculation columns exist. The stored rows stay the exact record; the parts
+  are the view. Each part is read back against the stored rows (criterion 11), and the parts together must hold
+  every row of the trade day once.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
