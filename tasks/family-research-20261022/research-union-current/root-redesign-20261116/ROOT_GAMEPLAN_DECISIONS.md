@@ -158,7 +158,16 @@ change for the next hour."
   - X12 (storage estimate against actual) has no values: the numbers were never taken out of the saved pages. Fix:
     take them out.
   - The storage figures held are the later revised ones. Fix: use the figures as first printed, from the saved pages.
-  - The forecast is pinned in both forms held: per model run, and the hourly forecast temperature for each city.
+  - The forecast: one forecast per trade day for now, the last one made before the trade day. Greg: "for the
+    forecast weather numbers, for this purpose just stick with one forecast for right now. It's not going into the
+    actual root calc so it's not super important in this stage. When we forecast price curves it definitely is. But
+    not in root." Following each new model run through the day is left for the price-curve forecasting stage.
+  - Storage: the figures as they come out on Thursday morning. Greg: "that's what the market uses for trading."
+  - The temperature calculation is rebuilt (Greg: "Yes rebuild it that way"): worked out from hourly readings, not
+    from the day's high and low; gas-weighted with the weights stated; on the gas day ending 10 am Eastern; wind and
+    carry-over from the previous days as their own columns. The hourly readings and hourly forecast temperatures are
+    pinned city by city underneath it. Obtaining the European model runs and the many-run averages is a separate,
+    later decision.
   - Where a source records the real time a value became public, that time is used. Where it does not, the value is
     pinned at a stated assumed time (today: a forecast run 4.5 hours after it starts, a station reading 10 minutes
     after, a grid hour 2 hours after).
