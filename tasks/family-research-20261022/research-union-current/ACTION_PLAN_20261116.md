@@ -249,8 +249,11 @@ Greg expects this may be small, because some steps right after ROOT were redone 
 
 - The trade-day rule is on the Markets trunk as of 2026-11-16 (`claude/kalshi-s79-kickoff-ij8t9o` at `b827fbe`).
   It is also on `research/markets-adaptive-wavepacket-migration-20261108` (at `96ff7f3`), the branch the second
-  session of 2026-11-16 was cut from. Note: that branch's `CLAUDE.md` also carries the trade-cost rule; the trunk's
-  does not.
+  session of 2026-11-16 was cut from. The trade-cost rule ("trade cost is not a market condition", Greg 2026-11-08) was
+  added to the trunk's `CLAUDE.md` on 2026-11-16 (`9a28fcb`), so the two files now match. Only `CLAUDE.md` was
+  brought over: the rest of the original rule commit `2e9af64` (two skill files, `KALSHI_TRADING.md` and six
+  research programs that remove fee terms, including `lag_join.py`) is still only on the research branch. Greg to
+  say whether those go to the trunk too.
 - Deleting old code from Markets branches other than the session's own.
 
 ---
