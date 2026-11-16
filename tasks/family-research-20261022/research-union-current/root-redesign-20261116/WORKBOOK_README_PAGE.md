@@ -14,8 +14,8 @@ that as a fault and report it.
 
 ## What this workbook is
 
-- Natural gas futures (NYMEX Henry Hub, front-month contract), order by order, for five trade days in October 2023:
-  Monday Oct 2, Tuesday Oct 3, Monday Oct 16, Tuesday Oct 17 and Wednesday Oct 18.
+- Natural gas futures (NYMEX Henry Hub, front-month contract), order by order, for four trade days in October 2023:
+  Monday Oct 2, Tuesday Oct 3, Tuesday Oct 17 and Wednesday Oct 18.
 - It is built from the raw order tape (the exchange's full order-by-order record, as delivered by the data vendor)
   and from published outside figures.
 - One sheet per trade day. A trade day has about 770,000 to 880,000 rows.

@@ -289,8 +289,8 @@ family geometry, ancestry, chains); L067-L071 (pre-births); L075, L076; S01-S19.
 
 With Step 1, handled separately: L054-L058 (the "legacy" columns made to match the 2021 work).
 
-**Five additions (Greg, 2026-11-16: "Yes add all five as long as 3 doesn't drop the rest of the bid ask depth when
-it's needed.")** Each is read straight off the tape at its tick, with nothing added up and no pattern defined first.
+**Additions (Greg, 2026-11-16: "Yes add all five as long as 3 doesn't drop the rest of the bid ask depth when
+it's needed"; the fifth was then withdrawn, see below.)** Each is read straight off the tape at its tick, with nothing added up and no pattern defined first.
 
 1. A mark on the row whenever the state of the market changes: the best bid or best ask moves, a price level appears
    or empties, or the order at the front of a line changes.
@@ -301,8 +301,10 @@ it's needed.")** Each is read straight off the tape at its tick, with nothing ad
    in memory at every tick and every calculation reads all of it; the row still carries the whole-book figures and
    the full line at the touched price; a full picture is still kept at every trade.
 4. The playback check, added to the checks for "pinned correctly" (piece 0), which Greg agreed as a whole.
-5. Trade day Monday Oct 16, 2023 is written out as well. It is fully held, and the week's book walks every one of its
-   ticks to reach Oct 17. That makes five trade days: Mon Oct 2, Tue Oct 3, Mon Oct 16, Tue Oct 17, Wed Oct 18.
+5. (Withdrawn.) Writing out Monday Oct 16 as a fifth trade day. Greg: "Keep Monday as warm up only, stick with the
+   4 days." Monday Oct 16 stays warm-up: its ticks are run through the book so the book is right when trade day
+   Oct 17 starts; nothing is calculated for it and none of its rows are written out. The four trade days are
+   Mon Oct 2, Tue Oct 3, Tue Oct 17 and Wed Oct 18, 2023.
 
 **Vendor snapshot records.** Each raw file opens with the vendor's own restatement of the book. These are not
 messages from the exchange at that moment, so they are not ticks. They are kept in their own table beside the
