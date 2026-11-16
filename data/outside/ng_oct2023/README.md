@@ -11,7 +11,9 @@ yet.
   check it passed, and where it is stored. Large text files are stored as a gzip of the bytes as served (written with
   no time stamp inside, so the same bytes give the same file).
 - `fetch_sources.py`: the program that fetched them. It downloads and checks; it does not parse or calculate.
-- `raw/`: the files, 84 in all, about 30 MB.
+- `pull_curve.py`: the program that pulled the futures-curve files from Databento (it quotes first, refuses above a
+  ceiling, and never buys a file twice). The key is not in it.
+- `raw/`: the files, 107 in all, about 45 MB.
 
 Every file is the source's revision as of the retrieval date. Where a source keeps only revised figures, the figure as
 first published cannot come from it; that is said below.
@@ -25,6 +27,7 @@ first published cannot come from it; that is said below.
 | X10 | observed weather | `raw/weather_obs/`: every reading for the same 16 stations, Sep 1 to Oct 31, 2023, all report types and all fields, the raw station message included | Every station has at least 23 readings with a temperature on each clock day checked. NYC (Central Park) reports hourly only; the others also have 5-minute reports. |
 | X05, X07 | wind; gas burned for power | `raw/eia930/`: the EIA hourly grid file for Jul to Dec 2023, 62 balancing authorities | ERCO, CISO, MISO, PJM, SWPP and SOCO each have all 144 hours of the six UTC clock days that touch the four trade days, with the gas and the wind figure filled on every one. **There is no US48 row in this file** (see below). |
 | X11 | weekly storage | `raw/storage/`: the EIA history, and the EIA's own file of original estimates (`revisions.xls`) | The weeks ending Sep 22 to Oct 27, 2023 are present in both. `revisions.xls` holds the storage LEVEL of each week as estimated before any revision, with the EIA's note where a week was later changed (checked on the week ending Jan 20, 2023: 2,729 there, 2,734 in the history). The weekly change and the five-year comparison exactly as printed in each report are not in it (see below). |
+| X13 | the futures curve | `raw/curve/`: from Databento, every natural gas contract month (`NG.FUT`), one native file per UTC clock day: contract definitions, exchange statistics, and every trade of every month. UTC clock days Sep 29, Oct 1 to 3 and Oct 16 to 18, 2023 (Sep 30, a Saturday, was requested for definitions and statistics and holds no records). Cost $0.80. | Each definitions file lists 146 outright contract months plus the calendar spreads. Each statistics file holds settlement-price records (2,066 to 4,064 a clock day) and open interest. The trades files hold 897 (Sunday evening) to 128,776 trades a clock day. The full order tape of the other contract months was quoted at $4.83 and not bought (Greg: "if we decide we need it we can buy it later"). |
 | X06 | sessions since the front contract expired | nothing to fetch | It comes from the exchange calendar. |
 
 ## Not held yet, and why
@@ -32,7 +35,6 @@ first published cannot come from it; that is said below.
 | Points | What is missing | Reason |
 |---|---|---|
 | X12 | the street estimate of each storage figure before it was released | It was read from saved copies of two web pages on the Internet Archive (`web.archive.org`). That site is not allowed from the cloud environment. |
-| X13 | the futures curve, every contract month | It comes from Databento (a paid pull). The Databento key saved on the cloud environment has a line break and a date after it, so Databento rejects it. |
 | X11 | the weekly change and the five-year comparison exactly as printed in each report | The EIA's files give the level before revision, region by region. The change and the five-year figures as printed were on the report page of that week, which the EIA does not keep; saved copies are on the Internet Archive. Whether they are taken from there or worked out from the levels is decided in the `outside` specification. |
 | X01, X03, X04, X08 | the time each October 2023 report was published | The CFTC's release schedule page as served today lists 2026 only (`raw/cot/cftc_release_schedule.html`). The published time for the 2023 reports needs another source. On the usual weekly timetable (Friday 3:30 pm Eastern, a business day later in a holiday week) no positioning report, and no Thursday storage report, comes out inside any of the four trade days, so this affects the time written beside a value, not which value a row holds. |
 | X05, X07 | a US48 total | The file holds the 62 balancing authorities, not the national total. The EIA publishes US48 through its data service (`api.eia.gov`, free key). Adding the authorities up ourselves would be a choice, and it is not made here. |

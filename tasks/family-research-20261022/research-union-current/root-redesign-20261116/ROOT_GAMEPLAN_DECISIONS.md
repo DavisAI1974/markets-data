@@ -523,7 +523,7 @@ before any revision (checked on the week ending Jan 20, 2023: 2,729 there, 2,734
 first printed does not need the Internet Archive. The weekly change and the five-year comparison exactly as printed
 are not in that file. On the usual weekly timetable no positioning report and no storage report comes out inside
 any of the four trade days. Still missing, with the reason in the README:
-the street estimate for X12 (needs `web.archive.org`), the futures curve X13 (Databento key entry), the time each
+the street estimate for X12 (needs `web.archive.org`), the time each
 October 2023 positioning report was published, and a US48 total for the grid data (the file holds 62 balancing
 authorities and no national row; adding them up ourselves would be a choice and is not made).
 
@@ -569,7 +569,14 @@ available.
   repository. Prices quoted by Databento the same day for the futures curve (X13), every natural gas contract month
   (`NG.FUT`), UTC clock days Sep 29, Oct 1 to 3 and Oct 16 to 18, 2023, nothing bought yet: contract definitions
   $0.04; exchange statistics (settlements, open interest) $0.01; trades of every month $0.75; the full order tape of
-  every month $4.83 (about 2.9 GB before compression). A paid pull waits for Greg's word.
+  every month $4.83 (about 2.9 GB before compression).
+- **The futures curve pull (Greg: "Do the 3 now and if we decide we need it we can buy it later").** Pulled
+  2026-11-16 for $0.80: contract definitions, exchange statistics and every trade of every contract month, 23 native
+  files in `data/outside/ng_oct2023/raw/curve/`, listed in the manifest with fingerprints. Read and confirmed: 146
+  outright contract months plus the calendar spreads in each definitions file; settlement-price and open-interest
+  records in each statistics file. The full order tape of the other contract months is not bought. The statistics
+  files also answer the earlier note under "Held for the later stage": the exchange's settlement prices and open
+  interest as published are now held for these clock days.
 
 ## Held for the later stage: figuring out what moves the market
 
