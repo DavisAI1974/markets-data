@@ -82,6 +82,44 @@ Sign-offs of the file list, the lineage delete list and the research intentions:
 - One book. Read after every tick. Every level and every order. No restart except Sunday's.
 - Both clocks and both times (first entry, last place in line) on every order.
 
+## Piece 2: what ROOT writes down for each tick (CLOSED by Greg, 2026-11-16)
+
+Greg: "That is correct. We want the tape as it comes."
+
+**What we want**
+- One record for every tick, in tape order, none skipped.
+- The message exactly as the tape has it, every field, with both clocks.
+- What that tick did to the book: which order it touched; that order's size before and after; whether the order took
+  a place in line, kept it, lost it or left the book; where the order stood in line just before (how many orders and
+  how much size were ahead of it); the best bid and best ask just before and just after.
+- The exchange's own end-of-event marker, recorded on the tick that carries it.
+- Anything irregular, recorded on the tick where it happens: a gap in the exchange's sequence numbers, a cancel for
+  more than was resting, a message for an order the book does not know.
+
+**What the old ROOT does today** (read at the same two revisions)
+- The book rule works out, for every message, the size before and after, the change, whether the place in line was
+  lost, whether the order left, whether the reference was missing, and the best price just before (adapter 169-182,
+  439-531).
+- The basic adapter then discards it (adapter 827). The full-capture wrapper keeps it (wrapper 458-460) but hands it
+  out bundled at the close of an exchange event (wrapper 602-631), and only on the "bedrock" path, which the
+  experiment ROOT ran with switched off by default.
+- An order's place in line just before a message is worked out only in a second book, for the queue section
+  (`native_rt_book.py` 159-187; driver 1400-1405).
+- A message that fails to apply is written to a failure list and skipped, and the run carries on
+  (`frankie_box_boss_session.py` 836-840). The stand-alone adapter program skips records that are not order messages
+  without counting them (adapter 912-913).
+
+**What changes**
+- The record is written for every tick and kept, never bundled or discarded.
+- Place in line is on every tick.
+- Nothing is skipped; a message that cannot be applied is still recorded, with the reason.
+
+**A fact about this tape that the record must respect.** A trade arrives as several ticks: the trade itself, the fill
+of each resting order, then the cancel or modify that takes the filled size out of the book (trade, fill and "none"
+messages change nothing in the book by themselves; adapter 529-530). Between those ticks the book still shows size
+that has just traded. ROOT records each tick as it comes and marks which tick ends the event, so a reader can take
+the book after any tick or only at event ends. Nothing is decided ahead of time.
+
 ## Facts established in this session (real tape and exchange documents)
 
 - **Messages between 5 pm and 6 pm Eastern** (received time), counted on the held files: evening of Mon Oct 2, 418
