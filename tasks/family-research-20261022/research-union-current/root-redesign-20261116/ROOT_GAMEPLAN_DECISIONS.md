@@ -1593,6 +1593,37 @@ Claude's recommendation, his to decide:
   marked as missing its first two hours and with a level made without them; or run Native again on those two
   trade days from 6 pm; or leave them out of D until then.
 
+**The two Codex pieces (the SQL step and the family workflow): how they are to be judged (Greg, 2026-11-16,
+seventh session).** He sent Codex's handoff of 2026-10-22 (Markets `dd9c797a`,
+`artifacts/sqlite-triage/20261022/families/family-parallel-run-full-handoff-20261022.txt`): "We need to look at
+these to really see what value they are adding before we decide on anything. They were run on the old incomplete
+data and with the wrong times so overlook those parts and look at what info they are giving us and does it move us
+forward to understanding the trades better to get better signals to make better strategies using any ways
+possible. We can pick and choose good pieces and discard the bad". Then: "That was old data so don't lean on the
+findings. Just intent and is the code accomplishing the intent and is the data useful". Then: "But if those
+perspective would be good to use on the new data then include it". Then: "Sticking with these avenues of thought,
+can you expand on them or add to them to improve?"
+- So each part is judged on three things: its intent, whether the code does what the intent says, and whether its
+  kind of output is useful. Its old numbers carry no weight. A good question it asked is carried to the new data
+  as a question.
+- A read of both pieces on those terms was under way when this was written; its result goes to Greg.
+- Claude's expansions, put to him the same hour as PROPOSALS (none approved, none built):
+  1. Two clocks on every fact: when it happened and when it could first be known, and the time between them.
+  2. The earliest tell: for every peak, leg and dipole, the first tick at which it could be told apart from the
+     ones that came to nothing.
+  3. More than one ending for a dipole, as a peak has (fades to zero, changes side, beaten, still open), so an
+     ending is never fixed by its own definition.
+  4. The cases that did not happen: wherever we look back from a birth, also list the ticks where the same things
+     were present and no birth followed.
+  5. Order, not only together: which fact came first and the time between, each case listed.
+  6. Refilled orders: an order that is filled and shows the same size again (seen on the tape: 1,688 such fill
+     messages on trade day Oct 2), as a fact of where size is being absorbed.
+  7. Sweeps: a trade that fills through more than one price level, and the moments the best bid and ask touch or
+     cross (1,858 rows on trade day Oct 2), as facts read off the tape.
+  8. Orders that act together: orders entering, moving or leaving at the same moment at the same size.
+  9. What an outside figure changing did: at each tick one of the 13 outside points changes, the story of the
+     flow and the quote after it.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
