@@ -66,6 +66,7 @@
    "what": "From the high of the peak before to this high. Empty on the first peak."
   }
  ],
+ "tables": {},
  "ticks_calculated_on": 878671,
  "rows": 879497,
  "counts": {
@@ -73,7 +74,7 @@
   "trades the tape gives no side for": 1870,
   "ticks": 878671,
   "ticks with a flow": 867666,
-  "peaks": 9910,
+  "peaks": 10577,
   "high_still_standing_at_the_last_tick": true,
   "different_sizes_of_flow": 9011
  },
@@ -81,32 +82,32 @@
   {
    "file": "calc-flow_peak-20231003-part000.parquet",
    "rows": 262144,
-   "bytes": 854197,
-   "sha256": "ce21690fa54721482b3b20eb2096f9e24d9dad41705ddd192fe579414326d791",
+   "bytes": 865259,
+   "sha256": "22c6021cfc7b6fc7717ed07805ed09dd0e6bcb0286e689445b14349c100585f2",
    "beside": "rows-20231003-part000.parquet",
    "beside_sha256": "b966a6f7145eb70f50e444ca0dd7dcec20e479d77247cd087d9d4873e7aab995"
   },
   {
    "file": "calc-flow_peak-20231003-part001.parquet",
    "rows": 262144,
-   "bytes": 896017,
-   "sha256": "45bb72f6d13d2c3f5af05c65fef3a8ea36ab8df596f17b5a85750120f2668631",
+   "bytes": 905209,
+   "sha256": "d0c991aeb9f4e6132b0f899ed28348877af19c08fe27a6e03af9bdcc22d406c2",
    "beside": "rows-20231003-part001.parquet",
    "beside_sha256": "17bddfe9a6d9640c5b0a8f0d1880b5c4c698a7c4fcd8b1f3f8cdd53b2cf76d98"
   },
   {
    "file": "calc-flow_peak-20231003-part002.parquet",
    "rows": 262144,
-   "bytes": 941884,
-   "sha256": "b8dcb94122c193504ff01bf887f26a6e20236c6e7be02742d32520ad45e0f376",
+   "bytes": 952173,
+   "sha256": "900985a9326ba349913acb4f8ba03259d7e09b378377f5111c9e355fea43bb88",
    "beside": "rows-20231003-part002.parquet",
    "beside_sha256": "3be73726c98238d760079b31eee002cd7a2c867acf7048b193e51295bc0ac7f3"
   },
   {
    "file": "calc-flow_peak-20231003-part003.parquet",
    "rows": 93065,
-   "bytes": 374331,
-   "sha256": "497d7d87e0ac425283440b2693942c8ed4fa4a14da58639eff361c128f0fb234",
+   "bytes": 378209,
+   "sha256": "2b8ce5a2a92e22ca4bafa4a259c20d71c134b4cd23027d987ff1d14113e92f50",
    "beside": "rows-20231003-part003.parquet",
    "beside_sha256": "bb39165ae86256f4dfd3fa20cbea8a29df82fd1adfb0783c38ddf5c4b5474cde"
   }
@@ -117,7 +118,7 @@
    "rows_compared": 879497,
    "trade_day_rows": 878671,
    "rows_of_no_trade_day_all_empty": 826,
-   "peaks_compared": 9910,
+   "peaks_compared": 10577,
    "moments_the_flow_changed": 75234,
    "method": "whole-column recount from the stored rows; shares no code with the tick-by-tick calculation"
   },
@@ -125,17 +126,15 @@
    {
     "cut_at": "the middle tick",
     "ticks_given": 439335,
-    "same_as_full_run": true,
-    "high_still_standing_at_the_cut": false
+    "same_as_full_run": true
    },
    {
     "cut_at": "the high of the middle peak",
     "ticks_given": 429104,
-    "same_as_full_run": true,
-    "high_still_standing_at_the_cut": true
+    "same_as_full_run": true
    }
   ]
  },
  "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
- "seconds": 30.0
+ "seconds": 31.6
 }
