@@ -86,8 +86,8 @@ UTC).
 
 **The book record at every trade.** 143,979 records, one per trade: the full book when the trade arrives, every
 level, every order, with lower-bound ages marked. Stored on four branches of markets-data,
-`trade-day-book-20231002`, `-20231003`, `-20231017`, `-20231018`, 100 trades per file with a file list. Oct 2, 17
-and 18 were verified complete; **check Oct 3's file count (415) at the start of the next session.** The records for
+`trade-day-book-20231002`, `-20231003`, `-20231017`, `-20231018`, 100 trades per file with a file list. All four
+were verified complete after upload: 382, 415, 338 and 308 files, each branch matching what was sent. The records for
 the 5,513 workbook ticks are also on the working branch in `trade-day-rebuild-20261116/book_records/`. The old
 selected-tick records were deleted.
 
