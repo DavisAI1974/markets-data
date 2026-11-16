@@ -439,6 +439,18 @@ It'll be like the blind forecast where we know what happens and he's coming up w
   rows), which is what he forecasts and is scored on; hiding particular calculated columns on historical trade days
   is a separate training choice, to test whether he recognizes a thing himself.
 
+**Greg's final word in this session (it supersedes the section above where they differ):** "You had what I
+initially said. You had it right but I switched it up. He's going to have to learn in the classroom and then apply
+that in rt."
+
+- **Classroom:** for the historical trade days, everything we worked out ahead of time is on the rows and is shown
+  to Frankie one tick at a time, so he learns how each thing forms, what else is changing with it, and what follows.
+- **Real time:** he applies what he learned.
+- Each column still carries a mark saying whether it is shown to Frankie, and the default is shown. The mark costs
+  nothing and leaves room to run a blind test later; no hidden answer key is being built now.
+- Not settled, and not needed for the historical build: what does the calculating when Frankie works in real time.
+  ROOT is designed so that it can run on a live feed.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

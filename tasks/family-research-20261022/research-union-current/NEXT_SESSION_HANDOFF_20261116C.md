@@ -33,11 +33,12 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. Pushes to it work f
   time and calculated in ROOT; Frankie learns and recognizes, he does not calculate.
 - **Working out those calculations is the calculation inventory**, laid out Greg's way for every one: what we want it
   to calculate, what is calculated today, and what changes. It has not been started beyond reading.
-- **Why all of this:** each trade day is worked out beforehand and played back to Frankie one tick at a time. He
-  sees the market as it stood and does his own analysis; our worked-out answers for that trade day are an answer key
-  hidden from him, and he is scored against it, like the blind forecast. He keeps his classroom, where he learns why
-  and how things such as the dipole work. So every column is marked either shown to Frankie or answer key; which
-  calculated columns are shown is decided with Greg, and until decided a calculated column is hidden.
+- **Why all of this:** Greg's final word: "He's going to have to learn in the classroom and then apply that in rt."
+  A historical trade day is worked out ahead of time and shown to Frankie one tick at a time with everything on its
+  rows, so he learns how each thing forms, what else is changing with it, and what follows. In real time he applies
+  what he learned. During the session Greg tried two other versions (a hidden answer key that Frankie is scored
+  against; Frankie doing the calculations himself) and withdrew both. Columns keep a "shown to Frankie" mark,
+  default shown.
 
 ## What was done to files in this session
 
@@ -57,10 +58,8 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. Pushes to it work f
    was made and it asked for a new sign-in.
 4. Sign-offs of the old ROOT file list, the lineage delete list and the research intentions. Still not given.
 5. Which comes first next: the calculation inventory for part 2, or building the foundation.
-7. **Who calculates in real time.** Greg's last thought: Frankie may have to do the calculations himself, because
-   that is what his real-time environment will be like, unless another piece does them. Claude's answer, not yet
-   confirmed by Greg: ROOT is that piece, running live the same way it runs on history. See the end of "What Frankie
-   sees" in the decisions file.
+7. **What calculates when Frankie works in real time** is not settled and is not needed for the historical build.
+   ROOT is designed so that it can run on a live feed.
 6. **`CLAUDE.md` in Markets still defines the trade day as 5 pm to 5 pm.** Greg decided in this session that a trade
    day is 6 pm to 5 pm with the 5 pm to 6 pm hour as its own stretch. `CLAUDE.md` loads in every session and has not
    been changed. It needs Greg's word before the trunk is edited.
