@@ -1064,13 +1064,21 @@ needed must be discussed with me first."
   itself; the rule is in Markets `CLAUDE.md` and `AGENTS.md` (session branch; not yet on the trunk).
 - Greg, same day: "There's a possibility that trades will continue to the next days beyond the 4 but we'll cross that
   bridge if we come to it." Nothing is built for it now; when it comes up it is put to him first.
-- **Put to Greg under this rule, awaiting his answer:** the futures curve (X13) uses forward-contract data from just
+- **ANSWERED by Greg: "Yes use forward contracts."** The curve stays as approved, with the two points below.
+  The question as put: the futures curve (X13) uses forward-contract data from just
   outside the four trade days: at the open of trade day Oct 2 the settlement shape is Friday Sep 29's settlement, and
   on trade day Oct 17 the back months' last-trade prices start as their last trades of Mon Oct 16. Both are in the
   approved `SPEC-outside.md` (call 3) and are figures known at that moment. Asked: keep, or start each trade day's
   curve empty. The other outside points also rest on earlier published reports by their definitions (positioning's
   one-year and three-year standing, storage's five-year comparison, weather's two gas days of carry-over, the
   forecast run made before the open), all as approved in that spec.
+
+**The other contract months' full order tape: still not bought (Greg asked again, 2026-11-16: "Do we need the full
+tape? ... Haven't heard definitely").** Claude's answer: not for anything built or specified so far. The foundation's
+rows are the front-month tape; the curve needs only the settlements and trades of the other months, which are held.
+It would be needed only if a Step 1 or Step 2 calculation reads the ORDER BOOK of another month (its depth, lines or
+order lives), not just its prices. That is known when those calculations are laid out; the definite answer is given
+to Greg then. If bought, it covers the same UTC clock days only ($4.83 quoted, about 2.9 GB before compression).
 
 ## Held for the later stage: figuring out what moves the market
 
