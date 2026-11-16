@@ -52,8 +52,10 @@ This session builds nothing, runs nothing, and writes to this file only.
 - 2026-11-16, 4:18 pm Eastern, the same minute as the word above: "Yes"
   Read as: confirming A through J as laid out. It was sent before Claude's message about K had reached him, so it
   is not read as a yes to K. K still awaits his word.
+- 2026-11-16, 4:20 pm Eastern, on K (the resting orders through a peak and a leg): "Yes to k"
+  K is approved as laid out.
 
-## The merged plan, by Greg's aims (2026-11-16; A through J approved by Greg, nothing built yet)
+## The merged plan, by Greg's aims (2026-11-16; A through K approved by Greg, nothing built yet)
 
 **Claude's reading of two words, corrected by Greg the same hour.** "The lifecycle of a trade" was first read
 as the life of one peak. On his word about the trade legs it is: a trade is anchored on a leg, a move in price,
@@ -104,10 +106,10 @@ candidate it had. That pass used the old one-second series, so the list is what 
 ## The suggestions laid out together (2026-11-16)
 
 Status: A through J APPROVED by Greg, 2026-11-16: "Include all of your pieces. Again we don't have to pick and
-choose. We aren't limited in any way." and then "Yes". K is laid out and awaits his word. Nothing is built or run yet. The
+choose. We aren't limited in any way." and then "Yes". K APPROVED by Greg the same hour: "Yes to k". Nothing is built or run yet. The
 code session builds; this session does not.
 
-Five are new calculations (A to D, and I). Four need no new calculation, because the others and Step 1 already
+Six are new calculations (A to D, I and K). Four need no new calculation, because the others and Step 1 already
 carry them (E to G, and J). One is a way of seeing the result (H). All follow the standing rules: only the four
 trade days; a row holds only what was known at its tick; nothing is written back; no fixed marks, labels, caps or
 minimum counts; empty is never zero; every trade individually; no cost of trading anywhere.
@@ -338,7 +340,7 @@ Claude's guess, held loosely: the quote's run and the flow's rise will not line 
 the eight large lasting cases of 2026-11-13, the buying and selling in the 5 seconds before the leg leaned with
 the leg in two, against it in two, and was even in four. The lists of I are what will tell us.
 
-### K. The resting orders through a peak and a leg (added by Claude after Greg's word; awaits his word)
+### K. The resting orders through a peak and a leg (APPROVED by Greg, 2026-11-16: "Yes to k")
 
 **What we want.** What became of the orders that were resting in the book at each turn: of the orders resting at
 a peak's high, or at the start of a run of the quote, how many were later filled, pulled, moved, or were still
@@ -370,7 +372,7 @@ is capped.
 - A and B after piece 2.
 - D and the rest of I after A and B, once the checks on Native's record and on the earlier legs are done.
 - H after D and I, with the legs as one more layer.
-- K after I, if he says yes to it.
+- K after I.
 - Then the grouping stage, with Greg. J is settled there.
 
 ### Every call of Claude's in this layout, in one place, his to correct
