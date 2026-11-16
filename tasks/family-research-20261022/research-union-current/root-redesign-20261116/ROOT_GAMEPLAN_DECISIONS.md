@@ -1303,6 +1303,17 @@ we won't be using."**
   which outputs are kept.
 - A deletion of something already saved still goes to Greg first, with what it is and why it exists.
 
+**No master list of limits (Greg, 2026-11-16, seventh session): "For right now. We want to eliminate any caps or
+limits on the st1 and 2 outputs. I don't need a master list."**
+- The list of hard-coded limits "owed to him" in the earlier sections and in handoff F is withdrawn. None is
+  written up for him and none is stored.
+- What stands is his ruling: the caps and limits on the Step 1 and Step 2 outputs come out. The calculations are
+  taken as they were defined, with the caps and limits off; this is not a redesign.
+- Each calculation is still laid out for him and approved before it is built or run. A layout names only the few
+  limits that change what comes out, in plain words.
+- Claude's reading notes on the old programs are working notes of the session and are not saved (his rule on what
+  is saved).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
