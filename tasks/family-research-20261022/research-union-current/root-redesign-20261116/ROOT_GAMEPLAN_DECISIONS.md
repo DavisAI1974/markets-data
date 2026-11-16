@@ -533,6 +533,11 @@ be made and if anything is missing find the data out there and fix it."
 | X06 | sessions since the front contract expired | the exchange calendar; nothing to fetch | n/a |
 | X13 | the futures curve, every contract month | Databento (definitions, statistics, order tape of every month) | paid |
 
+- **The outside data files are saved to git (Greg: "Save those files to git please").** The fetched inputs and the
+  files made from them are kept in markets-data, not on AWS alone, with a file list and fingerprints, beside the raw
+  order tape (proposed place: `data/outside/ng_oct2023/`). GitHub refuses a single file over 100 MB and one made
+  file was about 88 MB, so files are stored compressed and split where needed. Not done yet: nothing could be
+  fetched in this session (next point), so there is nothing to save so far.
 - What stands in the way today: the session runs in the "Markets" cloud environment, whose network allows a short
   list of sites. Requests to `www.cftc.gov`, `www.eia.gov`, `ir.eia.gov`, `api.eia.gov` and
   `mesonet.agron.iastate.edu` were refused by it. A request to add the five public sites was rejected by the
