@@ -1,0 +1,207 @@
+{
+ "what": "ROOT part 2: the calculation quote_runs on one trade day",
+ "laid_out_and_approved": "markets-data STEP2_PLAN.md, piece I, the quote's own runs (Greg, 2026-11-16)",
+ "trade_day": "2023-10-02",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231001.dbn.zst",
+   "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78"
+  },
+  {
+   "file": "NG_v0_mbo_20231002.dbn.zst",
+   "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d"
+  }
+ ],
+ "columns": [
+  {
+   "column": "bid_run_start_position",
+   "what": "The run of the best bid in progress at this tick: the tick it started at (its position on the tape; a label only). Empty until the best bid first moves in the trade day."
+  },
+  {
+   "column": "bid_run_direction",
+   "what": "Which way that run is going: up or down."
+  },
+  {
+   "column": "bid_run_price_before",
+   "what": "The best bid just before that run started."
+  },
+  {
+   "column": "bid_run_moves",
+   "what": "How many moves that run has made so far."
+  },
+  {
+   "column": "bid_run_distance",
+   "what": "How far that run has gone so far: the best bid now minus the price before the run (the tape's own price units; below zero for a run down)."
+  },
+  {
+   "column": "bid_run_since_start_ns",
+   "what": "From the tick that run started to this tick."
+  },
+  {
+   "column": "ask_run_start_position",
+   "what": "The run of the best ask in progress at this tick: the tick it started at (its position on the tape; a label only). Empty until the best ask first moves in the trade day."
+  },
+  {
+   "column": "ask_run_direction",
+   "what": "Which way that run is going: up or down."
+  },
+  {
+   "column": "ask_run_price_before",
+   "what": "The best ask just before that run started."
+  },
+  {
+   "column": "ask_run_moves",
+   "what": "How many moves that run has made so far."
+  },
+  {
+   "column": "ask_run_distance",
+   "what": "How far that run has gone so far: the best ask now minus the price before the run (the tape's own price units; below zero for a run down)."
+  },
+  {
+   "column": "ask_run_since_start_ns",
+   "what": "From the tick that run started to this tick."
+  },
+  {
+   "column": "quote_run_facts_known",
+   "what": "How many facts about runs of the quote became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "quote",
+    "run_start_position",
+    "fact",
+    "direction",
+    "price_before_run",
+    "price_before_tick",
+    "price_now",
+    "furthest_price",
+    "moves",
+    "distance",
+    "since_run_start_ns",
+    "since_previous_move_ns",
+    "step_back",
+    "since_furthest_ns",
+    "gap_now"
+   ],
+   "lines": 62505,
+   "files": [
+    {
+     "file": "calc-quote_runs-facts-20231002-part000.parquet",
+     "rows": 62505,
+     "bytes": 1418846,
+     "sha256": "0a7952fd722a472233eab7e5031bf8380a08b398e84416719d3191c035673aea"
+    }
+   ]
+  },
+  "open-at-the-end": {
+   "columns": [
+    "quote",
+    "run_start_position",
+    "direction",
+    "price_before_run",
+    "furthest_price",
+    "moves"
+   ],
+   "lines": 2,
+   "files": [
+    {
+     "file": "calc-quote_runs-open-at-the-end-20231002-part000.parquet",
+     "rows": 2,
+     "bytes": 2027,
+     "sha256": "1f4012ba57299a3bd3d926ff969b8a5abea1adc8e1a2f8e09c875c994e8bcba3"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 819783,
+ "rows": 820670,
+ "counts": {
+  "facts": {
+   "best bid: run started": 13332,
+   "best bid: new furthest price": 4171,
+   "best bid: first step back": 13331,
+   "best ask: run started": 13680,
+   "best ask: new furthest price": 4312,
+   "best ask: first step back": 13679
+  },
+  "ticks_with_the_book_crossed": 1858,
+  "runs_still_going_at_the_last_tick": 2
+ },
+ "files": [
+  {
+   "file": "calc-quote_runs-20231002-part000.parquet",
+   "rows": 262144,
+   "bytes": 2924217,
+   "sha256": "e217ec8a3cdf5220a63498d5122cdfcfbf0d6f99c4842fc57dfaad347511d47a",
+   "beside": "rows-20231002-part000.parquet",
+   "beside_sha256": "5baee395161f79476c82a0f91035f48226782f5e8db4f55d81746ab8bf571c1b"
+  },
+  {
+   "file": "calc-quote_runs-20231002-part001.parquet",
+   "rows": 262144,
+   "bytes": 2841038,
+   "sha256": "c450676e3a5924a453ba8c59028c5d175606f0c85dbeae8505a222db05a2caf6",
+   "beside": "rows-20231002-part001.parquet",
+   "beside_sha256": "eec0368236f487b8624d49aeb3c9ad8cbaf174a0398a2fa2d68908392d149db9"
+  },
+  {
+   "file": "calc-quote_runs-20231002-part002.parquet",
+   "rows": 262144,
+   "bytes": 2853492,
+   "sha256": "e2034a0bbb96780f4edefd2331bcb88b0a8d544ea8dc0e6a7c01bd7dbb769e35",
+   "beside": "rows-20231002-part002.parquet",
+   "beside_sha256": "8e8f0e8ea3e24f80700f5db54d876b3330326bb2c0e57fed73c69271272e5ca2"
+  },
+  {
+   "file": "calc-quote_runs-20231002-part003.parquet",
+   "rows": 34238,
+   "bytes": 460532,
+   "sha256": "5041cb8be4a4e9d383bb4a5cab0d2f0ea19c18d5ffb99df5f56f2fac6fd17d47",
+   "beside": "rows-20231002-part003.parquet",
+   "beside_sha256": "4fd041156d86ce815ba967537bba6c4853a09aea16a2d9400cb63a007f6963e4"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 819783,
+   "rows_of_no_trade_day_all_empty": 887,
+   "facts_compared": 62505,
+   "facts_by_kind": {
+    "best ask: first step back": 13679,
+    "best ask: new furthest price": 4312,
+    "best ask: run started": 13680,
+    "best bid: first step back": 13331,
+    "best bid: new furthest price": 4171,
+    "best bid: run started": 13332
+   },
+   "most_facts_on_one_tick": 2,
+   "moves_made_by_the_first_tick_of_the_trade_day": 0,
+   "runs_still_going_at_the_last_tick": 2,
+   "method": "every run found again from the foundation's marks of a best price moving, along whole columns; the calculation reads the best-price columns and never the marks"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 409891,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "a tick that ends one run and starts the next",
+    "ticks_given": 370757,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 819783,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 19.5
+}
