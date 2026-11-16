@@ -941,6 +941,24 @@ available.
   files also answer the earlier note under "Held for the later stage": the exchange's settlement prices and open
   interest as published are now held for these clock days.
 
+## Fifth session (2026-11-16, on Opus with the Fable advisor)
+
+**Where things go (Greg, 2026-11-16).** "We made that repo specifically for the data." Asked where the ROOT code is
+pushed, he chose: **"Markets (code)". ROOT code goes to Markets on its own branch; only code goes there, never data.
+All outputs, tables and documents go to markets-data.**
+- The ROOT code from the fourth session (`a1b3ad2`, `6208460`) was brought onto this session's Markets branch,
+  `claude/plugin-company-customization-z50yb3` (as `27975f9`, `53469eb`). All 21 tests pass there on the real source
+  files.
+- How much went to Markets that belonged in markets-data (Greg asked): about 5.9 GB on the trunk, pushed Oct 22 to
+  Nov 7: `artifacts/recovered-c-drive/` 4.7 GB, `artifacts/sqlite-triage/` 1.2 GB, `tasks/` 15 MB. The code is
+  about 4 MB. The rule "Markets is code only" is now in Markets `CLAUDE.md`, a new `AGENTS.md` (for Codex), the
+  `repo-conventions` skill and `.gitignore` (trunk `da0101c`).
+- **The sqlite-triage outputs (Greg):** "We can probably delete sqllite outputs because we ran it on bad data and ran
+  it for wrong hrs. We want to keep the run code though to make changes to." The split of that folder into run code
+  and outputs is put to him before anything is deleted.
+- **The move off Markets:** Greg chose S3 for the large parts plus markets-data for the rest, then: "Aws not
+  accessible, forgot." So the move waits on AWS for the large parts; nothing has been moved or deleted yet.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
