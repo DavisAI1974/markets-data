@@ -4,6 +4,31 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data` for data and documen
 `NEXT_SESSION_HANDOFF_20261116F.md` as the starting point. Greg asked for a new chat because this one grew long;
 nothing was left half done.
 
+## UPDATE, later the same evening: read this first
+
+This handoff was written when the seventh session expected to stop. Two things have happened since.
+
+**1. An eighth session started from this file and has built a good part of the list below.** It is recorded in
+the decisions file under "Eighth session". In short: the gate for calculations that read the stored rows is built;
+Step 2's C (the book totals), the quote's runs of I, A and B are built, checked and stored on all four trade days
+(A and B on four pods, on Greg's go); the open call on fills is made (filled and added, both). So items 1 to 4
+under "What to do next" are DONE. The latest ROOT code is on Markets branch `ccr-30cca01c-bgs4az`, not on
+`ccr-ebe7e38d-wwccru`, and the `root-rows` branches have moved on (`ac9fb25`, `32664ba`, `8e1da23`, `9108441`).
+**Before building anything, read the "Eighth session" section and check for a newer handoff or newer commits, so
+that two sessions never build the same piece.**
+
+**2. The seventh session stayed open with Greg and added work.** It is items 8 and 9 below:
+- Nine additions, approved by Greg ("Try them all"), laid out in `STEP1_STEP2_LAYOUTS.md` under "Additions from
+  the look at Codex's two pieces": four calculations L to O, three ways of working, two grouping-stage readings.
+- The look at Codex's two pieces (the SQL step and the family workflow), which he wants judged on intent, whether
+  the code does what the intent says, whether the kind of output is useful, and which of its perspectives are
+  worth using on the new data.
+
+What is left, in order: the chain link models (approved; on pods with pinned helpers; Greg's go at the time);
+Greg's decision on Native's record and the print legs for Oct 2 and Oct 17, then D and the rest of I; L and M;
+K with N (the eighth session's finding on place in line is looked at first); O; H; the Codex read to Greg; the
+grouping with Greg.
+
 ## Read these, in this order
 
 1. `root-redesign-20261116/ROOT_GAMEPLAN_DECISIONS.md`: every decision in Greg's words. The section "Seventh
@@ -93,10 +118,10 @@ by a different method, and playback at two cuts). A calculation can keep a table
 7. Then D and the rest of I, K, H (the renders, every instance), and the grouping with Greg.
 
 8. **Nine additions, approved by Greg ("Try them all")**, laid out in `STEP1_STEP2_LAYOUTS.md` under "Additions
-   from the look at Codex's two pieces". Four calculations, L to O: build **L (refilled orders) and M (sweeps, and
-   the quote touching or crossing) together with C and the quote's runs** (they need only the rows; L settles C's
-   open call on fills: such a fill counts as filled and added both); **N (orders that act together) with K**;
-   **O (what an outside figure changing did) after A, B and I**. Three ways of working apply to every piece (two
+   from the look at Codex's two pieces". Four calculations, L to O. C and the quote's runs are already built (eighth
+   session), and the book totals already carry the refilled size on every row, so: build **L (the per-order refill
+   facts) and M (one fact per trade: sweeps; and the quote touching or crossing) next**, they need only the rows;
+   **N (orders that act together) with K**; **O (what an outside figure changing did) after the rest of I**. Three ways of working apply to every piece (two
    clocks on every fact; more than one way to end; the cases that did not happen). Two readings are made at the
    grouping stage.
 
