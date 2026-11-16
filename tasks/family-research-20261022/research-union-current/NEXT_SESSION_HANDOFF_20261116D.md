@@ -69,6 +69,10 @@ as the starting point; C lists as open several things that are now closed.
 - **One run.** Step 1 and Step 2 calculations (the two Step 1 columns, and Step 1 with the Phase 2 calculations) are
   made in the same single pass wherever that can be done; each stays its own named calculation with its own checks.
 
+- **One exception to "no averages".** Greg: a Step 1 calculation works the same data both averaged and not averaged,
+  for different answers. Both are kept, each in its own column. Which calculation it is gets confirmed with him when
+  the Step 1 calculations are laid out. The rule stands everywhere else.
+
 ## Where the ROOT code is (read this before building)
 
 **The new ROOT code exists only on Markets branch `ccr-ddc0ebeb-do2y3o`** (commits `a1b3ad2` and `6208460`: `root/` and

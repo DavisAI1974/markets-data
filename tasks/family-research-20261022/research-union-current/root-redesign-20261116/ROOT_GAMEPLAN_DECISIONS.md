@@ -791,6 +791,20 @@ of split up").
 - Where it cannot be one pass (a definition that needs something only known later, such as a threshold taken over a
   whole day), that is put to Greg when the calculation is laid out, not worked around.
 
+**An exception to the no-averaging rule, inside Step 1 (Greg, 2026-11-16):** "There is an exception to my long
+standing rule. I think there's a calc in step 1 that does averaging because it adds something in addition to not
+averaging the same data. I think it does it both ways for different answers so note that."
+
+- Where a Step 1 calculation works the same data both ways, averaged and not averaged, and the two give different
+  answers, both are kept. The averaged form is not removed under "no averages": it is its own calculation with its
+  own column beside the un-averaged one, and it never replaces the individual values.
+- Which calculation it is has not been confirmed; Greg said "I think". It is identified when the Step 1 calculations
+  are laid out, and shown to him as such. Candidates seen in the Step 1 programs, not yet confirmed as the one he
+  means: the 20-second roll of the per-second signed flow, which sits beside the per-second values themselves; and
+  the family rule, whose families are centres worked out over many events.
+- The exception is for that calculation only. The rule stands everywhere else: every trade individually, no rates,
+  averages or model scores as a readout.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
