@@ -42,12 +42,18 @@ as the starting point; C lists as open several things that are now closed.
    it by hand; the service rejected the request when it was in a list with other sites.
 4. Permission for Markets branches other than the session's, when old ROOT code is deleted there.
 
+## Done later in the session (on Opus)
+
+- `SPEC-root.md` APPROVED ("Foundation is good"). The old material DELETED (672 files, one commit `ee4da3f`).
+- First piece BUILT: the `outside` tables. Markets `ccr-ddc0ebeb-do2y3o` at `6208460` (`root/calendar.py`,
+  `root/outside.py`, `root/DECLARED_CONSTANTS.md`, `tests/root/`, 21 tests passing); tables, receipt and a small
+  workbook in markets-data `data/outside/ng_oct2023/made/`. Storage (X11, X12) not made: waits on Greg's word on
+  `xlrd`. Step 1 search recorded in the decisions file.
+
 ## What to do next
 
-- **Switch to Opus with the Fable advisor (`/model opus`).** The gameplan for part 1 is finished.
-- First build: the `outside` part's point tables and their small workbook (approved). It needs the trade-day cut but
-  not the tick rows.
-- Then, once `SPEC-root.md` is approved: `calendar`, `tape`, `book`, `rows`, `store` and `checks`, then pinning the
+- Storage tables once `xlrd` is allowed.
+- Then: `calendar`, `tape`, `book`, `rows`, `store` and `checks`, then pinning the
   13 onto the rows, then `sheet`. The first sheet written is a short stretch; its size is reported before the full
   workbook is written.
 - New ROOT code goes in the Markets repository, `root/` with tests in `tests/root/`, on the session's own Markets

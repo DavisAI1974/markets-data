@@ -588,33 +588,98 @@
   {
    "table": "curve_statistics.csv.gz",
    "rows": 157561,
-   "bytes": 2266017,
-   "sha256": "718ad98563e0760d867254ac49f86eb3d48d8a3af6ed97c9fb97d012a14a35f2"
+   "bytes": 2269389,
+   "sha256": "0f243ffd86cac87e556f6f20d5da7640b9724dcce63ac9c71a2272a9c626d49e"
   },
   {
    "table": "curve_trades.csv.gz",
    "rows": 600081,
-   "bytes": 8660641,
-   "sha256": "584a9cbfb81ae16c7f22229be028484a37dfe9d01c463b8a1d1d7f7a4bb319d1"
+   "bytes": 8655443,
+   "sha256": "88de4456c13b4c3025caf109cda75eb63203f1246ee48071ec5a694c970efbe4"
   },
   {
    "table": "curve_settled_shape.csv",
    "rows": 38,
-   "bytes": 4468,
-   "sha256": "2af504420656d21dedcf1ea2d99cf11be8f41c9bfd93720734a093e23e472d1a"
+   "bytes": 4458,
+   "sha256": "f30505c04b14c8d95140607df1175a59ab84fd583ac05bd04a72031d90dfebd1"
   },
   {
    "table": "curve_traded_shape.csv.gz",
-   "rows": 93642,
-   "bytes": 1217484,
-   "sha256": "34192b1eafda47310cd206d15e3aa6b1de0e253d5c8eeaf04c494bd8bc984981"
+   "rows": 93643,
+   "bytes": 1219258,
+   "sha256": "548ca780db51cc7723ea40714088c2b1adc860a3f53084e41f55337cea335284"
   }
  ],
  "empty": [
   {
    "table": "positioning.csv",
-   "reason": "standing left empty while the window holds fewer reports than the minimum (45 for one year, 140 for three)",
-   "cells": 915
+   "cells_by_column": {
+    "net_change_on_week": 5,
+    "standing_1y": 220,
+    "standing_3y": 695
+   },
+   "reason": "standing: the window holds fewer reports than the minimum (45 for one year, 140 for three); change on the week: no report 5 to 10 days earlier"
+  },
+  {
+   "table": "forecast_city_runs.csv.gz",
+   "cells_by_column": {
+    "n_x": 44288,
+    "wdr": 13920,
+    "p06": 41600,
+    "p12": 44288,
+    "q06": 41600,
+    "q12": 47072,
+    "t06_1": 38832,
+    "t06_2": 41600,
+    "t12_1": 56304,
+    "t12_2": 55360,
+    "snw": 61926,
+    "cig": 13920,
+    "vis": 13920,
+    "obv": 13920,
+    "poz": 13920,
+    "pos": 13920,
+    "t06": 41600,
+    "t12": 57216
+   },
+   "reason": "the forecast product does not give that figure for that hour (as served)"
+  },
+  {
+   "table": "forecast_gas_weighted.csv",
+   "cells_by_column": {
+    "cities_missing": 839
+   },
+   "reason": "cities_missing is empty when no city is missing"
+  },
+  {
+   "table": "forecast_on_row.csv",
+   "cells_by_column": {
+    "empty_reason": 16
+   },
+   "reason": "empty_reason is empty when the figure was made"
+  },
+  {
+   "table": "weather_gas_day_city.csv",
+   "cells_by_column": {
+    "weight": 56
+   },
+   "reason": "weight: the city carries no weight (AUS, SAT); a figure: no reading of it that gas day"
+  },
+  {
+   "table": "weather_gas_day.csv",
+   "cells_by_column": {
+    "gw_hdd_1_gas_days_before": 1,
+    "gw_hdd_2_gas_days_before": 2,
+    "cities_missing": 28
+   },
+   "reason": "cities_missing is empty when no city is missing; carry-over: before the first gas day made"
+  },
+  {
+   "table": "curve_statistics.csv.gz",
+   "cells_by_column": {
+    "price": 63982
+   },
+   "reason": "price: the statistic has no price (a quantity only); raw_symbol: no definition known for that instrument"
   }
  ],
  "not_made": [

@@ -621,18 +621,23 @@ until we entered the new data." So the empty Step 1 columns are by decision, not
 data is entered, base and growth side by side. Greg: "Look in git for step 1": the search for where the 2021 base is
 kept in git is under way.
 
-**First built piece: the `outside` tables (2026-11-16, on Opus).** Markets branch `ccr-ddc0ebeb-do2y3o`, commit
-`a1b3ad2`: `root/calendar.py`, `root/outside.py`, `root/DECLARED_CONSTANTS.md`, `tests/root/` (20 tests, all passing on
+**First built piece: the `outside` tables (2026-11-16, on Opus).** Markets branch `ccr-ddc0ebeb-do2y3o`, commits
+`a1b3ad2` and `6208460`: `root/calendar.py`, `root/outside.py`, `root/DECLARED_CONSTANTS.md`, `tests/root/` (21 tests, all passing on
 the real files). The tables, their receipt and a small workbook of them (`outside_tables.xlsx`) are in markets-data at
 `data/outside/ng_oct2023/made/`. Read by eye and tested: positioning equals the CFTC file; the release rule moves a
 report a business day in a holiday week; the expiry count is 3, 4, 14, 15 for the four trade days (NGV23 expired
 Sep 27, 2023); each forecast on a row is the last run known before the open; Boston's missing hour on Oct 2 stays
-missing; the curve's front-month trades equal the order tape; the shape at each open is the previous settlement; two
+missing; the curve's front-month trades equal the order tape; the curve's front price at each open equals the last settlement record known before it; two
 builds give identical bytes; every number in the code is declared. Two corrections found while reading the output:
 the 16 city weights are scaled to add up to 1, as the original did; and last prices on the curve start fresh where
 the held curve files have a gap (Oct 4 to 15), so no Oct 3 price is carried into Oct 16. **Not made yet:** storage
 (X11) and the storage estimate (X12): reading the EIA's `.xls` files needs one small library (`xlrd`), which the spec
 says is asked for first.
+
+- **A rule to settle when the 13 are pinned onto the rows.** The forecast, the disagreement and the expiry count are
+  made once per built trade day and known from its open. A written row outside a trade day (the 5 pm to 6 pm stretch,
+  the Sunday start-up before trade day Oct 2) would otherwise show the previous trade day's figure or none. The
+  pinning step states what such rows show.
 
 **Step 1 in git (Greg: "Look in git for step 1"; searched 2026-11-16).** Greg also sent
 `NG_EXHAUSTION_CHAIN_PHASE2_GATE_20260817.json`, the gate into Phase 2 of the natural gas exhaustion chain work. Found:
@@ -644,8 +649,14 @@ says is asked for first.
   frozen family classifier (`research/FRANKIE_NG_PRE_FAMILY_CLASSIFIER_FROZEN_OPERATIONAL_20260817.json`, families
   A, B, C as centroids over 78 features); and, for the later 2021 census, its programs and summary counts only.
 - **What is NOT in git:** the event tables themselves. The 54-week base (231,532 events), the held week (3,638) and the
-  reconciled 55-week set were kept only as GitHub Actions artifacts (ids 9281733364, 9281272840, 9306082330). They are
-  past GitHub's retention and return "not found". The 2021 census outputs were written to the AWS worker's disk.
+  reconciled 55-week set were kept only as GitHub Actions artifacts (ids 9281733364, 9281272840, 9306082330). All
+  three were checked on 2026-11-16 and return "not found": they are past GitHub's retention. An earlier version of
+  the event set (the "V0" data plane, artifact 9274443976) was published to S3 under `nymex/ng_exhaustion/v0/`; no
+  workflow in git publishes the 55-week tables to S3. The 2021 census outputs were written to the AWS worker's disk.
+- **Which work Greg means by Step 1 is not settled here.** His words in the second session were "the initial 2021
+  data"; the file he sent today is the gate of the 2025-26 55-week work. Both are recorded; he decides.
+- The gate file Greg sent has the same content as the copy in git
+  (`research/NG_EXHAUSTION_CHAIN_PHASE2_GATE_20260817.json` on `chatgpt/ng-exhaustion-chain-phase2-20260817`).
 - **What they were made from:** the continuous order-book tape on S3 (`nymex/nymex_cont/`), not the full order tape
   this rebuild uses. That fits Greg's word that the original Step 1 "weren't run on mbo or this depth".
 - **So the base can be rebuilt, not copied:** the frozen code is in git, and the gate records the fingerprint of each
