@@ -24,6 +24,61 @@ This session builds nothing, runs nothing, and writes to this file only.
   my head"
   Answer given: yes, it did (see "Step 2's own grouping" below). Read as: Step 2's own grouping is kept in the
   plan.
+- 2026-11-16, the aims for Step 2, after the gaps were put to him: "We can merge our ideas together. Whatever is
+  going to give us better more unique real trading signals or eplain the lifecycle of a trade better or dipole
+  better and a deeper look into if those two things couple of correlate to again get better trade signals is the
+  goals we want to aim at. However we can do those things"
+  Read as: his ideas and Claude's are merged into one plan. Its aims are (1) better and more unique real trading
+  signals, (2) explaining the lifecycle of a trade better, (3) explaining the dipole better, (4) a deeper look at
+  whether the trade lifecycle and the dipole couple or correlate. How it is done is left to Claude to propose.
+
+## The merged plan, by Greg's aims (Claude's proposal, 2026-11-16; nothing approved, nothing built)
+
+**Claude's reading of two words, his to correct.** "The lifecycle of a trade" is read as the life of one move in
+the market: the build-up, the high of the flow, the fade, the ending, and what price did after. That is what
+Step 1 records per peak and Step 2 links into chains. "The dipole" is the Native dipole with its own life: before
+birth, birth, recognition, what follows, exhaustion.
+
+Everything sits on the same tick rows, each fact at the tick it became known. Four layers, then the grouping.
+
+1. **Each peak's own life.** Step 1, pieces 1 and 2. Built or being built by the code session. Serves aim 2.
+2. **The links between peaks.** The core of the old Step 2, as facts and without letters: the peak before and
+   after, same side or not, the times between, whether their stories overlap, the three models' values at each
+   step back. Added to it: the state at each tick, meaning how many peak stories are open on each side and how old
+   each is. Serves aims 2 and 1.
+3. **The book between and during.** For each pair of neighbouring peaks, and for each stage of a peak's life: how
+   much resting size was added, pulled and traded on each side, as it happened. Serves aims 2, 3 and 1. This is
+   where the signals can be unlike anyone else's: the old work did not read the book, and we hold all of it at
+   every tick.
+4. **The dipole beside the peaks.** Each recorded Native dipole's birth, recognition and end placed on the tick
+   rows at the tick each was known. Then, case by case: for every dipole, where each of its stages falls in the
+   story of the peak or peaks around it; for every peak, whether a dipole was alive at that tick and at what
+   stage. Serves aims 3 and 4. This was gap 6 below; on his word it moves up to a main part of the plan.
+
+**The grouping stage,** after all four trade days have run all of it, with Greg:
+- single peaks, with the Step 1 families A, B and C as the base;
+- chains, with Step 2's own groupings as the base (lifespan, pieces, growth);
+- dipoles, by what their recorded lives show;
+- the coupling: which groupings of one line up with which of the other, each with its list of individual cases.
+
+**Where the signals come from (aim 1).** Claude's view: a signal is something that repeats, ahead of something
+else that repeats, seen case by case. So the signals are read at the grouping stage, from layers 1 to 4. Nothing
+in the calculations is a signal by itself. The old paper play stays in git as the record. No cost, fee or fill
+is assumed anywhere, and no entry or exit time is fixed in advance.
+
+**Two things that have to be settled before layer 4 is laid out.**
+- Which record of the dipole is used. The dipole is not yet defined as a ROOT calculation (the decisions file
+  lists it among those that need a definition first). What exists is Native's own record of each candidate.
+  Claude's call: use Native's record for this look, marked as Native's and not as a ROOT calculation. It can be
+  placed on the rows now, and what it shows may help write the definition.
+- Whether Native's record was cut on the old day boundaries. To be checked by the code session before anything
+  is placed.
+
+**First measurement proposed for layer 4** (for the code session, once approved; nothing is run here): for every
+recorded Native birth on the four trade days, the flow of piece 1 at that tick and the nearest peak, listed one
+line per birth. Claude's guess, held loosely: many births will sit where the flow is fully one-sided, because the
+independent pass of 2026-11-13 found the 20-second ratio at exactly plus or minus 1 in the birth second of every
+candidate it had. That pass used the old one-second series, so the list is what will tell us.
 
 ## The original intent, what is worth keeping, and the gaps (Claude's view, put to Greg 2026-11-16)
 
@@ -108,7 +163,7 @@ per pair of peaks, with no label and no fixed mark.
    rows already; Step 2 did not use it.
 5. **The small peaks.** About nine in ten of the peaks were never seen by the old Step 2. Whether small ones sit
    between large ones in a way that repeats is open.
-6. **The dipole lifecycle beside the peaks** (speculative, and a larger piece). The Native dipole births are read
+6. **The dipole lifecycle beside the peaks** (moved up to layer 4 of the merged plan on Greg's word). The Native dipole births are read
    from the same 20-second flow. Whether each birth sits on or beside one of the 34,278 peaks is not measured; a
    count would settle it.
 
