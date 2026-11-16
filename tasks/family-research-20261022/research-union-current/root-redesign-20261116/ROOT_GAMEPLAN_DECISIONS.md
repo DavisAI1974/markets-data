@@ -1445,6 +1445,18 @@ looked at, and each such grouping is kept.
 with no fixed marks and no names: the build-up, each new low of the fade, reaching zero, coming back, beaten;
 kept as a facts table beside the rows.
 
+**Step 2 planned in Desktop while the code session builds (Greg, 2026-11-16, seventh session).** "Can i be
+continuing with the plan in desktop while youre doing the build and run? If so, create detailed explanation of st2
+and what our system is. Link any st2 historical docs in git for him to reference."
+- Yes. `STEP2_BRIEF_FOR_DESKTOP.md` in this folder is that explanation, with the links.
+- So the two sessions do not collide: Desktop writes only to a new file `STEP2_PLAN.md` in this folder, builds and
+  runs nothing, and does not edit this file or `STEP1_STEP2_LAYOUTS.md`. Greg's decisions made there are copied
+  into this file by the code session.
+
+**The step runs go on pods, all four trade days at the same time (Greg, same hour):** "And we need to run the st in
+the pods doing all 4 days at the same time." It matches his fifth-session ruling (four boxes, one per trade day).
+His standing condition holds: no pod starts until he has seen the pod type and the price.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
