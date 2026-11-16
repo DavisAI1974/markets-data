@@ -262,12 +262,13 @@ Greg expects this may be small, because some steps right after ROOT were redone 
   `--entry-slip` options are gone. Markets trunk `300a7ab`; research branch and `ccr-5317ce1c-hpqa9c` `b24b263`.
   Verified by compiling and a static check only: no Kalshi trade tape is in the cloud container, and no made-up
   data was used, so neither program has been run since the change.
-- Inert leftovers of the old cost rules, not removed: `research/kalshi/lag_join.py` still has `fee_cents` (returns
-  0), `_legacy_fee_cents` (the old Kalshi taker-fee formula, never called) and a `--slip` option that is accepted
-  and ignored; `research/kalshi/coach_replay.py` still has `FEE_RT = 0.0` and subtracts it. They change no number.
-  `level_hit_dataset.py` still prints a mean per cell, which is against the no-averages rule; left as it was.
-  About 70 other Python files mention fees or slippage; most are crypto-era and executor code kept as history.
-- Whatever Kalshi's own rules turn out to be is future work and is not modelled anywhere now.
+- **Bitcoin-era trade rules are removed from Markets, with the code that factored them in (Greg, 2026-11-16).**
+  56 files removed, 28 edited, on the trunk (`4f6172f`) and on the research and session branches (`a60cbda`).
+  `lag_join.py` and `coach_replay.py` no longer carry any fee, slippage or maker/taker term. The full list, what
+  was checked and what was left for Greg to decide is in `root-audit-20261116/BITCOIN_ERA_RULES_REMOVAL.md`.
+- **Kalshi rules start fresh, for Kalshi only.** None is written yet, so none is assumed anywhere. This is now a
+  standing rule in Markets `CLAUDE.md` and in the `kalshi-backtest` skill. Writing them is future work with Greg.
+- `level_hit_dataset.py` still prints a mean per cell, which is against the no-averages rule; left as it was.
 - Deleting old code from Markets branches other than the session's own.
 
 ---
@@ -302,6 +303,9 @@ Greg expects this may be small, because some steps right after ROOT were redone 
    research projects are listed by intended result and research angle only; their results are not kept.)
 4. Permission, or his own hand, for pushes to Markets branches other than the session's.
 5. Go and budget for pods when the first full run is ready.
+6. The six items left in place after the bitcoin-era rule removal (old cost-based findings and handoffs, five
+   crypto files that read a fee-net label, `odcore/sizing.py`, the crypto signal service, crypto collectors,
+   other Markets branches): delete or keep. Listed in `root-audit-20261116/BITCOIN_ERA_RULES_REMOVAL.md`.
 
 ---
 
