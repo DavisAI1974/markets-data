@@ -477,6 +477,38 @@ that trade."
 - For the build: the timeline shows, tick by tick, where each general behavior is in its course, and for each trade
   its own place in it as known at that tick.
 
+## Answers to the open questions of `SPEC-root.md` (fourth session, 2026-11-16)
+
+`SPEC-root.md` itself is brought into line once all five questions are answered; until then this section governs
+where the two differ.
+
+**Question 1, which ticks outside the 6 pm to 5 pm trade day get rows: CLOSED by Greg.** "Yes that's right, add the
+mark. Give it whatever fills the book in completely. Those days won't be counted on the excel sheet or run through
+any calcs. Just use the extra days to complete the book and if anything does need calculated on those days, keep
+them completely separate from the 4 days. You can make a completely different excel sheet for those days. I don't
+want those days bleeding into the work we're doing on the 4 days."
+
+- Rows are written for: each of the four trade days, 6 pm to 5 pm Eastern; the 5 pm to 6 pm stretch just before and
+  just after each of them, marked; and the exchange's Sunday start-up before trade day Mon Oct 2, marked.
+- The extra ticks (the Sunday Oct 15 start-up, trade day Mon Oct 16, and the hours after 6 pm on the evenings of
+  Oct 3 and Oct 18) exist for one purpose: to complete the book. They are run through the book with whatever the
+  book needs to be complete. They are not rows on the four trade-day sheets, they are not counted there, and no
+  calculation is run on them.
+- If anything ever does have to be calculated on those extra ticks, it is kept completely separate from the four
+  trade days: its own output and, if a workbook is wanted, its own workbook. Nothing from it is mixed into the four
+  trade days' rows, counts, checks or calculations.
+- **The mark.** A row on trade day Tue Oct 17 or Wed Oct 18 can touch an order that entered during the extra ticks.
+  Its pointers back (the tick where the order first entered, the tick of its previous step) then name ticks that
+  were never written out. Such a row carries a mark saying the order entered before the written record. The order's
+  first-entry and last-place times are still on the row, on both clocks, because they are facts of the book.
+- Consequence to carry into part 2 (not decided here): since no calculation runs on the extra ticks, a calculation
+  starts with nothing behind it at the first written row of each week's record (the Sunday start-up for week 1;
+  5 pm Eastern Mon Oct 16 for week 2). Only the book itself arrives complete.
+
+**AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
+the session and asked for a sign-in. No further attempt is made until Greg says so. The 13 outside data points
+cannot be prepared or checked until then.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
