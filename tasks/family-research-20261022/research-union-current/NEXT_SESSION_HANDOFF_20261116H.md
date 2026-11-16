@@ -17,7 +17,7 @@ had grown long; the chain link models were about to be built.
 
 ## Where everything is
 
-- **ROOT code:** Markets branch `ccr-30cca01c-bgs4az`, tip `8f9a971`. Not on the trunk. A new session gets a new
+- **ROOT code:** Markets branch `ccr-30cca01c-bgs4az`, tip: see `git log -1` (the last commit of the session adds `refills.py` and `sweeps.py`). Not on the trunk. A new session gets a new
   branch: `git fetch origin ccr-30cca01c-bgs4az && git merge --no-edit FETCH_HEAD`.
   Fresh container: `pip install databento pyarrow xlrd openpyxl pytest`; set `MARKETS_DATA` to the markets-data
   checkout and `ROOT_ROWS` to the folder that holds `rows-<trade day>/`.
@@ -71,11 +71,28 @@ had grown long; the chain link models were about to be built.
 
 0. **L and M, approved by Greg while this session was building ("Try them all"; laid out by the Desktop session in
    `STEP1_STEP2_LAYOUTS.md`, "Additions from the look at Codex's two pieces").** L is refilled orders; M is sweeps
-   and the moments the quote touches or crosses. Both need only the rows and were to be built with C and the
-   quote's runs, which now exist, so they are due first. L's rule for a refill is the one C already uses (a fill
-   the book shows no change for counts as filled and as added). N (orders that act together) is built with K; O
-   (what an outside figure changing did) after A, B and I. `NEXT_SESSION_HANDOFF_20261116G.md` is kept up to date
-   by the Desktop session too (its items 8 and 9): read both.
+   and the moments the quote touches or crosses. Both need only the rows. N (orders that act together) is built
+   with K; O (what an outside figure changing did) after A, B and I.
+   - **State when the session ended: the two calculation files are WRITTEN and nothing more.**
+     `root/calcs/refills.py` (L) and `root/calcs/sweeps.py` (M), Markets `ccr-30cca01c-bgs4az`. They are NOT in
+     `part2.CALCS` or `LAID_OUT`, their checks are NOT written, and they have NOT been run, not even once.
+   - Still to do for each: a recount check in `root/checks.py` by a different method, an entry in `CALC_CHECKS`
+     and a playback cut; then the first run, on the pods, with Greg's go.
+     - L's check: gather the fills of each exchange event first and lay each on its order's row (as the check of
+       `book_totals` does); the per-order counts by sorting; and the size put back per side must equal the last
+       value of `bid_refilled` and `ask_refilled` in the stored `book_totals` columns.
+     - M's check: group whole columns by exchange event; the touches from where the stored gap column goes to
+       zero or below and comes back.
+   - L's calls (in its file): every row with size put back gets a fact, with the row's own words; a yes/no says
+     whether the order is the same size or larger (the layout's "refill"); a fill followed by a change of price
+     is its own kind of moment.
+   - M's calls (in its file): one fact for every exchange event that holds a trade, at the tick with the
+     exchange's end mark; all trade sides of an event are written when there is more than one.
+   - Read off all four trade days before writing M: every event with a trade ends on the tick that carries the
+     end mark, with no end mark inside it; there is never a fill without a trade; about 850 to 1,400 trade events
+     a trade day have no fill message; 4 to 19 events a trade day hold trades of more than one side; the quote
+     touches or crosses 553 to 636 times a trade day and is never left that way at the last tick.
+   - `NEXT_SESSION_HANDOFF_20261116G.md` is kept up to date by the Desktop session too: read both.
 
 1. **The chain link models** (Step 1 piece 4; layout APPROVED: "Do it"; `STEP1_STEP2_LAYOUTS.md`). Decided so far
    in this session (Claude's calls, to state to Greg when built; none is built):
