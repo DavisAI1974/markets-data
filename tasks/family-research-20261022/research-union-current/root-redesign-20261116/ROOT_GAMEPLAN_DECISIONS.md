@@ -324,6 +324,12 @@ that has this behavior means and what it will do in the future."
   (2) Tick by tick: fill the timeline as each lifecycle unfolds.
 - **Every row holds only what could be known at its tick.** Nothing from later ticks is written back onto earlier
   rows. A row can say how far along something is so far; it cannot say how it will end.
+- **Scope.** Greg: "For root we don't have to have all that stuff but by the end, we should have every conceivable
+  thing mapped out that we feel is important ahead of time on the excel sheets but it will be experienced as it
+  occurs in the playback time."
+- **Why everything is on one timeline.** Greg: "And he can see what else in the market is changing as these things
+  appear or continue or whatever and he can start making connections that we may have missed." At any tick the whole
+  picture is side by side: the tape, the book, the outside data points and, later, the lifecycles.
 - For a single order the tape gives the stages. For the bigger lifecycles the stages have to be defined first; that
   work belongs to the stage after ROOT and its results go onto the same timeline.
 
