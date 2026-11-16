@@ -1704,14 +1704,18 @@ still his to approve as their own pieces): refilled orders (proposal 6) are the 
 totals, per side and at the best price, on every row; the moments the best bid and ask touch or cross (part of
 proposal 7) are on every fact of the quote's runs as the gap at that tick.
 
-**All nine expansions approved to try (Greg, 2026-11-16, seventh session): "Try them all".** Laid out in full in
+**All nine expansions approved to try (Greg, 2026-11-16): "Try them all".** (Written here by the seventh session,
+which was still open with Greg while the eighth was building; it is his word to the seventh session.) Laid out in full in
 `STEP1_STEP2_LAYOUTS.md`, "Additions from the look at Codex's two pieces", with Claude's calls, his to correct.
 Four are new calculations, named L to O so they do not collide with Step 2's A to K: L refilled orders; M sweeps
 and the moments the quote touches or crosses; N orders that act together; O what an outside figure changing did.
 Three are ways of working applied to every piece (two clocks on every fact; more than one way to end; the cases
 that did not happen). Two are readings made at the grouping stage (the earliest tell; order and how long between).
-Build order: L and M with C and the quote's runs (they need only the rows; L settles C's open call on fills); N
-with K; O after A, B and I. Nothing is built yet.
+Build order, as it stands now that the eighth session has built C, the quote's runs, A and B: L and M next (they
+need only the rows; the book totals already carry the refilled size on every row and the quote's facts carry the
+gap, so L adds the per-order facts and M the per-trade facts); N with K; O after the rest of I. None of L to O is
+built yet. The open call on fills that L was to settle has been made by the eighth session the same way (filled
+and added, both).
 
 ## Held for the later stage: figuring out what moves the market
 
