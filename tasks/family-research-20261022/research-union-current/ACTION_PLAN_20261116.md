@@ -105,9 +105,8 @@ session. Four small CPU pods created in data center US-CA-2 never started; with 
 to use that data center.
 
 **Not done.** The workbook cells still hold old values. The four old archive branches
-`codex/frankie-book-recovery-*` still exist. The trade-day rule is in the Markets `CLAUDE.md` only on branch
-`ccr-5317ce1c-hpqa9c`; pushes to the Markets trunk and research branch were refused by the session's permission
-system.
+`codex/frankie-book-recovery-*` still exist. The trade-day rule is on the Markets trunk (`b827fbe`) and on branch `ccr-5317ce1c-hpqa9c`, but not on the
+Markets research branch.
 
 ---
 
@@ -248,8 +247,9 @@ Greg expects this may be small, because some steps right after ROOT were redone 
 
 ### Step 7. Housekeeping that needs Greg
 
-- Put the trade-day rule (Markets commit `b827fbe`) on the Markets trunk and on
-  `research/markets-adaptive-wavepacket-migration-20261108`: `git push origin b827fbe:claude/kalshi-s79-kickoff-ij8t9o`.
+- The trade-day rule is on the Markets trunk as of 2026-11-16 (`claude/kalshi-s79-kickoff-ij8t9o` at `b827fbe`).
+  It is still not on `research/markets-adaptive-wavepacket-migration-20261108`, which is the branch the second
+  session of 2026-11-16 was cut from.
 - Deleting old code from Markets branches other than the session's own.
 
 ---
