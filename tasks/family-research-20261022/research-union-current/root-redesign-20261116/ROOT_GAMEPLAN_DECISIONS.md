@@ -1245,6 +1245,30 @@ Markets `.claude/settings.json` but was not installed in the session's container
   the README), made by the same stand-in programs with the same cut; Claude's recommendation is that they go too.
   His word asked for: "delete" for the four, or "delete all" to include the rest. **Nothing is deleted before it.**
 
+**The eight selected-trade sheets wait until the end (Greg, 2026-11-16, seventh session).** "Since we are going
+to be doing all the work on the full 4 days, hold off on doing the 8 trade sheets for right now. I don't know if
+we'll need them ... If so pause until the end." "I mean the separate smaller 8 trade type across the 4 days excel
+sheets."
+- The smaller workbooks of eight selected cases per trade day (32 cases, 5,513 selected ticks) are not built now.
+  Nothing of the kind was being built in this session. Whether they are needed is decided at the end.
+- If they are wanted then, they are cut from the new stored rows. The old material for them
+  (`trade-day-rebuild-20261116/book_records/`, made with the stand-in programs and the 5 pm cut) is not their source.
+
+**Greg's questions on the workbook, and the answers given (2026-11-16, seventh session).** "Can we zip the excel
+sheets and read values from it and make changes to it while it's zipped?" "Would splitting it up by rows change the
+science for the book info or can we run them seamlessly when needed? Or is splitting by columns better?"
+- An Excel workbook already is a zipped file. The short stretch is 19.9 MB as stored and 221 MB of sheet text
+  inside; zipping it again gives 17.8 MB. A value cannot be changed inside it without writing the sheet out again.
+- The working record is the stored rows (Parquet), not the workbook: trade day Oct 2 is 61 MB there against about
+  817 MB as a workbook, any column can be read without opening the rest, and a new calculation column is added as its
+  own file without rewriting what is there. The workbook is written from the stored rows, once, at the end.
+- Splitting the workbook changes no result, because no calculation reads the workbook. The book is carried unbroken
+  through the week in the one pass, and each row already holds its own book figures. A split is only how the
+  finished record is shown; the position on the tape is on every row, so parts go back together exactly.
+- Claude's recommendation: split by rows (by the clock). A split by columns leaves 820,000 rows in every file, which
+  is the part Excel struggles with, and it pulls apart figures that belong side by side on one tick. A narrow
+  cut of chosen columns over a whole trade day can be made from the stored rows whenever one is wanted.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
