@@ -118,3 +118,19 @@ The inputs to "Original SQLite/Julia" are Desktop's family research files, Marke
 - Whether the trade day Oct 18 flow, queue and replenishment sources came from the same ROOT build as the other three
   trade days.
 - Anything on the stopped AWS boxes or in Desktop's own folders.
+
+## G. Greg's answer on the two workflow steps (2026-11-16)
+
+1. **The original trade day Oct 18 SQLite and Julia work**: confirmed by Greg. This is Desktop's family research,
+   Markets `artifacts/sqlite-triage/20261022/families/` (its handoffs record 5,275,928 resolved observations and
+   5,803,712 measurement rows read from ROOT and native contexts).
+2. **"A replacement for the hundreds of trillions of calcs that were wrong with like 5+ million"**, described in a
+   handoff from the week of Nov 8. **Not located yet.** Searched without a match for "trillion": this branch of
+   markets-data, the Markets session branch, GitHub code search on both default branches, and the Oct 22 grouping
+   session. Leads, unconfirmed:
+   - The Nov 8 notes in Markets `research/kalshi/adaptive_wavepacket_20261108/` name the problem as an "ID/name-driven
+     group count explosion" to be replaced, and say it was not yet connected at that time.
+   - This folder's `README.md` records 5,075,640 timestamp-indexed research rows and 5,569,627 clock-indexed rows
+     from the four-day workflow processing of Nov 9, which may be the "5+ million".
+   Greg to confirm which run this is, or point to the handoff (it may be a Desktop handoff that is not in git, or on
+   a branch that was not searched).
