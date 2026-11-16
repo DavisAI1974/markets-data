@@ -361,8 +361,18 @@ The cleanup is parked. The next session goes back to the main line: the calculat
    Markets trunk is too large to check out in a cloud container; read single files with `git show`, and commit
    with a temporary index if a change is needed there.
 4. `pip install databento pyarrow pandas scipy`. Use the "Markets" cloud environment; it allows the Databento and
-   Runpod addresses. The Databento key is in `~/.config/markets/env` only if the container is the same one;
-   otherwise ask Greg how to supply it, and never print it.
+   Runpod addresses.
+   **Databento key (Greg, 2026-11-16): it is saved on the Markets cloud environment as a network secret for
+   `hist.databento.com`, not in git** (both repositories are public). The session's network proxy puts the key
+   on every request to that host, so code never holds it: give the Databento client a placeholder of the right
+   shape, `db.Historical('db-' + 'x'*29)`, and the proxy replaces it. Never print a key and never commit one.
+   **State at the end of 2026-11-16: the saved entry is wrong and must be corrected before any pull.** The key
+   was entered with a line break and a date after it, so Databento answers 400
+   `auth_invalid_username_in_basic_auth`. The fix is Greg's: cloud environment menu in the session title bar,
+   Edit, Network secrets, the `hist.databento.com` entry, username = the key alone (32 characters starting
+   `db-`), password empty. First check of the next session: `curl -u 'db-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx:'
+   https://hist.databento.com/v0/metadata.list_datasets` must return 200. Until it does, no tape can be pulled
+   in this environment, because the proxy's entry overrides any key the code supplies.
 5. Begin here, in this order:
    a. Put the open questions of section 6 (items 1 and 2) in front of Greg: the three questions in
       `SPEC-tape-stream.md`, whether the ingest is replaced together with ROOT, which copy of the order-book rule
