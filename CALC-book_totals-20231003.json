@@ -1,0 +1,233 @@
+{
+ "what": "ROOT part 2: the calculation book_totals on one trade day",
+ "laid_out_and_approved": "markets-data STEP2_PLAN.md, piece C (Greg, 2026-11-16)",
+ "trade_day": "2023-10-03",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231001.dbn.zst",
+   "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78"
+  },
+  {
+   "file": "NG_v0_mbo_20231002.dbn.zst",
+   "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d"
+  },
+  {
+   "file": "NG_v0_mbo_20231003.dbn.zst",
+   "sha256": "8db4b0042d9324b299f616c5de5c6c66ff3bfa1d2a1288eb69cc575e7653c600"
+  }
+ ],
+ "columns": [
+  {
+   "column": "bid_added",
+   "what": "Size added on the bid side so far in the trade day: new orders, orders made larger, and size put back on an order as it traded."
+  },
+  {
+   "column": "bid_pulled",
+   "what": "Size pulled from the bid side so far: cancels, and orders made smaller."
+  },
+  {
+   "column": "bid_filled",
+   "what": "Size of resting bid orders filled (traded away) so far, by the tape's fill messages, counted on the row where the book shows it."
+  },
+  {
+   "column": "bid_moved",
+   "what": "Size carried by bid orders from one price to another so far. In neither added nor pulled."
+  },
+  {
+   "column": "bid_added_at_best",
+   "what": "Of the size added: the part at the best bid price (for a new order, best just after its tick; for an order already resting there, best just before)."
+  },
+  {
+   "column": "bid_pulled_at_best",
+   "what": "Of the size pulled: the part whose price was the best bid just before its tick."
+  },
+  {
+   "column": "bid_filled_at_best",
+   "what": "Of the size filled: the part whose price was the best bid just before its tick."
+  },
+  {
+   "column": "bid_moved_from_best",
+   "what": "Of the size moved: the part that left the best bid price (best just before its tick)."
+  },
+  {
+   "column": "bid_moved_to_best",
+   "what": "Of the size moved: the part that joined the best bid price (best just after its tick)."
+  },
+  {
+   "column": "bid_refilled",
+   "what": "Of the size added: size put back on an order in the same exchange event that filled it, so the book showed less change than the fill, or none."
+  },
+  {
+   "column": "bid_refilled_at_best",
+   "what": "Of the size refilled: the part at the best bid price."
+  },
+  {
+   "column": "bid_filled_no_side",
+   "what": "Of the size filled: the part whose fill message the tape gives no side for."
+  },
+  {
+   "column": "ask_added",
+   "what": "Size added on the ask side so far in the trade day: new orders, orders made larger, and size put back on an order as it traded."
+  },
+  {
+   "column": "ask_pulled",
+   "what": "Size pulled from the ask side so far: cancels, and orders made smaller."
+  },
+  {
+   "column": "ask_filled",
+   "what": "Size of resting ask orders filled (traded away) so far, by the tape's fill messages, counted on the row where the book shows it."
+  },
+  {
+   "column": "ask_moved",
+   "what": "Size carried by ask orders from one price to another so far. In neither added nor pulled."
+  },
+  {
+   "column": "ask_added_at_best",
+   "what": "Of the size added: the part at the best ask price (for a new order, best just after its tick; for an order already resting there, best just before)."
+  },
+  {
+   "column": "ask_pulled_at_best",
+   "what": "Of the size pulled: the part whose price was the best ask just before its tick."
+  },
+  {
+   "column": "ask_filled_at_best",
+   "what": "Of the size filled: the part whose price was the best ask just before its tick."
+  },
+  {
+   "column": "ask_moved_from_best",
+   "what": "Of the size moved: the part that left the best ask price (best just before its tick)."
+  },
+  {
+   "column": "ask_moved_to_best",
+   "what": "Of the size moved: the part that joined the best ask price (best just after its tick)."
+  },
+  {
+   "column": "ask_refilled",
+   "what": "Of the size added: size put back on an order in the same exchange event that filled it, so the book showed less change than the fill, or none."
+  },
+  {
+   "column": "ask_refilled_at_best",
+   "what": "Of the size refilled: the part at the best ask price."
+  },
+  {
+   "column": "ask_filled_no_side",
+   "what": "Of the size filled: the part whose fill message the tape gives no side for."
+  }
+ ],
+ "tables": {},
+ "ticks_calculated_on": 878671,
+ "rows": 879497,
+ "counts": {
+  "fill messages": 69558,
+  "size of the fill messages": 93202,
+  "price changes that also changed size": 1767,
+  "rows where a fill was put back: stayed": 1195,
+  "rows where a fill was put back: lost its place: size raised": 223,
+  "rows where a fill was put back: shrank by fill": 60,
+  "rows where a fill was put back: left by fill": 133,
+  "rows where a fill was put back: lost its place: price changed": 23,
+  "rows where more left than was filled: left by fill": 2,
+  "rows where more left than was filled: lost its place: price changed": 1,
+  "fills_waiting_for_their_row_at_the_last_tick": 0,
+  "size_of_fills_waiting_at_the_last_tick": 0,
+  "totals_at_the_last_tick": {
+   "bid_added": 450069,
+   "bid_pulled": 400670,
+   "bid_filled": 48889,
+   "bid_moved": 62455,
+   "bid_added_at_best": 99953,
+   "bid_pulled_at_best": 58217,
+   "bid_filled_at_best": 48396,
+   "bid_moved_from_best": 3856,
+   "bid_moved_to_best": 8189,
+   "bid_refilled": 1603,
+   "bid_refilled_at_best": 1523,
+   "bid_filled_no_side": 2693,
+   "ask_added": 481132,
+   "ask_pulled": 436600,
+   "ask_filled": 44313,
+   "ask_moved": 63687,
+   "ask_added_at_best": 98992,
+   "ask_pulled_at_best": 62104,
+   "ask_filled_at_best": 43678,
+   "ask_moved_from_best": 1195,
+   "ask_moved_to_best": 3168,
+   "ask_refilled": 2268,
+   "ask_refilled_at_best": 2235,
+   "ask_filled_no_side": 1525
+  }
+ },
+ "files": [
+  {
+   "file": "calc-book_totals-20231003-part000.parquet",
+   "rows": 262144,
+   "bytes": 2149597,
+   "sha256": "7ba5f67ff326b66a98a48855f2bd47e87e9c603de4daf936a36861c67230d6d3",
+   "beside": "rows-20231003-part000.parquet",
+   "beside_sha256": "b966a6f7145eb70f50e444ca0dd7dcec20e479d77247cd087d9d4873e7aab995"
+  },
+  {
+   "file": "calc-book_totals-20231003-part001.parquet",
+   "rows": 262144,
+   "bytes": 2262251,
+   "sha256": "936fd964eb0aff76b78fa8298138420efba52d80ef2791f158d03df37803c08d",
+   "beside": "rows-20231003-part001.parquet",
+   "beside_sha256": "17bddfe9a6d9640c5b0a8f0d1880b5c4c698a7c4fcd8b1f3f8cdd53b2cf76d98"
+  },
+  {
+   "file": "calc-book_totals-20231003-part002.parquet",
+   "rows": 262144,
+   "bytes": 2282917,
+   "sha256": "2fb9cad81233f49b42916c8e75208f69d47edec742d73acbddfb01782b06a67f",
+   "beside": "rows-20231003-part002.parquet",
+   "beside_sha256": "3be73726c98238d760079b31eee002cd7a2c867acf7048b193e51295bc0ac7f3"
+  },
+  {
+   "file": "calc-book_totals-20231003-part003.parquet",
+   "rows": 93065,
+   "bytes": 849127,
+   "sha256": "3a970eea07c2c333128bc73063b53e77730e46153d12f194e8bedff70f2fa107",
+   "beside": "rows-20231003-part003.parquet",
+   "beside_sha256": "bb39165ae86256f4dfd3fa20cbea8a29df82fd1adfb0783c38ddf5c4b5474cde"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "rows_compared": 879497,
+   "trade_day_rows": 878671,
+   "rows_of_no_trade_day_all_empty": 826,
+   "columns_compared": 24,
+   "size_at_the_open": {
+    "bid": 777,
+    "ask": 482
+   },
+   "total_size_identity_holds_on_every_row": true,
+   "size_of_fill_messages": 93202,
+   "size_counted_as_filled": 93202,
+   "size_of_fills_waiting_at_the_last_tick": 0,
+   "rows_where_a_fill_was_put_back": 1634,
+   "rows_where_more_left_than_was_filled": 3,
+   "method": "whole-column recount from the stored rows, with the best price taken from the count of better levels; the foundation's total sizes; the fill messages. Shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 439335,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "inside an exchange event, after a fill message and before the row where the book shows it",
+    "ticks_given": 480177,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 878671,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 27.1
+}
