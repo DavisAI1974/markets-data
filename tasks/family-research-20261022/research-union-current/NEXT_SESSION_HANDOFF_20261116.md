@@ -99,7 +99,9 @@ Raise this with Greg at the start of the next session, before the book issue is 
   applicable to 2023 trades".
 - L060-L063, L067-L071: definitions are prose; no complete runnable producer was found in git.
 - The resting-order age question above.
-- Add the trade-day rule to the project `CLAUDE.md`.
+- Merge the trade-day rule into the Markets trunk. It is committed as `b827fbe` on Markets branch
+  `ccr-349e2ffe-07p8od` (one commit on top of trunk `c93895e`); the trunk `claude/kalshi-s79-kickoff-ij8t9o` does
+  not have it yet, so a session cut from the trunk will not see it in `CLAUDE.md`.
 
 ## Practical notes for the container
 
