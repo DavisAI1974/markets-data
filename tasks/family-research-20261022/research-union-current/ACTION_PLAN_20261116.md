@@ -249,11 +249,18 @@ Greg expects this may be small, because some steps right after ROOT were redone 
 
 - The trade-day rule is on the Markets trunk as of 2026-11-16 (`claude/kalshi-s79-kickoff-ij8t9o` at `b827fbe`).
   It is also on `research/markets-adaptive-wavepacket-migration-20261108` (at `96ff7f3`), the branch the second
-  session of 2026-11-16 was cut from. The trade-cost rule ("trade cost is not a market condition", Greg 2026-11-08) was
-  added to the trunk's `CLAUDE.md` on 2026-11-16 (`9a28fcb`), so the two files now match. Only `CLAUDE.md` was
-  brought over: the rest of the original rule commit `2e9af64` (two skill files, `KALSHI_TRADING.md` and six
-  research programs that remove fee terms, including `lag_join.py`) is still only on the research branch. Greg to
-  say whether those go to the trunk too.
+  session of 2026-11-16 was cut from. The trade-cost rule ("trade cost is not a market condition", Greg 2026-11-08) is
+  now on the trunk in full (2026-11-16): `CLAUDE.md` in `9a28fcb`, and the other nine files of the original rule
+  commit `2e9af64` in `2e23681` (two skill files, `KALSHI_TRADING.md`, six research programs). The trunk's copies of
+  those files match the research branch's.
+- **Open, for Greg: the trade-cost rule is not finished in two live programs.** The rule says no fee, slippage,
+  maker or taker offset or other execution assumption enters any research calculation. Fees are zeroed, but two
+  things still enter a "net" figure: in `research/kalshi/lag_exploit_backtest.py` the "toll" (crossing the spread,
+  whole or half depending on a maker or taker exit; lines 66-72, 159, 217); and in
+  `research/kalshi/level_hit_dataset.py` an assumed entry slippage of 1 cent by default (lines 231, 427). The rule
+  commit kept both on purpose, describing the spread as an observable book condition. Greg to say whether they stay
+  or go. About 70 other Python files mention fees or slippage; most are the crypto-era and executor code the rule
+  keeps as history, and they were not examined one by one.
 - Deleting old code from Markets branches other than the session's own.
 
 ---
