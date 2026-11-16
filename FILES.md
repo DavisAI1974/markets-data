@@ -10,9 +10,11 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 - An empty field is stored as empty (null): never 0, never blank text. A line that a tick emptied is the words "no orders".
 - Checks in `RECEIPT.json`, all passed: every record accounted for; the trade day cut; the book equals the vendor restatement; the book adds up at every trade; one history per order; the trade count; the outside points pinned right on every row and every section G column.
 - `playback-*.json` is the playback record (four cuts, all identical). It was made on the first build of this session (Markets `fca77bb`), before the emptied line was changed from a blank cell to the words "no orders". That change touches one text cell and was not run through playback again (one check per changed part).
+- Part 2, the calculation `flow_peak` (the flow and the exhaustion peak; laid out and approved by Greg 2026-11-16, `STEP1_STEP2_LAYOUTS.md` piece 1; Markets `5aff999`): `calc-flow_peak-*.parquet`, one file beside each rows file, in the same row order, with the position on the tape and 12 new columns. 7,423 peaks became known in the trade day. Rows of no trade day hold empty cells. Check in `CALC-flow_peak-20231018.json`, passed: every column recounted from the stored rows by a different method and equal on all 771,468 rows; playback equal at two cuts.
 
 | File | Bytes | SHA256 |
 |---|---:|---|
+| `CALC-flow_peak-20231018.json` | 4,379 | `bfb18740c4b831b804c535dd8c3b8c9f89893262e3e9e8296781d5d681c1881a` |
 | `RECEIPT.json` | 8,849 | `ab9b100236fc09124313410653ad6f49a1139661f6c66adc70209febb6f9436b` |
 | `book-pictures-20231018-part000.parquet` | 12,044,565 | `825dae26433b637002707b830852ad544c22ad171b816427d82c6d5ffd18707b` |
 | `book-pictures-20231018-part001.parquet` | 12,391,163 | `b77cce7fcdc43d67ae8818a23f65bd07ff39df6428f02ea0f00900d1ad5be7d4` |
@@ -23,6 +25,9 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `book-pictures-20231018-part006.parquet` | 11,918,275 | `77ab656c3b2828527201b6cac260ff8086199e000fc4e93654ac71cdaf5b145b` |
 | `book-pictures-20231018-part007.parquet` | 12,122,094 | `702ebad0ad0c2a67e4d5520ede4c1c6a132b357697ce3bd4a42d57e1e2e881f7` |
 | `book-pictures-20231018-part008.parquet` | 6,550,590 | `28a058da1a92473626f33b6a5d9bb0e69fe94e78c34671a9a1b123181a315983` |
+| `calc-flow_peak-20231018-part000.parquet` | 798,419 | `18dae3729a1ec905af5363c8d60dc238ae41946810aa49d1f9e218bc147b4956` |
+| `calc-flow_peak-20231018-part001.parquet` | 852,477 | `44fabc0045bf6c644c0b9b38f6078dba47cfde4f31ed75f04f7d29a679439570` |
+| `calc-flow_peak-20231018-part002.parquet` | 806,656 | `ca03d123368dad212830fbcc1248176d3801ae3fa8ac0efb488197670f50301a` |
 | `playback-20231018.json` | 666 | `dff963b8f017297e3be9ddd21c68c5ed3d1d7afe470aa63cb0bc13c67c4c8439` |
 | `rows-20231018-part000.parquet` | 19,918,917 | `553218f493ba6420dfc957f9adce322ddf8e477ab150f60fc88f97fba635df47` |
 | `rows-20231018-part001.parquet` | 20,110,859 | `7cd439efe8f94e71d4612e7d8effe88994ae96b653d724c73749797bd1479975` |
