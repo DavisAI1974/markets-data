@@ -1,7 +1,6 @@
 # Spec: the `outside` part of ROOT (the 13 outside data points)
 
-Status: DRAFT, 2026-11-16. Not ready for approval until the questions at the end are answered. No code is written
-until Greg approves it.
+Status: DRAFT for Greg's approval, 2026-11-16. No code is written until he approves it.
 It is one part of ROOT part 1 (`SPEC-root.md`, section G). Decisions behind it: `ROOT_GAMEPLAN_DECISIONS.md`.
 
 ## Objective
@@ -17,6 +16,10 @@ nothing else.**
 3. Temperature (X10): worked out from the hourly readings, on the gas day ending 10 am Eastern, with wind and
    carry-over from earlier days as their own columns.
 4. The published figures underneath each point are kept and go on the row as well.
+
+And for this first ROOT part, Greg, 2026-11-16: **"keep the storage and weather forecasts simple. They aren't part of
+the actual calcs so it's fine for now. We'll update them later."** So: one forecast per trade day, and the Thursday
+storage figure. Nothing is dropped from the tables; only what a row shows is kept simple.
 
 "As it was" is defined by the original builder and the feeds it called, read at Markets `7f34afa`:
 `frankie_day_external.py`, `cot_feed.py`, `nws_temp_feed.py`, `forward_curve.py`, `flow_calendar.py`,
@@ -44,7 +47,7 @@ The original carried 13 points as 30 figures plus one hourly temperature per cit
 |---|---|
 | X01, X03, X04 | the NYMEX gas contract's managed-money net position: its standing among the last year of reports, its change on the week, its standing among the last three years |
 | X08 | the ICE Henry Hub contract's standing among the last year |
-| X02 | four forecast figures (gas-weighted heating degree days): GFS for the trade day's date, NAM for the same date, GFS for the day after, extended GFS for three days after. Each updates with every new model run. |
+| X02 | four forecast figures (gas-weighted heating degree days): GFS for the trade day's date, NAM for the same date, GFS for the day after, extended GFS for three days after. The original updated them with every new model run; here they are taken once per trade day (see "Kept simple"). |
 | X09 | the largest gap between GFS and NAM over the 8 days forecast, per shared run |
 | X05, X07 | US48 wind generation in the hour; the gas-burn estimate for the hour |
 | X06 | trading sessions since the front contract last expired |
@@ -61,19 +64,32 @@ Times are when a value becomes known. They are the original's, declared by name 
 |---|---|---|---|
 | X01, X03, X04 | Net = long minus short for managed money, CFTC code 023651. Standing = where this week's net falls among the reports of the trailing window: 1 year (at least 45 of about 52 reports, else empty) and 3 years (at least 140 of about 156). Change = this report minus the one before. | Friday 3:30 pm Eastern after the report date, a business day later in a holiday week. This is a rule, as in the original, not a record. | Fix 4: long, short, net and the number of reports in each window on the row. |
 | X08 | The same 1-year standing for CFTC code 023391. The three other ICE gas codes stay in its table. | as X01 | Fix 4, as above. |
-| X02 | For each model run and each city: the forecast temperatures for a target date give that date's high and low; their mean gives degree days, base 65 F; the cities are combined with the 16 original weights, spread over the cities present. Target dates: the trade day's date and the 7 after. | the run's start time plus 4.5 hours | Fix 4: each city's forecast temperatures underneath. See questions 1 and 2. |
-| X09 | GFS minus NAM in gas-weighted heating degree days on the cities both have, per shared run; the largest gap over the 8 target dates and which one it is at. | as X02 | none, unless question 2 changes the day |
-| X10 | Observed gas-weighted heating and cooling degree days and precipitation per gas day, 16 cities with the original weights; every station reading underneath. | each reading 10 minutes after its time; the gas-day figure 10 minutes after that gas day ends | **Fix 3.** The gas day ends 10 am Eastern (it was midnight Central). The temperature comes from the hourly readings (it was the high and low averaged). Wind and carry-over are their own columns. The routine hourly reading of each hour is taken from the routine-only files, so the source identifies it. See question 3. |
+| X02 | For each model run and each city: the forecast temperatures for a target date give that date's high and low; their mean gives degree days, base 65 F; the cities are combined with the 16 original weights, spread over the cities present. Target dates: the trade day's date and the 7 after. | the run's start time plus 4.5 hours | Fix 4: each city's forecast temperatures underneath. One forecast per trade day (see "Kept simple"). |
+| X09 | GFS minus NAM in gas-weighted heating degree days on the cities both have, per shared run; the largest gap over the 8 target dates and which one it is at. | as X02 | none. One per trade day, as X02. |
+| X10 | Observed gas-weighted heating and cooling degree days and precipitation per gas day, 16 cities with the original weights; every station reading underneath. | each reading 10 minutes after its time; the gas-day figure 10 minutes after that gas day ends | **Fix 3.** The gas day ends 10 am Eastern (it was midnight Central). The temperature comes from the hourly readings (it was the high and low averaged). Wind and carry-over are their own columns. The routine hourly reading of each hour is taken from the routine-only files, so the source identifies it. See call 5. |
 | X05, X07 | US48 wind generation by hour (X05). Gas burned for power, estimated as US48 gas generation in the hour x 24 x 7,900 / 1.035e9 (X07). Both from the EIA's own US48 rows (`raw/eia930/api/`), as in the original. The hourly rows of the six regions stay underneath. | the hour plus 2 hours | none |
 | X06 | Trading sessions since the front contract last expired, with that contract's symbol and expiry date. | see call 1 | none |
 | X11 | Level, change on the week, comparison with the five-year average. The original took all of them from the printed report where a saved copy was held, and otherwise from the EIA's series. | Thursday 10:30 am Eastern after the week | **Fix 1.** Level: the EIA's original estimate before any revision (`revisions.xls`). Change: the difference of two such levels. See call 2 for the five-year comparison. |
-| X12 | The street estimate of the weekly change, the printed actual, actual minus estimate; one row per weekly report, and a report whose estimate was not found keeps its row empty with the reason. | the report's release time | **Fix 2.** Filled in. Waits on the saved pages. |
+| X12 | The street estimate of the weekly change, the printed actual, actual minus estimate; one row per weekly report, and a report whose estimate was not found keeps its row empty with the reason. | the report's release time | **Fix 2.** Filled in when the saved pages can be reached. Until then empty with that reason (see "Kept simple"). |
 | X13 | The contract list, every exchange statistic and every trade of every month. The shape is worked out over the 12 nearest contract months that have a price, once from settlement prices and once from last trades, again at each change. | each record's own received time | none. Trades are read from the vendor's trades files; the original read the same trades out of the full order tape. |
 
 Which reports the four trade days carry (report dates read from the files; release times by the rules above): trade
 days Oct 2 and Oct 3 carry the storage report for the week ending Sep 22 and the positioning report dated Sep 26;
 trade days Oct 17 and Oct 18 carry the storage report for the week ending Oct 6 and the positioning report dated
 Oct 10. By those rules no storage or positioning report comes out inside any of the four trade days.
+
+## Kept simple for this first ROOT part (Greg, 2026-11-16)
+
+- **Forecast (X02, X09): one per trade day.** For each model, the last run that had become known before the trade
+  day opens at 6 pm Eastern. Its figures are the same on every row of that trade day. Every run stays in the table
+  with its time, so following each new run through the day can be switched on later without fetching anything.
+- **The forecast keeps the original's day and method** (the calendar date, the forecast high and low). It is not
+  moved to the gas day now. So for the time being the forecast and the observed figure describe slightly different
+  days; that is noted on the README page and is part of the later update.
+- **Storage (X11): the Thursday figure.** The level as first printed, the change on the week, and the five-year
+  comparison by the original's fallback rule (call 2).
+- **Storage estimate (X12): not chased now.** Its saved pages cannot be reached from the cloud environment. The
+  column is there, empty, with that reason, and is filled in the later update.
 
 ## Claude's calls. Correct any that are wrong.
 
@@ -89,12 +105,20 @@ Oct 10. By those rules no storage or positioning report comes out inside any of 
    day Mon Oct 2 is Friday's. The original read only the two clock-day files of each trade day.
 4. **Where the tables are kept.** In markets-data beside the source files, `data/outside/ng_oct2023/made/`, one
    plain table per point, with the receipt.
+5. **The details of fix 3 (X10), kept simple.** The gas day's temperature for a city is the mean of its routine
+   hourly readings in that gas day; degree days come from that mean, base 65 F as before; the cities are combined
+   with the 16 original weights, spread over the cities present, the missing ones named. The wind column is the
+   same weighted mean of the hourly wind speeds. Carry-over is the heating degree days of each of the two gas days
+   before, as two columns. The number of hours with a reading is on the row.
+6. **A workbook of the point tables.** Greg asked for the files to be rebuilt "so we can add them to the excel
+   sheet". Until the tick rows exist, the tables go into a small workbook, one sheet per point, separate from the
+   four trade-day sheets. When the rows are built the 13 are pinned onto them from the same tables.
 
 ## What is still missing
 
 | Point | What | What it waits on |
 |---|---|---|
-| X12 | the street estimate | `web.archive.org` allowed on the cloud environment. The estimates were read from saved copies of two web pages. |
+| X12 | the street estimate | `web.archive.org` allowed on the cloud environment. Left for the later update. |
 | X11 | the five-year average and year-ago level exactly as printed | `web.archive.org`, the saved report pages. |
 
 A point that is waiting is built with everything else in place and its values empty, each with the stated reason.
@@ -125,18 +149,3 @@ before it is added.
 - **Ask first:** any paid download; any new source; any change to a formula of the original beyond the four fixes.
 - **Never:** use the old workbook or an old made file as a source; fill a value from a different report or a
   different day; put a cost or fee into anything.
-
-## Questions for Greg (these are his decisions, not calls)
-
-1. **The forecast on a row (X02).** The original showed four forecast figures, each updating with every new model
-   run. Earlier on 2026-11-16 Greg ruled one forecast per trade day for the ROOT stage, the last made before the
-   trade day opens (`SPEC-root.md`, section G). "Keep everything as it was" came after. Which is it: every run as it
-   arrives, or the one forecast made before the open?
-2. **Which day the forecast describes (X02, X09).** Fix 3 moves the observed temperature to the gas day ending
-   10 am Eastern. The forecast in the original describes the calendar date. Left as it was, forecast and observed
-   describe different days. Is the forecast moved to the same gas day, or left as it was?
-3. **The details of fix 3 (X10).** Three things were not said: whether degree days come from the mean of the day's
-   hourly readings or are counted hour by hour; what the wind column is; and how many earlier gas days the carry-over
-   covers.
-4. **A workbook of the point tables now.** Yes or no: a small workbook with one sheet per point, so the 13 can be
-   seen before the tick rows exist, separate from the four trade-day sheets.

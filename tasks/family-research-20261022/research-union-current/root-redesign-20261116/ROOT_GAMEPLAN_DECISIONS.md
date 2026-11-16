@@ -556,6 +556,16 @@ authorities and no national row; adding them up ourselves would be a choice and 
   observed temperature moves to the gas day; the details of fix 3; and a workbook of the point tables. The source
   folder now holds 127 files: readings for Austin and San Antonio and routine-only hourly files were added.
 
+- **Kept simple for this first ROOT part (Greg, 2026-11-16):** "Just for this initial root part, keep the storage
+  and weather forecasts simple. They aren't part of the actual calcs so it's fine for now. We'll update them later."
+  So his earlier ruling stands: one forecast per trade day, the last run known before the trade day opens, the same
+  on every row of that trade day; and the Thursday storage figure. Every forecast run stays in the point table with
+  its time, so nothing is dropped and the later update needs no new fetch. The forecast keeps the original's day and
+  method for now. The storage estimate (X12) is not chased now: its column is there, empty, with the reason.
+  `SPEC-root.md` section G already says one forecast per trade day and needs no change. The three other questions in
+  `SPEC-outside.md` are settled as stated calls in that file (the details of fix 3, and a small workbook of the point
+  tables), for Greg to correct when he reads it.
+
 **Making the 13 from these files is the `outside` part of ROOT and is a build:** it gets its short specification
 (each point's source, formula and timing, with the fixes already decided), Greg's approval, and then the switch to
 Opus. The old builder is not rerun, because it carries what was ruled wrong. The 13 go onto the sheet when the ROOT
