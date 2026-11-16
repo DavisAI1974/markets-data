@@ -983,6 +983,31 @@ faster do that. Or use the git box." Then: **"We can use 4 boxes and run them al
   anything starts. The GitHub runner (4 CPUs, 6 hours a job) stays the fallback.
 - The endpoint `frankie-reading-granite42` is the Granite reader on a GPU, not a box for ROOT.
 
+**Every calculation is inspected before it runs (Greg, 2026-11-16).** "Before we run these let's take a look at the
+calcs to make sure they're doing any we need." Then: "Build it and we also need to inspect st 1 and 2 calcs before
+running." So each calculation is laid out (what we want, what the original did, what changes) and Greg says yes
+before it is built or run. The Step 1 and Step 2 calculations get the same inspection before anything runs; laying
+them out is gameplan work, done on Fable.
+
+**Storage (X11, X12): laid out, approved ("Build it"), BUILT (2026-11-16).** Markets session branch, `root/outside.py`;
+tables in `data/outside/ng_oct2023/made/` (`storage_weekly.csv`, `storage_estimate.csv`).
+- Level as first printed: `revisions.xls` holds the EIA's first print for every week from 2015-06-19, so the printed
+  pages are not needed for it. Week ending 2023-01-20: first print 2,729, later revised to 2,734.
+- Change on the week: this week's first print minus the week before's. It is not called "as printed": in the week
+  after a revision the printed change used the revised level (2023-01-27: -146 here, -151 by the EIA). Since 2015 that
+  happens on 28 weeks; in 2023 on Jan 20, Jan 27, Jun 30 and Jul 7, none near the four trade days. The EIA's current
+  change is a later figure, so it is in the receipt as a check and on no row.
+- Five-year comparison: the original's fallback exactly (same ISO week number, five prior calendar years, empty
+  unless all five; the five listed). The prior years use the EIA's current values (Claude's call, stated to Greg;
+  their first prints are available if he prefers).
+- Release time: Thursday 10:30 am Eastern after the week, marked as a rule. Holiday weeks can move it; no shift of
+  Sep 28 or Oct 12 could reach into a trade day.
+- The four trade days carry: Oct 2 and 3 the week ending Sep 22 (3,359; change 90; five-year +199.0); Oct 17 and 18
+  the week ending Oct 6 (3,529; change 84; five-year +168.6). No report comes out inside a trade day.
+- Street estimate (X12): empty on every row with its reason (needs `web.archive.org`).
+- The history file and the EIA API series agree on all 480 shared weeks. 27 tests pass on the real files; the 16
+  earlier tables are byte-identical to the previous build.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

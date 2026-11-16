@@ -368,6 +368,18 @@
    "sha256": "4cf1cc7d1836c1b15e96329070859aa19b701a54390a81b6e10904c92d43413a"
   },
   {
+   "stored": "raw/storage/api/eia_weekly_NW2_EPG0_SWO_R48_BCF_page00.json.gz",
+   "sha256": "91728f4d0ea55187482fdadb693bc5d33bea9ae60ff6510e8411a6fc3f106d6d"
+  },
+  {
+   "stored": "raw/storage/ngshistory.xls",
+   "sha256": "c028758e4208741424ffcad9d95bc6b27fed8a8fbd09688684014954f37b4245"
+  },
+  {
+   "stored": "raw/storage/revisions.xls",
+   "sha256": "ee7c703c6d30176d0253b879aa4c8c6dc0178b411c36d73036d89aeff412dd3c"
+  },
+  {
    "stored": "raw/weather_obs/asos_ATL_20230901_20231101.tsv.gz",
    "sha256": "066fe4e69bb62e25bca34230c94dc3cd699222259c3883b4b4f32535cff2d807"
   },
@@ -608,6 +620,18 @@
    "rows": 93643,
    "bytes": 1219258,
    "sha256": "548ca780db51cc7723ea40714088c2b1adc860a3f53084e41f55337cea335284"
+  },
+  {
+   "table": "storage_weekly.csv",
+   "rows": 434,
+   "bytes": 151627,
+   "sha256": "0a1b4908f77d3452fac0bde7146bc33e20cdb27a690ca2118ed81691d0ec7d9d"
+  },
+  {
+   "table": "storage_estimate.csv",
+   "rows": 434,
+   "bytes": 126688,
+   "sha256": "b378cc7e9a56b6bdfef69309ad52836fb628abbe26a7f3bbe80986749487a68a"
   }
  ],
  "empty": [
@@ -680,12 +704,177 @@
     "price": 63982
    },
    "reason": "price: the statistic has no price (a quantity only); raw_symbol: no definition known for that instrument"
+  },
+  {
+   "table": "storage_weekly.csv",
+   "cells_by_column": {
+    "change_from_first_prints_bcf": 1,
+    "vs_5yr_bcf": 2,
+    "same_week_prior_5y_levels": 1,
+    "eia_note": 411
+   },
+   "reason": "change: no first print for the week before (the first prints start 2015-06-19); vs_5yr and the prior levels: fewer than five prior calendar years carry that ISO week number (week 53); eia_note: the EIA wrote no note for that week"
+  },
+  {
+   "table": "storage_estimate.csv",
+   "cells_by_column": {
+    "estimate_bcf": 434,
+    "actual_change_from_first_prints_bcf": 1,
+    "surprise_bcf": 434
+   },
+   "reason": "estimate and surprise: the street estimate is not held (estimate_missing_reason); actual: no first print for the week before"
   }
  ],
+ "storage_checks": {
+  "history_file_equals_api_series_weeks": 480,
+  "change_from_first_prints_differs_from_eia_current_net_change": [
+   {
+    "week_ending": "2016-02-12",
+    "change_from_first_prints_bcf": -158.0,
+    "eia_current_net_change_bcf": -163.0
+   },
+   {
+    "week_ending": "2016-02-19",
+    "change_from_first_prints_bcf": -122.0,
+    "eia_current_net_change_bcf": -117.0
+   },
+   {
+    "week_ending": "2017-06-30",
+    "change_from_first_prints_bcf": 72.0,
+    "eia_current_net_change_bcf": 62.0
+   },
+   {
+    "week_ending": "2017-07-07",
+    "change_from_first_prints_bcf": 57.0,
+    "eia_current_net_change_bcf": 58.0
+   },
+   {
+    "week_ending": "2017-07-14",
+    "change_from_first_prints_bcf": 28.0,
+    "eia_current_net_change_bcf": 27.0
+   },
+   {
+    "week_ending": "2017-07-28",
+    "change_from_first_prints_bcf": 20.0,
+    "eia_current_net_change_bcf": 19.0
+   },
+   {
+    "week_ending": "2017-08-04",
+    "change_from_first_prints_bcf": 28.0,
+    "eia_current_net_change_bcf": 30.0
+   },
+   {
+    "week_ending": "2017-08-11",
+    "change_from_first_prints_bcf": 44.0,
+    "eia_current_net_change_bcf": 53.0
+   },
+   {
+    "week_ending": "2018-06-15",
+    "change_from_first_prints_bcf": 91.0,
+    "eia_current_net_change_bcf": 95.0
+   },
+   {
+    "week_ending": "2018-06-22",
+    "change_from_first_prints_bcf": 70.0,
+    "eia_current_net_change_bcf": 66.0
+   },
+   {
+    "week_ending": "2018-07-13",
+    "change_from_first_prints_bcf": 46.0,
+    "eia_current_net_change_bcf": 45.0
+   },
+   {
+    "week_ending": "2018-07-27",
+    "change_from_first_prints_bcf": 35.0,
+    "eia_current_net_change_bcf": 33.0
+   },
+   {
+    "week_ending": "2018-08-03",
+    "change_from_first_prints_bcf": 46.0,
+    "eia_current_net_change_bcf": 48.0
+   },
+   {
+    "week_ending": "2018-08-17",
+    "change_from_first_prints_bcf": 48.0,
+    "eia_current_net_change_bcf": 49.0
+   },
+   {
+    "week_ending": "2018-08-24",
+    "change_from_first_prints_bcf": 70.0,
+    "eia_current_net_change_bcf": 69.0
+   },
+   {
+    "week_ending": "2018-09-07",
+    "change_from_first_prints_bcf": 68.0,
+    "eia_current_net_change_bcf": 69.0
+   },
+   {
+    "week_ending": "2019-03-08",
+    "change_from_first_prints_bcf": -204.0,
+    "eia_current_net_change_bcf": -200.0
+   },
+   {
+    "week_ending": "2019-03-15",
+    "change_from_first_prints_bcf": -43.0,
+    "eia_current_net_change_bcf": -47.0
+   },
+   {
+    "week_ending": "2021-03-19",
+    "change_from_first_prints_bcf": -36.0,
+    "eia_current_net_change_bcf": -32.0
+   },
+   {
+    "week_ending": "2021-03-26",
+    "change_from_first_prints_bcf": 18.0,
+    "eia_current_net_change_bcf": 14.0
+   },
+   {
+    "week_ending": "2022-05-20",
+    "change_from_first_prints_bcf": 80.0,
+    "eia_current_net_change_bcf": 87.0
+   },
+   {
+    "week_ending": "2022-05-27",
+    "change_from_first_prints_bcf": 90.0,
+    "eia_current_net_change_bcf": 82.0
+   },
+   {
+    "week_ending": "2022-06-03",
+    "change_from_first_prints_bcf": 97.0,
+    "eia_current_net_change_bcf": 102.0
+   },
+   {
+    "week_ending": "2022-06-10",
+    "change_from_first_prints_bcf": 96.0,
+    "eia_current_net_change_bcf": 92.0
+   },
+   {
+    "week_ending": "2023-01-20",
+    "change_from_first_prints_bcf": -91.0,
+    "eia_current_net_change_bcf": -86.0
+   },
+   {
+    "week_ending": "2023-01-27",
+    "change_from_first_prints_bcf": -146.0,
+    "eia_current_net_change_bcf": -151.0
+   },
+   {
+    "week_ending": "2023-06-30",
+    "change_from_first_prints_bcf": 72.0,
+    "eia_current_net_change_bcf": 76.0
+   },
+   {
+    "week_ending": "2023-07-07",
+    "change_from_first_prints_bcf": 53.0,
+    "eia_current_net_change_bcf": 49.0
+   }
+  ],
+  "note": "the EIA current net change is a later figure and is not put on any row; a difference is the week after a revision, when the printed change used the revised level of the week before"
+ },
  "not_made": [
   {
-   "points": "X11, X12",
-   "reason": "storage tables wait for Greg's word on adding a reader for the EIA .xls files (SPEC-outside.md asks first)"
+   "points": "X12 street estimate",
+   "reason": "the street estimate is on saved web pages (web.archive.org), which the cloud environment cannot reach; left for the later update (SPEC-outside.md, kept simple)"
   }
  ]
 }
