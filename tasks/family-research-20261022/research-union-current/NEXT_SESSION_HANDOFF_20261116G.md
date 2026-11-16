@@ -6,6 +6,9 @@ nothing was left half done.
 
 ## UPDATE, later the same evening: read this first
 
+**`NEXT_SESSION_HANDOFF_20261116H.md` is newer than this file and is the place to start.** What follows is kept as
+the record of how the seventh session ended.
+
 This handoff was written when the seventh session expected to stop. Two things have happened since.
 
 **1. An eighth session started from this file and has built a good part of the list below.** It is recorded in
