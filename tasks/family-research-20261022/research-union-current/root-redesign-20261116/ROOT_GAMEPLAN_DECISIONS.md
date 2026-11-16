@@ -1692,11 +1692,17 @@ front orders were cancelled by the exchange in the same event without trading (1
 others are not explained yet. C and the quote's runs do not use the place in line. K does, so this is looked at
 before K is built, and anything about the foundation goes to him first.
 
-**The two checks before D and the print legs of I: NOT DONE.** The read-only search for where Native's dipole
-record and the 23,615 earlier print legs are kept was started in the background and stopped: it was downloading
-whole old branches and filled the session's disk. It had found likely places (markets-data branches
-`codex/native-dipole-artifacts-20261108`, `codex/research-union-four-days-20261109`, the tags
-`eight-trade-types-repair-20261115`). It is to be run again by reading single files, not whole branches.
+**The two checks before D and the print legs of I: already DONE by the seventh session** (see "Result of the two
+checks" above, written to this file at 4:48 pm Eastern, after this session had read the handoff). Native's dipole
+record and the earlier print legs cover the whole trade day on Oct 3 and Oct 18 and miss the first two hours on
+Oct 2 and Oct 17. Greg's decision on them is still needed before D or the print legs of I are placed. This
+session had started its own read-only search for the same thing in the background and stopped it: it was
+downloading whole old branches and filled the session's disk. It is not needed and is not run again.
+
+**Two of the proposals put to Greg in the seventh session are already measured by what was built here** (they are
+still his to approve as their own pieces): refilled orders (proposal 6) are the `refilled` columns of the book
+totals, per side and at the best price, on every row; the moments the best bid and ask touch or cross (part of
+proposal 7) are on every fact of the quote's runs as the gap at that tick.
 
 ## Held for the later stage: figuring out what moves the market
 
