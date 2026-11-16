@@ -132,6 +132,48 @@ working folders.
 
 Purpose: nothing is deleted and no code is written on a guess.
 
+### Step 2b. The calculation inventory (Greg, 2026-11-16)
+
+Greg: "We really need to inspect all of our calcs from root through the 2 new workflow pieces and adding in the
+research projects we did to figure out what we want to figure out, is currently being calc, and how we make new
+calcs to meet our needs."
+
+Purpose: before any new calculation is designed, lay every existing one out next to the question it was meant to
+answer, so that we can see three things side by side: what we want to find out, what is actually being calculated
+today, and what new calculation the full record makes possible. Without this, the new research layer would either
+repeat the old calculations with their limits, or drop a question nobody remembered was being asked.
+
+Scope, in the order the data flows (see `root-audit-20261116/OLD_ROOT_LINEAGE.md` section B):
+ROOT and its sections; replay comparison; four-day extensions; family replication; combined events; whole
+lifecycles; lifecycle data links; the 141-field grid; the per-trade book archive; the S fields; the 2021 Step 1
+census; Desktop's SQLite and Julia family research; and the research projects in this folder (priority-ten,
+discovery-depth, reanalysis, fifteen-strategies, paper-validation, the case tables, the dipole maps).
+
+The deliverable is one table, `root-audit-20261116/CALCULATION_INVENTORY.md`, one row per calculation:
+
+| Column | What goes in it |
+|---|---|
+| Where | stage, file and line |
+| What it was meant to find out | the question, in plain words, from the code's own notes and the handoffs |
+| What it actually calculates | inputs, the formula in words, the step size, every window, cap and threshold |
+| What data it uses and what it leaves out | depth, resolution, which messages, which contract |
+| What it feeds | the later calculations and sheet fields that take it in |
+| What the full record allows | how the same question would be asked with every message, full depth, no fixed window |
+| Keep the question? | Greg's column |
+
+Method: read the code and definitions only, not results or findings. One reader per stage, each returning rows for
+this table; then one pass to join them and to list questions that no calculation answers and calculations that
+answer no stated question.
+
+The first column of questions is drafted from the records for Greg to correct. Already on record as things he wants
+to find out: which pieces of data dictate what happens next; the shapes of a family across its life (the approach
+before birth, the turn, the tail and exhaustion), by direction; the dipole dive; the roughly half-second lead on
+natural gas; the exhaustion canary and the entry hypothesis; flow authority, its collapse and recovery; where a
+turning point comes from; and what each S field was trying to measure.
+
+This step can run while the new ROOT record is being built (step 3), because the record keeps everything
+regardless. It must be finished and signed off before any research-layer spec is written (step 4).
+
 ### Step 3. Build the new ROOT, one piece at a time
 
 ROOT becomes only the complete record. Each piece follows the same cycle: a short written spec; Greg approves; build
@@ -190,7 +232,7 @@ Greg expects this may be small, because some steps right after ROOT were redone 
 - Book, queue and age fields from the new book records.
 - The S fields (S01-S19): the old calculation uses fixed 64- and 1,024-group windows and the top 3 levels
   (`c15_teacher_r3.py` line 205), so it is not run as it stands. What each S field was trying to measure is re-asked
-  of the full record. Greg has not objected to this; confirm it.
+  of the full record. Greg agreed to this on 2026-11-16.
 - The Step 1 fields (L080, L083-L089) from the expanded families; the family and pre-birth fields (L060-L063,
   L067-L071) from the new structures. L024 and L026 are the 2021 raw objects themselves and stay as they are.
 - Write the new workbook release and apply the same to the four-day research workbook.
@@ -225,7 +267,10 @@ Greg expects this may be small, because some steps right after ROOT were redone 
    do in a week with an exchange holiday or a missing Sunday file (proposed: stop and name what is missing); a
    contract roll inside a trade week (proposed: carry both contracts' books).
 2. Sign-off of the old ROOT file list and of the lineage delete list, once they exist.
-3. Confirm the S replay is not run as it stands.
+3. Name the two runs that are "our two new workflow steps". The records never identified them
+   (`root-audit-20261116/OLD_ROOT_LINEAGE.md` section A lists the candidates).
+3b. Correct the draft list of what we want to find out (step 2b), and say whether the earlier Claude research
+   projects are to be listed in the calculation inventory as calculations, or stay unread.
 4. Permission, or his own hand, for pushes to Markets branches other than the session's.
 5. Go and budget for pods when the first full run is ready.
 
