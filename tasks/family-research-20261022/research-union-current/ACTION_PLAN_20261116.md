@@ -318,6 +318,11 @@ Greg expects this may be small, because some steps right after ROOT were redone 
 
 ## 6. Waiting on Greg
 
+**Update, third session of 2026-11-16:** items 1 and the ingest, order-book and `c15_dstate.py` questions are answered,
+and the ROOT gameplan is being settled piece by piece. The answers and each closed piece are recorded in
+`root-redesign-20261116/ROOT_GAMEPLAN_DECISIONS.md`. Read that file before this section. The sign-offs in item 2 are
+still open.
+
 1. `SPEC-tape-stream.md`: where the new ROOT code lives (proposed: Markets repository, new folder `root/`); what to
    do in a week with an exchange holiday or a missing Sunday file (proposed: stop and name what is missing); a
    contract roll inside a trade week (proposed: carry both contracts' books).
