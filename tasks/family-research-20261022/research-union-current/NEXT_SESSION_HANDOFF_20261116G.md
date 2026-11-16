@@ -84,11 +84,11 @@ by a different method, and playback at two cuts). A calculation can keep a table
 5. **The chain link models (Step 1). APPROVED by Greg: "Do it."** The layout is in `STEP1_STEP2_LAYOUTS.md` and in
    the decisions file. It reads the links of A, so it is built after A. It is the piece for the pods.
 
-6. **Two checks before D and the print legs of I are placed, results to Greg FIRST:** whether Native's dipole
-   record, and the earlier print legs (23,615 of them, pass of 2026-11-13), were cut on the old day boundaries.
-   A read-only search for where both are kept was started in this session and had not reported when the session
-   ended; run it again. Much old material was deleted from the branch on 2026-11-16 and is only in git history or
-   on older branches (see `root-audit-20261116/OLD_MATERIAL_REMOVAL_LIST.md`). Nothing is restored without his word.
+6. **The two checks before D and the print legs of I are placed: DONE, results put to Greg, his decision
+   needed.** Both Native's dipole record and the earlier print legs cover the whole trade day on Oct 3 and Oct 18,
+   and are missing the first two hours (they start at 00:00 UTC) on Oct 2 and Oct 17. The full result, where each
+   record is kept, and Claude's recommendation are in the decisions file under "Result of the two checks". Do not
+   place either until he has answered. Nothing is restored without his word.
 
 7. Then D and the rest of I, K, H (the renders, every instance), and the grouping with Greg.
 

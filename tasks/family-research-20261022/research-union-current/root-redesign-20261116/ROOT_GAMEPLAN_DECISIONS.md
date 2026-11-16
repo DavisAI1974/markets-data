@@ -1549,6 +1549,50 @@ built after Step 2's piece A and is the piece for the pods; no pod starts withou
 `NEXT_SESSION_HANDOFF_20261116G.md`. Nothing was left half built: Step 2's piece C and the quote's runs were
 being prepared (the counting rules read off trade day Oct 2 are in the handoff) and no code for them exists yet.
 
+**Result of the two checks (2026-11-16, read-only search of both repositories; nothing was restored, nothing
+placed). Put to Greg the same hour; his decision is needed before D or the print legs of I are placed.**
+
+Both records were cut right on two of the four trade days and wrong on the other two.
+
+| Trade day | Native's dipole record | The earlier print legs |
+|---|---|---|
+| Mon Oct 2 | Starts 00:00 UTC (8 pm Eastern). The first two hours of the trade day are missing. | Same: first two hours missing; 457 trades are in no leg. |
+| Tue Oct 3 | Covers the whole trade day (42 births in its first two hours). | Covers the whole trade day. |
+| Tue Oct 17 | Starts 00:00 UTC. The first two hours are missing. | Same; 252 trades are in no leg. |
+| Wed Oct 18 | Covers the whole trade day (60 births in its first two hours). | Covers the whole trade day. |
+
+Native's dipole record:
+- Candidates: 741, 833, 741 and 863 on the four trade days. On Oct 2 and Oct 17 the detector's history also starts
+  at 00:00 UTC, so every candidate's 0.85 level on those two trade days was made without the first two hours.
+- No candidate in the first 20 to 28 minutes after a start, on any of the four (the detector warms up).
+- Two candidates became available just after 5 pm (one on Oct 3, one on Oct 17): outside the trade day.
+- The Oct 18 record comes from a different, older run than the other three.
+- Where: the complete records (birth, recognition, each second of the dipole, how it ended) for Oct 2, 3 and 17
+  are on markets-data branches `codex/frankie-lifecycle-recovery-20231002-42621496819`, `-20231003-`, `-20231017-`
+  (about 600 MB a date); Oct 18 is at Markets commit `3d0b06aa`,
+  `artifacts/sqlite-triage/20261022/families/trade-lifecycle-targeted-v1/source-episode.jsonl.gz`. The current
+  branch holds only a repackaged list with no end stage (`replay-artifacts/<date>/candidate-inputs.jsonl.gz`).
+- Native's own programs cut the trade day at 6 pm Eastern (Markets `2ebb8ce8`,
+  `research/kalshi/frankie_raw_mbo_benchmark/native_session.py`); why the Oct 2 and Oct 17 runs started at
+  00:00 UTC was not determined.
+
+The earlier print legs:
+- 23,615 legs (5,996; 6,907; 5,592; 5,120), of which 13,661 one tick long: both figures of the 2026-11-13 pass
+  reconcile exactly. On markets-data `main`, under
+  `tasks/family-research-20261022/claude-independent-research-20261113/source-artifacts/.../a-print-legs.parquet`.
+- On Oct 2 and Oct 17 the first leg is cut at 00:00 UTC and every leg number counts from there.
+- The rule that made them is in git (Markets `0408df44`, `continue_trade_chronology.py`, "maximal same-sign
+  distinct-print steps; turning stretches belong to both"), so they can be made again from the stored rows.
+- The write-up of the 2026-11-13 pass itself was not found in git; the "85.6 of 100" figure is only in
+  `STEP2_PLAN.md`.
+
+Claude's recommendation, his to decide:
+- Print legs: make them again from the stored rows by the same rule, for all four trade days, so all four are cut
+  the same way. The old files are not placed.
+- Native's record: place Oct 3 and Oct 18 as they are. For Oct 2 and Oct 17 the choice is his: place what exists,
+  marked as missing its first two hours and with a level made without them; or run Native again on those two
+  trade days from 6 pm; or leave them out of D until then.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
