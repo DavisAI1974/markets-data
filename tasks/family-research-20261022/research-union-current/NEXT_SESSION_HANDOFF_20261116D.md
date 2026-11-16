@@ -66,6 +66,9 @@ as the starting point; C lists as open several things that are now closed.
   mixed rows) is in the decisions file, awaiting Greg's yes. The 5-year full order tape on S3 covers the 55 weeks and
   all of October 2023, so old and new can later be measured on the same events once AWS is back.
 
+- **One run.** Step 1 and Step 2 calculations (the two Step 1 columns, and Step 1 with the Phase 2 calculations) are
+  made in the same single pass wherever that can be done; each stays its own named calculation with its own checks.
+
 ## Where the ROOT code is (read this before building)
 
 **The new ROOT code exists only on Markets branch `ccr-ddc0ebeb-do2y3o`** (commits `a1b3ad2` and `6208460`: `root/` and

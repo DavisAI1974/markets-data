@@ -779,6 +779,18 @@ Claude's answer, given to him the same hour (a proposal until he says yes; no sp
   the removed files are in the commit before `ee4da3f` and on three older branches. Nothing is restored without his
   word.
 
+**Step 1 and Step 2 calculations in one run (Greg, 2026-11-16):** "And if we can consolidate step 1 and 2 calcs into 1
+run do that". It matches his earlier rulings ("there's no reason to do 2 separate runs"; "do them all at once instead
+of split up").
+- Read both ways, with the same answer: the two Step 1 columns (the original definition and the growth), and Step 1
+  together with the Phase 2 calculations that were run after it (the chain, its stages, timing and recurrence), are
+  made in the same single pass over the timeline wherever that can be done.
+- How: each stays its own named calculation with its own columns and its own checks, as the shape of part 2 says.
+  One pass walks the ticks once; at each tick the calculations run in a fixed order, so one that reads another's
+  column runs after it. Nothing is walked twice.
+- Where it cannot be one pass (a definition that needs something only known later, such as a threshold taken over a
+  whole day), that is put to Greg when the calculation is laid out, not worked around.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
