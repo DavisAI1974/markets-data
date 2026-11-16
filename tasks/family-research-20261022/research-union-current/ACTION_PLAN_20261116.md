@@ -105,8 +105,8 @@ session. Four small CPU pods created in data center US-CA-2 never started; with 
 to use that data center.
 
 **Not done.** The workbook cells still hold old values. The four old archive branches
-`codex/frankie-book-recovery-*` still exist. The trade-day rule is on the Markets trunk (`b827fbe`) and on branch `ccr-5317ce1c-hpqa9c`, but not on the
-Markets research branch.
+`codex/frankie-book-recovery-*` still exist. The trade-day rule is on the Markets trunk (`b827fbe`), the Markets research branch (`96ff7f3`) and branch
+`ccr-5317ce1c-hpqa9c`.
 
 ---
 
@@ -248,8 +248,9 @@ Greg expects this may be small, because some steps right after ROOT were redone 
 ### Step 7. Housekeeping that needs Greg
 
 - The trade-day rule is on the Markets trunk as of 2026-11-16 (`claude/kalshi-s79-kickoff-ij8t9o` at `b827fbe`).
-  It is still not on `research/markets-adaptive-wavepacket-migration-20261108`, which is the branch the second
-  session of 2026-11-16 was cut from.
+  It is also on `research/markets-adaptive-wavepacket-migration-20261108` (at `96ff7f3`), the branch the second
+  session of 2026-11-16 was cut from. Note: that branch's `CLAUDE.md` also carries the trade-cost rule; the trunk's
+  does not.
 - Deleting old code from Markets branches other than the session's own.
 
 ---
