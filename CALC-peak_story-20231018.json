@@ -1,0 +1,149 @@
+{
+ "what": "ROOT part 2: the calculation peak_story on one trade day",
+ "laid_out_and_approved": "markets-data STEP1_STEP2_LAYOUTS.md, piece 2 as revised (Greg, 2026-11-16)",
+ "trade_day": "2023-10-18",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d"
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e"
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65"
+  },
+  {
+   "file": "NG_v0_mbo_20231018.dbn.zst",
+   "sha256": "54b2b14c4762a7e4160cc00ce1e70504961ea4e6954e28866dd1bfbaa140f5d5"
+  }
+ ],
+ "columns": [
+  {
+   "column": "peak_facts_known",
+   "what": "How many facts about peaks became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "peak_high_position",
+    "fact",
+    "since_high_ns",
+    "share_of_peak_left",
+    "lowest_share_so_far",
+    "away_ns",
+    "low_position",
+    "low_size",
+    "low_flow",
+    "low_to_high_ns",
+    "low_price",
+    "price_at_high",
+    "price_now",
+    "highest_price_since_high",
+    "lowest_price_since_high",
+    "highest_price_since_zero",
+    "lowest_price_since_zero"
+   ],
+   "lines": 45958,
+   "files": [
+    {
+     "file": "calc-peak_story-facts-20231018-part000.parquet",
+     "rows": 45958,
+     "bytes": 1267791,
+     "sha256": "338352a0c4d686f9b5afcf8f2aa17f27e1e91a4359b0929933e76ccf332513f9"
+    }
+   ]
+  },
+  "open-at-the-end": {
+   "columns": [
+    "peak_high_position",
+    "reached_zero",
+    "lowest_share_so_far"
+   ],
+   "lines": 2,
+   "files": [
+    {
+     "file": "calc-peak_story-open-at-the-end-20231018-part000.parquet",
+     "rows": 2,
+     "bytes": 1126,
+     "sha256": "e793ae68151a914e0b5df371bb1ae3e1f540cfc42096cfa09ef34958b9a35db0"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 770579,
+ "rows": 771468,
+ "counts": {
+  "facts": {
+   "build-up": 7967,
+   "new low": 24758,
+   "reached zero": 5268,
+   "came back": 5267,
+   "beaten": 2698
+  },
+  "peaks": 7967,
+  "peaks_still_open_at_the_last_tick": 2
+ },
+ "files": [
+  {
+   "file": "calc-peak_story-20231018-part000.parquet",
+   "rows": 262144,
+   "bytes": 541088,
+   "sha256": "90cca4a659ca9ffe1aa158ee909d15d701564738442139a2c8961ab0e4ceccc0",
+   "beside": "rows-20231018-part000.parquet",
+   "beside_sha256": "553218f493ba6420dfc957f9adce322ddf8e477ab150f60fc88f97fba635df47"
+  },
+  {
+   "file": "calc-peak_story-20231018-part001.parquet",
+   "rows": 262144,
+   "bytes": 543461,
+   "sha256": "fd7dbccf128339644900ee73e1240ae1de70c4c739161476089adf3d4fee7636",
+   "beside": "rows-20231018-part001.parquet",
+   "beside_sha256": "7cd439efe8f94e71d4612e7d8effe88994ae96b653d724c73749797bd1479975"
+  },
+  {
+   "file": "calc-peak_story-20231018-part002.parquet",
+   "rows": 247180,
+   "bytes": 527795,
+   "sha256": "b0bdb49e559c472790e719a1aca597bfc67e830b49c5ec99df5e282cba70382b",
+   "beside": "rows-20231018-part002.parquet",
+   "beside_sha256": "4a74d42f71f754bd55db61a627e92cdebe9812faf248b649310462a05703023f"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "peaks": 7967,
+   "facts_compared": 45958,
+   "facts_by_kind": {
+    "build-up": 7967,
+    "reached zero": 5268,
+    "new low": 24758,
+    "came back": 5267,
+    "beaten": 2698
+   },
+   "most_facts_on_one_tick": 25,
+   "peaks_still_open_at_the_last_tick": 2,
+   "method": "every fact found again by looking ahead along whole columns of the stored rows; shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 385289,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 407850,
+    "same_as_full_run": true
+   }
+  ]
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 31.1
+}
