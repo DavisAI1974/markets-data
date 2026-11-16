@@ -1457,6 +1457,24 @@ and what our system is. Link any st2 historical docs in git for him to reference
 the pods doing all 4 days at the same time." It matches his fifth-session ruling (four boxes, one per trade day).
 His standing condition holds: no pod starts until he has seen the pod type and the price.
 
+**Piece 2 (what each peak did before and after): BUILT and run on all four trade days; piece 1 corrected and run
+again (2026-11-16, seventh session).** Markets session branch `6a468af`.
+- Piece 2: 226,077 facts over the four trade days (58,828; 68,185; 53,106; 45,958), about six a peak, at most 36
+  on one tick. Kept as a table beside the rows. One check, as ruled: every fact found again by a second method,
+  equal on all four trade days; playback equal at two cuts.
+- That check exposed a fault in piece 1 as first built: a high was judged on size alone, so when the flow changed
+  side at an equal or larger size the peak was known late or not recorded. Corrected: a change of side ends a
+  high. Peaks are now 9,525, 10,577, 8,619 and 7,967 (36,688 in all; 34,278 as first built).
+- The earlier piece 1 files on the `root-rows` branches were replaced in the same commit that added piece 2
+  (`603f1f9`, `b7f6f49`, `fd056f2`, `9b29c64`), under Greg's rule that a rebuild replaces what it corrects.
+- Claude's calls in the build are listed in `STEP1_STEP2_LAYOUTS.md` under "Piece 2 as built".
+
+**Pod type and price shown to Greg (2026-11-16, seventh session), from the Runpod catalog that hour; nothing
+started; no pods were running on the account.** General Purpose CPU pod, 8 CPUs and 32 GB, $0.32 an hour each,
+$1.28 an hour for four (Claude's recommendation). Compute-Optimized, 32 CPUs and 64 GB, $0.96 an hour each, $3.84
+for four. Disk is extra and is quoted before anything starts. Pieces 1 and 2 take about 30 seconds a trade day
+and were run in the session; the pods are for the chain link models and Step 2. His go is still needed.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

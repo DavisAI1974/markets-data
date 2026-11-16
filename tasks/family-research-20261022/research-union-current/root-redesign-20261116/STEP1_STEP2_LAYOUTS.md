@@ -83,24 +83,29 @@ is reported after the first trade day, and Greg hears before anything is capped 
 - The flow starts empty at the first tick of the trade day. Trades the tape gives no side for are counted in their
   own column.
 
+**Corrected after piece 2's check (same session).** As first built, a high was judged on the size of the flow
+alone. When the flow changed side at an equal or larger size (all buying turning to all selling in one tick), the
+high was carried across the change: the peak became known late, or was not recorded at all. Piece 2's recount
+found facts that came before their own peak was known, which exposed it. Now a change of side ends a high, and the
+flow on the new side starts its own. All four trade days were run again and the earlier piece 1 files replaced.
+
 Results (each in `CALC-flow_peak-<trade day>.json` on its `root-rows` branch):
 
-| Trade day | Rows | Peaks | Trades with no side | Recount | Playback |
+| Trade day | Rows | Peaks | Peaks as first built | Recount | Playback |
 |---|---:|---:|---:|---|---|
-| Mon Oct 2 | 820,670 | 8,894 | 2,230 | equal on every row | equal at two cuts |
-| Tue Oct 3 | 879,497 | 9,910 | 1,870 | equal on every row | equal at two cuts |
-| Tue Oct 17 | 846,158 | 8,051 | 2,647 | equal on every row | equal at two cuts |
-| Wed Oct 18 | 771,468 | 7,423 | 2,408 | equal on every row | equal at two cuts |
+| Mon Oct 2 | 820,670 | 9,525 | 8,894 | equal on every row | equal at two cuts |
+| Tue Oct 3 | 879,497 | 10,577 | 9,910 | equal on every row | equal at two cuts |
+| Tue Oct 17 | 846,158 | 8,619 | 8,051 | equal on every row | equal at two cuts |
+| Wed Oct 18 | 771,468 | 7,967 | 7,423 | equal on every row | equal at two cuts |
 
-34,278 peaks over the four trade days, about one every 9 or 10 seconds. The old detector recorded about 850 a
-UTC clock day. About 21 to 30 seconds a trade day to run; 2.3 to 2.9 MB stored a trade day. The check caught one
-fault on its first run (a peak's standing left out the stretch of flow still running at the tick it became known);
-it was fixed before anything was stored.
+36,688 peaks over the four trade days, about one every 9 seconds. The old detector recorded about 850 a UTC
+clock day. About 21 to 32 seconds a trade day to run. The check also caught one fault on its first run (a peak's
+standing left out the stretch of flow still running at the tick it became known); fixed before anything was stored.
 
 ## The rest of Step 1, laid out together (Greg, 2026-11-16: "Let's do the rest of the st 1 calcs plan in this next swoop so we aren't doing a piece at a time")
 
-Status: piece 2 APPROVED to build by Greg 2026-11-16 ("Build"), as revised below. Piece 3 not built (his rule on
-labels). Piece 4 decided as B, to be laid out in detail after piece 2 exists.
+Status: piece 2 APPROVED by Greg 2026-11-16 ("Build"), BUILT and run on all four trade days (see "Piece 2 as
+built"). Piece 3 not built (his rule on labels). Piece 4 decided as B, to be laid out in detail next.
 
 "What it did" is read from the same frozen detector and the programs it calls (the fade-timing functions, the
 frozen family rule and its two rule files), and from the lineage programs of 2026-08-17.
@@ -171,6 +176,38 @@ reaches zero stays open to the end of the trade day.
 Also as before: read at every tick; the whole book; no peak dropped; nothing from outside the trade day; each
 fact stored in the facts table beside the rows. The number of facts is reported after the first trade day, and
 Greg hears before anything is capped.
+
+### Piece 2 as built (2026-11-16): Claude's calls, stated to Greg, his to correct
+
+Markets `6a468af`, `root/calcs/peak_story.py`; the runner can now keep a table beside the rows.
+- The facts are their own table, one line per fact: the tick it became known, the peak it is about (the tick of
+  its high), the kind of moment, the time since the high, how much of the peak is left, and the prices. A column
+  on each row gives how many facts became known at that tick.
+- The low a rise started from is read on the peak's own side: among the ticks after the high of the peak before
+  and before this high, the last one at which the flow on this side was lowest (no flow counts as zero). After a
+  peak on the other side, that is where the other peak's high ended.
+- A peak's first facts come at the tick it becomes known (its build-up, and its first step down or reaching zero).
+- "Beaten" is the flow on the peak's side going strictly above the peak's size before it reached zero.
+- A peak whose story has not ended at the last tick of the trade day is listed in its own small file, not on a
+  row: there is no tick inside the trade day at which "still open" could become known.
+- The kinds of moment (build-up, new low, reached zero, came back, beaten) are kinds of moment, not kinds of peak.
+  No peak is given a name, a state or a group.
+
+Results (each in `CALC-peak_story-<trade day>.json` on its `root-rows` branch):
+
+| Trade day | Peaks | Facts | New low | Reached zero | Came back | Beaten | Still open at the end | Most facts on one tick |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Mon Oct 2 | 9,525 | 58,828 | 33,833 | 5,946 | 5,945 | 3,579 | 1 | 25 |
+| Tue Oct 3 | 10,577 | 68,185 | 40,754 | 6,278 | 6,277 | 4,299 | 1 | 36 |
+| Tue Oct 17 | 8,619 | 53,106 | 30,453 | 5,416 | 5,415 | 3,203 | 1 | 22 |
+| Wed Oct 18 | 7,967 | 45,958 | 24,758 | 5,268 | 5,267 | 2,698 | 2 | 25 |
+
+226,077 facts over the four trade days, about six a peak. Nothing ran away and nothing is capped. One check, as
+ruled: every fact found again by a second method that looks ahead along whole columns, equal on all four trade
+days; playback equal at two cuts. 1.2 to 1.8 MB of facts a trade day; 21 to 31 seconds a trade day to run. The
+check found three faults before anything was stored: the piece 1 fault above, and two in how the low was taken.
+A fact that can be read from these counts, with no grouping applied: about six in ten peaks reached zero and came
+back; about four in ten were beaten by a larger peak first.
 
 ### Piece 3: the family (A, B, C). NOT BUILT NOW (Greg, 2026-11-16)
 
