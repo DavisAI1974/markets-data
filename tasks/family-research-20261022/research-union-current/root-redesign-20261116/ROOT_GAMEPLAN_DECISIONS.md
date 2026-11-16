@@ -1046,6 +1046,32 @@ data. I want to make sure this is very clear. The warm up days are only warm up 
 - A statement written earlier the same session ("the Oct 18 box through Oct 16 and 17" for calculations) was wrong
   and is corrected above.
 
+**Only the four trade days enter a calculation: SHARPENED and ENFORCED (Greg, 2026-11-16).** "The warm up starts on
+those days but none of the hours outside of the 4 trade days are used in our calculations. I've repeated it multiple
+times but I'm getting more and more nervous that it's not going to be adhered to. Do whatever you have to do to make
+this happen." Then: "Those are only used in our calculations that will affect our research and analysis and creation
+of trade strategies based on trade signals that we discover in this 4 day exercise. I don't know if you will have to
+use prior days for book info that will be then used in our 4 day data or not. But anything other than that if it's
+needed must be discussed with me first."
+- Only ticks inside the four trade days (6 pm to 5 pm Eastern on Oct 2, 3, 17, 18) enter any calculation that feeds
+  research, analysis or strategies. This is stricter than the note above ("a calculation starts at the first written
+  row of its week"): the 5 pm to 6 pm stretches and the Sunday start-up keep their marked rows, and nothing is
+  calculated on them.
+- Data from outside the four trade days may be used for one thing: seating the book so it is complete on the four.
+- Any other use of outside data is put to Greg first, before it is built.
+- Enforced: `root/tape.py` `for_calculations()` is the one gate a calculation receives ticks through (tested on the
+  real tape for all four boxes); calculation modules live in `root/calcs/` and a test fails if one reads the tape
+  itself; the rule is in Markets `CLAUDE.md` and `AGENTS.md` (session branch; not yet on the trunk).
+- Greg, same day: "There's a possibility that trades will continue to the next days beyond the 4 but we'll cross that
+  bridge if we come to it." Nothing is built for it now; when it comes up it is put to him first.
+- **Put to Greg under this rule, awaiting his answer:** the futures curve (X13) uses forward-contract data from just
+  outside the four trade days: at the open of trade day Oct 2 the settlement shape is Friday Sep 29's settlement, and
+  on trade day Oct 17 the back months' last-trade prices start as their last trades of Mon Oct 16. Both are in the
+  approved `SPEC-outside.md` (call 3) and are figures known at that moment. Asked: keep, or start each trade day's
+  curve empty. The other outside points also rest on earlier published reports by their definitions (positioning's
+  one-year and three-year standing, storage's five-year comparison, weather's two gas days of carry-over, the
+  forecast run made before the open), all as approved in that spec.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
