@@ -69,6 +69,14 @@ had grown long; the chain link models were about to be built.
 
 ## What to do next, in this order
 
+0. **L and M, approved by Greg while this session was building ("Try them all"; laid out by the Desktop session in
+   `STEP1_STEP2_LAYOUTS.md`, "Additions from the look at Codex's two pieces").** L is refilled orders; M is sweeps
+   and the moments the quote touches or crosses. Both need only the rows and were to be built with C and the
+   quote's runs, which now exist, so they are due first. L's rule for a refill is the one C already uses (a fill
+   the book shows no change for counts as filled and as added). N (orders that act together) is built with K; O
+   (what an outside figure changing did) after A, B and I. `NEXT_SESSION_HANDOFF_20261116G.md` is kept up to date
+   by the Desktop session too (its items 8 and 9): read both.
+
 1. **The chain link models** (Step 1 piece 4; layout APPROVED: "Do it"; `STEP1_STEP2_LAYOUTS.md`). Decided so far
    in this session (Claude's calls, to state to Greg when built; none is built):
    - Two parts. (a) A normal per-trade-day calculation: one line per peak at the tick its story ends, holding what
