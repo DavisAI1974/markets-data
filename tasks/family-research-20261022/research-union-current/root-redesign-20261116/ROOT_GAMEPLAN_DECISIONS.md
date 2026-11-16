@@ -1382,6 +1382,20 @@ link) are in `STEP1_STEP2_LAYOUTS.md`, put to him the same hour. Asked of him: y
 includes keeping the facts about a peak as their own table beside the rows; and A, B or C for the chain link.
 Nothing of them is built.
 
+**No fixed marks in what is recorded about a peak (Greg, 2026-11-16, seventh session).** Shown piece 2 with the
+line "The fixed marks stay as the definition of each figure: 50, 25 and 10 percent of the peak, the 3 seconds, the
+seven moments after the ending, the 2 ticks": "change this. Let the data be what it is and then we group after we
+see how they separate."
+- Nothing about a peak is measured against a level, a length of time or a set of moments picked in advance, and
+  nothing is given a name picked in advance (continuation, reversal, chop; the four after-states).
+- What the flow and the price did is recorded as it happened. Groups are made afterwards, from how the recorded
+  values separate.
+- Piece 2 is rewritten on that word in `STEP1_STEP2_LAYOUTS.md`: each new low of the fade, reaching zero, coming
+  back (how long it stayed away, measured), being beaten by a larger peak, each with the price at its tick.
+- Unchanged by this, on his earlier rulings: the 20-second roll of the flow (piece 1, his confirmed exception) and
+  the family as originally defined as the first of the two Step 1 columns (piece 3), with the growth grouped from
+  the four trade days afterwards.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

@@ -143,18 +143,33 @@ in, and what price did after the ending. Each fact on the row where it becomes k
   worst move inside each; each called continuation, reversal or chop by a 2-tick rule.
 - An event with no reading in its 121 seconds was dropped.
 
-**What changes.**
-1. Each fact goes on the row where it becomes known, naming its peak (above).
-2. The fade is followed until the peak ends, not for 60 seconds only.
-3. Read at every tick, not once a second. "3 seconds in a row" becomes 3 seconds of clock time.
-4. The whole book, not the top 10 levels.
-5. No peak is dropped. A figure that cannot be made is empty with its reason.
-6. Averages are additions (Greg's rule): the late book is an average over 20 seconds; the book at every tick is
-   already on the rows beside it.
-7. A peak not yet ended at 5 pm is recorded as still open at the end of the trade day.
-8. What stays, as the definition of each figure: the 50, 25 and 10 percent marks, the 3 seconds, seconds 41 to 60,
-   the seven moments after the ending, the 2 ticks, and the four state names. They hold nothing back: the whole
-   path of the flow and of the price is on the rows.
+**What changes (REVISED on Greg's word, 2026-11-16: "change this. Let the data be what it is and then we group
+after we see how they separate").** No fixed mark is kept. No 50, 25 and 10 percent, no 3 seconds, no seconds 41
+to 60, no seven moments, no 2 ticks, no state names, no continuation, reversal or chop. What a peak did is
+recorded as it happened, and the grouping is made afterwards from what the data shows.
+
+For each peak, every turn in its story is recorded at the tick it happens, naming its peak:
+1. **The fade.** Each time the flow sets a new low since the high: how much of the peak is left, and the time
+   since the high. That is the whole way down, step by step, with no level picked in advance.
+2. **Reaching zero.** The first tick the flow is at zero, has crossed to the other side, or has gone empty: the
+   time since the high.
+3. **Coming back.** The first tick after that at which the flow is back on the peak's side: how long it had
+   stayed away. The 3 seconds becomes a measured length, whatever it turns out to be.
+4. **Beaten.** If, before reaching zero, the flow rises above the peak's own size, the peak has been overtaken by a
+   larger one: recorded with the time since the high and how far it had faded.
+5. **Still open** at 5 pm, if none of those has happened.
+
+Every one of these facts carries, at its own tick: the last trade price, and the highest and lowest trade price
+since the high (for "coming back": also since reaching zero). The move in price is whatever it was, in the
+tape's own prices. The bought, sold and book figures at that tick are already on the row the fact names.
+
+Where a peak's story ends (Claude's call): at "coming back", or at "beaten", or at 5 pm. Without an end, every
+later turn of the trade day would be a fact about every earlier peak. A peak that is never beaten and never
+reaches zero stays open to the end of the trade day.
+
+Also as before: read at every tick; the whole book; no peak dropped; nothing from outside the trade day; each
+fact stored in the facts table beside the rows. The number of facts is reported after the first trade day, and
+Greg hears before anything is capped.
 
 ### Piece 3: the family (A, B, C)
 
