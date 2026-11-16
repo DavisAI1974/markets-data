@@ -292,6 +292,19 @@ Not yet settled. What ROOT calculates after the book and the per-tick record is 
   because no trade falls in that hour. `SPEC-tape-stream.md` criteria 1 and 7 are to be rewritten accordingly.
 - `CAPABILITY_MAP.md` draft 2 is to be revised: ROOT calculates.
 
+## Held for the later stage: figuring out what moves the market
+
+Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
+more important when we get to the figuring out what moves the market stage."
+
+In the ROOT stage the forecast and storage are kept simple: one forecast per trade day, and the Thursday storage
+figure. To bring back when the work reaches what moves the market and price-curve forecasting:
+
+- **Forecast:** follow each new model run through the day (the market trades the change from run to run); obtain the
+  European model runs and the many-run averages.
+- **Storage:** the expected figure against the actual one (the surprise, X12), the comparison with the five-year
+  average, and a daily supply and demand balance (production, LNG plant intake, pipeline flows, gas burned for power).
+
 ## Parked by Greg (do not raise unless he asks)
 
 - Downloading the five weekday files that would complete both weeks (UTC clock days Oct 4, 5, 6, 19, 20; about 8 cents
