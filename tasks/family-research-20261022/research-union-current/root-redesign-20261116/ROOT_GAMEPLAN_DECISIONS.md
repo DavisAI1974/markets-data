@@ -1337,6 +1337,15 @@ that we also need. This is something that is an addition to not a replacement of
   which are always kept as well. Where an old program gave only the averaged form, the individual values are
   written too.
 
+**Rewrite or patch the old programs (Greg asked, 2026-11-16, seventh session):** "Can you rewrite the files since
+we have a lot of changes or is that creating a larger issue". Claude's answer, awaiting his word: rewrite. It is the
+smaller job, not the larger one. The old files read an input we do not hold and are pinned to their own weeks and
+counts, so patching them would mean changing most lines anyway. The old files stay untouched on their branches as
+the record of what was run. The new ones go in `root/calcs/`, read the tick rows through the gate, and each is
+laid out and approved before it is written. The one risk of a rewrite is drifting from the original without
+noticing; the guard is the layout (what it did, what changes) and one check per new part. A number-for-number
+proof against an old week needs the old input, which is on AWS and off limits for now.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
