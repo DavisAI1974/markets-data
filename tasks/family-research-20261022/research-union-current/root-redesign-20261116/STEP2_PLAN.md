@@ -19,6 +19,11 @@ This session builds nothing, runs nothing, and writes to this file only.
   and could we fill some possible gaps that you could see"
   Read as: Step 2 is to give new results, not only a re-reading of the old ones, and Claude is to say what it was
   for, what is worth keeping, and what could be added. Claude's answer is the next section. None of it is approved.
+- 2026-11-16, on Step 2's own grouping: "And did we have a completely unique way of grouping the famies
+  together from what st1 did in the old calcs? If so I'd like to keep that in there. Can't remember off the top of
+  my head"
+  Answer given: yes, it did (see "Step 2's own grouping" below). Read as: Step 2's own grouping is kept in the
+  plan.
 
 ## The original intent, what is worth keeping, and the gaps (Claude's view, put to Greg 2026-11-16)
 
@@ -106,6 +111,39 @@ per pair of peaks, with no label and no fixed mark.
 6. **The dipole lifecycle beside the peaks** (speculative, and a larger piece). The Native dipole births are read
    from the same 20-second flow. Whether each birth sits on or beside one of the 34,278 peaks is not measured; a
    count would settle it.
+
+## Step 2's own grouping (KEPT, on Greg's word 2026-11-16)
+
+Step 2 did not use the Step 1 families. A, B and C do not appear in any of its 22 documents. It made its own
+grouping, and of a different thing.
+
+| | Step 1 | Step 2 |
+|---|---|---|
+| What is grouped | One event | A whole chain |
+| By what | The shape of the 60 seconds before the peak | How long the chain lived, and what pieces it is made of |
+| How | Nearest of three fixed centres; every event put in exactly one | Groups read from the measured values; one chain sits in more than one grouping |
+
+Step 2's groupings, in its own words where quoted:
+1. **By how long the chain lived** ("timing / lifespan families"). At depth 2: about 126 s, 215 s, and a rare
+   long group about 798 s. At depth 3: about 211 s and 609 s. (Result 10.)
+2. **By the pieces inside** ("modules"). Pairs and triplets of states with the side relation between neighbours,
+   such as PP|S, that recur inside chains that are otherwise different. (Result 8.)
+3. **By which pieces grow into longer chains** ("extension families"). The old documents speak of "multiple
+   short-to-long growth families rather than one universal chain-growth grammar". (Result 9.)
+4. **A delayed group, named but not worked out.** Cases against the trade at +60 seconds that came back later: "a
+   delayed/re-origin family", to be discovered separately "instead of forcing every valid instance into a fixed
+   +60 outcome".
+
+The part that is Step 2's own idea: these are separate axes. "Module identity and timing family are separate
+axes." The same chain has a lifespan group and its piece groups at once, and the lifespan groups held steadier
+from block to block than the pieces that filled them.
+
+How it is kept (Claude's call, following his word on the old Step 1 families): it is not applied inside the
+calculations. At the grouping stage it is the base for grouping chains, as A, B and C are the base for grouping
+single peaks: the new values are looked at against the old lifespan centres and the old pieces, to see the same
+groups, different ones, or the same with additions. What has to be written per peak now so that this can be done
+later is already on the list below: the time back to each earlier peak, the side relation, and the three models'
+values.
 
 ## What reading Step 2 against the rules shows
 
