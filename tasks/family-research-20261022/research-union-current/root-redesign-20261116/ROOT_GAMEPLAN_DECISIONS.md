@@ -544,6 +544,22 @@ change."
 - This also settles the old names on the part 2 placeholder columns: a placeholder is kept only until its question is
   looked at; if a new column answers it, it is not repeated.
 
+**Foundation first: DECIDED by Greg, 2026-11-16 (fourth session).** "Foundation first definitely. The calcs come
+from the initial foundation." The foundation (timeline, book, rows, the 13) is built before the calculations are
+worked out; each calculation is then looked at with real rows in view.
+
+**The old sheet and the old material (Greg, same message):** "I would clear everything from the old excel sheet and
+start from scratch. So much of that data is bad or incomplete that it isn't worth separating good from bad. And we
+can just delete the old stuff out and we don't need to save old bad data. It gets discarded and replaced with the
+correct data. And just delete old stuff so it doesn't creep back into the new calcs."
+
+- The rebuilt workbook starts from nothing. No value from an old workbook is carried, sorted or kept beside it.
+- The old material is deleted, not archived, so that it cannot be picked up by a new calculation.
+- Greg's rule at the start of this session was that nothing is deleted until he signs off the file list and the
+  lineage list. The delete list was put to him in short the same hour for that sign-off; nothing is deleted before
+  his word on it. One earlier ruling is kept out of the delete unless he says otherwise: the Step 1 fields ("Step 1
+  is going to be different initially don't wipe it").
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
