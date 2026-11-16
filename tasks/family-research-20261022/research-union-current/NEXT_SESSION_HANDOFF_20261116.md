@@ -73,6 +73,23 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`, started from `codex
    a first stretch before any full run.
 4. Then write the new workbook release (R3) and apply the same to `Frankie_four_day_research_current.xlsx`.
 
+## Carried over at Greg's request: the resting-order age question
+
+Raise this with Greg at the start of the next session, before the book issue is worked.
+
+- What is known: after the midnight carry, an order placed during the warm-up file or the trade day has its true
+  priority time. An order that was already resting when the warm-up file opens does not: the replay first sees it
+  in that file's opening snapshot and stamps it with the snapshot's receive time (00:00 UTC of the warm-up file).
+- Size of it: on trade days Oct 3, 17 and 18, 252, 225 and 278 resting orders at the 00:00 UTC check have a
+  snapshot event time more than one second older than the priority time the replay holds. On trade day Oct 2 the
+  count is 0 (the warm-up is Sunday's file).
+- Why it matters: every order-age value built on those orders (front-order age, queue-age percentiles, S04, S09)
+  is a lower bound, not the true age, for as long as the order rests.
+- The question: adopt the exchange snapshot's own event time as the order's priority time, or keep the receive-time
+  stamp and mark those ages as lower bounds. Adopting it changes the adapter's rule (it uses receive time), mixes
+  event time with receive time for those orders, and has not been tested. Not yet checked: whether a snapshot
+  event time is the order's original entry or its last priority-changing modification.
+
 ## Open decisions for Greg
 
 - The six clock-like S fields: rebuild on a rolling window, keep and mark "tracks session time", or drop.
@@ -81,7 +98,7 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`, started from `codex
 - L024, L026, L080, L083-L089 are defined as the sealed October 2021 package; proposal is to mark them "not
   applicable to 2023 trades".
 - L060-L063, L067-L071: definitions are prose; no complete runnable producer was found in git.
-- Use snapshot event times as true order priority times (removes the remaining left-censoring).
+- The resting-order age question above.
 - Add the trade-day rule to the project `CLAUDE.md`.
 
 ## Practical notes for the container
