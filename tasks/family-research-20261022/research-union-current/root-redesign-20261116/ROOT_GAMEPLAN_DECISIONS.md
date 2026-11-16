@@ -536,10 +536,14 @@ authorities and no national row; adding them up ourselves would be a choice and 
   figures and the number of reports in each window are on the row as their own columns. Window lengths are declared
   by name. Made fresh from the CFTC files in git and pinned on every tick.
 - **Greg, same message: "Keep everything as it was in the original 13 dp files."** The 13 keep their original
-  content and definitions; they are not redesigned group by group. Open, put to Greg: whether the fixes he ruled
-  earlier the same day (storage as first printed, the X12 numbers filled in, the temperature worked out from hourly
-  readings on the gas day ending 10 am Eastern, the figures underneath each point pinned as well) still stand on
-  top of "as it was", or are withdrawn.
+  content and definitions; they are not redesigned group by group.
+- **The four fixes stand (Greg: "A, keep the four fixes").** The 13 are the same as in the original files with
+  these four changes on top and nothing else: (1) storage (X11) as first printed on Thursday morning, not the later
+  revised figure; (2) the storage estimate against actual (X12) filled in; (3) the temperature (X10) worked out from
+  the hourly readings on the gas day ending 10 am Eastern, with wind and carry-over from earlier days as their own
+  columns; (4) the published figures underneath each point on the row as well.
+- Wind and gas burn (X05, X07): "as it was" means the EIA's own US48 figure, as in the original files, not our sum
+  of the regions. It needs `api.eia.gov` allowed and a free EIA key, which Greg sets up.
 
 **Making the 13 from these files is the `outside` part of ROOT and is a build:** it gets its short specification
 (each point's source, formula and timing, with the fixes already decided), Greg's approval, and then the switch to
