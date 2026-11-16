@@ -1475,6 +1475,14 @@ $1.28 an hour for four (Claude's recommendation). Compute-Optimized, 32 CPUs and
 for four. Disk is extra and is quoted before anything starts. Pieces 1 and 2 take about 30 seconds a trade day
 and were run in the session; the pods are for the chain link models and Step 2. His go is still needed.
 
+**From the Desktop session's `STEP2_PLAN.md` (copied here 2026-11-16; that file is the fuller record).**
+- Where the Step 2 plan is kept (it is in markets-data; he had said "the markets repo"): "That repo is fine also".
+- Told that Step 2 found no new events and mostly waits for the grouping: "Definitely new results haha. You tell
+  me, what was the original intent, does it add value, how do we create those calcs and if the first things are of
+  no value, then what can we do to create more value with what we have and could we fill some possible gaps that
+  you could see". Read there as: Step 2 is to give new results, not only a re-reading of the old ones. Desktop's
+  answer is in that file and none of it is approved yet.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
