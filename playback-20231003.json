@@ -1,0 +1,30 @@
+{
+ "what": "ROOT playback check (criterion 8)",
+ "trade_day": "2023-10-03",
+ "cuts": [
+  {
+   "cut": "across 6 pm Eastern, the open",
+   "raw_file": "NG_v0_mbo_20231002.dbn.zst",
+   "rows_compared": 419,
+   "identical": true
+  },
+  {
+   "cut": "inside an exchange event",
+   "raw_file": "NG_v0_mbo_20231002.dbn.zst",
+   "rows_compared": 2619,
+   "identical": true
+  },
+  {
+   "cut": "across the vendor file boundary",
+   "raw_file": "NG_v0_mbo_20231003.dbn.zst",
+   "rows_compared": 4890,
+   "identical": true
+  },
+  {
+   "cut": "across 5 pm Eastern, the halt",
+   "raw_file": "NG_v0_mbo_20231003.dbn.zst",
+   "rows_compared": 879090,
+   "identical": true
+  }
+ ]
+}

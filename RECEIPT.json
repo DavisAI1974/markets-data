@@ -1,0 +1,314 @@
+{
+ "what": "ROOT build of one trade day: rows, book pictures, vendor restatements",
+ "specification": "SPEC-root.md (approved 2026-11-16)",
+ "trade_day": "2023-10-03",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231001.dbn.zst",
+   "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78",
+   "records": 12532,
+   "vendor_restatement_records": 0
+  },
+  {
+   "file": "NG_v0_mbo_20231002.dbn.zst",
+   "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d",
+   "records": 813342,
+   "vendor_restatement_records": 733
+  },
+  {
+   "file": "NG_v0_mbo_20231003.dbn.zst",
+   "sha256": "8db4b0042d9324b299f616c5de5c6c66ff3bfa1d2a1288eb69cc575e7653c600",
+   "records": 879077,
+   "vendor_restatement_records": 741
+  }
+ ],
+ "outside_tables": [
+  {
+   "table": "curve_settled_shape.csv",
+   "sha256": "f30505c04b14c8d95140607df1175a59ab84fd583ac05bd04a72031d90dfebd1"
+  },
+  {
+   "table": "curve_traded_shape.csv.gz",
+   "sha256": "5da8cbe23d33d18b59d416285f1e2ffeaf1264b4bed7361d0524096e42b2bd54"
+  },
+  {
+   "table": "expiry.csv",
+   "sha256": "06dcf2685baf5cc3859d27117763585264b6e915de3f07714e09bff2948704c5"
+  },
+  {
+   "table": "forecast_disagreement.csv",
+   "sha256": "dde600d984a525b519e12e3de2578f5ab5e211cf223c4059c7f595a967b5b61f"
+  },
+  {
+   "table": "forecast_on_row.csv",
+   "sha256": "bf57279128dbcf19aa17a3cd8eb22db8597d90a6bafbbd4fa76286dc16c3fc67"
+  },
+  {
+   "table": "grid_us48.csv",
+   "sha256": "d04c2a80559c7963acfb251b4345f38500e86c4b23c98bfd5470aa3e6ae81040"
+  },
+  {
+   "table": "positioning.csv",
+   "sha256": "23a97ed8b096072634de536603763a8df9a41d1f70e7016f491f0b8e0f964515"
+  },
+  {
+   "table": "storage_estimate.csv",
+   "sha256": "b378cc7e9a56b6bdfef69309ad52836fb628abbe26a7f3bbe80986749487a68a"
+  },
+  {
+   "table": "storage_weekly.csv",
+   "sha256": "0a1b4908f77d3452fac0bde7146bc33e20cdb27a690ca2118ed81691d0ec7d9d"
+  },
+  {
+   "table": "weather_gas_day.csv",
+   "sha256": "5aff6b054c1f325b7d55eb59b2cc671494b20d62d4f53395680754ccdcdd71b0"
+  },
+  {
+   "table": "weather_hourly_city.csv",
+   "sha256": "752885b54d86b86af383b6638267a4a9270392a669c897632b97cc8fd0b22f31"
+  }
+ ],
+ "columns": 217,
+ "rows": 879497,
+ "row_files": [
+  {
+   "file": "rows-20231003-part000.parquet",
+   "rows": 262144,
+   "bytes": 19980059,
+   "sha256": "a81a0f25e413bdd33132ea691bbef67be8f91b183a1590a80c232623e8892094"
+  },
+  {
+   "file": "rows-20231003-part001.parquet",
+   "rows": 262144,
+   "bytes": 20088357,
+   "sha256": "618fd9b182416a37aca982cfbca424dd8b570ce6f4678bb3154bcf9257203cec"
+  },
+  {
+   "file": "rows-20231003-part002.parquet",
+   "rows": 262144,
+   "bytes": 20290447,
+   "sha256": "9d371fdaffcbf09d8757b514fcf18464460640bf8c16c360998b57f35bd03ad0"
+  },
+  {
+   "file": "rows-20231003-part003.parquet",
+   "rows": 93065,
+   "bytes": 7691086,
+   "sha256": "acb6e39bb4d8d1c6e606f4d409bf398fa84912cd17dc8306d86f039303d00e3d"
+  }
+ ],
+ "book_picture_rows": 51053273,
+ "book_pictures_at_trades": 41410,
+ "book_picture_at_first_written_row": {
+  "position": 820252,
+  "orders": 724
+ },
+ "book_picture_at_last_written_row": {
+  "position": 1699748,
+  "orders": 455
+ },
+ "book_picture_files": [
+  {
+   "file": "book-pictures-20231003-part000.parquet",
+   "rows": 4194304,
+   "bytes": 11063412,
+   "sha256": "e8540de6eee5c4607654dc8933d78aec236754e272a93b353aa1e2675191556c"
+  },
+  {
+   "file": "book-pictures-20231003-part001.parquet",
+   "rows": 4194304,
+   "bytes": 11611555,
+   "sha256": "8468695df9b90caccf96f1cad87cd115201e577211aa1ef31777913f7bf3d070"
+  },
+  {
+   "file": "book-pictures-20231003-part002.parquet",
+   "rows": 4194304,
+   "bytes": 10932568,
+   "sha256": "a5e146e665784c726c31bc6ef4a13a22eb23c3d1ab3463c0e94148390341cda3"
+  },
+  {
+   "file": "book-pictures-20231003-part003.parquet",
+   "rows": 4194304,
+   "bytes": 11548867,
+   "sha256": "6f322a3c6d2bf4bd0d31ca6aa7a5f69b4e9196166ccf870e607f8b2865a7c234"
+  },
+  {
+   "file": "book-pictures-20231003-part004.parquet",
+   "rows": 4194304,
+   "bytes": 12815760,
+   "sha256": "580d97d5a920adca07ccbcf4fe66aa311b8a0c1c1732c89dca1a72a689e729b4"
+  },
+  {
+   "file": "book-pictures-20231003-part005.parquet",
+   "rows": 4194304,
+   "bytes": 12521850,
+   "sha256": "1730c34f1b071cc85e54053d27bc578daa19401e9f4c1efae9bc6b4d400efd26"
+  },
+  {
+   "file": "book-pictures-20231003-part006.parquet",
+   "rows": 4194304,
+   "bytes": 12301738,
+   "sha256": "60bd49e24099e6b747db39004ffbe1a07683e2a08c985b0805f00c35e5ad164c"
+  },
+  {
+   "file": "book-pictures-20231003-part007.parquet",
+   "rows": 4194304,
+   "bytes": 11244139,
+   "sha256": "4bf6f72e541263675e014fa9b8ea52c39ccb83ae5818476d1d37ed1f9a853e33"
+  },
+  {
+   "file": "book-pictures-20231003-part008.parquet",
+   "rows": 4194304,
+   "bytes": 11618127,
+   "sha256": "8cbac7d164a8ebdb3e006b70a8894e5bcbdcb9e42c394eebeaaf53d4921269a0"
+  },
+  {
+   "file": "book-pictures-20231003-part009.parquet",
+   "rows": 4194304,
+   "bytes": 10871933,
+   "sha256": "43a2ca2ef027647bb4a909ce5b5c6245bbc18bc6093d101cf4ba1b82cd75608a"
+  },
+  {
+   "file": "book-pictures-20231003-part010.parquet",
+   "rows": 4194304,
+   "bytes": 10309376,
+   "sha256": "687f0522e2ac16d6c6cc6d717963eab651f17c3b63f0e0fc6f5bec4ca11d3dfb"
+  },
+  {
+   "file": "book-pictures-20231003-part011.parquet",
+   "rows": 4194304,
+   "bytes": 12376914,
+   "sha256": "a65610a119d6c989b33167bd63ac2307b636251a881f6b8d42ba3c009f35b220"
+  },
+  {
+   "file": "book-pictures-20231003-part012.parquet",
+   "rows": 721625,
+   "bytes": 2103777,
+   "sha256": "2efbaf418f271dee1b2a58fe275eadf0de1a1a58a3492a2ad5371a588aa656a9"
+  }
+ ],
+ "vendor_restatement_file": {
+  "file": "vendor-restatements-20231003.parquet",
+  "rows": 1474,
+  "bytes": 24587,
+  "sha256": "76762a2a2f0ad22ffed9fc2e4d67c8e6b8d3a451a53cd6c622a9ba3f1a6179cb"
+ },
+ "walk": {
+  "counts": {
+   "warm-up": 820252,
+   "written": 879497,
+   "left by cancel": 258730,
+   "no change": 194409,
+   "joined": 316914,
+   "lost its place: price changed": 35402,
+   "left by fill": 58454,
+   "shrank by fill": 9463,
+   "shrank": 4203,
+   "lost its place: size raised": 727,
+   "stayed": 1195,
+   "shelved": 3728
+  },
+  "ticks": 1703477,
+  "irregular": {
+   "the exchange sequence number went backwards": 101
+  },
+  "orders_resting_at_the_end": 777
+ },
+ "checks": {
+  "book_equals_restatement": [
+   {
+    "orders_in_restatement": 732,
+    "orders_in_our_book": 732,
+    "only_in_restatement": 0,
+    "only_in_our_book": 0,
+    "side_price_or_size_differs": 0,
+    "place_time_differs": 0,
+    "lines_in_a_different_order": 0,
+    "equal": true,
+    "file": "NG_v0_mbo_20231002.dbn.zst"
+   },
+   {
+    "orders_in_restatement": 740,
+    "orders_in_our_book": 740,
+    "only_in_restatement": 0,
+    "only_in_our_book": 0,
+    "side_price_or_size_differs": 0,
+    "place_time_differs": 0,
+    "lines_in_a_different_order": 0,
+    "equal": true,
+    "file": "NG_v0_mbo_20231003.dbn.zst"
+   }
+  ],
+  "book_adds_up_at_every_trade": true,
+  "rows": {
+   "passed": true,
+   "rows_seen": 879497,
+   "rows_by_label": {
+    "5 pm to 6 pm stretch": 826,
+    "trade day": 878671
+   },
+   "trade_rows": 41410,
+   "trade_rows_in_the_trade_day": 41410,
+   "orders_seen": 317394,
+   "orders_ended": 317184,
+   "orders_still_resting_or_running_on": 210,
+   "rows_of_orders_from_before_the_written_record": 0
+  },
+  "outside_pinned": {
+   "passed": true,
+   "rows_compared": 879497,
+   "columns_compared": 132,
+   "rows_of_no_trade_day": 826,
+   "trade_days_on_the_rows": [
+    "2023-10-03"
+   ],
+   "tables_hold_everything_known_before": "2023-10-18T18:00:00-04:00",
+   "rows_where_a_column_is_empty": {
+    "x10_cities_missing": 879497,
+    "x12_street_estimate_bcf": 879497,
+    "x12_surprise_bcf": 879497,
+    "x02_x06_x09_known_from_ns": 826,
+    "x06_sessions_since_front_expiry": 826,
+    "x06_last_expired_symbol": 826,
+    "x06_last_expiry_date": 826,
+    "x09_models_run_utc": 826,
+    "x09_models_largest_gap_hdd": 826,
+    "x09_models_gap_at_days_ahead": 826,
+    "x09_models_gap_by_days_ahead": 826,
+    "x02_forecast_gfs_today_hdd": 826,
+    "x02_forecast_gfs_today_run_utc": 826,
+    "x02_forecast_gfs_today_cities": 826,
+    "x02_forecast_gfs_today_empty_reason": 879497,
+    "x02_forecast_nam_today_hdd": 826,
+    "x02_forecast_nam_today_run_utc": 826,
+    "x02_forecast_nam_today_cities": 826,
+    "x02_forecast_nam_today_empty_reason": 879497,
+    "x02_forecast_gfs_next_day_hdd": 826,
+    "x02_forecast_gfs_next_day_run_utc": 826,
+    "x02_forecast_gfs_next_day_cities": 826,
+    "x02_forecast_gfs_next_day_empty_reason": 879497,
+    "x02_forecast_extended_gfs_three_days_on_hdd": 826,
+    "x02_forecast_extended_gfs_three_days_on_run_utc": 826,
+    "x02_forecast_extended_gfs_three_days_on_cities": 826,
+    "x02_forecast_extended_gfs_three_days_on_empty_reason": 879497
+   }
+  },
+  "accounted": {
+   "passed": true,
+   "from_the_raw_files": {
+    "records": 1704951,
+    "vendor_restatement_records": 1474,
+    "ticks": 1703477,
+    "written": 879497,
+    "trade_messages_written": 41410,
+    "trade_messages_in_the_trade_day": 41410
+   },
+   "from_the_walk": {
+    "written": 879497,
+    "warm_up": 820252,
+    "shelved": 3728
+   }
+  }
+ },
+ "empty_fields": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 126.1
+}
