@@ -28,7 +28,9 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. Pushes to it work f
   "So everything is calc and pinned correctly for the next steps and we eliminate some separate processes and do
   them all at once instead of split up." Claude proposed the shape (foundation plus calculations added one at a
   time, each named, pinned and checked; a calculation may only add columns); Greg has not said yes to that shape in
-  so many words. Confirm it.
+  so many words. Confirm it. His last word on it: "We'll still do that ahead of time. Frankie will just have to learn why
+  and how dipole works and apply what he's learned when he sees it." So definitions are worked out by us ahead of
+  time and calculated in ROOT; Frankie learns and recognizes, he does not calculate.
 - **Working out those calculations is the calculation inventory**, laid out Greg's way for every one: what we want it
   to calculate, what is calculated today, and what changes. It has not been started beyond reading.
 - **Why all of this:** the calculated data for a trade day is filled in beforehand and shown to Frankie one tick at

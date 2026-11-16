@@ -404,6 +404,12 @@ have root calcs to figure out."
   conclusion is analysis. Working out the calculations is the calculation inventory (old ROOT sections, the SQL
   step, the other workflow step, dipoles, S fields).
 - This supersedes the earlier wording of the split ("after ROOT"): those calculations are part 2 of ROOT.
+- Greg, on the definitions that have to be worked out before a calculation can be written (a dipole stage, a
+  pre-birth): "We'll still do that ahead of time. Frankie will just have to learn why and how dipole works and apply
+  what he's learned when he sees it." So we work the definitions out ahead of time and ROOT calculates them onto the
+  timeline. Frankie does not calculate; he learns why and how each thing works and recognizes it when it appears in
+  playback. Greg, restating the idea: "So everything is calc and pinned correctly for the next steps and we
+  eliminate some separate processes and do them all at once instead of split up."
 
 ## Held for the later stage: figuring out what moves the market
 
