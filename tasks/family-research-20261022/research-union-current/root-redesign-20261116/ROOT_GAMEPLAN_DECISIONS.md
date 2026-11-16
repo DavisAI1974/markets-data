@@ -1102,6 +1102,27 @@ check-book records in `receipts/`. Also done on his yes: the four-trade-days rul
   one permitted use of data outside the four trade days (seating the book); nothing else is made from it.
 - Speed: a week's book pass takes 2 to 3 seconds here; with the every-trade check, 13 to 36 seconds per box.
 
+**Rows, store and checks: BUILT; rules given while they were built (Greg, 2026-11-16).**
+- "The rows are the data for each tick across the fields. Columns are fields and rows are tick data." Built so:
+  one row per written tick, 85 fields (sections A to E), the same columns on every row.
+- "And empty cells are not included in calcs. That would artificially water down the output." An empty field is
+  stored as empty: never 0, never blank text. A zero appears only where the tape or the book says zero. A
+  calculation skips an empty cell.
+- "After we get new data filled in let's delete the old and keep focused on getting st 1 and 2 calcs run if we're at
+  that point or close." Claude's plan, Greg: "Do your plan": store and checks, pin the 13, a short stretch of the
+  sheet, then straight to laying out the Step 1 and 2 calculations; the full workbook is written once, after the
+  calculation columns exist. The delete list is shown to him and waits for his "delete".
+- "We need to keep the checks to one max and not drift and go overboard. And only test new parts when possible
+  instead of running everything from the beginning. These turn into major time sucks and we need to be progressing
+  and not constantly testing." From here: one check per new part, run once, on that part only; nothing beyond what
+  the spec lists.
+- Measured on trade day Oct 2: 820,670 rows, 59 MB stored; 38,127 book pictures at trade messages, 140 MB; 83 seconds
+  to build in the session. The foundation needs no pods.
+- A fill names an order, so it is a step of that order's life (found by the row checks; fixed in the book).
+- Five fills at 6:00 pm Eastern Sunday Oct 15 (the open of trade day Mon Oct 16, warm-up) name orders the book does
+  not hold; they are on no row of the four trade days, and the book still equals the vendor restatement after them.
+- Next session starts from `NEXT_SESSION_HANDOFF_20261116E.md`.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
