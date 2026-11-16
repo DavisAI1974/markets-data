@@ -58,8 +58,6 @@ as the starting point; C lists as open several things that are now closed.
   the first is Step 1 as originally defined, made on the four trade days; the second is the growth, its inputs
   decided when it is laid out. The list of hard-coded boundaries is owed to Greg first. Detail and the paths of the
   files Codex found are in the decisions file.
-- **Not decided, raised to Greg:** buying the other contract months' full order tape ($4.83), and how many trade
-  days the families are grown from.
 
 - **Merge, not scrap.** The new run's outputs are merged with the 55-week findings into a new Step 1 knowledge base;
   conflicts get a deeper dive. Claude's proposed way of doing it (statements with what each was measured on, never

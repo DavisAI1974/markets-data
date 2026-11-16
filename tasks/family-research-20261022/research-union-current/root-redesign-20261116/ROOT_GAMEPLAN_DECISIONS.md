@@ -805,6 +805,26 @@ averaging the same data. I think it does it both ways for different answers so n
 - The exception is for that calculation only. The rule stands everywhere else: every trade individually, no rates,
   averages or model scores as a readout.
 
+**Closing decisions of the fourth session (Greg, 2026-11-16):** "We'll wait on the full tape to see if we need it and
+we'll run the steps on all 4. Also mention that we need to eliminate all caps and limits and that the new data
+shouldn't be limited to what fits in old groupings. The new stuff will have new groups, families, chains, additional
+definitions probably. We let the data make the decisions unless it looks like it'll go out of control, then we'll
+figure something out."
+
+- **The other contract months' full order tape is not bought now.** It waits until the work shows whether it is
+  needed. (Quoted at $4.83 on 2026-11-16.)
+- **The steps are run on all four trade days.** The families are grown from the four.
+- **All caps and limits come out.** No cap on how far a lineage is followed, no fixed block lengths, no fixed windows,
+  no top-N levels, no threshold that keeps an event from being recorded. The list of hard-coded boundaries in the
+  Step 1 programs is the list of what comes out.
+- **The new data is not forced into the old groupings.** Old families, chains and definitions are the base, not a
+  mould. Where the new data shows a group, a family, a chain or a behaviour the old set has no place for, it gets a
+  new one, and a new definition where one is needed. Nothing is dropped or squeezed into the nearest old label
+  because it does not fit.
+- **The data makes the decisions.** The one stop: if something looks like it will run out of control (the number of
+  groups, the depth of a chain, the size of the output), the work stops there and it is put to Greg, and a way is
+  worked out with him. No limit is put in quietly to keep it manageable.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
