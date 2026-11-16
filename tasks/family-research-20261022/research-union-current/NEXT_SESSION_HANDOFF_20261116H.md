@@ -58,8 +58,8 @@ had grown long; the chain link models were about to be built.
   `https://<pod id>-8000.proxy.runpod.net/`, compares it with the fingerprint in its receipt, checks the code
   commit and the rows commit, and stores it. The pod writes nothing to git.
 - The session can only reach a pod after its address is added to the "Markets" cloud environment's allowed hosts
-  (`update_environment`, one approval from Greg). Four dead addresses from this session are still on that list;
-  remove them in the same call that adds the next four.
+  (`update_environment`, one approval from Greg). The four addresses of this session's pods were removed from that list on Greg's
+  word ("Remove dead pod addresses") once the pods were deleted; do the same after every launch.
 - **Helpers pinned (Greg: "Make sure the helpers are pinned to cpus so it isn't just one running by itself").**
   The launcher now starts every helper at once, each bound to its own CPU with `taskset`. Not yet run on a pod.
 - Each `exec-pod` call asks Greg for permission and he had to re-open the prompts. Better next time: put the
