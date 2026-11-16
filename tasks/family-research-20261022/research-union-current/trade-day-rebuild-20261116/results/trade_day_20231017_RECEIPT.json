@@ -2,6 +2,7 @@
  "first_archive_cursor_offset": 4805,
  "trade_day": "20231017",
  "definition": "17:00 ET prior evening to 17:00 ET named date (21:00-21:00 UTC, EDT)",
+ "warmup": "from the earliest UTC clock-day file held for the trade week; later opening snapshots checked, not applied",
  "sources": [
   {
    "utc_clock_day": "20231016",
@@ -20,8 +21,11 @@
    "after_halt_records_not_used": 17375
   }
  ],
+ "warmup_midnight_utc_carries": [],
  "resting_orders_at_session_start": 745,
+ "resting_orders_at_session_start_whose_priority_time_is_a_floor": 260,
  "midnight_utc_carry": {
+  "at_0000_utc_of": "20231017",
   "snapshot_records": 738,
   "snapshot_orders": 737,
   "carried_orders": 737,
@@ -29,11 +33,15 @@
   "price_levels": 404,
   "levels_with_identical_queue_order": 404,
   "carried_equals_snapshot": true,
-  "orders_whose_snapshot_event_time_is_over_1s_older_than_the_carried_priority_time": 225
+  "orders_whose_snapshot_event_time_is_over_1s_older_than_the_carried_priority_time": 225,
+  "resting_orders_whose_priority_time_is_a_floor": {
+   "opening_snapshot_of_earliest_held_file": 225
+  }
  },
  "session_records": 846406,
  "completed_groups": 638324,
  "resting_orders_at_halt": 790,
+ "resting_orders_at_halt_whose_priority_time_is_a_floor": 200,
  "integrity": {},
  "counts": {
   "messages": 846406,
@@ -317,5 +325,5 @@
   "path": "tasks/family-research-20261022/frankie-four-day-pins/book-recovery-42617700678-1/20231017",
   "scope": "original archived partial span"
  },
- "wall_seconds": 564.0
+ "wall_seconds": 365.5
 }

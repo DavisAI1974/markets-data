@@ -2,7 +2,15 @@
  "first_archive_cursor_offset": 0,
  "trade_day": "20231018",
  "definition": "17:00 ET prior evening to 17:00 ET named date (21:00-21:00 UTC, EDT)",
+ "warmup": "from the earliest UTC clock-day file held for the trade week; later opening snapshots checked, not applied",
  "sources": [
+  {
+   "utc_clock_day": "20231016",
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e",
+   "records": 925662,
+   "warmup_records": 925662
+  },
   {
    "utc_clock_day": "20231017",
    "file": "NG_v0_mbo_20231017.dbn.zst",
@@ -20,8 +28,26 @@
    "after_halt_records_not_used": 6391
   }
  ],
+ "warmup_midnight_utc_carries": [
+  {
+   "at_0000_utc_of": "20231017",
+   "snapshot_records": 738,
+   "snapshot_orders": 737,
+   "carried_orders": 737,
+   "same_orders_sides_prices_sizes": true,
+   "price_levels": 404,
+   "levels_with_identical_queue_order": 404,
+   "carried_equals_snapshot": true,
+   "orders_whose_snapshot_event_time_is_over_1s_older_than_the_carried_priority_time": 225,
+   "resting_orders_whose_priority_time_is_a_floor": {
+    "opening_snapshot_of_earliest_held_file": 225
+   }
+  }
+ ],
  "resting_orders_at_session_start": 790,
+ "resting_orders_at_session_start_whose_priority_time_is_a_floor": 200,
  "midnight_utc_carry": {
+  "at_0000_utc_of": "20231018",
   "snapshot_records": 718,
   "snapshot_orders": 717,
   "carried_orders": 717,
@@ -29,11 +55,15 @@
   "price_levels": 411,
   "levels_with_identical_queue_order": 411,
   "carried_equals_snapshot": true,
-  "orders_whose_snapshot_event_time_is_over_1s_older_than_the_carried_priority_time": 278
+  "orders_whose_snapshot_event_time_is_over_1s_older_than_the_carried_priority_time": 199,
+  "resting_orders_whose_priority_time_is_a_floor": {
+   "opening_snapshot_of_earliest_held_file": 199
+  }
  },
  "session_records": 771787,
  "completed_groups": 583688,
  "resting_orders_at_halt": 723,
+ "resting_orders_at_halt_whose_priority_time_is_a_floor": 177,
  "integrity": {},
  "counts": {
   "messages": 771787,
@@ -317,5 +347,5 @@
   "path": "tasks/family-research-20261022/frankie-four-day-pins/book-recovery-42617700678-1/20231018",
   "scope": "original archived full session"
  },
- "wall_seconds": 520.2
+ "wall_seconds": 514.7
 }

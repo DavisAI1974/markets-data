@@ -10,7 +10,7 @@ Checks, each counted and written to the receipt:
 import gzip, io, json, subprocess, sys, time
 from dataclasses import asdict
 import pandas as pd, pyarrow.parquet as pq
-sys.path.insert(0, '/home/user/work/tradeday')
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 from trade_day_stream import trade_day
 DAY, OUT = sys.argv[1], sys.argv[2]
 REPO = '/home/user/markets-data'
