@@ -149,3 +149,38 @@ had grown long; the chain link models were about to be built.
 - The fill messages always come before their order's own row inside an exchange event.
 - How he wants the work: plain words, read on a phone, a whole plan in one go, his question answered first,
   decisions recorded in git as they are made, and no test or check beyond the one per part.
+
+## Added by the seventh session, which stayed open with Greg while the eighth was building
+
+Two things from that conversation are NOT in the list above. Both are recorded in the decisions file (the last
+entries of the "Seventh session" section, and "All nine expansions approved to try" at the end of the "Eighth
+session" section).
+
+**1. Nine additions, approved by Greg: "Try them all".** Laid out in full, with Claude's calls, in
+`STEP1_STEP2_LAYOUTS.md` under "Additions from the look at Codex's two pieces". None is built.
+- Four calculations, named L to O so they do not collide with Step 2's A to K:
+  - **L, refilled orders:** a fact each time an order is traded against and shows the same size or more straight
+    after (where, which side, how much it took, how many times so far). The book totals already carry the refilled
+    size on every row; L adds the per-order facts.
+  - **M, sweeps:** one fact for every exchange event that holds a trade (size, orders filled, price levels filled
+    through, first and last fill price), and facts for the best bid and ask touching or crossing and parting.
+  - **N, orders that act together:** sets of orders entering or leaving at the same exchange time stamp.
+  - **O, what an outside figure changing did:** a fact at the tick one of the 13 outside points changes.
+- Three ways of working, for every piece from here on: two clocks on every fact (when it happened, when it could
+  first be known); more than one way to end (for the dipole, the ending of the flow peak in play beside Native's
+  own); the cases that did not happen, listed beside the ones that did.
+- Two readings made at the grouping stage: the earliest tell; which fact came first and the time between.
+- Where they go in the order above: **L and M next to the chain link models** (they need only the rows); **N with
+  K**; **O after the rest of I**.
+
+**2. The two Codex pieces: a look Greg asked for, not finished.** The SQL step and the family workflow, Markets
+commit `dd9c797a`, `artifacts/sqlite-triage/20261022/` (start with
+`families/family-parallel-run-full-handoff-20261022.txt`, `README.md`, `queries/README.txt`, `sources/`). His
+words: "look at what info they are giving us and does it move us forward to understanding the trades better to get
+better signals"; "That was old data so don't lean on the findings. Just intent and is the code accomplishing the
+intent and is the data useful"; "But if those perspective would be good to use on the new data then include it".
+So for each part: its intent; whether the code does what the intent says; whether its kind of output is useful;
+and which of its questions are worth asking of the new rows. Its old numbers carry no weight. A read on those
+terms was running in the seventh session and had not reported when this was written. If its result is not in the
+decisions file, do the read again (read single files from that commit with `git show`; do not fetch old branches
+whole) and bring the result to him.
