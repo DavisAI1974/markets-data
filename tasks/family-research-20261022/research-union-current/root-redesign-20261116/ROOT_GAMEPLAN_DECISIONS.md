@@ -545,6 +545,14 @@ authorities and no national row; adding them up ourselves would be a choice and 
 - Wind and gas burn (X05, X07): "as it was" means the EIA's own US48 figure, as in the original files, not our sum
   of the regions. It needs `api.eia.gov` allowed and a free EIA key, which Greg sets up.
 
+- **`SPEC-outside.md` is drafted (2026-11-16) and is not yet approved.** It states what the original put beside a
+  row (30 figures plus an hourly temperature for each of 18 cities), how each point is made, what the four fixes
+  change, what is still missing, and four questions that are Greg's to decide: whether a row shows every forecast
+  run as it arrives (the original) or the one forecast made before the open (his earlier ruling, which is what
+  `SPEC-root.md` section G says today and is pending his answer); which day the forecast describes once the
+  observed temperature moves to the gas day; the details of fix 3; and a workbook of the point tables. The source
+  folder now holds 127 files: readings for Austin and San Antonio and routine-only hourly files were added.
+
 **Making the 13 from these files is the `outside` part of ROOT and is a build:** it gets its short specification
 (each point's source, formula and timing, with the fixes already decided), Greg's approval, and then the switch to
 Opus. The old builder is not rerun, because it carries what was ruled wrong. The 13 go onto the sheet when the ROOT

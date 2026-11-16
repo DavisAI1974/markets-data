@@ -34,6 +34,8 @@ RETRIEVED_NOTE = 'current revision of the source on the retrieval date'
 # The 16 stations of the gas-weighted temperature (the station list of the weather feed; weights are not used here).
 STATIONS = ['NYC', 'BOS', 'PHL', 'DCA', 'ORD', 'DTW', 'MSP', 'STL', 'IAH', 'DFW', 'ATL', 'DEN', 'PHX', 'LAX', 'SFO',
             'SEA']
+# Two more cities whose hourly temperatures the original files carried beside each row (they have no weight).
+EXTRA_STATIONS = ['AUS', 'SAT']
 MOS_MODELS = ['GFS', 'NAM', 'MEX']           # the three forecast-statistics products behind X02 and X09
 SPANS = {
     'weather_obs': ('2023-09-01T00:00:00Z', '2023-11-01T00:00:00Z'),   # every reading, all report types
@@ -129,10 +131,17 @@ def targets():
                 'https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/' + SPANS['eia930'],
                 check_text_table('Balancing Authority', ','), True))
     sts, ets = SPANS['weather_obs']
-    for st in STATIONS:
+    for st in STATIONS + EXTRA_STATIONS:
         q = urllib.parse.urlencode(dict(station=st, data='all', sts=sts, ets=ets, tz='Etc/UTC', format='tdf',
                                         missing='M', trace='T', latlon='yes', elev='yes'))
         out.append(('weather_obs', f'asos_{st}_20230901_20231101.tsv.gz', f'{IEM}/asos.py?{q}',
+                    check_text_table('station', '\t'), True))
+    # The same span again with the routine hourly reports only (report type 3), so the routine reading of each hour
+    # is identified by the source itself and not by a rule of ours. The all-types files above stay the full record.
+    for st in STATIONS + EXTRA_STATIONS:
+        q = urllib.parse.urlencode(dict(station=st, data='all', sts=sts, ets=ets, tz='Etc/UTC', format='tdf',
+                                        missing='M', trace='T', latlon='yes', elev='yes', report_type='3'))
+        out.append(('weather_obs', f'asos_{st}_routine_20230901_20231101.tsv.gz', f'{IEM}/asos.py?{q}',
                     check_text_table('station', '\t'), True))
     sts, ets = SPANS['mos']
     for model in MOS_MODELS:
