@@ -1624,6 +1624,80 @@ can you expand on them or add to them to improve?"
   9. What an outside figure changing did: at each tick one of the 13 outside points changes, the story of the
      flow and the quote after it.
 
+## Eighth session (2026-11-16, in a code session, on Fable with the Fable advisor)
+
+Started from `NEXT_SESSION_HANDOFF_20261116G.md`.
+
+**Where the code is.** Markets branch `ccr-30cca01c-bgs4az` (the session's own). The ROOT branch
+`ccr-ebe7e38d-wwccru` (`6a468af`) was merged in first, as the handoff says. Tip at the time of writing: `8f9a971`.
+Nothing went to the trunk.
+
+**Greg's words in this session, and how each is read.**
+- "Why are we running total root rltest folder?!?! I said stop doing that" and "Test folder i mean". The whole
+  `tests/root` folder is not run. One check per new part, run once, on that part only. Claude had run the whole
+  folder after the parts had already passed their own checks; that was a mistake and it was stopped.
+- "Dont run the full thing for the corrected step". When a step is corrected, only the corrected part is checked;
+  the whole run is not made again for it.
+- "And the no limits or caps on the outputs is in your instructions right". Yes. Nothing built in this session has
+  a cap, a minimum size or a minimum count.
+- "Just read the skills from the repo if not", "Ise the git workflow skill". The `using-agent-skills` plugin was
+  not installed in the container and is not kept in the Markets repository. Its pinned version (0.6.8) was fetched
+  from its public source and the router and `git-workflow-and-versioning` were read. From there on: one logical
+  thing per commit, with the reason in the message.
+- "Aren't we going to use the pods for the calcs?", "So we aren't using the pods?", "Are these tests or the actual
+  run?", then "No tests. I was making sure they weren't. Run the pods". The book totals and the quote's runs had
+  been run in the session, one trade day at a time, before he asked: they were the actual runs on the full trade
+  days, checked and stored, and Claude should have raised the pods first. Read as (his to correct): those two
+  stored outputs stand, and from that word the step runs go on pods. A and B were then run on four pods.
+- "Make sure the helpers are pinned to cpus so it isn't just one running by itself". The launcher now starts every
+  helper at the same time, each pinned to its own CPU (`root/pod_run.sh`, Markets `8f9a971`). The A and B launch
+  had started before this word and ran one calculation after the other on each pod; it was not run again for it.
+  The chain link models are to be built with pinned helpers from the start.
+
+**The gate for calculations that read the stored rows: BUILT (Claude's call, stated to Greg).** Markets `9612f87`.
+`root/tape.py` `rows_for_calculations()` is the one way a calculation receives stored rows. It decides by the same
+`calculation_eligible` as `for_calculations()`, on the row's exchange time. The runner proves on every run that it
+passed exactly the tape gate's positions (it did, on all four trade days). No file in `root/calcs/` may open a
+stored file (test). Markets `CLAUDE.md` on the session branch says so. A calculation that needs pieces 1 or 2 works
+them out again in the same pass with the same code; it does not read their stored files.
+
+**Step 2 built and run on all four trade days: C, the quote's runs of I, A and B.** Each passed its one check on
+every trade day. Claude's calls in each build, and the counts, are in `STEP1_STEP2_LAYOUTS.md` under "Step 2 as
+built". Stored on the `root-rows` branches: `-20231002` (`ac9fb25`), `-20231003` (`32664ba`), `-20231017`
+(`8e1da23`), `-20231018` (`9108441`), each with `FILES.md` updated. The rows files are untouched.
+- C and the quote's runs were run in the session (see above). A and B were run on pods.
+
+**The open call on fills, MADE by Claude and stated to Greg (his to correct).** A fill the book shows no change for
+(the order is filled and the same exchange event puts the size back) counts as filled AND as added. The size put
+back is also kept in its own column, so the figures without it are one subtraction. With this the size filled
+equals the size of the tape's fill messages exactly on all four trade days (85,688; 93,202; 72,782; 62,673). The
+handoff's rule table would have counted 80,711 on trade day Oct 2 and left 4,977 of traded size out.
+
+**The pods: used, on Greg's go ("Run the pods").** Four General Purpose CPU pods (Runpod `cpu3g`, 8 CPUs and
+32 GB, $0.32 an hour each, $1.28 for the four, 10 GB of disk each), one per trade day, started 5:18 pm Eastern,
+finished and deleted about seven minutes later. The account showed no pods before and none after.
+- The launch path: both repositories are public, so each pod fetched the code, the raw tape and its trade day's
+  stored rows by itself. No key was put on a pod and a pod writes nothing to git. Each pod served its output
+  folder; the session fetched every file, compared it with the fingerprint in its receipt, checked the pod had
+  run the expected code commit on the same stored rows, and stored it.
+- To fetch from the pods the session needed their four addresses allowed in the "Markets" cloud environment.
+  Greg approved that. The four addresses are dead now and can come off the list.
+- A new launch still needs his go at the time.
+
+**A finding on the foundation's place-in-line figures, put to Greg (nothing changed).** A filled order had another
+order ahead of it in our line on 2,909, 3,312, 2,155 and 1,960 rows of trade days Oct 2, 3, 17 and 18. For 1,306,
+1,430, 835 and 850 of them every order ahead was itself filled in the same exchange event and its own row had not
+arrived yet: that is only the order of the messages. In the rest, an order ahead was not traded. Some of those
+front orders were cancelled by the exchange in the same event without trading (163, 175, 170 and 123 orders); the
+others are not explained yet. C and the quote's runs do not use the place in line. K does, so this is looked at
+before K is built, and anything about the foundation goes to him first.
+
+**The two checks before D and the print legs of I: NOT DONE.** The read-only search for where Native's dipole
+record and the 23,615 earlier print legs are kept was started in the background and stopped: it was downloading
+whole old branches and filled the session's disk. It had found likely places (markets-data branches
+`codex/native-dipole-artifacts-20261108`, `codex/research-union-four-days-20261109`, the tags
+`eight-trade-types-repair-20261115`). It is to be run again by reading single files, not whole branches.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

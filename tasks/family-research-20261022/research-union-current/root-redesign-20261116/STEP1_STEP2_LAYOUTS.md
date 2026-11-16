@@ -319,6 +319,117 @@ events (6 in the causal version; the three-month 2021 run capped it at 5).
   four trade days, it is a model score, and it would not be the old chain.
 - C: leave the link out of Step 1 for now.
 
+## Step 2 as built (2026-11-16, eighth session): Claude's calls, stated to Greg, his to correct
+
+The layouts are in `STEP2_PLAN.md`, "The suggestions laid out together", approved by Greg. What follows is what
+was built, each with its one check passed on all four trade days. Code: Markets branch `ccr-30cca01c-bgs4az`.
+
+### C. The book running totals (`root/calcs/book_totals.py`)
+
+24 new columns on every row: for the bid side and the ask side, size added, pulled, filled and moved since the
+first tick of the trade day; each also at the best price (moved has two: left the best, joined the best); the size
+put back on orders as they traded; and the filled size whose fill message has no side.
+
+- **One rule for every row.** b is the order's size before the tick, a its size after, f the size the fill
+  messages of the same exchange event named for it. Filled goes up by f. What is left is b minus f. If a is above
+  that, the difference is added; if below, pulled. If the order changed price, moved goes up by the smaller of a
+  and what was left. With no fill this is the handoff's table.
+- **A fill is counted on the row where the book shows it** (the order's own cancel or modify), not on the fill
+  message's row. That keeps the side's total size equal to its size at the open plus added minus pulled minus
+  filled on every row.
+- **A fill the book shows no change for counts as filled and as added both** (the open call of the handoff). The
+  size put back is kept in its own column. On trade day Oct 2 the rule counts 1,863 rows differently from the
+  handoff's table: 1,232 "stayed", 321 "size raised", 126 "price changed", 124 "left by fill", 60 "shrank by
+  fill". On every one a fill came with a book change of a different size.
+- **A change of price that also changes size** (1,957 on Oct 2): the smaller of the two sizes moved; the
+  difference is added or pulled.
+- **A fill message with no side** is counted on the side of the order it names, and also in its own column.
+- **At the best price.** For an order already resting: its price was the best just before the tick. For an order
+  that joins or arrives at a new price: its price is the best just after.
+- **Fills are not all at the best price.** On Oct 2, 60,868 of 61,168 rows that show a fill were at the best
+  price; 300 were behind it, some far behind (up to 193 levels). Each row carries how far, so nothing is cut.
+- More left than was filled on 3 or 4 rows a trade day (an order filled in part and the rest cancelled in the same
+  event): the rest is counted as pulled.
+- A clear, a message that was not applied, or a fill whose order shows no row in its event would stop the run.
+  None occurs on the four trade days.
+
+The check: every column worked out again from whole columns by a different method (the best price taken from the
+count of better levels, which the calculation does not read); the foundation's own total sizes on every row; the
+size filled against the fill messages; playback at two cuts, one between a fill message and the row where the
+book shows it.
+
+| Trade day | Fill messages, size | Counted as filled | Rows with a fill put back | Bid added / pulled / filled / moved | Ask added / pulled / filled / moved |
+|---|---:|---:|---:|---|---|
+| Mon Oct 2 | 85,688 | 85,688 | 1,763 | 406,585 / 363,428 / 42,718 / 42,000 | 422,692 / 379,439 / 42,970 / 44,240 |
+| Tue Oct 3 | 93,202 | 93,202 | 1,634 | 450,069 / 400,670 / 48,889 / 62,455 | 481,132 / 436,600 / 44,313 / 63,687 |
+| Tue Oct 17 | 72,782 | 72,782 | 1,440 | 466,967 / 431,411 / 34,830 / 83,280 | 387,389 / 348,961 / 37,952 / 28,451 |
+| Wed Oct 18 | 62,673 | 62,673 | 1,527 | 392,063 / 361,298 / 30,249 / 39,891 | 367,409 / 334,662 / 32,424 / 36,589 |
+
+### I, first part. The quote's own runs (`root/calcs/quote_runs.py`)
+
+Facts beside the rows, one line per turn of a run: run started, new furthest price, first step back. The best bid
+and the best ask are followed separately. On every row: the run in progress on each side (the tick it started,
+up or down, the price before it, how many moves, how far, how long).
+
+- A run is the best price moving one way. It ends at the first move the other way, whatever its size. No minimum
+  length and no minimum size.
+- A tick that ends one run starts the next. It carries two facts: the step back, then the start.
+- **Crossed book** (the best bid at or above the best ask for a moment during a sweep): each side is followed as
+  the book has it. No tick is set aside, and every fact carries the gap at its tick.
+- A run never crosses 6 pm. A move made by the first tick of the trade day would be measured from a price before
+  the trade day and is not counted; none occurs on the four trade days.
+- Up and down are read off the prices. They are not groups.
+- The calculation reads the best-price columns; the check finds every run again from the foundation's marks of a
+  best price moving.
+
+| Trade day | Facts | Runs of the best bid | Runs of the best ask | Ticks with the book crossed | Still going at the end |
+|---|---:|---:|---:|---:|---:|
+| Mon Oct 2 | 62,505 | 13,332 | 13,680 | 1,858 | 2 |
+| Tue Oct 3 | 67,118 | 14,780 | 14,767 | 2,084 | 2 |
+| Tue Oct 17 | 67,295 | 14,813 | 13,864 | 1,886 | 2 |
+| Wed Oct 18 | 64,050 | 13,877 | 13,268 | 1,910 | 2 |
+
+About three runs in four are a single move. Nothing ran away and nothing is capped.
+
+### A. The links between peaks (`root/calcs/peak_links.py`)
+
+Facts beside the rows. At the tick a peak becomes known: the last peak before it on its own side and on the other
+side (the tick of its high, the time between the two highs, the price at its high, whether its story was still
+open), and the peak before, same side or not. At the tick a story ends: how many later peaks became known while
+it was open, and the first of them.
+
+- "Before" goes by the tick a peak became known.
+- "Still open" is read as the stories stand once the tick is done. A story that ends on the tick a later peak
+  becomes known is not open for that peak.
+- The first peak of a trade day on a side has that link empty, and the fact says why.
+- Pieces 1 and 2 are worked out again in the same pass by the same code, so playback covers all of it.
+
+| Trade day | Peaks | Facts | Peak before on the same side | On the other side | Known while the peak before was still open | Most later peaks inside one story |
+|---|---:|---:|---:|---:|---:|---:|
+| Mon Oct 2 | 9,525 | 19,049 | 6,862 | 2,662 | 6,002 | 112 |
+| Tue Oct 3 | 10,577 | 21,153 | 7,843 | 2,733 | 6,619 | 196 |
+| Tue Oct 17 | 8,619 | 17,237 | 6,176 | 2,442 | 5,343 | 55 |
+| Wed Oct 18 | 7,967 | 15,932 | 5,540 | 2,426 | 5,030 | 68 |
+
+Read from these counts, with no grouping applied: about seven peaks in ten follow a peak on the same side, and
+about six in ten become known while the peak before is still open. Overlap is the usual case, not the exception.
+
+### B. The state at each tick (`root/calcs/open_stories.py`)
+
+10 new columns on every row: for buy peaks and for sell peaks, how many stories are open, how many of those have
+reached zero and not come back, and the tick of the high of the oldest, the newest and the largest open one.
+
+- The state is read once the tick is done: a peak that becomes known at this tick is open on its row; a story that
+  ends at this tick is not.
+- Of two open peaks of the same size, the largest is the one known earlier.
+
+| Trade day | Most buy stories open at one tick | Most sell stories open at one tick |
+|---|---:|---:|
+| Mon Oct 2 | 21 | 24 |
+| Tue Oct 3 | 35 | 30 |
+| Tue Oct 17 | 20 | 19 |
+| Wed Oct 18 | 14 | 19 |
+
 ## Still to lay out
 
 5. Step 2: the chain, its stages, timing and recurrence. Greg, 2026-11-16: "We'll have to look at step 2 closer
