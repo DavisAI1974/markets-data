@@ -250,6 +250,16 @@ it they don't think there's missing data."
 The wording is in `WORKBOOK_README_PAGE.md` in this folder. It becomes the first sheet of the rebuilt workbook and is
 kept current as each piece closes.
 
+**The frame of the rebuilt workbook (2026-11-16).** Greg, at the end of the session: "make sure excel sheet has been
+populated ... clear out old data from excel sheet first. Also add any additional columns as needed."
+`ROOT_workbook_frame.xlsx` in this folder holds the READ ME page, a COLUMNS sheet that lists every column in plain
+words (77 foundation columns, the 13 outside data points, 37 columns for ROOT part 2, 13 for Step 1 and the 2021
+work, 13 for Frankie's outputs), and one sheet for each of the four trade days with those 153 column headers and no
+rows. It is made by `tools/make_workbook_frame.py`. **It holds no market data.** No old value was carried into it.
+The rows are written by the ROOT build, which has not been built; the 13 outside data points are pinned onto every
+tick by that build from the outside data files, not copied from the old sheet, because the old sheet holds them on
+trade rows only. The foundation column names in it are Claude's draft of the column list for Greg to correct.
+
 Greg also asked for a page in the workbooks that exist today ("Yes add the page"). Done 2026-11-16 for the two held
 in git: a first sheet named "READ ME FIRST" saying the workbook predates the rebuild, why its calculated values are
 not relied on, its known gaps, and where the current state is written. Added with `tools/add_readme_page.py`, which

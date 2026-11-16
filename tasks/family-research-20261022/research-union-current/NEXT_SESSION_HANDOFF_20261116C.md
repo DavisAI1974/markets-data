@@ -48,6 +48,9 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. Pushes to it work f
 - A first sheet "READ ME FIRST" was added to `Frankie_four_day_research_current.xlsx` and
   `Priority_native_flow.xlsx` (fingerprints before and after are in the decisions file). The 500 MB R2 release
   workbook was not changed: a cloud session has no tool that replaces a release file.
+- New: `root-redesign-20261116/ROOT_workbook_frame.xlsx`, the frame of the rebuilt workbook: the READ ME page, a
+  COLUMNS sheet listing all 153 columns in plain words, and four empty trade-day sheets with the headers. It holds
+  no market data. Its foundation column names are a draft of the column list for Greg to correct.
 - No ROOT code was written. Nothing was deleted.
 
 ## Waiting on Greg
