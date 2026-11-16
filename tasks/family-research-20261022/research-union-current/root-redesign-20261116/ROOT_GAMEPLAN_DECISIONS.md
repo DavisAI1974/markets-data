@@ -448,8 +448,10 @@ that in rt."
 - **Real time:** he applies what he learned.
 - Each column still carries a mark saying whether it is shown to Frankie, and the default is shown. The mark costs
   nothing and leaves room to run a blind test later; no hidden answer key is being built now.
-- Not settled, and not needed for the historical build: what does the calculating when Frankie works in real time.
-  ROOT is designed so that it can run on a live feed.
+- Greg: "So root will do this part in the build and then play a similar but slightly different role in rt." In the
+  build, ROOT works out whole historical trade days ahead of time for the classroom. In real time it would do the
+  same calculations as each tick arrives, with only what has arrived so far. The real-time role is designed for,
+  not built now.
 
 ## Held for the later stage: figuring out what moves the market
 
