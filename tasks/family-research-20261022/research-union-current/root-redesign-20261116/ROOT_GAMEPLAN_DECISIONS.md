@@ -505,6 +505,29 @@ want those days bleeding into the work we're doing on the 4 days."
   starts with nothing behind it at the first written row of each week's record (the Sunday start-up for week 1;
   5 pm Eastern Mon Oct 16 for week 2). Only the book itself arrives complete.
 
+**Questions 3, 4 and 5: settled from what Greg had already said, plus one measurement (2026-11-16).** Greg: "I
+thought we covered the excel issues in last chat." The transcripts of the first and third sessions of 2026-11-16 were
+read back in full. He was right on the substance:
+
+- **Question 3, the size of the workbook.** Already closed in the third session: one row per tick, one sheet per
+  trade day; the whole book is not on every row ("Option 2 if it's going to have the book in memory"); the row
+  carries the full line at the touched price (group 3, closed). The 32,767-character cell limit and a trial sheet
+  were never put to him; they came only from the spec. The limit is now settled by measurement on the seven raw
+  files: the longest line of orders at one price at any tick is 49, the usual line 7 to 8, and 99 of every 100
+  ticks have 24 or fewer. The count was checked against the exchange's snapshot at all five file boundaries. A full
+  line always fits in one cell. Writing a short stretch first and reporting its size is a step of the build.
+- **Question 4, where the stored rows live.** Greg, first session: "I'm not picky about where you save things to as
+  long as it's to git and not the e drive and that saving on your old branch isn't going to have old work bleed over
+  into new work." So: git, fresh branches made for this build, none that holds old work.
+- **Question 5, the column list.** What a row holds was closed piece by piece (piece 2, groups 3 and 4, the split,
+  the additions), and Greg's word at the end of the third session was "add any additional columns as needed". The
+  column list is kept by the build; a change to what a row holds still comes to him first. Added on that word: the
+  second price and its line when an order changes price; the mark for an order that entered before the written
+  record; the full set of outside figures. The old names on the part 2 placeholder columns are settled with part 2.
+- `SPEC-root.md` is brought into line with all five answers. Part 1 now waits only for Greg's approval.
+- Not answered in any session read: the shape of part 2 in so many words (he restated the idea twice and did not
+  object), and whether the calculations are worked out first or the foundation is built first.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 

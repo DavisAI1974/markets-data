@@ -28,7 +28,7 @@ Scope of this build: front-month natural gas, the four trade days Mon Oct 2, Tue
 A tick is one single message from the exchange. Each written tick is one row, in tape order. Within what is
 written, nothing is merged, grouped, sampled or left out. Ticks that share a nanosecond stay separate rows.
 
-**Which ticks get rows** (proposed; see open question 1). The book walks every tick of the week from the exchange's
+**Which ticks get rows** (closed by Greg, 2026-11-16). The book walks every tick of the week from the exchange's
 Sunday start-up. Rows are written for:
 - every tick of each of the four trade days, 6 pm to 5 pm;
 - the 5 pm to 6 pm stretch just before each of those trade days opens, and the one just after it closes, each
@@ -38,8 +38,10 @@ Sunday start-up. Rows are written for:
 
 Ticks that belong to no built trade day are run through the book and not written: Monday Oct 16 and the Sunday
 before it (warm-up), and the hours after 6 pm at the end of the Oct 3 and Oct 18 files (they belong to the next
-trade day and are shelved). The stored rows are kept once, by position; a trade day's sheet shows the stretch before
-it, the trade day, and the stretch after it.
+trade day and are shelved). Those extra ticks exist only to complete the book: they are not rows on the four
+trade-day sheets, are not counted there, and no calculation runs on them. If anything ever has to be calculated on
+them it is kept completely apart, in its own output and its own workbook. The stored rows are kept once, by
+position; a trade day's sheet shows the stretch before it, the trade day, and the stretch after it.
 
 Each row carries the following. "Touched" means the order or price that this tick acted on.
 
@@ -63,7 +65,11 @@ Each row carries the following. "Touched" means the order or price that this tic
 - The touched order's size before and after.
 - Whether it joined, stayed, shrank, lost its place in line, or left; and if it left, whether by cancel or by fill.
 - How many orders and how much size were ahead of it in line just before.
-- Which step of its life this is so far, the tick where it first entered, and the tick of its previous step.
+- Which step of its life this is so far, the tick where it first entered, and the tick of its previous step. When
+  the order entered during the extra ticks that are not written out, the row carries a mark saying it entered before
+  the written record; its times are still on the row.
+- When an order changes price it leaves one line and joins another. The row carries both prices, and for each the
+  line's total size and number of orders just before and just after.
 - When it first entered and when it last took its place in line, each on both clocks, and how long it has rested.
   For an order carried over the weekend this is marked "at least".
 - How many price levels from the best price the action happened at.
@@ -77,7 +83,10 @@ Each row carries the following. "Touched" means the order or price that this tic
 - For the bid side and the ask side: total size, number of orders, number of price levels, over the whole book.
 - At the best bid and at the best ask: size, number of orders, and the front order's size and times.
 - At the touched price: the full line, every order in order with its size and times; and the line's total size and
-  number of orders just before and just after.
+  number of orders just before and just after. Measured on the seven raw files held (2026-11-16): the longest line
+  at one price at any tick is 49 orders, the usual line is 7 to 8, and 99 of every 100 ticks have 24 or fewer. A
+  line of 49 orders is about 4,500 characters, so a full line always fits in one workbook cell (the limit is 32,767).
+  When an order changes price, the full line is given at the price it joined.
 
 **E. Change-of-state marks**
 - Best bid moved; best ask moved (from what price to what price).
@@ -88,15 +97,9 @@ Each row carries the following. "Touched" means the order or price that this tic
 - Each trade's side and size exactly as the tape gives them, and its price.
 
 **G. The 13 outside data points**
-- Each one on every row. A value holds from the moment it became available until the next one replaces it.
-- For this stage: one forecast per trade day (the last made before the trade day opens), and the storage figure as
-  printed on Thursday morning. That one forecast gives a temperature for each hour, so a row carries the forecast
-  for its own hour; all of it was available before the open.
-- Observed weather: each hourly reading from the moment it became available, and the gas-day figure once that gas
-  day is complete.
-- The temperature figure is worked out from hourly readings, gas-weighted with the weights stated, on the gas day
-  ending 10 am Eastern, with wind and carry-over from earlier days as their own columns. The hourly readings are
-  kept city by city underneath it.
+- As specified in `SPEC-outside.md` (approved by Greg, 2026-11-16): the same 13 as the original files, with four
+  fixes, kept simple for this first ROOT part (one forecast per trade day; the Thursday storage figure).
+- Each figure is on every row. A value holds from the moment it became known until the next one replaces it.
 - A value that could not be obtained is empty with its reason. Nothing is estimated or filled in.
 
 ### 2. Kept beside the timeline
@@ -282,22 +285,29 @@ def trade_day_bounds(trade_day: date) -> tuple[int, int]:
   order has rested, is a measured quantity and is allowed); put a cost or fee into anything; invent data; use the
   old ROOT, its outputs or the old sheet as a source or as a test.
 
-## Open questions for Greg
+## The five open questions: answered (2026-11-16)
 
-1. **Which ticks outside the 6-to-5 trade day get rows.** Proposed under "Which ticks get rows" above: the 5 pm to
-   6 pm stretch on each side of a built trade day, and Sunday's start-up before trade day Oct 2; nothing for the
-   warm-up day or the shelved hours. Is that right?
-2. **The outside data files are on S3 and AWS needs your sign-in.** Until then the `outside` part cannot be built or
-   checked. By your rule the 13 are pinned before ROOT calculates, so a finished run for a trade day waits on this.
-   The tape and book parts can be built and tried in the meantime. Is that order acceptable?
-3. **How large the workbook will be is not known.** A sheet of about 800,000 rows with a full line of orders in a
-   cell may be too big for Excel to open comfortably, and one cell holds at most 32,767 characters. Proposed: write
-   a trial sheet for a short stretch first, measure it and the longest line on the tape, and bring you the numbers
-   before the full workbook is written. The same trial settles how a line too long for one cell is written.
-4. **Where the stored rows live.** Proposed: git, on one branch per trade day with a file list, as the book pictures
-   were stored yesterday.
-5. **The exact column list.** Sections A to G say what a row holds. The list of column names, their order and which
-   workbook field each one fills is drafted at the planning step and brought to you before the `rows` part is built.
+1. **Which ticks outside the 6-to-5 trade day get rows.** Closed by Greg: as proposed, with the mark for orders
+   that entered before the written record, and the extra ticks kept completely apart from the four trade days.
+2. **The outside data while AWS cannot be reached.** Answered by Greg: it does not wait. The source files were
+   fetched from the original sources and saved to git, and `SPEC-outside.md` is approved.
+3. **How large the workbook will be.** What goes on the sheet was already closed in the third session: one row per
+   tick ("Yes, 1 row per tick, nothing ever collapsed"), one sheet per trade day, the whole book not on every row
+   ("Option 2 if it's going to have the book in memory"), the full line at the touched price on the row ("group 3
+   is closed as long as it holds all raw data that wasn't calculated"). The cell limit is settled by measurement: a
+   full line always fits (section D). What is left is a step of the build, not a decision: the first sheet written
+   is a short stretch, its size is measured, and the numbers are reported before the full workbook is written.
+4. **Where the stored rows live.** Answered by Greg in the first session of 2026-11-16: "I'm not picky about where
+   you save things to as long as it's to git and not the e drive and that saving on your old branch isn't going to
+   have old work bleed over into new work." So: git, on fresh branches made for this build, one per trade day with a
+   file list. No branch that holds old work is reused.
+5. **The exact column list.** What a row holds was closed piece by piece in the third session, and Greg's standing
+   word is "add any additional columns as needed". So the column list is kept by the build, in the COLUMNS sheet of
+   the workbook, and a change to what a row HOLDS still comes to Greg first. Additions made on that word since the
+   draft: the second price and its line figures when an order changes price; the mark for an order that entered
+   before the written record; the full set of outside figures from `SPEC-outside.md` in place of one column per
+   point. An empty cell is explained by rule on the README page; a value missing by exception carries its reason on
+   the row. The old names on the part 2 placeholder columns are settled with part 2, not here.
 
 ## Part 2: calculations added on top (not designed yet)
 
