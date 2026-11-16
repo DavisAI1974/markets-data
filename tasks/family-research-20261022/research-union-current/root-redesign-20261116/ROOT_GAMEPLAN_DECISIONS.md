@@ -959,6 +959,30 @@ All outputs, tables and documents go to markets-data.**
 - **The move off Markets:** Greg chose S3 for the large parts plus markets-data for the rest, then: "Aws not
   accessible, forgot." So the move waits on AWS for the large parts; nothing has been moved or deleted yet.
 
+**The sqlite-triage outputs: DELETED (Greg, 2026-11-16).** "Inspect the code the sql files ran on. If it was using
+incomplete data, then we scrap the outputs and fix the code to run right." It was: the SQL triage read the old ROOT
+search database (`experiment-search/20231018/cycle-00/discovery.partial/recovery/indexed-v1/cells.sqlite`, one trade
+day, a partial run that was recovered) and the family research read the old ROOT run and teacher rows for Oct 18
+only. Greg: "Delete output and md." Markets trunk `420fd65`: 1,514 files, about 1.2 GB (outputs, 818 Markdown and 29
+text notes); the 286 code files kept. "We will have to make notes to track down where these old files are being read
+like the old root jsons": `root-audit-20261116/OLD_INPUT_READS.md` (170 programs). Fixing that code means rebuilding
+it as part 2 calculations on the new rows, after the foundation.
+
+**Compute for the runs (Greg, 2026-11-16).** "We have money on the pods so if they will do the st1 and 2 calcs a lot
+faster do that. Or use the git box." Then: **"We can use 4 boxes and run them all in parallel." "Do it."**
+- Four boxes, one per trade day, run at the same time.
+- The book is the week, so each box walks its own week from the Sunday start-up and writes rows only for its own
+  trade day (the Oct 3 box runs through Oct 2 first; the Oct 18 box through Oct 16 and 17). Anything a calculation
+  carries from an earlier trade day of the same week is worked through again on that box, so each box's output is
+  identical to one long run; the "same result twice" check proves it.
+- How it is started: a GitHub workflow uses the saved `RUNPOD_API_KEY` to start CPU pods; each pod takes the code
+  from Markets and the tape from markets-data, runs, pushes its outputs to markets-data and shuts itself down.
+- Prices read 2026-11-16: CPU pods $0.03 per CPU-hour (compute-optimized), so about $1 an hour per 32-CPU pod, about
+  $4 an hour for four. Last week's three 32-CPU pods (Nov 8 to 9) cost $39 in about 13.5 hours. Four pods tried in
+  US-CA-2 on Nov 16 never started, so another US data center is used. Greg sees the pod type and the total before
+  anything starts. The GitHub runner (4 CPUs, 6 hours a job) stays the fallback.
+- The endpoint `frankie-reading-granite42` is the Granite reader on a GPU, not a box for ROOT.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
