@@ -200,7 +200,21 @@ the four trade days) is laid out after this one is in view, as Greg ruled.
    the largest), and on the old flow (side by the midpoint, one reading a second). It is now applied to every
    peak, small ones included, on the new flow (the tape's side, every tick).
 
-### Piece 4: the link between events (the chain). NEEDS GREG'S DECISION.
+### Piece 4: the link between events (the chain). DECIDED by Greg 2026-11-16: B, with A's two facts.
+
+Greg: "Let it produce full values. That will be the base going forward that we build off of." The detailed layout
+(what the models are asked to predict, how they are taught, where the depth stops) is put to him after piece 2
+exists, because what a peak "did" is now what piece 2 records. Not built.
+
+The shape, as played back to him:
+- What a model predicts: what a peak did (its piece 2 story), from the stories of the peaks before it.
+- How it is taught: each trade day's peaks are scored by models taught on the other three trade days, so no peak
+  is scored by a model that saw its own trade day.
+- What is written, per peak: for each step back, each of the three models' own gain. Full values, nothing thinned.
+- Where it stops: no depth cap picked in advance. Steps back are added until no peak's chain reaches that far.
+- When it is known: a peak's link values are known when its own story has ended, and are recorded at that tick.
+
+The choice as it was put:
 
 **What it did.** A chain link was not read off the tape. Three models were taught, on blocks of 18 to 48 weeks,
 to predict what an event would do (same side as the next event, and the price moves after it) from the events

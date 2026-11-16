@@ -1396,6 +1396,19 @@ see how they separate."
   the family as originally defined as the first of the two Step 1 columns (piece 3), with the growth grouped from
   the four trade days afterwards.
 
+**The chain link: B, DECIDED by Greg (2026-11-16, seventh session).** Given the choice A (no model on four trade
+days), B (teach the models on the four trade days alone) or C (leave it out), he quoted A's two facts and B and
+wrote: "Let it produce full values. That will be the base going forward that we build off of."
+- Read as, and played back to him: B. The three models are taught on the four trade days and a chain link is
+  written for every peak. A's two facts (which peak came before, same side or not) are written as well; the
+  models read them anyway.
+- "Full values": every value for every peak is written, each model's own figure at each depth, not only a yes or
+  no and not only one depth number. Nothing is thinned out and no depth cap is set in advance.
+- This is the base going forward: later weeks build on it. It is a model score by his decision, an exception to
+  "no model scores", and it is kept per peak, never pooled.
+- It is still laid out for him before it is built: what the models are asked to predict comes from what piece 2
+  records about a peak, so its layout follows piece 2.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
