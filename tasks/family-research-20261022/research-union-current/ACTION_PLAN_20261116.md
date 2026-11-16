@@ -278,8 +278,8 @@ Greg expects this may be small, because some steps right after ROOT were redone 
 2. Sign-off of the old ROOT file list and of the lineage delete list, once they exist.
 3. (Settled 2026-11-16.) "Our two new workflow steps" are the original trade day Oct 18 SQLite and Julia family
    research, and, probably, Codex's four-day workflow processing of Nov 9 (5,075,640 research rows). Detail in
-   `root-audit-20261116/OLD_ROOT_LINEAGE.md` sections A and G. The handoff that describes replacing "hundreds of
-   trillions" of wrong calculations was not found; if it turns up, check it agrees.
+   `root-audit-20261116/OLD_ROOT_LINEAGE.md` sections A and G. The older version with "hundreds of trillions" of calculations was scrapped completely and restarted;
+   Greg mentioned it only as a pointer. There is nothing of it to find or retrieve.
 3b. Correct the draft list of what we want to find out (step 2b). (Settled 2026-11-16: the Claude and Codex
    research projects are listed by intended result and research angle only; their results are not kept.)
 4. Permission, or his own hand, for pushes to Markets branches other than the session's.

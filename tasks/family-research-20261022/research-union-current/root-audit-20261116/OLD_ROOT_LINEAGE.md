@@ -141,3 +141,7 @@ lifecycles, lifecycle data links, replay comparison; 448 files in `assembly/work
 companion batch is the 5,075,640 timestamp-indexed research rows recorded in this folder's `README.md`. Treat that
 as the second workflow step unless the handoff describing the "hundreds of trillions" replacement turns up and says
 otherwise. Both steps sit downstream of old ROOT outputs and are rerun on the new record.
+
+**Greg, closing this out:** the older version with "hundreds of trillions" of calculations was scrapped completely
+and the work restarted. There is nothing of it to find or retrieve; he mentioned it only as a pointer to the Nov 9
+run. Do not search for it again.
