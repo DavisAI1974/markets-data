@@ -118,3 +118,21 @@ mirror pairing within 60 s. (Same lines as section 1.)
 - `HARDCODED_WINDOWS` is cited in notes in A/native_layer_crosswalk.py but no such symbol exists.
 - The caller's value for `every_groups`.
 - Whether the redundancy list is complete: it is only what was noticed while listing windows, not a full audit.
+
+## Greg's decision on the time step (2026-11-16)
+
+ROOT runs at the tape's own resolution: nanoseconds, the same clocks the MBO tape carries and the live feed will
+deliver. Whole seconds are out, because they lose most of the data depth.
+
+What that means for the rewrite:
+- The step is the tape's own unit, in tape order: each message, with its nanosecond receive time (when it could be
+  known) and its nanosecond event time kept beside it. Nothing is binned to a second.
+- The trade-day tape has 771,787 to 879,830 messages and 583,688 to 653,912 completed message groups per trade day,
+  against 82,800 seconds. Every one of them becomes a step.
+- Historical and live must compute the same way: the live MBO feed carries the same fields (event time, receive
+  time, sequence, the end-of-group flag), so one code path serves both.
+- Point to settle with Greg in the spec: the exchange publishes one event as a group of messages ending with an
+  end-of-group flag. Orders, fills and flow can be stepped message by message. The book between two messages of the
+  same group is a half-applied update that never existed as a public book, so book readings belong at each group
+  close. That is the tape's own unit, not a truncation, but it is his call.
+- Everything in sections 1, 2 and 4 to 7 above that is expressed in seconds has to be re-stated from the data.

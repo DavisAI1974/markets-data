@@ -133,3 +133,11 @@ They were made with restarted order ages, the top-10 views and the fixed windows
 rebuilt, so nothing on it would have been used. Volume `qu5lhaqqbx` (`ng-replay-20231002-03-17-scratch`, 4,096 GB)
 was deleted and the account read back with no volumes and no pods. No file listing of it was ever made; what it held
 is known only from Codex's saved notes. Ignore the "option 2" plan and the "Blocked" note above.
+
+## ROOT time step: nanoseconds (Greg, 2026-11-16)
+
+Greg: ROOT is corrected to run at nanosecond resolution, whatever the MBO tape uses and the live feed will use; whole
+seconds lose too much. The full list of fixed windows, caps, tick collapses and repeated work, with file and line, is
+in `root-audit-20261116/ROOT_WINDOWS_AND_CAPS.md`, with this decision and its consequences at the end. Next step is a
+written spec for the ROOT rewrite (message-by-message stepping, full depth, no fixed windows, redundant passes
+removed, trade-day stream as input) for Greg to approve before any code changes.
