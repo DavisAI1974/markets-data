@@ -63,4 +63,6 @@ is reported after the first trade day, and Greg hears before anything is capped 
 3. The family rule (A, B, C). Both frozen rule files are in git.
 4. The chain link between events. Needs Greg's decision first: in the old work a link was a model score learned
    over blocks of 18 to 48 weeks, which four trade days cannot produce.
-5. Step 2: the chain, its stages, timing and recurrence.
+5. Step 2: the chain, its stages, timing and recurrence. Greg, 2026-11-16: "We'll have to look at step 2 closer
+   before it's run. That might be intentional" (of its pooled results). It is gone through with him result by
+   result before anything of it is built.

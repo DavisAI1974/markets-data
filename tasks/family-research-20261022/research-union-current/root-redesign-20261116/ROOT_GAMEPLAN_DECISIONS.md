@@ -1346,6 +1346,14 @@ laid out and approved before it is written. The one risk of a rewrite is driftin
 noticing; the guard is the layout (what it did, what changes) and one check per new part. A number-for-number
 proof against an old week needs the old input, which is on AWS and off limits for now.
 
+**Step 2 gets a closer look before it is run (Greg, 2026-11-16, seventh session).** Told that nearly every Step 2
+result is a pooled rate, a mean move, a median or a lift ratio with no individual values beside it: "We'll have to
+look at step 2 closer before it's run. That might be intentional."
+- Nothing in Step 2 is changed on the assumption that its pooled results are a fault. They may be there on purpose.
+- Step 2 is gone through with Greg, result by result, before anything of it is built or run: what each result is,
+  whether it is pooled, and what individual values lie underneath it. He says which are intentional.
+- His rule on averaging still holds where it applies: an averaged figure is an addition, not a replacement.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
