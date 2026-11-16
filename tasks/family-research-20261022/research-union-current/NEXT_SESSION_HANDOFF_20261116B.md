@@ -125,3 +125,11 @@ Greg does not want the 8.9 GB rebuilt each time. The record files are being push
 `tasks/family-research-20261022/trade-day-book/<trade day>/`, 100 trades per file, with MANIFEST.json and
 BOOK_RECEIPT.json. Fetch single files; never fetch those branches whole. Check each branch's file count against its
 manifest before relying on it: the push was still running when this note was written.
+
+## Runpod volume deleted (Greg, 2026-11-16)
+
+Greg: if the stored ROOT outputs are only reference material that will not be used, delete the volume and its data.
+They were made with restarted order ages, the top-10 views and the fixed windows, and every ROOT output is to be
+rebuilt, so nothing on it would have been used. Volume `qu5lhaqqbx` (`ng-replay-20231002-03-17-scratch`, 4,096 GB)
+was deleted and the account read back with no volumes and no pods. No file listing of it was ever made; what it held
+is known only from Codex's saved notes. Ignore the "option 2" plan and the "Blocked" note above.
