@@ -253,14 +253,21 @@ Greg expects this may be small, because some steps right after ROOT were redone 
   now on the trunk in full (2026-11-16): `CLAUDE.md` in `9a28fcb`, and the other nine files of the original rule
   commit `2e9af64` in `2e23681` (two skill files, `KALSHI_TRADING.md`, six research programs). The trunk's copies of
   those files match the research branch's.
-- **Open, for Greg: the trade-cost rule is not finished in two live programs.** The rule says no fee, slippage,
-  maker or taker offset or other execution assumption enters any research calculation. Fees are zeroed, but two
-  things still enter a "net" figure: in `research/kalshi/lag_exploit_backtest.py` the "toll" (crossing the spread,
-  whole or half depending on a maker or taker exit; lines 66-72, 159, 217); and in
-  `research/kalshi/level_hit_dataset.py` an assumed entry slippage of 1 cent by default (lines 231, 427). The rule
-  commit kept both on purpose, describing the spread as an observable book condition. Greg to say whether they stay
-  or go. About 70 other Python files mention fees or slippage; most are the crypto-era and executor code the rule
-  keeps as history, and they were not examined one by one.
+- **Trade-cost rule finished in the two Kalshi backtests (Greg, 2026-11-16: "Take those rules out. Those are
+  legacy bitcoin rules that don't apply generally to this. Kalshi has some different rules but we'll figure those
+  out in the future.").** `research/kalshi/lag_exploit_backtest.py` and `research/kalshi/level_hit_dataset.py` now
+  report gross moves only: the spread toll, the maker or taker exit, the assumed entry slippage, the zeroed fee
+  functions and the cost gate on which futures moves fire are all removed. The measured spread is still recorded
+  on each row as an observation. Output keys changed from `net_*` to `gross_*`; the `--exit-mode` and
+  `--entry-slip` options are gone. Markets trunk `300a7ab`; research branch and `ccr-5317ce1c-hpqa9c` `b24b263`.
+  Verified by compiling and a static check only: no Kalshi trade tape is in the cloud container, and no made-up
+  data was used, so neither program has been run since the change.
+- Inert leftovers of the old cost rules, not removed: `research/kalshi/lag_join.py` still has `fee_cents` (returns
+  0), `_legacy_fee_cents` (the old Kalshi taker-fee formula, never called) and a `--slip` option that is accepted
+  and ignored; `research/kalshi/coach_replay.py` still has `FEE_RT = 0.0` and subtracts it. They change no number.
+  `level_hit_dataset.py` still prints a mean per cell, which is against the no-averages rule; left as it was.
+  About 70 other Python files mention fees or slippage; most are crypto-era and executor code kept as history.
+- Whatever Kalshi's own rules turn out to be is future work and is not modelled anywhere now.
 - Deleting old code from Markets branches other than the session's own.
 
 ---
