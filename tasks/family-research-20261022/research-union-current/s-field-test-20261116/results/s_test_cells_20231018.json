@@ -1,0 +1,202 @@
+{
+ "leakage_gate": {
+  "checked": 40,
+  "fails": 0
+ },
+ "n_trades": 30739,
+ "settle_trades_excluded": 558,
+ "cells": {
+  "1_overnight_to_0800|far=bid(sell flow)|k=1": {
+   "cell": "1_overnight_to_0800|far=bid(sell flow)",
+   "k": 1,
+   "n": 2437,
+   "censored": 0,
+   "cont_rate": 0.547394337299959,
+   "median_seconds_to_outcome": 3.406168372
+  },
+  "1_overnight_to_0800|far=bid(sell flow)|k=2": {
+   "cell": "1_overnight_to_0800|far=bid(sell flow)",
+   "k": 2,
+   "n": 2437,
+   "censored": 0,
+   "cont_rate": 0.48912597455888385,
+   "median_seconds_to_outcome": 27.310190833
+  },
+  "1_overnight_to_0800|far=bid(sell flow)|k=4": {
+   "cell": "1_overnight_to_0800|far=bid(sell flow)",
+   "k": 4,
+   "n": 2437,
+   "censored": 0,
+   "cont_rate": 0.47066064833812066,
+   "median_seconds_to_outcome": 117.015681563
+  },
+  "1_overnight_to_0800|far=ask(buy flow)|k=1": {
+   "cell": "1_overnight_to_0800|far=ask(buy flow)",
+   "k": 1,
+   "n": 2297,
+   "censored": 0,
+   "cont_rate": 0.5898998693948628,
+   "median_seconds_to_outcome": 3.360314579
+  },
+  "1_overnight_to_0800|far=ask(buy flow)|k=2": {
+   "cell": "1_overnight_to_0800|far=ask(buy flow)",
+   "k": 2,
+   "n": 2297,
+   "censored": 0,
+   "cont_rate": 0.5798868088811493,
+   "median_seconds_to_outcome": 26.629547442
+  },
+  "1_overnight_to_0800|far=ask(buy flow)|k=4": {
+   "cell": "1_overnight_to_0800|far=ask(buy flow)",
+   "k": 4,
+   "n": 2297,
+   "censored": 0,
+   "cont_rate": 0.5772747061384415,
+   "median_seconds_to_outcome": 132.171404657
+  },
+  "2_0800_1100|far=bid(sell flow)|k=1": {
+   "cell": "2_0800_1100|far=bid(sell flow)",
+   "k": 1,
+   "n": 5371,
+   "censored": 0,
+   "cont_rate": 0.5548315025134984,
+   "median_seconds_to_outcome": 0.556488238
+  },
+  "2_0800_1100|far=bid(sell flow)|k=2": {
+   "cell": "2_0800_1100|far=bid(sell flow)",
+   "k": 2,
+   "n": 5371,
+   "censored": 0,
+   "cont_rate": 0.528951778067399,
+   "median_seconds_to_outcome": 6.664082877
+  },
+  "2_0800_1100|far=bid(sell flow)|k=4": {
+   "cell": "2_0800_1100|far=bid(sell flow)",
+   "k": 4,
+   "n": 5371,
+   "censored": 0,
+   "cont_rate": 0.5445913237758332,
+   "median_seconds_to_outcome": 34.063097053
+  },
+  "2_0800_1100|far=ask(buy flow)|k=1": {
+   "cell": "2_0800_1100|far=ask(buy flow)",
+   "k": 1,
+   "n": 5122,
+   "censored": 0,
+   "cont_rate": 0.563842249121437,
+   "median_seconds_to_outcome": 0.5170585084999999
+  },
+  "2_0800_1100|far=ask(buy flow)|k=2": {
+   "cell": "2_0800_1100|far=ask(buy flow)",
+   "k": 2,
+   "n": 5122,
+   "censored": 0,
+   "cont_rate": 0.5124951190941038,
+   "median_seconds_to_outcome": 8.000513720499999
+  },
+  "2_0800_1100|far=ask(buy flow)|k=4": {
+   "cell": "2_0800_1100|far=ask(buy flow)",
+   "k": 4,
+   "n": 5122,
+   "censored": 0,
+   "cont_rate": 0.49043342444357674,
+   "median_seconds_to_outcome": 36.6447451815
+  },
+  "3_1100_to_settle|far=bid(sell flow)|k=1": {
+   "cell": "3_1100_to_settle|far=bid(sell flow)",
+   "k": 1,
+   "n": 4141,
+   "censored": 3,
+   "cont_rate": 0.5322385897126298,
+   "median_seconds_to_outcome": 1.005532195
+  },
+  "3_1100_to_settle|far=bid(sell flow)|k=2": {
+   "cell": "3_1100_to_settle|far=bid(sell flow)",
+   "k": 2,
+   "n": 4116,
+   "censored": 28,
+   "cont_rate": 0.5741010689990281,
+   "median_seconds_to_outcome": 17.818542802000003
+  },
+  "3_1100_to_settle|far=bid(sell flow)|k=4": {
+   "cell": "3_1100_to_settle|far=bid(sell flow)",
+   "k": 4,
+   "n": 4077,
+   "censored": 67,
+   "cont_rate": 0.6480255089526613,
+   "median_seconds_to_outcome": 97.270233201
+  },
+  "3_1100_to_settle|far=ask(buy flow)|k=1": {
+   "cell": "3_1100_to_settle|far=ask(buy flow)",
+   "k": 1,
+   "n": 4210,
+   "censored": 1,
+   "cont_rate": 0.5187648456057007,
+   "median_seconds_to_outcome": 1.2960108505
+  },
+  "3_1100_to_settle|far=ask(buy flow)|k=2": {
+   "cell": "3_1100_to_settle|far=ask(buy flow)",
+   "k": 2,
+   "n": 4200,
+   "censored": 11,
+   "cont_rate": 0.4735714285714286,
+   "median_seconds_to_outcome": 20.891748579999998
+  },
+  "3_1100_to_settle|far=ask(buy flow)|k=4": {
+   "cell": "3_1100_to_settle|far=ask(buy flow)",
+   "k": 4,
+   "n": 4155,
+   "censored": 56,
+   "cont_rate": 0.3913357400722022,
+   "median_seconds_to_outcome": 112.312017064
+  },
+  "4_post_settle|far=bid(sell flow)|k=1": {
+   "cell": "4_post_settle|far=bid(sell flow)",
+   "k": 1,
+   "n": 1430,
+   "censored": 1,
+   "cont_rate": 0.5335664335664335,
+   "median_seconds_to_outcome": 4.149829302
+  },
+  "4_post_settle|far=bid(sell flow)|k=2": {
+   "cell": "4_post_settle|far=bid(sell flow)",
+   "k": 2,
+   "n": 1426,
+   "censored": 5,
+   "cont_rate": 0.4950911640953717,
+   "median_seconds_to_outcome": 36.181317506499994
+  },
+  "4_post_settle|far=bid(sell flow)|k=4": {
+   "cell": "4_post_settle|far=bid(sell flow)",
+   "k": 4,
+   "n": 1417,
+   "censored": 14,
+   "cont_rate": 0.4135497529992943,
+   "median_seconds_to_outcome": 178.529982701
+  },
+  "4_post_settle|far=ask(buy flow)|k=1": {
+   "cell": "4_post_settle|far=ask(buy flow)",
+   "k": 1,
+   "n": 1217,
+   "censored": 1,
+   "cont_rate": 0.5217748562037798,
+   "median_seconds_to_outcome": 3.338697743
+  },
+  "4_post_settle|far=ask(buy flow)|k=2": {
+   "cell": "4_post_settle|far=ask(buy flow)",
+   "k": 2,
+   "n": 1216,
+   "censored": 2,
+   "cont_rate": 0.5575657894736842,
+   "median_seconds_to_outcome": 41.5650317905
+  },
+  "4_post_settle|far=ask(buy flow)|k=4": {
+   "cell": "4_post_settle|far=ask(buy flow)",
+   "k": 4,
+   "n": 1207,
+   "censored": 11,
+   "cont_rate": 0.6271748135874068,
+   "median_seconds_to_outcome": 216.857019033
+  }
+ }
+}
