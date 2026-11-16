@@ -453,6 +453,20 @@ that in rt."
   same calculations as each tick arrives, with only what has arrived so far. The real-time role is designed for,
   not built now.
 
+**What Frankie learns (Greg, 2026-11-16):** "But we don't want to have Frankie learn from the 4 days. We want him to
+learn its relationship to trades, prebirth signals, exhaustion, etc and then apply that to specific situations.
+Dipole lifecycle isn't specific to each trade. There are behaviors that apply to all of them but act specifically in
+that trade."
+
+- What he learns is general: how a lifecycle such as the dipole's behaves, how it relates to trades, what its
+  pre-birth signals and its exhaustion look like. Those behaviors hold across all trades.
+- What he applies is specific: in a given situation, each trade individually, the general behavior shows up in that
+  trade's own way.
+- The four trade days are not the lesson and are not to be memorized. They are where the general behaviors can be
+  seen playing out in particular trades.
+- For the build: the timeline shows, tick by tick, where each general behavior is in its course, and for each trade
+  its own place in it as known at that tick.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

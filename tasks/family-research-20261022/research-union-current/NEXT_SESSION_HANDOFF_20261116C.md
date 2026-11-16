@@ -38,7 +38,9 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. Pushes to it work f
   rows, so he learns how each thing forms, what else is changing with it, and what follows. In real time he applies
   what he learned. During the session Greg tried two other versions (a hidden answer key that Frankie is scored
   against; Frankie doing the calculations himself) and withdrew both. Columns keep a "shown to Frankie" mark,
-  default shown.
+  default shown. What he learns is general (how a lifecycle such as the dipole's behaves, its relationship to trades,
+  pre-birth signals, exhaustion) and he applies it to each specific trade; the four trade days are examples, not the
+  lesson.
 
 ## What was done to files in this session
 
