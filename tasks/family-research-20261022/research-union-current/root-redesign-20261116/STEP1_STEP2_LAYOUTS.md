@@ -11,7 +11,8 @@ counted; every trade individually; the caps and limits come off the outputs; tra
 
 ## Piece 1: the flow and the exhaustion peak (Step 1)
 
-Status: APPROVED by Greg, 2026-11-16 (seventh session): "Yes rewrite", "Yes". Build started.
+Status: APPROVED by Greg, 2026-11-16 (seventh session): "Yes rewrite", "Yes". BUILT and run on all four trade days
+(Markets `5aff999`, `root/calcs/flow_peak.py`); see "Piece 1 as built" below.
 
 **What we want.** On every tick row of the four trade days: the signed trade flow as it stands at that tick, and a
 mark each time the flow reaches a peak, with its side and size. Every peak is recorded. None is held back.
@@ -41,7 +42,11 @@ mark each time the flow reaches a peak, with its side and size. Every peak is re
    - The 5 seconds becomes a figure: how long that reading had been the highest.
    - The 45 seconds becomes a figure: the time since the peak before. No peak is removed because a stronger one
      came later.
-   The old events can still be picked out from those figures; what the gates threw away is there as well.
+   CORRECTED after the build: these figures give the part of each old gate that looks backward (was anything
+   larger in the seconds before; where the peak stands so far). The part that looked forward (nothing larger in
+   the 5 seconds after; no stronger peak later) is not on the peak's own row, because it is not known yet; a
+   reader finds it on the rows that follow. And the flow itself differs from the old one (the tape's side, every
+   tick). So the old events are not reproduced one for one. What the gates threw away is there.
 5. No dead time at the start or end of a trade day.
 6. The whole book, not the top 10 levels (the row already carries it).
 7. The 20-second roll stays. It is the definition of the flow: without a span there is no flow, only single
@@ -56,6 +61,42 @@ its standing so far in the trade day, how long it had been the highest, and the 
 **Not promised.** The number of peaks. With the gates off there will be many more than the old events. The count
 is reported after the first trade day, and Greg hears before anything is capped if it looks like running away.
 
+### Piece 1 as built (2026-11-16): Claude's calls, stated to Greg, his to correct
+
+- The 20 seconds are measured on the received clock (when each trade could be known). The original used the
+  exchange's time. The received time never goes backwards on these trade days; the program stops if it does.
+- A trade side of B on the tape is the aggressor buying. Checked on trade day Oct 2: of 18,534 B trades, 17,731
+  printed at the best ask and 254 above it, none at the bid; of 17,363 A trades, 16,440 at the best bid and 390
+  below it, none at the ask.
+- "Where the peak stands so far" is a share of TIME: of the time so far in the trade day while there was a flow,
+  the share during which the flow was smaller than this peak. (The approved wording said "among the readings so
+  far". The original level was taken over one reading a second, which is time; counting ticks would weight busy
+  minutes more.)
+- "How long it had been the highest" is the time since the flow was last strictly larger. An equal reading does
+  not count as larger. When it never was larger in the trade day, the figure is the time since the first trade and
+  a yes/no column says so.
+- A peak becomes known at the first tick where the size of the flow is lower than at the tick before, or the flow
+  has gone empty. If the flow holds level, the high is the first tick at that level.
+- A high that has not come off by the last tick of the trade day (5 pm) is not written as a peak: there is no row
+  inside the trade day on which it could become known. The receipt says whether one was standing. Trade days Oct 2,
+  3 and 17 each ended with one; Oct 18 did not.
+- The flow starts empty at the first tick of the trade day. Trades the tape gives no side for are counted in their
+  own column.
+
+Results (each in `CALC-flow_peak-<trade day>.json` on its `root-rows` branch):
+
+| Trade day | Rows | Peaks | Trades with no side | Recount | Playback |
+|---|---:|---:|---:|---|---|
+| Mon Oct 2 | 820,670 | 8,894 | 2,230 | equal on every row | equal at two cuts |
+| Tue Oct 3 | 879,497 | 9,910 | 1,870 | equal on every row | equal at two cuts |
+| Tue Oct 17 | 846,158 | 8,051 | 2,647 | equal on every row | equal at two cuts |
+| Wed Oct 18 | 771,468 | 7,423 | 2,408 | equal on every row | equal at two cuts |
+
+34,278 peaks over the four trade days, about one every 9 or 10 seconds. The old detector recorded about 850 a
+UTC clock day. About 21 to 30 seconds a trade day to run; 2.3 to 2.9 MB stored a trade day. The check caught one
+fault on its first run (a peak's standing left out the stretch of flow still running at the tick it became known);
+it was fixed before anything was stored.
+
 ## The rest of Step 1, laid out together (Greg, 2026-11-16: "Let's do the rest of the st 1 calcs plan in this next swoop so we aren't doing a piece at a time")
 
 Status of pieces 2, 3 and 4: PUT TO GREG 2026-11-16 (seventh session). Not approved yet. Not built.
@@ -69,10 +110,19 @@ In the old work each event was one line, filled in afterwards with everything th
 it. On a tick row that would be writing later facts onto an earlier row. And peaks overlap: on trade day Oct 2 a
 new one becomes known about every 9 seconds, and each is followed for minutes.
 
-Claude's call: every fact about a peak is written on the tick row where that fact becomes known, and it names its
-peak (by the tick of the high). When facts about more than one peak become known on the same tick, the cell holds
-one line for each, in the way the order line cell already does. Nothing is written back, no peak's story is cut
-short because a newer peak arrived, and Frankie sees each fact at the moment it could be known.
+Claude's proposal, an explicit ask because it changes what is kept beside a row: every fact about a peak is
+recorded at the tick where that fact becomes known, and it names its peak (by the tick of the high). The facts are
+stored as their own table beside the rows, one line per fact, as the book pictures are: the tick it became known
+at, the peak it is about, what the fact is, its value. In the workbook each fact is shown on its tick row. Several
+facts can become known on one tick (peaks on the same side end together when the flow turns), so no promise is
+made that they fit in one cell; the count is reported after the first trade day. Nothing is written back, no
+peak's story is cut short because a newer peak arrived, and Frankie sees each fact at the moment it could be known.
+
+**The halt and the open, for every figure in pieces 2 and 3.** Only ticks inside the trade day enter. A figure whose
+stretch would run past 5 pm (the price moves after an ending late in the trade day, seconds 41 to 60 after a late
+peak, family A's second label) is empty with that reason. A figure that needs the 60 seconds before a peak is
+empty with its reason when the peak comes inside the first 60 seconds of the trade day. A stretch inside those 60
+seconds with no flow is filled from the reading before it, as the original did; that is stated on the fact.
 
 ### Piece 2: what happens after a peak (the fade, the ending, the after-state, the price after)
 
@@ -132,7 +182,8 @@ the four trade days) is laid out after this one is in view, as Greg ruled.
 5. The centres are averages over many events. Under Greg's rule this column is an addition: every peak's own
    curve is on the rows, and the growth column will be made from the peaks themselves.
 6. To know when reading the result: the rule was made from the old events, which were about a tenth as many (only
-   the largest). It is now applied to every peak, small ones included.
+   the largest), and on the old flow (side by the midpoint, one reading a second). It is now applied to every
+   peak, small ones included, on the new flow (the tape's side, every tick).
 
 ### Piece 4: the link between events (the chain). NEEDS GREG'S DECISION.
 
@@ -149,9 +200,10 @@ events (6 in the causal version; the three-month 2021 run capped it at 5).
 - A chain depth made this way is a model score.
 
 **The choice.**
-- A (Claude's recommendation): on the four trade days, write what a link is made from, per peak: the peak before
-  it, the time between them, same side or not, and each one's price moves after its ending. No model and no depth
-  number. The chain depth column stays empty with its reason until the old weeks can be run through the new ROOT.
+- A (Claude's recommendation): no model and no depth number on the four trade days. Most of what a link was made
+  from is already written by pieces 1 and 2 (the time between peaks; each peak's price moves after its ending). A
+  adds two facts per peak: which peak came before it, and whether it is on the same side. The chain depth column
+  stays empty with its reason until the old weeks can be run through the new ROOT.
 - B: teach the three models on the four trade days themselves and write a depth. It can be done, but it rests on
   four trade days, it is a model score, and it would not be the old chain.
 - C: leave the link out of Step 1 for now.

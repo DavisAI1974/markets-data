@@ -1360,6 +1360,28 @@ Told "Say 'yes, rewrite' and I take that as your yes on piece 1 as laid out": "Y
   untouched on their branches.
 - Piece 1 is built as laid out in `STEP1_STEP2_LAYOUTS.md`. It is the first calculation of part 2.
 
+**Piece 1 (the flow and the exhaustion peak): BUILT and run on all four trade days (2026-11-16, seventh session).**
+Markets session branch `5aff999`: `root/calcs/flow_peak.py`, the runner `root/part2.py`, the check
+`root.checks.flow_peak`, the command `python3 -m root.run calc flow_peak <trade day> --rows ... --out ...`.
+- 8,894, 9,910, 8,051 and 7,423 peaks on trade days Oct 2, 3, 17 and 18 (34,278 in all; the old detector recorded
+  about 850 a UTC clock day). Nothing ran away.
+- One check, as ruled: every column recounted from the stored rows by a different method, equal on every row of
+  all four trade days; and playback equal at two cuts. The check caught one fault on its first run, fixed before
+  anything was stored.
+- Stored on the `root-rows` branches as a new commit each (`a5228da`, `9de9611`, `ef50e72`, `fcc9e85`): the columns
+  as their own files beside the rows files, in the same row order, with the receipt; `FILES.md` updated. The rows
+  files are untouched.
+- Claude's calls in the build, stated to Greg, are listed in `STEP1_STEP2_LAYOUTS.md` under "Piece 1 as built":
+  the received clock for the 20 seconds; standing as a share of time; "highest" meaning strictly larger; a high
+  still standing at 5 pm is not written as a peak; and a correction to the layout's sentence that the old events
+  can still be picked out.
+
+**The rest of Step 1 laid out together (Greg, 2026-11-16):** "Let's do the rest of the st 1 calcs plan in this next
+swoop so we aren't doing a piece at a time." Pieces 2 (what happens after a peak), 3 (the family) and 4 (the chain
+link) are in `STEP1_STEP2_LAYOUTS.md`, put to him the same hour. Asked of him: yes to pieces 2 and 3, which
+includes keeping the facts about a peak as their own table beside the rows; and A, B or C for the chain link.
+Nothing of them is built.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
