@@ -1,0 +1,163 @@
+{
+ "what": "ROOT tape: check-week (files, fingerprints, counts, what each record is)",
+ "specification": "SPEC-root.md (approved 2026-11-16), part tape",
+ "trade_day": "2023-10-02",
+ "week_sunday": "2023-10-01",
+ "files": [
+  {
+   "file": "NG_v0_mbo_20231001.dbn.zst",
+   "utc_clock_day": "2023-10-01",
+   "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78",
+   "records": 12532,
+   "vendor_snapshot_records": 0,
+   "ticks": 12532,
+   "vendor_snapshot_actions": {},
+   "tick_actions": {
+    "A": 4891,
+    "C": 4159,
+    "F": 604,
+    "M": 864,
+    "N": 1556,
+    "R": 1,
+    "T": 457
+   },
+   "tick_flags": {
+    "F_LAST": 9321,
+    "F_TOB": 0,
+    "F_SNAPSHOT": 342,
+    "F_MBP": 0,
+    "F_BAD_TS_RECV": 343,
+    "F_MAYBE_BAD_BOOK": 0,
+    "F_PUBLISHER_SPECIFIC": 0
+   },
+   "ticks_by_label": {
+    "5 pm to 6 pm stretch": 126,
+    "Sunday start-up": 343,
+    "trade day 2023-10-02": 12063
+   },
+   "ticks_for_this_box": {
+    "written": 12532
+   },
+   "instrument_ids": [
+    150611
+   ],
+   "mappings": {
+    "NG.v.0": [
+     {
+      "start_date": "2023-09-29",
+      "end_date": "2023-10-02",
+      "symbol": "150611"
+     }
+    ]
+   },
+   "fields": [
+    "length",
+    "rtype",
+    "publisher_id",
+    "instrument_id",
+    "ts_event",
+    "order_id",
+    "price",
+    "size",
+    "flags",
+    "channel_id",
+    "action",
+    "side",
+    "ts_recv",
+    "ts_in_delta",
+    "sequence"
+   ]
+  },
+  {
+   "file": "NG_v0_mbo_20231002.dbn.zst",
+   "utc_clock_day": "2023-10-02",
+   "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d",
+   "records": 813342,
+   "vendor_snapshot_records": 733,
+   "ticks": 812609,
+   "vendor_snapshot_actions": {
+    "R": 1,
+    "A": 732
+   },
+   "tick_actions": {
+    "A": 293839,
+    "C": 293831,
+    "F": 62695,
+    "M": 43171,
+    "N": 81156,
+    "T": 37917
+   },
+   "tick_flags": {
+    "F_LAST": 603528,
+    "F_TOB": 0,
+    "F_SNAPSHOT": 0,
+    "F_MBP": 0,
+    "F_BAD_TS_RECV": 0,
+    "F_MAYBE_BAD_BOOK": 0,
+    "F_PUBLISHER_SPECIFIC": 0
+   },
+   "ticks_by_label": {
+    "5 pm to 6 pm stretch": 418,
+    "trade day 2023-10-02": 807720,
+    "trade day 2023-10-03": 4471
+   },
+   "ticks_for_this_box": {
+    "shelved": 4471,
+    "written": 808138
+   },
+   "instrument_ids": [
+    150611
+   ],
+   "mappings": {
+    "NG.v.0": [
+     {
+      "start_date": "2023-10-02",
+      "end_date": "2023-10-03",
+      "symbol": "150611"
+     }
+    ]
+   },
+   "fields": [
+    "length",
+    "rtype",
+    "publisher_id",
+    "instrument_id",
+    "ts_event",
+    "order_id",
+    "price",
+    "size",
+    "flags",
+    "channel_id",
+    "action",
+    "side",
+    "ts_recv",
+    "ts_in_delta",
+    "sequence"
+   ]
+  }
+ ],
+ "contract_instrument_id": 150611,
+ "record_fields": [
+  "ts_recv",
+  "ts_event",
+  "rtype",
+  "publisher_id",
+  "instrument_id",
+  "action",
+  "side",
+  "price",
+  "size",
+  "channel_id",
+  "order_id",
+  "flags",
+  "ts_in_delta",
+  "sequence"
+ ],
+ "never_exercised": [
+  "a later file that does not open with a flagged clear",
+  "a first file that does not open with an unflagged clear",
+  "a flagged record after the opening block",
+  "more than one contract in a week"
+ ],
+ "seconds": 7.6
+}

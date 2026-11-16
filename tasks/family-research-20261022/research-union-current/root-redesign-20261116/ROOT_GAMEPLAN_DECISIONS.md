@@ -1008,6 +1008,25 @@ tables in `data/outside/ng_oct2023/made/` (`storage_weekly.csv`, `storage_estima
 - The history file and the EIA API series agree on all 480 shared weeks. 27 tests pass on the real files; the 16
   earlier tables are byte-identical to the previous build.
 
+**The tape part: BUILT (2026-11-16, Greg: "Do it").** Markets session branch `8333ed0` (`root/calendar.py`,
+`root/tape.py`, `root/run.py`); check-week records in `receipts/`.
+- **The Sunday re-listed orders carry the vendor's snapshot flag** (the handoff's question): 342 orders on Sunday
+  Oct 1 and 350 on Sunday Oct 15, right after the exchange's clear, which is not flagged. They also carry the flag
+  saying the received time is unreliable (the clear too). **Claude's call, stated to Greg:** they are the exchange's
+  Sunday start-up, as he ruled, so they are ticks with start-up rows; their flags stay on the row. Classification is by
+  file and position, never by the flag alone. The unreliable received time matters when the 13 are pinned by received
+  time on those rows.
+- Every later file opens with the vendor's restatement: a flagged clear and 696 to 740 flagged orders, received
+  exactly at 8 pm Eastern (00:00 UTC). These go to the snapshot table and never reach the book.
+- Refused with the file named: a missing file, a changed fingerprint, a count that differs from the manifest, a
+  file that does not open as above, a flagged record later in a file, a second contract in a week. The held tape
+  triggers none of the last three; they are listed as never exercised.
+- Facts read: one contract all four trade days (instrument 150611); no record carries the vendor's "maybe bad book"
+  flag; actions are adds, cancels, modifies, trades, fills and the exchange's "none" messages; the only clear is the
+  Sunday one. Per box, every tick is written, warm-up or shelved, and the counts add up exactly.
+- **Speed:** a whole week reads, checks and labels in 8 to 22 seconds here (about 4.3 million records in the seven
+  files). The foundation does not need pods; whether the calculations do is measured when they are built.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
