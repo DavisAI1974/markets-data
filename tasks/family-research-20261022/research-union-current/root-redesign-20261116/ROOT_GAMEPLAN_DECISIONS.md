@@ -1475,13 +1475,68 @@ $1.28 an hour for four (Claude's recommendation). Compute-Optimized, 32 CPUs and
 for four. Disk is extra and is quoted before anything starts. Pieces 1 and 2 take about 30 seconds a trade day
 and were run in the session; the pods are for the chain link models and Step 2. His go is still needed.
 
-**From the Desktop session's `STEP2_PLAN.md` (copied here 2026-11-16; that file is the fuller record).**
-- Where the Step 2 plan is kept (it is in markets-data; he had said "the markets repo"): "That repo is fine also".
-- Told that Step 2 found no new events and mostly waits for the grouping: "Definitely new results haha. You tell
-  me, what was the original intent, does it add value, how do we create those calcs and if the first things are of
-  no value, then what can we do to create more value with what we have and could we fill some possible gaps that
-  you could see". Read there as: Step 2 is to give new results, not only a re-reading of the old ones. Desktop's
-  answer is in that file and none of it is approved yet.
+**From the Desktop session's `STEP2_PLAN.md`, section "Decisions (Greg's words)", copied whole (2026-11-16, plan
+commit `092e77f`; that file is the fuller record and holds every layout).**
+
+- 2026-11-16, on where this file is kept (it was pushed to markets-data, he had said "the markets repo"):
+  "That repo is fine also"
+- 2026-11-16, told that Step 2 found no new events and mostly waits for the grouping:
+  "Definitely new results haha. You tell me, what was the origional intent, does it add value, how do we create
+  those calcs and if the first things are of no value, then what can we do to create more value with what we have
+  and could we fill some possible gaps that you could see"
+  Read as: Step 2 is to give new results, not only a re-reading of the old ones, and Claude is to say what it was
+  for, what is worth keeping, and what could be added. Claude's answer is the next section. None of it is approved.
+- 2026-11-16, on Step 2's own grouping: "And did we have a completely unique way of grouping the famies
+  together from what st1 did in the old calcs? If so I'd like to keep that in there. Can't remember off the top of
+  my head"
+  Answer given: yes, it did (see "Step 2's own grouping" below). Read as: Step 2's own grouping is kept in the
+  plan.
+- 2026-11-16, the aims for Step 2, after the gaps were put to him: "We can merge our ideas together. Whatever is
+  going to give us better more unique real trading signals or eplain the lifecycle of a trade better or dipole
+  better and a deeper look into if those two things couple of correlate to again get better trade signals is the
+  goals we want to aim at. However we can do those things"
+  Read as: his ideas and Claude's are merged into one plan. Its aims are (1) better and more unique real trading
+  signals, (2) explaining the lifecycle of a trade better, (3) explaining the dipole better, (4) a deeper look at
+  whether the trade lifecycle and the dipole couple or correlate. How it is done is left to Claude to propose.
+- 2026-11-16, on how the suggestions are put to him: "Run through all of your suggestions. Do them in one swoop
+  instead of a little piece at a time"
+  Read as: every suggestion is laid out for him together, in full, as the rest of Step 1 was. It is not read as a
+  word to build or run: this session builds and runs nothing, and each calculation is approved by him first. The
+  layouts are in "The suggestions laid out together" below.
+- 2026-11-16, on the trade legs: "And let's take the next step from step 1 metaphorically and start looking at
+  how our calcs start to act in relation some way with the trade legs. Can we take things from st1 and use them in
+  some way to start defining trades or dirrerent parts of the trade lifecycle"
+  Read as: the step after Step 1 is to lay what Step 1 records against the trade legs, and to use Step 1's turns
+  to start defining a trade and the parts of its life. Laid out as I and J in "The suggestions laid out together".
+  This corrects Claude's earlier reading of "the lifecycle of a trade": a trade is anchored on a leg, a move in
+  price, and Step 1's turns mark the parts of its life.
+- 2026-11-16, told that "yes" approves A to D and I as laid out, or to name what to change: "Include all of your
+  pieces. Again we don't have to pick and choose. We aren't limited in any way."
+  Read as: his yes to every piece, A through J, as laid out. None is dropped and none is put ahead of another as a
+  choice. Nothing is to be limited: so H is every instance, not a selection (changed below). The two checks named
+  in D and I still come before those two are placed. The code session builds; this session does not.
+  K was added by Claude after this word. He has not seen it and it is not covered by this yes.
+- 2026-11-16, 4:18 pm Eastern, the same minute as the word above: "Yes"
+  Read as: confirming A through J as laid out. It was sent before Claude's message about K had reached him, so it
+  is not read as a yes to K. K still awaits his word.
+- 2026-11-16, 4:20 pm Eastern, on K (the resting orders through a peak and a leg): "Yes to k"
+  K is approved as laid out.
+
+**What that makes of Step 2 (Greg's instruction to the code session, 2026-11-16).**
+- Pieces A through K are approved as laid out in `STEP2_PLAN.md`, "The suggestions laid out together". Six are
+  calculations: A the links between peaks; B the state at each tick (open peak stories on each side); C the book
+  running totals (added, pulled, filled, moved; bid and ask); D the Native dipole beside the peaks; I the legs
+  beside the peaks (the quote's own runs, and the earlier print legs); K the resting orders through a peak and a
+  leg. E, F, G and J need no new calculation. H is the renders: every instance, none selected.
+- Order: C and the quote's runs of I now (they need only the rows). A and B after piece 2. Then D and the rest of
+  I. Then K. Then H. Then the grouping with Greg.
+- Two checks before D and I are placed, results to Greg first: whether Native's dipole record, and the earlier
+  print legs, were cut on the old day boundaries.
+- Each piece lists Claude's calls, his to correct. Where the build needs a call the plan does not make, it is made,
+  stated to him and recorded.
+- The thirteen old Step 2 results stay as written and are gone through with him at the grouping stage. The old
+  Step 2 groupings of chains (lifespan, pieces, growth) are kept as the base for that stage, on his word.
+- "Finish your stuff first": the code session's own Step 1 work comes before the Step 2 build.
 
 ## Held for the later stage: figuring out what moves the market
 
