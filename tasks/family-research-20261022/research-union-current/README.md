@@ -10,8 +10,8 @@ Start here: the latest `NEXT_SESSION_HANDOFF_*.md` in this folder.
 - `root-redesign-20261116/`: the decisions, the approved specifications (`SPEC-root.md`, `SPEC-outside.md`), the
   README page wording and the frame of the rebuilt workbook.
 - `root-audit-20261116/`: the audit lists.
-- `trade-day-rebuild-20261116/`, `resting-order-age-20261116/`: the replay and checks used to establish how the book
-  is carried; the replay is replaced by the new ROOT build.
+- `resting-order-age-20261116/`: the checks used to establish how the book is carried. The stand-in replay it names
+  (`trade-day-rebuild-20261116/`) was deleted on 2026-11-16 on Greg's word; the new ROOT build replaces it.
 - `field-rebuild-20261113/`: kept only for the names of the 141 fields and the reference documents behind L001 to
   L026, L081 and L082.
 - Raw inputs, outside this folder: `data/nymex_mbo/ng_v0_oct2023/` (the order tape) and `data/outside/ng_oct2023/`

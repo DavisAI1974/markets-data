@@ -1269,6 +1269,20 @@ science for the book info or can we run them seamlessly when needed? Or is split
   is the part Excel struggles with, and it pulls apart figures that belong side by side on one tick. A narrow
   cut of chosen columns over a whole trade day can be made from the stored rows whenever one is wanted.
 
+**The old material DELETED (Greg, 2026-11-16, seventh session): "Delete all if the book data was built wrong and
+we've already rebuilt the new one."** Both conditions were checked before anything was removed:
+- Built wrong: the old receipts define the trade day as "17:00 ET prior evening to 17:00 ET named date", so the
+  5 pm to 6 pm hour sat inside the trade day and every count and position followed that cut (820,642 session
+  records for trade day Oct 2 against 819,783 trade-day rows now).
+- Rebuilt: each `root-rows-*` branch holds the new book pictures at every trade (38,127; 41,410; 33,703; 30,739:
+  the same 143,979 trades) and its receipt shows every check passed.
+Deleted, in one commit: the whole folder `trade-day-rebuild-20261116/` (the five stand-in programs, `book_records/`
+281 MB, `results/`, the midnight check result, the README), `CAPABILITY_MAP.md` and `SPEC-tape-stream.md`. The four
+markets-data branches `trade-day-book-20231002` (`925070d`), `-20231003` (`076d9f9`), `-20231017` (`0a0f3f0`) and
+`-20231018` (`182fe1f`) are removed from the remote in the same step; see the handoff for whether the remote
+accepted it. Kept: `resting-order-age-20261116/` (the facts about how the book is carried), with a note that the
+programs it names are gone and where the same facts are proved now.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

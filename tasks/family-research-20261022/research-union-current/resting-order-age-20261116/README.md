@@ -1,5 +1,12 @@
 # Resting-order age: what the tape can and cannot say (2026-11-16)
 
+
+> Note, 2026-11-16 (seventh session): the folder `trade-day-rebuild-20261116/` named below (its programs, receipts
+> and book records) was deleted on Greg's word, because it cut the trade day at 5 pm on both sides. The facts on this
+> page are established again by the new ROOT build (`root/book.py` in Markets): its carried book equals the vendor's
+> restatement at every file boundary, recorded in `root-redesign-20261116/receipts/` and in the `RECEIPT.json` of
+> each `root-rows-*` branch.
+
 Question carried from the last handoff: an order already resting when the replay's warm-up file opens gets stamped
 with that file's opening receive time, so its age is a floor, not its age. Two checks were run before choosing what
 to do. Every result below is a count of individual orders; the per-order rows are in `results/`. Order IDs and
