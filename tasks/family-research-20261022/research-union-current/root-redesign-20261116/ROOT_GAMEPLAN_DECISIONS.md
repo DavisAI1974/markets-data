@@ -1229,6 +1229,22 @@ The full workbook is written once, after the calculation columns exist, so it wi
 Markets `.claude/settings.json` but was not installed in the session's container. The repository's own skills
 (`repo-conventions` and the others) did load and were used.
 
+**Put to Greg, waiting on his word (nothing done on either):**
+- The two workbook questions, each with Claude's recommendation: write each trade day's workbook in parts of about
+  80,000 rows (about 80 MB a part, 10 or 11 parts a trade day, split on the clock, each part a normal workbook with
+  the READ ME and COLUMNS sheets). That answers both the 100 MB limit of GitHub and the weight of 820,000 rows in
+  Excel. The stored rows stay the exact record. His word asked for: "parts", or what he would rather have.
+- The delete list, with what each item is and how and why it exists: (1) `trade-day-rebuild-20261116/scripts/`,
+  five stand-in programs of the morning of 2026-11-16, cut at 5 pm on both sides, replaced by `root/tape.py` and
+  `root/book.py`; (2) the four markets-data branches `trade-day-book-20231002`, `-20231003`, `-20231017`,
+  `-20231018`, 143,979 book pictures made by those programs at the wrong hour, replaced by the `root-rows` branches;
+  (3) `CAPABILITY_MAP.md`, the draft that calls ROOT "only the complete record", replaced by `SPEC-root.md`;
+  (4) `SPEC-tape-stream.md`, the spec of the stand-in tape reader with the old message counts, replaced by
+  `SPEC-root.md`. Shown separately as NOT on the list unless he says so: the rest of `trade-day-rebuild-20261116/`
+  (`book_records/` 281 MB of book pictures for 5,513 selected ticks, `results/` 11 MB, the midnight check result,
+  the README), made by the same stand-in programs with the same cut; Claude's recommendation is that they go too.
+  His word asked for: "delete" for the four, or "delete all" to include the rest. **Nothing is deleted before it.**
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
