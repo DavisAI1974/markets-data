@@ -55,11 +55,35 @@ Every remaining Python file compiles on both branches. The kept modules import. 
 `coach_replay.py --selftest` pass. No program was run on market data: none of the Kalshi or crypto tape is in the
 cloud container, and no made-up data was used.
 
+## Second pass, same day: the dead and old Kalshi rules
+
+Greg, 2026-11-16: "And remove the dead and old kalshi rules." Commits: trunk `676322d`; research and session
+branches `b20ab9c`. Each: 15 files edited, 3 removed.
+
+Rules removed: net-of-fee at maker and taker, the size-vs-fee wall, the spread toll, pooled hit-rate evaluation.
+
+- **Removed whole** (built on a removed rule): `LAG_EXPLOIT_FINDINGS_S81.md`, `LEVEL_HIT_FINDINGS_S82.md`,
+  `NYMEX_PRODUCTS_SURVEY_S91.md` (ranked and planned on the fee floor with maker and taker gates).
+- **`release_signal_history.py`**: the pooled hit rate, the release-versus-placebo rate and the fade rate are
+  gone. It writes one record per read. Loader, settle guard and leakage gate are unchanged.
+- **Findings stripped**: weather baseline (fee out of the worked example), event move, path forecast research,
+  gold and silver (its toll-net table is not kept), event surprise, weather regime, depth run-length.
+- **Handoffs a new session reads**: the S93 handoff, the S94 kickoff and the blind-forecaster handoff lost the
+  "net-of-fee maker AND taker" line and the cost-model requirements.
+- **`CLAUDE.md`**: the S86 priorities block is gone; the standing rule names the Kalshi rules that were removed.
+
+Checked: `research/kalshi` compiles; the edited module and its three importers import; both self-tests pass.
+
 ## Left in place, for Greg to decide
 
-- **Old findings and handoffs** that describe cost-based results (`LAG_EXPLOIT_FINDINGS_S81.md`,
-  `LEVEL_HIT_FINDINGS_S82.md`, `S36_NETCOST_BACKTEST_FINDINGS.md`, the session handoffs, `CLAUDE_ARCHIVE_OD.md`).
-  They state results, not rules, and the new rule says not to copy from them. Delete them too?
+- **Older handoffs and kickoffs** (S20 to S92, about 60 files) and `S36_NETCOST_BACKTEST_FINDINGS.md`,
+  `CLAUDE_ARCHIVE_OD.md`: dated records that still carry the old rule text. `CLAUDE.md` says not to copy
+  from them. Delete the superseded ones whole?
+- **Old Kalshi study scripts** in `research/kalshi/hist/` (7 scripts and their result files), listed in the
+  file index as old and off the live path. Studies, not rules, so left.
+- **Fixed numbers inside the Kalshi programs** (60 s bins, a 20-bin window, a 1,800 s settle guard, a 120 s
+  pause, the $350 and $500 play thresholds in the coach brain). These are the same kind of ahead-of-time
+  decision the ROOT redesign removes, but they are the programs' working parts, not leftovers.
 - **Five crypto pipeline files that read a stored label already net of a fee** (`_build_episode_onsets`,
   `_build_onset_coeff_lists`, `vendored_build_kit/_build_sameperiod_cand`, `_eligible_cross_section`,
   `_run_clean_rerun`). They do no fee arithmetic themselves.

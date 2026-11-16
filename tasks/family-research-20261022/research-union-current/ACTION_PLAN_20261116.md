@@ -266,6 +266,10 @@ Greg expects this may be small, because some steps right after ROOT were redone 
   56 files removed, 28 edited, on the trunk (`4f6172f`) and on the research and session branches (`a60cbda`).
   `lag_join.py` and `coach_replay.py` no longer carry any fee, slippage or maker/taker term. The full list, what
   was checked and what was left for Greg to decide is in `root-audit-20261116/BITCOIN_ERA_RULES_REMOVAL.md`.
+- **The dead and old Kalshi rules are removed too (Greg, 2026-11-16):** net-of-fee at maker and taker, the
+  size-vs-fee wall, the spread toll and pooled hit-rate evaluation. Trunk `676322d`; research and session
+  branches `b20ab9c`. Three documents built on them are gone and `release_signal_history.py` writes one record
+  per read. Detail in the same record file.
 - **Kalshi rules start fresh, for Kalshi only.** None is written yet, so none is assumed anywhere. This is now a
   standing rule in Markets `CLAUDE.md` and in the `kalshi-backtest` skill. Writing them is future work with Greg.
 - `level_hit_dataset.py` still prints a mean per cell, which is against the no-averages rule; left as it was.
@@ -303,9 +307,9 @@ Greg expects this may be small, because some steps right after ROOT were redone 
    research projects are listed by intended result and research angle only; their results are not kept.)
 4. Permission, or his own hand, for pushes to Markets branches other than the session's.
 5. Go and budget for pods when the first full run is ready.
-6. The six items left in place after the bitcoin-era rule removal (old cost-based findings and handoffs, five
-   crypto files that read a fee-net label, `odcore/sizing.py`, the crypto signal service, crypto collectors,
-   other Markets branches): delete or keep. Listed in `root-audit-20261116/BITCOIN_ERA_RULES_REMOVAL.md`.
+6. The items left in place after the rule removals (older handoffs and kickoffs, the old Kalshi study
+   scripts, the fixed numbers inside the Kalshi programs, five crypto files that read a fee-net label,
+   `odcore/sizing.py`, the crypto signal service, crypto collectors, other Markets branches): delete or keep. Listed in `root-audit-20261116/BITCOIN_ERA_RULES_REMOVAL.md`.
 
 ---
 
