@@ -667,6 +667,36 @@ says is asked for first.
   45-second refractory gap; horizons 5 to 300 seconds; a 2-tick material move; the top 10 book levels; weeks and days
   cut on the UTC clock day (against the trade-day rule); the classifier frozen on 2026-08-17.
 
+**The Step 1 outputs Codex found, and how they relate to the four trade days (2026-11-16).** Greg: "Honestly it's fine
+if we can find the output data." Codex listed surviving row-level data; the links did not survive the paste, and the
+files were found by name in Markets:
+- `chatgpt/ng-exhaustion-post-phase2-20260818` at `59c03e8`: `research/generated/ng_exhaustion_exact_d1_master_20260818/`
+  (the exact-D1 master ledger, 18,837 rows, its summary, predictor and rankings), the eight D1 analyses
+  (`ng_exhaustion_exact_d1_core8_v2_20260818/`, `..._v2_20260818/`), the focused P-O-X ledger of 3,429 events
+  (`ng_exhaustion_pox_focused_20260819/`), and the original Step 1 file map
+  (`research/NG_EXHAUSTION_CHAIN_STEP1_ORIGINAL_FILE_MAP_20260820.md`).
+- `chatgpt/ng-exhaustion-entry-timing-revival-20260818` at `2852f57`: the entry-timing outputs of 2026-08-18 and the
+  D1 to D5 predictability follow-up.
+- Codex: the full original 235,170-event table remains unlocated.
+
+Two facts read from these files decide how they relate to the four trade days:
+- **No shared dates.** The D1 ledger and the entry rows run from the week of 2025-11-02 to the week of 2026-07-12; the
+  55 weeks run 2025-06-29 to 2026-07-12; the census is Sep to Nov 2021. The four trade days are October 2023. No old
+  row can be laid against a tick row of the four trade days.
+- **Trade cost inside.** The ledger's `with_descendant_net_0_5_ticks`, `_net_1_ticks`, `_net_2_ticks` (and the
+  `against_` columns) are the move less an assumed cost of 0.5, 1 or 2 ticks (`ng_exhaustion_exact_d1_master_ledger_
+  20260818.py`, lines 53 to 57), and the profit rankings rest on them. Under "trade cost is not a market condition"
+  those columns and rankings are not carried into new work.
+
+**Correction to the Step 1 note above.** It said the base column "keeps the 2021 base exactly as it was" and that the
+base waits on AWS. On a row of an October 2023 trade day there is no old Step 1 value to keep, because the old outputs
+are on other dates. What carries over is the definitions (the families, the chain and its stages, P-O-X, lifespans)
+and the questions they answer. They are calculated fresh on the four trade days as part 2 calculations, each laid out
+Greg's way and approved before it runs, after the list of hard-coded boundaries is put to him. A definition built on a
+fixed window (the family rule reads a 20-second roll over the 60 seconds before) cannot simply drop its window; how
+each is carried over is worked out then. The old outputs stay where they are, in git, as the record of what the
+definitions found on their own dates.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
