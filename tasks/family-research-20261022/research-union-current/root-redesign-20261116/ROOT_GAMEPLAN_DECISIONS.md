@@ -1080,6 +1080,28 @@ It would be needed only if a Step 1 or Step 2 calculation reads the ORDER BOOK o
 order lives), not just its prices. That is known when those calculations are laid out; the definite answer is given
 to Greg then. If bought, it covers the same UTC clock days only ($4.83 quoted, about 2.9 GB before compression).
 
+**The book part: BUILT (2026-11-16, Greg: "Yes and start").** Markets session branch `2a9df15` (`root/book.py`);
+check-book records in `receipts/`. Also done on his yes: the four-trade-days rule is on the Markets trunk (`012586b`,
+`CLAUDE.md` and `AGENTS.md` only).
+- The rule is written fresh from the exchange's priority rule and passed on the first run: at all five later-file
+  boundaries (Oct 2, Oct 3, Oct 16, Oct 17, Oct 18 files) our carried book equals the vendor's restatement exactly:
+  the same 696 to 740 orders, sides, prices and sizes, the same order in every line, the same place time for every
+  order. No restatement is ever applied to the book.
+- The book adds up: the running whole-book figures equal a fresh count at every file boundary and at every trade
+  message (38,374 to 108,324 trade messages per box).
+- No message was left unapplied: no add for a known order, no cancel or modify for an unknown one, no cancel for
+  more than was resting, on either week.
+- The exchange's sequence number goes backwards 101 times in each week, all inside the Sunday start-up block, where
+  the re-listed orders are grouped by price and not by sequence number. None in trading. Those rows will carry the
+  irregular mark, explained on the README page.
+- Read from the tape for the `rows` part: every fill is followed inside the same exchange event by the cancel of
+  that order (fully filled) or by a modify to a smaller size (partly filled), so "left by fill" against "left by
+  cancel" is read from the tape, not assumed. Some trades and fills carry no side and no order number (implied or
+  spread trades); they are kept exactly as the tape gives them.
+- The checks walk the warm-up ticks too, because the book has to be right when the written rows start. That is the
+  one permitted use of data outside the four trade days (seating the book); nothing else is made from it.
+- Speed: a week's book pass takes 2 to 3 seconds here; with the every-trade check, 13 to 36 seconds per box.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
