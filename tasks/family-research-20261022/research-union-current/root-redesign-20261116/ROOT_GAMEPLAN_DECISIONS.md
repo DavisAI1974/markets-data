@@ -1123,6 +1123,89 @@ check-book records in `receipts/`. Also done on his yes: the four-trade-days rul
   not hold; they are on no row of the four trade days, and the book still equals the vendor restatement after them.
 - Next session starts from `NEXT_SESSION_HANDOFF_20261116E.md`.
 
+## Sixth session (2026-11-16, on Fable with the Fable advisor)
+
+Started in the chat app by mistake. Greg: "Stop. I meant to be in code. My bad. Update handoff and Push everything
+and print drop in so i can start code session." Then: "Let the 4 days finish storing." The work below is what was
+done before that; nothing was decided by Greg in this session beyond those words.
+
+**Where the code is.** Markets branch `claude/root-session6-017eY1`, started at the tip of the ROOT branch
+(`claude/plugin-company-customization-z50yb3`, `33d1586`). Commits `fca77bb` (the pinning) and `b39e10a` ("no orders",
+the sheet writer). Nothing went to the trunk.
+
+**The 13 outside points are pinned onto the rows: BUILT (section G, criterion 7).** `root/pin.py`. A row now has 217
+fields: 85 (sections A to E) and 132 of section G. Claude's calls, stated to Greg, his to correct:
+- Every figure except three is the latest value known at or before the row's RECEIVED time. Each group carries its
+  own known-from time on the row.
+- The three made once per trade day (the forecast X02, the disagreement between models X09, the sessions since the
+  front contract expired X06) are on every row of that trade day and EMPTY on a row of no trade day (the 5 pm to 6 pm
+  stretches, the Sunday start-up).
+- A row is pinned by its own received time and trade-day label, never by the box that wrote it. The stretch written
+  by two boxes (the evenings of Oct 2 and Oct 17) is identical in both: 418 and 490 rows, compared.
+- The Sunday start-up rows are pinned by the time as stamped and keep their flag. Their stamps read Sunday Oct 1,
+  7:05 to 8:00 am Eastern (equal to the exchange time), so they carry the right values.
+- City temperatures (X10): the latest routine hourly reading of each of the 18 cities, each with its own known-from
+  time beside it. Boston's missing 8 am hour on Oct 2 shows as the 7 am reading with the 7 am time.
+- Fix 4 for the forecast: each of the four forecast figures carries its cities underneath in one cell (city, forecast
+  high, forecast low, heating degree days), in the style of the order line cell, not as 128 more columns.
+- The storage estimate (X12) is empty on every row with its reason, as approved.
+- On a row: positioning (NYMEX and ICE: report date, long, short, net, standings, report counts), wind and gas burn
+  with their hour, the gas-day weather with carry-over, storage (level, change, five-year comparison and the five
+  levels it used), the curve shape from settlements and from last trades. The six regions' hourly rows, the storage
+  regions and every other report stay in the tables.
+
+**Found and fixed: the outside tables stopped an hour short.** They held values known before 5 pm Eastern on Oct 18,
+and the per-trade-day reading spans stopped at 5 pm too, while rows are written to 6 pm. The stretch rows after trade
+days Oct 3 and Oct 18 would have carried stale readings, and a check against the same short tables would have
+passed. The tables now hold every value known before 6 pm Eastern on Oct 18 (449 more station readings, one more
+grid hour, 8,662 more curve statistics records); the pinning refuses a row received at or after that instead of
+giving it an old value; the check asserts every row was received before it. New table `weather_hourly_city.csv`.
+Tables that did not change have the same content. The compressed tables have different bytes from the fifth
+session's because this machine's zlib is a different build; their contents were compared and are equal.
+
+**One check on the new part, as ruled.** `root.checks.pinned`, run inside every build: reads the stored rows back
+and compares every row and every section G column with the tables by a whole-column lookup that does not use the
+pinning code's own lookup. Passed on all four trade days.
+
+**An undeclared number in the fifth session's checks.** The "no hidden numbers" test failed on `root/checks.py`
+(the playback cut inside an exchange event is taken at the middle trade: a 2). It is declared now (`HALVE`); it only
+chooses where a check cuts.
+
+**The four trade days are stored: markets-data branches `root-rows-20231002`, `-20231003`, `-20231017`,
+`-20231018`,** fresh, one per trade day, each with `FILES.md` (file list with fingerprints), `RECEIPT.json` and the
+playback record.
+
+| Trade day | Rows | Trade day rows | Stretch rows | Start-up rows | Trade messages |
+|---|---:|---:|---:|---:|---:|
+| Mon Oct 2 | 820,670 | 819,783 | 544 | 343 | 38,127 |
+| Tue Oct 3 | 879,497 | 878,671 | 826 | 0 | 41,410 |
+| Tue Oct 17 | 846,158 | 845,246 | 912 | 0 | 33,703 |
+| Wed Oct 18 | 771,468 | 770,579 | 889 | 0 | 30,739 |
+
+Every check passed on all four: every record accounted for, the cut, the book equals the vendor restatement, the
+book adds up at every trade, one history per order, the trade counts, the pinning, and playback at four cuts. These
+builds were the first run of store and checks on Oct 3, Oct 17 and Oct 18. A trade day takes about 2 minutes to
+build in the session and about 160 to 200 MB stored. Building three at once ran out of memory; one at a time works.
+
+**An emptied line is the words "no orders" (Claude's call, stated to Greg).** When a tick emptied the touched price
+line, the row stored a blank text cell. That breaks "never blank text" and reads as an empty field in a sheet (found
+by the sheet's read-back). It is now the words "no orders". The four trade days were rebuilt for it and pushed to the
+same branches as a second commit; see the handoff for the state of that push. Playback was not run again for this
+one-cell change (one check per changed part); the playback records on the branches are from the first build.
+
+**The short stretch of the sheet: measured.** `root/sheet.py` writes the workbook from the stored rows and reads the
+sheet back against them (criterion 11). Measured on 20,000 rows of trade day Oct 2 from 9:00 am Eastern (they cover
+9:00:00 to 9:06:38 am): 19.8 MB, about 990 bytes a row, written in 18 seconds, read back equal to the stored rows.
+That implies about 810 MB for the sheet of trade day Oct 2 and about 3.3 GB for the four, about 12 minutes of writing
+per trade day. For Greg to decide before the full workbook is written: GitHub refuses a file over 100 MB, so a
+trade day's workbook cannot go into git as one file; and a sheet of 820,000 rows by 217 columns is heavy for Excel
+to open. Times in nanoseconds and order numbers are written as text, because Excel keeps only about 15 digits and
+would round them without saying so. The measurement was made before the "no orders" change; the workbook file
+itself is not stored yet.
+
+**Not done in this session:** the delete list was not shown; no Step 1 or Step 2 calculation was laid out; the list
+of hard-coded limits in the Step 1 programs is still owed.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
