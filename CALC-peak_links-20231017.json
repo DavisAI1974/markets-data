@@ -1,0 +1,148 @@
+{
+ "what": "ROOT part 2: the calculation peak_links on one trade day",
+ "laid_out_and_approved": "markets-data STEP2_PLAN.md, piece A (Greg, 2026-11-16)",
+ "trade_day": "2023-10-17",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d"
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e"
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65"
+  }
+ ],
+ "columns": [
+  {
+   "column": "peak_link_facts_known",
+   "what": "How many facts about the links between peaks became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "peak_high_position",
+    "fact",
+    "side",
+    "price_at_high",
+    "same_side_high_position",
+    "same_side_high_to_high_ns",
+    "same_side_price_at_high",
+    "same_side_story_open",
+    "other_side_high_position",
+    "other_side_high_to_high_ns",
+    "other_side_price_at_high",
+    "other_side_story_open",
+    "before_high_position",
+    "before_same_side",
+    "no_link_because",
+    "ended_by",
+    "later_peaks_while_open",
+    "first_later_high_position"
+   ],
+   "lines": 17237,
+   "files": [
+    {
+     "file": "calc-peak_links-facts-20231017-part000.parquet",
+     "rows": 17237,
+     "bytes": 475863,
+     "sha256": "61ff6772dbfd361fa930819ad8d455636853fbf3ab96e114d70b9e3afbd3fcff"
+    }
+   ]
+  },
+  "open-at-the-end": {
+   "columns": [
+    "peak_high_position",
+    "later_peaks_so_far",
+    "first_later_high_position"
+   ],
+   "lines": 1,
+   "files": [
+    {
+     "file": "calc-peak_links-open-at-the-end-20231017-part000.parquet",
+     "rows": 1,
+     "bytes": 1148,
+     "sha256": "3ef15b002297b096925c738447e3f5835ffe466f1ceb5c54efa12737cbee91b6"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 845246,
+ "rows": 846158,
+ "counts": {
+  "facts": {
+   "peak known": 8619,
+   "story ended": 8618
+  },
+  "most_later_peaks_while_one_story_was_open": 55,
+  "peaks_still_open_at_the_last_tick": 1
+ },
+ "files": [
+  {
+   "file": "calc-peak_links-20231017-part000.parquet",
+   "rows": 262144,
+   "bytes": 537361,
+   "sha256": "149b39edeb2d29458384d84986a1cc2d74b1e22a893fd651872f6c26802efb96",
+   "beside": "rows-20231017-part000.parquet",
+   "beside_sha256": "7c1559d5056070a4b91ffd4f7cf2928d1034a54fde3cb3a4e518438372416595"
+  },
+  {
+   "file": "calc-peak_links-20231017-part001.parquet",
+   "rows": 262144,
+   "bytes": 536926,
+   "sha256": "31bf9dbdc9fcb8520343d53b3f005ccdf12770d192a6cf41cf3a4f529c6dec80",
+   "beside": "rows-20231017-part001.parquet",
+   "beside_sha256": "a30f8b597209bd74a81ec426f678699e61a341099a1b66a9fa6e35299a7057f0"
+  },
+  {
+   "file": "calc-peak_links-20231017-part002.parquet",
+   "rows": 262144,
+   "bytes": 537485,
+   "sha256": "b73c288161b1a165d94555a30ffae97b3788ed10bb3e0100ac98f3708491f200",
+   "beside": "rows-20231017-part002.parquet",
+   "beside_sha256": "b1c9b234966d8874d4fec39567dbd483f47da3205209d03ccf57ca065722a36a"
+  },
+  {
+   "file": "calc-peak_links-20231017-part003.parquet",
+   "rows": 59726,
+   "bytes": 177173,
+   "sha256": "70cfdf30a0af25974dde29735210467c4a01764d29ab83ba47d4a1117efc22a3",
+   "beside": "rows-20231017-part003.parquet",
+   "beside_sha256": "efb7d6338879f8ad53224a307a882f4562cc5aafa797faf3a4ef07ef80c32313"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "peaks": 8619,
+   "facts_compared": 17237,
+   "peak_before_on_the_same_side": 6176,
+   "peak_before_on_the_other_side": 2442,
+   "peaks_known_while_the_peak_before_was_still_open": 5343,
+   "stories_with_a_later_peak_inside": 5343,
+   "most_later_peaks_while_one_story_was_open": 55,
+   "peaks_still_open_at_the_last_tick": 1,
+   "method": "every link worked out again from the stored outputs of pieces 1 and 2 as whole tables; shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 422623,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 428445,
+    "same_as_full_run": true
+   }
+  ]
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 44.8
+}
