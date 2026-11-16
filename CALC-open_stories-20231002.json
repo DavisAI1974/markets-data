@@ -1,0 +1,127 @@
+{
+ "what": "ROOT part 2: the calculation open_stories on one trade day",
+ "laid_out_and_approved": "markets-data STEP2_PLAN.md, piece B (Greg, 2026-11-16)",
+ "trade_day": "2023-10-02",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231001.dbn.zst",
+   "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78"
+  },
+  {
+   "file": "NG_v0_mbo_20231002.dbn.zst",
+   "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d"
+  }
+ ],
+ "columns": [
+  {
+   "column": "buy_open_stories",
+   "what": "How many buy peak stories are open at this tick."
+  },
+  {
+   "column": "buy_open_stories_past_zero",
+   "what": "How many of those have reached zero and not yet come back."
+  },
+  {
+   "column": "buy_oldest_open_high_position",
+   "what": "The oldest open buy peak: the tick of its high. Empty when none is open."
+  },
+  {
+   "column": "buy_newest_open_high_position",
+   "what": "The newest open buy peak: the tick of its high. Empty when none is open."
+  },
+  {
+   "column": "buy_largest_open_high_position",
+   "what": "The largest open buy peak: the tick of its high. Empty when none is open."
+  },
+  {
+   "column": "sell_open_stories",
+   "what": "How many sell peak stories are open at this tick."
+  },
+  {
+   "column": "sell_open_stories_past_zero",
+   "what": "How many of those have reached zero and not yet come back."
+  },
+  {
+   "column": "sell_oldest_open_high_position",
+   "what": "The oldest open sell peak: the tick of its high. Empty when none is open."
+  },
+  {
+   "column": "sell_newest_open_high_position",
+   "what": "The newest open sell peak: the tick of its high. Empty when none is open."
+  },
+  {
+   "column": "sell_largest_open_high_position",
+   "what": "The largest open sell peak: the tick of its high. Empty when none is open."
+  }
+ ],
+ "tables": {},
+ "ticks_calculated_on": 819783,
+ "rows": 820670,
+ "counts": {
+  "most buy stories open at one tick": 21,
+  "most sell stories open at one tick": 24,
+  "stories_open_at_the_last_tick": 1
+ },
+ "files": [
+  {
+   "file": "calc-open_stories-20231002-part000.parquet",
+   "rows": 262144,
+   "bytes": 627635,
+   "sha256": "42db6adbb3e4d578fec0a195d837986d9214f4020848283587b8775104d0ca8f",
+   "beside": "rows-20231002-part000.parquet",
+   "beside_sha256": "5baee395161f79476c82a0f91035f48226782f5e8db4f55d81746ab8bf571c1b"
+  },
+  {
+   "file": "calc-open_stories-20231002-part001.parquet",
+   "rows": 262144,
+   "bytes": 609888,
+   "sha256": "14bfbdc2c83bbb6345ffcd87b5d8d1f8afebeb4037c084cdee39d0e93a2e48c0",
+   "beside": "rows-20231002-part001.parquet",
+   "beside_sha256": "eec0368236f487b8624d49aeb3c9ad8cbaf174a0398a2fa2d68908392d149db9"
+  },
+  {
+   "file": "calc-open_stories-20231002-part002.parquet",
+   "rows": 262144,
+   "bytes": 611139,
+   "sha256": "b53c120588f9d2a28500635e6463afd4398c94973d6ba8f2127f584112cb2986",
+   "beside": "rows-20231002-part002.parquet",
+   "beside_sha256": "8e8f0e8ea3e24f80700f5db54d876b3330326bb2c0e57fed73c69271272e5ca2"
+  },
+  {
+   "file": "calc-open_stories-20231002-part003.parquet",
+   "rows": 34238,
+   "bytes": 112289,
+   "sha256": "046c0be1199f7b218624f4ad02eb4ba045a3a587f3fa63ffab8c370fab7ee6a5",
+   "beside": "rows-20231002-part003.parquet",
+   "beside_sha256": "4fd041156d86ce815ba967537bba6c4853a09aea16a2d9400cb63a007f6963e4"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 819783,
+   "rows_of_no_trade_day_all_empty": 887,
+   "columns_compared": 10,
+   "peaks": 9525,
+   "most_stories_open_at_one_tick": {
+    "buy": 21,
+    "sell": 24
+   },
+   "method": "each story laid over the rows as a stretch, from the stored outputs of pieces 1 and 2; shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 409891,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick with the most stories open",
+    "ticks_given": 339827,
+    "same_as_full_run": true
+   }
+  ]
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 42.1
+}
