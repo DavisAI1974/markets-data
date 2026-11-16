@@ -150,6 +150,10 @@ every tick until the number changes on a Thursday. Forecast temp will be that te
 change for the next hour."
 
 - The 13 stay, and are pinned onto every tick of the timeline.
+- Order of work (Greg: "And the root calcs are added before the next step happens." "So treat the 13 dp files
+  accordingly."): the 13 are prepared, pinned onto every tick and checked in the first step, before ROOT calculates.
+  They are in place on every row when ROOT's calculations run, and ROOT's results are pinned and checked before the
+  next stage starts.
 - Each value holds, unchanged, on every tick from the moment it takes effect until the next value replaces it. Each
   point changes at its own pace (the storage number weekly, a forecast temperature hourly).
 - They are pinned fresh onto the new timeline from the outside data files. The old sheet's copy, attached to trades
