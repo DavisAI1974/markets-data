@@ -171,7 +171,14 @@ Also as before: read at every tick; the whole book; no peak dropped; nothing fro
 fact stored in the facts table beside the rows. The number of facts is reported after the first trade day, and
 Greg hears before anything is capped.
 
-### Piece 3: the family (A, B, C)
+### Piece 3: the family (A, B, C). NOT BUILT NOW (Greg, 2026-11-16)
+
+Greg: "we hold off on labels and groups and identifiers until all 4 days have run all their calcs and we'll see how
+they define themselves. We don't want to do that for them and that goes for all outputs in st1 and 2." No family
+is assigned in advance. In its place, put to him as Claude's call: the build-up of each peak is recorded the way
+the fade is, with no mark picked in advance: the low the rise started from (the tick, the flow there, the price
+there) and the time from that low to the high. The layout below is kept as the record of what the old rule did.
+
 
 **What we want.** For every peak, at the moment it becomes known: which family its build-up belongs to, as Step 1
 originally defined families. This is the first of the two Step 1 columns. The growth column (new families from
@@ -211,7 +218,9 @@ The shape, as played back to him:
 - How it is taught: each trade day's peaks are scored by models taught on the other three trade days, so no peak
   is scored by a model that saw its own trade day.
 - What is written, per peak: for each step back, each of the three models' own gain. Full values, nothing thinned.
-- Where it stops: no depth cap picked in advance. Steps back are added until no peak's chain reaches that far.
+  No chain depth and no "member of a chain" is written from them (Greg: no labels or groups in advance).
+- Where it stops: no depth cap picked in advance. The first steps back are run and shown to Greg, and how far to
+  go is settled with him from what the values show.
 - When it is known: a peak's link values are known when its own story has ended, and are recorded at that tick.
 
 The choice as it was put:

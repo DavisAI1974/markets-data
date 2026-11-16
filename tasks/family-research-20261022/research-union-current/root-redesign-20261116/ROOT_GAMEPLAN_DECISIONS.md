@@ -1409,6 +1409,23 @@ wrote: "Let it produce full values. That will be the base going forward that we 
 - It is still laid out for him before it is built: what the models are asked to predict comes from what piece 2
   records about a peak, so its layout follows piece 2.
 
+**No labels, groups or identifiers until all four trade days have run all their calculations (Greg, 2026-11-16,
+seventh session).** "But we hold off on labels and groups and identifiers until all 4 days have run all their calcs
+and we'll see how they define themselves. We don't want to do that for them and that goes for all outputs in st1
+and 2."
+- No Step 1 or Step 2 output is given a label, put in a group or given a group identifier in advance: no family
+  letter, no state name, no chain depth, no stage name, no class. The calculations write what was measured.
+- The groups come afterwards, from how the outputs of all four trade days separate, with Greg.
+- What this changes in what was laid out:
+  - Piece 3 (the family A, B, C from the frozen rule) is NOT built now. This stands over the earlier ruling that
+    the first Step 1 column is the family as originally defined: no family is assigned in advance. Whether the old
+    A, B and C are ever laid beside the new groups is decided after the four trade days have run.
+  - Piece 4 (the chain link, B): the models' full values are written per peak. No "chain depth" and no "member of
+    a chain" is written from them.
+  - Step 2: the same. Its stage and state names are not applied in advance.
+- What is not a label in this sense: which peak a fact is about (the tick of its high, a place on the tape), and
+  the side of the flow (buy or sell, read off the tape).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
