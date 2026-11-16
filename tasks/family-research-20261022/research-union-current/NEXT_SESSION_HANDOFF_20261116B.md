@@ -94,3 +94,34 @@ Greg asked whether ROOT calculates with all the data depth possible. From the co
 - Correction: the ingest cuts the trading day at 21:00 UTC, so the stored ROOT runs for trade days Oct 2 and 17
   probably do include the first two hours. The "starts at 20:00 ET" limit belongs to the book-recovery archives.
   Not verified against the stored runs.
+
+## Greg's ROOT directives (2026-11-16, after the depth audit) — TO FIX
+
+Greg: the cutoffs and truncations in ROOT were not his choice and he would have stopped them.
+
+1. **No fixed windows.** Remove every fixed window from ROOT: the 1, 5, 20, 60 and 300 second activity windows, the
+   300 second history drop, the per-second bins and 20 second roll in signed flow, and any other fixed length found
+   in the producer package. Open design point to settle with Greg when the rewrite starts: what each windowed value
+   becomes (spans taken from the data itself, such as an event's or a family's own life, or no rolled-up value at
+   all with every event kept). His earlier standing rule applies: horizons are data-driven, never prescribed lengths.
+2. **Full depth everywhere.** ROOT runs on the full depth of the data: every price level and every order's queue
+   position in frames (no top-10 view), prices and signed flow from the full book rather than the top-10 "legacy"
+   rows, no top-N anywhere.
+3. **Everything we hold gets run on ROOT.** No data that we hold is left out of a ROOT run. Check what else is held
+   beyond the front month for these trade days before the rerun.
+4. **Audit ROOT for redundant passes and builds** before rerunning it. Greg expects duplicated passes and rebuilt
+   tables in it.
+5. Already required: ROOT runs on the trade-day stream (Sunday warm-up, book carried through every 00:00 UTC), so no
+   order's age is restarted.
+
+Order of work: read the pinned producer package (`research/kalshi/frankie_raw_mbo_benchmark/` at Markets pin
+`2ebb8ce8`), list every fixed window, depth cap and repeated pass with file and line, show Greg the list, then change
+and rerun. The ROOT outputs stored on Runpod volume `qu5lhaqqbx` were made with all of these limits in place.
+
+## Per-trade book records are now stored (Greg, 2026-11-16)
+
+Greg does not want the 8.9 GB rebuilt each time. The record files are being pushed to four branches in markets-data,
+`trade-day-book-20231002`, `-20231003`, `-20231017`, `-20231018`, under
+`tasks/family-research-20261022/trade-day-book/<trade day>/`, 100 trades per file, with MANIFEST.json and
+BOOK_RECEIPT.json. Fetch single files; never fetch those branches whole. Check each branch's file count against its
+manifest before relying on it: the push was still running when this note was written.
