@@ -31,6 +31,11 @@ This session builds nothing, runs nothing, and writes to this file only.
   Read as: his ideas and Claude's are merged into one plan. Its aims are (1) better and more unique real trading
   signals, (2) explaining the lifecycle of a trade better, (3) explaining the dipole better, (4) a deeper look at
   whether the trade lifecycle and the dipole couple or correlate. How it is done is left to Claude to propose.
+- 2026-11-16, on how the suggestions are put to him: "Run through all of your suggestions. Do them in one swoop
+  instead of a little piece at a time"
+  Read as: every suggestion is laid out for him together, in full, as the rest of Step 1 was. It is not read as a
+  word to build or run: this session builds and runs nothing, and each calculation is approved by him first. The
+  layouts are in "The suggestions laid out together" below.
 
 ## The merged plan, by Greg's aims (Claude's proposal, 2026-11-16; nothing approved, nothing built)
 
@@ -79,6 +84,188 @@ recorded Native birth on the four trade days, the flow of piece 1 at that tick a
 line per birth. Claude's guess, held loosely: many births will sit where the flow is fully one-sided, because the
 independent pass of 2026-11-13 found the 20-second ratio at exactly plus or minus 1 in the birth second of every
 candidate it had. That pass used the old one-second series, so the list is what will tell us.
+
+## The suggestions laid out together (2026-11-16)
+
+Status: LAID OUT, awaiting Greg's word. Nothing is built or run. On his yes the code session builds; this session
+does not.
+
+Four of the suggestions are new calculations (A to D). Three need no new calculation, because A to D and Step 1
+already carry them (E to G). One is a way of seeing the result (H). All follow the standing rules: only the four
+trade days; a row holds only what was known at its tick; nothing is written back; no fixed marks, labels, caps or
+minimum counts; empty is never zero; every trade individually; no cost of trading anywhere.
+
+How anything is stored, the same as Step 1: new columns are their own files beside the rows files, in the same row
+order, and no row is added or removed. Facts go in the facts table beside the rows, one line per fact: the tick it
+became known, what it is about, what the fact is, its value. Each calculation has one check, run once on that part:
+every value recounted from the stored rows by a different method, and playback equal at two cuts.
+
+### A. The links between peaks
+
+**What we want.** For every peak, how it stands to the peaks around it, written as facts. This is the chain,
+without letters and without a depth.
+
+**What the old work did.** Put the events of a week in order and read the 2, 3 or 4 before each one as a string
+of state letters. Left out an event when one before it had ended less than 60 seconds earlier, or when the next
+one began before its ending was confirmed. Never ran across a week boundary.
+
+**What is written.** Facts, at the tick a peak becomes known, naming that peak:
+- The last peak on its own side, and the last peak on the other side. For each: the tick of its high, the time
+  between the two highs, the last trade price at each high, and whether that earlier peak's story was still open
+  at this tick. Whichever of the two is nearer is "the peak before".
+And at the tick a peak's story ends:
+- How many later peaks had already become known while its story was open, and the first of them.
+
+**Claude's calls.**
+- One link back on each side, not a list of every earlier peak. Any earlier peak is reached by following the links
+  back one at a time, so nothing is capped and nothing is repeated.
+- No peak is left out for being close to another or for overlapping. Overlap is a fact.
+- A link never crosses 6 pm. The first peak of a trade day on each side has that link empty, with the reason.
+- "Before" goes by the tick a peak became known, since that is the order a reader meets them in.
+
+**Not promised.** Nothing about how many peaks overlap. Reported after the first trade day.
+
+**Needs.** Piece 2 (for when a story is open or ended). The three models' values at each step back are piece 4 and
+stay with the code session's layout.
+
+### B. The state at each tick
+
+**What we want.** At any tick, what is in play: which peak stories have not ended yet, on each side. This is what
+the old result 3 called a rolling state, recorded directly.
+
+**What the old work did.** Did not record it. It was inferred afterwards, from strings of four state letters and
+model scores.
+
+**What is written.** New columns on every row, for the buy side and for the sell side:
+- how many peak stories are open at this tick;
+- how many of those have reached zero and not yet come back;
+- the tick of the high of the oldest open one, of the newest open one, and of the largest open one.
+
+**Claude's calls.**
+- "Open" means the peak has become known and its story has not ended, by piece 2's own ending (coming back,
+  beaten, or 5 pm).
+- These are counts and places on the tape. No average is taken.
+- With no open story on a side, its three tick columns are empty, not zero.
+
+**Not promised.** How many stories can be open at once. Reported after the first trade day.
+
+**Needs.** Piece 2.
+
+### C. The book through a peak's life and between peaks
+
+**What we want.** What happened in the resting orders while the flow rose, peaked and faded, and from one peak
+to the next: how much size was added, pulled and filled, on each side.
+
+**What the old work did.** Step 1 took one figure: the average imbalance of the top 10 levels over seconds 41 to
+60 after the peak, and its change from the 20 seconds before. Step 2 did not read the book.
+
+**What is written.** New columns on every row: running totals since the 6 pm open of the trade day, for the bid
+side and for the ask side:
+- size added (a new order, or an order made larger);
+- size pulled (a cancel, or an order made smaller);
+- size filled (traded away);
+- size moved (an order changing price: it leaves one line and joins another).
+Each total is kept twice: for the whole side, and for actions at the best price of that tick.
+
+With running totals on every row, the amount between any two ticks is one subtraction. So the book between two
+peaks, or between any two turns of a peak's story, or across a stage of a dipole, is read straight off the two
+rows that the facts already name. No stretch of time is picked in advance.
+
+**Claude's calls.**
+- Running totals are sums of single messages, each of which stays on its own row. They are not averages.
+- They start at zero at 6 pm, as the flow does. The book itself carries over; only the counting of activity
+  starts fresh.
+- A change of price is counted as moved, not as pulled and added, because nothing left or joined the side.
+- "At the best price" is read from the book at that tick. How far from the best price each single action
+  happened is already on its row, so no number of levels is picked.
+- Trades the tape gives no side for are counted in their own column, as in piece 1.
+
+**Not promised.** Nothing about what the totals will show.
+
+**Needs.** Only the stored rows. It does not wait for piece 2 and can run beside it.
+
+### D. The dipole beside the peaks
+
+**What we want.** Each Native dipole's life on the same rows as the peaks, so that for every dipole, and for every
+peak, we can see case by case how the two stand to each other.
+
+**What the old work did.** Never put them together. The exhaustion chain work (August 2026) and the dipole work
+(October 2023 trade days) were done apart.
+
+**What is written.**
+- Facts, at the tick each stage of a dipole could first be known: its birth, its recognition, its end. Each names
+  its dipole and carries Native's own time for that stage beside the tick it is placed at.
+- On each of those fact lines, the peaks in play: the nearest peak on each side (the tick of its high), the time
+  since that high, and whether its story was open, past zero, or ended at this tick. The flow at that tick is
+  already on the row.
+- On the line where a peak becomes known: whether a dipole was alive at that tick, which one, its side against
+  the peak's side, the time since its birth, and whether it had been recognized yet.
+- Columns on every row: how many dipoles are alive at this tick, on each side.
+
+**Claude's calls.**
+- Native's own record of each candidate is used, marked as Native's and not as a ROOT calculation. The dipole is
+  not yet defined in ROOT; what this shows may help write that definition.
+- A stage is placed at the tick it could be known, not at the time of its label. Where the two differ, both are
+  kept. (The independent pass of 2026-11-13 found the two differ.)
+- Native's candidate number ties the lines together. It is a label and never an input.
+- A candidate whose record falls outside the trade day as now defined (6 pm to 5 pm) is listed for Greg and not
+  placed.
+
+**To settle first.** Whether Native's record was cut on the old day boundaries. The code session checks before
+anything is placed.
+
+**First thing to come out of it.** One line per recorded birth: the flow at that tick, and the nearest peak on
+each side. Claude's guess, held loosely: many births will sit where the flow is fully one-sided. The list is what
+will tell us.
+
+**Not promised.** That every Native candidate can be placed, or how many there are per trade day.
+
+**Needs.** Piece 1 (built), then A and B for the peaks in play.
+
+### E. The shape carried along the chain (no new calculation)
+
+Piece 2 already records each peak's rise and fade turn by turn. The links of A put those in order along a chain.
+So a chain's shape is every member's own recorded shape, one after another, with nothing reduced to a letter.
+
+### F. Where in the trade day (no new calculation)
+
+The clock, the trade day, the 5 pm to 6 pm stretch and the settlement window are on every row. The old Step 2
+did not use them. At the grouping stage they are one more thing every peak, chain and dipole is looked at
+against.
+
+### G. The small peaks (no new calculation)
+
+Every peak is kept, with its size and its standing so far in the trade day on its row. A to D treat every peak
+alike. No size is picked to separate small from large; whether size separates them is seen at the grouping stage.
+
+### H. One render per instance (a way of seeing, made after A to D exist)
+
+One picture per peak with its chain, and one per dipole: its whole life from before to after, with the layers
+stacked on the same clock. The layers: the flow, the peak's turns, the open stories on each side, the book totals,
+the price, the dipole's stages. Drawn from the stored rows and facts, with the plotted points reconciled to the
+rows on every chart. No part of a life is cut away from the rest.
+
+Claude's call: the program draws any instance on request, and all the dipoles. How the full set for 34,278 peaks
+is delivered is asked once the first ones are in view.
+
+### The order they can be built in
+
+- C now, beside piece 2. It needs only the rows.
+- A and B after piece 2.
+- D after A and B, once the check on Native's record is done.
+- H after D.
+- Then the grouping stage, with Greg.
+
+### Every call of Claude's in this layout, in one place, his to correct
+
+1. "A trade's lifecycle" is the life of one move: build-up, high, fade, ending, price after.
+2. Links: one back on each side, followed back as far as wanted; no cap.
+3. No peak left out for closeness or overlap.
+4. Nothing crosses 6 pm.
+5. Book totals: added, pulled, filled, moved; whole side and at the best price; from zero at 6 pm.
+6. The dipole: Native's own record, marked as such, placed at the tick each stage could be known.
+7. Renders: any instance on request, all dipoles; delivery of the full peak set asked later.
+8. The old paper play stays in git as the record and is not carried into the calculations.
 
 ## The original intent, what is worth keeping, and the gaps (Claude's view, put to Greg 2026-11-16)
 
