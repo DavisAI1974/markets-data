@@ -28,8 +28,8 @@ push data to Markets.
 | tape | `root/tape.py` | done: reads a week, fingerprints and counts checked, what each record is; the calculation gate |
 | book | `root/book.py` | done: equals the vendor restatement at all five file boundaries; adds up at every trade |
 | rows | `root/rows.py` | done: one row per tick, 85 fields (sections A to E), empties stored as empty |
-| store | `root/store.py` | written: rows and book pictures as Parquet parts, restatement table, receipt |
-| checks | `root/checks.py` | written: every row checked, records accounted for, trade counts, playback at cuts |
+| store | `root/store.py` | done: rows and book pictures as Parquet parts, restatement table, receipt |
+| checks | `root/checks.py` | done: every row checked, records accounted for, trade counts, playback at cuts |
 | run | `root/run.py` | commands: check-week, check-book, build, playback |
 
 Result of the one check run on rows, store and checks: see "Check results" at the end of this file.
@@ -114,4 +114,22 @@ and 560 MB of pictures. **No pods are needed for the foundation.** No stored row
 
 ## Check results
 
-(Filled in at the end of the session.)
+Markets `claude/plugin-company-customization-z50yb3` at `33d1586`. One check run on rows, store and checks, on the
+real tape:
+
+- PASSED: every row of all four boxes checked (the cut, one history per order, empties empty, the line on the row
+  adds up, best-price moves marked, "by fill" follows a fill); every record accounted for and the trade counts equal
+  the raw files (criteria 1, 2, 5, 6).
+- PASSED: the stretch between two built trade days is the same rows in both boxes.
+- PASSED: playback at four cuts on trade day Oct 3: inside an exchange event, across 6 pm, across the vendor file
+  boundary, across 5 pm (criterion 8).
+- PASSED: two builds of trade day Oct 2 are byte-identical (criterion 9); stored empties are empty.
+- PASSED: the vendor restatement is kept in its own table and matches our book.
+- One test failed on a wrong expectation of mine, not on the data: the first written row of trade day Oct 2 is the
+  exchange's clear, so the first book picture holds no orders. The receipt now states each picture's order count
+  (first 0, last 423 on Oct 2). Re-checked with one build: passes.
+
+Not done yet: the four trade days are not stored in markets-data (step 2 of "What to do next"); the 13 are not
+pinned onto the rows; no sheet; criterion 7 (outside pinning) and criterion 11 (workbook equals stored rows) come
+with those parts. The store and checks tests were not re-run in full after the last small change, on Greg's rule
+(one check per part; only the changed piece was re-checked).
