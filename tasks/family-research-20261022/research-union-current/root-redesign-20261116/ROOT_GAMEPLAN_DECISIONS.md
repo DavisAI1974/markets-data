@@ -564,11 +564,12 @@ available.
   `mesonet.agron.iastate.edu` are now allowed. `web.archive.org` and `api.eia.gov` are not; Greg can add them by
   hand (cloud environment menu, Edit, Network access, Allowed domains) if X12 and the US48 total are wanted from
   those sources.
-- Databento: the address is allowed, but the saved key entry is still wrong (the right key, saved with a line break
-  and a date after it; Databento answers 400). The network puts the saved entry on every request, so it has to be
-  re-saved cleanly in the environment's settings (Network secrets, the `hist.databento.com` entry: the key alone as
-  the username, password empty). The secure form offered in the session was declined. It matters for X13 only, and
-  a paid pull is brought to Greg with its price first. No key is ever written into either repository.
+- Databento: the saved key entry was wrong (the right key, saved with a line break and a date after it). Greg
+  re-saved it through the secure form on 2026-11-16 and Databento now answers. No key is ever written into either
+  repository. Prices quoted by Databento the same day for the futures curve (X13), every natural gas contract month
+  (`NG.FUT`), UTC clock days Sep 29, Oct 1 to 3 and Oct 16 to 18, 2023, nothing bought yet: contract definitions
+  $0.04; exchange statistics (settlements, open interest) $0.01; trades of every month $0.75; the full order tape of
+  every month $4.83 (about 2.9 GB before compression). A paid pull waits for Greg's word.
 
 ## Held for the later stage: figuring out what moves the market
 
