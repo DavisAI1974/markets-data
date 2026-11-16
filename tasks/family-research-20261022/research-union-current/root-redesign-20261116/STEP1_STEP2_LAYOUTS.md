@@ -45,8 +45,9 @@ mark each time the flow reaches a peak, with its side and size. Every peak is re
 5. No dead time at the start or end of a trade day.
 6. The whole book, not the top 10 levels (the row already carries it).
 7. The 20-second roll stays. It is the definition of the flow: without a span there is no flow, only single
-   trades. It sits beside the single trades, which are already on their own rows. To confirm with Greg: this is
-   the calculation he meant as the one exception to "no averaging" (the same data both ways, both kept).
+   trades. It sits beside the single trades, which are already on their own rows. CONFIRMED by Greg, 2026-11-16:
+   "I believe that was the exception but there might be another somewhere too." His rule for any averaging: it is
+   an addition to the individual outputs, never a replacement of them.
 
 **What it writes.** New columns on every row (no row is added or removed): bought, sold and no-side size in the
 last 20 seconds; the flow; and, on a row where a peak becomes known, the peak's side, size, the tick of its high,

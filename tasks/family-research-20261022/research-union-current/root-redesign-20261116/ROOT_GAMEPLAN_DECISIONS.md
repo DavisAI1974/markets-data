@@ -1326,6 +1326,17 @@ as they stand on the four trade days: they read a one-second, top-10-level input
 itself a limit and is not held for these trade days. So each is carried into `root/calcs/` as the same calculation
 reading the tick rows, with its limits off, laid out and approved first.
 
+**The averaging exception: CONFIRMED, and the rule for any averaging (Greg, 2026-11-16, seventh session).** Asked
+whether the 20-second roll of the trade flow is the exception he had in mind: "I believe that was the exception but
+there might be another somewhere too. And when we do an averaging also, it doesn't replace the individual outputs
+that we also need. This is something that is an addition to not a replacement of."
+- The 20-second roll of the flow is the exception he meant. It is kept, beside the single trades on their own rows.
+- There may be another. Any other place a Step 1 or Step 2 program averages is shown to him in the layout of its
+  piece, as such.
+- The rule for every one of them: an averaged figure is an ADDITION. It never replaces the individual outputs,
+  which are always kept as well. Where an old program gave only the averaged form, the individual values are
+  written too.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
