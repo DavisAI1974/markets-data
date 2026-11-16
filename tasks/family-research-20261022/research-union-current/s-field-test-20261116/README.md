@@ -29,30 +29,47 @@ counts are in `results/census.json` (`scripts/census2.py`).
 - Not yet validated: the Oct 18 archive starts with 841,601 warm-up messages before the session and its receipt
   has a different shape, so the Oct 2 script does not run on it as written.
 
-## Oct 18 test: does S add information beyond the fields already filled?
+## Calculation audit: are IDs or clocks used as values?
 
-Scripts: `flatten_oct18.py`, `s_test_oct18.py`, `s_test_incremental.py`. Population: all 30,739 Oct 18 trades.
+Read from `c15_teacher.py`, `c15_teacher_r3.py`, `c15_dstate.py`, `teacher_changes.py` at Markets `7f34afa`.
 
-- Context (known strictly before each trade): S at `last_completed_group_before_trade` (PRESENT only), the
-  pre-trade book, and the 64-group flow anchor. Leakage gate: 40 checks, 0 fails.
-- Outcome (strictly after, event-driven): which comes first, the mid moving k ticks with the anchoring flow
-  (continuation) or k ticks against it (reversal), k = 1, 2, 4. Settle window 14:28-14:30 ET excluded; outcomes
-  never run through it. No trade cost.
-- Cells: far side (bid/ask) x day part (overnight to 08:00, 08:00-11:00, 11:00 to settle, post settle) = 8 cells.
+- Trade IDs and trade cursors are not in the calculation. The replay uses the trade list to cross-check trade
+  messages and to label output rows.
+- Order ID, instrument/publisher ID, cursor, receive clock, session identifiers and hashes are used as keys, ordering
+  guards and provenance only.
+- Two duration-type quantities are values: order age in seconds (S04, S09) and counts of elapsed groups (S17, S19).
+- With `teacher_changes` applied (Greg, 2026-09-28): the "1024" fields are running totals over the whole day so far,
+  the cohort is every level of the far side, and the short window is the last 64 groups or all groups while fewer
+  exist.
 
-Results (`results/*.csv`):
+## Oct 18, every trade individually
 
-- Existing top-of-book fields sort the outcome in 8 of 8 cells at k=1 and k=2 (aligned top imbalance, top sizes
-  and order counts, the trade's own side).
-- S04 `far_front_age_log` is the only S field that is consistent on its own: 7 of 8 cells at k=1, 3 of 8 at k=2.
-  Inside strata of the existing top-of-book fields its sign reverses in most strata, so the stand-alone effect is
-  largely the same information as the book fields.
-- S08 `far_priority_loss_rate_64`: 5 of 8 cells at k=1, 1 of 8 at k=2. Every other S field: 0-3 of 8.
-- S15-S18 are present on too few trades to test (2,050 and 175 of 30,739).
-- Out of sample in time, per cell, adding 14 dense S fields to the existing fields raised AUC in 1 of 8 cells
-  (linear) and 5 of 8 (boosted) at k=1; 2 and 4 of 8 at k=2; 4 and 4 of 8 at k=4. Log loss improved in at most
-  3 of 8 cells at any k. S alone reaches AUC about 0.57 at k=1 against about 0.80 for the existing fields.
+The earlier within-cell rate tables, correlations and model scores were withdrawn (they averaged over trades) and
+are no longer in this folder. Scripts: `flatten_oct18.py`, `build_trade_frame_oct18.py`, `s_individual_oct18.py`.
 
-Reading: on this one day, for short-move direction at trade times, S adds little beyond the book fields already
-in the sheet. This is one day and one use of the fields. It does not test S as a lifecycle or exhaustion read at
-the dipole level, and k=4 outcomes follow the day's trend, so they cannot separate S from that trend.
+- `results/oct18_trade_ledger.csv.gz`: one row per trade, all 30,739. Designation (trade id, ordinal, cursor,
+  group, three clocks), the trade, the book just before it, the far side from the prior 64 groups of flow, all 19
+  S values with their states, and what happened to that trade next (first 1-, 2- and 4-tick move with or against
+  the flow, and seconds to it). Leakage gate on the context: 40 checks, 0 fails. Settle window 14:28-14:30 ET is
+  marked excluded and no outcome runs through it. No trade cost.
+- `results/oct18_twin_pairs.csv.gz`: pairs of individual trades with identical existing-field context (far side,
+  day part, spread, far-touch size and order count, near-touch size, trade side relative to flow), at least 60 s
+  apart, where one continued and the other reversed. 3,154 pairs at 1 tick, 5,027 at 2, 5,469 at 4. Both trades'
+  S values are listed side by side for all 19 fields.
+- `results/oct18_twin_field_counts*.csv`, `results/oct18_twin_clock_check.csv`: counts over those listed pairs.
+
+Per-field facts (counts of individual trades or pairs, 1-tick pairs unless stated):
+
+| Field | Fact |
+|---|---|
+| S05, S13 (whole-day identity survival, size retention) | Higher on the earlier trade in 2,047 of 2,047 and 2,050 of 2,050 pairs that differ. Equal to each other on 26,468 of 26,701 trades. |
+| S09 (far queue age p90, all levels) | Higher on the later trade in 3,109 of 3,154 pairs. |
+| S02, S07, S10 (whole-day absorption, priority loss, replenish) | Follow time order in 2,728, 2,657 and 2,569 of 3,154 pairs. |
+| S04 (far front-order age) | Higher on the continued trade in 1,759 pairs, on the reversed in 1,394; same direction whichever trade is earlier. Matches the front-order age already in the sheet's FIFO fields within 0.05 on 1,211 of 1,317 selected Oct 18 ticks. |
+| S12 (far size concentration) | 1,720 / 1,434 at 1 tick, 2,544 / 2,482 at 2 ticks; direction depends on which trade is earlier. |
+| S03, S06, S08, S11, S14, S19 (64-group fields, unresolved age) | Near even between continued and reversed: 1,536/1,605, 1,481/1,671, 842/842, 1,473/1,678, 1,481/1,671, 1,460/1,645. S14 equals S06 on 21,318 of 26,701 trades. |
+| S01 (extension count) | Zero on 24,651 of 26,701 trades; same on both trades in 2,668 of 3,154 pairs. |
+| S15-S18 | Present on 2,050 (S15, S17) and 175 (S16, S18) trades; 26 and 0 pairs. |
+
+The whole-day fields move with elapsed session time, so within a pair they mostly record which trade came later.
+These counts describe the next 1-4 tick move at trade times only; S as a dipole lifecycle read is not examined.

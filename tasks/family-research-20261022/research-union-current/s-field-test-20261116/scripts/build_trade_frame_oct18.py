@@ -1,4 +1,5 @@
-"""Oct 18 test: do the 19 second-set (S) fields add information beyond the fields we already have?
+"""Oct 18 per-trade frame: context known before each trade and what happened to that trade next.
+No rates or correlations are computed here (the earlier within-cell rate tables were withdrawn).
 
 Context = what is known strictly before each trade:
   * S values at 'last_completed_group_before_trade' (state PRESENT only; nothing imputed)
@@ -7,7 +8,6 @@ Context = what is known strictly before each trade:
 Outcome = strictly after the trade, event-driven (no fixed clock horizon): which comes first, the mid moving k ticks
 WITH the anchoring flow (continuation, +1) or k ticks AGAINST it (reversal, -1). Censored if neither before the
 settle window / session end. Settle window 14:28-14:30 ET is excluded. No trade cost anywhere.
-Per cell (far side x day part); pooled numbers are never the headline.
 """
 import json, sys, numpy as np, pandas as pd
 from scipy.stats import spearmanr
@@ -103,24 +103,5 @@ def main():
         y, lag = first_passage(df.mid2.values, k, stop); df[f'y{k}'] = y * df.d.values
         df[f'lag_s{k}'] = np.where(lag >= 0, (df.receive_ns.values[np.clip(lag, 0, n - 1)] - df.receive_ns.values) / 1e9, np.nan)
     df.to_parquet('/home/user/work/out/s_test_frame_20231018.parquet')
-    elig = (df.d != 0) & (~in_settle)
-    rows = []
-    for (p, d), c in df[elig].groupby(['part', 'd']):
-        cell = f"{p}|far={'ask(buy flow)' if d > 0 else 'bid(sell flow)'}"
-        for k in KS:
-            cc = c[c[f'y{k}'] != 0]; y = cc[f'y{k}'].values.astype(float)
-            base = dict(cell=cell, k=k, n=len(cc), censored=int((c[f'y{k}'] == 0).sum()), cont_rate=float((y > 0).mean()) if len(y) else None,
-                        median_seconds_to_outcome=float(np.nanmedian(cc[f'lag_s{k}'])) if len(cc) else None)
-            out['cells'][f'{cell}|k={k}'] = base
-            for feat in [s + '_lc' for s in S] + BASE:
-                m = cc[feat].notna().values
-                if m.sum() < 300: rows.append(dict(cell=cell, k=k, feat=feat, n=int(m.sum()), note='too few present')); continue
-                x = cc[feat].values[m].astype(float); yy = y[m]
-                r, pv = shift_p(x, yy, rho); tt = tercile_table(x, yy)
-                rows.append(dict(cell=cell, k=k, feat=feat, n=int(m.sum()), rho=r, p_shift=pv, lo=tt[0]['cont_rate'], mid=tt[1]['cont_rate'],
-                                 hi=tt[2]['cont_rate'], n_lo=tt[0]['n'], n_hi=tt[2]['n'],
-                                 first_half_rho=rho(x[:len(x)//2], yy[:len(x)//2]), second_half_rho=rho(x[len(x)//2:], yy[len(x)//2:])))
-    res = pd.DataFrame(rows); res.to_csv('/home/user/work/out/s_test_univariate_20231018.csv', index=False)
     json.dump(out, open('/home/user/work/out/s_test_cells_20231018.json', 'w'), indent=1)
-    print(pd.DataFrame(out['cells'].values()).to_string())
 main()
