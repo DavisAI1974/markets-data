@@ -235,6 +235,34 @@ messages change nothing in the book by themselves; adapter 529-530). Between tho
 that has just traded. ROOT records each tick as it comes and marks which tick ends the event, so a reader can take
 the book after any tick or only at event ends. Nothing is decided ahead of time.
 
+## How the book is held (Greg, 2026-11-16)
+
+Greg: "Option 2 if it's going to have the book in memory."
+
+- ROOT keeps one book in memory for the whole run. A tick changes one order in it; the book is read as it stands.
+  It is never rebuilt at a tick. A later stage that walks a trade day in order carries the book the same way.
+- On every row: what changed at that tick, the whole-book figures, and the full line at the price that was touched.
+- A full picture of the book is kept at every trade (the 143,979 built on 2026-11-16 are on the four
+  `trade-day-book-*` branches; they were cut at 5 pm and are to be rebuilt with the new ROOT).
+- A full picture on every row (about 62 KB times about 3.3 million ticks, roughly 200 GB) is not written.
+- The complete book at any tick is the nearest saved picture plus the changes after it, exactly.
+
+**Group 3, the book columns (L039-L046): laid out for Greg, not yet closed.** Proposed row content: best bid, best ask
+and the gap; total size, orders and levels on each side; size and orders at the best bid and ask; the full line at
+the touched price, with its totals before and after; for the touched order its size before and after, orders and size
+ahead just before, first-entry and last-place times on both clocks (marked "at least" when carried over the weekend),
+and what happened to it (joined, stayed, shrank, lost its place, left by cancel or by fill); the Sunday clear and
+re-listing as marked rows; the weekday snapshot check recorded, the snapshot not applied. A single figure for how
+concentrated a line is (L043) is deliberately not chosen yet.
+
+## README page for the workbook (Greg, 2026-11-16)
+
+Greg: "Create a read me page in the excel workbook that explains what's going on with it so if anyone else looks at
+it they don't think there's missing data."
+
+The wording is in `WORKBOOK_README_PAGE.md` in this folder. It becomes the first sheet of the rebuilt workbook and is
+kept current as each piece closes.
+
 ## Piece 3 (WITHDRAWN as first drafted)
 
 The first draft of "what ROOT reads off the book" was the old ROOT's book readings with edits (best prices, top-10
