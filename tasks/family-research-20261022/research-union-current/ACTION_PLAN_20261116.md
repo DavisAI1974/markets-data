@@ -171,6 +171,14 @@ before birth, the turn, the tail and exhaustion), by direction; the dipole dive;
 natural gas; the exhaustion canary and the entry hypothesis; flow authority, its collapse and recovery; where a
 turning point comes from; and what each S field was trying to measure.
 
+**The Claude and Codex research projects (Greg, 2026-11-16):** "let's list the intended results and research
+angles. I don't think we want to keep the results. They probably aren't calc correctly." So for every research
+project by either of us, the inventory records what it set out to find and the angle it took, and nothing else. The
+results themselves are not carried forward and are removed with the rest of the old-ROOT material once the list is
+signed off. This lifts the "do not read the earlier Claude analysis" wall for one purpose only: reading what each
+project intended and how it approached it. Result numbers, findings and conclusions are still not read into new
+work. Saved as `root-audit-20261116/RESEARCH_INTENTIONS.md`.
+
 This step can run while the new ROOT record is being built (step 3), because the record keeps everything
 regardless. It must be finished and signed off before any research-layer spec is written (step 4).
 
@@ -257,6 +265,7 @@ Greg expects this may be small, because some steps right after ROOT were redone 
 | Files and folders in this research folder that rest on old ROOT outputs | After Greg signs off the lineage list |
 | Old archive branches `codex/frankie-book-recovery-*` | After the new workbook is written |
 | Old cursor numbering columns in the trade lists | After the workbook rows are re-keyed |
+| Results of the Claude and Codex research projects (reanalysis, discovery depth, priority ten, fifteen strategies, paper validation, the independent Claude research) | After `RESEARCH_INTENTIONS.md` is signed off |
 | Old ROOT outputs on the stopped AWS boxes; Desktop's family research files | Greg's call, once listed |
 
 ---
@@ -269,8 +278,8 @@ Greg expects this may be small, because some steps right after ROOT were redone 
 2. Sign-off of the old ROOT file list and of the lineage delete list, once they exist.
 3. Name the two runs that are "our two new workflow steps". The records never identified them
    (`root-audit-20261116/OLD_ROOT_LINEAGE.md` section A lists the candidates).
-3b. Correct the draft list of what we want to find out (step 2b), and say whether the earlier Claude research
-   projects are to be listed in the calculation inventory as calculations, or stay unread.
+3b. Correct the draft list of what we want to find out (step 2b). (Settled 2026-11-16: the Claude and Codex
+   research projects are listed by intended result and research angle only; their results are not kept.)
 4. Permission, or his own hand, for pushes to Markets branches other than the session's.
 5. Go and budget for pods when the first full run is ready.
 
