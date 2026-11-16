@@ -15,6 +15,9 @@ the calculated data for a trade day will be shown to Frankie one tick at a time 
 they unfold, sees what else in the market is changing at the same moment, and makes connections we may have missed.
 That only works if nothing was dropped, nothing was decided ahead of time, and no row holds anything from later.
 
+ROOT is built to run the same way on a live feed as on the historical tape: one tick at a time, forward only, using
+nothing from later. A live connection is not part of this build, but nothing in the design may prevent it.
+
 Scope of this build: front-month natural gas, the four trade days Mon Oct 2, Tue Oct 3, Tue Oct 17 and Wed Oct 18,
 2023. A trade day runs 6:00 pm Eastern the evening before to 5:00 pm Eastern on the named date.
 

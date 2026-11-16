@@ -430,6 +430,14 @@ It'll be like the blind forecast where we know what happens and he's coming up w
 - Which calculated columns are shown and which are answer key is decided with Greg, calculation by calculation.
   Until it is decided for a column, a calculated column is treated as hidden.
 - This corrects the earlier note in this file that the calculated data is all shown to Frankie one tick at a time.
+- **Open, raised by Greg right after:** "After I thought about it, he's going to have to do the calcs too because
+  that's what his real time environment will be like unless we have some other piece of calcs instead of him rt."
+  Claude's answer, awaiting Greg: ROOT is that other piece. It is built to run the same way on a live feed as on
+  the historical tape, tick by tick, so in real time ROOT does the calculating and Frankie reads its columns and does
+  the reasoning. A language model cannot keep an exact order book or do exact arithmetic on hundreds of thousands of
+  ticks at the speed they arrive. On that view, what is always hidden in playback is what happens next (the later
+  rows), which is what he forecasts and is scored on; hiding particular calculated columns on historical trade days
+  is a separate training choice, to test whether he recognizes a thing himself.
 
 ## Held for the later stage: figuring out what moves the market
 

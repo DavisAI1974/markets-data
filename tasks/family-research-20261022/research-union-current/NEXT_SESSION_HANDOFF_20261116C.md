@@ -57,6 +57,10 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. Pushes to it work f
    was made and it asked for a new sign-in.
 4. Sign-offs of the old ROOT file list, the lineage delete list and the research intentions. Still not given.
 5. Which comes first next: the calculation inventory for part 2, or building the foundation.
+7. **Who calculates in real time.** Greg's last thought: Frankie may have to do the calculations himself, because
+   that is what his real-time environment will be like, unless another piece does them. Claude's answer, not yet
+   confirmed by Greg: ROOT is that piece, running live the same way it runs on history. See the end of "What Frankie
+   sees" in the decisions file.
 6. **`CLAUDE.md` in Markets still defines the trade day as 5 pm to 5 pm.** Greg decided in this session that a trade
    day is 6 pm to 5 pm with the 5 pm to 6 pm hour as its own stretch. `CLAUDE.md` loads in every session and has not
    been changed. It needs Greg's word before the trunk is edited.
