@@ -126,6 +126,15 @@ And: "Step 1 is going to be different initially don't wipe it. Let's do the othe
 - Nothing has been deleted. The old workbooks and their calculated columns are on the lineage delete list, which
   still waits for Greg's sign-off.
 
+- **The native tape goes on the sheet: one row per tick, nothing ever collapsed.** Greg: "Yes, 1 row per tick, nothing
+  ever collapsed." Terms as agreed: *raw MBO* is the vendor's file as downloaded; the *native tape* is that file
+  opened into its records, every message exactly as the exchange sent it (adds, cancels, modifies, trades, fills,
+  clears), each with its two clocks, side, price, size, order number, flags and sequence number. The Sunday clear and
+  the block of re-listed orders are rows too, marked for what they are. Each row carries its trade day, or the mark
+  of the 5 pm to 6 pm stretch, and its position on the tape. The old sheet had rows for trades only, with the
+  messages grouped inside cells by kind. (A trade day has about 770,000 to 880,000 ticks; an Excel sheet holds
+  1,048,576 rows, so each trade day fits on its own sheet.)
+
 How the 141 fields fall (10 trade labels, L001-L099, X01-X13, S01-S19; names from
 `field-rebuild-20261113/LAYER_REGISTRY.json`):
 
