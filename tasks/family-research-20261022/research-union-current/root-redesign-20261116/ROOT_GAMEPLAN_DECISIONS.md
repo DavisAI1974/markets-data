@@ -34,6 +34,27 @@ Greg: "I want to keep roots purpose the same. I don't believe we did that well b
   is 6 pm Monday to 5 pm Tuesday.
 - **The 5 pm to 6 pm Eastern hour is its own marked stretch**, belonging to neither trade day, recorded in full. The
   book processes its messages so that it is right at 6 pm.
+- **Old ROOT outputs and old ROOT calculations are both discarded.** Greg: "Discard the old root outputs and calcs for
+  that matter ... Root was done completely wrong on different levels and we don't want that to continue. That's what
+  the replace and delete step is for." None of them goes on the timeline, none is a starting template for a new
+  calculation, and none is a test for the new ROOT. The old code is read for one thing only: what question each
+  calculation was trying to answer, so that no question is lost. Then it is replaced and deleted (deletion itself
+  still waits for Greg's sign-off of the file list and the lineage list).
+- **Everything is pinned together by timestamp.** Greg: "Everything will be pinned together by timestamp at some point
+  in the process. The calculations don't make sense if they aren't done according to their timestamps." Every value
+  is worked out at its own tick and carries that tick's two clocks and its position on the tape (the position is a
+  label that tells apart ticks sharing a nanosecond; it is never an input to a calculation).
+- **One reading per tick.** Applying the tick to the book, recording what it did, and taking values off the book are
+  one step and one record at that tick, not separate runs or separate outputs to be lined up afterwards.
+- **A stage is not finished until everything it calculated is pinned correctly.** Greg: "Whatever we calc in any stage
+  should be pinned correctly before it moves from that step." This applies to every stage, not only ROOT.
+- **Look-ahead is about the clock within the tape, not about the calendar date of a discovery.** Greg: "We consider
+  something learned at 3 pm is a look ahead at 2 pm but we don't worry about when something was discovered according
+  to the calendar. In a real world situation we will have run enough days prior that it would have discoveries made
+  in its memory ... Other than holidays there's nothing that you will learn on the 18th that you couldn't have
+  learned on the 1st." So: a value at a tick may use only data that had arrived by that tick. A discovery about how
+  the market works (a definition, a family, what dictates what) may come from any of the trade days and be applied to
+  all of them, in any order. The exchange calendar (holidays) is the exception, because it is a fact of its date.
 - **The book is the week.** It is seated at the exchange's Sunday start-up and carried straight through to Friday. The
   only restart is the exchange's own on Sunday. The trade day is how work is cut and labelled; it is not a point where
   the book starts over.
@@ -49,6 +70,42 @@ Greg: "I want to keep roots purpose the same. I don't believe we did that well b
 6. `c15_dstate.py`: not a question for ROOT any more. ROOT is redone from the ground up, tick by tick.
 
 Sign-offs of the file list, the lineage delete list and the research intentions: not yet given. Nothing is deleted.
+
+## Piece 0: put everything together (CLOSED by Greg, 2026-11-16)
+
+Greg: "Root should be putting everything together before it does the calcs. That's probably a new part of root."
+"Our full depth of over 100 fields ... should be pinned together before we calc things. That's the only way we'll
+get the true picture. Some calcs may only touch specific pieces but we should have the entire picture together before
+we start figuring out how things work." "I understand that it won't have all of the fields initially but it should
+have full mbo, and anything else that isn't calc by root."
+
+**What we want**
+- One timeline for the trade week: every tick of the full order tape (MBO), each with both clocks and its position on
+  the tape.
+- Pinned onto it, before any calculation: everything that is not calculated by ROOT, each item at the moment it
+  became known.
+- ROOT then calculates at each tick with that whole picture in view, and pins every result onto the same timeline at
+  its own tick. The pinning is checked before the next stage starts.
+- Fields from later stages join the same timeline when those stages are rebuilt. No old calculated value is put on it.
+
+**What the old ROOT does today**
+- It takes in the tape and nothing else.
+- The 13 outside data points and the other fields were attached near the end of the chain, by a separate step, and
+  only to trades (the 141-field grid; `OLD_ROOT_LINEAGE.md` section B, steps 5 and 6).
+
+**What changes**
+- The pinning moves to the start, is done once, and covers every tick.
+
+**Proposed check for "pinned correctly"** (Claude's proposal; Greg has not corrected or confirmed it line by line)
+- Every value sits on the tick it was calculated at, with both clocks and its tape position.
+- No value used data that arrived after its tick.
+- Every tick is accounted for: where a value does not exist at a tick, that is marked with the reason.
+- The counts add up: ticks in, ticks on the timeline, values pinned.
+- Running the stage twice gives exactly the same result.
+
+**Still to do for this piece (reading only):** sort the workbook's 141 fields one by one into pinned at the start,
+calculated by ROOT, calculated by a later stage, or Frankie's; and find where the outside data files for the four
+trade days are kept. An outside value that cannot be found stays empty with a note.
 
 ## Piece 1: the order book (CLOSED by Greg, 2026-11-16)
 
@@ -119,6 +176,15 @@ of each resting order, then the cancel or modify that takes the filled size out 
 messages change nothing in the book by themselves; adapter 529-530). Between those ticks the book still shows size
 that has just traded. ROOT records each tick as it comes and marks which tick ends the event, so a reader can take
 the book after any tick or only at event ends. Nothing is decided ahead of time.
+
+## Piece 3 (WITHDRAWN as first drafted)
+
+The first draft of "what ROOT reads off the book" was the old ROOT's book readings with edits (best prices, top-10
+and whole-book totals, imbalance, per-level summaries, up/down labels). That carried the old ROOT forward, so it is
+withdrawn. What ROOT calculates after the book and the per-tick record is decided fresh. The shape agreed on
+2026-11-16 (second session) already names the next fresh piece: every change of state the tape shows (a level
+appears or empties, the best price moves, an order joins, shrinks, grows, moves or leaves, the front of a line
+changes), each at its own tick, defined from the tape and not from the old sections.
 
 ## Facts established in this session (real tape and exchange documents)
 
