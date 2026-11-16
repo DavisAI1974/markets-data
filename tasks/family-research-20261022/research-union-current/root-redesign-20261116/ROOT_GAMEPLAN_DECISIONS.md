@@ -621,6 +621,41 @@ until we entered the new data." So the empty Step 1 columns are by decision, not
 data is entered, base and growth side by side. Greg: "Look in git for step 1": the search for where the 2021 base is
 kept in git is under way.
 
+**First built piece: the `outside` tables (2026-11-16, on Opus).** Markets branch `ccr-ddc0ebeb-do2y3o`, commit
+`a1b3ad2`: `root/calendar.py`, `root/outside.py`, `root/DECLARED_CONSTANTS.md`, `tests/root/` (20 tests, all passing on
+the real files). The tables, their receipt and a small workbook of them (`outside_tables.xlsx`) are in markets-data at
+`data/outside/ng_oct2023/made/`. Read by eye and tested: positioning equals the CFTC file; the release rule moves a
+report a business day in a holiday week; the expiry count is 3, 4, 14, 15 for the four trade days (NGV23 expired
+Sep 27, 2023); each forecast on a row is the last run known before the open; Boston's missing hour on Oct 2 stays
+missing; the curve's front-month trades equal the order tape; the shape at each open is the previous settlement; two
+builds give identical bytes; every number in the code is declared. Two corrections found while reading the output:
+the 16 city weights are scaled to add up to 1, as the original did; and last prices on the curve start fresh where
+the held curve files have a gap (Oct 4 to 15), so no Oct 3 price is carried into Oct 16. **Not made yet:** storage
+(X11) and the storage estimate (X12): reading the EIA's `.xls` files needs one small library (`xlrd`), which the spec
+says is asked for first.
+
+**Step 1 in git (Greg: "Look in git for step 1"; searched 2026-11-16).** Greg also sent
+`NG_EXHAUSTION_CHAIN_PHASE2_GATE_20260817.json`, the gate into Phase 2 of the natural gas exhaustion chain work. Found:
+- **What is in git (Markets):** the programs (the frozen detector `research/ng_exhaustion_chain_canonical_table_20260817.py`,
+  the 54-week merge and shard, the held week, the Phase 1 agents and the 55-week reconciliation, on branches
+  `chatgpt/ng-exhaustion-chain-full-history-phase1-20260817` and `-phase2-20260817`); the freeze records (the 54-week
+  base freeze lists the 55 weeks: 2025-06-29 to 2026-07-12, the week of 2026-03-29 held aside and inserted later); the
+  gate and its Step-0 verification (235,170 events over 55 weeks, no mismatches); the Phase 2 findings documents; the
+  frozen family classifier (`research/FRANKIE_NG_PRE_FAMILY_CLASSIFIER_FROZEN_OPERATIONAL_20260817.json`, families
+  A, B, C as centroids over 78 features); and, for the later 2021 census, its programs and summary counts only.
+- **What is NOT in git:** the event tables themselves. The 54-week base (231,532 events), the held week (3,638) and the
+  reconciled 55-week set were kept only as GitHub Actions artifacts (ids 9281733364, 9281272840, 9306082330). They are
+  past GitHub's retention and return "not found". The 2021 census outputs were written to the AWS worker's disk.
+- **What they were made from:** the continuous order-book tape on S3 (`nymex/nymex_cont/`), not the full order tape
+  this rebuild uses. That fits Greg's word that the original Step 1 "weren't run on mbo or this depth".
+- **So the base can be rebuilt, not copied:** the frozen code is in git, and the gate records the fingerprint of each
+  event table (`event_table_uncompressed_sha256`), so a rebuild can be proved identical to the original. The input
+  tape is on AWS, which is off limits today.
+- **Hard-coded boundaries seen in the Step 1 programs** (for the list owed to Greg): the lineage followed back at most
+  5 generations; 52-week and 26-week blocks; a 20-second roll and a 0.85 quantile threshold per UTC clock day; a
+  45-second refractory gap; horizons 5 to 300 seconds; a 2-tick material move; the top 10 book levels; weeks and days
+  cut on the UTC clock day (against the trade-day rule); the classifier frozen on 2026-08-17.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
