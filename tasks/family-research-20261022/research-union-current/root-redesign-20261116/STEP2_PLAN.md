@@ -43,6 +43,12 @@ This session builds nothing, runs nothing, and writes to this file only.
   to start defining a trade and the parts of its life. Laid out as I and J in "The suggestions laid out together".
   This corrects Claude's earlier reading of "the lifecycle of a trade": a trade is anchored on a leg, a move in
   price, and Step 1's turns mark the parts of its life.
+- 2026-11-16, told that "yes" approves A to D and I as laid out, or to name what to change: "Include all of your
+  pieces. Again we don't have to pick and choose. We aren't limited in any way."
+  Read as: his yes to every piece, A through J, as laid out. None is dropped and none is put ahead of another as a
+  choice. Nothing is to be limited: so H is every instance, not a selection (changed below). The two checks named
+  in D and I still come before those two are placed. The code session builds; this session does not.
+  K was added by Claude after this word. He has not seen it and it is not covered by this yes.
 
 ## The merged plan, by Greg's aims (Claude's proposal, 2026-11-16; nothing approved, nothing built)
 
@@ -94,8 +100,9 @@ candidate it had. That pass used the old one-second series, so the list is what 
 
 ## The suggestions laid out together (2026-11-16)
 
-Status: LAID OUT, awaiting Greg's word. Nothing is built or run. On his yes the code session builds; this session
-does not.
+Status: A through J INCLUDED on Greg's word, 2026-11-16: "Include all of your pieces. Again we don't have to pick
+and choose. We aren't limited in any way." K is laid out and awaits his word. Nothing is built or run yet. The
+code session builds; this session does not.
 
 Five are new calculations (A to D, and I). Four need no new calculation, because the others and Step 1 already
 carry them (E to G, and J). One is a way of seeing the result (H). All follow the standing rules: only the four
@@ -236,9 +243,9 @@ So a chain's shape is every member's own recorded shape, one after another, with
 
 ### F. Where in the trade day (no new calculation)
 
-The clock, the trade day, the 5 pm to 6 pm stretch and the settlement window are on every row. The old Step 2
-did not use them. At the grouping stage they are one more thing every peak, chain and dipole is looked at
-against.
+The clock, the trade day, the 5 pm to 6 pm stretch and the settlement window are on every row, and so are the
+13 outside data points. The old Step 2 did not use them. At the grouping stage they are more things every peak,
+chain, leg and dipole is looked at against.
 
 ### G. The small peaks (no new calculation)
 
@@ -252,8 +259,9 @@ stacked on the same clock. The layers: the flow, the peak's turns, the open stor
 the price, the dipole's stages. Drawn from the stored rows and facts, with the plotted points reconciled to the
 rows on every chart. No part of a life is cut away from the rest.
 
-Claude's call: the program draws any instance on request, and all the dipoles. How the full set for 34,278 peaks
-is delivered is asked once the first ones are in view.
+Changed on Greg's word ("we don't have to pick and choose"): every instance is rendered. Every peak with its
+chain, every dipole, every leg. None is selected and none is left out. A set that size is written in parts, the
+way the workbook is, and each chart's plotted points are reconciled to its rows.
 
 ### I. The legs beside the peaks (added on Greg's word, 2026-11-16)
 
@@ -327,12 +335,39 @@ Claude's guess, held loosely: the quote's run and the flow's rise will not line 
 the eight large lasting cases of 2026-11-13, the buying and selling in the 5 seconds before the leg leaned with
 the leg in two, against it in two, and was even in four. The lists of I are what will tell us.
 
+### K. The resting orders through a peak and a leg (added by Claude after Greg's word; awaits his word)
+
+**What we want.** What became of the orders that were resting in the book at each turn: of the orders resting at
+a peak's high, or at the start of a run of the quote, how many were later filled, pulled, moved, or were still
+resting at the next turn. C says how much size came and went. This says whether it was the same orders.
+
+**What the earlier work did.** Did not follow orders from one event to the next.
+
+**What the rows hold.** Each order's life is already followed row by row: where it first entered, each step, and
+on the row where it leaves, whether by cancel or by fill.
+
+**What is written.** Facts, at the tick of each later turn of a peak's story or a leg, naming the earlier turn:
+of the orders resting on each side at the earlier turn, the number and the size that by this tick had been filled,
+had been pulled, had moved price, and were still resting. For the whole side, and at the best price of the
+earlier turn.
+
+**Claude's calls.**
+- The order number only ties an order's rows together. It is never a value in a calculation, as already ruled.
+- An order carried from before the trade day is counted with its mark saying so.
+- These are counts and sizes of single orders, each of which stays on its own rows. No average is taken.
+
+**Not promised.** How many facts this makes. Reported after the first trade day, and Greg hears before anything
+is capped.
+
+**Needs.** The rows, piece 2 and I.
+
 ### The order they can be built in
 
 - C and the quote's runs of I now, beside piece 2. They need only the rows.
 - A and B after piece 2.
 - D and the rest of I after A and B, once the checks on Native's record and on the earlier legs are done.
 - H after D and I, with the legs as one more layer.
+- K after I, if he says yes to it.
 - Then the grouping stage, with Greg. J is settled there.
 
 ### Every call of Claude's in this layout, in one place, his to correct
@@ -344,7 +379,7 @@ the leg in two, against it in two, and was even in four. The lists of I are what
 4. Nothing crosses 6 pm.
 5. Book totals: added, pulled, filled, moved; whole side and at the best price; from zero at 6 pm.
 6. The dipole: Native's own record, marked as such, placed at the tick each stage could be known.
-7. Renders: any instance on request, all dipoles; delivery of the full peak set asked later.
+7. Renders: every instance, none selected (changed on Greg's word).
 8. The old paper play stays in git as the record and is not carried into the calculations.
 9. Legs: the quote's own runs are recorded, best bid and best ask separately, no midpoint, no minimum size; the
    earlier print legs are kept unchanged beside them.
