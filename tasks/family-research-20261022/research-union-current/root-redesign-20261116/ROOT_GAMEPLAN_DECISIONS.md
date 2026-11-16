@@ -263,6 +263,22 @@ it they don't think there's missing data."
 The wording is in `WORKBOOK_README_PAGE.md` in this folder. It becomes the first sheet of the rebuilt workbook and is
 kept current as each piece closes.
 
+Greg also asked for a page in the workbooks that exist today ("Yes add the page"). Done 2026-11-16 for the two held
+in git: a first sheet named "READ ME FIRST" saying the workbook predates the rebuild, why its calculated values are
+not relied on, its known gaps, and where the current state is written. Added with `tools/add_readme_page.py`, which
+copies every existing part unchanged and adds one entry to each of the workbook's three index files; the page was
+read back from both files and the next sheet of each still opens. Page text: `tools/page_four_day.txt`,
+`tools/page_priority.txt`.
+
+| Workbook | SHA256 before | SHA256 after |
+|---|---|---|
+| `Frankie_four_day_research_current.xlsx` | `70b57f3d4843997b970d8a78df1fb1d3ce8a897c0ac318a21d62e242f49d6be4` | `9d7b8959a7eecdb31eb13bb66861b6187b9b9ea0eef1f75b4b2d794469ba13aa` |
+| `Priority_native_flow.xlsx` | `544a60f22b9d755214b7ade279eb67ca19ac220f68e7c403068694b8ca70ad94` | `543fc05be948018cb0b6fbf1868d3750babe841f0c94076e438b8b0539021e78` |
+
+Fingerprints of these two files recorded in older manifests in this folder are the "before" values.
+Not done: the 500 MB R2 workbook is a GitHub release file, not a file in the repository, and this session has no
+tool that can replace a release file.
+
 ## Piece 3 (WITHDRAWN as first drafted)
 
 The first draft of "what ROOT reads off the book" was the old ROOT's book readings with edits (best prices, top-10
