@@ -309,8 +309,9 @@ it's needed"; the fifth was then withdrawn, see below.)** Each is read straight 
 
 **Vendor snapshot records.** Each raw file opens with the vendor's own restatement of the book. These are not
 messages from the exchange at that moment, so they are not ticks. They are kept in their own table beside the
-timeline, each compared with the carried book and the result recorded. Records in a raw file = tick rows + snapshot
-records, and the README page states both counts so they reconcile. (The Sunday clear and the exchange's re-listing of
+timeline, each compared with the carried book and the result recorded. Records in a raw file = rows written + ticks run
+through the book but not written (warm-up and shelved hours) + snapshot records, and the README page states the
+counts so they reconcile. (The Sunday clear and the exchange's re-listing of
 carried orders are rows on the timeline, marked.)
 
 ## Facts established in this session (real tape and exchange documents)

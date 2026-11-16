@@ -52,6 +52,9 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. Pushes to it work f
    was made and it asked for a new sign-in.
 4. Sign-offs of the old ROOT file list, the lineage delete list and the research intentions. Still not given.
 5. Which comes first next: the calculation inventory for part 2, or building the foundation.
+6. **`CLAUDE.md` in Markets still defines the trade day as 5 pm to 5 pm.** Greg decided in this session that a trade
+   day is 6 pm to 5 pm with the 5 pm to 6 pm hour as its own stretch. `CLAUDE.md` loads in every session and has not
+   been changed. It needs Greg's word before the trunk is edited.
 
 ## How Greg wants the work done (learned in this session)
 
@@ -92,3 +95,8 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. Pushes to it work f
 - **Where new ROOT code goes:** the Markets repository, folder `root/` with tests in `tests/root/`, on the session's
   own Markets branch.
 - `pip install databento pyarrow` is needed in a fresh container; the seven raw MBO files read cleanly.
+- **To verify on the tape before the `tape` part is planned:** whether the exchange's Sunday block of re-listed
+  orders carries the vendor's snapshot flag (it decides whether those records are rows or snapshot records).
+- **"No trades between 5 pm and 6 pm"** was counted on two evenings only (Mon Oct 2 and Tue Oct 17). The build's
+  own counts will show the other evenings.
+- **The "READ ME FIRST" sheets** added to the two workbooks were read back by program. They were not opened in Excel.

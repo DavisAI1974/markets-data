@@ -23,8 +23,11 @@ that as a fault and report it.
 ## What a row is
 
 - **One row is one tick: a single message from the exchange.** An order added, cancelled or changed, a trade, a fill,
-  or a clearing of the book. Every message has its own row, in the order the tape gives them. Nothing is merged,
-  grouped, sampled or left out.
+  or a clearing of the book. Every message inside a trade day, and in the 5 pm to 6 pm stretch on each side of it,
+  has its own row, in the order the tape gives them. Nothing is merged, grouped, sampled or left out.
+- Messages from other days of the same week are not rows here. They were still run through the order book, so the
+  book is correct at the first row of every sheet. The counts at the end of this page show how every record in the
+  raw files is accounted for.
 - Several rows can carry the same time down to the nanosecond. They are still separate ticks, in tape order.
 - **A trade usually takes several rows:** the trade itself, the fill of each resting order, and then the cancel or
   change that takes the filled size out of the book. Between those rows the book still shows size that has just

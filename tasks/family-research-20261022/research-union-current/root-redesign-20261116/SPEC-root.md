@@ -22,8 +22,8 @@ Scope of this build: front-month natural gas, the four trade days Mon Oct 2, Tue
 
 ### 1. The timeline: one row per tick
 
-A tick is one single message from the exchange. Every tick has a row, in tape order. Nothing is merged, grouped,
-sampled or left out. Ticks that share a nanosecond stay separate rows.
+A tick is one single message from the exchange. Each written tick is one row, in tape order. Within what is
+written, nothing is merged, grouped, sampled or left out. Ticks that share a nanosecond stay separate rows.
 
 **Which ticks get rows** (proposed; see open question 1). The book walks every tick of the week from the exchange's
 Sunday start-up. Rows are written for:
@@ -45,13 +45,13 @@ Each row carries the following. "Touched" means the order or price that this tic
   side, price, size, order number, the exchange's flags and sequence number, channel, contract number.
 
 **B. Our labels** (never used in a calculation)
-- Trade day, or the mark of the 5 pm to 6 pm stretch. The label is decided by exchange time.
+- One of three labels, decided by exchange time: a trade day; the 5 pm to 6 pm stretch; or the exchange's Sunday
+  start-up (before 5 pm on Sunday).
 - Position on the tape, numbered fresh across the week.
 - The raw file the row came from, with that file's fingerprint.
 - The contract, read from the tape's own symbol record. (The expiry date is not on the order tape; it joins when
   the exchange's contract definitions are held.)
-- The part of the exchange's session: the trade day, the 5 pm to 6 pm stretch, the 2:28 to 2:30 pm Eastern settlement
-  window.
+- The 2:28 to 2:30 pm Eastern settlement window, marked on the rows inside it.
 - The exchange's event label: which ticks belong to the same exchange event. It is the position of the event's first
   tick, so it is known as soon as the event starts. The exchange's own end-of-event flag stays on the tick that
   carries it.
@@ -131,8 +131,8 @@ The foundation does not do these. They are part 2 or later work:
 1. **Put everything together.** Read the raw files of the trade week in order. Prepare the 13 outside data points
    and pin them, and check them.
 2. **One pass.** Walk the tape once from the exchange's Sunday start-up. One book is kept in memory for the whole
-   week and is never restarted. Each tick is applied to the book, its row is written, and everything in sections A
-   to G is taken at that tick, in that one step.
+   week and is never restarted. Each tick is applied to the book. For a written tick, its row is made in that
+   same step, with everything in sections A to G taken at that tick.
 3. **Warm-up.** Ticks that belong to no built trade day are run through the book so that it is right when the next
    written row comes. Nothing is written out for them.
 4. **Check the pinning.** Only when every check below passes is ROOT finished for that trade day. No later stage
@@ -159,10 +159,12 @@ all four.
 
 ROOT is done for a trade day when all of these hold, each shown in the receipt.
 
-1. **Every record is accounted for.** For each raw file, records in the file = tick rows + vendor snapshot records,
-   counted independently of the pass. No tick is skipped, merged or reordered.
+1. **Every record is accounted for.** For each raw file, records in the file = rows written + ticks run through the
+   book but not written (warm-up and shelved hours) + vendor snapshot records. Each of the three is counted, and the
+   file's total is counted independently of the pass. No tick is skipped, merged or reordered.
 2. **The trade day is cut right.** Rows labelled with a trade day have exchange times from 6:00 pm Eastern the evening
-   before to 5:00 pm Eastern on the named date. Rows from 5:00 pm to 6:00 pm carry the separate mark.
+   before to 5:00 pm Eastern on the named date. Rows from 5:00 pm to 6:00 pm carry the stretch mark, and Sunday
+   rows before 5:00 pm carry the start-up mark.
 3. **The book matches the exchange.** At the opening of every raw file after the first of the week, our carried book
    equals the snapshot there: the same orders, sides, prices and sizes, and the same order in every line. The
    snapshot's time for each order equals the exchange time at which we say that order last took its place. (Both
@@ -221,7 +223,7 @@ python3 -m pytest tests/root                        # all checks, on the held ta
 ## Project structure
 
 ```
-Markets repository, branch ccr-1adaee3f-6ame3b
+Markets repository, on the building session's own branch
   root/                 the new ROOT: calendar.py, tape.py, book.py, rows.py, outside.py, store.py, checks.py,
                         sheet.py, run.py, DECLARED_CONSTANTS.md
   tests/root/           tests, real tape only
@@ -265,8 +267,8 @@ def trade_day_bounds(trade_day: date) -> tuple[int, int]:
 - **Never:** drop, merge, sample or reorder a tick; restart the book inside the week; write anything onto a row from
   a later tick; apply a vendor snapshot after the week's start; use an order number, trade number, position or clock
   reading as a value in a formula (they tell things apart and find things; a length of time, such as how long an
-  order has rested, is a measured quantity and is allowed); put a cost or fee into anything; invent data; use the old ROOT, its outputs or the
-  old sheet as a source or as a test.
+  order has rested, is a measured quantity and is allowed); put a cost or fee into anything; invent data; use the
+  old ROOT, its outputs or the old sheet as a source or as a test.
 
 ## Open questions for Greg
 
@@ -282,7 +284,6 @@ def trade_day_bounds(trade_day: date) -> tuple[int, int]:
    before the full workbook is written. The same trial settles how a line too long for one cell is written.
 4. **Where the stored rows live.** Proposed: git, on one branch per trade day with a file list, as the book pictures
    were stored yesterday.
-
 5. **The exact column list.** Sections A to G say what a row holds. The list of column names, their order and which
    workbook field each one fills is drafted at the planning step and brought to you before the `rows` part is built.
 
