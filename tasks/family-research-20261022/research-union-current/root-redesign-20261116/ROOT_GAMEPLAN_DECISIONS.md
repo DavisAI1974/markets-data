@@ -697,6 +697,31 @@ fixed window (the family rule reads a 20-second roll over the 60 seconds before)
 each is carried over is worked out then. The old outputs stay where they are, in git, as the record of what the
 definitions found on their own dates.
 
+**What depth the Step 1 rerun uses: raised by Greg, 2026-11-16, not yet decided.** "Yes codex was looking. If we have
+the correct step1 for these days, absolutely use that. That solves some problems. But we still have to rerun once we
+get the depth that we want to get the best output. The run you have didn't use all of the available data. So we have
+to decide is full mbo enough or do we need almost all the layers. But we should decide those things first and the
+decision will be made based on best output not easiest to do."
+
+Facts checked the same hour, for that decision:
+- **No correct Step 1 exists for the four trade days.** The only family work on any of them is Desktop's for trade day
+  Oct 18 (Markets `artifacts/sqlite-triage/20261022/families/`): 749 open-world families read out of the old ROOT
+  run's derived structures (`.../experiment-roots/e2e-20231018-.../work/derived/.rows/structures.jsonl`). It rests on
+  old ROOT output, covers one trade day of the four, and its own audit says the export does not keep the links from a
+  family to its birth, timestamps or terminal state. The frozen Step 1 detector and family classifier were never run
+  on October 2023.
+- **What "the layers" add beyond the full order tape.** Sorting the 99 layers, the 13 outside points and the 19 S
+  fields of `LAYER_REGISTRY.json`: 69 are the front-month order tape itself or are worked out from it (L027 to L076,
+  S01 to S19: messages, order lives, the full book and its lines, flow, depletion and refill, dipoles, families,
+  pre-births, clocks). The full order tape already contains everything they contain. What is NOT on the front-month
+  tape: the 13 outside points (X01 to X13, which include the other contract months through the curve). The rest are
+  not market data for a tick: reference documents and knowledge (L001 to L023, L081, L082), the 2021 objects and
+  Step 1 answers (L024 to L026, L080, L083 to L089), and Frankie's outputs (L077 to L079, L090 to L099).
+- Greg's earlier words bear on it: "our full depth of over 100 fields ... should be pinned together before we calc
+  things. That's the only way we'll get the true picture. Some calcs may only touch specific pieces but we should
+  have the entire picture together"; "everything that we have gets run"; "when we decide ahead of time, we're killing
+  our own research silently".
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
