@@ -36,12 +36,19 @@ This session builds nothing, runs nothing, and writes to this file only.
   Read as: every suggestion is laid out for him together, in full, as the rest of Step 1 was. It is not read as a
   word to build or run: this session builds and runs nothing, and each calculation is approved by him first. The
   layouts are in "The suggestions laid out together" below.
+- 2026-11-16, on the trade legs: "And let's take the next step from step 1 metaphorically and start looking at
+  how our calcs start to act in relation some way with the trade legs. Can we take things from st1 and use them in
+  some way to start defining trades or dirrerent parts of the trade lifecycle"
+  Read as: the step after Step 1 is to lay what Step 1 records against the trade legs, and to use Step 1's turns
+  to start defining a trade and the parts of its life. Laid out as I and J in "The suggestions laid out together".
+  This corrects Claude's earlier reading of "the lifecycle of a trade": a trade is anchored on a leg, a move in
+  price, and Step 1's turns mark the parts of its life.
 
 ## The merged plan, by Greg's aims (Claude's proposal, 2026-11-16; nothing approved, nothing built)
 
-**Claude's reading of two words, his to correct.** "The lifecycle of a trade" is read as the life of one move in
-the market: the build-up, the high of the flow, the fade, the ending, and what price did after. That is what
-Step 1 records per peak and Step 2 links into chains. "The dipole" is the Native dipole with its own life: before
+**Claude's reading of two words, corrected by Greg the same hour.** "The lifecycle of a trade" was first read
+as the life of one peak. On his word about the trade legs it is: a trade is anchored on a leg, a move in price,
+and Step 1's turns mark the parts of its life (see I and J). "The dipole" is the Native dipole with its own life: before
 birth, birth, recognition, what follows, exhaustion.
 
 Everything sits on the same tick rows, each fact at the tick it became known. Four layers, then the grouping.
@@ -90,8 +97,8 @@ candidate it had. That pass used the old one-second series, so the list is what 
 Status: LAID OUT, awaiting Greg's word. Nothing is built or run. On his yes the code session builds; this session
 does not.
 
-Four of the suggestions are new calculations (A to D). Three need no new calculation, because A to D and Step 1
-already carry them (E to G). One is a way of seeing the result (H). All follow the standing rules: only the four
+Five are new calculations (A to D, and I). Four need no new calculation, because the others and Step 1 already
+carry them (E to G, and J). One is a way of seeing the result (H). All follow the standing rules: only the four
 trade days; a row holds only what was known at its tick; nothing is written back; no fixed marks, labels, caps or
 minimum counts; empty is never zero; every trade individually; no cost of trading anywhere.
 
@@ -248,17 +255,90 @@ rows on every chart. No part of a life is cut away from the rest.
 Claude's call: the program draws any instance on request, and all the dipoles. How the full set for 34,278 peaks
 is delivered is asked once the first ones are in view.
 
+### I. The legs beside the peaks (added on Greg's word, 2026-11-16)
+
+**What we want.** Every leg on the same rows as the peaks, so that for every leg, and for every peak, we can see
+case by case how the flow and the move in price stand to each other. This is the step after Step 1: what Step 1
+records, laid against the trade legs.
+
+**What the earlier work did.** The leg was made from trade prices: a run of prints stepping one way. The
+independent pass of 2026-11-13 measured 23,615 such legs on the four dates. Of the 13,661 legs one print tick
+long, the quote did not move with the leg in 85.6 of 100: the prints were going back and forth between the bid
+and the ask. Of the 32 selected cases, the 8 large lasting ones were moves of the quote of 3 to 8 ticks. That pass
+could not see the quote between trades. The eight trade types (large or small, up or down, lasting or brief) were
+names given by how each leg turned out.
+
+**What is different now.** The rows carry the best bid and the best ask at every tick, with a mark on the tick
+each one moves. So a move in price can be read from the quote itself, at every tick, and not only where a trade
+happened to print.
+
+**What is written.**
+- The quote's own runs, as facts at the tick each becomes known, the same way a peak's story is written: a run of
+  the best bid starts, each new furthest price it reaches, and its first step back. The same for the best ask.
+- The print leg as the earlier work defined it, unchanged, placed on the rows at the tick each of its turns
+  became known. It is Greg's existing material and stays.
+- On each leg fact line, the peaks in play: the nearest peak on each side (the tick of its high), the time since
+  that high, and where its story stood (rising to its high not yet known, fading, past zero, ended).
+- On each peak fact line (the high becoming known, each new low, reaching zero, coming back, beaten): the run of
+  the quote in progress at that tick on each side, which way it is going, how far it has gone so far, and the time
+  since it started.
+
+**Claude's calls.**
+- The best bid and the best ask are followed separately. They are not combined into a midpoint, which is an
+  average of two prices.
+- A run ends at the first step back, whatever its size. No minimum length and no minimum size: one-tick runs are
+  kept, as every peak is kept.
+- The eight trade types are not assigned in advance (his rule on labels). They are the base for grouping legs at
+  the grouping stage, as A, B and C are for peaks.
+- A run never crosses 6 pm.
+
+**To settle first.** Whether the earlier print legs were cut on the old day boundaries. The code session checks,
+as for Native's record.
+
+**Not promised.** How many runs of the quote there are. Reported after the first trade day, and Greg hears before
+anything is capped.
+
+**Needs.** The quote's runs need only the rows and can run now, beside C. The lines that name peaks need piece 2.
+
+### J. The parts of a trade's life, from Step 1's turns (no new calculation; a way of defining)
+
+Greg asked whether things from Step 1 can be used to start defining trades or the parts of a trade's life.
+Claude's answer: yes. Each thing Step 1 records about a peak is a turn at a known tick, and a part of a trade's
+life can be defined as the stretch between two turns. No length of time and no level is picked.
+
+| Turn, as Step 1 records it | The stretch it opens |
+|---|---|
+| The low the rise started from | The flow building on one side |
+| The high | The push at its most one-sided |
+| Each new low of the fade | The push giving out, step by step |
+| Reaching zero | The push spent |
+| Coming back, or beaten by a larger peak | The same side pushing again |
+| A peak on the other side becoming known | The other side taking over |
+
+Beside these go the leg's own turns from I: the quote starts to run, reaches its furthest price, takes its first
+step back.
+
+A trade is then anchored on a leg, with the peak stories around it as its parts: what the flow was doing before
+the quote started to run, while it ran, and after its first step back. Which of Step 1's turns the leg's turns sit
+on, and in what order, is not assumed. It is read from the lines of I, case by case, and the definition of each
+part is settled with Greg at the grouping stage from how they line up.
+
+Claude's guess, held loosely: the quote's run and the flow's rise will not line up the same way in every leg. In
+the eight large lasting cases of 2026-11-13, the buying and selling in the 5 seconds before the leg leaned with
+the leg in two, against it in two, and was even in four. The lists of I are what will tell us.
+
 ### The order they can be built in
 
-- C now, beside piece 2. It needs only the rows.
+- C and the quote's runs of I now, beside piece 2. They need only the rows.
 - A and B after piece 2.
-- D after A and B, once the check on Native's record is done.
-- H after D.
-- Then the grouping stage, with Greg.
+- D and the rest of I after A and B, once the checks on Native's record and on the earlier legs are done.
+- H after D and I, with the legs as one more layer.
+- Then the grouping stage, with Greg. J is settled there.
 
 ### Every call of Claude's in this layout, in one place, his to correct
 
-1. "A trade's lifecycle" is the life of one move: build-up, high, fade, ending, price after.
+1. A trade is anchored on a leg, a move in price. The parts of its life are the stretches between Step 1's turns
+   (corrected on Greg's word; see J).
 2. Links: one back on each side, followed back as far as wanted; no cap.
 3. No peak left out for closeness or overlap.
 4. Nothing crosses 6 pm.
@@ -266,6 +346,9 @@ is delivered is asked once the first ones are in view.
 6. The dipole: Native's own record, marked as such, placed at the tick each stage could be known.
 7. Renders: any instance on request, all dipoles; delivery of the full peak set asked later.
 8. The old paper play stays in git as the record and is not carried into the calculations.
+9. Legs: the quote's own runs are recorded, best bid and best ask separately, no midpoint, no minimum size; the
+   earlier print legs are kept unchanged beside them.
+10. The eight trade types are the base for grouping legs later, not assigned in advance.
 
 ## The original intent, what is worth keeping, and the gaps (Claude's view, put to Greg 2026-11-16)
 
