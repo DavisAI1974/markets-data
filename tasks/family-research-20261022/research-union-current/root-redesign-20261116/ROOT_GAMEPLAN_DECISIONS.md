@@ -745,6 +745,40 @@ what goes into making 2nd column." Read as, and played back to him:
 read-only library for the EIA's own `.xls` files and blocks only the storage tables. It is added at the next build
 stretch unless Greg says no.
 
+**Merge, not scrap: the Step 1 knowledge base (Greg, 2026-11-16).** "That's fine about not having the old version of
+these days. We will run on the new data and use those outputs to expand on the 55 wk findings and research along with
+last week's to come up with a new step 1 outputs knowledge base instead of scrapping our prior work we'll merge. If
+there's conflicting findings for things, do a deeper dive. Chances are it's just the new run giving a better answer
+but it could be 2 outcomes on what looks like exact situations. Do you have a clean way to merge everything or does
+the months old data create problems while also adding nothing? You tell me".
+
+Claude's answer, given to him the same hour (a proposal until he says yes; no specification is written):
+- **The old work adds something the four trade days cannot:** breadth. 55 weeks and 235,170 events against four
+  trade days; things too rare to appear in four trade days (the gate counts chains 4 deep 9 times and 5 deep once in
+  about 153,000); and the vocabulary itself (the families, the chain states P, O, S, X, the repeating pairs and
+  triplets).
+- **It causes problems only if it is merged as data.** It was measured with a different instrument (one reading a
+  second, the top 10 levels, fixed windows, UTC clock days) on different dates, and part of it is stated as lift
+  ratios, model scores and profit rankings with assumed costs, which Greg's rules keep out as findings.
+- **The clean way:** the knowledge base is a list of statements, never mixed rows. Each old finding enters as one
+  statement carrying what it was measured on (dates, tape, definition). Each new-run result is attached to the
+  statement it bears on. A statement is then confirmed, sharpened, in conflict, or not seen yet. "Not seen yet" is
+  its own status for things too rare for four trade days; it is not a contradiction. Ratios, scores and rankings
+  enter as questions to re-ask per event, not as findings.
+- **A conflict gets the deeper dive, by cause:** the definition, the depth, the dates, or two real outcomes from
+  what looks like the same situation. The two Step 1 columns separate the first two. The dates cannot be separated
+  while old and new share no dates.
+- **What would make it fully clean, found in git the same hour:** the 5-year full order tape is on S3
+  (`nymex/ng_mbo_5y_v0/`, manifest `research/kalshi/NG_EXHAUSTION_MBO_5Y_CANONICAL_OBJECT_MANIFEST_20260822.json`:
+  1,565 daily objects, Aug 2021 to Aug 2026, 26.6 GB). It covers every one of the 55 weeks and every weekday of
+  October 2023. So the new ROOT can later be run on the old weeks themselves, and old and new measured on the same
+  events. It also lets the first Step 1 column be proved a faithful copy, by running one old week through it and
+  matching the gate's fingerprints. Both need AWS, which is off limits today.
+- **"Last week's" has two readings:** Desktop's family work for trade day Oct 18 (still in Markets), or the Codex and
+  Claude research results removed from the branch today, which Greg had ruled not kept. Nothing is lost either way:
+  the removed files are in the commit before `ee4da3f` and on three older branches. Nothing is restored without his
+  word.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 

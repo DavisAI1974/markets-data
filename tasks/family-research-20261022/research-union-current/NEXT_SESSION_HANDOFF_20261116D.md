@@ -61,6 +61,18 @@ as the starting point; C lists as open several things that are now closed.
 - **Not decided, raised to Greg:** buying the other contract months' full order tape ($4.83), and how many trade
   days the families are grown from.
 
+- **Merge, not scrap.** The new run's outputs are merged with the 55-week findings into a new Step 1 knowledge base;
+  conflicts get a deeper dive. Claude's proposed way of doing it (statements with what each was measured on, never
+  mixed rows) is in the decisions file, awaiting Greg's yes. The 5-year full order tape on S3 covers the 55 weeks and
+  all of October 2023, so old and new can later be measured on the same events once AWS is back.
+
+## Where the ROOT code is (read this before building)
+
+**The new ROOT code exists only on Markets branch `ccr-ddc0ebeb-do2y3o`** (commits `a1b3ad2` and `6208460`: `root/` and
+`tests/root/`). A new session is given a new, empty branch. Start by bringing that work in:
+`git fetch origin ccr-ddc0ebeb-do2y3o && git merge --no-edit FETCH_HEAD` (or cherry-pick the two commits), then run
+`MARKETS_DATA=<markets-data checkout> python3 -m pytest tests/root -q` and see 21 pass before adding anything.
+
 ## What to do next (on Opus, with the Fable advisor; a fresh session is suggested)
 
 - Storage tables (X11, X12 actual) with `xlrd`, unless Greg has said no.
