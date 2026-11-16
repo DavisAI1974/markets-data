@@ -76,6 +76,9 @@ for his word with the rest.
   behind fields L001 to L026, L081, L082; not old ROOT output).
 - `ACTION_PLAN_20261116.md` and the `NEXT_SESSION_HANDOFF_*` files.
 
+- **Step 1.** The Step 1 columns of the workbook, the 2021 family definitions and the Step 1 programs in the Markets
+  repository all stay (Greg: "That stays ... It just gets built on top of"). Nothing on this list holds a Step 1 value.
+
 ## Not removed with this list
 
 - `trade-day-rebuild-20261116/` and the four `trade-day-book-*` branches: yesterday's stand-in replay and book

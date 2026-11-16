@@ -27,6 +27,10 @@ as the starting point; C lists as open several things that are now closed.
   orders at one price on the held tape is 49, so a full line always fits in one cell.
 - **Part 2 shape confirmed,** with three rules: nothing is stated twice; every calculation is looked at before it is
   run; columns may be eliminated later on Greg's decision, everything is kept for now.
+- **Step 1 stays and is built on top of.** Its columns stay in the workbook; the 2021 definitions and data are the
+  base; the new data expands it once the hard-coded cutoffs are listed for Greg and removed. Base and growth go in
+  separate columns. It is handled with the calculations of part 2, not the foundation.
+- **The raw data collected on 2026-11-16 stays** and was double-checked (see the README beside it).
 - **Foundation first.** "The calcs come from the initial foundation."
 - **Old material is discarded, not archived.** The delete list is written and waits for Greg's "delete".
 

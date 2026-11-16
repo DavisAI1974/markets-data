@@ -576,6 +576,37 @@ checked). The gaps found are in the sources themselves: a handful of single hour
 them, Boston at 8 am Eastern on Oct 2, is inside a trade day) and three hours of one region's demand table. A missing
 hour stays missing.
 
+**Step 1 stays and is built on top of (Greg, 2026-11-16, fourth session):** "Forgot about step 1! That stays. Again we
+covered it in either last session or the one before. It just gets built on top of. ... The step 1 stays in the
+excel sheet. so i don't know if you want to create a 2nd step 1 column for the growth or just make additions in the
+same column".
+
+What he had already said, read back from the second session of 2026-11-16:
+- "i believe our thinking on the step 1 pops was that we were going to use the initial 2021 data and then add to it.
+  We were going to use those initial definitions and data as a base and have the code remove any hard coded cutoffs
+  or boundaries and let the new data expand what we started with because that original step 1 outputs weren't run on
+  mbo or this depth so we knew that was a starting point that later runs would expand on."
+- "That original step 1 data gives family definitions for how the families shaped up across those days. The
+  structure is trade agnostic. The smaller families fit thousands of trades while the largest only fit one or two but
+  they weren't individually structured by trade. But maybe they should be, I don't know".
+- Third session: "Step 1 is going to be different initially don't wipe it. Let's do the other column first".
+
+So:
+- **The Step 1 columns stay in the workbook.** They are in the workbook frame and are never removed with the old
+  material. The 2021 definitions and data are the base.
+- **The new data expands the base.** The hard-coded cutoffs in the Step 1 programs are listed for Greg, then removed,
+  and the full order tape is let to add to what 2021 started. Seen so far: the lineage followed back at most 5
+  generations, the 52-week and 26-week blocks, and the family classifier frozen on 2026-08-17. That list is still
+  owed to him; it belongs with the calculations of part 2, not the foundation.
+- **Base and growth are kept in separate columns (Claude's call, on Greg leaving it open).** Each Step 1 column keeps
+  the 2021 base exactly as it was, and a second column beside it holds only what the new data adds. Reasons: the two
+  come from different data (the base was not made from the full order tape at this depth); what the new data added
+  is the very thing being learned and cannot be seen once the two are mixed; the growth can be redone without
+  touching the base; and nothing is stated twice, because the growth column never repeats the base.
+- **Two facts for whoever fills them.** The Step 1 columns hold no values in any old workbook (they are empty on
+  every trade), so nothing of Step 1 is lost when the old workbooks go. The 2021 base outputs themselves were
+  reported in the second session to be in the sealed package on AWS, which cannot be reached today.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
