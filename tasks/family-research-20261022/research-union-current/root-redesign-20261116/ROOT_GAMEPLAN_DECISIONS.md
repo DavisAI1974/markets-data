@@ -1279,8 +1279,9 @@ we've already rebuilt the new one."** Both conditions were checked before anythi
 Deleted, in one commit: the whole folder `trade-day-rebuild-20261116/` (the five stand-in programs, `book_records/`
 281 MB, `results/`, the midnight check result, the README), `CAPABILITY_MAP.md` and `SPEC-tape-stream.md`. The four
 markets-data branches `trade-day-book-20231002` (`925070d`), `-20231003` (`076d9f9`), `-20231017` (`0a0f3f0`) and
-`-20231018` (`182fe1f`) are removed from the remote in the same step; see the handoff for whether the remote
-accepted it. Kept: `resting-order-age-20261116/` (the facts about how the book is carried), with a note that the
+`-20231018` (`182fe1f`) were NOT removed: the session's connection to GitHub refuses to delete a branch (answer 403), and no way around
+that was tried. They are still on the remote and nothing reads them. Greg can remove them on GitHub (the
+repository's Branches page), or say how he wants it done. Kept: `resting-order-age-20261116/` (the facts about how the book is carried), with a note that the
 programs it names are gone and where the same facts are proved now.
 
 ## Held for the later stage: figuring out what moves the market
