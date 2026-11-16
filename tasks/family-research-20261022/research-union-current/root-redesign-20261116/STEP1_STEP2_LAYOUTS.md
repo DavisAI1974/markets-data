@@ -11,7 +11,7 @@ counted; every trade individually; the caps and limits come off the outputs; tra
 
 ## Piece 1: the flow and the exhaustion peak (Step 1)
 
-Status: PUT TO GREG 2026-11-16 (seventh session). Not approved yet. Not built.
+Status: APPROVED by Greg, 2026-11-16 (seventh session): "Yes rewrite", "Yes". Build started.
 
 **What we want.** On every tick row of the four trade days: the signed trade flow as it stands at that tick, and a
 mark each time the flow reaches a peak, with its side and size. Every peak is recorded. None is held back.

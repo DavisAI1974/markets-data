@@ -1354,6 +1354,12 @@ look at step 2 closer before it's run. That might be intentional."
   whether it is pooled, and what individual values lie underneath it. He says which are intentional.
 - His rule on averaging still holds where it applies: an averaged figure is an addition, not a replacement.
 
+**Rewrite: DECIDED. Piece 1 (the flow and the exhaustion peak): APPROVED (Greg, 2026-11-16, seventh session).**
+Told "Say 'yes, rewrite' and I take that as your yes on piece 1 as laid out": "Yes rewrite", then "Yes".
+- The Step 1 and Step 2 calculations are rewritten into `root/calcs/`, reading the tick rows. The old files stay
+  untouched on their branches.
+- Piece 1 is built as laid out in `STEP1_STEP2_LAYOUTS.md`. It is the first calculation of part 2.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
