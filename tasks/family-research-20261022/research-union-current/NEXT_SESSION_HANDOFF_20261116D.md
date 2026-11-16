@@ -50,9 +50,20 @@ as the starting point; C lists as open several things that are now closed.
   workbook in markets-data `data/outside/ng_oct2023/made/`. Storage (X11, X12) not made: waits on Greg's word on
   `xlrd`. Step 1 search recorded in the decisions file.
 
-## What to do next
+## Decided at the end of the session (back on Fable)
 
-- Storage tables once `xlrd` is allowed.
+- **Step 1.** No correct Step 1 exists for the four trade days; the old Step 1 outputs are on other dates (2021 and
+  2025-26) and carry assumed trade costs, so their values are not carried. The rerun reads everything we hold (full
+  order tape, full book, the 13). Depth is judged by outputs laid side by side, after the foundation. Two columns:
+  the first is Step 1 as originally defined, made on the four trade days; the second is the growth, its inputs
+  decided when it is laid out. The list of hard-coded boundaries is owed to Greg first. Detail and the paths of the
+  files Codex found are in the decisions file.
+- **Not decided, raised to Greg:** buying the other contract months' full order tape ($4.83), and how many trade
+  days the families are grown from.
+
+## What to do next (on Opus, with the Fable advisor; a fresh session is suggested)
+
+- Storage tables (X11, X12 actual) with `xlrd`, unless Greg has said no.
 - Then: `calendar`, `tape`, `book`, `rows`, `store` and `checks`, then pinning the
   13 onto the rows, then `sheet`. The first sheet written is a short stretch; its size is reported before the full
   workbook is written.

@@ -722,6 +722,29 @@ Facts checked the same hour, for that decision:
   have the entire picture together"; "everything that we have gets run"; "when we decide ahead of time, we're killing
   our own research silently".
 
+**The depth of the Step 1 rerun: DECIDED by Greg, 2026-11-16.** Asked "the rerun reads everything we hold, and we
+judge depth by laying the outputs side by side once the foundation exists?", he answered: "Yes to your question."
+- The rerun reads the whole picture: the full order tape with the full book at every tick, and the 13 outside points
+  beside it.
+- Whether a definition needs a given piece is shown by the run, not decided ahead. "Best output" is judged with the
+  same definition run at each depth and laid side by side, event by event, with no scores.
+- That comparison needs the foundation, so the foundation is built first, as already decided.
+
+**The two Step 1 columns (Greg, same message):** "So we can use the data you have for the 1st step 1 column and decide
+what goes into making 2nd column." Read as, and played back to him:
+- **First column:** Step 1 as it was originally defined (the frozen detector and the family rule), made on the four
+  trade days from the data we hold.
+- **Second column:** the growth. What goes into making it (which depth, which pieces, which cutoffs removed) is
+  decided when that calculation is laid out, with the list of hard-coded boundaries in front of him.
+- Both are part 2 calculations, after the foundation, each looked at before it runs.
+- To raise when the first column is laid out: the original detector sets its threshold from the 0.85 level of a whole
+  UTC clock day's readings. Taken over the whole day, that uses readings from later in the day than the tick it is
+  applied to, which a row on the timeline may not do.
+
+**`xlrd` (Claude's call, stated to Greg):** the question was put three times with no objection. It is a small
+read-only library for the EIA's own `.xls` files and blocks only the storage tables. It is added at the next build
+stretch unless Greg says no.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
