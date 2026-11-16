@@ -508,9 +508,27 @@ want those days bleeding into the work we're doing on the 4 days."
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 
-**Question 2, the 13 outside data points while AWS is unavailable: direction given by Greg; the order of work is
-still to be confirmed.** Greg: "Why can't the 13 dp files be made or checked until aws is back? They should already
-be made and if anything is missing find the data out there and fix it."
+**Question 2, the 13 outside data points while AWS is unavailable: ANSWERED by Greg's three instructions.** "Why
+can't the 13 dp files be made or checked until aws is back? They should already be made and if anything is missing
+find the data out there and fix it." "Save those files to git please." "Rebuild the files so we can add them to the
+excel sheet." So the outside data is not deferred: it is fetched from its original sources now, saved to git, and
+the 13 are rebuilt from it.
+
+**State at the end of the fetch (2026-11-16).** The published source files are in git at
+`data/outside/ng_oct2023/` (84 files, about 30 MB, with `MANIFEST.json`, `README.md` and the fetch program). They
+are source files exactly as served; no value is calculated yet. Read and confirmed to cover the four trade days:
+positioning (X01, X03, X04, X08), forecasts (X02, X09), observed weather (X10), the hourly grid data for six regions
+(X05, X07) and weekly storage (X11). The EIA's own file `revisions.xls` holds each week's storage estimate as first
+released, so "as first printed" does not need the Internet Archive. Still missing, with the reason in the README:
+the street estimate for X12 (needs `web.archive.org`), the futures curve X13 (Databento key entry), the time each
+October 2023 positioning report was published, and a US48 total for the grid data (the file holds 62 balancing
+authorities and no national row; adding them up ourselves would be a choice and is not made).
+
+**Making the 13 from these files is the `outside` part of ROOT and is a build:** it gets its short specification
+(each point's source, formula and timing, with the fixes already decided), Greg's approval, and then the switch to
+Opus. The old builder is not rerun, because it carries what was ruled wrong. The 13 go onto the sheet when the ROOT
+build has written the rows; until then what can exist is each point's table of values with the time each became
+available.
 
 - The 13 do not wait on AWS. Where a made file or an input cannot be reached, the data is fetched again from its
   original source and anything missing or wrong is fixed.
@@ -535,18 +553,19 @@ be made and if anything is missing find the data out there and fix it."
 
 - **The outside data files are saved to git (Greg: "Save those files to git please").** The fetched inputs and the
   files made from them are kept in markets-data, not on AWS alone, with a file list and fingerprints, beside the raw
-  order tape (proposed place: `data/outside/ng_oct2023/`). GitHub refuses a single file over 100 MB and one made
-  file was about 88 MB, so files are stored compressed and split where needed. Not done yet: nothing could be
-  fetched in this session (next point), so there is nothing to save so far.
-- What stands in the way today: the session runs in the "Markets" cloud environment, whose network allows a short
-  list of sites. Requests to `www.cftc.gov`, `www.eia.gov`, `ir.eia.gov`, `api.eia.gov` and
-  `mesonet.agron.iastate.edu` were refused by it. A request to add the five public sites was rejected by the
-  environments service; nothing was changed. Greg can add them himself (cloud environment menu, Edit, Network
-  access, Allowed domains).
-- Databento: the address is allowed, but the saved key entry is still wrong (the key was saved with a line break and
-  a date after it; Databento answers 400). It matters for X13 only, and a paid pull is brought to Greg with its
-  price first. Databento's error message repeats the saved entry back, so the key should be replaced when the entry
-  is corrected.
+  order tape, at `data/outside/ng_oct2023/`. GitHub refuses a single file over 100 MB, so large text files are
+  stored compressed. Done for the public sources on 2026-11-16 (see "State at the end of the fetch" above).
+- Network: the session runs in the "Markets" cloud environment, whose network allows a listed set of sites. A first
+  request to add five public sites (with `web.archive.org`) was rejected by the environments service. A second
+  request without it was approved by Greg: `www.cftc.gov`, `www.eia.gov`, `ir.eia.gov` and
+  `mesonet.agron.iastate.edu` are now allowed. `web.archive.org` and `api.eia.gov` are not; Greg can add them by
+  hand (cloud environment menu, Edit, Network access, Allowed domains) if X12 and the US48 total are wanted from
+  those sources.
+- Databento: the address is allowed, but the saved key entry is still wrong (the right key, saved with a line break
+  and a date after it; Databento answers 400). The network puts the saved entry on every request, so it has to be
+  re-saved cleanly in the environment's settings (Network secrets, the `hist.databento.com` entry: the key alone as
+  the username, password empty). The secure form offered in the session was declined. It matters for X13 only, and
+  a paid pull is brought to Greg with its price first. No key is ever written into either repository.
 
 ## Held for the later stage: figuring out what moves the market
 
