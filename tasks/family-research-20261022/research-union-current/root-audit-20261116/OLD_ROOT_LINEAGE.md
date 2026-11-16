@@ -134,3 +134,10 @@ The inputs to "Original SQLite/Julia" are Desktop's family research files, Marke
      from the four-day workflow processing of Nov 9, which may be the "5+ million".
    Greg to confirm which run this is, or point to the handoff (it may be a Desktop handoff that is not in git, or on
    a branch that was not searched).
+
+**Greg, later on 2026-11-16:** the second step is "probably" the four-day workflow processing of Nov 9, run by
+Codex: the run families listed in section A (four-day extensions, family replication, combined events, whole
+lifecycles, lifecycle data links, replay comparison; 448 files in `assembly/workflow_sources.json`), whose verified
+companion batch is the 5,075,640 timestamp-indexed research rows recorded in this folder's `README.md`. Treat that
+as the second workflow step unless the handoff describing the "hundreds of trillions" replacement turns up and says
+otherwise. Both steps sit downstream of old ROOT outputs and are rerun on the new record.
