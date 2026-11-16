@@ -1624,6 +1624,42 @@ can you expand on them or add to them to improve?"
   9. What an outside figure changing did: at each tick one of the 13 outside points changes, the story of the
      flow and the quote after it.
 
+**The look at Codex's two pieces: result (2026-11-16, seventh session). Put to Greg; his word is needed on the
+four further proposals at the end.** The full read is `CODEX_PIECES_READ.md` in this folder. Old numbers carry no
+weight; this is about intent, whether the code does it, and whether the kind of output is useful.
+
+| Part | Intent | Does the code do it | Is the kind of output useful |
+|---|---|---|---|
+| The SQL step | Find conditions that sit together | No. It counts label names that share one set of rows; they are the same rows named twice, as its own code says | No. Drop |
+| What a "family" is | Study the market before, at and after a family's birth | No. A family there is the shape of one burst of messages (one add; a trade with its fills and cancels), and its "birth" is the first place that shape is seen in the file | Partly. The shape of a burst is a real fact per tick. "First seen" is not a market event |
+| The descriptive work | Watch the market around each start, with no target picked | The timing is careful (each value as last known, with its age). But it reads five fixed points and nine fixed lengths of time, and reports pooled tables | Partly. Keep the timing habit and measuring a move both in trade prices and in the quote |
+| Before a birth | What the book looked like before a start | The time rule is kept, but it is two snapshots 120 seconds apart, anchored on "first seen" | No as built. Good question, wrong anchor |
+| Samples and targets | Rows to learn from, cut forward in time | Mostly. One target has its answer built in: "is a family first seen in the next N seconds" counts the row's own family | Partly. Forward-only cuts are sound; that target is circular |
+| The models | Use every layer together to predict direction, size or the next family | It runs what it lists, on 1,154,928 columns against 3,745 rows from one stretch of tape, and one score charges the spread | No. Drop, except one piece: per case, how far price travelled against where it ended |
+| Full-depth inputs | Recover every level and the queue at each | Yes | Yes as measurements; not as columns for a model |
+| The dipole audits | Check the stored dipole paths against their own clocks and rules | Yes | Yes. The most valuable part: beside each stage, the book it was given and the book really known then; and that "ends in reversal" is the rule that ends a path |
+| The exact ladder around one moment | Every book in a row, nothing sampled | Yes, for one window | Yes. The new rows already hold it everywhere |
+| The outside series beside the dipole columns | Say how each outside series moved against each dipole column | It reproduces the old statements, which compare only the first and last value of the stretch | No. Drop. The alignment underneath is sound |
+| The later trade-by-trade reading | One trade at a time: which resting orders it hit | Yes in kind, on a few hand-picked trades | Yes. The paper replay beside it is not (fixed entry and exit, spread charged) |
+
+Which of its questions are already carried by what is planned: two clocks on every fact, more than one way to
+end, the run-up tick by tick with the cases that did not happen (the ways of working); overlapping events (A);
+the book through a peak (C); what an outside figure changing did (O); the resting orders through a peak (K);
+sweeps per trade (M); a cancel that follows a fill against a real pull (the book totals already separate them).
+
+**Four further proposals from it, put to Greg (none approved, none built):**
+- **P. The shape of each burst.** For every exchange event: the string of what happened in it (one add; a trade,
+  three fills, two cancels), and how many times that shape has been seen so far in the trade day. A fact off the
+  tape, on the tick that ends the event. Codex's "family", used as what it really is.
+- **Q. How far price travelled, not only where it ended.** For each peak's story and each run of the quote: the
+  distance travelled, the net move, the largest move with it and against it and when; measured in trade prices
+  and, separately, on the best bid and on the best ask (no midpoint).
+- **R. The line at the touched price, in a few figures.** The largest order in the line, how long it has rested,
+  and how many orders hold the rest. The rows already carry the size ahead and the time rested for the touched
+  order, and the whole line.
+- **S. Per trade: what gave way and what replaced it.** For each resting order a trade filled: whether it was the
+  last at its price, whether the best price moved, and what next joined that price and how soon. Added to M.
+
 ## Eighth session (2026-11-16, in a code session, on Fable with the Fable advisor)
 
 Started from `NEXT_SESSION_HANDOFF_20261116G.md`.

@@ -190,14 +190,10 @@ session" section).
 - Where they go in the order above: **L and M next to the chain link models** (they need only the rows); **N with
   K**; **O after the rest of I**.
 
-**2. The two Codex pieces: a look Greg asked for, not finished.** The SQL step and the family workflow, Markets
-commit `dd9c797a`, `artifacts/sqlite-triage/20261022/` (start with
-`families/family-parallel-run-full-handoff-20261022.txt`, `README.md`, `queries/README.txt`, `sources/`). His
-words: "look at what info they are giving us and does it move us forward to understanding the trades better to get
-better signals"; "That was old data so don't lean on the findings. Just intent and is the code accomplishing the
-intent and is the data useful"; "But if those perspective would be good to use on the new data then include it".
-So for each part: its intent; whether the code does what the intent says; whether its kind of output is useful;
-and which of its questions are worth asking of the new rows. Its old numbers carry no weight. A read on those
-terms was running in the seventh session and had not reported when this was written. If its result is not in the
-decisions file, do the read again (read single files from that commit with `git show`; do not fetch old branches
-whole) and bring the result to him.
+**2. The two Codex pieces: the look Greg asked for is DONE and was put to him.** The full read is
+`root-redesign-20261116/CODEX_PIECES_READ.md`; the verdict, part by part, is in the decisions file under "The look
+at Codex's two pieces: result" (end of the "Seventh session" section). In short: drop the SQL step, the "family
+birth" as an event, the models and the outside-series tables; keep the timing habits, the dipole audits' checks,
+the per-order and per-trade readings. Four further proposals came out of it and WAIT ON GREG'S WORD (do not build
+them without it): P the shape of each burst; Q how far price travelled against where it ended; R the line at the
+touched price in a few figures; S per trade, what gave way and what replaced it.
