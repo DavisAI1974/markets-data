@@ -506,8 +506,42 @@ want those days bleeding into the work we're doing on the 4 days."
   5 pm Eastern Mon Oct 16 for week 2). Only the book itself arrives complete.
 
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
-the session and asked for a sign-in. No further attempt is made until Greg says so. The 13 outside data points
-cannot be prepared or checked until then.
+the session and asked for a sign-in. No further attempt is made until Greg says so.
+
+**Question 2, the 13 outside data points while AWS is unavailable: direction given by Greg; the order of work is
+still to be confirmed.** Greg: "Why can't the 13 dp files be made or checked until aws is back? They should already
+be made and if anything is missing find the data out there and fix it."
+
+- The 13 do not wait on AWS. Where a made file or an input cannot be reached, the data is fetched again from its
+  original source and anything missing or wrong is fixed.
+- What is held where (checked in this session):
+  - The made files for the four trade days and the fetched inputs are stored on AWS only
+    (`frankie/day_external/`, `frankie/day_history/`, `nymex/ng_fut_parent_v0/`). They are not in either repository.
+  - Git holds the programs, for reading: the fetcher `research/kalshi/frankie_boss/operations/fetch_day_history.py`
+    and `pull_curve_days.py` (Markets `7f34afa`), and the builder `frankie_day_external.py`.
+  - The old workbook holds the 13 on trade rows only, and is not a source (decided earlier).
+- Where each point comes from:
+
+| Points | What | Original source | Free? |
+|---|---|---|---|
+| X01, X03, X04, X08 | positioning (NYMEX and ICE contracts) | CFTC weekly report files, `www.cftc.gov` | yes |
+| X02, X09 | forecast temperature, disagreement between models | Iowa State weather archive, `mesonet.agron.iastate.edu` | yes |
+| X10 | observed weather, hourly station readings | the same archive | yes |
+| X05, X07 | wind, gas burned for power (hourly grid data) | EIA, `www.eia.gov` files or `api.eia.gov` with a free key | yes |
+| X11 | weekly storage, as first printed | EIA's weekly report page as saved on the Internet Archive, `web.archive.org`, `ir.eia.gov` | yes |
+| X12 | storage estimate against actual | saved pages on the Internet Archive (TradingEconomics, investing.com) and EIA's report | yes |
+| X06 | sessions since the front contract expired | the exchange calendar; nothing to fetch | n/a |
+| X13 | the futures curve, every contract month | Databento (definitions, statistics, order tape of every month) | paid |
+
+- What stands in the way today: the session runs in the "Markets" cloud environment, whose network allows a short
+  list of sites. Requests to `www.cftc.gov`, `www.eia.gov`, `ir.eia.gov`, `api.eia.gov` and
+  `mesonet.agron.iastate.edu` were refused by it. A request to add the five public sites was rejected by the
+  environments service; nothing was changed. Greg can add them himself (cloud environment menu, Edit, Network
+  access, Allowed domains).
+- Databento: the address is allowed, but the saved key entry is still wrong (the key was saved with a line break and
+  a date after it; Databento answers 400). It matters for X13 only, and a paid pull is brought to Greg with its
+  price first. Databento's error message repeats the saved entry back, so the key should be replaced when the entry
+  is corrected.
 
 ## Held for the later stage: figuring out what moves the market
 
