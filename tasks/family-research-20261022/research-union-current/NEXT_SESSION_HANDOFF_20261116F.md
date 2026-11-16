@@ -145,4 +145,8 @@ the latest routine hourly reading with its own time beside it.
 
 ## State of the push
 
-(Written at the very end of the session; see below.)
+DONE. All four trade days were rebuilt with the "no orders" fix, every check passed again, and the second commit
+is on the remote for each: `root-rows-20231002` `806ee43`, `root-rows-20231003` `7b0f5d7`, `root-rows-20231017`
+`cdcc525`, `root-rows-20231018` `aa226d1`. Nothing is left to rebuild; step 1 of "What to do next" is a look only.
+Markets `claude/root-session6-017eY1` is at `b39e10a`. Playback was not run again after the one-cell change; the
+playback records on the branches are from the first build of the session.
