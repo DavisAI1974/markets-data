@@ -528,6 +528,22 @@ read back in full. He was right on the substance:
 - Not answered in any session read: the shape of part 2 in so many words (he restated the idea twice and did not
   object), and whether the calculations are worked out first or the foundation is built first.
 
+**The shape of part 2: CONFIRMED by Greg, 2026-11-16 (fourth session).** "Yes that's the shape I want for part 2.
+And if we are answering with our new data one of the old columns, you don't have to state it 2x. And if we should
+look at our calcs before we run them to make sure they are adding what we want and that its relevant. So to go
+against what i said earlier, we might eliminate columns but for the time being everything is kept and that may not
+change."
+
+- The shape stands: the foundation, plus calculations added on top one at a time, each named, run tick by tick,
+  pinning its own columns and passing its own checks.
+- Nothing is stated twice: where a new column already answers what an old column was for, the old column gets no
+  column of its own; the column list says which new column answers it.
+- Every calculation is looked at before it is run, to make sure it adds what we want and is relevant.
+- Columns may be eliminated later, on Greg's decision. For the time being everything is kept, and that may not
+  change. No row is ever removed.
+- This also settles the old names on the part 2 placeholder columns: a placeholder is kept only until its question is
+  looked at; if a new column answers it, it is not repeated.
+
 **AWS (Greg, same session):** "Aws is unavailable so don't try it." One read-only listing was tried at the start of
 the session and asked for a sign-in. No further attempt is made until Greg says so.
 

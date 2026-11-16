@@ -309,22 +309,31 @@ def trade_day_bounds(trade_day: date) -> tuple[int, int]:
    point. An empty cell is explained by rule on the README page; a value missing by exception carries its reason on
    the row. The old names on the part 2 placeholder columns are settled with part 2, not here.
 
-## Part 2: calculations added on top (not designed yet)
+## Part 2: calculations added on top (shape agreed, calculations not designed yet)
 
 Greg, 2026-11-16: "I think we should figure out all of the calcs we're wanting to do including sql step and the
 other new workflow step and any dipole and anything else, and have those all done in root ... That way the other
 steps are just analysis, pattern matching and logic."
 
-Proposed shape, awaiting Greg's yes:
+**The shape, confirmed by Greg ("Yes that's the shape I want for part 2"):**
 - ROOT is the foundation plus calculations added on top, one at a time. Each calculation is named, runs over the
   timeline tick by tick, pins its own columns and passes its own checks, the playback check included. Adding one
   later does not redo the others.
 - The test for where something belongs: if it puts a value on a tick, it is a ROOT calculation. If it reads rows and
   draws a conclusion, it is analysis.
-- A calculation may only add columns. It may never remove, hide or filter a row.
-- Working out which calculations we want is the calculation inventory: the old ROOT sections, the SQL step, the other
-  workflow step, the dipoles and the S fields, each laid out as what we want to find out, what was calculated
-  before, and the fresh calculation.
+- A calculation adds columns. It never removes, hides or filters a row.
+
+**Three rules Greg added with his yes:**
+- **Nothing is stated twice.** Where a new column already answers what an old column was for, the old column does
+  not get a column of its own. The COLUMNS sheet says which new column answers it.
+- **Every calculation is looked at before it is run,** to make sure it adds what we want and is relevant. It is
+  laid out Greg's way (what we want it to calculate, what is calculated today, what changes) and he says yes before
+  it runs.
+- **Columns may be eliminated later.** Greg: "we might eliminate columns but for the time being everything is kept
+  and that may not change." Taking a column out is Greg's decision. Until he makes it, every column is kept.
+
+Working out which calculations we want is the calculation inventory: the old ROOT sections, the SQL step, the other
+workflow step, the dipoles and the S fields.
 
 ## When this lands
 
