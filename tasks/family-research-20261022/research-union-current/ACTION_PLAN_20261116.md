@@ -1,7 +1,15 @@
 # Action plan going forward (written 2026-11-16, end of the second session; updated at the end of that day)
 
-Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. This is the document to read first in the next session.
-**Where the next session starts: section 8.** It says why we are doing this, what is already true, what happens next and in what order, what gets deleted, and
+Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`.
+
+> **Update, end of the third session of 2026-11-16.** Read `NEXT_SESSION_HANDOFF_20261116C.md` first. The ROOT
+> gameplan was worked through with Greg: his decisions are in `root-redesign-20261116/ROOT_GAMEPLAN_DECISIONS.md` and
+> the draft specification of ROOT part 1 is `root-redesign-20261116/SPEC-root.md`. Where this plan differs from those
+> files, they win. In particular: ROOT does calculate; every calculation is to be done in ROOT, with later steps being
+> analysis only; the trade day is 6 pm to 5 pm Eastern with the 5 pm to 6 pm hour as its own stretch; and steps 3 and
+> 4 below are replaced by ROOT part 1 (the foundation) and part 2 (the calculations).
+
+**Where the next session starts: the handoff named above, then section 8 for the practical notes.** It says why we are doing this, what is already true, what happens next and in what order, what gets deleted, and
 what is waiting on Greg. The two handoffs (`NEXT_SESSION_HANDOFF_20261116.md` and `...20261116B.md`) hold the detail
 behind each statement here.
 
