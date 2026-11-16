@@ -141,3 +141,22 @@ seconds lose too much. The full list of fixed windows, caps, tick collapses and 
 in `root-audit-20261116/ROOT_WINDOWS_AND_CAPS.md`, with this decision and its consequences at the end. Next step is a
 written spec for the ROOT rewrite (message-by-message stepping, full depth, no fixed windows, redundant passes
 removed, trade-day stream as input) for Greg to approve before any code changes.
+
+## ROOT redesign under way (Greg: "Do your plan", 2026-11-16)
+
+- Governing rule, Greg's words: "what pieces of data are dictating things ... when we decide ahead of time, we're
+  killing our own research silently." ROOT records everything and decides nothing ahead of time.
+- `root-redesign-20261116/CAPABILITY_MAP.md` (draft 2) is the approved shape: ROOT = `tape-stream`, `book-core`,
+  `event-ledger`, `change-points` (+ `store`, `checks`); research on top = `spans`, `structures`, `trade-join`.
+- `root-redesign-20261116/SPEC-tape-stream.md` is the first module spec, awaiting Greg's review. Next specs in order:
+  `book-core`, `event-ledger`, `change-points`.
+- Salvage from old ROOT: the order-book rule, the tape reader and exchange calendar rules, record-keeping utilities,
+  the 2021 Step 1 family definitions. Everything else is replaced and deleted in the same change that replaces it.
+  A file-by-file keep/delete list was being produced at the time of writing.
+- Greg: trace where old ROOT outputs were used, merged or added downstream, remove them, and rerun those steps,
+  including "our 2 new workflow steps" and whatever ran between ROOT and them. A lineage trace of this folder was
+  running at the time of writing. Not reachable from the cloud session: the stopped AWS boxes and Desktop's folders.
+- The S fields (S01-S19) use fixed 64- and 1,024-group windows and the top 3 levels (`c15_teacher_r3.py` line 205).
+  Proposed to Greg: do not run the S replay as it stands; re-ask what the S fields measured from the full record.
+  He has not objected; confirm before relying on it.
+- All four trade days of per-trade book records are on branches `trade-day-book-<trade day>` (check Oct 3's count).
