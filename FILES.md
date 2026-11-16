@@ -1,18 +1,19 @@
 # ROOT stored rows: trade day Tue Oct 17, 2023 (6 pm Eastern the evening before to 5 pm Eastern)
 
-Built by the new ROOT (Markets branch `claude/root-session6-017eY1`, commit `fca77bb`) from the raw order tape
+Built by the new ROOT (Markets branch `claude/root-session6-017eY1`, commit `b39e10a`) from the raw order tape
 and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothing here comes from an old run.
 
 - Rows: 846,158 (one per tick), 217 fields each. Sections A to E from the tape and the book, section G the 13 outside data points.
 - Rows by label: 5 pm to 6 pm stretch 912, trade day 845,246.
 - Book pictures: one at each of 33,703 trade messages, one at the first written row and one at the last (42,506,828 order lines).
 - Only rows labelled "trade day" enter a calculation. The stretch and start-up rows are kept and marked; nothing is calculated on them.
-- An empty field is stored as empty (null): never 0, never blank text.
-- Checks, all passed: every record accounted for; the trade day cut; the book equals the vendor restatement; the book adds up at every trade; one history per order; the trade count; the outside points pinned right on every row; playback at four cuts.
+- An empty field is stored as empty (null): never 0, never blank text. A line that a tick emptied is the words "no orders".
+- Checks in `RECEIPT.json`, all passed: every record accounted for; the trade day cut; the book equals the vendor restatement; the book adds up at every trade; one history per order; the trade count; the outside points pinned right on every row and every section G column.
+- `playback-*.json` is the playback record (four cuts, all identical). It was made on the first build of this session (Markets `fca77bb`), before the emptied line was changed from a blank cell to the words "no orders". That change touches one text cell and was not run through playback again (one check per changed part).
 
 | File | Bytes | SHA256 |
 |---|---:|---|
-| `RECEIPT.json` | 8,902 | `2abec3bf0175a783fe2aa4fe567785962c1549de25c144935dfb9849a09c7f9d` |
+| `RECEIPT.json` | 8,902 | `4ec88893c09030330ff0e7a9f9b9bd2032e074e251286115af324acd1f8031b0` |
 | `book-pictures-20231017-part000.parquet` | 11,957,324 | `b029cda92bb6d4d90b1c2d1538205f16dd2aba00111e3d956dd594b07b8e9cf1` |
 | `book-pictures-20231017-part001.parquet` | 12,710,758 | `96a4d6c711cb2ec4c0a17df8411aa928e80cb488e127d90509356588bb008070` |
 | `book-pictures-20231017-part002.parquet` | 12,933,911 | `c1a33bfc8819448e998bac25abb5cb5fcc4272ed0984cd0310d603da8862b64e` |
@@ -25,8 +26,8 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `book-pictures-20231017-part009.parquet` | 12,275,903 | `426b05a05e76c813e859eb49a081b86a43abe2d78f1a897da675d733c11b58a8` |
 | `book-pictures-20231017-part010.parquet` | 1,335,158 | `ab39063c15ae0de108b36a1667483902fcea0a3a8f4257ba395be70e05bb6d73` |
 | `playback-20231017.json` | 665 | `730534ef97f7ba68f7b3ca9e381ae0723fc360e787b16956ac03927e5aa4177d` |
-| `rows-20231017-part000.parquet` | 19,708,212 | `5833defd6322c9f7b14ecdbf2dbd7732e4fa15ccdbcb2c470a50f91ccb861923` |
-| `rows-20231017-part001.parquet` | 20,201,824 | `64cdc63f3e545211f8caaeebaf33d66bf07e2460208c9715b21b7a09649cdb95` |
-| `rows-20231017-part002.parquet` | 20,190,635 | `c9cc4a0e121d7df673648b5a3de1589373b94e323fe63999b02b7d7a7e238ae7` |
-| `rows-20231017-part003.parquet` | 4,804,871 | `5dddc0f632e0bf243742d5e6b06e6296052a07ef9079ed4837a46b1856dbcddb` |
+| `rows-20231017-part000.parquet` | 19,729,598 | `7c1559d5056070a4b91ffd4f7cf2928d1034a54fde3cb3a4e518438372416595` |
+| `rows-20231017-part001.parquet` | 20,226,095 | `a30f8b597209bd74a81ec426f678699e61a341099a1b66a9fa6e35299a7057f0` |
+| `rows-20231017-part002.parquet` | 20,215,925 | `b1c9b234966d8874d4fec39567dbd483f47da3205209d03ccf57ca065722a36a` |
+| `rows-20231017-part003.parquet` | 4,808,580 | `efb7d6338879f8ad53224a307a882f4562cc5aafa797faf3a4ef07ef80c32313` |
 | `vendor-restatements-20231017.parquet` | 25,152 | `839562be094b57fb8d241d5df378fa377727cfc6bd72906d080805aafb7840bd` |
