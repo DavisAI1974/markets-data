@@ -65,9 +65,9 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data`. Pushes to it work f
 5. Which comes first next: the calculation inventory for part 2, or building the foundation.
 7. **What calculates when Frankie works in real time** is not settled and is not needed for the historical build.
    ROOT is designed so that it can run on a live feed.
-6. **`CLAUDE.md` in Markets still defines the trade day as 5 pm to 5 pm.** Greg decided in this session that a trade
-   day is 6 pm to 5 pm with the 5 pm to 6 pm hour as its own stretch. `CLAUDE.md` loads in every session and has not
-   been changed. It needs Greg's word before the trunk is edited.
+6. (Done at the end of the session, on Greg's word.) The trade-day rule in Markets `CLAUDE.md` now reads 18:00 ET
+   to 17:00 ET, with the 17:00 to 18:00 ET hour as its own stretch and the book as the week. It is on the trunk
+   (`c056e7e`), the research branch and the session branch (`b39ff01`); the change is `CLAUDE.md` only.
 
 ## How Greg wants the work done (learned in this session)
 

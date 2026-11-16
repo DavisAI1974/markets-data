@@ -504,6 +504,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
 
 ## Session notes
 
+- The trade-day rule in Markets `CLAUDE.md` was updated on Greg's word at the end of the session ("Update trade rule
+  in md"): 18:00 ET to 17:00 ET, the 17:00 to 18:00 ET hour its own stretch, the book the week. Trunk `c056e7e`;
+  research branch and session branch `b39ff01`.
+
 - The session runs in the "Default" cloud environment, where the Databento address is refused. Nothing needs pulling
   for the four trade days. A pull would need the "Markets" environment, and the key saved there still has to be
   corrected.
