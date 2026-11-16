@@ -68,3 +68,29 @@ Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data` (Greg approved commi
   agents.runpod.io, api.runpod.io, api.runpod.ai, mcp.runpod.io, hapi.runpod.net.
 - The Runpod command-line tool ignores the session proxy; run it through a wrapper that sets aiohttp `trust_env`.
 - Pinned code worktree: Markets `7f34afa` at `/home/user/work/pins`. `pip install databento pyarrow pandas runpod`.
+
+## ROOT depth audit (code read at Markets `7f34afa`, end of session)
+
+Greg asked whether ROOT calculates with all the data depth possible. From the code:
+
+- Full: the input is every MBO message; the book keeps every order in every queue at every price; no row caps were
+  found in the ROOT path.
+- Order ages restart twice (spot-checked): the opening book is warmed from the prior partition's 00:00 UTC snapshot
+  (`research/kalshi/frankie_boss/operations/ingest_block_sources.py` lines 187-265), and the next partition is
+  appended whole, so its 00:00 UTC snapshot is applied inside the trade day. Same defect as the old replay. This
+  alone means ROOT has to be rerun on the trade-day stream.
+- Frames carry a top-10 view with no per-order queue (`research/ng_exhaustion_mbo_v4_state_adapter_20260820.py`
+  line 730). The audit reports that ROOT copies the full book beside it (`frankie_box_boss_session.py` 866-869);
+  not spot-checked.
+- Prices and signed flow come from the top-of-book / top-10 "legacy" rows, emitted on trades or top-10 changes.
+- Fixed windows: activity 1, 5, 20, 60 and 300 s with history dropped after 300 s (adapter line 51); signed flow in
+  per-second bins with a 20 s roll (from labels only).
+- One contract: the front month (`NG.v.0`).
+- The bedrock and layer-projection step is off by default in the experiment ROOT (`frankie_box_experiment_root.py`
+  line 280).
+- Not readable in this checkout: the pinned producer package `research/kalshi/frankie_raw_mbo_benchmark/` (staged
+  from pin `2ebb8ce8`): signed flow, roll20, book transition, dipole candidate and episode code. Read it before
+  deciding what a rerun should change.
+- Correction: the ingest cuts the trading day at 21:00 UTC, so the stored ROOT runs for trade days Oct 2 and 17
+  probably do include the first two hours. The "starts at 20:00 ET" limit belongs to the book-recovery archives.
+  Not verified against the stored runs.
