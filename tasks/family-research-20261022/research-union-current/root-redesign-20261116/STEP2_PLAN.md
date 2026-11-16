@@ -49,8 +49,11 @@ This session builds nothing, runs nothing, and writes to this file only.
   choice. Nothing is to be limited: so H is every instance, not a selection (changed below). The two checks named
   in D and I still come before those two are placed. The code session builds; this session does not.
   K was added by Claude after this word. He has not seen it and it is not covered by this yes.
+- 2026-11-16, 4:18 pm Eastern, the same minute as the word above: "Yes"
+  Read as: confirming A through J as laid out. It was sent before Claude's message about K had reached him, so it
+  is not read as a yes to K. K still awaits his word.
 
-## The merged plan, by Greg's aims (Claude's proposal, 2026-11-16; nothing approved, nothing built)
+## The merged plan, by Greg's aims (2026-11-16; A through J approved by Greg, nothing built yet)
 
 **Claude's reading of two words, corrected by Greg the same hour.** "The lifecycle of a trade" was first read
 as the life of one peak. On his word about the trade legs it is: a trade is anchored on a leg, a move in price,
@@ -100,8 +103,8 @@ candidate it had. That pass used the old one-second series, so the list is what 
 
 ## The suggestions laid out together (2026-11-16)
 
-Status: A through J INCLUDED on Greg's word, 2026-11-16: "Include all of your pieces. Again we don't have to pick
-and choose. We aren't limited in any way." K is laid out and awaits his word. Nothing is built or run yet. The
+Status: A through J APPROVED by Greg, 2026-11-16: "Include all of your pieces. Again we don't have to pick and
+choose. We aren't limited in any way." and then "Yes". K is laid out and awaits his word. Nothing is built or run yet. The
 code session builds; this session does not.
 
 Five are new calculations (A to D, and I). Four need no new calculation, because the others and Step 1 already
