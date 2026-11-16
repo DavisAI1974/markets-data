@@ -56,25 +56,33 @@ The adapter rule is left alone. No event time is mixed into the receive-time age
 the earliest UTC clock-day file held for the trade week, and every later opening snapshot it passes is checked against
 the carried book and not applied (`trade-day-rebuild-20261116/scripts/trade_day_stream.py`, `WARMUP`).
 
-| Trade day | Warm-up files | Floor orders at session start / at 00:00 UTC / at the halt | Kind of floor | Orders over 1 s older than the replay at 00:00 UTC: before / now |
+| Trade day | Warm-up files | Floor orders at session start / at 00:00 UTC / at the halt | Kind of floor | Orders over 1 s older than the replay at 00:00 UTC: first build / now |
 |---|---|---|---|---|
 | Oct 2 | Oct 1 | 342 of 342 / 319 of 732 / 251 of 725 | weekly re-listing block | 0 / 0 |
 | Oct 3 | Oct 1, Oct 2 | 251 of 725 / 247 of 740 / 217 of 748 | weekly re-listing block | 252 / 0 |
-| Oct 17 | Oct 16 | 260 of 745 / 225 of 737 / 200 of 790 | opening snapshot of the earliest held file (00:00 UTC Oct 16) | 225 / 225 |
-| Oct 18 | Oct 16, Oct 17 | 200 of 790 / 199 of 717 / 177 of 723 | same | 278 / 199 |
+| Oct 17 | Oct 15, Oct 16 | 210 of 745 / 207 of 737 / 183 of 790 | weekly re-listing block | 225 / 0 |
+| Oct 18 | Oct 15, Oct 16, Oct 17 | 183 of 790 / 182 of 717 / 164 of 723 | weekly re-listing block | 278 / 0 |
 
 Verified after the change (`trade-day-rebuild-20261116/results/*_RECEIPT.json`): on all four trade days every message
 still equals the archived message, every one of the 143,270 existing trades is still found identical at its mapped
 cursor and group, the trade lists are byte-for-byte the lists from the first rebuild, and the carried book equals the
-exchange snapshot at every 00:00 UTC crossed, the two extra ones in the longer warm-ups included.
+exchange snapshot at every 00:00 UTC crossed, the extra ones in the longer warm-ups included.
 
 The replay keeps a live list (`floor`) of every resting order whose priority time is a floor, with the kind of floor
 and the snapshot's event time beside it, so each age value built on such an order can be marked as a lower bound,
 order by order. An order leaves the list when it is removed or a modify resets its priority.
 
-## Still open: the UTC clock-day Oct 15 file
+## The UTC clock-day Oct 15 file (added 2026-11-16)
 
-It is not held. With it, the second week would be on the same footing as the first: 18 orders (trade day Oct 17) and
-17 (trade day Oct 18) placed Sunday evening Oct 15 would get their own receive times, and the weekly block's floor
-would move from 00:00 UTC Oct 16 back to its real receive time near 12:54 UTC Oct 15. It needs a Databento download;
-no Databento key is available in this session.
+Downloaded at Greg's request: `NG_v0_mbo_20231015.dbn.zst`, 29,063 records, the same single instrument, cost $0.0027.
+It opens like the Oct 1 file: a clear record, then a block of 350 re-listed orders with one event time
+(12:54:42.688701461 UTC) and one receive time (12:54:42.891809140 UTC). With it in the warm-up, trade days Oct 17 and
+18 are on the same footing as the first week: no order at 00:00 UTC is more than a second older than the replay
+knows, and the only floors left are the Sunday re-listed orders.
+
+## How far receive time sits from event time
+
+For the 1,852 orders at the four boundaries that have their own live message, receive time minus event time runs from
+0.076 ms to 245 ms; 111 are over 1 ms, 29 over 10 ms, 1 over 100 ms, none over 1 second. This is the size of the
+difference that reading an order's time from a snapshot (event time) instead of replaying earlier files (receive
+time) would introduce.

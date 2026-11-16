@@ -28,7 +28,7 @@ HALT_UTC_NS = 21 * 3600 * 10**9          # 17:00 ET in EDT
 # order placed earlier in the week keeps the receive time the replay saw it arrive with. The last file listed is the
 # one whose final three hours (from 21:00 UTC) open the trade day.
 WARMUP = {'20231002': ['20231001'], '20231003': ['20231001', '20231002'],
-          '20231017': ['20231016'], '20231018': ['20231016', '20231017']}
+          '20231017': ['20231015', '20231016'], '20231018': ['20231015', '20231016', '20231017']}
 DAY_NS = 86400 * 10**9
 
 def _file(day):

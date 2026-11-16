@@ -62,6 +62,27 @@
    "zstd_magic": "28b52ffd"
   },
   {
+   "day": "2023-10-15",
+   "symbol": "NG.v.0",
+   "stype_in": "continuous",
+   "schema": "mbo",
+   "dataset": "GLBX.MDP3",
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "bytes": 599121,
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d",
+   "records": 29063,
+   "expected_records": 29063,
+   "cost_usd": 0.0027,
+   "ts_event_first": "2023-10-15 12:47:43.625000000+00:00",
+   "ts_event_last": "2023-10-15 23:59:54.994751649+00:00",
+   "mappings": [
+    "NG.v.0"
+   ],
+   "zstd_magic": "28b52ffd",
+   "pulled_utc": "2026-11-16 07:15:03.164129+00:00",
+   "purpose": "UTC clock-day file that opens the trade week of Oct 16-20: the Sunday re-listing block and the Sunday evening, so the trade-day warm-up for trade days Oct 17 and 18 starts at the weekly open; pulled 2026-11-16 at Greg's request"
+  },
+  {
    "day": "2023-10-16",
    "symbol": "NG.v.0",
    "stype_in": "continuous",
