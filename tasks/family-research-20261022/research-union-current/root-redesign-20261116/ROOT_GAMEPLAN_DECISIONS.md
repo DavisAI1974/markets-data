@@ -1953,6 +1953,24 @@ and 143,406 lines (one per peak, model and step), about 24 to 31 MB a trade day.
   each is run now, not caps: where the gain has not gone by the last step, that way is run further.
 - K is built after this launch (it is the largest piece); the rest of I, O and N go with the chain ways.
 
+**Three of the open questions ANSWERED by Greg (2026-11-16 late evening Eastern, ninth session):** "For L, we want
+to show what the data is telling us and not changing that. And when it shows another order ahead of it for k. We
+should show that in case that tells ys something new and not show anything when it isnt present. Shouldn't we be
+using the mbo data to populate mative and trade leg data ?"
+- **L (saved question 6): DECIDED.** L stays as built: every row with size put back gets a fact, in the row's own
+  words, with the yes/no for "same size or larger" beside it. Nothing is filtered and nothing is renamed.
+- **The place-in-line finding (saved question 7): DECIDED.** It is not run down and nothing in the foundation is
+  changed for it. Where a filled order had another order ahead of it in our line, that is SHOWN as a fact (how many
+  orders and how much size were ahead, and which orders), in case it tells us something new. Where no order was
+  ahead, nothing is written. Built with K.
+- **Native's dipole record and the trade (print) legs (saved question 1): DECIDED.** Both are made from the MBO
+  tape, for all four trade days, from the 6 pm open. The old records, which miss the first two hours of trade days
+  Oct 2 and Oct 17, are not placed. The trade legs are made again from the stored rows by the old rule (Markets
+  `0408df44`, `continue_trade_chronology.py`). For Native's dipole, Native's own program is read first to see
+  whether it runs on our tape as it is or is rewritten into `root/calcs/`; that is laid out for him before it is
+  built (the dipole has no ROOT definition yet).
+- This unparks D and the print legs of I.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
