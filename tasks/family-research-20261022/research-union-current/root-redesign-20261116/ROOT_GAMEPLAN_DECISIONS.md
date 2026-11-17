@@ -2451,6 +2451,41 @@ inpits and outputs from last week already?"**
   list first (it is his default branch, and that folder also holds the earlier trade-leg record the checks of
   `trade_legs` and `leg_peaks` were proved against).
 
+**CORRECTED (same session), on Bedrock: the entry above called the lifecycle ledger "the Bedrock table". That was
+read off a folder name and is too much.** Read from the code (Markets `7f34afa` `deploy/aws/box/frankie_box_bedrock.py`):
+the Bedrock stage makes three LAYERS (derived_geometry, 8 figures; prebirth_opportunity, 5; causal_clocks, 7),
+projected by Native's own crosswalk, and files three exact LEDGERS whole: `exact_member_rows.jsonl`,
+`exact_lifecycle_rows.jsonl`, `legacy_observable_rows.jsonl`. What is stored for trade days Oct 2, 3 and 17 is ONE
+of those ledgers, the lifecycle ledger. The three layer files and the other two ledgers were NOT found stored for
+the four trade days (that is what each receipt's "all layers: no" says). For Oct 18 nothing was found at the place
+the Oct 2 parts came from (Markets `bebd939d`, `replay-artifacts/20231018/`); only its episode lines exist. So
+Bedrock is partly made: the lifecycle ledger on three trade days; the layers and two ledgers on none that was found.
+
+**The peak against the turns of the price: what the stored lines show (counted in the session from the stored
+files, told to Greg first; each trade day on its own, nothing pooled).** The count is "the move made no step after
+the peak's high". Beside it, the same count for ANY print of the trade day.
+- Trade leg, 20-second peaks against any print: Oct 2 5,768 of 9,525 against 20,625 of 38,125; Oct 3 6,638 of
+  10,577 against 23,389 of 41,403; Oct 17 5,006 of 8,618 against 17,331 of 33,700; Oct 18 4,591 of 7,966 against
+  16,095 of 30,736. A lean toward the peaks on every trade day (about 58 to 63 in 100 against 51 to 57 in 100).
+- Run of the best bid, 20-second peaks against any print: Oct 2 5,663 of 9,525 against 22,526 of 38,126; Oct 3
+  6,410 of 10,577 against 25,308 of 41,409; Oct 17 4,847 of 8,619 against 19,153 of 33,702; Oct 18 4,690 of 7,963
+  against 17,584 of 30,727. The run of the best ask reads the same. No lean: a peak's high is at the end of a run
+  of the quote about as often as any print is.
+- Most moves are one step long (Oct 2: 3,878 of 6,118 legs; 10,597 of 13,331 runs of the best bid), so "no step
+  after" is common for any tick.
+- The peak with no window against the trade leg (Oct 2: 7,257 of 11,567; 5,342 of 6,118 leg ends have such a peak
+  on their last step) is close to built in: a change of aggressor side usually prints across the spread, which is
+  what ends a leg.
+- Of the ended runs of the quote, the ones with a 20-second peak's high on their last step: Oct 2 4,119 of 13,331
+  (bid) and 4,024 of 13,679 (ask). About a third of the quote's turns have a peak at them; two thirds do not.
+- About a third of the runs of the quote had already ended before the peak became known (Oct 2: 3,057 of 9,525).
+- READ: by this count the peaks do not mark the turns of the quote, and lean only a little toward the ends of
+  trade legs. It does not weigh how far a move went: a one-step flicker counts the same as a long move. Not done:
+  the same count laid out by each move's own number of steps.
+- Native's closing lines: nearly every one reads REVERSAL (one CENSORED_AT_OBSERVATION_END on Oct 3 and on Oct 17);
+  the time from the recognized line to the closing line runs from 0 to several hundred seconds with no single
+  value, so the closing line is not a fixed span.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
