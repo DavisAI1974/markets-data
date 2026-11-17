@@ -36,12 +36,20 @@
    "sha256": "06dcf2685baf5cc3859d27117763585264b6e915de3f07714e09bff2948704c5"
   },
   {
-   "table": "forecast_disagreement.csv",
-   "sha256": "dde600d984a525b519e12e3de2578f5ab5e211cf223c4059c7f595a967b5b61f"
+   "table": "forecast_gap_gfs_nam.csv",
+   "sha256": "38aba4510b56c8b4052bdfb17dab7bc08784a92441f33ec2cd8b2bbc4c4a1384"
   },
   {
-   "table": "forecast_on_row.csv",
-   "sha256": "bf57279128dbcf19aa17a3cd8eb22db8597d90a6bafbbd4fa76286dc16c3fc67"
+   "table": "forecast_on_row_gfs.csv",
+   "sha256": "7a8a4d67e5a7b1c366763d7bf3129eaebd25b33010d5f5d07575bc5b83138e53"
+  },
+  {
+   "table": "forecast_on_row_mex.csv",
+   "sha256": "49f029bba83e096ceba4a03d4bc1b9d2c1a69c70cdbd8e8a3ce6720c153eee8d"
+  },
+  {
+   "table": "forecast_on_row_nam.csv",
+   "sha256": "3399d6093ee1a530ea5f8de4bad5381aa87920aad9a2f5fb6bb117d1212179bc"
   },
   {
    "table": "grid_us48.csv",
@@ -49,7 +57,7 @@
   },
   {
    "table": "positioning.csv",
-   "sha256": "23a97ed8b096072634de536603763a8df9a41d1f70e7016f491f0b8e0f964515"
+   "sha256": "94f6bca46d44479569bdcd153e7293847b81a126b6a1594d8178eb61aec2b8d3"
   },
   {
    "table": "storage_estimate.csv",
@@ -60,40 +68,40 @@
    "sha256": "0a1b4908f77d3452fac0bde7146bc33e20cdb27a690ca2118ed81691d0ec7d9d"
   },
   {
-   "table": "weather_gas_day.csv",
-   "sha256": "5aff6b054c1f325b7d55eb59b2cc671494b20d62d4f53395680754ccdcdd71b0"
+   "table": "weather_hourly_city.csv",
+   "sha256": "dfc02a9ed2600abe9b0778a253cdd52b8bcf69a573a89777c1b13c975b73ebf2"
   },
   {
-   "table": "weather_hourly_city.csv",
-   "sha256": "752885b54d86b86af383b6638267a4a9270392a669c897632b97cc8fd0b22f31"
+   "table": "weather_hourly_weighted.csv",
+   "sha256": "764b7dccfde6396d4ec0b1ffc20e7e0df6d28ba998b7bfeec8704faaf16e4666"
   }
  ],
- "columns": 217,
+ "columns": 408,
  "rows": 879497,
  "row_files": [
   {
    "file": "rows-20231003-part000.parquet",
    "rows": 262144,
-   "bytes": 20012767,
-   "sha256": "b966a6f7145eb70f50e444ca0dd7dcec20e479d77247cd087d9d4873e7aab995"
+   "bytes": 20257248,
+   "sha256": "6011219f56c25a86847290bf8f9ef3268f7184077d340efbea5f1b9cd82c6374"
   },
   {
    "file": "rows-20231003-part001.parquet",
    "rows": 262144,
-   "bytes": 20119090,
-   "sha256": "17bddfe9a6d9640c5b0a8f0d1880b5c4c698a7c4fcd8b1f3f8cdd53b2cf76d98"
+   "bytes": 20357327,
+   "sha256": "4e74a326183a17fd80cb492d6d709b791a841056f3eaf5e6d9a23a0c21c7d14e"
   },
   {
    "file": "rows-20231003-part002.parquet",
    "rows": 262144,
-   "bytes": 20331880,
-   "sha256": "3be73726c98238d760079b31eee002cd7a2c867acf7048b193e51295bc0ac7f3"
+   "bytes": 20572550,
+   "sha256": "20af2d63378a0e7027d93a1c5458297474145930cf9115e9395b7497ddabf436"
   },
   {
    "file": "rows-20231003-part003.parquet",
    "rows": 93065,
-   "bytes": 7711059,
-   "sha256": "bb39165ae86256f4dfd3fa20cbea8a29df82fd1adfb0783c38ddf5c4b5474cde"
+   "bytes": 7828963,
+   "sha256": "9162ca8b862f46e0f0b1c0cc7549549d664aa2b4b7605472366e69c8bd9e209e"
   }
  ],
  "book_picture_rows": 51053273,
@@ -256,7 +264,7 @@
   "outside_pinned": {
    "passed": true,
    "rows_compared": 879497,
-   "columns_compared": 132,
+   "columns_compared": 323,
    "rows_of_no_trade_day": 826,
    "trade_days_on_the_rows": [
     "2023-10-03"
@@ -266,30 +274,11 @@
     "x10_cities_missing": 879497,
     "x12_street_estimate_bcf": 879497,
     "x12_surprise_bcf": 879497,
-    "x02_x06_x09_known_from_ns": 826,
+    "x10_wind_knots_aus": 56085,
+    "x06_known_from_ns": 826,
     "x06_sessions_since_front_expiry": 826,
     "x06_last_expired_symbol": 826,
-    "x06_last_expiry_date": 826,
-    "x09_models_run_utc": 826,
-    "x09_models_largest_gap_hdd": 826,
-    "x09_models_gap_at_days_ahead": 826,
-    "x09_models_gap_by_days_ahead": 826,
-    "x02_forecast_gfs_today_hdd": 826,
-    "x02_forecast_gfs_today_run_utc": 826,
-    "x02_forecast_gfs_today_cities": 826,
-    "x02_forecast_gfs_today_empty_reason": 879497,
-    "x02_forecast_nam_today_hdd": 826,
-    "x02_forecast_nam_today_run_utc": 826,
-    "x02_forecast_nam_today_cities": 826,
-    "x02_forecast_nam_today_empty_reason": 879497,
-    "x02_forecast_gfs_next_day_hdd": 826,
-    "x02_forecast_gfs_next_day_run_utc": 826,
-    "x02_forecast_gfs_next_day_cities": 826,
-    "x02_forecast_gfs_next_day_empty_reason": 879497,
-    "x02_forecast_extended_gfs_three_days_on_hdd": 826,
-    "x02_forecast_extended_gfs_three_days_on_run_utc": 826,
-    "x02_forecast_extended_gfs_three_days_on_cities": 826,
-    "x02_forecast_extended_gfs_three_days_on_empty_reason": 879497
+    "x06_last_expiry_date": 826
    }
   },
   "accounted": {
@@ -310,5 +299,5 @@
   }
  },
  "empty_fields": "stored as empty (null): never 0, never blank text; a calculation skips them",
- "seconds": 122.6
+ "seconds": 93.7
 }
