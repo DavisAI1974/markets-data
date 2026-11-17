@@ -2308,6 +2308,20 @@ refresh my memory later and kill the pods. We'll pick up from here later".**
 - His go for the pods does not carry over: a pod needs his go again at the time, with the price.
 - Where we stopped, and what was learned about Native's stored record, is in `NEXT_SESSION_HANDOFF_20261117L.md`.
 
+**Greg shows a side project made with Desktop (2026-11-17, after the stop): trade day Oct 17, the price of every
+trade (33,703) with a line through the price at each of the 8,619 peak points, and below it the same with 8,619
+points picked at random off the tape.** His words: "This is peak w/o the 20 window with price. They're almost
+identical. Prak is red line." Then: "That's one of the reasons why I didn't want you messinging with it. The group
+info and ranking would have told me nothing and the individual peaks said everything."
+- Standing, restated by him: each peak is kept whole, on its own tick, with its own price. Nothing ranked, nothing
+  grouped by our systems. A rank or a group drops the tick and the price that let a peak be laid against the tape.
+- Said to him once, his to weigh (not repeated): the line is the price at each peak's tick, and the random points in
+  the lower panel trace the price just as closely, so closeness to the price line by itself does not set the peaks
+  apart. What does look different by eye is that the peak line reaches the tips of the price spikes where the random
+  line leaves them poking out. Not measured. And 8,619 is exactly the stored peak count of trade day Oct 17, which is
+  made on the 20-second flow, so which peaks were plotted is to be checked with Desktop before anything is built on
+  it. Nothing was run.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
