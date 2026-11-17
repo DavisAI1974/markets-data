@@ -177,3 +177,31 @@ What this says:
   not separate market events. This is what Native's stored record shows; it does not say the DIPOLE DIVE (the flow
   lean diving into a turn and recovering) is not real. That is looked at in the renders, one per dipole, pinned at
   the birth second.
+
+### The dipoles born WITH a trade are a different thing from the rest (Greg: "That's fine if some were born with no trades, what about the ones that were")
+
+Read from the stored files in the session (told to Greg first); counts in `DIPOLES_BORN_WITH_A_TRADE.json`.
+
+| | Oct 2 | Oct 3 | Oct 17 | Oct 18 |
+|---|---:|---:|---:|---:|
+| Born WITH a trade in the birth second | 288 | 335 | 267 | 315 |
+| ... every trade in that second on the dipole's side | 281 | 327 | 255 | 295 |
+| ... our flow fully one-sided on its side right after | 274 | 321 | 250 | 288 |
+| ... the birth second is where our flow BECAME fully one-sided | 271 | 311 | 256 | 308 |
+| ... a 20-second peak's high on its side in that second | 264 | 302 | 240 | 281 |
+| ... a no-window peak's high on its side in that second | 133 | 144 | 118 | 130 |
+| ... born exactly 45 seconds after the one before | 6 | 6 | 5 | 7 |
+| ... a single lot traded on its side | 169 | 203 | 159 | 159 |
+| Born with NO trade in the birth second | 453 | 498 | 474 | 548 |
+| ... our flow fully one-sided on its side right after | 264 | 289 | 226 | 308 |
+| ... a 20-second peak's high on its side in that second | 65 | 79 | 54 | 69 |
+| ... born exactly 45 seconds after the one before | 93 | 110 | 100 | 105 |
+
+- The dipoles born with a trade agree with our tape almost every time. They mark the second in which a trade
+  made the 20-second flow fully one-sided, and about nine in ten are the same event as an exhaustion peak (a
+  20-second peak's high in that same second, on the same side). Almost none are spacing marks.
+- The dipoles born with no trade are where the 45-second spacing rule shows up.
+- More than half of the dipoles born with a trade are a single lot: on a thin tape one small trade after a quiet
+  stretch makes the 20-second flow fully one-sided.
+- So the part of Native's dipole record that is a real event on the tape is, as far as read, the exhaustion peak
+  whose flow is fully one-sided. Whether it does the dipole dive is what the renders are for.

@@ -2648,6 +2648,32 @@ the renders after you do".**
   dipole (price, both kinds of flow, the size at the best prices, from the dipole before to the dipole after, so
   no span of time is chosen). The renders are a run: on pods, the price given at the launch.
 
+**Greg, 2026-11-17, on the dipoles and exhaustion.** "That's fine if some were born with no trades, what about the ones
+that were"; "So how do you know how the dipoles are lining up if they aren't pinned to their timestamps?"; "You
+pinned all those dipole events to the timestamps this quicy and i can look at the excel sheets and see them
+a.pinned?"; "And what about exhaustion? ... The exhaustion renders has the almost identitcal shapes for different
+types of trades and the shapes are very distinct for trade to trade".
+- Told plainly: every dipole carries its own exact times in Native's stored record and every tick carries its own
+  on our tape; lining the two up is the pin, and it was done for all of them in the session to count. What had not
+  been done was saving the lined-up table. It is not in any Excel sheet. The run below saves it; then it is written
+  out as one small Excel file, a sheet per trade day.
+- The dipoles born WITH a trade (288, 335, 267, 315) read as real events: every trade in the second on the dipole's
+  side for nearly all; our flow fully one-sided on its side right after for 274, 321, 250, 288; the birth second is
+  where the flow became one-sided for 271, 311, 256, 308; a 20-second peak's high in the same second for 264, 302,
+  240, 281; born exactly 45 seconds after the one before for only 6, 6, 5, 7. More than half are a single lot. The
+  dipoles born with no trade are where the spacing rule shows (93, 110, 100, 105 at exactly 45 seconds).
+- Exhaustion: the stored 20-second peaks are the exhaustion peaks, each with its story. Their shapes had only been
+  counted, never looked at on the rebuilt data. Last week's exhaustion renders were not opened.
+- LAUNCHED 10:26 UTC on his word ("Pin the dipoles and the do the renders after you do"): four General Purpose
+  8-CPU pods, $0.32 an hour each, $1.28 for the four, Markets `f44f7c6`, job `calc:renders` (`root/dipole_renders.py`).
+  Pods: Oct 2 `v77rqljqv0s9hb`, Oct 3 `vmczelc3kybrzv`, Oct 17 `f3g6yj2owboz01`, Oct 18 `g5cpkm35bkwrst`. Each makes:
+  the pinned table (one line per dipole: what our tape holds at its birth second); one picture per dipole (price,
+  our 20-second flow lean with the flow with no window beside it, the size at the best prices), running from the
+  dipole before to the dipole after so no span of time is chosen; and every exhaustion peak as its own small panel,
+  40 to a page in the order of their highs, the flow lean and the last print turned so the peak's side is up,
+  from the high of the peak before to the end of its own story, with an index naming each peak's page and panel.
+  A dry run in the session drew two dipole pictures and one page first (told to him; thrown away).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
