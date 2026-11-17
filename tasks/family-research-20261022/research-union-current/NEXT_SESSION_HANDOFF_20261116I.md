@@ -1,5 +1,7 @@
 # Handoff, ninth session (2026-11-16 evening Eastern): L, M and the chain link models built, run on pods and stored; the six steps put to Greg
 
+**`NEXT_SESSION_HANDOFF_20261116J.md` is newer than this file and is the place to start.**
+
 Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data` for data and documents. This file replaces
 `NEXT_SESSION_HANDOFF_20261116H.md` as the starting point. Desktop writes to the same branch: fetch before every
 push.

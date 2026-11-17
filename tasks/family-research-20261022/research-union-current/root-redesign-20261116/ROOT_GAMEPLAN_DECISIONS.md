@@ -1984,6 +1984,25 @@ strong and is withdrawn. What stands:
   them and replaces nothing.
 - Where an old value and a new one both exist, both are kept side by side.
 
+**How the missing hours are made: DECIDED (Greg, same hour): "So build the mossing hrs exactly how we built the
+current data for the other hours".** Asked first whether the exact data could be downloaded instead ("Can we
+download that exact data from somewhere instead of building it ourselves?"): no. Native's dipole record and the
+trade legs are our own outputs, not a vendor's; the raw tape for 6 pm to 8 pm Eastern of trade days Oct 2 and Oct 17
+is already held (the MBO files and the stored rows). So:
+- The missing two hours of trade days Oct 2 and Oct 17 are made **exactly the way the existing data for the other
+  hours was made**: the same programs and the same rule, run over those hours of the held tape. Not a new method
+  and not a rewrite.
+- For the trade legs that is the rule of Markets `0408df44`, `continue_trade_chronology.py`. For Native that is
+  Native's own program (Markets `2ebb8ce8`, `research/kalshi/frankie_raw_mbo_benchmark/native_session.py` and what
+  it calls). Each is read first; if one cannot be run as it stands on those hours, that comes to Greg before
+  anything else is done.
+- If a full from-6-pm run of Native for those two dates exists somewhere this session cannot see (AWS is off
+  limits; his own machine), it is the exact data and is placed instead of being made. He was told so.
+
+**A new session (Greg: "Shoukd we start new session soon?").** Yes: this one has grown very long. Nothing is half
+done on a pod: none is running, nothing is billing, and everything run is stored. Handoff written as
+`NEXT_SESSION_HANDOFF_20261116J.md`.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
