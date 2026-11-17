@@ -27,6 +27,9 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
   - `sweeps` (addition M, every trade event and the quote touching or crossing; Markets `5f49e4d`): `calc-sweeps-facts-20231018-part*.parquet`, one line per fact: 29,797 trade events (1,357 with no fill message, 24 with more than one trade side, at most 5 price levels filled in one event); the quote touched or crossed 557 times (1,910 ticks), none standing at the last tick. It was run twice: the first run's receipt counted the touch facts 33 times over (the facts themselves were right); only the corrected run is stored.
   - `chain_peaks` (the chain link models, first part: what each peak did, and the ended peaks before it; Markets `b8b720c`): `calc-chain_peaks-facts-20231018-part*.parquet`, one line per peak at the tick its story ended: 7,965 peak lines (5,267 came back, 2,698 beaten; 2 still open at the last tick, listed in `calc-chain_peaks-open-at-the-end-*`). `calc-chain_peaks-before-20231018-part*.parquet`, one line per step back at the tick a peak became known: 47,755 lines, six steps written out (8 peak lines had fewer than six ended peaks before them). Empty cells: no low for the rise on 35 lines, no trade between the high and the end on 118, no peak before on 1. It holds no model.
   - Checks, in `CALC-refills-20231018.json`, `CALC-sweeps-20231018.json` and `CALC-chain_peaks-20231018.json`, all passed on the first run of each: every fact and line worked out again by a different method and equal; playback equal at two cuts (three for sweeps), each cut where something was still unfolding. Rows of no trade day hold empty cells.
+- The chain link models, second part (Step 1 piece 4; approved by Greg 2026-11-16: "Let it produce full values", "Do it"; Markets `1a0e073`, `root/chain_models.py`). Run on the same pod, on helpers pinned one to a CPU, one thread each. **These values are NOT known at any tick:** this trade day's peaks were scored by ridge, nearest neighbours and extra trees taught on the OTHER three trade days (2023-10-02, 2023-10-03, 2023-10-17), some of them later. They are kept in their own table and are never put on a tick row. It is a model score by his decision, kept per peak.
+  - `chain-models-20231018-part*.parquet`: one line per peak, model and step back (1 to 6), 143,406 lines: each of the ten figures' own squared error without and with the ended peak at that step, the mean over the ten beside them, and the gain. Peaks scored at steps 1 to 6: 7,875, 7,825, 7,794, 7,758, 7,721, 7,688. A line that is not scored has empty values and the reason (fewer ended peaks before it than the step; an empty figure on the peak or on one of the peaks before it; story still open at the last tick).
+  - Checks, in `CHAIN-MODELS-20231018.json`, passed: every peak given to a model had a story that ended at or before the tick its target became known (215,974 inputs looked at, over all four trade days); ridge worked out again in closed form agrees with the library. Nearest neighbours and extra trees have no independent recount. Libraries: scikit-learn 1.9.1, numpy 2.5.5, Python 3.12.16.
 
 | File | Bytes | SHA256 |
 |---|---:|---|
@@ -39,6 +42,7 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `CALC-quote_runs-20231018.json` | 6,221 | `c9fad90f9babc52b853517fc50caa8ef47a3eacbef8abf3af71406e7bfa373fa` |
 | `CALC-refills-20231018.json` | 4,478 | `d94d50ccfadb5f0bd3ffeb49789f70cf20bd136e9a4a5a7d120be9681bb05776` |
 | `CALC-sweeps-20231018.json` | 5,174 | `b4a4a5936a2ddc931a37c72df502af117ed427f41426864cd753953f89fc59c6` |
+| `CHAIN-MODELS-20231018.json` | 41,745 | `870b29ebb4508f1bfa99ba11727fbf1af141a611755b27eae9eb2ad647bbaa1e` |
 | `RECEIPT.json` | 8,849 | `ab9b100236fc09124313410653ad6f49a1139661f6c66adc70209febb6f9436b` |
 | `book-pictures-20231018-part000.parquet` | 12,044,565 | `825dae26433b637002707b830852ad544c22ad171b816427d82c6d5ffd18707b` |
 | `book-pictures-20231018-part001.parquet` | 12,391,163 | `b77cce7fcdc43d67ae8818a23f65bd07ff39df6428f02ea0f00900d1ad5be7d4` |
@@ -88,6 +92,7 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `calc-sweeps-20231018-part002.parquet` | 527,085 | `efbbbdfecdb85cb302b2bf83921b0b7dab366ad465d2c7d0ae4deed813e87861` |
 | `calc-sweeps-facts-20231018-part000.parquet` | 1,088,842 | `f1f09a7788b6c4f2dcf199b81b152c9a1716671c7b6bbafcf2e6d31902e24dff` |
 | `calc-sweeps-open-at-the-end-20231018-part000.parquet` | 734 | `686f3712d423508eaf008134ba74805b62b07249acf3c63d533a38374b048ab2` |
+| `chain-models-20231018-part000.parquet` | 25,597,459 | `2f30ff0cfdcb892be12f1a1c95b57d6504a54b599016f7ac658a45d55657ea2b` |
 | `playback-20231018.json` | 666 | `dff963b8f017297e3be9ddd21c68c5ed3d1d7afe470aa63cb0bc13c67c4c8439` |
 | `rows-20231018-part000.parquet` | 19,918,917 | `553218f493ba6420dfc957f9adce322ddf8e477ab150f60fc88f97fba635df47` |
 | `rows-20231018-part001.parquet` | 20,110,859 | `7cd439efe8f94e71d4612e7d8effe88994ae96b653d724c73749797bd1479975` |
