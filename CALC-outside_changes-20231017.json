@@ -1,0 +1,271 @@
+{
+ "what": "ROOT part 2: the calculation outside_changes on one trade day",
+ "laid_out_and_approved": "markets-data STEP1_STEP2_LAYOUTS.md, addition O (\"Try them all\", Greg, 2026-11-16)",
+ "trade_day": "2023-10-17",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d"
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e"
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65"
+  }
+ ],
+ "columns": [
+  {
+   "column": "outside_change_facts_known",
+   "what": "How many facts about an outside figure changing became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "figure",
+    "kind",
+    "value_before",
+    "value_now",
+    "known_from_ns",
+    "buy_peak_high_position",
+    "buy_peak_since_high_ns",
+    "buy_peak_story",
+    "sell_peak_high_position",
+    "sell_peak_since_high_ns",
+    "sell_peak_story",
+    "rise_side",
+    "rise_high_position",
+    "rise_since_high_ns",
+    "bid_run_start_position",
+    "bid_run_direction",
+    "bid_run_price_before",
+    "bid_run_moves",
+    "bid_run_distance",
+    "bid_run_since_start_ns",
+    "ask_run_start_position",
+    "ask_run_direction",
+    "ask_run_price_before",
+    "ask_run_moves",
+    "ask_run_distance",
+    "ask_run_since_start_ns"
+   ],
+   "lines": 77306,
+   "files": [
+    {
+     "file": "calc-outside_changes-facts-20231017-part000.parquet",
+     "rows": 77306,
+     "bytes": 1686998,
+     "sha256": "9113a369ca1e70c7b49ea5ac9a6b9e029e197926c80496b7956b2b4b69ee949e"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 845246,
+ "rows": 846158,
+ "counts": {
+  "facts": 77306,
+  "facts_by_figure": {
+   "x05_us48_wind_mwh": 22,
+   "x05_x07_grid_hour_utc": 22,
+   "x05_x07_grid_known_from_ns": 22,
+   "x07_gas_burn_estimate_bcfd": 22,
+   "x07_us48_gas_mwh": 22,
+   "x10_gas_day": 1,
+   "x10_gas_day_known_from_ns": 1,
+   "x10_gas_weighted_cdd": 1,
+   "x10_gas_weighted_hdd": 1,
+   "x10_gas_weighted_precip_in": 1,
+   "x10_gas_weighted_wind_knots": 1,
+   "x10_hdd_one_gas_day_before": 1,
+   "x10_hdd_two_gas_days_before": 1,
+   "x10_temp_atl_known_from_ns": 23,
+   "x10_temp_aus_known_from_ns": 23,
+   "x10_temp_bos_known_from_ns": 23,
+   "x10_temp_dca_known_from_ns": 23,
+   "x10_temp_den_known_from_ns": 23,
+   "x10_temp_dfw_known_from_ns": 23,
+   "x10_temp_dtw_known_from_ns": 23,
+   "x10_temp_f_atl": 18,
+   "x10_temp_f_aus": 22,
+   "x10_temp_f_bos": 14,
+   "x10_temp_f_dca": 17,
+   "x10_temp_f_den": 19,
+   "x10_temp_f_dfw": 20,
+   "x10_temp_f_dtw": 15,
+   "x10_temp_f_iah": 20,
+   "x10_temp_f_lax": 16,
+   "x10_temp_f_msp": 19,
+   "x10_temp_f_nyc": 16,
+   "x10_temp_f_ord": 18,
+   "x10_temp_f_phl": 19,
+   "x10_temp_f_phx": 22,
+   "x10_temp_f_sat": 19,
+   "x10_temp_f_sea": 13,
+   "x10_temp_f_sfo": 18,
+   "x10_temp_f_stl": 22,
+   "x10_temp_iah_known_from_ns": 23,
+   "x10_temp_lax_known_from_ns": 23,
+   "x10_temp_msp_known_from_ns": 23,
+   "x10_temp_nyc_known_from_ns": 23,
+   "x10_temp_ord_known_from_ns": 23,
+   "x10_temp_phl_known_from_ns": 23,
+   "x10_temp_phx_known_from_ns": 23,
+   "x10_temp_sat_known_from_ns": 23,
+   "x10_temp_sea_known_from_ns": 23,
+   "x10_temp_sfo_known_from_ns": 23,
+   "x10_temp_stl_known_from_ns": 23,
+   "x13_curve_settled_curvature": 1,
+   "x13_curve_settled_far": 1,
+   "x13_curve_settled_front": 1,
+   "x13_curve_settled_front_minus_next": 1,
+   "x13_curve_settled_known_from_ns": 1,
+   "x13_curve_settled_next": 1,
+   "x13_curve_settled_slope_to_far": 1,
+   "x13_curve_settled_slope_to_next": 1,
+   "x13_curve_traded_curvature": 10335,
+   "x13_curve_traded_far": 451,
+   "x13_curve_traded_front": 9553,
+   "x13_curve_traded_front_minus_next": 13290,
+   "x13_curve_traded_known_from_ns": 14559,
+   "x13_curve_traded_next": 4995,
+   "x13_curve_traded_slope_to_far": 9966,
+   "x13_curve_traded_slope_to_next": 13290
+  },
+  "outside_columns_followed": 108
+ },
+ "files": [
+  {
+   "file": "calc-outside_changes-20231017-part000.parquet",
+   "rows": 262144,
+   "bytes": 539664,
+   "sha256": "67b2078924f83c8263319b8d7bd8b403d6d2a75e6cf38e50bdf9ab5f15c5d1ad",
+   "beside": "rows-20231017-part000.parquet",
+   "beside_sha256": "7c1559d5056070a4b91ffd4f7cf2928d1034a54fde3cb3a4e518438372416595"
+  },
+  {
+   "file": "calc-outside_changes-20231017-part001.parquet",
+   "rows": 262144,
+   "bytes": 538062,
+   "sha256": "bd02acbfaefbc11bd1bf173072797c84cad0f37f226133f155f5d79b95ea205d",
+   "beside": "rows-20231017-part001.parquet",
+   "beside_sha256": "a30f8b597209bd74a81ec426f678699e61a341099a1b66a9fa6e35299a7057f0"
+  },
+  {
+   "file": "calc-outside_changes-20231017-part002.parquet",
+   "rows": 262144,
+   "bytes": 537996,
+   "sha256": "636ee076fe94eda3116eb23df7d0fb150deb2da0b7806b4e8411f8917b7f65d3",
+   "beside": "rows-20231017-part002.parquet",
+   "beside_sha256": "b1c9b234966d8874d4fec39567dbd483f47da3205209d03ccf57ca065722a36a"
+  },
+  {
+   "file": "calc-outside_changes-20231017-part003.parquet",
+   "rows": 59726,
+   "bytes": 177372,
+   "sha256": "d1e8f986fc94152a78465c538782876b29bb15becb0397d085f830d99d36ee87",
+   "beside": "rows-20231017-part003.parquet",
+   "beside_sha256": "efb7d6338879f8ad53224a307a882f4562cc5aafa797faf3a4ef07ef80c32313"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 845246,
+   "facts_compared": 77306,
+   "ticks_with_a_change": 14686,
+   "facts_by_figure": {
+    "x05_us48_wind_mwh": 22,
+    "x05_x07_grid_hour_utc": 22,
+    "x05_x07_grid_known_from_ns": 22,
+    "x07_gas_burn_estimate_bcfd": 22,
+    "x07_us48_gas_mwh": 22,
+    "x10_gas_day": 1,
+    "x10_gas_day_known_from_ns": 1,
+    "x10_gas_weighted_cdd": 1,
+    "x10_gas_weighted_hdd": 1,
+    "x10_gas_weighted_precip_in": 1,
+    "x10_gas_weighted_wind_knots": 1,
+    "x10_hdd_one_gas_day_before": 1,
+    "x10_hdd_two_gas_days_before": 1,
+    "x10_temp_atl_known_from_ns": 23,
+    "x10_temp_aus_known_from_ns": 23,
+    "x10_temp_bos_known_from_ns": 23,
+    "x10_temp_dca_known_from_ns": 23,
+    "x10_temp_den_known_from_ns": 23,
+    "x10_temp_dfw_known_from_ns": 23,
+    "x10_temp_dtw_known_from_ns": 23,
+    "x10_temp_f_atl": 18,
+    "x10_temp_f_aus": 22,
+    "x10_temp_f_bos": 14,
+    "x10_temp_f_dca": 17,
+    "x10_temp_f_den": 19,
+    "x10_temp_f_dfw": 20,
+    "x10_temp_f_dtw": 15,
+    "x10_temp_f_iah": 20,
+    "x10_temp_f_lax": 16,
+    "x10_temp_f_msp": 19,
+    "x10_temp_f_nyc": 16,
+    "x10_temp_f_ord": 18,
+    "x10_temp_f_phl": 19,
+    "x10_temp_f_phx": 22,
+    "x10_temp_f_sat": 19,
+    "x10_temp_f_sea": 13,
+    "x10_temp_f_sfo": 18,
+    "x10_temp_f_stl": 22,
+    "x10_temp_iah_known_from_ns": 23,
+    "x10_temp_lax_known_from_ns": 23,
+    "x10_temp_msp_known_from_ns": 23,
+    "x10_temp_nyc_known_from_ns": 23,
+    "x10_temp_ord_known_from_ns": 23,
+    "x10_temp_phl_known_from_ns": 23,
+    "x10_temp_phx_known_from_ns": 23,
+    "x10_temp_sat_known_from_ns": 23,
+    "x10_temp_sea_known_from_ns": 23,
+    "x10_temp_sfo_known_from_ns": 23,
+    "x10_temp_stl_known_from_ns": 23,
+    "x13_curve_settled_curvature": 1,
+    "x13_curve_settled_far": 1,
+    "x13_curve_settled_front": 1,
+    "x13_curve_settled_front_minus_next": 1,
+    "x13_curve_settled_known_from_ns": 1,
+    "x13_curve_settled_next": 1,
+    "x13_curve_settled_slope_to_far": 1,
+    "x13_curve_settled_slope_to_next": 1,
+    "x13_curve_traded_curvature": 10335,
+    "x13_curve_traded_far": 451,
+    "x13_curve_traded_front": 9553,
+    "x13_curve_traded_front_minus_next": 13290,
+    "x13_curve_traded_known_from_ns": 14559,
+    "x13_curve_traded_next": 4995,
+    "x13_curve_traded_slope_to_far": 9966,
+    "x13_curve_traded_slope_to_next": 13290
+   },
+   "outside_columns_followed": 108,
+   "method": "each outside column laid against itself one row down, along the whole column; what was in play from the stored outputs of pieces 1, 2 and the quote's runs. Shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 422623,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 391240,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 845246,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 59.8
+}

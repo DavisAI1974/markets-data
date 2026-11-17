@@ -30,6 +30,11 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 - The chain link models, second part (Step 1 piece 4; approved by Greg 2026-11-16: "Let it produce full values", "Do it"; Markets `1a0e073`, `root/chain_models.py`). Run on the same pod, on helpers pinned one to a CPU, one thread each. **These values are NOT known at any tick:** this trade day's peaks were scored by ridge, nearest neighbours and extra trees taught on the OTHER three trade days (2023-10-02, 2023-10-03, 2023-10-18), some of them later. They are kept in their own table and are never put on a tick row. It is a model score by his decision, kept per peak.
   - `chain-models-20231017-part*.parquet`: one line per peak, model and step back (1 to 6), 155,142 lines: each of the ten figures' own squared error without and with the ended peak at that step, the mean over the ten beside them, and the gain. Peaks scored at steps 1 to 6: 8,542, 8,510, 8,478, 8,441, 8,414, 8,381. A line that is not scored has empty values and the reason (fewer ended peaks before it than the step; an empty figure on the peak or on one of the peaks before it; story still open at the last tick).
   - Checks, in `CHAIN-MODELS-20231017.json`, passed: every peak given to a model had a story that ended at or before the tick its target became known (215,974 inputs looked at, over all four trade days); ridge worked out again in closed form agrees with the library. Nearest neighbours and extra trees have no independent recount. Libraries: scikit-learn 1.9.1, numpy 2.5.5, Python 3.12.16.
+- Part 2, the three calculations written in the ninth session and first run in the tenth (Markets `02ffde6`, on a pod; Greg's go 2026-11-17):
+  - `quote_peaks` (the rest of piece I: the peaks in play at every turn of a run of the quote): `calc-quote_peaks-20231017-part*.parquet` beside the rows; `calc-quote_peaks-facts-20231017-part*.parquet`, 67,295 facts, one at every turn.
+  - `outside_changes` (addition O: what was in play when an outside figure changed): `calc-outside_changes-20231017-part*.parquet`; `calc-outside_changes-facts-20231017-part*.parquet`, 77,306 facts over 108 outside columns followed (14,686 ticks with a change).
+  - `together` (addition N: orders that entered or left at the same exchange time): `calc-together-20231017-part*.parquet`; `calc-together-facts-20231017-part*.parquet`, 2 lines in 1 sets that entered together and 32,234 lines in 9,023 sets that left together; `calc-together-open-at-the-end-20231017-part000.parquet`.
+  - Checks, in `CALC-quote_peaks-20231017.json`, `CALC-outside_changes-20231017.json` and `CALC-together-20231017.json`, all passed on the first run (a recount by a second method, the playback cuts, the rows gate).
 
 | File | Bytes | SHA256 |
 |---|---:|---|
@@ -37,11 +42,14 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `CALC-chain_peaks-20231017.json` | 5,587 | `08534c70cfbe5ce838b77673b89e8f21ae361d34ca98a20926a6d494c3253d94` |
 | `CALC-flow_peak-20231017.json` | 4,489 | `41d09932c74f8dcb940eb3dddc31e11e395ff604a65f14843bf0adaf2abdb83b` |
 | `CALC-open_stories-20231017.json` | 4,168 | `7aacee61855532684c2655b2f028b86708d45d5816f72b9dc1a22b1ef1b5ca04` |
+| `CALC-outside_changes-20231017.json` | 8,577 | `4628ac41063440a143668e12d3c350fadef32e223bef8e2a39b0bdd87cac49fa` |
 | `CALC-peak_links-20231017.json` | 4,354 | `364eb62a531bc7793d9c74272be88f3fbf41b8b8ff9a4fffcee559f6716e77c9` |
 | `CALC-peak_story-20231017.json` | 4,199 | `69d5d54919061c4b4177cb3f1b1d2db6fa5872b3e95c172cb802877dffed3801` |
+| `CALC-quote_peaks-20231017.json` | 3,959 | `90c9f28cdce9078c98994dadbd899a461ff9e135a0b82d1fd7a433aa17398d1b` |
 | `CALC-quote_runs-20231017.json` | 6,407 | `6c9109c7e6d80593b24064d2c5ce1d127d3dfe01458753bd0289834f7c3346a3` |
 | `CALC-refills-20231017.json` | 4,659 | `d2788f91c2edad0da0445984505f3f47a8c75d8cf54a404ec38ac14531480a5d` |
 | `CALC-sweeps-20231017.json` | 5,356 | `d82d9040f1b9a87db7d5a672eeddc1ff2ff183c43050c91ff9df752b40ea6e1c` |
+| `CALC-together-20231017.json` | 4,860 | `1ade81307d0bf62fc84416273ae46ff6d347afb21f8f9551260fe43131d540df` |
 | `CHAIN-MODELS-20231017.json` | 41,720 | `95ccbfb438d8f6a558699513f84f6aeed3643e0568fd717ba6b2840c6d4f1bf4` |
 | `RECEIPT.json` | 8,902 | `4ec88893c09030330ff0e7a9f9b9bd2032e074e251286115af324acd1f8031b0` |
 | `book-pictures-20231017-part000.parquet` | 11,957,324 | `b029cda92bb6d4d90b1c2d1538205f16dd2aba00111e3d956dd594b07b8e9cf1` |
@@ -74,6 +82,11 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `calc-open_stories-20231017-part001.parquet` | 599,461 | `4d216c6eeef0e1a7046dc1603a1de426c7c2804748b9e9f80904224c5ebac935` |
 | `calc-open_stories-20231017-part002.parquet` | 604,288 | `e45ef3aebf07ab27d5428b3694bb8f239379f80cf3b72b5434f14194dd166eb8` |
 | `calc-open_stories-20231017-part003.parquet` | 199,436 | `35668c6254d37fe939b7c047dbff27435d093d03ea46ed531c8ed36f68d669e5` |
+| `calc-outside_changes-20231017-part000.parquet` | 539,664 | `67b2078924f83c8263319b8d7bd8b403d6d2a75e6cf38e50bdf9ab5f15c5d1ad` |
+| `calc-outside_changes-20231017-part001.parquet` | 538,062 | `bd02acbfaefbc11bd1bf173072797c84cad0f37f226133f155f5d79b95ea205d` |
+| `calc-outside_changes-20231017-part002.parquet` | 537,996 | `636ee076fe94eda3116eb23df7d0fb150deb2da0b7806b4e8411f8917b7f65d3` |
+| `calc-outside_changes-20231017-part003.parquet` | 177,372 | `d1e8f986fc94152a78465c538782876b29bb15becb0397d085f830d99d36ee87` |
+| `calc-outside_changes-facts-20231017-part000.parquet` | 1,686,998 | `9113a369ca1e70c7b49ea5ac9a6b9e029e197926c80496b7956b2b4b69ee949e` |
 | `calc-peak_links-20231017-part000.parquet` | 537,361 | `149b39edeb2d29458384d84986a1cc2d74b1e22a893fd651872f6c26802efb96` |
 | `calc-peak_links-20231017-part001.parquet` | 536,926 | `31bf9dbdc9fcb8520343d53b3f005ccdf12770d192a6cf41cf3a4f529c6dec80` |
 | `calc-peak_links-20231017-part002.parquet` | 537,485 | `b73c288161b1a165d94555a30ffae97b3788ed10bb3e0100ac98f3708491f200` |
@@ -86,6 +99,11 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `calc-peak_story-20231017-part003.parquet` | 178,194 | `52576e840f333ce9a98f96979e969cda31652299b4f9200090474ff73b8f065a` |
 | `calc-peak_story-facts-20231017-part000.parquet` | 1,474,998 | `064f007725b82161aaecd46db29161fa148860ff919742785ea8cdd576822ad8` |
 | `calc-peak_story-open-at-the-end-20231017-part000.parquet` | 1,110 | `c1f2082ec94a9a7575aa30d1e0c72f5f76a4e153bad64aa9ab24468c794071f0` |
+| `calc-quote_peaks-20231017-part000.parquet` | 547,088 | `ce8fc668ec69d2495c16880fdbdc50e583adc2cc40057fd485fa15baa979df78` |
+| `calc-quote_peaks-20231017-part001.parquet` | 543,636 | `4682b39ff7d7885d10e5e9cca1de6cd4e908073bda25cae6a2e077865805d965` |
+| `calc-quote_peaks-20231017-part002.parquet` | 544,286 | `2298415ba5cbff6726bff4276a64d598791d683d5f836bf47589e17e42d91b5e` |
+| `calc-quote_peaks-20231017-part003.parquet` | 178,548 | `be45dca6c2b3f54bb07d5bbd7aa8155da74ee2edd296ea034417937599aec60b` |
+| `calc-quote_peaks-facts-20231017-part000.parquet` | 1,453,053 | `8283d2d92b9706cc0a9033cffb8f8f7353fc7d9ab973a9ef57731ad8c9f0cad2` |
 | `calc-quote_runs-20231017-part000.parquet` | 2,952,347 | `c45306a7bdee6e3007fe16850ea5355c0fd4346e1cfff9165291f8897d5e39d2` |
 | `calc-quote_runs-20231017-part001.parquet` | 2,854,193 | `743d9c7347d16eb2f370d730806eb3be96ef7f2d3a7de5ce1a11637bdd97caf1` |
 | `calc-quote_runs-20231017-part002.parquet` | 2,854,428 | `612b6b7b45221a4545e801a34a716cd2f678c0b6d34a9cb8e5ac9407dbb77606` |
@@ -103,6 +121,12 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `calc-sweeps-20231017-part003.parquet` | 178,278 | `e9260983388287b20888a530c32b9ace930ca1f34068886e59f6eefe14446f30` |
 | `calc-sweeps-facts-20231017-part000.parquet` | 1,174,208 | `fb37cae11e510badcee746c7d7891a5494045cee5097f9290f52313c11eb58dd` |
 | `calc-sweeps-open-at-the-end-20231017-part000.parquet` | 734 | `686f3712d423508eaf008134ba74805b62b07249acf3c63d533a38374b048ab2` |
+| `calc-together-20231017-part000.parquet` | 534,345 | `10ad2cc6f5a9b46243a5bf74be54325e52303abeafa7b2017e7d1fc192f33cf0` |
+| `calc-together-20231017-part001.parquet` | 536,387 | `3ce3f607305171c05a066641ff5ad903f2ed680a7a14cde68af910265f54b426` |
+| `calc-together-20231017-part002.parquet` | 537,171 | `29d1a89e7ebca6410b28730c4ca6a30cf0529197d671a236f959802cdf2a19d3` |
+| `calc-together-20231017-part003.parquet` | 176,842 | `4aa833da60f03f0a4ab86c4bac39c93b4e009ea2fc17932de2e0e117220044f9` |
+| `calc-together-facts-20231017-part000.parquet` | 795,028 | `d4d95a27d1d6f49d7d3f557f3ff0ddd6ef8f9f0499cd1b1644772646d557e639` |
+| `calc-together-open-at-the-end-20231017-part000.parquet` | 909 | `dbcf236a733ec98b017da71b00ce46f057e8562e197ab6f62d9c7d4dadc6012a` |
 | `chain-models-20231017-part000.parquet` | 27,593,519 | `c1f08e341c7e2751a54f64e43806e24cf5e6f4e886ebf9df38ae9e83568ed0cc` |
 | `playback-20231017.json` | 665 | `730534ef97f7ba68f7b3ca9e381ae0723fc360e787b16956ac03927e5aa4177d` |
 | `rows-20231017-part000.parquet` | 19,729,598 | `7c1559d5056070a4b91ffd4f7cf2928d1034a54fde3cb3a4e518438372416595` |

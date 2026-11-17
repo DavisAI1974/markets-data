@@ -1,0 +1,171 @@
+{
+ "what": "ROOT part 2: the calculation together on one trade day",
+ "laid_out_and_approved": "markets-data STEP1_STEP2_LAYOUTS.md, addition N (\"Try them all\", Greg, 2026-11-16)",
+ "trade_day": "2023-10-17",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d"
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e"
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65"
+  }
+ ],
+ "columns": [
+  {
+   "column": "together_lines_known",
+   "what": "How many lines about orders that entered or left together became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "fact",
+    "set_exchange_time_ns",
+    "orders_in_set",
+    "size_of_set",
+    "order_position",
+    "order_received_time_ns",
+    "order_number",
+    "side",
+    "price",
+    "size",
+    "how_left",
+    "entered_in_this_trade_day",
+    "entered_exchange_time_ns",
+    "others_that_entered_with_it"
+   ],
+   "lines": 32236,
+   "files": [
+    {
+     "file": "calc-together-facts-20231017-part000.parquet",
+     "rows": 32236,
+     "bytes": 795028,
+     "sha256": "d4d95a27d1d6f49d7d3f557f3ff0ddd6ef8f9f0499cd1b1644772646d557e639"
+    }
+   ]
+  },
+  "open-at-the-end": {
+   "columns": [
+    "fact",
+    "set_exchange_time_ns",
+    "order_position",
+    "order_number"
+   ],
+   "lines": 0,
+   "files": [
+    {
+     "file": "calc-together-open-at-the-end-20231017-part000.parquet",
+     "rows": 0,
+     "bytes": 909,
+     "sha256": "dbcf236a733ec98b017da71b00ce46f057e8562e197ab6f62d9c7d4dadc6012a"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 845246,
+ "rows": 846158,
+ "counts": {
+  "sets": {
+   "entered together": 1,
+   "left together": 9023
+  },
+  "lines": {
+   "entered together": 2,
+   "left together": 32234
+  },
+  "largest_set": {
+   "entered together": 2,
+   "left together": 72
+  },
+  "ticks_with_an_earlier_exchange_time": 0,
+  "orders_that_entered_in_the_trade_day_and_are_still_resting": 477
+ },
+ "files": [
+  {
+   "file": "calc-together-20231017-part000.parquet",
+   "rows": 262144,
+   "bytes": 534345,
+   "sha256": "10ad2cc6f5a9b46243a5bf74be54325e52303abeafa7b2017e7d1fc192f33cf0",
+   "beside": "rows-20231017-part000.parquet",
+   "beside_sha256": "7c1559d5056070a4b91ffd4f7cf2928d1034a54fde3cb3a4e518438372416595"
+  },
+  {
+   "file": "calc-together-20231017-part001.parquet",
+   "rows": 262144,
+   "bytes": 536387,
+   "sha256": "3ce3f607305171c05a066641ff5ad903f2ed680a7a14cde68af910265f54b426",
+   "beside": "rows-20231017-part001.parquet",
+   "beside_sha256": "a30f8b597209bd74a81ec426f678699e61a341099a1b66a9fa6e35299a7057f0"
+  },
+  {
+   "file": "calc-together-20231017-part002.parquet",
+   "rows": 262144,
+   "bytes": 537171,
+   "sha256": "29d1a89e7ebca6410b28730c4ca6a30cf0529197d671a236f959802cdf2a19d3",
+   "beside": "rows-20231017-part002.parquet",
+   "beside_sha256": "b1c9b234966d8874d4fec39567dbd483f47da3205209d03ccf57ca065722a36a"
+  },
+  {
+   "file": "calc-together-20231017-part003.parquet",
+   "rows": 59726,
+   "bytes": 176842,
+   "sha256": "4aa833da60f03f0a4ab86c4bac39c93b4e009ea2fc17932de2e0e117220044f9",
+   "beside": "rows-20231017-part003.parquet",
+   "beside_sha256": "efb7d6338879f8ad53224a307a882f4562cc5aafa797faf3a4ef07ef80c32313"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 845246,
+   "lines_compared": 32236,
+   "lines_by_kind": {
+    "left together": 32234,
+    "entered together": 2
+   },
+   "sets_by_kind": {
+    "entered together": 1,
+    "left together": 9023
+   },
+   "largest_set_by_kind": {
+    "left together": 72,
+    "entered together": 2
+   },
+   "lines_left_together_by_how": {
+    "left by fill": 32009,
+    "left by cancel": 225
+   },
+   "lines_left_together_whose_order_entered_with_another_of_the_set": 0,
+   "lines_of_sets_still_waiting_at_the_last_tick": 0,
+   "rows_whose_exchange_time_is_earlier_than_the_row_before": 0,
+   "method": "for every row the next row with a later exchange time, along the whole column; the sets by gathering the orders of one instant that share it. Shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 422623,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 492329,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 845246,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 23.7
+}
