@@ -1971,6 +1971,19 @@ using the mbo data to populate mative and trade leg data ?"
   built (the dipole has no ROOT definition yet).
 - This unparks D and the print legs of I.
 
+**CORRECTED the same hour (Greg): "And if we have values for native and trade legs that are also valid, don't
+discard it. Why do we need to rebuilf those?"** Claude's line above, "the old records ... are not placed", was too
+strong and is withdrawn. What stands:
+- **Valid values are never discarded.** Native's dipole record and the trade legs for trade days Oct 3 and Oct 18
+  cover the whole trade day and are placed as they are. On trade days Oct 2 and Oct 17 what exists (from 8 pm
+  Eastern, 00:00 UTC, onward) is real and is kept and placed, marked as starting there.
+- **Only what is missing is made from the MBO tape:** 6 pm to 8 pm Eastern of trade days Oct 2 and Oct 17 (457 and
+  252 trades in no leg; no Native candidates for those two hours).
+- **Marked, not changed:** on Oct 2 and Oct 17 Native's level for each candidate was worked out without the first
+  two hours. Those values are what Native recorded and stay. If a from-6-pm version is ever made, it sits beside
+  them and replaces nothing.
+- Where an old value and a new one both exist, both are kept side by side.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
