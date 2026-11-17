@@ -2379,6 +2379,22 @@ The four pieces, and Claude's calls in each (stated to him, his to correct):
   placed and is listed in the receipt. Native's record for Oct 2, 3 and 17 is read part by part from its pinned
   branch commits (each part compared with the record's manifest); Oct 18 from its one stored file.
 
+**OPEN, raised by Greg (2026-11-17, while the pods ran): "And we have to figure out if edrock calcs still need to be
+run. We've skipped those".** Told what is known and what is not: Native's stored record for these trade days was
+made by the Frankie box's Bedrock run (Markets `7f34afa` `deploy/aws/box/frankie_box_bedrock.py`); its own receipt
+says the retained lifecycle ledger is complete and "all layers" is not, so some Bedrock layers were never made for
+the four trade days. Which ones, and whether ROOT now covers them, is not yet established. AWS is off limits, so
+the box cannot be run. To do, after the pod results are stored (a read, nothing run): list every calculation the
+Bedrock run makes, each marked as already in ROOT, already in Native's stored record, or never made for these
+trade days; then his call on which are run and where. Carried into the handoff until done.
+
+**A slip in `dipole_peaks`, found on the first finished pod and corrected (Markets `d44f750`).** Native wrote some
+closing lines at the same instant as the dipole's recognized line (45 dipoles on trade day Oct 18). The lines were
+taken in the record's order, so 20 closing lines came before their recognized line and were left unplaced, with a
+wrong reason. Both the forward pass and its second method made the same mistake, so the check passed; it showed
+in the counts (863 recognized, 843 closed). Fixed: at one instant the recognized line goes first. Only that piece
+was run again, on the same four pods (no pod restarted); the first output is not stored.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
