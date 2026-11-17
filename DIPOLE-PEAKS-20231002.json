@@ -1,0 +1,223 @@
+{
+ "what": "Native's dipole beside the peaks: Native's stored record placed on the tape, each line at the tick it could first be known. Native's record is Native's; nothing of it is worked out again here",
+ "laid_out_and_approved": "markets-data STEP2_PLAN.md, piece D (Greg, 2026-11-16; his go 2026-11-17)",
+ "trade_day": "2023-10-02",
+ "native_record": {
+  "repository": "DavisAI1974/markets-data",
+  "commit": "5305008bb48160cd29d9e14887989e375449e4bb",
+  "folder": "tasks/family-research-20261022/frankie-four-day-pins/native-lifecycle-42621496819-1/20231002",
+  "manifest_sha256": "4e001a5d59d748642bd78d2d40a6be6e3715103d4d73be339b630a69286d92a1",
+  "parts_read": 225,
+  "lines_read": 5289814,
+  "megabytes_read": 573.0
+ },
+ "native_record_starts": "8 pm Eastern (00:00 UTC): the first two hours of the trade day are not in Native's stored record; the counts beside the rows are empty until then",
+ "to_revisit": "Native's record is built on its own fixed windows (a 20-second roll, a level set from 85 in 100 seconds, 60-second horizons)",
+ "columns": [
+  {
+   "column": "native_dipoles_known_plus",
+   "what": "Native's dipoles of polarity +1 (net buying) that are known and not closed once this tick is done. Empty before Native's record starts on this trade day."
+  },
+  {
+   "column": "native_dipoles_known_minus",
+   "what": "The same for polarity -1 (net selling)."
+  },
+  {
+   "column": "native_dipoles_known_no_polarity",
+   "what": "The same for dipoles whose polarity Native's record does not give."
+  },
+  {
+   "column": "dipole_peak_facts_known",
+   "what": "How many lines about a dipole or a peak became known at this tick (they are in the facts file)."
+  }
+ ],
+ "fact_columns": [
+  {
+   "column": "known_position",
+   "what": "The tick at which this line became known: its position on the tape. A label only."
+  },
+  {
+   "column": "known_received_time_ns",
+   "what": "When that tick was received."
+  },
+  {
+   "column": "fact",
+   "what": "Recognized or closed (a line of Native's record placed on the tape), or peak known."
+  },
+  {
+   "column": "dipole",
+   "what": "Native's candidate number. A label only. On peak known: the dipole most lately recognized that is not closed; empty when there is none."
+  },
+  {
+   "column": "native_polarity",
+   "what": "Native's polarity for the dipole: +1 or -1, the sign of the signed flow."
+  },
+  {
+   "column": "native_magnitude",
+   "what": "Native's magnitude for the dipole."
+  },
+  {
+   "column": "native_birth_ns",
+   "what": "Native's time for the dipole's birth (the start of its second)."
+  },
+  {
+   "column": "native_recognized_ns",
+   "what": "Native's time for its recognition (the start of its second)."
+  },
+  {
+   "column": "native_line_written_ns",
+   "what": "The received time at which Native wrote this line. On peak known: empty."
+  },
+  {
+   "column": "native_detection_lag_seconds",
+   "what": "Native's detection lag, in seconds."
+  },
+  {
+   "column": "native_orientation",
+   "what": "Native's orientation, in its own words."
+  },
+  {
+   "column": "native_recognition_outcome",
+   "what": "Native's recognition outcome, in its own words."
+  },
+  {
+   "column": "native_terminal_phase",
+   "what": "On closed: Native's terminal phase, in its own words."
+  },
+  {
+   "column": "native_stage_count",
+   "what": "On closed: Native's stage count."
+  },
+  {
+   "column": "since_birth_ns",
+   "what": "From Native's birth time to this tick."
+  },
+  {
+   "column": "since_recognized_line_ns",
+   "what": "On closed and on peak known: from the tick the dipole's recognized line was placed to this tick."
+  },
+  {
+   "column": "dipoles_known_plus",
+   "what": "Dipoles of polarity +1 known and not closed once this tick is done."
+  },
+  {
+   "column": "dipoles_known_minus",
+   "what": "The same for polarity -1."
+  },
+  {
+   "column": "dipoles_known_no_polarity",
+   "what": "The same for dipoles whose polarity the record does not give."
+  },
+  {
+   "column": "peak_high_position",
+   "what": "On peak known: the tick of the peak's high. A label only."
+  },
+  {
+   "column": "peak_side",
+   "what": "On peak known: buy or sell."
+  },
+  {
+   "column": "buy_peak_high_position",
+   "what": "The buy peak most lately known at this tick: the tick of its high. A label only. Empty when no buy peak has become known yet in the trade day."
+  },
+  {
+   "column": "buy_peak_since_high_ns",
+   "what": "From that high to this tick."
+  },
+  {
+   "column": "buy_peak_story",
+   "what": "Where that peak's story stands once this tick is done: open, past zero, or ended."
+  },
+  {
+   "column": "sell_peak_high_position",
+   "what": "The sell peak most lately known at this tick: the tick of its high. A label only. Empty when no sell peak has become known yet in the trade day."
+  },
+  {
+   "column": "sell_peak_since_high_ns",
+   "what": "From that high to this tick."
+  },
+  {
+   "column": "sell_peak_story",
+   "what": "Where that peak's story stands once this tick is done: open, past zero, or ended."
+  },
+  {
+   "column": "rise_side",
+   "what": "The rise under way at this tick, if the flow has a high that has not come off yet: buy or sell. Empty when there is none."
+  },
+  {
+   "column": "rise_high_position",
+   "what": "The tick of that rise's high so far. A label only. It is not a peak yet."
+  },
+  {
+   "column": "rise_since_high_ns",
+   "what": "From that high so far to this tick."
+  }
+ ],
+ "counts": {
+  "native_episode_lines": 1482,
+  "dipoles": 741,
+  "lines": 11007,
+  "recognized": 741,
+  "closed": 741,
+  "peak_known": 9525,
+  "peak_known_with_a_dipole_known_and_not_closed": 1268,
+  "dipoles_with_no_polarity_in_the_record": 0,
+  "native_lines_not_placed": 0
+ },
+ "native_lines_not_placed": [],
+ "checks": {
+  "passed": true,
+  "lines_compared": 11007,
+  "rows_compared": 819783,
+  "playback": {
+   "cut_at": "one tick before the middle recognized line",
+   "ticks_given": 84390,
+   "same_as_full_run": true
+  },
+  "method": "the tick of every line of Native's record found again along the whole column of received times; the counts added up along the sorted lines; the peaks in play from the stored outputs of pieces 1 and 2 as whole tables"
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text",
+ "files": [
+  {
+   "file": "dipole-peaks-20231002-part000.parquet",
+   "rows": 262144,
+   "bytes": 542542,
+   "sha256": "a6b00531bd9b0cf14f1c5a23b90242063ee689e978196139af6ea6da1ee51bc7",
+   "beside": "rows-20231002-part000.parquet"
+  },
+  {
+   "file": "dipole-peaks-20231002-part001.parquet",
+   "rows": 262144,
+   "bytes": 539160,
+   "sha256": "ff609a50abbd6141d85823a812c2ed0cabac9646a684e2776615fe645dc6d6e4",
+   "beside": "rows-20231002-part001.parquet"
+  },
+  {
+   "file": "dipole-peaks-20231002-part002.parquet",
+   "rows": 262144,
+   "bytes": 539784,
+   "sha256": "66fc9ead26995b9c74297ab99b3d8d5debcb043a0a5b8be63c907c17c86a60eb",
+   "beside": "rows-20231002-part002.parquet"
+  },
+  {
+   "file": "dipole-peaks-20231002-part003.parquet",
+   "rows": 34238,
+   "bytes": 102125,
+   "sha256": "2a474cc8c2e0fcbfb9430001fd3b7fe338ea5ea3f3637326c0430e6a1aa5fefa",
+   "beside": "rows-20231002-part003.parquet"
+  },
+  {
+   "file": "dipole-peaks-facts-20231002.parquet",
+   "rows": 11007,
+   "bytes": 441749,
+   "sha256": "4258d4c26c3bb1b1f0206b9a38dd5ae7b5ed3406b7c3e4227cbf0be958c9eeab"
+  },
+  {
+   "file": "native-episodes-20231002.jsonl.gz",
+   "rows": 1482,
+   "bytes": 912407,
+   "sha256": "73c4824bda266ba9fffc896ff6ca2ba4229a8cbf544aebd3179f97c7f4acb850"
+  }
+ ],
+ "seconds": 60.3
+}
