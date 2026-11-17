@@ -54,10 +54,6 @@
    "what": "When the tick of the high was received."
   },
   {
-   "column": "peak_standing_so_far",
-   "what": "The share of the time so far in this trade day, while there was a flow, that the flow was smaller than this peak."
-  },
-  {
    "column": "peak_highest_for_ns",
    "what": "At the high: how long since the flow was last larger than this. When it never was in this trade day, the time since the first trade of the trade day."
   },
@@ -79,33 +75,32 @@
   "trades the tape gives no side for": 2408,
   "ticks with a flow": 743580,
   "peaks": 7967,
-  "high_still_standing_at_the_last_tick": false,
-  "different_sizes_of_flow": 5903
+  "high_still_standing_at_the_last_tick": false
  },
  "files": [
   {
    "file": "calc-flow_peak-20231018-part000.parquet",
    "rows": 262144,
-   "bytes": 806993,
-   "sha256": "40b208450b7106d70c7ab984a9c918bc61e24eb23b94b233486129c6d2b96a7f",
+   "bytes": 771078,
+   "sha256": "c67d734e0534ed40bede821dad066e7afcbf1b6de3ca63ee5d167db79a3daff7",
    "beside": "rows-20231018-part000.parquet",
-   "beside_sha256": "553218f493ba6420dfc957f9adce322ddf8e477ab150f60fc88f97fba635df47"
+   "beside_sha256": "19c695e0319df60c69fe04c8a112c645e30666b60a5179bd330993f2d20d2be4"
   },
   {
    "file": "calc-flow_peak-20231018-part001.parquet",
    "rows": 262144,
-   "bytes": 860997,
-   "sha256": "40708987669d0a28f0740ffa15b1f56efbcf7551cad8e3602fed6f08ba85a1fc",
+   "bytes": 824356,
+   "sha256": "1f94811b3f9569723fb79ae1246ab2633c7c4adf2c443f58c03086da34e7516e",
    "beside": "rows-20231018-part001.parquet",
-   "beside_sha256": "7cd439efe8f94e71d4612e7d8effe88994ae96b653d724c73749797bd1479975"
+   "beside_sha256": "a01104c9731dbcc6f677588eb7f009803814dea2747c05cd2f885fc6896c52dc"
   },
   {
    "file": "calc-flow_peak-20231018-part002.parquet",
    "rows": 247180,
-   "bytes": 818036,
-   "sha256": "a338ddf196f90fadfbe19bcb40844c860478910ccef2884d03f9309ee466ed8d",
+   "bytes": 781406,
+   "sha256": "0d5f8bbda7283f00f56219df2db7e71aa455993800c29fd7e9ea0744acc3a090",
    "beside": "rows-20231018-part002.parquet",
-   "beside_sha256": "4a74d42f71f754bd55db61a627e92cdebe9812faf248b649310462a05703023f"
+   "beside_sha256": "6dc55a21055feab38c2d56a4d2f68f7e0e5fdcc645dbb9bb257e227ba0b8b65c"
   }
  ],
  "checks": {
@@ -132,5 +127,5 @@
   ]
  },
  "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
- "seconds": 29.7
+ "seconds": 42.3
 }

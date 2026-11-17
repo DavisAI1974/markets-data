@@ -3,7 +3,7 @@
 Built by the new ROOT (Markets branch `claude/root-session6-017eY1`, commit `b39e10a`) from the raw order tape
 and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothing here comes from an old run.
 
-- Rows: 771,468 (one per tick), 217 fields each. Sections A to E from the tape and the book, section G the 13 outside data points.
+- Rows: 771,468 (one per tick), 408 fields each. Sections A to E from the tape and the book (85 fields), section G the outside data (323 fields; before the rebuild of 2026-11-17 the rows held 217 fields, 132 of them outside).
 - Rows by label: 5 pm to 6 pm stretch 889, trade day 770,579.
 - Book pictures: one at each of 30,739 trade messages, one at the first written row and one at the last (35,735,000 order lines).
 - Only rows labelled "trade day" enter a calculation. The stretch and start-up rows are kept and marked; nothing is calculated on them.
@@ -11,7 +11,7 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 - Checks in `RECEIPT.json`, all passed: every record accounted for; the trade day cut; the book equals the vendor restatement; the book adds up at every trade; one history per order; the trade count; the outside points pinned right on every row and every section G column.
 - `playback-*.json` is the playback record (four cuts, all identical). It was made on the first build of this session (Markets `fca77bb`), before the emptied line was changed from a blank cell to the words "no orders". That change touches one text cell and was not run through playback again (one check per changed part).
 - Part 2, Step 1, laid out and approved by Greg 2026-11-16 (`STEP1_STEP2_LAYOUTS.md`; Markets `6a468af`). The rows files are untouched; each calculation's output is its own files.
-  - `flow_peak` (piece 1, the flow and the exhaustion peak): `calc-flow_peak-20231018-part*.parquet`, one file beside each rows file, in the same row order, with the position on the tape and 12 columns. 7,967 peaks became known in the trade day.
+  - `flow_peak` (piece 1, the flow and the exhaustion peak): `calc-flow_peak-20231018-part*.parquet`, one file beside each rows file, in the same row order, with the position on the tape and 11 columns (12 until 2026-11-17, when the ranked column `peak_standing_so_far` was taken out). 7,967 peaks became known in the trade day.
   - `peak_story` (piece 2, what each peak did before and after; no fixed marks, no names for kinds of peak): `calc-peak_story-facts-20231018-part*.parquet`, one line per fact, each with the tick at which it became known and the peak it is about: 45,958 facts (7,967 build-up, 24,758 new low, 5,268 reached zero, 5,267 came back, 2,698 beaten); `calc-peak_story-20231018-part*.parquet`, the number of facts known on each row; `calc-peak_story-open-at-the-end-20231018-part000.parquet`, the 2 peaks whose story had not ended at the last tick.
   - Checks, in `CALC-flow_peak-20231018.json` and `CALC-peak_story-20231018.json`, all passed: every column and every fact worked out again from the stored rows by a different method and equal; playback equal at two cuts each. Rows of no trade day hold empty cells.
 - Part 2, Step 2, pieces C and I (the quote's own runs), approved by Greg 2026-11-16 (`STEP2_PLAN.md`; Markets `9612f87`). They read the stored rows through the rows gate, which passed exactly the ticks of the tape gate. The rows files are untouched.
@@ -29,17 +29,23 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
   - Checks, in `CALC-refills-20231018.json`, `CALC-sweeps-20231018.json` and `CALC-chain_peaks-20231018.json`, all passed on the first run of each: every fact and line worked out again by a different method and equal; playback equal at two cuts (three for sweeps), each cut where something was still unfolding. Rows of no trade day hold empty cells.
 - Part 2, the three calculations written in the ninth session and first run in the tenth (Markets `02ffde6`, on a pod; Greg's go 2026-11-17):
   - `quote_peaks` (the rest of piece I: the peaks in play at every turn of a run of the quote): `calc-quote_peaks-20231018-part*.parquet` beside the rows; `calc-quote_peaks-facts-20231018-part*.parquet`, 64,050 facts, one at every turn.
-  - `outside_changes` (addition O: what was in play when an outside figure changed): `calc-outside_changes-20231018-part*.parquet`; `calc-outside_changes-facts-20231018-part*.parquet`, 72,736 facts over 108 outside columns followed (13,926 ticks with a change).
+  - `outside_changes` (addition O: what was in play when an outside figure changed): `calc-outside_changes-20231018-part*.parquet`; `calc-outside_changes-facts-20231018-part*.parquet`, 72,736 facts over 108 outside columns followed (13,926 ticks with a change) (these were the figures of the first run; made again on 2026-11-17, see the rebuild below).
   - `together` (addition N: orders that entered or left at the same exchange time): `calc-together-20231018-part*.parquet`; `calc-together-facts-20231018-part*.parquet`, 15 lines in 5 sets that entered together and 27,060 lines in 7,795 sets that left together; `calc-together-open-at-the-end-20231018-part000.parquet`.
   - Checks, in `CALC-quote_peaks-20231018.json`, `CALC-outside_changes-20231018.json` and `CALC-together-20231018.json`, all passed on the first run (a recount by a second method, the playback cuts, the rows gate).
+- THE REBUILD of 2026-11-17 (Greg's go; Markets `e083757`, job `rebuild`, one General Purpose 8-CPU pod per trade day; every file fetched and compared with the fingerprint in its receipt before it was stored):
+  - The rows were built again with the outside tables as they now stand (markets-data `5eab71f`: hour by hour, no averages, no windows, no ranks). They now carry 323 outside columns (229 new, 38 taken out: the fund standings over 1 and 3 years, the gas-day degree days, the forecast high-low midpoint and the others made from averages). Proved before storing: every one of the 179 columns the old and new rows share (all 85 tape, book and trade columns and the 94 outside columns kept) is equal on every one of the 771,468 rows. The book pictures and the vendor restatement came back byte for byte the same. The build's own checks in `RECEIPT.json` all passed.
+  - `flow_peak` was run again only to drop the ranked column `peak_standing_so_far` (a percentile; Greg: "take any ranking system for any data out"). His rule: if the peaks came out differently, keep the old values and only delete the column. Compared before storing: every other column equal to the stored one on every row, so the new files are stored. No peak changed.
+  - `outside_changes` was made again beside the rebuilt rows (the one calculation that reads the outside columns): 74,010 facts (13,929 ticks with a change); 319 outside columns followed, 249 of them changed in the trade day. Its checks passed. It replaces the earlier output, which followed the averaged and windowed columns that no longer exist.
+  - Every other calculation's output stands as stored. Each was made beside the earlier rows, whose tape, book and trade columns are unchanged (proved above), and none reads an outside column. None was run again (Greg: "No tests except on changed pieces").
+  - `playback-20231018.json` was made on the first build and was not run again.
 
 | File | Bytes | SHA256 |
 |---|---:|---|
 | `CALC-book_totals-20231018.json` | 8,090 | `bacda48896dcb6beb2aeccccd69d60faebb453d53fec6df1ea0820ab31caf21c` |
 | `CALC-chain_peaks-20231018.json` | 5,400 | `8c7fefead7a27e658c1a44f31487791ee8f29bd4a55e46c9515add25db2be56e` |
-| `CALC-flow_peak-20231018.json` | 4,305 | `01ad68bb58b45faeeb1cc265d3a484f3621c670d71eba70c6ea95f1ae5ce76cc` |
+| `CALC-flow_peak-20231018.json` | 4,097 | `fa17b0ea4c215a3a8a487bebf46f54355983fcf56b9ff3506c19eab85975693e` |
 | `CALC-open_stories-20231018.json` | 3,980 | `d1db6acf3332b150e082f7b118b32d7ad54cec0e74a1c44428e35c246238c60b` |
-| `CALC-outside_changes-20231018.json` | 8,384 | `69874bbe0ff6b0571354eb6f4fe20d365163e67e87134898038635f3f0193c4f` |
+| `CALC-outside_changes-20231018.json` | 19,899 | `ef5086a445820f7f08c937ba9b1f14269f19e9df4d6741630fe3f051f0a8fbec` |
 | `CALC-peak_links-20231018.json` | 4,168 | `c63d8fcf3d11ea883cb2cc10c21a50c9bdf89bb010eb4e711915e1863b381c70` |
 | `CALC-peak_story-20231018.json` | 4,013 | `c27dc48a20d5bf9db1f8d1d7eed23c0c29a4374f3ba69fac20317d1484563c54` |
 | `CALC-quote_peaks-20231018.json` | 3,772 | `9081b18c7e065e0889139c5a3d1a11b545149493da7064421a08e3f102b6c8c8` |
@@ -47,7 +53,7 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `CALC-refills-20231018.json` | 4,478 | `d94d50ccfadb5f0bd3ffeb49789f70cf20bd136e9a4a5a7d120be9681bb05776` |
 | `CALC-sweeps-20231018.json` | 5,174 | `b4a4a5936a2ddc931a37c72df502af117ed427f41426864cd753953f89fc59c6` |
 | `CALC-together-20231018.json` | 4,679 | `6c255d20dc9b052286ce760b2b35cb9950075d2409d615fff739b7e3f05369fa` |
-| `RECEIPT.json` | 8,849 | `ab9b100236fc09124313410653ad6f49a1139661f6c66adc70209febb6f9436b` |
+| `RECEIPT.json` | 8,209 | `d25f44398e66a2fdbddd3ab870fee2b730cdf94d4fafd21825b26a5e436a3e63` |
 | `book-pictures-20231018-part000.parquet` | 12,044,565 | `825dae26433b637002707b830852ad544c22ad171b816427d82c6d5ffd18707b` |
 | `book-pictures-20231018-part001.parquet` | 12,391,163 | `b77cce7fcdc43d67ae8818a23f65bd07ff39df6428f02ea0f00900d1ad5be7d4` |
 | `book-pictures-20231018-part002.parquet` | 12,182,897 | `6d3447de145a9723aba9499e3c480ae527b7e53fefa939e3c40e7fc7a64ff5b6` |
@@ -66,16 +72,16 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `calc-chain_peaks-before-20231018-part000.parquet` | 380,082 | `2bd458e2f393abeccb3395deaa0f14e8749dd88f109a190c54e0a44f9d9b3816` |
 | `calc-chain_peaks-facts-20231018-part000.parquet` | 503,376 | `728b707f6c16d213e87a3aa49b428929e79015c14ca8b6d68e8f973b70458f0f` |
 | `calc-chain_peaks-open-at-the-end-20231018-part000.parquet` | 901 | `dac642e5a00562bc74b714536693229c7e51a0740d03f71da401a697b749885c` |
-| `calc-flow_peak-20231018-part000.parquet` | 806,993 | `40b208450b7106d70c7ab984a9c918bc61e24eb23b94b233486129c6d2b96a7f` |
-| `calc-flow_peak-20231018-part001.parquet` | 860,997 | `40708987669d0a28f0740ffa15b1f56efbcf7551cad8e3602fed6f08ba85a1fc` |
-| `calc-flow_peak-20231018-part002.parquet` | 818,036 | `a338ddf196f90fadfbe19bcb40844c860478910ccef2884d03f9309ee466ed8d` |
+| `calc-flow_peak-20231018-part000.parquet` | 771,078 | `c67d734e0534ed40bede821dad066e7afcbf1b6de3ca63ee5d167db79a3daff7` |
+| `calc-flow_peak-20231018-part001.parquet` | 824,356 | `1f94811b3f9569723fb79ae1246ab2633c7c4adf2c443f58c03086da34e7516e` |
+| `calc-flow_peak-20231018-part002.parquet` | 781,406 | `0d5f8bbda7283f00f56219df2db7e71aa455993800c29fd7e9ea0744acc3a090` |
 | `calc-open_stories-20231018-part000.parquet` | 619,366 | `29220e4fd44f3c4b57c737411551fa521a84b913dfad9fbae762c78fccd211c1` |
 | `calc-open_stories-20231018-part001.parquet` | 603,709 | `a178301cc7c836d33d1eb7608581d410cb357b6a3d12e3440b2fede95d30b265` |
 | `calc-open_stories-20231018-part002.parquet` | 591,256 | `3418eec110bead9b055144676aad5231f85003f9bcd3bcc3fc1a033ff8668050` |
-| `calc-outside_changes-20231018-part000.parquet` | 539,845 | `8aedb8fb537b3dd296b09bbb5898f2e7d149fa4f8955c5ae81034f90f71b382a` |
-| `calc-outside_changes-20231018-part001.parquet` | 538,459 | `23d17d664d7142b4fd5c80c7dce5ce93e897fecd1cb8356a4a20cba2de00afc2` |
-| `calc-outside_changes-20231018-part002.parquet` | 522,673 | `b3e004490969b5fb7c9b042aaa6260117f49e5d12afe28ad4f9a05b4cc987626` |
-| `calc-outside_changes-facts-20231018-part000.parquet` | 1,601,909 | `63808863841e15bfdf1618ed5a59d3c45e2846e7192faa23b8f8143fc596009a` |
+| `calc-outside_changes-20231018-part000.parquet` | 540,029 | `ef9113707b29153cb2443d09b322f591297c300f0dc04d961c880a73dd0aefce` |
+| `calc-outside_changes-20231018-part001.parquet` | 538,537 | `0f1ea71199e01b96903a8f38978c0359071d38fd998ec01b1739401c9367177f` |
+| `calc-outside_changes-20231018-part002.parquet` | 522,743 | `d3ec063751c4d1c578a3c4c174b92ddd5f4021412a751b2425c1c48073f5980b` |
+| `calc-outside_changes-facts-20231018-part000.parquet` | 1,613,573 | `ae74a4e97c918866ca9bc08f3af582f71bb849f2a856c4ff66ec42e518d37cba` |
 | `calc-peak_links-20231018-part000.parquet` | 537,351 | `1f6357c87cef64d03117835c1b2539f797661949e13fb93045c4e51fc39a53f9` |
 | `calc-peak_links-20231018-part001.parquet` | 537,322 | `2017d3efb5fa5430c74e0bdfcf280c92d989d666658fdadfcfc28249cc8cf10e` |
 | `calc-peak_links-20231018-part002.parquet` | 521,739 | `19bb50350ad871e175c2714c664ba8b4f0a3b9183c4d73c91ea06f5509dccd79` |
@@ -110,7 +116,7 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `calc-together-facts-20231018-part000.parquet` | 681,187 | `741bead91e201a9f9fe01f705a53b42bf02ce0452ccb5d26ba3c457ef75a8376` |
 | `calc-together-open-at-the-end-20231018-part000.parquet` | 909 | `dbcf236a733ec98b017da71b00ce46f057e8562e197ab6f62d9c7d4dadc6012a` |
 | `playback-20231018.json` | 666 | `dff963b8f017297e3be9ddd21c68c5ed3d1d7afe470aa63cb0bc13c67c4c8439` |
-| `rows-20231018-part000.parquet` | 19,918,917 | `553218f493ba6420dfc957f9adce322ddf8e477ab150f60fc88f97fba635df47` |
-| `rows-20231018-part001.parquet` | 20,110,859 | `7cd439efe8f94e71d4612e7d8effe88994ae96b653d724c73749797bd1479975` |
-| `rows-20231018-part002.parquet` | 18,971,027 | `4a74d42f71f754bd55db61a627e92cdebe9812faf248b649310462a05703023f` |
+| `rows-20231018-part000.parquet` | 20,163,000 | `19c695e0319df60c69fe04c8a112c645e30666b60a5179bd330993f2d20d2be4` |
+| `rows-20231018-part001.parquet` | 20,348,742 | `a01104c9731dbcc6f677588eb7f009803814dea2747c05cd2f885fc6896c52dc` |
+| `rows-20231018-part002.parquet` | 19,198,552 | `6dc55a21055feab38c2d56a4d2f68f7e0e5fdcc645dbb9bb257e227ba0b8b65c` |
 | `vendor-restatements-20231018.parquet` | 34,368 | `ceacfad36514edf43a7ba367914f00a6f79eab37a3276fc07fa0dff223eb43b7` |
