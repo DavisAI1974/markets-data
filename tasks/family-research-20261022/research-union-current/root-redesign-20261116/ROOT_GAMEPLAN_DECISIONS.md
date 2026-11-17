@@ -2571,6 +2571,15 @@ test, not a finding: ends and one-step moves look like a small trade taking out 
 stepped in; the middle and the beginning look like a larger run moving the quote. Not yet asked: how old the level
 was that the peak hit, and what the price did after each pile.
 
+**Greg, 2026-11-17: "And look at the peak 20 sec win and with now window".** Read from the stored files (told to him
+first); in the research folder (`TWO_KINDS_OF_PEAK.json`, the README). On each trade day a little over half of the
+20-second peaks share their high with a peak with no window (Oct 2: 5,403 of 9,525; Oct 3: 5,941 of 10,577; Oct 17:
+4,833 of 8,619; Oct 18: 4,405 of 7,967). Between a quarter and three in ten 20-second peaks have their high on a
+tick where nothing traded (2,660; 2,907; 2,478; 2,250): the flow rose because older trades dropped out of the 20
+seconds, so those highs are made by the window. More than half of the peaks with no window have no 20-second peak
+at their high. The taller a peak with no window, the more often a 20-second peak shares its high. The peaks with
+no window at the end of a move share least.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

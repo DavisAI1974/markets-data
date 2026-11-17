@@ -119,3 +119,29 @@ Trade day Oct 2, peaks with no window (the other three trade days read the same 
   between and at the beginning look like a larger run moving the quote. The book figures are read once the high's
   tick is done, so a trade that has just eaten into a level makes it thinner: partly built in. Not yet asked: how
   old the level was that the peak hit, and what the price did after each pile.
+
+## The two kinds of peak against each other (Greg: "And look at the peak 20 sec win and with now window")
+
+Read from the stored files in the session (told to Greg first); counts in `TWO_KINDS_OF_PEAK.json`.
+
+| Trade day | 20-second peaks | No-window peaks | Highs they share | 20-second high on a trade inside a run that went on | 20-second high on a tick with no trade |
+|---|---:|---:|---:|---:|---:|
+| Oct 2 | 9,525 | 11,567 | 5,403 | 1,377 | 2,660 |
+| Oct 3 | 10,577 | 12,684 | 5,941 | 1,619 | 2,907 |
+| Oct 17 | 8,619 | 10,401 | 4,833 | 1,251 | 2,478 |
+| Oct 18 | 7,967 | 9,549 | 4,405 | 1,250 | 2,250 |
+
+- A little over half of the 20-second peaks have their high on the last trade of a run of trades on one side: the
+  same tick as a peak with no window, and (but for a handful) the same side.
+- Between a quarter and three in ten 20-second peaks have their high on a tick where nothing traded. The flow
+  rose there because older trades dropped out of the 20 seconds. Those highs are made by the window, not by a
+  trade.
+- More than half of the peaks with no window have no 20-second peak at their high (trade day Oct 2: 6,164 of
+  11,567).
+- On a shared high the two are nearly always known on the same tick; where they differ the 20-second peak is
+  known first (trade day Oct 2: same tick 4,716; 20-second first 674; no-window first 13).
+- The taller a peak with no window, the more often a 20-second peak shares its high (trade day Oct 2: 1 lot 1,111
+  of 2,747; 6 lots or more 2,391 of 4,327).
+- By pile (the quote it pushes into), peaks with no window that share their high with a 20-second peak, trade day
+  Oct 2: in between 713 of 1,339; at the beginning 1,292 of 2,599; at the end 719 of 1,837; one-step moves 2,679 of
+  5,792. The end pile shares least.
