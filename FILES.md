@@ -35,6 +35,9 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
   - `outside_changes` (addition O: what was in play when an outside figure changed): `calc-outside_changes-20231002-part*.parquet`; `calc-outside_changes-facts-20231002-part*.parquet`, 71,986 facts over 108 outside columns followed (13,270 ticks with a change).
   - `together` (addition N: orders that entered or left at the same exchange time): `calc-together-20231002-part*.parquet`; `calc-together-facts-20231002-part*.parquet`, 49 lines in 15 sets that entered together and 33,560 lines in 9,283 sets that left together; `calc-together-open-at-the-end-20231002-part000.parquet`.
   - Checks, in `CALC-quote_peaks-20231002.json`, `CALC-outside_changes-20231002.json` and `CALC-together-20231002.json`, all passed on the first run (a recount by a second method, the playback cuts, the rows gate).
+- The missing two hours of the trade legs, 6 pm to 8 pm Eastern (Greg 2026-11-17: "build the missing hrs exactly how we built the current data"; "Then change it ... Finish the data"; Markets `02ffde6` `root/trade_legs.py`, on a pod). The old rule (Markets `0408df44` `price_stretches`, `print_legs`, loaded byte for byte) run over the trade day's trades from 6 pm; only the start changed. The old legs (markets-data `main`, run 42571551209) stay as they are.
+  - `trade-legs-6pm-to-8pm-trades-20231002.parquet` (457 trades before 8 pm), `trade-legs-6pm-to-8pm-stretches-20231002.parquet` (278 price stretches holding a trade before 8 pm), `trade-legs-6pm-to-8pm-legs-20231002.parquet` (124 legs holding a trade before 8 pm; the two touching 8 pm are marked, and the one that is the whole of the old cut leg 0 names it). Numbered from 6 pm; the old record numbers from 8 pm.
+  - Check, in `TRADE-LEGS-20231002.json`, passed: every one of the 37,670 old trades is the tape's trade at the same place from 8 pm (clocks, price, size, order, side, the time its exchange event was complete) and every one of the 5,995 old legs after the first comes out again with the same trades, direction and price change.
 
 | File | Bytes | SHA256 |
 |---|---:|---|
@@ -52,6 +55,7 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `CALC-together-20231002.json` | 4,737 | `ae03f15e72bae4751ef2d1f06503dfae72716f7323c08508a39e03088b868701` |
 | `CHAIN-MODELS-20231002.json` | 41,737 | `d7cdd61f0b044f21abae27d13b297f099a27e38e3fa531fa956dcf5da88b6060` |
 | `RECEIPT.json` | 8,555 | `70c2ce013a4885070229206c0e7311629eb65b0a3028dfc828c9e43dbc30b2b2` |
+| `TRADE-LEGS-20231002.json` | 2,248 | `6be3667105c5002b2d6b860deb4110e7ec0d063428f4e13c183f569bb3dc55a8` |
 | `book-pictures-20231002-part000.parquet` | 10,629,137 | `3cd57f981710a2ba70922ba433876da798a7d696c1119dc2218282c07a771b8c` |
 | `book-pictures-20231002-part001.parquet` | 11,792,993 | `62f3be457bd3f626264ce2bdff03a745498b976553c127344938cecaece133ba` |
 | `book-pictures-20231002-part002.parquet` | 11,335,501 | `e225f15d191edb0379bcd2e568c6440dde08213cab4a61389de063e71e70fafa` |
@@ -134,4 +138,7 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `rows-20231002-part001.parquet` | 20,111,686 | `eec0368236f487b8624d49aeb3c9ad8cbaf174a0398a2fa2d68908392d149db9` |
 | `rows-20231002-part002.parquet` | 20,462,051 | `8e8f0e8ea3e24f80700f5db54d876b3330326bb2c0e57fed73c69271272e5ca2` |
 | `rows-20231002-part003.parquet` | 2,876,301 | `4fd041156d86ce815ba967537bba6c4853a09aea16a2d9400cb63a007f6963e4` |
+| `trade-legs-6pm-to-8pm-legs-20231002.parquet` | 18,924 | `f091da8df71f8d0606c89cc14733bffbfa7ea2e77db9432fcea0413396e27a6c` |
+| `trade-legs-6pm-to-8pm-stretches-20231002.parquet` | 6,499 | `ffc54ed29acc1a7fb1035c3efab141fdcab08e0fe6d01659f9b359df1c7c481f` |
+| `trade-legs-6pm-to-8pm-trades-20231002.parquet` | 19,258 | `962df2d7d631a7621a465903efea81cb53c3987324b6549a196f7bb28d85bb4c` |
 | `vendor-restatements-20231002.parquet` | 15,331 | `bfe15b673dce5d374c1c2e61cfdae19b07c27afaca128e364307b6921792ff6a` |

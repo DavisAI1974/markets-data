@@ -1,0 +1,58 @@
+{
+ "what": "The trade legs of 6 pm to 8 pm Eastern, made by the old rule from the trade day's first trade",
+ "decided": "Greg, 2026-11-17: \"build the mossing hrs exactly how we built the current data\"; \"Then change it ... Finish the data\"",
+ "trade_day": "2023-10-02",
+ "rule": {
+  "commit": "0408df44c4f106f7fda4ac4b92ae622d7d34cd7b",
+  "file": "tasks/family-research-20261022/continue_trade_chronology.py",
+  "sha256": "db51ff08447b2ed1c4bca3f0c559fef9a7b0394a0a164434224afcb87faedda1",
+  "functions": [
+   "price_stretches",
+   "print_legs"
+  ]
+ },
+ "old_record": {
+  "commit": "15fbf2acd11365cb00893a919ec83e00b4df209f",
+  "folder": "tasks/family-research-20261022/claude-independent-research-20261113/source-artifacts/tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231002",
+  "sha256": {
+   "legs": "af766f0bf330ef9d8d23e7453ddae5260c87adf18ac244de50b99fdfc03f0896",
+   "trades": "a10f5928b0df415260bd93a1bf4475abf1aa6be1c49776553c1a5be80805f243"
+  },
+  "trades": 37670,
+  "legs": 5996
+ },
+ "trades_in_the_trade_day": 38127,
+ "trades_before_8pm": 457,
+ "stretches_from_6pm": 9846,
+ "legs_from_6pm": 6119,
+ "legs_written": 124,
+ "stretches_written": 278,
+ "checks": {
+  "passed": true,
+  "old_trades_compared": 37670,
+  "old_legs_compared": 5995,
+  "what": "every old trade is the tape's trade at the same place from 8 pm (clocks, price, size, order, side, time its event was complete); every old leg after the first comes out again with the same trades, direction and price change"
+ },
+ "kept_beside": "the old legs and trades are kept as they are; the old first leg, cut at 8 pm, is named on the whole leg that crosses 8 pm",
+ "files": [
+  {
+   "file": "trade-legs-6pm-to-8pm-trades-20231002.parquet",
+   "rows": 457,
+   "bytes": 19258,
+   "sha256": "962df2d7d631a7621a465903efea81cb53c3987324b6549a196f7bb28d85bb4c"
+  },
+  {
+   "file": "trade-legs-6pm-to-8pm-stretches-20231002.parquet",
+   "rows": 278,
+   "bytes": 6499,
+   "sha256": "ffc54ed29acc1a7fb1035c3efab141fdcab08e0fe6d01659f9b359df1c7c481f"
+  },
+  {
+   "file": "trade-legs-6pm-to-8pm-legs-20231002.parquet",
+   "rows": 124,
+   "bytes": 18924,
+   "sha256": "f091da8df71f8d0606c89cc14733bffbfa7ea2e77db9432fcea0413396e27a6c"
+  }
+ ],
+ "seconds": 4.8
+}
