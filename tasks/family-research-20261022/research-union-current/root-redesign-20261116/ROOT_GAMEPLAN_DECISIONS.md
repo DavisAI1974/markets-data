@@ -2558,6 +2558,19 @@ Do any similarities in the peak sizes or shapes apr durations start to stand out
   smaller and more often a single trade. SHAPE does not: how a 20-second peak's story ended reads about the same in
   every pile. Clock durations were not compared pile against pile (needs time buckets or a middle value).
 
+**Greg, 2026-11-17: "Are there distinctive attributes that are mostly associated with the end or beginning or the
+middle or the otber? Are there reasons why this peak is accociated with this part and not another? Jist ask curious
+questions why they are as they are"; then "What about peak height".** Read from the stored files (told to him
+first); in the research folder (`ATTRIBUTES_BY_PILE.json`, `HEIGHT_BY_PILE.json`, the README). Each peak was placed
+against the quote it pushes into. What differs by pile, the same way on all four trade days: which way the peak
+pushes against the move; its height in lots (peaks with no window: the middle and the beginning are the tall ones,
+the end and the one-step moves the short ones); and the side it pushes into being the thinner one at the best
+price (most often at the end and in one-step moves). What does not differ: the gap, the lean of the whole book,
+the side of the peak before, Native's dipole. The 20-second peak's height differs only a little. A reading to
+test, not a finding: ends and one-step moves look like a small trade taking out a thin quote that had just
+stepped in; the middle and the beginning look like a larger run moving the quote. Not yet asked: how old the level
+was that the peak hit, and what the price did after each pile.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

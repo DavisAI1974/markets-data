@@ -87,3 +87,35 @@ Peaks with no window: how many of the pile are runs of 6 lots or more, and how m
   beginning; 795 of 1,206 at the end; 2,728 of 4,457 whole one-step moves). The peaks in between make a few more
   new lows (4 or more: 403 of 1,090 against 366 of 1,206 at the end).
 - Durations: not compared (see above).
+
+## Attributes and height by pile, each peak placed against the quote it pushes into (Greg: "Are there distinctive attributes that are mostly associated with the end or beginning or the middle or the other? ... What about peak height")
+
+Read from the stored files in the session (told to Greg first). Here a buy peak is placed in the run of the best
+ASK and a sell peak in the run of the best BID: the price it is trying to move. Counts are in
+`ATTRIBUTES_BY_PILE.json` and `HEIGHT_BY_PILE.json`, one entry per trade day, kind of peak and pile. Height is in
+lots: for a peak with no window the size traded in the run; for a 20-second peak bought minus sold at the high.
+
+Trade day Oct 2, peaks with no window (the other three trade days read the same way):
+
+| | In between | At the beginning | At the end | Whole one-step move |
+|---|---:|---:|---:|---:|
+| Peaks | 1,339 | 2,599 | 1,837 | 5,792 |
+| Pushing with the move | 854 | 1,681 | 506 | 1,252 |
+| Height of 6 lots or more | 630 | 1,225 | 627 | 1,845 |
+| Height of 1 lot | 321 | 497 | 521 | 1,408 |
+| Pushed side thinner at the best price | 846 | 1,707 | 1,345 | 4,614 |
+| Pushed side thinner in the whole book | 673 | 1,338 | 907 | 2,881 |
+| Gap of one tick | 1,151 | 2,285 | 1,525 | 5,053 |
+
+- Differ by pile: which way the peak pushes against the move; its height; and how often the side it pushes into is
+  the thinner one at the best price (most often at the end and in one-step moves).
+- Do not differ by pile: the gap between bid and ask; which side of the whole book is thinner; for the 20-second
+  peaks, whether the peak before was on the same side, whether a Native dipole was known, and whether that dipole
+  was on the peak's side.
+- The 20-second peak's height differs only a little by pile (6 lots or more, trade day Oct 2: 770 of 1,038 in
+  between; 1,826 of 2,647 at the beginning; 817 of 1,251 at the end; 3,209 of 4,589 one-step moves).
+- A reading to test, not a finding: the peaks at the end of a move and in one-step moves look like a small trade
+  taking out a thin quote that had just stepped in (the other side, small, the pushed level thin), and the peaks in
+  between and at the beginning look like a larger run moving the quote. The book figures are read once the high's
+  tick is done, so a trade that has just eaten into a level makes it thinner: partly built in. Not yet asked: how
+  old the level was that the peak hit, and what the price did after each pile.
