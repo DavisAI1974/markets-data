@@ -2108,6 +2108,19 @@ Eclach thing is its own tjing."**
   earlier as his one exception (his words in "Seventh session"); not reopened here. Native's own record carries
   fixed windows of its own design.
 
+**DECIDED (Greg, 2026-11-17, same exchange): "That point has neen made again and again." Then: "Now you can do it
+both ways. Average and individual. Don't throw out the average just add the individual part", and "Just nk
+predertimed windows".**
+- Both ways, side by side: the three averaging models stay as built, and an individual way is added beside them.
+  The stored six-step chain results stay. Nothing averaged is thrown out; the individual part is added.
+- No predetermined windows, anywhere.
+- The individual way (Claude's call, stated to him): for each peak and each step back, the single peak on the other
+  three trade days whose earlier peaks are closest to its own; ties each get their own line. Each line names the
+  matched peak (trade day, tick of its high) and how close it was, and each figure's own difference. No setting is
+  chosen and nothing is blended. Figures are put on one footing by their rank among the teaching peaks, not by an
+  average. With no earlier peak given there is nothing to match on, so the individual way starts at one step back
+  (ways 3 and 4 match on the peak's own size and side at none given).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
