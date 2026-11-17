@@ -1,0 +1,150 @@
+{
+ "what": "ROOT part 2: the calculation refills on one trade day",
+ "laid_out_and_approved": "markets-data STEP1_STEP2_LAYOUTS.md, addition L (\"Try them all\", Greg, 2026-11-16)",
+ "trade_day": "2023-10-18",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d"
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e"
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65"
+  },
+  {
+   "file": "NG_v0_mbo_20231018.dbn.zst",
+   "sha256": "54b2b14c4762a7e4160cc00ce1e70504961ea4e6954e28866dd1bfbaa140f5d5"
+  }
+ ],
+ "columns": [
+  {
+   "column": "refill_facts_known",
+   "what": "How many facts about filled orders with size put back became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "order_number",
+    "fact",
+    "side",
+    "price",
+    "price_after",
+    "levels_from_best",
+    "size_filled",
+    "size_before",
+    "size_after",
+    "size_put_back",
+    "same_size_or_larger",
+    "times_put_back_so_far",
+    "size_filled_so_far",
+    "first_entered_exchange_time_ns",
+    "first_entered_received_time_ns",
+    "entered_before_written_record"
+   ],
+   "lines": 1608,
+   "files": [
+    {
+     "file": "calc-refills-facts-20231018-part000.parquet",
+     "rows": 1608,
+     "bytes": 40586,
+     "sha256": "98fee353e92e47039afbf3d30b36814087ed230f153e68bea732776e3509524b"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 770579,
+ "rows": 771468,
+ "counts": {
+  "facts_by_what_happened": {
+   "lost its place: price changed": 111,
+   "stayed": 1079,
+   "lost its place: size raised": 267,
+   "left by fill": 104,
+   "shrank by fill": 47
+  },
+  "orders_with_size_put_back": 379,
+  "most_times_on_one_order": 76,
+  "fills_waiting_for_their_row_at_the_last_tick": 0
+ },
+ "files": [
+  {
+   "file": "calc-refills-20231018-part000.parquet",
+   "rows": 262144,
+   "bytes": 528706,
+   "sha256": "e24f741e1a8540c39db96edc2a632af0ac7a67730f75ce036dbfe36f03324b99",
+   "beside": "rows-20231018-part000.parquet",
+   "beside_sha256": "553218f493ba6420dfc957f9adce322ddf8e477ab150f60fc88f97fba635df47"
+  },
+  {
+   "file": "calc-refills-20231018-part001.parquet",
+   "rows": 262144,
+   "bytes": 529329,
+   "sha256": "6d63e3ddfb399414cd855d5e285257ba9331870802048d961670416a81dca570",
+   "beside": "rows-20231018-part001.parquet",
+   "beside_sha256": "7cd439efe8f94e71d4612e7d8effe88994ae96b653d724c73749797bd1479975"
+  },
+  {
+   "file": "calc-refills-20231018-part002.parquet",
+   "rows": 247180,
+   "bytes": 513959,
+   "sha256": "445c054f7c8936a127567fa3891b129814a3a6b0da63e2c26f105bfe13c32f7a",
+   "beside": "rows-20231018-part002.parquet",
+   "beside_sha256": "4a74d42f71f754bd55db61a627e92cdebe9812faf248b649310462a05703023f"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 770579,
+   "rows_of_no_trade_day_all_empty": 889,
+   "facts_compared": 1608,
+   "facts_by_what_happened": {
+    "left by fill": 104,
+    "lost its place: price changed": 111,
+    "lost its place: size raised": 267,
+    "shrank by fill": 47,
+    "stayed": 1079
+   },
+   "facts_with_size_put_back": 1527,
+   "facts_same_size_or_larger": 1370,
+   "orders_with_size_put_back": 379,
+   "most_times_on_one_order": 76,
+   "size_put_back": {
+    "bid": 2223,
+    "ask": 1273
+   },
+   "refilled_in_the_stored_book_totals": {
+    "bid": 2223,
+    "ask": 1273
+   },
+   "fills_waiting_for_their_row_at_the_last_tick": 0,
+   "method": "the fill messages of each exchange event gathered first and laid on the rows; the figures so far by sorting the filled rows by order; the size put back against the stored book totals. Shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 385289,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "inside an exchange event, after a fill message and before the row where the book shows it",
+    "ticks_given": 416023,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 770579,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 40.9
+}

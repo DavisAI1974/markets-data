@@ -1,0 +1,178 @@
+{
+ "what": "ROOT part 2: the calculation sweeps on one trade day",
+ "laid_out_and_approved": "markets-data STEP1_STEP2_LAYOUTS.md, addition M (\"Try them all\", Greg, 2026-11-16)",
+ "trade_day": "2023-10-18",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d"
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e"
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65"
+  },
+  {
+   "file": "NG_v0_mbo_20231018.dbn.zst",
+   "sha256": "54b2b14c4762a7e4160cc00ce1e70504961ea4e6954e28866dd1bfbaa140f5d5"
+  }
+ ],
+ "columns": [
+  {
+   "column": "sweep_facts_known",
+   "what": "How many facts about trade events and about the quote touching or crossing became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "fact",
+    "event_position",
+    "first_trade_position",
+    "first_trade_received_time_ns",
+    "since_first_trade_ns",
+    "ticks_in_event",
+    "aggressor_sides",
+    "trades",
+    "size_traded",
+    "size_bought",
+    "size_sold",
+    "size_no_side",
+    "first_trade_price",
+    "last_trade_price",
+    "fill_messages",
+    "orders_filled",
+    "size_of_fills",
+    "price_levels_filled",
+    "first_fill_price",
+    "last_fill_price",
+    "best_bid_moved",
+    "best_ask_moved",
+    "best_bid_before",
+    "best_bid_after",
+    "best_ask_before",
+    "best_ask_after",
+    "gap_now",
+    "touched_position",
+    "lasted_ns",
+    "ticks_lasted",
+    "lowest_gap",
+    "standing_at_first_tick"
+   ],
+   "lines": 30911,
+   "files": [
+    {
+     "file": "calc-sweeps-facts-20231018-part000.parquet",
+     "rows": 30911,
+     "bytes": 1088842,
+     "sha256": "f1f09a7788b6c4f2dcf199b81b152c9a1716671c7b6bbafcf2e6d31902e24dff"
+    }
+   ]
+  },
+  "open-at-the-end": {
+   "columns": [
+    "touched_position",
+    "ticks_so_far",
+    "lowest_gap"
+   ],
+   "lines": 0,
+   "files": [
+    {
+     "file": "calc-sweeps-open-at-the-end-20231018-part000.parquet",
+     "rows": 0,
+     "bytes": 734,
+     "sha256": "686f3712d423508eaf008134ba74805b62b07249acf3c63d533a38374b048ab2"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 770579,
+ "rows": 771468,
+ "counts": {
+  "facts": {
+   "trade event": 29797,
+   "quote touched or crossed": 557,
+   "quote parted": 557
+  },
+  "most_price_levels_filled_in_one_event": 5,
+  "touching_or_crossed_at_the_last_tick": 0
+ },
+ "files": [
+  {
+   "file": "calc-sweeps-20231018-part000.parquet",
+   "rows": 262144,
+   "bytes": 541057,
+   "sha256": "db6a5a1d7c74546d8234ed66471f3356d8a55989c3e5eae62d28b2f9d8fe8e29",
+   "beside": "rows-20231018-part000.parquet",
+   "beside_sha256": "553218f493ba6420dfc957f9adce322ddf8e477ab150f60fc88f97fba635df47"
+  },
+  {
+   "file": "calc-sweeps-20231018-part001.parquet",
+   "rows": 262144,
+   "bytes": 542342,
+   "sha256": "8fdebb73fbceea7d935c9300e028d9ca37b11f154d584713f9070b3e8fc85fca",
+   "beside": "rows-20231018-part001.parquet",
+   "beside_sha256": "7cd439efe8f94e71d4612e7d8effe88994ae96b653d724c73749797bd1479975"
+  },
+  {
+   "file": "calc-sweeps-20231018-part002.parquet",
+   "rows": 247180,
+   "bytes": 527085,
+   "sha256": "efbbbdfecdb85cb302b2bf83921b0b7dab366ad465d2c7d0ae4deed813e87861",
+   "beside": "rows-20231018-part002.parquet",
+   "beside_sha256": "4a74d42f71f754bd55db61a627e92cdebe9812faf248b649310462a05703023f"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 770579,
+   "rows_of_no_trade_day_all_empty": 889,
+   "facts_compared": 30911,
+   "facts_by_kind": {
+    "quote parted": 557,
+    "quote touched or crossed": 557,
+    "trade event": 29797
+   },
+   "most_facts_on_one_tick": 1,
+   "trade_events_with_no_fill_message": 1357,
+   "trade_events_with_more_than_one_trade_side": 24,
+   "most_price_levels_filled_in_one_event": 5,
+   "ticks_with_the_quote_touching_or_crossed": 1910,
+   "touching_or_crossed_at_the_last_tick": 0,
+   "touching_or_crossed_at_the_first_tick": false,
+   "first_tick_is_inside_an_event_that_began_before_the_trade_day": false,
+   "trade_or_fill_rows_with_the_tapes_no_price_value": 0,
+   "method": "the rows grouped by exchange event and each group taken as a whole; a best price moving from the best-price columns; the touches from the stored gap. Shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 385289,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "inside an exchange event, on its first trade and before its end mark",
+    "ticks_given": 411930,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "while the quote is touching or crossed",
+    "ticks_given": 419268,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 770579,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 49.4
+}

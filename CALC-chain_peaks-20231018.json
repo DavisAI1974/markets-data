@@ -1,0 +1,183 @@
+{
+ "what": "ROOT part 2: the calculation chain_peaks on one trade day",
+ "laid_out_and_approved": "markets-data STEP1_STEP2_LAYOUTS.md, piece 4, the chain link models (\"Do it\", Greg, 2026-11-16): the per-peak lines the models read",
+ "trade_day": "2023-10-18",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d"
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e"
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65"
+  },
+  {
+   "file": "NG_v0_mbo_20231018.dbn.zst",
+   "sha256": "54b2b14c4762a7e4160cc00ce1e70504961ea4e6954e28866dd1bfbaa140f5d5"
+  }
+ ],
+ "columns": [
+  {
+   "column": "chain_peak_lines_known",
+   "what": "How many peak lines became known at this tick: peaks whose stories ended here (they are in the facts table)."
+  },
+  {
+   "column": "chain_before_lines_known",
+   "what": "How many before lines became known at this tick: the ended peaks before a peak that became known here (they are in the before table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "peak_high_position",
+    "peak_high_received_time_ns",
+    "peak_known_position",
+    "peak_known_received_time_ns",
+    "side",
+    "size",
+    "low_to_high_ns",
+    "ended_by",
+    "high_to_end_ns",
+    "lowest_share",
+    "steps_down",
+    "price_at_high",
+    "price_at_end",
+    "highest_price_since_high",
+    "lowest_price_since_high",
+    "price_move_with_side",
+    "furthest_price_with_side",
+    "furthest_price_against_side",
+    "before_high_position",
+    "same_side_as_peak_before",
+    "ended_peaks_before"
+   ],
+   "lines": 7965,
+   "files": [
+    {
+     "file": "calc-chain_peaks-facts-20231018-part000.parquet",
+     "rows": 7965,
+     "bytes": 503376,
+     "sha256": "728b707f6c16d213e87a3aa49b428929e79015c14ca8b6d68e8f973b70458f0f"
+    }
+   ]
+  },
+  "before": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "peak_high_position",
+    "steps_back",
+    "earlier_high_position",
+    "earlier_known_position",
+    "earlier_ended_position"
+   ],
+   "lines": 47755,
+   "files": [
+    {
+     "file": "calc-chain_peaks-before-20231018-part000.parquet",
+     "rows": 47755,
+     "bytes": 380082,
+     "sha256": "2bd458e2f393abeccb3395deaa0f14e8749dd88f109a190c54e0a44f9d9b3816"
+    }
+   ]
+  },
+  "open-at-the-end": {
+   "columns": [
+    "peak_high_position",
+    "peak_known_position"
+   ],
+   "lines": 2,
+   "files": [
+    {
+     "file": "calc-chain_peaks-open-at-the-end-20231018-part000.parquet",
+     "rows": 2,
+     "bytes": 901,
+     "sha256": "dac642e5a00562bc74b714536693229c7e51a0740d03f71da401a697b749885c"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 770579,
+ "rows": 771468,
+ "counts": {
+  "peak_lines": 7965,
+  "before_lines": 47755,
+  "came_back": 5267,
+  "beaten": 2698,
+  "peaks_with_fewer_ended_peaks_before_than_steps_written": 8,
+  "lines_with_no_low_to_high": 35,
+  "lines_with_no_peak_before": 1,
+  "lines_with_no_trade_between_high_and_end": 118,
+  "lines_with_no_price_at_high": 0,
+  "steps_back_written": 6,
+  "peaks_still_open_at_the_last_tick": 2
+ },
+ "files": [
+  {
+   "file": "calc-chain_peaks-20231018-part000.parquet",
+   "rows": 262144,
+   "bytes": 540125,
+   "sha256": "16d2da77ffcf9297c619094baf284f791eef334f18585144fbfb1d6316b8d7d3",
+   "beside": "rows-20231018-part000.parquet",
+   "beside_sha256": "553218f493ba6420dfc957f9adce322ddf8e477ab150f60fc88f97fba635df47"
+  },
+  {
+   "file": "calc-chain_peaks-20231018-part001.parquet",
+   "rows": 262144,
+   "bytes": 540293,
+   "sha256": "7fd3e92f8d2ffc06f8a8d2032cc5ff1169c9648c7c4bf37a52395b21bab4edf0",
+   "beside": "rows-20231018-part001.parquet",
+   "beside_sha256": "7cd439efe8f94e71d4612e7d8effe88994ae96b653d724c73749797bd1479975"
+  },
+  {
+   "file": "calc-chain_peaks-20231018-part002.parquet",
+   "rows": 247180,
+   "bytes": 524727,
+   "sha256": "95d3d6333a7c05ceb70ca0cd7565b9de92b680b75e38170332479f17312198a2",
+   "beside": "rows-20231018-part002.parquet",
+   "beside_sha256": "4a74d42f71f754bd55db61a627e92cdebe9812faf248b649310462a05703023f"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "peaks": 7967,
+   "peak_lines_compared": 7965,
+   "before_lines_compared": 47755,
+   "ended_by": {
+    "beaten": 2698,
+    "came back": 5267
+   },
+   "peaks_still_open_at_the_last_tick": 2,
+   "empty_cells_by_column": {
+    "low_to_high_ns": 35,
+    "highest_price_since_high": 118,
+    "lowest_price_since_high": 118,
+    "before_high_position": 1,
+    "same_side_as_peak_before": 1
+   },
+   "peak_lines_with_fewer_ended_peaks_before_than_steps_written": 8,
+   "method": "every line worked out again from the stored outputs of pieces 1, 2 and A as whole tables; the fade while away from the bought and sold columns; the ended peaks before by walking back. Shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 385289,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick a peak became known, its story still open",
+    "ticks_given": 395407,
+    "same_as_full_run": true
+   }
+  ]
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 83.0
+}
