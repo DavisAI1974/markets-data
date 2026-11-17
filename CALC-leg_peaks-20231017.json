@@ -1,0 +1,200 @@
+{
+ "what": "ROOT part 2: the calculation leg_peaks on one trade day",
+ "laid_out_and_approved": "markets-data STEP2_PLAN.md, piece I, the print legs beside the peaks (Greg, 2026-11-16; his go 2026-11-17)",
+ "trade_day": "2023-10-17",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d"
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e"
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65"
+  }
+ ],
+ "columns": [
+  {
+   "column": "leg_number",
+   "what": "The trade leg in progress at this tick, counted from the first print of the trade day (a label only). Empty until the first print that steps away from the first price."
+  },
+  {
+   "column": "leg_direction",
+   "what": "Which way that leg goes: up or down."
+  },
+  {
+   "column": "leg_first_trade_position",
+   "what": "The first trade of that leg: its position on the tape. A label only."
+  },
+  {
+   "column": "leg_start_price",
+   "what": "The price that leg started from (the tape's own price units)."
+  },
+  {
+   "column": "leg_furthest_price",
+   "what": "The furthest price that leg has printed so far."
+  },
+  {
+   "column": "leg_steps",
+   "what": "How many steps of price that leg has made so far."
+  },
+  {
+   "column": "leg_facts_known",
+   "what": "How many facts about trade legs became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "fact",
+    "leg_number",
+    "direction",
+    "leg_first_trade_position",
+    "leg_first_trade_received_time_ns",
+    "leg_start_price",
+    "price",
+    "steps",
+    "price_change",
+    "since_first_trade_ns",
+    "leg_last_trade_position",
+    "step_back",
+    "buy_peak_high_position",
+    "buy_peak_since_high_ns",
+    "buy_peak_story",
+    "sell_peak_high_position",
+    "sell_peak_since_high_ns",
+    "sell_peak_story",
+    "rise_side",
+    "rise_high_position",
+    "rise_since_high_ns"
+   ],
+   "lines": 15532,
+   "files": [
+    {
+     "file": "calc-leg_peaks-facts-20231017-part000.parquet",
+     "rows": 15532,
+     "bytes": 607180,
+     "sha256": "93bfbc2e0b12cffd26e8ba35bbb1fae821fdbfcd18fb8ccf90017567b4bf03a4"
+    }
+   ]
+  },
+  "open-at-the-end": {
+   "columns": [
+    "leg_number",
+    "direction",
+    "leg_first_trade_position",
+    "leg_start_price",
+    "furthest_price",
+    "steps"
+   ],
+   "lines": 1,
+   "files": [
+    {
+     "file": "calc-leg_peaks-open-at-the-end-20231017-part000.parquet",
+     "rows": 1,
+     "bytes": 2062,
+     "sha256": "fadb96ce7087758d3764256b3e2f6175b8721b5f3c158bcaa9c2b2a2109a2368"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 845246,
+ "rows": 846158,
+ "counts": {
+  "trades": 33703,
+  "stretches": 9874,
+  "legs": 5660,
+  "leg started": 5660,
+  "new furthest price": 4213,
+  "leg ended": 5659,
+  "legs_still_going_at_the_last_tick": 1
+ },
+ "files": [
+  {
+   "file": "calc-leg_peaks-20231017-part000.parquet",
+   "rows": 262144,
+   "bytes": 588255,
+   "sha256": "6387ca22465bd46f96d4785c7984f0826a27cab67b831fcc1146c6a558ca6f54",
+   "beside": "rows-20231017-part000.parquet",
+   "beside_sha256": "129af2a47cbce9921f21ca5051c75435f7961eb2138ed76865d7f25bd2b0718a"
+  },
+  {
+   "file": "calc-leg_peaks-20231017-part001.parquet",
+   "rows": 262144,
+   "bytes": 576217,
+   "sha256": "42dd3602ac1009c0da308fd4680a4ca7948f2322350899ed0d996b1e27262663",
+   "beside": "rows-20231017-part001.parquet",
+   "beside_sha256": "e605e5ca15822068c2c0863adb7c21ff3cf2fc60ef0163a6231f6fcb3bea1803"
+  },
+  {
+   "file": "calc-leg_peaks-20231017-part002.parquet",
+   "rows": 262144,
+   "bytes": 579647,
+   "sha256": "31f97852a5cf8b32e4a9327b8df3b12669449ceeb3c319b8eae39b639bf24784",
+   "beside": "rows-20231017-part002.parquet",
+   "beside_sha256": "88daf42ead9133913a71c643751e75e400e6acf638f8ec2c4b8a541761e38a29"
+  },
+  {
+   "file": "calc-leg_peaks-20231017-part003.parquet",
+   "rows": 59726,
+   "bytes": 188231,
+   "sha256": "8d09fde90985be538bb6adb6c8c6cd4968d2be05eb0a442f8444061bf2631704",
+   "beside": "rows-20231017-part003.parquet",
+   "beside_sha256": "1c5b5ec098d3da4043473fabed84b29647095b7204c1657a4fca8d533b69813b"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 845246,
+   "prints": 33703,
+   "stretches": 9874,
+   "legs": 5660,
+   "facts_compared": 15532,
+   "facts_by_kind": {
+    "leg started": 5660,
+    "leg ended": 5659,
+    "new furthest price": 4213
+   },
+   "facts_with_a_rise_under_way": 8853,
+   "earlier_record": {
+    "commit": "15fbf2acd11365cb00893a919ec83e00b4df209f",
+    "folder": "tasks/family-research-20261022/claude-independent-research-20261113/source-artifacts/tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231017",
+    "sha256": {
+     "legs": "4710ae6660e82c2a29fb60d12e725f901bbdffdc0bbabfc4dd31b3196f89e3f1",
+     "trades": "e9be9e78167e719a8b2070a041da297fe8f1aec5e98a9baa74a06341e0601854"
+    },
+    "trades_compared": 33451,
+    "legs_compared": 5591,
+    "starts": "8 pm Eastern (00:00 UTC); its first leg is cut there and is left out",
+    "prints_before_it_starts": 252,
+    "an_earlier_leg_number_is_this_leg_number_minus": 68
+   },
+   "method": "the legs made again by the earlier rule functions over the whole list of prints, each moment placed from that; the peaks in play from the stored outputs of pieces 1 and 2 as whole tables; every earlier trade and leg found again. Shares no code with the print-by-print calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 422623,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 384536,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 845246,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 55.1
+}

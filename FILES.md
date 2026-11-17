@@ -41,12 +41,18 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
   - `outside_changes` was made again beside the rebuilt rows (the one calculation that reads the outside columns): 78,616 facts (14,689 ticks with a change); 319 outside columns followed, 249 of them changed in the trade day. Its checks passed. It replaces the earlier output, which followed the averaged and windowed columns that no longer exist.
   - Every other calculation's output stands as stored. Each was made beside the earlier rows, whose tape, book and trade columns are unchanged (proved above), and none reads an outside column. None was run again (Greg: "No tests except on changed pieces").
   - `playback-20231017.json` was made on the first build and was not run again.
+- Part 2, the four pieces written and run on 2026-11-17 (Greg's go: "Write the 3 calcs and run them on the pods"; "do that extra along with the others"; one General Purpose 8-CPU pod per trade day, all four pieces started together, each on its own CPU; Markets `fbf5a36`, the dipole piece at `d44f750`; every file fetched and compared with the fingerprint in its receipt before it was stored). The rows files are untouched.
+  - `leg_peaks` (the rest of piece I: the trade legs beside the peaks): the earlier leg rule (Markets `0408df44`) followed forward, print by print, from the first print of the trade day. `calc-leg_peaks-facts-20231017-part*.parquet`: 15,532 lines, one for every moment of a leg (leg started 5,660, new furthest price 4,213, leg ended 5,659), each at the tick of the print that shows it, with the peaks in play; `calc-leg_peaks-20231017-part*.parquet`, the leg in progress on every row; `calc-leg_peaks-open-at-the-end-*`, the leg still going at the last tick. 33,703 prints, 9,874 stretches, 5,660 legs counted from 6 pm. Check passed: the legs made again by the earlier rule functions over the whole list of prints; every one of the 33,451 earlier trades is the tape's print at the same place and every one of the 5,591 earlier legs compared comes out again (the earlier record starts at 8 pm Eastern); an earlier leg number is this leg number minus 68. No leg is named a kind of leg.
+  - `resting` (piece K: the resting orders through a peak, a run of the quote and a trade leg): `calc-resting-facts-20231017-part*.parquet`, 107,256 lines, one per later turn (peak 53,106; run of the best bid 19,869; run of the best ask 18,749; trade leg 15,532), naming its earlier turn (41,307 earlier turns): of the orders resting on each side at the earlier turn, for the whole side and for those at that side's best price then, how many still rest and with what size, left by fill, left by cancel, were filled at all and how much, gave size up and how much, had size added, changed price, and how many were carried in from before the trade day. `calc-resting-ahead-20231017-part*.parquet`: 2,155 lines, one for every fill of an order that had another order ahead of it in our line (how many, how much size, which orders; every one of them names every order ahead). `calc-resting-20231017-part*.parquet`, the counts of lines known on each row. 307,977 orders have a row in the trade day; 128 of them were resting since before it. Orders resting since before the trade day and never touched in it: bid 148 orders of size 495, ask 151 of size 307; the check found that same number and size at every one of the earlier turns. Check passed: every order's whole life laid out as one table and each line read off it again.
+  - `turn_peaks` (the peak with no window, and every peak against the turns of the price; Greg: "We need to calc this without the window and find the peak number"): the flow counted from the moment the aggressor side last changed; every run of trades on one side peaks at its last trade and its number is the size traded in the run. 10,401 peaks with no window, beside the 8,619 20-second peaks of piece 1 (unchanged). `calc-turn_peaks-facts-20231017-part*.parquet`: 76,078 lines: one when each peak becomes known, and one for each of three moves in price under way at its high (the trade leg, the run of the best bid, the run of the best ask) when that move has ended, saying how many steps the move had made at the high and how many in all. Moves that made NO step after the peak's high (the move ended where the high found it), out of the moves that ended: 20-second peaks: trade leg: 5,006 of 8,618; run of the best bid: 4,847 of 8,619; run of the best ask: 4,915 of 8,618. Peaks with no window: trade leg: 6,377 of 10,401; run of the best bid: 6,171 of 10,401; run of the best ask: 6,186 of 10,401. These are counts of single peaks, each on its own line; what share of ANY tick would show the same has not been worked out, so the counts alone do not say the peaks sit at the turns. `calc-turn_peaks-20231017-part*.parquet`, the run of trades in progress on every row; `calc-turn_peaks-open-at-the-end-*`, the 0 lines waiting on a move still going at the last tick. Check passed.
+  - `dipole_peaks` (piece D: Native's dipole beside the peaks; `DIPOLE-PEAKS-20231017.json`). Native's stored record is placed as it is and marked as Native's; nothing of Native is worked out again. `native-episodes-20231017.jsonl.gz`: Native's 1,482 episode lines for 741 dipoles, kept as recorded. `dipole-peaks-facts-20231017.parquet`: 10,101 lines, each at the first tick received at or after the time Native wrote it: recognized 741, closed 741, and one at each of the 8,619 20-second peaks as it becomes known (1,313 of them with a dipole known and not closed). `dipole-peaks-20231017-part*.parquet`: beside every row, how many dipoles are known and not closed on each polarity. Native's record starts at 8 pm Eastern (00; the counts beside the rows are empty until then. 0 lines of Native's record were not placed. Check passed: every tick found again along the whole column of received times; playback cut one tick before a recognized line. Native's record is built on its own fixed windows (TO REVISIT). The first output of this piece left 20 closing lines unplaced on trade day Oct 18 (a closing line written at the same instant as its recognized line was read first); it was corrected and run again and only the corrected output is stored.
 
 | File | Bytes | SHA256 |
 |---|---:|---|
 | `CALC-book_totals-20231017.json` | 8,276 | `ad21e7706edd35de0feabba1f5cc6d27b83e09d90db7404be85eb61218a0dd6c` |
 | `CALC-chain_peaks-20231017.json` | 5,587 | `08534c70cfbe5ce838b77673b89e8f21ae361d34ca98a20926a6d494c3253d94` |
 | `CALC-flow_peak-20231017.json` | 4,281 | `0dfc5cc0b48b36050588884970c403b1d91999c4fbc5c7cd7ca31cdf7cb8ebde` |
+| `CALC-leg_peaks-20231017.json` | 6,156 | `8d6b1239b551cd29f3f8b1ae2bc06ac4f78f88543f1170ff29bdac5902d4e5b4` |
 | `CALC-open_stories-20231017.json` | 4,168 | `7aacee61855532684c2655b2f028b86708d45d5816f72b9dc1a22b1ef1b5ca04` |
 | `CALC-outside_changes-20231017.json` | 20,092 | `d0b500982037f7d96389aa49d3684f6fd2010cb4780aed9cb5bdce848d9160b5` |
 | `CALC-peak_links-20231017.json` | 4,354 | `364eb62a531bc7793d9c74272be88f3fbf41b8b8ff9a4fffcee559f6716e77c9` |
@@ -54,8 +60,11 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `CALC-quote_peaks-20231017.json` | 3,959 | `90c9f28cdce9078c98994dadbd899a461ff9e135a0b82d1fd7a433aa17398d1b` |
 | `CALC-quote_runs-20231017.json` | 6,407 | `6c9109c7e6d80593b24064d2c5ce1d127d3dfe01458753bd0289834f7c3346a3` |
 | `CALC-refills-20231017.json` | 4,659 | `d2788f91c2edad0da0445984505f3f47a8c75d8cf54a404ec38ac14531480a5d` |
+| `CALC-resting-20231017.json` | 6,677 | `60f5eb82dcb63a5a6fb39a0ba6454c57242bb268ef3a8f932f009721abae047a` |
 | `CALC-sweeps-20231017.json` | 5,356 | `d82d9040f1b9a87db7d5a672eeddc1ff2ff183c43050c91ff9df752b40ea6e1c` |
 | `CALC-together-20231017.json` | 4,860 | `1ade81307d0bf62fc84416273ae46ff6d347afb21f8f9551260fe43131d540df` |
+| `CALC-turn_peaks-20231017.json` | 6,703 | `e9780069d0dd13426e079a70a772a97b76ce973c4f3df92313ee7284859ee7a3` |
+| `DIPOLE-PEAKS-20231017.json` | 7,500 | `3295bf6351f05258a597174f531d2ff789400afb554ce63dce3441e6b8947d4e` |
 | `RECEIPT.json` | 8,291 | `e30e549451de54e20aaf74eb405373bd5d8a476e8fb5b23e22502b46a4dbbe73` |
 | `TRADE-LEGS-20231017.json` | 2,246 | `adbfd3d514235f02d93aa580932384c3d328b08aa62318d17ec17243f18df689` |
 | `book-pictures-20231017-part000.parquet` | 11,957,324 | `b029cda92bb6d4d90b1c2d1538205f16dd2aba00111e3d956dd594b07b8e9cf1` |
@@ -84,6 +93,12 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `calc-flow_peak-20231017-part001.parquet` | 800,571 | `3a3bcbdec2fee972280e80d70655212aff54f9a17490a79176bc0a2c4ec49024` |
 | `calc-flow_peak-20231017-part002.parquet` | 826,381 | `6ee4c2a82af8e326eb984487a9d3af4c22867ad23e71519204396f1e35f9afd2` |
 | `calc-flow_peak-20231017-part003.parquet` | 242,906 | `049fa5730f89f8f0c263778c1db41ce3be7b5b406ebe03990642533b0b97441d` |
+| `calc-leg_peaks-20231017-part000.parquet` | 588,255 | `6387ca22465bd46f96d4785c7984f0826a27cab67b831fcc1146c6a558ca6f54` |
+| `calc-leg_peaks-20231017-part001.parquet` | 576,217 | `42dd3602ac1009c0da308fd4680a4ca7948f2322350899ed0d996b1e27262663` |
+| `calc-leg_peaks-20231017-part002.parquet` | 579,647 | `31f97852a5cf8b32e4a9327b8df3b12669449ceeb3c319b8eae39b639bf24784` |
+| `calc-leg_peaks-20231017-part003.parquet` | 188,231 | `8d09fde90985be538bb6adb6c8c6cd4968d2be05eb0a442f8444061bf2631704` |
+| `calc-leg_peaks-facts-20231017-part000.parquet` | 607,180 | `93bfbc2e0b12cffd26e8ba35bbb1fae821fdbfcd18fb8ccf90017567b4bf03a4` |
+| `calc-leg_peaks-open-at-the-end-20231017-part000.parquet` | 2,062 | `fadb96ce7087758d3764256b3e2f6175b8721b5f3c158bcaa9c2b2a2109a2368` |
 | `calc-open_stories-20231017-part000.parquet` | 615,807 | `4f35684f6a1615ab2cb716463120e64396720e789a04752974228d54cc0e6f3e` |
 | `calc-open_stories-20231017-part001.parquet` | 599,461 | `4d216c6eeef0e1a7046dc1603a1de426c7c2804748b9e9f80904224c5ebac935` |
 | `calc-open_stories-20231017-part002.parquet` | 604,288 | `e45ef3aebf07ab27d5428b3694bb8f239379f80cf3b72b5434f14194dd166eb8` |
@@ -121,6 +136,12 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `calc-refills-20231017-part002.parquet` | 529,169 | `c1c19a18f1bb2b9af92ba4f93fa5f9962e86655319c682d8ef0bad9fd6dc8a20` |
 | `calc-refills-20231017-part003.parquet` | 175,199 | `c9eb2f114c98038961d2677110a35ca51a515523eda459729e16069ee79f54b5` |
 | `calc-refills-facts-20231017-part000.parquet` | 38,723 | `6c6e6c89f3bb80719ce45ac2fe09e892518a23577910825e20ae4cd5b6903e7e` |
+| `calc-resting-20231017-part000.parquet` | 560,328 | `1962dfa07838d2d08e85771c3fde1e80823fee6a2c693af857635304ddd26b12` |
+| `calc-resting-20231017-part001.parquet` | 560,487 | `d42cbd83e14c8c06e906773cb7d0bd8ff61377840b51914e26670739012f18fe` |
+| `calc-resting-20231017-part002.parquet` | 562,493 | `276752d4feba612da38470d0cf5676c992c17696f125e729d91ab866c27408c3` |
+| `calc-resting-20231017-part003.parquet` | 182,237 | `88fd72eb8184788b0f36ff32dc4ccb3d10852dcf344a457d6f1ecc78761546eb` |
+| `calc-resting-ahead-20231017-part000.parquet` | 54,550 | `82c6ac76bf733388012e647dbeea78c109f31da2bca388c5e7579049165ce8b7` |
+| `calc-resting-facts-20231017-part000.parquet` | 4,782,150 | `0cf5f4393d20994ad8b9bc71fb6b59841b4cef37314d2f20c2eb6d52508e024c` |
 | `calc-sweeps-20231017-part000.parquet` | 540,735 | `a4fb6dfe701716a1e0e652718219542cb7b12816a1bd3985c7427dae3f03fe6d` |
 | `calc-sweeps-20231017-part001.parquet` | 542,246 | `2f70980fb4ea655718c4eff03d8892b8bec28395cb049994a8c971ef80afcdfd` |
 | `calc-sweeps-20231017-part002.parquet` | 543,209 | `4e95f10bafd7162fb5568968b85d7839c903b5eb2ec79e9520440727a7d421bd` |
@@ -133,6 +154,18 @@ and the made outside tables in markets-data branch `ccr-349e2ffe-07p8od`. Nothin
 | `calc-together-20231017-part003.parquet` | 176,842 | `4aa833da60f03f0a4ab86c4bac39c93b4e009ea2fc17932de2e0e117220044f9` |
 | `calc-together-facts-20231017-part000.parquet` | 795,028 | `d4d95a27d1d6f49d7d3f557f3ff0ddd6ef8f9f0499cd1b1644772646d557e639` |
 | `calc-together-open-at-the-end-20231017-part000.parquet` | 909 | `dbcf236a733ec98b017da71b00ce46f057e8562e197ab6f62d9c7d4dadc6012a` |
+| `calc-turn_peaks-20231017-part000.parquet` | 605,899 | `c02ea831fae4579c3767924e81ff38a2b45747beae2a65927d6cb46985bcecd3` |
+| `calc-turn_peaks-20231017-part001.parquet` | 614,189 | `09310c83cde2386920507ce12f31072f6f5b72b71774fdec033d7564b63cece0` |
+| `calc-turn_peaks-20231017-part002.parquet` | 621,892 | `ec2e2701a803919deb32d4d58f9ca6014b005c221be574c4886b13442ebcf697` |
+| `calc-turn_peaks-20231017-part003.parquet` | 196,707 | `3cce1edefb028d4336b1765a0bee37228e1946fb299e16843a20a0bd74da08c4` |
+| `calc-turn_peaks-facts-20231017-part000.parquet` | 1,824,242 | `572497f89cb826504a5801e914ae136c55097c757ab7f118af3831f3f8b27189` |
+| `calc-turn_peaks-open-at-the-end-20231017-part000.parquet` | 1,242 | `8907a6cd5e2f95accf968dffb688a11a932d50a1b08c21305a345cfc32a597f3` |
+| `dipole-peaks-20231017-part000.parquet` | 541,743 | `93916473c4932abc04241a0cc081cf8cc4dee18a0c5193f09ade7e6477e34876` |
+| `dipole-peaks-20231017-part001.parquet` | 538,365 | `3243b34eecf71d4ee065ad115d5bf149c3c861a7bc1f7b20bdfc077c96f02c7e` |
+| `dipole-peaks-20231017-part002.parquet` | 538,929 | `ae80f1d421c9cecec57ae61949081803bae10d4f57e0e4508e907911c0223e16` |
+| `dipole-peaks-20231017-part003.parquet` | 178,885 | `b4a79e7e4c03361b215410bd134902b65a6b228a0af61aec4567f29ca6998b54` |
+| `dipole-peaks-facts-20231017.parquet` | 412,051 | `4e7ec01d9fab2a4c491cea27a2552b72cfc8086aff44864c2b86c123b60c9531` |
+| `native-episodes-20231017.jsonl.gz` | 878,967 | `b4fe63637227d2dd0268d07192c6e8cdfb1701f8c0e2791523286467d5e87dfe` |
 | `playback-20231017.json` | 665 | `730534ef97f7ba68f7b3ca9e381ae0723fc360e787b16956ac03927e5aa4177d` |
 | `rows-20231017-part000.parquet` | 19,973,753 | `129af2a47cbce9921f21ca5051c75435f7961eb2138ed76865d7f25bd2b0718a` |
 | `rows-20231017-part001.parquet` | 20,463,874 | `e605e5ca15822068c2c0863adb7c21ff3cf2fc60ef0163a6231f6fcb3bea1803` |
