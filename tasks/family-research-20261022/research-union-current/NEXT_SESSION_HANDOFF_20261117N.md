@@ -19,7 +19,7 @@ fifteen candidates, the selected cases and their results. Handoffs K and L point
 ## Where things stand
 
 - **No pod exists. Nothing is running. Nothing is billing.** Everything made is stored and pushed.
-- Code: Markets branch `ccr-3096f7d6-fst7al`, tip `c7b874b` (nothing on the trunk).
+- Code: Markets branch `ccr-3096f7d6-fst7al`, tip `b1ed5bf` (nothing on the trunk).
 - Stored rows and outputs: `root-rows-20231002` `97acb1c`, `-20231003` `a16fc8f`, `-20231017` `35bea61`, `-20231018`
   `4f47994`. Each branch's `FILES.md` lists and explains every file. Clone each shallow; never fetch old branches
   whole. The renders are in each branch's `renders/` folder (about 100 MB a trade day).
@@ -76,6 +76,11 @@ fifteen candidates, the selected cases and their results. Handoffs K and L point
    labels, no caps or limits; gross; the leakage gate first; the settle window left out; each trade day traded by
    versions formed on the other three, blind to it. Lay all 15 out to him in one message before writing any; name
    in that word anything that averages. Nothing of last week's findings.
+   **HIS CALL, put to him once before any version is formed:** the notes file was read from all four trade days
+   ("all four read the same way"), and a version must be formed blind to the trade day it is traded on. A session
+   that has read the notes has seen every trade day. One way to keep the rule: form each version only from the
+   other three trade days' own counts, which the count files in the research folder hold separately for each trade
+   day. Another: form the versions in a chat that does not open the notes. He decides.
 4. Greg's answer on deleting last week's two folders from `main` (put to him once; nothing is pushed to `main`
    without his yes): `tasks/family-research-20261022/claude-independent-research-20261113/` and
    `research-union-current/codex-review-and-gaps-20261113/`. Told: deleting leaves them in git history; the first
@@ -110,6 +115,14 @@ fifteen candidates, the selected cases and their results. Handoffs K and L point
   (`root/dipole_renders.py` shows how).
 - Do not list a `codex/frankie-lifecycle-recovery-*` branch with file sizes through a partial clone: it downloads
   every file. Fetch single files by raw address.
+- The four pod addresses of the last launch are dead and still on the "Markets" cloud environment's list
+  (`v77rqljqv0s9hb`, `vmczelc3kybrzv`, `f3g6yj2owboz01`, `g5cpkm35bkwrst`, each `-8000.proxy.runpod.net`). Take them
+  off when the next four are added (one approval card).
+- `ROOT_dipoles_pinned.xlsx` is written by `python3 -m root.pinned_excel <out.xlsx> <folder holding rows-<trade
+  day>/> <peak research folder>` (Markets `b1ed5bf`); it reads the stored tables in each branch's `renders/` and
+  reads its own values back. Its links open the pictures on GitHub.
+- `root/pod_fetch.py` holds a pod's files in memory until every one is proved, then writes them. A folder reads
+  empty until then. About a thousand files take ten to fifteen minutes.
 
 ## TO REVISIT (Greg: carry into every handoff until done)
 

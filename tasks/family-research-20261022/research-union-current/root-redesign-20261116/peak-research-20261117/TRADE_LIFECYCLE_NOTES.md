@@ -235,10 +235,11 @@ price above the flow lean on one clock; this idea is the sharper version, built 
 
 ## (CORRECTED BELOW by Greg the same hour: the 20-second version is KEPT and the tick version ADDED) The flow lean at the tick
 
-Greg, on seeing the first renders: "We need to make flow lean nano too and not 20 sec windows." The 20-second flow
-was his one standing exception; it is withdrawn for the flow lean. Twelve of the seventeen stored calculations
-stand on the 20-second window in whole or in part (listed in the decisions file). They stay stored; the versions
-with no window are made beside them. Still to settle with him: what the lean compares once the clock is gone
+Greg, on seeing the first renders: "We need to make flow lean nano too and not 20 sec windows." Claude first
+recorded this as the 20-second exception being withdrawn. THAT WAS WRONG: the same hour he said "You can keep the
+20 sec but we need to add nano". The 20-second flow is KEPT and a line made at the tick is ADDED beside it. Twelve
+of the seventeen stored calculations stand on the 20-second window in whole or in part (listed in the decisions
+file). They stay stored; the versions made at the tick are made beside them. Still to settle with him: what the lean compares once the clock is gone
 (Claude's pick: buying against selling since the price move under way started, with the run of trades on one side
 beside it). The first renders were too crowded for him to read; the next ones are his stacked pair, price above
 and one flow line below.
@@ -270,3 +271,16 @@ To settle with him before it is built:
   before to the dipole after).
 Known faults of the first renders to fix: the black line on the exhaustion pages is the last print and flips a tick
 as trades alternate between bid and ask (use the quote); the page title is cut off at the top.
+
+## Cautions added at the close of the session (2026-11-17)
+
+- "About nine in ten dipoles born with a trade are the same event as an exhaustion peak" is close to built in. A
+  trade that makes the 20-second flow fully one-sided sets a high of that flow by definition. It shows the two
+  records agree where a trade prints; it is not a separate discovery.
+- The counts of "our flow NOT fully one-sided at the birth second" (194, 207, 243, 236) were read on the last tick
+  received before the second ended. Trades can drop out of the 20 seconds between that tick and the end of the
+  second, with no tick to show it. So part of that disagreement between Native's record and our tape may be our own
+  sampling at ticks, not Native. A line made at the tick with its own clock (the "nano" line) is what settles it.
+- Everything in this file was read from all four trade days. A strategy version has to be formed blind to the trade
+  day it is traded on. How the next session can read these notes and still keep that is Greg's call (see the
+  handoff).
