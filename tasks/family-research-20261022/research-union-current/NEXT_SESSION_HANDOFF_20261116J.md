@@ -8,6 +8,20 @@ push.
 Greg has news to share ("we may have figured out something huge"). He said he will share it after the build and
 run below are done. Ask for nothing; he will bring it.
 
+## TONIGHT'S PRIORITY (Greg's last word of the ninth session; it comes before the list under "What to do next")
+
+"I'm getting low in usage so I want to make sure the 1st strategy versions get done tonight soon ... I want to have
+some sort of barometer to see where our knowledge works or doesn't in a parer trade atmosphere". And: "we are going
+to do the strategy creation like we did last week".
+- Make the first strategy versions FIRST, from what is already stored, the way it was done last week (ask him
+  where last week's strategy work is kept if the handoffs do not say; do not guess a method).
+- It is a barometer in a paper-trade setting, not a result: gross (no trade cost), every trade individually, the
+  leakage gate first, only the four trade days, each trade day paper traded by versions formed on the other three.
+- Usage is low. Do not start the long builds below before this is done. Generating data continues afterwards.
+- What tonight's calculations already say, to start from: the peaks before a peak say a good deal about the next
+  peak's flow and nothing measurable about the price moves after it; a few hundred orders are traded against and
+  reloaded at the best price; nine lots in ten added to the book are pulled, not traded; the quote mostly flickers.
+
 ## Read these, in this order
 
 1. `root-redesign-20261116/ROOT_GAMEPLAN_DECISIONS.md`, section "Ninth session" (long; its last entries are the

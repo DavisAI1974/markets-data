@@ -2003,6 +2003,20 @@ is already held (the MBO files and the stored rows). So:
 done on a pod: none is running, nothing is billing, and everything run is stored. Handoff written as
 `NEXT_SESSION_HANDOFF_20261116J.md`.
 
+**The first strategy versions, tonight, as a barometer (Greg, end of the ninth session):** "Once all of these
+calcs are done, we are going to do the strategy creation like we did last week. I'm getting low in usage so I want
+to make sure the 1st strategy versions get done tonight soon. When will continue generating data but I want to have
+some sort of barometer to see where our knowledge works or doesn't in a parer trade atmosphere".
+- Read as (his to correct): the first strategy versions are made tonight, in the next session, from what is
+  already stored, the way the strategy creation was done last week. They are a barometer in a paper-trade setting:
+  where what we know works and where it does not. Generating data (the chain ways, the resting orders, the trade
+  legs and Native's missing hours) goes on afterwards and is not what tonight waits on.
+- Usage is low: the next session keeps to that aim and does not start long builds first.
+- Standing rules that bear on it: every trade individually, with any average only beside the individual trades;
+  trade cost is not a market condition (gross); the leakage gate before any backtest; only the four trade days;
+  provisional until live. With four trade days, a version is formed on three and paper traded on the fourth, each
+  in turn, so no trade is scored by a rule that saw its own trade day (Claude's call, stated to him).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
