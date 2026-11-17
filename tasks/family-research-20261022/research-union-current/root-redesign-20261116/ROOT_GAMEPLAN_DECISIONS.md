@@ -2607,6 +2607,15 @@ story reads the same and the difference is in what the resting orders did. Small
 of chance, first level only. Told to him as a modest, steady part of the story, not a reason to hold the
 strategies.
 
+**Greg, 2026-11-17: "What foes your just finished dipole research say when its data was produced?"** Read from the
+stored `dipole_peaks` lines (told to him first; `DIPOLE_AGAINST_PEAKS.json`, the README). On every trade day: every
+dipole is born in a second in which the flow was fully one-sided (magnitude exactly 1: 741, 833, 741, 863 of the
+same); under half share their birth second with a 20-second peak's high on the same side (329, 381, 294, 350) and
+more than half with no peak's high at all (402, 447, 437, 501); most are recognized exactly 50 seconds after the
+birth (526, 584, 545, 599), Native's own fixed span; by then the flow peak on the dipole's side has usually already
+reached zero (515, 552, 510, 575). A dipole did not help place a peak in a move. What Native recorded about each
+dipole after recognition (its stages) has not been read.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

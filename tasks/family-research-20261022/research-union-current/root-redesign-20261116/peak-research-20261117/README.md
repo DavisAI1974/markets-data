@@ -220,3 +220,35 @@ Moves that took a third step, out of the moves in that row:
 - Limits: only the first level of each move is followed; the rows with every order filled or every order pulled
   hold 100 to 250 moves each; no test of chance was made; most moves of the quote are one step long and are not in
   this table (about 5,200 to 6,100 a side a trade day).
+
+## What Native's dipole says, laid against the peaks (Greg: "What does your just finished dipole research say")
+
+Read from the stored `dipole_peaks` lines in the session (told to Greg first); counts in
+`DIPOLE_AGAINST_PEAKS.json`. Native's record is Native's; nothing of it was worked out again.
+
+| | Oct 2 | Oct 3 | Oct 17 | Oct 18 |
+|---|---:|---:|---:|---:|
+| Dipoles | 741 | 833 | 741 | 863 |
+| Magnitude exactly 1 (the flow fully one-sided in its birth second) | 741 | 833 | 741 | 863 |
+| A 20-second peak's high on its side in its birth second | 329 | 381 | 294 | 350 |
+| A no-window peak's high on its side in its birth second | 133 | 144 | 118 | 130 |
+| No peak's high of either kind in its birth second | 402 | 447 | 437 | 501 |
+| Recognized exactly 50 seconds after its birth | 526 | 584 | 545 | 599 |
+| At recognition, the latest peak on its side had already reached zero | 515 | 552 | 510 | 575 |
+| At recognition, that peak's story was still open | 86 | 87 | 91 | 119 |
+| At recognition, a rise under way on its side | 184 | 224 | 170 | 213 |
+| At recognition, a rise under way on the other side | 151 | 160 | 132 | 170 |
+
+- Every dipole is born in a second in which the flow was fully one-sided.
+- Under half are born in the same second as a 20-second peak's high on the same side; more than half are born in a
+  second with no peak's high at all.
+- A dipole is known late: most are recognized exactly 50 seconds after the birth (Native's own fixed span), the
+  rest a few seconds sooner.
+- By the time it is known, the flow peak on its side has usually already faded to zero (about seven in ten).
+- From the recognized line to the closing line: under 5 seconds for 193, 214, 158 and 205 dipoles; 60 seconds or
+  more for 213, 216, 209 and 238 (these two marks are only to describe the spread). Nearly every closing line reads
+  REVERSAL.
+- A dipole was known at about one 20-second peak in seven, on the peak's side about three times in four, and the
+  same in every pile: it did not help place a peak in a move.
+- Its part of the story, as read so far: it marks that a fully one-sided burst happened about 50 seconds ago. What
+  Native recorded about each dipole after that (its stages) has not been read.
