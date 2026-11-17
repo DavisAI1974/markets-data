@@ -2207,6 +2207,16 @@ s.all. take any ranking system for any data out".**
   peak: a percentile). Put to him for removal, with `peak_highest_for_ns` (how long since the flow was last larger),
   which compares size with the past.
 
+**Greg, 2026-11-17: "Just striplp the ranks from the outpit data before saving to the excel sheets and delete the
+ranks"; then "This is very frustrating. I have stated plainly that we let the data group data together, not our
+systems."; then "Fine. Make sure that every other correction is done before restarting".**
+- Ranks out of everything saved: `peak_standing_so_far` taken out of `flow_peak` (Markets `cd91b45`).
+- The chain matching (each peak's "closest" peak) stops completely: it was our system deciding what counts as alike.
+  Nothing from those runs is kept; the four pods were deleted. The chain stays as stored facts (each peak's figures
+  and the earlier peaks before it, in time order). Grouping is for later, with him, from what the data shows.
+- Before any restart, every other correction is made: an audit of every number and rule in ROOT against no
+  averages, no predetermined windows, no ranks, no grouping or matching by our systems, no fixed marks or caps.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
