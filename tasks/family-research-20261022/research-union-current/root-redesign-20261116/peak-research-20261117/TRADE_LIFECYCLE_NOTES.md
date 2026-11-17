@@ -137,3 +137,43 @@ Most real moves are far smaller than this picture: on trade day Oct 2, 10,597 of
   `calc-peak_story-*`, `calc-flow_peak-*`, the rows). Each branch's `FILES.md` explains every file.
 - Every read here used all four trade days. None of it may be used to form a strategy version for the trade day
   that version is traded on.
+
+## Native's dipole, reverse engineered (2026-11-17, Greg: "That 50 sec line sounds like an artifact ... pin the dipoles to their timestamps and then see what there's to see")
+
+Read from Native's stored lines and from OUR tape (the stored rows and our own 20-second flow), in the session,
+told to Greg first. Each trade day on its own; the four read the same way.
+
+| | Oct 2 | Oct 3 | Oct 17 | Oct 18 |
+|---|---:|---:|---:|---:|
+| Dipoles | 741 | 833 | 741 | 863 |
+| Native's threshold exactly 1 | 741 | 833 | 741 | 863 |
+| Native's magnitude exactly 1 | 741 | 833 | 741 | 863 |
+| Native's prominence exactly 0 | 71 | 96 | 65 | 80 |
+| NO trade at all in the birth second | 453 | 498 | 474 | 548 |
+| One trade in the birth second | 210 | 254 | 207 | 227 |
+| OUR flow fully one-sided, its side, at the end of the birth second | 538 | 610 | 476 | 596 |
+| OUR flow NOT fully one-sided there | 194 | 207 | 243 | 236 |
+| OUR flow already fully one-sided on its side one second earlier | 219 | 236 | 185 | 247 |
+| Seconds of the trade day with OUR flow fully one-sided | 18,960 of 82,799 | 20,068 | 18,987 | 18,773 |
+| Smallest number of seconds between one birth and the next | 45 | 45 | 45 | 45 |
+| Births exactly 45 seconds after the one before | 99 | 116 | 105 | 112 |
+| Known exactly 50 seconds after the birth | 526 | 584 | 545 | 599 |
+
+What this says:
+- A dipole, as recorded on these trade days, is a mark put on a second in which the 20-second flow is fully
+  one-sided. The level it must clear is 1 on every dipole, so the level selects nothing.
+- Our flow is fully one-sided in about 19,000 to 20,000 seconds of each trade day. Native marks 741 to 863 of
+  them. What decides which: spacing. No two births are closer than 45 seconds, and exactly 45 seconds is the
+  most common gap by far. The 45 seconds and the 50 seconds are both constants of the detector, not of the market.
+- More than six dipoles in ten are "born" in a second in which nothing traded. The flow was one-sided there only
+  because earlier trades were still inside the 20 seconds.
+- For about a quarter of the dipoles our own 20-second flow is not fully one-sided at the birth second. Native's
+  record and the tape do not agree there. Why is not established (Native bins by whole seconds and may use a
+  different clock; its per-second flow lines are in the stored ledger and have not been read).
+- For about three in ten the flow had already been fully one-sided a second earlier, so the birth is not where
+  the one-sidedness began.
+- So Greg's reading stands on the evidence so far: the 50-second line is made by the detector. And more than
+  that: the dipoles themselves, as recorded, are mostly marks spaced by a rule along stretches of one-sided flow,
+  not separate market events. This is what Native's stored record shows; it does not say the DIPOLE DIVE (the flow
+  lean diving into a turn and recovering) is not real. That is looked at in the renders, one per dipole, pinned at
+  the birth second.

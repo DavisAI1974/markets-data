@@ -2628,6 +2628,26 @@ learned, and handoff M sends the next session to it first. Also said to him: the
 the way (about seven emptied levels in ten are part eaten and part pulled), almost never put size back at once,
 and a level that was only abandoned leads nowhere while one that was eaten leads on.
 
+**Greg, 2026-11-17: "Go back and reverse engineer the dipoles. That 50 sec line sounds like and artifact because
+that's wxactlynwhat desktop said when he was working with half the data depth that was run wrong. Literally the
+same line so i don't think it's valid. Regardless. You need to pin the dipoles to thwir timestamps and then see
+what there's to see. I know that they do the dipole dive like before so do that for me. Pin the dipoles and the do
+the renders after you do".**
+- Reverse engineered from Native's stored lines against OUR tape (a read in the session, told to him first; the
+  table is in `peak-research-20261117/TRADE_LIFECYCLE_NOTES.md`). On every trade day: every dipole has Native's
+  threshold exactly 1 and magnitude exactly 1, so the level selects nothing; our own 20-second flow is fully
+  one-sided in about 19,000 to 20,000 seconds of a trade day and Native marks 741 to 863 of them; no two births are
+  closer than 45 seconds and exactly 45 seconds is the most common gap (99, 116, 105, 112 times); most are known
+  exactly 50 seconds after the birth. More than six in ten are born in a second with no trade at all (453, 498,
+  474, 548). For about a quarter our own flow is not fully one-sided at the birth second (194, 207, 243, 236):
+  Native's record and the tape do not agree there, and why is not established.
+- READ: his suspicion holds on this evidence. The 50 seconds and the 45 seconds are constants of the detector, and
+  the dipoles as recorded are mostly marks spaced by a rule along stretches of one-sided flow. That is a statement
+  about Native's stored record, not about the dipole dive itself.
+- NEXT, on his word: every dipole pinned at its birth second on our tape (a stored table), then one render per
+  dipole (price, both kinds of flow, the size at the best prices, from the dipole before to the dipole after, so
+  no span of time is chosen). The renders are a run: on pods, the price given at the launch.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
