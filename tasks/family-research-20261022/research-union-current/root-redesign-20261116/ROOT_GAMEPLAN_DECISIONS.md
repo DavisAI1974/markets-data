@@ -2132,6 +2132,20 @@ what prodeces what we wany".**
   version is made beside them, a different version, nothing replaced. Which produces what we want is read from the
   results.
 
+**Greg, 2026-11-17: "But if the average outputs are worthless or tell us nothing valuable, we delete them. Iactually
+let's figure that part out now because I don't want them tainting any other calcs if they are.. so stop everything
+and let's address the averages right now", then: "I'm extremely upset though that we created the average data to
+begin with. That id the cardinal rule".**
+- Everything stopped (no pods, nothing billing). The averaged outputs were found and put to him: only the stored
+  six-step chain model tables; nothing reads them. Averages and windows also sit in the outside figures (fund
+  standings over 1 and 3 years, gas-weighted degree days from daily mean temperatures, storage against the
+  five-year average). His calls on deleting both are pending.
+- How it happened, owned: the chain link models were put to him as "models" and "a model score", and the fact
+  that every one of them averages across peaks was not said in those words. The ninth session built and ran them.
+- STANDING RULE from here (Claude's commitment to him): nothing that averages, blends, pools or groups cases is
+  built or run. Any method that would combine more than one case into one value is named to him as averaging, in
+  that word, before anything is written, and is not built unless he asks for it by name.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
