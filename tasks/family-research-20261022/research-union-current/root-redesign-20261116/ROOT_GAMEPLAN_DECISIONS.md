@@ -2146,6 +2146,17 @@ begin with. That id the cardinal rule".**
   built or run. Any method that would combine more than one case into one value is named to him as averaging, in
   that word, before anything is written, and is not built unless he asks for it by name.
 
+**DECIDED (Greg, 2026-11-17), on the temperatures: "I can deal with weighted day temps but don't know about the
+average temps. What are the temps averaging?" Told: a city's observed gas-day temperature is the average of its
+hourly readings that day (and wind the average of its hourly speeds); a forecast day temperature is (high + low) / 2;
+degree days come from those averages; the 16 cities are then weighted. His answer: "Absolutely not for the temps. The
+temp changes are what drive market price in rt markets!! We have hourly temps available for each day. Use them".**
+- No temperature is averaged over time. The hourly readings are used, each as it arrives. Weighting the cities is
+  acceptable to him.
+- The averaged temperature figures come out (the observed gas-day mean temperature, the degree days and wind made
+  from it, and the forecast high-low midpoint and the degree days made from it). How they are replaced is laid out
+  to him from the data held.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
