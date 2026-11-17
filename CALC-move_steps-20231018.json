@@ -1,0 +1,150 @@
+{
+ "what": "ROOT part 2: the calculation move_steps on one trade day",
+ "laid_out_and_approved": "Greg, 2026-11-17: \"I'll let you pick one other calc ... that you feel will have the biggest impact for your strategies\"; Claude's pick, stated to him",
+ "trade_day": "2023-10-18",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d"
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e"
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65"
+  },
+  {
+   "file": "NG_v0_mbo_20231018.dbn.zst",
+   "sha256": "54b2b14c4762a7e4160cc00ce1e70504961ea4e6954e28866dd1bfbaa140f5d5"
+  }
+ ],
+ "columns": [
+  {
+   "column": "move_step_facts_known",
+   "what": "How many lines about a step or the end of a move in price became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "move",
+    "fact",
+    "move_start_position",
+    "direction",
+    "step",
+    "price",
+    "steps_in_all",
+    "given_back",
+    "flow_bought_20s",
+    "flow_sold_20s",
+    "run_side",
+    "run_size",
+    "run_trades",
+    "best_bid",
+    "best_ask",
+    "best_bid_size",
+    "best_ask_size",
+    "best_bid_orders",
+    "best_ask_orders",
+    "bid_total_size",
+    "ask_total_size",
+    "buy_peak_high_position",
+    "buy_peak_since_high_ns",
+    "buy_peak_story",
+    "sell_peak_high_position",
+    "sell_peak_since_high_ns",
+    "sell_peak_story",
+    "rise_side",
+    "rise_high_position",
+    "rise_since_high_ns"
+   ],
+   "lines": 78277,
+   "files": [
+    {
+     "file": "calc-move_steps-facts-20231018-part000.parquet",
+     "rows": 78277,
+     "bytes": 2261392,
+     "sha256": "c428f82bade41170e23b669674e4e2fee53c9ba0d0fabaa947d27128a5354b19"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 770579,
+ "rows": 771468,
+ "counts": {
+  "lines": 78277,
+  "lines_by_move_and_kind": {
+   "trade leg: step": 9108,
+   "trade leg: ended": 5119,
+   "run of the best bid: step": 18845,
+   "run of the best bid: ended": 13876,
+   "run of the best ask: step": 18062,
+   "run of the best ask: ended": 13267
+  }
+ },
+ "files": [
+  {
+   "file": "calc-move_steps-20231018-part000.parquet",
+   "rows": 262144,
+   "bytes": 550513,
+   "sha256": "e208ce05a06654ead3b122dd805c04426f14ee9e11412d690bd377bbd9833b6c",
+   "beside": "rows-20231018-part000.parquet",
+   "beside_sha256": "19c695e0319df60c69fe04c8a112c645e30666b60a5179bd330993f2d20d2be4"
+  },
+  {
+   "file": "calc-move_steps-20231018-part001.parquet",
+   "rows": 262144,
+   "bytes": 547800,
+   "sha256": "c1f009d49319161bbf26cd5de55a5803a2c96215f83c661f14427193c96b741e",
+   "beside": "rows-20231018-part001.parquet",
+   "beside_sha256": "a01104c9731dbcc6f677588eb7f009803814dea2747c05cd2f885fc6896c52dc"
+  },
+  {
+   "file": "calc-move_steps-20231018-part002.parquet",
+   "rows": 247180,
+   "bytes": 531093,
+   "sha256": "9025fbb2fa9a58b0a9ee6024aab88c06f255bf584c2200e82e62b9b9e8b48165",
+   "beside": "rows-20231018-part002.parquet",
+   "beside_sha256": "6dc55a21055feab38c2d56a4d2f68f7e0e5fdcc645dbb9bb257e227ba0b8b65c"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 770579,
+   "lines_compared": 78277,
+   "lines_by_move_and_kind": {
+    "run of the best ask: step": 18062,
+    "run of the best ask: ended": 13267,
+    "run of the best bid: step": 18845,
+    "trade leg: step": 9108,
+    "trade leg: ended": 5119,
+    "run of the best bid: ended": 13876
+   },
+   "method": "the moves as whole lists (legs by the earlier rule, the quote's runs from their stored facts); what was in play read off whole stored columns of flow_peak, turn_peaks and the rows, and the peaks from the stored outputs of pieces 1 and 2. Shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 385289,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 353383,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 770579,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 31.2
+}
