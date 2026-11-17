@@ -8,7 +8,8 @@ A ninth session started from this file. Its record is the section "Ninth session
 - L and M: one fault in L corrected before it ran; both checks written and both wired in.
 - The chain link models: built in two parts (`chain_peaks`, `chain_models`).
 - The pod launch path is rebuilt (`root/pod.py`, `root/pod_fetch.py`; `pod_run.sh` is gone).
-- **None of it has run.** The first run of each is on the pods, on Greg's go at the time, with the price.
+- L, M and `chain_peaks` RAN on four pods on Greg's go and are stored on the `root-rows` branches (`9248f13`,
+  `9dec603`, `9712727`, `356ceea`). The models: see the decisions file for whether they have run and been shown.
 - Items 2 to 4 of "What to do next" and the questions for Greg below stand as written.
 
 Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data` for data and documents. This file replaces

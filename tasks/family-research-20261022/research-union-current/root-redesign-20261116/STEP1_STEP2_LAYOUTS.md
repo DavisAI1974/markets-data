@@ -514,11 +514,11 @@ ones that came to nothing. Read from the facts in tick order.
 **Order, and how long between.** For any two kinds of fact: which came first and the time between, each case
 listed. Every fact carries its tick, so this is a subtraction, with no pairing picked in advance.
 
-## Written in the ninth session (2026-11-17), not yet run: L, M and the chain link models
+## Built in the ninth session: L, M and the chain link models
 
-Code: Markets branch `ccr-d9ae98a9-65go6q`. Each has its one check written. The first run of each is on the pods,
-on Greg's go. Counts are added here when they have run. Every call below is in `ROOT_GAMEPLAN_DECISIONS.md`,
-"Ninth session", stated to Greg, his to correct.
+Code: Markets branch `ccr-d9ae98a9-65go6q`. Each has its one check. Run on four pods on Greg's go, all four trade
+days at the same time, helpers pinned; counts under "Run in the ninth session" below. Every call is in
+`ROOT_GAMEPLAN_DECISIONS.md`, "Ninth session", stated to Greg, his to correct.
 
 ### L. Refilled orders (`root/calcs/refills.py`)
 
@@ -548,6 +548,44 @@ As laid out in piece 4 above and approved ("Do it"). Two parts:
 - `chain_models`: for each trade day, three models taught on the other three trade days. One line per peak, model
   and step back: each figure's squared error without and with the peak at that step, the mean beside them, the
   gain. Its own table, keyed by peak. The values are not known at a tick.
+
+## Run in the ninth session (2026-11-16 evening Eastern, on four pods): counts
+
+Each passed its one check on the first run on all four trade days. Receipts are `CALC-<name>-<trade day>.json` on
+the `root-rows` branches.
+
+**L, refilled orders.**
+
+| Trade day | Facts | With size put back | Leaving the order the same size or larger | Orders | Most times on one order | Size put back, bid / ask (equal to the book totals) |
+|---|---:|---:|---:|---:|---:|---|
+| Mon Oct 2 | 1,860 | 1,763 | 1,575 | 383 | 70 | 3,053 / 1,653 |
+| Tue Oct 3 | 1,727 | 1,634 | 1,438 | 404 | 66 | 1,603 / 2,268 |
+| Tue Oct 17 | 1,522 | 1,440 | 1,262 | 357 | 99 | 1,801 / 1,406 |
+| Wed Oct 18 | 1,608 | 1,527 | 1,370 | 379 | 76 | 2,223 / 1,273 |
+
+The facts without size put back are filled orders that changed price in the same row. By the row's own words on
+trade day Oct 2: stayed 1,232, size raised 321, price changed 126, left by fill 121, shrank by fill 60.
+
+**M, trade events and the quote touching or crossing.**
+
+| Trade day | Trade events | With no fill message | With more than one trade side | Most price levels filled in one | Touches | Ticks touching or crossed | Standing at the first tick | At the last tick |
+|---|---:|---:|---:|---:|---:|---:|---|---:|
+| Mon Oct 2 | 37,238 | 1,052 | 17 | 13 | 587 | 1,858 | yes | 0 |
+| Tue Oct 3 | 40,517 | 854 | 10 | 7 | 636 | 2,084 | yes | 0 |
+| Tue Oct 17 | 32,728 | 1,398 | 24 | 6 | 553 | 1,886 | no | 0 |
+| Wed Oct 18 | 29,797 | 1,357 | 24 | 5 | 557 | 1,910 | no | 0 |
+
+A touch standing at the first tick began before the trade day: its facts say so and its length is counted from the
+first tick only. No trade or fill row carries the tape's "no price" value.
+
+**The chain link models, first part (`chain_peaks`).**
+
+| Trade day | Peaks | Peak lines | Came back | Beaten | Still open at the end | Before lines | Peak lines with fewer than six ended peaks before | No low for the rise | No trade between high and end |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Mon Oct 2 | 9,525 | 9,524 | 5,945 | 3,579 | 1 | 57,114 | 9 | 42 | 171 |
+| Tue Oct 3 | 10,577 | 10,576 | 6,277 | 4,299 | 1 | 63,438 | 6 | 33 | 192 |
+| Tue Oct 17 | 8,619 | 8,618 | 5,415 | 3,203 | 1 | 51,687 | 7 | 32 | 148 |
+| Wed Oct 18 | 7,967 | 7,965 | 5,267 | 2,698 | 2 | 47,755 | 8 | 35 | 118 |
 
 ## Still to lay out
 

@@ -1855,6 +1855,49 @@ record and the print legs on trade days Oct 2 and Oct 17), which holds D and the
 the place-in-line figures, before K; L's question 6 (every row with size put back gets a fact, with a yes/no for
 "same size or larger": keep that, or only the same-size-or-larger ones), put to him when L's counts are reported.
 
+**Greg's words during the launch, and how each is read (2026-11-16 evening Eastern, ninth session).**
+- "You have the runpod mcp you can use and run runpod skills". The Runpod MCP was already in use (the account, the
+  live price, the create-pod details); the Runpod skills (`runpod-mcp`, the `runpod` router, the pod workflow guide)
+  were loaded and followed.
+- "Approve". He sent it when told the launch request was his to approve, BEFORE the price was on his screen. Read
+  as his go. The price and scikit-learn were then stated to him in full in the next message, before any pod was
+  made (four General Purpose CPU pods, 8 CPUs and 32 GB, $0.32 an hour each, $1.28 for the four, 10 GB disk each;
+  scikit-learn 1.9.1 with scipy 1.18.1 for the models; "say 'no scikit-learn' and I stop before that step"). He
+  wrote twice more during the run and did not object. Not asked again.
+- "You'll have to migrate the data to the data repo". Everything a pod makes is fetched, compared with the
+  fingerprint in its receipt, and committed to that trade day's `root-rows` branch of markets-data. Nothing stays
+  on a pod and nothing goes to Markets. The pods are deleted only after the push has gone through.
+- "And we are going to be very light on the tests. Only on pieces that change and only once". Standing rule,
+  sharpened. Applied in this launch: each new piece had its one check, run once; one piece changed afterwards (M)
+  and only it was run again, once.
+
+**The launch (2026-11-16, 9:09 pm Eastern; pods `np8ymwtao1oipl`, `88crhkhurx7pvp`, `sr05nqcwa5wl2k`,
+`79wzw32bskx0i3`, one per trade day).** L, M and `chain_peaks` ran as three helpers at once on each pod, each
+pinned to its own CPU. **All three passed their checks on the first run on all four trade days.** Nothing was run
+in the session; it fetched, proved and stored. Stored on the `root-rows` branches: `-20231002` (`9248f13`),
+`-20231003` (`9dec603`), `-20231017` (`9712727`), `-20231018` (`356ceea`), each with `FILES.md` updated. Counts are
+in `STEP1_STEP2_LAYOUTS.md`, "Run in the ninth session".
+
+**What the first run found, and what was done.**
+- **M's receipt counted the touch facts 33 times over** (19,371 where there were 587 on trade day Oct 2). The
+  facts table and the check were right; only the calculation's own count was wrong (the line for a touch was built
+  once for every column). Corrected (Markets `5f49e4d`) and M alone run again, once, on the same pods. Only the
+  corrected run is stored.
+- **The quote is already touching or crossed at the first tick of trade days Oct 2 and Oct 3** (not on Oct 17 or
+  18). Such a touch began before the trade day. **Claude's call, stated to Greg:** its two facts carry a yes/no
+  saying so, and its length is counted from the first tick only, because nothing from before the trade day enters a
+  calculation. (The same correction run.)
+- No trade or fill row carries the tape's "no price" value, and no trade day's first tick sits inside an exchange
+  event that began before it.
+
+**Empty figures on the peak lines, counted on all four trade days before the models ran (as handoff H required).**
+No low for the rise (piece 2 has none) on 42, 33, 32 and 35 peak lines; no peak before on 1 a trade day (the first
+peak). So 43, 34, 33 and 36 peak lines of 9,524, 10,576, 8,618 and 7,965 have an empty figure: under half of one
+in a hundred. **The rule is kept as built (Claude's call, stated to Greg):** such a peak, and a peak with one of
+them among the d peaks before it, has empty values at that step with the reason; nothing is filled in. The price
+moves are never empty (no trade between the high and the end on 171, 192, 148 and 118 lines: the moves are zero
+there and the highest and lowest price stay empty).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
