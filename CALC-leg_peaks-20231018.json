@@ -1,0 +1,196 @@
+{
+ "what": "ROOT part 2: the calculation leg_peaks on one trade day",
+ "laid_out_and_approved": "markets-data STEP2_PLAN.md, piece I, the print legs beside the peaks (Greg, 2026-11-16; his go 2026-11-17)",
+ "trade_day": "2023-10-18",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d"
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e"
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65"
+  },
+  {
+   "file": "NG_v0_mbo_20231018.dbn.zst",
+   "sha256": "54b2b14c4762a7e4160cc00ce1e70504961ea4e6954e28866dd1bfbaa140f5d5"
+  }
+ ],
+ "columns": [
+  {
+   "column": "leg_number",
+   "what": "The trade leg in progress at this tick, counted from the first print of the trade day (a label only). Empty until the first print that steps away from the first price."
+  },
+  {
+   "column": "leg_direction",
+   "what": "Which way that leg goes: up or down."
+  },
+  {
+   "column": "leg_first_trade_position",
+   "what": "The first trade of that leg: its position on the tape. A label only."
+  },
+  {
+   "column": "leg_start_price",
+   "what": "The price that leg started from (the tape's own price units)."
+  },
+  {
+   "column": "leg_furthest_price",
+   "what": "The furthest price that leg has printed so far."
+  },
+  {
+   "column": "leg_steps",
+   "what": "How many steps of price that leg has made so far."
+  },
+  {
+   "column": "leg_facts_known",
+   "what": "How many facts about trade legs became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "fact",
+    "leg_number",
+    "direction",
+    "leg_first_trade_position",
+    "leg_first_trade_received_time_ns",
+    "leg_start_price",
+    "price",
+    "steps",
+    "price_change",
+    "since_first_trade_ns",
+    "leg_last_trade_position",
+    "step_back",
+    "buy_peak_high_position",
+    "buy_peak_since_high_ns",
+    "buy_peak_story",
+    "sell_peak_high_position",
+    "sell_peak_since_high_ns",
+    "sell_peak_story",
+    "rise_side",
+    "rise_high_position",
+    "rise_since_high_ns"
+   ],
+   "lines": 14227,
+   "files": [
+    {
+     "file": "calc-leg_peaks-facts-20231018-part000.parquet",
+     "rows": 14227,
+     "bytes": 563354,
+     "sha256": "e0c4dda60ccc6ad585ee02d03f144cb22f85b743e9ceec23b0978ea15e0f23a4"
+    }
+   ]
+  },
+  "open-at-the-end": {
+   "columns": [
+    "leg_number",
+    "direction",
+    "leg_first_trade_position",
+    "leg_start_price",
+    "furthest_price",
+    "steps"
+   ],
+   "lines": 1,
+   "files": [
+    {
+     "file": "calc-leg_peaks-open-at-the-end-20231018-part000.parquet",
+     "rows": 1,
+     "bytes": 2062,
+     "sha256": "d4094961193100d0725c8dc3264059ce92706c94c631e4fb2adef0b8061096e1"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 770579,
+ "rows": 771468,
+ "counts": {
+  "trades": 30739,
+  "stretches": 9109,
+  "legs": 5120,
+  "leg started": 5120,
+  "new furthest price": 3988,
+  "leg ended": 5119,
+  "legs_still_going_at_the_last_tick": 1
+ },
+ "files": [
+  {
+   "file": "calc-leg_peaks-20231018-part000.parquet",
+   "rows": 262144,
+   "bytes": 587282,
+   "sha256": "7d14daa8bf01a297b4a0feaea59d568b9c31ad48fce48bab44d4dba3780c32c3",
+   "beside": "rows-20231018-part000.parquet",
+   "beside_sha256": "19c695e0319df60c69fe04c8a112c645e30666b60a5179bd330993f2d20d2be4"
+  },
+  {
+   "file": "calc-leg_peaks-20231018-part001.parquet",
+   "rows": 262144,
+   "bytes": 578746,
+   "sha256": "2d812aca762b480a6065561ca633e014286483ba8cb795fde862f7c4d48bb199",
+   "beside": "rows-20231018-part001.parquet",
+   "beside_sha256": "a01104c9731dbcc6f677588eb7f009803814dea2747c05cd2f885fc6896c52dc"
+  },
+  {
+   "file": "calc-leg_peaks-20231018-part002.parquet",
+   "rows": 247180,
+   "bytes": 561952,
+   "sha256": "ec4b4e83d715db49bfce4cae00e52a8f71d1cc78f8e62d7b59162a5ca5b17e22",
+   "beside": "rows-20231018-part002.parquet",
+   "beside_sha256": "6dc55a21055feab38c2d56a4d2f68f7e0e5fdcc645dbb9bb257e227ba0b8b65c"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 770579,
+   "prints": 30739,
+   "stretches": 9109,
+   "legs": 5120,
+   "facts_compared": 14227,
+   "facts_by_kind": {
+    "leg started": 5120,
+    "new furthest price": 3988,
+    "leg ended": 5119
+   },
+   "facts_with_a_rise_under_way": 8182,
+   "earlier_record": {
+    "commit": "15fbf2acd11365cb00893a919ec83e00b4df209f",
+    "folder": "tasks/family-research-20261022/claude-independent-research-20261113/source-artifacts/tasks/family-research-20261022/combined-events/run-42571551209-1/events-20231018",
+    "sha256": {
+     "legs": "e2dbb0cb31ba8c64e52329f019deac366990702bd012a6dd33ac79fdcdaa5065",
+     "trades": "eb274a3e9d81c1589a1038a96b6097f9f6dac2ef34f1ef9407d522d532696977"
+    },
+    "trades_compared": 30739,
+    "legs_compared": 5120,
+    "starts": "6 pm Eastern, the open of the trade day",
+    "prints_before_it_starts": 0,
+    "an_earlier_leg_number_is_this_leg_number_minus": 0
+   },
+   "method": "the legs made again by the earlier rule functions over the whole list of prints, each moment placed from that; the peaks in play from the stored outputs of pieces 1 and 2 as whole tables; every earlier trade and leg found again. Shares no code with the print-by-print calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 385289,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 344029,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 770579,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 28.6
+}
