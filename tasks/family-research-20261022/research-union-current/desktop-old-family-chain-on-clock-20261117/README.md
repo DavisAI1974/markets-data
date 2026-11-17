@@ -1,5 +1,15 @@
 # Old family and chain states on the clock of the four trade days (Desktop session, 2026-11-17)
 
+> **Note added 2026-11-17, 04:52 Eastern. Read this before anything below.**
+> Greg: "I was trying to explain to you to use the same process and procedure as we used on the 55 we run and apply
+> those to the new run. We don't need the old ut puts with the new data, but we want to know how they were defined
+> and grouped".
+> What is in this folder is the OLD OUTPUTS (the frozen family centres, the old state names, the old named chains)
+> laid on the new data. That is not what he asked for. **Do NOT put anything from this folder into the daily sheets
+> or the workbook.** It stays as a record only. What he asked for is the 55-week run's process and procedure (how the
+> families and chains were defined and grouped) applied fresh to the new run. Not built yet.
+
+
 Made in a Claude chat session ("Desktop") on Greg's word, 2026-11-17 about 04:18 to 04:40 Eastern.
 New files only. Nothing existing was changed. Nothing is in the daily stores or the workbook yet:
 **this folder is the hand-over to Code so the daily sheets and the workbook can be updated from it.**
