@@ -2069,6 +2069,26 @@ can't get around. Finish the data".** Our own programs are changed where they st
 hours are made by the same rule. Valid old values are still kept; where an old value and a new one both exist,
 both are kept side by side.
 
+**Native's dipole record, traced (tenth session).** The stored record was made by the Frankie box run on AWS
+(`/opt/frankie-box`, 31 workers; on Oct 2 a 7.6 GB lifecycle ledger, 741 candidates, 75,600 seconds from 00:00
+UTC). Its ledger is the one Native's own launcher writes (`ledgers/exact_lifecycle_rows.jsonl`; launcher Markets
+`2ebb8ce8` `native_a_arm_launch.py`, no AWS, no keys, one CPU). It began at 00:00 UTC on Oct 2 and Oct 17 because the
+earlier UTC file was not fed in. The trade legs do not depend on it: their trade list came from the stored grouped
+stream (Markets `af36937d`). Plan put to Greg: a short test run on the Oct 2 file alone must match the stored record
+line for line before anything else; then Oct 1 + Oct 2, and Oct 16 + Oct 17. Native needs a short hand-written file
+list (its builder knows only the 2021 files). A from-6-pm run shifts levels and candidates after 8 pm too; by his
+earlier decision the whole new record sits beside the old and replaces nothing.
+
+**GO (Greg, 2026-11-17): "Go go and yes as long as no hours outside of the 4 teade days are used in our research
+calcs except when the book is concerned".**
+- Go for the four Compute-Optimized pods (32 CPUs, $0.96 an hour each, $3.84 for the four): the three
+  calculations, the six chain ways, and the 6 pm to 8 pm trade legs on the Oct 2 and Oct 17 pods.
+- Go for the Native test pod (a Frankie run, named): Compute-Optimized, 4 CPUs, $0.12 an hour plus disk.
+- Yes to Native running over trade day Oct 16 to reach 6 pm of trade day Oct 17, on his condition: no hour outside
+  the four trade days is used in any research calculation, except to seat the book. So nothing Native makes for
+  trade day Oct 16 (or for the Sunday start-up before Oct 2) is stored or used; only what falls inside trade days
+  Oct 2 and Oct 17 is kept.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
