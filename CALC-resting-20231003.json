@@ -1,0 +1,226 @@
+{
+ "what": "ROOT part 2: the calculation resting on one trade day",
+ "laid_out_and_approved": "markets-data STEP2_PLAN.md, piece K (\"Yes to k\", Greg, 2026-11-16; his go 2026-11-17)",
+ "trade_day": "2023-10-03",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231001.dbn.zst",
+   "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78"
+  },
+  {
+   "file": "NG_v0_mbo_20231002.dbn.zst",
+   "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d"
+  },
+  {
+   "file": "NG_v0_mbo_20231003.dbn.zst",
+   "sha256": "8db4b0042d9324b299f616c5de5c6c66ff3bfa1d2a1288eb69cc575e7653c600"
+  }
+ ],
+ "columns": [
+  {
+   "column": "resting_facts_known",
+   "what": "How many lines about resting orders at a later turn became known at this tick (they are in the facts table)."
+  },
+  {
+   "column": "ahead_of_a_fill_known",
+   "what": "How many lines about a filled order with orders ahead of it in our line became known at this tick (they are in the ahead table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "about",
+    "turn",
+    "earlier_turn_position",
+    "earlier_turn_received_time_ns",
+    "since_earlier_turn_ns",
+    "best_bid_at_turn",
+    "best_ask_at_turn",
+    "bid_side_orders_at_turn",
+    "bid_side_size_at_turn",
+    "bid_side_carried_in",
+    "bid_side_still_resting_orders",
+    "bid_side_still_resting_size",
+    "bid_side_left_by_fill",
+    "bid_side_left_by_cancel",
+    "bid_side_filled_orders",
+    "bid_side_filled_size",
+    "bid_side_pulled_orders",
+    "bid_side_pulled_size",
+    "bid_side_added_size",
+    "bid_side_moved_orders",
+    "bid_best_orders_at_turn",
+    "bid_best_size_at_turn",
+    "bid_best_carried_in",
+    "bid_best_still_resting_orders",
+    "bid_best_still_resting_size",
+    "bid_best_left_by_fill",
+    "bid_best_left_by_cancel",
+    "bid_best_filled_orders",
+    "bid_best_filled_size",
+    "bid_best_pulled_orders",
+    "bid_best_pulled_size",
+    "bid_best_added_size",
+    "bid_best_moved_orders",
+    "ask_side_orders_at_turn",
+    "ask_side_size_at_turn",
+    "ask_side_carried_in",
+    "ask_side_still_resting_orders",
+    "ask_side_still_resting_size",
+    "ask_side_left_by_fill",
+    "ask_side_left_by_cancel",
+    "ask_side_filled_orders",
+    "ask_side_filled_size",
+    "ask_side_pulled_orders",
+    "ask_side_pulled_size",
+    "ask_side_added_size",
+    "ask_side_moved_orders",
+    "ask_best_orders_at_turn",
+    "ask_best_size_at_turn",
+    "ask_best_carried_in",
+    "ask_best_still_resting_orders",
+    "ask_best_still_resting_size",
+    "ask_best_left_by_fill",
+    "ask_best_left_by_cancel",
+    "ask_best_filled_orders",
+    "ask_best_filled_size",
+    "ask_best_pulled_orders",
+    "ask_best_pulled_size",
+    "ask_best_added_size",
+    "ask_best_moved_orders"
+   ],
+   "lines": 123234,
+   "files": [
+    {
+     "file": "calc-resting-facts-20231003-part000.parquet",
+     "rows": 123234,
+     "bytes": 5411126,
+     "sha256": "bb7af8c51fd2303a574e9aecdab2fbe412772f163820f31184a1c92f07d5405f"
+    }
+   ]
+  },
+  "ahead": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "exchange_event",
+    "order_number",
+    "side",
+    "price",
+    "what_happened",
+    "size_filled",
+    "orders_ahead",
+    "size_ahead",
+    "orders_ahead_numbers",
+    "orders_ahead_named"
+   ],
+   "lines": 3312,
+   "files": [
+    {
+     "file": "calc-resting-ahead-20231003-part000.parquet",
+     "rows": 3312,
+     "bytes": 79778,
+     "sha256": "5ebe382865450225e86df9cc397be57a2c2d5b61714fd6becc7d780e7dc8c9fa"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 878671,
+ "rows": 879497,
+ "counts": {
+  "lines_by_what_the_turn_belongs_to": {
+   "peak": 68185,
+   "run of the best bid": 18829,
+   "run of the best ask": 18742,
+   "trade leg": 17478
+  },
+  "lines": 123234,
+  "orders_with_a_row": 316961,
+  "orders_carried_in_with_a_row": 161,
+  "ahead_of_a_fill_lines": 3312
+ },
+ "files": [
+  {
+   "file": "calc-resting-20231003-part000.parquet",
+   "rows": 262144,
+   "bytes": 565462,
+   "sha256": "6896da3f00b47253850c7a383a5c984783eea104415bfe974ac4e10f45e92b89",
+   "beside": "rows-20231003-part000.parquet",
+   "beside_sha256": "6011219f56c25a86847290bf8f9ef3268f7184077d340efbea5f1b9cd82c6374"
+  },
+  {
+   "file": "calc-resting-20231003-part001.parquet",
+   "rows": 262144,
+   "bytes": 563581,
+   "sha256": "5945d84e235d457c70e157b493b8e4e89e1fe23b41163f5f5f1ae9ba515d4edd",
+   "beside": "rows-20231003-part001.parquet",
+   "beside_sha256": "4e74a326183a17fd80cb492d6d709b791a841056f3eaf5e6d9a23a0c21c7d14e"
+  },
+  {
+   "file": "calc-resting-20231003-part002.parquet",
+   "rows": 262144,
+   "bytes": 564032,
+   "sha256": "6f9ce2c692be5b4708675f8c51c3dd9a3b0c576bdf0b8b06001c0112090d67cb",
+   "beside": "rows-20231003-part002.parquet",
+   "beside_sha256": "20af2d63378a0e7027d93a1c5458297474145930cf9115e9395b7497ddabf436"
+  },
+  {
+   "file": "calc-resting-20231003-part003.parquet",
+   "rows": 93065,
+   "bytes": 286171,
+   "sha256": "cc6e3a7250d35a7df24e7f0c713814e37541cc8d098569ee6aa7a62f10b5ed28",
+   "beside": "rows-20231003-part003.parquet",
+   "beside_sha256": "9162ca8b862f46e0f0b1c0cc7549549d664aa2b4b7605472366e69c8bd9e209e"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 878671,
+   "orders_with_a_row": 316961,
+   "orders_carried_in_with_a_row": 161,
+   "orders_with_no_row_all_trade_day": {
+    "bid": {
+     "orders": 149,
+     "size": 536
+    },
+    "ask": {
+     "orders": 113,
+     "size": 326
+    }
+   },
+   "earlier_turns": 45024,
+   "lines_compared": 123234,
+   "lines_by_what_the_turn_belongs_to": {
+    "run of the best ask": 18742,
+    "trade leg": 17478,
+    "peak": 68185,
+    "run of the best bid": 18829
+   },
+   "ahead_of_a_fill_lines_compared": 3312,
+   "ahead_lines_naming_every_order_ahead": 3312,
+   "method": "every order's life laid out as one table from the rows; the orders at a turn are those whose life spans its row, and what became of them is read off each life table; the turns from the stored outputs of piece 2 and the quote's runs and the legs by the earlier rule. Shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 439335,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 423423,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 878671,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 292.4
+}

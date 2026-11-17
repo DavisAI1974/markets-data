@@ -1,0 +1,204 @@
+{
+ "what": "ROOT part 2: the calculation turn_peaks on one trade day",
+ "laid_out_and_approved": "Greg, 2026-11-17: \"We need to calc this without the window and find the peak number\"; \"do that extra along with the others\"",
+ "trade_day": "2023-10-03",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231001.dbn.zst",
+   "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78"
+  },
+  {
+   "file": "NG_v0_mbo_20231002.dbn.zst",
+   "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d"
+  },
+  {
+   "file": "NG_v0_mbo_20231003.dbn.zst",
+   "sha256": "8db4b0042d9324b299f616c5de5c6c66ff3bfa1d2a1288eb69cc575e7653c600"
+  }
+ ],
+ "columns": [
+  {
+   "column": "run_side",
+   "what": "The run of trades on one side in progress at this tick (the flow with no window): buy or sell. Empty until the first trade with a side in the trade day."
+  },
+  {
+   "column": "run_size",
+   "what": "The size traded in that run so far."
+  },
+  {
+   "column": "run_trades",
+   "what": "How many trades that run holds so far."
+  },
+  {
+   "column": "run_first_trade_position",
+   "what": "The first trade of that run: its position on the tape. A label only."
+  },
+  {
+   "column": "run_no_side_size",
+   "what": "Size traded during that run that the tape gives no side for. In no figure above."
+  },
+  {
+   "column": "turn_peak_facts_known",
+   "what": "How many lines about a peak against the turns of the price became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "peak_kind",
+    "fact",
+    "peak_side",
+    "peak_high_position",
+    "peak_high_received_time_ns",
+    "peak_number",
+    "peak_trades",
+    "peak_first_trade_position",
+    "print_price_at_high",
+    "print_price_when_known",
+    "since_high_ns",
+    "move_direction",
+    "move_start_position",
+    "move_price_at_high",
+    "move_steps_at_high",
+    "move_steps_in_all",
+    "move_steps_after_high",
+    "move_end_price",
+    "move_ended_position",
+    "move_ended_received_time_ns"
+   ],
+   "lines": 93044,
+   "files": [
+    {
+     "file": "calc-turn_peaks-facts-20231003-part000.parquet",
+     "rows": 93044,
+     "bytes": 2168534,
+     "sha256": "532ef65d7aaf1d978fd9c9f3dcb520230e48d6499cbddb16fc316d86ec03e2b3"
+    }
+   ]
+  },
+  "open-at-the-end": {
+   "columns": [
+    "peak_kind",
+    "peak_side",
+    "peak_high_position",
+    "move",
+    "move_start_position",
+    "move_steps_at_high"
+   ],
+   "lines": 0,
+   "files": [
+    {
+     "file": "calc-turn_peaks-open-at-the-end-20231003-part000.parquet",
+     "rows": 0,
+     "bytes": 1242,
+     "sha256": "8907a6cd5e2f95accf968dffb688a11a932d50a1b08c21305a345cfc32a597f3"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 878671,
+ "rows": 879497,
+ "counts": {
+  "20-second flow: peak known": 10577,
+  "20-second flow: trade leg ended": 10577,
+  "20-second flow: run of the best bid ended": 10577,
+  "20-second flow: run of the best ask ended": 10577,
+  "no window: peak known": 12684,
+  "no window: trade leg ended": 12684,
+  "no window: run of the best bid ended": 12684,
+  "no window: run of the best ask ended": 12684,
+  "20-second flow: trade leg: no step after the high": 6638,
+  "20-second flow: run of the best bid: no step after the high": 6410,
+  "20-second flow: run of the best ask: no step after the high": 6534,
+  "no window: trade leg: no step after the high": 8372,
+  "no window: run of the best bid: no step after the high": 8064,
+  "no window: run of the best ask: no step after the high": 8253,
+  "run_of_trades_still_going_at_the_last_tick": true,
+  "lines_waiting_on_a_move_still_going_at_the_last_tick": 0
+ },
+ "files": [
+  {
+   "file": "calc-turn_peaks-20231003-part000.parquet",
+   "rows": 262144,
+   "bytes": 617945,
+   "sha256": "471901346024739f3b1b4906bd0f93f978ee88dbce8438b89bc9d897ad059854",
+   "beside": "rows-20231003-part000.parquet",
+   "beside_sha256": "6011219f56c25a86847290bf8f9ef3268f7184077d340efbea5f1b9cd82c6374"
+  },
+  {
+   "file": "calc-turn_peaks-20231003-part001.parquet",
+   "rows": 262144,
+   "bytes": 628926,
+   "sha256": "1987cf260b5e1f0196e289dbb030e2e045596df43f4d20f58a024fbccfa3b002",
+   "beside": "rows-20231003-part001.parquet",
+   "beside_sha256": "4e74a326183a17fd80cb492d6d709b791a841056f3eaf5e6d9a23a0c21c7d14e"
+  },
+  {
+   "file": "calc-turn_peaks-20231003-part002.parquet",
+   "rows": 262144,
+   "bytes": 636076,
+   "sha256": "ec0e61a5cd2a3112caf227f031e40fc631d582c325f7db569c583de58b14303d",
+   "beside": "rows-20231003-part002.parquet",
+   "beside_sha256": "20af2d63378a0e7027d93a1c5458297474145930cf9115e9395b7497ddabf436"
+  },
+  {
+   "file": "calc-turn_peaks-20231003-part003.parquet",
+   "rows": 93065,
+   "bytes": 305673,
+   "sha256": "b90d15846a30894bbb2a2e90f1da4fbc2aea2450fa8bc635e052ee50f096eb3d",
+   "beside": "rows-20231003-part003.parquet",
+   "beside_sha256": "9162ca8b862f46e0f0b1c0cc7549549d664aa2b4b7605472366e69c8bd9e209e"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 878671,
+   "prints": 41410,
+   "peaks": {
+    "20-second flow": 10577,
+    "no window": 12684
+   },
+   "lines_compared": 93044,
+   "lines_waiting_at_the_last_tick": 0,
+   "moves_ended_with_no_step_after_the_high": {
+    "20-second flow: trade leg ended": 6638,
+    "20-second flow: run of the best bid ended": 6410,
+    "20-second flow: run of the best ask ended": 6534,
+    "no window: trade leg ended": 8372,
+    "no window: run of the best bid ended": 8064,
+    "no window: run of the best ask ended": 8253
+   },
+   "moves_ended_in_all": {
+    "20-second flow: trade leg ended": 10577,
+    "20-second flow: run of the best bid ended": 10577,
+    "20-second flow: run of the best ask ended": 10577,
+    "no window: trade leg ended": 12684,
+    "no window: run of the best bid ended": 12684,
+    "no window: run of the best ask ended": 12684
+   },
+   "method": "the runs of trades on one side cut from the whole column of trade sides; the 20-second peaks as stored by piece 1; the move in progress at each high found among whole lists of the legs (earlier rule) and the quote's runs (stored facts). Shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 439335,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 426997,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 878671,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 64.5
+}
