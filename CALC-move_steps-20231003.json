@@ -1,0 +1,154 @@
+{
+ "what": "ROOT part 2: the calculation move_steps on one trade day",
+ "laid_out_and_approved": "Greg, 2026-11-17: \"I'll let you pick one other calc ... that you feel will have the biggest impact for your strategies\"; Claude's pick, stated to him",
+ "trade_day": "2023-10-03",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231001.dbn.zst",
+   "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78"
+  },
+  {
+   "file": "NG_v0_mbo_20231002.dbn.zst",
+   "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d"
+  },
+  {
+   "file": "NG_v0_mbo_20231003.dbn.zst",
+   "sha256": "8db4b0042d9324b299f616c5de5c6c66ff3bfa1d2a1288eb69cc575e7653c600"
+  }
+ ],
+ "columns": [
+  {
+   "column": "move_step_facts_known",
+   "what": "How many lines about a step or the end of a move in price became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "move",
+    "fact",
+    "move_start_position",
+    "direction",
+    "step",
+    "price",
+    "steps_in_all",
+    "given_back",
+    "flow_bought_20s",
+    "flow_sold_20s",
+    "run_side",
+    "run_size",
+    "run_trades",
+    "best_bid",
+    "best_ask",
+    "best_bid_size",
+    "best_ask_size",
+    "best_bid_orders",
+    "best_ask_orders",
+    "bid_total_size",
+    "ask_total_size",
+    "buy_peak_high_position",
+    "buy_peak_since_high_ns",
+    "buy_peak_story",
+    "sell_peak_high_position",
+    "sell_peak_since_high_ns",
+    "sell_peak_story",
+    "rise_side",
+    "rise_high_position",
+    "rise_since_high_ns"
+   ],
+   "lines": 84596,
+   "files": [
+    {
+     "file": "calc-move_steps-facts-20231003-part000.parquet",
+     "rows": 84596,
+     "bytes": 2424009,
+     "sha256": "d987638ad3ebb066d1f5ee86b228a0cab4028379d9fd6e197b0037f92484a218"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 878671,
+ "rows": 879497,
+ "counts": {
+  "lines": 84596,
+  "lines_by_move_and_kind": {
+   "trade leg: step": 10572,
+   "trade leg: ended": 6906,
+   "run of the best bid: step": 18830,
+   "run of the best bid: ended": 14779,
+   "run of the best ask: step": 18743,
+   "run of the best ask: ended": 14766
+  }
+ },
+ "files": [
+  {
+   "file": "calc-move_steps-20231003-part000.parquet",
+   "rows": 262144,
+   "bytes": 550725,
+   "sha256": "dba85837ceab83ea267ed440e060cf7fba27fa452df26ebb3fcab999ea542cb4",
+   "beside": "rows-20231003-part000.parquet",
+   "beside_sha256": "6011219f56c25a86847290bf8f9ef3268f7184077d340efbea5f1b9cd82c6374"
+  },
+  {
+   "file": "calc-move_steps-20231003-part001.parquet",
+   "rows": 262144,
+   "bytes": 547080,
+   "sha256": "7c5846218165e06dd3a721dad0203eda38e2dd5a0e5a0f02da0228341dde5de1",
+   "beside": "rows-20231003-part001.parquet",
+   "beside_sha256": "4e74a326183a17fd80cb492d6d709b791a841056f3eaf5e6d9a23a0c21c7d14e"
+  },
+  {
+   "file": "calc-move_steps-20231003-part002.parquet",
+   "rows": 262144,
+   "bytes": 545423,
+   "sha256": "2307fddab95a5f1e97a169ec03db650bce0e26da69ffe1120245565eae14c80a",
+   "beside": "rows-20231003-part002.parquet",
+   "beside_sha256": "20af2d63378a0e7027d93a1c5458297474145930cf9115e9395b7497ddabf436"
+  },
+  {
+   "file": "calc-move_steps-20231003-part003.parquet",
+   "rows": 93065,
+   "bytes": 282047,
+   "sha256": "76951ad04b32c6f729330465a4f2c23fb703bb9b5f357d323bd394bf7d8f6f7a",
+   "beside": "rows-20231003-part003.parquet",
+   "beside_sha256": "9162ca8b862f46e0f0b1c0cc7549549d664aa2b4b7605472366e69c8bd9e209e"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 878671,
+   "lines_compared": 84596,
+   "lines_by_move_and_kind": {
+    "run of the best ask: step": 18743,
+    "run of the best bid: step": 18830,
+    "run of the best ask: ended": 14766,
+    "trade leg: step": 10572,
+    "trade leg: ended": 6906,
+    "run of the best bid: ended": 14779
+   },
+   "method": "the moves as whole lists (legs by the earlier rule, the quote's runs from their stored facts); what was in play read off whole stored columns of flow_peak, turn_peaks and the rows, and the peaks from the stored outputs of pieces 1 and 2. Shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 439335,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 381182,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 878671,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 32.0
+}
