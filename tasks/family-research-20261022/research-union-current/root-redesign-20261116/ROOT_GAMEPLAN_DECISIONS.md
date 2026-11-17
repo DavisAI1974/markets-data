@@ -2121,6 +2121,17 @@ predertimed windows".**
   average. With no earlier peak given there is nothing to match on, so the individual way starts at one step back
   (ways 3 and 4 match on the peak's own size and side at none given).
 
+**DECIDED (Greg, 2026-11-17): "Keep.native like the other hours but make a note in yhe handoff to revisit that at
+some piint. Again, don't throw the averaging 6 results, just make a different version that is individual. We'll see
+what prodeces what we wany".**
+- Native's missing two hours (6 pm to 8 pm Eastern, trade days Oct 2 and Oct 17) are made the same way as its other
+  hours, with its own fixed windows as built. TO REVISIT LATER (into every handoff until done): Native's record is
+  built on predetermined windows (a 20-second roll, a level set from 85 in 100 seconds, 60-second horizons), which
+  his "no predetermined windows" rule does not allow for our own work.
+- The averaging results are kept: the six stored steps, and the averaging models in the six ways. The individual
+  version is made beside them, a different version, nothing replaced. Which produces what we want is read from the
+  results.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
