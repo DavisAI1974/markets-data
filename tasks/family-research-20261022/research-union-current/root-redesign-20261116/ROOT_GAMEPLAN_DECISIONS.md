@@ -2322,6 +2322,23 @@ info and ranking would have told me nothing and the individual peaks said everyt
   made on the 20-second flow, so which peaks were plotted is to be checked with Desktop before anything is built on
   it. Nothing was run.
 
+**GO (Greg, 2026-11-17, after the stop): "Write the 3 calcs and run them on the pods and we need to do more research
+on the peak. I believe this was the peak of the 20 sec. Either way. We need to calc this without the window and find
+the peak number if this isn't already doing it. And if the peaks are peaking at the turns, then we have a huge
+problem solved. We need to make surr this is saved, used and given a lot morr research. Once you get thr pods
+running, start with the strategies and do 15 instead of 5".**
+- Go for four pods to run the three remaining Step 2 calculations (the trade legs beside the peaks; the resting
+  orders through a peak and a leg; Native's dipole beside the peaks). Price put to him: four General Purpose 8-CPU
+  pods, $0.32 an hour each, $1.28 for the four; the live price is confirmed to him at the launch.
+- The peak, more research: he believes the chart used the 20-second peaks. Either way the peak is to be worked out
+  without the window, and its count found. Whether the peaks sit at the turns of the price is to be established; if
+  they do, "we have a huge problem solved". This is saved, used and researched further. How "without the window"
+  is defined is put to him once, before it is written; the 20-second version stays beside it.
+- The strategy versions start once the pods are running: 15 versions, not 5.
+- Corrected to him: the dipole and the trade legs beside the peaks do not wait on Native's missing two hours. By
+  his decision of the ninth session the stored record is placed as it is, marked as starting at 8 pm Eastern on
+  trade days Oct 2 and Oct 17; the 6 pm to 8 pm part is added beside it later.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
