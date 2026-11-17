@@ -528,8 +528,8 @@
   {
    "table": "positioning.csv",
    "rows": 985,
-   "bytes": 253208,
-   "sha256": "23a97ed8b096072634de536603763a8df9a41d1f70e7016f491f0b8e0f964515"
+   "bytes": 239993,
+   "sha256": "94f6bca46d44479569bdcd153e7293847b81a126b6a1594d8178eb61aec2b8d3"
   },
   {
    "table": "forecast_city_runs.csv.gz",
@@ -538,22 +538,34 @@
    "sha256": "ddf0dcf1c3a76d7aa262b27e66b41025b552283637e31ffe06d6496a000b7d43"
   },
   {
-   "table": "forecast_gas_weighted.csv",
-   "rows": 839,
-   "bytes": 84719,
-   "sha256": "d6fe8a3c351fea4099adfc147e8f58078c7c53100e25d263076e9d5726dfcac3"
+   "table": "forecast_hourly.csv",
+   "rows": 4503,
+   "bytes": 483861,
+   "sha256": "e0b1c3c09190baf7a91d5f25b1398479ff4d01d3075498d3fe6ea8b1ccb421a2"
   },
   {
-   "table": "forecast_on_row.csv",
-   "rows": 16,
-   "bytes": 6533,
-   "sha256": "bf57279128dbcf19aa17a3cd8eb22db8597d90a6bafbbd4fa76286dc16c3fc67"
+   "table": "forecast_on_row_gfs.csv",
+   "rows": 115,
+   "bytes": 73097,
+   "sha256": "7a8a4d67e5a7b1c366763d7bf3129eaebd25b33010d5f5d07575bc5b83138e53"
   },
   {
-   "table": "forecast_disagreement.csv",
-   "rows": 52,
-   "bytes": 6660,
-   "sha256": "dde600d984a525b519e12e3de2578f5ab5e211cf223c4059c7f595a967b5b61f"
+   "table": "forecast_on_row_nam.csv",
+   "rows": 58,
+   "bytes": 37126,
+   "sha256": "3399d6093ee1a530ea5f8de4bad5381aa87920aad9a2f5fb6bb117d1212179bc"
+  },
+  {
+   "table": "forecast_on_row_mex.csv",
+   "rows": 58,
+   "bytes": 27613,
+   "sha256": "49f029bba83e096ceba4a03d4bc1b9d2c1a69c70cdbd8e8a3ce6720c153eee8d"
+  },
+  {
+   "table": "forecast_gap_gfs_nam.csv",
+   "rows": 58,
+   "bytes": 39951,
+   "sha256": "38aba4510b56c8b4052bdfb17dab7bc08784a92441f33ec2cd8b2bbc4c4a1384"
   },
   {
    "table": "weather_readings.csv.gz",
@@ -562,22 +574,16 @@
    "sha256": "ba0f273cd4b3d04499f734d2251b4bdccfc6553e5bff492eec8e5db1e0c59aaf"
   },
   {
-   "table": "weather_gas_day_city.csv",
-   "rows": 504,
-   "bytes": 79642,
-   "sha256": "342eaf4ff0fdf314e829b1c45f78e874cc07519c166e3edb127aa3e026db9c4a"
-  },
-  {
-   "table": "weather_gas_day.csv",
-   "rows": 28,
-   "bytes": 2966,
-   "sha256": "5aff6b054c1f325b7d55eb59b2cc671494b20d62d4f53395680754ccdcdd71b0"
-  },
-  {
    "table": "weather_hourly_city.csv",
    "rows": 4282,
-   "bytes": 556738,
-   "sha256": "752885b54d86b86af383b6638267a4a9270392a669c897632b97cc8fd0b22f31"
+   "bytes": 639650,
+   "sha256": "dfc02a9ed2600abe9b0778a253cdd52b8bcf69a573a89777c1b13c975b73ebf2"
+  },
+  {
+   "table": "weather_hourly_weighted.csv",
+   "rows": 1191,
+   "bytes": 119052,
+   "sha256": "764b7dccfde6396d4ec0b1ffc20e7e0df6d28ba998b7bfeec8704faaf16e4666"
   },
   {
    "table": "grid_hourly_all.csv.gz",
@@ -644,11 +650,9 @@
   {
    "table": "positioning.csv",
    "cells_by_column": {
-    "net_change_on_week": 5,
-    "standing_1y": 220,
-    "standing_3y": 695
+    "net_change_on_week": 5
    },
-   "reason": "standing: the window holds fewer reports than the minimum (45 for one year, 140 for three); change on the week: no report 5 to 10 days earlier"
+   "reason": "change on the week: no report 5 to 10 days earlier"
   },
   {
    "table": "forecast_city_runs.csv.gz",
@@ -675,34 +679,26 @@
    "reason": "the forecast product does not give that figure for that hour (as served)"
   },
   {
-   "table": "forecast_gas_weighted.csv",
+   "table": "forecast_hourly.csv",
    "cells_by_column": {
-    "cities_missing": 839
+    "cities_missing": 4503
    },
-   "reason": "cities_missing is empty when no city is missing"
+   "reason": "cities_missing is empty when no city is missing; gw_tmp_f: no weighted city has a forecast temperature at that hour"
   },
   {
-   "table": "forecast_on_row.csv",
+   "table": "weather_hourly_city.csv",
    "cells_by_column": {
-    "empty_reason": 16
+    "sknt": 8,
+    "p01i": 1
    },
-   "reason": "empty_reason is empty when the figure was made"
+   "reason": "the routine hourly reading carries no temperature, wind or precipitation (as served)"
   },
   {
-   "table": "weather_gas_day_city.csv",
+   "table": "weather_hourly_weighted.csv",
    "cells_by_column": {
-    "weight": 56
+    "cities_missing": 1187
    },
-   "reason": "weight: the city carries no weight (AUS, SAT); a figure: no reading of it that gas day"
-  },
-  {
-   "table": "weather_gas_day.csv",
-   "cells_by_column": {
-    "gw_hdd_1_gas_days_before": 1,
-    "gw_hdd_2_gas_days_before": 2,
-    "cities_missing": 28
-   },
-   "reason": "cities_missing is empty when no city is missing; carry-over: before the first gas day made"
+   "reason": "cities_missing is empty when no city is missing; a figure: no weighted city has reported it yet in the span"
   },
   {
    "table": "curve_statistics.csv.gz",
@@ -719,7 +715,7 @@
     "same_week_prior_5y_levels": 1,
     "eia_note": 411
    },
-   "reason": "change: no first print for the week before (the first prints start 2015-06-19); vs_5yr and the prior levels: fewer than five prior calendar years carry that ISO week number (week 53); eia_note: the EIA wrote no note for that week"
+   "reason": "change: no first print for the week before (the first prints start 2015-06-19); vs_5yr and (INFORMATION ONLY, never on the rows or in a calculation: Greg 2026-11-17) the prior levels: fewer than five prior calendar years carry that ISO week number (week 53); eia_note: the EIA wrote no note for that week"
   },
   {
    "table": "storage_estimate.csv",
