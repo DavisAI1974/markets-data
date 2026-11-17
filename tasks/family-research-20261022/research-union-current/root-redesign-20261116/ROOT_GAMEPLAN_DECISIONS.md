@@ -2193,6 +2193,20 @@ go: the individual chain ways launched at once (Markets `67f2b67`, four Compute-
 hour each, $3.84 for the four, 05:18 UTC), the outside figures fixed while they run. The averaging models are out of
 the code (`chain_models.py` removed; the shared parts are `chain_common.py`).
 
+**Greg, 2026-11-17: "And no tests except on changed pieces."** Read as: the rows are built again only for the
+changed outside figures (their check covers the pinned outside figures) and `outside_changes`, the one calculation
+that reads them, is run again; the unchanged calculations are not run again and their stored outputs stand.
+
+**DECIDED (Greg, 2026-11-17), on hearing the individual chain way put figures on one footing by their rank: "We don't
+need ranks. Absolutely don't do that. We're assigning our value system tk them and that number may give meaning to
+something where it isn't warrented or even valid. Biggness may not mean anything if it matches with something else
+s.all. take any ranking system for any data out".**
+- No ranking of any data, anywhere: no place-in-line, no percentile, no standing.
+- The chain ways' rank footing comes out. The run on the pods that used it is not stored.
+- Found in what is stored: `flow_peak`'s `peak_standing_so_far` (the share of the trade day's flow time below the
+  peak: a percentile). Put to him for removal, with `peak_highest_for_ns` (how long since the flow was last larger),
+  which compares size with the past.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
