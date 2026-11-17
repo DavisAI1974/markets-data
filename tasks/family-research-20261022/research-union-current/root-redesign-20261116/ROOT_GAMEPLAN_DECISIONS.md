@@ -2228,6 +2228,10 @@ $0.32 an hour each, $1.28 for the four, 05:34 UTC, Markets `e083757`). Handoff w
 from stored avalues".** The new `flow_peak` output is stored only if every value except the removed column equals the
 stored one; otherwise the old stored values are kept and only the `peak_standing_so_far` column is deleted from them.
 
+**Greg, 2026-11-17: "It's wasteful to be rerunning these but there's no point in stopping them now."** Standing from
+here: when a stored output only loses a column (or anything else that is a plain removal), the column is deleted
+from the stored values; the calculation is not run again. A rerun is only for a piece whose values change.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

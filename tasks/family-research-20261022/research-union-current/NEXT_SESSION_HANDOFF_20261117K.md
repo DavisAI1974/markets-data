@@ -56,6 +56,8 @@ writes to the same branch: fetch before every push.
 - "We let the data group data together, not our systems." No labels, groups or identifiers until all four trade days
   have run all their calcs; grouping is done with him.
 - "No tests except on changed pieces." Unchanged calculations are not run again.
+- "It's wasteful to be rerunning these": a plain removal (a column) is deleted from the stored values, never made
+  by running the calculation again. A rerun is only for a piece whose values change.
 - Temperatures hour by hour; the gas day only as a label.
 - Unchanged: trade day 6 pm to 5 pm Eastern; only the four trade days enter a calculation; outside data seats the
   book only; rows are ticks; empty is never zero; every trade individually; never invent data; gross; AWS off
