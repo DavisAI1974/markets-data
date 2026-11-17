@@ -2157,6 +2157,17 @@ temp changes are what drive market price in rt markets!! We have hourly temps av
   from it, and the forecast high-low midpoint and the degree days made from it). How they are replaced is laid out
   to him from the data held.
 
+**Greg, 2026-11-17, on weights and the gas day.**
+- "And by weight I mean a much smaller city would have a much smaller effect on the overall gas util usage as
+  compared to a huge city in a total usage". Told: the 16 weights in use are fixed numbers typed into the old feed
+  (NYC 0.12, Chicago 0.10, Houston 0.07 ...), with no recorded source; Austin and San Antonio carry none. Proposed:
+  weights from measured use (EIA monthly residential and commercial gas deliveries by state, the latest month
+  published before the trade day; a state's use split among its cities by Census population). A new outside input:
+  his answer pending.
+- DECIDED: "Now if a "gas day" descriptor tells us something I'm fine but those tepms will never be used in a
+  research role to determine effect on markets or in any calculations." The gas day is kept only as a label (which
+  gas day a reading belongs to). No gas-day temperature figure is kept or used in any research or calculation.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
