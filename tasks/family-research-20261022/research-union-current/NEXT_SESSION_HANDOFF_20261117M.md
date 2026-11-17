@@ -45,6 +45,10 @@ instance, piece H) and the grouping stage, which is done with Greg.
 
 ## The peak research folder (made after the pods, from stored files only)
 
+**Read `root-redesign-20261116/peak-research-20261117/TRADE_LIFECYCLE_NOTES.md` first.** It is the running notes:
+a generic price move stage by stage, with what each piece of data tells at each stage, the guesses that turned out
+wrong, and the open questions. Greg: the notes are written down as we go; add to that file, do not start another.
+
 `root-redesign-20261116/peak-research-20261117/` (README, one file of peaks per trade day, five count files). Greg's
 standing word: "we don't have to pick winners. We just want the story": which part of the story each kind of data
 tells. The README's "The story" table is the map. In short, each trade day read on its own:

@@ -2616,6 +2616,18 @@ birth (526, 584, 545, 599), Native's own fixed span; by then the flow peak on th
 reached zero (515, 552, 510, 575). A dipole did not help place a peak in a move. What Native recorded about each
 dipole after recognition (its stages) has not been read.
 
+**STANDING (Greg, 2026-11-17): "Start making a list right now of what these different pieces ha e been telling you
+at different times. Or make a big generic trade leg that represnts the trade life cycle and start writing whetre
+these different pieces tell differt stories about the trade lofecycle ... we absolutely need to be writing your
+notes down or they.will be forgotten about in 10 min".** Written:
+`root-redesign-20261116/peak-research-20261117/TRADE_LIFECYCLE_NOTES.md`. One generic move of the quote, stage by
+stage (before, the first step, the middle, whether it takes another step, the turn, after), with what each piece
+tells at each stage and the counts; one line for what each piece can and cannot tell; the guesses that turned out
+wrong; the open questions; where everything is. It is the running notes file: it is added to as things are
+learned, and handoff M sends the next session to it first. Also said to him: the standing orders mostly get out of
+the way (about seven emptied levels in ten are part eaten and part pulled), almost never put size back at once,
+and a level that was only abandoned leads nowhere while one that was eaten leads on.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

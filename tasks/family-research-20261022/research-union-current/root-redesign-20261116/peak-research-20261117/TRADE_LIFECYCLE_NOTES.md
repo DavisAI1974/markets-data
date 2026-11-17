@@ -1,0 +1,139 @@
+# The life of a price move, and what each piece of data tells about each part of it
+
+Working notes, started 2026-11-17 on Greg's word: "we absolutely need to be writing your notes down or they will be
+forgotten about in 10 min". ADD TO THIS FILE as things are learned; do not start a new one.
+
+Greg's frame: "we don't have to pick winners. We just want the story. What part of the story does peak tell us and
+what other thing or things fill in the exact parts that peak can't."
+
+How to read the numbers: every count is from one trade day read on its own (trade day Oct 2, 2023 unless named).
+The other three trade days (Oct 3, 17, 18) read the same way wherever a line says "all four". Every count for all
+four trade days is in the JSON files beside this one and in `README.md`. Nothing is averaged. No test of chance
+has been made on anything here: these are counts, and each is a lead, not a result.
+
+## The generic move
+
+One move of the quote in one direction (the best ask going up, or the best bid going down), drawn going up:
+
+```
+            (3) last step
+              ____
+         ____/    \____  (4) the turn: first step back
+    ____/  (2) middle  \____
+___/ (1) first step          (5) after
+(0) before
+```
+
+Most real moves are far smaller than this picture: on trade day Oct 2, 10,597 of 13,331 runs of the best bid and
+3,878 of 6,118 trade legs were ONE step long. A one-step move is its own beginning and end.
+
+## Stage by stage: what each piece says there
+
+### (0) Before the move
+- THE PEAK: nothing yet. A peak is only known after its high.
+- THE BOOK AT THE BEST PRICE: holds the size and number of orders the move will have to get through. Read only
+  just after a peak's trade so far, not before.
+- NOT LOOKED AT: the outside figures (weather, forecasts, storage) changing before a move; how old the standing
+  level is; Native's missing 6 pm to 8 pm on trade days Oct 2 and Oct 17.
+
+### (1) The first step
+- THE QUOTE'S RUNS say a move has started, at that tick. They are the only thing that holds the price.
+- THE PEAK WITH NO WINDOW at the beginning of a move is a TALL one (1,225 of 2,599 are 6 lots or more) and pushes
+  WITH the move (1,681 of 2,599). All four.
+- THE STANDING ORDERS: at the best price the peak pushed into, an order was filled out at 1,522 of 2,647
+  beginning peaks, pulled at 708, every order still there at 813 (20-second peaks). All four.
+- KNOWN AT THE TIME: that the quote stepped; the peak's side and height. NOT known: that this is a beginning and
+  not a one-step flicker.
+
+### (2) The middle
+- THE PEAK WITH NO WINDOW in the middle is the TALLEST pile (630 of 1,339 are 6 lots or more) and pushes with
+  the move (854 of 1,339). All four.
+- THE STANDING ORDERS: the middle peaks most often ate through an order (733 of 1,038) and least often left every
+  order standing (195 of 1,038).
+- HOW THE LEVEL EMPTIED says whether the move goes on (see stage 3). The peak cannot see this.
+
+### (3) Whether it takes another step
+- THE STANDING ORDERS, on the quote's own clock, are the piece that speaks here. When the quote backs away, the
+  level it left emptied: part eaten by trades and part pulled out (959 moves, best ask up), every order pulled out
+  (212), every order eaten (123). So about seven times in ten the orders left on a level that is being hit leave.
+- Moves that took a third step: every order eaten 53 of 123; some of each 362 of 959; every order pulled 63 of
+  212. In ALL EIGHT rows (four trade days, ask up and bid down) the pulled-only moves went on LEAST often.
+  A level that was only abandoned leads nowhere; a level that was eaten leads on.
+- THE PEAK reads the same in all three: the pushing side was hitting in 118 of 123, 186 of 212 and 944 of 959.
+- Size is almost never put back straight away (7 of 1,038 in-between peaks). No quick defending was seen.
+- LIMITS: the eaten-only and pulled-only rows hold 100 to 250 moves; only the first level of a move is followed.
+
+### (4) The turn
+- THE PEAK ON THE OTHER SIDE marks it. At the end of a move of the quote, the peak with no window there is on the
+  OTHER side about three times in four (pushing with the move: only 506 of 1,837). All four. It is the other
+  side arriving, not the pushing side running out.
+- It is a SHORT peak (627 of 1,837 are 6 lots or more; 521 are a single lot) and it most often hits a level that
+  is the thinner one at the best price (1,345 of 1,837).
+- A reading to test, not shown: a small quote steps in one tick better, a small trade takes it out, the quote
+  snaps back. That would be one event seen three ways (short, other side, thin level).
+- THE 20-SECOND PEAK sees this stage worst: the end pile shares its high with a 20-second peak least (719 of
+  1,837, against about half elsewhere).
+- KNOWN AT THE TIME: the peak's side, its height, the size at the best price. NOT known: that the move has ended;
+  that is only known at the first step back.
+- Partly built in: selling into the bid is what stops the bid's rise.
+
+### (5) After
+- WHERE THE PRICE STOOD at the end of a 20-second peak's story: about even three ways in every pile (in between:
+  further the peak's way 344, back against it 318, where it was 376). All four. The peak alone does not say where
+  the price goes.
+- NOT LOOKED AT: what the price did after a peak with no window; the next move after a turn; the chain (the peak
+  after) beyond "the peak before was on the same side", which read the same in every pile.
+
+## What each piece is, in one line each
+
+| Piece | What it tells | What it cannot tell |
+|---|---|---|
+| The peak with no window | Who was hitting, which side, how many lots, when it changed hands. Every one is a real change of hands. | Any price. Where in a move it is. What the standing orders did. |
+| The 20-second peak | The same, smoothed over 20 seconds; the earlier family and chain work stands on it. | A little over half share their high with a no-window peak (5,403 of 9,525). 2,660 of 9,525 have their high on a tick with NO trade: made by old trades dropping out of the window. More than half of the no-window peaks have no 20-second peak at their high. Its height barely differs by pile. |
+| The quote's runs, `move_steps` | Whether the price moved, how far, each step, when it ended. | Why. |
+| The trade legs | The prints' own path. | Close to built in against the peaks (a buy prints at the ask). 3,878 of 6,118 are one step. |
+| The book at the best price | What the peak pushes into. | The whole book's lean told nothing (even in every pile). The gap is one tick nearly always. |
+| The standing orders (`resting`) | Whether a level was eaten or abandoned, and so whether the move goes on. | At the moment of a peak, a beginning from an end (they read alike). |
+| Native's dipole | That a fully one-sided burst happened: every dipole is born in a second with the flow fully one-sided. | It is known late (526 of 741 exactly 50 seconds after the birth, Native's own fixed span); by then the flow on its side has already reached zero for 515 of 741; over half are born where no peak's high sits; it did not help place a peak. |
+| The outside figures | Not looked at. | |
+| Refills, orders together, sweeps | Not looked at against the peaks. | |
+| Native's stages after recognition, the Bedrock layers | Not read. The Bedrock layers were not found stored for these trade days. | |
+
+## Guesses that turned out wrong (kept so they are not made again)
+
+- "If the peaks sit at the turns, a huge problem is solved." Against the runs of the quote a peak's high is at the
+  end of a move as often as ANY print is (5,663 of 9,525 against 22,526 of 38,126). The lean is only toward the
+  ends of trade legs, and that is partly built in.
+- "The red line in the picture shows the peaks tracking the price." Any 8,619 points off a tape of 33,703 trades
+  trace the price; the random points in the lower panel did the same.
+- "Orders that stand make an ending; orders that pull away make a beginning." Not borne out: an order was pulled at
+  about a quarter of the peaks in every pile. And on the quote's own clock it is the other way round: a level that
+  was only pulled leads nowhere.
+- "The whole book's lean will matter." It did not. Only the best price did.
+- "Native's dipole will help place a peak." It did not, as read so far.
+
+## Curious questions still open
+
+1. How old was the level a peak hit? If the end peaks hit quotes that had just stepped in, the reading under
+   stage (4) holds.
+2. What did the price do after each pile of peaks with no window (not only the 20-second ones)?
+3. The same "eaten or abandoned" read at every level of a move, not only the first.
+4. Do the tall peaks sit near an outside figure changing?
+5. Refills and orders moving together: are the eaten levels the ones somebody refilled later?
+6. Why does Native's dipole not separate the piles at all? What do its stages say after recognition?
+7. The five-step process (`DavisAI1974/Basic_equations`, `level2_four_sciences.py` lines 10 to 20): which two
+   streams. The natural pair from these notes is the hitting side (the peaks) and the standing side (the resting
+   orders). It uses windows and an ensemble as written: Greg's calls before anything is run.
+8. Read the step lines by each move's own length: do long moves read differently from one-step flickers?
+
+## Where everything is
+
+- This folder: `README.md` (each read written out), one `peaks-by-place-in-the-move-<trade day>.parquet` per trade
+  day (every peak with its pile), and the count files: `COUNTS.json`, `ATTRIBUTES_BY_PILE.json`,
+  `HEIGHT_BY_PILE.json`, `TWO_KINDS_OF_PEAK.json`, `BOOK_ANSWER_BY_PILE.json`, `HOW_A_LEVEL_EMPTIED.json`,
+  `DIPOLE_AGAINST_PEAKS.json`.
+- The stored data it was read from: the four `root-rows-<trade day>` branches (`calc-turn_peaks-*`,
+  `calc-move_steps-*`, `calc-resting-*`, `calc-leg_peaks-*`, `dipole-peaks-*`, `calc-chain_peaks-*`,
+  `calc-peak_story-*`, `calc-flow_peak-*`, the rows). Each branch's `FILES.md` explains every file.
+- Every read here used all four trade days. None of it may be used to form a strategy version for the trade day
+  that version is traded on.
