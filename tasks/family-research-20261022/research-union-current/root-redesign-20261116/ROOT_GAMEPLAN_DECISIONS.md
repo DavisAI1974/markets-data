@@ -2486,6 +2486,28 @@ the peak's high". Beside it, the same count for ANY print of the trade day.
   the time from the recognized line to the closing line runs from 0 to several hundred seconds with no single
   value, so the closing line is not a fixed span.
 
+**Greg, 2026-11-17: "And let me know when you're going to be doing codex strategy handoff because I'll put you on
+extra high."; "Actually I'll let you pick one other calc to do with them that you feel will have the biggest impact
+for your strategies that we haven't done yet"; "And run one other calc with them to add to your strategies work. At
+the same time on the box"; "Where is new family and chain data? I'm going to have desktop start looking at if
+there are descernabe groups, new groups, etc. Or if there isn't. He found it".**
+- STANDING: he is told before the strategy work starts, so that he can raise the effort setting. No strategy work
+  has started.
+- The family and chain data Desktop reads: each trade day's `root-rows` branch (`calc-chain_peaks-*`,
+  `calc-peak_links-*`, and from this session `calc-turn_peaks-*`, `calc-resting-*`, `calc-leg_peaks-*`,
+  `dipole-peaks-*`), every file listed in that branch's `FILES.md`. Desktop is looking at whether the peaks fall
+  into groups that can be told apart, new groups, or none.
+- Claude's pick of the one other calculation, stated to him: `move_steps` (Markets `b9fd00a`). One line at the tick
+  of every step of every trade leg and every run of the best bid and best ask, with what was in play once that
+  tick was done (the 20-second flow, the flow with no window, the best prices with their size and number of
+  orders, each side's total size, the peaks in play), and one line when the move ends (steps in all, the end
+  price, what it gave back). Why: a strategy comes down to whether a move that has just taken a step goes on or
+  turns; and tonight's count of peaks at the turns could not tell a one-step flicker from a long move.
+- LAUNCHED 09:38 UTC on his word: four General Purpose 8-CPU pods, $0.32 an hour each, $1.28 for the four, job
+  `calc:move_steps`. Pods: Oct 2 `p0e9ilzia7toob`, Oct 3 `qafiwmmhso5v7b`, Oct 17 `w4qvmvakp9eg5b`, Oct 18
+  `8a24482rpz8vmw`. The four pieces before it had finished and their pods were already deleted, so this is its own
+  launch. The pod addresses were swapped on the cloud environment's list (his approval card).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
