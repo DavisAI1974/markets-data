@@ -1,0 +1,154 @@
+{
+ "what": "ROOT part 2: the calculation refills on one trade day",
+ "laid_out_and_approved": "markets-data STEP1_STEP2_LAYOUTS.md, addition L (\"Try them all\", Greg, 2026-11-16)",
+ "trade_day": "2023-10-03",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231001.dbn.zst",
+   "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78"
+  },
+  {
+   "file": "NG_v0_mbo_20231002.dbn.zst",
+   "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d"
+  },
+  {
+   "file": "NG_v0_mbo_20231003.dbn.zst",
+   "sha256": "8db4b0042d9324b299f616c5de5c6c66ff3bfa1d2a1288eb69cc575e7653c600"
+  }
+ ],
+ "columns": [
+  {
+   "column": "refill_facts_known",
+   "what": "How many facts about filled orders with size put back became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "order_number",
+    "fact",
+    "side",
+    "price",
+    "price_after",
+    "levels_from_best",
+    "size_filled",
+    "size_before",
+    "size_after",
+    "size_put_back",
+    "same_size_or_larger",
+    "times_put_back_so_far",
+    "size_filled_so_far",
+    "first_entered_exchange_time_ns",
+    "first_entered_received_time_ns",
+    "entered_before_written_record"
+   ],
+   "lines": 1727,
+   "files": [
+    {
+     "file": "calc-refills-facts-20231003-part000.parquet",
+     "rows": 1727,
+     "bytes": 43021,
+     "sha256": "cff3b2626c2502982ad0cd103ced77875aab7010c5cfff3b0c59f68c71fee85a"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 878671,
+ "rows": 879497,
+ "counts": {
+  "facts_by_what_happened": {
+   "lost its place: price changed": 116,
+   "stayed": 1195,
+   "lost its place: size raised": 223,
+   "shrank by fill": 60,
+   "left by fill": 133
+  },
+  "orders_with_size_put_back": 404,
+  "most_times_on_one_order": 66,
+  "fills_waiting_for_their_row_at_the_last_tick": 0
+ },
+ "files": [
+  {
+   "file": "calc-refills-20231003-part000.parquet",
+   "rows": 262144,
+   "bytes": 528735,
+   "sha256": "21797a750c8c23bedab02fd3a6c47204e8a72e2ed9b0da3c6ee417b69486a139",
+   "beside": "rows-20231003-part000.parquet",
+   "beside_sha256": "b966a6f7145eb70f50e444ca0dd7dcec20e479d77247cd087d9d4873e7aab995"
+  },
+  {
+   "file": "calc-refills-20231003-part001.parquet",
+   "rows": 262144,
+   "bytes": 529006,
+   "sha256": "b993c68ead28e72d34f595158247897ba6a35e951564eab06354abe34b07a1fc",
+   "beside": "rows-20231003-part001.parquet",
+   "beside_sha256": "17bddfe9a6d9640c5b0a8f0d1880b5c4c698a7c4fcd8b1f3f8cdd53b2cf76d98"
+  },
+  {
+   "file": "calc-refills-20231003-part002.parquet",
+   "rows": 262144,
+   "bytes": 529671,
+   "sha256": "5e0dcf07af7a0b5abb8f30ae664468ccbc492c822217f28c148072b72d82f239",
+   "beside": "rows-20231003-part002.parquet",
+   "beside_sha256": "3be73726c98238d760079b31eee002cd7a2c867acf7048b193e51295bc0ac7f3"
+  },
+  {
+   "file": "calc-refills-20231003-part003.parquet",
+   "rows": 93065,
+   "bytes": 276831,
+   "sha256": "c17549ceddde29081a1217e74189222b1550cd464ce0253c033a375c61b45b22",
+   "beside": "rows-20231003-part003.parquet",
+   "beside_sha256": "bb39165ae86256f4dfd3fa20cbea8a29df82fd1adfb0783c38ddf5c4b5474cde"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 878671,
+   "rows_of_no_trade_day_all_empty": 826,
+   "facts_compared": 1727,
+   "facts_by_what_happened": {
+    "left by fill": 133,
+    "lost its place: price changed": 116,
+    "lost its place: size raised": 223,
+    "shrank by fill": 60,
+    "stayed": 1195
+   },
+   "facts_with_size_put_back": 1634,
+   "facts_same_size_or_larger": 1438,
+   "orders_with_size_put_back": 404,
+   "most_times_on_one_order": 66,
+   "size_put_back": {
+    "bid": 1603,
+    "ask": 2268
+   },
+   "refilled_in_the_stored_book_totals": {
+    "bid": 1603,
+    "ask": 2268
+   },
+   "fills_waiting_for_their_row_at_the_last_tick": 0,
+   "method": "the fill messages of each exchange event gathered first and laid on the rows; the figures so far by sorting the filled rows by order; the size put back against the stored book totals. Shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 439335,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "inside an exchange event, after a fill message and before the row where the book shows it",
+    "ticks_given": 523967,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 878671,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 40.6
+}
