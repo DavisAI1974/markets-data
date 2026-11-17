@@ -2674,6 +2674,25 @@ types of trades and the shapes are very distinct for trade to trade".
   from the high of the peak before to the end of its own story, with an index naming each peak's page and panel.
   A dry run in the session drew two dipole pictures and one page first (told to him; thrown away).
 
+**DECIDED (Greg, 2026-11-17, on seeing the first renders): "I did notice one thing we need to change. We need to make
+flow lean nano too and not 20 sec windows. How .anynother things are 20 sec windows".** The 20-second flow was his
+one standing exception to "zero predetermined windows". It is withdrawn for the flow lean: the lean is to be made
+at the tick, with no window, like the peak with no window. Valid data is not discarded: the 20-second versions stay
+stored beside the new ones.
+- Told him what stands on the 20-second window: twelve of the seventeen stored calculations, in whole or in part.
+  Wholly: `flow_peak`, `peak_story`, `peak_links`, `open_stories`, `chain_peaks`, `dipole_peaks`. For the peaks in
+  play: `quote_peaks`, `leg_peaks`, `outside_changes`, `resting` (its peak part only), `move_steps` (two flow columns
+  and the peaks in play), `turn_peaks` (it holds both kinds). Also the exhaustion pages and the orange line of the
+  dipole pictures. Not on it: the rows, `book_totals`, `quote_runs`, `refills`, `sweeps`, `together`, the trade legs,
+  the peaks with no window. Native's own windows are separate (TO REVISIT).
+- NOT YET DECIDED, put to him with Claude's pick: what the lean compares once the clock is gone. (1) Since the
+  aggressor side last changed: built (`turn_peaks`), but always all one side, so a size and not a balance. (2) Since
+  the price move under way started, resetting at every turn of the quote: a true balance over a stretch the market
+  sets. (3) Since the trade day opened: a running total. Claude's pick: (2), with (1) beside it.
+- He found the first renders confusing ("I can tell that they are the same length but it's a little confusing for
+  me to see anything else"). The simpler picture is his stacked pair (price above, one flow line below), drawn
+  with the lean made at the tick. First build item of the next session.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

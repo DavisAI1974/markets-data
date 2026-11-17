@@ -232,3 +232,13 @@ To settle with him before it is built (not decided here):
   each change on its own line.
 The dipole renders made on 2026-11-17 (`renders/dipole-render-*.png` on each `root-rows` branch) already stack the
 price above the flow lean on one clock; this idea is the sharper version, built around the moments of change.
+
+## DECIDED 2026-11-17: the flow lean goes to the tick, no 20-second window
+
+Greg, on seeing the first renders: "We need to make flow lean nano too and not 20 sec windows." The 20-second flow
+was his one standing exception; it is withdrawn for the flow lean. Twelve of the seventeen stored calculations
+stand on the 20-second window in whole or in part (listed in the decisions file). They stay stored; the versions
+with no window are made beside them. Still to settle with him: what the lean compares once the clock is gone
+(Claude's pick: buying against selling since the price move under way started, with the run of trades on one side
+beside it). The first renders were too crowded for him to read; the next ones are his stacked pair, price above
+and one flow line below.
