@@ -2725,6 +2725,25 @@ but not first"; "You might see some other additions that to excel that desktop c
 picture is three separate graphs first; overlays may come later. Desktop may add to the Excel files on the data
 branch: fetch first, expect its additions, never write over them. In the notes and in handoff N.
 
+**Desktop's two hand-overs taken in (2026-11-17, a code session on Opus with the Fable advisor, after the close).**
+Greg passed on Desktop's first hand-over (`desktop-old-family-chain-on-clock-20261117/`, `e6dbe09`) with "make sure
+you are using it and the outputs go into the excel sheets too". Put back to him: 13 minutes after it, `c2bb02b` put
+his own words at the top of that folder ("We don't need the old ut puts with the new data"; keep it out of the daily
+sheets and the workbook), and Desktop's later folder `desktop-peak-lives-on-clock-20261117/` (`2fcfbb1`, "Peaks are
+fine") is the live hand-over. His answers:
+- **Old family and chain folder:** "Keep it accessible for definitions and run code and for reference. Doesn't have
+  to be in the excel sheets if the new data is better and fuller." It stays where it is on this branch, unchanged,
+  as the reference for how the 55-week run defined and grouped; each daily store's `FILES.md` points at it. Nothing
+  of it is stored on the `root-rows` branches and it is never an input to a calculation.
+- **Peak lives:** "Yes, add to daily stores." Stored in a `desktop/` folder on each `root-rows` branch: the table and
+  the render, byte for byte Desktop's (sha256 checked against its `MANIFEST.json` before and after the push), with
+  a `FILES.md` section marking it Desktop-made, not a ROOT calculation (no receipt, recount or playback), its "what
+  a life is" calls Greg's to correct. Branch tips: `root-rows-20231002` `07ff47c`, `-20231003` `261bf0a`, `-20231017`
+  `9dc46c9`, `-20231018` `03946e5`. Lines 21,092 / 23,261 / 19,020 / 17,516, each kind equal to the stored counts.
+- **Excel:** "Workbook later." No Excel file written. The peak lives are a sheet to include when the full workbook
+  is written all at once.
+- **Branches:** his go to push to the four `root-rows` branches and this one.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
