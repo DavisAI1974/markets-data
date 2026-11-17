@@ -2168,6 +2168,25 @@ temp changes are what drive market price in rt markets!! We have hourly temps av
   research role to determine effect on markets or in any calculations." The gas day is kept only as a label (which
   gas day a reading belongs to). No gas-day temperature figure is kept or used in any research or calculation.
 
+**DECIDED (Greg, 2026-11-17): "Hourly temp pla. And take out all.of the other averages. Especially storage
+numbers!!! Their weekly changes are instant market movers. Again, if the average storage number gives us insight
+into the weekly variable numbers then keep it but it's just there for informational purposes and not to make market
+predictions".**
+- The hourly temperature plan is approved: observed and forecast temperatures hour by hour, each as it arrives,
+  cities weighted; no time-averaged temperature anywhere.
+- Every other average comes out:
+  - the averaged chain-model results (the six stored steps, their receipts and the read-out document) are deleted,
+    and the averaging models are taken out of the code; the chain ways keep only the individual way. The one
+    finding is kept as a sentence: with averaging models, the nearest ended peak helped say a peak's size, side and
+    story length (partly true by definition), steps two to six added nothing, and nothing was found about the price
+    after a peak at any step.
+  - the fund positioning standings over 1 and 3 years (and the report counts in those windows) come off; each
+    report's long, short, net and weekly change stay as reported.
+  - storage: the level and the weekly change stay on the rows (the instant market movers). The five-year comparison
+    comes off the rows and every calculation; it is kept only as information beside the outside tables, marked
+    never to be used to make market predictions or in any calculation.
+- Still with him: replacing the 16 typed weights with measured gas use (EIA by state, split by Census population).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
