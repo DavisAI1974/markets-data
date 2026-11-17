@@ -1898,6 +1898,37 @@ them among the d peaks before it, has empty values at that step with the reason;
 moves are never empty (no trade between the high and the end on 171, 192, 148 and 118 lines: the moves are zero
 there and the highest and lowest price stay empty).
 
+**The chain link models: RUN on the same four pods, stored, and the first six steps put to Greg (2026-11-16
+evening Eastern, ninth session).** Markets `1a0e073`. Each pod scored its own trade day with ridge, nearest
+neighbours and extra trees taught on the other three trade days, on eight helpers pinned one to a CPU, one thread
+each; 106 to 176 seconds a pod. Both checks passed on all four: every peak given to a model had a story that had
+ended when its target became known (215,974 inputs looked at); ridge in closed form agrees with the library (the
+furthest apart about 2 parts in a thousand million million). Stored on the `root-rows` branches: `-20231002`
+(`4a1e4c4`), `-20231003` (`ea5b8b8`), `-20231017` (`2725dc2`), `-20231018` (`cf5a0f6`): 171,450, 190,386, 155,142
+and 143,406 lines (one per peak, model and step), about 24 to 31 MB a trade day.
+- Peaks scored at step 1: 9,430, 10,507, 8,542 and 7,875; at step 6: 9,207, 10,346, 8,381 and 7,688. Not scored for
+  an empty figure on the peak or on a peak before it: 68 to 93 at step 1, 224 to 308 at step 6. Not scored for
+  fewer ended peaks before than the step: 1 to 9. One or two a trade day still open at the last tick.
+- **What the six steps show** (the read-out is `CHAIN_LINK_FIRST_SIX_STEPS.md` in this folder; every peak's own
+  values are in the stored tables; counts first, the mean beside them, the four trade days apart):
+  - Step 1, the nearest ended peak before: about 7 peaks in 10 gained, on all four trade days, in all three models.
+  - Step 2: a small gain. Ridge and extra trees: 53 to 56 peaks in 100 gained. Nearest neighbours: 47 to 50.
+  - Steps 3 to 6: at or within two or three peaks in a hundred of an even split, in every model and trade day.
+  - Where the step 1 gain sits: the size of the peak, which side it is on, how long its story took, the steps
+    down, how it ended. The three price moves after the high: 49 to 57 peaks in 100 gained at step 1 and an even
+    split after that.
+  - **Said to him with the result:** part of the step 1 gain is true by definition (a "beaten" peak means a larger
+    peak came on that side; neighbouring peaks are cut from the same stretch of the 20-second flow). And ridge and
+    nearest neighbours chose the last setting of their lists, so the original's lists may stop short.
+- **He asked to see the six steps before anything further. Nothing more is built on the chain link models until he
+  says how far to go.**
+- The pods were deleted after the last push went through (the account shows none), and their four addresses were
+  taken off the "Markets" environment's allowed hosts. Pods were up about 11 to 12 minutes at $1.28 an hour for
+  the four: about 25 cents. Runpod's billing had not posted them when this was written.
+- A fault in the fetch, found and fixed during the run: it compared the stored-rows commit for the models too, and
+  refused them once L, M and the per-peak lines had been stored. The models read no stored rows; the comparison
+  stays for every calculation that does (Markets `459f733`).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

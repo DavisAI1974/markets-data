@@ -2,6 +2,8 @@
 
 ## UPDATE, 2026-11-17 (ninth session): read this first
 
+**`NEXT_SESSION_HANDOFF_20261116I.md` is newer than this file and is the place to start.**
+
 A ninth session started from this file. Its record is the section "Ninth session" of
 `root-redesign-20261116/ROOT_GAMEPLAN_DECISIONS.md`; read that before building anything.
 - The ROOT code is now on Markets branch `ccr-d9ae98a9-65go6q` (it continues `ccr-30cca01c-bgs4az`).
