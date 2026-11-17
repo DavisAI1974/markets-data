@@ -1,5 +1,16 @@
 # Handoff for the next Desktop chat (written 2026-11-17, about 04:55 Eastern)
 
+> **Update 2026-11-17, 05:50 Eastern.**
+> - Greg, 05:39: "Peaks are fine". The family step runs on the stored peaks. Settled; do not ask again.
+> - Done since: the life of every peak on the clock with no defined window, both kinds (20-second and no window),
+>   in `../desktop-peak-lives-on-clock-20261117/` (read its README). That is the events step of the fresh run.
+> - Code has stored the peaks with no window (`calc-turn_peaks`), `move_steps`, `leg_peaks`, `resting` and
+>   `dipole-peaks` on the `root-rows` branches, and its peak research is in
+>   `root-redesign-20261116/peak-research-20261117/`. Read that before building, so nothing is made twice.
+> - Next: the family step on those lives, each shape described over its own length. How the shape is described is
+>   put to Greg once before it is built.
+
+
 Branch `ccr-349e2ffe-07p8od` of `DavisAI1974/markets-data`. Code writes to the same branch: fetch before every push.
 This chat's workspace does not last. Everything it made that is kept is in this folder.
 
