@@ -1,0 +1,129 @@
+{
+ "what": "ROOT part 2: the calculation quote_peaks on one trade day",
+ "laid_out_and_approved": "markets-data STEP2_PLAN.md, piece I, the lines that name peaks (Greg, 2026-11-16)",
+ "trade_day": "2023-10-02",
+ "inputs": [
+  {
+   "file": "NG_v0_mbo_20231001.dbn.zst",
+   "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78"
+  },
+  {
+   "file": "NG_v0_mbo_20231002.dbn.zst",
+   "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d"
+  }
+ ],
+ "columns": [
+  {
+   "column": "quote_peak_facts_known",
+   "what": "How many facts laying the peaks against a turn of a run of the quote became known at this tick (they are in the facts table)."
+  }
+ ],
+ "tables": {
+  "facts": {
+   "columns": [
+    "known_position",
+    "known_received_time_ns",
+    "quote",
+    "run_start_position",
+    "fact",
+    "buy_peak_high_position",
+    "buy_peak_since_high_ns",
+    "buy_peak_story",
+    "sell_peak_high_position",
+    "sell_peak_since_high_ns",
+    "sell_peak_story",
+    "rise_side",
+    "rise_high_position",
+    "rise_since_high_ns"
+   ],
+   "lines": 62505,
+   "files": [
+    {
+     "file": "calc-quote_peaks-facts-20231002-part000.parquet",
+     "rows": 62505,
+     "bytes": 1336895,
+     "sha256": "b1428b856362c28a63625a580c2853185c9c98b8b00bcd3c73df035d4dbadd94"
+    }
+   ]
+  }
+ },
+ "ticks_calculated_on": 819783,
+ "rows": 820670,
+ "counts": {
+  "facts": 62505
+ },
+ "files": [
+  {
+   "file": "calc-quote_peaks-20231002-part000.parquet",
+   "rows": 262144,
+   "bytes": 547415,
+   "sha256": "2195538666a0f3d624bca1beefcab8587ae0b2061b6ce3fe33390d974f009faf",
+   "beside": "rows-20231002-part000.parquet",
+   "beside_sha256": "5baee395161f79476c82a0f91035f48226782f5e8db4f55d81746ab8bf571c1b"
+  },
+  {
+   "file": "calc-quote_peaks-20231002-part001.parquet",
+   "rows": 262144,
+   "bytes": 543085,
+   "sha256": "eb204e6cfe404436ff260fcf904bcd47b84126479e758afeea28e65ca87d71e6",
+   "beside": "rows-20231002-part001.parquet",
+   "beside_sha256": "eec0368236f487b8624d49aeb3c9ad8cbaf174a0398a2fa2d68908392d149db9"
+  },
+  {
+   "file": "calc-quote_peaks-20231002-part002.parquet",
+   "rows": 262144,
+   "bytes": 541338,
+   "sha256": "8cce07089c71657eb304d87af4943e455e8264d9a635cbd8b6c1f3e8c26521c6",
+   "beside": "rows-20231002-part002.parquet",
+   "beside_sha256": "8e8f0e8ea3e24f80700f5db54d876b3330326bb2c0e57fed73c69271272e5ca2"
+  },
+  {
+   "file": "calc-quote_peaks-20231002-part003.parquet",
+   "rows": 34238,
+   "bytes": 101347,
+   "sha256": "8db3f87c581bc9cb07d18850a288f50fe3a15dcfcada8c888b5eeecd64412eb9",
+   "beside": "rows-20231002-part003.parquet",
+   "beside_sha256": "4fd041156d86ce815ba967537bba6c4853a09aea16a2d9400cb63a007f6963e4"
+  }
+ ],
+ "checks": {
+  "recount": {
+   "passed": true,
+   "trade_day_rows": 819783,
+   "facts_compared": 62505,
+   "turns_with_a_rise_under_way": 34451,
+   "turns_by_where_the_buy_peak_story_stood": {
+    "None": 124,
+    "open": 18841,
+    "past zero": 33174,
+    "ended": 10366
+   },
+   "turns_by_where_the_sell_peak_story_stood": {
+    "None": 5,
+    "past zero": 31802,
+    "ended": 9849,
+    "open": 20849
+   },
+   "method": "the peaks in play at every stored turn of the quote worked out again from the stored outputs of pieces 1 and 2 as whole tables; shares no code with the tick-by-tick calculation"
+  },
+  "playback": [
+   {
+    "cut_at": "the middle tick",
+    "ticks_given": 409891,
+    "same_as_full_run": true
+   },
+   {
+    "cut_at": "the tick the middle fact became known",
+    "ticks_given": 357028,
+    "same_as_full_run": true
+   }
+  ],
+  "rows_gate": {
+   "passed": true,
+   "ticks": 819783,
+   "what": "the stored-rows gate passed exactly the positions of tape.for_calculations() for this trade day"
+  }
+ },
+ "empty_cells": "stored as empty (null): never 0, never blank text; a calculation skips them",
+ "seconds": 23.2
+}
