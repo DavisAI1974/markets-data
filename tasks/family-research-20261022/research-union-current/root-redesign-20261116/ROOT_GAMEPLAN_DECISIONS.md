@@ -2693,6 +2693,16 @@ stored beside the new ones.
   me to see anything else"). The simpler picture is his stacked pair (price above, one flow line below), drawn
   with the lean made at the tick. First build item of the next session.
 
+**DECIDED, and it corrects the entry above (Greg, 2026-11-17): "Do a 3 tier. Make notes for next session. Price,
+dipole and exhaustion in 3 different graphs. Youncan keep the 20 sec bit we need to add nano if we're going tonbe
+pinning and comparing to nano timed things".**
+- The 20-second flow is KEPT. It is not withdrawn. A version made at the tick (he calls it nano) is ADDED beside
+  it, because a line that is pinned and compared against things timed to the nanosecond has to be timed the same
+  way. The entry above said the exception was withdrawn; that was Claude's reading and it was too strong.
+- The next renders are three graphs, one above the other, on one time axis of real timestamps: the price; the
+  dipole; the exhaustion. Three separate graphs, not lines laid over each other.
+- For the next session. Not built in this one.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

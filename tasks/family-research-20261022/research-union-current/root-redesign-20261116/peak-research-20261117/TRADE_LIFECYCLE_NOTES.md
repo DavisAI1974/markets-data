@@ -233,7 +233,7 @@ To settle with him before it is built (not decided here):
 The dipole renders made on 2026-11-17 (`renders/dipole-render-*.png` on each `root-rows` branch) already stack the
 price above the flow lean on one clock; this idea is the sharper version, built around the moments of change.
 
-## DECIDED 2026-11-17: the flow lean goes to the tick, no 20-second window
+## (CORRECTED BELOW by Greg the same hour: the 20-second version is KEPT and the tick version ADDED) The flow lean at the tick
 
 Greg, on seeing the first renders: "We need to make flow lean nano too and not 20 sec windows." The 20-second flow
 was his one standing exception; it is withdrawn for the flow lean. Twelve of the seventeen stored calculations
@@ -242,3 +242,31 @@ with no window are made beside them. Still to settle with him: what the lean com
 (Claude's pick: buying against selling since the price move under way started, with the run of trades on one side
 beside it). The first renders were too crowded for him to read; the next ones are his stacked pair, price above
 and one flow line below.
+
+## FOR THE NEXT SESSION, in Greg's words (2026-11-17): the three-tier picture, and nano beside the 20 seconds
+
+"Do a 3 tier. Make notes for next session. Price, dipole and exhaustion in 3 different graphs. You can keep the 20
+sec but we need to add nano if we're going to be pinning and comparing to nano timed things."
+
+What to build:
+- ONE picture, THREE graphs stacked, sharing one time axis of real timestamps:
+  1. the price;
+  2. the dipole;
+  3. the exhaustion.
+  Three separate graphs. Not lines laid over each other (the first renders were too crowded for him to read: "I can
+  tell that they are the same length but it's a little confusing for me to see anything else").
+- KEEP the 20-second flow and everything made on it. ADD a version made at the tick ("nano") beside it. Reason, his:
+  a line that is pinned and compared against things timed to the nanosecond must be timed the same way.
+- This joins his earlier saved idea (the stacked pair: do the price and the dipole line MOVE at the same moments,
+  whatever the direction). The three-tier picture is the fuller form of it.
+
+To settle with him before it is built:
+- What the tick-level line compares once the clock is gone (three ways are in the decisions file; Claude's pick:
+  buying against selling since the price move under way started, with the run of trades on one side beside it).
+- What goes in the dipole graph: Native's dipole marks (born with a trade, born with none), our own flow lean, or
+  both. And what goes in the exhaustion graph: the 20-second exhaustion peaks and their stories, the peaks with no
+  window, or both.
+- Which stretch of time one picture covers, with no span chosen by us (the first renders ran from the dipole
+  before to the dipole after).
+Known faults of the first renders to fix: the black line on the exhaustion pages is the last print and flips a tick
+as trades alternate between bid and ask (use the quote); the page title is cut off at the top.

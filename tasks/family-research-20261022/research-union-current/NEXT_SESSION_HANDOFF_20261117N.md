@@ -62,16 +62,13 @@ fifteen candidates, the selected cases and their results. Handoffs K and L point
 
 ## Open, in order
 
-1. **The flow lean at the tick, with no 20-second window (DECIDED by Greg 2026-11-17: "We need to make flow lean
-   nano too and not 20 sec windows").** The 20-second flow is no longer an exception. First settle with him what
-   the lean compares once the clock is gone (Claude's pick: buying against selling since the price move under way
-   started, with the run of trades on one side beside it; the three ways are in the decisions file). Then the
-   pieces that stand on the 20-second window (twelve of seventeen, listed there) get a version with no window
-   BESIDE the stored one; nothing stored is discarded. One launch, everything together.
-1b. **The renders.** Stored in each `root-rows` branch's `renders/`. Greg found the first ones too crowded to read
-   ("I can tell that they are the same length but it's a little confusing"). Draw the next ones as his stacked
-   pair, with the lean made at the tick. In the exhaustion pages the black line is the last print and flips a
-   tick as trades alternate between bid and ask: use the quote. The page title is cut off at the top.
+1. **The three-tier picture, and a tick-level ("nano") line beside the 20-second one (Greg, 2026-11-17: "Do a 3
+   tier ... Price, dipole and exhaustion in 3 different graphs. You can keep the 20 sec but we need to add nano if
+   we're going to be pinning and comparing to nano timed things").** His words and the three things to settle with
+   him first are in the notes file, last section. KEEP the 20-second flow and everything made on it; ADD the version
+   made at the tick beside it. One picture, three separate graphs on one time axis of real timestamps: price, dipole,
+   exhaustion. The first renders (stored in each `root-rows` branch's `renders/`) were too crowded for him to read.
+   What stands on the 20-second window is listed in the decisions file (twelve of seventeen calculations).
 2. **Greg's saved idea: the stacked pair of graphs** (his words are in the notes file, "SAVED FOR THE NEXT
    SESSION"). For each dipole and the trade that goes with it: price on top, the dipole line below, one time axis
    of real timestamps. The question is whether the two MOVE at the same moments, whatever the direction. Three
