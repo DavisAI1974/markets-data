@@ -1753,6 +1753,108 @@ gap, so L adds the per-order facts and M the per-trade facts); N with K; O after
 built yet. The open call on fills that L was to settle has been made by the eighth session the same way (filled
 and added, both).
 
+## Ninth session (2026-11-17, in a code session, on Fable with the Fable advisor)
+
+Started from `NEXT_SESSION_HANDOFF_20261116H.md`.
+
+**Where the code is.** Markets branch `ccr-d9ae98a9-65go6q` (the session's own). The ROOT branch
+`ccr-30cca01c-bgs4az` (`9d851b8`) was brought in first; it was a straight continuation, no conflict. Nothing went
+to the trunk. Tip when this was written: `b8b720c`.
+
+**Greg's rules for this session, as he gave them at its start (all standing; restated so they are in one place).**
+- The runs go on pods, all four trade days at the same time, helpers pinned to CPUs. "Nothing is run in the session
+  without telling me first. No pod starts without my go at the time, with the price."
+- "NO TESTS. Never run the tests folder. One check per new part, run once, on that part only. When a step is
+  corrected, check only the corrected part; do not run the whole thing again."
+- "Where the build needs a call the layout does not make, make it, state it to me, and record it." "Do not re-ask
+  what I have decided."
+- How it was applied here: nothing was run on market data in the session. Only a syntax and import check of the
+  new files was made. Every calculation below is WRITTEN AND NOT RUN; its first run is on the pods, on his go.
+
+**Runpod, read from the account at the start.** No pods, no volumes. Pod billing for the UTC clock day 2026-11-16
+shows eight pod records, $0.19 in all: four at about $0.034 each (the eighth session's four, about six and a half
+minutes at $0.32 an hour) and four at $0.009 to $0.025 (the ones the eighth session saw and did not make). Nothing
+is billing. Price read from the catalog the same hour: General Purpose CPU (`cpu3g`) $0.04 a CPU an hour, so 8 CPUs
+and 32 GB is $0.32 an hour a pod, $1.28 an hour for four. Unchanged from yesterday.
+
+**L (refilled orders) and M (sweeps; the quote touching or crossing): checks written, wired in. Not run.**
+Markets `11f7d36`, `5e4d013`.
+- **A fault found in L before it ran, and corrected.** As first written, the size put back on a fact was the
+  order's whole rise above what the fill left. Where an order ends LARGER than it began (a fill of 2 on an order of
+  5 that shows 8 afterwards), that is 5; the book totals count 2 as refilled and 3 as plainly added. The two would
+  not have reconciled. **Claude's call, stated to Greg:** the size put back on a fact is never more than the fill
+  took, the same figure as `refilled` in the book totals. Both sizes are on the line, so the rise beyond the fill is
+  one subtraction.
+- L's check: the fill messages of each exchange event gathered first and laid on the rows; an order's "so far"
+  figures by sorting the filled rows by order; and each side's size put back must equal the last value of that
+  side's `refilled` total in the stored book totals.
+- M's check: the rows grouped by exchange event, each group taken whole; every group with a trade must end on its
+  one end mark; "a best price moved" read from the best-price columns (the calculation reads the marks); the
+  touches from the stored gap. It also reports, without judging: whether the first tick of the trade day sits
+  inside an event that began before it, whether the quote is already touching at the first tick, and how many
+  trade or fill rows carry the tape's "no price" value.
+- Playback is cut where something is still unfolding: for L, after a fill message and before its order's row; for
+  M, on an event's first trade before its end mark, and while the quote is touching.
+
+**The chain link models (Step 1 piece 4): BUILT in two parts. Not run.** Markets `fadebae`, `8bfe4c8`. The layout
+is the one he approved ("Do it"). Claude's calls in the build, stated to Greg, his to correct:
+1. **Two parts.** (a) `chain_peaks`, a normal per-trade-day calculation with the usual recount and playback: one
+   line per peak at the tick its story ends, and for every peak the nearest peaks before it whose stories had
+   already ended when it became known. It holds no model. (b) `chain_models`: each trade day scored by models
+   taught on the other three.
+2. **The ten figures of "what a peak did"** (the approved list): its size; the time from the low to the high; how
+   its story ended; how long that took; how far it faded; the number of steps down; the price move from the high to
+   the end; the furthest the price went with the peak's side, and against it; same side as the peak before or not.
+3. **"How far it faded" is one figure for both endings,** so it is never empty: for a beaten peak the lowest share
+   before it was beaten; for one that came back, the lowest the flow went on its side while it was away (zero or
+   below).
+4. **The price moves are distances from the price at the high, in the tape's price units.** With no trade between
+   the high and the end they are zero (the price did not move); the highest and lowest price stay empty there.
+5. **The peaks before are stored as their own lines,** one per step back, not as six fixed columns. Six steps are
+   written out now because six are to be shown to him; that is not a cap. Every peak line carries the tick the peak
+   became known and the tick its story ended, so any further step follows by the same rule.
+6. **How each figure enters a model.** Lengths of time and the count of steps down as log(1 + value): raw
+   nanoseconds run over many powers of ten and a few long ones would decide every squared error. Price moves in
+   ticks through arcsinh, as the original. Sizes and shares as they are. A yes or no as 1 or 0.
+7. **The settings are the original's fixed lists.** Trees: 140, and 50 while choosing a setting (the original
+   programs disagree; these are the ones of its "known at the time" pilot).
+8. **The paired sample is kept:** at step d the model given d-1 peaks and the model given d peaks score the same
+   peaks, those with d ended peaks before them.
+9. **Empty figures.** A peak is scored at step d when it and the d peaks before it have every figure. Otherwise its
+   line at that step is there with empty values and the reason. Nothing is filled in. The counts of empty figures
+   are read from part (a) on all four trade days BEFORE the models run; if they are not small this rule comes back
+   to him first.
+10. **The model values are not "known at a tick".** They are made afterwards by models taught on other trade days,
+    some of them later ones. They are their own table, keyed by peak, and never go on a tick row. The receipt says
+    so.
+11. **Under his averaging rule:** each figure's own squared error is written for every peak, model and step,
+    without and with the peak before; the mean over the ten figures sits beside them.
+12. **The checks:** every peak given to a model had a story that ended at or before the tick its target became
+    known; ridge worked out again in closed form. Nearest neighbours and extra trees have no independent recount;
+    the receipt says so.
+13. **To say when the six steps are shown:** some gain is true by definition (a peak "beaten" means a larger peak
+    came on that side).
+
+**scikit-learn** is needed by the chain link models and by nothing else in ROOT. The spec says a new dependency is
+asked for first. It is named to Greg with the launch request and is installed on a pod only when the models are
+asked for. (Markets `requirements.txt` has listed it since the Kalshi work; ROOT has not used it.)
+
+**The pod launch path rebuilt.** Markets `b8b720c`, `root/pod.py` and `root/pod_fetch.py`; `pod_run.sh` is gone.
+- The file server starts first, so a failed set-up can be read.
+- Every run names the code commit it runs, so a corrected part can be run again on the same pod and the receipt's
+  commit is the one that ran. This is how "check only the corrected part" is kept without a new launch.
+- A run is asked for over the pod's own address, with a word given to the pod when it is made. No command goes
+  through Runpod once a pod is up (the eighth session's `exec-pod` calls each needed his approval).
+- Library versions are pinned: databento 0.90.0, pyarrow 26.0.1, numpy 2.5.5; for the models scikit-learn 1.9.1
+  and scipy 1.18.1.
+- The session fetches each file, compares it with the fingerprint in its receipt, checks the code commit and the
+  rows commit, and only then stores it.
+
+**Still waiting on Greg (carried from handoff H; none blocks the launch):** his answer to the two checks (Native's
+record and the print legs on trade days Oct 2 and Oct 17), which holds D and the print legs of I; the finding on
+the place-in-line figures, before K; L's question 6 (every row with size put back gets a fact, with a yes/no for
+"same size or larger": keep that, or only the same-size-or-larger ones), put to him when L's counts are reported.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

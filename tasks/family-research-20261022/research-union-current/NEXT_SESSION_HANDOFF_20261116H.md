@@ -1,5 +1,16 @@
 # Handoff, eighth session of 2026-11-16 (Step 2 pieces C, the quote's runs, A and B built and stored; the pods used; next: the chain link models)
 
+## UPDATE, 2026-11-17 (ninth session): read this first
+
+A ninth session started from this file. Its record is the section "Ninth session" of
+`root-redesign-20261116/ROOT_GAMEPLAN_DECISIONS.md`; read that before building anything.
+- The ROOT code is now on Markets branch `ccr-d9ae98a9-65go6q` (it continues `ccr-30cca01c-bgs4az`).
+- L and M: one fault in L corrected before it ran; both checks written and both wired in.
+- The chain link models: built in two parts (`chain_peaks`, `chain_models`).
+- The pod launch path is rebuilt (`root/pod.py`, `root/pod_fetch.py`; `pod_run.sh` is gone).
+- **None of it has run.** The first run of each is on the pods, on Greg's go at the time, with the price.
+- Items 2 to 4 of "What to do next" and the questions for Greg below stand as written.
+
 Branch: `ccr-349e2ffe-07p8od` in `DavisAI1974/markets-data` for data and documents. This file replaces
 `NEXT_SESSION_HANDOFF_20261116G.md` as the starting point. Written while the session was still going, because it
 had grown long; the chain link models were about to be built.

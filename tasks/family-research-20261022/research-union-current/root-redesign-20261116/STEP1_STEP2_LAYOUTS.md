@@ -514,6 +514,41 @@ ones that came to nothing. Read from the facts in tick order.
 **Order, and how long between.** For any two kinds of fact: which came first and the time between, each case
 listed. Every fact carries its tick, so this is a subtraction, with no pairing picked in advance.
 
+## Written in the ninth session (2026-11-17), not yet run: L, M and the chain link models
+
+Code: Markets branch `ccr-d9ae98a9-65go6q`. Each has its one check written. The first run of each is on the pods,
+on Greg's go. Counts are added here when they have run. Every call below is in `ROOT_GAMEPLAN_DECISIONS.md`,
+"Ninth session", stated to Greg, his to correct.
+
+### L. Refilled orders (`root/calcs/refills.py`)
+
+Facts beside the rows: at the tick of an order's own row in the exchange event that filled it, whenever that row
+shows size put back, and whenever a filled order changes price in that row.
+- Every row with size put back gets a fact, with the row's own words. A yes/no says whether the order is the same
+  size or larger than before the fill (the layout's "refill"). Nothing is picked.
+- The size put back is never more than the fill took: the same figure as `refilled` in the book totals, so the
+  facts of a side add up to that side's total. (Corrected before the first run; see the decisions file.)
+- A fill followed by a change of price is its own kind of moment.
+
+### M. Sweeps, and the quote touching or crossing (`root/calcs/sweeps.py`)
+
+Facts beside the rows: one for every exchange event that holds a trade, at the tick with the exchange's end mark;
+one when the best bid and ask touch or cross; one when they part, with how long it lasted and the lowest the gap
+went.
+- Every trade event gets a fact, not only the ones that fill through several price levels.
+- All trade sides of an event are written when there is more than one, in the order they came.
+- A price level filled through is a distinct price among the event's fill messages.
+
+### The chain link models (`root/calcs/chain_peaks.py`, `root/chain_models.py`)
+
+As laid out in piece 4 above and approved ("Do it"). Two parts:
+- `chain_peaks`: a peak line at the tick each peak's story ends (the ten figures of what it did, both clocks), and
+  before lines at the tick each peak becomes known (the nearest peaks before it whose stories had already ended,
+  one line a step, six steps written out now).
+- `chain_models`: for each trade day, three models taught on the other three trade days. One line per peak, model
+  and step back: each figure's squared error without and with the peak at that step, the mean beside them, the
+  gain. Its own table, keyed by peak. The values are not known at a tick.
+
 ## Still to lay out
 
 5. Step 2: the chain, its stages, timing and recurrence. Greg, 2026-11-16: "We'll have to look at step 2 closer
