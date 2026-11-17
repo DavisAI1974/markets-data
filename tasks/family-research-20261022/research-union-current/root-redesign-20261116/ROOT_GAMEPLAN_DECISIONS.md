@@ -2187,6 +2187,12 @@ predictions".**
     never to be used to make market predictions or in any calculation.
 - Still with him: replacing the 16 typed weights with measured gas use (EIA by state, split by Census population).
 
+**Greg, 2026-11-17: "Do we need the remps for st2 run?.If not, start running st2 and fix.while it runs".** The
+temperatures feed only `outside_changes` (rerun after the fix); the chain ways read no outside figure. Read as his
+go: the individual chain ways launched at once (Markets `67f2b67`, four Compute-Optimized 32-CPU pods, $0.96 an
+hour each, $3.84 for the four, 05:18 UTC), the outside figures fixed while they run. The averaging models are out of
+the code (`chain_models.py` removed; the shared parts are `chain_common.py`).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
