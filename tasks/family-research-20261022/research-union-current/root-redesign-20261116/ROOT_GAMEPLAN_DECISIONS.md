@@ -2339,6 +2339,46 @@ running, start with the strategies and do 15 instead of 5".**
   his decision of the ninth session the stored record is placed as it is, marked as starting at 8 pm Eastern on
   trade days Oct 2 and Oct 17; the 6 pm to 8 pm part is added beside it later.
 
+**Greg, 2026-11-17, while the pieces were being written: "Do all of these calcs in the pods at the same time. Don't
+keep stopping and starting pods. It's inefficient. Do all of the calcs at the same time when possible", and of the
+peak with no window: "And do that extra along with the others".** Standing from here: one launch carries every
+piece that is ready, each started together on its own CPU; pods are not started and stopped piece by piece.
+
+**LAUNCHED (2026-11-17, 09:18 UTC, on his go): four General Purpose 8-CPU pods, $0.32 an hour each, $1.28 for the
+four (live price confirmed), Markets `fbf5a36` on branch `ccr-3096f7d6-fst7al`, job
+`calc:leg_peaks,resting,turn_peaks,dipole`.** Pods: Oct 2 `e6xw6c690sjbhb`, Oct 3 `setjdygtb5q68i`, Oct 17
+`4bitpdnkmzoyug`, Oct 18 `k1p1uj4nlkefnf`. Their four addresses were allowed in the "Markets" cloud environment and
+the four dead ones of the morning taken off (his approval card). Before the launch a dry run of the new code was
+made in the session over the first 150,000 ticks of one trade day (told to him first; its output thrown away).
+
+The four pieces, and Claude's calls in each (stated to him, his to correct):
+- `leg_peaks` (the rest of piece I, the trade legs beside the peaks). The earlier leg rule (Markets `0408df44`) is
+  followed forward, print by print, from the first print of the trade day on all four trade days; every moment of
+  a leg (started, new furthest price, ended) is written at the tick of the print that shows it, with the peaks in
+  play. Legs are counted from 6 pm; the check finds every earlier trade and every earlier leg again and records
+  the fixed difference in the leg numbers. The eight trade types are not assigned.
+- `resting` (piece K). For a peak (earlier turn: the tick of its high), a run of the best bid or best ask (the tick
+  it started) and a trade leg (its first trade): at each later turn, of the orders resting on each side at the
+  earlier turn, how many still rest and with what size, left by fill, left by cancel, were filled at all and how
+  much, gave size up and how much, had size added, changed price; for the whole side and for the orders at that
+  side's best price at the earlier turn. An order resting since before the trade day is counted from the row's own
+  count of the side until its first row, and is counted in a carried-in figure. With it, on his call of
+  2026-11-16: one line for every fill of an order that had another order ahead of it in our line (how many, how
+  much size, which orders).
+- `turn_peaks` (the peak with no window, and every peak against the turns of the price). "Without the window":
+  the flow is counted from the moment the aggressor side last changed; every run of trades on one side is its own
+  event, peaks at its last trade, and its number is the size traded in the run; a trade the tape gives no side for
+  neither continues nor breaks a run. The 20-second peaks stay beside it. For every peak of both kinds: the trade
+  leg, the run of the best bid and the run of the best ask under way at its high, how many steps each had made at
+  the high and how many in all. No step after the high means the move ended where the peak's high found it. The
+  turns are the ones already followed with no window; no span of time is chosen, nothing is ranked or grouped.
+- `dipole_peaks` (piece D). Native's stored episode lines (two per dipole: recognized, and a closing line) are
+  placed as they are, each at the first tick received at or after the time Native wrote it, with Native's own times
+  beside it. "Alive" is read as known and not closed. On trade days Oct 2 and Oct 17 the record starts at 8 pm
+  Eastern and the counts beside the rows are empty until then. A line Native wrote outside the trade day is not
+  placed and is listed in the receipt. Native's record for Oct 2, 3 and 17 is read part by part from its pinned
+  branch commits (each part compared with the record's manifest); Oct 18 from its one stored file.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
