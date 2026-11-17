@@ -2284,6 +2284,21 @@ time".** Read as (his to correct): each trade day's stored files on its `root-ro
 calculation's output, `FILES.md`) are kept up to date as each calculation lands; the Excel workbook is written all
 at once later, at a slow time, and nothing waits on it. The short stretch stays as the only Excel file until then.
 
+**Greg, 2026-11-17: "Because as you and i planned, the workbook is going to have to have its days broken up to stay
+under the limit. But the individual days where we are keeping track of the data is up.to date right?"** Told: yes.
+Each of the four `root-rows` branches holds the rebuilt rows, all twelve finished calculations, the 6 pm to 8 pm
+trade legs (Oct 2 and Oct 17) and a `FILES.md` rewritten today; all pushed and confirmed.
+
+**DECIDED (Greg, 2026-11-17): "Just finish up what is running and update the files and I'll show you before we do
+those orher things you mentioned".** This holds the go for four more pods given earlier in this session.
+- Nothing is running: the four pods are deleted, the account shows none, nothing is billing. The files are up to
+  date and pushed.
+- NOT started, and not to be started until he has shown the earlier discovery: the three Step 2 calculations never
+  run (D, Native's dipole beside the peaks; the trade legs beside the peaks; K, the resting orders through a peak
+  and a leg), Native's missing two hours, the removal of the stopped chain matching code, and the strategy
+  versions. No code was written for them in this session.
+- A new pod needs his go again at the time, with the price.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
