@@ -2017,6 +2017,16 @@ some sort of barometer to see where our knowledge works or doesn't in a parer tr
   provisional until live. With four trade days, a version is formed on three and paper traded on the fourth, each
   in turn, so no trade is scored by a rule that saw its own trade day (Claude's call, stated to him).
 
+**CORRECTED by Greg the same minute: "I have usage to finish what we started properly in the next chat. I don't
+want to have partially built firlds or stop short of an experiment outpit."** Claude's reading above ("the next
+session does not start long builds first") is withdrawn. What stands:
+- **What was started is finished properly first.** No field is left partly built, and no experiment stops short of
+  its output. The three calculations that are written and not run are run, checked and stored. The chain link
+  models are taken as far as they go, in the ways named, through to their stored results and the read-out of what
+  they say.
+- **Then the first strategy versions,** as the paper-trade barometer, the way it was done last week.
+- A piece is not begun unless it can be carried through to its stored output in that chat.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
