@@ -43,6 +43,25 @@ instance, piece H) and the grouping stage, which is done with Greg.
 - Greg's aim stands: "if the peaks are peaking at the turns, then we have a huge problem solved". It is not shown
   yet. Desktop is looking at whether the peaks fall into groups (family and chain work) from the same branches.
 
+## The peak research folder (made after the pods, from stored files only)
+
+`root-redesign-20261116/peak-research-20261117/` (README, one file of peaks per trade day, five count files). Greg's
+standing word: "we don't have to pick winners. We just want the story": which part of the story each kind of data
+tells. The README's "The story" table is the map. In short, each trade day read on its own:
+- A peak tells who was hitting, on which side, how much, and when it stopped. It holds no price.
+- Peaks in the middle or at the beginning of a move of the quote are the tall ones and push with it; peaks at the
+  end are short and on the other side about three times in four.
+- A quarter or more of the 20-second peaks have their high on a tick with no trade (made by the window); more than
+  half of the peaks with no window have no 20-second peak at their high.
+- When the quote backs away and the level it left emptied only by orders pulling out, the move takes a third step
+  least often; the pushing side is hitting either way.
+- Where the price stood at the end of a 20-second peak's story is about even three ways in every pile.
+- The five-step process Greg asked about is in `DavisAI1974/Basic_equations`, `level2_four_sciences.py` lines 10 to
+  20 (observables built from information; treat them as state variables; an operator library; solve the rate of
+  change; look for the opposing pair). Nothing of it was run; it uses windows and an ensemble, which are his calls.
+All of this read all four trade days. It is not to be used to form a strategy version for the trade day it is
+traded on.
+
 ## Open, in order
 
 1. **Greg's answer on deleting last week's material from `main`** (put to him once, with the list): the folders

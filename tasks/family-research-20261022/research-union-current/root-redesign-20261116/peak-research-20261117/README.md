@@ -188,3 +188,35 @@ its high, by the tick the peak became known. Trade day Oct 2 (the other three re
   stretch from the high to the tick the peak became known is short; and the end of a peak's story is set by the
   flow, not by the price. Not yet read: the resting orders through each run of the QUOTE (stored in `resting`),
   which is the book's answer measured over the price move itself.
+
+## How a level emptied, and whether the move went on (the resting orders on the quote's own clock)
+
+Read from the stored files in the session (told to Greg first); counts in `HOW_A_LEVEL_EMPTIED.json`. When the
+quote backs away (the best ask going up, or the best bid going down) the level it leaves has emptied. For every
+such move of two steps or more: of the orders that stood at the best price when the move started, were they all
+filled, all pulled, or some of each, by the move's second step; and did the move take a third step.
+
+Moves that took a third step, out of the moves in that row:
+
+| Trade day and quote | Every order filled | Every order pulled | Some filled, some pulled |
+|---|---|---|---|
+| Oct 2, best ask up | 53 of 123 | 63 of 212 | 362 of 959 |
+| Oct 2, best bid down | 60 of 135 | 37 of 144 | 383 of 1,060 |
+| Oct 3, best ask up | 39 of 150 | 20 of 101 | 368 of 1,099 |
+| Oct 3, best bid down | 51 of 149 | 26 of 126 | 321 of 947 |
+| Oct 17, best ask up | 91 of 228 | 24 of 135 | 419 of 1,097 |
+| Oct 17, best bid down | 60 of 173 | 43 of 196 | 461 of 1,245 |
+| Oct 18, best ask up | 83 of 162 | 26 of 177 | 438 of 1,035 |
+| Oct 18, best bid down | 74 of 154 | 50 of 245 | 422 of 1,130 |
+
+- In all eight rows the moves whose first level emptied ONLY by orders pulling out took a third step least often
+  (about 15 to 30 in 100, against about 26 to 51 where trades ate the level and about 33 to 42 where both
+  happened).
+- At the second step the side that pushes was the one hitting in nearly every case, whichever way the level had
+  emptied (trade day Oct 2, best ask up: buyers hitting in 118 of 123, 186 of 212 and 944 of 959). The peak's side
+  of the story reads the same in all three; the difference is in what the resting orders did. This is a part of
+  the story the peak cannot tell.
+- It is the opposite of Claude's earlier guess (that orders pulling away mark a beginning).
+- Limits: only the first level of each move is followed; the rows with every order filled or every order pulled
+  hold 100 to 250 moves each; no test of chance was made; most moves of the quote are one step long and are not in
+  this table (about 5,200 to 6,100 a side a trade day).

@@ -2595,6 +2595,18 @@ put the eak data witb some other kind of data, the partial picture all of a sudd
   ways in every pile. Claude's guess (orders that stand make an ending, orders that pull make a beginning) was not
   borne out, and he was told so. Not yet read: the resting orders through each run of the quote.
 
+**Greg, 2026-11-17: "We're going to give you another 15-20 minutes to play around with it then do the strategies
+unless youbreally feel you're onto something".** The one unread piece was read (stored files, told to him first;
+`HOW_A_LEVEL_EMPTIED.json` and the README): when the quote backs away, how the level it left had emptied (the
+orders standing at the best price when the move started: all filled, all pulled, or some of each, by the move's
+second step) and whether the move took a third step. In all eight rows (four trade days, best ask up and best bid
+down) the moves whose first level emptied only by orders pulling out took a third step least often (about 15 to 30
+in 100, against 26 to 51 where trades ate the level and 33 to 42 where both happened). At that second step the
+pushing side was the one hitting in nearly every case, whichever way the level emptied: the peak's side of the
+story reads the same and the difference is in what the resting orders did. Small rows (100 to 250 moves), no test
+of chance, first level only. Told to him as a modest, steady part of the story, not a reason to hold the
+strategies.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
