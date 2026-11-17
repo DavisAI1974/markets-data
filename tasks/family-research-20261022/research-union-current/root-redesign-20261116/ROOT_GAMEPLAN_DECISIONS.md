@@ -1929,6 +1929,30 @@ and 143,406 lines (one per peak, model and step), about 24 to 31 MB a trade day.
   refused them once L, M and the per-peak lines had been stored. The models read no stored rows; the comparison
   stays for every calculation that does (Markets `459f733`).
 
+**After the six steps were put to him (Greg, 2026-11-16 late evening Eastern, ninth session).**
+- "Before we start building anything tell me the interesting stuff we found during st1 and 2 calcs". Told, from the
+  stored receipts of all four trade days, with no groups applied (the list is in this session's conversation; the
+  counts are in `STEP1_STEP2_LAYOUTS.md`).
+- "Hang with me becaue we may have figured out something huge. Hang loose for a little bit", then "Continue with
+  build. After we're done with build and run, I'll share the news". Read as: the build goes on with the pieces that
+  wait on none of his open answers (the rest of I, N, O, K); D and the print legs stay parked.
+- **"Take the chains as far as they will go. And try the calcs in different ways. Keep the different results and
+  see what the results are telling you"**. This answers how far to take the chain link models. Read as: no stop at
+  six steps; the models are run out until the gain is gone. The calculations are made in more than one way; every
+  way's results are stored beside the others and none replaces another; and Claude reads what they say and tells
+  him. The six-step result stays as stored.
+- **"The goal of our calcs is to better explani, predict or be able to explain trades or their lifecycles or
+  different lifecycle pieces better or perfectly if possible by coming at yhat from any angle that we can figure
+  out"**. Standing aim for every calculation from here: explain or predict a trade, its lifecycle or any piece of
+  it, from any angle. A way of calculating is worth trying when it could do that.
+- **The ways of the chain, Claude's calls, stated to him the same minute (his to correct):** (1) as built, out to
+  24 steps back; (2) each earlier peak alone, out to 48; (3) what a peak does AFTER it becomes known, given its own
+  size and side and then the chain, out to 24; (4) the same with each earlier peak alone, out to 48; (5) only the
+  peaks before on its own side, to 24; (6) only those on the other side, to 24. Wider lists of settings, because
+  ridge and nearest neighbours were choosing the last entry of the original lists. The step counts are how far
+  each is run now, not caps: where the gain has not gone by the last step, that way is run further.
+- K is built after this launch (it is the largest piece); the rest of I, O and N go with the chain ways.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
