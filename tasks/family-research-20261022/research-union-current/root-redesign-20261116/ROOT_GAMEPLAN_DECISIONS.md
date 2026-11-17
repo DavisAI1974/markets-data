@@ -2217,6 +2217,13 @@ systems."; then "Fine. Make sure that every other correction is done before rest
 - Before any restart, every other correction is made: an audit of every number and rule in ROOT against no
   averages, no predetermined windows, no ranks, no grouping or matching by our systems, no fixed marks or caps.
 
+**Greg, 2026-11-17: "We already have clearly defined family chain rules that were derived from runs months ago",
+then "Don't worry about it now! Just run the data!"; "After the pods start, we'll start new chat."; "Why are we
+renuild ing peaks? Just don't group them right now".** Told: the peaks are not rebuilt or grouped; `flow_peak` runs
+again only to drop the ranked column, every peak unchanged. The rebuild launched (four General Purpose 8-CPU pods,
+$0.32 an hour each, $1.28 for the four, 05:34 UTC, Markets `e083757`). Handoff written as
+`NEXT_SESSION_HANDOFF_20261117K.md`.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
