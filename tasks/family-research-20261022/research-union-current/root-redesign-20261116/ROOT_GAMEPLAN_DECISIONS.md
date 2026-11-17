@@ -2232,6 +2232,53 @@ stored one; otherwise the old stored values are kept and only the `peak_standing
 here: when a stored output only loses a column (or anything else that is a plain removal), the column is deleted
 from the stored values; the calculation is not run again. A rerun is only for a piece whose values change.
 
+## Eleventh session (2026-11-17, in a code session, on Fable with the Fable advisor)
+
+Started from `NEXT_SESSION_HANDOFF_20261117K.md`. Code: Markets branch `ccr-3096f7d6-fst7al` (the session's own),
+with `claude/loving-hawking-pwxr2c` (`e083757`) brought in first by fast-forward. Nothing went to the trunk.
+
+**The rebuild fetched, proved and stored; the four pods deleted (2026-11-17, 05:46 UTC).**
+- All four pods said `finished rebuild`. Every file was fetched and matched the size and fingerprint in its receipt.
+- **The peaks came out the same.** Every `flow_peak` column except the removed `peak_standing_so_far` was compared
+  with the stored one, row by row, on all four trade days (820,670; 879,497; 846,158; 771,468 rows): all equal. By
+  Greg's rule the new files are stored. No peak changed; only the ranked column is gone.
+- The rebuilt rows were proved before storing: every one of the 179 columns the old and new rows share (the 85
+  tape, book and trade columns and the 94 outside columns kept) is equal on every row of all four trade days. The
+  rows now hold 408 columns, 323 of them outside (229 new, 38 taken out). The book pictures and the vendor
+  restatements came back byte for byte the same. The build's own checks passed.
+- `outside_changes` was made again beside the rebuilt rows and passed its checks: 73,236; 76,713; 78,616 and 74,010
+  facts; 319 outside columns followed.
+- Stored: `root-rows-20231002` `daac81d`, `-20231003` `e4ffcc9`, `-20231017` `74f4225`, `-20231018` `d2c34be`, each
+  with its `FILES.md` brought up to date. Pushed and confirmed, then the pods were deleted; the account shows none.
+  About 12 minutes at $1.28 an hour for the four.
+- To fetch, the four pod addresses were allowed in the "Markets" cloud environment (Greg approved the card). They
+  are dead now and can come off the list.
+- `playback-<trade day>.json` was not run again (no tests except on changed pieces).
+
+**The short-stretch workbook written again from the rebuilt rows** (`ROOT_short_stretch_20231002_0900.xlsx`, told to
+Greg before it ran in the session): 20,000 rows from 9:00:00 am Eastern of trade day Oct 2, 408 columns, 37.1 MB,
+1,857.5 bytes a row; read back equal to the stored rows. It replaces the file that carried the averaged and ranked
+outside columns. At that size a part of 80,000 rows would be about 149 MB, over GitHub's 100 MB limit: the parts of
+the full workbook have to be smaller (about 45,000 rows). Claude's call, to be made when the workbook is written.
+
+**Greg, 2026-11-17: "Sonis st2 and 1 completely done?" / "Are the st2 calcs completed?"** Told: Step 1 is done as
+ordered (the flow and its peaks, each peak's story; the family letters not built, on his word). Step 2: everything
+started is finished and stored. Never run: D (Native's dipole beside the peaks), the trade legs beside the peaks
+(the rest of I), K (the resting orders through a peak and a leg); and Native's missing two hours, which D waits on.
+
+**GO (Greg, 2026-11-17): "I thought we were doing all of st2 on the pods. Fire up 4 more and have these pods do all
+of the remaining st2 calcs".** Told: the three remaining calculations have no code yet, so pods started that minute
+would sit idle and bill; they are written first (code only, nothing run in the session) and the four pods start
+when the code is ready. Price put to him: four General Purpose 8-CPU pods, $0.32 an hour each, $1.28 for the four,
+confirmed again at the launch.
+
+**Greg, 2026-11-17: "When all of the calcs are done and rhe excel sheets have been updates I'll show you the earlier
+discovery. We have been keeping up with populating the wxcel sheets rught?"** Told plainly: no. Only the short
+stretch exists as Excel; no full trade-day workbook has been written and no calculation column is in any sheet. By
+his decision of 2026-11-16 (seventh session) the workbook is written once, at the end, after the calculation
+columns exist, in parts. Every calculation is stored as its own files beside the rows. Order from here: the three
+remaining Step 2 calculations and Native's two hours; then the full workbooks; then he shows the earlier discovery.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
