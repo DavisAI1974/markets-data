@@ -2514,6 +2514,31 @@ trade days on the first run: 78,468; 84,596; 82,827 and 78,277 lines. Stored: `r
 shows no pod. About 5 minutes at $1.28 an hour for the four. Handoff written as `NEXT_SESSION_HANDOFF_20261117M.md`;
 it drops the pointers to last week's strategy material that handoffs K and L carried.
 
+**Greg's two ideas (2026-11-17): "do you rememberthat process we discovered in the basic equations repo that was
+the 5 step correlation process that is data type agnostic? Maybe we try it on a few things for this"; and "Seperate
+the peak data just for reseach purposes into the ones that land exactly where turns happen, and when this evwnt
+begins or this group always lands on the ending of something. Don't change the peak structure or where it's
+stored ... they could be different things".**
+- The split was made (a read of stored files in the session, told to him first) and stored as a research view in
+  `root-redesign-20261116/peak-research-20261117/` (one line per peak per trade day, `COUNTS.json`, `README.md`).
+  The peak files on the `root-rows` branches are unchanged. Each peak is placed, for each of the trade leg, the
+  run of the best bid and the run of the best ask under way at its high: at the beginning, at the end, the whole
+  move (a one-step move), or in between; with whether the high is on the exact tick of the step and whether the
+  peak's side goes with the move.
+- What stuck out, the same way on all four trade days (counts, no test of chance): the piles are not alike. A peak
+  in the middle or at the beginning of a move of the quote is mostly on the move's side; a peak at the END of a
+  move of the quote is more often on the other side, most clearly for the peaks with no window (trade day Oct 2,
+  run of the best bid: 450 of 1,846 with the move at the end, against 888 of 1,437 in between and 1,770 of 2,847
+  at the beginning). Partly built in (selling into the bid is what stops the bid's rise). It does not say what the
+  price did afterwards, and a move's place is known only once the move has ended.
+- The five-step process: this session had no memory of it. `DavisAI1974/Basic_equations` was read (public, read
+  only). The words "five step" are not in it. Two things there could be what he means; put to him to name which:
+  the stacked null-extraction pipeline (two streams, windowed entropy and mutual-information operators, stacked and
+  centred, singular values and the rank gap, the null relations read out and checked against a shifted null), of
+  which Markets holds ports in `odcore/null_extract.py` and `odcore/coupling_scanner.py`; or the five numbered
+  mapping steps in that repo's instructions. Told to him: the pipeline is built on sliding windows and on pooling
+  windows into one matrix, which his rules for this work do not allow unless he asks for it by name. Nothing was run.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
