@@ -2580,6 +2580,21 @@ seconds, so those highs are made by the window. More than half of the peaks with
 at their high. The taller a peak with no window, the more often a 20-second peak shares its high. The peaks with
 no window at the end of a move share least.
 
+**STANDING (Greg, 2026-11-17): "Again we don't have to pick winners. We just want the story. What part of the story
+does peak tell us and what other thing or things fill in the exact parts that peak can't"; before it: "maybe if we
+put the eak data witb some other kind of data, the partial picture all of a sudden becomes the whole picture".**
+- No kind of data is chosen over another. Each is asked which part of the story it tells. The map is in the
+  research folder's README ("The story"): the peak tells who was hitting, on which side, how much and when it
+  stopped; it holds no price. Whether and how far the price moved, and where in a move a peak sits, come from the
+  quote's runs; what it pushed into from the book at the best price; what ended a move from the peak on the other
+  side; the rest (the resting orders' answer, what the price did after, the outside figures) is being read.
+- First read of the book's answer (stored files, told to him first; `BOOK_ANSWER_BY_PILE.json`): the orders at the
+  best price a 20-second peak pushed into, by the tick it became known. The peaks in between more often ate through
+  an order; the beginning and the end read alike; an order was pulled at about a quarter of the peaks in every
+  pile; size is almost never added back. Where the price stood at the end of the peak's story is about even three
+  ways in every pile. Claude's guess (orders that stand make an ending, orders that pull make a beginning) was not
+  borne out, and he was told so. Not yet read: the resting orders through each run of the quote.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

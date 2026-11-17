@@ -145,3 +145,46 @@ Read from the stored files in the session (told to Greg first); counts in `TWO_K
 - By pile (the quote it pushes into), peaks with no window that share their high with a 20-second peak, trade day
   Oct 2: in between 713 of 1,339; at the beginning 1,292 of 2,599; at the end 719 of 1,837; one-step moves 2,679 of
   5,792. The end pile shares least.
+
+## The story: what the peak tells, and what fills in the parts it cannot (Greg: "we don't have to pick winners. We just want the story")
+
+No kind of data is being chosen over another here. Each is asked which part of the story it tells.
+
+| Part of the story | What tells it | What the stored files showed tonight |
+|---|---|---|
+| Who was hitting, on which side, how much, and when it stopped or changed hands | THE PEAK (its side, its height, its tick) | This is the whole of what a peak holds. It is about the aggressor only. |
+| Whether the price moved, and how far | The quote's runs and `move_steps` | A peak has no price in it. The largest pile of peaks sits in moves of one step. |
+| Where in a move it is (beginning, middle, end) | The quote's runs, once the move has ended | At the time, two things lean one way or the other: the peak's height, and whether it pushes with the quote's last step or against it. |
+| What it was pushing into | The book at the best price (the rows) | The size at the best price differs by pile. Which side of the whole book is thinner does not. |
+| How the resting orders answered | `resting` (filled, pulled, stood), `refills`, `together` | First read below: it did not tell a beginning from an end. |
+| What ended the move | The peak on the OTHER side | At the end of a move of the quote the peak there is on the other side about three times in four. |
+| What the price did afterwards | `chain_peaks`, `move_steps` | First read below: about even three ways in every pile. |
+| Why then | The outside figures (`outside_changes`) | Not looked at yet. |
+| Native's dipole | `dipole_peaks` | The same in every pile: it did not help place a peak. |
+
+### The first read of the book's answer (counts in `BOOK_ANSWER_BY_PILE.json`)
+
+20-second peaks, each placed against the quote it pushes into; the orders at the best price it pushed into at
+its high, by the tick the peak became known. Trade day Oct 2 (the other three read the same way):
+
+| | In between | At the beginning | At the end | Whole one-step move |
+|---|---:|---:|---:|---:|
+| Peaks | 1,038 | 2,647 | 1,251 | 4,589 |
+| An order there was filled out | 733 | 1,522 | 716 | 3,029 |
+| An order there was pulled | 261 | 708 | 316 | 1,023 |
+| Every order still there | 195 | 813 | 373 | 1,058 |
+| Size added back to them | 7 | 28 | 12 | 35 |
+| Price at the end of the peak's story: further the peak's way | 344 | 735 | 372 | 1,229 |
+| back against the peak | 318 | 867 | 378 | 1,312 |
+| where it was | 376 | 1,044 | 501 | 2,048 |
+
+- The peaks in between more often ate through an order and less often left every order standing.
+- The beginning and the end read alike. Claude's guess (orders that stand make an ending, orders that pull away
+  make a beginning) is NOT borne out by this read: an order was pulled at about a quarter of the peaks in every
+  pile.
+- Size is almost never added back to those orders in that stretch.
+- Where the price stood when the peak's story ended is about even three ways in every pile.
+- Limits of this read: it uses the 20-second peaks (a quarter or more have highs on a tick with no trade); the
+  stretch from the high to the tick the peak became known is short; and the end of a peak's story is set by the
+  flow, not by the price. Not yet read: the resting orders through each run of the QUOTE (stored in `resting`),
+  which is the book's answer measured over the price move itself.
