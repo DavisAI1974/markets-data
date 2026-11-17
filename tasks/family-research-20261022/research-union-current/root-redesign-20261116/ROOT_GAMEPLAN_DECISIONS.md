@@ -2508,6 +2508,12 @@ there are descernabe groups, new groups, etc. Or if there isn't. He found it".**
   `8a24482rpz8vmw`. The four pieces before it had finished and their pods were already deleted, so this is its own
   launch. The pod addresses were swapped on the cloud environment's list (his approval card).
 
+**`move_steps` STORED and its four pods deleted (2026-11-17, about 09:43 UTC).** It passed its checks on all four
+trade days on the first run: 78,468; 84,596; 82,827 and 78,277 lines. Stored: `root-rows-20231002` `6037f23`,
+`-20231003` `33b3652`, `-20231017` `a76923a`, `-20231018` `8a6175f`, each `FILES.md` brought up to date. The account
+shows no pod. About 5 minutes at $1.28 an hour for the four. Handoff written as `NEXT_SESSION_HANDOFF_20261117M.md`;
+it drops the pointers to last week's strategy material that handoffs K and L carried.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
