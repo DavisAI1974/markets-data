@@ -2089,6 +2089,25 @@ calcs except when the book is concerned".**
   trade day Oct 16 (or for the Sunday start-up before Oct 2) is stored or used; only what falls inside trade days
   Oct 2 and Oct 17 is kept.
 
+**Run on the pods (tenth session, 2026-11-17 04:41 UTC on, four Compute-Optimized 32-CPU pods).** `quote_peaks`,
+`outside_changes` and `together` passed their checks on the first run on all four trade days and are stored on
+the `root-rows` branches. The trade legs of 6 pm to 8 pm on Oct 2 and Oct 17 were made by the old rule from 6 pm;
+the check passed (every old trade, 37,670 and 33,451, and every old leg after the first, 5,995 and 5,591, came out
+again; 457 and 252 trades before 8 pm) and they are stored. The six chain ways were started.
+
+**STOPPED by Greg (2026-11-17), on hearing nearest neighbours chose to blend 640 peaks: "No. We do not have
+predetermined time periods. We need to remove those. We let each individual event, instnce, trade or whatever
+decide thtose values on their own. ZERO WINDOWS. and we do not average anything to group the things or whatever.
+Eclach thing is its own tjing."**
+- The six ways were stopped mid-run and the four pods deleted; nothing from the ways was stored. All finished
+  work had been stored and pushed first.
+- What it means for the chain models: the three models average by their nature (nearest neighbours blends the
+  look-alike peaks, ridge fits one line through every peak, extra trees average within groups of peaks). That is
+  averaging to group things, against his rule. They are not run again as they are.
+- Zero windows: the only fixed time period in ROOT's own calculations is the 20-second flow behind the peaks, kept
+  earlier as his one exception (his words in "Seventh session"); not reopened here. Native's own record carries
+  fixed windows of its own design.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
