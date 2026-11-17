@@ -2730,19 +2730,36 @@ Greg passed on Desktop's first hand-over (`desktop-old-family-chain-on-clock-202
 you are using it and the outputs go into the excel sheets too". Put back to him: 13 minutes after it, `c2bb02b` put
 his own words at the top of that folder ("We don't need the old ut puts with the new data"; keep it out of the daily
 sheets and the workbook), and Desktop's later folder `desktop-peak-lives-on-clock-20261117/` (`2fcfbb1`, "Peaks are
-fine") is the live hand-over. His answers:
+fine") is the live hand-over. His answers (two of them, marked "picked", are options he chose, not words he typed):
 - **Old family and chain folder:** "Keep it accessible for definitions and run code and for reference. Doesn't have
   to be in the excel sheets if the new data is better and fuller." It stays where it is on this branch, unchanged,
   as the reference for how the 55-week run defined and grouped; each daily store's `FILES.md` points at it. Nothing
   of it is stored on the `root-rows` branches and it is never an input to a calculation.
-- **Peak lives:** "Yes, add to daily stores." Stored in a `desktop/` folder on each `root-rows` branch: the table and
+- **Peak lives:** picked "Yes, add to daily stores". Stored in a `desktop/` folder on each `root-rows` branch: the table and
   the render, byte for byte Desktop's (sha256 checked against its `MANIFEST.json` before and after the push), with
   a `FILES.md` section marking it Desktop-made, not a ROOT calculation (no receipt, recount or playback), its "what
   a life is" calls Greg's to correct. Branch tips: `root-rows-20231002` `07ff47c`, `-20231003` `261bf0a`, `-20231017`
   `9dc46c9`, `-20231018` `03946e5`. Lines 21,092 / 23,261 / 19,020 / 17,516, each kind equal to the stored counts.
-- **Excel:** "Workbook later." No Excel file written. The peak lives are a sheet to include when the full workbook
+- **Excel:** picked "Workbook later". No Excel file written. The peak lives are a sheet to include when the full workbook
   is written all at once.
 - **Branches:** his go to push to the four `root-rows` branches and this one.
+- **Greg's words in the two Desktop sessions** (copied as written from the two folders' READMEs, so they are in this
+  file): "Do you want to start looking at new family and chain data to see what it's showing us? New structures? New
+  groupijgs? But we want the data to guide us"; "Use the old famiky definitions of families and chain examples to build
+  the things using same timestamps as the renders you sent me."; "And if they don't add anything try something else and
+  if they do add, keep pulling on that string"; "And we don't associate peaks with anything other than the data but
+  they really should be pinned to the timestanp like price curve and dipole. They happen at certain times and for
+  certain reasons. I don't think groupling applies at all to them"; "If calculations happen over a time period the
+  sensible thing is to pin them to timestamps rignt?" (answered yes); "I was trying to explain to you to use the same
+  process and procedure as we used on the 55 we run and apply those to the new run. We don't need the old ut puts with
+  the new data, but we want to know how they were defined and grouped"; "And let's get away from defined windows a d see
+  how long or short these groups and families actually last and where their true begininngs and ends are pinned to the
+  timestamps"; "Peaks are fine".
+- Standing from them (Desktop's reading, Greg's to correct): the peaks are their own layer on the clock, like price
+  and the dipole; no peak is put in a group. A calculation over a stretch of time carries three stamps: the tick it is
+  about, the stretch it read, and the tick its answer became known. The family step (the 55-week process run fresh on
+  these lives: shape over each life's own length, identical shapes counted once, splits 2 to 8 ways all reported, one
+  trade day left out) is NOT started; how a life's shape is described is put to Greg before it is built.
 
 ## Held for the later stage: figuring out what moves the market
 

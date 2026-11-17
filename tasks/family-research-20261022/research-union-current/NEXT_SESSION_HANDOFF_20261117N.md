@@ -134,3 +134,15 @@ fifteen candidates, the selected cases and their results. Handoffs K and L point
 Native's record is built on predetermined windows (a 20-second roll, a level set from 85 in 100 seconds, 60-second
 horizons, and, found this session, a 45-second spacing and a 50-second wait before a dipole is made known), which
 his "no predetermined windows" rule does not allow for our own work. He chose to keep Native as it was made for now.
+
+## Added after the close (2026-11-17, a code session): Desktop's peak lives in the daily stores
+
+- The `root-rows` tips moved: `root-rows-20231002` `07ff47c`, `-20231003` `261bf0a`, `-20231017` `9dc46c9`,
+  `-20231018` `03946e5` (each one commit after the tips named above). Each holds a new `desktop/` folder: Desktop's
+  peak lives (`peak-lives-<trade day>.parquet`, `peak_lives_<trade day>.png`), not a ROOT calculation. Each
+  `FILES.md` carries a "DESKTOP'S ADDITION" section and two table rows for them: keep both when `FILES.md` is
+  written again.
+- Item 11 (the full workbooks): include a sheet of the peak lives (Greg: "Workbook later").
+- Desktop's old family and chain folder (`desktop-old-family-chain-on-clock-20261117/`) stays on this branch as the
+  reference for how the 55-week run defined and grouped; it does not go into the daily stores or the workbook.
+- Greg's answers and Desktop's quoted words: the decisions file, the entry "Desktop's two hand-overs taken in".
