@@ -2413,6 +2413,44 @@ right for three of the four trade days. The Bedrock table is the lifecycle ledge
 Open, his: where Oct 18's full ledger is (or whether it is made); the missing two hours on Oct 2 and Oct 17 (already
 listed); which other sections, if any, are laid beside the rows. AWS is not needed for any of it.
 
+**The four Step 2 pieces STORED and the four pods deleted (2026-11-17, about 09:30 UTC).** Every check passed on all
+four trade days; every file was fetched and matched its receipt. Stored: `root-rows-20231002` `d7d1c15`, `-20231003`
+`8a544ea`, `-20231017` `90dce0f`, `-20231018` `8c77859`, each with `FILES.md` brought up to date. The account shows
+no pod. About 12 minutes at $1.28 an hour for the four.
+- `leg_peaks`: 6,119; 6,907; 5,660 and 5,120 legs counted from 6 pm. Every earlier trade and every earlier leg
+  compared came out again (on Oct 2 and Oct 17 the earlier record starts at 8 pm; the leg numbers differ by 123 and
+  68).
+- `resting`: 110,284; 123,234; 107,256 and 97,090 lines. The orders resting since before the trade day and never
+  touched in it came out as the same number and size at every earlier turn on each trade day. Fills of an order
+  with another ahead of it in our line: 2,909; 3,312; 2,155 and 1,960 lines (the counts found in the ninth
+  session), every one naming every order ahead.
+- `turn_peaks`: peaks with no window: 11,567; 12,684; 10,401 and 9,549, beside the 20-second peaks (9,525; 10,577;
+  8,619; 7,967). Moves that made no step after the peak's high, of the moves that ended, 20-second peaks, trade
+  leg / run of the best bid / run of the best ask: Oct 2 5,768 / 5,663 / 5,545 of 9,525; Oct 3 6,638 / 6,410 /
+  6,534 of 10,577; Oct 17 5,006 / 4,847 / 4,915 of 8,619; Oct 18 4,591 / 4,690 / 4,622 of about 7,966. Peaks with
+  no window: Oct 2 7,257 / 7,283 / 7,105 of 11,567; Oct 3 8,372 / 8,064 / 8,253 of 12,684; Oct 17 6,377 / 6,171 /
+  6,186 of 10,401; Oct 18 5,857 / 5,759 / 5,711 of about 9,548. NOT yet a finding: what the same count is for
+  any tick (not only a peak's high) has not been worked out, and without it these counts do not say whether the
+  peaks sit at the turns.
+- `dipole_peaks`: 741, 833, 741 and 863 dipoles, every recognized and every closing line placed (none left out
+  after the fix).
+
+**DECIDED (Greg, 2026-11-17), on the strategies: "Don't use any of your finding from last week. You might try the
+same ideas but don't use any of the findings. That handoff was just to remind you of the job"; then "You are going
+to habe to start at the beginning with this. Actually completely delete whatever you did last week when you dtarted
+so it doesn't get mixed in with good data"; then "Delete all info that was used. I thought we dumped all the bad
+inpits and outputs from last week already?"**
+- The strategy versions start from the beginning, from what is stored now for the four trade days. Nothing of last
+  week's findings (evidence, numbers, selected cases, results, the review, the fifteen candidates) is used. The
+  list of fifteen laid out to him earlier in this session was last week's candidates written again as tape events;
+  it is withdrawn and was never written to code or to git.
+- Done at once: this session's copies of last week's handoff, review and fifteen-strategies file were deleted.
+- Found (a read): the working data branch `ccr-349e2ffe-07p8od` no longer holds last week's strategy material. The
+  `main` branch still holds `tasks/family-research-20261022/claude-independent-research-20261113/` and
+  `research-union-current/codex-review-and-gaps-20261113/`. What is deleted from `main` is put to him as an exact
+  list first (it is his default branch, and that folder also holds the earlier trade-leg record the checks of
+  `trade_legs` and `leg_peaks` were proved against).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
