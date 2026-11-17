@@ -205,3 +205,30 @@ Read from the stored files in the session (told to Greg first); counts in `DIPOL
   stretch makes the 20-second flow fully one-sided.
 - So the part of Native's dipole record that is a real event on the tape is, as far as read, the exhaustion peak
   whose flow is fully one-sided. Whether it does the dipole dive is what the renders are for.
+
+## SAVED FOR THE NEXT SESSION: the stacked pair of graphs (Greg, 2026-11-17)
+
+His words: "we should have 2 graphs stacked on top and bottom of each other for the dipoles and trades that are
+associated with each other with the x axis being the timestamps and the y axis being price for one graph that has
+the the line for that ones trade and the other grapd being the dipole line as it moves up and down. I wonder if
+there are changes that happen at the same time ir very close and they might be in different directions which
+doesn't matter. It's the movement thay matters". Then: "Save rhat for next session".
+
+What it asks for:
+- One picture for each dipole and the trade associated with it. Two graphs, one above the other, on the SAME
+  time axis (the real timestamps).
+- Top graph: price, with the line for that trade.
+- Bottom graph: the dipole line as it moves up and down.
+- The question: do the two change at the same moment, or very close to it? Direction does not matter (they may
+  move opposite ways). What matters is that they MOVE together.
+
+To settle with him before it is built (not decided here):
+- Which "trade" goes with a dipole: the trade leg under way, the run of the quote, or the run of trades on one
+  side.
+- What "the dipole line" is drawn from: our own 20-second flow lean, the flow with no window, or Native's own
+  per-second flow lines (stored in its ledger, not read yet).
+- How "at the same time or very close" is counted without choosing a span of time. One way with no window: for
+  every tick where the dipole line changes, the number of ticks to the nearest tick where the price line changes,
+  each change on its own line.
+The dipole renders made on 2026-11-17 (`renders/dipole-render-*.png` on each `root-rows` branch) already stack the
+price above the flow lean on one clock; this idea is the sharper version, built around the moments of change.
