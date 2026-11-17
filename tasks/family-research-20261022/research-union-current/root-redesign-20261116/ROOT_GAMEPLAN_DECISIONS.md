@@ -2027,6 +2027,36 @@ session does not start long builds first") is withdrawn. What stands:
 - **Then the first strategy versions,** as the paper-trade barometer, the way it was done last week.
 - A piece is not begun unless it can be carried through to its stored output in that chat.
 
+## Tenth session (2026-11-17, in a code session, on Opus with the Fable advisor)
+
+Started from `NEXT_SESSION_HANDOFF_20261116J.md`. Code: Markets branch `claude/loving-hawking-pwxr2c` (the session's
+own), with the ROOT branch `ccr-d9ae98a9-65go6q` (`a6a7861`) merged in first. One conflict, in `CLAUDE.md`: the ROOT
+side was kept in both places (the newer wording of the two-gates rule, and the rule that bad or incomplete data
+that will not be used is not saved). The merged tree is the ROOT tip's tree exactly. Nothing went to the trunk.
+
+**Greg's order for this chat, at its start (standing for it).** 1. Finish what was started, to its stored output:
+the three calculations written and not run (`quote_peaks`, `outside_changes`, `together`) run on the pods, checked
+and stored; the chain link models taken as far as they go in the six ways, built, run, stored side by side and
+read out. 2. Then the first strategy versions as a paper-trade barometer, following the handoff Codex made on
+Friday 2026-11-13 (`claude-independent-research-20261113/HANDOFF.md` and `REVIEW_AND_GAPS.md` on markets-data
+`main`); where it and tonight's rules differ, tonight's rules win and he is told where. 3. No further piece begun
+unless it can be carried to its stored output in this chat. Standing rules restated: trade day 6 pm to 5 pm
+Eastern; only the four trade days enter a calculation; rows are ticks; empty is never zero; every trade
+individually; no fixed marks, caps, labels or groups until all four trade days have run all their calcs; valid data
+never discarded, old and new kept side by side; very light on tests, never the tests folder; runs on pods, all four
+trade days at once, helpers pinned; nothing run in the session without telling him; no pod without his go with the
+price; everything a pod makes stored in markets-data before the pod is deleted; gross; leakage gate first; each
+trade day paper traded by versions formed on the other three; never invent data; AWS off limits.
+
+**REORDERED by Greg (2026-11-17, early in the session): "Finish the build and computes on what we have already
+started and fill in the the missing 2 hr data first before we do any strategy work".** What stands:
+- First: finish the started builds and runs (the three calculations; the chain link models in the six ways).
+- Second: the missing two hours, 6 pm to 8 pm Eastern of trade days Oct 2 and Oct 17, for the trade legs and
+  Native's dipole record, made and stored. Read as (his to correct): "fill in" means made and stored beside the
+  existing records; placing them beside the peaks (pieces D and the print legs of I) follows.
+- Only then the strategy work.
+- The resting orders through a peak (K) stays unstarted.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
