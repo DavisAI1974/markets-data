@@ -284,3 +284,11 @@ as trades alternate between bid and ask (use the quote); the page title is cut o
 - Everything in this file was read from all four trade days. A strategy version has to be formed blind to the trade
   day it is traded on. How the next session can read these notes and still keep that is Greg's call (see the
   handoff).
+
+## Greg, at the close (2026-11-17)
+
+- "I don't want to do the lines laid over initially. We might but not first." The three-tier picture is three
+  SEPARATE graphs first. Lines laid over each other may come later; they are not the first thing built.
+- "You might see some other additions to excel that desktop contributes." Desktop may add sheets or columns to the
+  Excel files on the data branch. Fetch before touching them, expect its additions, and never write over them. If
+  `ROOT_dipoles_pinned.xlsx` is written again, Desktop's sheets are kept.

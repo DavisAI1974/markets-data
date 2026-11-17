@@ -2720,6 +2720,11 @@ matched its receipt; the pin's check passed on all four trade days. Stored in `r
 - Greg: "Save for next session. Reprint updated drop in and update hand off. After you do that I'm stopping for a
   while." Handoff `NEXT_SESSION_HANDOFF_20261117N.md` made final; the drop-in reprinted to him.
 
+**Greg, at the close of the eleventh session (2026-11-17): "I don't want to donthe lines laid over initially. Ee might
+but not first"; "You might see some other additions that to excel that desktop contributes."** The three-tier
+picture is three separate graphs first; overlays may come later. Desktop may add to the Excel files on the data
+branch: fetch first, expect its additions, never write over them. In the notes and in handoff N.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

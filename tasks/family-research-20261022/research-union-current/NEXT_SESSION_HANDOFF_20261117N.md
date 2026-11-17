@@ -65,6 +65,8 @@ fifteen candidates, the selected cases and their results. Handoffs K and L point
    him first are in the notes file, last section. KEEP the 20-second flow and everything made on it; ADD the version
    made at the tick beside it. One picture, three separate graphs on one time axis of real timestamps: price, dipole,
    exhaustion. The first renders (stored in each `root-rows` branch's `renders/`) were too crowded for him to read.
+   Greg at the close: "I don't want to do the lines laid over initially. We might but not first." Three SEPARATE
+   graphs first; overlays later, if at all.
    What stands on the 20-second window is listed in the decisions file (twelve of seventeen calculations).
 2. **Greg's saved idea: the stacked pair of graphs** (his words are in the notes file, "SAVED FOR THE NEXT
    SESSION"). For each dipole and the trade that goes with it: price on top, the dipole line below, one time axis
@@ -118,6 +120,9 @@ fifteen candidates, the selected cases and their results. Handoffs K and L point
 - The four pod addresses of the last launch are dead and still on the "Markets" cloud environment's list
   (`v77rqljqv0s9hb`, `vmczelc3kybrzv`, `f3g6yj2owboz01`, `g5cpkm35bkwrst`, each `-8000.proxy.runpod.net`). Take them
   off when the next four are added (one approval card).
+- **Desktop may add to the Excel files** (Greg: "You might see some other additions to excel that desktop
+  contributes"). Fetch first, expect its sheets or columns, never write over them. `root.pinned_excel` writes a whole
+  new file: if it is run again, Desktop's additions must be carried into the new file, not lost.
 - `ROOT_dipoles_pinned.xlsx` is written by `python3 -m root.pinned_excel <out.xlsx> <folder holding rows-<trade
   day>/> <peak research folder>` (Markets `b1ed5bf`); it reads the stored tables in each branch's `renders/` and
   reads its own values back. Its links open the pictures on GitHub.
