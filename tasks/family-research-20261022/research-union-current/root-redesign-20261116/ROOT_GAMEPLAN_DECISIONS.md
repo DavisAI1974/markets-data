@@ -2539,6 +2539,25 @@ stored ... they could be different things".**
   mapping steps in that repo's instructions. Told to him: the pipeline is built on sliding windows and on pooling
   windows into one matrix, which his rules for this work do not allow unless he asks for it by name. Nothing was run.
 
+**Greg, 2026-11-17: "You have to look in that repo"; and "when we have the peaks associated with each other that way.
+Do any similarities in the peak sizes or shapes apr durations start to stand out?"**
+- THE FIVE-STEP PROCESS, found (all branches of `DavisAI1974/Basic_equations` searched; nothing run). It is named
+  in `level2_four_sciences.py`, lines 10 to 20: "the SAME five-step process that found Level 1" (the information
+  dipole). In general terms: 1. pick an observable class built from information (at Level 1 the entropy of each
+  stream and the mutual information between them); 2. treat those observables as state variables that change over
+  time; 3. build an operator library from them (H_i, H_j, their squares, their product, MI, a constant); 4. solve
+  the rate of change against the library, per pair and per science; 5. look for the same opposing-sign structure
+  everywhere (the self term against the cross term). It has been run on four simulated sciences, DNA, markets,
+  ECG and LIGO. It needs at least two coupled streams. As written it uses sliding windows (the Level 2 balance:
+  window 30, stride 4; DNA: window 120) and takes entropies across many simulated runs at each time step. Told to
+  Greg: on this tape a window is his to allow, and how entropies are taken with one tape and no ensemble is a call
+  to put to him before anything is written.
+- SIZES AND SHAPES BY PILE (a read of stored files, told to him first; in the research folder's README): SIZE
+  stands out on all four trade days: the peaks with no window that sit in the middle or at the beginning of a move
+  of the quote are the larger runs (about half are 6 lots or more); those at the end and in one-step moves are
+  smaller and more often a single trade. SHAPE does not: how a 20-second peak's story ended reads about the same in
+  every pile. Clock durations were not compared pile against pile (needs time buckets or a middle value).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

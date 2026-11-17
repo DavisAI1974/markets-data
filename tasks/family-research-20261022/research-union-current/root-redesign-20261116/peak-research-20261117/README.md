@@ -58,3 +58,32 @@ beginning 2,847 (1,770 with); at the end 1,846 (450 with); the whole move 5,437 
 - A peak on the other side at the end of a move is partly built in too: selling into the bid is what stops the
   bid's rise.
 - No test of chance was made. These are counts.
+
+## Sizes and shapes inside each pile (Greg: "Do any similarities in the peak sizes or shapes or durations start to stand out?")
+
+Read from the stored files in the session (told to Greg first). Place is taken against the run of the best bid.
+Only the tape's own whole numbers and words are compared; clock durations were not compared pile against pile,
+because that needs time buckets or a middle value.
+
+Peaks with no window: how many of the pile are runs of 6 lots or more, and how many are runs of a single trade.
+
+| Trade day | In between | At the beginning | At the end | Whole one-step move |
+|---|---|---|---|---|
+| Oct 2, 6 lots or more | 694 of 1,437 | 1,327 of 2,847 | 654 of 1,846 | 1,652 of 5,437 |
+| Oct 3, 6 lots or more | 696 of 1,364 | 1,515 of 3,256 | 645 of 1,850 | 1,874 of 6,214 |
+| Oct 17, 6 lots or more | 665 of 1,355 | 1,252 of 2,875 | 585 of 1,763 | 1,245 of 4,408 |
+| Oct 18, 6 lots or more | 657 of 1,290 | 1,049 of 2,496 | 468 of 1,579 | 1,139 of 4,180 |
+| Oct 2, a single trade | 460 of 1,437 | 871 of 2,847 | 717 of 1,846 | 2,103 of 5,437 |
+| Oct 3, a single trade | 431 of 1,364 | 1,076 of 3,256 | 749 of 1,850 | 2,436 of 6,214 |
+| Oct 17, a single trade | 430 of 1,355 | 951 of 2,875 | 746 of 1,763 | 1,798 of 4,408 |
+| Oct 18, a single trade | 396 of 1,290 | 830 of 2,496 | 732 of 1,579 | 1,740 of 4,180 |
+
+- SIZE stands out, the same way on all four trade days: the peaks in the middle or at the beginning of a move of
+  the quote are the larger runs (about half are 6 lots or more); the peaks at the end of a move and in one-step
+  moves are smaller (about a third or less are 6 lots or more) and more often a single trade. Partly built in: a
+  long run of trades on one side lasts through more steps.
+- SHAPE, as far as the 20-second peaks' stories go, does NOT stand out: how the story ended (came back, or beaten)
+  reads about the same in every pile (trade day Oct 2, came back: 664 of 1,090 in between; 1,758 of 2,772 at the
+  beginning; 795 of 1,206 at the end; 2,728 of 4,457 whole one-step moves). The peaks in between make a few more
+  new lows (4 or more: 403 of 1,090 against 366 of 1,206 at the end).
+- Durations: not compared (see above).
