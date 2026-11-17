@@ -2057,6 +2057,18 @@ started and fill in the the missing 2 hr data first before we do any strategy wo
 - Only then the strategy work.
 - The resting orders through a peak (K) stays unstarted.
 
+**What was found on the old trade legs program (tenth session), and Greg's answer.** The 23,615 old legs were
+made by markets-data GitHub run 42571551209 (workflow `ng-combined-events.yml`, Markets `43e4d2bd`,
+`agent-pass/replication/event_chronology.py`), which loads the two rule functions (`price_stretches`, `print_legs`)
+from Markets `0408df44` `continue_trade_chronology.py`. Its trade list came from an earlier stage (run 42569937357,
+Markets `5f694cf7` `combined_event_sources.py`), which reads Native's saved grouped stream and raw cache; those
+start at 8 pm Eastern on trade days Oct 2 and Oct 17. And `event_common.py` sets the start by hand: 8 pm Eastern
+(00:00 UTC) for Oct 2 and Oct 17, 6 pm for Oct 3 and Oct 18. So as it stands it cannot make the two hours.
+**DECIDED (Greg, 2026-11-17): "Then change it. It's something we made and we can change it. It's not a gate we
+can't get around. Finish the data".** Our own programs are changed where they stop at 8 pm, so the missing two
+hours are made by the same rule. Valid old values are still kept; where an old value and a new one both exist,
+both are kept side by side.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
