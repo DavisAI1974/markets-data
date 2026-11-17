@@ -2299,6 +2299,15 @@ those orher things you mentioned".** This holds the go for four more pods given 
   versions. No code was written for them in this session.
 - A new pod needs his go again at the time, with the price.
 
+**GO, then STOPPED for the night (Greg, 2026-11-17): "I reset the usage so we're good"; "Run the 3 calcs on the
+pods. Let's gwt this done"; then "Actually let's stop for the night. Make a note of where we're stopping so i can
+refresh my memory later and kill the pods. We'll pick up from here later".**
+- Stopped while reading the inputs of the three remaining Step 2 calculations (the old trade legs; Native's stored
+  record). No code was written for them, nothing was run, no pod was started.
+- No pod exists; the account was checked at the stop and shows none. Everything made is stored and pushed.
+- His go for the pods does not carry over: a pod needs his go again at the time, with the price.
+- Where we stopped, and what was learned about Native's stored record, is in `NEXT_SESSION_HANDOFF_20261117L.md`.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
