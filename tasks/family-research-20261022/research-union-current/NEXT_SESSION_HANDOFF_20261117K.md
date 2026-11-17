@@ -20,6 +20,12 @@ writes to the same branch: fetch before every push.
   (the rows now carry 323 outside columns; `peak_standing_so_far` is gone; the other calculations' outputs stand,
   made beside the earlier rows, whose tape, book and trade columns are unchanged), commit, push, confirm, THEN delete
   the pods with the Runpod MCP (load `runpod:runpod-mcp` first) and check the account shows none.
+- **Greg's rule for the peaks (2026-11-17): "Of the peaks come out differently, then we keep old values and just
+  delete column from stored avalues".** Before storing the new `calc-flow_peak-*` files, compare every one of their
+  columns, row by row, with the stored ones (all columns except `peak_standing_so_far`). If all are equal, store the
+  new files. If ANY value differs: do not store the new `flow_peak` output; keep the old stored files and only delete
+  the `peak_standing_so_far` column from them (rewrite each part without that column, everything else byte-for-value
+  the same), and say so in `FILES.md`. Either way tell Greg which happened.
 - `playback-<trade day>.json` on each branch was made on the first build; not run again (no tests except on changed
   pieces). Say so in `FILES.md`.
 - Then write the short-stretch workbook again from the rebuilt rows (`python3 -m root.sheet 20231002 --rows ... --out

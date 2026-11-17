@@ -2224,6 +2224,10 @@ again only to drop the ranked column, every peak unchanged. The rebuild launched
 $0.32 an hour each, $1.28 for the four, 05:34 UTC, Markets `e083757`). Handoff written as
 `NEXT_SESSION_HANDOFF_20261117K.md`.
 
+**DECIDED (Greg, 2026-11-17): "Of the peaks come out differently, then we keep old values and just delete column
+from stored avalues".** The new `flow_peak` output is stored only if every value except the removed column equals the
+stored one; otherwise the old stored values are kept and only the `peak_standing_so_far` column is deleted from them.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
