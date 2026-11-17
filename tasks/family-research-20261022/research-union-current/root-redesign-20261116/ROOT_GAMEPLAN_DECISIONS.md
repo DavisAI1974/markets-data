@@ -2395,6 +2395,24 @@ wrong reason. Both the forward pass and its second method made the same mistake,
 in the counts (863 recognized, 843 closed). Fixed: at one instant the recognized line goes first. Only that piece
 was run again, on the same four pods (no pod restarted); the first output is not stored.
 
+**Greg, 2026-11-17, on the Bedrock calcs: "I know they haven't been yet but we ran them without aws. They 4 days
+might already have the table built. We don't need aws to do them".** Looked for (a read; nothing run), and he was
+right for three of the four trade days. The Bedrock table is the lifecycle ledger the Bedrock stage wrote
+(`work/bedrock/.../ledgers/exact_lifecycle_rows.jsonl`), stored whole on markets-data branches
+`codex/frankie-lifecycle-recovery-<date>-42621496819`, folder
+`tasks/family-research-20261022/frankie-four-day-pins/native-lifecycle-42621496819-1/<date>/`:
+- Oct 2: 5,289,814 lines, 12 sections; starts 8 pm Eastern (the first two hours of the trade day are missing).
+- Oct 3: 5,773,925 lines, 13 sections; the whole trade day.
+- Oct 17: 5,580,240 lines, 13 sections; starts 8 pm Eastern.
+- Oct 18: NO such branch was found. Only its episode lines exist (1,726 lines, an older run; Markets `3d0b06aa`).
+- Sections: recurrence, mirror, ladder, absorption, replenishment, queue, flow_substrate (the flow by second),
+  candidate, episode, response, lineage, detector_coverage (and exhaustion on Oct 3 and Oct 17). Each receipt says
+  the retained ledger is complete and "all layers" is not; which layers that means has not been read yet.
+- ROOT uses one section so far: the episode lines, in `dipole_peaks`. The others are stored and not laid beside the
+  rows.
+Open, his: where Oct 18's full ledger is (or whether it is made); the missing two hours on Oct 2 and Oct 17 (already
+listed); which other sections, if any, are laid beside the rows. AWS is not needed for any of it.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
