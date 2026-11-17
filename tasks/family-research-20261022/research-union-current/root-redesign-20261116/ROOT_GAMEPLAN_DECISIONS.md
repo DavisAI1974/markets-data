@@ -2279,6 +2279,11 @@ his decision of 2026-11-16 (seventh session) the workbook is written once, at th
 columns exist, in parts. Every calculation is stored as its own files beside the rows. Order from here: the three
 remaining Step 2 calculations and Native's two hours; then the full workbooks; then he shows the earlier discovery.
 
+**DECIDED (Greg, 2026-11-17): "Just keep the daily sheets updated and we'll do the workbook all at once at a slow
+time".** Read as (his to correct): each trade day's stored files on its `root-rows` branch (the rows, every
+calculation's output, `FILES.md`) are kept up to date as each calculation lands; the Excel workbook is written all
+at once later, at a slow time, and nothing waits on it. The short stretch stays as the only Excel file until then.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
