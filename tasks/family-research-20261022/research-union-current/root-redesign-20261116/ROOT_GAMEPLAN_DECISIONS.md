@@ -2703,6 +2703,23 @@ pinning and comparing to nano timed things".**
   dipole; the exhaustion. Three separate graphs, not lines laid over each other.
 - For the next session. Not built in this one.
 
+**The pin and the renders STORED, the four pods deleted (2026-11-17, about 11:05 UTC).** Every file was fetched and
+matched its receipt; the pin's check passed on all four trade days. Stored in `renders/` on `root-rows-20231002`
+`97acb1c` (982 files), `-20231003` `a16fc8f` (1,100), `-20231017` `35bea61` (959), `-20231018` `4f47994` (1,065); each
+`FILES.md` brought up to date. Dipoles pinned: 741, 833, 741, 863. Exhaustion peaks drawn: 9,525; 10,577; 8,619;
+7,967, on 239, 265, 216 and 200 pages. The account shows no pod.
+- A slip, owned: the pod runner pins a job to one CPU, so the first drawing ran on one CPU of eight. It was stopped
+  and run again on the same pods with the drawing spread over all eight (Markets `f4385cd`). One fetch was cut by
+  a dropped connection; nothing of it was kept, a retry was added to the fetch (Markets `c7b874b`) and it was
+  fetched again.
+- Greg, on being shown five of the pictures: "Should we save these alongside the excel sheets". Done as:
+  the pictures on each trade day's branch, and `root-redesign-20261116/ROOT_dipoles_pinned.xlsx` beside the short
+  stretch, with a sheet of dipoles and a sheet of exhaustion peaks for each trade day, every row linked to its
+  picture on GitHub. Read back equal to the stored tables (a decimal can differ in its sixteenth digit; Excel keeps
+  about fifteen).
+- Greg: "Save for next session. Reprint updated drop in and update hand off. After you do that I'm stopping for a
+  while." Handoff `NEXT_SESSION_HANDOFF_20261117N.md` made final; the drop-in reprinted to him.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

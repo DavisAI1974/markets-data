@@ -18,15 +18,10 @@ fifteen candidates, the selected cases and their results. Handoffs K and L point
 
 ## Where things stand
 
-- **NOT FINAL YET (10:38 UTC): four pods are still drawing the renders** (Oct 2 `v77rqljqv0s9hb`, Oct 3
-  `vmczelc3kybrzv`, Oct 17 `f3g6yj2owboz01`, Oct 18 `g5cpkm35bkwrst`; $1.28 an hour for the four; Markets `f4385cd`, job
-  `calc:renders`). Their output is fetched with `python3 -m root.pod_fetch <pod address> <trade day>
-  f4385cda0fc070906ad93f6ea301f141fe401200 --into <rows clone>/renders renders`, stored, then the pods deleted. This
-  line is replaced when that is done. Until then the `renders/` folders and `ROOT_dipoles_pinned.xlsx` named below
-  do not exist yet, and the rows branches are at the tips given here.
-- Code: Markets branch `ccr-3096f7d6-fst7al`, tip `f4385cd` (nothing on the trunk).
-- Stored rows and outputs: `root-rows-20231002` `6037f23`, `-20231003` `33b3652`, `-20231017` `a76923a`, `-20231018`
-  `8a6175f`. Each branch's `FILES.md` lists and explains every file. Clone each shallow; never fetch old branches
+- **No pod exists. Nothing is running. Nothing is billing.** Everything made is stored and pushed.
+- Code: Markets branch `ccr-3096f7d6-fst7al`, tip `c7b874b` (nothing on the trunk).
+- Stored rows and outputs: `root-rows-20231002` `97acb1c`, `-20231003` `a16fc8f`, `-20231017` `35bea61`, `-20231018`
+  `4f47994`. Each branch's `FILES.md` lists and explains every file. Clone each shallow; never fetch old branches
   whole. The renders are in each branch's `renders/` folder (about 100 MB a trade day).
 - Every Step 1 and Step 2 calculation that was laid out is run and stored for all four trade days.
 
@@ -38,6 +33,8 @@ fifteen candidates, the selected cases and their results. Handoffs K and L point
    seconds on our tape (`dipoles-pinned-<trade day>.parquet`, and all four as `ROOT_dipoles_pinned.xlsx` in
    `root-redesign-20261116/`), one picture per dipole, and every exhaustion peak drawn as its own small panel on
    pages, with an index naming each peak's page and panel.
+   `ROOT_dipoles_pinned.xlsx` has a sheet of dipoles and a sheet of exhaustion peaks for each trade day; every row
+   links to its picture on GitHub (Greg: save the pictures alongside the Excel sheets). About 4,100 pictures in all.
 4. The peak research folder (`peak-research-20261117/`): every peak placed in the move under way, and the reads.
 
 ## What the research showed, in short (each trade day on its own; details and counts in the notes file)
