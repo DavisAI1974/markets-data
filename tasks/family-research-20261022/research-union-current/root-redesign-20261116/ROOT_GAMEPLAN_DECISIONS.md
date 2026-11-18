@@ -3480,6 +3480,19 @@ data it's going to replace while it's running and don't touch any n r w fata unt
   one trade, because a trade leg usually turns on a trade from the other side, which also ends the run. The
   dipole's stretches are longer by build: the dipole only changes side when the new run outgrows the one before.
 
+**GO (Greg, 2026-11-18, fourteenth session): "Go on the four graph picture"; then, while it ran: "w`need to get the
+individual trade renders. we decided tjhat the full day doesn't really tell us much when done on one render".**
+- DRAWN AND STORED (Markets `e8cd626`, `root/four_graphs.py`; one pod, `tl81ci5shyg9l4`, 09:06 to 09:10 UTC, about
+  2 cents, deleted, the account read: none): the stretch of the twelfth session on trade day Oct 17 as four
+  separate graphs on one clock (trade price curve, dipole at the tick, exhaustion at the tick, the 20-second
+  exhaustion line), its edges set by the data. Two pictures, sent to him: 11:58:20.551 to 11:59:09.742 Eastern
+  (178 trades) and to 12:07:04.664 (625 trades). `root-rows-20231017` `b2af4e2`, folder `four-graphs/`.
+- INDIVIDUAL TRADE RENDERS ARE NEXT, his word. No render of a whole trade day. Put to him once, because the count
+  and the size differ by a hundred times and the unit is his: a picture for every single print is 143,979
+  pictures, most of them repeats of each other (many prints sit inside one event). Claude's call, stated: one
+  picture per TRADE LEG (the trade price curve cut into its own moves), trade day Oct 17 first (5,660), then the
+  other three on his go. Nothing is drawn until his go.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
