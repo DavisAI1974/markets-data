@@ -443,3 +443,14 @@ nano versoons of them all".
 - Next: his word on the three as drawn; then the dipole at the tick laid out as a calculation for his yes, and
   the pictures for all four trade days on pods (one launch, the price put to him at the time).
 
+## 2026-11-18: the dipoles born on a trade leg's first trade (Greg: "Let's start there")
+
+- Trade day Oct 17: 267 recorded dipoles were born with a trade in their birth second; for 90 of them that second
+  holds the FIRST trade of a trade leg. Not yet set beside "any second with a trade", and not yet counted on the
+  other three trade days.
+- The first two in time order were drawn as the stacked pair (trade leg's price above, the dipole at the tick
+  below): born 20:28:01 (trade leg 79, up, 1 step, 110.9 s) and 20:46:56 Eastern (trade leg 85, up, 2 steps,
+  261.7 s). Both are evening, thin tape, one trade in the birth second.
+- The recorded dipole only says where to look (a mark). The line drawn is the dipole at the tick.
+- To do on his word: all 90 of trade day Oct 17 and the same on the other three trade days (pods, one launch).
+

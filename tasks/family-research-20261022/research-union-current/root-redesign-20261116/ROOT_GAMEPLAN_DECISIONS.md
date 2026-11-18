@@ -2981,6 +2981,28 @@ price drawn as a smooth curve.
 - Read as the trade price curve (the top graph). If he meant the stored trade legs (each leg from its first
   print to its last), that is a different line and is drawn on his word.
 
+**Greg (2026-11-18): "We have a lpt of trade legs that line up exactly with dipoles. You said it last night. Let's
+start there and just print those 2 dipoles"; then "That info was in the previous sessions. Maybe only 1 or 2 or 3
+back".**
+- Looked for in the records (this file, handoffs I to N, the notes, the research folder). What is recorded, from
+  the eleventh session: the dipoles born WITH a trade in their birth second (288, 335, 267, 315 on the four trade
+  days) agree with our tape, and about nine in ten are the same event as an exhaustion peak. Nothing in the
+  records counts dipoles against TRADE LEGS. Read as: those are the ones he means; the count against trade legs
+  was made now.
+- Counted (a read of stored files of trade day Oct 17, told to him first): of the 267 dipoles born with a trade,
+  90 have the FIRST trade of a trade leg inside their birth second (87 have a "leg started" line there, 87 a "leg
+  ended" line, 79 a "new furthest price" line). Not compared with any second that holds a trade, so by itself it
+  does not say the dipoles pick out leg starts. The other three trade days are not counted yet.
+- Printed and sent (in the session, nothing stored): the first two of those 90 in time order, taken by position
+  and not by what happened (born 20:28:01 and 20:46:56 Eastern, trade legs 79 and 85). Each as the stacked pair
+  he saved on 2026-11-17: the trade leg's price curve above (every trade a dot, drawn smooth through them, the
+  leg's own life shaded), the dipole at the tick below (the run of trades under way against the run before it),
+  one axis of real timestamps. The picture runs from the first trade of the leg before to the last trade of the
+  leg after, so no span of time is chosen.
+- The recorded dipole (Native's) is used ONLY to say where to look and is drawn as a mark (the second it was
+  born). It is made on the 20-second window and enters no calculation. The line in the lower graph is the dipole
+  at the tick, not Native's.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
