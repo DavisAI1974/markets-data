@@ -37,7 +37,7 @@ What that means, plainly:
 
 ## Where things stand
 
-- **No pod was started this session.** The account read at its start showed none. Nothing is running or billing.
+- **No pod was started this session.** The account was read again at the close (the pod list): it shows none.
 - Code: Markets branch `claude/wizardly-fermi-0s9nlb` = `ccr-3096f7d6-fst7al` = `b1ed5bf` (brought in by
   fast-forward; no code was changed this session; nothing on the trunk).
 - Stored rows and outputs: `root-rows-20231002` `07ff47c`, `-20231003` `261bf0a`, `-20231017` `9dc46c9`,
@@ -48,7 +48,7 @@ What that means, plainly:
 - Stored this session: only documents and the sample pictures (`three-renders-samples-20261118/`). No calculation
   was built or run. No daily store changed except the Desktop addition above.
 
-## THE CRYPTO EXHAUSTION CALCULATION, exactly as its script has it
+## THE CRYPTO EXHAUSTION CALCULATION, as its script has it (steps 1, 2 and 4 to 7 read whole; step 3 read in part)
 
 Where it is: Markets branch `claude/davisai-s71-counterparty-capacity-sf1168`, commit `75b15fa` (2026-07-07):
 `research/shape_s71/regroup2.py` (drew his picture), `arc_gate.py` and `shape_arc.py` (the pieces it uses),
@@ -64,9 +64,20 @@ Step by step:
 2. THE GRID: everything is put on a regular grid of TENTHS OF A SECOND (`to_grid(…, 0.1)`): book figures take the
    last value in each cell and are carried forward; bought and sold are summed in each cell.
 3. THE TRADES: made by the platform's own executor, `run_kraken_cell(cfg, mid, buy, sell, best bid size, best ask
-   size, half the median spread)`. It finds turns with a zigzag on a lean of trades over 600 cells (`WFLIP = 600`)
-   with a reversal level of 0.10 (`REV`), and makes simulated trades ("legs"), each with an entry (`open_idx`, the
-   ONSET, t = 0), an exit (`close_idx`), a side, and a result in bps (`net_bps`).
+   size, half the median spread)` (`odcore/platform.py` on that branch). READ IN PART: `run_kraken_cell`,
+   `kraken_flips` and the head of `run_stream` were read; `run_stream`'s body, `swing_maker`, `retime_flips` and
+   `detect_flips` were NOT. Read them whole before building. What was read:
+   - The turns come from a zigzag on a lean of trades over 600 cells (`WFLIP = 600`) with a reversal level set per
+     coin (`rev`: 0.10 for eth, btc and sol; 0.30 for doge; 0.13 for xrp), moved earlier ("early-arm",
+     `retime_flips`) where the coin has an `eps` (eth 10, btc 5). `lean_series` is written for one reading a
+     second; this work fed it tenths of a second.
+   - Each turn becomes a SIMULATED trade ("leg") with an entry (`open_idx`, the ONSET, t = 0), an exit
+     (`close_idx`), a side, and a result in bps (`net_bps`). The simulation carries a maker fee and a taker fee
+     (the Kraken cells: maker 0), a front-of-the-line fill, a grace of 300 or 600, a price stop per coin (`bail`:
+     eth 100, btc 80) and a close improved by 0.5 bps. So `net_bps` is NOT a plain price move: fees, fills and a
+     stop are inside it. There is also an entry gate in that file (`_entry_gate`, the divergence read); whether
+     this path used it was not established.
+   - **`odcore/platform.py` is NOT in the current code.** It went with the crypto-era rules.
 4. THE FLOW LINE: `rolling_imb(buy, sell, 20)`: at every cell, bought minus sold over bought plus sold, over the
    last 200 cells (20 SECONDS, `SMOOTH_SEC = 20`). Where nothing traded in those 20 seconds the value is 0.
    Its own comment on the 20: trades were sparse; "a shorter window makes per-leg |imb| a saturated 0/1 square
@@ -101,13 +112,21 @@ removed (make ours the same) or put to him once, plainly.
 | Short or long | Against the median length | His standing rules: no ranks, no labels put on by us |
 | The line drawn | The mean over many trades | His standing rule: any method that combines cases is named to him as averaging before it is written |
 | How much data | Five coins, about 40 hours each | One contract, four trade days |
+| The session | Round the clock, one unbroken window per coin, all its trades taken together | Cut by trade day (6 pm to 5 pm Eastern), the 5 pm halt and the settlement window marked; each trade day on its own |
 
-The three rows that need his word before anything is built (put them together, once, with a recommendation):
-the trades followed (to be exactly like crypto the same executor has to be run on the natural gas tape, with its
-own constants); winner or loser (the result of those simulated trades, and what costs sit inside `net_bps`); and
-the mean over trades and the median (both are what made the crypto picture; both are what his rules name).
-"Exactly like the old calc" is his latest word: the recommendation is to do it exactly, name the averaging to
-him in that word, and draw every single trade's own arc beside the mean so nothing is hidden by it.
+THREE THINGS THAT NEED HIS WORD before anything is built. Put them together, once, plainly, with no recommendation
+made for him: both sides of each are his own rules.
+1. THE TRADES. The crypto arcs follow simulated trades made by the crypto executor. To be exactly like crypto the
+   same executor has to be run on the natural gas tape. It is not in the current code, and his rule of 2026-11-16
+   says: "NO BITCOIN-ERA RULES ... do not reintroduce any of them, and do not copy one out of old code, an old
+   handoff or the archive" (fee floors, maker and taker fill assumptions, crypto-venue strategy rules). Bringing
+   the executor back is his explicit word, or he names what the onset is on this tape in its place.
+2. WINNER OR LOSER. In crypto it is the simulated trade's `net_bps`, which has fees, fills and a stop inside it.
+   His rules: trade cost is not a market condition; research is gross. His word on what a winner is here.
+3. THE MEAN AND THE MEDIAN. Each crypto line is the mean over many trades, and short or long is against the
+   median. His rules name both (averaging; a rank; a label put on by us). "Exactly like the old calc" asks for
+   them. Name the averaging to him in that word; whichever he says, every single trade's own arc can be drawn
+   beside it.
 
 ## What Desktop has (the "great start")
 
@@ -119,8 +138,10 @@ On this branch, under `research-union-current/`:
 - Its earlier pictures, made on the earlier data and pasted by Greg this session (described in the notes file):
   "Flow lean and midpoint around the birth" (the 20-second lean and the midpoint from 40 seconds before a birth
   to 60 after, against matched controls), the share of births above and below their level, and the first-event
-  curves. They are the same kind of picture as the crypto arcs, anchored on a dipole's birth. Ask Desktop (through
-  Greg) for the programs if they are not on the branch.
+  curves. They are the same kind of picture as the crypto arcs, anchored on a dipole's birth. **They and their
+  programs were NOT found on this branch** (searched by file name). Where they are is not known to this session:
+  ask Greg, or Desktop through him. If they sit only in last week's folders, that meets "do not open last week's
+  strategy material" and is his call.
 
 ## What was drawn this session (he has seen all of it)
 
