@@ -3383,6 +3383,22 @@ better understanding of trade data".**
   put on any of it, until it is decided with him. None has been.
 - THE MEASURE for every output from here: does it give a better understanding of the trade data.
 
+**DECIDED (Greg, 2026-11-18, fourteenth session): "I mean price/trade.curve"; "And any exhaustion renders that
+were made on old or bad data should be delettled too".**
+- THE MEASURE, in his words: whether an output gives a better understanding of the PRICE / TRADE CURVE.
+- REMOVED from the four daily branches: the eleventh session's exhaustion sheets (`renders/exhaustion-sheet-<trade
+  day>-NNN.png`: 239, 265, 216 and 200 pages, 920 in all) and their four index tables. They drew every 20-second
+  peak as a small panel, 40 to a page, with a black line that was the last print (a known fault); a form he later
+  refused (one trade, one graph). `root-rows-20231002` `bd9c360`, `-20231003` `7eb9ae2`, `-20231017` `a1659c3`,
+  `-20231018` `df8d45b`; each `FILES.md` says what was removed and the commit they can be read back from. The
+  renders' receipts still list them, as the record of what was made.
+- LEFT, each said to him: the 3,178 dipole renders in the same folders (they are dipole pictures; each carries the
+  20-second flow lean as one of its lines); the twelfth session's 13 sample pictures; the 60 case pictures of last
+  week's strategy material (not opened; deleting last week's folders is his own open call); his own 7 attached
+  pictures in `historical-shape-attachments/`. No exhaustion render made on the earlier, bad data was found on
+  either repository's live branches: Desktop's earlier pictures were never on the branch.
+- The exhaustion renders that stand: `crypto-ng-tick/` on each daily branch (tonight's rerun).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
