@@ -620,3 +620,25 @@ wring dayta"; "We've gone over numerois times".
   9,963; 3,532 of 9,405. About a third either way: by this count the dipoles born with a trade do not pick out
   the starts of trade legs. It answers the twelfth session's "90 of 267 ... not yet set beside any second with a
   trade".
+
+## 2026-11-18 (fourteenth session): the exhaustion calculation is written at the tick; the rerun goes first
+
+Greg: "We have to rerun the exhaustion data on the pods first. Pull renders whike it's running"; "A we have tonchange
+is output time from .1 to nano tick.time".
+- The only change from the July calculation is the TIME: tenths of a second become the nanosecond. Every rule and
+  number is the July one. The turn finder is the July function itself, walked over every moment its 60-second
+  lean changes.
+- THERE IS ONE 20-SECOND LINE FOR THE WHOLE TRADE DAY. It changes only when a trade is received or when a trade
+  leaves the 20 seconds (a moment with no tick). Every single trade's exhaustion line, a trade of the program or
+  a trade on the tape, is a cut of that one line around the trade, as far before and after as is wanted. So
+  "prebirth" is not a separate calculation: what the line did before any trade is already on it.
+- Both kinds of trade get a line in the one run (Claude's call, his to correct): the program's own trades, and
+  every trade on the tape.
+- KEPT SO IT IS NOT DONE AGAIN: a made-up list of numbers on tenths of a second was used in the session to check
+  the new code against the July program. He objected at once ("Why are we using made up data and why are we using
+  .1 timing?"). It is deleted. No made-up numbers, not even for a code check, and nothing on a grid for any
+  purpose. A new calculation is checked on real tape on the pods.
+- Built in, to remember when the lines are read: every onset is a trade AGAINST the program's own side, so the
+  line steps against the trade at 0 and steps back exactly 20 seconds later when that trade leaves. On thin tape
+  a turn can be marked when old trades leave the 60 seconds with nothing new traded; those are counted in the
+  receipt and nothing is filtered.

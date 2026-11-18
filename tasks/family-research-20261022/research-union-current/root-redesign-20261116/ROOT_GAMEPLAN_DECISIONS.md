@@ -3255,6 +3255,83 @@ session."
 - THE PODS: all four deleted at 04:41 UTC, after each push was confirmed; the account was read and shows none.
   About 23 minutes at $1.28 an hour.
 
+## Fourteenth session (2026-11-18, in a code session, on Fable with the Fable advisor)
+
+Greg pasted the drop-in of the TWELFTH session (the one naming handoff O). Handoff P of the thirteenth session is
+newer on the same branch and carries his later words, so the session worked from P and told him so. Nothing of
+handoff O's "FIRST" was put to him again.
+- Code: Markets `claude/magical-allen-kncdpa` (`7c98593`) brought into the session's own branch
+  `ccr-92cbec22-u0cbuj` by fast-forward (the session branch held nothing of its own). Nothing to the trunk.
+- The Runpod skills were loaded and the account read: no pod exists. The agent skills router and the git workflow
+  skill were read from the pinned public source (tag 0.6.8). Superpowers loaded by itself and was not used.
+- This session runs in the cloud environment "Markets", whose network is LIMITED (the thirteenth session's was
+  open). The four pod addresses allowed there are old pods'. New pod addresses need an approval card each launch.
+- Read in full: handoffs O and P, the notes file, this file's twelfth and thirteenth sessions.
+
+**Greg (2026-11-18): "No" to fetching the stored pictures first; then "We have to rerun the exhaustion data on the
+pods first. Pull renders whike it's running".**
+- THE ORDER: the exhaustion rerun at the nanosecond goes on the pods first. The stored three renders and stacked
+  pairs are pulled for him while it runs, not before.
+- Touched before his No (told to him): trade day Oct 17's branch, names only, its `FILES.md` and the two small
+  index tables of the tick renders. No picture was fetched, nothing calculated, nothing stored.
+
+**BUILT, NOT RUN (Markets `ccr-92cbec22-u0cbuj`, `6c94f88`): the exhaustion calculation at the tick.**
+- `crypto_ng/tick.py`: the July rules read on the clock. WHAT STAYS: every rule and every number (the 20-second
+  line; the turn finder's lean over 60 seconds, its 600 cells; the turn amount 0.10; in at the first trade on the
+  other side after a turn, only if before the next turn; the wait of 30 seconds, its 300 cells; 45 seconds before
+  and 60 after as the least a picture shows). The turn finder is the July function itself (`detect_flips`,
+  untouched), walked over every moment the 60-second lean changes instead of over every cell. WHAT CHANGES: no
+  cells. A trade enters a line at the nanosecond it was received and leaves it exactly 20 (or 60) seconds later.
+- `root/crypto_ng_tick.py`: the pod job. It writes, for one trade day: the 20-second line for the WHOLE trade day
+  at every moment it changes; the 60-second lean the same way; every turn and what became of it; every trade of
+  the program; and EVERY TRADE ON THE TAPE on its own line (where it sits on the 20-second line, just before it
+  and at it, and the trade of the program under way at it). The count of trades is written first
+  (`CRYPTO-NG-TICK-COUNT-<trade day>.json`). No picture in the data run; one trade's graph is printed afterwards,
+  twice (steps; a smooth curve, drawing only), one graph in each.
+- The refused tenth-of-a-second job (`root/crypto_ng_exhaustion.py`) is removed in the same change ("We don't keep
+  wrong data"). The July program in `crypto_ng/program/` stays byte for byte as the record; it is not run.
+- Checks, all on real tape on the pod: both lines recounted a second way at every read; the size bought and sold
+  in the 20 seconds compared with the stored `flow_bought_20s` and `flow_sold_20s` on EVERY tick of the trade day;
+  the trades read back against what the rules promise (each starts at a trade on the other side after its turn,
+  none overlap, every turn has a line).
+- Claude's calls in it, stated to Greg, his to correct:
+  1. WHICH TRADES GET A LINE (handoff P's first open point): BOTH, in one run. Every trade of the program and
+     every trade on the tape has its own line in its own table; each one's exhaustion line is a cut of the one
+     20-second line of the whole trade day. Neither of his two statements is set aside.
+  2. The read order where several things fall on one nanosecond: one read per trade in tape order; trades leaving
+     at that same nanosecond leave first. The same as the stored flow of piece 1.
+  3. The turn finder starts at the open of the trade day, where nothing has traded and the July rule reads 0.
+  4. Inside the turn finder the July 0 (nothing traded in the 60 seconds) is kept, because it is a rule of the
+     program. In every stored line that moment is EMPTY with a mark, never 0.
+  5. A trade of the program still open at the last tick is written (the July program wrote no line for it).
+  6. The program's own price and fee columns are written as the thirteenth session wrote them (observation only,
+     nothing drawn or labelled by them). Its divergence read beside each trade is NOT written: it is worked out
+     on halves of a list of cells, and it was never used on this path.
+  7. Nothing is left out for not fitting 45 seconds before and 60 after: the line is the whole trade day's.
+- Said to him plainly: this is the July rules on our clock, not the July code run byte for byte. Its trades are
+  not the trades a grid run makes, because a grid nets everything inside a tenth of a second into one reading.
+
+**A SLIP, OWNED, and Greg's word on it (2026-11-18): "Why are we using made upndata and why are we using .1 timin?
+A we have tonchange is output time from .1 to nano tick.time".**
+- What was done: to check the new code before any pod, a MADE-UP list of numbers placed exactly on tenths of a
+  second was run in the session through both the July program and the clock version, to see that they made the
+  same turns and trades. It was not market data, it produced no output and nothing of it was stored or committed.
+  It was still against two of his standing rules (never invent data; no grid of any size) and he was told of it
+  only after it was done.
+- It is deleted. STANDING FROM HERE: no made-up numbers in the session, not even to check code, and nothing placed
+  on a grid for any purpose. A new calculation is checked on real tape on the pods, by a second method written
+  into the job.
+- His reading of the job is the right one and is what was built: the only change is the time, from tenths of a
+  second to the nanosecond. Every rule and number is the July one.
+- Not established by any check on real data yet: that the clock version's trade maker follows every branch of
+  the July one. The pod run's own checks are what stand behind it.
+
+- Found, not touched (outside this change): the test `test_no_hidden_numbers` already fails on `7c98593` at
+  `root/calcs/in_play.py` line 36 (three constants not in `DECLARED_CONSTANTS.md`), and `root/pod_fetch.py` holds
+  three undeclared numbers. The new files are clean under the same rule.
+- Runpod, read from the account this session: General Purpose (`cpu3g`) is $0.04 a CPU an hour, so 8 CPUs is
+  $0.32 an hour a pod and $1.28 an hour for the four. No pod has been started.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
