@@ -3133,6 +3133,46 @@ not give them that label prior to run".**
   dividing line, no middle length and no label. It IS an ordering by a measure, said to him in those words; he
   can strike it.
 
+**BUILT, NOT RUN (2026-11-18, thirteenth session): the crypto and ng program, the natural gas exhaustion render,
+the three renders at the tick and the stacked pairs.** Markets branch `claude/magical-allen-kncdpa`, `022c3be`.
+- `crypto_ng/`: the crypto trading program of Markets `75b15fa`, named "crypto and ng". `flip_detector.py`,
+  `swing_maker.py` and `info_dipole.py` are byte for byte the July files (their git blob ids are equal, proved by
+  `tests/crypto_ng/test_provenance.py`, run once); `platform.py` differs in three import lines only, so that it
+  reads these copies and not today's `odcore`. `PROVENANCE.md` lists every fingerprint. `ng.py` holds the natural
+  gas row (sol's row with the name changed) and the few lines of the July scripts around the program, each copied
+  with its source named.
+- `CLAUDE.md` of Markets now carries the one exception under "no bitcoin-era rules", in his words, so a later
+  session does not remove the package as a violation or copy from it.
+- `root/crypto_ng_exhaustion.py` (pod job `crypto_ng`): the grid of tenths of a second from the stored rows
+  through the gate; the program's trades; the 20-second line by the July formula; every trade's own arc. Writes
+  the grid, the program's trades (every column the program writes, named `program_...`), every arc, a page of
+  small panels for every 40 trades in the order they happened, and two pictures holding every trade at once (in
+  time order; in the order of each trade's own length). Two checks: the line counted again by a second method at
+  every tenth of a second; and against the stored `flow_20s` of piece 1 wherever both hold the same trades.
+  The receipt counts, with nothing filtered: turns marked in a tenth of a second with no trade, turns never
+  filled, trades with no arc and why, trades the tape gives no side for.
+- `root/tick_renders.py` (pod job `ticks`): the dipole and the exhaustion at the tick written for every tick of
+  the trade day (`tick-dipole-<trade day>.parquet`), checked on every tick against the stored runs of
+  `turn_peaks`; the three renders for the whole trade day, 600 trades to a picture, end to end; and the stacked
+  pair for every recorded dipole whose birth second holds the first trade of a trade leg, with the same count
+  for any second of the trade day that holds a trade.
+- `root/pod.py` runs both together, each on its own CPU (`calc:crypto_ng,ticks`); `root/pod_fetch.py` knows their
+  receipts. The pod installs scipy for the smooth curve.
+- NOT RUN. A dry run on a slice of trade day Oct 17 was told to Greg and the slice fetched; the session's
+  permission check refused to run it, twice, and it was not worked around. Only a syntax and import check and a
+  line by line read were made, as in the ninth session ("every calculation below is WRITTEN AND NOT RUN; its
+  first run is on the pods"). A fault found on the first pod run is corrected and that piece run again on the
+  same pods, which the pod runner allows.
+- Runpod, read from the account: no pod exists. General Purpose (`cpu3g`) is $0.04 a CPU an hour: 8 CPUs and
+  32 GB is $0.32 an hour a pod, $1.28 an hour for the four. Unchanged.
+- Calls stated to him in the go message, his to correct: 600 trades to a picture; each arc its own panel in time
+  order; the second all-trades picture is ordered by length (an ordering by a measure); the program's own result
+  columns, the fee one included, are kept in the sheet as the program wrote them and nothing is drawn, coloured
+  or labelled by them.
+- After the run, in this order: fetch and prove every file; store on each `root-rows` branch with `FILES.md`
+  brought up to date; the program's trades into the Excel file as sheets named "crypto and ng <trade day>",
+  every row linked to its picture, Desktop's sheets kept; delete the pods.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
