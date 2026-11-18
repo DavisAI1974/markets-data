@@ -3348,6 +3348,41 @@ time needs to be deleted".** Read as "deleted" (his to correct).
 - Runpod, read from the account this session: General Purpose (`cpu3g`) is $0.04 a CPU an hour, so 8 CPUs is
   $0.32 an hour a pod and $1.28 an hour for the four. No pod has been started.
 
+**THE RERUN, done (2026-11-18, fourteenth session). Greg: "Once all trace of [the old time step] is gone then go".**
+- Four General Purpose 8-CPU pods, $0.32 an hour each, started 05:32 UTC (Oct 2 `51rl6h7imo1j4y`, Oct 3
+  `rml8rj2i9upi14`, Oct 17 `qhl7n8sdpdgjt5`, Oct 18 `jqwbnlly79csvr`), job `crypto_ng_tick`. This session's network
+  is limited, so the four pod addresses were added to the environment "Markets" on his approval card.
+- First run (Markets `901be5c`): the counts came out and both lines passed their second count; it stopped at the
+  comparison with the stored flow, because the check lined the two up wrongly (the stored flow file also holds
+  the rows of the 5 pm to 6 pm stretch). Fixed (`67628a7`) and run again on the same pods: ALL FOUR PASSED every
+  check (both lines counted a second way at every read; the 20 seconds equal to the stored `flow_bought_20s` and
+  `flow_sold_20s` on every tick of the trade day; the trades read back against the rules).
+- EVERY TRADE ON THE TAPE HAS ITS OWN LINE, all four trade days, no cap: 38,127 (Oct 2); 41,410 (Oct 3); 33,703
+  (Oct 17); 30,739 (Oct 18). The program's own trades beside them: 1,794; 1,895; 1,672; 1,682.
+- Counted, nothing filtered (trade day Oct 17; the others are in their receipts): 4,086 turns found, 2,009 of
+  them marked at a moment with no tick (old trades leaving the 60 seconds, nothing new traded), 248 of those as
+  the 60 seconds emptied; 1,672 filled, 1,712 not filled before the next turn, 702 not acted on.
+- STORED, each file fetched and proved against its receipt, in `crypto-ng-tick/` on each daily branch, `FILES.md`
+  brought up to date: `root-rows-20231002` `0f67f4e`, `-20231003` `5f7e75e`, `-20231017` `fcde2ea`, `-20231018`
+  `1fb87c2`. No picture in the data run.
+- Printed afterwards on the Oct 17 pod and stored: the exhaustion line over the stretch of the twelfth session
+  (from 11:58:32.200 Eastern, to 11:59:01.300 and to 12:07:03.800) on the Eastern clock (Markets `69d0f98`), and
+  the own graph of each of the 30 trades of the program that touch it (trades 1051 to 1080), each drawn as steps
+  and as a curve. Sent to him: the stretch pictures and trade 1051. Steps or curve is still his to say.
+- Pulled for him while it ran, as he asked: the stored three renders picture holding that stretch
+  (`three-renders-20231017-035.png`), two stacked pairs, and the twelfth session's two sample pictures.
+- ALL FOUR PODS DELETED after every push was confirmed; the account was read and shows none.
+- NOT PROVED by any check: that the program's trades equal what the July files would have made.
+
+**DECIDED (Greg, 2026-11-18, fourteenth session): "I don't think I see anything useful for the Full day and the 4
+day dipole outputs ... Don't apply that data to the excel sheets until we discuss those first"; "Don't apply any
+data types to the 1 day or 4 day runs of new outputs intil we decide first"; "And remember the goal is to give
+better understanding of trade data".**
+- NOTHING of the thirteenth session's tick renders (the dipole at the tick, the full trade day three renders, the
+  stacked pairs) and nothing of this session's rerun goes into the Excel sheets, and no type, label or kind is
+  put on any of it, until it is decided with him. None has been.
+- THE MEASURE for every output from here: does it give a better understanding of the trade data.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
