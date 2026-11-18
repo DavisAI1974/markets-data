@@ -3453,7 +3453,7 @@ data it's going to replace while it's running and don't touch any n r w fata unt
   typed, labelled, averaged or ranked; not in the Excel sheets.
 - ONE POD, four helpers, one trade day each, each pinned to its own CPU and all running at the same time (Claude's
   call, stated to him before it started: two of four pods never started in the launch before). General Purpose
-  8 CPUs, $0.32 an hour, `2wuz4oci0hiqdj`, 08:59 to 09:05 UTC: about 3 cents. Passed on its first run on all four
+  8 CPUs, $0.32 an hour, `2wuz4oci0hiqdj`, 08:59 to 09:02 UTC: about 2 cents. Passed on its first run on all four
   trade days. Deleted after every push was confirmed; the account was read and shows no pod.
 - Counted, each trade day on its own, nothing filtered:
 
