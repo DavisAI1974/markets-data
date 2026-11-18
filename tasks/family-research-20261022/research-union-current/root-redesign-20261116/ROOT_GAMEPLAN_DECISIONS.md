@@ -3190,6 +3190,71 @@ exhaustion graph. No more than one graph per render".**
   number, the side the program took, the onset in Eastern time and how long the trade lasted.
 - No go for the pods has been given yet.
 
+**GO, and the run (Greg, 2026-11-18, thirteenth session).** His words before it: "Rum the entire trade day amount of
+trades but individually. There shkukd be a lot more than 600 trades per day. That is initial data output run. Once
+its done then we print exhaustion render for the one trade that we carried the renders over from last chat"; "And
+each trade is run individually for the calc run"; "What would these other panels add and we ony did an average of a
+bunch of trades for crypto for simlplification purposes"; then the go: "Then go as long as it runs exactly like
+crypto".
+- Told to him before the launch: 600 was only how many trades fit in one picture of the three renders, not a cap;
+  the exhaustion run is a data run with no picture, and one trade's graph is printed afterwards.
+- LAUNCHED 04:18 UTC: four General Purpose 8-CPU pods, $0.32 an hour each, $1.28 for the four (price read from the
+  account the same hour), Markets `8b9dc9d`, job `calc:crypto_ng,ticks`. Pods: Oct 2 `mxasey28xiko2f`, Oct 3
+  `plq0sky5u5351g`, Oct 17 `0spy3igyomdxxw`, Oct 18 `3ibk04eznz8zgo`. The session's cloud environment has open
+  network, so no approval card was needed for the pod addresses. No dry run was made in the session (its
+  permission check had refused one twice); both jobs passed on their first run on all four trade days.
+- Greg, while it ran: "And do we have the same data that crypto did to run the calc? It's one thing to matchnfile
+  sizes but it's another check to make sure we have the data the files are calling". Answered input by input, and
+  a block was added to the receipt listing every input the program is handed, where it comes from on our tape
+  and how much of it was there, with the sizes proved equal to the tape's own totals (Markets `c25ac13`; run
+  again on the same pods). Then: "Wait. So crypto uses 9 ... layers of ata for their run that we aren't using?"
+  Answered: no. Kraken's records held ten book levels; the July exhaustion calculation never read levels 2 to
+  10. They were used by a different crypto calculation (the resting book's lean, July 8 to 11). "Ok. Just double
+  checking".
+- Printed for him on the trade day Oct 17 pod: the program's trade at 11:58:40 Eastern, inside the stretch of the
+  twelfth session's three renders. His words on it and after it: "Wait. We also want to be measuring exhaustion
+  prior to trade start and after trade ends"; "Part of exhaustion research is to see if there are prebirth
+  signals"; "Should we just run for the entire 23 hours to try to find additional findings?"; "It looks lie we are
+  truncating the exhaustion data in the render at the start and end"; "And we want the line to look like a curve
+  and not like straight lines right or does it matter? Look at crypto render from july".
+  - Told: the line is made for the whole trade day; the picture was cut at the crypto marks (45 seconds before
+    the start, 60 after). The print was changed to reach from the trade before to the trade after, never less
+    than 45 before the start and 60 after the END (Markets `04e1b45`). On the curve: the July lines were smooth
+    because each was an average of hundreds of trades; one trade's line moves in steps; a smooth curve through
+    its own points is drawing only. A print drawn as a curve was written (Markets `987b2cf`) and never run.
+
+**DECIDED (Greg, 2026-11-18, at the close of the thirteenth session): NANO TICKS; the first run is wrong data.**
+His words, in order: "And we should probably have the ticks to be nano since our data is nano"; "Definitely run it
+on nano ticks. .1 is losing too much data"; "Delete .1 outputs and renders. We don't keep wring dayta"; "We've gone
+over numerois times"; "And the pod ran the exhaustion calcs for 30k+ trades each day.for 4 days in a matter of
+minues earlier? Something doesn't sound rigjt"; "We're going to have to rerun days with the new tick time anyway
+right?"; "If so., let's make new handoff, commit and push and print drop in for new chat and save rerun for new
+session."
+- THE EXHAUSTION CALCULATION IS MADE AT THE TICK. No grid of tenths of a second, no grid of any size. The first
+  run put the trades on a tenth-of-a-second grid because the Kraken collector did; that was Claude's call, stated
+  to him, and it is against a rule he has given many times. Owned.
+- THE TENTH-OF-A-SECOND OUTPUTS AND RENDERS ARE DELETED. None was stored: the fetched copies and the printed
+  graphs were removed from the session and nothing of them reached git. The job that made them is marked refused
+  in the code and stops at once (Markets `74fe470`).
+- HIS DOUBT ABOUT THE SPEED WAS RIGHT. The run did not make a line for each of the 30,000 and more trades of the
+  tape. It read every tape trade only as a total inside its tenth of a second, and made an arc for each trade of
+  the PROGRAM, which makes its own trades (that run: 1,332; 1,441; 1,251; 1,270 on the four trade days; deleted
+  data, not to be used). Claude never put that count in front of him before the run. Standing from here: before a
+  run, say how many trades it makes a line for.
+- THE RERUN IS FOR THE NEXT SESSION, on all four trade days. First there, put to him once and together: which
+  trades get a line (the program's own, or every trade on the tape), and how "exactly like crypto" is kept at the
+  tick, where the July program's cells become spans on the clock. Handoff `NEXT_SESSION_HANDOFF_20261118P.md`.
+- STORED (made at the tick, checks passed, fetched and proved against their receipts), in `tick-renders/` on each
+  daily branch with `FILES.md` brought up to date: the dipole and the exhaustion at the tick on every tick, his
+  three renders for the whole trade day (64, 70, 57 and 52 pictures), and the stacked pairs (99, 118, 90 and 97).
+  `root-rows-20231002` `8ea723a`, `-20231003` `f1a7684`, `-20231017` `12e7890`, `-20231018` `1988900`. He has not
+  looked at them yet.
+- The stacked pairs' count, set beside any second with a trade (counts only): 99 of 288, 118 of 335, 90 of 267,
+  97 of 315 dipoles born with a trade have the first trade of a trade leg in the birth second; of all seconds
+  with a trade, 4,088 of 10,330; 4,595 of 11,482; 3,803 of 9,963; 3,532 of 9,405 do. About a third either way.
+- THE PODS: all four deleted at 04:41 UTC, after each push was confirmed; the account was read and shows none.
+  About 23 minutes at $1.28 an hour.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

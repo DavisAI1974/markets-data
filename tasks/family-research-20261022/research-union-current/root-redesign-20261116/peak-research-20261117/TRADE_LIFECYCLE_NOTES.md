@@ -589,3 +589,34 @@ longer and shorter ones behave is looked at afterwards from the single trades.
 Greg, same session: "Each trade should have its own exhaustion graph. No more than one graph per render". One
 picture for each trade of the crypto and ng program, one graph in it. No pages of panels, no picture holding many
 trades.
+
+## 2026-11-18 (thirteenth session, close): NANO TICKS; the first crypto and ng run was wrong data and is deleted
+
+Greg: "Definitely run it on nano ticks. .1 is losing too much data"; "Delete .1 outputs and renders. We don't keep
+wring dayta"; "We've gone over numerois times".
+- The first natural gas run of the crypto calculation put the trades on a grid of tenths of a second, as the
+  Kraken collector did. Wrong on our tape: it collapses ticks. Its outputs are deleted; nothing of it is stored
+  or to be used. The rerun is at the tick, every trade at its own nanosecond.
+- It also made lines only for the trades of the PROGRAM (which makes its own, of the order of 1,300 a trade day
+  in that run), not for each of the 30,000 and more trades on the tape, which is what he had in mind. Which
+  trades get a line is his word, first thing in the next session.
+- What he wants the exhaustion work to do, in his words of this session: every trade individually, "see how they
+  seperate organically", "like the reversal of that crypto process"; "see how the long and short dprints behave
+  but not give them that label prior to run"; "Each trade should have its own exhaustion graph. No more than one
+  graph per render"; "We also want to be measuring exhaustion prior to trade start and after trade ends"; "Part of
+  exhaustion research is to see if there are prebirth signals"; the render must not cut the line off at the
+  start and the end; the line as a curve or as steps is still his to say (the July curves were averages; one
+  trade's line moves in steps).
+- KEPT SO IT IS NOT GOT WRONG AGAIN: "exactly like crypto" never outranks "rows are ticks, timed to the
+  nanosecond". Where a crypto step would collapse ticks, it is said to him and done at the tick.
+
+### Made at the tick this session and stored (`tick-renders/` on each daily branch)
+
+- The dipole and the exhaustion at the tick, on every tick of all four trade days; his three renders for the whole
+  trade day; the stacked pair for every recorded dipole born on a trade leg's first trade.
+- A count, each trade day on its own, no test of chance: a recorded dipole born with a trade has the first trade
+  of a trade leg in its birth second in 99 of 288, 118 of 335, 90 of 267, 97 of 315 cases. ANY second of the
+  trade day with a trade holds the first trade of a trade leg in 4,088 of 10,330; 4,595 of 11,482; 3,803 of
+  9,963; 3,532 of 9,405. About a third either way: by this count the dipoles born with a trade do not pick out
+  the starts of trade legs. It answers the twelfth session's "90 of 267 ... not yet set beside any second with a
+  trade".
