@@ -1,0 +1,56 @@
+{
+ "what": "One trade's own exhaustion graph, printed twice from the stored 20-second line of the data run: as the steps the line moves in, and as a smooth curve through its own points (drawing only)",
+ "asked": "Greg, 2026-11-18: \"Each trade should have its own exhaustion graph. No more than one graph per render\"; \"We also want to be measuring exhaustion prior to trade start and after trade ends\"; \"we want the line to look like a curve and not like straight lines right or does it matter?\"",
+ "trade_day": "2023-10-17",
+ "asked_for": {
+  "moment_received_ns": null,
+  "trade": 1062,
+  "position_on_tape": null
+ },
+ "chosen": "named by its number",
+ "trade": {
+  "trade": 1062,
+  "side": "sell",
+  "turn": 2878,
+  "turn_received_ns": 1697558461270999502,
+  "onset_position_on_tape": 1522071,
+  "onset_received_ns": 1697558461385906182,
+  "onset_read_20s": 39919,
+  "ended": "the next turn was filled: that fill ended this trade and started the next",
+  "end_position_on_tape": 1522374,
+  "end_received_ns": 1697558481332708025,
+  "length_seconds": 19.946801843,
+  "program_open_px": 3.044996736824931,
+  "program_close_px": 3.0430034263338226,
+  "program_close_maker": true,
+  "program_gross_bps": 6.546182683883501,
+  "program_net_bps": 6.546182683883501,
+  "program_swing_bps": 3.284611594680026,
+  "program_dive_depth": 0.1179,
+  "program_lean_flip": -0.2186,
+  "program_lean_close": 0.1849,
+  "seconds_from_the_open_to_the_onset": 64861.385906182
+ },
+ "edges": "set by the line itself: every hump of the 20-second line the trade touches, whole",
+ "stretch": {
+  "first_received_ns": 1697558442937095248,
+  "last_received_ns": 1697558494001899197,
+  "first_eastern": "2023-10-17T12:00:42-04:00",
+  "last_eastern": "2023-10-17T12:01:34-04:00",
+  "seconds_before_the_start": 18.448810934,
+  "seconds_after_the_end": 12.669191172,
+  "reads_drawn": 236
+ },
+ "files": [
+  {
+   "file": "crypto-ng-tick-exhaustion-20231017-trade-01062-steps.png",
+   "bytes": 62171,
+   "sha256": "de2703012a5a8d7e4c0987f30c23e98155e6f915e432ebfc6e8322c35084000a"
+  },
+  {
+   "file": "crypto-ng-tick-exhaustion-20231017-trade-01062-curve.png",
+   "bytes": 76508,
+   "sha256": "bf907b7dd5cb51281a40e45b49da463592659e8e076b316c7e0cf1cd82cda023"
+  }
+ ]
+}

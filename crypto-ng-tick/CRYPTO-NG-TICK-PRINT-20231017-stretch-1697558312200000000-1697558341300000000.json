@@ -1,0 +1,37 @@
+{
+ "what": "The 20-second exhaustion line over one stretch of the trade day, printed twice from the stored line of the data run: as the steps it moves in, and as a smooth curve through its own points (drawing only)",
+ "asked": "Greg, 2026-11-18: \"We were looking at one particular trade leg 2 session ago, pull those renders. Look at the last renders I asked about just for that trade leg\"",
+ "trade_day": "2023-10-17",
+ "asked_for": {
+  "first_received_ns": 1697558312200000000,
+  "last_received_ns": 1697558341300000000
+ },
+ "edges": "set by the line itself: every hump of the 20-second line the asked stretch touches, whole",
+ "stretch": {
+  "first_received_ns": 1697558300551459910,
+  "last_received_ns": 1697558349742182540,
+  "first_eastern": "11:58:20.551459910",
+  "last_eastern": "11:59:09.742182540",
+  "reads_drawn": 270
+ },
+ "trades_of_the_program_touching_it": [
+  1049,
+  1050,
+  1051,
+  1052,
+  1053,
+  1054
+ ],
+ "files": [
+  {
+   "file": "crypto-ng-tick-exhaustion-20231017-stretch-1697558312200000000-1697558341300000000-steps.png",
+   "bytes": 73978,
+   "sha256": "6b57583fc972e8970552f2aa2c88f9ec9f952b7fd6bbdf21ded1c3016d04bc25"
+  },
+  {
+   "file": "crypto-ng-tick-exhaustion-20231017-stretch-1697558312200000000-1697558341300000000-curve.png",
+   "bytes": 87252,
+   "sha256": "9439370745c0bfd2b87031a3d4025b4e6b8cc9e7501ecf52875c839dea35af44"
+  }
+ ]
+}
