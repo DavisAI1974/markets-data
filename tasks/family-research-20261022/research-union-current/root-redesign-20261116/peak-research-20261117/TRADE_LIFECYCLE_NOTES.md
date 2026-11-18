@@ -423,3 +423,23 @@ and they do".
 - To do, on his word: count it with no window, every case listed (each move of one line, the distance in ticks
   and time to the nearest move of the others), and draw all four trade days.
 
+## 2026-11-18: NO EXCEPTIONS on the 20 seconds; the three renders are trade price, dipole and exhaustion at the tick
+
+Greg: "No exceptions! That window gives us nothing but a visual to confirm frkm."; "I said dipole and exhaustion
+ticked by nano"; "And i asked for the trade price curve too"; "We can add those to your selections once you have
+nano versoons of them all".
+
+- The 20-second window: a picture to confirm from, nothing else. Never a signal, never in a calculation. Do not
+  propose it as an exception again.
+- The three renders, each its own graph, one axis of real timestamps, no window:
+  1. the trade price curve (the price of every trade, in order);
+  2. the dipole at the tick: the latest run of buying against the latest run of selling (the run under way and
+     the run it took over from), changing at every trade;
+  3. the exhaustion at the tick: each run of trades on one side as it builds; its high is its last trade (the
+     peak with no window, already stored in `turn_peaks`).
+- Other lines (the resting orders' lean, the running total of lots, the quote) are additions for later, beside
+  these, never in place of them.
+- Samples of exactly these three were sent (trade day Oct 17, from 11:58:32.200 Eastern, 150 and 600 trades).
+- Next: his word on the three as drawn; then the dipole at the tick laid out as a calculation for his yes, and
+  the pictures for all four trade days on pods (one launch, the price put to him at the time).
+

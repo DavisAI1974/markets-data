@@ -2935,6 +2935,39 @@ big movements happened in all 3 at the same time and they do".**
   line, how far in ticks and in time to the nearest move of each other line), and the pictures for the whole of
   the four trade days. Not started. The one open call before it is the 20 seconds (the entry above).
 
+**DECIDED (Greg, 2026-11-18), the 20 seconds, final: "But if we're running 20 sec data on the renders it's worthless
+to get signals from. They are basically validations that we need to continue with this reserch but that's their
+only purpose if 20 sec windows"; then "No exceptions! That window gives us nothing but a visual to confirm frkm."**
+- NO EXCEPTIONS. Nothing made on the 20-second window is a signal or enters a calculation. Its one use: a picture
+  to confirm from. This settles the conflict put to him in the correction above, and Claude's recommendation
+  there (keep the 20 seconds as the one exception) is REFUSED. It is not raised again.
+- The stored 20-second outputs stay stored. They are not deleted and not used.
+
+**CORRECTED BY GREG (2026-11-18), the three renders: "And those aren't the 3 renders I asked for"; "I said dipole and
+exhaustion ticked by nano"; "We can add those to your selections once you have nano versoons of them all"; "And i
+asked for the trade price curve too".**
+- The slip, owned: the first two sets of samples drew Claude's own selections (the best bid and ask, a running
+  total of trades, the lean of the resting orders, and a 20-second strip) in place of what he asked for.
+- THE THREE RENDERS ARE: (1) the trade price curve; (2) the dipole, timed at the tick; (3) the exhaustion, timed
+  at the tick. Three separate graphs on one axis of real timestamps. No window.
+- Claude's selections (the resting orders' lean, the running total of lots bought minus sold, the quote) may be
+  ADDED beside them once the tick versions of the dipole and the exhaustion exist. Not before, not instead.
+- Redrawn and sent (the same stored files of trade day Oct 17, nothing new read, nothing stored; 150 and 600
+  trades from 11:58:32.200 Eastern). What each graph is, Claude's calls, stated to him, his to correct:
+  1. The trade price curve: the price of every trade, joined in time order.
+  3. The exhaustion at the tick: the peak with no window, as stored in `turn_peaks` (made on his word of
+     2026-11-17, "calc this without the window and find the peak number"): each run of trades on one side as it
+     builds trade by trade; its high is its last trade; it ends when the other side hits.
+  2. The dipole at the tick: buying against selling, where the two poles are the run of trades under way and the
+     run it took over from: the size of the latest run of buying minus the size of the latest run of selling,
+     over the two together. It changes at every trade. No clock, no count of trades, no level: the stretch is
+     set by the last change of hands. Empty until there has been one change of hands. NAMED AS HIS RULE ASKS:
+     it adds the trades of a run together (a run's size is a sum of its trades); the single trades stay on
+     their rows. This is a new figure; it is read off the stored runs and is not yet a stored calculation.
+- Why this dipole and not "since the price move under way started" (Claude's pick of the eleventh session): that
+  line restarts at every move and most moves are one step long, so it holds one trade or none most of the time.
+  The run against the run before is defined at every trade. Both can be drawn; this one is drawn first.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
