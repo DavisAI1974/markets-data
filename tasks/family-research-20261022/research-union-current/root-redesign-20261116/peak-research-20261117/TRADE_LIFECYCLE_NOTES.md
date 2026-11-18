@@ -474,3 +474,89 @@ was crypto and we're doing ng".
 - Likely the correction he means (the crypto review of July 11): a winner and its losing twin had the same shape
   at entry; win or lose was the side taken, not the shape.
 
+## 2026-11-18 (thirteenth session): the crypto exhaustion calculation read WHOLE, and the finished list of differences
+
+Read whole this session, on Markets branch `claude/davisai-s71-counterparty-capacity-sf1168` (`75b15fa`):
+`research/shape_s71/regroup2.py`, `arc_gate.py`, `two_shapes.py`, `shape_arc.py` (its first 140 lines; it is not
+used by the picture), `_birth_probe.py`, `_liquidity_dive.py`, `odcore/platform.py`, `odcore/flip_detector.py`,
+`odcore/swing_maker.py`, `kraken_book_collector.py`, the July 7 handoff and `SIGNAL_SHAPE_DIRECTION_S71.md`. Also
+opened: that session's own saved arc values, `research/shape_s71/quad_means.npz` (told to Greg first).
+Nothing of ours was read or run.
+
+### What handoff O left open, now settled from the code
+
+- THE ENTRY GATE WAS NOT USED. `run_kraken_cell` never switches it on (`dipole_entry` stays off), so the
+  divergence read played no part in which trades the arcs follow.
+- THE ONSET IS A FILL, NOT THE TURN. The turn finder marks a turn; the trade then starts at the first later tenth
+  of a second holding a trade on the OTHER side (a sell for a trade going long, a buy for one going short), and
+  only if that comes before the next turn. So every onset holds a trade against the trade's own side.
+- THAT IS WHAT BREAKS HIS PICTURE AT 0 AND AT 20 SECONDS. The against-side trade at the onset pushes the line down
+  at 0; exactly 20.0 seconds later it leaves the 20-second roll and the line jumps back up. Checked on the saved
+  crypto values: on all 20 lines (five coins, four kinds) the two largest steps of the whole line are at 0.0
+  (down, 0.17 to 0.66) and at 20.0 (up, 0.15 to 0.63); every other step is about 0.003. The notes above said
+  "which way is not known": it is the roll plus the fill rule. Any other onset on our tape puts a different
+  built-in step there.
+- WHAT FEEDS AN ARC. Only three things from the data: the size bought and the size sold in each tenth of a second,
+  and (for two coins only) the mid price. The resting sizes at the best prices are passed in but never used on
+  this path (`fill_model="front"`). The fees (maker 0, taker 5) go into `net_bps` and nowhere else: with winner
+  and loser gone, no fee touches any drawn value.
+- WHAT SETS WHERE A TRADE STARTS AND ENDS (the executor's rules, all still inside the arcs):
+  1. the turn finder: a zigzag on the lean of trades over the last 600 cells, which on this grid is 60 SECONDS,
+     turning when the lean comes back from its furthest point by a set amount (0.10 for btc, eth, sol; 0.13 xrp;
+     0.30 doge);
+  2. for btc and eth only, an earlier entry when the mid price comes back from its furthest point by 5 or 10 bps;
+  3. the fill rule above (in at the next trade on the other side, first in line);
+  4. the end: the next turn's fill ends this trade and starts the next one; if that fill does not come, a wait of
+     30 seconds (60 for doge) for a trade on the other side, then out;
+  5. for btc and eth only, a stop when the price is 80 or 100 bps against the trade.
+  Under the plain setup (sol's: none of 2 and 5) the mid price is not used at all: the trades and their arcs come
+  from the bought and sold sizes alone.
+- SHORT OR LONG needs an END as well as an onset: the length is end minus onset, both from the executor.
+- PARTLY BUILT IN, kept so it is not read as a finding: a turn is only marked once recent trading has moved the
+  trade's way, so the line rising into the onset is partly made by how the trades are chosen.
+
+### The finished list: crypto against what we hold
+
+Made the same in the natural gas calculation (Claude's calls, stated to Greg, his to correct):
+1. THE GRID. Our trades are summed into tenths of a second on the received clock, each trade in the tenth it was
+   received in; the grid starts at the open of the trade day (6 pm Eastern). Crypto's records were made the same
+   way by the collector, on its own receive clock. The stored rows are untouched; this is inside the calculation.
+2. THE 20-SECOND LINE is worked out fresh on that grid with crypto's own formula (the last 200 cells, the cell
+   itself included). The stored `flow_20s` is NOT used for it: it exists only at ticks, and crypto's line is read
+   every tenth of a second, also where a trade drops out with no message. It is checked once against the stored
+   `flow_20s` where the two must agree.
+3. ZERO WHERE NOTHING TRADED. Crypto wrote 0 when no trade was inside the 20 seconds, and those zeros are inside
+   every mean. Ours is stored empty there. In this calculation the crypto 0 is used, with a mark beside it saying
+   "nothing traded", so both are kept.
+4. A TRADE WITH NO SIDE goes into neither bought nor sold. Same as crypto in effect.
+5. EACH TRADE DAY takes the place of a coin: its own trades, its own middle length, its own line. Nothing crosses
+   from one trade day to another. The 5 pm to 6 pm stretch is not in it.
+6. 45 seconds before the onset to 60 after; a trade whose 105 seconds do not fit inside the trade day is left
+   out; a kind is drawn only with at least 8 trades. As crypto.
+
+Cannot be made the same; said to him as facts:
+- Crypto never had the single trades or orders. Its collector kept one record per tenth of a second with the
+  trades already summed, and the ten best levels of the book. We hold every message.
+- Crypto's clock was our collector's computer; trades during a dropped connection were lost; when the feed went
+  quiet the collector could stamp a trade early by the length of the quiet. Faults of the collector, not steps
+  of the calculation: not copied.
+- Crypto ran round the clock, five coins, about 40 hours each in one unbroken stretch. Ours: one contract, four
+  trade days of 23 hours, each on its own, with the settlement window (2:28 to 2:30 pm Eastern) marked and nothing
+  removed.
+- Sizes are coins there and lots here.
+- NO NATURAL GAS SETUP EXISTS. The turn amount, the early entry, the stop and the wait were set coin by coin on
+  Kraken results. "Only the market differs" cannot choose one for natural gas.
+
+Still needing his word, put once and together (the message of this session):
+1. THE TRADES the arcs follow: the crypto turn finder and its in and out rules brought back for natural gas (with
+   a setup named), or his own onset and end.
+2. THE MEAN AND THE MEDIAN: each line an AVERAGE of many trades' arcs; short or long by the middle length.
+
+### Desktop's start, found (corrects handoff O, which said it was not on the branch)
+
+`desktop-old-family-chain-on-clock-20261117/flow-60s-before-and-after-<trade day>.parquet`: for every 20-second
+peak of the four trade days, the 20-second flow turned to the peak's side, one reading a second from 60 seconds
+before the peak's high to 60 after, on the rebuilt rows. It is the same kind of line as the crypto arc with a
+different anchor (the peak's high, not a trade's onset) and a different step (one second, not a tenth). That
+folder carries Greg's note "record only", so it is cited as what Desktop anchored on and is never an input.
+Desktop's earlier pictures on the old data ("Flow lean and midpoint around the birth") are still not on the branch.

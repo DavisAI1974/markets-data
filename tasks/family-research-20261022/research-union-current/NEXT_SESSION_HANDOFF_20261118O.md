@@ -148,7 +148,11 @@ On this branch, under `research-union-current/`:
   "Flow lean and midpoint around the birth" (the 20-second lean and the midpoint from 40 seconds before a birth
   to 60 after, against matched controls), the share of births above and below their level, and the first-event
   curves. They are the same kind of picture as the crypto arcs, anchored on a dipole's birth. **They and their
-  programs were NOT found on this branch** (searched by file name). Where they are is not known to this session:
+  programs were NOT found on this branch** (searched by file name). (CORRECTED 2026-11-18, thirteenth session: Desktop's
+  start on the REBUILT rows is on this branch, `desktop-old-family-chain-on-clock-20261117/`
+  `flow-60s-before-and-after-<trade day>.parquet`: the 20-second flow turned to each peak's side, 60 seconds
+  before its high to 60 after. A record only, never an input. The earlier pictures on the old data are still not
+  here.) Where they are is not known to this session:
   ask Greg, or Desktop through him. If they sit only in last week's folders, that meets "do not open last week's
   strategy material" and is his call.
 

@@ -3039,6 +3039,49 @@ our thinking later so completely disregard those labels".**
   The review of 2026-07-11 (`S77_REVIEW_FOR_CHATGPT.md`, 2d) says a winner and its losing twin shared the same
   entry shape and that turning a loser's side round made it a winner: that may be the correction he means.
 
+## Thirteenth session (2026-11-18, in a code session, on Fable with the Fable advisor)
+
+Started from `NEXT_SESSION_HANDOFF_20261118O.md` and Greg's drop-in (the corrected one: winner and loser left out).
+- Code: Markets `claude/wizardly-fermi-0s9nlb` (`b1ed5bf`) brought into the session's own branch
+  `claude/magical-allen-kncdpa` by fast-forward (the session branch held nothing of its own). Nothing to the trunk.
+- The agent skills do not install in the container: the router and the git workflow skill were read from the
+  pinned public source (tag 0.6.8). Superpowers loads by itself here and was not used (one router only).
+- Read in full: handoff O, the notes file, this file's eleventh and twelfth sessions, the sample pictures' README
+  and three of its pictures. Last week's strategy material was not opened.
+- No pod was started. Nothing of the four trade days was read or run in the session.
+
+**The crypto exhaustion calculation read whole, and the list of differences finished (his FIRST job).** Every file
+the July 7 picture stands on was read whole on its own session's branch (`75b15fa`): the script that drew it, the
+pieces it calls, the executor (`odcore/platform.py`, `odcore/swing_maker.py`), the turn finder
+(`odcore/flip_detector.py`) and the Kraken collector. The full list, with what was settled from the code, is in the
+notes file (`TRADE_LIFECYCLE_NOTES.md`, the section dated 2026-11-18, thirteenth session). In short:
+- Settled from the code: the entry gate was not used; the onset is a FILL (the first trade on the other side
+  after a turn), which with the 20-second roll makes the break at 0 and at 20 seconds in his picture (checked on
+  the crypto session's saved values, `quad_means.npz`, told to him first: on all 20 lines the two largest steps
+  are at 0.0 and at 20.0); the fees touch only the result that is now disregarded, so no fee is in any drawn
+  value; the turn finder's lean is 600 cells, which is 60 seconds on that grid; under the plain setup (sol's) the
+  trades come from the bought and sold sizes alone.
+- Claude's calls, stated to him, his to correct (each makes ours the same as crypto): trades summed into tenths of
+  a second on the received clock, the grid starting at the open of the trade day; the 20-second line worked out
+  fresh on that grid with crypto's formula and not taken from the stored `flow_20s`; crypto's 0 where nothing
+  traded, with a mark beside it so the empty is kept too; a trade with no side in neither figure; each trade day
+  in the place of a coin; 45 seconds before to 60 after, left out when the 105 seconds do not fit, a kind drawn
+  only with at least 8. Not copied: the collector's faults (lost trades on a dropped connection, early stamps
+  after a quiet feed).
+- Cannot be made the same, said as facts: crypto never held single trades or orders; round the clock against the
+  trade day; five coins against one contract; no natural gas setup exists (the turn amount, early entry, stop and
+  wait were set coin by coin on Kraken results).
+- PUT TO HIM, once and together, with no recommendation: (1) the trades the arcs follow (the crypto turn finder
+  and its in and out rules brought back for natural gas with a setup named, or his own onset and end; said with
+  it: if he brings it back and names no setup, Claude uses the plain one, sol's, because the other four carry
+  numbers set on those coins' results); (2) the mean and the median (each line an AVERAGE of many trades' arcs,
+  named in that word; short or long by the middle length). Nothing of the exhaustion calculation is written
+  until his word.
+- Handoff O corrected in one place: Desktop's start IS on the branch
+  (`desktop-old-family-chain-on-clock-20261117/flow-60s-before-and-after-<trade day>.parquet`), a record only.
+- The layout "Exhaustion with no window" at the end of `STEP1_STEP2_LAYOUTS.md` stays unbuilt: overtaken by the
+  crypto-exact calculation (handoff O, open item 7).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
