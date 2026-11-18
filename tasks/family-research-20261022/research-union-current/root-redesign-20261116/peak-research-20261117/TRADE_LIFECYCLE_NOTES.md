@@ -570,3 +570,14 @@ iutpots if are any will now go into our excel sheet. They would be for observati
 - Its outputs go into the Excel sheet. Observation and verification only: never a signal, never an input.
 - The mean and the median were not answered; Claude's call (the stored output is per trade; the averaging is in
   the picture only and is named on it) is stated to him and is his to correct.
+
+## 2026-11-18 (thirteenth session): no average and no split; our trades individually (Greg)
+
+"And i think we took the average of the trade trlypes to get a simplified version to run for each type to
+validaylte the equations and outputs. We will want to door our trades individually and see how they seperate
+organically. Like the reversal of that crypto process".
+- The crypto mean line per kind was a simplified check of the equations. It is NOT made for natural gas.
+- No short or long split, no middle length, no kind put on a trade by us. Every trade's own arc, on its own.
+- How the trades separate is looked for in the single arcs. Any method that would group them is named to him
+  first (his standing rule).
+- Left out of the crypto calculation on his word, in all: winner and loser; the average; the short or long split.

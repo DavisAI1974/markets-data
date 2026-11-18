@@ -3101,6 +3101,27 @@ any will now go into our excel sheet. They would be for observation or vaelrific
   and the short and long split are made in the PICTURE only, named as averaging on the picture, and every
   trade's own arc is drawn too.
 
+**DECIDED (Greg, 2026-11-18, thirteenth session), the mean and the median. His words, whole: "And i think we took
+the average of the trade trlypes to get a simplified version to run for each type to validaylte the equations and
+outputs. We will want to door our trades individually and see how they seperate organically. Like the reversal of
+that crypto process".**
+- NO AVERAGE LINE AND NO SHORT OR LONG SPLIT in the natural gas exhaustion render. The crypto average of each kind
+  was a simplified version made to check the equations and outputs; it is not carried over. This is the second
+  part of the crypto calculation left out on his word (the first: winner and loser).
+- EVERY TRADE INDIVIDUALLY: each trade's own arc is stored and drawn on its own, and how they separate is left to
+  the data ("organically"). No kind is put on a trade by us; no middle length is taken.
+- "The reversal of that crypto process": crypto went from kinds named beforehand to one average line per kind;
+  here it starts from the single trades and looks at what kinds, if any, show by themselves.
+- This replaces Claude's call recorded in the entry above (the mean line and the split in the picture only): the
+  picture holds no mean and no split at all. The at-least-8 rule goes with them (it only guarded a mean).
+- What is carried over exactly, then: the data handling (tenths of a second), the 20-second line, the trading
+  program that makes the trades, the onset, the 45 seconds before and 60 after, the turn to the trade's side.
+- Claude's calls for the drawing, stated to him, his to correct: every trade's arc as its own small panel, in the
+  order the trades happened; and one picture per trade day holding every trade at once, one thin strip per trade
+  in time order, coloured by its flow, with each trade's own end marked, so they can be looked at together
+  without any of them being combined. No order by length or by any other measure (that would be a rank) unless
+  he asks for it.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
