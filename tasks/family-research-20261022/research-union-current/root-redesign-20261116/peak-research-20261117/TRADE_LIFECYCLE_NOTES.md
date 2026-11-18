@@ -585,3 +585,7 @@ organically. Like the reversal of that crypto process".
 Greg, same session: "We will want to see how the long and short dprints behave but not give them that label prior
 to run". Each trade's length is a stored number; no short or long label before the run or in the store; how the
 longer and shorter ones behave is looked at afterwards from the single trades.
+
+Greg, same session: "Each trade should have its own exhaustion graph. No more than one graph per render". One
+picture for each trade of the crypto and ng program, one graph in it. No pages of panels, no picture holding many
+trades.

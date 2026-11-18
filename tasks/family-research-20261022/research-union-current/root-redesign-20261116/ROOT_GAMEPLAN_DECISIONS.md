@@ -3173,6 +3173,23 @@ the three renders at the tick and the stacked pairs.** Markets branch `claude/ma
   brought up to date; the program's trades into the Excel file as sheets named "crypto and ng <trade day>",
   every row linked to its picture, Desktop's sheets kept; delete the pods.
 
+**DECIDED (Greg, 2026-11-18, thirteenth session), on the go message's calls: "Each trade should have its own
+exhaustion graph. No more than one graph per render".**
+- THE EXHAUSTION RENDER IS ONE PICTURE FOR EACH TRADE, WITH ONE GRAPH IN IT: that trade's own arc and nothing
+  else. Claude's call of pages holding 40 small panels is REFUSED and taken out of the code (Markets branch
+  `claude/magical-allen-kncdpa`; the commit names this decision).
+- Taken out with it, as they put many trades in one render: the two pictures holding every trade at once (in time
+  order; in order of length). Not made. Every arc is stored in `crypto-ng-arcs-<trade day>.parquet`, so any such
+  picture can be drawn later from the stored arcs on his word; it is offered once and not built.
+- Read as (his to correct): the sentence is about the exhaustion pictures. His three renders stay as he asked for
+  them (three separate graphs on one axis of real timestamps) and the stacked pair stays two graphs ("2 graphs
+  stacked on top and bottom of each other"). Said to him in the message; if he wants those as single pictures too
+  it is a change of drawing only.
+- Each trade's picture: the 20-second flow turned to the trade's side, 45 seconds before the onset to 60 after;
+  the onset marked; where that trade ended marked when it is inside the 60 seconds; the title gives the trade's
+  number, the side the program took, the onset in Eastern time and how long the trade lasted.
+- No go for the pods has been given yet.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
