@@ -3223,7 +3223,7 @@ crypto".
 
 **DECIDED (Greg, 2026-11-18, at the close of the thirteenth session): NANO TICKS; the first run is wrong data.**
 His words, in order: "And we should probably have the ticks to be nano since our data is nano"; "Definitely run it
-on nano ticks. .1 is losing too much data"; "Delete .1 outputs and renders. We don't keep wring dayta"; "We've gone
+on nano ticks. [the old time step] is losing too much data"; "Delete [the old time step] outputs and renders. We don't keep wring dayta"; "We've gone
 over numerois times"; "And the pod ran the exhaustion calcs for 30k+ trades each day.for 4 days in a matter of
 minues earlier? Something doesn't sound rigjt"; "We're going to have to rerun days with the new tick time anyway
 right?"; "If so., let's make new handoff, commit and push and print drop in for new chat and save rerun for new
@@ -3308,8 +3308,8 @@ pods first. Pull renders whike it's running".**
 - Said to him plainly: this is the July rules on our clock, not the July code run byte for byte. Its trades are
   not the trades a grid run makes, because a grid nets everything inside a grid step into one reading.
 
-**A SLIP, OWNED, and Greg's word on it (2026-11-18): "Why are we using made upndata and why are we using .1 timin?
-A we have tonchange is output time from .1 to nano tick.time".**
+**A SLIP, OWNED, and Greg's word on it (2026-11-18): "Why are we using made upndata and why are we using [the old time step] timin?
+A we have tonchange is output time from [the old time step] to nano tick.time".**
 - What was done: to check the new code before any pod, a MADE-UP list of numbers placed exactly on grid steps was run in the session through both the July program and the clock version, to see that they made the
   same turns and trades. It was not market data, it produced no output and nothing of it was stored or committed.
   It was still against two of his standing rules (never invent data; no grid of any size) and he was told of it
@@ -3321,7 +3321,7 @@ A we have tonchange is output time from .1 to nano tick.time".**
 - Not established by any check on real data yet: that the clock version's trade maker follows every branch of
   the July one. The pod run's own checks are what stand behind it.
 
-**DECIDED (Greg, 2026-11-18, fourteenth session): "Any .1 code and data need to be delivered. Any .1 mentions as
+**DECIDED (Greg, 2026-11-18, fourteenth session): "Any [the old time step] code and data need to be delivered. Any [the old time step] mentions as
 time needs to be deleted".** Read as "deleted" (his to correct).
 - CODE (Markets `ccr-92cbec22-u0cbuj`, `3f0112d`): the July program's files brought back in the thirteenth session
   (`crypto_ng/program/`, `crypto_ng/ng.py`, `crypto_ng/PROVENANCE.md`) and their fingerprint test are removed from
@@ -3335,7 +3335,10 @@ time needs to be deleted".** Read as "deleted" (his to correct).
 - MENTIONS: taken out of the code, the receipts the job writes, the constants record and `CLAUDE.md` (which now
   also carries: no made-up numbers in a session, not even to check code). In the record pages (handoffs O and P,
   this file, the notes file, each daily branch's `FILES.md`) the wording is changed to "time grid" and "grid
-  step", so the record of what happened still reads. KEPT AS THEY WERE SAID: Greg's own quoted words.
+  step", so the record of what happened still reads. Greg, after it: "Once all trace of [the old time step] is
+  gone then go"; "Yes deleted. My bad". So in his own quoted words too the figure is written "[the old time
+  step]", in square brackets, wherever it stood. NOT REACHABLE: git history and the commit messages already pushed,
+  and the older session branches, which still hold the old files; none is deleted or rewritten.
 - The fingerprint check of the thirteenth session is gone with the files it checked. What stands behind the
   rules now is the job's own checks on real tape.
 

@@ -591,7 +591,7 @@ trades.
 
 ## 2026-11-18 (thirteenth session, close): NANO TICKS; the first crypto and ng run was wrong data and is deleted
 
-Greg: "Definitely run it on nano ticks. .1 is losing too much data"; "Delete .1 outputs and renders. We don't keep
+Greg: "Definitely run it on nano ticks. [the old time step] is losing too much data"; "Delete [the old time step] outputs and renders. We don't keep
 wring dayta"; "We've gone over numerois times".
 - The first natural gas run of the crypto calculation put the trades on a time grid, as the
   Kraken collector did. Wrong on our tape: it collapses ticks. Its outputs are deleted; nothing of it is stored
@@ -623,7 +623,7 @@ wring dayta"; "We've gone over numerois times".
 ## 2026-11-18 (fourteenth session): the exhaustion calculation is written at the tick; the rerun goes first
 
 Greg: "We have to rerun the exhaustion data on the pods first. Pull renders whike it's running"; "A we have tonchange
-is output time from .1 to nano tick.time".
+is output time from [the old time step] to nano tick.time".
 - The only change from the July calculation is the TIME: grid steps become the nanosecond. Every rule and
   number is the July one. The turn finder is the July function itself, walked over every moment its 60-second
   lean changes.
@@ -635,13 +635,13 @@ is output time from .1 to nano tick.time".
   every trade on the tape.
 - KEPT SO IT IS NOT DONE AGAIN: a made-up list of numbers on grid steps was used in the session to check
   the new code against the July program. He objected at once ("Why are we using made up data and why are we using
-  .1 timing?"). It is deleted. No made-up numbers, not even for a code check, and nothing on a grid for any
+  [the old time step] timing?"). It is deleted. No made-up numbers, not even for a code check, and nothing on a grid for any
   purpose. A new calculation is checked on real tape on the pods.
 - Built in, to remember when the lines are read: every onset is a trade AGAINST the program's own side, so the
   line steps against the trade at 0 and steps back exactly 20 seconds later when that trade leaves. On thin tape
   a turn can be marked when old trades leave the 60 seconds with nothing new traded; those are counted in the
   receipt and nothing is filtered.
-- Greg, same session: "Any .1 code and data need to be delivered. Any .1 mentions as time needs to be deleted"
+- Greg, same session: "Any [the old time step] code and data need to be delivered. Any [the old time step] mentions as time needs to be deleted"
   (read as "deleted"). The July program's files are removed from the code branch; the rules stand on their own,
   written in seconds at the nanosecond. In these notes the old wording is changed to "time grid" and "grid
   step"; his own quoted words are kept as he said them. Do not bring a time grid, or the word for one, back.

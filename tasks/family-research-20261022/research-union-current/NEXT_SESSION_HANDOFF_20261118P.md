@@ -16,8 +16,8 @@ selected cases). Nothing of it is used.
 
 ## THE JOB, in Greg's words (2026-11-18, at the close)
 
-"And we should probably have the ticks to be nano since our data is nano"; "Definitely run it on nano ticks. .1 is
-losing too much data"; "Delete .1 outputs and renders. We don't keep wring dayta"; "We've gone over numerois times";
+"And we should probably have the ticks to be nano since our data is nano"; "Definitely run it on nano ticks. [the old time step] is
+losing too much data"; "Delete [the old time step] outputs and renders. We don't keep wring dayta"; "We've gone over numerois times";
 "And the pod ran the exhaustion calcs for 30k+ trades each day.for 4 days in a matter of minues earlier? Something
 doesn't sound rigjt"; "We're going to have to rerun days with the new tick time anyway right?"; "let's make new
 handoff, commit and push and print drop in for new chat and save rerun for new session."
