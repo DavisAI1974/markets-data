@@ -3122,6 +3122,17 @@ that crypto process".**
   without any of them being combined. No order by length or by any other measure (that would be a rank) unless
   he asks for it.
 
+**DECIDED (Greg, 2026-11-18, thirteenth session): "We will want to see how the long and short dprints behave but
+not give them that label prior to run".**
+- No "short" or "long" label is put on a trade before the run, and none is stored. Each trade's own length (onset
+  to end) is written down as a measured number, like its side and its times.
+- How the longer and the shorter trades behave is looked at AFTER the run, from the single trades.
+- Claude's call for the drawing, stated to him, his to correct: the picture that holds every trade of a trade day
+  at once (one thin strip per trade) is drawn twice: in the order the trades happened, and in the order of each
+  trade's own length. The second is a way of looking made after the run from the stored number; it has no
+  dividing line, no middle length and no label. It IS an ordering by a measure, said to him in those words; he
+  can strike it.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

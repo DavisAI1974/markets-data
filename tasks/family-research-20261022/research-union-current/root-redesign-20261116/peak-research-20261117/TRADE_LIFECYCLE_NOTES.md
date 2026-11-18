@@ -581,3 +581,7 @@ organically. Like the reversal of that crypto process".
 - How the trades separate is looked for in the single arcs. Any method that would group them is named to him
   first (his standing rule).
 - Left out of the crypto calculation on his word, in all: winner and loser; the average; the short or long split.
+
+Greg, same session: "We will want to see how the long and short dprints behave but not give them that label prior
+to run". Each trade's length is a stored number; no short or long label before the run or in the store; how the
+longer and shorter ones behave is looked at afterwards from the single trades.
