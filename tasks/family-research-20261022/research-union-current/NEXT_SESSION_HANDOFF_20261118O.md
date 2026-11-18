@@ -24,12 +24,18 @@ desktop has already gotten a great start on this."
 
 "The only difference between the two should be that was crypto and we're doing ng".
 
+And after the handoff was written: **"We looked at winner and loser incorrectly. We corrected our thinking later so
+completely disregard those labels".**
+
 What that means, plainly:
 - He wants the natural gas exhaustion render to come out of the SAME calculation that made the crypto exhaustion
   graphs of July 7, 2026 (the four-panel picture "Kraken onset->exhaustion arcs REGROUPED BY TYPE"). He judged
   those graphs "basically good enough on their own to trade from". The point is how much they tell.
 - Nothing in that calculation is to be improved, swapped or left out. If it used a 20-second roll, the 20-second
   roll is used, the same way. The only difference allowed is the market.
+- WINNER AND LOSER ARE GONE. The crypto picture split its trades into winners and losers; that was a mistake he
+  and the crypto sessions corrected later. No winner or loser label is made, drawn, carried over or used, anywhere.
+  This is the one part of the crypto calculation that is NOT carried over, on his word.
 - Before building, find every way the crypto data or its handling differs from what we hold, and either remove
   the difference or put it to him. He asked for this check by name.
 - Desktop already started down this road on the earlier (bad) data. Start from what it has; do it on the rebuilt
@@ -85,7 +91,7 @@ Step by step:
 5. THE ARC of one trade: that line from 45 seconds before its onset to 60 seconds after (`PRE_SEC, POST_SEC =
    45, 60`; 1,051 cells), multiplied by the trade's side so that "with the trade" is up. A trade is left out if
    the 105 seconds do not fit inside the data or its exit is not after its entry.
-6. THE FOUR KINDS: short or long by whether the trade lasted at most the MEDIAN length of that coin's trades;
+6. THE FOUR KINDS (the winner and loser half of this is DISREGARDED on his word; see above): short or long by whether the trade lasted at most the MEDIAN length of that coin's trades;
    winner or loser by whether `net_bps` is above 0. Short-loser, long-winner, short-winner, long-loser.
 7. THE PICTURE: for each kind, the MEAN of the arcs of that kind (only if there are at least 8), one line per
    coin, four panels, x = seconds from the onset, y = "mean flow". Saved also as `quad_means.npz`.
@@ -108,25 +114,28 @@ removed (make ours the same) or put to him once, plainly.
 | The 20-second flow | Over the last 200 grid cells; 0 where nothing traded | Stored `flow_20s` in `calc-flow_peak-*`: over the last 20 seconds on the received clock, at every tick; EMPTY where nothing traded |
 | The side of a trade | As the collector recorded it (check `kraken_book_collector.py`) | The tape's own aggressor side; a trade with no side is counted apart |
 | The trades followed | SIMULATED trades of the platform's executor (zigzag on a 600-cell lean, reversal 0.10, maker fills) | No such trades exist for natural gas. We hold the trade legs (print by print), the runs of the quote, the peaks. `run_kraken_cell` has never been run on this tape |
-| Winner or loser | `net_bps` of the simulated trade (check what costs are inside it) | Nothing. His standing rule: trade cost is not a market condition; research is gross |
+| Winner or loser | `net_bps` of the simulated trade (fees, fills and a stop inside it) | DISREGARDED on his word (2026-11-18): no winner or loser label anywhere |
 | Short or long | Against the median length | His standing rules: no ranks, no labels put on by us |
 | The line drawn | The mean over many trades | His standing rule: any method that combines cases is named to him as averaging before it is written |
 | How much data | Five coins, about 40 hours each | One contract, four trade days |
 | The session | Round the clock, one unbroken window per coin, all its trades taken together | Cut by trade day (6 pm to 5 pm Eastern), the 5 pm halt and the settlement window marked; each trade day on its own |
 
-THREE THINGS THAT NEED HIS WORD before anything is built. Put them together, once, plainly, with no recommendation
+TWO THINGS THAT NEED HIS WORD before anything is built. Put them together, once, plainly, with no recommendation
 made for him: both sides of each are his own rules.
 1. THE TRADES. The crypto arcs follow simulated trades made by the crypto executor. To be exactly like crypto the
    same executor has to be run on the natural gas tape. It is not in the current code, and his rule of 2026-11-16
    says: "NO BITCOIN-ERA RULES ... do not reintroduce any of them, and do not copy one out of old code, an old
    handoff or the archive" (fee floors, maker and taker fill assumptions, crypto-venue strategy rules). Bringing
    the executor back is his explicit word, or he names what the onset is on this tape in its place.
-2. WINNER OR LOSER. In crypto it is the simulated trade's `net_bps`, which has fees, fills and a stop inside it.
-   His rules: trade cost is not a market condition; research is gross. His word on what a winner is here.
-3. THE MEAN AND THE MEDIAN. Each crypto line is the mean over many trades, and short or long is against the
+2. THE MEAN AND THE MEDIAN. Each crypto line is the mean over many trades, and short or long is against the
    median. His rules name both (averaging; a rank; a label put on by us). "Exactly like the old calc" asks for
    them. Name the averaging to him in that word; whichever he says, every single trade's own arc can be drawn
    beside it.
+
+DECIDED, not to be asked: winner or loser. "We looked at winner and loser incorrectly. We corrected our thinking
+later so completely disregard those labels". The crypto `net_bps` result (fees, fills and a stop inside it) is not
+used for anything. With the labels gone the four crypto panels become at most two (short, long), and only if he
+keeps the split by length at all (thing 2).
 
 ## What Desktop has (the "great start")
 
@@ -184,6 +193,7 @@ On this branch, under `research-union-current/`:
 ## Standing rules as they stand after this session
 
 - THE EXHAUSTION CALCULATION IS THE CRYPTO ONE, EXACTLY. The only difference: that was crypto, this is natural gas.
+  One thing is left out on his word: the winner and loser labels ("completely disregard those labels").
 - "No exceptions! That window gives us nothing but a visual to confirm from" (the 20 seconds), said earlier the
   same session, was not withdrawn. Do not argue one against the other and do not re-ask. Build the crypto-exact
   exhaustion render (20 seconds as crypto used it) AND the tick versions beside it; what counts as a signal is his

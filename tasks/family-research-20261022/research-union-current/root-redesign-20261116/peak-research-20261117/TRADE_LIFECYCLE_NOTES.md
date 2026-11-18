@@ -467,3 +467,10 @@ was crypto and we're doing ng".
   exhaustion. Carry it over as it was; list every difference between the crypto data and ours; put each to him.
 - The tick versions (the dipole and the exhaustion at the tick) are built BESIDE it, not in place of it.
 
+## 2026-11-18: winner and loser are disregarded (Greg)
+
+"We looked at winner and loser incorrectly. We corrected our thinking later so completely disregard those labels".
+- No winner or loser label anywhere. The crypto exhaustion calculation is carried over exactly EXCEPT for that.
+- Likely the correction he means (the crypto review of July 11): a winner and its losing twin had the same shape
+  at entry; win or lose was the side taken, not the shape.
+

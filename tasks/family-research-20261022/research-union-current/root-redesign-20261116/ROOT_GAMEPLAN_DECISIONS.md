@@ -3027,6 +3027,18 @@ difference between the two should be that was crypto and we're doing ng".**
   `three-renders-samples-20261118/` (samples only, no receipt). Handoff O replaces handoff N as the starting
   point. No pod was started in this session; the account read at its start showed none.
 
+**DECIDED (Greg, 2026-11-18, after handoff O was written): "We looked at winner and loser incorrectly. We corrected
+our thinking later so completely disregard those labels".**
+- No winner or loser label is made, drawn, carried over or used, in the exhaustion calculation or anywhere else.
+  It is the one part of the crypto calculation that is not carried over. The crypto result it was made from
+  (`net_bps`, with fees, fills and a stop inside it) is not used for anything.
+- This removes one of the three things handoff O said needed his word. Two remain: the trades the arcs follow
+  (the crypto executor is not in the current code, and his rule of 2026-11-16 is against bringing crypto-era
+  trade rules back), and the mean and the median. Handoff O is corrected.
+- Not established in this session: when and where the crypto sessions corrected the winner and loser reading.
+  The review of 2026-07-11 (`S77_REVIEW_FOR_CHATGPT.md`, 2d) says a winner and its losing twin shared the same
+  entry shape and that turning a loser's side round made it a winner: that may be the correction he means.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
