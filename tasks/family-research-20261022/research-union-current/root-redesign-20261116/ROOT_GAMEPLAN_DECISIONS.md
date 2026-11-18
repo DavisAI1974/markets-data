@@ -2899,8 +2899,7 @@ refrag."**
   each trade (128 numbers from the 30 minutes before entry; about 1,919 signatures over 12 cells, June 2026). The
   refrag program itself is on his E: drive, not in the repository (only `markets_adapter.py` is).
 - WHAT THE SCRIPT DOES, and it corrects the entry two above: the line is the TRADES, not the book. Flow = bought
-  minus sold over bought plus sold, over a ROLLING 20 SECONDS (`SMOOTH_SEC = 20`), on a grid of tenths of a
-  second, turned to the trade's own side, from 45 seconds before the trade's entry (the onset) to 60 after. Each
+  minus sold over bought plus sold, over a ROLLING 20 SECONDS (`SMOOTH_SEC = 20`), on a time grid, turned to the trade's own side, from 45 seconds before the trade's entry (the onset) to 60 after. Each
   line of the picture is the mean of that over the trades of one kind (short or long by the median length;
   winner or loser by the result). The script's own comment on the 20 seconds: trades were sparse, "a shorter
   window makes per-leg |imb| a saturated 0/1 square wave; 20s recovers a readable per-leg arc".
@@ -3061,8 +3060,7 @@ notes file (`TRADE_LIFECYCLE_NOTES.md`, the section dated 2026-11-18, thirteenth
   are at 0.0 and at 20.0); the fees touch only the result that is now disregarded, so no fee is in any drawn
   value; the turn finder's lean is 600 cells, which is 60 seconds on that grid; under the plain setup (sol's) the
   trades come from the bought and sold sizes alone.
-- Claude's calls, stated to him, his to correct (each makes ours the same as crypto): trades summed into tenths of
-  a second on the received clock, the grid starting at the open of the trade day; the 20-second line worked out
+- Claude's calls, stated to him, his to correct (each makes ours the same as crypto): trades summed into grid steps on the received clock, the grid starting at the open of the trade day; the 20-second line worked out
   fresh on that grid with crypto's formula and not taken from the stored `flow_20s`; crypto's 0 where nothing
   traded, with a mark beside it so the empty is kept too; a trade with no side in neither figure; each trade day
   in the place of a coin; 45 seconds before to 60 after, left out when the 105 seconds do not fit, a kind drawn
@@ -3114,7 +3112,7 @@ that crypto process".**
   here it starts from the single trades and looks at what kinds, if any, show by themselves.
 - This replaces Claude's call recorded in the entry above (the mean line and the split in the picture only): the
   picture holds no mean and no split at all. The at-least-8 rule goes with them (it only guarded a mean).
-- What is carried over exactly, then: the data handling (tenths of a second), the 20-second line, the trading
+- What is carried over exactly, then: the data handling (grid steps), the 20-second line, the trading
   program that makes the trades, the onset, the 45 seconds before and 60 after, the turn to the trade's side.
 - Claude's calls for the drawing, stated to him, his to correct: every trade's arc as its own small panel, in the
   order the trades happened; and one picture per trade day holding every trade at once, one thin strip per trade
@@ -3143,13 +3141,13 @@ the three renders at the tick and the stacked pairs.** Markets branch `claude/ma
   with its source named.
 - `CLAUDE.md` of Markets now carries the one exception under "no bitcoin-era rules", in his words, so a later
   session does not remove the package as a violation or copy from it.
-- `root/crypto_ng_exhaustion.py` (pod job `crypto_ng`): the grid of tenths of a second from the stored rows
+- `root/crypto_ng_exhaustion.py` (pod job `crypto_ng`): the time grid from the stored rows
   through the gate; the program's trades; the 20-second line by the July formula; every trade's own arc. Writes
   the grid, the program's trades (every column the program writes, named `program_...`), every arc, a page of
   small panels for every 40 trades in the order they happened, and two pictures holding every trade at once (in
   time order; in the order of each trade's own length). Two checks: the line counted again by a second method at
-  every tenth of a second; and against the stored `flow_20s` of piece 1 wherever both hold the same trades.
-  The receipt counts, with nothing filtered: turns marked in a tenth of a second with no trade, turns never
+  every grid step; and against the stored `flow_20s` of piece 1 wherever both hold the same trades.
+  The receipt counts, with nothing filtered: turns marked in a grid step with no trade, turns never
   filled, trades with no arc and why, trades the tape gives no side for.
 - `root/tick_renders.py` (pod job `ticks`): the dipole and the exhaustion at the tick written for every tick of
   the trade day (`tick-dipole-<trade day>.parquet`), checked on every tick against the stored runs of
@@ -3230,14 +3228,14 @@ over numerois times"; "And the pod ran the exhaustion calcs for 30k+ trades each
 minues earlier? Something doesn't sound rigjt"; "We're going to have to rerun days with the new tick time anyway
 right?"; "If so., let's make new handoff, commit and push and print drop in for new chat and save rerun for new
 session."
-- THE EXHAUSTION CALCULATION IS MADE AT THE TICK. No grid of tenths of a second, no grid of any size. The first
-  run put the trades on a tenth-of-a-second grid because the Kraken collector did; that was Claude's call, stated
+- THE EXHAUSTION CALCULATION IS MADE AT THE TICK. No time grid, no grid of any size. The first
+  run put the trades on a time grid because the Kraken collector did; that was Claude's call, stated
   to him, and it is against a rule he has given many times. Owned.
-- THE TENTH-OF-A-SECOND OUTPUTS AND RENDERS ARE DELETED. None was stored: the fetched copies and the printed
+- THE TIME-GRID OUTPUTS AND RENDERS ARE DELETED. None was stored: the fetched copies and the printed
   graphs were removed from the session and nothing of them reached git. The job that made them is marked refused
   in the code and stops at once (Markets `74fe470`).
 - HIS DOUBT ABOUT THE SPEED WAS RIGHT. The run did not make a line for each of the 30,000 and more trades of the
-  tape. It read every tape trade only as a total inside its tenth of a second, and made an arc for each trade of
+  tape. It read every tape trade only as a total inside its grid step, and made an arc for each trade of
   the PROGRAM, which makes its own trades (that run: 1,332; 1,441; 1,251; 1,270 on the four trade days; deleted
   data, not to be used). Claude never put that count in front of him before the run. Standing from here: before a
   run, say how many trades it makes a line for.
@@ -3276,20 +3274,19 @@ pods first. Pull renders whike it's running".**
   index tables of the tick renders. No picture was fetched, nothing calculated, nothing stored.
 
 **BUILT, NOT RUN (Markets `ccr-92cbec22-u0cbuj`, `6c94f88`): the exhaustion calculation at the tick.**
-- `crypto_ng/tick.py`: the July rules read on the clock. WHAT STAYS: every rule and every number (the 20-second
-  line; the turn finder's lean over 60 seconds, its 600 cells; the turn amount 0.10; in at the first trade on the
-  other side after a turn, only if before the next turn; the wait of 30 seconds, its 300 cells; 45 seconds before
-  and 60 after as the least a picture shows). The turn finder is the July function itself (`detect_flips`,
-  untouched), walked over every moment the 60-second lean changes instead of over every cell. WHAT CHANGES: no
-  cells. A trade enters a line at the nanosecond it was received and leaves it exactly 20 (or 60) seconds later.
+- `crypto_ng/tick.py`: the July rules written at the nanosecond. WHAT STAYS: every rule and every number (the
+  20-second line; the turn finder's lean over 60 seconds; the turn amount 0.10; in at the first trade on the
+  other side after a turn, only if before the next turn; the wait of 30 seconds; 45 seconds before and 60 after
+  as the least a picture shows). The turn finder is walked over every moment the 60-second lean changes. A trade
+  enters a line at the nanosecond it was received and leaves it exactly 20 (or 60) seconds later.
 - `root/crypto_ng_tick.py`: the pod job. It writes, for one trade day: the 20-second line for the WHOLE trade day
   at every moment it changes; the 60-second lean the same way; every turn and what became of it; every trade of
   the program; and EVERY TRADE ON THE TAPE on its own line (where it sits on the 20-second line, just before it
   and at it, and the trade of the program under way at it). The count of trades is written first
   (`CRYPTO-NG-TICK-COUNT-<trade day>.json`). No picture in the data run; one trade's graph is printed afterwards,
   twice (steps; a smooth curve, drawing only), one graph in each.
-- The refused tenth-of-a-second job (`root/crypto_ng_exhaustion.py`) is removed in the same change ("We don't keep
-  wrong data"). The July program in `crypto_ng/program/` stays byte for byte as the record; it is not run.
+- The refused time-grid job (`root/crypto_ng_exhaustion.py`) is removed in the same change ("We don't keep
+  wrong data").
 - Checks, all on real tape on the pod: both lines recounted a second way at every read; the size bought and sold
   in the 20 seconds compared with the stored `flow_bought_20s` and `flow_sold_20s` on EVERY tick of the trade day;
   the trades read back against what the rules promise (each starts at a trade on the other side after its turn,
@@ -3309,22 +3306,38 @@ pods first. Pull renders whike it's running".**
      on halves of a list of cells, and it was never used on this path.
   7. Nothing is left out for not fitting 45 seconds before and 60 after: the line is the whole trade day's.
 - Said to him plainly: this is the July rules on our clock, not the July code run byte for byte. Its trades are
-  not the trades a grid run makes, because a grid nets everything inside a tenth of a second into one reading.
+  not the trades a grid run makes, because a grid nets everything inside a grid step into one reading.
 
 **A SLIP, OWNED, and Greg's word on it (2026-11-18): "Why are we using made upndata and why are we using .1 timin?
 A we have tonchange is output time from .1 to nano tick.time".**
-- What was done: to check the new code before any pod, a MADE-UP list of numbers placed exactly on tenths of a
-  second was run in the session through both the July program and the clock version, to see that they made the
+- What was done: to check the new code before any pod, a MADE-UP list of numbers placed exactly on grid steps was run in the session through both the July program and the clock version, to see that they made the
   same turns and trades. It was not market data, it produced no output and nothing of it was stored or committed.
   It was still against two of his standing rules (never invent data; no grid of any size) and he was told of it
   only after it was done.
 - It is deleted. STANDING FROM HERE: no made-up numbers in the session, not even to check code, and nothing placed
   on a grid for any purpose. A new calculation is checked on real tape on the pods, by a second method written
   into the job.
-- His reading of the job is the right one and is what was built: the only change is the time, from tenths of a
-  second to the nanosecond. Every rule and number is the July one.
+- His reading of the job is the right one and is what was built: the only change is the time, from grid steps to the nanosecond. Every rule and number is the July one.
 - Not established by any check on real data yet: that the clock version's trade maker follows every branch of
   the July one. The pod run's own checks are what stand behind it.
+
+**DECIDED (Greg, 2026-11-18, fourteenth session): "Any .1 code and data need to be delivered. Any .1 mentions as
+time needs to be deleted".** Read as "deleted" (his to correct).
+- CODE (Markets `ccr-92cbec22-u0cbuj`, `3f0112d`): the July program's files brought back in the thirteenth session
+  (`crypto_ng/program/`, `crypto_ng/ng.py`, `crypto_ng/PROVENANCE.md`) and their fingerprint test are removed from
+  the branch. They were code made for a time grid. The originals are untouched where they were made (Markets
+  `75b15fa`, branch `claude/davisai-s71-counterparty-capacity-sf1168`). `crypto_ng/tick.py` now stands on its own:
+  the same rules and numbers, written in seconds, each trade at its own nanosecond, with its own turn finder.
+  The "crypto and ng" package is still the one exception to "no bitcoin-era rules"; `CLAUDE.md` says what it now
+  holds.
+- DATA: none made on a time grid exists. The thirteenth session's first run was deleted before anything reached
+  git; the made-up check list of this session is deleted.
+- MENTIONS: taken out of the code, the receipts the job writes, the constants record and `CLAUDE.md` (which now
+  also carries: no made-up numbers in a session, not even to check code). In the record pages (handoffs O and P,
+  this file, the notes file, each daily branch's `FILES.md`) the wording is changed to "time grid" and "grid
+  step", so the record of what happened still reads. KEPT AS THEY WERE SAID: Greg's own quoted words.
+- The fingerprint check of the thirteenth session is gone with the files it checked. What stands behind the
+  rules now is the job's own checks on real tape.
 
 - Found, not touched (outside this change): the test `test_no_hidden_numbers` already fails on `7c98593` at
   `root/calcs/in_play.py` line 36 (three constants not in `DECLARED_CONSTANTS.md`), and `root/pod_fetch.py` holds

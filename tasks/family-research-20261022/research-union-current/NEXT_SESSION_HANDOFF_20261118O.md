@@ -67,7 +67,7 @@ Step by step:
 1. THE DATA: the Kraken order book stream for one coin, one record after another (`<coin>_book.jsonl`): the time,
    the mid price, the spread, the size bought and the size sold by takers since the record before, and the resting
    bids and asks. Five coins (btc, eth, sol, xrp, doge), each one recent window of about 40 hours.
-2. THE GRID: everything is put on a regular grid of TENTHS OF A SECOND (`to_grid(…, 0.1)`): book figures take the
+2. THE GRID: everything is put on a regular time grid (`to_grid`): book figures take the
    last value in each cell and are carried forward; bought and sold are summed in each cell.
 3. THE TRADES: made by the platform's own executor, `run_kraken_cell(cfg, mid, buy, sell, best bid size, best ask
    size, half the median spread)` (`odcore/platform.py` on that branch). READ IN PART: `run_kraken_cell`,
@@ -76,7 +76,7 @@ Step by step:
    - The turns come from a zigzag on a lean of trades over 600 cells (`WFLIP = 600`) with a reversal level set per
      coin (`rev`: 0.10 for eth, btc and sol; 0.30 for doge; 0.13 for xrp), moved earlier ("early-arm",
      `retime_flips`) where the coin has an `eps` (eth 10, btc 5). `lean_series` is written for one reading a
-     second; this work fed it tenths of a second.
+     second; this work fed it grid steps.
    - Each turn becomes a SIMULATED trade ("leg") with an entry (`open_idx`, the ONSET, t = 0), an exit
      (`close_idx`), a side, and a result in bps (`net_bps`). The simulation carries a maker fee and a taker fee
      (the Kraken cells: maker 0), a front-of-the-line fill, a grace of 300 or 600, a price stop per coin (`bail`:
@@ -110,7 +110,7 @@ removed (make ours the same) or put to him once, plainly.
 | | Crypto, July 7 | What we hold for the four trade days |
 |---|---|---|
 | The tape | A collector's stream of book records with bought and sold size per record | Every single exchange message, one row per tick |
-| The clock | A grid of tenths of a second | Every tick, to the nanosecond |
+| The clock | A time grid | Every tick, to the nanosecond |
 | The 20-second flow | Over the last 200 grid cells; 0 where nothing traded | Stored `flow_20s` in `calc-flow_peak-*`: over the last 20 seconds on the received clock, at every tick; EMPTY where nothing traded |
 | The side of a trade | As the collector recorded it (check `kraken_book_collector.py`) | The tape's own aggressor side; a trade with no side is counted apart |
 | The trades followed | SIMULATED trades of the platform's executor (zigzag on a 600-cell lean, reversal 0.10, maker fills) | No such trades exist for natural gas. We hold the trade legs (print by print), the runs of the quote, the peaks. `run_kraken_cell` has never been run on this tape |

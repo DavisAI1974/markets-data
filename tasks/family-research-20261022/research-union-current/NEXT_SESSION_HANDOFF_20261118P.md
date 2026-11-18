@@ -24,7 +24,7 @@ handoff, commit and push and print drop in for new chat and save rerun for new s
 
 What that means, plainly:
 - THE EXHAUSTION CALCULATION IS RUN AGAIN AT THE TICK, on all four trade days. Every trade at its own nanosecond.
-  No grid of tenths of a second, no grid of any size. This is decided; do not put it to him again.
+  No time grid, no grid of any size. This is decided; do not put it to him again.
 - The first run of this session is WRONG DATA by his word. Its outputs and renders are deleted and none is stored.
 - He expects an exhaustion line for each of the 30,000 and more trades of a trade day. The first run did not do
   that (see below). This is the first thing to settle with him.
@@ -43,16 +43,16 @@ What that means, plainly:
    start and after trade ends"; "Part of exhaustion research is to see if there are prebirth signals".
 4. Built and run on four pods on his go ("Then go as long as it runs exactly like crypto"): the exhaustion job and
    a second job for his three renders and the stacked pairs. Both passed their checks on all four trade days.
-5. He looked at the first exhaustion render and ruled the run wrong: nano ticks, not tenths of a second.
+5. He looked at the first exhaustion render and ruled the run wrong: nano ticks, not grid steps.
 
 ### What the first exhaustion run did, and the two ways it was wrong
 
-- IT PUT THE TRADES ON A GRID OF TENTHS OF A SECOND, because the Kraken collector did and the July program walks
-  cells. Claude stated that as a call ("our trades are summed into tenths of a second, the way the Kraken
+- IT PUT THE TRADES ON A TIME GRID, because the Kraken collector did and the July program walks
+  cells. Claude stated that as a call ("our trades are summed into grid steps, the way the Kraken
   collector did it") and it is against a rule he has given many times: rows are ticks, nothing collapsed, timed
   to the nanosecond.
 - IT DID NOT MAKE A LINE FOR EVERY TRADE OF THE TAPE. It read every tape trade (30,739 to 41,410 a trade day) only
-  as a total inside its tenth of a second, and made an exhaustion arc for each trade OF THE PROGRAM: the program
+  as a total inside its grid step, and made an exhaustion arc for each trade OF THE PROGRAM: the program
   makes its own trades. Counts of that run, given once so the mismatch is plain; they are from deleted data and
   are NOT to be used: 1,332; 1,441; 1,251 and 1,270 program trades on the four trade days. That is why four trade
   days took seconds. Claude never put that count in front of him before the run, against his "There should be a
@@ -69,7 +69,7 @@ What that means, plainly:
     `platform.py` with three import lines changed), `PROVENANCE.md`, `ng.py` (the natural gas row: sol's row).
     `tests/crypto_ng/test_provenance.py` proves the fingerprints. `CLAUDE.md` carries the one exception under "no
     bitcoin-era rules".
-  - `root/crypto_ng_exhaustion.py`: the REFUSED tenth-of-a-second job. It stops at once (`REFUSED`). Kept as the
+  - `root/crypto_ng_exhaustion.py`: the REFUSED time-grid job. It stops at once (`REFUSED`). Kept as the
     record of the July steps and of the checks worth keeping (the inputs check, the recount, the comparison with
     the stored flow). It is to be written again at the tick.
   - `root/tick_renders.py`: the three renders at the tick and the stacked pairs. Run and stored (below).
@@ -93,7 +93,7 @@ What that means, plainly:
   render" was read as being about the exhaustion pictures; the three renders are three graphs in one picture and
   the pair is two, as he first asked. He did not answer that reading. If he wants single pictures it is a change
   of drawing only.
-- **NOT stored, deleted on his word:** everything of the tenth-of-a-second exhaustion run (the grid, the program's
+- **NOT stored, deleted on his word:** everything of the time-grid exhaustion run (the grid, the program's
   trades, the arcs, the printed graphs of two trades). Nothing of it reached git.
 - **The counts the stacked pairs gave** (stored, in each `TICK-RENDERS-<trade day>.json`; counts only, no test of
   chance): of the recorded dipoles born with a trade, those with the first trade of a trade leg in the birth
@@ -123,7 +123,7 @@ No recommendation is made for him on the first; both sides are his own words.
      cells). 45 seconds before and 60 after as the least a picture shows.
    - What changes: no cells. Every trade enters each line at the nanosecond it was received and leaves it at the
      nanosecond exactly 20 (or 60) seconds later. The lines are written as every moment they change, each with
-     its own time. The turn finder is walked over those moments, not over tenths of a second.
+     its own time. The turn finder is walked over those moments, not over grid steps.
    - Said plainly to him: this is no longer the July code run byte for byte; it is the July rules on our clock.
      The byte-for-byte program stays in `crypto_ng/program/` as the record.
 
@@ -209,8 +209,7 @@ ng" and its outputs are for observation and verification only; wrong data is del
 
 ## Standing rules as they stand after this session
 
-- NANO TICKS. Every calculation is made at the tick, each trade at its own nanosecond. No grid of tenths of a
-  second or of any size, and that includes anything copied from crypto.
+- NANO TICKS. Every calculation is made at the tick, each trade at its own nanosecond. No time grid of any size, and that includes anything copied from crypto.
 - WRONG DATA IS DELETED, NOT KEPT ("We don't keep wrong data").
 - THE CRYPTO AND NG PROGRAM is the one exception to "no bitcoin-era rules", on his word; observation and
   verification only; its outputs go into the Excel sheet under that name.
@@ -228,7 +227,7 @@ ng" and its outputs are for observation and verification only; wrong data is del
 
 ## Slips of this session, so they are not made again
 
-- The trades were put on a tenth-of-a-second grid because the crypto collector did. "Exactly like crypto" never
+- The trades were put on a time grid because the crypto collector did. "Exactly like crypto" never
   outranks "rows are ticks, timed to the nanosecond". When a crypto step would collapse ticks, say so to him and
   do it at the tick.
 - The run's reach was not said before it ran. He was thinking of every trade on the tape; the run followed the
