@@ -347,3 +347,40 @@ The pictures themselves are in the chat, not in git. What each shows, as read of
    birth. A reading, not measured: that break is the 20-second window showing itself (a birth is the second the
    20-second flow turns fully one-sided, which is when the last trade of the other side drops out of the 20
    seconds).
+
+## 2026-11-18: how exhaustion was made in crypto, and the first three-tier samples
+
+Greg, of the crypto exhaustion graphs (July 7, "Kraken onset->exhaustion"): "this is how we should be calcing
+exhaustion"; "The crypto exhaustion graphs were basically good wnough on their own to trade from"; of Desktop's
+earlier pictures: "desktop started doen this road. We need to continue down.it ... the foundation has been laid to
+get to the crypto level putput renders".
+
+- FOUND IN THE CODE (`archive/crypto`: `research/shape_s71/`, `S77_REVIEW_FOR_CHATGPT.md`): the crypto line was the
+  lean of the RESTING BOOK (bid size against ask size, ten levels nearest the price, once a second). No roll of
+  trades, no 20 seconds. A book's lean is a state at a tick; it needs no window. The July natural gas exhaustion
+  (the book's support for a move, at its start against at its high) is the same idea.
+- So "exhaustion" in this work is the STANDING side: the resting orders leaning toward a move and then letting
+  go. The 20-second trade flow was a different thing that took the name in August.
+- Each crypto trade was followed whole (before its onset; onset to where it flattened). Four kinds were kept
+  apart: short or long by the median length, winner or loser by the result. Those are labels made afterwards and
+  a median; here the cases are drawn one by one and the data does the grouping.
+- From the same work, four days later, kept so it is not forgotten: matching the entry shape to the winner shapes
+  did not lift the result; winner and losing twin shared the entry shape; direction came from the book's lean,
+  the shape told how much and how long.
+- His July 7 graphs break at exactly 0 and exactly 20 seconds on every line. Made by the picture, not the market;
+  the script is not kept, so which way is not known.
+- Desktop's earlier picture "Flow lean and midpoint around the birth" shows the 20-second window plainly: the
+  lean sits at +1 from the birth and drops at 20 seconds after; its dotted lines are at 0 and at 20 before.
+
+THE FIRST SAMPLES (trade day Oct 17, from 11:58:32.200 Eastern; in the session; not stored): price; the hitting
+side (the run of trades on one side); the standing side (the resting orders' lean).
+- By eye, one stretch, nothing measured: the lean at the best bid against the best ask alone flips end to end tick
+  by tick. The lean of the whole book is a steady line that rose and fell with the price over eight minutes.
+  Earlier in this file: "the whole book's lean told nothing" at the tick of a peak. Read along a move it may tell
+  more. A lead to follow, not a result.
+- Missing between the two: the lean over the few levels nearest the price (crypto's ten). Not on the rows; a new
+  calculation.
+- Still to settle with Greg: the stretch one picture covers; what an "onset" is with no span and no level to
+  clear (the first step of a move of the quote is the stored candidate); whether a picture that lays cases
+  together is wanted, by name.
+

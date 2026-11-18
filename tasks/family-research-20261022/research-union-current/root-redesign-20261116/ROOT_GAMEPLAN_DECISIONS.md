@@ -2827,6 +2827,64 @@ calculation".**
   that move, start against now). It waits on the calculation above. Claude's call, stated: the 20-second line is
   not in the first pictures; it can be a fourth strip if he asks.
 
+**Greg's reference pictures and his direction (2026-11-18).** He pasted, in three lots: the crypto dipole-dive picture
+("Dipole (flow) over Price, 2000 winners, aligned to the turn"); the crypto exhaustion graphs of July 7 ("Kraken
+onset->exhaustion", four panels: long-winner, long-loser, short-loser, short-winner, the mean flow of five coins
+from 45 seconds before the onset to 60 after); and Desktop's earlier pictures on the four trade days (the flow lean
+and the midpoint around the birth; the share of births above and below their level against matched controls; the
+first-event curves). His words:
+- "Here's some reference data. I'll paste more."
+- "This is different data but this is how we should be calcing exhaustion. Mynearlier examples of us heading that
+  direction with the bad data but the point is what can be produced and how much info it tells is The crypto
+  exhaustion graphs were basically good wnough on their own to trade from"
+- "Some of this might be repeat posts but desktop started doen this road. We need to continue down.it. It was the bad
+  data but the foundation has been laid to get to the crypto level putput renders"
+- Asked whether to raise the effort setting ("You're on hard now?"). Told: not for the lookup; raise it for the
+  exhaustion layout and for the strategies.
+
+**HOW THE CRYPTO EXHAUSTION WAS MADE, found in the code (read; nothing run).** The script that drew the July 7
+graphs is not in the repository (it read session files, `/tmp/kbook/<coin>_whole.npz`). What is kept from that
+work, on Markets branch `archive/crypto`: `research/shape_s71/early_signal.py` (written July 8),
+`research/shape_s71/fit_shapes.py`, `research/shape_s71/lookahead_sweep.py`, `S77_REVIEW_FOR_CHATGPT.md` (July 11).
+They say:
+- The line is the lean of the RESTING ORDER BOOK, not a roll of trades: bid size minus ask size over bid size
+  plus ask size, over the ten price levels nearest the price, read once a second from the Kraken and Coinbase
+  books. A lean of the book is a state at one moment. It needs no window. So he is right: that exhaustion had no
+  20-second window, and the July natural gas exhaustion (the book's support for a move, start against high) is
+  the same idea.
+- Each trade was followed whole: its own curve before the onset ("the fire"), and its own curve from the onset
+  to where it flattened out (the exhaustion point). The four panels are four kinds of trade kept apart:
+  short or long (how long it lasted, against the median) and winner or loser (whether it made money).
+- Said to him once, his to weigh: (1) every line of his July 7 graphs breaks straight up or down at exactly 0
+  and at exactly 20 seconds, in every panel and every coin. That is something in how the picture was put
+  together (pieces lined up separately and joined, or a 20-second rule), not the market; which, cannot be told
+  without the script. (2) Each line there is a mean over many trades, and the four kinds were named after the
+  fact from how the trade ended and from a median. Under the rules of this work that is averaging, a label and a
+  rank. The way to the same picture here: every case drawn on its own, anchored on its own onset, and the cases
+  set side by side; a picture that lays cases together is asked for by name. (3) The same work tested trading
+  from the shape four days later (`S77_REVIEW_FOR_CHATGPT.md`, 2d): matching a trade's entry shape to the winner
+  shapes did not lift the result; a winner and its losing twin had the same entry shape; direction came from
+  the book's lean, and the shape told how much and how long. In his pasted panels the winner and the loser of
+  the same length do look alike.
+
+**SAMPLES of the three-tier picture drawn in the session and sent to him (told first; a read of stored files of
+trade day Oct 17, rows part 2 and the stored runs of trades; nothing stored, no pod).** Three separate graphs on
+one axis of real timestamps, nothing made on the 20 seconds:
+1. the price: best bid, best ask, every trade;
+2. the hitting side: the run of trades on one side as it grows trade by trade, buying up and selling down;
+3. the standing side: the lean of the resting orders, every tick.
+Two zooms from the same trade (150 trades, 29.1 seconds; 600 trades, 511.6 seconds, from 11:58:32.200 Eastern),
+each drawn twice: the lean at the best bid against the best ask, and the lean of the whole book.
+- Claude's calls, stated, his to correct: the "dipole" graph is the hitting side and the "exhaustion" graph is
+  the standing side, the pair the notes already named; the stretch of a sample is a count of trades from a place
+  on the tape (a number of ours: 150 and 600, to be replaced by his choice); the start (the 2,000th trade of the
+  part) was taken by position, not by what happened there.
+- What the samples show, by eye, one stretch, nothing measured: the lean at the best prices alone swings from
+  one end to the other tick by tick and is a solid block at 600 trades. The lean of the whole book is a steady
+  line (0.13 to 0.25 here) that rises and falls with the price over these eight minutes. A lead, not a finding.
+- NOT ON THE ROWS: the lean over the few price levels nearest the price (what crypto read: ten levels). The rows
+  hold the best prices and the whole-book totals. Making it is a new calculation, to be laid out for his yes.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
