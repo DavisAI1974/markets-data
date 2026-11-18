@@ -2920,6 +2920,21 @@ refrag."**
   time. The 20-second flow is already stored at every tick of all four trade days, so nothing new has to be
   calculated to draw them. Until he answers, the entry above stands as recorded and nothing is built.
 
+**Greg, on the first three-tier samples (2026-11-18): "I am seeing spikes and dips at the same timestamps so thats
+promising. Since they are measurijg different data types the graphs will look different but I wanted to see if the
+big movements happened in all 3 at the same time and they do".**
+- This is his stacked-pair question (do the lines MOVE at the same moments, whatever the direction), answered by
+  his eye on the samples: yes. It is one stretch of trade day Oct 17 (11:58:32 to 12:07:03 Eastern), looked at,
+  not measured.
+- Said to him once, his to weigh: part of that agreement is built in. One trade that takes the best ask is, on
+  the same tick, a dot on the price graph, a step of the run of trades, and size gone from the best ask (so the
+  lean at the best prices jumps). Those three cannot help moving together. The whole-book lean is the one of the
+  four lines that is not moved much by a single trade, and it still rose and fell with the price in the sample:
+  that is the part worth following.
+- Next, on his word: the same thing counted with no window, every case on its own line (for each move of one
+  line, how far in ticks and in time to the nearest move of each other line), and the pictures for the whole of
+  the four trade days. Not started. The one open call before it is the 20 seconds (the entry above).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

@@ -411,3 +411,15 @@ Found on Greg's question about refrag. The script that drew his July 7 picture i
 - The book's lean (the standing side) remains worth drawing beside it: it is what the July 8 to 11 crypto signal
   and the July 14 natural gas exhaustion read, and in today's sample the whole-book lean moved with the price.
 
+## 2026-11-18: Greg on the first samples: the big movements happen in all three at the same time
+
+"I am seeing spikes and dips at the same timestamps so thats promising. Since they are measurijg different data
+types the graphs will look different but I wanted to see if the big movements happened in all 3 at the same time
+and they do".
+- By eye, one stretch (trade day Oct 17, 11:58:32 to 12:07:03 Eastern). Not measured yet.
+- Partly built in: a trade at the best ask moves the price graph, the run of trades and the lean at the best
+  prices on one and the same tick. The whole-book lean is not moved much by one trade and still followed the
+  price: the lead to follow.
+- To do, on his word: count it with no window, every case listed (each move of one line, the distance in ticks
+  and time to the nearest move of the others), and draw all four trade days.
+
