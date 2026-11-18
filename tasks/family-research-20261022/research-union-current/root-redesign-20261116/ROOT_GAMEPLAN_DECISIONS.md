@@ -2842,7 +2842,8 @@ first-event curves). His words:
 - Asked whether to raise the effort setting ("You're on hard now?"). Told: not for the lookup; raise it for the
   exhaustion layout and for the strategies.
 
-**HOW THE CRYPTO EXHAUSTION WAS MADE, found in the code (read; nothing run).** The script that drew the July 7
+**(WRONG ON THE MAIN POINT, CORRECTED TWO ENTRIES BELOW: the July 7 graphs were made on a 20-second roll of trades.)
+HOW THE CRYPTO EXHAUSTION WAS MADE, found in the code (read; nothing run).** The script that drew the July 7
 graphs is not in the repository (it read session files, `/tmp/kbook/<coin>_whole.npz`). What is kept from that
 work, on Markets branch `archive/crypto`: `research/shape_s71/early_signal.py` (written July 8),
 `research/shape_s71/fit_shapes.py`, `research/shape_s71/lookahead_sweep.py`, `S77_REVIEW_FOR_CHATGPT.md` (July 11).
@@ -2884,6 +2885,40 @@ each drawn twice: the lean at the best bid against the best ask, and the lean of
   line (0.13 to 0.25 here) that rises and falls with the price over these eight minutes. A lead, not a finding.
 - NOT ON THE ROWS: the lean over the few price levels nearest the price (what crypto read: ten levels). The rows
   hold the best prices and the whole-book totals. Making it is a new calculation, to be laid out for his yes.
+
+**CORRECTION, found on Greg's question about refrag (2026-11-18): "I don't know if we ran the crypot data through the
+full refrag program that we have or what we did. Hopefully you can find that. I might be totally wrong about the
+refrag."**
+- The July sessions' own branches still exist. The script that drew his July 7 picture is kept on Markets branch
+  `claude/davisai-s71-counterparty-capacity-sf1168` (`75b15fa`): `research/shape_s71/regroup2.py` (its title is
+  the picture's title, "Kraken onset->exhaustion arcs REGROUPED BY TYPE"), with `shape_arc.py`, `arc_gate.py`,
+  `two_shapes.py`, the handoff `SESSION_HANDOFF_2026-07-07_S71.md` and `SIGNAL_SHAPE_DIRECTION_S71.md` (his own
+  words of that day: "look at the SHAPE of things ... Find exhaustion in previous trades and MAP THE CURVE of it").
+- REFRAG: none of those four scripts uses refrag (now named DeepNova) or its fingerprints. The graphs did not go
+  through it. Crypto trades did go through refrag, a month earlier and for a different thing: the fingerprint of
+  each trade (128 numbers from the 30 minutes before entry; about 1,919 signatures over 12 cells, June 2026). The
+  refrag program itself is on his E: drive, not in the repository (only `markets_adapter.py` is).
+- WHAT THE SCRIPT DOES, and it corrects the entry two above: the line is the TRADES, not the book. Flow = bought
+  minus sold over bought plus sold, over a ROLLING 20 SECONDS (`SMOOTH_SEC = 20`), on a grid of tenths of a
+  second, turned to the trade's own side, from 45 seconds before the trade's entry (the onset) to 60 after. Each
+  line of the picture is the mean of that over the trades of one kind (short or long by the median length;
+  winner or loser by the result). The script's own comment on the 20 seconds: trades were sparse, "a shorter
+  window makes per-leg |imb| a saturated 0/1 square wave; 20s recovers a readable per-leg arc".
+- So the 20 seconds was BORN in that crypto work, on July 7, and the August natural gas detector carried it on.
+  The straight break at exactly 20 seconds on every line of his picture is that window. Claude's statement that
+  the crypto exhaustion had no 20-second window was wrong; it was drawn from the later files kept on
+  `archive/crypto` (the book-lean work of July 8 to 11), not from the script that made the picture. What stands:
+  the July 14 natural gas exhaustion (`month_characterize.py`) is a read of the book with no 20 seconds; the
+  July 8 to 11 crypto signal is the book's lean.
+- THE CONFLICT, put to him plainly for his call: "this is how we should be calcing exhaustion" (the July 7
+  graphs) and "We can't use that data in any calculation" (the 20-second data) cannot both hold, because those
+  graphs ARE the 20-second flow. What made them tell so much was following every trade as a whole curve from
+  before its onset to its exhaustion; the 20 seconds was what made a sparse tape readable. The second graph of
+  today's samples (the run of trades on one side, no window) is the square wave that comment describes.
+  Claude's recommendation: go back to the rule of his drop-in (zero predetermined windows except the 20-second
+  flow, with lines made at the tick beside it), and draw the crypto pictures on the rebuilt data one trade at a
+  time. The 20-second flow is already stored at every tick of all four trade days, so nothing new has to be
+  calculated to draw them. Until he answers, the entry above stands as recorded and nothing is built.
 
 ## Held for the later stage: figuring out what moves the market
 

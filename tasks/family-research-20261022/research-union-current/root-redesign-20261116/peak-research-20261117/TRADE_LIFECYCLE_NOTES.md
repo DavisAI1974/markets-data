@@ -350,6 +350,9 @@ The pictures themselves are in the chat, not in git. What each shows, as read of
 
 ## 2026-11-18: how exhaustion was made in crypto, and the first three-tier samples
 
+(THE FIRST TWO POINTS UNDER "FOUND IN THE CODE" ARE WRONG. See the correction in the next section: the July 7
+crypto exhaustion graphs were a 20-second roll of trades.)
+
 Greg, of the crypto exhaustion graphs (July 7, "Kraken onset->exhaustion"): "this is how we should be calcing
 exhaustion"; "The crypto exhaustion graphs were basically good wnough on their own to trade from"; of Desktop's
 earlier pictures: "desktop started doen this road. We need to continue down.it ... the foundation has been laid to
@@ -383,4 +386,28 @@ side (the run of trades on one side); the standing side (the resting orders' lea
 - Still to settle with Greg: the stretch one picture covers; what an "onset" is with no span and no level to
   clear (the first step of a move of the quote is the stored candidate); whether a picture that lays cases
   together is wanted, by name.
+
+## 2026-11-18, CORRECTION: the crypto exhaustion graphs WERE the 20-second flow (kept so it is not got wrong again)
+
+Found on Greg's question about refrag. The script that drew his July 7 picture is on Markets branch
+`claude/davisai-s71-counterparty-capacity-sf1168`: `research/shape_s71/regroup2.py` (with `shape_arc.py`,
+`arc_gate.py`, `two_shapes.py`, `SESSION_HANDOFF_2026-07-07_S71.md`, `SIGNAL_SHAPE_DIRECTION_S71.md`).
+
+- The line: bought minus sold over bought plus sold, over a ROLLING 20 SECONDS of trades, on a tenth-of-a-second
+  grid, turned to the trade's side, 45 seconds before the trade's entry to 60 after. Each drawn line is the mean
+  over the trades of one kind. Not the book. Not window-free.
+- Why 20 seconds, in that script's words: trades were sparse; a shorter window made each trade's line "a saturated
+  0/1 square wave". The 20 seconds began there (crypto, July 7) and the August natural gas detector kept it.
+- Refrag (now DeepNova) was not used for those graphs. It was used on crypto in June for the per-trade fingerprints.
+- The onset there was the entry of a trade made by the platform's own turn detector (a zigzag of the lean with a
+  reversal level), not a mark on the tape by itself.
+- What that session found (its handoff): the arc "rhymes" from trade to trade; the part before the onset told the
+  kind of trade out of sample on all five coins (the taller the peak at the onset, the longer and the more often
+  a winner); how long the trade lasted set where the collapse landed.
+- What it means here: the picture Greg wants and the 20-second flow are one thing. Either the 20 seconds is kept
+  as the one exception (his drop-in's rule) and the arcs are drawn now from the stored flow, one trade at a time;
+  or the 20 seconds stays out and the arc is made on a stretch the market sets, which on a sparse tape is the
+  square wave again. His call, put to him.
+- The book's lean (the standing side) remains worth drawing beside it: it is what the July 8 to 11 crypto signal
+  and the July 14 natural gas exhaustion read, and in today's sample the whole-book lean moved with the price.
 
