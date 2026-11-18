@@ -1,0 +1,459 @@
+{
+ "what": "The natural gas exhaustion calculation of the crypto and ng program, made at the tick: every trade at its own nanosecond",
+ "asked": "Greg, 2026-11-18: \"I want everything in our new exhaustion calc to be exactly like the old calc\"; \"Definitely run it on nano ticks\"; \"We have to rerun the exhaustion data on the pods first\"",
+ "use": "OBSERVATION AND VERIFICATION ONLY. Never a signal, never an input to another calculation.",
+ "left_out_on_his_word": [
+  "the winner and loser labels",
+  "the average line of each kind",
+  "the short or long split (each trade's length is a stored number, no label)"
+ ],
+ "not_written": [
+  "the program's divergence read beside each trade (dipole_class, rev_conv): it was never used on this path, and its July form is not a calculation at the tick"
+ ],
+ "trade_day": "2023-10-18",
+ "rules": {
+  "source": "the rules of the July 2026 crypto calculation (DavisAI1974/Markets 75b15fa10193fab218b6469e5e5f0f49359880e1), written at the nanosecond",
+  "rules_file_git_blob_id": "0b4d1ec80269d683e9ebd412b1c4d316294d6fb1",
+  "natural_gas_settings": {
+   "line_seconds": 20,
+   "turn_finder_lean_seconds": 60,
+   "turn_amount": 0.1,
+   "wait_seconds": 30,
+   "close_improved_by_bps": 0.5,
+   "maker_fee_bps": 0.0,
+   "taker_fee_bps": 5.0,
+   "early_entry": null,
+   "stop": null,
+   "first_in_line": true
+  },
+  "half_spread_bps": 1.6283992835043153,
+  "how_time_is_read": "a trade enters each line at the nanosecond it was received and leaves it exactly 20 (or 60) seconds later; the turn finder is walked over every moment the 60-second lean changes; the wait is 30 seconds",
+  "read_order": "a line is read after every sided trade is received (one read per trade, in tape order, also when several share a nanosecond) and at every moment trades leave the span (one read per moment; trades leaving at the nanosecond a trade is received leave first and are read with it)",
+  "the_start": "the turn finder starts at the open of the trade day, where nothing has traded and the July rule reads 0",
+  "a_hump": "the time the 20-second line stays on one side of zero: it begins the moment the line comes onto that side and ends the moment it next stands at zero, is empty, or has crossed. Its two ends are the line's own moments; no number of ours sets them. A picture holds, whole, every hump the event touches"
+ },
+ "inputs": [
+  {
+   "input": "buy",
+   "what": "every trade on the tape with the tape's own aggressor side B, each at its own nanosecond",
+   "trades": 13935,
+   "size": 31512
+  },
+  {
+   "input": "sell",
+   "what": "every trade on the tape with the tape's own aggressor side A",
+   "trades": 14396,
+   "size": 30313
+  },
+  {
+   "input": "a trade with no side",
+   "what": "a trade the tape gives no aggressor side for: in neither bought nor sold; it has its own line in the tape-trades table",
+   "trades": 2408,
+   "size": 4560
+  },
+  {
+   "input": "mid",
+   "what": "halfway between the best bid and the best ask on the stored row: the row of the trade, or the latest row at or before a moment with no tick. Used only for the program's own price columns; no line, turn or trade of the program reads it",
+   "ticks_with_both_sides_standing": 770579,
+   "ticks_with_one_side_empty": 0
+  },
+  {
+   "input": "half_spread_bps",
+   "what": "half the middle value of spread over mid, every 50th tick with both sides standing (the July figure). Used only for the program's own price columns"
+  }
+ ],
+ "columns": {
+  "line": [
+   {
+    "column": "read",
+    "what": "The number of this read of the line, in order from the open of the trade day (0 is the first)."
+   },
+   {
+    "column": "moment_received_ns",
+    "what": "The moment of the read on the received clock, to the nanosecond."
+   },
+   {
+    "column": "what",
+    "what": "What changed the line: a trade was received, or trades left the span at a moment with no tick."
+   },
+   {
+    "column": "position_on_tape",
+    "what": "The trade received: its position on the tape. Empty when the read is trades leaving."
+   },
+   {
+    "column": "trades_left",
+    "what": "How many trades left the span at this moment (those leaving at the very nanosecond a trade is received leave first and are read with it)."
+   },
+   {
+    "column": "bought",
+    "what": "Size bought by aggressors inside the span, after this read."
+   },
+   {
+    "column": "sold",
+    "what": "Size sold by aggressors inside the span, after this read."
+   },
+   {
+    "column": "flow",
+    "what": "THE LINE: bought minus sold over bought plus sold. It holds this value until the next read. Empty where nothing with a side traded inside the span (the July rule wrote 0 there)."
+   },
+   {
+    "column": "nothing_traded",
+    "what": "Yes where nothing with a side traded inside the span."
+   }
+  ],
+  "turns": [
+   {
+    "column": "turn",
+    "what": "The number of this turn, in the order the turn finder marked them. A label only."
+   },
+   {
+    "column": "side",
+    "what": "buy or sell: the side the turn calls for."
+   },
+   {
+    "column": "marked_read",
+    "what": "The read of the 60-second lean at which the turn was marked."
+   },
+   {
+    "column": "marked_received_ns",
+    "what": "The moment of that read."
+   },
+   {
+    "column": "marked_at",
+    "what": "Whether the turn was marked as a trade was received, or at a moment trades left the 60 seconds (no tick: nothing new had traded)."
+   },
+   {
+    "column": "lean_at_mark",
+    "what": "The 60-second lean at the mark. Empty when the 60 seconds held no trade (the July rule read 0)."
+   },
+   {
+    "column": "furthest_read",
+    "what": "The read at which the lean stood furthest before it turned. Empty when that was the open of the trade day, before any trade."
+   },
+   {
+    "column": "furthest_received_ns",
+    "what": "The moment of that read (the open of the trade day when there is none)."
+   },
+   {
+    "column": "lean_at_furthest",
+    "what": "The lean there. Empty when the 60 seconds held no trade."
+   },
+   {
+    "column": "what_became_of_it",
+    "what": "Filled (a trade of the program started), or why not. Nothing is filtered."
+   },
+   {
+    "column": "program_trade",
+    "what": "The trade of the program this turn started. Empty when it started none."
+   }
+  ],
+  "program_trades": [
+   {
+    "column": "trade",
+    "what": "The number of this trade of the crypto and ng program, in the order they started. A label only."
+   },
+   {
+    "column": "side",
+    "what": "buy or sell: the side the program took."
+   },
+   {
+    "column": "turn",
+    "what": "The turn it was made on (a line of the turns table)."
+   },
+   {
+    "column": "turn_received_ns",
+    "what": "The moment that turn was marked."
+   },
+   {
+    "column": "onset_position_on_tape",
+    "what": "THE ONSET: the trade on the tape that filled it (the first trade on the other side after the turn). Its position on the tape."
+   },
+   {
+    "column": "onset_received_ns",
+    "what": "When that trade was received, to the nanosecond."
+   },
+   {
+    "column": "onset_read_20s",
+    "what": "The read of the 20-second line made as that trade was received."
+   },
+   {
+    "column": "ended",
+    "what": "How the trade ended, in the words of the July rule that ended it."
+   },
+   {
+    "column": "end_position_on_tape",
+    "what": "The trade on the tape that ended it. Empty when it ended at no tick or is still open."
+   },
+   {
+    "column": "end_received_ns",
+    "what": "When it ended. Empty when it was still open at the last tick of the trade day."
+   },
+   {
+    "column": "length_seconds",
+    "what": "From the onset to the end, in seconds. A measured number; no short or long label is made."
+   },
+   {
+    "column": "program_open_px",
+    "what": "The program's own entry price: the mid at the turn with the half spread added or taken off."
+   },
+   {
+    "column": "program_close_px",
+    "what": "The program's own exit price."
+   },
+   {
+    "column": "program_close_maker",
+    "what": "The program's own mark: yes when it counted the exit as filled at its own quote."
+   },
+   {
+    "column": "program_gross_bps",
+    "what": "The program's own result in hundredths of a percent, before its fees. Observation only."
+   },
+   {
+    "column": "program_net_bps",
+    "what": "The same after the program's fee settings (the Kraken ones: 0 and 5). Observation only. No winner or loser is made from it and nothing is drawn or coloured by it."
+   },
+   {
+    "column": "program_swing_bps",
+    "what": "The program's own figure: how far the mid moved from the turn to the end."
+   },
+   {
+    "column": "program_dive_depth",
+    "what": "Written by the program beside each trade: the size of the 60-second lean at its furthest."
+   },
+   {
+    "column": "program_lean_flip",
+    "what": "Written by the program: the lean at the turn, measured with the trade before."
+   },
+   {
+    "column": "program_lean_close",
+    "what": "Written by the program: the lean at the end, measured with this trade."
+   },
+   {
+    "column": "seconds_from_the_open_to_the_onset",
+    "what": "How long after the open of the trade day the onset came."
+   }
+  ],
+  "tape_trades": [
+   {
+    "column": "position_on_tape",
+    "what": "The trade: its position on the tape. A label only."
+   },
+   {
+    "column": "received_time_ns",
+    "what": "When it was received, to the nanosecond."
+   },
+   {
+    "column": "side",
+    "what": "buy or sell: the tape's own aggressor side. Empty when the tape gives none."
+   },
+   {
+    "column": "size",
+    "what": "Its size, in lots."
+   },
+   {
+    "column": "price",
+    "what": "Its price, in dollars."
+   },
+   {
+    "column": "read_20s",
+    "what": "The read of the 20-second line made as this trade was received. Empty for a trade with no side (it is in neither bought nor sold, so the line does not change at it)."
+   },
+   {
+    "column": "flow_20s_before",
+    "what": "The 20-second line as it stood just before this trade was received. Empty when nothing had traded in those 20 seconds."
+   },
+   {
+    "column": "flow_20s_at",
+    "what": "The 20-second line with this trade in it. Empty when nothing with a side is inside it."
+   },
+   {
+    "column": "program_trade_under_way",
+    "what": "The trade of the program under way as this trade was received. Empty when the program held none."
+   },
+   {
+    "column": "starts_program_trade",
+    "what": "The trade of the program this trade started (it filled it). Empty otherwise."
+   },
+   {
+    "column": "ends_program_trade",
+    "what": "The trade of the program this trade ended. Empty otherwise."
+   }
+  ],
+  "humps": [
+   {
+    "column": "hump",
+    "what": "The number of this hump of the 20-second line, in order through the trade day. A label only."
+   },
+   {
+    "column": "side",
+    "what": "buy or sell: the side of zero the line stays on through this hump."
+   },
+   {
+    "column": "began_received_ns",
+    "what": "When it began: the moment the line came onto this side."
+   },
+   {
+    "column": "how_it_began",
+    "what": "What the line was just before: empty (nothing traded in the 20 seconds), at zero, or on the other side."
+   },
+   {
+    "column": "ended_received_ns",
+    "what": "When it ended: the moment the line next stood at zero, was empty, or had crossed. Empty when it was still on this side at the end of the trade day."
+   },
+   {
+    "column": "how_it_ended",
+    "what": "What the line did there: went empty, came to zero, or crossed to the other side."
+   },
+   {
+    "column": "length_seconds",
+    "what": "From its beginning to its end, in seconds. Empty when it had not ended."
+   },
+   {
+    "column": "furthest_flow",
+    "what": "The furthest the line stood from zero during it (above zero buying, below selling)."
+   },
+   {
+    "column": "furthest_received_ns",
+    "what": "The moment it first stood there."
+   },
+   {
+    "column": "trades_inside",
+    "what": "How many trades on the tape were received from its beginning up to its end."
+   },
+   {
+    "column": "first_trade_position",
+    "what": "The first of them: its position on the tape. Empty when there is none."
+   },
+   {
+    "column": "last_trade_position",
+    "what": "The last of them."
+   },
+   {
+    "column": "first_trade_price",
+    "what": "The price of the first of them, in dollars."
+   },
+   {
+    "column": "last_trade_price",
+    "what": "The price of the last of them."
+   },
+   {
+    "column": "highest_trade_price",
+    "what": "The highest price traded inside it."
+   },
+   {
+    "column": "lowest_trade_price",
+    "what": "The lowest price traded inside it."
+   },
+   {
+    "column": "first_trade_leg",
+    "what": "The stored trade leg under way at its first trade: its number."
+   },
+   {
+    "column": "last_trade_leg",
+    "what": "The stored trade leg under way at its last trade."
+   },
+   {
+    "column": "trade_legs_under_way",
+    "what": "How many different stored trade legs were under way at its trades."
+   }
+  ]
+ },
+ "counts": {
+  "ticks": 770579,
+  "trades_on_the_tape": 30739,
+  "trades_with_a_side": 28331,
+  "trades_the_tape_gives_no_side_for": 2408,
+  "reads_of_the_20_second_line": 56021,
+  "of_them_at_a_moment_trades_left_with_no_tick": 27690,
+  "reads_of_the_20_second_line_with_nothing_traded": 853,
+  "reads_of_the_60_second_lean": 56015,
+  "turns_found": 4293,
+  "turns_marked_at_a_moment_with_no_tick": 2126,
+  "of_them_marked_as_the_60_seconds_emptied": 226,
+  "what_became_of_the_turns": {
+   "not filled before the next turn": 1785,
+   "filled: a trade of the program started": 1682,
+   "not acted on: a fill or a wait before it was still resolving": 826
+  },
+  "trades_of_the_program": 1682,
+  "how_they_ended": {
+   "the next turn was filled: that fill ended this trade and started the next": 1169,
+   "the next turn was not filled; a trade on the other side came within the 30-second wait": 379,
+   "the next turn was not filled and the wait ran out: 30 seconds after the turn, at no tick": 134
+  },
+  "humps_of_the_20_second_line": 4163,
+  "humps_holding_no_trade": 1193,
+  "humps_holding_one_trade": 840,
+  "humps_holding_more_than_one_trade": 2130,
+  "humps_with_more_than_one_trade_leg_under_way": 1245,
+  "pictures_in_this_run": 0
+ },
+ "built_in": "Every onset is a trade against the trade's own side (the program is filled by the next trade on the other side), so the line steps against the trade at the onset and steps back exactly 20 seconds later when that trade leaves. A turn is marked only after recent trading has moved the trade's way, so the rise into the onset is partly made by how the trades are chosen. On thin tape a turn can be marked when old trades leave the 60 seconds with nothing new traded: counted above, nothing filtered.",
+ "checks": {
+  "the_20_second_line_recounted": {
+   "passed": true,
+   "reads": 56021,
+   "what": "the 20-second line: bought and sold at every read, from running totals and two look-ups on the clock"
+  },
+  "the_60_second_lean_recounted": {
+   "passed": true,
+   "reads": 56015,
+   "what": "the 60-second lean: bought and sold at every read, from running totals and two look-ups on the clock"
+  },
+  "against_the_stored_flow": {
+   "passed": true,
+   "ticks_compared": 770579,
+   "what": "bought and sold over the 20 seconds on every tick of the trade day, against the stored flow_bought_20s and flow_sold_20s of piece 1"
+  },
+  "the_trades_hold_together": {
+   "passed": true,
+   "trades": 1682,
+   "what": "every trade of the program starts at a trade on the other side after its turn, ends at or after its start, and no two are under way at once; every turn has a line saying what became of it"
+  },
+  "the_humps_hold_every_trade": {
+   "passed": true,
+   "trades": 30739,
+   "trades_before_the_first_read_of_the_line": 1,
+   "what": "the humps of the 20-second line and the stretches between them (the line at zero or empty), laid end to end, hold every trade on the tape received from the line's first read on, each once"
+  }
+ },
+ "files": [
+  {
+   "file": "crypto-ng-tick-line-20s-20231018.parquet",
+   "rows": 56021,
+   "bytes": 826454,
+   "sha256": "dbcbe49016f847a6a24fd6d1c56ecc8a963bb31d3721dbebb84fb0827a25c916"
+  },
+  {
+   "file": "crypto-ng-tick-lean-60s-20231018.parquet",
+   "rows": 56015,
+   "bytes": 881555,
+   "sha256": "e3ed08b4717cdbda504b4f969757eb1e9c98d5d053446c3effc12eb7beaab481"
+  },
+  {
+   "file": "crypto-ng-tick-turns-20231018.parquet",
+   "rows": 4293,
+   "bytes": 137218,
+   "sha256": "f38932408066d15322bedf27b73fa84e4c4af197f771136d4736573bbd47f6f8"
+  },
+  {
+   "file": "crypto-ng-tick-program-trades-20231018.parquet",
+   "rows": 1682,
+   "bytes": 161927,
+   "sha256": "c0e3c1a409223e386b349558eee8d4eb86ca69efdef8a1ca0543a21cdb96eba7"
+  },
+  {
+   "file": "crypto-ng-tick-tape-trades-20231018.parquet",
+   "rows": 30739,
+   "bytes": 580935,
+   "sha256": "2881a044b78b6bb6647279e86fb2f7f9bae989a4ca0858e0c259abeaf43afa99"
+  },
+  {
+   "file": "crypto-ng-tick-humps-20231018.parquet",
+   "rows": 4163,
+   "bytes": 215443,
+   "sha256": "00cd3800133855f0d4c78c4753fce4be40341d7089ff1ffc3b8d5591098531dd"
+  }
+ ],
+ "seconds": 3.8
+}
