@@ -3082,6 +3082,25 @@ notes file (`TRADE_LIFECYCLE_NOTES.md`, the section dated 2026-11-18, thirteenth
 - The layout "Exhaustion with no window" at the end of `STEP1_STEP2_LAYOUTS.md` stays unbuilt: overtaken by the
   crypto-exact calculation (handoff O, open item 7).
 
+**DECIDED (Greg, 2026-11-18, thirteenth session), the trades the arcs follow. His words, whole: "Bring back the
+program and just designate it crypto and ng so we know what it is at a later date. And it's crypto iutpots if are
+any will now go into our excel sheet. They would be for observation or vaelrification purpose only".**
+- THE CRYPTO TRADING PROGRAM IS BROUGHT BACK for natural gas: the turn finder, the fill rule and the in and out
+  rules, as they were on Markets `75b15fa`. It is named "crypto and ng" wherever it appears (code, files, sheets,
+  pictures), so that later it is plain what it is. This is his explicit word and the one exception to "no
+  bitcoin-era rules": it applies to this program only and to nothing else.
+- ITS OUTPUTS GO INTO THE EXCEL SHEET, for OBSERVATION AND VERIFICATION ONLY. Read as (his to correct): the trades
+  the program makes on the natural gas tape, with every column the program itself writes, go into a sheet per
+  trade day; nothing of them is a signal, an input to another calculation or a trade result of ours. No winner or
+  loser label is made from them (his word of the same day stands).
+- The setup: he named none. Claude's call, stated to him before his answer: the plain one (sol's: turn amount
+  0.10, no early entry, no stop, a wait of 30 seconds, first in line). Recorded in the code as the natural gas
+  row, his to change.
+- THE MEAN AND THE MEDIAN: his message does not speak to them. Returned to once in the next message, with
+  Claude's call stated: the stored calculation holds every trade's own arc and nothing combined; the mean line
+  and the short and long split are made in the PICTURE only, named as averaging on the picture, and every
+  trade's own arc is drawn too.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

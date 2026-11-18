@@ -560,3 +560,13 @@ before the peak's high to 60 after, on the rebuilt rows. It is the same kind of 
 different anchor (the peak's high, not a trade's onset) and a different step (one second, not a tenth). That
 folder carries Greg's note "record only", so it is cited as what Desktop anchored on and is never an input.
 Desktop's earlier pictures on the old data ("Flow lean and midpoint around the birth") are still not on the branch.
+
+## 2026-11-18 (thirteenth session): Greg brings the crypto program back, named "crypto and ng"
+
+"Bring back the program and just designate it crypto and ng so we know what it is at a later date. And it's crypto
+iutpots if are any will now go into our excel sheet. They would be for observation or vaelrification purpose only".
+- The trades the exhaustion arcs follow are made by the crypto trading program, run on the natural gas tape as it
+  was (Markets `75b15fa`), under the name "crypto and ng".
+- Its outputs go into the Excel sheet. Observation and verification only: never a signal, never an input.
+- The mean and the median were not answered; Claude's call (the stored output is per trade; the averaging is in
+  the picture only and is named on it) is stated to him and is his to correct.
