@@ -62,8 +62,9 @@ What that means, plainly:
 
 - **No pod exists.** Four were made at 04:18 UTC and deleted at 04:41 UTC (about 23 minutes at $1.28 an hour for
   the four). The account was read after the delete: none.
-- **Code:** Markets branch `claude/magical-allen-kncdpa`, `74fe470` (the session's own branch; nothing on the
-  trunk). It holds everything of `claude/wizardly-fermi-0s9nlb` (`b1ed5bf`) plus:
+- **Code:** Markets branch `claude/magical-allen-kncdpa`, `7c98593` (the session's own branch; nothing on the
+  trunk). Its `CLAUDE.md` carries the new rule (every calculation at the tick, timed to the nanosecond) and the
+  one exception for `crypto_ng/`. It holds everything of `claude/wizardly-fermi-0s9nlb` (`b1ed5bf`) plus:
   - `crypto_ng/`: the July program (`flip_detector.py`, `swing_maker.py`, `info_dipole.py` byte for byte;
     `platform.py` with three import lines changed), `PROVENANCE.md`, `ng.py` (the natural gas row: sol's row).
     `tests/crypto_ng/test_provenance.py` proves the fingerprints. `CLAUDE.md` carries the one exception under "no
@@ -83,6 +84,11 @@ What that means, plainly:
     trades: say it this way.
   - `dipole-leg-pair-<trade day>-<dipole>.png` (99, 118, 90, 97) and the table of all dipoles born with a trade.
   - Check passed on every tick of all four trade days: the run of trades equals the stored `turn_peaks`.
+- **THE DIPOLE AT THE TICK WAS STORED ON CLAUDE'S CALL, WITHOUT HIS YES AS A CALCULATION.** Handoff O said it needed
+  his yes first. It was stated to him as a call in the go message (with the three renders) and he did not speak
+  to it. It is the figure of the samples he looked at in the twelfth session (the run under way against the run
+  before it). Say so when the renders are shown; if he changes what the dipole at the tick is, the table and the
+  pictures are made again and the old ones go in the same change.
 - **HE HAS NOT LOOKED AT THE STORED THREE RENDERS OR THE STACKED PAIRS.** Show him. His "No more than one graph per
   render" was read as being about the exhaustion pictures; the three renders are three graphs in one picture and
   the pair is two, as he first asked. He did not answer that reading. If he wants single pictures it is a change
@@ -104,7 +110,11 @@ No recommendation is made for him on the first; both sides are his own words.
    every trade on the tape, each as its own start (30,739 to 41,410 a trade day). He said "Bring back the
    program", and he also believed the run had covered "30k+ trades each day". If every tape trade: say what
    starts and ends a single print's line, since a print has no length (the stored candidates: the run of trades
-   on one side it belongs to, its trade leg).
+   on one side it belongs to, its trade leg). Said with it, so its size is plain: the 20-second line at every
+   trade's own tick is ALREADY STORED (`flow_20s`, `flow_bought_20s`, `flow_sold_20s` in `calc-flow_peak-*`, on
+   every tick of all four trade days, this tick included, the received clock). A line for every tape trade is
+   then mostly a read of stored columns around each trade, plus the moments a trade leaves the 20 seconds with no
+   tick. No program is needed for that.
 2. **"EXACTLY LIKE CRYPTO" AT THE TICK.** The July program exists only on a grid of cells. At the tick its rules
    have to be written again on the clock. Lay it out his way (what we want, what crypto did, what changes) and
    get his yes before any code:
@@ -160,7 +170,8 @@ ng" and its outputs are for observation and verification only; wrong data is del
 
 - The session REFUSES to run a job on market data in the session (its permission check stopped a dry run twice).
   The first run of new code is on the pods; a fault is fixed and that piece run again on the same pods.
-- The session's cloud environment ("markets-data") has open network: no approval card is needed for pod addresses.
+- This session's cloud environment ("markets-data") had open network, so no approval card was needed for the pod
+  addresses. Read the next session's own environment (`get_environment`) before counting on that.
 - One pod per trade day, Runpod MCP `create-pod`: image `python:3.12`; `cpu` `cpu3g` with 8 vCPUs ($0.32 an hour
   each, read the price again at the time); `disk` 10; `ports` `8000/http`; `env` `POD_WORD` (a random word made in
   the session, never in git); `entrypoint` `bash -c`; `cmd`:
@@ -181,7 +192,13 @@ ng" and its outputs are for observation and verification only; wrong data is del
    his go at the time with the price, the count of trades said first), check, store, delete the pods.
 2. The exhaustion render for the one trade carried over; steps and curve side by side for him to choose.
 3. The program's outputs into the Excel sheets (observation and verification only).
-4. Show him the stored three renders and stacked pairs; his word on one graph per render for them.
+4. Show him the stored three renders and stacked pairs; his word on one graph per render for them, and on the
+   dipole at the tick as a stored calculation.
+4b. The stored pictures have NO EXCEL SHEET yet. His standing rule: pictures are saved alongside the Excel sheets,
+   each row linked to its picture. Add to `ROOT_dipoles_pinned.xlsx` (fetch first; keep Desktop's sheets) a sheet
+   per trade day from `three-renders-index-<trade day>.parquet` and one from `dipole-leg-pairs-<trade day>.parquet`,
+   every row linked to its picture in `tick-renders/` on that trade day's branch. A read of stored files: tell
+   him first.
 5. Carried from handoff O, in its order: his stacked-pair question counted with no window; TELL HIM before the
    strategies start (he raises the effort setting): 15 versions, laid out in one message first, and first how a
    version is formed blind to its own trade day; then his open calls, each put once (deleting last week's two
