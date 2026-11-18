@@ -3399,6 +3399,53 @@ were made on old or bad data should be delettled too".**
   either repository's live branches: Desktop's earlier pictures were never on the branch.
 - The exhaustion renders that stand: `crypto-ng-tick/` on each daily branch (tonight's rerun).
 
+**DECIDED (Greg, 2026-11-18, fourteenth session): "I feel like dipole and exhaustion are single trade event outputs
+and dona great job explaining those events"; "Or maybe a few teades in a row but not entire days"; "how canwe see
+with the data we have if there are any dipoles or wxhaustions that continue on to cover more than one trade? We
+ahoukd probably expand our searches for those"; "we need to fix our run code so we don't ha d the hard coded
+beginning and end times because ot truncates our data. We need the data to be telling us what thise times are. We
+might need to rerun the smaller output runs"; then "Go. And if we're going to be generating new data, delete the
+data it's going to replace while it's running and don't touch any n r w fata until the old stuff is totally gone."**
+- THE UNIT IS THE EVENT (one trade, one trade leg, a few trades in a row), not the trade day.
+- NO HARD CODED BEGINNING OR END TIME. Found and removed (Markets `d2b68c6`): the 45 seconds before and 60 after and
+  the neighbouring-trade edges of a trade's picture; the typed clock times of the stretch pictures. Not cut: the
+  stored data (the 20-second line is stored for the whole trade day).
+- THE DATA SAYS THE TIMES (Claude's call for the 20-second line, stated to him, his to correct from the picture):
+  A HUMP is the time the line stays on one side of zero. It begins the moment the line comes onto that side and
+  ends the moment it next stands at zero, is empty, or has crossed. A picture holds, whole, every hump the event
+  touches. Where the line stands at zero or is empty at the event's own edge, that edge is the event's own.
+  Said to him: a brief dip through zero ends a hump, so the lead-in can be short (trade 1051: 2.9 seconds).
+- EVERY HUMP IS STORED ON ITS OWN LINE, all four trade days (`crypto-ng-tick-humps-<trade day>.parquet`): when and
+  how it began and ended, the furthest the line stood, the trades inside it, what the trade price did across it,
+  the stored trade legs under way. This is the search for exhaustions that carry on over more than one trade.
+  Counted, each trade day on its own, nothing filtered:
+
+  | | Oct 2 | Oct 3 | Oct 17 | Oct 18 |
+  |---|---:|---:|---:|---:|
+  | Humps of the 20-second line | 4,459 | 4,579 | 4,103 | 4,163 |
+  | ... holding no trade (the line changed side as old trades left) | 1,324 | 1,290 | 1,148 | 1,193 |
+  | ... holding one trade | 881 | 928 | 827 | 840 |
+  | ... holding more than one trade | 2,254 | 2,361 | 2,128 | 2,130 |
+  | ... with more than one trade leg under way | 1,380 | 1,438 | 1,280 | 1,245 |
+
+  Counts only. Nothing is typed, labelled or in the Excel sheets. Already stored before tonight, for the other
+  kind of exhaustion: on trade day Oct 17, 10,401 runs of trades on one side, 4,053 of them a single trade.
+- NOT DONE, waiting on his word: the same search on the runs of trades and on the dipole at the tick; the picture
+  with four graphs on one clock.
+- THE ORDER HE SET, KEPT: the pods were started; the first run's outputs and their `FILES.md` entries were removed
+  from all four daily branches and the removal confirmed on the remote; only then was anything new fetched.
+- THE RERUN: four General Purpose 8-CPU pods at $0.32 an hour each, started 06:52 UTC, job `crypto_ng_tick` at
+  Markets `d2b68c6`. Trade days Oct 2 and Oct 3 passed on their own pods. The pods for Oct 17 and Oct 18 never
+  got past "container is starting"; they were deleted and those two trade days were run on the two healthy pods
+  (the same code commit, the stored rows of each trade day cloned beside). All four passed every check, the new
+  one included (the humps and the stretches between them hold every trade once). The trade counts are the same
+  as the first run's. Redrawn on trade day Oct 17 with the line's own edges: the stretch of the twelfth session
+  and the 30 trades of the program that touch it (64 pictures).
+- STORED, each file fetched and proved against its receipt: `root-rows-20231002` `87bfe61`, `-20231003` `f44367a`,
+  `-20231017` `e24d884`, `-20231018` `0898248`.
+- ALL PODS DELETED, the account read: none. OWNED: the price told to him was about 40 cents for about 20 minutes.
+  The session's worker restarted twice while the pods were up and they stood for about two hours: about $2.40.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

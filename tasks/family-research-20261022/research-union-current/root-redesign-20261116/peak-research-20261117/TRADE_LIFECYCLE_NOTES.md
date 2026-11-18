@@ -685,3 +685,22 @@ one trade? We ahoukd probably expand our searches for those".
 - OWNED: the 920 exhaustion sheets removed this session were the eleventh session's, made on the REBUILT rows
   (the 20-second peaks), not on the earlier bad data. His words were "made on old or bad data". Said to him,
   with the offer to put them back from git.
+
+## 2026-11-18 (fourteenth session): the data says where an exhaustion begins and ends; the humps
+
+Greg: "We need the data to be telling us what thise times are". No picture or output takes its start or end from a
+number of seconds, a typed clock time or a count of trades.
+- On the 20-second line an exhaustion is a HUMP: the line comes onto one side of zero, goes as far as it goes,
+  and comes back to zero (or empties, or crosses). Its two ends are the line's own moments. Stored for every hump
+  of all four trade days, each on its own line, with the trades and the trade legs it covers and what the trade
+  price did across it.
+- First counts (each trade day on its own; a lead, not a result): about half of the humps hold more than one
+  trade, and about three in ten had more than one trade leg under way (trade day Oct 17: 2,128 and 1,280 of
+  4,103). Roughly three in ten hold no trade at all: the line changed side only because old trades left the 20
+  seconds. Those are made by the 20 seconds, not by the market.
+- To weigh when the humps are read: a brief dip through zero splits what the eye sees as one build into two
+  humps. In the stretch he knows the buying before 11:58:20 and the buying after it are two humps with a dip of
+  a fraction of a second between them.
+- Kept so it is not done again: a pod that says "container is starting" for more than a few minutes is not coming
+  up. Delete it and run its trade day on a healthy pod. And a pod left up while the session restarts keeps
+  billing: read the account first thing after any restart.
