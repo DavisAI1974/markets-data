@@ -1,0 +1,854 @@
+{
+ "what": "Greg's three renders for the whole trade day, timed at the tick, and the dipoles that line up with trade legs as stacked pairs",
+ "asked": "Greg, 2026-11-18: \"the trade price curve ... dipole and exhaustion ticked by nano\"; \"We have a lot of trade legs that line up exactly with dipoles ... Let's start there\"",
+ "trade_day": "2023-10-17",
+ "tick_columns": [
+  {
+   "column": "position_on_tape",
+   "what": "The tick: its position on the tape. A label only."
+  },
+  {
+   "column": "received_time_ns",
+   "what": "When the tick was received."
+  },
+  {
+   "column": "run_side",
+   "what": "The run of trades on one side under way at this tick: buy or sell. Empty before the first trade with a side."
+  },
+  {
+   "column": "run_size",
+   "what": "The size traded in that run so far (a run's size adds its trades together)."
+  },
+  {
+   "column": "run_before_size",
+   "what": "The size of the run it took over from, at that run's last trade. Empty until there has been one change of hands."
+  },
+  {
+   "column": "dipole_at_tick",
+   "what": "THE DIPOLE at the tick: the latest run of buying minus the latest run of selling, over the two together. +1 all buying, -1 all selling. Empty until there has been one change of hands."
+  },
+  {
+   "column": "exhaustion_at_tick",
+   "what": "THE EXHAUSTION at the tick: the size of the run under way, above zero for buying and below for selling."
+  },
+  {
+   "column": "run_high",
+   "what": "Yes on the last trade of a run that a trade on the other side then ended: the high of the peak with no window. Known only at that later trade."
+  }
+ ],
+ "pair_columns": [
+  {
+   "column": "dipole",
+   "what": "Native's candidate number. A label only."
+  },
+  {
+   "column": "native_birth_ns",
+   "what": "Native's birth time: the start of the birth second, on the received clock."
+  },
+  {
+   "column": "native_polarity",
+   "what": "Native's polarity: +1 net buying, -1 net selling."
+  },
+  {
+   "column": "trades_in_birth_second",
+   "what": "How many trades printed in the birth second."
+  },
+  {
+   "column": "leg_number",
+   "what": "The trade leg whose FIRST trade is in the birth second. Empty when no trade leg starts in it."
+  },
+  {
+   "column": "leg_direction",
+   "what": "Which way that trade leg went."
+  },
+  {
+   "column": "leg_steps",
+   "what": "How many steps it made. Empty when it was still going at the last tick."
+  },
+  {
+   "column": "leg_first_trade_position",
+   "what": "Its first trade: position on the tape. A label only."
+  },
+  {
+   "column": "render",
+   "what": "The stacked pair drawn for it. Empty when no trade leg starts in the birth second."
+  }
+ ],
+ "counts": {
+  "ticks": 845246,
+  "trades": 33703,
+  "runs_of_trades_ended": 10401,
+  "three_render_pictures": 57,
+  "trades_in_a_picture": 600,
+  "recorded_dipoles": 741,
+  "recorded_dipoles_born_with_a_trade": 267,
+  "of_them_with_the_first_trade_of_a_trade_leg_in_the_birth_second": 90,
+  "seconds_of_the_trade_day_with_a_trade": 9963,
+  "of_them_holding_the_first_trade_of_a_trade_leg": 3803,
+  "trade_legs": 5660
+ },
+ "how_to_read_the_two_counts": "A recorded dipole born with a trade has the first trade of a trade leg in its birth second in so many cases; a second with a trade, taken anywhere in the trade day, holds the first trade of a trade leg in so many. Two counts set side by side; no test of chance is made.",
+ "checks": {
+  "the_runs_against_the_stored_ones": {
+   "passed": true,
+   "ticks_compared": 845246,
+   "what": "the side and size of the run of trades under way on every tick, against the stored turn_peaks"
+  }
+ },
+ "files": [
+  {
+   "file": "tick-dipole-20231017.parquet",
+   "rows": 845246,
+   "bytes": 4343887,
+   "sha256": "8ca2fc0a259099881bd430003040e6318f9f0c2e13390c960b9c209f54b1320c"
+  },
+  {
+   "file": "three-renders-index-20231017.parquet",
+   "rows": 57,
+   "bytes": 3863,
+   "sha256": "649d15c23d6d02b32554057d58396354f05bbabd1cad19ffd06fb5a84513321a"
+  },
+  {
+   "file": "dipole-leg-pairs-20231017.parquet",
+   "rows": 267,
+   "bytes": 7247,
+   "sha256": "459a63950aa85f4b04ac1f71ae77c35cb460b7c9eaa8904eebd69ef6b089c111"
+  },
+  {
+   "file": "three-renders-20231017-000.png",
+   "bytes": 152664,
+   "sha256": "cabde3c4fcc0baaf67c52a7ebc98ed84ce35502c30e2a00205a072106a7aae20"
+  },
+  {
+   "file": "three-renders-20231017-001.png",
+   "bytes": 159537,
+   "sha256": "761b9b779a5740264c34bbe05bdfdae4675451874885d42885e6f8e8e63186ba"
+  },
+  {
+   "file": "three-renders-20231017-002.png",
+   "bytes": 163994,
+   "sha256": "ffe5fde0825b8ddfb53f305c7cbe6dee06735cf2501d7c9d7eec8b866790962d"
+  },
+  {
+   "file": "three-renders-20231017-003.png",
+   "bytes": 161722,
+   "sha256": "c0f18d126669f1c0189195f7a0f4fa5cae927c8236cda7804ea925e8143ab091"
+  },
+  {
+   "file": "three-renders-20231017-004.png",
+   "bytes": 155230,
+   "sha256": "29af195a0340e4ec505db56e8d03579b156882cb9ae9a0035c4044052bcbf3b2"
+  },
+  {
+   "file": "three-renders-20231017-005.png",
+   "bytes": 145045,
+   "sha256": "4412b0f5b1a7b5ba161666103d78276fe72e35e5b900bc39c4b388f0c7d59a55"
+  },
+  {
+   "file": "three-renders-20231017-006.png",
+   "bytes": 136889,
+   "sha256": "97349aa4019a269851d60bfd6c9dfb55ea11297441668ca458e749bb0a0330b4"
+  },
+  {
+   "file": "three-renders-20231017-007.png",
+   "bytes": 144629,
+   "sha256": "7cad29d929f4a5cc935473f178aeb602843aab2ab2a1496c9929489188f4991d"
+  },
+  {
+   "file": "three-renders-20231017-008.png",
+   "bytes": 144753,
+   "sha256": "5f04ef6e9b947811cd03573dfb35be1ea5d1860632aae83433980e5e1793a99c"
+  },
+  {
+   "file": "three-renders-20231017-009.png",
+   "bytes": 153860,
+   "sha256": "42c0617aac2b408f268f57a5a5a902652ed3b93063e95ce9a045f99ef86f4966"
+  },
+  {
+   "file": "three-renders-20231017-010.png",
+   "bytes": 145227,
+   "sha256": "0453b74e9fdcc95322ad1dcef39f52fbf7793c143513ceb63bca37cf353900d0"
+  },
+  {
+   "file": "three-renders-20231017-011.png",
+   "bytes": 151974,
+   "sha256": "0fde8236e5e378cf31ae8fb5c35d49211a6e44980c50b0374bca16639fd55030"
+  },
+  {
+   "file": "three-renders-20231017-012.png",
+   "bytes": 143242,
+   "sha256": "61d88b9841bf02f0a7a22edb03ad44620e9af89a9f64b0b698d6422a8d9230cb"
+  },
+  {
+   "file": "three-renders-20231017-013.png",
+   "bytes": 140982,
+   "sha256": "241ee0d42e64a9199aba2507dafe5c9b47993e94767a80416d122a6ff075adf2"
+  },
+  {
+   "file": "three-renders-20231017-014.png",
+   "bytes": 143090,
+   "sha256": "577299b2965aae7c7cd08864403aa6af0716b0af67f3457a5355f83e104a9b74"
+  },
+  {
+   "file": "three-renders-20231017-015.png",
+   "bytes": 145344,
+   "sha256": "3de090764bf4b86b9be167c968681544c41e74d131e002091a0a848a932926a9"
+  },
+  {
+   "file": "three-renders-20231017-016.png",
+   "bytes": 165151,
+   "sha256": "fa475bd4141a0602295239efcc9bd5aedd5e6b387d7312e4e961f2c31d8c92c7"
+  },
+  {
+   "file": "three-renders-20231017-017.png",
+   "bytes": 147844,
+   "sha256": "865693ff9ae34b2ab0aae1fa640e27194c7468ff7add6d9e8704cf35b5ef3426"
+  },
+  {
+   "file": "three-renders-20231017-018.png",
+   "bytes": 155573,
+   "sha256": "9f16d190264fb06261550153daadca67d5cd13cb45b4ff63b5463dbfae21e26b"
+  },
+  {
+   "file": "three-renders-20231017-019.png",
+   "bytes": 150580,
+   "sha256": "f38b0fd89de6dec35f3e8f87989611e12993fb68facdb46919f2082c50e2f0b2"
+  },
+  {
+   "file": "three-renders-20231017-020.png",
+   "bytes": 142547,
+   "sha256": "5fd7a325f452e550040bee2a73f8e1e21d661ace10d933d4e4ef6e69378f3143"
+  },
+  {
+   "file": "three-renders-20231017-021.png",
+   "bytes": 141230,
+   "sha256": "22ab0a692dab57b4d870acfdd02298039bac7cc08bd6a8684775bf902e9330b4"
+  },
+  {
+   "file": "three-renders-20231017-022.png",
+   "bytes": 150647,
+   "sha256": "eda11b92762c96be466eb0d7f9ca71a006ab4da70c6fcf6a3e16c58173a93675"
+  },
+  {
+   "file": "three-renders-20231017-023.png",
+   "bytes": 140551,
+   "sha256": "2ec809bd7571f0f3615b07b030264586c35381d7e368d936ca04ec1a0b1b3aea"
+  },
+  {
+   "file": "three-renders-20231017-024.png",
+   "bytes": 147674,
+   "sha256": "cd4cc69b5cdb5a0a4461a9105b2ea22ae6371b90374274400cdeda6561d14a5e"
+  },
+  {
+   "file": "three-renders-20231017-025.png",
+   "bytes": 153348,
+   "sha256": "01d2e9cc64e9b3e410d15868f063e56db0d3ed8adeb0956d2f550132bbf4e7a9"
+  },
+  {
+   "file": "three-renders-20231017-026.png",
+   "bytes": 141635,
+   "sha256": "8c477f267e11504ce3a331b436737aa83bf13fb605e29028fa0340c55e0b928e"
+  },
+  {
+   "file": "three-renders-20231017-027.png",
+   "bytes": 145384,
+   "sha256": "5df5065f8709a57461e2d8b6ba9c8949dced5c1958c12b319034f4a8917c24a4"
+  },
+  {
+   "file": "three-renders-20231017-028.png",
+   "bytes": 145375,
+   "sha256": "6aec64e97b8b2512a837572a77eb830af6481477f1ce211af28529735da0015a"
+  },
+  {
+   "file": "three-renders-20231017-029.png",
+   "bytes": 144638,
+   "sha256": "02022027568f7c5c65d6357ba8eaa57f81c1acf7b0d06abfaa2493e1e7d7ded6"
+  },
+  {
+   "file": "three-renders-20231017-030.png",
+   "bytes": 154811,
+   "sha256": "f8de0373acb8fa7e452d48c5b5428fa72bf5b2904a11e517e36906a478d048ee"
+  },
+  {
+   "file": "three-renders-20231017-031.png",
+   "bytes": 135223,
+   "sha256": "41a2fbb906cd421869cee59443f69571d036286ea423d83a29f33bcdd4a79b53"
+  },
+  {
+   "file": "three-renders-20231017-032.png",
+   "bytes": 153496,
+   "sha256": "754b178cff519e27117194a793f66c67baa90dda6d3d445b587873922e18ae09"
+  },
+  {
+   "file": "three-renders-20231017-033.png",
+   "bytes": 135250,
+   "sha256": "28e19faab3baa5b41691bfef3c46a7755c2eccb47c24552e744498cbcfab4fa3"
+  },
+  {
+   "file": "three-renders-20231017-034.png",
+   "bytes": 140043,
+   "sha256": "c2991d0b679034e0c3161f2c14169579fc6a6f31c33d1d49546340455446bca2"
+  },
+  {
+   "file": "three-renders-20231017-035.png",
+   "bytes": 143684,
+   "sha256": "e2733521e93012f1e7d9dee55f49e172fe7cb01d7a9be16bf97311b7cbea4f3f"
+  },
+  {
+   "file": "three-renders-20231017-036.png",
+   "bytes": 150415,
+   "sha256": "ad586d961c70207bf72aaac3225b17289e60bf2edea8643b19ee8f845000f58f"
+  },
+  {
+   "file": "three-renders-20231017-037.png",
+   "bytes": 138862,
+   "sha256": "9644ef489b192d2e3c8112f9db31d2aaaa25c94a26576f65c36eb6c7952aadae"
+  },
+  {
+   "file": "three-renders-20231017-038.png",
+   "bytes": 142518,
+   "sha256": "ce506ba712035303339e4ebb32faa902d178f164f0c2ffc168a4f1805fd792fe"
+  },
+  {
+   "file": "three-renders-20231017-039.png",
+   "bytes": 141416,
+   "sha256": "94f46ba733ef470d22c25fee342d30f5ead0a65ef72f666c1fa816d873c65b2c"
+  },
+  {
+   "file": "three-renders-20231017-040.png",
+   "bytes": 160296,
+   "sha256": "be5262ce21055f14b8f5eab93dcad74a711df87fca9f1e7d8976e17fe3d246ec"
+  },
+  {
+   "file": "three-renders-20231017-041.png",
+   "bytes": 141749,
+   "sha256": "a43403046b7f44e98327dff3b890496685461edfc62cb98ada94ecd9f615a371"
+  },
+  {
+   "file": "three-renders-20231017-042.png",
+   "bytes": 148497,
+   "sha256": "0a8650776336c733e0f3b3ba69d6023d2ba25f4fe13eb822e9ca0820ecd40a9c"
+  },
+  {
+   "file": "three-renders-20231017-043.png",
+   "bytes": 140405,
+   "sha256": "5cca7d77b66fa19f91d8adb3290f55a053b7e402705e8b1489b13af5b8749d80"
+  },
+  {
+   "file": "three-renders-20231017-044.png",
+   "bytes": 141371,
+   "sha256": "65e3e245fba61f232523129fbfe153518a12727d30b3863835132fc9821cbfac"
+  },
+  {
+   "file": "three-renders-20231017-045.png",
+   "bytes": 138525,
+   "sha256": "42b7c8834974c15dd44f3d5eb1ca585867dec51defa334a2428ac39ded19260f"
+  },
+  {
+   "file": "three-renders-20231017-046.png",
+   "bytes": 142129,
+   "sha256": "22e1809e27c69247a96013e9b1f04834be9af9b7229015fa02aa17178f3409ef"
+  },
+  {
+   "file": "three-renders-20231017-047.png",
+   "bytes": 141530,
+   "sha256": "dda20cef9fc1eb34a7dab7989157ef4005a89fef6a3a232b46d87f606ab61ddb"
+  },
+  {
+   "file": "three-renders-20231017-048.png",
+   "bytes": 145643,
+   "sha256": "f3c7ec8e5f76cee1ea898e10a3bf477ac26d357ec755929b0f3f6073fbe547d6"
+  },
+  {
+   "file": "three-renders-20231017-049.png",
+   "bytes": 135272,
+   "sha256": "ddb3814187676da236d195e35078fed2f89e94072d6c451672054d002eb70f43"
+  },
+  {
+   "file": "three-renders-20231017-050.png",
+   "bytes": 155694,
+   "sha256": "dcd1d8dd06528e05a54f4fe018649e5716647b0ac52cb5f6d898d215cf5d820c"
+  },
+  {
+   "file": "three-renders-20231017-051.png",
+   "bytes": 147036,
+   "sha256": "ef2ab9f0af358869109168754bac4857a2a0acbdbe34ecba74fa960df7431cd3"
+  },
+  {
+   "file": "three-renders-20231017-052.png",
+   "bytes": 145476,
+   "sha256": "d9f7b2d2a01aa920252a14c78067f369e245861a13547c94aede580d2244290a"
+  },
+  {
+   "file": "three-renders-20231017-053.png",
+   "bytes": 146073,
+   "sha256": "0e5799dcb86c3c35744d586ab669fa2f53a84d183a816f463ad5aadaee7d1aab"
+  },
+  {
+   "file": "three-renders-20231017-054.png",
+   "bytes": 150185,
+   "sha256": "d87f60e5c42caaa52b486f258169ec76517a084f17adf4f095335954f038e49b"
+  },
+  {
+   "file": "three-renders-20231017-055.png",
+   "bytes": 155077,
+   "sha256": "e91ab1dd14937ecaf328ec483953f81864f460480325903479cad99ecc4dfbf7"
+  },
+  {
+   "file": "three-renders-20231017-056.png",
+   "bytes": 108568,
+   "sha256": "cf774398d0842cdabbf5d37b8f62e8e5c7ee7a8f854a6ab4ca68956fee5e973d"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697502481.png",
+   "bytes": 93237,
+   "sha256": "7453e017eb679e35d68446ae00f96a9baf5a4cc2f67b3d9576a3f1796b3772f0"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697503616.png",
+   "bytes": 89730,
+   "sha256": "953cfb6e579795097cefae1e55d502960e381289d30be06fcdc0a28d740a38a7"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697503792.png",
+   "bytes": 95820,
+   "sha256": "498d5b384019191d5385a9cf3bd960909f22ab9a66bbbef8688e7d017aeadc2d"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697504733.png",
+   "bytes": 89638,
+   "sha256": "4951b98cb3c9a568e3a15a0d03a8f1b79e3ad8bc82213c8941c95302fdd20431"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697504849.png",
+   "bytes": 99426,
+   "sha256": "494af2db2b0ac54e17e6495fafeb50636c9ef37b23e34ff64a104233fa3f3cd1"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697506020.png",
+   "bytes": 92319,
+   "sha256": "e7590fec31c741a4951f5851d3528e8344e333352b4f9008677e39f1edf56791"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697506148.png",
+   "bytes": 98076,
+   "sha256": "afa3d0f7c5e34fbc6c64ccc37c9be04dfe8a54c28eb0c00b211697f039bba3fe"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697506270.png",
+   "bytes": 98844,
+   "sha256": "72bbee64275522e72fb426bc2bae50a7866704ed8695a6b0fc8ad3ed22bc0e20"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697506801.png",
+   "bytes": 104803,
+   "sha256": "184e431b7f5c25c55abbd6ce392f4e1d6aa22cda2a41a366b96e993168408e49"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697506970.png",
+   "bytes": 96422,
+   "sha256": "75440af7a6ca1e9ff7c93d9c9a4663995a57fd7c5197b2aec42357f739f63f08"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697507849.png",
+   "bytes": 90079,
+   "sha256": "3511a6e0e8ac4825377dab18847f4d8796a2a18e100d8a72513c38253c5a98ac"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697508115.png",
+   "bytes": 97760,
+   "sha256": "2eb7810271ad0529e266c688a3859007f538f4298addcf989cef1eba708a110e"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697508244.png",
+   "bytes": 99725,
+   "sha256": "9bfd0e06dcc875627efc0cc9b25d4ae6ade167d7488cb6ce71c80f32051f9c25"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697508787.png",
+   "bytes": 105048,
+   "sha256": "a46e9db2d138caf6f7c75fadfa7181a0a59985160c4bf4dcec662d68ba920e0f"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697510436.png",
+   "bytes": 99523,
+   "sha256": "5aa32b4ddbfba3ebafd0ccf909d7308e2865d30d4701e0e2ab6632198a84f8e9"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697510576.png",
+   "bytes": 104491,
+   "sha256": "c47bcd5f84ca6b88fd85a5e5d00b9b756c98d992c809dc268f096e416bba9249"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697511030.png",
+   "bytes": 98263,
+   "sha256": "3b1d0303b430092ca8fae5ad92edfbbdda2e592798672d071ade157e37df738e"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697511311.png",
+   "bytes": 96813,
+   "sha256": "56a2a69f53077feb8bae83eb84b20c260289a20de56b2b558eaf0a41b25c0a2b"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697511591.png",
+   "bytes": 94628,
+   "sha256": "d2d5ceb69323b83259cc2ebfbfd969a8ace9da3cdcdeb1283e4dd7571bcbc2d8"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697514523.png",
+   "bytes": 98176,
+   "sha256": "ed606bf2cff31db9ad095d09c12de4e128ae704ef1f631c7d5fc9ed12a5b0f4f"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697514596.png",
+   "bytes": 97468,
+   "sha256": "a7f241161570b948e967466bb3e70127fae830e0b36248c2464835da3cd89c90"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697514981.png",
+   "bytes": 96759,
+   "sha256": "a1442f3b6b11b7c46cd097b1b8b9beec576c5199ae3fa932781fc048c73ec2f3"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697515154.png",
+   "bytes": 98422,
+   "sha256": "1e191224c90813970be66e00a2e2c5d23c252a6e9f3abd541213f6c915287276"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697515547.png",
+   "bytes": 105008,
+   "sha256": "25525f71978999978b35323ae0e9af974c0f5f1d6cf6123ebcc37d4eb0223934"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697515644.png",
+   "bytes": 105285,
+   "sha256": "a4b5b6c456c64c021ceabb2a9a741ffdd13c429869a6a95f30e1c39c9e57e137"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697516153.png",
+   "bytes": 107312,
+   "sha256": "85d8cc4f075feade353219bb3bb5c1ae58cc8b48bbc288c92e72229a29765654"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697516414.png",
+   "bytes": 88091,
+   "sha256": "4e523b87ffd2e36d8b142c4bd63bb466ee8db05c772c407cf766b00fa8abe688"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697517060.png",
+   "bytes": 87041,
+   "sha256": "e9f2eb46f28e3ff2687bb2ab2baf4ee3fb4f4c12aeeba92c0bc1a404d210d31c"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697517584.png",
+   "bytes": 101780,
+   "sha256": "463fa49a1152b2736c7d503ae0bcc76978bf81a6e9e48ab6d80e69b6a3a12fe6"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697517869.png",
+   "bytes": 101333,
+   "sha256": "23760e9e5967b0b2b56269c30c97d8d9ed8c6b65522b6cb0a0e760da79ead4f4"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697518278.png",
+   "bytes": 96731,
+   "sha256": "cb61232aab76dc6a51fc488ccc2561febf49d52681b6125a9f3eb9ddcad2347a"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697518435.png",
+   "bytes": 102677,
+   "sha256": "74568783eb6c3d04c87cc4697c995ec7ef33f1160134fca5f956777893fe0523"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697519310.png",
+   "bytes": 97411,
+   "sha256": "24443593233c93f283a5b50366e7fce3136b9861c1e4c707e4528388eed49529"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697519690.png",
+   "bytes": 104929,
+   "sha256": "5c04c3473e2dd5e2a4d96befe13f9c4584d0c07b3e1fabbc3f1d0ae09c358039"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697519817.png",
+   "bytes": 93362,
+   "sha256": "93aa26596d04417e925ba6143cfe5ee97cd8f7a87bc815b15b3f88a70432f227"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697521297.png",
+   "bytes": 94600,
+   "sha256": "05059293e05aa7b0a4046a0ad42e9ba53e4a685af27d41080b6dfe216875b074"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697521587.png",
+   "bytes": 101155,
+   "sha256": "81ba331b06042721a917c4799af129718b68e870e0e8e760ff8223043a48b588"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697522164.png",
+   "bytes": 102610,
+   "sha256": "4710c9037d831b020ec38e66767f0958e84f7942c073c6e5527436368b12b678"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697522347.png",
+   "bytes": 98476,
+   "sha256": "86e3e266eecd16d4d3232907fd18a58ef64817216b9c8f9a6086a3e76c5fbadd"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697523426.png",
+   "bytes": 106384,
+   "sha256": "ad44486d0db889ad2d701ca195304f545d813c623675f9c32978758e68363c5a"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697523498.png",
+   "bytes": 104421,
+   "sha256": "b0f9c375e8b1c5a6200ac925ecc5e670462be2c2a0bb6f39135a264f1bddae25"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697523760.png",
+   "bytes": 96896,
+   "sha256": "f98d8a17af2e0771ec1a3e963015861b39874b1358b612d7b3702ee7b28f29be"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697524648.png",
+   "bytes": 95863,
+   "sha256": "57a476a248ebfa5e3eafaabc95edd8fe97af235e3ff9c0778f4d88bccd187560"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697524759.png",
+   "bytes": 98135,
+   "sha256": "47a68c34e554201d91ba8497571ef53d04202644cffa2759d66f35d1729e38d7"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697524954.png",
+   "bytes": 93340,
+   "sha256": "63c666812b9d3d304d840ba9c3db1e52f3d9d7de9d2c9799bf6782537549e40e"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697525073.png",
+   "bytes": 99823,
+   "sha256": "0d787d7353c670bafcdcff58eecbcbdeea7363fcb345889614164821902a1f03"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697526248.png",
+   "bytes": 102897,
+   "sha256": "69540ea20040957768454a9226037dd27f810a218ccd948058a7783b28aa233d"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697527325.png",
+   "bytes": 99380,
+   "sha256": "e6e5b648a483fcdef97a5c3cc3f150eaf9f56033d758aecb44863b258ad886e9"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697528172.png",
+   "bytes": 100606,
+   "sha256": "b47de8731a8631c1f224f88ec98e56fb9209db33577127b46573159c15428392"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697528809.png",
+   "bytes": 100565,
+   "sha256": "84b3194c365731e8cb882b349bd998d8aa31750a00c5cbbf87608fedc27d2ac3"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697529591.png",
+   "bytes": 100806,
+   "sha256": "49c5c906dd70c2fa63d5e613f1c7768319fd42bdcbac728efd1a1524ad7f7e9a"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697530047.png",
+   "bytes": 97417,
+   "sha256": "cc78fec19744fbdb034075bdf7400c84c8fc2f557017335974eb62dfc772ba5e"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697530245.png",
+   "bytes": 100487,
+   "sha256": "cd3a1e11f8e3be23c290e68bac0c8aa11c85a083544fa207f3ea6b7f1b4a1f1d"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697530318.png",
+   "bytes": 93437,
+   "sha256": "30829e9a4869565ffed2194ecdb28c4c0839bb5b997175ac8544543540b1e88c"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697530504.png",
+   "bytes": 101969,
+   "sha256": "bfd4e3ba194b96036f7644b6c884577a83f66b66841b2879103c1efe1a03a1d3"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697530631.png",
+   "bytes": 101221,
+   "sha256": "36c44a28b3505e15e92e6a6593243aed3bc1d0afbf0b194b8407126fc52df6d4"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697530720.png",
+   "bytes": 100559,
+   "sha256": "a8965e0bbe503c4f3b3fddb44b242566470fa6563f03b939a57734bafde3bca4"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697530837.png",
+   "bytes": 100624,
+   "sha256": "959b9a9cc21126f5ec2019663d43fab1ab428d50cb03627846af06e5b42a5427"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697531719.png",
+   "bytes": 102278,
+   "sha256": "46e909a1f475dcb7da88efe375fd6b2f95928d893eef6e43f421fa7bfc49524d"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697531771.png",
+   "bytes": 103585,
+   "sha256": "327f01c76713cf5d47106c091c5e7a1b2f1d2e354fdc00d3f6fd01481c10149c"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697532089.png",
+   "bytes": 104889,
+   "sha256": "f0d195333bbf1c6d5089a0b23363faf3b23bbfb8d8693f32090d4ff63d4b77d7"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697532499.png",
+   "bytes": 98830,
+   "sha256": "fb6f9f9c69e4d9d321dfe97ed17e6ad1a6f09eec76c63aba972659bd37892619"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697534031.png",
+   "bytes": 100496,
+   "sha256": "d7ca32971cc581453eecd3f0b45791a9aa160030399f96ea9146e2efa18f056e"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697534387.png",
+   "bytes": 99032,
+   "sha256": "0812b328b177bf052d70a9aa13a5921b08e6181852678cd0c9b825b5ca29f703"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697535176.png",
+   "bytes": 106459,
+   "sha256": "92227d1b3ea608d3fafe84f014e0c72ca42af5810a227b5cabafb705a0c97767"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697535415.png",
+   "bytes": 96872,
+   "sha256": "13bc4baa504c0d166e6e7d3e0949d69d8b2eb96156b1a54e54a0915675418b91"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697535488.png",
+   "bytes": 98521,
+   "sha256": "d49c7dd805b84cf817eccadb9ae8663d499ed3f11f3338adf3801722c9ce2f04"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697536268.png",
+   "bytes": 102050,
+   "sha256": "11e549c6fb835ccf12b2b02eae14bc6ba463957b58529563073c2859639570d3"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697536734.png",
+   "bytes": 99929,
+   "sha256": "e1693c5b54bb6b4e9998a3324b28c73f8a8fb328db5c65310c950b677590ea8d"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697536788.png",
+   "bytes": 99350,
+   "sha256": "674f6dde44599037709fe49973138a467ba463002e11f716d749be6870821f1d"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697537734.png",
+   "bytes": 108079,
+   "sha256": "80fb4f96096ab9db73fe9bd201628d4f7211ffca41ce3f52e5129fbbe38d9c81"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697537808.png",
+   "bytes": 99387,
+   "sha256": "41dbb67389a715e2cdb1b556a1e78bc2dbdf705c2f117f571bbb0717450a6384"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697539099.png",
+   "bytes": 103508,
+   "sha256": "4e86d85cd3ee7603fd246edfb7c42e1c0dc28354c3676b1d5efdb720b3c18b0a"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697539450.png",
+   "bytes": 102280,
+   "sha256": "2bd7f80c37a1645a8d465306febaacbafac518474048910d481cdf6ec2f6633c"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697539680.png",
+   "bytes": 96070,
+   "sha256": "d072d94cf624df90e5730ef7d715573310bafcc5ea7373fcc17008d8c37d1f0f"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697539869.png",
+   "bytes": 94227,
+   "sha256": "65b15f1b72b2a12627004ed09d2db96337b1aaa03c0e68b33f08c6520b025192"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697542250.png",
+   "bytes": 101383,
+   "sha256": "ce879466f7e9c4f35a31d9944b9d89c077094949dc29381b7c962d962790ad8f"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697543491.png",
+   "bytes": 92236,
+   "sha256": "a7ba91e004e558e9bb13000b199bd0c6589d153e7859fe24fbea19b2830d6bc0"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697552627.png",
+   "bytes": 102569,
+   "sha256": "4650ddeb3026200c346ac2f35d2e7eb55e1ed26a674a3939e9f81851cd4ff948"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697553865.png",
+   "bytes": 101279,
+   "sha256": "b0cbaff9e1e3c69a74a13da69caa2201b368f2b7f46def56b17cfe3324b74e84"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697561210.png",
+   "bytes": 95958,
+   "sha256": "d5ffda01fd28daf695e08aa5156a4ca7e8fc3f4a5a7e432e3b6786b0be2b0f5b"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697568423.png",
+   "bytes": 108213,
+   "sha256": "9a47a8bf7aec189d9cb2c2653e7845d2971d46464ff2b066f6840f0f49f937c4"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697568740.png",
+   "bytes": 99943,
+   "sha256": "ee2651546e51eb009e2e3e54c27edd5bbb8e2ea0fec4f8290c76b21aa5a35019"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697569749.png",
+   "bytes": 104980,
+   "sha256": "605a2fb700eea529001900047132f4e27cc635a9e6ee195bee2b78c8e77573c6"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697569923.png",
+   "bytes": 96936,
+   "sha256": "5da0d15b3fa3c1e28bbf573447a67712179391d2102f65890b2932514fefe46a"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697574689.png",
+   "bytes": 104633,
+   "sha256": "63106892db0ccc78530073a56344a7fa0fc15cb04fc6f48021a71f6abacc72fe"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697574745.png",
+   "bytes": 102547,
+   "sha256": "0adec4fc23bf397348f3bd03fe97e8d4fcf7300a22bd40bd35586282253e03d1"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697575204.png",
+   "bytes": 107515,
+   "sha256": "ff5cbc561f84de07d9d9f966c13b87bbb87e5e45081748f33a6626ba174c2a8a"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697576294.png",
+   "bytes": 94511,
+   "sha256": "95f1ac3466df29b0d09007061875960f09b3b48795257b248174b4a3f55f7e07"
+  },
+  {
+   "file": "dipole-leg-pair-20231017-dip-19647-1697576378.png",
+   "bytes": 105373,
+   "sha256": "7064249802a68424c34c6215205cf4f2cb8df987f3b830812db8271f1aeba84e"
+  }
+ ],
+ "seconds": 17.1
+}
