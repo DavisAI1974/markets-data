@@ -454,3 +454,16 @@ nano versoons of them all".
 - The recorded dipole only says where to look (a mark). The line drawn is the dipole at the tick.
 - To do on his word: all 90 of trade day Oct 17 and the same on the other three trade days (pods, one launch).
 
+## 2026-11-18, close: the exhaustion calculation is to be EXACTLY the crypto one; only the market differs
+
+Greg: "Whatever crypto did to generate those renders do that. If one of the calcs was a 20 sec. Use it just like
+crypto did. Look at if the crypto data was altered to be different that what we have in any way. I want everything
+in our new exhaustion calc to be exactly like the old calc."; "The only difference between the two should be that
+was crypto and we're doing ng".
+
+- The crypto calculation, as its script has it (Markets branch `claude/davisai-s71-counterparty-capacity-sf1168`
+  `75b15fa`, `research/shape_s71/regroup2.py`, `arc_gate.py`, `shape_arc.py`): spelled out in handoff O.
+- Do not swap in a "better" line. Do not drop the 20 seconds from this calculation. Do not relabel another line as
+  exhaustion. Carry it over as it was; list every difference between the crypto data and ours; put each to him.
+- The tick versions (the dipole and the exhaustion at the tick) are built BESIDE it, not in place of it.
+

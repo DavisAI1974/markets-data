@@ -3003,6 +3003,30 @@ back".**
   born). It is made on the 20-second window and enters no calculation. The line in the lower graph is the dipole
   at the tick, not Native's.
 
+**DECIDED (Greg, 2026-11-18, at the close of the twelfth session). His words, whole:** "Wait. I also asked  for the
+exhaustion render too. Whatever crypto did to generate those renders do that. If one of the calcs was a 20 sec. Use
+it just like crypto did. Look at if the crypto data was altered to be different that what we have in any way. I
+want everything in our new exhaustion calc to be exactly like the old calc. Agaim, desktop has already gotten a
+great start on this. Actually, create and push everything and create a handoff so we can dtart a fresh session. Use
+what i wrote in this prompt in the handoff to explain things better then print drop in box". Then: **"The only
+difference between the two should be that was crypto and we're doing ng".**
+- THE EXHAUSTION RENDER IS MADE EXACTLY AS THE CRYPTO WORK MADE IT. Every step of the crypto calculation is
+  carried over as it was. Where the crypto calculation used 20 seconds, 20 seconds is used, the same way. The
+  only difference allowed: that was crypto and this is natural gas.
+- This is his latest word and it governs the exhaustion calculation and its render. It stands beside, and after,
+  "No exceptions! That window gives us nothing but a visual to confirm from" of the same session. Claude does not
+  argue the two against each other: the exhaustion render is built crypto-exact, the tick versions of the dipole
+  and the exhaustion are built beside it, and what is a signal and what is a picture to confirm from is his word
+  when the renders are in front of him.
+- TO DO FIRST in the next session, on his word: go through the crypto calculation and the crypto data line by
+  line and list every way they differ from what we hold, so that each difference is either removed or put to him.
+  A first read was made in this session (code only, nothing run) and is in handoff O; it is not finished.
+- Desktop has a start on this (his words). Its folders on this branch and its earlier pictures are the place to
+  begin from, on the rebuilt data.
+- Everything of this session is pushed: the sample pictures and the programs that drew them are in
+  `three-renders-samples-20261118/` (samples only, no receipt). Handoff O replaces handoff N as the starting
+  point. No pod was started in this session; the account read at its start showed none.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
