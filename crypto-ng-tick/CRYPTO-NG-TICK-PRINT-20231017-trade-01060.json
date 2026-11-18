@@ -1,0 +1,55 @@
+{
+ "what": "One trade's own exhaustion graph, printed twice from the stored 20-second line of the data run: as the steps the line moves in, and as a smooth curve through its own points (drawing only)",
+ "asked": "Greg, 2026-11-18: \"Each trade should have its own exhaustion graph. No more than one graph per render\"; \"We also want to be measuring exhaustion prior to trade start and after trade ends\"; \"we want the line to look like a curve and not like straight lines right or does it matter?\"",
+ "trade_day": "2023-10-17",
+ "asked_for": {
+  "moment_received_ns": null,
+  "trade": 1060,
+  "position_on_tape": null
+ },
+ "chosen": "named by its number",
+ "trade": {
+  "trade": 1060,
+  "side": "sell",
+  "turn": 2876,
+  "turn_received_ns": 1697558431069266119,
+  "onset_position_on_tape": 1520020,
+  "onset_received_ns": 1697558431241905074,
+  "onset_read_20s": 39785,
+  "ended": "the next turn was filled: that fill ended this trade and started the next",
+  "end_position_on_tape": 1521421,
+  "end_received_ns": 1697558453173516452,
+  "length_seconds": 21.931611378,
+  "program_open_px": 3.044996736824931,
+  "program_close_px": 3.0440032631750693,
+  "program_close_maker": true,
+  "program_gross_bps": 3.2626427406214877,
+  "program_net_bps": 3.2626427406214877,
+  "program_swing_bps": 6.5692231893571345,
+  "program_dive_depth": 0.1538,
+  "program_lean_flip": 0.0462,
+  "program_lean_close": 0.1217,
+  "seconds_from_the_open_to_the_onset": 64831.241905074
+ },
+ "stretch": {
+  "first_received_ns": 1697558386241905074,
+  "last_received_ns": 1697558513173516452,
+  "first_eastern": "2023-10-17T11:59:46-04:00",
+  "last_eastern": "2023-10-17T12:01:53-04:00",
+  "seconds_before_the_start": 45.0,
+  "seconds_after_the_end": 60.0,
+  "reads_drawn": 403
+ },
+ "files": [
+  {
+   "file": "crypto-ng-tick-exhaustion-20231017-trade-01060-steps.png",
+   "bytes": 69974,
+   "sha256": "c4fa423cfd4aefe66dfdd0d4e3e278ab1020e2fba8035273e4619e7f4842403a"
+  },
+  {
+   "file": "crypto-ng-tick-exhaustion-20231017-trade-01060-curve.png",
+   "bytes": 90966,
+   "sha256": "d51b11cb0d60c2472571927037f591646ee028c9a6cc0104ee6010b99b8a5bb1"
+  }
+ ]
+}
