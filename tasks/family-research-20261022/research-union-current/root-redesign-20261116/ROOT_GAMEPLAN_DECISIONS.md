@@ -2968,6 +2968,19 @@ asked for the trade price curve too".**
   line restarts at every move and most moves are one step long, so it holds one trade or none most of the time.
   The run against the run before is defined at every trade. Both can be drawn; this one is drawn first.
 
+**Greg (2026-11-18): "Print the render of the trade leg as a smooth curve".** Done and sent: the same three renders
+(trade day Oct 17, 150 and 600 trades from 11:58:32.200 Eastern; in the session, nothing stored), with the trade
+price drawn as a smooth curve.
+- Claude's call, stated to him, his to correct: "smooth" is a way of DRAWING, not a calculation. The curve passes
+  through every trade's own price at its own timestamp (a shape-keeping curve between the points, which does not
+  swing past them); nothing is averaged and no price is changed. Every trade is still a dot on it. Where several
+  trades share one instant (3 of the 150; 9 of the 600) the curve goes through the last of them and the others
+  are the dots above or below it.
+- What the curve shows between two trades is drawing only: no trade happened there. Read the dots for what
+  traded.
+- Read as the trade price curve (the top graph). If he meant the stored trade legs (each leg from its first
+  print to its last), that is a different line and is drawn on his word.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
