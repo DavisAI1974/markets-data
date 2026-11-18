@@ -645,3 +645,43 @@ is output time from [the old time step] to nano tick.time".
   (read as "deleted"). The July program's files are removed from the code branch; the rules stand on their own,
   written in seconds at the nanosecond. In these notes the old wording is changed to "time grid" and "grid
   step"; his own quoted words are kept as he said them. Do not bring a time grid, or the word for one, back.
+
+## 2026-11-18 (fourteenth session): the dipole and the exhaustion are SINGLE EVENT outputs (Greg)
+
+Greg, after the rerun, on the stored full trade day renders and the four trade days of stacked pairs: "I don't
+think I see anything useful for the Full day and the 4 day dipole outputs"; "the goal is to give better
+understanding of trade data ... I mean price/trade.curve"; "I feel like dipole and exhaustion are single trade
+event outputs and dona great job explaining those events"; "Or maybe a few teades in a row but not entire days";
+"how canwe see with the data we have if there are any dipoles or wxhaustions that continue on to cover more than
+one trade? We ahoukd probably expand our searches for those".
+
+- THE UNIT IS THE EVENT (one trade, one trade leg, or a few trades in a row), NOT THE TRADE DAY. Inside one event
+  the dipole shows whose hands it was in and when that changed, and the exhaustion shows the run building and
+  letting go. Laid end to end over a trade day the event is lost.
+- THE MEASURE of any output: does it help us understand the price / trade curve.
+- Nothing of the full trade day or four trade day outputs, old or new, goes into the Excel sheets or gets a type
+  or a label until it is decided with him.
+- Why the full-day dipole pictures say little (Claude's read, his to weigh): the dipole at the tick and the
+  exhaustion at the tick are made from the same two runs of trades, so they are one story drawn twice; and both
+  are made from the very prints that draw the price curve, so they move when it moves. They describe an event;
+  they do not say why the curve moved or what it does next.
+- THE NEXT SEARCH, his: dipoles and exhaustions that CONTINUE over more than one trade. The stored data can show
+  them without any window of ours, because each sets its own start and end:
+  1. a run of trades on one side (the exhaustion at the tick): from one change of the hitting side to the next.
+     Stored for every run: its trades, its lots, its first trade (`turn_peaks`); and the trade leg under way is
+     stored on every tick (`leg_peaks`). Side by side they say how many trades and how many trade legs each run
+     lasted through.
+  2. the dipole at the tick: each stretch it stays on the buying side or the selling side, through several
+     changes of hands (`tick-renders/tick-dipole-*`).
+  3. the 20-second line: each stretch it stays on one side of zero (`crypto-ng-tick/crypto-ng-tick-line-20s-*`).
+  For each stretch found: how many trades and trade legs it covers and what the trade price did from its start
+  to its end, each on its own line, none combined, no label.
+- By eye only, one stretch, not measured: on trade day Oct 17 the 20-second line stayed on the buying side from
+  before 11:58:32 to about 11:59:00 Eastern, while four trades of the program came and went and the price went
+  from 3.038 to 3.045. One exhaustion over several trades.
+- A first look at that one stretch was written to be read in the session; the session's own check refused to
+  run it (a calculation on market data), so it was not run and nothing was worked around. It goes on a pod on
+  his go.
+- OWNED: the 920 exhaustion sheets removed this session were the eleventh session's, made on the REBUILT rows
+  (the 20-second peaks), not on the earlier bad data. His words were "made on old or bad data". Said to him,
+  with the offer to put them back from git.
