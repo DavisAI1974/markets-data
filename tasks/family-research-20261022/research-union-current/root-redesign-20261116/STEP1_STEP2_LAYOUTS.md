@@ -593,3 +593,66 @@ first tick only. No trade or fill row carries the tape's "no price" value.
    before it's run. That might be intentional" (of its pooled results). It is gone through with him result by
    result before anything of it is built.
 6. The growth column of the family (new families from the four trade days), after piece 3 is in view.
+
+## Exhaustion with no window (PUT TO GREG 2026-11-18. NOT APPROVED. Nothing built, nothing run.)
+
+On his word: "we need to recalc exhaustion like we did months ago and for cryptomo ... We can't use that data in
+any calculation" (the 20-second data). His words and what they take out are in `ROOT_GAMEPLAN_DECISIONS.md`,
+"Twelfth session".
+
+**What we want.** For every move the market makes, as it unfolds: is the push behind it holding or running out?
+Told two ways, both written, neither picked over the other: by what the resting orders do (the book form) and by
+who is hitting (the flow form). No clock span anywhere. Each figure on the tick where it becomes known.
+
+**What it did (July 2026, natural gas; `research/kalshi/month_characterize.py` and
+`event_move_baseline.depth_features`; and crypto, `odcore/info_dipole.py`).**
+- Took a move and two moments of it: its start, and its high (or its first push).
+- Book form: the lean of the resting orders (bid size against ask size, ten price levels) toward the move at the
+  start, minus the same at the high. A positive figure meant the book's support had collapsed. With it: how much
+  the side being eaten had thinned, and the gap at the high over the gap at the start.
+- Flow form (crypto): the buy-against-sell balance of the trades, late half of the bars before entry against the
+  early half. Moving back toward even was the exhaustion.
+- Its spans: the first push was the best price inside 60 seconds; the high was looked for inside 30 minutes; the
+  flow was read over 300 seconds in 10 bins (crypto: 30 one-minute bars). The high was found by looking ahead.
+
+**What changes.**
+1. The move is one the market makes, already stored with no window: every run of the best bid, every run of the
+   best ask, every trade leg. All three, each on its own. No move is chosen and none is left out.
+2. No span and no looking ahead. The "later moment" is each step of the move as it happens, and its last step.
+   The high is not searched for: a step is on the row where it happens, and that it was the last step is known
+   only at the first step back, as now.
+3. The book form, at every step of every move, against that move's first tick: the lean toward the move then and
+   now, and the difference; the size on the side being eaten then and now; the gap then and now. Written twice:
+   for the best price alone and for the whole side (the row carries both; ten levels are not a thing of this
+   tape). The tape's own sizes, nothing divided into a rate.
+4. The flow form, at every trade inside a move: size bought and size sold since the move's first tick, and the
+   balance between them. Each time that balance steps back toward even after its furthest point, a line says so,
+   with how far it had got and how far it has come back. No halves, no bars, no bins. The trade side is the
+   tape's own. A trade with no side is counted on its own, as in piece 1.
+5. Adding trades up since a move started IS adding cases together. Named here as averaging, in that word, as his
+   rule asks. The single trades stay on their own rows, and the stretch is the market's, not ours.
+6. Only ticks of the four trade days. A move under way at 5 pm is listed as still open, as elsewhere.
+7. Trade cost is nowhere in it. No level is set that a figure must clear. Nothing is ranked or named a kind.
+
+**What it writes.** Its own files beside the rows on each `root-rows` branch, like every other calculation: one
+line per step of a move (the book form), one line per trade inside a move and one per step back toward even (the
+flow form), and a count on each row of the lines known there. Nothing stored is changed.
+
+**Not promised.** That it tells anything. Most moves are one step long (trade day Oct 2: 10,597 of 13,331 runs of
+the best bid, 3,878 of 6,118 trade legs) and have no "start against later"; their lines are written and are
+empty there. Against the piles of peaks the whole book's lean told nothing; this is a different read (start
+against later, not one tick), so that does not settle it either way.
+
+**Claude's calls, his to correct.**
+- The stretch is the move's own life. Not since the hitting side last changed (that is always all one side, a
+  size and never a balance; it is already stored as the peak with no window) and not since the open.
+- All three kinds of move are written, though the trade leg is close to built in against the trade side (a buy
+  prints at the ask).
+- The book form can be read from the stored `move_steps` lines (they hold the best prices with their sizes and
+  each side's total at every step); the flow form needs the trades from the rows. Both are made in one program
+  and checked by a second method and by playback, on pods, on his go with the price.
+
+## Still to lay out (carried)
+
+5 and 6 above stand as written.
+

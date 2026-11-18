@@ -2761,6 +2761,72 @@ fine") is the live hand-over. His answers (two of them, marked "picked", are opt
   these lives: shape over each life's own length, identical shapes counted once, splits 2 to 8 ways all reported, one
   trade day left out) is NOT started; how a life's shape is described is put to Greg before it is built.
 
+## Twelfth session (2026-11-18, in a code session, on Fable with the Fable advisor)
+
+Started from `NEXT_SESSION_HANDOFF_20261117N.md` and Greg's drop-in. This is the same code session that took in
+Desktop's hand-overs (the entry above); Greg: "From a different session so I'm combining you two" and "If your
+branches are newer use yoirs just make sure notjing is lost from this".
+- Code: Markets `ccr-3096f7d6-fst7al` (`b1ed5bf`) brought into the session's own branch `claude/wizardly-fermi-0s9nlb`
+  by fast-forward (the session branch held nothing of its own, so nothing was lost) and pushed. Nothing went to
+  the trunk.
+- The agent skills do not install in the container: the router and the git workflow skill were read from the
+  pinned public source (tag 0.6.8). The Runpod skills were loaded and the account read: no pod exists.
+- Read: handoff N, the notes file and this file's eleventh session in full, `SPEC-root.md`, `SPEC-outside.md`.
+  `STEP1_STEP2_LAYOUTS.md` and `STEP2_PLAN.md` were read by section (the headings, pieces 1 and 2, the ways of
+  working, D and H), not line by line. To finish before the strategy lay-out.
+
+**The three open points of the three-tier picture were put to Greg as three questions (what the tick-level line
+adds up; what goes in the dipole graph and the exhaustion graph; which stretch one picture covers). He did not
+pick: "I think the 3 renders stacked that i mentioned will give us a lot of insight."** Read as the go on the
+three stacked graphs, with the calls left to Claude to make and state. Sample pictures were about to be drawn in
+the session (told to him first). Nothing was drawn: his next word changed what they must show.
+
+**DECIDED (Greg, 2026-11-18): "Then we need to recalc exhaustion like we did months ago and for cryptomo. I don't
+think we had 20 sec windows then. Why does everything have 20 sec windows now? We can't use that data in any
+calculation".**
+- Read as (his to correct): nothing made on the 20-second window enters a calculation from here. It stays stored
+  (his word of 2026-11-17, "You can keep the 20 sec", and "valid data is never discarded"); it is not deleted and
+  it is not used. Exhaustion is worked out again with no window, the way it was before the 20 seconds came in.
+  This replaces the exception in his drop-in of the same session ("ZERO predetermined windows, except the
+  20-second flow").
+- What that takes out of calculations (the list of the eleventh session): wholly `flow_peak`, `peak_story`,
+  `peak_links`, `open_stories`, `chain_peaks`, `dipole_peaks`; the peaks-in-play parts of `quote_peaks`,
+  `leg_peaks`, `outside_changes`, `resting` and `move_steps`, and its two 20-second flow columns; the 20-second
+  kind in `turn_peaks` and in Desktop's peak lives; the exhaustion pages and the orange line of the dipole
+  pictures; and every count in the notes file that stands on a 20-second peak. Native's dipole record stands on the
+  same 20-second roll (and its own 85 in 100, 45 seconds and 50 seconds), so by this rule it enters no calculation
+  either; it can still be drawn as marks. Said to him; his to correct.
+- What stays usable: the rows, `book_totals`, `quote_runs`, `refills`, `sweeps`, `together`, the trade legs, the
+  peaks with no window (`turn_peaks`, Desktop's lives of that kind), `resting` for the quote's runs and the legs,
+  and `move_steps` without its 20-second columns and peaks in play.
+- WHY EVERYTHING HAS 20 SECONDS, answered from the files (code read; no data read, nothing run):
+  - It came in with the exhaustion chain programs of August 2026 (Markets branch
+    `chatgpt/ng-exhaustion-chain-phase2-20260817`, `research/ng_exhaustion_chain_canonical_table_20260817.py`):
+    flow = bought minus sold over bought plus sold over the last 20 seconds, with the 85-in-100 level, the 5
+    seconds and the 45-second spacing (`STEP1_STEP2_LAYOUTS.md`, piece 1, "What it did"). Native's record uses the
+    same roll.
+  - On 2026-11-16 piece 1 of the rebuild was a rewrite of that detector. Claude kept the 20-second roll as "the
+    definition of the flow"; Greg confirmed it as the one exception ("I believe that was the exception but there
+    might be another somewhere too"). Every piece built after it that reads "the peak" took the 20 seconds in with
+    it: twelve of the seventeen calculations.
+  - HE IS RIGHT about months ago. The July 2026 natural gas work (`research/kalshi/month_characterize.py`,
+    `event_move_baseline.depth_features`) has no 20-second roll. Its exhaustion is a read of the BOOK between two
+    events of one move: how much the resting orders leaned toward the move at its start, minus how much they
+    leaned toward it at its high ("book support collapsed"); with it, how much the side being eaten had thinned,
+    and the gap at the high against the gap at the start.
+  - Said to him plainly, so it is not carried wrong: that work was not free of fixed spans. The first push was the
+    best price inside 60 seconds; the turn was looked for inside 30 minutes; the order-flow dipole beside it was
+    read over the 300 seconds before the move, in 10 bins. The crypto version (`odcore/info_dipole.py`) read
+    exhaustion as the buy-against-sell balance in the late half of the 30 one-minute bars before entry against the
+    early half. Neither used 20 seconds; both used a span. The span is what has to go, not the idea.
+- PUT TO HIM, NOT APPROVED (laid out his way in `STEP1_STEP2_LAYOUTS.md`, "Exhaustion with no window"): exhaustion
+  worked out again on the moves the market itself makes, start to each step to end, with no clock span anywhere:
+  the book form (the July one) and the flow form (the crypto one). Nothing is written or run until his yes.
+- The three-tier picture then holds three different things, none made on the 20 seconds: the price; the dipole
+  (buying against selling since the move under way started, at the tick); the exhaustion (the book's support for
+  that move, start against now). It waits on the calculation above. Claude's call, stated: the 20-second line is
+  not in the first pictures; it can be a fourth strip if he asks.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

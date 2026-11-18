@@ -292,3 +292,58 @@ as trades alternate between bid and ask (use the quote); the page title is cut o
 - "You might see some other additions to excel that desktop contributes." Desktop may add sheets or columns to the
   Excel files on the data branch. Fetch before touching them, expect its additions, and never write over them. If
   `ROOT_dipoles_pinned.xlsx` is written again, Desktop's sheets are kept.
+
+## 2026-11-18: the 20 seconds go out of every calculation; exhaustion is worked out again with no window
+
+Greg: "Then we need to recalc exhaustion like we did months ago and for cryptomo. I don't think we had 20 sec
+windows then. Why does everything have 20 sec windows now? We can't use that data in any calculation". Before it,
+of the three-tier picture: "I think the 3 renders stacked that i mentioned will give us a lot of insight."
+
+- READ EVERYTHING ABOVE THIS LINE WITH THIS IN MIND: every count in this file that stands on a 20-second peak, on
+  the 20-second flow or on Native's dipole is kept as a record and enters no calculation. That is most of "Stage
+  by stage" wherever it says "20-second peak", the two tables on Native's dipole, and the 20-second rows of "What
+  each piece is". What does not stand on it: the peaks with no window, the quote's runs, the trade legs, the
+  standing orders through a run of the quote or a leg, the book totals, refills, sweeps, orders together.
+- Where the 20 seconds came from: the exhaustion chain programs of August 2026 and Native. The rebuild's first
+  piece was a rewrite of that detector and kept the roll; twelve of seventeen calculations took it in from there.
+- What exhaustion was in July 2026 (natural gas, `month_characterize.py`): a read of the BOOK between two events of
+  one move. The resting orders' lean toward the move at its start, minus their lean toward it at its high. With it:
+  how much the side being eaten had thinned, and the gap at the high against the gap at the start. In crypto: the
+  buy-against-sell balance moving back toward even (the late half of the bars before entry against the early half).
+- Neither used 20 seconds. Both used some span (60 seconds, 30 minutes, 300 seconds, 30 bars). Under the rules of
+  this work the span goes and the idea stays: the stretch is a move's own life, start to each step to end.
+- A caution carried from stage (3) and "Guesses that turned out wrong": against the piles of peaks "the whole
+  book's lean told nothing; only the best price did". That was read at the tick of a peak, not start-against-high
+  of a move. It is not the same read, so it does not settle this one; both the best price and the whole side are
+  written.
+- A fact that limits it: most moves are one step long (trade day Oct 2: 10,597 of 13,331 runs of the best bid;
+  3,878 of 6,118 trade legs). A one-step move has no "start against later". Its lines are written and are empty
+  there. Nothing is filtered.
+- The layout is in `STEP1_STEP2_LAYOUTS.md`, "Exhaustion with no window". Not approved, nothing built.
+- The three-tier picture after it: price; the dipole made at the tick; the new exhaustion. Three different things.
+
+
+## 2026-11-18: reference pictures Greg pasted into the session ("Here's some reference data. I'll paste more.")
+
+The pictures themselves are in the chat, not in git. What each shows, as read off the image (nothing measured here):
+
+1. "Dipole (flow) over Price, 2000 winners, aligned to the turn (x=0)". Top: the flow lean and the price (in bps,
+   turned to the winning side) from 60 seconds before the turn to 60 after. Both fall into the turn and rise out
+   of it: the DIPOLE DIVE. Bottom: the rate of change of each (the picture says corr +0.26); both spike at the
+   turn. This is the crypto-era picture. It is 2,000 cases laid on top of each other and it is cut at 60 seconds
+   each side: under the rules of this work the same thing is drawn one turn at a time, on real timestamps, with no
+   span. Its lean line runs straight through the turn without restarting. A line that restarts when a move starts
+   would break exactly there: an open point for the flow form of the layout, to settle with him.
+2. Three pictures titled "SAME births: four days overlaid": "Aggressor run start", "Touch-size change", "Quote
+   relocation". Each: Native's recognition time minus the time of the first such event, every birth in order of
+   size, one line per trade day (387, 449, 387, 472 births; "Oct 2 and 17 are partial sessions"). All three sit on
+   a flat shelf at about +50 seconds: the 50-second wait of the detector. Greg circled the left end of each, where
+   the lines leave the shelf (recognition up to several hundred seconds BEFORE the first event on two of them).
+   These carry the look of the earlier, partial run; where they were made is not known to this session.
+3. "Share of candidates whose midpoint is above / below its anchor-boundary level, oriented by birth direction",
+   four trade days (741, 824, 740, 852), against a grey band of 500 matched-control draws, 60 seconds before the
+   birth second to 160 after. After the birth the price is on the birth's side more often than the controls on
+   all four. Before it, on all four panels and in both rows, the line breaks sharply about 20 seconds before the
+   birth. A reading, not measured: that break is the 20-second window showing itself (a birth is the second the
+   20-second flow turns fully one-sided, which is when the last trade of the other side drops out of the 20
+   seconds).
