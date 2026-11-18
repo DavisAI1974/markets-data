@@ -3446,6 +3446,40 @@ data it's going to replace while it's running and don't touch any n r w fata unt
 - ALL PODS DELETED, the account read: none. OWNED: the price told to him was about 40 cents for about 20 minutes.
   The session's worker restarted twice while the pods were up and they stood for about two hours: about $2.40.
 
+**GO (Greg, 2026-11-18, fourteenth session): "Go on the runs of trades and the dipole search".**
+- BUILT AND RUN (Markets `ea1519d`, `root/continuing.py`): every run of trades on one side (the exhaustion at the
+  tick) and every stretch the dipole at the tick stays on one side, each on its own line from its own beginning to
+  its own end, with its trades, what the trade price did across it and the stored trade legs under way. Nothing
+  typed, labelled, averaged or ranked; not in the Excel sheets.
+- ONE POD, four helpers, one trade day each, each pinned to its own CPU and all running at the same time (Claude's
+  call, stated to him before it started: two of four pods never started in the launch before). General Purpose
+  8 CPUs, $0.32 an hour, `2wuz4oci0hiqdj`, 08:59 to 09:05 UTC: about 3 cents. Passed on its first run on all four
+  trade days. Deleted after every push was confirmed; the account was read and shows no pod.
+- Counted, each trade day on its own, nothing filtered:
+
+  | | Oct 2 | Oct 3 | Oct 17 | Oct 18 |
+  |---|---:|---:|---:|---:|
+  | Runs of trades on one side | 11,568 | 12,685 | 10,402 | 9,550 |
+  | ... a single trade | 4,151 | 4,692 | 3,925 | 3,700 |
+  | ... more than one trade | 7,417 | 7,993 | 6,477 | 5,850 |
+  | ... more than one trade leg under way | 1,270 | 1,421 | 1,358 | 1,249 |
+  | Stretches of the dipole on one side | 6,880 | 7,541 | 6,056 | 5,566 |
+  | ... a single trade | 1,786 | 1,937 | 1,543 | 1,427 |
+  | ... more than one trade | 5,094 | 5,604 | 4,513 | 4,139 |
+  | ... through more than one run of trades | 4,033 | 4,473 | 3,658 | 3,351 |
+  | ... more than one trade leg under way | 2,300 | 2,612 | 2,203 | 1,986 |
+
+- CORRECTED: Claude told him earlier that on trade day Oct 17 "4,053 runs are a single trade, so 6,348 carry on".
+  That 4,053 was Desktop's count of runs with no LENGTH IN TIME, which includes runs of several trades received at
+  one nanosecond. Counted by trades: 3,925 are a single trade and 6,477 hold more than one (10,402 runs, the
+  10,401 that ended and the one still under way at the last trade).
+- STORED in `continuing/` on each daily branch, each file fetched and proved against its receipt, `FILES.md`
+  brought up to date: `root-rows-20231002` `36be8d2`, `-20231003` `fe6a8a8`, `-20231017` `5cb940e`, `-20231018`
+  `6abd6c0`.
+- Kept in mind when these are read: a run going on under more than one trade leg is rarer than a run of more than
+  one trade, because a trade leg usually turns on a trade from the other side, which also ends the run. The
+  dipole's stretches are longer by build: the dipole only changes side when the new run outgrows the one before.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
