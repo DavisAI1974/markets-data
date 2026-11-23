@@ -5750,3 +5750,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   not active (the daily halt hour); rerun at 18:01 ET (Greg: "Go"). Greg: "If it passes, submit the real order".
   Claude's call for the submit: 10 polls 5 seconds apart, up to 2 pages when looking for the order, cancel if still
   open after the last poll. Sandbox only.
+- ROOT does the live calculations too. Greg: "We talked about making root also do the live calcs along with the
+  historical calcs". Where it stands (Claude, checked on Markets `ec2e86f`): ROOT reads only Databento order-by-order
+  files (`root/tape.py`), and `for_calculations()` passes only the four built trade days. Nothing reads a live feed
+  yet. Whether the tastytrade stream can feed ROOT's calculations depends on what 7e's `prod-stream` shows it carries
+  (single orders with ids, every trade with its buy/sell side, timestamp resolution); that step needs the production
+  keys.
