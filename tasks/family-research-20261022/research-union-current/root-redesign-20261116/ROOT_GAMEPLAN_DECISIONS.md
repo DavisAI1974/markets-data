@@ -5224,6 +5224,37 @@ things. Completely unnecessary".**
 - The research itself is not lost: it is in the stored tables on the daily branches (`research-threads/`,
   `info-measure/`) and is being added beside the every-tick rows as column files (his go; the run under way).
 
+**Greg (2026-11-23, seventeenth session): "Go"; then, stopping the pod's start to ask: "Save the further research
+that we talked about until later. You are only updating the outputs we currently have correct?"; told yes; "Go".**
+- THE FURTHER RESEARCH IS SAVED FOR LATER (`FURTHER_RESEARCH_LIST.md`); nothing of it is built or run.
+- The run only puts outputs already made onto the daily sheets. Confirmed to him before the second go.
+
+**THE RESEARCH COLUMNS ADDED BESIDE THE EVERY-TICK ROWS (the daily sheets), done (2026-11-23, seventeenth session), on
+his go.**
+- ONE POD, the four trade days side by side: General Purpose 8 CPUs, $0.32 an hour, `sg5jzl7k7kp5ud` (US-CA-2),
+  15:59:59 to about 16:04:30 UTC: about 2 cents. Markets `ccr-dd95052b-3vcrwq` `1f79c44`,
+  `root/research_columns.py`. All four passed the job's checks on the first run; each trade day took about half a
+  minute. The pod's address went onto the environment on his approval card and the one before came off.
+- STORED at the top of each daily branch beside the rows, as every calculation's columns are, every file fetched
+  and proved against its receipt, `FILES.md` brought up to date, each push confirmed: `root-rows-20231002`
+  `a3b492b`, `-20231003` `977c210`, `-20231017` `53d2388`, `-20231018` `c8b8e9b`. THE POD WAS DELETED after that;
+  the account was read and shows none.
+- NOTHING THAT EXISTED WAS REWRITTEN. `calc-research_columns-<trade day>-partNNN.parquet`: one file beside each
+  stored rows file, the same number of rows in the same order (proved against the rows receipt: rows and
+  fingerprint), 327 columns, on 819,783; 878,671; 845,246; 770,579 ticks:
+  - on EVERY tick: the exhaustion line, the dipole line and the information measure as they stood at that tick;
+  - each MOVE on the tick of its first step: trade legs 6,119; 6,907; 5,660; 5,120; runs of the best bid 13,332;
+    14,780; 14,813; 13,877; runs of the best offer 13,680; 14,767; 13,864; 13,268 (every move: 33,131; 36,454;
+    34,337; 32,265);
+  - each HUMP that began on a trade, on that tick: 2,326; 2,416; 2,192; 2,232.
+- THE ONE THING THAT DOES NOT SIT ON ITS OWN TICK, said to him: a hump that began at a moment with no tick (old
+  trades leaving the 20 seconds): 2,133; 2,163; 1,911; 1,931. It is set on the last tick received before that
+  moment, in its own block, with its own nanosecond in its column: 1,752; 1,733; 1,590; 1,565. Where more than
+  one began before the next tick only the first is set there and a count column says how many: 381; 430; 321; 366
+  humps are second or later. Every hump is whole in the stored table of the humps.
+- No further check was made on this data after the job's own (his word: no more tests). Nothing is in an Excel
+  file: the workbook in parts waits for his word, as planned.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
