@@ -5273,6 +5273,30 @@ of them".**
   the four daily branches and forcing them onto GitHub. Desktop writes to the documents branch, and the house rule
   is no forced push onto a data branch. It is done only on his explicit word.
 
+**DECIDED (Greg, 2026-11-23, seventeenth session): "Do you still have the strategy doc that codex made? Update it so
+I can send it to codex so you two can have parallel strategy sessions going on. No consulting with the other's work
+until everything is finished."**
+- THE STRATEGY STEP IS RUN TWICE, IN PARALLEL: ONE SESSION BY CODEX, ONE BY CLAUDE. NEITHER CONSULTS THE OTHER'S WORK
+  UNTIL EVERYTHING IS FINISHED. For Claude: no `codex/` branch and no folder `strategy-20261123-codex/` is opened,
+  listed or searched until he says both are finished. Claude's own strategy work goes under
+  `research-union-current/strategy-20261123-claude/` on `ccr-349e2ffe-07p8od`.
+- THE DOC: Codex's handoff of 2026-11-13, "Independent market research for Claude" (`main`,
+  `claude-independent-research-20261113/HANDOFF.md`). OPENED ON HIS WORD: it is the brief (the task, the rules, the
+  package), and holds none of Codex's strategies. Codex's review, its candidates and the selected cases were NOT
+  opened.
+- UPDATED AS A NEW DATED FILE, the old one on `main` left as it is:
+  `research-union-current/STRATEGY_HANDOFF_FOR_CODEX_20261123.md`. Its sections are Codex's own; what changed: it
+  is addressed to Codex; the data is the rebuilt every-tick data of the four daily branches (not the 32 selected
+  cases, the eight trade types and the 141 fields); the standing rules he has set since (trade day; the tick and
+  the read by place on the tape; the crypto formulas; no mid price; no averaging or labels; no trade cost; no
+  window of ours; the leakage gate); what may feed a version (the IN and OUT list of the sixteenth session, marked
+  as Claude's reading of his rulings, and the information measure marked not yet for strategy); the task in his
+  own order (first how a version is formed blind to its own trade day, then 15 versions in one message; a later
+  trade day may know an earlier one's findings); the no-consulting rule; where Codex stores its work.
+- SAID IN IT, so the blind rule is not broken by the shared record: the running notes hold counts read from all
+  four trade days; a session says in its first message how it uses them, or leaves them shut. That holds for
+  Claude's own strategy session too.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
