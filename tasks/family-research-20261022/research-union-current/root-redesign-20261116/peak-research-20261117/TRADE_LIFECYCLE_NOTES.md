@@ -741,3 +741,28 @@ legs picked at random per trade day; counts of trade legs 6,119; 6,907; 5,660; 5
 - The lead-in is as long as the trade leg before. After a one-step trade leg it can be a few seconds and a single
   trade, which shows little prebirth. Open with Greg: whether a picture should reach further back, and by what the
   data says (two trade legs before; the run of the quote under way; something else of his).
+
+## 2026-11-23 (fifteenth session): DIPOLE AND EXHAUSTION ARE THE CRYPTO FORMULAS. Read this before drawing either.
+
+Greg: "We should not be reinventing the wheel! The instructions should have been explicit to folow the crypot
+formulas. That's why we brought that part back and did all of that work last session."
+
+- THE 40 PICTURES ABOVE ARE DELETED. They drew Claude's tick versions (the run of trades under way against the run
+  before it) under the names dipole and exhaustion. Everything in the section above that speaks of "the dipole at
+  the tick" and "the exhaustion at the tick" as his three renders is superseded by this section.
+- The crypto formulas, from the crypto code (Markets `75b15fa`): one figure, bought minus sold over bought plus
+  sold, over the trades of a span of time.
+  - EXHAUSTION LINE: over 20 seconds (`research/shape_s71/regroup2.py`, the July 7 graphs).
+  - DIPOLE LINE: over 60 seconds (`_dipole_price_overlay.py`, the "Dipole (flow) over Price" picture, with the
+    rate of change of the lean, the "dipole dive", under it).
+  - BEFORE AN ENTRY (`odcore/info_dipole.py`): the lean over the bars before entry; divergence is its sign against
+    the price's drift; exhaustion is the late half weaker than the early half. Not built for natural gas.
+- BOTH LINES ARE ALREADY STORED AT THE NANOSECOND for all four trade days, made in the fourteenth session with the
+  July rules: `crypto-ng-tick-line-20s-<trade day>.parquet` and `crypto-ng-tick-lean-60s-<trade day>.parquet`.
+  Nothing new has to be worked out to draw a trade leg against them.
+- "TICKED BY NANO" IS THE TIME OF THE READ, NOT A NEW FORMULA. The tick versions of the twelfth session came from
+  misreading that. They are Claude's own, never approved as a calculation; they are not dipole and not exhaustion.
+- In crypto the two were never independent: one flow lean, two spans, two reads (its level; its fall toward even).
+- Still true of the crypto lines too, to remember when they are read against the price: they are made from the
+  prints, so a print moves them on the same nanosecond. Unlike the tick versions they also move with NO print
+  (when an old trade leaves the 20 or the 60 seconds), and they carry what happened before a trade leg starts.

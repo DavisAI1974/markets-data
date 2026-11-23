@@ -3612,6 +3612,62 @@ the 3."**
   refused the start. Nothing was started, nothing worked around, and the old 40 are untouched. It waits for his go
   with the price in front of him ($0.32 an hour, General Purpose 8 CPUs).
 
+**CORRECTED BY GREG (2026-11-23, fifteenth session). His words, in order: "But isn't the diplle and exhaustion calcs
+done independently?"; "That's not how we calculated the crypto exhaustion and dipole was it?"; "We should not be
+reinventing the wheel! The instructions should have been explicit to folow the crypot formulas. That's why we brought
+that part back and did all of that work last session. You need to reread the last session before we go any further.
+You should delete new data that wasn't run properly".**
+- THE SLIP, OWNED. The 40 trade leg pictures of this session drew, under the names dipole and exhaustion, Claude's
+  own tick versions of the twelfth session (the run of trades under way against the run before it; the lots in
+  the run under way). Those are not the crypto formulas. And when he said "those 3 renders" Claude took the
+  crypto exhaustion line (the 20-second line) OUT of the picture. Both wrong against what he had the twelfth to
+  fourteenth sessions do: bring the crypto calculation back and make ours exactly like it.
+- WHERE THE WRONG TURN WAS MADE: the twelfth session read "dipole and exhaustion ticked by nano" as "make new
+  versions with no window". His meaning, plain from his words at that session's close ("Whatever crypto did to
+  generate those renders do that"; "The only difference between the two should be that was crypto and we're doing
+  ng") and from the whole of the thirteenth and fourteenth: THE CRYPTO FORMULAS, READ AT THE NANOSECOND. "Nano"
+  is the time of each read, not a new formula.
+- DELETED on his word: this session's `leg-renders/` (40 pictures, the four index tables, the receipts) from all
+  four daily branches, each removal confirmed on the remote: `root-rows-20231002` `cfd12b2`, `-20231003` `23c80fe`,
+  `-20231017` `1bec17d`, `-20231018` `d6a7957`. Each `FILES.md` says what was removed and why. The copies in the
+  session are deleted too. No pod is up; the rerun he gave a go for was never started.
+- NOT DELETED, his to say (it is not this session's data): the thirteenth session's `tick-renders/` (the dipole and
+  the exhaustion at the tick on every tick, the whole trade day three renders, the stacked pairs) and the
+  fourteenth session's `continuing/` and `four-graphs/`, all of which stand on those same tick versions in whole or
+  in part. Put to him once.
+- REREAD: handoff Q; this file's twelfth, thirteenth and fourteenth sessions; the notes file; and the crypto code
+  itself on Markets `75b15fa` (`_dipole_price_overlay.py`, `_turn_accel.py`, `odcore/info_dipole.py`,
+  `research/shape_s71/regroup2.py` through the notes of the thirteenth session).
+- WHAT THE CRYPTO FORMULAS ARE, from the code (his to confirm; nothing of ours was read or run for this):
+  1. ONE FIGURE under both: bought minus sold over bought plus sold, over the trades of a span of time.
+     +1 all buying, -1 all selling.
+  2. THE CRYPTO EXHAUSTION LINE (his July 7 graphs, `regroup2.py`): that figure over a rolling 20 SECONDS, around
+     each trade. Ours, made exactly like it at the nanosecond in the fourteenth session and STORED for all four
+     trade days: `crypto-ng-tick/crypto-ng-tick-line-20s-<trade day>.parquet`.
+  3. THE CRYPTO DIPOLE LINE (his picture "Dipole (flow) over Price ... aligned to the turn",
+     `_dipole_price_overlay.py`): that figure over a rolling 60 SECONDS (`W = 60`), drawn with the price from 60
+     seconds before the turn to 60 after, and under it the rate of change of each ("dipole DIVE" against "price
+     rate"). Ours: the same 60-second figure is what the crypto and ng turn finder reads, made at the nanosecond
+     in the fourteenth session and ALSO STORED for all four trade days:
+     `crypto-ng-tick/crypto-ng-tick-lean-60s-<trade day>.parquet`.
+  4. THE CRYPTO DIPOLE READ BEFORE AN ENTRY (`odcore/info_dipole.py`, `divergence`): the same figure over the bars
+     before entry (30 one-minute bars in the fingerprint work); DIVERGENCE is its sign against the price's drift;
+     EXHAUSTION is the late half of those bars weaker than the early half (the lean falling back toward even).
+     Not built for natural gas. Its span is a number of bars on a grid: put to him before anything is made.
+  5. So in crypto the dipole and the exhaustion were NOT two independent calculations: one flow lean, read over
+     two spans (60 seconds and 20 seconds) and read two ways (its level; its fall toward even).
+- WHAT THE CRYPTO PICTURES DID THAT IS NOT CARRIED, each already his word: they were averages of many trades
+  (2,000 winners; a mean per kind) and used the winner label; they were cut at 60 seconds (or 45 and 60) each
+  side; they sat on a time grid. Here: one trade leg at a time, read at the nanosecond, edges from the data.
+- THE RULE, written into Markets `CLAUDE.md` (`ccr-b66f34d5-h6ra1t`, `edf3595`) so no session reinvents them again:
+  dipole and exhaustion mean the crypto formulas; "ticked by nano" is the time of the read; any other line is
+  named as what it is, never drawn in their place, and put to him before it is built.
+- PUT TO HIM, NOT BUILT: the trade leg picture as three graphs on one clock, all three from what is already
+  stored: (1) the trade price curve; (2) the crypto dipole line (the 60-second lean); (3) the crypto exhaustion
+  line (the 20-second line). No tick version in it. Its edges: two trade legs back (his word of this session) to
+  the trade leg after, and every hump of the 20-second line it touches whole (the fourteenth session's rule).
+  `root/leg_renders.py` still draws the tick versions and is changed only on his word.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
