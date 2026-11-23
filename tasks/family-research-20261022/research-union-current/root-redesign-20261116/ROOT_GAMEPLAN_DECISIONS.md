@@ -5134,6 +5134,36 @@ excel sheets and we'll do further research later".**
      every level of a move and one order's life after a part fill; what the exhaustion, the dipole and the
      measure did BEFORE a first step, not only at it.
 
+**DECIDED (Greg, 2026-11-23, seventeenth session). His words: "Keep the trade day data on one sheet. Can't we make
+additional columns instead of new sheets? I'm afraid the new sheets won't be used. And why new sheets instead of
+columns. Make a list so none of the further research projects get forgotten about. Make sure crypto op is init. So
+in plain englis h what did the runs find?"; then "The other 1 day sheets had almost 800k rows. What is different?"**
+- ONE SHEET FOR EACH TRADE DAY; NEW RESEARCH GOES IN AS COLUMNS, NEVER AS NEW SHEETS. OWNED: the separate "moves" and
+  "humps" sheets were Claude's call (each kind of row on its own sheet) and did not fit how he uses the file.
+- DONE (Markets `ccr-dd95052b-3vcrwq`, `root/trade_day_sheet.py`; written in the session from the stored tables and
+  from the earlier sheets, told to him; nothing worked out). `ROOT_dipoles_pinned.xlsx` now holds a READ ME page, a
+  COLUMNS page and ONE sheet "trade day <trade day>" for each trade day: 70,582; 76,729; 67,384; 62,823 rows, 201
+  columns. EVERY TRADE ON THE TAPE IS A ROW (38,127; 41,410; 33,703; 30,739), in tape order, pinned to its
+  nanosecond with the Eastern time beside it. Everything else is a block of columns on the row at its own
+  timestamp: `trade.` (the trade, the exhaustion and the dipole at it, the information measure at it), `move.`
+  (33,131; 36,454; 34,337; 32,265, on the row of its first step), `hump.` (4,459; 4,579; 4,103; 4,163, where it
+  began), `program.` (1,794; 1,895; 1,672; 1,682), `native_dipole.` (741; 833; 741; 863), `peak.` (9,525; 10,577;
+  8,619; 7,967). What happens where no trade sits has its own row at its own timestamp; two things of one kind on
+  one tick: the second has the row under it.
+- THE EARLIER SEPARATE SHEETS (dipoles, peaks, crypto and ng, moves, humps) ARE TAKEN INTO THE TRADE DAY SHEETS
+  WHOLE, every value and every picture link (751; 843; 751; 873), and are no longer separate sheets. The file as it
+  was is in git at `0b1c20f`. Every sheet read back equal. The file is 59.3 megabytes.
+- NEW ON THE SHEET, said to him: the exhaustion line, the dipole line and the information measure at EVERY trade on
+  the tape (looked up at the trade's own tick by place), which his open item 4 of handoff S asked for.
+- THE LIST OF FURTHER RESEARCH: `root-redesign-20261116/FURTHER_RESEARCH_LIST.md`, seventeen items, the crypto
+  operator's deep dive first. To be added to; an item comes off only on his word.
+- "THE OTHER 1 DAY SHEETS HAD ALMOST 800K ROWS", ANSWERED: those are every tick (820,670; 879,497; 846,158; 771,468:
+  every message on the tape), stored as tables on the daily branches and never written as Excel apart from one
+  short stretch. The new sheet holds every trade and the research events, not every tick: every tick in Excel is
+  about 1.5 gigabytes a trade day by the one measurement there is. Claude's call, stated to him: the Excel file
+  is the readable view; the same research columns are put onto the every-tick tables as additional columns lined
+  up tick for tick, on a pod, on his go with the price. Not built yet.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
