@@ -864,3 +864,11 @@ The two test pictures were reprinted this way the same session (`trade-renders-q
   best bid and the best offer graphs carry that.
 - Trades of the program that ended at no tick and so have no end price: 99 of 1,794 (trade day Oct 2), 134 of 1,682
   (trade day Oct 18). Their pictures will carry one point and the dotted line where the wait ran out.
+
+Greg, same session: "We should not have originally picked a zero price movement to look at our best bid offer
+graphs." Trade 883 was sold and bought at one price. Before a trade is picked to look at the best bid and the best
+offer on, read its two prices in the stored index table. Trade day Oct 2, trade 1672 (a sell: sold 2.839, bought
+2.836, 31.248 seconds) was drawn beside it the same way (`trade-renders-quotes-test/`, `root-rows-20231002`).
+- By eye, one trade: at its start the best bid and the best offer both stood a tick higher for a moment and stepped
+  down together; after that the offer moved back and forth a tick several times while the bid stood. The bid and
+  the offer do not always step together: the thing the mid price hid.

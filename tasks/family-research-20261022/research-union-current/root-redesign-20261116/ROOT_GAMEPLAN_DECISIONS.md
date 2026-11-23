@@ -4273,6 +4273,38 @@ changes to match these 2".**
 - AN INSTRUCTION, NOT THE GO. No pod was started. It waits for the word, with the price in front of him: 2 trades
   (883 again, so the folder's receipt covers both, and 1672), 2 pictures, trade day Oct 2, $0.32 an hour.
 
+**Greg (2026-11-23, sixteenth session): "Nevermind you're doing it"; then "Go".**
+- "Nevermind you're doing it" was read as: the trade was already found. Not the go; no pod was started on it.
+
+**THE BEST BID AND BEST OFFER TEST ON A TRADE WHOSE PRICE MOVED (trade day Oct 2, trade 1672), done (2026-11-23,
+sixteenth session), on his "Go".**
+- THE ORDER HE SET, KEPT: the pod was started; the folder `trade-renders-quotes-test/` of `root-rows-20231002` was
+  cleared and the removal confirmed on the remote (`a861337`); only then was anything new fetched.
+- ONE POD, the one trade day on all eight CPUs: General Purpose 8 CPUs, $0.32 an hour, `9ty1zttoaxd7cs` (US-MD-1),
+  12:51:40 to about 12:53:50 UTC: under 2 cents. Markets `ccr-26ff219b-72monm` `6562821`, launched with
+  `DAYS='20231002' ... trade_renders --only 20231002:883 --only 20231002:1672 --quotes`. It passed every check on
+  the first run. The pod's address was added to the environment on his approval card and the one before taken off.
+- 2 TRADES, 2 PICTURES: trade 1672 (new) and trade 883 again. THE REDRAWN 883 IS BYTE FOR BYTE THE PICTURE STORED
+  BEFORE (`3b3f15d`), so nothing of it changed; it is kept because it is valid data.
+- STORED in `trade-renders-quotes-test/`, each file fetched and proved against its receipt, `FILES.md` brought up
+  to date, the push confirmed on the remote: `root-rows-20231002` `bc213c9`. `root-rows-20231018` is as it was
+  (`a4f2708`). THE POD WAS DELETED after that; the account was read and shows none.
+- TRADE 1672'S PRICE GRAPH: sold at 2.839 at its start, bought at 2.836 at its end, 31.248 seconds later. The line
+  falls three ticks and the scale names the two prices.
+- SEEN IN THE PICTURE BY EYE, one trade, nothing measured, said to him as it is:
+  1. At the trade's start the best bid and the best offer both stand a tick higher for a moment (2.839 and
+     2.840), and both step down at once after it (the bid to 2.837, the offer to 2.838). The sale was filled at
+     that moment.
+  2. Through the trade's life the bid goes 2.837, 2.836; the offer moves between 2.838 and 2.837 several times
+     while the bid stands: the two do not step together.
+  3. Before the start the dipole stood against the trade for about two minutes (near -0.9 at its lowest) and
+     came back toward zero during the trade; the exhaustion line has gaps where nothing had traded in 20 seconds.
+  One trade. A lead to look for in others, not a result.
+- FOR THE NEXT LAUNCH: the deleted pod's address (`9ty1zttoaxd7cs-8000.proxy.runpod.net`) is still in the allowed
+  hosts of the environment "Markets"; take it off in the next approval card. (This replaces the same note above
+  about `ocu44mumcu9pwc`, which is off.)
+- Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
