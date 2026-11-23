@@ -5770,3 +5770,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - THE FEED for paper trading and the second ROOT is tastytrade's. Greg: "We are taking the tasty feed for this";
   and of the second ROOT: "Correct, 2nd ver and not replacement of root". With no production keys yet, that is the
   sandbox's own stream: a `sandbox-stream` step is added to the 7e check to record what it sends.
+- A THIN FEED IS NOT SCORED. Greg: "If the lack of data depth is going to affect our strategy results, we keep this
+  from being scored in our new system we've just built". Claude's call on how: every paper record carries what the
+  feed sent and what it did not (the 7e stream record is the list); a strategy whose rule needs something the feed
+  does not carry (single orders with ids, every trade's buy/sell side) has its paper trades marked "not scored: the
+  feed lacks <what>", each one named, and none of them enters the scoring of the new system (the experiment record,
+  the keep-if-better loop). They are kept as a record, not as a result. Which strategies that is waits on the stream
+  run with the market open.
