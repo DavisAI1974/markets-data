@@ -4565,6 +4565,64 @@ excel sheets. The ng version of these absolutely should be used for strategy".**
   Told now. Nothing of the strategy step has been started. Its first message is how a version is formed blind to
   its own trade day; then 15 versions in one message.
 
+**Greg (2026-11-23, sixteenth session), on whether pictures are needed for every trade to keep the data linked.**
+Answered: no. The data is linked by each trade's position on the tape and its nanosecond, on all four trade days;
+a picture is only a way to look. Claude's call: no picture for all 7,043 trades; any trade is drawn by number when
+he wants to see it.
+
+**Greg (2026-11-23, sixteenth session): "You, desktop and codex all did independent research projects before we
+started on the analysis but same incomplete data story as with other rhings. Did we redo the research threads to have
+value witb our current data yet? If not, read all three research reports and rerun those threads with the better data
+on your own and not all 3 of you. Just use the reasearch avenues that are already there."**
+- ANSWERED: NO, NOT AS A REDO. On 2026-11-16 the three research efforts were reduced to their questions and angles
+  with every result left out (`root-audit-20261116/RESEARCH_INTENTIONS.md`, his word: "let's list the intended
+  results and research angles. I don't think we want to keep the results"). Some of those questions were built
+  into the rebuild's calculations. The threads themselves were never run again on the rebuilt data.
+- OPENED ON HIS WORD OF THIS MESSAGE, for their avenues only, no finding carried (the drop-in of this session said
+  not to open last week's material; his Nov 17 rule: "You might try the same ideas but don't use any of the
+  findings"):
+  1. CLAUDE: `main`, `claude-independent-research-20261113/HANDOFF.md`. It is the BRIEF of that research (seven
+     questions), not a report. Claude's results are on no branch of `markets-data` (searched by name); last
+     week's copies were deleted on his word of 2026-11-17.
+  2. CODEX: `main`, `codex-review-and-gaps-20261113/REVIEW_AND_GAPS.md`, and
+     `evidence-availability-20261113/REVIEW.md` on its `codex/` branch. SAID TO HIM PLAINLY: the first holds
+     last week's fifteen candidates and the selected-case observations. Read; nothing of them is used.
+  3. DESKTOP: NO REPORT FOUND on any branch of `markets-data`. What is in git of Desktop's: the audit's list of
+     its family research questions (trade day Oct 18), the five pictures he pasted this session, and its two
+     later folders on the rebuilt rows (the peak lives; the old family and chain on the clock).
+- THE AVENUES, each as a question with no old result, AND WHERE EACH STANDS ON THE REBUILT DATA:
+  ANSWERED BY HOW THE REBUILD IS MADE (nothing to rerun):
+  - Coverage (every occurrence, not 32 chosen cases; the flat and the failed kept): every tick, run, trade leg
+    and hump is stored; nothing is selected.
+  - What each field means and when it was knowable: every column is described, and every fact carries the tick
+    it became known at; the outside figures carry their known-from clock.
+  - Whether two ways of calling a trade a buy or a sell agree: the tape's own side is used; the midpoint way is gone.
+  PARTLY REDONE (2026-11-17, the peak research):
+  - Does a level that was eaten lead on and a level that was pulled lead nowhere (replenishment, survival,
+    cancellation against continuation and failure): read for the first level of a move only.
+  - Is a change in flow fresh trading or old trades leaving the span: counted per hump, not yet beside the price.
+  NOT REDONE, BUT ANSWERABLE FROM WHAT IS STORED (a read-out, no new calculation):
+  - How much of a move is left at the first moment it could be known (`move_steps`, `quote_runs`, the trade legs).
+  - Do large moves come back (what a move gave back, `move_steps`).
+  - A move in the trade prints against a move in the quote: the print bouncing between bid and offer, or the
+    quote really stepping (the trade legs beside `quote_runs`).
+  - The thin one-lot quote: how it got thin and what it did next (the rows: size, orders and age at the best price).
+  - An outside figure changing, and what the tape did after (`outside_changes`).
+  - Where in the trade day (the rows; `book_totals`).
+  NOT REDONE, NEEDS THE NEW TABLE ALREADY PUT TO HIM (the hump events, from Desktop's concepts):
+  - Is anything observable before an event begins (pre-birth).
+  - The dive, the flip and the tail of the exhaustion and the dipole against the price, one event at a time.
+  - Which comes first and how long each takes: the trade, the size change at the best price, the quote step
+    (Codex's "delay from flow to quote response" and "cancellation-led movement before fresh flow").
+  CANNOT BE RERUN AS THEY WERE, by his standing rules:
+  - The models over every layer together (pooled, and built on windows); anything anchored on Native's births or
+    on the eight trade types (labels made from what happened next); the paper trading, execution and cost
+    threads (no trade cost is a market condition; execution rules are to be written new).
+- PUT TO HIM, NOT RUN (new read-outs are counts on market data: a pod, on his go): ONE pod, all four trade days,
+  each trade day on its own, every line individual, nothing pooled across trade days, no window, no label:
+  the six read-outs from what is stored, the "eaten or pulled" read at every level of a move (not only the
+  first), and the hump events table. General Purpose 8 CPUs, $0.32 an hour.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
