@@ -5736,3 +5736,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   corrected.
 - Model: Fable for the gameplan, inventory and specs, with the advisor set to Fable. The switch to Opus with the Fable
   advisor comes when the first approved module is built.
+
+## Nineteenth session (2026-11-23, in a code session): stage 7e
+
+- Production keys not needed yet. Greg: "You don't need prod keys yet". Claude's call from it: 7e runs the two
+  sandbox steps only (`sandbox-lookup`, then `sandbox-order`); `prod-stream` and the page's "Stream market data"
+  step wait for the production keys, because the sandbox does not serve market data (the tastytrade page: HTTP 502;
+  a DXLink URL and token come only from a production session's `GET /api-quote-tokens`).
+- The four key names were checked at session start: none set in the cloud environment "Markets". Greg gave a sandbox
+  token in chat ("token"; then "Gave you new token instead of refresh"). It is kept out of every file and commit.
