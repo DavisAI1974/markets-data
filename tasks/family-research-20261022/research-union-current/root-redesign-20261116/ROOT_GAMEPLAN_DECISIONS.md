@@ -4623,6 +4623,25 @@ on your own and not all 3 of you. Just use the reasearch avenues that are alread
   the six read-outs from what is stored, the "eaten or pulled" read at every level of a move (not only the
   first), and the hump events table. General Purpose 8 CPUs, $0.32 an hour.
 
+**CONFIRMED BY GREG (2026-11-23, sixteenth session): "Not the strategy analysis sheets but the research we did right
+before"; "Correct, not the research values, just the questions".**
+- THE THREADS TO RERUN ARE THE QUESTIONS OF THE RESEARCH DONE BEFORE THE STRATEGY ANALYSIS: Codex's reanalysis and
+  discovery work, Desktop's family research, Claude's reanalysis and open questions, as listed with no result in
+  `root-audit-20261116/RESEARCH_INTENTIONS.md`. NOT the strategy sheets (the fifteen candidates and the review of
+  2026-11-13): those are set aside and nothing of them is used.
+- ONLY THE QUESTIONS. No value of the old research is carried.
+- The list put to him was made from those questions. Gone through again line by line against that file; three
+  threads were missing from the list and are added, and one cannot be rerun:
+  - ADDED: how long until a level that emptied is filled again (stored: `refills`).
+  - ADDED: one resting order at a time: once it has been partly filled and is still there, what became of it,
+    and when an order gave way what took its place (stored: `resting`; the seventh session's proposal S).
+  - ADDED: the best price against the whole side of the book at the start of a move (stored: the rows,
+    `book_totals`).
+  - CANNOT BE RERUN: Codex's "information measure" (are large information ratios real or made by sparse
+    activity). That measure was one of the old S fields and is not made on the rebuilt data; making it would be a
+    new calculation, his to say.
+- Still not run: it waits for his go on a pod.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
