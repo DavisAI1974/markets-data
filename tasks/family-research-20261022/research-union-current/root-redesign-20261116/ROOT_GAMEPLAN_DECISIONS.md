@@ -5677,6 +5677,8 @@ but all Anthropic models running them"; "Permission for main change".**
 - ON HIS WORD FOR THE TRUNK: the stage 1 set (the four agents, the CLAUDE.md roles section, the plan, its index and
   the amendments to Codex's prompt) is on the Markets trunk `claude/kalshi-s79-kickoff-ij8t9o` at `beb3836`, on top
   of `79517f6`. Nothing else from the session branch went with it.
+- Greg, same exchange: "I'm fine with them running in code sess". THE AUDITOR AND VERIFIER TASKS RUN IN A CLAUDE CODE
+  SESSION, with the four agents. Not started: each is begun on his word, with its declared budget.
 
 ## Held for the later stage: figuring out what moves the market
 
