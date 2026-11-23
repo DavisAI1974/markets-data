@@ -5756,3 +5756,8 @@ figure. To bring back when the work reaches what moves the market and price-curv
   yet. Whether the tastytrade stream can feed ROOT's calculations depends on what 7e's `prod-stream` shows it carries
   (single orders with ids, every trade with its buy/sell side, timestamp resolution); that step needs the production
   keys.
+- A SECOND VERSION OF ROOT for live and other data. Greg: "We can make a second version of root that allows
+  different data. We are in control of that". Claude's call: it is added beside ROOT, never replacing it (ROOT, its
+  four-trade-day gate and its tests stay exactly as they are); it reuses ROOT's calculation modules wherever the
+  feed carries their inputs, and says plainly which calculations a feed cannot support. Its input is built from the
+  real record of what the feed sends (7e `prod-stream`), not before it: no made-up messages, even to check code.
