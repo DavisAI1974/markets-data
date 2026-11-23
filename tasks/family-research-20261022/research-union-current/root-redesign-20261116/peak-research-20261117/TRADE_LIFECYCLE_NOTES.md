@@ -797,3 +797,14 @@ trade legs). By eye only, a handful, nothing measured:
 - Unlike the deleted versions, these lines move with no print (a trade leaving the 20 or the 60 seconds) and can
   sit against the trade leg for its whole life. So agreement or disagreement with the price is not built in the
   same way; a print still moves both lines on its own nanosecond.
+
+The 40 were redrawn the same session (price as it printed; each line on its own scale). By eye in five, nothing
+measured, to carry into the next look:
+- A sharp price move and a jump in both lines fall on the same prints (built in).
+- After it, both lines drift back toward zero as old trades leave the span while the price holds or returns: the
+  lean falling back toward even, which is what crypto called exhaustion. This is the part that is not built in.
+- In these five the lines turn after the price, never before: they carry the last 20 and 60 seconds.
+- THE STORED TRADE LEG IS A POOR MARK FOR "THE TRADE": it ends at any single print one tick back, so the shaded band
+  is often a piece of the move the eye sees (trade day Oct 2, trade leg 3016; trade day Oct 3, trade leg 2554 is
+  0.4 seconds long inside a two-minute rise). Put to Greg: shade the crypto and ng program's own trade instead
+  (what the crypto graphs were drawn around). Not answered yet.

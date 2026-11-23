@@ -3837,6 +3837,36 @@ not worried about different heights. I just want to see if dipole and exhaustion
 - He did not speak to the shaded area. Until he does, the shading stays the stored trade leg, as he asked for
   earlier in this session; it is not changed on Claude's call.
 
+**THE 40 PICTURES REDRAWN, done (2026-11-23, fifteenth session), on his "Go".**
+- THE ORDER HE SET, KEPT: the pod was started; the 40 stored pictures, their index tables and receipts were removed
+  from all four daily branches and each removal confirmed on the remote (`802f286`, `6e6b308`, `87055f5`,
+  `ff08b24`); only then was anything new fetched.
+- ONE POD, all four trade days together, each pinned to its own two CPUs: General Purpose 8 CPUs, $0.32 an hour,
+  `hyv25exqq694cv` (US-CA-2), 09:54:18 to about 09:57:05 UTC: under 2 cents. Markets `57e188a`. All four passed
+  every check on the first run; the same 40 trade legs; the same counts of trade legs.
+- WHAT CHANGED IN THE PICTURE, drawing only: the trade price as it printed (dots joined in tape order, nothing
+  smoothed); each of the two line graphs on a scale set by the line itself; more room between the graphs.
+- STORED in `leg-renders/`, each file fetched and proved against its receipt, `FILES.md` brought up to date, each
+  push confirmed: `root-rows-20231002` `2f0c027`, `-20231003` `9a52e91`, `-20231017` `4c41a54`, `-20231018`
+  `b170b43`. THE POD WAS DELETED after that; the account was read and shows none.
+- A drawing fault left in these 40: the side labels of the two line graphs run into each other. Shortened in the
+  code for the next run (Markets `792cbe5`).
+- SEEN BY EYE in five of the 40, nothing measured, said to him as it is (his question: do the dipole and the
+  exhaustion correlate somehow to the price curve):
+  1. Where the price makes a sharp move, both lines jump on the same prints (trade day Oct 17, trade leg 2375: the
+     fall from 3.087 to 3.080; trade day Oct 2, trade leg 3016: the fall to 2.859, where the dipole changes side).
+     That much is built in: the lines are made from those prints.
+  2. What is NOT built in and does show: after a sharp move both lines drift back toward zero over the following
+     seconds as the old trades leave the span, while the price holds or comes back (2375: both lines climb back
+     toward zero all through the recovery, and stay on the selling side the whole way).
+  3. The lines carry the last 20 and 60 seconds, so they turn AFTER the price, not before it, in these five. None
+     of the five shows a line changing before the price did.
+  4. Cases against: trade day Oct 18, trade leg 2990 (a fall of 6 steps with the dipole on the buying side the
+     whole way); trade day Oct 3, trade leg 2554 is a trade leg of 0.4 seconds inside a two-minute rise, so the
+     shading says nothing there.
+  Five pictures. A lead to look for in the others, not a result.
+- Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
