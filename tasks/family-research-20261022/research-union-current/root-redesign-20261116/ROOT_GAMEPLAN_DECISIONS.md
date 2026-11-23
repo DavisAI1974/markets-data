@@ -5767,3 +5767,6 @@ figure. To bring back when the work reaches what moves the market and price-curv
   page reports that `GET /api-quote-tokens` on the sandbox returned a `demo`-level token with a `/delayed` DXLink URL
   that streamed quotes (one observation, 2026-10-28; how delayed not measured). If it works for natural gas, it
   answers what the feed carries; how far behind it runs is measured, not assumed.
+- THE FEED for paper trading and the second ROOT is tastytrade's. Greg: "We are taking the tasty feed for this";
+  and of the second ROOT: "Correct, 2nd ver and not replacement of root". With no production keys yet, that is the
+  sandbox's own stream: a `sandbox-stream` step is added to the 7e check to record what it sends.
