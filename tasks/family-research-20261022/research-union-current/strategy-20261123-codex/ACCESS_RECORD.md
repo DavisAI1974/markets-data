@@ -1,0 +1,30 @@
+# Access record
+
+The four trade days were discovery material. Every market observation in the paper specifications comes from the rebuilt natural gas tape. The historical work read setups through their decision tick. No outcome after a setup entered a comparison or a strategy score.
+
+## Sources and verification
+
+Authenticated GitHub access opened the [current handoff](https://github.com/DavisAI1974/markets-data/blob/07f6767d9ae6a63fe6bfdd1854880ef1b30fffcb/tasks/family-research-20261022/research-union-current/STRATEGY_HANDOFF_FOR_CODEX_20261123.md) in full first. The research paper and the cross-trade-day lifecycle notes stayed closed. The handoff itself disclosed all four trade-day row counts and the same-nanosecond lookup correction before v1.
+
+Each data branch has its own single-branch, depth-one, blob-filtered clone. Named blobs were fetched through the authenticated GitHub API, compared with their committed Git blob hashes and checked out in the matching clone. Verified the full row file list against each row receipt during extraction. The table gives coverage of the trade-day rows, not a count of strategy outcomes.
+
+| 2023 trade day | Verified in-session ticks | Row parts | Pinned source |
+|---|---:|---:|---|
+| Oct 2 | 819,783 | 4 | [Files](https://github.com/DavisAI1974/markets-data/blob/360fdaa2ba692e22d4c68c5a583ca89496533289/FILES.md) · [row receipt](https://github.com/DavisAI1974/markets-data/blob/360fdaa2ba692e22d4c68c5a583ca89496533289/RECEIPT.json) · [column receipt](https://github.com/DavisAI1974/markets-data/blob/360fdaa2ba692e22d4c68c5a583ca89496533289/CALC-research_columns-20231002.json) |
+| Oct 3 | 878,671 | 4 | [Files](https://github.com/DavisAI1974/markets-data/blob/c8a0b758057b4fc620c535682783242e61b2e713/FILES.md) · [row receipt](https://github.com/DavisAI1974/markets-data/blob/c8a0b758057b4fc620c535682783242e61b2e713/RECEIPT.json) · [column receipt](https://github.com/DavisAI1974/markets-data/blob/c8a0b758057b4fc620c535682783242e61b2e713/CALC-research_columns-20231003.json) |
+| Oct 17 | 845,246 | 4 | [Files](https://github.com/DavisAI1974/markets-data/blob/733442aee6ff02f6417ba44aa74f792496ef1fa2/FILES.md) · [row receipt](https://github.com/DavisAI1974/markets-data/blob/733442aee6ff02f6417ba44aa74f792496ef1fa2/RECEIPT.json) · [column receipt](https://github.com/DavisAI1974/markets-data/blob/733442aee6ff02f6417ba44aa74f792496ef1fa2/CALC-research_columns-20231017.json) |
+| Oct 18 | 770,579 | 3 | [Files](https://github.com/DavisAI1974/markets-data/blob/1bd670ef1ba9f74a11bfcde3a50f59c18720f4df/FILES.md) · [row receipt](https://github.com/DavisAI1974/markets-data/blob/1bd670ef1ba9f74a11bfcde3a50f59c18720f4df/RECEIPT.json) · [column receipt](https://github.com/DavisAI1974/markets-data/blob/1bd670ef1ba9f74a11bfcde3a50f59c18720f4df/CALC-research_columns-20231018.json) |
+
+Opened the source file guides, row receipts and research-column receipts. On each branch used the every-tick rows and their matching research-column files. Read both underlying natural gas line files and the tape-trades file’s position, received time and aggressor. The standalone playback receipts were downloaded; no new producer playback was run. The Oct 2 guide also describes obsolete products and prior runs. None supplied an input. From the source implementation, inspected how the research-column writer passes both time and position into its lookup. [Column writer](https://github.com/DavisAI1974/Markets/blob/ccr-dd95052b-3vcrwq/root/research_columns.py)
+
+Checked row counts, continuous tape positions across parts, matching positions in both files, nondecreasing receive times inside the trade day, and the existing receipts’ pass flags. At **every eligible trade-day tick, including nontrade ticks**, each stored D and E matched the last stored source read available at that received nanosecond and position. A timed expiry with no trade position is eligible when its received time arrives. At simultaneous trades the comparison allows only positions through that tick. For every nonsettlement trade, matched the received nanosecond and decoded aggressor against the stored trade tape. Only raw message, book and the two approved line inputs feed the market conditions. No information measure, mid price, strategy-program output, completed-leg field, cost or manufactured value enters them.
+
+## Earlier discussions and original directive
+
+Following Greg’s explicit update, read the available local November Codex chat records for his own instructions, especially November 8 on momentum and exit timing and November 13 on signals during a position and keeping multiple strategies. Some user messages included old research claims and figures. They were visible, and none was used. Read the objective and purpose fields of the older strategy document and the directive paragraphs of its companion handoff. The older candidate definitions, performance values and paper rules supplied no strategy logic. The earlier documents are access records for intent only. [Earlier strategy document](https://github.com/DavisAI1974/markets-data/blob/fe45d2eff9b389e00c80807b6e2240003ba4885d/tasks/family-research-20261022/research-union-current/fifteen-strategies-20261113/STRATEGIES_15.json) · [Earlier handoff](https://github.com/DavisAI1974/markets-data/blob/15fbf2acd11365cb00893a919ec83e00b4df209f/tasks/family-research-20261022/claude-independent-research-20261113/HANDOFF.md)
+
+In the fresh publication clone an initially empty index caused Git to show unrelated historical filenames as local deletions. This was corrected **before the first push**. Verified the published tree against the shared base. I saw filenames of older material. I did not open, query or compare the parallel Claude strategy work or see its strategy contents.
+
+## Available scope
+
+No historical trials, account connection, paper orders or paid run. No unseen trade day was supplied. There is no live paper-position stream in the four source branches. The predicate markers in the per-trade-day ledgers are reproducible descriptions of p and q only. An actual active-position action requires paper state.

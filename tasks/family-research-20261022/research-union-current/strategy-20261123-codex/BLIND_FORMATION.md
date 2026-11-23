@@ -7,3 +7,7 @@ After the freeze, I’ll check the stored inputs against tape order, including t
 ## Amendment before opening the data
 
 Greg then asked to use all four trade days to come up with strategies. Keep the initial hypotheses as a fixed reference. Read trade days in order. Record revisions and the last trade day seen before the next tape is opened. Oct 2 can inform Oct 3, Oct 2 and 3 can inform Oct 17, and Oct 2, 3 and 17 can inform Oct 18. After Oct 18, all four inform the final specifications and their limitations. An amended rule first formed then has no remaining blind trade day. No post hoc selection earns a blind claim.
+
+## Final instruction and actual use
+
+Before any historical trial, Greg said that the trials would be in paper trading and asked for all four trade days to contribute to strategy formation. He then authorized the earlier discussion and document for the directive alone. All four shallow copies supplied development observations. The v1 rule sheet was published at [af71e70](https://github.com/DavisAI1974/markets-data/commit/af71e70d8981930753fdaca68358b202ec0e9f5b) before opening their files. The v2 specifications were written after inspecting all four. No walk-forward trial or outcome calculation took place; the earlier schedule above records the original plan. The first eligible blind use of v2 is an unseen paper-trading trade day with these rules frozen before its tape arrives. If a paper trade prompts a change, retain the old rule and date the new version before the next unseen trade day.
