@@ -3912,6 +3912,36 @@ described?"; before it: "Aren't exhaustion and dipole independent calcs from the
   trading has moved the trade's way, so some rise into the onset is made by how the program picks its trades. The
   DIFFERENCES he marked between kinds (sooner, steeper, the dip below zero, the tails) are not made that way.
 
+**DECIDED (Greg, 2026-11-23, fifteenth session), on his two crypto pictures: "Disregard my notes and just focud on
+graph lines"; then, offered the missing lines: "Yes I want the prebirths laid out. Not worried about the 2000
+averaging. I just want to mak sure we are setting them up.to same. Show each individual tade and their prebirths
+like this without designated start times for dipole and exhaustion. Their start times are when they start showing
+up."**
+- THE PICTURES ARE SET UP AS THE CRYPTO PICTURES WERE, one individual trade at a time, with its prebirth.
+- NO DESIGNATED START TIME for the dipole or the exhaustion: each starts where it begins to show.
+- THE AVERAGING is not a worry of his either way; nothing is averaged here (his standing rule).
+- BUILT, NOT RUN (Markets `ccr-b66f34d5-h6ra1t`, `root/trade_renders.py`). Claude's calls in it, stated to him, his
+  to correct from the picture:
+  1. "EACH INDIVIDUAL TRADE" IS A TRADE OF THE CRYPTO AND NG PROGRAM (stored: 1,794; 1,895; 1,672; 1,682). That is
+     what the crypto exhaustion graphs were drawn around, and what "setting them up the same" needs. It is NOT the
+     stored trade leg of the earlier pictures of this session; those stay stored until he says.
+  2. ZERO ON THE CLOCK IS THE TRADE'S START, as in the crypto graphs, and the clock reads in seconds from it (each
+     read still at its own nanosecond; the Eastern time is in the title). So one trade can be set beside another.
+  3. THE PRICE LINE is the crypto picture's black line: the MID price, its change from where it stood at the
+     trade's start, in hundredths of a percent, turned to the trade's side. Read from the stored rows through the
+     rows gate. Not the trade prints.
+  4. THE DIPOLE (60 seconds) AND THE EXHAUSTION (20 seconds) are the stored crypto lines, turned to the trade's
+     side. Three separate graphs, not laid over each other (his word of 2026-11-17: not laid over first).
+  5. START AND STOP: the frame is the program's own trades, from the start of the trade two before to the end of
+     the trade after; then every hump of either line that the frame touches is in the picture whole, so each
+     line is on the page from where it began to show.
+  6. NOT DRAWN YET: the two rate lines of the crypto dipole picture (how fast the dipole and the price change).
+     They were read per second on an averaged line; how a rate is read on one trade at the nanosecond is put to
+     him before it is made.
+- TO KNOW WHEN THEY ARE READ (said before): the program starts a trade at the first trade AGAINST its own side
+  after a turn, so the 20-second line steps against the trade at zero and steps back 20 seconds later when that
+  trade leaves. That step is made by the rule, not by the market.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
