@@ -5792,3 +5792,11 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - RUN THE STRATEGIES ON THE THIN FEED ANYWAY, UNGRADED. Greg: "Let's see how our strategies do even with thin data.
   We just won't grade them". So the 30 go into paper trading on the tastytrade sandbox with its own stream; every
   trade of it is marked not scored and none enters the scoring of the new system.
+- CORRECTION to the 7e result above (records `7e/sandbox-stream-*`, runs 4 and 5): the sandbox stream is exactly
+  900 seconds behind, so the first open-market run saw the halt hour. With trading in view it sent TimeAndSale: 107
+  trade messages in ten minutes (55 buy, 43 sell, 9 side not given; sizes add to 149 where the feed's own day volume
+  says 172), times in milliseconds, the nanosecond field always zero; Quote in about half-second steps with no time;
+  no Order. Sandbox Sell 1 /NGF7 (order 2207911) filled at 3.534 and the account is flat; its status stayed Live
+  through ten polls though the fill was recorded.
+- Greg, on running the 30 on this feed: "Let's see if our strategies sell even with thin data. We won't give it a
+  bad mark if it doesn't but maybe it will". Sandbox sells as well as buys: "Sell or buy for that matter".
