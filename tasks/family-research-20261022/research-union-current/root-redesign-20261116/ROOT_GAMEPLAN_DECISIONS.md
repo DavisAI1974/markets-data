@@ -4093,6 +4093,87 @@ previous things first befre discuss".**
 - Already stored and not Claude's version of anything: the best bid and best ask are on every row, and
   `calc-quote_runs-*` holds each one's own runs up and down.
 
+## Sixteenth session (2026-11-23, in a code session)
+
+Greg pasted the drop-in of the fifteenth session (handoff R). Read in full: handoff R, the notes file, this file from
+"Fifteenth session" to the end of the session entries.
+- Code: Markets `ccr-b66f34d5-h6ra1t` (`35d45df`) brought into the session's own branch `ccr-26ff219b-72monm` by
+  fast-forward (the session branch held nothing of its own). Nothing to the trunk.
+- The Runpod skills were loaded and the account read: no pod exists. The agent skills router and the git workflow
+  skill were read from the pinned public source (tag 0.6.8). Superpowers loaded by itself and was not used.
+- Not opened: last week's strategy material. Not touched: AWS.
+- Run in the session: nothing on market data. One compile check of the changed program, and a search of the text
+  files of this branch for the word "mid" (told to him first).
+
+**DECIDED (Greg, 2026-11-23, sixteenth session), in the drop-in itself. His words, whole: "For the trade price graph,
+I literally want only two points and a line connecting them. No midprice. Just two dots (or whatever symbol we're
+using) and a line. Put the 2 separate dotted lines showing when the buy-sell combo happens. Keep the other graps the
+same. And shorten the y axis scale for that graph.  Change that for the 2 trades that we added the bid and offer
+renders to. Change nothing else and reprint those pictures."**
+- THE TRADE PRICE GRAPH IS TWO POINTS AND THE LINE JOINING THEM. NO MID PRICE IN IT. This settles the price line of
+  the picture, the first of the midpoint items of handoff R. The mid was Claude's call and is out of that graph.
+- TWO DOTTED LINES on that graph: one at the moment the trade was bought, one at the moment it was sold.
+- THE SCALE OF THAT GRAPH IS SHORTENED.
+- THE OTHER GRAPHS STAY AS THEY ARE. For the two test pictures only (trade day Oct 2, trade 883; trade day Oct 18,
+  trade 982: the two with the best bid and the best offer). Nothing else is changed.
+- BUILT, NOT RUN (Markets `ccr-26ff219b-72monm`, `6562821`, `root/trade_renders.py`). Claude's calls in it, stated
+  to him, his to correct from the picture:
+  1. EACH POINT sits at the price of the trade on the tape that filled it there (bought: green, pointing up; sold:
+     red, pointing down, as before). The line between them is straight. Nothing else is on the graph.
+  2. THE TWO DOTTED LINES stand on the price graph only, each in its point's colour, at the nanosecond of that
+     fill. The four graphs under it keep their own marks (the trade's life shaded, the line at zero, the line at
+     the turn), unchanged.
+  3. THE SCALE runs from the lower of the two prices to the higher with a little room, and names only those two
+     prices. Read as "shorten the scale": before, it had to hold the whole mid price line of the picture.
+  4. A TRADE THAT ENDED AT NO TICK (the wait ran out; nothing traded there) gets the dotted line at its end and NO
+     point, and its `end_price` in the index table is left EMPTY. Before, both were the mid price standing then:
+     a price where nothing traded. Not drawn and not stored any more ("No midprice"; "store nothing from it").
+  5. THE LAST GRAPH ("how fast the price changes") IS STILL THE MID PRICE'S CHANGE PER TICK. It stays on his
+     "Keep the other graphs the same". It is drawn, not stored. Said to him plainly; his to strike.
+  6. The program draws every picture this way from this commit on. THE 40 STORED PICTURES of `trade-renders/` are
+     NOT touched ("Change nothing else"): they still show the mid price line, and so do their index tables.
+- NOT RUN. It waits for his go on a pod: General Purpose 8 CPUs, $0.04 a CPU an hour, $0.32 an hour, read from
+  the account this session. 2 trades, 2 pictures, 2 trade days, one pod. The two stored test pictures are replaced
+  in his order: the pod is started, the old ones are deleted from the two daily branches, the removal is
+  confirmed on the remote, and only then is anything new fetched.
+
+**THE MIDPOINT, LAID OUT FOR HIM IN ONE GO (2026-11-23, sixteenth session). Fuller than handoff R's list: every ROOT
+program was searched, and the text files of this branch.**
+- WHAT THE MID PRICE IS: halfway between the best bid and the best offer, held from the last tick that had both.
+  It is an average of two prices. THE REBUILD'S OWN PLAN ALREADY SAID NO TO IT: "The best bid and the best ask are
+  followed separately. They are not combined into a midpoint, which is an average of two prices" (`STEP2_PLAN.md`,
+  Claude's call of 2026-11-16, item 9 of the plan). The pictures of the fifteenth session went against that.
+- NOT A STORED COLUMN ANYWHERE, and in no Excel sheet. No calculation in `root/calcs/` uses it. The stored rows
+  hold `best_bid`, `best_ask` and `gap`, each on its own.
+- WHERE IT IS USED, two programs only:
+  1. THE PICTURE PROGRAM (`root/trade_renders.py`). Until this session: the price line of graph 1; the point and
+     the `end_price` of a trade that ended at no tick; and graph 5, its change per tick. From `6562821`: graph 5
+     only.
+  2. THE CRYPTO AND NG RUN (`crypto_ng/tick.py`, `root/crypto_ng_tick.py`; the fourteenth session's). It prices
+     the program's trades from the mid: the mid at the turn with the half spread added or taken off.
+- THE FACT THAT MATTERS MOST, read from the code this session: THE MID DOES NOT CHOOSE THE PROGRAM'S TRADES. Which
+  trades the program makes, and the nanosecond each starts and ends, come from the turns of the 60-second line,
+  the sides of the trades on the tape and the 30-second wait (natural gas settings: no gate, no stop). The mid
+  only puts the program's own prices on them. So the trades, their starts and ends, the dipole line, the
+  exhaustion line, the humps and the frame of every picture do not stand on the mid.
+- WHERE VALUES MADE FROM IT ARE STORED NOW, all four daily branches unless said:
+  1. `crypto-ng-tick-program-trades-*`: `program_open_px`, `program_close_px`, `program_gross_bps`,
+     `program_net_bps`, `program_swing_bps` (the program's own figures; observation only).
+  2. `CRYPTO-NG-TICK-<trade day>.json` (the receipt): `half_spread_bps`, one figure for the trade day, "half the
+     middle value of spread over mid". Not in handoff R's list.
+  3. `trade-renders-index-*`: `end_price`, for a trade that ended at no tick only.
+  4. The 42 stored pictures themselves (40 in `trade-renders/`, 2 in `trade-renders-quotes-test/`): the mid price
+     line in graph 1, its change per tick in graph 5, and the point of a trade that ended at no tick. Not in
+     handoff R's list as pictures.
+- NOT OURS, a record only: the earlier programs (Native's roll, Desktop's old chain) took a trade's side from its
+  price against the midpoint and left out trades at the midpoint. The rebuild takes the side the tape gives
+  (`STEP1_STEP2_LAYOUTS.md`). Nothing of that is used.
+- STILL HIS TO SAY, each put once, with Claude's call: (a) graph 5: take it out, because per tick it only ever says
+  half a tick up or down and the best bid and best offer graphs show the same steps apart; (b) the five program
+  price columns and the half spread: leave them stored as the crypto program's own figures, never in a sheet;
+  (c) `end_price` at no tick: emptied the next time each index table is written; (d) the 40 pictures of
+  `trade-renders/`: redrawn the new way when he says.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

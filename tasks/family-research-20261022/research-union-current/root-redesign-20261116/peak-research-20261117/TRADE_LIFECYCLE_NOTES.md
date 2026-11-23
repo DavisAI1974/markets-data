@@ -829,3 +829,29 @@ The best bid and the best offer were tested on two trades the same session (`tra
 own graph by tick, a rounded curve that is straight where the price is not changing. By eye: close to steps (the
 book ticks too often for the rounding to show); the two do part company at times (one steps, the other stays, the
 gap is two ticks for a few seconds). Greg's read is awaited.
+
+## 2026-11-23 (sixteenth session): the price graph is two points and a line, no mid price; where the mid price is
+
+Greg: "For the trade price graph, I literally want only two points and a line connecting them. No midprice. Just two
+dots (or whatever symbol we're using) and a line. Put the 2 separate dotted lines showing when the buy-sell combo
+happens. Keep the other graps the same. And shorten the y axis scale for that graph."
+- THE PRICE GRAPH OF A TRADE'S PICTURE: where the trade was bought and where it was sold, each at the price of the
+  trade on the tape that filled it, joined by a straight line. A dotted line at the moment of each. The scale is
+  the two prices and nothing else. No mid price. This supersedes "the price line is the mid price" in the section
+  above.
+- A trade that ended at no tick has no price at its end: the dotted line is drawn, no point, and no `end_price` is
+  stored. A price where nothing traded is not drawn or stored.
+- The last graph (how fast the price changes) is still the mid price's change per tick: kept on his "Keep the other
+  graphs the same" until he says.
+- Code: Markets `ccr-26ff219b-72monm`, `6562821`. Built, not run.
+
+The mid price, kept so it is not looked up again (the full list is in the decisions file, sixteenth session):
+- It is an average of two prices, and the rebuild's own plan had already said the best bid and the best ask are
+  followed separately and never combined into a midpoint (`STEP2_PLAN.md`). Bringing it in with the crypto picture
+  went against that. Before a line is copied from a crypto picture, check it against the rebuild's own rules.
+- It is in two programs only: the picture program and the crypto and ng run. It is not a stored column, is in no
+  calculation of `root/calcs/` and in no Excel sheet.
+- IT DOES NOT CHOOSE THE PROGRAM'S TRADES. The trades, their starts and ends come from the turns of the 60-second
+  line, the sides of the trades and the 30-second wait. The mid only prices them (the program's own open and close
+  price and its three results in hundredths of a percent, and one half spread figure for the trade day). So the
+  dipole, the exhaustion, the humps and every picture's frame do not stand on it.
