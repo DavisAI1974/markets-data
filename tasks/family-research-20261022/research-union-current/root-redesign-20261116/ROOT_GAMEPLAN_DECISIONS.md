@@ -4202,7 +4202,7 @@ session), on his "Go".**
   removed from the two daily branches and each removal confirmed on the remote (`root-rows-20231002` `a2bb3e6`,
   `root-rows-20231018` `6d7151f`); only then was anything new fetched.
 - ONE POD, the two trade days together, each pinned to its own four CPUs: General Purpose 8 CPUs, $0.32 an hour,
-  `ocu44mumcu9pwc` (US-CA-2), 12:43:48 to about 12:53 UTC: about 5 cents. Markets `ccr-26ff219b-72monm` `6562821`,
+  `ocu44mumcu9pwc` (US-CA-2), 12:43:48 to about 12:46:15 UTC: under 2 cents. Markets `ccr-26ff219b-72monm` `6562821`,
   launched with `DAYS='20231002 20231018' ... trade_renders --only 20231002:883 --only 20231018:982 --quotes`.
   Both passed every check on the first run (the first time this change ran anywhere). The pod's address was added
   to the environment "Markets" on his approval card and the last session's dead address taken off.
