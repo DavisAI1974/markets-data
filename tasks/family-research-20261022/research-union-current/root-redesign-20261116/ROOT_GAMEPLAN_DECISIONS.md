@@ -5745,3 +5745,8 @@ figure. To bring back when the work reaches what moves the market and price-curv
   a DXLink URL and token come only from a production session's `GET /api-quote-tokens`).
 - The four key names were checked at session start: none set in the cloud environment "Markets". Greg gave a sandbox
   token in chat ("token"; then "Gave you new token instead of refresh"). It is kept out of every file and commit.
+- 7e step 2, numbers: account 5WY79188 (Greg showed it funded on the sandbox tool page), Buy 1 /NGF7, Market, Day
+  (Claude's proposal; Greg: "Go"). The first dry run at 17:31 ET was refused only because the futures session was
+  not active (the daily halt hour); rerun at 18:01 ET (Greg: "Go"). Greg: "If it passes, submit the real order".
+  Claude's call for the submit: 10 polls 5 seconds apart, up to 2 pages when looking for the order, cancel if still
+  open after the last poll. Sandbox only.
