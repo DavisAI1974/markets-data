@@ -5800,3 +5800,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   through ten polls though the fill was recorded.
 - Greg, on running the 30 on this feed: "Let's see if our strategies sell even with thin data. We won't give it a
   bad mark if it doesn't but maybe it will". Sandbox sells as well as buys: "Sell or buy for that matter".
+- THE RUNNER BUILD, started on Greg's "Go" (then "Proceed"). Budgets declared to him first, in tokens: scout
+  (Haiku) 150,000; reviewer (Opus) on the plan 200,000; builder (Sonnet) 600,000; reviewer (Opus) on the finished
+  code 250,000; 1,200,000 in all. A run's tokens can only be read when it returns: a run that comes back over its
+  budget stops the work and is told to him before the next starts. Claude's calls, said to him: the first run is a
+  short canary from the session, on his go; one sandbox account, one lot a trade, each strategy's trades kept apart
+  in our own record; no bad mark for a rule that never trades, the record says which input was missing; ROOT is not
+  touched. Before any code: a 30-row table of what each rule reads and whether the feed has it.
