@@ -732,3 +732,12 @@ mean"; "Per trade".
   trade leg. The 20-second line is not in them. The line above that says "the four graphs" is superseded by this.
 - A picture's edges: the trade leg before to the trade leg after, moved outward so no run of trades or dipole
   stretch is cut.
+
+The first 40 pictures were drawn and stored the same session (`leg-renders/` on each `root-rows` branch; 10 trade
+legs picked at random per trade day; counts of trade legs 6,119; 6,907; 5,660; 5,120).
+- By eye only, a handful of pictures, nothing measured: inside a trade leg the dipole and the exhaustion step at
+  the same prints the price steps at, as expected (they are made from those prints). The part to read is the
+  lead-in before the shaded stretch.
+- The lead-in is as long as the trade leg before. After a one-step trade leg it can be a few seconds and a single
+  trade, which shows little prebirth. Open with Greg: whether a picture should reach further back, and by what the
+  data says (two trade legs before; the run of the quote under way; something else of his).

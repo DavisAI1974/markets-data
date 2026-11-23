@@ -3559,6 +3559,40 @@ the whole trade day: "For the time being, just pick 10 random ones per day with 
 - Code: Markets `ccr-b66f34d5-h6ra1t`, `f5396d9`. `root/four_graphs.py` is as the fourteenth session left it.
 - Still not run: he has not said go for the pod.
 
+**Greg (2026-11-23, fifteenth session), asked whether the graphs are in one render or separate: "It doesn't matter to
+me which. As long as it isn't too confusing we can try all on 1 to see"; then "Go".**
+- ONE PICTURE per trade leg holding the three graphs stacked on one clock (three separate graphs, no lines laid
+  over each other). To try; if it is too crowded they are split into three pictures per trade leg.
+
+**THE FIRST TRADE LEG PICTURES, done (2026-11-23, fifteenth session), on his "Go".**
+- ONE POD, all four trade days started together, each pinned to its own two CPUs: General Purpose 8 CPUs, $0.32 an
+  hour, `jrocanf9ituqea` (US-CA-2), 08:59:54 to about 09:02:30 UTC: under 2 cents. Launched with
+  `root/pod_leg_renders.sh f5396d9... --random 10` (Markets `ccr-b66f34d5-h6ra1t`). The pod's address was added to
+  the environment "Markets" on his approval card and the five deleted pods' addresses taken off.
+- ALL FOUR PASSED every check on the first run (the first time this program ran anywhere): every trade leg sits on
+  trades the stored tape holds, with the stored time; its stored moments are in order; the count of trade legs is
+  the one in the stored receipt of the tick renders; every picture holds its trade leg whole; every trade leg asked
+  for was drawn exactly once.
+- THE TRADE LEGS, counted by the job before it drew: 6,119 (Oct 2); 6,907 (Oct 3); 5,660 (Oct 17); 5,120 (Oct 18):
+  23,806 in all. One trade leg of each trade day was still going at the last trade.
+- THE PICK (the computer's, seeded with the trade day's own number): Oct 2: 72, 630, 1451, 1806, 3016, 3721, 4767,
+  5503, 5560, 5716. Oct 3: 1590, 2474, 2554, 2579, 3030, 5189, 5844, 5949, 6393, 6445. Oct 17: 25, 1014, 1317,
+  1530, 1845, 2375, 2616, 4316, 4893, 5164. Oct 18: 522, 1285, 1697, 2990, 3022, 3173, 3223, 3542, 4092, 4326.
+- MEASURED SIZE: the 10 pictures of a trade day are 1,507,619; 1,474,059; 1,486,895; 1,523,996 bytes (the largest
+  single picture 163,229). Every trade leg of all four trade days at that size is of the order of 3.5 gigabytes in
+  git: said to him before any larger run.
+- STORED in `leg-renders/` on each daily branch, each file fetched and proved against its receipt, `FILES.md`
+  brought up to date, each push confirmed on the remote: `root-rows-20231002` `7e0f29e`, `-20231003` `4219a77`,
+  `-20231017` `8f1aadd`, `-20231018` `1684a62`. Also stored there: `leg-renders-index-<trade day>.parquet`, one
+  line for EVERY trade leg of the trade day with its stored facts and the two edges its picture has.
+- THE POD WAS DELETED after every push was confirmed; the account was read and shows none.
+- SEEN IN THE PICTURES, said to him: the lead-in before a trade leg is exactly as long as the trade leg before it.
+  When that trade leg was one step, the prebirth is a few seconds and one or two trades (Oct 2, trade leg 3016:
+  about four seconds, one trade). Whether a picture should reach further back is his to say.
+- Trade legs whose picture has NO lead-in: the first of each trade day, and on trade day Oct 2 also 179 and 194
+  (their first trade and the first trade of the trade leg before were received at the same nanosecond).
+- Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
