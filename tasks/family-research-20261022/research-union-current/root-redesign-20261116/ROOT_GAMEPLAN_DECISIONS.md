@@ -5669,6 +5669,15 @@ still need to be saved to markets data repo gor space reasons".**
   run with the new roster, Codex works from `ccr-fffbc766-a1gxpl`, or the trunk takes the stage 1 set on his word.
 - OUTPUTS, both sessions': to `DavisAI1974/markets-data` only, never to Markets (Markets is near its size quota).
 
+**DECIDED (Greg, 2026-11-23, eighteenth session): "And codex isn't running one of the agents is he? ... Not sonnet for all
+but all Anthropic models running them"; "Permission for main change".**
+- ALL FOUR AGENTS RUN ON ANTHROPIC MODELS: scout Haiku, builder Sonnet, reviewer Opus, performance auditor Sonnet.
+  Codex wrote the auditor's first version and runs none of them. Said to him: the agent files only work inside
+  Claude Code, so the auditor and verifier tasks, run with the agents, run in a Claude Code session, not in Codex.
+- ON HIS WORD FOR THE TRUNK: the stage 1 set (the four agents, the CLAUDE.md roles section, the plan, its index and
+  the amendments to Codex's prompt) is on the Markets trunk `claude/kalshi-s79-kickoff-ij8t9o` at `beb3836`, on top
+  of `79517f6`. Nothing else from the session branch went with it.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
