@@ -4230,6 +4230,11 @@ session), on his "Go".**
   2. With the mid line gone, graph 1 says only where and when the trade was made. What the price did in between
      is read from the best bid and best offer graphs under it.
 - Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
+- FOR THE NEXT LAUNCH: the deleted pod's address (`ocu44mumcu9pwc-8000.proxy.runpod.net`) is still in the allowed
+  hosts of the environment "Markets"; take it off in the next approval card.
+- "The other graphs are as they were" rests on the code change (only the price graph's drawing was touched) and
+  on the same drawn stretch in each title, not on a side-by-side with the old pictures. Those can be read back
+  from `root-rows-20231002` `612efec` and `root-rows-20231018` `afa9bc7` if he asks.
 
 ## Held for the later stage: figuring out what moves the market
 
