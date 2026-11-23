@@ -5605,6 +5605,17 @@ haiku and opilus plan."**
   NOT DONE, said to him: retiring the three aws agents and the aws-mcp entry (stage 1 lists it); removing what is
   saved goes to him by name first, and S3 is his open question.
 
+**DECIDED (Greg, 2026-11-23, eighteenth session): "And have our thing stop at 5.75 hrs if we're stopping so we don't get
+git cutting us offf and we lose everything".**
+- THE RUNNER ON GITHUB ACTIONS STOPS ITSELF AT 5.75 HOURS of its own job, inside GitHub's cut-off of about 6 hours,
+  so nothing is lost to the cut.
+- CLAUDE'S READING OF WHAT THAT MEANS IN THE RUNNER, stated to him, his to correct: everything is written to the
+  record as it happens all through the job, and pushed to markets-data during the job, not only at its end; at 5.75
+  hours it opens no new trade, writes and pushes what it holds, confirms the push, and then ends; the next job
+  starts from the record and carries any trade still open (the sandbox keeps positions until its 24-hour reset).
+  How one job hands over to the next is part of building the runner (7b), put to him with it.
+- The 7e check is not a GitHub job: it runs from the session, so this does not bear on it.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
