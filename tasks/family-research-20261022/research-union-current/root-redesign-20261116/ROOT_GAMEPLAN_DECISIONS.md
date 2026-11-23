@@ -5215,6 +5215,15 @@ things. Completely unnecessary".**
 - KEPT SO IT IS NOT DONE AGAIN: before any work on an Excel file, read this file's entries on the workbook (search
   "workbook", "parts", "daily sheets", "short stretch") and `WORKBOOK_README_PAGE.md`. The next drop-in must say so.
 
+**DECIDED (Greg, 2026-11-23, seventeenth session): "Put the pinned workbook back as it was this morning". DONE.**
+- `ROOT_dipoles_pinned.xlsx` is again byte for byte the file of `4262074` (the start of this session: thirteen
+  sheets: the read-me, and for each trade day "dipoles", "peaks" and "crypto and ng"; 2.35 megabytes). Today's three
+  versions of it (the "moves" and "humps" sheets; the same with the information measure; the one sheet for each
+  trade day) are out of the working file and stay in git history at `f489404`, `0b1c20f` and `3b6dcbe`, for the
+  record only. Nothing else was touched.
+- The research itself is not lost: it is in the stored tables on the daily branches (`research-threads/`,
+  `info-measure/`) and is being added beside the every-tick rows as column files (his go; the run under way).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
