@@ -4039,6 +4039,24 @@ straight".**
      stored pictures are not touched.
 - Nothing of the best bid or best offer is typed, labelled, measured or put in the Excel sheets.
 
+**THE TEST OF THE BEST BID AND THE BEST OFFER, done (2026-11-23, fifteenth session), on his "Go".**
+- ONE POD, the two trade days together, each pinned to its own four CPUs: General Purpose 8 CPUs, $0.32 an hour,
+  `o7hnr06qhpxdtp` (US-CA-2), 12:06:36 to about 12:10:30 UTC: about 2 cents. Markets `35d45df`, launched with
+  `DAYS='20231002 20231018' ... trade_renders --only 20231002:883 --only 20231018:982 --quotes`. Both passed every
+  check on the first run.
+- STORED in `trade-renders-quotes-test/` on the two daily branches, each file fetched and proved against its
+  receipt, `FILES.md` brought up to date, each push confirmed: `root-rows-20231002` `612efec`, `root-rows-20231018`
+  `afa9bc7`. The 40 pictures of `trade-renders/` are untouched. THE POD WAS DELETED after that; the account was
+  read and shows none.
+- SEEN BY EYE in the two pictures, nothing measured, said to him as it is:
+  1. As told beforehand, the two curves look close to steps. The rounding shows only in the few places where two
+     ticks were a second or more apart; elsewhere the price stepped inside a moment too short to see.
+  2. The bid and the offer DO move apart from each other at times. Trade day Oct 2, trade 883: during the trade
+     the offer stepped up a tick while the bid stayed, so the gap was two ticks for a few seconds. Trade day
+     Oct 18, trade 982: about 38 seconds before the start the offer came down a tick while the bid stayed.
+  3. Each move of the mid price in graph 1 is one of the two stepping, which the two graphs now show apart.
+  Two pictures. Whether it shows him anything is his to say.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the

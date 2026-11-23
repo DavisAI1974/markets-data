@@ -824,3 +824,8 @@ this without designated start times for dipole and exhaustion"; "instead of per 
 - Per tick, the price rate is always half a tick up or down: it carries timing and direction only.
 - To look for across the 40 before anything is said: whether the dive before zero comes with the trades that then
   go the trade's way, each trade on its own, none combined.
+
+The best bid and the best offer were tested on two trades the same session (`trade-renders-quotes-test/`): each its
+own graph by tick, a rounded curve that is straight where the price is not changing. By eye: close to steps (the
+book ticks too often for the rounding to show); the two do part company at times (one steps, the other stays, the
+gap is two ticks for a few seconds). Greg's read is awaited.
