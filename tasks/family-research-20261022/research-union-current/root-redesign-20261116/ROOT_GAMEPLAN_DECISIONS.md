@@ -5032,6 +5032,16 @@ session). BUILT, NOT RUN: it waits for the word "go".**
   question, every row pinned to its timestamp), written from the tables made again; the counts read to him again
   where they moved.
 
+**DECIDED (Greg, 2026-11-23, seventeenth session), on the rerun put to him: "After this no more tests on this data.
+Tests to make sure the output is correct that is".**
+- THE RERUN OF THE TWO RESEARCH TABLES, WITH ITS FOUR PASS RULES, IS THE LAST CORRECTNESS TEST ON THIS DATA. After
+  it no further run or check is made to prove that the output is correct: no more traces, no byte-for-byte proof
+  of stored files, no second way of reading the same thing. The work moves on: the Excel sheets, then the
+  strategy step on his word.
+- What stays, because it is how anything is stored and not a test of this data (Claude's reading, stated to him,
+  his to correct): a job's own checks while it runs, and each fetched file compared with its receipt.
+- NOT THE GO. The word was not typed; no pod was started.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
