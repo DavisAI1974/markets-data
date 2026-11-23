@@ -5042,6 +5042,42 @@ Tests to make sure the output is correct that is".**
   his to correct): a job's own checks while it runs, and each fetched file compared with its receipt.
 - NOT THE GO. The word was not typed; no pod was started.
 
+**Greg (2026-11-23, seventeenth session): "Go"; then, on his "no more tests": "I meant the test prompt about an earlier
+test you were doing. Fix whatever issues need fixed".**
+- Claude's reading, stated to him, his to correct: the fix is the rerun of the two research tables read by place on
+  the tape; after its checks the work goes straight to the Excel sheets, with no further testing. The entry above
+  ("the last correctness test") stands in that sense.
+
+**THE TWO RESEARCH TABLES MADE AGAIN, READ BY PLACE ON THE TAPE, done (2026-11-23, seventeenth session), on his go.**
+- THE ORDER HE SET, KEPT: the pod was started; the first run's tables, receipt, count file and printout were removed
+  from the four daily branches and each removal confirmed on the remote (`ad2bcd3`, `bc036ae`, `353ac7a`,
+  `6488c92`: no file left under `research-threads/`); only then was anything new fetched.
+- ONE POD, the four trade days side by side: General Purpose 8 CPUs, $0.32 an hour, `obfh7n4glbcz0p` (US-CA-2),
+  15:16:49 to about 15:19:40 UTC: under 2 cents. Markets `ccr-dd95052b-3vcrwq` `b58bb01`. All four passed the
+  job's own checks on the first run. The pod's address went onto the environment on his approval card and the one
+  before came off.
+- THE FOUR CHECKS SET DOWN BEFORE THE RUN, ALL PASSED ON ALL FOUR TRADE DAYS: (1) the level-emptied counts equal
+  `HOW_A_LEVEL_EMPTIED.json` in all eight rows; (2) the stored exhaustion line against the step line's own flow at
+  every first step: equal 32,760; 36,143; 33,814; 31,539, NOT EQUAL 0 on every trade day, both empty 371; 311;
+  523; 726; (3) the same numbers of lines (moves 33,131; 36,454; 34,337; 32,265; humps 4,459; 4,579; 4,103;
+  4,163); (4) old against new, every cell of both tables: the cells that changed are exactly the ones the trace
+  counted, column by column, and no other column moved.
+- STORED in `research-threads/`, every file fetched and proved against its receipt, `FILES.md` brought up to date,
+  each push confirmed: `root-rows-20231002` `7abfdc7`, `-20231003` `84a9d09`, `-20231017` `ff0ae27`, `-20231018`
+  `bb02d4e`. THE POD WAS DELETED after that; the account was read and shows none.
+- THE COUNTS THAT MOVED. Of the 36 count tables of each trade day, 4 moved: the two lines at a TRADE LEG's first
+  step (up and down). No count of the runs of the quote, of the print against the quote, of the humps or of the
+  levels moved. Trade legs that took a second step, exhaustion on the move's side against exhaustion against it,
+  as they stand now (Oct 2; Oct 3; Oct 17; Oct 18):
+  - trade leg up: with 546 of 1,422; 607 of 1,791; 695 of 1,528; 569 of 1,239. Against 507 of 1,536; 542 of 1,545;
+    470 of 1,208; 470 of 1,208.
+  - trade leg down: with 598 of 1,497; 580 of 1,573; 512 of 1,170; 530 of 1,209. Against 508 of 1,451; 523 of
+    1,767; 620 of 1,548; 516 of 1,217.
+  Each moved by 2 to 13 lines from the first run's figures (recorded above). The read is as before: more trade
+  legs go on when the line stood on their side at the first step, in seven of these eight rows; trade leg up on
+  trade day Oct 3 reads slightly the other way (607 of 1,791 against 542 of 1,545). Partly built in: a trade
+  leg's first step is a print, and that print is in the line. A lead; no test of chance.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
