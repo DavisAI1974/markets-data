@@ -3738,6 +3738,22 @@ want the crypto calc styles as the source of output for exhaustion and dipole to
 - Nothing of the crypto and ng run is in a sheet yet either (the fourteenth session's rule: nothing goes in until
   decided with him).
 
+**CONFIRMED BY GREG (2026-11-23, fifteenth session): "2 trades back is great. Just didn't want to use things like "20
+seconds before trade" or anything like that to start fraphs. Even going back, the back dipole and exhaustion graphs
+should start when they begin to show activity before the actual first price curve. So includw the prebirths from
+inception for the beginning trade leg so the first one will show dipole and exhaustion graphs starting before 1st
+trade leg i assume".**
+- TWO TRADE LEGS BACK STAYS. What he ruled out is a number of seconds before a trade as the start of a graph.
+- THE DIPOLE AND THE EXHAUSTION GRAPHS START BEFORE THE FIRST TRADE LEG IN THE PICTURE: where each line began to
+  show the activity it is in at that trade leg's first trade. As built (`root/leg_renders.py`, `edges`): the hump
+  each line is in just before the first trade of the trade leg two back is in the picture whole, from where it
+  began; the picture starts at the earlier of the two.
+- Claude's reading of "from inception", stated to him, his to correct from the picture: a line's activity begins
+  where it last came onto the side of zero it is on (from empty, from zero, or by crossing over). It is not
+  followed back through earlier crossings to the last moment nothing had traded at all: on a busy tape the
+  60-second line is not empty for hours, and the picture would be the trade day. Where a line shows nothing just
+  before that first trade (empty or at zero), its graph starts at the trade: there is no activity to show.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
