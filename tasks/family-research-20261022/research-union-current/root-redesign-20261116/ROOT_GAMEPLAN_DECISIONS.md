@@ -5633,6 +5633,16 @@ created/produced/learned at any time".**
   of truth; the live store is the window). The live store and the phone notice are outside services and are
   named to him before anything is set up.
 
+**DECIDED (Greg, 2026-11-23, eighteenth session): "We'll stop at 5.75 and discuss yhings so it might be a little.
+Flatten all.positions at 5.75 and denote that so it's not used as trade data. We'll start over new when we stsrt
+back".**
+- AT 5.75 HOURS THE RUNNER FLATTENS EVERY OPEN POSITION. Each closing order made then is marked "flattened at the
+  5.75-hour stop" and is NOT trade data: it is not a strategy's own exit, and no result of any strategy is taken
+  from it. The trade it closes is recorded as open at the stop, with no strategy exit.
+- EACH RUN STARTS OVER NEW: nothing is carried from one run to the next. This REPLACES Claude's earlier reading
+  above ("the next job starts from the record and carries any trade still open"). There may be a gap between runs
+  while things are discussed.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
