@@ -5078,6 +5078,29 @@ test you were doing. Fix whatever issues need fixed".**
   trade day Oct 3 reads slightly the other way (607 of 1,791 against 542 of 1,545). Partly built in: a trade
   leg's first step is a print, and that print is in the line. A lead; no test of chance.
 
+**THE RESEARCH THREADS PUT INTO THE TRADE DAY SHEETS OF `ROOT_dipoles_pinned.xlsx`, done (2026-11-23, seventeenth
+session), on his "Yes make columns for eaxh new research question and fill in data pinned to timestamp".**
+- Written in the session from the stored tables made again (told to him; no calculation, no pod): Markets
+  `ccr-dd95052b-3vcrwq`, `root/research_excel.py`. The file was fetched first; Desktop had changed nothing in it.
+- ADDED, eight sheets: "moves <trade day>", one row per move in price (33,131; 36,454; 34,337; 32,265 rows, 35
+  columns), and "humps <trade day>", one row per hump of the 20-second exhaustion line (4,459; 4,579; 4,103;
+  4,163 rows, 60 columns). No row is left out.
+- EVERY ROW IS PINNED TO ITS TIMESTAMP: a move to the nanosecond of its first step, a hump to the nanosecond it
+  began (text, 19 digits), with the Eastern date and time to the nanosecond added beside it for reading.
+- ADDED, the sheet "RESEARCH COLUMNS": every column of the new sheets under the research question it belongs to,
+  with what it holds. The questions, as written there: how much of a move is left at the first moment it can be
+  known; do large moves come back (marked as NOT answered: only the first step back is there); the thin quote and
+  the whole side of the book at the start of a move; the natural gas exhaustion and dipole at a move's first step
+  and end; the print against the quote; a level eaten or pulled; fresh trading or old trades leaving; the dive,
+  the flip and the tail against the price; which comes first after an event begins; anything observable before it.
+- LEFT OUT, on his yes: the three stored columns of the run of trades under way at a first step.
+- THE READ ME gained five lines saying what the new sheets are; no line of it was changed.
+- NOT TOUCHED, proved: the "dipoles", "peaks" and "crypto and ng" sheets, every value and every link.
+- EVERY SHEET READ BACK EQUAL to what was written (a decimal within Excel's fifteen digits). The file is now 22
+  sheets and 25.9 megabytes (it was 2.4).
+- NO MID PRICE and no crypto data is in the file. The dipole and exhaustion values are the stored natural gas lines
+  read at the tick by place on the tape. The information measure is NOT in the file (his deep dive first).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
