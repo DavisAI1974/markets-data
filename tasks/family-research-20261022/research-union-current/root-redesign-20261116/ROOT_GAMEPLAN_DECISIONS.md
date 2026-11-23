@@ -4262,6 +4262,17 @@ price movement to look at our best bid offer graphs."**
 - NOT RUN. It waits for his go on a pod: 2 trades, 2 pictures, trade day Oct 2 only, General Purpose 8 CPUs,
   $0.32 an hour.
 
+**DECIDED (Greg, 2026-11-23, sixteenth session), on being put trade 1672: "Fimd another and make the appropriate
+changes to match these 2".**
+- ANOTHER TRADE, ONE WHOSE PRICE MOVED, IS DRAWN THE SAME WAY AS THE TWO REPRINTED PICTURES: the trade price graph
+  as two points and a line with the two dotted lines and the short scale, no mid price, the best bid and the best
+  offer under it, the other graphs as they are.
+- Claude's reading, stated to him, his to correct: "another" is the trade put to him, trade day Oct 2, trade 1672
+  (a sell: sold 2.839, bought 2.836, 31.248 seconds). No code change is needed: the program at Markets `6562821`
+  already draws every picture that way.
+- AN INSTRUCTION, NOT THE GO. No pod was started. It waits for the word, with the price in front of him: 2 trades
+  (883 again, so the folder's receipt covers both, and 1672), 2 pictures, trade day Oct 2, $0.32 an hour.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
