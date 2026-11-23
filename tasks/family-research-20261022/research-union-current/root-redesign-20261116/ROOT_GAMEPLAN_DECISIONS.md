@@ -5785,3 +5785,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   if needed. That way he can do that while you're doing this". So Codex does the first build of our own paper
   platform; Claude checks it when Codex is done and makes the adjustments needed; meanwhile Claude goes on with the
   tastytrade checks.
+- 7e RESULT (2026-11-23, records in `paper-trading-20261123/7e/`): the sandbox fills a natural gas future (order
+  2207792, Buy 1 /NGF7 Market Day, filled at 3.534 at 18:02:22 ET, 0.2 s after receipt; the feed's bid and ask 30 s
+  later were 3.524 and 3.543). The sandbox stream (demo level, `/delayed`) for /NGF27:XNYM over 300 s with the
+  market open sent 5 Quote changes, no new Trade, no TimeAndSale, no Order; every Quote time field was zero.
+- RUN THE STRATEGIES ON THE THIN FEED ANYWAY, UNGRADED. Greg: "Let's see how our strategies do even with thin data.
+  We just won't grade them". So the 30 go into paper trading on the tastytrade sandbox with its own stream; every
+  trade of it is marked not scored and none enters the scoring of the new system.
