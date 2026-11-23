@@ -4236,6 +4236,32 @@ session), on his "Go".**
   on the same drawn stretch in each title, not on a side-by-side with the old pictures. Those can be read back
   from `root-rows-20231002` `612efec` and `root-rows-20231018` `afa9bc7` if he asks.
 
+**Greg, on the two reprinted pictures (2026-11-23, sixteenth session): "We should not have originally picked a zero
+price movement to look at our best bid offer graphs."**
+- OWNED: the pick of trade day Oct 2, trade 883 was Claude's (fifteenth session: "the first two he was sent, one of
+  each side"). Whether its price moved was not looked at. It was sold and bought at one price, 2.865.
+- READ, told to him first: the stored index table of each of the two test trade days, the ten trades already
+  pictured in `trade-renders/` only. Each trade on its own line, bought and sold as stored, nothing combined:
+  - trade day Oct 2: 21 sell, sold 2.914, ended at no tick (no bought price), 46.113 s; 184 sell, 2.933 and 2.933,
+    66.447 s; 424 buy, 2.888 and 2.888, 6.823 s; 528 buy, bought 2.909 sold 2.911, 58.702 s; 883 sell, 2.865 and
+    2.865, 15.884 s; 1090 buy, bought 2.868 sold 2.869, 12.305 s; 1396 buy, bought 2.863 sold 2.864, 3.500 s; 1608
+    sell, sold 2.842 bought 2.841, 6.393 s; 1627 buy, bought 2.844 sold 2.845, 25.438 s; 1672 sell, sold 2.839
+    bought 2.836, 31.248 s.
+  - trade day Oct 18: 171 sell, sold 3.064 bought 3.065, 0.020 s; 420 sell, 3.109 and 3.109, 0.003 s; 556 buy,
+    bought 3.127 sold 3.128, 8.618 s; 982 buy, bought 3.111 sold 3.112, 16.686 s; 991 sell, sold 3.112 bought
+    3.111, 21.696 s; 1042 buy, bought 3.084 sold 3.085, 86.299 s; 1056 sell, sold 3.094 bought 3.093, 5.658 s;
+    1160 sell, sold 3.078 bought 3.079, 0.537 s; 1343 buy, bought 3.069 sold 3.071, 25.210 s; 1419 sell, 3.059 and
+    3.059, 23.119 s.
+- CLAUDE'S CALL, stated to him, his to correct: the test trade of trade day Oct 2 becomes TRADE 1672 (a sell: sold
+  2.839, bought 2.836, 31.248 seconds). Why that one: it is a sell, so the two test pictures stay one of each side
+  (982 is a buy); it ended on a trade; and its two prices are three ticks apart, the most of the ten, so the best
+  bid and the best offer have something to show. This chooses which trade a TEST is looked at on. It is not a
+  result and nothing is made from it. Trade 982 of trade day Oct 18 (one tick) stays.
+- TRADE 883'S PICTURE IS KEPT (valid data is not discarded): the one run draws 883 and 1672 together, so the
+  folder's index table and receipt cover both pictures.
+- NOT RUN. It waits for his go on a pod: 2 trades, 2 pictures, trade day Oct 2 only, General Purpose 8 CPUs,
+  $0.32 an hour.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
