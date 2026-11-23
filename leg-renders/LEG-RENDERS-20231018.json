@@ -1,0 +1,165 @@
+{
+ "what": "One picture for every trade leg: his three renders (the trade price curve, the dipole at the tick, the exhaustion at the tick) on one clock, the trade leg marked on all three, with what came before it and after it",
+ "asked": "Greg, 2026-11-23: \"I want every trade leg compared against the exhaustion and the dipole. And show the prebirths for the dipole and exhaustion before the trade starts\"; \"Those 3 renders I mean. Per trade\"",
+ "trade_day": "2023-10-18",
+ "edges": "set by the data: from the first trade of the trade leg before to the last trade of the trade leg after, moved outward so no run of trades or stretch of the dipole it touches is cut",
+ "index_columns": [
+  {
+   "column": "leg_number",
+   "what": "The trade leg, counted from the first print of the trade day as `leg_peaks` stores it. A label only."
+  },
+  {
+   "column": "direction",
+   "what": "Which way it goes: up or down, read off the prices."
+  },
+  {
+   "column": "steps",
+   "what": "How many steps of price it made. Empty when it was still going at the last trade."
+  },
+  {
+   "column": "start_price",
+   "what": "The price it started from, in dollars."
+  },
+  {
+   "column": "end_price",
+   "what": "The price it ended at, in dollars. Empty when it was still going at the last trade."
+  },
+  {
+   "column": "first_trade_position",
+   "what": "Its first trade: position on the tape. A label only."
+  },
+  {
+   "column": "first_trade_received_ns",
+   "what": "When its first trade was received, to the nanosecond."
+  },
+  {
+   "column": "known_position",
+   "what": "The print where it first became known (its first step): position on the tape."
+  },
+  {
+   "column": "known_received_ns",
+   "what": "When that print was received."
+  },
+  {
+   "column": "last_trade_position",
+   "what": "Its last trade. Empty when it was still going at the last trade."
+  },
+  {
+   "column": "last_trade_received_ns",
+   "what": "When its last trade was received. Empty when it was still going."
+  },
+  {
+   "column": "ended_known_position",
+   "what": "The print that showed it had ended (the step back). Empty when it was still going."
+  },
+  {
+   "column": "ended_known_received_ns",
+   "what": "When that print was received."
+  },
+  {
+   "column": "picture_first_ns",
+   "what": "Where its picture starts, set by the data."
+  },
+  {
+   "column": "picture_last_ns",
+   "what": "Where its picture ends, set by the data."
+  },
+  {
+   "column": "trades_in_picture",
+   "what": "How many trades on the tape are inside its picture."
+  },
+  {
+   "column": "render",
+   "what": "The picture drawn for it in this run. Empty when this run did not draw it."
+  }
+ ],
+ "counts": {
+  "trade_day": "2023-10-18",
+  "trade_legs_in_the_trade_day": 5120,
+  "pictures_this_run_draws": 10,
+  "trades_on_the_tape": 30739,
+  "drawn": "10 trade legs picked at random by the computer (seeded with the trade day's own number, 20231018, so the same pick comes out again): [522, 1285, 1697, 2990, 3022, 3173, 3223, 3542, 4092, 4326]",
+  "pictures_drawn": 10,
+  "picture_bytes": 1523996,
+  "picture_megabytes": 1.5,
+  "largest_picture_bytes": 158376,
+  "trade_legs_still_going_at_the_last_trade": 1,
+  "trade_legs_whose_picture_starts_at_their_own_first_trade": 1,
+  "helpers": 2
+ },
+ "trade_legs_with_no_lead_in": [
+  0
+ ],
+ "checks": {
+  "passed": true,
+  "what": "every trade leg sits on trades the stored tape holds, with the stored time; its stored moments are in order; the count of trade legs is the one in the stored receipt of the tick renders; every picture holds its trade leg whole; every trade leg asked for was drawn exactly once",
+  "stored_receipts_compared": 1
+ },
+ "read_from": [
+  "calc-leg_peaks-facts-20231018-part*.parquet",
+  "tick-renders/tick-dipole-20231018.parquet",
+  "crypto-ng-tick/crypto-ng-tick-tape-trades-20231018.parquet",
+  "continuing/continuing-runs-20231018.parquet",
+  "continuing/continuing-dipole-20231018.parquet"
+ ],
+ "nothing_applied": "Nothing is worked out, averaged, ranked, typed or labelled: stored values, drawn.",
+ "files": [
+  {
+   "file": "leg-renders-index-20231018.parquet",
+   "rows": 5120,
+   "bytes": 315934,
+   "sha256": "eb6baefe4df242548dd5e367653450959538c4686621fbeecde72576bd864d11"
+  },
+  {
+   "file": "leg-render-20231018-00522.png",
+   "bytes": 151383,
+   "sha256": "bb9f2fbbba201218afd4941608734e0a5aee20070290d1bca54fd6c451598df9"
+  },
+  {
+   "file": "leg-render-20231018-01285.png",
+   "bytes": 151318,
+   "sha256": "b979ee0154a23e76c27f3f85061502408534e9336559d527dffeb441fe1f1b40"
+  },
+  {
+   "file": "leg-render-20231018-01697.png",
+   "bytes": 149960,
+   "sha256": "27817b57e41d4cd85dabec7d43adcc2073d690d1ce4849f65840c4e0ad7ff1d1"
+  },
+  {
+   "file": "leg-render-20231018-02990.png",
+   "bytes": 152937,
+   "sha256": "4f7b32932641d770e65df887bef3d94788831e9ac2c2397e93e34f98aa22db02"
+  },
+  {
+   "file": "leg-render-20231018-03022.png",
+   "bytes": 158376,
+   "sha256": "9e1a9c064ae930ea9c025f58344c23d4230125acc29f8c75b5bd158b98ce4a94"
+  },
+  {
+   "file": "leg-render-20231018-03173.png",
+   "bytes": 139166,
+   "sha256": "a7ce42810bdf8412f81fc38c686d5f9a467f9c494a69664924be70387f889ab8"
+  },
+  {
+   "file": "leg-render-20231018-03223.png",
+   "bytes": 152560,
+   "sha256": "31f6600a47dfdd54ee2057f8610f3933f94abe60e7974a0ceccd3785e11b8706"
+  },
+  {
+   "file": "leg-render-20231018-03542.png",
+   "bytes": 157783,
+   "sha256": "ab37e74b6a12a8bc29f9da8cb5b85e3b9de1092d26a0af7476d9c4a666c5828f"
+  },
+  {
+   "file": "leg-render-20231018-04092.png",
+   "bytes": 156679,
+   "sha256": "8ff0cad070fb9941c42c951c5a64f62b7076478d5889ac5b59ba188d100202eb"
+  },
+  {
+   "file": "leg-render-20231018-04326.png",
+   "bytes": 153834,
+   "sha256": "b8ac8720dbfab01d7eb7708bad0a0926af549aaa687cf5f6ff6303c759e1c122"
+  }
+ ],
+ "seconds": 8.3
+}
