@@ -993,3 +993,20 @@ record and not a blind test. The versions are in `research-union-current/strateg
   there in every row (trade day Oct 3, best offer up: 3 of 150 eaten runs reached a fifth step, against 42 of
   1,099 and 3 of 101); and the dipole at a first step reads the other way in four of sixteen cells.
 - NOT ANSWERED, as before: anything before a first step; whether moves come back.
+
+## 2026-11-23 (eighteenth session): all thirty strategies go to paper trading; Claude's fifteen as paper-trading rules
+
+Greg: "we don't need one winner strategy. We need 15 good ones that work. They will all be used for paper trading.
+And we will be testing strategies in paper trading. That's what it's there for"; "We're going with your list of 15
+and starting paper trading steps"; "Don't change your strategys based on codex. I want all 30 different ones in
+paper trading".
+- PAPER TRADING IS THE TEST. Do not ask again for a try on a pod first or for a blind trade day.
+- Claude's fifteen are written as rules that each open and close a paper trade (v2, on top of
+  `strategy-20261123-claude/VERSIONS.md`). The first proposals are kept under them.
+- KEPT SO IT IS NOT DONE AGAIN: the first set held a version that never opened a trade, warnings with no side, and
+  one marked "cannot be evaluated". A strategy is a rule that opens a trade. What is not a signal belongs in the
+  rules all strategies share (now rule 6: a change of side made by the span).
+- What paper trading will show first, for every rule: a run's first step back is one tick nearly every time, so a
+  trade closed there is one tick behind on the followed quote unless the move took another step.
+- What the rules need live: the order-by-order tape with the exchange's event marks, the book built as ROOT builds
+  it, and the two lines made at the tick. Trades and best prices alone cannot run six of the fifteen.

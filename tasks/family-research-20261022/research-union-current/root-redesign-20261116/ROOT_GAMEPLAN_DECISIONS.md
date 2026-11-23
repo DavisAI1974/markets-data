@@ -5422,6 +5422,30 @@ want 15 strategies from you".**
   searched. Claude's v2 was written without them. Whether Claude's fifteen are finished is his to say once he has
   seen v2; the folder is opened on his word.
 
+**DECIDED (Greg, 2026-11-23, eighteenth session), stopping the rewrite as it began. His words: "We're going with your
+list of 15 and starting paper trading steps. We have to get these going. We will be doing more research and refining
+as it is going on. The answers to Your questions will be added to the update"; "Don't change your strategys based on
+codex. I want all 30 different ones in paper trading".**
+- CLAUDE'S LIST OF FIFTEEN IS THE LIST. Paper trading starts; research and refining go on beside it.
+- ALL THIRTY (Claude's fifteen and Codex's fifteen) GO INTO PAPER TRADING, each on its own. CLAUDE'S STRATEGIES ARE NOT
+  CHANGED BECAUSE OF CODEX'S. His answers to the open questions come with a later update; nothing waits on them.
+- DONE AT ONCE: the fifteen written as paper-trading rules, v2 (`strategy-20261123-claude/VERSIONS.md`, the first
+  fifteen sections; the first proposals kept whole below them). Each rule: the trigger, the tick it is decided at,
+  the side, what closes it when right and when wrong, when it may open again, what it reads. PUSHED BEFORE CODEX'S
+  FOLDER WAS OPENED.
+- CLAUDE'S CALLS IN v2, stated to him, his to correct:
+  1. THE LIST IS KEPT, WITH ONE CHANGE HE IS TOLD OF: CL09 as first written never opened a trade (it says what is
+     not a signal). It is now rule 6 of all fifteen, and CL09 (v2) is the trade beside CL03 that its evidence
+     points to: the first step made by a cancel, faded. If he wants the list exactly as first shown, CL09 trades
+     nothing and fourteen trade.
+  2. CL10 and CL11 are left as he saw them, on opposite sides of the same events; both go forward.
+  3. CL05 is narrowed to trade legs, where its counts read. The warning uses of CL02, CL08, CL12 and CL14 are out of
+     the rules (kept in v1). No rule looks at another.
+  4. One paper trade for each trigger, one lot, each on its own line; a trade still open at 5 pm Eastern is closed
+     at the last tick of the trade day; no trade opens inside the settlement window.
+  5. No fill and no cost is set in a rule: it gives the tick and the side, and both quotes are written.
+- `OPEN_QUESTIONS.md` is now "what paper trading must settle", strategy by strategy.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
