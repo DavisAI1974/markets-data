@@ -3668,6 +3668,48 @@ You should delete new data that wasn't run properly".**
   the trade leg after, and every hump of the 20-second line it touches whole (the fourteenth session's rule).
   `root/leg_renders.py` still draws the tick versions and is changed only on his word.
 
+**DECIDED (Greg, 2026-11-23, fifteenth session). His words, whole: "Delete anything that you ran your way.  I want the
+other 2 graphs exactly like thry were in crypto. And no hardcoded start and stop time for graphs. Dipole and
+exhaustion start and stop by when the data says and not our predetermined values".**
+- DELETED, everything made on Claude's own versions of the dipole and the exhaustion (the run of trades under way
+  against the run before it), each removal confirmed on the remote:
+  - on the four daily branches: `tick-renders/` (thirteenth session: those two figures on every tick, the whole
+    trade day three renders, the stacked pairs), `continuing/` (fourteenth session: the search over runs of trades
+    and stretches of that dipole) and `four-graphs/` (fourteenth session, Oct 17 only). `root-rows-20231002`
+    `c1b10ae` (171 files), `-20231003` `203f529` (196), `-20231017` `d946892` (159), `-20231018` `8909610` (157).
+    Each `FILES.md` says what was removed and why;
+  - on this branch: `three-renders-samples-20261118/` (the twelfth session's sample pictures and the programs that
+    drew them: those versions, and Claude's own selections he had already refused);
+  - in the code (Markets `ccr-b66f34d5-h6ra1t`, `09478e6`): `root/tick_renders.py`, `root/continuing.py`,
+    `root/four_graphs.py`, and their jobs in the pod runner.
+- KEPT, said to him: `calc-turn_peaks-*` (the peak with no window). It was made on his own word of 2026-11-17
+  ("calc this without the window and find the peak number") and is not one of those versions. `crypto-ng-tick/`
+  (the crypto calculation at the nanosecond) is what stands. Native's pinned dipoles and their renders (`renders/`)
+  are Native's record, not Claude's versions. The counts and words of the earlier sessions stay in this file and
+  the notes as the record of what happened; nothing of them is to be used.
+- THE OTHER TWO GRAPHS EXACTLY AS IN CRYPTO (built, not run: Markets `09478e6`, `root/leg_renders.py`):
+  - THE DIPOLE: bought minus sold over bought plus sold, over the trades of the last 60 seconds
+    (`_dipole_price_overlay.py`, `W = 60`), turned to the trade's side.
+  - THE EXHAUSTION: the same figure over the last 20 seconds (`regroup2.py`), turned to the trade's side.
+  - Both are READ FROM THE STORED LINES of the fourteenth session's crypto and ng run (made at the nanosecond with
+    the July rules). Nothing is worked out in the picture. Turned to the trade's side as crypto did: for a trade
+    leg up the line is as stored, for a trade leg down it is turned over, so above zero reads "with this trade
+    leg".
+  - Drawn as the steps the line moves in. The crypto pictures looked smooth because each line was an average of
+    many trades; one trade leg's line moves in steps. Steps or curve stays his to say (open from handoff Q).
+  - NOT DRAWN, said to him: the crypto dipole picture's lower panel (the rate of change of the lean and of the
+    price, the "dipole dive"). It was worked out on a one-second grid and on an average; a rate at the nanosecond
+    needs his word on how it is made.
+- NO HARD CODED START OR STOP. The crypto pictures' 45 and 60 seconds are not carried. A picture's frame is the
+  trade legs (from the first trade of the trade leg two before, his word of this session, to the last trade of
+  the trade leg after), and the dipole and the exhaustion then set where it starts and stops: every hump of
+  either line that the frame touches is in the picture whole (a hump is the time a line stays on one side of
+  zero, the fourteenth session's rule). Claude's reading, stated to him, his to strike: the two trade legs back
+  are kept, because they are his word and are moves the data makes, not a time.
+- THE RULE in Markets `CLAUDE.md` carries both: the crypto formulas, and no hard coded start or stop.
+- NOT RUN. No pod is up. The pick of 40 (10 at random on each trade day) stands and waits for his go, with the
+  price in front of him.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

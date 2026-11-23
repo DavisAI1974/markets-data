@@ -766,3 +766,15 @@ formulas. That's why we brought that part back and did all of that work last ses
 - Still true of the crypto lines too, to remember when they are read against the price: they are made from the
   prints, so a print moves them on the same nanosecond. Unlike the tick versions they also move with NO print
   (when an old trade leaves the 20 or the 60 seconds), and they carry what happened before a trade leg starts.
+
+Greg, same session: "Delete anything that you ran your way. I want the other 2 graphs exactly like thry were in
+crypto. And no hardcoded start and stop time for graphs. Dipole and exhaustion start and stop by when the data says
+and not our predetermined values".
+- Deleted: `tick-renders/`, `continuing/`, `four-graphs/` on the daily branches, the twelfth session's sample folder,
+  and the three programs that made them. Every count in this file that stands on "the dipole at the tick", "the
+  exhaustion at the tick", "runs of trades on one side" as an exhaustion, or "stretches of the dipole" is a record
+  of what was done and is NOT to be used.
+- The trade leg picture now: trade price curve; the crypto dipole (the 60-second lean); the crypto exhaustion (the
+  20-second line); both read from the stored crypto and ng lines and turned to the trade leg's side.
+- A picture's start and stop: the trade legs frame it, and every hump of either line it touches is whole. No
+  number of seconds anywhere.
