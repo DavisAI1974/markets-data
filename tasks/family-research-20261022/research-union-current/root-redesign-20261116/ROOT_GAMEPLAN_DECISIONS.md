@@ -4467,6 +4467,38 @@ excel sheets because the workbook is.so big. Look for those sheets".**
   measurement), before a single calculation column; that is the "slow time" job. Which columns go in is his to
   say before it is written (his rule: nothing goes in a sheet until decided together).
 
+**Greg (2026-11-23, sixteenth session): "Look back in thr past couplle of sessions".**
+- LOOKED BACK: this file from the eleventh session to the fifteenth, every mention of an Excel sheet.
+- THE SHEETS HE MEANS ARE THE TRADE DAY SHEETS OF `ROOT_dipoles_pinned.xlsx` (eleventh session, 2026-11-17, on his
+  "Should we save these alongside the excel sheets"): ONE Excel file, with a sheet of dipoles and a sheet of
+  exhaustion peaks FOR EACH TRADE DAY. OWNED: Claude named that file in the check but did not say it was his four
+  trade day sheets, and then pointed him at the old files on the `codex/` branches instead.
+- WHAT WAS DECIDED TO GO INTO IT SINCE, AND WHAT IS ACTUALLY IN IT (the file read today: nine sheets, a read-me and
+  four pairs):
+  1. "dipoles <trade day>" (Native's dipoles pinned to our tape; 741, 833, 741, 863 rows): IN, and each row's
+     picture exists.
+  2. "peaks <trade day>" (the 20-second peaks; 9,525; 10,577; 8,619; 7,967 rows): IN, but every row names a page
+     that was deleted on 2026-11-18, and the read-me cites the deleted index.
+  3. "crypto and ng <trade day>" (thirteenth session, 2026-11-18, his word: "it's crypto outputs if are any will
+     now go into our excel sheet. They would be for observation or verification purpose only"; the program's
+     trades, a sheet per trade day, every row linked to its picture): NEVER WRITTEN. The first run was wrong data
+     and was deleted; after the rerun he said (fourteenth session) "Don't apply that data to the excel sheets
+     until we discuss those first", and it has stood there since.
+  4. Desktop's peak lives: his pick was "Workbook later". Not in it. Desktop has added no sheet of its own.
+- SO THE FOUR TRADE DAY SHEETS ARE NOT UP TO DATE: one pair is right, one pair points at deleted pictures, and the
+  crypto and ng sheets he decided on were never made.
+- PUT TO HIM, NOT WRITTEN (his rule: nothing goes in a sheet until decided together). Claude's calls:
+  1. ADD "crypto and ng <trade day>", four sheets: one row per trade of the program (1,794; 1,895; 1,672; 1,682),
+     with its side, the moment its turn was marked, its start and end and how it ended, its length, the price of
+     the trade on the tape that filled it at each end (empty where it ended at no tick), and the program's own
+     reads of the crypto lines (the 20-second read at its start; the 60-second lean at its furthest, at the turn
+     and at its end). LEFT OUT until he says: the program's five price and result columns, because they are made
+     from the mid price (his word of this session: nothing of the mid in a sheet), and its fee marks.
+  2. THE "peaks" SHEETS: the rows stay (they are the stored 20-second peaks, a record); the two columns that name
+     the deleted pages come out, and the read-me is corrected.
+  3. Written in the session from the stored tables (no calculation: stored values into a sheet), read back equal
+     to them, Desktop's file fetched first and nothing of its written over.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
