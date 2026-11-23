@@ -5643,6 +5643,20 @@ back".**
   above ("the next job starts from the record and carries any trade still open"). There may be a gap between runs
   while things are discussed.
 
+**RECEIVED (Greg, 2026-11-23, eighteenth session): the last version of the handoff ("A few changes. This should be the
+last ones").**
+- WHAT CHANGED: stage 1 is COMMITTED NOW, with FOUR agents: scout (Haiku), builder (Sonnet), reviewer (Opus), and
+  Codex's `frankie-performance-auditor` (his `b0e5546` on the trunk), now on Sonnet with no AWS in it; the
+  CLAUDE.md roles section names all four. Then Codex's read-only auditor and verifier tasks run with them, by
+  `CODEX_PROMPT_AMENDMENTS_20261123.md`: where Codex's work and the plan touch, they run as one system (one claim
+  register, the plan's graph, with Codex's verifier contracts as its field definitions; one grounding check run
+  by the reviewer). Stages 2 to 6 and 8 stay filed. The plan gains section 4a-bis "One register, not two".
+- DONE: on Markets `ccr-fffbc766-a1gxpl` (`cfea06b`): the four agent files, the CLAUDE.md roles section as patched,
+  and the plan, index and amendments file as sent, in `research/kalshi/frankie_boss/`.
+- NOT DONE, said to him: nothing is on the Markets TRUNK. Codex works from the trunk (tip `79517f6`), so for his
+  tasks to run with the new roster the four files and the CLAUDE.md section must go onto the trunk; that is on his
+  word "trunk" alone (his standing rule). The amendments file is his to relay to Codex.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
