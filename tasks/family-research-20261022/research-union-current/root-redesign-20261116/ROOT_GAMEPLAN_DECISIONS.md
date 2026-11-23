@@ -3867,6 +3867,23 @@ not worried about different heights. I just want to see if dipole and exhaustion
   Five pictures. A lead to look for in the others, not a result.
 - Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
 
+**Greg, on the redrawn 40 (2026-11-23, fifteenth session): "I see a lot of correlation. They aren't the same size of
+movements but there's almost always some change to the other 2 when price moves even if it's small."**
+- HIS READ, by eye: when the trade price moves, the dipole and the exhaustion almost always change too, by
+  different amounts.
+- SAID TO HIM, so the read is weighed rightly (it holds for the crypto lines as it did for the deleted versions):
+  that particular agreement cannot fail. The trade price only moves at a print, and every print with a side goes
+  into both spans the moment it is received, so both lines change on that same nanosecond. "Some change in the
+  other two when the price moves" is how the lines are made, not something the market shows.
+- WHAT WOULD BE A FINDING, each of which the pictures can show and none of which is built in: (1) the direction
+  and size of a line's change against the direction and size of the price step; (2) what the lines were doing
+  BEFORE a price step (the prebirth); (3) the lines moving while the price does not (a trade at the same price; a
+  trade leaving the span with no print at all); (4) the price that can move with NO trade, the best bid and best
+  ask, which is his own saved idea: a quote can step without touching either line.
+- PUT TO HIM, NOT BUILT (a new count needs his yes): for every print where the trade price steps, on its own line:
+  which way and how far the price stepped, and which way and how far each line moved on that print; beside it the
+  same for prints where the price did not step. No window, nothing averaged, nothing labelled.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
