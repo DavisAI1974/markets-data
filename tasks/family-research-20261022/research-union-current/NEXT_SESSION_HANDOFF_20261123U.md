@@ -61,11 +61,13 @@ THE KEYS:
   ("Put in there they are only test keys"). THIS REPOSITORY IS PUBLIC: that file is readable by anyone; he chose
   it knowingly. Load with `set -a; . <that file>; set +a`. It holds the client ID and secret; THE REFRESH TOKEN IS
   STILL MISSING ("Create Grant" on the sandbox application): when he gives it, add it to that file's last line,
-  commit and push, so he never gives it again.
+  commit and push, so he never gives it again. SUPERSEDED, Greg: "Or cloud is fine too anywhere I'm not posting them
+  every sess": the sandbox REFRESH TOKEN goes in the cloud environment's settings (below), not in that file.
 - PRODUCTION, read-only, data only (client ID, client secret, refresh token from his real account): NEVER in any
   file in git. He enters them once in the cloud environment "Markets" settings (Edit, Environment variables) as
-  `TASTY_PROD_CLIENT_ID`, `TASTY_PROD_CLIENT_SECRET`, `TASTY_PROD_REFRESH_TOKEN`; every later session reads them
-  from there. The stream needs a fully onboarded customer; natural gas quotes may need a data entitlement.
+  `TASTY_PROD_CLIENT_ID`, `TASTY_PROD_CLIENT_SECRET`, `TASTY_PROD_REFRESH_TOKEN`, and with them the sandbox's
+  `TASTY_SANDBOX_REFRESH_TOKEN`; every later session reads them from there. FIRST THING IN A SESSION: check those four
+  names are set (names only, never print a value); if one is missing, tell him which. The stream needs a fully onboarded customer; natural gas quotes may need a data entitlement.
 - NETWORK: `developer.tastytrade.com` and `api.cert.tastyworks.com` are allowed on environment "Markets". Production
   needs `api.tastyworks.com` and the DXLink host the quote token names: an approval card for each, when used.
 

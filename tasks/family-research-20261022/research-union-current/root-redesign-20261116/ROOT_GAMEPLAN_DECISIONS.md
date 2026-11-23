@@ -5694,6 +5694,11 @@ keys".**
   file") is superseded by his word.
 - PRODUCTION KEYS NEVER GO IN GIT: he enters them once in the cloud environment's settings as environment
   variables (Claude's call, stated to him; the session's own tools may not set secret values).
+- Greg, the next minute: "Or cloud is fine too anywhere I'm not posting them every sess". CLAUDE'S CALL, stated to
+  him: the sandbox client ID and secret stay in the file (already public; moving them would not un-publish them).
+  Everything not yet given goes in the cloud environment's settings, never in git: `TASTY_SANDBOX_REFRESH_TOKEN`
+  and the three `TASTY_PROD_*`. The file's empty refresh-token line was removed so loading the file never blanks
+  the value set in the cloud.
 
 ## Held for the later stage: figuring out what moves the market
 
