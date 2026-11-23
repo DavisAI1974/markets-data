@@ -5010,6 +5010,28 @@ crypto op is the correct one or not. We can do it now as long as we can be sure 
   "large" is a number of his, not of Claude's or Codex's.
 - Nothing of either is typed, labelled or in the Excel sheets. The measure feeds no strategy.
 
+**THE RESEARCH THREADS PROGRAM CORRECTED TO READ BY PLACE ON THE TAPE; THE RERUN PUT TO HIM (2026-11-23, seventeenth
+session). BUILT, NOT RUN: it waits for the word "go".**
+- Markets `ccr-dd95052b-3vcrwq`, `b58bb01`, `root/research_threads.py`: a move's first step and end read both stored
+  lines at their own tick; a hump's beginning, furthest and end read the dipole line and the quote at the tick of
+  the read each moment is (when that read is trades leaving the span: before any tick of that nanosecond). No
+  look-up by time alone is left in the program. Nothing else is changed: the same two tables, the same columns.
+- THE RERUN: one pod, the four trade days side by side, General Purpose 8 CPUs, $0.32 an hour; the first run of
+  this job took about four minutes: about 2 cents. It makes a line for each of the same 136,187 moves and 17,304
+  humps. HIS REPLACE ORDER: the pod is started, the old `research-threads/` tables are deleted from the four daily
+  branches and the removal confirmed on the remote, and only then is anything new fetched. `research-trace/`
+  stays: it is the record of the fault and names the commit the old tables can be read back from.
+- THE PASS RULES, WRITTEN BEFORE THE RUN: (1) check 1 again equal to `HOW_A_LEVEL_EMPTIED.json` in all eight rows;
+  (2) at the first step of every move the stored exhaustion line against the step line's own flow: "not equal" is
+  0 on every trade day (equal 32,760; 36,143; 33,814; 31,539: the old equal and not equal together; both empty
+  as before 371; 311; 523; 726); (3) the same numbers of lines as the first run; (4) old against new, read in the
+  session from the stored tables: the cells that changed are exactly the ones the trace counted (a move's first
+  step: exhaustion 104; 144; 136; 130, dipole 113; 151; 144; 137, and so on) and no other column changed. If any
+  of the four fails, nothing new is stored and he is told.
+- AFTER IT: the Excel sheets he approved ("moves" and "humps" for each trade day, columns for each research
+  question, every row pinned to its timestamp), written from the tables made again; the counts read to him again
+  where they moved.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
