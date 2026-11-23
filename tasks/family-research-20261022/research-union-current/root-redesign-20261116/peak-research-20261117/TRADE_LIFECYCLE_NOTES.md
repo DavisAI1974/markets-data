@@ -915,8 +915,10 @@ decisions file (seventeenth session) and in each receipt. Leads, no test of chan
   the one-step legs that are poor.
 - WHERE THE EXHAUSTION OR THE DIPOLE LINE STANDS AT A MOVE'S FIRST STEP SAYS LITTLE ABOUT WHETHER IT GOES ON. About
   one run of the quote in five takes a second step, with the line on the move's side or against it (Oct 2: 2,793
-  of 13,163 against 2,473 of 12,712). A small lean toward "on the move's side" on three trade days, none on trade
-  day Oct 3. The side alone is not the read; how far the line stands, and what it did before, are not counted yet.
+  of 13,163 against 2,473 of 12,712). Added up over the four kinds of run there is a small lean toward "on the
+  move's side" on every trade day, least on trade day Oct 3, where the runs of the best ask up read the other way
+  (681 of 3,687 on its side against 682 of 3,470). The side alone is not the read; how far the line stands, and
+  what it did before, are not counted yet.
 - A HUMP THAT BEGINS ONLY BECAUSE OLD TRADES LEFT THE 20 SECONDS CARRIES NO DIRECTION: the next trade is on its side
   about as often as on the other (Oct 2: 845 against 786). A hump that begins on a trade is followed first by the
   quote it was hitting stepping (1,055) or by more trading on its side (880), seldom by the other side (176).

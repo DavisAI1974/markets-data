@@ -4843,7 +4843,7 @@ then go".**
      as they must be when a new quote steps in front and the old level stays. Rows in the receipts.
 - NOT ANSWERED BY THIS RUN, said to him: "DO LARGE MOVES COME BACK". `given_back` is the price once the ending tick
   was done minus the price the move ended at, which is the first step back: one tick nearly every time (trade day
-  Oct 2, runs of the best ask up: 6,731 of 6,839 at one tick). Whether a move comes back needs what the next moves
+  Oct 2, runs of the best ask up: 6,732 of 6,839 at one tick). Whether a move comes back needs what the next moves
   did. A new read, to be laid out for him first.
 - Nothing of the run is typed, labelled or in the Excel sheets. The Excel column list is put to him next.
 
