@@ -5164,6 +5164,26 @@ in plain englis h what did the runs find?"; then "The other 1 day sheets had alm
   is the readable view; the same research columns are put onto the every-tick tables as additional columns lined
   up tick for tick, on a pod, on his go with the price. Not built yet.
 
+**DECIDED (Greg, 2026-11-23, seventeenth session): "Put the research columns on the every tick tables. Yes we want
+every tick. Why are you rebuilding things that are already there? Just update what already exists".**
+- THE RESEARCH COLUMNS GO ONTO THE EVERY-TICK TABLES. EVERY TICK IS WANTED.
+- ONLY ADD TO WHAT EXISTS; DO NOT REBUILD IT. OWNED: the workbook's layout was rebuilt (sheets replaced) when he
+  wanted columns added. From here a new result is added as columns to what is there; an existing file or layout is
+  not replaced without his word.
+- BUILT, NOT RUN (Markets `ccr-dd95052b-3vcrwq`, `1f79c44`, `root/research_columns.py`). The every-tick table of a
+  trade day is the stored rows and, beside them, one column file for each calculation, lined up row for row. The
+  research columns are added the same way: `calc-research_columns-<trade day>-partNNN.parquet`, one file beside
+  each stored rows file, the same rows in the same order. NO STORED FILE IS REWRITTEN. 327 columns: on every tick,
+  the exhaustion line, the dipole line and the information measure as they stood at that tick (by place on the
+  tape); each move on the tick of its first step (a block of columns for a trade leg, one for a run of the best
+  bid, one for a run of the best offer); each hump on the tick it began on. A hump that began at a moment with no
+  tick is set on the last tick received before it, in its own block, with a count where more than one began
+  before the next tick (said to him: that is the one thing that cannot sit exactly on a tick; its own nanosecond
+  is in its column, and every hump is whole in the stored table of the humps).
+- THE RUN PUT TO HIM: one pod, the four trade days side by side, General Purpose 8 CPUs, $0.32 an hour; it covers
+  every tick of the four trade days (819,783; 878,671; 845,246; 770,579), the 136,187 moves and the 17,304 humps.
+  It waits for the word "go".
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
