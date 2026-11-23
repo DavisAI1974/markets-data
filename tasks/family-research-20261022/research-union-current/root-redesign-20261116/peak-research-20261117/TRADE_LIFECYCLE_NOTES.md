@@ -784,3 +784,16 @@ Greg, same session, two things to keep:
   sheets". Checked: neither Excel file holds any of Claude's versions.
 - SAVED FOR AFTER THE CURRENT WORK, his idea: the best bid and the best ask as two separate graphs, each flowing up
   and down by tick through the trade day, no trades in them. Not to be raised until the trade leg pictures are done.
+
+The 40 pictures on the crypto lines are drawn and stored (`leg-renders/` on each `root-rows` branch; the same 40
+trade legs). By eye only, a handful, nothing measured:
+- The lines do start before the first trade leg in the picture.
+- Thin tape: both lines are a square wave between +1 and -1 with empty gaps (one or two trades fill the span).
+- Busy tape: a picture can hold hundreds of trades with the trade leg a thin band, because a hump of the 60-second
+  line is long.
+- A lead, one case (trade day Oct 18, trade leg 2990, a fall of 6 steps): the 60-second dipole was on the buying
+  side through the whole fall and crossed to the selling side only after it ended. To look for in the others
+  before anything is said about it.
+- Unlike the deleted versions, these lines move with no print (a trade leaving the 20 or the 60 seconds) and can
+  sit against the trade leg for its whole life. So agreement or disagreement with the price is not built in the
+  same way; a print still moves both lines on its own nanosecond.

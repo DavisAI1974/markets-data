@@ -3754,6 +3754,41 @@ trade leg i assume".**
   60-second line is not empty for hours, and the picture would be the trade day. Where a line shows nothing just
   before that first trade (empty or at zero), its graph starts at the trade: there is no activity to show.
 
+**THE 40 TRADE LEG PICTURES ON THE CRYPTO LINES, done (2026-11-23, fifteenth session), on his "Go" (then "Proceed").**
+- A SLIP, OWNED: the first pod (`fnpo2bnhov23en`) was started with a placeholder left in its command where the code
+  commit goes. It could not have run the job. Deleted about 30 seconds later and started again correctly; told to
+  him at once.
+- ONE POD, all four trade days started together, each pinned to its own two CPUs: General Purpose 8 CPUs, $0.32 an
+  hour, `3rum3y4c5xn1u1` (US-CA-2), 09:41:03 to about 09:46:20 UTC: about 3 cents, with the wrong pod under 4.
+  `root/pod_leg_renders.sh 0d5413e... --random 10` (Markets `ccr-b66f34d5-h6ra1t`).
+- ALL FOUR PASSED every check on the first run: every trade leg sits on trades the stored tape holds, with the
+  stored time; its stored moments are in order; both stored lines are in time order; every picture holds its trade
+  leg whole; every trade leg asked for was drawn exactly once.
+- THE SAME 40 TRADE LEGS as the deleted run, and the same counts of trade legs: 6,119; 6,907; 5,660; 5,120.
+- STORED in `leg-renders/` on each daily branch, each file fetched and proved against its receipt, `FILES.md`
+  brought up to date, each push confirmed on the remote: `root-rows-20231002` `6ee428b`, `-20231003` `4534029`,
+  `-20231017` `7058a1a`, `-20231018` `57c8e9e`. The 10 pictures of a trade day are 1,757,847; 1,733,630; 1,789,164;
+  1,739,618 bytes (the largest single picture 193,303). Every trade leg of all four trade days at that size is
+  about 3.9 gigabytes.
+- THE POD WAS DELETED after every push was confirmed; the account was read and shows none.
+- The only trade leg with no lead-in on each trade day is the first (nothing had traded before it).
+- SEEN IN THE PICTURES BY EYE, a handful, nothing measured, said to him:
+  1. Both lines start before the first trade leg in the picture, as he asked.
+  2. The two lines are plainly different lines (60 and 20 seconds), and the turn to the trade leg's side reads
+     right on an up and on a down trade leg.
+  3. On thin evening tape (trade day Oct 17, trade leg 25) both lines jump between +1 and -1 with gaps where
+     nothing traded: one or two trades fill the whole span. The crypto script's own comment warned of this
+     ("a saturated 0/1 square wave").
+  4. On a busy stretch a picture can run minutes and hold hundreds of trades with the trade leg a thin band (trade
+     day Oct 2, trade leg 3016: 401 trades, the trade leg 11 seconds), because a hump of the 60-second line is
+     long. Shown to him as it is; not re-cut.
+  5. One picture (trade day Oct 18, trade leg 2990, down, 6 steps): the 60-second dipole stayed on the BUYING side
+     through the whole fall and only came onto the selling side after the trade leg had ended. One case; a lead to
+     look for, not a result.
+- A drawing fault: the two-line titles of the lower graphs touch the graph above. Corrected in the code for the
+  next run (Markets `ccr-b66f34d5-h6ra1t`, the commit after `0d5413e`); these 40 are stored as drawn.
+- Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
