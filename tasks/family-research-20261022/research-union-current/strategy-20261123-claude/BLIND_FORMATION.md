@@ -10,8 +10,8 @@ ruling means, plainly, and what is kept in place of blindness.
 - TRIED ON: only those four exist. A try of a version on any of them is therefore NOT a blind test: the version
   was formed on that trade day. It is a record of how the version behaves, event by event, on the tape it was
   formed on. Nothing more is claimed from it.
-- A BLIND TEST needs a trade day beyond the four (none is held, and only the four enter any calculation) or live.
-  Every version stays a hypothesis: provisional until live.
+- THE TEST IS PAPER TRADING (Greg, 2026-11-23: "we will be testing strategies in paper trading. That's what it's
+  there for"). All fifteen go forward, each on its own. Every one stays provisional until it clears live.
 
 ## What had already been seen of each trade day before a version was formed
 

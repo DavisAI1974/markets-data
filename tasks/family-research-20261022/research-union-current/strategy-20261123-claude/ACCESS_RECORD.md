@@ -51,7 +51,12 @@ public source); the Runpod skills; the Runpod account (no pod exists; the balanc
 
 ## Not opened, not listed, not searched
 
-- Any `codex/` branch. Any folder `strategy-20261123-codex/`. Nothing of Codex's work of this step was visible.
+- Any `codex/` branch. Any folder `strategy-20261123-codex/`. WHAT WAS SEEN OF CODEX'S WORK before the v2 rules
+  were pushed: only the handoff note Greg pasted into the session (its branch `codex/ng-blind-20261123`, its
+  commit `ad10921`, the names of its files, and that it holds fifteen v2 paper-trading rules with their triggers,
+  direction, management, exits and resets). None of its strategies. The v1 proposals and the v2 rules of this
+  folder were both written and pushed before that folder was opened, and are not changed by it (Greg: "Don't
+  change your strategys based on codex").
 - The old research and strategy documents of earlier sessions (on `main` and elsewhere), Claude's own strategy
   work of last week included. This session has no memory of them.
 - The stored tables of the information measure, Native's record, the crypto and ng program's trades and turns,

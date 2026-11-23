@@ -1,4 +1,275 @@
-# The 15 versions (Claude, 2026-11-23, eighteenth session)
+# Claude's 15 strategies: the paper-trading rules (v2, 2026-11-23, eighteenth session)
+
+Greg, 2026-11-23: "We're going with your list of 15 and starting paper trading steps"; "we don't need one winner
+strategy. We need 15 good ones that work. They will all be used for paper trading. And we will be testing strategies
+in paper trading. That's what it's there for"; "Don't change your strategys based on codex. I want all 30 different
+ones in paper trading".
+
+THE FIRST 15 SECTIONS BELOW ARE THE CURRENT RULES (v2): the same fifteen, each written as a rule that opens and
+closes a paper trade. THE FIRST PROPOSALS (v1) ARE KEPT WHOLE UNDER THEM. These rules were written and pushed before
+Codex's folder was opened and are not changed by it. None has been traded: paper trading is the test. The counts
+behind each are in `EVIDENCE.md`; what paper trading must settle is in `OPEN_QUESTIONS.md`.
+
+WHAT CHANGED FROM v1, said plainly:
+- Every rule now has one side, one way of closing, and says when it may open again. The "warning" uses are gone
+  from the rules (they are kept in v1 below).
+- No rule looks at another. Each stands alone.
+- CL09 as first written never opened a trade (it says what is NOT a signal). It is now rule 6 of "what holds for
+  all fifteen", and CL09 is the trade its own evidence points to beside CL03: the first step made by a CANCEL,
+  faded. Claude's call, stated to Greg, his to strike.
+- CL11 is unchanged in substance: it takes the other side of CL10 on the same events. Both go forward; one of the
+  two will be on the losing side of each event, by construction. Said to Greg.
+- CL05 is narrowed to trade legs, where its counts read; the runs of the quote stay in v1.
+- CL15 simply trades; nothing has to be researched first.
+
+## What holds for all fifteen
+
+1. THE DECISION TICK. A rule decides at the tick that carries the exchange's own end-of-event mark
+   (`ends_exchange_event`) for the event in which its trigger became true, never inside an event. If the thing the
+   rule follows has already ended by that tick, no trade is opened.
+2. ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE. Trades of one strategy may be open at the same
+   time (on different runs, humps or levels); nothing is netted; no strategy looks at another. The same run, hump,
+   level or order never opens a second trade of the same strategy. (Claude's call; "one at a time for each
+   strategy" is a one-line change if he prefers it.)
+3. THE SETTLEMENT WINDOW (2:28 to 2:30 pm Eastern, marked on the tape): no trade is opened on a row inside it. A
+   trade open when it begins is held through it and marked.
+4. THE END OF THE TRADE DAY: a trade still open at the last tick of the trade day (5 pm Eastern) is closed at that
+   tick and marked "closed at the end of the trade day". Nothing is carried into the next trade day.
+5. A MISSING INPUT: where a stored value a rule reads is empty, no trade is opened and the tick is counted. A trade
+   the tape gives no side for neither opens nor closes anything.
+6. A CHANGE OF SIDE MADE BY THE SPAN IS NO SIGNAL (v1's CL09). When a line changes side, or a hump begins, at a
+   moment with no tick (old trades left the 20 or the 60 seconds, nothing new traded), nothing is opened and it is
+   never read as the other side arriving. A hump's own END still closes CL07 and CL08, however it ends.
+7. NO SECONDS, NO NUMBER OF OURS, NO MID PRICE, NO FILL, NO COST. The rule gives the tick and the side. How the
+   paper platform fills and prices it is not set here. Written for each paper trade: the tick it opened and closed
+   at; the best bid and the best offer at each, EACH ON ITS OWN; what closed it; the trigger's own values; the
+   steps of each quote and the prints between.
+8. THE TWO LINES are the stored exhaustion line (20 seconds) and dipole line (60 seconds), the crypto formulas made
+   on the natural gas tape, read at the tick by place. Only: above zero, below zero, at zero, empty.
+9. WHAT THE RULES NEED LIVE: the order-by-order tape (every add, cancel, change and fill, with the exchange's event
+   marks), the book built from it the way ROOT builds it, and the two lines made at the tick. Which platform and
+   which feed is Greg's.
+10. OUT of every rule: the 20-second peak family, Native's record, the crypto and ng program's trades and turns,
+    the information measure, crypto data, the old research and strategy documents, and Codex's strategies.
+11. WORDS. "Best offer" is the column `best_ask`. A "run" is a run of the best bid or the best offer as
+    `quote_runs` follows it; its "first step back" is the tick it ends. BUY and SELL are the side of the paper
+    trade.
+
+## CL01 (v2). The eaten level
+
+- WHEN: a move is deciding whether to take another step.
+- TRIGGER: a run of the best offer UP takes its second step, and every order that stood at its first level left by
+  being FILLED. (Mirror: a run of the best bid DOWN, the same.)
+- DECIDED AT: the end of the exchange event that holds the second step. No trade if the run has already stepped
+  back by then.
+- SIDE: BUY for the best offer up. SELL for the best bid down.
+- CLOSES: at the run's first step back. RIGHT if the run took a third step first, in a later exchange event; WRONG
+  if the step back came first.
+- OPENS AGAIN: at the next run's second step.
+- READS: `calc-quote_runs-facts`, `calc-resting-facts`.
+- BEHIND IT: counted (the paper's finding 4).
+
+## CL02 (v2). The abandoned level
+
+- WHEN: the same moment as CL01.
+- TRIGGER: a run of the best offer UP takes its second step, and every order that stood at its first level was
+  PULLED, none filled. (Mirror: a run of the best bid DOWN.)
+- DECIDED AT: the end of the exchange event that holds the second step. No trade if the run has already stepped
+  back or taken a third step by then.
+- SIDE: SELL for the best offer up. BUY for the best bid down. (Against the run.)
+- CLOSES WHEN RIGHT: at the run's first step back.
+- CLOSES WHEN WRONG: at the run's third step.
+- OPENS AGAIN: at the next run's second step.
+- READS: as CL01.
+- BEHIND IT: counted (the paper's finding 4).
+
+## CL03 (v2). The first step made by a fill
+
+- WHEN: the first step of a move.
+- TRIGGER: the best offer steps UP (a run starts) because the order whose leaving moved it was FILLED, in an
+  exchange event that holds a buy. (Mirror: the best bid steps DOWN on a fill by a sell.)
+- DECIDED AT: the end of that exchange event. No trade if the run has already stepped back by then.
+- SIDE: BUY for the best offer up. SELL for the best bid down.
+- CLOSES: at the run's first step back. RIGHT if the run took a second step first, in a later exchange event; WRONG
+  if the step back came first.
+- OPENS AGAIN: at the next run's start.
+- READS: the rows, `calc-sweeps-facts`, `calc-quote_runs-facts`.
+- BEHIND IT: no count at the first step. Finding 4 carried one step earlier.
+
+## CL04 (v2). A level that has only been eaten, before it gives
+
+- WHEN: before the move.
+- TRIGGER: since the best offer took its present price, size has been FILLED there and none has been pulled, added
+  or moved. (Mirror: the best bid.)
+- DECIDED AT: the end of the first exchange event in which that holds. No trade if the level has already given way
+  or the state is already broken at that tick.
+- SIDE: BUY when the best offer is being eaten. SELL when the best bid is.
+- CLOSES WHEN WRONG: before the level gives, at the first tick size is pulled, added or moved at that price, or a
+  better quote steps in front of it.
+- CLOSES WHEN RIGHT: the level gives (the quote steps away): the trade is HELD, and closes at that run's first step
+  back.
+- OPENS AGAIN: when that quote next takes a new price.
+- READS: `calc-book_totals`, the rows' marks of the quote moving, `calc-quote_runs-facts`.
+- BEHIND IT: no count. Nothing has yet been read before a first step.
+
+## CL05 (v2). A trade leg's first step with the exhaustion line on its side
+
+- WHEN: the first step of a move in the prints.
+- TRIGGER: a trade leg makes its first step (the print that steps away), AND at that tick at least one of the two
+  quotes is no longer where it stood at the leg's first trade (so it is not the print going back and forth between
+  the bid and the offer), AND the exhaustion line is on the leg's side.
+- DECIDED AT: the end of the exchange event of that print. No trade if the leg has already ended by then.
+- SIDE: BUY for a leg up. SELL for a leg down.
+- CLOSES: at the print that ends the leg. RIGHT if the leg took a second step first; WRONG if it ended first.
+- OPENS AGAIN: at the next trade leg's first step.
+- READS: `calc-leg_peaks-facts`, `calc-research_columns` (`exhaustion_20s`), the rows.
+- BEHIND IT: counted for the line (the paper's finding 3); it read the other way for legs up on trade day Oct 3.
+  The condition on the quotes at the first step is not counted.
+
+## CL06 (v2). Both quotes have stepped the same way
+
+- WHEN: the middle of a move.
+- TRIGGER: since the last tick at which either quote stepped DOWN, the best bid has stepped up and the best offer
+  has stepped up. It begins at the tick the second of the two steps. (Mirror for down.) Not while the best offer
+  is at or below the best bid.
+- DECIDED AT: the end of the exchange event in which it begins. No trade if either quote has already stepped back
+  by then.
+- SIDE: BUY when both stepped up. SELL when both stepped down.
+- CLOSES: at the first step the other way by either quote. RIGHT if either quote stepped further the same way
+  first; WRONG if the step the other way came first.
+- OPENS AGAIN: the next time the state begins.
+- READS: the rows, `calc-quote_runs-facts`.
+- BEHIND IT: no count.
+
+## CL07 (v2). Fresh trading on the dipole's side
+
+- WHEN: the birth of a push.
+- TRIGGER: a hump of the exhaustion line begins ON A TRADE, and the dipole line as it stood just before that trade
+  was on the hump's side.
+- DECIDED AT: the end of the exchange event of that trade. No trade if the hump has already ended by then.
+- SIDE: BUY for a buying hump. SELL for a selling hump.
+- CLOSES: when the hump ends (the line next stands at zero, is empty, or has crossed). RIGHT if the quote the hump
+  was hitting stepped away first, in a later exchange event; WRONG if the hump ended first.
+- OPENS AGAIN: at the next hump that begins on a trade.
+- READS: `research-humps`, `crypto-ng-tick-lean-60s`, `calc-research_columns`.
+- BEHIND IT: counted for humps that begin on a trade (the paper's finding 6); not yet split by the dipole's side.
+
+## CL08 (v2). Fresh trading against the dipole
+
+- WHEN: the turn.
+- TRIGGER: a hump of the exhaustion line begins ON A TRADE while the dipole line just before that trade was on the
+  OTHER side; AND THEN the quote the hump is hitting steps away in a LATER exchange event, before the hump ends.
+- DECIDED AT: the end of the exchange event of that step. No trade if the hump has already ended by then.
+- SIDE: BUY for a buying hump. SELL for a selling hump. (With the new side.)
+- CLOSES: when the hump ends, or at that quote's first step back, whichever comes first. RIGHT if that quote took
+  a second step first; WRONG otherwise.
+- OPENS AGAIN: at the next such hump.
+- READS: as CL07, and `calc-quote_runs-facts`.
+- BEHIND IT: no count.
+
+## CL09 (v2). The first step made by a cancel
+
+- WHEN: the first step of a move.
+- TRIGGER: the best offer steps UP (a run starts) because the order whose leaving moved it was CANCELLED, with no
+  trade in that exchange event. (Mirror: the best bid steps DOWN on a cancel.)
+- DECIDED AT: the end of that exchange event. No trade if the run has already stepped back or stepped again by
+  then.
+- SIDE: SELL for the best offer up. BUY for the best bid down. (Against the step.)
+- CLOSES WHEN RIGHT: at the run's first step back.
+- CLOSES WHEN WRONG: at the run's second step.
+- OPENS AGAIN: at the next run's start.
+- READS: the rows, `calc-sweeps-facts`, `calc-together-facts`, `calc-quote_runs-facts`.
+- BEHIND IT: no count at the first step. Finding 4 (a level only pulled leads on least often) and finding 1 (most
+  runs end at one step), carried one step earlier.
+
+## CL10 (v2). The price runs against the dipole: with the price
+
+- WHEN: the middle of a move.
+- TRIGGER: a run of the quote (either quote, either way) takes its second step while the dipole line stands on the
+  OTHER side.
+- DECIDED AT: the end of the exchange event that holds the second step. No trade if the run has already stepped
+  back by then.
+- SIDE: BUY for a run up. SELL for a run down. (With the price.)
+- CLOSES: at the run's first step back. RIGHT if the run took a third step first; WRONG if the step back came
+  first.
+- OPENS AGAIN: at the next run's second step.
+- READS: `calc-quote_runs-facts`, `calc-research_columns` (`dipole_60s`).
+- BEHIND IT: one case by eye. No count at the second step.
+
+## CL11 (v2). The price runs against the dipole: against the price
+
+- WHEN: the same moment as CL10.
+- TRIGGER: as CL10.
+- DECIDED AT: as CL10. No trade if the run has already stepped back or taken a third step by then.
+- SIDE: SELL for a run up. BUY for a run down. (Against the price: the other side of CL10.)
+- CLOSES WHEN RIGHT: at the run's first step back.
+- CLOSES WHEN WRONG: at the run's third step.
+- OPENS AGAIN: at the next run's second step.
+- READS: as CL10.
+- BEHIND IT: no count at the second step. At the first step, runs with the dipole against them took a second step
+  somewhat less often in twelve of sixteen cells.
+
+## CL12 (v2). The reloaded level
+
+- WHEN: the middle of a move, into the turn.
+- TRIGGER: an order at the best offer is traded against and straight after shows the same size or more (size was
+  put back). The FIRST time on that order. (Mirror: an order at the best bid.)
+- DECIDED AT: the end of that exchange event. No trade if that order has already left by then.
+- SIDE: SELL when an offer is reloaded. BUY when a bid is. (Against the push.)
+- CLOSES WHEN RIGHT: at the first step AWAY from that level by either quote (down for a reloaded offer).
+- CLOSES WHEN WRONG: when that order leaves by fill, or the level empties and the quote steps through it.
+- CLOSES, NEITHER: when that order is cancelled (the one reloading has gone).
+- OPENS AGAIN: at the first reload on another order.
+- READS: `calc-refills-facts`, the rows.
+- BEHIND IT: no count.
+
+## CL13 (v2). Paying up through more than one level
+
+- WHEN: the middle of a move.
+- TRIGGER: one exchange event holds a trade that fills through MORE THAN ONE price level, with one aggressor side.
+- DECIDED AT: the tick with that event's end mark.
+- SIDE: BUY when a buyer paid up. SELL when a seller did.
+- CLOSES: at the first step back of the quote that was swept. RIGHT if that quote stepped further first, in a
+  later exchange event; WRONG if the step back came first.
+- OPENS AGAIN: at the next such event.
+- READS: `calc-sweeps-facts`, `calc-quote_runs-facts`.
+- BEHIND IT: no count.
+
+## CL14 (v2). The other side arrives at the top step of a run
+
+- WHEN: the turn.
+- TRIGGER: the best bid has been stepping UP and has not stepped back; the FIRST sell since its latest step prints
+  at the level that step made; and that level still stands at the end of the exchange event. (Mirror: the best
+  offer stepping DOWN, and the first buy at its latest level.)
+- DECIDED AT: the end of that exchange event.
+- SIDE: SELL for the best bid up. BUY for the best offer down. (Against the run.)
+- CLOSES WHEN RIGHT: at the run's first step back.
+- CLOSES WHEN WRONG: at the run's next step the same way.
+- OPENS AGAIN: at the run's next step, or the next run.
+- READS: the rows, `calc-quote_runs`.
+- BEHIND IT: counted last week in another form (a run of trades read at its last trade); not in this form.
+
+## CL15 (v2). The step back and the return
+
+- WHEN: after a move.
+- TRIGGER: a run of the quote (either quote, either way) made two steps or more and ended; the run back made ONE
+  step and ended; so the quote has stepped the original way again.
+- DECIDED AT: the end of the exchange event of that return step. No trade if the new run has already stepped back
+  by then.
+- SIDE: the ORIGINAL direction: BUY when the first run was up, SELL when it was down.
+- CLOSES: at the new run's first step back. RIGHT if the new run took a second step first; WRONG if the step back
+  came first.
+- OPENS AGAIN: at the next such return.
+- READS: `calc-quote_runs-facts`.
+- BEHIND IT: no count. The first step back of a run is one tick nearly every time; whether the move then comes
+  again has not been read.
+
+---
+
+# THE FIRST PROPOSALS (v1), KEPT WHOLE: the 15 versions as first written (Claude, 2026-11-23, eighteenth session)
+
+Not the current rules: the current rules are the fifteen v2 sections above. Kept unchanged so every proposal
+stays on record, with its warning uses, what is built in and what would show it wrong.
 
 Fifteen strategy versions for the natural gas front-month future, each for one situation and one stage of a move.
 Every one is a HYPOTHESIS. None has been tried on the tape. None is ranked against another, none is merged into

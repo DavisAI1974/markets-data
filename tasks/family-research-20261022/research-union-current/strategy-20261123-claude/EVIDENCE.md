@@ -13,9 +13,10 @@
   `-20231003` `c8a0b75`, `-20231017` `733442a`, `-20231018` `1bd670e`), and two count files of the peak research of
   2026-11-17 beside the running notes (`HOW_A_LEVEL_EMPTIED.json`, `ATTRIBUTES_BY_PILE.json`: the peak with no
   window only). All 36 count tables of the research receipts are whole in `EVIDENCE_COUNTS.md`.
-- NO STORED TABLE OF MARKET DATA WAS OPENED AND NOTHING WAS CALCULATED for this file. So "every case individually"
-  is not met here: the single lines are in the stored tables named under each version, and reading them is a run
-  on a pod, on Greg's go.
+- NO STORED TABLE OF MARKET DATA WAS OPENED AND NOTHING WAS CALCULATED for this file. The single lines are in the
+  stored tables named under each rule.
+- THE RULES ARE NOW v2 (paper-trading rules). Where v2 changed a rule the heading says so. Paper trading is the
+  test (Greg, 2026-11-23).
 - THE VERSIONS WERE FORMED ON THESE SAME FOUR TRADE DAYS. A count below is where an idea came from. It is not a
   test of it.
 - "none" means that trade day's receipt has no such row.
@@ -99,7 +100,7 @@ The same runs from the count file of 2026-11-17, which also holds a FIFTH step:
 | Best bid up, every order pulled: took a third step | 65 | 53 | 73 | 63 |
 | Best bid up, every order pulled: two steps only | 139 | 136 | 161 | 157 |
 
-## CL03. The first step made by a fill. CL04. A level that has only been eaten, before it gives
+## CL03. The first step made by a fill. CL04. A level that has only been eaten, before it gives. CL09 (v2). The first step made by a cancel
 
 Source: the paper's finding 1; receipts, table "how much of a move was left at its first step".
 
@@ -122,10 +123,12 @@ Source: the paper's finding 1; receipts, table "how much of a move was left at i
   table shows what is at stake there: most runs make one step only.
 - AGAINST: the paper, in its own words: "Nothing yet warns BEFORE a move's first step: only the lines AT the first
   step and at the end were read."
+- CL09 (v2) stands on the same two things read the other way: a level that was only pulled led on least often
+  (the table under CL01 and CL02), and most runs end at one step (this table).
 - UNRESOLVED: how many first steps are made by a fill and how many by a cancel; what follows each. For CL04, how
   often a level is traded into with nothing pulled or added since the quote took that price.
 
-## CL05. A move's first step with the exhaustion line on its side
+## CL05. A first step with the exhaustion line on its side (v2: trade legs only)
 
 Source: the paper's findings 2 and 3; receipts, tables "the exhaustion_20s line at the first step" and "the print
 against the quote".
@@ -200,7 +203,7 @@ Source: the paper's finding 2 (the table above), by analogy; the receipts of `qu
   tick several times while the bid stood.
 - UNRESOLVED: how often the state begins, and what the next step of either quote is.
 
-## CL07. Fresh trading on the dipole's side. CL08. Fresh trading against the dipole. CL09. A change of side made by the span
+## CL07. Fresh trading on the dipole's side. CL08. Fresh trading against the dipole. Rule 6 of all fifteen (v1's CL09): a change of side made by the span
 
 Source: the paper's findings 5 and 6; receipts, tables "how a hump began" and "what came first after a hump
 began"; the crypto and ng receipt.
@@ -231,7 +234,7 @@ began"; the crypto and ng receipt.
 | sell hump: a step of the best offer (the other quote) | 70 | 81 | 81 | 82 |
 | sell hump: a trade on the other side | 96 | 97 | 51 | 49 |
 
-**What came first after a hump that began AS OLD TRADES LEFT (CL09)**
+**What came first after a hump that began AS OLD TRADES LEFT (rule 6; v1's CL09)**
 
 | | Oct 2 | Oct 3 | Oct 17 | Oct 18 |
 |---|---:|---:|---:|---:|
@@ -247,7 +250,7 @@ began"; the crypto and ng receipt.
 - BEHIND CL07 AND CL08: after a hump that began on a trade, the quote it was hitting stepped, or more trading came
   on its side, far more often than a trade on the other side came, in every cell. The other quote stepping first
   lies in between, and which way it stepped is not in the count.
-- BEHIND CL09: after a hump made by the span, a trade on its side and a trade on the other side came in close
+- BEHIND RULE 6 (v1's CL09): after a hump made by the span, a trade on its side and a trade on the other side came in close
   numbers in every cell: a little more often on its side in five of the eight cells, on the other side in three.
 - BUILT IN: a buy that takes out the best offer steps it in the same exchange event. The column that says so is
   stored (`next_..._same_event`) and has not been counted. A hump holding one trade ends when that trade leaves
