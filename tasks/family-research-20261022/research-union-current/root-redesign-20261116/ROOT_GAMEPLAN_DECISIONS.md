@@ -5472,6 +5472,35 @@ codex. I want all 30 different ones in paper trading".**
   6. Codex's six management rules need an open paper position: Claude's call, they attach to Codex's own entries
      only, never to Claude's.
 
+**STOPPED BY GREG (2026-11-23, eighteenth session): "Stop. We have real paper trade options. Go back a week or two in
+the sessions and read our discussions"; "After you read stop so we can discuss".**
+- OWNED: Claude had begun to build its own paper engine (a program replaying the stored tape). Nothing of it was
+  written or pushed. Steps 2 and 3 of the list above are WITHDRAWN. An instruction of his, recorded in Codex's
+  handoff of about 2026-11-09 (`NEW_CHAT_HANDOFF.md`, markets-data `1dd7d93`), says: every defined strategy goes into
+  PLATFORM paper trading; the platform must execute and record the paper trades automatically; delayed or older
+  playback data is acceptable; "Do not substitute our own standalone historical strategy backtest for those
+  platform paper trades."
+- THE CHATS WERE READ, not the written record: every session of 2026-11-08 to 11-18 in Claude's session list (twenty
+  sessions), by three readers, each paged back to its first message. HIS OWN WORDS FOUND:
+  - 2026-11-09: "Tradovate is current paper trading selection".
+  - 2026-11-08: "we're on the edge of finally starting paper trases and i want him to look this over before hand to
+    see if running the historical data through this strengthens or finds trade signals for us to test in the paper
+    trading environment".
+  - 2026-11-08: "do daily futures because we'll need them for tasty at some point"; "Which ones will we need for
+    options on tasty?"; then "We won't worry about it at the moment".
+  - 2026-11-09: "We don't need it to run paper, it's just for discovery".
+  - 2026-11-17: "some sort of barometer to see where our knowledge works or doesn't in a parer trade atmosphere".
+- THE PLATFORMS AS THE EARLIER DOCUMENTS RECORD THEM (Codex's and Claude's of 2026-11-09, read inside those chats; not
+  his typed words): Henry Hub natural gas, the December 2026 contract (NGZ6); Tradovate demo selected, its API said
+  to need a funded balance of $1,000 and a $25 a month add-on, quotes and depth only, no order-by-order data;
+  NinjaTrader researched (automated strategies, a local simulated account, depth with no order numbers); CME's free
+  practice simulator opened with NGZ6 (10-minute delayed data, no strategy loader found); tastytrade's sandbox
+  rejected the futures orders tried; nothing installed, connected, funded or ordered. Kalshi's demo account is the
+  paper option the July notes name for Kalshi contracts.
+- NOT READ: the chat of 2026-11-12 or 13 where the strategy work began, and Codex's and Desktop's own chats (none is
+  in Claude's session list); the folder `paper-rules/20261109/` on `main` (listed, never opened).
+- NOTHING IS BUILT OR STARTED UNTIL HE HAS DISCUSSED IT.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
