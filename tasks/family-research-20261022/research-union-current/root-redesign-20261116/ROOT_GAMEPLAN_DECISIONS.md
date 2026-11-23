@@ -4196,6 +4196,41 @@ midprice hasn't been added to the excel sheets".**
 - NOT CHECKED BY VALUE: no column was compared with a mid worked out in the session (that would be a calculation
   on market data in the session). The check is by every heading, description, formula and text cell.
 
+**THE TWO TEST PICTURES REPRINTED WITH THE TRADE PRICE GRAPH AS TWO POINTS AND A LINE, done (2026-11-23, sixteenth
+session), on his "Go".**
+- THE ORDER HE SET, KEPT: the pod was started; the two stored test pictures, their index tables and receipts were
+  removed from the two daily branches and each removal confirmed on the remote (`root-rows-20231002` `a2bb3e6`,
+  `root-rows-20231018` `6d7151f`); only then was anything new fetched.
+- ONE POD, the two trade days together, each pinned to its own four CPUs: General Purpose 8 CPUs, $0.32 an hour,
+  `ocu44mumcu9pwc` (US-CA-2), 12:43:48 to about 12:53 UTC: about 5 cents. Markets `ccr-26ff219b-72monm` `6562821`,
+  launched with `DAYS='20231002 20231018' ... trade_renders --only 20231002:883 --only 20231018:982 --quotes`.
+  Both passed every check on the first run (the first time this change ran anywhere). The pod's address was added
+  to the environment "Markets" on his approval card and the last session's dead address taken off.
+- 2 TRADES, 2 PICTURES. The index table written beside each covers every trade of the program on its trade day
+  (1,794 and 1,682).
+- STORED in `trade-renders-quotes-test/`, each file fetched and proved against its receipt, `FILES.md` brought up
+  to date, each push confirmed on the remote: `root-rows-20231002` `3b3f15d`, `root-rows-20231018` `a4f2708`. THE
+  POD WAS DELETED after that; the account was read and shows none.
+- WHAT THE PRICE GRAPH SHOWS NOW:
+  - trade day Oct 2, trade 883 (a sell): sold at 2.865 at its start, bought at 2.865 at its end, 15.884 seconds
+    later. The two points are at ONE price, so the line is level and the scale names that one price.
+  - trade day Oct 18, trade 982 (a buy): bought at 3.111, sold at 3.112, 16.686 seconds later. The line rises one
+    tick and the scale names the two prices.
+  - BOTH TRADES ENDED ON A TRADE ON THE TAPE, so both pictures carry both points.
+- A COUNT THE JOB WROTE, each trade day on its own: trades of the program that ended at no tick (the wait ran out;
+  nothing traded there), which now have no end price: 99 of 1,794 (trade day Oct 2) and 134 of 1,682 (trade day
+  Oct 18). The receipt names each. The other two trade days were not run.
+- NO VALUE MADE FROM THE MID PRICE IS STORED BY THIS RUN. Still stored from before, untouched, his to say: the 40
+  pictures of `trade-renders/` and their four index tables (mid price line; `end_price` at the mid for a trade that
+  ended at no tick), and the program's own price columns and half spread of the crypto and ng run.
+- THE LAST GRAPH of both pictures is still the mid price's change per tick (his "Keep the other graphs the same").
+- SEEN IN THE TWO PICTURES BY EYE, nothing measured, said to him as it is:
+  1. Trade 883's two points are at one price although the best bid and the best offer both moved during it: the
+     program's start and end are each the first trade on the other side, and both printed at 2.865.
+  2. With the mid line gone, graph 1 says only where and when the trade was made. What the price did in between
+     is read from the best bid and best offer graphs under it.
+- Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

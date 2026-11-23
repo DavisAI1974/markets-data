@@ -855,3 +855,12 @@ The mid price, kept so it is not looked up again (the full list is in the decisi
   line, the sides of the trades and the 30-second wait. The mid only prices them (the program's own open and close
   price and its three results in hundredths of a percent, and one half spread figure for the trade day). So the
   dipole, the exhaustion, the humps and every picture's frame do not stand on it.
+
+The two test pictures were reprinted this way the same session (`trade-renders-quotes-test/`, trade day Oct 2 trade
+883 and trade day Oct 18 trade 982; Markets `6562821`).
+- Trade 883 (a sell): sold 2.865, bought 2.865: one price, a level line. Trade 982 (a buy): bought 3.111, sold 3.112.
+- To remember when a price graph of two points is read: the two points are the program's own start and end, each
+  the first trade on the OTHER side after a turn. They say where and when, not what the price did in between; the
+  best bid and the best offer graphs carry that.
+- Trades of the program that ended at no tick and so have no end price: 99 of 1,794 (trade day Oct 2), 134 of 1,682
+  (trade day Oct 18). Their pictures will carry one point and the dotted line where the wait ran out.
