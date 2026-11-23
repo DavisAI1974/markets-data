@@ -5232,7 +5232,7 @@ that we talked about until later. You are only updating the outputs we currently
 **THE RESEARCH COLUMNS ADDED BESIDE THE EVERY-TICK ROWS (the daily sheets), done (2026-11-23, seventeenth session), on
 his go.**
 - ONE POD, the four trade days side by side: General Purpose 8 CPUs, $0.32 an hour, `sg5jzl7k7kp5ud` (US-CA-2),
-  15:59:59 to about 16:04:30 UTC: about 2 cents. Markets `ccr-dd95052b-3vcrwq` `1f79c44`,
+  15:59:59 to about 16:03 UTC (the clock read 16:03:13 just after it was deleted): under 2 cents. Markets `ccr-dd95052b-3vcrwq` `1f79c44`,
   `root/research_columns.py`. All four passed the job's checks on the first run; each trade day took about half a
   minute. The pod's address went onto the environment on his approval card and the one before came off.
 - STORED at the top of each daily branch beside the rows, as every calculation's columns are, every file fetched
