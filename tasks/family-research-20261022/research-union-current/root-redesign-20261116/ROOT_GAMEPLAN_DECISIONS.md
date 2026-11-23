@@ -4534,6 +4534,37 @@ excel sheets because the workbook is.so big. Look for those sheets".**
 - NOT IN THE FILE, his to say: Desktop's peak lives ("Workbook later"); the humps; the two crypto lines read at
   every trade on the tape; anything of the sixteen calculations.
 
+**DECIDED (Greg, 2026-11-23, sixteenth session), on being told that as the rules stood the crypto dipole and
+exhaustion were observation only and could not feed a strategy: "The crypto data is not to be in our analysis or on
+excel sheets. The ng version of these absolutely should be used for strategy".**
+- THE NATURAL GAS DIPOLE AND EXHAUSTION ARE USED FOR STRATEGY. The dipole line (60 seconds) and the exhaustion line
+  (20 seconds) made on the natural gas tape with the crypto formulas, and the humps of the 20-second line, are
+  inputs to the strategy analysis and go into the Excel sheets. This changes the rule of 2026-11-18
+  ("observation and verification only") for those two lines.
+- CRYPTO DATA IS NOT IN OUR ANALYSIS OR ON THE EXCEL SHEETS: nothing measured on a crypto market (prices, trades,
+  results, the saved crypto arcs, the values and averages of the crypto pictures). The crypto work gives the
+  formulas and nothing else.
+- CHECKED AGAINST WHAT IS STORED, said to him: no crypto market data is in the Excel file or on the four daily
+  branches. Every value in the sheets named "crypto and ng" is made from natural gas trades; the name is his own
+  of 2026-11-18 for the crypto program run on the natural gas tape.
+- Claude's reading, stated to him, his to correct: THE PROGRAM'S OWN TRADES STAY OBSERVATION ONLY. Where the
+  program gets in and out is set by numbers tuned coin by coin on crypto results (the turn amount, the 30-second
+  wait, the fees; the thirteenth session: "no natural gas setup exists"). So its trades, its price and result
+  figures and its fee marks are not a strategy input unless he says. The two lines do not depend on those
+  settings: they are the formula and the two spans.
+- WRITTEN INTO Markets `CLAUDE.md` on the session branch (`ccr-26ff219b-72monm`, `0670613`). Not on the trunk.
+- WHAT FEEDS THE STRATEGY STEP, as Claude reads his rulings together, put to him once, his to correct:
+  IN: the rows (every tick, the book, the best bid and best offer, the outside figures); the calculations with no
+  window (`quote_runs`, `book_totals`, `refills`, `sweeps`, `together`, the trade legs, the peaks with no window,
+  the resting orders, the steps of a move); and now the natural gas dipole line, exhaustion line and humps.
+  OUT: the 20-second peak family (`flow_peak`, `peak_story`, `peak_links`, `open_stories`, `chain_peaks`,
+  `dipole_peaks` and the peak columns of the others: his word of 2026-11-18); Native's dipole record (its own
+  fixed windows, his TO REVISIT); the program's trades and prices; the mid price; any crypto data; last week's
+  strategy material.
+- THE STANDING ORDER, kept: he is told before the strategy step starts so that he can raise the effort setting.
+  Told now. Nothing of the strategy step has been started. Its first message is how a version is formed blind to
+  its own trade day; then 15 versions in one message.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

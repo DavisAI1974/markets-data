@@ -889,3 +889,14 @@ on them: "We didn't have the full depth of the data and we ran the days wrong so
   pulled; stepped after = eaten. The same lead as stage (3) above, read at the start of an event.
 - The event to use is the HUMP of the stored 20-second line (17,304 on the four trade days), not Native's birth.
 - Laid out to him as one table and one workbook; not built until his word (the full list is in the decisions file).
+
+## 2026-11-23 (sixteenth session): the natural gas dipole and exhaustion are used for strategy; crypto data is not
+
+Greg: "The crypto data is not to be in our analysis or on excel sheets. The ng version of these absolutely should be
+used for strategy".
+- The two lines made on the natural gas tape (60 seconds, 20 seconds) and the humps are strategy inputs and go into
+  the Excel sheets. Where this file says "observation and verification only" of the crypto and ng outputs (the
+  thirteenth session), that now holds for the program's own trades, prices and fee marks, not for the two lines.
+- Crypto data (anything measured on a crypto market) is in no analysis and no sheet. The formulas only.
+- The program's trades stay observation only (Claude's reading, his to correct): their starts and ends come from
+  settings tuned on crypto results.
