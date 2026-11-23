@@ -963,3 +963,33 @@ decisions file (seventeenth session) and in each receipt. Leads, no test of chan
   workbook is written once, at a slow time, in parts with the days broken up by rows (`root/sheet.py`,
   `WORKBOOK_README_PAGE.md`). Read that before touching any Excel file. Add columns to what exists; do not design
   a new sheet or a new layout.
+
+## 2026-11-23 (eighteenth session): the strategy step; fifteen versions laid along the stages of a move
+
+Greg: "Use all 4 days to make strategies". Every version is formed on all four trade days, so a try on them is a
+record and not a blind test. The versions are in `research-union-current/strategy-20261123-claude/` (`VERSIONS.md`,
+`EVIDENCE.md`). None has been tried; no stored table was opened to write them. What the work added to these notes:
+
+- THE STAGES NOW EACH HAVE A VERSION. (0) before: a level that has only been eaten (CL04); fresh trading on the
+  dipole's side (CL07). (1) the first step: made by a fill or by a cancel (CL03); the exhaustion line on its side
+  (CL05). (2) the middle: both quotes have stepped (CL06); the price running against the dipole, read both ways
+  (CL10, CL11); paying up through more than one level (CL13). (3) another step: the eaten level (CL01); the
+  abandoned level (CL02). (4) the turn: fresh trading against the dipole (CL08); the reloaded level (CL12); the
+  other side arriving at a fresh quote (CL14). (5) after: the step back and the return (CL15). At any stage: a
+  change of side made by the span is no signal (CL09).
+- A BUILT-IN NOT SAID BEFORE, to face before finding 4 of the paper is leaned on: one order that trades through
+  several price levels makes several steps of the quote in ONE exchange event. A third step in the same event as
+  the second is not something that "followed" an eaten level; nobody could act between them. It has not been
+  counted. Every version therefore takes its stance at the tick with the exchange's own end-of-event mark and
+  counts as following only what comes in a later exchange event.
+- WHAT IS LEFT AFTER A DECISION, in plain arithmetic on the followed quote alone: the first step back of a run is
+  one tick nearly every time (stored). So a stance taken at a run's second step and let go at its first step back
+  stands one tick BEHIND when the run ended at two steps, LEVEL when it took a third, and one tick ahead for each
+  step after that. Knowing a move has ended only at its first step back costs a tick; that is why a sign of the
+  end that comes earlier (CL12, CL14) and what the OTHER quote is doing (CL06) matter.
+- A stored line is compared with a trade by reading it JUST BEFORE that trade (the read before, by place), so the
+  trade is not inside the value it is set against (CL07, CL08). Put to Greg.
+- From the stored counts, kept so they are not read past: by the FIFTH step the lead of the eaten level is not
+  there in every row (trade day Oct 3, best offer up: 3 of 150 eaten runs reached a fifth step, against 42 of
+  1,099 and 3 of 101); and the dipole at a first step reads the other way in four of sixteen cells.
+- NOT ANSWERED, as before: anything before a first step; whether moves come back.

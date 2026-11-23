@@ -44,3 +44,14 @@ is a question, not a result. The record of each is in `ROOT_GAMEPLAN_DECISIONS.m
 15. A BRIEF DIP THROUGH ZERO splits one build of the exhaustion line into two humps: should it end a hump?
 16. THE FULL EVERY-TICK WORKBOOKS ("at a slow time"), and Desktop's peak lives as a sheet ("Workbook later").
 17. THE CRYPTO AND NG PROGRAM'S OWN TRADES: observation only (settings tuned on crypto results). Not confirmed by him.
+
+## Added on 2026-11-23 (eighteenth session, from the strategy step)
+
+18. STEPS INSIDE ONE EXCHANGE EVENT. How many of a run's second, third and later steps lie in the same exchange
+    event as the step before (one order trading through several levels)? It bears on "a level that was eaten leads
+    on" (the paper's finding 4): a third step in the same event as the second did not follow anything.
+19. A BETTER QUOTE STEPPING IN FRONT (the best offer down, the best bid up) whose first level is then "every order
+    filled" by the second step: what happens there. The count is stored; the mechanism is not understood.
+20. THE ORDERS OF A STANDING BEST LEVEL, followed from the tick it became the best and at every tick, not only at
+    the turns of a run (the stored `resting` rule with a different starting tick). Version CL04 reads a coarser
+    form from the running totals; this would be the exact one.

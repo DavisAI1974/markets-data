@@ -5357,6 +5357,47 @@ notes hold counts from all four trade days: "Use all 4 days to make strategies".
   the four enter any calculation) or live. Every version stays a hypothesis: provisional until live.
 - Taken as the word that starts the step. Said to him in the first message.
 
+**THE STRATEGY STEP, CLAUDE'S SIDE, WRITTEN (2026-11-23, eighteenth session). Nothing tried, no pod, no table opened.**
+- THE FIRST MESSAGE, said to him: formed on all four trade days; a try on them is a record, not a blind test; what
+  had been seen of each trade day (the paper, the notes, the decisions file, this session's receipts); and what is
+  kept in place of blindness (no number of Claude's in any version; every version written and pushed before any
+  try with what would show it wrong; counts per trade day and per cell; every built-in said; the leakage gate
+  first). Stored as `strategy-20261123-claude/BLIND_FORMATION.md`.
+- THE FIFTEEN VERSIONS, `strategy-20261123-claude/VERSIONS.md`, ids CL01 to CL15, laid along the stages of a move
+  (the list by stage is in the running notes, eighteenth session). Each: the situation and stage; what is observed
+  and the tick it is known at; the exact state; the direction; when a stance is taken, let go and may be taken
+  again; management and what invalidates it; what is built in and what is left after the decision; observation
+  against proposed rule; what would show it wrong; its cells; whether it can be read from what is stored today.
+  With them: `EVIDENCE.md` (every count copied by script from the stored receipts, each trade day on its own),
+  `EVIDENCE_COUNTS.md` (all 36 count tables of the research receipts, four trade days side by side),
+  `ACCESS_RECORD.md`, `OPEN_QUESTIONS.md`.
+- READ IN THE SESSION, told to him as it was done, documents only: on `root-rows-20231002` the file guide and the
+  receipts of the rows, of the nine calculations that may feed a version, of the two lines and of the research
+  tables; on the other three daily branches the research receipt, six calculation receipts and the crypto and ng
+  receipt; beside the notes, two count files of the peak research of 2026-11-17. No parquet file was fetched.
+- CLAUDE'S CALLS IN THE STEP, each stated to him, his to correct:
+  1. A stance is taken only at the tick with the exchange's own end-of-event mark, and only what comes in a LATER
+     exchange event counts as following it (one order trading through several levels makes several steps in one
+     event).
+  2. No number of Claude's is in a version. "A second step", "every order filled", "more than one level" are lines
+     the tape draws. The largest way a level empties ("some filled, some pulled") is left in no version; its split
+     is a number of his.
+  3. The record of a stance is the best bid and the best offer at the two ticks, each on its own: no mid price, no
+     fill, no cost, no size.
+  4. Left out with the program's trades: the crypto and ng program's turns table (its turn amount was set on crypto
+     results). Left out as before: the 20-second peak family (also where its columns ride inside `move_steps`,
+     `leg_peaks`, `turn_peaks` and `resting`), Native's record, the information measure, the mid price.
+  5. Two reads treated as reads of stored values and not as new lines: a stored running total of `book_totals`
+     subtracted between two ticks the data sets (CL04); the stored dipole line as it stood just before a trade
+     (CL07, CL08).
+  6. The evidence of CL14 cites the peak research of 2026-11-17 (the peak with no window, on the rebuilt rows),
+     marked as what it is.
+- NOT CHANGED: `STRATEGY_HANDOFF_FOR_CODEX_20261123.md` still asks Codex for blind formation. Said to him.
+- ADDED: the running notes (eighteenth session) and three items to `FURTHER_RESEARCH_LIST.md` (18 to 20). Nothing of
+  the further research was started.
+- NEXT, each on his word: the try (one pod run, one line for each stance, put to him with the price); the discard
+  of the old research and strategy documents (the list by name first, then his "delete").
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
