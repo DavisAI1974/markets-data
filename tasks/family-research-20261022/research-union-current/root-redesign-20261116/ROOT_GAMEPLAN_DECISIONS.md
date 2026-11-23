@@ -3829,6 +3829,14 @@ shaded areas to designate trade".**
   to make. Claude's call: (b), because he asked for crypto exactness and a one-tick print does not end one. Not
   built until his word; any other rule for a move would need a number of ours, which he has ruled out.
 
+**Greg (2026-11-23, fifteenth session), on the scale of the two line graphs differing from picture to picture: "I'm
+not worried about different heights. I just want to see if dipole and exhaustion correlate somehow to price curve".**
+- THE SCALE SET BY THE LINE ITSELF STANDS. Heights are not compared between pictures.
+- WHAT THE PICTURES ARE FOR, in his words: to see whether the dipole and the exhaustion correlate somehow to the
+  price curve. Not the same direction, not the same height: whether they move in step in some way.
+- He did not speak to the shaded area. Until he does, the shading stays the stored trade leg, as he asked for
+  earlier in this session; it is not changed on Claude's call.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
