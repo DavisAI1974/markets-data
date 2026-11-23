@@ -5815,3 +5815,14 @@ figure. To bring back when the work reaches what moves the market and price-curv
   counts the first 60 seconds of the dipole, the first 20 of the exhaustion, the first run of each quote and the
   first trade leg as missing inputs; no rule that reads them opens until they are whole. (G4) the new runner copies
   the 7e check's stream and order code into a new file with the source lines named; the 7e file is not edited.
+- THE NEW REPOSITORY `DavisAI1974/paper-trading-platform`. Greg: "I did make a new paper-trade repo in git. I'll let
+  you decide if you want to use that for your paper trade work". Claude's call: YES. Seen at `efb9087` (read only):
+  it holds Codex's first build of our own platform (`paper_platform/`, the 30 rule files, a monitor page, two
+  workflows) and copies of ROOT's calculations and `crypto_ng/tick.py` that are byte-identical to Markets for the
+  three files the tastytrade runner calls (`crypto_ng/tick.py`, `root/calcs/quote_runs.py`, `root/calcs/leg_peaks.py`).
+  So the tastytrade runner's code goes THERE, on a branch of Claude's own, not into Markets: Markets is near its
+  GitHub size limit, the code the runner calls is already there, and Codex's platform and the tastytrade runner can
+  share the rule pieces. Until the builder's work is checked it sits uncommitted in the session's Markets folder and
+  nothing of it is pushed to Markets. Records and output still go to markets-data. Pushing to the new repository
+  needs write access for this session (an approval card when asked for). Codex's `main` there is not touched by
+  Claude before Greg says Codex is done.
