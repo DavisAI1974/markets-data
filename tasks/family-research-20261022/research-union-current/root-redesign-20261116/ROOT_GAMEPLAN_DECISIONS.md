@@ -5807,3 +5807,11 @@ figure. To bring back when the work reaches what moves the market and price-curv
   short canary from the session, on his go; one sandbox account, one lot a trade, each strategy's trades kept apart
   in our own record; no bad mark for a rule that never trades, the record says which input was missing; ROOT is not
   touched. Before any code: a 30-row table of what each rule reads and whether the feed has it.
+- THE RUNNER PLAN, FOUR POINTS (`paper-trading-20261123/RUNNER_PLAN_20261123.md`, G1 to G4, put after the reviewer's
+  check). Greg: "Yes to all four". So: (G1) the rules read the quote from the trade prints' own bid and offer only;
+  the separate Quote messages are recorded and followed apart, read by no rule. (G2) the paper runner may call
+  `crypto_ng.tick.reads` and `crypto_ng.tick.line` exactly as they are, nothing else of that package, nothing copied
+  from it (written into Markets `CLAUDE.md` on the session branch). (G3) a run that starts after the feed's open
+  counts the first 60 seconds of the dipole, the first 20 of the exhaustion, the first run of each quote and the
+  first trade leg as missing inputs; no rule that reads them opens until they are whole. (G4) the new runner copies
+  the 7e check's stream and order code into a new file with the source lines named; the 7e file is not edited.
