@@ -4073,6 +4073,15 @@ separate column in the spreadsheets?"**
   day Oct 2; the full trade days are in the stored rows, and the full workbooks are still an open item of his.
   NOT a column anywhere: the mid price (it is worked out in the picture).
 
+**AT THE CLOSE (Greg, 2026-11-23, fifteenth session): "Create the handoff and print the drop in for a new chat. Be
+sure to note in the handoff that midpoint has to be discussed".**
+- Handoff `NEXT_SESSION_HANDOFF_20261123R.md` replaces handoff Q as the starting point. Its FIRST item is the
+  midpoint: the price line of the stored pictures is the mid price, Claude's call and not a stored column; nothing
+  is built on it, stored from it or put in a sheet until it has been talked through with him.
+- The drop-in for the next chat carries, in its standing rules, "follow the crypto formulas" and "no hard coded
+  start or stop for a graph", which were missing from the one this session started from.
+- No pod is running; the account was read at the end and shows none.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
