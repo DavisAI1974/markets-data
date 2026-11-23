@@ -5686,6 +5686,15 @@ Markets trunk `beb3836`, Markets session branch `ccr-fffbc766-a1gxpl` `ec2e86f`,
 handoff U. No pod exists. The tastytrade keys pasted this session were kept only in the session's scratch folder and
 are in no committed file; the next session asks for them again.
 
+**DECIDED (Greg, 2026-11-23, after the close): "And i sent you tasty keys. Please put in env file and update handoff and
+drop in so I'm not soing that every session"; told both repositories are PUBLIC: "Put in there they are only test
+keys".**
+- THE SANDBOX TEST KEYS ARE IN `paper-trading-20261123/tasty-sandbox.env` on this branch, marked sandbox-only and
+  public. The refresh token is still to come; it is added there when he gives it. The note above ("in no committed
+  file") is superseded by his word.
+- PRODUCTION KEYS NEVER GO IN GIT: he enters them once in the cloud environment's settings as environment
+  variables (Claude's call, stated to him; the session's own tools may not set secret values).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

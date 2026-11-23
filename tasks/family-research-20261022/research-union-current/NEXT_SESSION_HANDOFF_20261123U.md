@@ -56,12 +56,16 @@ Guarantees: an order is never re-sent; every key and token is scrubbed from ever
 always written; output only to a markets-data folder (it refuses Markets). Output goes to
 `paper-trading-20261123/7e/` beside this file.
 
-NEEDS FROM GREG (the scratch copy of the keys is gone with the old container; ask him to paste again):
-- SANDBOX: client ID, client secret, and the REFRESH TOKEN ("Create Grant" on the sandbox application). He pasted the
-  ID and secret on 2026-11-23; the refresh token was never given.
-- PRODUCTION, read-only, data only: client ID, client secret, refresh token from his real tastytrade account. The
-  stream needs a fully onboarded customer; natural gas quotes may need a data entitlement.
-- The keys go in as environment variables (`TASTY_SANDBOX_*`, `TASTY_PROD_*`), never into a file that is committed.
+THE KEYS:
+- SANDBOX (test keys, no money): in `paper-trading-20261123/tasty-sandbox.env` beside this file, on Greg's word
+  ("Put in there they are only test keys"). THIS REPOSITORY IS PUBLIC: that file is readable by anyone; he chose
+  it knowingly. Load with `set -a; . <that file>; set +a`. It holds the client ID and secret; THE REFRESH TOKEN IS
+  STILL MISSING ("Create Grant" on the sandbox application): when he gives it, add it to that file's last line,
+  commit and push, so he never gives it again.
+- PRODUCTION, read-only, data only (client ID, client secret, refresh token from his real account): NEVER in any
+  file in git. He enters them once in the cloud environment "Markets" settings (Edit, Environment variables) as
+  `TASTY_PROD_CLIENT_ID`, `TASTY_PROD_CLIENT_SECRET`, `TASTY_PROD_REFRESH_TOKEN`; every later session reads them
+  from there. The stream needs a fully onboarded customer; natural gas quotes may need a data entitlement.
 - NETWORK: `developer.tastytrade.com` and `api.cert.tastyworks.com` are allowed on environment "Markets". Production
   needs `api.tastyworks.com` and the DXLink host the quote token names: an approval card for each, when used.
 
