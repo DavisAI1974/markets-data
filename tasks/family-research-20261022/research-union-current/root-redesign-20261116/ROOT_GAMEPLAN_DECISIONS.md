@@ -3710,6 +3710,21 @@ exhaustion start and stop by when the data says and not our predetermined values
 - NOT RUN. No pod is up. The pick of 40 (10 at random on each trade day) stands and waits for his go, with the
   price in front of him.
 
+- After the entry above: the code is at Markets `ccr-b66f34d5-h6ra1t` `d0fc1ed` (the humps only widen a picture's
+  frame; the rule says the 20 and the 60 seconds are read from the crypto scripts, his to confirm). The daily
+  branches are at `root-rows-20231002` `56409ed`, `-20231003` `bf799cf`, `-20231017` `8f2da5d`, `-20231018`
+  `415f14c` (each `FILES.md` now names the commit a removed folder can be read back from, for the record only).
+- FOR THE NEXT DROP-IN, so it is not missing again: its standing rules must say, in his words, "follow the crypto
+  formulas": dipole and exhaustion are the crypto lines (60 and 20 seconds, bought minus sold over bought plus
+  sold, read at the nanosecond); "nano" is the time of the read; no line of Claude's is drawn under those names;
+  no hard coded start or stop for a graph.
+- NOT TOUCHED, said to him: the older session branches of Markets (`ccr-92cbec22-u0cbuj`, `claude/magical-allen-
+  kncdpa` and before) still hold the three deleted programs. No branch is deleted or rewritten without his word.
+- WHAT STILL DIFFERS FROM THE CRYPTO PICTURES, said to him in one list: the anchor (crypto drew around the
+  program's own trade, or around the price turn; here it is a trade leg); three separate graphs, not the lean laid
+  over the price; no rate panel; steps, not an averaged curve; empty where nothing traded, where crypto wrote 0;
+  no cut at 45 or 60 seconds.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
