@@ -1,0 +1,1389 @@
+{
+ "what": "The research columns on the every-tick table: the natural gas exhaustion and dipole lines and the information measure at every tick, each move on the tick of its first step, each hump on the tick it began on",
+ "asked": "Greg, 2026-11-23: \"Put the research columns on the every tick tables. Yes we want every tick ... Just update what already exists\"",
+ "trade_day": "2023-10-02",
+ "nothing_rewritten": "These are new column files lined up row for row with the stored rows, as every calculation's columns are. No stored file is changed. Nothing new is calculated on the tape; no window, no label, no average, no midpoint; nothing from another trade day.",
+ "read_from": [
+  "rows-20231002-part*.parquet (through the rows gate)",
+  "research-threads/research-moves-20231002.parquet",
+  "research-threads/research-humps-20231002.parquet",
+  "info-measure/info-measure-20231002.parquet",
+  "crypto-ng-tick/crypto-ng-tick-tape-trades-20231002.parquet",
+  "crypto-ng-tick/crypto-ng-tick-line-20s-20231002.parquet",
+  "crypto-ng-tick/crypto-ng-tick-lean-60s-20231002.parquet"
+ ],
+ "columns": [
+  {
+   "column": "position_on_tape",
+   "what": "The tick: its position on the tape, as on the stored row."
+  },
+  {
+   "column": "exhaustion_20s",
+   "what": "THE EXHAUSTION LINE at this tick: bought minus sold over bought plus sold, the trades of the last 20 seconds; the stored line read by place on the tape. Above zero buying, below selling."
+  },
+  {
+   "column": "dipole_60s",
+   "what": "THE DIPOLE LINE at this tick: the same figure over the last 60 seconds, read the same way."
+  },
+  {
+   "column": "info_ratio",
+   "what": "THE INFORMATION MEASURE at this tick (not the dipole, not the exhaustion). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "info_ratio_log",
+   "what": "THE INFORMATION MEASURE at this tick (not the dipole, not the exhaustion). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "info_shared",
+   "what": "THE INFORMATION MEASURE at this tick (not the dipole, not the exhaustion). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "info_entropy_lean",
+   "what": "THE INFORMATION MEASURE at this tick (not the dipole, not the exhaustion). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "info_flow",
+   "what": "THE INFORMATION MEASURE at this tick (not the dipole, not the exhaustion). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "info_lean_change",
+   "what": "THE INFORMATION MEASURE at this tick (not the dipole, not the exhaustion). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "info_pieces_with_a_trade",
+   "what": "THE INFORMATION MEASURE at this tick (not the dipole, not the exhaustion). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "info_ratio_made_by_division",
+   "what": "TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "leg__move",
+   "what": "A trade leg, on the tick of its first step. Which move: trade leg, run of the best bid, run of the best ask."
+  },
+  {
+   "column": "leg__direction",
+   "what": "A trade leg, on the tick of its first step. Which way it goes: up or down."
+  },
+  {
+   "column": "leg__move_start_position",
+   "what": "A trade leg, on the tick of its first step. The move: the trade leg's first trade, or the tick the run started. A label only."
+  },
+  {
+   "column": "leg__first_step_position",
+   "what": "A trade leg, on the tick of its first step. The tick of its first step: the first moment it could be known. Position on the tape."
+  },
+  {
+   "column": "leg__first_step_received_ns",
+   "what": "A trade leg, on the tick of its first step. When that tick was received."
+  },
+  {
+   "column": "leg__first_step_price",
+   "what": "A trade leg, on the tick of its first step. The price it had reached at its first step, in dollars."
+  },
+  {
+   "column": "leg__second_step_received_ns",
+   "what": "A trade leg, on the tick of its first step. When its second step was received. Empty when it made one step only."
+  },
+  {
+   "column": "leg__steps_in_all",
+   "what": "A trade leg, on the tick of its first step. How many steps it made in all. Empty when it was still going at the last tick."
+  },
+  {
+   "column": "leg__end_position",
+   "what": "A trade leg, on the tick of its first step. The tick it ended at. Empty when it was still going."
+  },
+  {
+   "column": "leg__end_received_ns",
+   "what": "A trade leg, on the tick of its first step. When that tick was received."
+  },
+  {
+   "column": "leg__end_price",
+   "what": "A trade leg, on the tick of its first step. The price it ended at, in dollars."
+  },
+  {
+   "column": "leg__given_back",
+   "what": "A trade leg, on the tick of its first step. The price once the ending tick was done minus the price it ended at, in dollars."
+  },
+  {
+   "column": "leg__best_bid_at_first_step",
+   "what": "A trade leg, on the tick of its first step. As stored on its first step line, once that tick was done: best_bid (dollars)."
+  },
+  {
+   "column": "leg__best_ask_at_first_step",
+   "what": "A trade leg, on the tick of its first step. As stored on its first step line, once that tick was done: best_ask (dollars)."
+  },
+  {
+   "column": "leg__best_bid_size_at_first_step",
+   "what": "A trade leg, on the tick of its first step. As stored on its first step line, once that tick was done: best_bid_size."
+  },
+  {
+   "column": "leg__best_ask_size_at_first_step",
+   "what": "A trade leg, on the tick of its first step. As stored on its first step line, once that tick was done: best_ask_size."
+  },
+  {
+   "column": "leg__best_bid_orders_at_first_step",
+   "what": "A trade leg, on the tick of its first step. As stored on its first step line, once that tick was done: best_bid_orders."
+  },
+  {
+   "column": "leg__best_ask_orders_at_first_step",
+   "what": "A trade leg, on the tick of its first step. As stored on its first step line, once that tick was done: best_ask_orders."
+  },
+  {
+   "column": "leg__bid_total_size_at_first_step",
+   "what": "A trade leg, on the tick of its first step. As stored on its first step line, once that tick was done: bid_total_size."
+  },
+  {
+   "column": "leg__ask_total_size_at_first_step",
+   "what": "A trade leg, on the tick of its first step. As stored on its first step line, once that tick was done: ask_total_size."
+  },
+  {
+   "column": "leg__exhaustion_20s_at_first_step",
+   "what": "A trade leg, on the tick of its first step. THE EXHAUSTION LINE at its first step: bought minus sold over bought plus sold, the trades of the last 20 seconds, the stored line as it stood AT THAT TICK (read by place on the tape: no trade that came after the tick is in it, also when it shares the tick's nanosecond). Above zero buying, below zero selling. Empty where nothing with a side had traded in the span."
+  },
+  {
+   "column": "leg__dipole_60s_at_first_step",
+   "what": "A trade leg, on the tick of its first step. THE DIPOLE LINE at its first step: the same figure over the last 60 seconds."
+  },
+  {
+   "column": "leg__exhaustion_20s_at_end",
+   "what": "A trade leg, on the tick of its first step. The exhaustion line as it stood at its end."
+  },
+  {
+   "column": "leg__dipole_60s_at_end",
+   "what": "A trade leg, on the tick of its first step. The dipole line as it stood at its end."
+  },
+  {
+   "column": "leg__best_bid_at_end",
+   "what": "A trade leg, on the tick of its first step. The best bid once its ending tick was done, in dollars."
+  },
+  {
+   "column": "leg__best_ask_at_end",
+   "what": "A trade leg, on the tick of its first step. The best offer once its ending tick was done, in dollars."
+  },
+  {
+   "column": "leg__best_bid_at_first_trade",
+   "what": "A trade leg, on the tick of its first step. Trade legs only: the best bid once the tick of its first trade was done, in dollars."
+  },
+  {
+   "column": "leg__best_ask_at_first_trade",
+   "what": "A trade leg, on the tick of its first step. Trade legs only: the best offer once the tick of its first trade was done."
+  },
+  {
+   "column": "leg__level_orders_at_turn",
+   "what": "A trade leg, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many orders stood there."
+  },
+  {
+   "column": "leg__level_size_at_turn",
+   "what": "A trade leg, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: their size."
+  },
+  {
+   "column": "leg__level_left_by_fill",
+   "what": "A trade leg, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had left by being filled."
+  },
+  {
+   "column": "leg__level_left_by_cancel",
+   "what": "A trade leg, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had left by being pulled."
+  },
+  {
+   "column": "leg__level_still_resting_orders",
+   "what": "A trade leg, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many still rested."
+  },
+  {
+   "column": "leg__level_moved_orders",
+   "what": "A trade leg, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had changed price."
+  },
+  {
+   "column": "leg__info_ratio_at_first_step",
+   "what": "A trade leg, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "leg__info_ratio_log_at_first_step",
+   "what": "A trade leg, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "leg__info_shared_at_first_step",
+   "what": "A trade leg, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "leg__info_entropy_lean_at_first_step",
+   "what": "A trade leg, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "leg__info_flow_at_first_step",
+   "what": "A trade leg, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "leg__info_lean_change_at_first_step",
+   "what": "A trade leg, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "leg__info_pieces_with_a_trade_at_first_step",
+   "what": "A trade leg, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "leg__info_ratio_made_by_division_at_first_step",
+   "what": "A trade leg, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "leg__info_ratio_at_end",
+   "what": "A trade leg, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "leg__info_ratio_log_at_end",
+   "what": "A trade leg, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "leg__info_shared_at_end",
+   "what": "A trade leg, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "leg__info_entropy_lean_at_end",
+   "what": "A trade leg, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "leg__info_flow_at_end",
+   "what": "A trade leg, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "leg__info_lean_change_at_end",
+   "what": "A trade leg, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "leg__info_pieces_with_a_trade_at_end",
+   "what": "A trade leg, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "leg__info_ratio_made_by_division_at_end",
+   "what": "A trade leg, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "bid_run__move",
+   "what": "A run of the best bid, on the tick of its first step. Which move: trade leg, run of the best bid, run of the best ask."
+  },
+  {
+   "column": "bid_run__direction",
+   "what": "A run of the best bid, on the tick of its first step. Which way it goes: up or down."
+  },
+  {
+   "column": "bid_run__move_start_position",
+   "what": "A run of the best bid, on the tick of its first step. The move: the trade leg's first trade, or the tick the run started. A label only."
+  },
+  {
+   "column": "bid_run__first_step_position",
+   "what": "A run of the best bid, on the tick of its first step. The tick of its first step: the first moment it could be known. Position on the tape."
+  },
+  {
+   "column": "bid_run__first_step_received_ns",
+   "what": "A run of the best bid, on the tick of its first step. When that tick was received."
+  },
+  {
+   "column": "bid_run__first_step_price",
+   "what": "A run of the best bid, on the tick of its first step. The price it had reached at its first step, in dollars."
+  },
+  {
+   "column": "bid_run__second_step_received_ns",
+   "what": "A run of the best bid, on the tick of its first step. When its second step was received. Empty when it made one step only."
+  },
+  {
+   "column": "bid_run__steps_in_all",
+   "what": "A run of the best bid, on the tick of its first step. How many steps it made in all. Empty when it was still going at the last tick."
+  },
+  {
+   "column": "bid_run__end_position",
+   "what": "A run of the best bid, on the tick of its first step. The tick it ended at. Empty when it was still going."
+  },
+  {
+   "column": "bid_run__end_received_ns",
+   "what": "A run of the best bid, on the tick of its first step. When that tick was received."
+  },
+  {
+   "column": "bid_run__end_price",
+   "what": "A run of the best bid, on the tick of its first step. The price it ended at, in dollars."
+  },
+  {
+   "column": "bid_run__given_back",
+   "what": "A run of the best bid, on the tick of its first step. The price once the ending tick was done minus the price it ended at, in dollars."
+  },
+  {
+   "column": "bid_run__best_bid_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. As stored on its first step line, once that tick was done: best_bid (dollars)."
+  },
+  {
+   "column": "bid_run__best_ask_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. As stored on its first step line, once that tick was done: best_ask (dollars)."
+  },
+  {
+   "column": "bid_run__best_bid_size_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. As stored on its first step line, once that tick was done: best_bid_size."
+  },
+  {
+   "column": "bid_run__best_ask_size_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. As stored on its first step line, once that tick was done: best_ask_size."
+  },
+  {
+   "column": "bid_run__best_bid_orders_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. As stored on its first step line, once that tick was done: best_bid_orders."
+  },
+  {
+   "column": "bid_run__best_ask_orders_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. As stored on its first step line, once that tick was done: best_ask_orders."
+  },
+  {
+   "column": "bid_run__bid_total_size_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. As stored on its first step line, once that tick was done: bid_total_size."
+  },
+  {
+   "column": "bid_run__ask_total_size_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. As stored on its first step line, once that tick was done: ask_total_size."
+  },
+  {
+   "column": "bid_run__exhaustion_20s_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. THE EXHAUSTION LINE at its first step: bought minus sold over bought plus sold, the trades of the last 20 seconds, the stored line as it stood AT THAT TICK (read by place on the tape: no trade that came after the tick is in it, also when it shares the tick's nanosecond). Above zero buying, below zero selling. Empty where nothing with a side had traded in the span."
+  },
+  {
+   "column": "bid_run__dipole_60s_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. THE DIPOLE LINE at its first step: the same figure over the last 60 seconds."
+  },
+  {
+   "column": "bid_run__exhaustion_20s_at_end",
+   "what": "A run of the best bid, on the tick of its first step. The exhaustion line as it stood at its end."
+  },
+  {
+   "column": "bid_run__dipole_60s_at_end",
+   "what": "A run of the best bid, on the tick of its first step. The dipole line as it stood at its end."
+  },
+  {
+   "column": "bid_run__best_bid_at_end",
+   "what": "A run of the best bid, on the tick of its first step. The best bid once its ending tick was done, in dollars."
+  },
+  {
+   "column": "bid_run__best_ask_at_end",
+   "what": "A run of the best bid, on the tick of its first step. The best offer once its ending tick was done, in dollars."
+  },
+  {
+   "column": "bid_run__best_bid_at_first_trade",
+   "what": "A run of the best bid, on the tick of its first step. Trade legs only: the best bid once the tick of its first trade was done, in dollars."
+  },
+  {
+   "column": "bid_run__best_ask_at_first_trade",
+   "what": "A run of the best bid, on the tick of its first step. Trade legs only: the best offer once the tick of its first trade was done."
+  },
+  {
+   "column": "bid_run__level_orders_at_turn",
+   "what": "A run of the best bid, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many orders stood there."
+  },
+  {
+   "column": "bid_run__level_size_at_turn",
+   "what": "A run of the best bid, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: their size."
+  },
+  {
+   "column": "bid_run__level_left_by_fill",
+   "what": "A run of the best bid, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had left by being filled."
+  },
+  {
+   "column": "bid_run__level_left_by_cancel",
+   "what": "A run of the best bid, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had left by being pulled."
+  },
+  {
+   "column": "bid_run__level_still_resting_orders",
+   "what": "A run of the best bid, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many still rested."
+  },
+  {
+   "column": "bid_run__level_moved_orders",
+   "what": "A run of the best bid, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had changed price."
+  },
+  {
+   "column": "bid_run__info_ratio_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "bid_run__info_ratio_log_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "bid_run__info_shared_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "bid_run__info_entropy_lean_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "bid_run__info_flow_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "bid_run__info_lean_change_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "bid_run__info_pieces_with_a_trade_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "bid_run__info_ratio_made_by_division_at_first_step",
+   "what": "A run of the best bid, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "bid_run__info_ratio_at_end",
+   "what": "A run of the best bid, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "bid_run__info_ratio_log_at_end",
+   "what": "A run of the best bid, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "bid_run__info_shared_at_end",
+   "what": "A run of the best bid, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "bid_run__info_entropy_lean_at_end",
+   "what": "A run of the best bid, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "bid_run__info_flow_at_end",
+   "what": "A run of the best bid, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "bid_run__info_lean_change_at_end",
+   "what": "A run of the best bid, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "bid_run__info_pieces_with_a_trade_at_end",
+   "what": "A run of the best bid, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "bid_run__info_ratio_made_by_division_at_end",
+   "what": "A run of the best bid, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "ask_run__move",
+   "what": "A run of the best ask, on the tick of its first step. Which move: trade leg, run of the best bid, run of the best ask."
+  },
+  {
+   "column": "ask_run__direction",
+   "what": "A run of the best ask, on the tick of its first step. Which way it goes: up or down."
+  },
+  {
+   "column": "ask_run__move_start_position",
+   "what": "A run of the best ask, on the tick of its first step. The move: the trade leg's first trade, or the tick the run started. A label only."
+  },
+  {
+   "column": "ask_run__first_step_position",
+   "what": "A run of the best ask, on the tick of its first step. The tick of its first step: the first moment it could be known. Position on the tape."
+  },
+  {
+   "column": "ask_run__first_step_received_ns",
+   "what": "A run of the best ask, on the tick of its first step. When that tick was received."
+  },
+  {
+   "column": "ask_run__first_step_price",
+   "what": "A run of the best ask, on the tick of its first step. The price it had reached at its first step, in dollars."
+  },
+  {
+   "column": "ask_run__second_step_received_ns",
+   "what": "A run of the best ask, on the tick of its first step. When its second step was received. Empty when it made one step only."
+  },
+  {
+   "column": "ask_run__steps_in_all",
+   "what": "A run of the best ask, on the tick of its first step. How many steps it made in all. Empty when it was still going at the last tick."
+  },
+  {
+   "column": "ask_run__end_position",
+   "what": "A run of the best ask, on the tick of its first step. The tick it ended at. Empty when it was still going."
+  },
+  {
+   "column": "ask_run__end_received_ns",
+   "what": "A run of the best ask, on the tick of its first step. When that tick was received."
+  },
+  {
+   "column": "ask_run__end_price",
+   "what": "A run of the best ask, on the tick of its first step. The price it ended at, in dollars."
+  },
+  {
+   "column": "ask_run__given_back",
+   "what": "A run of the best ask, on the tick of its first step. The price once the ending tick was done minus the price it ended at, in dollars."
+  },
+  {
+   "column": "ask_run__best_bid_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. As stored on its first step line, once that tick was done: best_bid (dollars)."
+  },
+  {
+   "column": "ask_run__best_ask_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. As stored on its first step line, once that tick was done: best_ask (dollars)."
+  },
+  {
+   "column": "ask_run__best_bid_size_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. As stored on its first step line, once that tick was done: best_bid_size."
+  },
+  {
+   "column": "ask_run__best_ask_size_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. As stored on its first step line, once that tick was done: best_ask_size."
+  },
+  {
+   "column": "ask_run__best_bid_orders_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. As stored on its first step line, once that tick was done: best_bid_orders."
+  },
+  {
+   "column": "ask_run__best_ask_orders_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. As stored on its first step line, once that tick was done: best_ask_orders."
+  },
+  {
+   "column": "ask_run__bid_total_size_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. As stored on its first step line, once that tick was done: bid_total_size."
+  },
+  {
+   "column": "ask_run__ask_total_size_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. As stored on its first step line, once that tick was done: ask_total_size."
+  },
+  {
+   "column": "ask_run__exhaustion_20s_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. THE EXHAUSTION LINE at its first step: bought minus sold over bought plus sold, the trades of the last 20 seconds, the stored line as it stood AT THAT TICK (read by place on the tape: no trade that came after the tick is in it, also when it shares the tick's nanosecond). Above zero buying, below zero selling. Empty where nothing with a side had traded in the span."
+  },
+  {
+   "column": "ask_run__dipole_60s_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. THE DIPOLE LINE at its first step: the same figure over the last 60 seconds."
+  },
+  {
+   "column": "ask_run__exhaustion_20s_at_end",
+   "what": "A run of the best ask, on the tick of its first step. The exhaustion line as it stood at its end."
+  },
+  {
+   "column": "ask_run__dipole_60s_at_end",
+   "what": "A run of the best ask, on the tick of its first step. The dipole line as it stood at its end."
+  },
+  {
+   "column": "ask_run__best_bid_at_end",
+   "what": "A run of the best ask, on the tick of its first step. The best bid once its ending tick was done, in dollars."
+  },
+  {
+   "column": "ask_run__best_ask_at_end",
+   "what": "A run of the best ask, on the tick of its first step. The best offer once its ending tick was done, in dollars."
+  },
+  {
+   "column": "ask_run__best_bid_at_first_trade",
+   "what": "A run of the best ask, on the tick of its first step. Trade legs only: the best bid once the tick of its first trade was done, in dollars."
+  },
+  {
+   "column": "ask_run__best_ask_at_first_trade",
+   "what": "A run of the best ask, on the tick of its first step. Trade legs only: the best offer once the tick of its first trade was done."
+  },
+  {
+   "column": "ask_run__level_orders_at_turn",
+   "what": "A run of the best ask, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many orders stood there."
+  },
+  {
+   "column": "ask_run__level_size_at_turn",
+   "what": "A run of the best ask, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: their size."
+  },
+  {
+   "column": "ask_run__level_left_by_fill",
+   "what": "A run of the best ask, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had left by being filled."
+  },
+  {
+   "column": "ask_run__level_left_by_cancel",
+   "what": "A run of the best ask, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had left by being pulled."
+  },
+  {
+   "column": "ask_run__level_still_resting_orders",
+   "what": "A run of the best ask, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many still rested."
+  },
+  {
+   "column": "ask_run__level_moved_orders",
+   "what": "A run of the best ask, on the tick of its first step. Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had changed price."
+  },
+  {
+   "column": "ask_run__info_ratio_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "ask_run__info_ratio_log_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "ask_run__info_shared_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "ask_run__info_entropy_lean_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "ask_run__info_flow_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "ask_run__info_lean_change_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "ask_run__info_pieces_with_a_trade_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "ask_run__info_ratio_made_by_division_at_first_step",
+   "what": "A run of the best ask, on the tick of its first step. At its first step, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "ask_run__info_ratio_at_end",
+   "what": "A run of the best ask, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "ask_run__info_ratio_log_at_end",
+   "what": "A run of the best ask, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "ask_run__info_shared_at_end",
+   "what": "A run of the best ask, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "ask_run__info_entropy_lean_at_end",
+   "what": "A run of the best ask, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "ask_run__info_flow_at_end",
+   "what": "A run of the best ask, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "ask_run__info_lean_change_at_end",
+   "what": "A run of the best ask, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "ask_run__info_pieces_with_a_trade_at_end",
+   "what": "A run of the best ask, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "ask_run__info_ratio_made_by_division_at_end",
+   "what": "A run of the best ask, on the tick of its first step. At its end, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "hump__hump",
+   "what": "A hump of the exhaustion line, on the tick it began on. The number of this hump of the 20-second line, in order through the trade day. A label only."
+  },
+  {
+   "column": "hump__side",
+   "what": "A hump of the exhaustion line, on the tick it began on. buy or sell: the side of zero the line stays on through this hump."
+  },
+  {
+   "column": "hump__began_received_ns",
+   "what": "A hump of the exhaustion line, on the tick it began on. When it began: the moment the line came onto this side."
+  },
+  {
+   "column": "hump__ended_received_ns",
+   "what": "A hump of the exhaustion line, on the tick it began on. When it ended: the moment the line next stood at zero, was empty, or had crossed. Empty when it was still on this side at the end of the trade day."
+  },
+  {
+   "column": "hump__length_seconds",
+   "what": "A hump of the exhaustion line, on the tick it began on. From its beginning to its end, in seconds. Empty when it had not ended."
+  },
+  {
+   "column": "hump__how_it_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. What the line was just before: empty (nothing traded in the 20 seconds), at zero, or on the other side."
+  },
+  {
+   "column": "hump__how_it_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. What the line did there: went empty, came to zero, or crossed to the other side."
+  },
+  {
+   "column": "hump__began_on",
+   "what": "A hump of the exhaustion line, on the tick it began on. What the stored line says changed it as the hump began: a trade was received, or trades left the span at a moment with no tick (nothing new had traded)."
+  },
+  {
+   "column": "hump__began_position",
+   "what": "A hump of the exhaustion line, on the tick it began on. The trade it began on: its position on the tape. Empty when it began with no tick."
+  },
+  {
+   "column": "hump__ended_on",
+   "what": "A hump of the exhaustion line, on the tick it began on. The same for the read at which it ended. Empty when it had not ended."
+  },
+  {
+   "column": "hump__trades_inside",
+   "what": "A hump of the exhaustion line, on the tick it began on. How many trades on the tape were received from its beginning up to its end."
+  },
+  {
+   "column": "hump__furthest_flow",
+   "what": "A hump of the exhaustion line, on the tick it began on. The furthest the line stood from zero during it (above zero buying, below selling)."
+  },
+  {
+   "column": "hump__furthest_received_ns",
+   "what": "A hump of the exhaustion line, on the tick it began on. The moment it first stood there."
+  },
+  {
+   "column": "hump__first_trade_position",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first of them: its position on the tape. Empty when there is none."
+  },
+  {
+   "column": "hump__last_trade_position",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last of them."
+  },
+  {
+   "column": "hump__first_trade_price",
+   "what": "A hump of the exhaustion line, on the tick it began on. The price of the first of them, in dollars."
+  },
+  {
+   "column": "hump__last_trade_price",
+   "what": "A hump of the exhaustion line, on the tick it began on. The price of the last of them."
+  },
+  {
+   "column": "hump__highest_trade_price",
+   "what": "A hump of the exhaustion line, on the tick it began on. The highest price traded inside it."
+  },
+  {
+   "column": "hump__lowest_trade_price",
+   "what": "A hump of the exhaustion line, on the tick it began on. The lowest price traded inside it."
+  },
+  {
+   "column": "hump__first_trade_leg",
+   "what": "A hump of the exhaustion line, on the tick it began on. The stored trade leg under way at its first trade: its number."
+  },
+  {
+   "column": "hump__last_trade_leg",
+   "what": "A hump of the exhaustion line, on the tick it began on. The stored trade leg under way at its last trade."
+  },
+  {
+   "column": "hump__trade_legs_under_way",
+   "what": "A hump of the exhaustion line, on the tick it began on. How many different stored trade legs were under way at its trades."
+  },
+  {
+   "column": "hump__best_bid_at_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. The best bid as it stood at the moment the hump began, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump__best_ask_at_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. The best offer as it stood at the moment the hump began, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump__dipole_60s_at_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. The dipole line (60 seconds) as it stood at the moment the hump began, read by place on the tape: no trade that came after that read is in it."
+  },
+  {
+   "column": "hump__best_bid_at_furthest",
+   "what": "A hump of the exhaustion line, on the tick it began on. The best bid as it stood at the moment the hump first stood at its furthest, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump__best_ask_at_furthest",
+   "what": "A hump of the exhaustion line, on the tick it began on. The best offer as it stood at the moment the hump first stood at its furthest, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump__dipole_60s_at_furthest",
+   "what": "A hump of the exhaustion line, on the tick it began on. The dipole line (60 seconds) as it stood at the moment the hump first stood at its furthest, read by place on the tape: no trade that came after that read is in it."
+  },
+  {
+   "column": "hump__best_bid_at_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. The best bid as it stood at the moment the hump ended, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump__best_ask_at_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. The best offer as it stood at the moment the hump ended, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump__dipole_60s_at_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. The dipole line (60 seconds) as it stood at the moment the hump ended, read by place on the tape: no trade that came after that read is in it."
+  },
+  {
+   "column": "hump__next_bid_step_position",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a step of the best bid after the hump began: its position on the tape."
+  },
+  {
+   "column": "hump__next_bid_step_received_ns",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a step of the best bid after the hump began: when it was received."
+  },
+  {
+   "column": "hump__next_bid_step_price_from",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a step of the best bid after the hump began: the price it stepped from, in dollars."
+  },
+  {
+   "column": "hump__next_bid_step_price_to",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a step of the best bid after the hump began: the price it stepped to, in dollars."
+  },
+  {
+   "column": "hump__next_bid_step_same_event",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a step of the best bid after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+  },
+  {
+   "column": "hump__next_ask_step_position",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a step of the best offer after the hump began: its position on the tape."
+  },
+  {
+   "column": "hump__next_ask_step_received_ns",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a step of the best offer after the hump began: when it was received."
+  },
+  {
+   "column": "hump__next_ask_step_price_from",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a step of the best offer after the hump began: the price it stepped from, in dollars."
+  },
+  {
+   "column": "hump__next_ask_step_price_to",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a step of the best offer after the hump began: the price it stepped to, in dollars."
+  },
+  {
+   "column": "hump__next_ask_step_same_event",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a step of the best offer after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+  },
+  {
+   "column": "hump__next_same_side_trade_position",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a trade on the hump's side after the hump began: its position on the tape."
+  },
+  {
+   "column": "hump__next_same_side_trade_received_ns",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a trade on the hump's side after the hump began: when it was received."
+  },
+  {
+   "column": "hump__next_same_side_trade_same_event",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a trade on the hump's side after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+  },
+  {
+   "column": "hump__next_other_side_trade_position",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a trade on the other side after the hump began: its position on the tape."
+  },
+  {
+   "column": "hump__next_other_side_trade_received_ns",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a trade on the other side after the hump began: when it was received."
+  },
+  {
+   "column": "hump__next_other_side_trade_same_event",
+   "what": "A hump of the exhaustion line, on the tick it began on. The first a trade on the other side after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+  },
+  {
+   "column": "hump__last_bid_step_position",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a step of the best bid before the hump began: its position on the tape."
+  },
+  {
+   "column": "hump__last_bid_step_received_ns",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a step of the best bid before the hump began: when it was received."
+  },
+  {
+   "column": "hump__last_bid_step_price_from",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a step of the best bid before the hump began: the price it stepped from, in dollars."
+  },
+  {
+   "column": "hump__last_bid_step_price_to",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a step of the best bid before the hump began: the price it stepped to, in dollars."
+  },
+  {
+   "column": "hump__last_ask_step_position",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a step of the best offer before the hump began: its position on the tape."
+  },
+  {
+   "column": "hump__last_ask_step_received_ns",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a step of the best offer before the hump began: when it was received."
+  },
+  {
+   "column": "hump__last_ask_step_price_from",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a step of the best offer before the hump began: the price it stepped from, in dollars."
+  },
+  {
+   "column": "hump__last_ask_step_price_to",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a step of the best offer before the hump began: the price it stepped to, in dollars."
+  },
+  {
+   "column": "hump__last_same_side_trade_position",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a trade on the hump's side before the hump began: its position on the tape."
+  },
+  {
+   "column": "hump__last_same_side_trade_received_ns",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a trade on the hump's side before the hump began: when it was received."
+  },
+  {
+   "column": "hump__last_other_side_trade_position",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a trade on the other side before the hump began: its position on the tape."
+  },
+  {
+   "column": "hump__last_other_side_trade_received_ns",
+   "what": "A hump of the exhaustion line, on the tick it began on. The last a trade on the other side before the hump began: when it was received."
+  },
+  {
+   "column": "hump__info_ratio_at_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "hump__info_ratio_log_at_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "hump__info_shared_at_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "hump__info_entropy_lean_at_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "hump__info_flow_at_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "hump__info_lean_change_at_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "hump__info_pieces_with_a_trade_at_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "hump__info_ratio_made_by_division_at_began",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "hump__info_ratio_at_furthest",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "hump__info_ratio_log_at_furthest",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "hump__info_shared_at_furthest",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "hump__info_entropy_lean_at_furthest",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "hump__info_flow_at_furthest",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "hump__info_lean_change_at_furthest",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "hump__info_pieces_with_a_trade_at_furthest",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "hump__info_ratio_made_by_division_at_furthest",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "hump__info_ratio_at_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "hump__info_ratio_log_at_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "hump__info_shared_at_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "hump__info_entropy_lean_at_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "hump__info_flow_at_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "hump__info_lean_change_at_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "hump__info_pieces_with_a_trade_at_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "hump__info_ratio_made_by_division_at_ended",
+   "what": "A hump of the exhaustion line, on the tick it began on. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "hump_between_ticks__hump",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The number of this hump of the 20-second line, in order through the trade day. A label only."
+  },
+  {
+   "column": "hump_between_ticks__side",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. buy or sell: the side of zero the line stays on through this hump."
+  },
+  {
+   "column": "hump_between_ticks__began_received_ns",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. When it began: the moment the line came onto this side."
+  },
+  {
+   "column": "hump_between_ticks__ended_received_ns",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. When it ended: the moment the line next stood at zero, was empty, or had crossed. Empty when it was still on this side at the end of the trade day."
+  },
+  {
+   "column": "hump_between_ticks__length_seconds",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. From its beginning to its end, in seconds. Empty when it had not ended."
+  },
+  {
+   "column": "hump_between_ticks__how_it_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. What the line was just before: empty (nothing traded in the 20 seconds), at zero, or on the other side."
+  },
+  {
+   "column": "hump_between_ticks__how_it_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. What the line did there: went empty, came to zero, or crossed to the other side."
+  },
+  {
+   "column": "hump_between_ticks__began_on",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. What the stored line says changed it as the hump began: a trade was received, or trades left the span at a moment with no tick (nothing new had traded)."
+  },
+  {
+   "column": "hump_between_ticks__began_position",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The trade it began on: its position on the tape. Empty when it began with no tick."
+  },
+  {
+   "column": "hump_between_ticks__ended_on",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The same for the read at which it ended. Empty when it had not ended."
+  },
+  {
+   "column": "hump_between_ticks__trades_inside",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. How many trades on the tape were received from its beginning up to its end."
+  },
+  {
+   "column": "hump_between_ticks__furthest_flow",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The furthest the line stood from zero during it (above zero buying, below selling)."
+  },
+  {
+   "column": "hump_between_ticks__furthest_received_ns",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The moment it first stood there."
+  },
+  {
+   "column": "hump_between_ticks__first_trade_position",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first of them: its position on the tape. Empty when there is none."
+  },
+  {
+   "column": "hump_between_ticks__last_trade_position",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last of them."
+  },
+  {
+   "column": "hump_between_ticks__first_trade_price",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The price of the first of them, in dollars."
+  },
+  {
+   "column": "hump_between_ticks__last_trade_price",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The price of the last of them."
+  },
+  {
+   "column": "hump_between_ticks__highest_trade_price",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The highest price traded inside it."
+  },
+  {
+   "column": "hump_between_ticks__lowest_trade_price",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The lowest price traded inside it."
+  },
+  {
+   "column": "hump_between_ticks__first_trade_leg",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The stored trade leg under way at its first trade: its number."
+  },
+  {
+   "column": "hump_between_ticks__last_trade_leg",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The stored trade leg under way at its last trade."
+  },
+  {
+   "column": "hump_between_ticks__trade_legs_under_way",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. How many different stored trade legs were under way at its trades."
+  },
+  {
+   "column": "hump_between_ticks__best_bid_at_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The best bid as it stood at the moment the hump began, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump_between_ticks__best_ask_at_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The best offer as it stood at the moment the hump began, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump_between_ticks__dipole_60s_at_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The dipole line (60 seconds) as it stood at the moment the hump began, read by place on the tape: no trade that came after that read is in it."
+  },
+  {
+   "column": "hump_between_ticks__best_bid_at_furthest",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The best bid as it stood at the moment the hump first stood at its furthest, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump_between_ticks__best_ask_at_furthest",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The best offer as it stood at the moment the hump first stood at its furthest, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump_between_ticks__dipole_60s_at_furthest",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The dipole line (60 seconds) as it stood at the moment the hump first stood at its furthest, read by place on the tape: no trade that came after that read is in it."
+  },
+  {
+   "column": "hump_between_ticks__best_bid_at_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The best bid as it stood at the moment the hump ended, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump_between_ticks__best_ask_at_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The best offer as it stood at the moment the hump ended, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+  },
+  {
+   "column": "hump_between_ticks__dipole_60s_at_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The dipole line (60 seconds) as it stood at the moment the hump ended, read by place on the tape: no trade that came after that read is in it."
+  },
+  {
+   "column": "hump_between_ticks__next_bid_step_position",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a step of the best bid after the hump began: its position on the tape."
+  },
+  {
+   "column": "hump_between_ticks__next_bid_step_received_ns",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a step of the best bid after the hump began: when it was received."
+  },
+  {
+   "column": "hump_between_ticks__next_bid_step_price_from",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a step of the best bid after the hump began: the price it stepped from, in dollars."
+  },
+  {
+   "column": "hump_between_ticks__next_bid_step_price_to",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a step of the best bid after the hump began: the price it stepped to, in dollars."
+  },
+  {
+   "column": "hump_between_ticks__next_bid_step_same_event",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a step of the best bid after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+  },
+  {
+   "column": "hump_between_ticks__next_ask_step_position",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a step of the best offer after the hump began: its position on the tape."
+  },
+  {
+   "column": "hump_between_ticks__next_ask_step_received_ns",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a step of the best offer after the hump began: when it was received."
+  },
+  {
+   "column": "hump_between_ticks__next_ask_step_price_from",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a step of the best offer after the hump began: the price it stepped from, in dollars."
+  },
+  {
+   "column": "hump_between_ticks__next_ask_step_price_to",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a step of the best offer after the hump began: the price it stepped to, in dollars."
+  },
+  {
+   "column": "hump_between_ticks__next_ask_step_same_event",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a step of the best offer after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+  },
+  {
+   "column": "hump_between_ticks__next_same_side_trade_position",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a trade on the hump's side after the hump began: its position on the tape."
+  },
+  {
+   "column": "hump_between_ticks__next_same_side_trade_received_ns",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a trade on the hump's side after the hump began: when it was received."
+  },
+  {
+   "column": "hump_between_ticks__next_same_side_trade_same_event",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a trade on the hump's side after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+  },
+  {
+   "column": "hump_between_ticks__next_other_side_trade_position",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a trade on the other side after the hump began: its position on the tape."
+  },
+  {
+   "column": "hump_between_ticks__next_other_side_trade_received_ns",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a trade on the other side after the hump began: when it was received."
+  },
+  {
+   "column": "hump_between_ticks__next_other_side_trade_same_event",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The first a trade on the other side after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+  },
+  {
+   "column": "hump_between_ticks__last_bid_step_position",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a step of the best bid before the hump began: its position on the tape."
+  },
+  {
+   "column": "hump_between_ticks__last_bid_step_received_ns",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a step of the best bid before the hump began: when it was received."
+  },
+  {
+   "column": "hump_between_ticks__last_bid_step_price_from",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a step of the best bid before the hump began: the price it stepped from, in dollars."
+  },
+  {
+   "column": "hump_between_ticks__last_bid_step_price_to",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a step of the best bid before the hump began: the price it stepped to, in dollars."
+  },
+  {
+   "column": "hump_between_ticks__last_ask_step_position",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a step of the best offer before the hump began: its position on the tape."
+  },
+  {
+   "column": "hump_between_ticks__last_ask_step_received_ns",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a step of the best offer before the hump began: when it was received."
+  },
+  {
+   "column": "hump_between_ticks__last_ask_step_price_from",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a step of the best offer before the hump began: the price it stepped from, in dollars."
+  },
+  {
+   "column": "hump_between_ticks__last_ask_step_price_to",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a step of the best offer before the hump began: the price it stepped to, in dollars."
+  },
+  {
+   "column": "hump_between_ticks__last_same_side_trade_position",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a trade on the hump's side before the hump began: its position on the tape."
+  },
+  {
+   "column": "hump_between_ticks__last_same_side_trade_received_ns",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a trade on the hump's side before the hump began: when it was received."
+  },
+  {
+   "column": "hump_between_ticks__last_other_side_trade_position",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a trade on the other side before the hump began: its position on the tape."
+  },
+  {
+   "column": "hump_between_ticks__last_other_side_trade_received_ns",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. The last a trade on the other side before the hump began: when it was received."
+  },
+  {
+   "column": "hump_between_ticks__info_ratio_at_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "hump_between_ticks__info_ratio_log_at_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "hump_between_ticks__info_shared_at_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "hump_between_ticks__info_entropy_lean_at_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "hump_between_ticks__info_flow_at_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "hump_between_ticks__info_lean_change_at_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "hump_between_ticks__info_pieces_with_a_trade_at_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "hump_between_ticks__info_ratio_made_by_division_at_began",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its began, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "hump_between_ticks__info_ratio_at_furthest",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "hump_between_ticks__info_ratio_log_at_furthest",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "hump_between_ticks__info_shared_at_furthest",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "hump_between_ticks__info_entropy_lean_at_furthest",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "hump_between_ticks__info_flow_at_furthest",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "hump_between_ticks__info_lean_change_at_furthest",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "hump_between_ticks__info_pieces_with_a_trade_at_furthest",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "hump_between_ticks__info_ratio_made_by_division_at_furthest",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its furthest, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "hump_between_ticks__info_ratio_at_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). THE INFORMATION RATIO (the operator's C_signed): the mean of the entropy of the twenty bought pieces and the entropy of the twenty sold pieces, over the information the two lists share, signed by the side that leads. HUGE WHERE info_ratio_made_by_division IS TRUE: do not read its size there."
+  },
+  {
+   "column": "hump_between_ticks__info_ratio_log_at_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "hump_between_ticks__info_shared_at_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio). Zero where all the trading of the 20 seconds is on one side."
+  },
+  {
+   "column": "hump_between_ticks__info_entropy_lean_at_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's ent_dipole: the entropy of the bought pieces minus the entropy of the sold pieces, over their sum."
+  },
+  {
+   "column": "hump_between_ticks__info_flow_at_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's mi_flow: the shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "hump_between_ticks__info_lean_change_at_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). The operator's imb_flow: bought minus sold over bought plus sold of the later ten seconds, minus the same of the earlier ten."
+  },
+  {
+   "column": "hump_between_ticks__info_pieces_with_a_trade_at_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). How many of the twenty one-second pieces hold any trade with a side. A figure standing on one or two pieces stands on very little."
+  },
+  {
+   "column": "hump_between_ticks__info_ratio_made_by_division_at_ended",
+   "what": "A hump that began at a moment with no tick (old trades leaving the 20 seconds), set on the last tick received before that moment. At its ended, read at that tick (the read of the stored exhaustion line standing there, by place on the tape). TRUE where the two lists share exactly nothing (all the trading of the 20 seconds is on one side): there the ratio is a number over the operator's smallest number, made by the division and not by the market. FALSE otherwise. Empty where nothing with a side traded."
+  },
+  {
+   "column": "humps_begun_between_ticks",
+   "what": "How many humps began at a moment with no tick after this tick and before the next. The first is in the hump_between_ticks columns; every one is whole in the stored research table of the humps."
+  }
+ ],
+ "counts": {
+  "trade_day": "2023-10-02",
+  "ticks": 819783,
+  "leg_moves_set_on_their_first_step": 6119,
+  "bid_run_moves_set_on_their_first_step": 13332,
+  "ask_run_moves_set_on_their_first_step": 13680,
+  "humps_set_on_the_tick_they_began_on": 2326,
+  "humps_that_began_with_no_tick": 2133,
+  "of_them_set_on_the_last_tick_before": 1752,
+  "of_them_second_or_later_before_the_next_tick": 381,
+  "of_them_before_the_first_tick_of_the_trade_day": 0,
+  "moves": 33131,
+  "humps": 4459,
+  "columns": 327
+ },
+ "checks": {
+  "passed": true,
+  "what": "each file holds the rows of the stored rows file beside it, in the same order; every tick of the trade day is in exactly one of them; at every trade with a side the exhaustion line is that trade's own stored read; every move sits on the tick of its first step and no two of one kind share a tick; every hump that began on a trade sits on that tick"
+ },
+ "files": [
+  {
+   "file": "calc-research_columns-20231002-part000.parquet",
+   "rows": 262144,
+   "bytes": 3964067,
+   "sha256": "1b769a759054924f62a818b55488eb0d97b500e8a76d87337abf3f4c34da4793",
+   "beside": "rows-20231002-part000.parquet",
+   "beside_sha256": "f79c3f322a8dcb5077fa4edc4cadc5f5e889b8a13154d806975417f318499932"
+  },
+  {
+   "file": "calc-research_columns-20231002-part001.parquet",
+   "rows": 262144,
+   "bytes": 3893937,
+   "sha256": "5281b8916d25c94a15d4ddb82af472b3c455b4e0da50cd7eed354d45654dd1a6",
+   "beside": "rows-20231002-part001.parquet",
+   "beside_sha256": "8390ed82b3e4d10eecd717dbe8436a93b80a0e6b10a69bffe6e3d9306e3406b9"
+  },
+  {
+   "file": "calc-research_columns-20231002-part002.parquet",
+   "rows": 262144,
+   "bytes": 3613044,
+   "sha256": "b912ceacac7d3e73c6083570904fe74e872a0a1fa15cb7fad1eedf3af7f2cd49",
+   "beside": "rows-20231002-part002.parquet",
+   "beside_sha256": "f160a13f58c51550c635b646a8fa7929fdead459840bc62569adefbf7800e1e2"
+  },
+  {
+   "file": "calc-research_columns-20231002-part003.parquet",
+   "rows": 34238,
+   "bytes": 593844,
+   "sha256": "d15c8792910e10249d78dc15885e9a6ac3aeae533ba6cf7b3dfa8d6dee5654ba",
+   "beside": "rows-20231002-part003.parquet",
+   "beside_sha256": "490e3f61988482632b4f7dd82868bafc3a761731c2931d574ddf9855753defa4"
+  },
+  {
+   "file": "CALC-research_columns-COUNT-20231002.json",
+   "rows": null,
+   "bytes": 481,
+   "sha256": "589994874315dd7273595fae016500b2f1163275965a9b7f7297a0234d708f6d"
+  }
+ ],
+ "seconds": 31.4
+}
