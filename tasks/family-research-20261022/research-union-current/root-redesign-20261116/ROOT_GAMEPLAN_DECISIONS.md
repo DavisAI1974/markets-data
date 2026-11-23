@@ -4011,6 +4011,34 @@ with 2 points: bought and sold".**
 - Nothing is typed, labelled, measured or put in the Excel sheets from these pictures. The two points are where
   the program's rules put the trade, for looking at; no result is made from them.
 
+**DECIDED (Greg, 2026-11-23, fifteenth session), on the pictures with the two points. His words, whole: "Ok
+ So the exhaustion and dipole does show movement when the trades sre executed. Keep those as they are for the time
+being. Let's discuss separate best bid and offer price curves by tick during the trade period for a minute. I don't
+know exactly what that might show us but just pick 2 of the 40 to test it on. I want to see the flow up and down and
+if it's showing me anything along with these. So keep the grapsh we currently have and add those two for any two
+days. And make these curves rounded instead of straight lines unless price isn't changing then it would be
+straight".**
+- THE DIPOLE AND THE EXHAUSTION GRAPHS STAY AS THEY ARE for the time being. His read: they do show movement when
+  the trades are executed.
+- HIS BEST BID AND BEST OFFER IDEA IS TAKEN UP, as a TEST ON TWO of the 40 pictures, on two trade days. The five
+  graphs stay; two are added, each its own graph: the best bid by tick, the best offer by tick.
+- THE TWO CURVES ARE ROUNDED, and straight where the price is not changing.
+- BUILT, NOT RUN (Markets `ccr-b66f34d5-h6ra1t`, `root/trade_renders.py --quotes --only`). Claude's calls, stated
+  to him, his to correct from the picture:
+  1. THE TWO PICTURES: trade day Oct 18, trade 982 (a buy) and trade day Oct 2, trade 883 (a sell): the first two
+     he was sent, one of each side, on two trade days.
+  2. HOW A CURVE IS ROUNDED WITH NO NUMBER OF OURS: it goes through the first tick and the last tick of every
+     stretch a best price stands unchanged. Between those two it is a straight line (the price is not changing);
+     from the last tick of one price to the first tick of the next it is rounded (a shape-keeping curve that never
+     swings past a price that stood). Drawing only: no value is changed. Said to him: because the book ticks many
+     times a second, the rounded part is the short moment the price actually stepped, so on a busy stretch the
+     curve will look close to steps with soft corners. If he wants it to flow more than that, the curve would
+     have to slope while the price is standing still, which he ruled out in the same sentence.
+  3. WHERE THEY SIT: under the price graph, above the dipole, so the three price graphs read together.
+  4. The test is stored in its own folder (`trade-renders-quotes-test/`) on the two trade day branches; the 40
+     stored pictures are not touched.
+- Nothing of the best bid or best offer is typed, labelled, measured or put in the Excel sheets.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
