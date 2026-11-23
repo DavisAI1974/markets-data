@@ -5512,6 +5512,28 @@ think part of tasty problem was that i didn't confirm email and do one of the st
 - Nothing is bought, installed, connected or built on this until it has been laid out to him.
 - Greg, same discussion: "And i can sign up for ninja". NinjaTrader's free simulated account is in play. It is a
   Windows program: it runs on his own computer, not in a cloud session.
+- Greg, same discussion: "We figured out a partial workaround by creating rules and letting the system trade by
+  them". READ ON THAT WORD, told to him first, platform and handoff files only (no findings file, no old strategy
+  rule): on markets-data `main` (`15fbf2a`), `paper-rules/20261109/`: `PLATFORM_UPLOAD_STATUS.md`,
+  `UPLOAD_INSTRUCTIONS.md`, `UNIFORM_PAPER_PROTOCOL.md`, `ACTIVE_IMPLEMENTATION.md`, `REMAINING_DEPENDENCIES.md`,
+  `deferred/README.md`, `platform/CME_CAPABILITIES.json`, `README.md`, `NEXT_CHAT_HANDOFF.md`, `RESTART_HANDOFF.md`,
+  `RECOVERY_RUNTIME_UPDATE.md`, `RUNTIME_ENVIRONMENT.json`. WHAT THEY SAY (Codex's record of about 2026-11-09):
+  - THE WORKAROUND: because he cannot answer in milliseconds, every strategy is written as a RULE a system trades
+    by on its own (a machine rule file, helpers that read it, a ledger layout, one protocol for all). It was
+    PARTIAL: the rules and the protocol were made; no platform was ever made to trade by them. "This is a
+    specification and preservation checkpoint, not a finished platform runner." No platform fill was ever made.
+  - THE PLATFORM THEN: CME's practice simulator in Microsoft Edge (signed in, NGZ6, $100,000 practice funds) had
+    replaced Tradovate as his choice; NinjaTrader's set-up was turned down at that time. The simulator has no way
+    to load a strategy and Codex could not work its buttons. So nothing traded.
+  - THE PROTOCOL (`UNIFORM_PAPER_PROTOCOL.md`), which fits his rulings of today: every strategy gets the same
+    handling, none screened out; each rule decides at the first tick everything it needs is known; opposing rules
+    are kept apart so one cannot close another's trade (separate simulated accounts, or the same span replayed
+    separately); a fill is only what the platform reports; every outcome is written down, no-fill and rejected
+    included.
+  - NINJATRADER, from its official pages as cited there: a strategy written in its own script can run in a
+    simulated account, replay included; its depth has no order numbers; its file interface for outside signals
+    takes day and good-till-cancelled orders, not immediate-or-cancel.
+- NOT USED from that folder: its rules, models and findings (made on the old data).
 
 ## Held for the later stage: figuring out what moves the market
 
