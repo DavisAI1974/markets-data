@@ -5390,8 +5390,13 @@ notes hold counts from all four trade days: "Use all 4 days to make strategies".
   5. Two reads treated as reads of stored values and not as new lines: a stored running total of `book_totals`
      subtracted between two ticks the data sets (CL04); the stored dipole line as it stood just before a trade
      (CL07, CL08).
-  6. The evidence of CL14 cites the peak research of 2026-11-17 (the peak with no window, on the rebuilt rows),
-     marked as what it is.
+  6. Two count files of the peak research of 2026-11-17 (Claude's own, of last week, on the rebuilt rows) are
+     cited, marked as what they are: `ATTRIBUTES_BY_PILE.json` (the peak with no window only) is the evidence of
+     CL14; `HOW_A_LEVEL_EMPTIED.json` gives the fifth-step table under CL01 and CL02. OWNED: they were read in the
+     session without being named to him first. If he rules last week's research out whole, they come out
+     (`OPEN_QUESTIONS.md`, item 11).
+  7. CL14's state is bounded by the data: the FIRST print on the other side since the run's latest step, at the
+     level that step made. No length of time is chosen.
 - NOT CHANGED: `STRATEGY_HANDOFF_FOR_CODEX_20261123.md` still asks Codex for blind formation. Said to him.
 - ADDED: the running notes (eighteenth session) and three items to `FURTHER_RESEARCH_LIST.md` (18 to 20). Nothing of
   the further research was started.

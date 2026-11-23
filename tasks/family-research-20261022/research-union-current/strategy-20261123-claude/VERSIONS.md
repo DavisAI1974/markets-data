@@ -278,8 +278,9 @@ would show it wrong; the cells it is reported by; and whether it can be read fro
 - STAGE AND SITUATION: (4) the turn, as a transition. The exhaustion line comes onto one side ON A TRADE while the
   60-second flow still stands on the OTHER side: the first fresh trading against the flow that has been in charge.
 - OBSERVED, AND KNOWN AT: as CL07 (a hump that begins on a trade; the dipole line just before that trade), and then
-  the first step of the quote the hump is hitting with its stored mark `next_bid_step_same_event` or
-  `next_ask_step_same_event`.
+  the steps of the quote the hump is hitting. The humps table stores only the FIRST step after the hump began,
+  with its mark `next_bid_step_same_event` or `next_ask_step_same_event`; a step in a later exchange event is read
+  from `calc-quote_runs-facts` and the rows' `exchange_event`.
 - THE STATE: the hump began on a trade, and the dipole line just before the trade stood on the other side.
 - DIRECTION: two uses, kept apart. (a) A WARNING, no direction: a with-the-old-flow stance of any version is let
   go. (b) The proposed rule: with the NEW hump, but only once the quote it is hitting has stepped away in a LATER
@@ -297,7 +298,7 @@ would show it wrong; the cells it is reported by; and whether it can be read fro
 - WHAT WOULD SHOW IT WRONG: in a cell, after such a hump the first quote step in a later exchange event is the
   other quote stepping the old way as often as the hit quote stepping the new way.
 - CELLS: side by how the hump began by trade day.
-- READ FROM WHAT IS STORED TODAY: yes (the same files as CL07). NOT COUNTED YET.
+- READ FROM WHAT IS STORED TODAY: yes (the same files as CL07, and `calc-quote_runs-facts`). NOT COUNTED YET.
 
 ## CL09. A change of side made by the span: no signal
 
@@ -417,22 +418,24 @@ would show it wrong; the cells it is reported by; and whether it can be read fro
 - CELLS: aggressor side by trade day. How many levels (two, three, more) is written on each line, not grouped.
 - READ FROM WHAT IS STORED TODAY: yes (`calc-sweeps-facts`, `calc-quote_runs-facts`). NOT COUNTED YET.
 
-## CL14. The other side arrives at a fresh quote
+## CL14. The other side arrives at the top step of a run
 
-- STAGE AND SITUATION: (4) the turn, and management. The best bid has been stepping up. Its top step is a new,
-  better bid that has just come in. A SELL prints at it: the other side has arrived at the newest and usually
-  thinnest level of the move. (The mirror: the best offer stepping down and a BUY printing at it.)
+- STAGE AND SITUATION: (4) the turn, and management. The best bid has been stepping up. Its top step is a better
+  bid that came in. A SELL prints at it, the FIRST since that step: the other side has arrived at the newest level
+  of the move. (The mirror: the best offer stepping down and a BUY printing at it.)
 - OBSERVED, AND KNOWN AT: the run of the best bid in progress is up (`bid_run_direction`) and has not stepped back;
   a trade row with the tape's own side selling, at the best bid's price; and at the tick before it the size at the
   best bid against the size at the best offer (`best_bid_size`, `best_ask_size`). Known at the end of the trade's
   exchange event.
-- THE STATE: a trade on the other side has printed at the top level of a run of the quote that is still under way,
-  and that level still stands at the end of the exchange event. (When the trade empties it, the run has already
-  taken its first step back and there is nothing left to decide.)
+- THE STATE: the FIRST trade on the other side since the run's latest step has printed at the level that step
+  made, and that level still stands at the end of the exchange event. One stance for each step of a run at most:
+  a later print at the same level is not a new event. How long the level had stood is written on the stance's line
+  (the tick of the step and the tick of the print), not judged: no length of time is chosen. (When the trade
+  empties the level, the run has already taken its first step back and there is nothing left to decide.)
 - DIRECTION: two uses, kept apart. (a) MANAGEMENT, no direction: a with-the-move stance of any version is let go
-  here, one event before the first step back would show the end. (b) The proposed rule: AGAINST the run.
+  here, before the first step back would show the end. (b) The proposed rule: AGAINST the run.
 - TAKEN / LET GO / AGAIN: taken at the end of that exchange event. (b) is let go at the run's first step back,
-  which is the event it expects. Again at the next run.
+  which is the event it expects. Again at the run's next step, or at the next run.
 - MANAGEMENT AND INVALIDATION: (b) is invalidated by the run's next step the same way.
 - BUILT IN, AND WHAT IS LEFT: selling into the bid is what stops the bid's rise, so that the other side is found
   at the end of a move is partly built in. What is NOT built in is the level still standing after the print. What

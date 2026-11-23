@@ -12,7 +12,7 @@ was made, so the work does not wait on an answer.
    770,579), the 136,187 moves, the 17,304 humps and the trades on the tape (38,127; 41,410; 33,703; 30,739). The
    leakage gate comes first. NOT BUILT, NOT PRICED: it is put to him with the price when he wants it. Because the
    versions were formed on these trade days it would be a record, not a test.
-2. THE BUILT-IN UNDER THE STRONGEST LEAD. How many of a run's third steps lie in the same exchange event as its
+2. THE BUILT-IN UNDER THE PAPER'S FINDING 4. How many of a run's third steps lie in the same exchange event as its
    second step (one order trading through several levels)? Until that is counted, part of "a level that was eaten
    leads on" (the paper's finding 4, versions CL01 and CL02) may be made by the event. Data: `calc-quote_runs-facts`
    and the rows' `exchange_event`. Added to `FURTHER_RESEARCH_LIST.md`.
@@ -43,8 +43,14 @@ was made, so the work does not wait on an answer.
    question for after the try, and his.
 10. WHAT WAS LEFT OUT ON CLAUDE'S OWN CALL, his to correct: the crypto and ng program's TURNS table (its turn
     amount was set on crypto results), with the program's trades. Still not for strategy: the information measure.
-11. THE EVIDENCE OF CL14 stands on the peak research of 2026-11-17 (the peak with no window, made on the rebuilt
-    rows and kept in the running notes). Claude's call: it may be cited, marked as what it is. His to strike.
+11. TWO COUNT FILES OF THE PEAK RESEARCH OF 2026-11-17 ARE CITED (Claude's own, of last week, made on the rebuilt
+    rows and kept beside the running notes). `ATTRIBUTES_BY_PILE.json`, the peak with no window only: the whole
+    evidence of CL14. `HOW_A_LEVEL_EMPTIED.json`: the FIFTH-step table under CL01 and CL02, the two "against"
+    sentences drawn from it, and the "3 of 150" line added to the running notes. (Its third-step figures are the
+    paper's own: the research run of 2026-11-23 was checked equal to this file.) They were read in the session
+    without being named to him first: owned. Claude's call: they may be cited, marked as what they are, because
+    they stand on the rebuilt data. If he rules that last week's research is out whole, those two tables, those
+    sentences and that line come out and CL14 stands with no count behind it.
 12. CODEX'S HANDOFF still asks for blind formation; this session formed on all four on his word. Not changed.
 
 ## Not supplied

@@ -975,7 +975,7 @@ record and not a blind test. The versions are in `research-union-current/strateg
   (CL05). (2) the middle: both quotes have stepped (CL06); the price running against the dipole, read both ways
   (CL10, CL11); paying up through more than one level (CL13). (3) another step: the eaten level (CL01); the
   abandoned level (CL02). (4) the turn: fresh trading against the dipole (CL08); the reloaded level (CL12); the
-  other side arriving at a fresh quote (CL14). (5) after: the step back and the return (CL15). At any stage: a
+  other side arriving at the top step of a run (CL14). (5) after: the step back and the return (CL15). At any stage: a
   change of side made by the span is no signal (CL09).
 - A BUILT-IN NOT SAID BEFORE, to face before finding 4 of the paper is leaned on: one order that trades through
   several price levels makes several steps of the quote in ONE exchange event. A third step in the same event as

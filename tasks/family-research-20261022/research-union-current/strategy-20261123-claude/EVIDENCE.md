@@ -3,8 +3,10 @@
 ## How to read it
 
 - EVERY FIGURE IS A COUNT OF LINES OF ONE TRADE DAY, in the order Oct 2; Oct 3; Oct 17; Oct 18 (2023). Nothing is
-  added across trade days, nothing is averaged, no share is worked out. No test of chance has been made: each count
-  is a lead, not a result.
+  added across trade days, nothing is averaged, and no share is written. Where a sentence says "more often, set
+  against their number", the two pairs of counts in the table beside it were compared by hand and the sentence
+  is that comparison; the counts are there to check it. No test of chance has been made: each count is a lead,
+  not a result.
 - EVERY FIGURE WAS COPIED BY SCRIPT from a stored receipt or count file, not typed: the receipts
   `research-threads/RESEARCH-THREADS-<trade day>.json` and `CALC-<name>-<trade day>.json` and
   `crypto-ng-tick/CRYPTO-NG-TICK-<trade day>.json` on the four daily branches (`root-rows-20231002` `360fdaa`,
@@ -328,7 +330,7 @@ Source: the receipt of `sweeps`.
   its face.
 - UNRESOLVED: the number of such events, and the next step of the swept quote in a later exchange event.
 
-## CL14. The other side arrives at a fresh quote
+## CL14. The other side arrives at the top step of a run
 
 Source: the running notes of 2026-11-17, stage (4), and their count file `ATTRIBUTES_BY_PILE.json` (the peak with
 no window: a run of trades on one side, read at its last trade, laid against the runs of the quote).
@@ -357,7 +359,8 @@ no window: a run of trades on one side, read at its last trade, laid against the
 - AGAINST: the notes call the reading "to test, not shown". These counts are of a run of trades read at its LAST
   trade, which is known only at the first trade on the other side; CL14 acts on a single print, earlier. That
   form is not counted.
-- UNRESOLVED: whether the level hit was the newest step of the run; whether it still stood after the print.
+- UNRESOLVED: whether the print was the first on the other side since the run's latest step; whether the level
+  still stood after it.
 
 ## CL15. The step back and the return
 
