@@ -5680,6 +5680,12 @@ but all Anthropic models running them"; "Permission for main change".**
 - Greg, same exchange: "I'm fine with them running in code sess". THE AUDITOR AND VERIFIER TASKS RUN IN A CLAUDE CODE
   SESSION, with the four agents. Not started: each is begun on his word, with its declared budget.
 
+**CLOSE OF THE EIGHTEENTH SESSION (Greg: "Update, create handoff committ and push everything and then make drop in box
+for new session").** Handoff `NEXT_SESSION_HANDOFF_20261123U.md` replaces handoff T. Everything committed and pushed:
+Markets trunk `beb3836`, Markets session branch `ccr-fffbc766-a1gxpl` `ec2e86f`, this branch at the commit that adds
+handoff U. No pod exists. The tastytrade keys pasted this session were kept only in the session's scratch folder and
+are in no committed file; the next session asks for them again.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
