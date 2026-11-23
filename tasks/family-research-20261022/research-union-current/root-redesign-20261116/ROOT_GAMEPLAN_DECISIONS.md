@@ -3493,6 +3493,45 @@ individual trade renders. we decided tjhat the full day doesn't really tell us m
   picture per TRADE LEG (the trade price curve cut into its own moves), trade day Oct 17 first (5,660), then the
   other three on his go. Nothing is drawn until his go.
 
+## Fifteenth session (2026-11-23, in a code session, on Fable with the Fable advisor)
+
+Greg pasted the drop-in of the fourteenth session (handoff Q). Read in full: handoff Q, the notes file, this file's
+fourteenth session.
+- Code: Markets `ccr-92cbec22-u0cbuj` (`e8cd626`) brought into the session's own branch `ccr-b66f34d5-h6ra1t` by
+  fast-forward (the session branch held nothing of its own). Nothing to the trunk.
+- The Runpod skills were loaded and the account read: no pod exists. The agent skills router and the git workflow
+  skill were read from the pinned public source (tag 0.6.8). Superpowers loaded by itself and was not used.
+- Not opened: last week's strategy material. Not touched: AWS.
+
+**DECIDED (Greg, 2026-11-23, fifteenth session), on being put the unit of a picture once (every print, every trade
+leg, every trade of the program; Claude's call: the trade leg): "And I want every trade leg compared against the
+exhaustion and the dipole. And show the prebirtths for the dipole and exhaustion before the trade starts".**
+- THE UNIT OF A PICTURE IS THE TRADE LEG. One picture for every trade leg, all four trade days. Not put to him again.
+- EACH PICTURE SETS THE TRADE LEG AGAINST THE DIPOLE AND THE EXHAUSTION: the four separate graphs on one clock
+  (trade price curve; dipole at the tick; exhaustion at the tick; the 20-second exhaustion line).
+- THE PREBIRTH IS IN EVERY PICTURE: what the dipole and the exhaustion did BEFORE the trade leg's first trade.
+- BUILT, NOT RUN (Markets `ccr-b66f34d5-h6ra1t`, `27c3e25`, `root/leg_renders.py`). Claude's calls in it, stated to
+  him, his to correct from the picture:
+  1. WHERE A PICTURE STARTS AND ENDS. It starts at the first trade of the trade leg BEFORE and ends at the last
+     trade of the trade leg AFTER; both edges are then moved outward so that no stored run of trades, stretch of
+     the dipole or hump of the 20-second line they touch is cut. No number of seconds, typed clock time or count of
+     trades is in it. THIS REPLACES what Claude told him first in this session (only the humps the trade leg
+     touches): under that rule a picture could start at the trade leg's own first trade and show no prebirth at
+     all (the fourteenth session's trade 1051 had 2.9 seconds). The first trade leg of a trade day has no trade leg
+     before it; the receipt names every trade leg whose picture has no lead-in.
+  2. THE TRADE LEG IS MARKED ON ALL FOUR GRAPHS: its own life shaded (first trade to last trade), a line at the
+     print where it first became known (its first step), a line at the print that showed it had ended (the step
+     back). A trade leg has two starts and both are drawn; neither is chosen.
+  3. "COMPARED" IS THE PICTURE. Nothing is worked out: stored values are drawn. No measure of lead, no score, no
+     order, no type, no label. The index table holds each trade leg's own stored facts and its picture's two edges.
+  4. A FIRST LOOK BEFORE A WHOLE TRADE DAY IS STORED: the job can draw only the trade legs whose first trade falls
+     inside one stretch. That chooses WHICH trade legs are drawn first, never where a picture starts or ends.
+  5. Checks written into the job, on the stored real data on the pod: every trade leg sits on trades the stored
+     tape holds, with the stored time; its stored moments are in order; the count of trade legs is the one in the
+     stored receipt of the tick renders; every picture holds its trade leg whole; every trade leg asked for is drawn
+     exactly once. The count is written first; the size of the pictures is written in the receipt.
+- NOT RUN: nothing is drawn until his go on a pod, with the price read at the time.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

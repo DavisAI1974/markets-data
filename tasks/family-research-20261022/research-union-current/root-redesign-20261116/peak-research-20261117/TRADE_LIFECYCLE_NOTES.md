@@ -704,3 +704,23 @@ number of seconds, a typed clock time or a count of trades.
 - Kept so it is not done again: a pod that says "container is starting" for more than a few minutes is not coming
   up. Delete it and run its trade day on a healthy pod. And a pod left up while the session restarts keeps
   billing: read the account first thing after any restart.
+
+
+## 2026-11-23 (fifteenth session): one picture per TRADE LEG, set against the dipole and the exhaustion, prebirth shown
+
+Greg, on being put the unit of a picture: "And I want every trade leg compared against the exhaustion and the
+dipole. And show the prebirtths for the dipole and exhaustion before the trade starts".
+- The unit of the individual trade renders is the TRADE LEG (the trade price curve cut into its own moves).
+- Each picture: the four graphs on one clock, the trade leg marked on all four (its life shaded; the print where it
+  became known; the print that showed it had ended).
+- The prebirth is what the dipole and the exhaustion did before the trade leg's first trade. To be sure it is in
+  every picture, a picture starts at the first trade of the trade leg BEFORE (and ends at the last trade of the
+  trade leg after), moved outward so no run of trades, dipole stretch or hump of the 20-second line is cut.
+  Starting only from the hump the trade leg touches could leave no lead-in at all.
+- To remember when the pictures are read (said before, still true): the dipole and the exhaustion at the tick are
+  made from the very prints that draw the trade price curve, so inside a trade leg they move when it moves. What
+  is not built in is what they did BEFORE the trade leg's first trade. That is what these pictures are for.
+- Also built in: a trade leg starts on the stretch where the one before it turned, so the lead-in of every picture
+  is the trade leg before, and neighbouring pictures overlap. Each picture shades only its own trade leg.
+- Nothing is typed, labelled, measured or put in the Excel sheets from these pictures until decided with him.
+- Code: Markets `ccr-b66f34d5-h6ra1t`, `root/leg_renders.py`. Built, not run.
