@@ -3884,6 +3884,34 @@ movements but there's almost always some change to the other 2 when price moves 
   which way and how far the price stepped, and which way and how far each line moved on that print; beside it the
   same for prints where the price did not step. No window, nothing averaged, nothing labelled.
 
+**Greg (2026-11-23, fifteenth session), with two pictures: a screen of his own earlier message ("I also wanted to
+incled old crypto renders. They don't transfer value wise but they do in the same theory. They have have distinct
+prebirst features depending on direction and tails depending on direction. Same thing!! Obviously different shapes
+but exactly the same concept", with the July 7 exhaustion graphs marked by hand: "start ascent sooner", "dip below
+zero", "higher", "rate of ascent steeper", the tails circled) and the crypto picture "Dipole (flow) over Price, 2000
+winners, aligned to the turn". His question: "So these old crypto graphs are calculated exactly the way you just
+described?"; before it: "Aren't exhaustion and dipole independent calcs from the price curve?"**
+- ANSWERED FROM THE CODE (Markets `75b15fa`, both scripts read whole this session): YES for the lines. In
+  `_dipole_price_overlay.py` the dipole is bought minus sold over bought plus sold over the last 60 seconds; in
+  `research/shape_s71/regroup2.py` the exhaustion line is the same figure over a rolling 20 seconds. Neither takes
+  a price. They are independent of the price in what they read; they share only the moments of the trades.
+- WHAT THOSE PICTURES ALSO DID, which ours do not, said to him plainly:
+  1. EVERY LINE IS AN AVERAGE: of 2,000 winners in the dipole picture; of all the trades of one kind for one coin
+     in the exhaustion graphs. That is why they are smooth and why the features he marked stand out.
+  2. THEY ARE LINED UP ON ONE CHOSEN MOMENT. The exhaustion graphs: the onset of the PROGRAM'S OWN TRADE (x = 0).
+     The dipole picture: "the turn", the lowest (or highest) mid price in the half hour before the decision. So
+     the price V in that picture is made by the choice of x = 0; the dipole V under it is not.
+  3. THE PRICE in the dipole picture is the MID price (halfway between bid and ask), in bps from the turn, not the
+     trade prints.
+  4. Fixed spans (60 seconds each side; 45 before and 60 after) and a time grid.
+- WHAT IT MEANS FOR SEEING "THE SAME CONCEPT" HERE: the prebirth features and the tails are read around the onset
+  of the program's trade. Our pictures are drawn around a stored trade leg, which is a different mark and often a
+  one-tick piece. The crypto and ng program's own trades are stored for all four trade days. Claude's call,
+  repeated once: draw the next pictures around the program's trade. Not built until his word.
+- Carried from the thirteenth session, so the pre-onset rise is read rightly: a turn is only marked once recent
+  trading has moved the trade's way, so some rise into the onset is made by how the program picks its trades. The
+  DIFFERENCES he marked between kinds (sooner, steeper, the dip below zero, the tails) are not made that way.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
