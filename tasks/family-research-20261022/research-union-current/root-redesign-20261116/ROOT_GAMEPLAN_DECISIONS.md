@@ -5346,6 +5346,17 @@ task), `root-audit-20261116/RESEARCH_INTENTIONS.md` and `FURTHER_RESEARCH_LIST.m
   list by name put to him first, nothing removed before his word "delete".
 - Told to him before the strategy step starts; it waits for his word.
 
+**DECIDED (Greg, 2026-11-23, eighteenth session), on being told the strategy step was ready and that the paper and the
+notes hold counts from all four trade days: "Use all 4 days to make strategies".**
+- EVERY VERSION IS FORMED ON ALL FOUR TRADE DAYS (Oct 2, 3, 17, 18, 2023). This replaces "a version is formed blind to
+  the trade day it is tried on" for this step. The paper, the notes and the stored counts of all four may feed
+  every version.
+- WHAT FOLLOWS FROM IT, Claude's reading, stated to him, his to correct: a try of a version on any of the four trade
+  days is not a blind test, because the version was formed on that trade day. It shows how the version behaves
+  event by event on the tape it was formed on. A blind test needs a trade day beyond the four (none is held; only
+  the four enter any calculation) or live. Every version stays a hypothesis: provisional until live.
+- Taken as the word that starts the step. Said to him in the first message.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
