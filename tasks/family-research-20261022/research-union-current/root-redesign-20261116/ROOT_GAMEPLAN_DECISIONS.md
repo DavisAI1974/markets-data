@@ -5101,6 +5101,39 @@ session), on his "Yes make columns for eaxh new research question and fill in da
 - NO MID PRICE and no crypto data is in the file. The dipole and exhaustion values are the stored natural gas lines
   read at the tick by place on the tape. The information measure is NOT in the file (his deep dive first).
 
+**DECIDED (Greg, 2026-11-23, seventeenth session). His words: "If we can use the codex info now then fo it. If it needs
+further investigation why it's yes sometimes and no others, srt aside for further research"; and, pasting the table
+of values the look-up fault had touched: "Should we do deeper research after first steps? If this is good put in
+excel sheets and we'll do further research later".**
+- SAID TO HIM FIRST: the table he pasted (104; 144; 136; 130 and the rest) is how many values the look-up fault had
+  touched, all corrected by the rerun. It is not a research finding. The corrected tables were already in the
+  "moves" and "humps" sheets.
+- THE CODEX MEASURE IS USED NOW AND IS IN THE SHEETS. "Yes sometimes and no others" needs no further investigation:
+  where all the trading of the 20 seconds is on one side the two lists share exactly nothing and the ratio is made
+  by the division. Those reads are MARKED in their own column (`info_ratio_made_by_division`), so the sheet shows
+  which values to read. This replaces "the measure is in no sheet until his deep dive" above. It still feeds no
+  strategy until he says.
+- DONE, in the session from the stored tables (told to him; a look-up, nothing worked out; Markets
+  `ccr-dd95052b-3vcrwq`, `root/research_excel.py`): the eight "moves" and "humps" sheets written again whole with
+  the measure looked up AT THE SAME TICK as the exhaustion beside it (the read of the stored exhaustion line
+  standing there, by place on the tape): at a move's first step and end, at a hump's beginning, furthest and end.
+  Eight columns at each moment: `info_ratio`, `info_ratio_log`, `info_shared`, `info_entropy_lean`, `info_flow`,
+  `info_lean_change`, `info_pieces_with_a_trade`, `info_ratio_made_by_division`. Claude's call on the names,
+  stated to him: plain names, none of them "dipole" or "exhaustion"; the operator's own name of each is on the
+  RESEARCH COLUMNS page. The operator's first figure is not repeated: it is the exhaustion column.
+- The "moves" sheets now hold 51 columns, the "humps" sheets 84; the RESEARCH COLUMNS page 135 lines; the READ ME
+  one more line. Every sheet read back equal; the other sheets untouched, values and links. The file is 39.7
+  megabytes.
+- SET ASIDE FOR FURTHER RESEARCH, on his word (nothing of it is built):
+  1. THE OPERATOR AGAINST THE ORIGINAL DIPOLE EQUATIONS (`DavisAI1974/Basic_equations`, not attached to this
+     session; the session refused to attach it).
+  2. HOW LARGE THE INFORMATION RATIO IS where trading is on both sides, and how that goes with the number of pieces
+     holding a trade and with what the price did. What counts as large is his number.
+  3. DEEPER THAN THE FIRST STEP: what a move does between its first step and its end and after it (every step, not
+     only the first and the last); whether large moves come back (needs the moves that follow); the orders at
+     every level of a move and one order's life after a part fill; what the exhaustion, the dipole and the
+     measure did BEFORE a first step, not only at it.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

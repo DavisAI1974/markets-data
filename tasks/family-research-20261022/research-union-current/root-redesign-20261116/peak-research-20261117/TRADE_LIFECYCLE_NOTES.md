@@ -952,3 +952,8 @@ decisions file (seventeenth session) and in each receipt. Leads, no test of chan
   pieces of twenty (trade day Oct 2: 3,750 on one, 5,068 on two, of 70,393).
 - NOT PROVED, his deep dive: that the operator matches the original dipole equations (`Basic_equations`, not
   attached to the session). Until then it is in no sheet and no strategy.
+- 2026-11-23, later the same session: on Greg's word the information measure IS in the "moves" and "humps" sheets
+  (columns named `info_...`, with `info_ratio_made_by_division` marking the reads where the ratio says nothing).
+  Set aside by him for further research: the operator against the original equations; how large the ratio is on
+  two-sided reads; and everything deeper than a move's first step (the steps in between, whether moves come back,
+  what the lines did before the first step).
