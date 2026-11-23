@@ -5761,3 +5761,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   four-trade-day gate and its tests stay exactly as they are); it reuses ROOT's calculation modules wherever the
   feed carries their inputs, and says plainly which calculations a feed cannot support. Its input is built from the
   real record of what the feed sends (7e `prod-stream`), not before it: no made-up messages, even to check code.
+- PRODUCTION KEYS ONLY FOR LIVE TRADING. Greg: "We don't need the production keys now. Only when we go live trading
+  that we need prod keys". This replaces, for paper trading, the plan's market feed from tastytrade's production
+  quote stream (stage 7b). Claude's call for the feed meanwhile: try the sandbox's own stream. tastytrade's sandbox
+  page reports that `GET /api-quote-tokens` on the sandbox returned a `demo`-level token with a `/delayed` DXLink URL
+  that streamed quotes (one observation, 2026-10-28; how delayed not measured). If it works for natural gas, it
+  answers what the feed carries; how far behind it runs is measured, not assumed.
