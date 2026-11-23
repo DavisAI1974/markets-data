@@ -5616,6 +5616,23 @@ git cutting us offf and we lose everything".**
   How one job hands over to the next is part of building the runner (7b), put to him with it.
 - The 7e check is not a GitHub job: it runs from the session, so this does not bear on it.
 
+**DECIDED (Greg, 2026-11-23, eighteenth session). His words: "We'll have to handoff. Or run it for 6 and see what we get
+and then start again"; "If we have a budget, we need to be notified immediately when it hits it and everything stops";
+"And i don't want updates to only happen at the end of 6 hrs. If there's updating it need to be happening much more
+often. Irt if possible and we need real time updates that we can look at. We should be able to see what's being
+created/produced/learned at any time".**
+- JOB LENGTH: hand over from job to job, OR run one job to its stop, look at what it made, and start again. CLAUDE'S
+  CALL, his to correct: the first runs are single jobs that stop at 5.75 hours and are started again on his go;
+  the hand-over between jobs is built after he has seen one.
+- A BUDGET: the moment any budget is reached, everything stops and he is notified at once, on his phone. That holds
+  for the runner and for every agent run in a session.
+- UPDATES IN REAL TIME, NOT AT THE END: he must be able to see at any moment what is being created, produced and
+  learned. CLAUDE'S CALL, put to him with the runner, his to change: every signal, order, fill and status is
+  written the moment it happens to a live store he can watch on one page from his phone, and also appended to the
+  git record in markets-data, which is pushed every minute and at once on every order and fill (git is the record
+  of truth; the live store is the window). The live store and the phone notice are outside services and are
+  named to him before anything is set up.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
