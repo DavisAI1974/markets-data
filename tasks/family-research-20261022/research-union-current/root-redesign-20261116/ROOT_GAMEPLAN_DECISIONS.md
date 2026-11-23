@@ -3994,6 +3994,23 @@ with 2 points: bought and sold".**
 - Built, not run: Markets `ccr-b66f34d5-h6ra1t`. The 40 stored now are replaced by the rerun (deleted while it runs,
   the removal confirmed, then the new ones fetched). It waits for his go.
 
+**THE 40 PICTURES REDRAWN WITH THE TWO POINTS, done (2026-11-23, fifteenth session), on his "Go".**
+- The session's worker had restarted before his go. The account was read first (no pod), and the working folders
+  and git were found as left.
+- THE ORDER HE SET, KEPT: the pod was started; the 40 stored pictures, their index tables and receipts were removed
+  from all four daily branches and each removal confirmed on the remote (`2cbbd70`, `7959462`, `fc5f104`,
+  `3454855`); only then was anything new fetched.
+- ONE POD, all four trade days together, each pinned to its own two CPUs: General Purpose 8 CPUs, $0.32 an hour,
+  `bpujebthyac7ol` (US-CA-2), 10:50:09 to about 10:54:30 UTC: about 2 cents. Markets `a4d9c38`. All four passed
+  every check on the first run; the same 40 trades; the same counts of trades.
+- STORED in `trade-renders/`, each file fetched and proved against its receipt, `FILES.md` brought up to date, each
+  push confirmed: `root-rows-20231002` `577ea0f`, `-20231003` `85fd853`, `-20231017` `1eccc49`, `-20231018`
+  `29c8f46`. THE POD WAS DELETED after that; the account was read and shows none.
+- The price graph now: the mid price in dollars with two points, bought (a green point) and sold (a red point),
+  each named with its price. Nothing else is on it.
+- Nothing is typed, labelled, measured or put in the Excel sheets from these pictures. The two points are where
+  the program's rules put the trade, for looking at; no result is made from them.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
