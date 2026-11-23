@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Henry Hub Natural Gas · Paper trading</title>
+<style>
+:root{color-scheme:dark;font:16px/1.5 Inter,system-ui,sans-serif;background:#10191c;color:#edf1ee}
+*{box-sizing:border-box}body{max-width:58rem;margin:2rem auto;padding:0 1rem}h1{font-size:clamp(1.6rem,5vw,2.8rem);margin:0}
+p{margin:.35rem 0}article{padding:1rem 0;border-bottom:1px solid #344146}small{display:block;color:#b5c6c5;overflow-wrap:anywhere}
+select,button{font:inherit;padding:.35rem;background:#1b292a;color:#fff;border:1px solid #70817b;border-radius:.3rem}
+form{display:flex;gap:.7rem;align-items:end;flex-wrap:wrap;margin:1rem 0}label{display:grid;font-size:.9rem}#status{color:#9ce6ba}
+.spec{white-space:pre-wrap;color:#ccdad7}summary{cursor:pointer}
+</style></head><body>
+<header><small>NYMEX · Futures · Paper trading</small><h1>Henry Hub Natural Gas</h1><p id="status" role="status">Rule preview · no session started</p></header>
+<form method="get" style="display:none"><label>Market<select name="market"><option value="nymex-ng" selected>Henry Hub Natural Gas</option></select></label><label>Strategy<select name="rule"><option value="" selected>All strategies</option><option value="CL01">CL01</option><option value="CL02">CL02</option><option value="CL03">CL03</option><option value="CL04">CL04</option><option value="CL05">CL05</option><option value="CL06">CL06</option><option value="CL07">CL07</option><option value="CL08">CL08</option><option value="CL09">CL09</option><option value="CL10">CL10</option><option value="CL11">CL11</option><option value="CL12">CL12</option><option value="CL13">CL13</option><option value="CL14">CL14</option><option value="CL15">CL15</option><option value="CX01">CX01</option><option value="CX02">CX02</option><option value="CX03">CX03</option><option value="CX04">CX04</option><option value="CX05">CX05</option><option value="CX06">CX06</option><option value="CX07">CX07</option><option value="CX08">CX08</option><option value="CX09">CX09</option><option value="CX10">CX10</option><option value="CX11">CX11</option><option value="CX12">CX12</option><option value="CX13">CX13</option><option value="CX14">CX14</option><option value="CX15">CX15</option></select></label><button>Show</button></form>
+<details><summary>CL01</summary><p class="spec">## CL01 (v2). The eaten level
+
+- WHEN: a move is deciding whether to take another step.
+- TRIGGER: a run of the best offer UP takes its second step, and every order that stood at its first level left by
+  being FILLED. (Mirror: a run of the best bid DOWN, the same.)
+- DECIDED AT: the end of the exchange event that holds the second step. No trade if the run has already stepped
+  back by then.
+- SIDE: BUY for the best offer up. SELL for the best bid down.
+- CLOSES: at the run&#x27;s first step back. RIGHT if the run took a third step first, in a later exchange event; WRONG
+  if the step back came first.
+- OPENS AGAIN: at the next run&#x27;s second step.
+- READS: `calc-quote_runs-facts`, `calc-resting-facts`.
+- BEHIND IT: counted (the paper&#x27;s finding 4).</p></details><details><summary>CL02</summary><p class="spec">## CL02 (v2). The abandoned level
+
+- WHEN: the same moment as CL01.
+- TRIGGER: a run of the best offer UP takes its second step, and every order that stood at its first level was
+  PULLED, none filled. (Mirror: a run of the best bid DOWN.)
+- DECIDED AT: the end of the exchange event that holds the second step. No trade if the run has already stepped
+  back or taken a third step by then.
+- SIDE: SELL for the best offer up. BUY for the best bid down. (Against the run.)
+- CLOSES WHEN RIGHT: at the run&#x27;s first step back.
+- CLOSES WHEN WRONG: at the run&#x27;s third step.
+- OPENS AGAIN: at the next run&#x27;s second step.
+- READS: as CL01.
+- BEHIND IT: counted (the paper&#x27;s finding 4).</p></details><details><summary>CL03</summary><p class="spec">## CL03 (v2). The first step made by a fill
+
+- WHEN: the first step of a move.
+- TRIGGER: the best offer steps UP (a run starts) because the order whose leaving moved it was FILLED, in an
+  exchange event that holds a buy. (Mirror: the best bid steps DOWN on a fill by a sell.)
+- DECIDED AT: the end of that exchange event. No trade if the run has already stepped back by then.
+- SIDE: BUY for the best offer up. SELL for the best bid down.
+- CLOSES: at the run&#x27;s first step back. RIGHT if the run took a second step first, in a later exchange event; WRONG
+  if the step back came first.
+- OPENS AGAIN: at the next run&#x27;s start.
+- READS: the rows, `calc-sweeps-facts`, `calc-quote_runs-facts`.
+- BEHIND IT: no count at the first step. Finding 4 carried one step earlier.</p></details><details><summary>CL04</summary><p class="spec">## CL04 (v2). A level that has only been eaten, before it gives
+
+- WHEN: before the move.
+- TRIGGER: since the best offer took its present price, size has been FILLED there and none has been pulled, added
+  or moved. (Mirror: the best bid.)
+- DECIDED AT: the end of the first exchange event in which that holds. No trade if the level has already given way
+  or the state is already broken at that tick.
+- SIDE: BUY when the best offer is being eaten. SELL when the best bid is.
+- CLOSES WHEN WRONG: before the level gives, at the first tick size is pulled, added or moved at that price, or a
+  better quote steps in front of it.
+- CLOSES WHEN RIGHT: the level gives (the quote steps away): the trade is HELD, and closes at that run&#x27;s first step
+  back.
+- OPENS AGAIN: when that quote next takes a new price.
+- READS: `calc-book_totals`, the rows&#x27; marks of the quote moving, `calc-quote_runs-facts`.
+- BEHIND IT: no count. Nothing has yet been read before a first step.</p></details><details><summary>CL05</summary><p class="spec">## CL05 (v2). A trade leg&#x27;s first step with the exhaustion line on its side
+
+- WHEN: the first step of a move in the prints.
+- TRIGGER: a trade leg makes its first step (the print that steps away), AND at that tick at least one of the two
+  quotes is no longer where it stood at the leg&#x27;s first trade (so it is not the print going back and forth between
+  the bid and the offer), AND the exhaustion line is on the leg&#x27;s side.
+- DECIDED AT: the end of the exchange event of that print. No trade if the leg has already ended by then.
+- SIDE: BUY for a leg up. SELL for a leg down.
+- CLOSES: at the print that ends the leg. RIGHT if the leg took a second step first; WRONG if it ended first.
+- OPENS AGAIN: at the next trade leg&#x27;s first step.
+- READS: `calc-leg_peaks-facts`, `calc-research_columns` (`exhaustion_20s`), the rows.
+- BEHIND IT: counted for the line (the paper&#x27;s finding 3); it read the other way for legs up on trade day Oct 3.
+  The condition on the quotes at the first step is not counted.</p></details><details><summary>CL06</summary><p class="spec">## CL06 (v2). Both quotes have stepped the same way
+
+- WHEN: the middle of a move.
+- TRIGGER: since the last tick at which either quote stepped DOWN, the best bid has stepped up and the best offer
+  has stepped up. It begins at the tick the second of the two steps. (Mirror for down.) Not while the best offer
+  is at or below the best bid.
+- DECIDED AT: the end of the exchange event in which it begins. No trade if either quote has already stepped back
+  by then.
+- SIDE: BUY when both stepped up. SELL when both stepped down.
+- CLOSES: at the first step the other way by either quote. RIGHT if either quote stepped further the same way
+  first; WRONG if the step the other way came first.
+- OPENS AGAIN: the next time the state begins.
+- READS: the rows, `calc-quote_runs-facts`.
+- BEHIND IT: no count.</p></details><details><summary>CL07</summary><p class="spec">## CL07 (v2). Fresh trading on the dipole&#x27;s side
+
+- WHEN: the birth of a push.
+- TRIGGER: a hump of the exhaustion line begins ON A TRADE, and the dipole line as it stood just before that trade
+  was on the hump&#x27;s side.
+- DECIDED AT: the end of the exchange event of that trade. No trade if the hump has already ended by then.
+- SIDE: BUY for a buying hump. SELL for a selling hump.
+- CLOSES: when the hump ends (the line next stands at zero, is empty, or has crossed). RIGHT if the quote the hump
+  was hitting stepped away first, in a later exchange event; WRONG if the hump ended first.
+- OPENS AGAIN: at the next hump that begins on a trade.
+- READS: `research-humps`, `crypto-ng-tick-lean-60s`, `calc-research_columns`.
+- BEHIND IT: counted for humps that begin on a trade (the paper&#x27;s finding 6); not yet split by the dipole&#x27;s side.</p></details><details><summary>CL08</summary><p class="spec">## CL08 (v2). Fresh trading against the dipole
+
+- WHEN: the turn.
+- TRIGGER: a hump of the exhaustion line begins ON A TRADE while the dipole line just before that trade was on the
+  OTHER side; AND THEN the quote the hump is hitting steps away in a LATER exchange event, before the hump ends.
+- DECIDED AT: the end of the exchange event of that step. No trade if the hump has already ended by then.
+- SIDE: BUY for a buying hump. SELL for a selling hump. (With the new side.)
+- CLOSES: when the hump ends, or at that quote&#x27;s first step back, whichever comes first. RIGHT if that quote took
+  a second step first; WRONG otherwise.
+- OPENS AGAIN: at the next such hump.
+- READS: as CL07, and `calc-quote_runs-facts`.
+- BEHIND IT: no count.</p></details><details><summary>CL09</summary><p class="spec">## CL09 (v2). The first step made by a cancel
+
+- WHEN: the first step of a move.
+- TRIGGER: the best offer steps UP (a run starts) because the order whose leaving moved it was CANCELLED, with no
+  trade in that exchange event. (Mirror: the best bid steps DOWN on a cancel.)
+- DECIDED AT: the end of that exchange event. No trade if the run has already stepped back or stepped again by
+  then.
+- SIDE: SELL for the best offer up. BUY for the best bid down. (Against the step.)
+- CLOSES WHEN RIGHT: at the run&#x27;s first step back.
+- CLOSES WHEN WRONG: at the run&#x27;s second step.
+- OPENS AGAIN: at the next run&#x27;s start.
+- READS: the rows, `calc-sweeps-facts`, `calc-together-facts`, `calc-quote_runs-facts`.
+- BEHIND IT: no count at the first step. Finding 4 (a level only pulled leads on least often) and finding 1 (most
+  runs end at one step), carried one step earlier.</p></details><details><summary>CL10</summary><p class="spec">## CL10 (v2). The price runs against the dipole: with the price
+
+- WHEN: the middle of a move.
+- TRIGGER: a run of the quote (either quote, either way) takes its second step while the dipole line stands on the
+  OTHER side.
+- DECIDED AT: the end of the exchange event that holds the second step. No trade if the run has already stepped
+  back by then.
+- SIDE: BUY for a run up. SELL for a run down. (With the price.)
+- CLOSES: at the run&#x27;s first step back. RIGHT if the run took a third step first; WRONG if the step back came
+  first.
+- OPENS AGAIN: at the next run&#x27;s second step.
+- READS: `calc-quote_runs-facts`, `calc-research_columns` (`dipole_60s`).
+- BEHIND IT: one case by eye. No count at the second step.</p></details><details><summary>CL11</summary><p class="spec">## CL11 (v2). The price runs against the dipole: against the price
+
+- WHEN: the same moment as CL10.
+- TRIGGER: as CL10.
+- DECIDED AT: as CL10. No trade if the run has already stepped back or taken a third step by then.
+- SIDE: SELL for a run up. BUY for a run down. (Against the price: the other side of CL10.)
+- CLOSES WHEN RIGHT: at the run&#x27;s first step back.
+- CLOSES WHEN WRONG: at the run&#x27;s third step.
+- OPENS AGAIN: at the next run&#x27;s second step.
+- READS: as CL10.
+- BEHIND IT: no count at the second step. At the first step, runs with the dipole against them took a second step
+  somewhat less often in twelve of sixteen cells.</p></details><details><summary>CL12</summary><p class="spec">## CL12 (v2). The reloaded level
+
+- WHEN: the middle of a move, into the turn.
+- TRIGGER: an order at the best offer is traded against and straight after shows the same size or more (size was
+  put back). The FIRST time on that order. (Mirror: an order at the best bid.)
+- DECIDED AT: the end of that exchange event. No trade if that order has already left by then.
+- SIDE: SELL when an offer is reloaded. BUY when a bid is. (Against the push.)
+- CLOSES WHEN RIGHT: at the first step AWAY from that level by either quote (down for a reloaded offer).
+- CLOSES WHEN WRONG: when that order leaves by fill, or the level empties and the quote steps through it.
+- CLOSES, NEITHER: when that order is cancelled (the one reloading has gone).
+- OPENS AGAIN: at the first reload on another order.
+- READS: `calc-refills-facts`, the rows.
+- BEHIND IT: no count.</p></details><details><summary>CL13</summary><p class="spec">## CL13 (v2). Paying up through more than one level
+
+- WHEN: the middle of a move.
+- TRIGGER: one exchange event holds a trade that fills through MORE THAN ONE price level, with one aggressor side.
+- DECIDED AT: the tick with that event&#x27;s end mark.
+- SIDE: BUY when a buyer paid up. SELL when a seller did.
+- CLOSES: at the first step back of the quote that was swept. RIGHT if that quote stepped further first, in a
+  later exchange event; WRONG if the step back came first.
+- OPENS AGAIN: at the next such event.
+- READS: `calc-sweeps-facts`, `calc-quote_runs-facts`.
+- BEHIND IT: no count.</p></details><details><summary>CL14</summary><p class="spec">## CL14 (v2). The other side arrives at the top step of a run
+
+- WHEN: the turn.
+- TRIGGER: the best bid has been stepping UP and has not stepped back; the FIRST sell since its latest step prints
+  at the level that step made; and that level still stands at the end of the exchange event. (Mirror: the best
+  offer stepping DOWN, and the first buy at its latest level.)
+- DECIDED AT: the end of that exchange event.
+- SIDE: SELL for the best bid up. BUY for the best offer down. (Against the run.)
+- CLOSES WHEN RIGHT: at the run&#x27;s first step back.
+- CLOSES WHEN WRONG: at the run&#x27;s next step the same way.
+- OPENS AGAIN: at the run&#x27;s next step, or the next run.
+- READS: the rows, `calc-quote_runs`.
+- BEHIND IT: counted last week in another form (a run of trades read at its last trade); not in this form.</p></details><details><summary>CL15</summary><p class="spec">## CL15 (v2). The step back and the return
+
+- WHEN: after a move.
+- TRIGGER: a run of the quote (either quote, either way) made two steps or more and ended; the run back made ONE
+  step and ended; so the quote has stepped the original way again.
+- DECIDED AT: the end of the exchange event of that return step. No trade if the new run has already stepped back
+  by then.
+- SIDE: the ORIGINAL direction: BUY when the first run was up, SELL when it was down.
+- CLOSES: at the new run&#x27;s first step back. RIGHT if the new run took a second step first; WRONG if the step back
+  came first.
+- OPENS AGAIN: at the next such return.
+- READS: `calc-quote_runs-facts`.
+- BEHIND IT: no count. The first step back of a run is one tick nearly every time; whether the move then comes
+  again has not been read.</p></details><details><summary>CX01</summary><p class="spec">## CX01 · Enter on buying that carries into a new event
+
+**Arm.** Both lines are positive. **At q.** Both stay positive, the print and the bid rise, and q belongs to a different exchange event. Open an upward paper idea.
+
+**Manage.** Keep it while the bid holds at or above q’s bid and both lines stay positive. Close at the first breach.
+
+**Why.** A higher print can be another piece of the same exchange event. A fresh event with a higher bid gives an independent book observation.</p></details><details><summary>CX02</summary><p class="spec">## CX02 · Enter when selling moves the bid down
+
+**Arm.** Both lines are negative. **At q.** Both stay negative. A reported seller prints below p in a different exchange event, with a lower bid. Open downward.
+
+**Manage.** Close on the first bid above q’s bid or when either line reaches zero or turns positive.
+
+**Why.** A lower print can occur without a new bid, and a print can have an unknown aggressor. Neither establishes this particular selling sequence.</p></details><details><summary>CX03</summary><p class="spec">## CX03 · Re-enter upward after a pullback
+
+**Arm.** Dipole is positive and exhaustion is zero or negative. **At q.** Dipole stays positive. Exhaustion is now positive and a reported buyer trades at the best offer. Open upward.
+
+**Manage.** Keep the recovery while both lines are positive and the offer holds at or above q’s offer. Close at the first breach.
+
+**Why.** The flow turn can occur away from the offer. Requiring a purchase there ties the entry to a transaction at the asking price.</p></details><details><summary>CX04</summary><p class="spec">## CX04 · Re-enter downward after a bounce
+
+**Arm.** Dipole is negative and exhaustion is zero or positive. **At q.** Dipole stays negative. Exhaustion is now negative, a reported seller trades at the bid, and the offer is at or below its value at p. Open downward.
+
+**Manage.** Close when the offer rises above q’s offer or either line reaches zero or turns positive.
+
+**Why.** A turn in selling pressure can coexist with an advancing offer. This version needs the offer to stop advancing between the two prints.</p></details><details><summary>CX05</summary><p class="spec">## CX05 · Exit an upward position when the bid gives way
+
+**Arm.** An upward paper position is open and both lines are positive. **At q.** With that position still open, dipole stays positive, exhaustion turns negative and the bid falls. Issue an exit indication at q.
+
+**Manage.** The exit ends this position’s warning. Any re-entry needs a separate entry trigger. A new upward position can arm it again.
+
+**Why.** This catches a weakening bid before the slower line turns. The print itself can stay at the same price through the flow change.</p></details><details><summary>CX06</summary><p class="spec">## CX06 · Exit a downward position as the offer lifts
+
+**Arm.** A downward paper position is open and both lines are negative. **At q.** With that position still open, dipole stays negative, exhaustion turns positive and the offer rises. Issue an exit indication at q.
+
+**Manage.** End the warning with that exit. A new downward position and a fresh pair of prints are needed to arm it again.
+
+**Why.** A positive exhaustion reading can accompany a falling bid. A higher offer supplies a separate reason to end the downward idea.</p></details><details><summary>CX07</summary><p class="spec">## CX07 · Follow a buyer to a higher offer
+
+**Arm.** The print is at the best offer. **At q.** A reported buyer pays the new, higher best offer. The bid is unchanged between p and q. Open upward.
+
+**Manage.** Track whether the bid follows. Close on the first offer below q’s offer or bid below q’s bid. A later higher bid is a distinct observation to log.
+
+**Why.** This isolates an offer moving first. It can be a widening market, so the stationary bid matters both at entry and afterward.</p></details><details><summary>CX08</summary><p class="spec">## CX08 · Follow a seller to a lower bid
+
+**Arm.** The print is at the best bid. **At q.** A reported seller trades at the new, lower best bid. The offer is unchanged between p and q. Open downward.
+
+**Manage.** Track whether the offer follows. Close on the first bid above q’s bid or offer above q’s offer.
+
+**Why.** A bid can retreat while the offer stays put. The next movement of the offer distinguishes two-sided repricing from an isolated retreat.</p></details><details><summary>CX09</summary><p class="spec">## CX09 · Reverse down from a stationary offer
+
+**Arm.** The print is at the best offer and exhaustion is positive. **At q.** The offer is unchanged, the next print is lower and the bid has fallen. Open downward.
+
+**Manage.** Close on the first print at or above p’s print or the first bid above q’s bid.
+
+**Why.** A print can drop from the offer to the bid with neither quote moving. A falling bid distinguishes this reversal proposal.</p></details><details><summary>CX10</summary><p class="spec">## CX10 · Reverse up from a stationary bid
+
+**Arm.** The print is at the best bid and exhaustion is negative. **At q.** The bid is unchanged, the next print is higher and the offer has risen. Open upward.
+
+**Manage.** Close on the first print at or below p’s print or the first offer below q’s offer.
+
+**Why.** A print can rise across an unchanged spread. Requiring a higher offer asks whether the book also repriced.</p></details><details><summary>CX11</summary><p class="spec">## CX11 · Stay in an upward position when a seller tests a higher bid
+
+**Arm.** An upward paper position is open and dipole is positive. **At q.** Dipole stays positive. The bid rises, the offer is unchanged and a reported seller trades at that higher bid. Maintain the existing position.
+
+**Manage.** Withdraw the hold and issue an exit on the first bid below q’s bid or dipole at or below zero. A fresh position can arm again.
+
+**Why.** Even a lower print can be a sale into a bid that has stepped up. This manages the bid supporting the trade.</p></details><details><summary>CX12</summary><p class="spec">## CX12 · Stay in a downward position when a buyer tests a lower offer
+
+**Arm.** A downward paper position is open and dipole is negative. **At q.** Dipole stays negative. The offer falls, the bid is unchanged and a reported buyer pays that lower offer. Maintain the existing position.
+
+**Manage.** Withdraw the hold and issue an exit on the first offer above q’s offer or dipole at or above zero. A fresh position can arm again.
+
+**Why.** A higher print can still be a purchase at a lower asking price. This manages the offer capping the trade.</p></details><details><summary>CX13</summary><p class="spec">## CX13 · Question a rise that the bid does not follow
+
+**Arm.** An upward paper position is open and dipole is negative. **At q.** A reported buyer prints above p while exhaustion is negative and the bid is flat or lower. Suspend additions to the upward position.
+
+**Manage.** Release the warning if the bid first rises above q’s bid or exhaustion becomes nonnegative. If a later print first falls below q’s print, issue an exit.
+
+**Why.** A buy can lift the print even while the trade balance leans toward selling. The bid shows whether another buyer has stepped up behind it.</p></details><details><summary>CX14</summary><p class="spec">## CX14 · Question a decline that the offer does not follow
+
+**Arm.** A downward paper position is open and dipole is positive. **At q.** A reported seller prints below p while exhaustion is positive and the offer is flat or higher. Suspend additions to the downward position.
+
+**Manage.** Release the warning if the offer first falls below q’s offer or exhaustion becomes nonpositive. If a later print first rises above q’s print, issue an exit.
+
+**Why.** A sale can mark the print down while buying pressure persists. The offer shows whether a seller has actually followed it down.</p></details><details><summary>CX15</summary><p class="spec">## CX15 · Enter on a pressure turn at an unchanged price
+
+**Arm.** Exhaustion has a strict positive or negative sign. **At q.** The print, bid and offer equal their respective values at p. Exhaustion now has the opposite strict sign and the reported aggressor agrees with it. Open in that new direction.
+
+**Manage.** For an upward indication close if exhaustion reaches zero or turns negative, or the bid falls below q’s bid. For downward, close if exhaustion reaches zero or turns positive, or the offer rises above q’s offer.
+
+**Why.** The same print price can mask a moving book. Requiring both quote endpoints to match isolates the flow change visible at q.</p></details>
+<section id="events" data-stream="" aria-label="Trading events"></section>
+<script>
+const list=document.querySelector('#events'),statusLine=document.querySelector('#status');
+if(list.dataset.stream){
+  const stream=new EventSource(list.dataset.stream);
+  stream.onmessage=({data})=>{const row=JSON.parse(data);list.insertAdjacentHTML('afterbegin',row.html);statusLine.textContent=row.status};
+  stream.addEventListener('finished',()=>stream.close());
+  stream.onerror=()=>{statusLine.textContent='Reconnecting…'};
+}
+</script></body></html>
