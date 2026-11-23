@@ -4499,6 +4499,41 @@ excel sheets because the workbook is.so big. Look for those sheets".**
   3. Written in the session from the stored tables (no calculation: stored values into a sheet), read back equal
      to them, Desktop's file fetched first and nothing of its written over.
 
+**DECIDED (Greg, 2026-11-23, sixteenth session), on the four calls for the trade day sheets: "Yes".**
+
+**THE TRADE DAY SHEETS OF `ROOT_dipoles_pinned.xlsx` BROUGHT UP TO DATE, done (2026-11-23, sixteenth session).**
+- Written in the session from the stored tables (told to him; no calculation, no pod): Markets
+  `ccr-26ff219b-72monm` `aed0e49`, `root/crypto_ng_excel.py`. The file was fetched first; Desktop had changed
+  nothing in it.
+- ADDED: four sheets "crypto and ng <trade day>", one row per trade of the program: 1,794; 1,895; 1,672; 1,682.
+  Columns: the Eastern time of its start (for reading); the program's own stored columns (its number, side, the
+  turn and when it was marked, the trade on the tape that filled it and when, how it ended, the trade that ended
+  it and when, its length, its three reads of the 60-second line, the seconds from the open); and, looked up
+  from the stored tables for that trade: `exhaustion_20s_at_start` (the stored 20-second line at the read the
+  program names), `bought_price` and `sold_price` (the price of the trade on the tape at each end; empty where
+  it ended at no tick), and its picture where one is stored (10 on each trade day, linked).
+- A SLIP CAUGHT BEFORE STORING, said to him: `onset_read_20s` is the NUMBER of a read of the 20-second line, not
+  its value. He had been told the sheet would carry the program's read of the exhaustion line at the start, so
+  the value that read points to was added as its own column, and checked on every trade (the read named is the
+  very trade that filled it, at the same nanosecond).
+- LEFT OUT, as put to him: `program_open_px`, `program_close_px`, `program_gross_bps`, `program_net_bps`,
+  `program_swing_bps` (made from the mid price) and `program_close_maker` (the fee mark). NO MID PRICE IS IN THE
+  FILE.
+- THE "peaks" SHEETS: the `sheet` and `panel` columns (and the links to the deleted pages) are out; every other
+  value is as it was (9,525; 10,577; 8,619; 7,967 rows).
+- THE "dipoles" SHEETS: not touched. Proved: every value and every one of their links (741, 833, 741, 863) is
+  identical to the file before.
+- THE READ ME is written again: what the file holds now, the columns of the new sheets, what was left out and why.
+- EVERY SHEET READ BACK EQUAL to what was written (a decimal within Excel's fifteen digits). Rows with no bought
+  or no sold price: 99 on trade day Oct 2 and 134 on trade day Oct 18, the same counts the picture job wrote for
+  trades that ended at no tick.
+- TO KNOW WHEN THE SHEETS ARE READ: `exhaustion_20s_at_start` is as stored (above zero buying), not turned to the
+  trade's side, and it includes the trade that filled the program's trade, which is on the other side. The 40
+  linked pictures of `trade-renders/` still draw the mid price line in their first graph; the three in
+  `trade-renders-quotes-test/` do not.
+- NOT IN THE FILE, his to say: Desktop's peak lives ("Workbook later"); the humps; the two crypto lines read at
+  every trade on the tape; anything of the sixteen calculations.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
