@@ -3579,7 +3579,7 @@ me which. As long as it isn't too confusing we can try all on 1 to see"; then "G
   5503, 5560, 5716. Oct 3: 1590, 2474, 2554, 2579, 3030, 5189, 5844, 5949, 6393, 6445. Oct 17: 25, 1014, 1317,
   1530, 1845, 2375, 2616, 4316, 4893, 5164. Oct 18: 522, 1285, 1697, 2990, 3022, 3173, 3223, 3542, 4092, 4326.
 - MEASURED SIZE: the 10 pictures of a trade day are 1,507,619; 1,474,059; 1,486,895; 1,523,996 bytes (the largest
-  single picture 163,229). Every trade leg of all four trade days at that size is of the order of 3.5 gigabytes in
+  single picture 163,229). Every trade leg of all four trade days at that size is about 3.3 gigabytes in
   git: said to him before any larger run.
 - STORED in `leg-renders/` on each daily branch, each file fetched and proved against its receipt, `FILES.md`
   brought up to date, each push confirmed on the remote: `root-rows-20231002` `7e0f29e`, `-20231003` `4219a77`,
