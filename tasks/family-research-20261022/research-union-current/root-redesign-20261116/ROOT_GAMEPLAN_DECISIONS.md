@@ -4847,6 +4847,71 @@ then go".**
   did. A new read, to be laid out for him first.
 - Nothing of the run is typed, labelled or in the Excel sheets. The Excel column list is put to him next.
 
+**TWO CORRECTIONS TO WHAT CLAUDE SAID FROM THE RUN (2026-11-23, seventeenth session). Both said to him.**
+- "TRADE LEGS READ THE SAME WAY" WAS WRONG. About two trade legs in five take a second step, not one in five, and
+  the gap by where a line stood is wider than for the runs of the quote. And the table put to him added the four
+  kinds of run together, which hid one that reads the other way. His rule is per cell, so the rows by kind and
+  direction are what counts. Took a second step, exhaustion on the move's side against exhaustion against the
+  move, in the order Oct 2; Oct 3; Oct 17; Oct 18:
+  - best ask up: with 716 of 3,267; 681 of 3,687; 893 of 3,782; 800 of 3,448. Against 598 of 3,329; 682 of 3,470;
+    571 of 2,909; 580 of 2,836.
+  - best ask down: with 712 of 3,386; 687 of 3,571; 751 of 2,946; 747 of 2,932. Against 651 of 3,115; 619 of 3,518;
+    814 of 3,597; 747 of 3,256.
+  - best bid up: with 657 of 3,171; 686 of 3,500; 932 of 3,840; 808 of 3,343. Against 629 of 3,188; 709 of 3,574;
+    659 of 3,194; 702 of 3,155.
+  - best bid down: with 708 of 3,339; 724 of 3,746; 794 of 3,304; 849 of 3,317. Against 595 of 3,080; 566 of 3,392;
+    808 of 3,800; 689 of 3,258.
+  - trade leg up: with 549 of 1,425; 611 of 1,795; 707 of 1,540; 575 of 1,245. Against 505 of 1,535; 539 of 1,542;
+    457 of 1,195; 464 of 1,202.
+  - trade leg down: with 602 of 1,501; 583 of 1,575; 515 of 1,173; 537 of 1,216. Against 506 of 1,449; 520 of 1,765;
+    616 of 1,544; 510 of 1,211.
+  The dipole rows by kind and direction are in each receipt. For a trade leg the first step is a print and that
+  print is in both lines, so "on the move's side" is partly built in there.
+- "THE HUMPS SHEETS CAN BE WRITTEN NOW" IS WITHDRAWN. The research threads job read a stored line BY TIME (the last
+  read at or before the tick's nanosecond). A nanosecond can hold several reads, so that read can stand on trades
+  that came after the tick on the tape. The dipole columns of the humps table, the dipole at a first step and both
+  lines at a move's end are read the same way as the 514 first steps that differ, and none of them has a
+  cross-check. ALL EIGHT SHEETS WAIT for the trace. If the look-up is the cause, the two tables are made again
+  with the look-up by place on the tape, in his replace order (the old deleted while the new runs).
+
+**CODEX'S INFORMATION MEASURE, READ FROM ITS CODE AND LAID OUT FOR HIM (2026-11-23, seventeenth session).**
+- WHERE: markets-data `codex/research-union-four-days-20261109`, `reanalysis-20261109/analyze.py`. Read for its
+  code only; no result file of that folder was opened.
+- WHAT WAS FOUND: CODEX WROTE NO FORMULA. Its program loads the crypto information dipole operator,
+  `odcore/info_dipole.py`, pinned as git blob `c04751cbe5f92952e33328f6c04fcae6392e05e5`, and calls
+  `signed_flow_features` on twenty one-second pieces of bought and sold size. Compared in the session: the
+  operator's measure functions (`shannon`, `mutual_info`, `signed_flow_features`) are the same lines in the pinned
+  copy and in today's file. So making it is following the crypto formula, exactly his standing rule.
+- THE FIVE FIGURES: `imb_level` (bought minus sold over bought plus sold over the twenty pieces: the exhaustion
+  line's figure); `ent_dipole` (the entropy of the bought pieces minus that of the sold pieces, over their sum);
+  `C_signed`, the information ratio the thread asks about (the mean of the two entropies over the information the
+  two lists share, signed by the leading side); `mi_flow` (the shared information of the later ten pieces minus
+  the earlier ten, signed); `imb_flow` (the lean of the later ten minus the earlier ten: crypto's read of
+  exhaustion). Codex kept beside them the logarithm form of the ratio and the shared information itself.
+- WHY THE RATIO BLOWS UP, from the code: where all the trading of the 20 seconds is on one side the two lists share
+  nothing, and the ratio is a number over the operator's smallest number (a billionth). Made by the division.
+- HOW CODEX CUT THE PIECES: whole clock seconds from a ready-made one-second table. That is what he corrected.
+- BUILT, NOT RUN (Markets `ccr-dd95052b-3vcrwq`, `0bc157c`, `root/info_measure.py`). Claude's calls, stated to
+  him, his to strike: the operator is CALLED, not copied; the pieces are counted back from each read's own
+  nanosecond (a trade is inside while less than 20 seconds old and sits in the piece numbered by its whole seconds
+  of age; oldest piece first); it is read at every read of the stored exhaustion line, keyed by the read's own
+  number (71,220; 78,454; 61,425; 56,021 reads over 35,897; 39,540; 31,056; 28,331 trades with a side), a read
+  made at a trade holding every trade up to that one on the tape and no later one; the tape's own side; lots.
+  Stored per read: the figures, the forty pieces themselves, how many pieces hold a trade. Checks on real tape on
+  the pod: at every read the bought pieces add up to the stored bought and the sold pieces to the stored sold,
+  the operator gives nothing exactly where the stored line says nothing traded, and the first figure equals the
+  stored exhaustion line. The receipt counts the thin cases by the exact number of pieces holding a trade and by
+  the shared information being exactly zero; none of Codex's cut-offs is carried except its rounding figure,
+  which only names a count. It is "the information measure": not dipole, not exhaustion, in no sheet.
+- A LIMIT, said to him: between two reads a trade can pass from one piece into the next with nothing new traded;
+  the first figure cannot change then, the others can. It is read only where the stored line is read.
+- ALSO BUILT, NOT RUN (`root/research_trace.py`, same commit): every look-up of the two research tables made a
+  second way, by place on the tape; the 514 first steps listed with both figures; counts of look-ups that land on
+  a nanosecond holding more than one read. The pod runner now takes several programs in one launch and the fetch
+  program knows both receipts (read against each other before the launch).
+- THE LAUNCH PUT TO HIM: one pod, the measure and the trace together, the four trade days side by side, General
+  Purpose 8 CPUs, $0.32 an hour. It waits for the word "go".
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
