@@ -24,15 +24,23 @@ it in a sheet until this has been talked through with him. What is known, so the
 - The price line in the stored `trade-renders/` pictures is the MID price: halfway between the best bid and the
   best ask. It was Claude's call, made because the crypto dipole picture's price was the mid
   (`_dipole_price_overlay.py`, Markets `75b15fa`). Greg never said "mid".
-- THE MID IS NOT A STORED COLUMN ANYWHERE. It is worked out inside the picture program (`root/trade_renders.py`,
+- THE MID ITSELF IS NOT A STORED COLUMN. It is worked out inside the picture program (`root/trade_renders.py`,
   `quotes`) and inside the crypto and ng run for the program's own use. It has not been approved as a calculation.
+- BUT VALUES MADE FROM THE MID ARE ALREADY STORED, in three places. Claude's last answer to him said "worked out in
+  the picture only"; give him this fuller list first:
+  1. the program's trades table (`crypto-ng-tick-program-trades-*`, the fourteenth session's): `program_open_px`,
+     `program_close_px`, `program_gross_bps`, `program_net_bps` and `program_swing_bps` are the program's own
+     figures made from the mid (observation only);
+  2. the `end_price` column of `trade-renders-index-*`, for a trade that ended at no tick: it is the mid standing
+     then, not a trade;
+  3. the "bought" or "sold" point drawn for such a trade: it sits at a price where nothing traded.
 - The best bid and the best ask ARE stored columns on every tick (`best_bid`, `best_ask`, `gap`, and the four
   "moved from / moved to" marks; `root/rows.py`, sections D and E), and in the Excel short-stretch file.
 - His read of the two test pictures: "Price is either a mix of or closely resembles one in shape and movement which
   is interesting." Said to him: the mid is exactly halfway between the two, so "a mix" is how that line is made.
   What is not made that way is WHICH of the two stepped at each move.
-- Per tick the mid only ever moves by half a tick, so the "how fast the price changes" graph has strokes of one
-  height: it says when and which way, never how much.
+- In the pictures looked at (three, by eye, not proved for the trade day) the mid moved by half a tick at every
+  step, so the "how fast the price changes" graph had strokes of one height: when and which way, not how much.
 - Things to settle with him, none decided: whether the mid is the right price line at all (against the trade
   prints, the best bid, the best ask, or the side the trade was made on); whether it becomes a stored column and
   goes into the Excel sheets; whether the price rate graph stays.
@@ -141,7 +149,7 @@ everything of `ccr-92cbec22-u0cbuj` (`e8cd626`) EXCEPT the three deleted program
   lines; others show the dipole against the trade through its life. Leads, not results.
 - NOT PROVED (carried): that the program's trades equal what the July files would have made.
 
-## How a launch goes now (as done this session; six launches, all passed first time)
+## How a launch goes now (as done this session: seven pods started, six ran, every run passed first time)
 
 - The session REFUSES to start a pod unless Greg has typed the word "go" AFTER the price was on his screen. Twice
   this session Claude read an instruction as the go and the start was refused. Do not try: state the price and
@@ -158,6 +166,10 @@ everything of `ccr-92cbec22-u0cbuj` (`e8cd626`) EXCEPT the three deleted program
   goes and had to be deleted.
 - Each trade day's output is served under `/d<trade day>/`. Fetch and prove with
   `python3 -m root.pod_fetch <address>/d<trade day> <trade day> <commit> --into <folder> <leg_renders|trade_renders>`.
+  It holds every file in memory before it writes one: fine for 10 pictures, to be changed before a run of
+  thousands.
+- The last pod's address (`o7hnr06qhpxdtp-8000.proxy.runpod.net`) is still in the environment's allowed hosts;
+  take it off in the next approval card.
 - The daily branches: clone each as its own shallow copy with `--filter=blob:none --no-checkout`, then
   `sparse-checkout set --no-cone '/FILES.md' '/<folder>/'`. NEVER list one with file sizes.
 - WHEN NEW DATA REPLACES OLD: start the pod, delete the old from the branches, confirm it is gone on the remote,
