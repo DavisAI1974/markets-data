@@ -1,0 +1,308 @@
+{
+ "what": "The information measure, made from our ticks: the crypto information dipole operator called on twenty one-second pieces counted back from each read of the stored exhaustion line",
+ "asked": "Greg, 2026-11-23: \"do the codex calc if it's valuable\"; \"I mean tick values to get to a second or whatever timeframe we need to get to\"",
+ "use": "THE INFORMATION MEASURE. Not the dipole and not the exhaustion. In no sheet until decided with Greg.",
+ "trade_day": "2023-10-18",
+ "the_operator": {
+  "file": "odcore/info_dipole.py",
+  "git_blob_id": "6a62f4d7491c02bee3af840ad7f736453fff892a",
+  "called": "signed_flow_features(bought, sold) and mutual_info(bought, sold), unchanged",
+  "codex_pinned_git_blob_id": "c04751cbe5f92952e33328f6c04fcae6392e05e5",
+  "compared": "the job refuses any operator file but this one. Compared in the session of 2026-11-23: against the copy Codex pinned, one phrase of a comment differs; the functions shannon, mutual_info and signed_flow_features and the smallest number are the same lines, and the same lines as the first version of 2026-06-22 (Markets 21ec02f). NOT compared: the original dipole scripts outside this repository.",
+  "codex_program": "markets-data codex/research-union-four-days-20261109, reanalysis-20261109/analyze.py (read for its code; no result carried)"
+ },
+ "how_the_pieces_are_cut": {
+  "pieces": 20,
+  "seconds_each": 1,
+  "rule": "at a read made at the moment M a trade received at R is inside while M minus R is less than 20 seconds; it is in the piece numbered by the whole seconds of M minus R, counted back from the read, and the operator is given the pieces oldest first. Nothing is cut on the clock.",
+  "which_trades": "a read made at a trade holds every trade with a side up to and including that one on the tape; a read of trades leaving holds no trade received after its moment. A trade the tape gives no side for is in neither list. Sizes are lots."
+ },
+ "read_from": [
+  "rows-20231018-part*.parquet (through the rows gate)",
+  "crypto-ng-tick/crypto-ng-tick-line-20s-20231018.parquet"
+ ],
+ "columns": [
+  {
+   "column": "read",
+   "what": "The number of the read of the stored exhaustion line this line belongs to."
+  },
+  {
+   "column": "moment_received_ns",
+   "what": "The moment of that read on the received clock, to the nanosecond."
+  },
+  {
+   "column": "what",
+   "what": "What changed the stored line at that read: a trade was received, or trades left the span."
+  },
+  {
+   "column": "position_on_tape",
+   "what": "The trade received: its position on the tape. Empty when the read is trades leaving."
+  },
+  {
+   "column": "bought",
+   "what": "Size bought inside the 20 seconds after this read, as stored (the bought pieces add up to it)."
+  },
+  {
+   "column": "sold",
+   "what": "Size sold inside the 20 seconds after this read, as stored (the sold pieces add up to it)."
+  },
+  {
+   "column": "imb_level",
+   "what": "The operator's first figure: bought minus sold over bought plus sold, over the twenty pieces. Checked equal to the stored exhaustion line at every read."
+  },
+  {
+   "column": "ent_dipole",
+   "what": "The entropy of the twenty bought pieces minus the entropy of the twenty sold pieces, over their sum. An entropy here is of the sizes sorted into classes, as the operator does it."
+  },
+  {
+   "column": "C_signed",
+   "what": "THE INFORMATION RATIO: the mean of the two entropies over the information the two lists share, signed by the side that leads. Huge where the two lists share nothing: made by the division."
+  },
+  {
+   "column": "mi_flow",
+   "what": "The shared information of the later ten pieces minus that of the earlier ten, signed by the side that leads."
+  },
+  {
+   "column": "imb_flow",
+   "what": "The lean (bought minus sold over bought plus sold) of the later ten pieces minus the lean of the earlier ten."
+  },
+  {
+   "column": "log_signed_C",
+   "what": "Codex's form of the ratio: its sign times the logarithm of one plus its size."
+  },
+  {
+   "column": "mi_level",
+   "what": "The information the twenty bought pieces and the twenty sold pieces share (the bottom of the ratio before the operator's smallest number is added)."
+  },
+  {
+   "column": "pieces_with_buying",
+   "what": "How many of the twenty pieces hold any buying."
+  },
+  {
+   "column": "pieces_with_selling",
+   "what": "How many of the twenty pieces hold any selling."
+  },
+  {
+   "column": "pieces_with_a_trade",
+   "what": "How many of the twenty pieces hold any trade with a side."
+  },
+  {
+   "column": "bought_piece_01",
+   "what": "Size bought in piece 1 of twenty (piece 1 is the oldest): the trades received at least 19 and less than 20 seconds before the read."
+  },
+  {
+   "column": "bought_piece_02",
+   "what": "Size bought in piece 2 of twenty (piece 1 is the oldest): the trades received at least 18 and less than 19 seconds before the read."
+  },
+  {
+   "column": "bought_piece_03",
+   "what": "Size bought in piece 3 of twenty (piece 1 is the oldest): the trades received at least 17 and less than 18 seconds before the read."
+  },
+  {
+   "column": "bought_piece_04",
+   "what": "Size bought in piece 4 of twenty (piece 1 is the oldest): the trades received at least 16 and less than 17 seconds before the read."
+  },
+  {
+   "column": "bought_piece_05",
+   "what": "Size bought in piece 5 of twenty (piece 1 is the oldest): the trades received at least 15 and less than 16 seconds before the read."
+  },
+  {
+   "column": "bought_piece_06",
+   "what": "Size bought in piece 6 of twenty (piece 1 is the oldest): the trades received at least 14 and less than 15 seconds before the read."
+  },
+  {
+   "column": "bought_piece_07",
+   "what": "Size bought in piece 7 of twenty (piece 1 is the oldest): the trades received at least 13 and less than 14 seconds before the read."
+  },
+  {
+   "column": "bought_piece_08",
+   "what": "Size bought in piece 8 of twenty (piece 1 is the oldest): the trades received at least 12 and less than 13 seconds before the read."
+  },
+  {
+   "column": "bought_piece_09",
+   "what": "Size bought in piece 9 of twenty (piece 1 is the oldest): the trades received at least 11 and less than 12 seconds before the read."
+  },
+  {
+   "column": "bought_piece_10",
+   "what": "Size bought in piece 10 of twenty (piece 1 is the oldest): the trades received at least 10 and less than 11 seconds before the read."
+  },
+  {
+   "column": "bought_piece_11",
+   "what": "Size bought in piece 11 of twenty (piece 1 is the oldest): the trades received at least 9 and less than 10 seconds before the read."
+  },
+  {
+   "column": "bought_piece_12",
+   "what": "Size bought in piece 12 of twenty (piece 1 is the oldest): the trades received at least 8 and less than 9 seconds before the read."
+  },
+  {
+   "column": "bought_piece_13",
+   "what": "Size bought in piece 13 of twenty (piece 1 is the oldest): the trades received at least 7 and less than 8 seconds before the read."
+  },
+  {
+   "column": "bought_piece_14",
+   "what": "Size bought in piece 14 of twenty (piece 1 is the oldest): the trades received at least 6 and less than 7 seconds before the read."
+  },
+  {
+   "column": "bought_piece_15",
+   "what": "Size bought in piece 15 of twenty (piece 1 is the oldest): the trades received at least 5 and less than 6 seconds before the read."
+  },
+  {
+   "column": "bought_piece_16",
+   "what": "Size bought in piece 16 of twenty (piece 1 is the oldest): the trades received at least 4 and less than 5 seconds before the read."
+  },
+  {
+   "column": "bought_piece_17",
+   "what": "Size bought in piece 17 of twenty (piece 1 is the oldest): the trades received at least 3 and less than 4 seconds before the read."
+  },
+  {
+   "column": "bought_piece_18",
+   "what": "Size bought in piece 18 of twenty (piece 1 is the oldest): the trades received at least 2 and less than 3 seconds before the read."
+  },
+  {
+   "column": "bought_piece_19",
+   "what": "Size bought in piece 19 of twenty (piece 1 is the oldest): the trades received at least 1 and less than 2 seconds before the read."
+  },
+  {
+   "column": "bought_piece_20",
+   "what": "Size bought in piece 20 of twenty (piece 1 is the oldest): the trades received at least 0 and less than 1 seconds before the read."
+  },
+  {
+   "column": "sold_piece_01",
+   "what": "Size sold in piece 1 of twenty (piece 1 is the oldest): the trades received at least 19 and less than 20 seconds before the read."
+  },
+  {
+   "column": "sold_piece_02",
+   "what": "Size sold in piece 2 of twenty (piece 1 is the oldest): the trades received at least 18 and less than 19 seconds before the read."
+  },
+  {
+   "column": "sold_piece_03",
+   "what": "Size sold in piece 3 of twenty (piece 1 is the oldest): the trades received at least 17 and less than 18 seconds before the read."
+  },
+  {
+   "column": "sold_piece_04",
+   "what": "Size sold in piece 4 of twenty (piece 1 is the oldest): the trades received at least 16 and less than 17 seconds before the read."
+  },
+  {
+   "column": "sold_piece_05",
+   "what": "Size sold in piece 5 of twenty (piece 1 is the oldest): the trades received at least 15 and less than 16 seconds before the read."
+  },
+  {
+   "column": "sold_piece_06",
+   "what": "Size sold in piece 6 of twenty (piece 1 is the oldest): the trades received at least 14 and less than 15 seconds before the read."
+  },
+  {
+   "column": "sold_piece_07",
+   "what": "Size sold in piece 7 of twenty (piece 1 is the oldest): the trades received at least 13 and less than 14 seconds before the read."
+  },
+  {
+   "column": "sold_piece_08",
+   "what": "Size sold in piece 8 of twenty (piece 1 is the oldest): the trades received at least 12 and less than 13 seconds before the read."
+  },
+  {
+   "column": "sold_piece_09",
+   "what": "Size sold in piece 9 of twenty (piece 1 is the oldest): the trades received at least 11 and less than 12 seconds before the read."
+  },
+  {
+   "column": "sold_piece_10",
+   "what": "Size sold in piece 10 of twenty (piece 1 is the oldest): the trades received at least 10 and less than 11 seconds before the read."
+  },
+  {
+   "column": "sold_piece_11",
+   "what": "Size sold in piece 11 of twenty (piece 1 is the oldest): the trades received at least 9 and less than 10 seconds before the read."
+  },
+  {
+   "column": "sold_piece_12",
+   "what": "Size sold in piece 12 of twenty (piece 1 is the oldest): the trades received at least 8 and less than 9 seconds before the read."
+  },
+  {
+   "column": "sold_piece_13",
+   "what": "Size sold in piece 13 of twenty (piece 1 is the oldest): the trades received at least 7 and less than 8 seconds before the read."
+  },
+  {
+   "column": "sold_piece_14",
+   "what": "Size sold in piece 14 of twenty (piece 1 is the oldest): the trades received at least 6 and less than 7 seconds before the read."
+  },
+  {
+   "column": "sold_piece_15",
+   "what": "Size sold in piece 15 of twenty (piece 1 is the oldest): the trades received at least 5 and less than 6 seconds before the read."
+  },
+  {
+   "column": "sold_piece_16",
+   "what": "Size sold in piece 16 of twenty (piece 1 is the oldest): the trades received at least 4 and less than 5 seconds before the read."
+  },
+  {
+   "column": "sold_piece_17",
+   "what": "Size sold in piece 17 of twenty (piece 1 is the oldest): the trades received at least 3 and less than 4 seconds before the read."
+  },
+  {
+   "column": "sold_piece_18",
+   "what": "Size sold in piece 18 of twenty (piece 1 is the oldest): the trades received at least 2 and less than 3 seconds before the read."
+  },
+  {
+   "column": "sold_piece_19",
+   "what": "Size sold in piece 19 of twenty (piece 1 is the oldest): the trades received at least 1 and less than 2 seconds before the read."
+  },
+  {
+   "column": "sold_piece_20",
+   "what": "Size sold in piece 20 of twenty (piece 1 is the oldest): the trades received at least 0 and less than 1 seconds before the read."
+  }
+ ],
+ "counts": {
+  "trade_day": "2023-10-18",
+  "trades_with_a_side": 28331,
+  "reads_of_the_stored_exhaustion_line": 56021,
+  "reads": {
+   "a trade was received": 28331,
+   "trades left the span at a moment with no tick": 27690
+  },
+  "figures": {
+   "made": 55168,
+   "none: nothing with a side traded in the 20 seconds": 853
+  },
+  "pieces holding a trade, of twenty": {
+   "01": 4278,
+   "02": 5873,
+   "03": 6451,
+   "04": 5851,
+   "05": 6273,
+   "06": 5042,
+   "07": 4342,
+   "08": 3818,
+   "09": 2564,
+   "10": 2181,
+   "11": 1863,
+   "12": 1604,
+   "13": 1389,
+   "14": 958,
+   "15": 819,
+   "16": 582,
+   "17": 397,
+   "18": 544,
+   "19": 332,
+   "20": 7
+  },
+  "the shared information": {
+   "above zero; trading on both sides": 49900,
+   "exactly zero; all the trading on one side": 5268
+  }
+ },
+ "checks": {
+  "passed": true,
+  "what": "every read made at a trade is the next trade with a side on the tape, at its own nanosecond; no read of trades leaving holds a trade not yet read; every trade inside a read is less than 20 seconds old; at every read the twenty bought pieces add up to the stored bought and the twenty sold pieces to the stored sold; the operator gives nothing exactly where the stored line says nothing traded; the first figure equals the stored exhaustion line at every read; every trade with a side is in a read; the operator file is the one that was compared with the copy Codex pinned"
+ },
+ "files": [
+  {
+   "file": "info-measure-20231018.parquet",
+   "rows": 56021,
+   "bytes": 1760834,
+   "sha256": "51aa9f6b2a541871a33a863f3928cfee3e7867334011c2eb511b8344b5686337"
+  },
+  {
+   "file": "INFO-MEASURE-COUNT-20231018.json",
+   "rows": null,
+   "bytes": 754,
+   "sha256": "0fe103b3df15a8ae38b1f62fe5c478d157e4b42dcd135a5a2db585d11e07640f"
+  }
+ ],
+ "seconds": 184.0
+}

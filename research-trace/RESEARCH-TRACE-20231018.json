@@ -1,0 +1,170 @@
+{
+ "what": "Why the stored exhaustion line and a step line's own 20-second flow differ at some first steps: every look-up of the two research tables made a second way, by place on the tape, and compared",
+ "asked": "Greg, 2026-11-23, the handoff's second check: read the job's count of first steps where the stored exhaustion line equals the step line's own 20-second flow, and where it does not. The reason for the ones that do not is found here, not guessed.",
+ "trade_day": "2023-10-18",
+ "nothing_applied": "No window, no label, no average, no midpoint; nothing new calculated on the tape; nothing from another trade day.",
+ "the_two_ways": {
+  "by_time": "the last read made at or before the nanosecond of the tick (what the research threads job did)",
+  "by_place": "the last read made before that nanosecond, or at it and not after the tick on the tape; trades leaving at a nanosecond leave first"
+ },
+ "read_from": [
+  "research-threads/research-moves-20231018.parquet",
+  "research-threads/research-humps-20231018.parquet",
+  "research-threads/RESEARCH-THREADS-20231018.json",
+  "calc-move_steps-facts-20231018-part*.parquet",
+  "rows-20231018-part*.parquet (through the rows gate)",
+  "crypto-ng-tick/crypto-ng-tick-line-20s-20231018.parquet",
+  "crypto-ng-tick/crypto-ng-tick-lean-60s-20231018.parquet"
+ ],
+ "columns": [
+  {
+   "column": "move",
+   "what": "Which move: trade leg, run of the best bid, run of the best ask."
+  },
+  {
+   "column": "move_start_position",
+   "what": "The move, as the research table names it."
+  },
+  {
+   "column": "first_step_position",
+   "what": "The tick of its first step: its position on the tape."
+  },
+  {
+   "column": "first_step_received_ns",
+   "what": "When that tick was received."
+  },
+  {
+   "column": "step_bought_20s",
+   "what": "Size bought in the 20 seconds, as stored on the step line."
+  },
+  {
+   "column": "step_sold_20s",
+   "what": "Size sold in the 20 seconds, as stored on the step line."
+  },
+  {
+   "column": "step_flow",
+   "what": "The figure made from those two: bought minus sold over bought plus sold."
+  },
+  {
+   "column": "line_by_time",
+   "what": "The stored exhaustion line read by time: the last read at or before that nanosecond."
+  },
+  {
+   "column": "read_by_time",
+   "what": "The number of that read."
+  },
+  {
+   "column": "line_by_place",
+   "what": "The stored exhaustion line read by place on the tape: the last read not after the tick."
+  },
+  {
+   "column": "read_by_place",
+   "what": "The number of that read. Empty when no read had been made yet."
+  },
+  {
+   "column": "reads_at_that_nanosecond",
+   "what": "How many reads of the stored line share that nanosecond."
+  },
+  {
+   "column": "equal_by_place",
+   "what": "Yes when the read by place equals the step line's own figure."
+  }
+ ],
+ "counts": {
+  "trade_day": "2023-10-18",
+  "moves": 32265,
+  "humps": 4163,
+  "first_steps_the_stored_exhaustion_line_against_the_step_lines_own_20_second_flow": {
+   "both empty": 726,
+   "equal": 31409,
+   "not equal": 130,
+   "not equal by time: equal by place on the tape": 130
+  },
+  "every_look_up_both_ways": {
+   "a hump's began, the best ask": {
+    "look-ups": 4163,
+    "on a nanosecond holding more than one tick": 2194,
+    "a different value by place than by time": 39
+   },
+   "a hump's began, the best bid": {
+    "look-ups": 4163,
+    "on a nanosecond holding more than one tick": 2194,
+    "a different value by place than by time": 22
+   },
+   "a hump's began, the dipole_60s line": {
+    "look-ups": 4163,
+    "on a nanosecond holding more than one read": 124,
+    "a different value by place than by time": 84
+   },
+   "a hump's ended, the best ask": {
+    "look-ups": 4162,
+    "on a nanosecond holding more than one tick": 1420,
+    "a different value by place than by time": 31
+   },
+   "a hump's ended, the best bid": {
+    "look-ups": 4162,
+    "on a nanosecond holding more than one tick": 1420,
+    "a different value by place than by time": 26
+   },
+   "a hump's ended, the dipole_60s line": {
+    "look-ups": 4162,
+    "on a nanosecond holding more than one read": 96,
+    "a different value by place than by time": 60
+   },
+   "a hump's furthest, the best ask": {
+    "look-ups": 4163,
+    "on a nanosecond holding more than one tick": 1836,
+    "a different value by place than by time": 60
+   },
+   "a hump's furthest, the best bid": {
+    "look-ups": 4163,
+    "on a nanosecond holding more than one tick": 1836,
+    "a different value by place than by time": 41
+   },
+   "a hump's furthest, the dipole_60s line": {
+    "look-ups": 4163,
+    "on a nanosecond holding more than one read": 59,
+    "a different value by place than by time": 17
+   },
+   "a move's end, the dipole_60s line": {
+    "look-ups": 32262,
+    "on a nanosecond holding more than one read": 259,
+    "a different value by place than by time": 137
+   },
+   "a move's end, the exhaustion_20s line": {
+    "look-ups": 32262,
+    "on a nanosecond holding more than one read": 259,
+    "a different value by place than by time": 130
+   },
+   "a move's first step, the dipole_60s line": {
+    "look-ups": 32265,
+    "on a nanosecond holding more than one read": 259,
+    "a different value by place than by time": 137
+   },
+   "a move's first step, the exhaustion_20s line": {
+    "look-ups": 32265,
+    "on a nanosecond holding more than one read": 259,
+    "a different value by place than by time": 130
+   }
+  }
+ },
+ "checks": {
+  "passed": true,
+  "what": "both stored lines are in time order; every stored value of the two research tables is the line (or the quote) read by time; the counts of equal and not equal first steps are the ones the research threads job wrote; every hump's moment is a read of the stored line"
+ },
+ "files": [
+  {
+   "file": "research-trace-first-steps-20231018.parquet",
+   "rows": 130,
+   "bytes": 10409,
+   "sha256": "d703334c82cfee5affea9ca3c2d06ec22a2688f0937699daccc139d2f2caf4b5"
+  },
+  {
+   "file": "RESEARCH-TRACE-COUNT-20231018.json",
+   "rows": null,
+   "bytes": 2531,
+   "sha256": "b3eea9ebc690f5d802e79db8a533d7ff7cd99ce9f46133c7da8895e141dc4f29"
+  }
+ ],
+ "seconds": 16.6
+}
