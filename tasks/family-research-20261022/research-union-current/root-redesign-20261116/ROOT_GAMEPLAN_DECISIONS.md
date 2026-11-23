@@ -5446,6 +5446,32 @@ codex. I want all 30 different ones in paper trading".**
   5. No fill and no cost is set in a rule: it gives the tick and the side, and both quotes are written.
 - `OPEN_QUESTIONS.md` is now "what paper trading must settle", strategy by strategy.
 
+**CODEX'S RULES OPENED, READ ONLY, AFTER CLAUDE'S v2 WAS PUSHED (2026-11-23, eighteenth session).**
+- Claude's v2 stood on the remote at `bc8c6c1` first. Then, from `codex/ng-blind-20261123` (`ad10921`), two files of
+  `strategy-20261123-codex/` were read: `VERSIONS.md` (its fifteen v2 sections, CX01 to CX15) and
+  `OPEN_QUESTIONS.md`. Nothing else of that branch was fetched. NOTHING IN CLAUDE'S RULES WAS CHANGED AFTER READING
+  THEM (his word).
+- THE THIRTY ARE DIFFERENT. Codex's rules read one trade print against the next (the print, the best bid, the best
+  offer, the sign of the two lines, the aggressor, whether the two prints are in different exchange events); six
+  of them (CX05, CX06, CX11 to CX14) manage a paper position that is already open. Claude's read the runs of the
+  quote, how a level emptied (filled or pulled), reloads, events through more than one level, and the humps.
+- THE PAPER-TRADING STEPS, laid out to him in one go (Claude's calls, his to correct):
+  1. THE RULE SHEETS: done, both sets, in git.
+  2. THE PAPER ENGINE: one program that walks a trade day's tape forward tick by tick, every rule seeing only what
+     is known at that tick, and writes one line for each paper trade of each of the thirty, each strategy on its
+     own. Built next, as code on the session's Markets branch. Its own check: the trades it opens on the tape cut
+     at a tick equal the trades it opens on the whole tape up to that tick.
+  3. A FIRST RUN ON THE FOUR STORED TRADE DAYS, on a pod, on his "go" after the price: to show the engine runs and
+     every rule opens trades. A record, not a result.
+  4. NEW TRADE DAYS: paper trading proper. It needs his word, because only the four trade days enter any
+     calculation today. What is at hand: the order-by-order file of a trade day from Databento once that trade day
+     has closed (the session reaches Databento's history). Trading inside the trade day as it happens needs a
+     live feed and a machine that stays on; neither is set up, and AWS is off limits.
+  5. HOW A PAPER FILL IS PRICED: his word. Until then each paper trade carries both quotes at each end and no
+     result figure.
+  6. Codex's six management rules need an open paper position: Claude's call, they attach to Codex's own entries
+     only, never to Claude's.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

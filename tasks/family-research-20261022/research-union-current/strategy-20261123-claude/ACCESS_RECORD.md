@@ -57,6 +57,9 @@ public source); the Runpod skills; the Runpod account (no pod exists; the balanc
   direction, management, exits and resets). None of its strategies. The v1 proposals and the v2 rules of this
   folder were both written and pushed before that folder was opened, and are not changed by it (Greg: "Don't
   change your strategys based on codex").
+- AFTER the v2 rules stood on the remote (`bc8c6c1`): Codex's `VERSIONS.md` (its fifteen v2 sections) and
+  `OPEN_QUESTIONS.md` were read, from `codex/ng-blind-20261123` at `ad10921`, to lay out the paper-trading steps
+  for all thirty. Nothing in this folder's rules was changed after reading them.
 - The old research and strategy documents of earlier sessions (on `main` and elsewhere), Claude's own strategy
   work of last week included. This session has no memory of them.
 - The stored tables of the information measure, Native's record, the crypto and ng program's trades and turns,
