@@ -3532,6 +3532,21 @@ exhaustion and the dipole. And show the prebirtths for the dipole and exhaustion
      exactly once. The count is written first; the size of the pictures is written in the receipt.
 - NOT RUN: nothing is drawn until his go on a pod, with the price read at the time.
 
+**DECIDED (Greg, 2026-11-23, fifteenth session), on being put a first look at one stretch of trade day Oct 17 before
+the whole trade day: "For the time being, just pick 10 random ones per day with those 3 to start".**
+- THE FIRST PICTURES: 10 trade legs picked at random on EACH of the four trade days, 40 pictures. Not one stretch of
+  one trade day, and not every trade leg yet.
+- "Those 3" is read as the three things of his message before: the trade leg, the dipole and the exhaustion. The
+  exhaustion is drawn in both its stored forms (at the tick, and the 20-second line), so a picture holds four
+  graphs. Claude's reading, stated to him, his to correct from the picture.
+- THE PICK is the computer's, seeded with the trade day's own number so the same pick comes out again; the receipt
+  names the trade legs picked. It chooses which trade legs are drawn, never where a picture starts or ends.
+- BUILT, NOT RUN (Markets `ccr-b66f34d5-h6ra1t`, `9b5f786`): `root/leg_renders.py --random 10`, and
+  `root/pod_leg_renders.sh`, which runs all four trade days on ONE pod, each trade day's program started together
+  and pinned to its own CPUs. Price read from the account: General Purpose 8 CPUs, $0.32 an hour.
+- OWNED: Claude read his words as the go for the pod and tried to start it. The session's own check refused the
+  start, because he had not said go. Nothing was started and nothing was worked around. The pod waits for his go.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
