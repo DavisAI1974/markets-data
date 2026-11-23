@@ -5535,6 +5535,38 @@ think part of tasty problem was that i didn't confirm email and do one of the st
     takes day and good-till-cancelled orders, not immediate-or-cancel.
 - NOT USED from that folder: its rules, models and findings (made on the old data).
 
+**DECIDED (Greg, 2026-11-23, eighteenth session): "Delete the old rules files and any other traces. See how much we can
+do with tasty first and then we will fill in with others what we can and our own open source after that. Do what we
+can first".**
+- THE ORDER OF THE PAPER-TRADING WORK: tastytrade first, as far as it goes; then the other platforms for what they
+  can do; then our own open source one for the rest.
+- THE DELETE: his standing rule is the list by name first, then his word "delete"; and the files are on `main`. THE
+  LIST PUT TO HIM (markets-data `main`, `15fbf2a`, 525 files in all): `paper-rules/20261109/` (128 files: the old
+  rule files, their builders, reviews, tests and bundle); `carry-forward/20261109/` (27: the earlier sources those
+  rules were carried from); the lines of `MARKET_DATA_INDEX.md` that point at them. Beside them, the old research
+  he has already said is to be discarded: `tasks/family-research-20261022/claude-independent-research-20261113/`
+  (246), `claude-code-cases/` (70), `replay-artifacts/` (22), `claude-code-pins/` (11), `claude-code-derived/` (4).
+  SAID TO HIM: the first of those holds the earlier trade-leg record he chose to keep on 2026-11-17, which the
+  stored trade legs were checked against by commit; taking it off the branch leaves that commit in the history.
+  NOTHING IS REMOVED until he types "delete". The session's own copy of the rules files it read was removed.
+- TASTYTRADE'S SANDBOX, read from tastytrade's own developer pages (the environment "Markets" now allows
+  `developer.tastytrade.com` and `api.cert.tastyworks.com`, on his approval card; the dead pod address came off):
+  - WHY THE FUTURES ORDERS WERE TURNED AWAY ON ABOUT 2026-11-09, most likely: they were immediate-or-cancel. The
+    sandbox page says an order with no stock leg "does not fill on arrival", and an immediate-or-cancel order that
+    does not fill on arrival "is cancelled". So that order type cannot fill for a future there. A day order goes
+    to the simulator's book and fills when a quote arrives for the instrument; "If there is no quote, nothing
+    fills". Not his email.
+  - Orders never reach a real market: a simulator fills them from the quote it holds (the quote's middle rounded
+    to the tick, up for a buy and down for a sell, which with a one-tick gap is the offer for a buy and the bid
+    for a sell). The page says only stock fills have been seen; A FUTURES FILL HAS NOT BEEN SEEN BY ITS AUTHORS.
+  - It serves no market data of its own to a program (those calls fail); one delayed stream was seen once. It
+    wipes trades, positions and balances every 24 hours. It is free.
+  - Set-up, on his side: tastytrade's sandbox account tool in the browser makes the sandbox user, the customer
+    record and funded account most calls need, and the sign-in application and grant. A program signs in with a
+    client secret and a refresh token, exchanged for a 15-minute token.
+  - THE FIRST TEST, when his sandbox is set up: one day order in natural gas, to see whether a future fills there
+    at all. Not placed: it needs his sandbox sign-in.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
