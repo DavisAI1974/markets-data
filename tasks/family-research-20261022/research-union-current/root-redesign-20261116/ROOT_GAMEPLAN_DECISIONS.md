@@ -4642,6 +4642,51 @@ before"; "Correct, not the research values, just the questions".**
     new calculation, his to say.
 - Still not run: it waits for his go on a pod.
 
+**DECIDED (Greg, 2026-11-23, sixteenth session), on the research threads: "Go but make sure these reasearch threads
+are adding value. We don't have to rerun the ones that aren't because we did before. If they all are then that's
+fine. And do the codex calc if it's valuable. 4 pods, 1 for each day rigt? Running in parallel? And we can have
+findings for previous days be known by later ones if need be".**
+- ONLY THE THREADS THAT ADD VALUE ARE RERUN. Claude's judgment, stated to him:
+  - RUN: how much of a move is left when it can first be known; do large moves come back; the print against the
+    quote; the thin quote and the whole side at the start of a move; a level eaten or pulled (first level, on
+    every run of the quote, both ways); is anything observable before an event begins; the dive, the flip and the
+    tail against the price; which comes first, the trade or the quote stepping; fresh trading against old trades
+    leaving. And, because he ruled them strategy inputs this session: the natural gas exhaustion and dipole lines
+    as they stood at every move's first step and at its end.
+  - NOT RUN: the outside figures (too few changes inside four trade days; held by him for the later stage);
+    where in the trade day (the time is on every line; a read by the hour would be a grid); the orders at EVERY
+    level of a move and one order's life after a part fill (each a new calculation, to be laid out for him
+    first); the models, Native's births, the eight trade types, the paper and cost threads (his standing rules).
+- A LATER TRADE DAY MAY KNOW WHAT WAS FOUND ON AN EARLIER ONE, if need be. Not needed for this run: each trade day
+  is read on its own. To be carried into how a strategy version is formed.
+- THE PODS: one pod runs the four trade days side by side, each pinned to its own CPUs. Four pods is his to have
+  if it is faster; it is not here (see below).
+- BUILT, NOT RUN (Markets `ccr-26ff219b-72monm`, `2df4f14`, `root/research_threads.py`; the pod runner and the
+  fetch program know it). For one trade day: `research-moves-<trade day>.parquet` (one line per move: 37
+  columns), `research-humps-<trade day>.parquet` (one line per hump of the 20-second line: 59 columns) and the
+  receipt with the counts. Nothing new is calculated on the tape; stored lines are laid side by side.
+- CHECKS TO MAKE WHEN IT HAS RUN, written here so they are not forgotten: (1) the job's own count "how the first
+  level emptied by the second step" for the best ask up and the best bid down must equal
+  `peak-research-20261117/HOW_A_LEVEL_EMPTIED.json` (2026-11-17, same rebuilt data): that proves the join to the
+  stored resting lines; (2) the job counts, at every first step, whether the stored exhaustion line equals the
+  figure made from the step line's own 20-second flow: read that count before the line is trusted on the moves.
+
+**Greg (2026-11-23, sixteenth session), stopping the launch: "Before we do these, let's start new session starting
+with these"; "How long will this take on 1 pod? I'm fine running 4 if faster"; "Would running codex thing by tick be
+more helpful? 1 sec intervals is too long."**
+- NO POD WAS STARTED. The run is the FIRST thing of the next session, on his go there with the price in front of
+  him. Handoff `NEXT_SESSION_HANDOFF_20261123S.md` replaces handoff R.
+- HOW LONG, said to him as an estimate (the program has never run): about five minutes on one pod, two to three
+  cents. Most of that is the pod starting and fetching the stored files; the reading itself is about a minute a
+  trade day and the four run side by side. Four pods would not finish sooner.
+- CODEX'S MEASURE BY TICK, Claude's answer, stated to him, his to weigh: NOT AS IT IS. It is a ratio with the
+  shared information between bins underneath; with few trades in the span that bottom figure is near nothing and
+  the ratio blows up, and at the tick there are fewer trades to work with, not more. What it reaches for (how
+  one-sided the trading is and how much trading stands behind it) is already at the tick in what is stored: the
+  exhaustion and dipole lines, with the size bought and the size sold inside the span on every read. Claude has
+  read only the report's line on it, not Codex's code; a tick version would be a new formula and is put to him
+  before it is built (his rule). Not built.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
