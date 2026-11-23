@@ -1,0 +1,21 @@
+{
+ "trade_day": "2023-10-02",
+ "counts": {
+  "trade_day": "2023-10-02",
+  "moves": 33131,
+  "moves_that_ended": 33128,
+  "moves_still_going_at_the_last_tick": 3,
+  "runs_with_a_second_step_and_no_resting_line": 0,
+  "first_steps_the_stored_exhaustion_line_against_the_step_lines_own_20_second_flow": {
+   "both empty": 371,
+   "equal": 32656,
+   "not equal": 104
+  },
+  "humps": 4459
+ },
+ "checks": {
+  "passed": true,
+  "what": "every move has its first step line and its steps in a row, and they add up to the stored count; no step is stored twice and no move ends twice; every trade leg's first trade is a tick of the trade day; the stored lines and the rows are in time order; every hump is begun and ended by a read of the stored line; no move or hump ends before it begins; a hump's last tick before it is before its next tick after it"
+ },
+ "seconds": 9.6
+}
