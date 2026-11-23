@@ -5595,6 +5595,16 @@ chat with Claude as architect, sent as two zips ("Only the tasty updaes changd a
   gas quotes may need a data entitlement there; (4) live signals read today's market, outside the four trade
   days: his word to run stage 7 is taken to cover it, and its output is kept in its own folder apart from ROOT.
 
+**DECIDED (Greg, 2026-11-23, eighteenth session): "And I'm saying we do the full suite for the tests. The full sonnet,
+haiku and opilus plan."**
+- CLAUDE'S READING, stated to him, his to correct: stage 1 goes in now and does the stage 7 test work. The scout
+  (Haiku) reads documents and locates; the builder (Sonnet) writes the test program; the reviewer (Opus) checks
+  the plan and the final change; the main session decides and reports. The plan's token rules apply: a declared
+  budget for each agent run, and each run's model and token use recorded.
+- DONE: the three agent files and the CLAUDE.md roles section, exactly as sent, on Markets `ccr-fffbc766-a1gxpl`.
+  NOT DONE, said to him: retiring the three aws agents and the aws-mcp entry (stage 1 lists it); removing what is
+  saved goes to him by name first, and S3 is his open question.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
