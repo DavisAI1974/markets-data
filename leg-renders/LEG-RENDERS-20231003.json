@@ -1,0 +1,175 @@
+{
+ "what": "One picture for every trade leg: the trade price curve, the crypto dipole line (60 seconds) and the crypto exhaustion line (20 seconds) on one clock, both turned to the trade leg's side, the trade leg marked on all three, with what came before it and after it",
+ "asked": "Greg, 2026-11-23: \"I want every trade leg compared against the exhaustion and the dipole. And show the prebirths for the dipole and exhaustion before the trade starts\"; \"I want the other 2 graphs exactly like they were in crypto. And no hardcoded start and stop time for graphs. Dipole and exhaustion start and stop by when the data says and not our predetermined values\"",
+ "trade_day": "2023-10-03",
+ "the_two_lines": {
+  "dipole": {
+   "read_from": "crypto-ng-tick/crypto-ng-tick-lean-60s-20231003.parquet",
+   "span_seconds": 60,
+   "formula": "bought minus sold over bought plus sold, over the trades received in the span, read at the nanosecond; turned to the trade leg's side"
+  },
+  "exhaustion": {
+   "read_from": "crypto-ng-tick/crypto-ng-tick-line-20s-20231003.parquet",
+   "span_seconds": 20,
+   "formula": "bought minus sold over bought plus sold, over the trades received in the span, read at the nanosecond; turned to the trade leg's side"
+  }
+ },
+ "edges": "set by the data: the frame runs from the first trade of the trade leg two before to the last trade of the trade leg after; every hump of the dipole line and of the exhaustion line that the frame touches is in the picture whole (a hump is the time a line stays on one side of zero)",
+ "index_columns": [
+  {
+   "column": "leg_number",
+   "what": "The trade leg, counted from the first print of the trade day as `leg_peaks` stores it. A label only."
+  },
+  {
+   "column": "direction",
+   "what": "Which way it goes: up or down, read off the prices."
+  },
+  {
+   "column": "steps",
+   "what": "How many steps of price it made. Empty when it was still going at the last trade."
+  },
+  {
+   "column": "start_price",
+   "what": "The price it started from, in dollars."
+  },
+  {
+   "column": "end_price",
+   "what": "The price it ended at, in dollars. Empty when it was still going at the last trade."
+  },
+  {
+   "column": "first_trade_position",
+   "what": "Its first trade: position on the tape. A label only."
+  },
+  {
+   "column": "first_trade_received_ns",
+   "what": "When its first trade was received, to the nanosecond."
+  },
+  {
+   "column": "known_position",
+   "what": "The print where it first became known (its first step): position on the tape."
+  },
+  {
+   "column": "known_received_ns",
+   "what": "When that print was received."
+  },
+  {
+   "column": "last_trade_position",
+   "what": "Its last trade. Empty when it was still going at the last trade."
+  },
+  {
+   "column": "last_trade_received_ns",
+   "what": "When its last trade was received. Empty when it was still going."
+  },
+  {
+   "column": "ended_known_position",
+   "what": "The print that showed it had ended (the step back). Empty when it was still going."
+  },
+  {
+   "column": "ended_known_received_ns",
+   "what": "When that print was received."
+  },
+  {
+   "column": "picture_first_ns",
+   "what": "Where its picture starts, set by the data."
+  },
+  {
+   "column": "picture_last_ns",
+   "what": "Where its picture ends, set by the data."
+  },
+  {
+   "column": "trades_in_picture",
+   "what": "How many trades on the tape are inside its picture."
+  },
+  {
+   "column": "render",
+   "what": "The picture drawn for it in this run. Empty when this run did not draw it."
+  }
+ ],
+ "counts": {
+  "trade_day": "2023-10-03",
+  "trade_legs_in_the_trade_day": 6907,
+  "pictures_this_run_draws": 10,
+  "trades_on_the_tape": 41410,
+  "drawn": "10 trade legs picked at random by the computer (seeded with the trade day's own number, 20231003, so the same pick comes out again): [1590, 2474, 2554, 2579, 3030, 5189, 5844, 5949, 6393, 6445]",
+  "pictures_drawn": 10,
+  "picture_bytes": 1684616,
+  "picture_megabytes": 1.6,
+  "largest_picture_bytes": 190415,
+  "trade_legs_still_going_at_the_last_trade": 1,
+  "trade_legs_whose_picture_starts_at_their_own_first_trade": 1,
+  "helpers": 2
+ },
+ "trade_legs_with_no_lead_in": [
+  0
+ ],
+ "checks": {
+  "passed": true,
+  "what": "every trade leg sits on trades the stored tape holds, with the stored time; its stored moments are in order; both stored lines are in time order; every picture holds its trade leg whole; every trade leg asked for was drawn exactly once"
+ },
+ "read_from": [
+  "calc-leg_peaks-facts-20231003-part*.parquet",
+  "crypto-ng-tick/crypto-ng-tick-tape-trades-20231003.parquet",
+  "crypto-ng-tick/crypto-ng-tick-lean-60s-20231003.parquet",
+  "crypto-ng-tick/crypto-ng-tick-line-20s-20231003.parquet"
+ ],
+ "nothing_applied": "Nothing is worked out, averaged, ranked, typed or labelled: stored values, drawn.",
+ "files": [
+  {
+   "file": "leg-renders-index-20231003.parquet",
+   "rows": 6907,
+   "bytes": 363076,
+   "sha256": "26cdd5803a58c2e2f233bd75bbf5f2d1b79f764842b5c2e5a78cc1a8f9f97694"
+  },
+  {
+   "file": "leg-render-20231003-01590.png",
+   "bytes": 169816,
+   "sha256": "9057618c5be25e0de470e9a5c61adf1ba5a1ab93ff814ceca7c20dbb2a74114d"
+  },
+  {
+   "file": "leg-render-20231003-02474.png",
+   "bytes": 164859,
+   "sha256": "c806026a90ad42afeed1f57435c4ffb59cd0246dbdb73c644e4e1eda239039be"
+  },
+  {
+   "file": "leg-render-20231003-02554.png",
+   "bytes": 157901,
+   "sha256": "905acc75a0d41b48cd7b5e8b127d6eaeb0e1f1db683e9593743a3006e5de1617"
+  },
+  {
+   "file": "leg-render-20231003-02579.png",
+   "bytes": 172919,
+   "sha256": "850310ca737a90784ed0157aab872db9317faeb381a9c3605ad1dc7648a13ec8"
+  },
+  {
+   "file": "leg-render-20231003-03030.png",
+   "bytes": 164101,
+   "sha256": "15041bbe2217daae9448dbc0a98745a85000051134bde57fbb9b7bbf59113c8c"
+  },
+  {
+   "file": "leg-render-20231003-05189.png",
+   "bytes": 171140,
+   "sha256": "5d5867380f1725e4a3382ce049f003ddc1d5b54103dc89db56ae87462c9cfec4"
+  },
+  {
+   "file": "leg-render-20231003-05844.png",
+   "bytes": 190415,
+   "sha256": "1f08eda50737977da07f41928ec8aaf3649beb3a2c8438d8ef919d8ee2e7c688"
+  },
+  {
+   "file": "leg-render-20231003-05949.png",
+   "bytes": 173308,
+   "sha256": "e58094fbd20005faf770bc6f667171239c899bbe1478232c9fe3036c53d40b5d"
+  },
+  {
+   "file": "leg-render-20231003-06393.png",
+   "bytes": 169069,
+   "sha256": "58049f8860e28833585e7d3c5a32cccfd6098eb67d09d5904ad3128f9db3b8d6"
+  },
+  {
+   "file": "leg-render-20231003-06445.png",
+   "bytes": 151088,
+   "sha256": "aad116f068c747f032eee2bbc8ca13c2b888fe16011d6cd3a3fa95a69468f656"
+  }
+ ],
+ "seconds": 11.0
+}
