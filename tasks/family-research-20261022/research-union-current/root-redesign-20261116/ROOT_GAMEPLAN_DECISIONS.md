@@ -4434,6 +4434,39 @@ for this data".**
 - NOT RUN. It goes on a pod on his go, with the price in front of him: one pod, all four trade days, 17,304
   humps, General Purpose 8 CPUs at $0.32 an hour.
 
+**Greg (2026-11-23, sixteenth session): "There's only one workbook but we've been updating the 4 dys on individual
+excel sheets because the workbook is.so big. Look for those sheets".**
+- LOOKED FOR, told to him first: every branch of `markets-data` (23), by file name only, nothing downloaded and
+  nothing opened.
+- FOUND. They are the OLD ones, on three older `codex/` branches only
+  (`codex/research-union-four-days-20261109`, `codex/fifteen-strategy-synthesis-20261113`,
+  `codex/evidence-availability-20261113`, the newest copy written 2026-11-15):
+  - THE ONE WORKBOOK: `Frankie_four_day_research_current.xlsx` (with `Priority_native_flow.xlsx` beside it).
+  - THE FOUR TRADE DAYS AS SEPARATE EXCEL FILES: `trade-layers/<trade day>-all-trade-layer-values-NN.xlsx`
+    (4, 5, 4 and 4 files: every saved trade with its 141 fields) and
+    `research-pins/<trade day>-research-pins-NN.xlsx` (5, 5, 5 and 6 files, and 2 cross-day files: the research
+    rows by timestamp).
+- WHAT THEY ARE, from `root-audit-20261116/OLD_MATERIAL_REMOVAL_LIST.md`: made on 2026-11-09 from the old trade
+  archives and the old outputs, trades only, cut on the wrong clock (two trade days missing their first two
+  hours). They were removed from the working branch on 2026-11-16 on his word ("Delete for old data that wasn't
+  entered this morning"), with the rule set the same day: "The rebuilt workbook starts from nothing. No value from
+  an old workbook is carried".
+- SAID TO HIM PLAINLY: NOTHING HAS BEEN WRITTEN INTO THOSE SHEETS SINCE. Everything made from 2026-11-16 on (the
+  rebuilt rows, the sixteen calculations, the crypto dipole and exhaustion lines) is stored as tables on the four
+  `root-rows` branches and is not in any Excel file, apart from `ROOT_dipoles_pinned.xlsx` and the short stretch.
+  So the four trade days are up to date as stored tables and NOT as Excel sheets. He was told this on 2026-11-17
+  and chose the workbook "all at once at a slow time"; it was never written.
+- NOT OPENED: the old files (old data; nothing of them is carried). The branch
+  `codex/fifteen-strategy-synthesis-20261113` is last week's strategy material: only its file names were listed.
+- PUT TO HIM ONCE, Claude's call, not built: the four trade days are written as NEW Excel files from the rebuilt
+  tables, in the form the old `trade-layers` had: ONE ROW PER TRADE ON THE TAPE (38,127; 41,410; 33,703; 30,739),
+  each with every stored column of its row, the columns of the sixteen calculations at that tick, and the crypto
+  dipole and exhaustion read at that trade's nanosecond (the crypto calculation only). A few files a trade day.
+  Why trades and not every tick: every tick with its 408 columns is about 1,857 bytes a row as measured on the
+  short stretch, about 6 gigabytes for the four trade days in some 74 files (an estimate from that one
+  measurement), before a single calculation column; that is the "slow time" job. Which columns go in is his to
+  say before it is written (his rule: nothing goes in a sheet until decided together).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
