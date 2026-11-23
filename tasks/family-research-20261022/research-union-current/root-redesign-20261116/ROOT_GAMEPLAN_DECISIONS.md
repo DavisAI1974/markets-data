@@ -4687,6 +4687,23 @@ more helpful? 1 sec intervals is too long."**
   read only the report's line on it, not Codex's code; a tick version would be a new formula and is put to him
   before it is built (his rule). Not built.
 
+**CORRECTED BY GREG (2026-11-23, sixteenth session), on Codex's measure: "I mean tick values to get to a second or
+whatever timeframe we need to get to."**
+- HIS MEANING: not a new formula at the tick. The measure is made the way Codex defined it, but ITS INPUTS ARE BUILT
+  UP FROM OUR TICKS (every trade at its own nanosecond), not taken from the old ready-made one-second table.
+  Claude's answer before this ("not as it is") answered a question he had not asked.
+- HOW THAT FITS HIS RULES, Claude's call, stated to him, his to correct: the one-second pieces are counted BACK
+  FROM EACH READ'S OWN NANOSECOND (the 20 seconds before a read, cut into twenty pieces of one second), never cut
+  on the clock. So no tick is moved onto a time grid: every trade falls in its exact piece at every read. The 20
+  seconds and the twenty pieces are the measure's own, as Codex wrote it.
+- WHAT IT MENDS AND WHAT IT DOES NOT, said to him: it mends the data under the measure (every trade counted, in
+  its right place, on the right trade days). It does not mend the thin tape: where only one or two pieces of the
+  twenty hold a trade the ratio still stands on almost nothing. The rerun will show how often that is on the
+  rebuilt data, each trade day on its own; that was the thread's own question.
+- NOT BUILT. For the next session, after the research threads run: (1) read Codex's own code for the measure and
+  carry the formula exactly (Claude has read only the report's one line on it; nothing is to be reinvented);
+  (2) lay it out for him; (3) build it and run it on a pod on his go. Written into handoff S.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

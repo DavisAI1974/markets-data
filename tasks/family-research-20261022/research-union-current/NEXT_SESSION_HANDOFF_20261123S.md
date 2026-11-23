@@ -38,9 +38,16 @@ nothing of it is used. The research QUESTIONS are in `root-audit-20261116/RESEAR
 - THEN: read the counts for him, each trade day on its own, as leads (no test of chance is made). Then the Excel
   columns for these two tables: put the column list to him first (his rule: nothing in a sheet until decided).
 - NOT IN THE RUN, said to him: the outside figures; where in the trade day; the orders at every level of a move
-  and one order's life after a part fill (new calculations, to be laid out first); Codex's information measure
-  (Claude's answer: not as it is; a tick version would be a new formula, his to say; Claude has not read
-  Codex's code for it).
+  and one order's life after a part fill (new calculations, to be laid out first).
+- AFTER THE RUN, HIS WORD: CODEX'S INFORMATION MEASURE, MADE FROM OUR TICKS ("I mean tick values to get to a second
+  or whatever timeframe we need to get to"). The formula is Codex's own, unchanged; its inputs are built up from
+  every trade at its own nanosecond. Claude's call, stated to him: the one-second pieces are counted back from
+  each read's own nanosecond (the 20 seconds before a read in twenty pieces), never cut on the clock, so nothing
+  goes onto a time grid. FIRST read Codex's own code for the measure (Claude has read only the report's line:
+  a signed mean marginal entropy over the shared information between the pieces; the code is on Markets at the
+  old commits `CODEX_PIECES_READ.md` names, or with the S fields); carry it exactly; lay it out for him; then
+  build and run on his go. Said to him: this mends the data under the measure, not the thin tape (a ratio over
+  one or two filled pieces of twenty still stands on almost nothing); the rerun shows how often that is.
 
 ## SECOND: THE STRATEGY STEP (not started)
 
