@@ -4912,6 +4912,45 @@ then go".**
 - THE LAUNCH PUT TO HIM: one pod, the measure and the trace together, the four trade days side by side, General
   Purpose 8 CPUs, $0.32 an hour. It waits for the word "go".
 
+**DECIDED (Greg, 2026-11-23, seventeenth session), on the Excel column list, the three calls in it and the measure.
+His words, whole: "Yes make columns for eaxh new research question and fill in data pinned to timestamp. Yes. Yes to
+your 3 suggestions. The crypto operator might be the same but we'll deep dive later on that. How will we know if the
+crypto op is the correct one or not. We can do it now as long as we can be sure if the cryp op is the correct one".**
+- THE EXCEL SHEETS ARE APPROVED: columns for each research question, every row pinned to its timestamp. Claude's
+  reading, stated to him: the "moves" and "humps" sheets for each trade day in `ROOT_dipoles_pinned.xlsx`, the
+  columns grouped under the research question each one answers on the COLUMNS page, every row carrying its own
+  nanosecond and its Eastern time. NOT WRITTEN YET: they wait for the trace (the look-up by time), as told to him.
+- YES TO THE THREE CALLS: the three run-of-trades columns stay out of the sheets; the sheets wait for the lines that
+  differ to be explained; the trace runs on a pod.
+- NOT THE GO. "We can do it now as long as we can be sure" is a condition, and the word was not typed. No pod was
+  started. The operator was checked first.
+- THE OPERATOR, his to deep dive later. WHAT IS PROVED, code only, in the session:
+  1. IT IS THE OPERATOR CODEX'S MEASURE RAN. Codex's program refuses to run unless the operator file has the git
+     fingerprint `c04751cbe5f92952e33328f6c04fcae6392e05e5`. That file is in the Markets history; read back, its
+     fingerprint is that one. Against today's `odcore/info_dipole.py` (`6a62f4d7491c02bee3af840ad7f736453fff892a`)
+     ONE PHRASE OF ONE COMMENT differs ("+ net-of-cost", taken out on 2026-11-16 with the bitcoin-era rules). No
+     line of code differs.
+  2. IT IS THE OPERATOR THE CRYPTO WORK WROTE. The file was first committed on 2026-06-22 (Markets `21ec02f`, "Add
+     signed information-dipole FLOW operator"). Its three formula functions (`shannon`, `mutual_info`,
+     `signed_flow_features`) and its smallest number are the same lines in that first version, in the copy Codex
+     pinned and in today's file. Later commits added the divergence read and a deploy map beside them.
+  3. THE RUN IS TIED TO THAT FILE: the job now refuses any operator file but the one compared (Markets
+     `ccr-dd95052b-3vcrwq`, `2e3f9e7`), and its receipt says what was and was not compared.
+- WHAT IS NOT PROVED, said to him plainly: THAT THE OPERATOR MATCHES THE ORIGINAL DIPOLE EQUATIONS. `odcore` says of
+  itself that its equations were reconstructed from the research log and that the original scripts live in another
+  repository (`DavisAI1974/Basic_equations`), to be compared later; `info_dipole.py` says "faithful to the paper's
+  primitives". That comparison has never been made. Claude tried to attach `Basic_equations` read-only to make
+  it; the session's own permission check refused, and it was not worked around. It needs him to add the
+  repository to the session. That is his deep dive.
+- WHAT THE CRYPTO PICTURES USED, so the two are not confused: his crypto exhaustion graphs and the dipole picture
+  used only bought minus sold over bought plus sold (20 and 60 seconds). That is the operator's first figure and
+  nothing else of it. The entropy figures, the shared information and the ratio were never in those pictures. The
+  run checks the first figure against the stored exhaustion line at every read.
+- CLAUDE'S CALL, stated to him: for Codex's research question (are large information ratios real or made by thin
+  trading) the correct operator is the one Codex's measure used, and that is proved. Whether its entropy figures
+  are the right dipole formula for strategy is the deep dive; until then the measure is in no sheet and feeds no
+  strategy.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
