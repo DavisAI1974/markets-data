@@ -3789,6 +3789,16 @@ trade leg i assume".**
   next run (Markets `ccr-b66f34d5-h6ra1t`, the commit after `0d5413e`); these 40 are stored as drawn.
 - Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
 
+**DECIDED (Greg, 2026-11-23, fifteenth session), on the 40 pictures: "We're going to have to use smaller scales for
+y axis on dipole and exhaustion".**
+- THE SCALE OF THE DIPOLE GRAPH AND OF THE EXHAUSTION GRAPH IS SET BY THE LINE ITSELF in each picture: from the
+  lowest to the highest the line stands there, zero always in sight, a little room above and below. Drawing only;
+  no value is changed. Claude's call, stated to him, his to correct: the line sets it, not a fixed smaller number
+  of ours; each of the two graphs has its own scale; so the same height in two pictures is not the same value and
+  the numbers on the axis are what to read.
+- Built, not run: Markets `ccr-b66f34d5-h6ra1t`, `17afc6a`. The 40 stored now are replaced by the rerun (deleted
+  while it runs, the removal confirmed, then the new ones fetched). It waits for his go.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
