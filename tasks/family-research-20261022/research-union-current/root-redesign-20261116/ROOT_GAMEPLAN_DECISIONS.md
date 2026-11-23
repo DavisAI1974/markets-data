@@ -4951,6 +4951,65 @@ crypto op is the correct one or not. We can do it now as long as we can be sure 
   are the right dipole formula for strategy is the deep dive; until then the measure is in no sheet and feeds no
   strategy.
 
+**Greg (2026-11-23, seventeenth session), after being told what is and is not proved about the operator: "Go";
+"Go if we're sure about operator"; then "Read me the results when it finishes".**
+- TAKEN AS THE GO FOR BOTH PROGRAMS, said to him as the pod was started: the operator is proved to be the one
+  Codex's measure used and the one the crypto work wrote, which is what his question asked; the comparison with the
+  original equations stays his deep dive, and the measure goes in no sheet and no strategy until then.
+
+**THE INFORMATION MEASURE AND THE TRACE, done (2026-11-23, seventeenth session), on his go.**
+- ONE POD, both programs one after the other, the four trade days side by side, each pinned to its own two CPUs:
+  General Purpose 8 CPUs, $0.32 an hour, `ylglkzhpnop84n` (US-CA-2), 15:06:21 to about 15:13:30 UTC: about 4
+  cents. Markets `ccr-dd95052b-3vcrwq` `2e3f9e7`, `pod_leg_renders.sh ... info_measure,research_trace`. All eight
+  runs passed every check on the first run (the first time either program ran anywhere). The measure took 118 to
+  235 seconds a trade day, the trace 8 to 17. The pod's address went onto the environment on his approval card
+  and the one before came off.
+- STORED in `info-measure/` and `research-trace/` on each daily branch, every file fetched and proved against its
+  receipt (the fetch program worked first time), `FILES.md` brought up to date, each push confirmed on the remote:
+  `root-rows-20231002` `6e20bfc`, `-20231003` `97164e8`, `-20231017` `4e3ccba`, `-20231018` `4c3bda0`. THE POD WAS
+  DELETED after that; the account was read and shows none.
+- THE TRACE: THE CAUSE IS FOUND, AND IT IS THE LOOK-UP BY TIME. Of the first steps where the stored exhaustion line
+  was not the step line's own 20-second flow (104; 144; 136; 130), EVERY ONE is equal once the line is read by
+  place on the tape: 104 of 104; 144 of 144; 136 of 136; 130 of 130. None is left unexplained. The research
+  threads job took the last read at or before the tick's nanosecond; where several trades share a nanosecond that
+  read stands on trades that came after the tick on the tape.
+- HOW FAR IT REACHES, every look-up of the two research tables made both ways, in the order Oct 2; Oct 3; Oct 17;
+  Oct 18. A different value by place than by time:
+  - a move's first step: the exhaustion line 104; 144; 136; 130; the dipole line 113; 151; 144; 137 (of 33,131;
+    36,454; 34,337; 32,265 moves). A move's end: the same counts (an end is nearly always the first step of the
+    next move).
+  - a hump's beginning: the dipole line 50; 80; 61; 84; the best bid 12; 16; 28; 22; the best offer 20; 14; 26; 39
+    (of 4,459; 4,579; 4,103; 4,163 humps).
+  - a hump's furthest: the dipole 10; 11; 9; 17; the best bid 35; 37; 38; 41; the best offer 41; 31; 43; 60.
+  - a hump's end: the dipole 40; 65; 44; 60; the best bid 15; 22; 18; 26; the best offer 19; 21; 30; 31.
+  About half of the hump moments sit on a nanosecond holding more than one tick (2,307; 2,391; 2,145; 2,194 at the
+  beginning), but the best bid or offer differs at only a few tens of them.
+- SO THE TWO RESEARCH TABLES HOLD WRONG VALUES ON THOSE LINES (a few in every thousand moves; about one hump in
+  fifty on the dipole at its beginning). They are to be made again with the look-up by place, in his replace
+  order. The counts read to him from the first run stand on the same tables: the counts by where a line stood at
+  a first step can move by those few lines. The Excel sheets are written from the tables made again.
+- THE INFORMATION MEASURE, the checks on real tape, ALL PASSED on all four trade days: at every read the twenty
+  bought pieces add up to the stored bought and the twenty sold pieces to the stored sold; the operator gives
+  nothing exactly where the stored line says nothing traded; THE FIRST FIGURE EQUALS THE STORED EXHAUSTION LINE AT
+  EVERY READ (71,220; 78,454; 61,425; 56,021 reads).
+- THE MEASURE'S COUNTS, each trade day on its own (Oct 2; Oct 3; Oct 17; Oct 18), counts of reads, no test of
+  chance:
+  - figures made at 70,393; 77,645; 60,608; 55,168 reads. None (nothing with a side traded in the 20 seconds) at
+    827; 809; 817; 853.
+  - THE SHARED INFORMATION IS EXACTLY ZERO, AND ALL THE TRADING IS ON ONE SIDE, at 4,594; 4,869; 4,360; 5,268
+    reads. There the information ratio is a number over the operator's smallest number: made by the division.
+    Exactly zero with trading on both sides: 0; 1; 0; 0. Above zero (always with trading on both sides): 65,799;
+    72,775; 56,248; 49,900. No read has it "not zero and smaller than rounding".
+  - reads standing on ONE piece of twenty: 3,750; 3,611; 3,699; 4,278. On TWO: 5,068; 4,856; 4,627; 5,873. On
+    three: 5,792; 5,907; 4,991; 6,451. On all twenty: 2,060; 3,045; 64; 7. Every number of pieces is in the
+    receipts.
+- WHAT THAT SAYS TO CODEX'S QUESTION (are large information ratios real or made by thin trading), as far as the
+  counts go: the ratio is made by the division at every read with one-sided trading and at one other read on the
+  four trade days; that is 6 to 10 reads in a hundred. How large the ratio is at the other reads, and how that
+  goes with the number of pieces holding a trade, is in the stored table and has not been counted: what counts as
+  "large" is a number of his, not of Claude's or Codex's.
+- Nothing of either is typed, labelled or in the Excel sheets. The measure feeds no strategy.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

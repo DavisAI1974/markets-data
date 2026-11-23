@@ -930,3 +930,25 @@ decisions file (seventeenth session) and in each receipt. Leads, no test of chan
   needs the moves that follow.
 - Kept so it is not done again: the fetch program had never met this receipt's layout. A new job's receipt is to be
   read against `root/pod_fetch.py` before the launch, not after.
+
+## 2026-11-23 (seventeenth session): a stored line is read BY PLACE ON THE TAPE, never by time; and the information measure
+
+- THE FAULT, kept so it is not made again: `root/research_threads.py` read the stored exhaustion and dipole lines,
+  and the quote, "as it stood at that nanosecond": the last read at or before the tick's received time. Several
+  trades often share one nanosecond (one order filling several resting orders), so that read holds trades that
+  came AFTER the tick on the tape. Traced on a pod (`research-trace/`): every one of the 104; 144; 136; 130 first
+  steps where the stored exhaustion line was not the step line's own flow is equal once read by place. A look-up
+  of anything stored at the tick is made by the tick's position on the tape. Time alone does not order the tape.
+- The first counts of the research threads (the section above) stand on tables with that fault on a few lines in
+  every thousand. They are leads as before; the tables are being made again.
+- THE INFORMATION MEASURE (`info-measure/`): Codex's measure is the crypto information dipole operator
+  (`odcore/info_dipole.py`) called on twenty one-second pieces. Made here with the pieces counted back from each
+  read's own nanosecond. Its first figure is the exhaustion line, and equals the stored line at every read on all
+  four trade days. Its other figures (the entropy lean, the information ratio, the information flow, the lean's
+  change) are NOT the dipole and NOT the exhaustion of the crypto pictures, which used the first figure only.
+- What the counts say so far: where all the trading of the 20 seconds is on one side (4,594; 4,869; 4,360; 5,268
+  reads) the two lists share exactly nothing and the ratio is made by the division. With trading on both sides
+  the shared information was above zero at every read but one. A sizeable part of the reads stand on one or two
+  pieces of twenty (trade day Oct 2: 3,750 on one, 5,068 on two, of 70,393).
+- NOT PROVED, his deep dive: that the operator matches the original dipole equations (`Basic_equations`, not
+  attached to the session). Until then it is in no sheet and no strategy.
