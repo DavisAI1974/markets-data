@@ -1,0 +1,152 @@
+{
+ "what": "One picture for every trade of the crypto and ng program, set up as the crypto pictures were: zero at the trade's start; the mid price from where it stood there; the crypto dipole line (60 seconds); the crypto exhaustion line (20 seconds); all turned to the trade's side",
+ "asked": "Greg, 2026-11-23: \"Yes I want the prebirths laid out. Not worried about the 2000 averaging. I just want to make sure we are setting them up the same. Show each individual trade and their prebirths like this without designated start times for dipole and exhaustion. Their start times are when they start showing up.\"",
+ "trade_day": "2023-10-03",
+ "the_lines": {
+  "price": "the mid price (halfway between the best bid and the best ask on the stored rows, through the rows gate), its change from where it stood at the trade's start, in hundredths of a percent, turned to the trade's side",
+  "rates": "per tick, not per second: the dipole line's change at each of its own reads, and the mid price's change at each tick it moves, each drawn as a stroke at that tick",
+  "dipole": {
+   "read_from": "crypto-ng-tick/crypto-ng-tick-lean-60s-20231003.parquet",
+   "span_seconds": 60,
+   "formula": "bought minus sold over bought plus sold, over the trades received in the span, read at the nanosecond; turned to the trade's side"
+  },
+  "exhaustion": {
+   "read_from": "crypto-ng-tick/crypto-ng-tick-line-20s-20231003.parquet",
+   "span_seconds": 20,
+   "formula": "bought minus sold over bought plus sold, over the trades received in the span, read at the nanosecond; turned to the trade's side"
+  }
+ },
+ "edges": "set by the data: the frame runs from the start of the trade two before to the end of the trade after; every hump of the dipole line and of the exhaustion line that the frame touches is in the picture whole",
+ "index_columns": [
+  {
+   "column": "trade",
+   "what": "The trade of the crypto and ng program, in the order they started. A label only."
+  },
+  {
+   "column": "side",
+   "what": "buy or sell: the side the program took."
+  },
+  {
+   "column": "turn_received_ns",
+   "what": "The moment the program marked the turn it was made on."
+  },
+  {
+   "column": "onset_received_ns",
+   "what": "THE START: when the trade on the tape that filled it was received. Zero on its picture."
+  },
+  {
+   "column": "end_received_ns",
+   "what": "When it ended. Empty when it was still open at the last tick of the trade day."
+  },
+  {
+   "column": "ended",
+   "what": "How it ended, in the words of the July rule that ended it."
+  },
+  {
+   "column": "length_seconds",
+   "what": "From its start to its end, in seconds."
+  },
+  {
+   "column": "mid_at_the_start",
+   "what": "The mid price standing as it started, in dollars: the level its price line is measured from."
+  },
+  {
+   "column": "picture_first_ns",
+   "what": "Where its picture starts, set by the data."
+  },
+  {
+   "column": "picture_last_ns",
+   "what": "Where its picture ends, set by the data."
+  },
+  {
+   "column": "render",
+   "what": "The picture drawn for it in this run. Empty when this run did not draw it."
+  }
+ ],
+ "counts": {
+  "trade_day": "2023-10-03",
+  "trades_of_the_program_in_the_trade_day": 1895,
+  "pictures_this_run_draws": 10,
+  "trades_on_the_tape": 41410,
+  "drawn": "10 trades of the program picked at random by the computer (seeded with the trade day's own number, 20231003, so the same pick comes out again): [435, 678, 698, 707, 831, 1420, 1603, 1627, 1751, 1763]",
+  "pictures_drawn": 10,
+  "picture_bytes": 2230908,
+  "picture_megabytes": 2.1,
+  "largest_picture_bytes": 243815,
+  "trades_still_open_at_the_last_tick": 0,
+  "trades_whose_picture_starts_at_their_own_start": 0,
+  "helpers": 2
+ },
+ "trades_with_no_lead_in": [],
+ "checks": {
+  "passed": true,
+  "what": "the stored trades of the program are in the order they started and none ends before it starts; both stored lines and the mid price are in time order; a mid price stood as every trade started; every picture holds its trade whole; every trade asked for was drawn exactly once"
+ },
+ "read_from": [
+  "crypto-ng-tick/crypto-ng-tick-program-trades-20231003.parquet",
+  "rows-20231003-part*.parquet",
+  "crypto-ng-tick/crypto-ng-tick-tape-trades-20231003.parquet",
+  "crypto-ng-tick/crypto-ng-tick-lean-60s-20231003.parquet",
+  "crypto-ng-tick/crypto-ng-tick-line-20s-20231003.parquet"
+ ],
+ "nothing_applied": "Nothing is averaged, ranked, typed or labelled. Observation only.",
+ "files": [
+  {
+   "file": "trade-renders-index-20231003.parquet",
+   "rows": 1895,
+   "bytes": 92653,
+   "sha256": "81b620b29d436ba5e397a997d395d78a2f93ed058ea2054643ce0dc3fa22e8a8"
+  },
+  {
+   "file": "trade-render-20231003-00435.png",
+   "bytes": 205809,
+   "sha256": "9214de19edf3c5da6e10ee940abe63081caa80a716a496480855b49083f5ef7c"
+  },
+  {
+   "file": "trade-render-20231003-00678.png",
+   "bytes": 220320,
+   "sha256": "333bdd81dc1b8bc955dc6edf7f1d5a5cc176c35aff526da66a59e9359b48728b"
+  },
+  {
+   "file": "trade-render-20231003-00698.png",
+   "bytes": 235323,
+   "sha256": "138bc0d15fccf950f54e0f69e5b1fdbb3ad4993c8f306b4c1f2639e8f4a13359"
+  },
+  {
+   "file": "trade-render-20231003-00707.png",
+   "bytes": 221627,
+   "sha256": "af8939e0cb6dd97d187fcac71ce7b200ad020ca6f60d64b9e25d5fed730ff176"
+  },
+  {
+   "file": "trade-render-20231003-00831.png",
+   "bytes": 211567,
+   "sha256": "dd4f5a839f3151a88e61b1efba145f0aa3bd6d15dba35e252af52773cd01bf70"
+  },
+  {
+   "file": "trade-render-20231003-01420.png",
+   "bytes": 225013,
+   "sha256": "7414266f56ee8530464ba864f3f5c040890be5a53f680c591c1297685ef01f09"
+  },
+  {
+   "file": "trade-render-20231003-01603.png",
+   "bytes": 238844,
+   "sha256": "61e041dfc0c920c2eb087456b0b3a90574f761b7642bb30a5436fc847be5daad"
+  },
+  {
+   "file": "trade-render-20231003-01627.png",
+   "bytes": 243815,
+   "sha256": "e448b3ca88d6188376ca4689398de5df647794dac46117e13a1dbfcb5c083d98"
+  },
+  {
+   "file": "trade-render-20231003-01751.png",
+   "bytes": 206284,
+   "sha256": "a4bebe89cf0177966e52e87dbf4bd25f036941f7ef2a75bda35b7b10db8616a2"
+  },
+  {
+   "file": "trade-render-20231003-01763.png",
+   "bytes": 222306,
+   "sha256": "c9d9e29fd5e96bb55720e55e773b074037d354293fb9de590b698a9f7186e80c"
+  }
+ ],
+ "seconds": 13.7
+}
