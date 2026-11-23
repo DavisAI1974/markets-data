@@ -900,3 +900,31 @@ used for strategy".
 - Crypto data (anything measured on a crypto market) is in no analysis and no sheet. The formulas only.
 - The program's trades stay observation only (Claude's reading, his to correct): their starts and ends come from
   settings tuned on crypto results.
+
+## 2026-11-23 (seventeenth session): the research threads read again on the rebuilt data (`research-threads/`)
+
+One line per move (a trade leg, a run of the best bid, a run of the best ask) and one line per hump of the 20-second
+exhaustion line, stored values laid side by side; all four trade days, each on its own. The counts are in the
+decisions file (seventeenth session) and in each receipt. Leads, no test of chance:
+- MOST MOVES ARE OVER AT THE MOMENT THEY CAN FIRST BE KNOWN. Of the runs of the quote about four in five make one
+  step only (trade day Oct 2: 21,420 of 27,010); of the trade legs about six in ten (3,878 of 6,118).
+- A ONE-STEP TRADE LEG IS MOSTLY THE PRINT BOUNCING. On trade day Oct 2 the best bid and the best offer both stood
+  where they were at 2,323 of 3,878 one-step trade legs, at 114 of 1,399 two-step ones and at 4 of 841 with three
+  or more. All four read alike (a little over half on trade days Oct 17 and Oct 18). So the stored trade leg is a
+  real move of the price from its second step on. This answers "the stored trade leg is a poor mark" above: it is
+  the one-step legs that are poor.
+- WHERE THE EXHAUSTION OR THE DIPOLE LINE STANDS AT A MOVE'S FIRST STEP SAYS LITTLE ABOUT WHETHER IT GOES ON. About
+  one run of the quote in five takes a second step, with the line on the move's side or against it (Oct 2: 2,793
+  of 13,163 against 2,473 of 12,712). A small lean toward "on the move's side" on three trade days, none on trade
+  day Oct 3. The side alone is not the read; how far the line stands, and what it did before, are not counted yet.
+- A HUMP THAT BEGINS ONLY BECAUSE OLD TRADES LEFT THE 20 SECONDS CARRIES NO DIRECTION: the next trade is on its side
+  about as often as on the other (Oct 2: 845 against 786). A hump that begins on a trade is followed first by the
+  quote it was hitting stepping (1,055) or by more trading on its side (880), seldom by the other side (176).
+  Partly built in: a buy that takes out the best offer steps it in the same exchange event. The table has a column
+  for that (`next_..._same_event`); not counted yet.
+- THE STORED EXHAUSTION LINE AND THE STEP LINE'S OWN 20-SECOND FLOW DIFFER at 104; 144; 136; 130 first steps (equal
+  at 32,656; 35,999; 33,678; 31,409). Not explained. Do not use the exhaustion value on those lines until it is.
+- "Do large moves come back" is NOT answered: the stored `given_back` is only the first step back (one tick). It
+  needs the moves that follow.
+- Kept so it is not done again: the fetch program had never met this receipt's layout. A new job's receipt is to be
+  read against `root/pod_fetch.py` before the launch, not after.

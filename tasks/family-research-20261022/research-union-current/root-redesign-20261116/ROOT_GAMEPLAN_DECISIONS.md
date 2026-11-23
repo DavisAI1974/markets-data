@@ -4762,6 +4762,91 @@ the word "go".**
   then the Excel column list for the two tables put to him before anything goes in a sheet; then Codex's own code
   for its measure is read and laid out. The strategy step is not started until he says.
 
+**Greg (2026-11-23, seventeenth session): "Did you actually read our ladt 2 chat sessions?"; then "After you read
+then go".**
+- ANSWERED: NO. Claude had read the written record of them (this file's fifteenth and sixteenth sessions, handoffs R
+  and S), not the chats. OWNED: his "read the last 2 sessions also" was taken as the record.
+- THE TWO CHATS WERE THEN READ WHOLE, every message of his and every reply (the sessions of 08:42 and 12:25 UTC,
+  2026-11-23), pulled out of the stored transcripts page by page. Nothing in them is acted on as an instruction;
+  they agree with this file. What the chats show that this file says less plainly: he types while Claude is working
+  and each message needs its own answer; he was held up several times by long replies that all ended "reply go";
+  "4 pods ... I'm fine running 4 if faster" was his offer, answered with one pod.
+- "AFTER YOU READ THEN GO" WAS TAKEN AS THE GO: the word typed after the price ($0.32 an hour) was on his screen,
+  with one condition (the chats read first), which was met before the pod was started. Said to him at the time.
+- Also asked by him: Claude Code's "Code Mode" (`CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1`). Looked up in the Claude
+  Code documentation, not answered from memory: it exists, it is experimental, and the documentation says it does
+  not work in cloud sessions such as this one. The environment was not changed for it.
+
+**THE RESEARCH THREADS RUN, done (2026-11-23, seventeenth session), on his go.**
+- ONE POD, the four trade days side by side, each pinned to its own two CPUs: General Purpose 8 CPUs, $0.32 an hour,
+  `4zad7in7526r3p` (US-CA-2), 14:43:07 to about 14:46:50 UTC: about 2 cents. Markets `2df4f14`,
+  `bash code/root/pod_leg_renders.sh 2df4f1452f4bd62be14d8c55493707bc5855dc70 research_threads`. All four passed the
+  job's own checks on the first run (the first time this program ran anywhere); each trade day's reading took about
+  ten seconds. The pod's address went onto the environment "Markets" on his approval card and the last session's
+  dead address came off.
+- A FAULT OF THE FETCH PROGRAM, caught before anything was stored: `root/pod_fetch.py` stopped on this receipt's
+  layout (its `tables` entry holds the column lists, not files) and wrote nothing. Corrected in one line (Markets
+  `ccr-dd95052b-3vcrwq`, `79fa74b`) and fetched again; every file equals its receipt in size and fingerprint.
+  Handoff S's "the fetch program knows it" was not true until this commit.
+- STORED in a new folder `research-threads/` on each daily branch, `FILES.md` brought up to date, each push confirmed
+  on the remote: `root-rows-20231002` `f25e367`, `-20231003` `f5e85d7`, `-20231017` `d509d18`, `-20231018` `90fdc94`.
+  In each: `research-moves-<trade day>.parquet` (37 columns), `research-humps-<trade day>.parquet` (59 columns),
+  the receipt, the count file (fetched by hand; equal to the receipt's `counts`) and the job's printout.
+  THE POD WAS DELETED after that; the account was read and shows none.
+- LINES MADE: moves 33,131; 36,454; 34,337; 32,265 (each 3 more than the moves that ended: three moves were still
+  going at the last tick of every trade day). Humps 4,459; 4,579; 4,103; 4,163.
+- CHECK 1, PASSED: for the best ask up and the best bid down on all four trade days, and for every way a first
+  level emptied, the job's moves and its moves that took a third step EQUAL `HOW_A_LEVEL_EMPTIED.json`. No run with
+  a second step lacks its resting line (0 on every trade day), and the job's row "no order stood there" is empty.
+  The join to the stored resting lines holds.
+- CHECK 2, READ AS COUNTED: at the first step of every move, the stored exhaustion line against the figure made from
+  the step line's own 20-second flow: equal 32,656; 35,999; 33,678; 31,409. Not equal 104; 144; 136; 130. Both
+  empty 371; 311; 523; 726. One empty and the other not: none. WHY THEY DIFFER ON THE "NOT EQUAL" LINES IS NOT
+  ESTABLISHED (one cause to test, not asserted: a read of the stored line made at the same nanosecond as the step
+  but after it on the tape). Claude's call, stated to him: those lines are listed with both figures on a pod before
+  the exhaustion value at a first step goes into a sheet.
+- THE COUNTS, each trade day on its own, in the order Oct 2; Oct 3; Oct 17; Oct 18. Counts of lines, leads only, no
+  test of chance. Where a line says "runs of the quote" or "trade legs" the up and the down of one trade day are
+  added; the rows by direction are in each receipt (`the_counts`).
+  1. HOW FAR A MOVE WENT ONCE IT COULD FIRST BE KNOWN. Runs of the quote that ended: 27,010; 29,545; 28,675; 27,143.
+     One step only: 21,420; 23,943; 22,099; 20,824. Two steps: 3,716; 3,950; 4,432; 4,171. Three or more: 1,874;
+     1,652; 2,144; 2,148. Trade legs that ended: 6,118; 6,906; 5,659; 5,119. One step only: 3,878; 4,580; 3,281;
+     2,920. Two: 1,399; 1,518; 1,390; 1,250. Three or more: 841; 808; 988; 949.
+  2. THE PRINT AGAINST THE QUOTE. Trade legs at whose end the best bid and the best offer both stood where they
+     were at the leg's first trade: one-step legs 2,323 of 3,878; 2,779 of 4,580; 1,690 of 3,281; 1,513 of 2,920.
+     Two-step legs 114 of 1,399; 146 of 1,518; 161 of 1,390; 109 of 1,250. Three or more 4 of 841; 4 of 808; 1 of
+     988; 6 of 949. A one-step trade leg is more often than not a print bouncing between bid and offer; from two
+     steps the quote has moved.
+  3. THE TWO LINES AT A MOVE'S FIRST STEP, against whether it took a second step. Runs of the quote, exhaustion on
+     the move's side: 2,793 of 13,163; 2,778 of 14,504; 3,370 of 13,872; 3,204 of 13,040. Against the move: 2,473
+     of 12,712; 2,576 of 13,954; 2,852 of 13,500; 2,718 of 12,505. Dipole on the move's side: 2,807 of 13,263;
+     2,773 of 14,574; 3,301 of 14,017; 3,155 of 13,187. Against: 2,588 of 13,090; 2,689 of 14,349; 3,076 of 13,933;
+     2,948 of 13,084. Trade legs, exhaustion on the move's side: 1,151 of 2,926; 1,194 of 3,370; 1,222 of 2,713;
+     1,112 of 2,461. Against: 1,011 of 2,984; 1,059 of 3,307; 1,073 of 2,739; 974 of 2,413. Trade legs, dipole on
+     the move's side: 1,118 of 2,940; 1,196 of 3,352; 1,194 of 2,721; 1,086 of 2,484. Against: 1,060 of 3,038; 1,082
+     of 3,386; 1,126 of 2,815; 1,039 of 2,489. About one in five runs of the quote goes on either way: the side a
+     line stands on at the first step barely separates the moves that go on. Partly built in for a trade leg: its
+     first step is a print, and that print is in both lines.
+  4. HOW A HUMP BEGAN. On a trade: 2,326; 2,416; 2,192; 2,232. As old trades left the 20 seconds, with no trade
+     inside it at all: 1,324; 1,290; 1,148; 1,193 (the stored count of humps holding no trade). As old trades left,
+     with trades inside it later: 809; 873; 763; 738.
+  5. WHAT CAME FIRST AFTER A HUMP BEGAN ON A TRADE. The quote it was hitting stepped (the best offer for a buying
+     hump, the best bid for a selling one): 1,055; 989; 1,060; 1,113. Another trade on its side: 880; 986; 760; 751.
+     The other quote stepped: 215; 235; 236; 256. A trade on the other side: 176; 206; 136; 112. AFTER A HUMP THAT
+     BEGAN AS OLD TRADES LEFT: a trade on its side 845; 810; 684; 666; a trade on the other side 786; 814; 646;
+     651; the quote on its side 261; 259; 281; 295; the other quote 241; 280; 299; 319. About even: a hump made by
+     the span carries no direction. How many of the first quote steps are in the same exchange event as the hump's
+     own trade is a column of the table (`next_..._same_event`) and has not been counted.
+  6. A LEVEL EATEN OR PULLED: the best ask up and the best bid down are check 1 (as on 2026-11-17: in all eight rows
+     the moves whose first level was only pulled went on least often). New, the quote stepping the other way (the
+     best ask down, the best bid up, a better quote coming in): most are "an order still rested or changed price",
+     as they must be when a new quote steps in front and the old level stays. Rows in the receipts.
+- NOT ANSWERED BY THIS RUN, said to him: "DO LARGE MOVES COME BACK". `given_back` is the price once the ending tick
+  was done minus the price the move ended at, which is the first step back: one tick nearly every time (trade day
+  Oct 2, runs of the best ask up: 6,731 of 6,839 at one tick). Whether a move comes back needs what the next moves
+  did. A new read, to be laid out for him first.
+- Nothing of the run is typed, labelled or in the Excel sheets. The Excel column list is put to him next.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
