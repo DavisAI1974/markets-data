@@ -5317,6 +5317,35 @@ sessions are not to be used. We should actually discard those if they have old d
   started; with "old ... docs are not to be used" it is not needed and nothing of it is used.
 - Handoff `NEXT_SESSION_HANDOFF_20261123T.md` replaces handoff S.
 
+## Eighteenth session (2026-11-23, in a code session): the strategy step, Claude's side
+
+Greg pasted the drop-in of the seventeenth session (handoff T). Read in full: handoff T, `RESEARCH_PAPER_20261123.md`,
+the running notes, this file's seventeenth session to the end, `STRATEGY_HANDOFF_FOR_CODEX_20261123.md` (the shared
+task), `root-audit-20261116/RESEARCH_INTENTIONS.md` and `FURTHER_RESEARCH_LIST.md`.
+- Code: Markets `ccr-dd95052b-3vcrwq` (`a556589`) brought into the session's own branch `ccr-fffbc766-a1gxpl` by
+  fast-forward (the session branch held nothing of its own) and pushed there. Nothing to the trunk.
+- The Runpod skills were loaded and the account read: NO POD EXISTS; the balance is $31.30. The agent skills router
+  and the git workflow skill were read from the pinned public source (tag 0.6.8). Superpowers loaded by itself and
+  is not used as a router.
+- NOT OPENED, NOT LISTED, NOT SEARCHED: any `codex/` branch; any folder `strategy-20261123-codex/`; the old research
+  and strategy documents of earlier sessions (on `main` and elsewhere), Claude's own of last week included. Not
+  touched: AWS (an AWS tool is attached to the session; it was not called). No stored table was opened and nothing
+  was calculated: documents only.
+- HIS RULES OF THE DROP-IN, as he wrote them, in force for this session: only the four trade days; a later trade day
+  may know what was found on an earlier one; the crypto formulas for dipole and exhaustion and no line of Claude's
+  own under, beside or in place of them (any other line is named as what it is and put to him before it is built);
+  a stored value read by its place on the tape; no mid price; only add to what exists; the Excel plan as decided;
+  no more tests of the output's correctness on this data; the further research saved for later; the unit is the
+  event; no hard coded beginning or end time; no made-up numbers; nothing typed, labelled or put in the Excel
+  sheets until decided together; no averaging, pooling, ranking or labels; no trade cost; the replace order for
+  data; pods only after the price and his typed "go"; nothing run in the session without telling him first; AWS
+  off limits.
+- THE ORDER HE SET: first the strategy step (Claude's first message: how a version is formed blind to its own trade
+  day; then 15 strategies in one message; work under `strategy-20261123-claude/`). He is told before it starts so he
+  can raise the effort setting. THEN, when he says: the discard of the old research and strategy documents, the
+  list by name put to him first, nothing removed before his word "delete".
+- Told to him before the strategy step starts; it waits for his word.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
