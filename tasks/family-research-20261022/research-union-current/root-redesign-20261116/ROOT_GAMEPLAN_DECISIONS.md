@@ -5219,8 +5219,8 @@ things. Completely unnecessary".**
 - `ROOT_dipoles_pinned.xlsx` is again byte for byte the file of `4262074` (the start of this session: thirteen
   sheets: the read-me, and for each trade day "dipoles", "peaks" and "crypto and ng"; 2.35 megabytes). Today's three
   versions of it (the "moves" and "humps" sheets; the same with the information measure; the one sheet for each
-  trade day) are out of the working file and stay in git history at `f489404`, `0b1c20f` and `3b6dcbe`, for the
-  record only. Nothing else was touched.
+  trade day) are out of the working file. They were made without need and are not kept or to be used (his word,
+  below). Nothing else was touched.
 - The research itself is not lost: it is in the stored tables on the daily branches (`research-threads/`,
   `info-measure/`) and is being added beside the every-tick rows as column files (his go; the run under way).
 
@@ -5254,6 +5254,24 @@ his go.**
   humps are second or later. Every hump is whole in the stored table of the humps.
 - No further check was made on this data after the job's own (his word: no more tests). Nothing is in an Excel
   file: the workbook in parts waits for his word, as planned.
+
+**DECIDED (Greg, 2026-11-23, seventeenth session): "Delete the versions we made incorrectly. We don't need a history
+of them".**
+- DELETED, everything of the wrong versions that was still stored or pointed to:
+  - the program that rebuilt the pinned workbook into one trades-only sheet (`root/trade_day_sheet.py`; Markets
+    `ccr-dd95052b-3vcrwq`, `a556589`);
+  - the session's own copies of the three wrong workbook versions and of the first run's research tables;
+  - the lines of the four daily `FILES.md` and of this file that pointed back at them "for the record" (daily
+    branches `360fdaa`, `c8a0b75`, `733442a`, `1bd670e`).
+- ALREADY GONE BEFORE HIS WORD: the three wrong workbook versions (the file was put back as it stood this morning)
+  and the first run's research tables read by time (removed while their replacement ran).
+- KEPT, said to him: `research-trace/` (the listing that found the look-up fault: correct data, and the reason the
+  tables were made again) and `root/research_excel.py` (the stored research columns were made with its look-ups).
+  His to strike.
+- NOT DONE, said to him plainly: git itself still holds the old commits of both branches, so the wrong versions
+  can still be dug out of the history. Taking them out of the history means rewriting the documents branch and
+  the four daily branches and forcing them onto GitHub. Desktop writes to the documents branch, and the house rule
+  is no forced push onto a data branch. It is done only on his explicit word.
 
 ## Held for the later stage: figuring out what moves the market
 
