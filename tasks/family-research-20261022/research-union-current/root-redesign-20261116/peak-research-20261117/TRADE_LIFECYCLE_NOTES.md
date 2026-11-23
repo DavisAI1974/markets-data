@@ -778,3 +778,9 @@ and not our predetermined values".
   20-second line); both read from the stored crypto and ng lines and turned to the trade leg's side.
 - A picture's start and stop: the trade legs frame it, and every hump of either line it touches is whole. No
   number of seconds anywhere.
+
+Greg, same session, two things to keep:
+- EXCEL: "We only want the crypto calc styles as the source of output for exhaustion and dipole to put on excel
+  sheets". Checked: neither Excel file holds any of Claude's versions.
+- SAVED FOR AFTER THE CURRENT WORK, his idea: the best bid and the best ask as two separate graphs, each flowing up
+  and down by tick through the trade day, no trades in them. Not to be raised until the trade leg pictures are done.

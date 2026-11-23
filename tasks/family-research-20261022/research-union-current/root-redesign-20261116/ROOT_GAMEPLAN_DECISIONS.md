@@ -3725,6 +3725,30 @@ exhaustion start and stop by when the data says and not our predetermined values
   over the price; no rate panel; steps, not an averaged curve; empty where nothing traded, where crypto wrote 0;
   no cut at 45 or 60 seconds.
 
+**DECIDED (Greg, 2026-11-23, fifteenth session): "And make sure ykur new calcs don't end up on the excel sheet. We oy
+want the crypto calc styles as the source of output for exhaustion and dipole to put on excles sheets".**
+- THE EXCEL SHEETS TAKE DIPOLE AND EXHAUSTION FROM THE CRYPTO CALCULATION ONLY. No figure of Claude's goes into a
+  sheet under those names or beside them. Written into Markets `CLAUDE.md` (`ccr-b66f34d5-h6ra1t`).
+- CHECKED, both Excel files on this branch, every sheet (sheet names, first rows, and a search of all their text):
+  `ROOT_dipoles_pinned.xlsx` (the read-me page, and a "dipoles" and a "peaks" sheet for each trade day: Native's
+  pinned dipoles and the eleventh session's 20-second peaks) and `ROOT_short_stretch_20231002_0900.xlsx` (rows of
+  one short stretch). NEITHER HOLDS A COLUMN OR A VALUE OF CLAUDE'S VERSIONS. One sentence on the read-me page of
+  the first speaks of "a line made at the tick is added beside it; the next pictures are three separate graphs":
+  words about a plan, not data. Left as it is (Desktop writes to that file); said to him.
+- Nothing of the crypto and ng run is in a sheet yet either (the fourteenth session's rule: nothing goes in until
+  decided with him).
+
+**SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
+current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
+the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
+previous things first befre discuss".**
+- NOT TO BE RAISED OR BUILT until the trade leg pictures on the crypto lines are done and he has seen them. Then it
+  is put to him once.
+- What it is: the best bid as its own graph and the best ask as its own graph, each moving by tick through the
+  trade day, with no trades in them.
+- Already stored and not Claude's version of anything: the best bid and best ask are on every row, and
+  `calc-quote_runs-*` holds each one's own runs up and down.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
