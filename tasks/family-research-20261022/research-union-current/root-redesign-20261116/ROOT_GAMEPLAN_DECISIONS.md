@@ -5657,6 +5657,18 @@ last ones").**
   tasks to run with the new roster the four files and the CLAUDE.md section must go onto the trunk; that is on his
   word "trunk" alone (his standing rule). The amendments file is his to relay to Codex.
 
+**DECIDED (Greg, 2026-11-23, eighteenth session): "Move his to yours or yours to him. Doesn't matter to me. Our outputs
+still need to be saved to markets data repo gor space reasons".**
+- TRIED FIRST, mine to his: the stage 1 set alone (four agents, the CLAUDE.md roles section, the plan, index and
+  amendments) was laid on the trunk tip `79517f6` in a small separate copy. THE PUSH TO THE TRUNK WAS REFUSED by the
+  session's own safety check, which wants his explicit word for the trunk. NOTHING WAS PUSHED TO THE TRUNK; the
+  copy was removed.
+- DONE, his to mine: Codex's verifier plan (`research/kalshi/FRANKIE_INDEPENDENT_SCIENTIFIC_VERIFIER_PLAN.md`, byte for
+  byte as at `79517f6`) is on Markets `ccr-fffbc766-a1gxpl` (`ec2e86f`), beside the four agents (Codex's auditor in
+  his updated form), the plan, its index and the amendments. That branch now holds both sides. For Codex's tasks to
+  run with the new roster, Codex works from `ccr-fffbc766-a1gxpl`, or the trunk takes the stage 1 set on his word.
+- OUTPUTS, both sessions': to `DavisAI1974/markets-data` only, never to Markets (Markets is near its size quota).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
