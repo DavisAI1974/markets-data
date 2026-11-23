@@ -957,3 +957,9 @@ decisions file (seventeenth session) and in each receipt. Leads, no test of chan
   Set aside by him for further research: the operator against the original equations; how large the ratio is on
   two-sided reads; and everything deeper than a move's first step (the steps in between, whether moves come back,
   what the lines did before the first step).
+- 2026-11-23, kept so it is not done again: THE PLAN FOR THE EXCEL WORKBOOK WAS DECIDED ON 2026-11-16 AND 17 and
+  is in the decisions file: one row per tick, one sheet per trade day; the stored rows on the daily branches are
+  the "daily sheets" and are kept up to date by adding each calculation's column files beside the rows; the Excel
+  workbook is written once, at a slow time, in parts with the days broken up by rows (`root/sheet.py`,
+  `WORKBOOK_README_PAGE.md`). Read that before touching any Excel file. Add columns to what exists; do not design
+  a new sheet or a new layout.
