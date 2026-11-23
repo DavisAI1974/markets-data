@@ -3593,6 +3593,25 @@ me which. As long as it isn't too confusing we can try all on 1 to see"; then "G
   (their first trade and the first trade of the trade leg before were received at the same nanosecond).
 - Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
 
+**DECIDED (Greg, 2026-11-23, fifteenth session), on the first 40 pictures: "Go two trade legs back and rerun the 40.
+I do see a lot of encouraging signs. It looks like in almost every case the dipoles and exhaustion show a change
+when the price makes a change. I'm not looking for the same direction of movement just something correlating between
+the 3."**
+- A PICTURE STARTS TWO TRADE LEGS BACK (the first trade of the trade leg two before), not one. The right edge is as
+  it was (the last trade of the trade leg after). Built: Markets `ccr-b66f34d5-h6ra1t`, `45fdeb3`.
+- THE 40 ARE RERUN with the same pick. The 40 stored now are replaced: deleted from the four daily branches while
+  the run is going, the removal confirmed, and only then is anything new fetched (his standing rule).
+- WHAT HE IS LOOKING FOR, in his words: not the same direction of movement, "just something correlating between
+  the 3". By eye, his read of the first 40: in almost every case the dipole and the exhaustion change when the
+  price changes.
+- SAID TO HIM, so the read is weighed rightly: all three graphs can only change at a print, because all three are
+  made from the prints. So "they change at the same moments" is built in and cannot fail. What is NOT built in:
+  what the dipole and the exhaustion did BEFORE a price step (the lead-in), how far each moved, and the prints
+  where one moved and the price did not.
+- NOT RUN YET: Claude took "Go ... rerun the 40" as the go and tried to start the pod; the session's own check
+  refused the start. Nothing was started, nothing worked around, and the old 40 are untouched. It waits for his go
+  with the price in front of him ($0.32 an hour, General Purpose 8 CPUs).
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
