@@ -3547,6 +3547,18 @@ the whole trade day: "For the time being, just pick 10 random ones per day with 
 - OWNED: Claude read his words as the go for the pod and tried to start it. The session's own check refused the
   start, because he had not said go. Nothing was started and nothing was worked around. The pod waits for his go.
 
+**CORRECTED BY GREG (2026-11-23, fifteenth session): "Those 3 renders i mean"; "Per trade".**
+- "THOSE 3" ARE HIS THREE RENDERS of 2026-11-18: the trade price curve, the dipole at the tick, the exhaustion at
+  the tick. Three separate graphs on one clock. Claude's reading above (four graphs, the 20-second line as the
+  fourth) was wrong and is withdrawn: the 20-second line is NOT in these pictures.
+- "PER TRADE" is read as one picture per trade leg, the unit he gave earlier in this session (Claude's reading,
+  stated to him, his to correct).
+- With the 20-second line out of the picture it no longer sets an edge either. A picture starts at the first trade
+  of the trade leg before and ends at the last trade of the trade leg after, moved outward so no run of trades
+  (the exhaustion at the tick) or dipole stretch it touches is cut.
+- Code: Markets `ccr-b66f34d5-h6ra1t`, `f5396d9`. `root/four_graphs.py` is as the fourteenth session left it.
+- Still not run: he has not said go for the pod.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

@@ -724,3 +724,11 @@ dipole. And show the prebirtths for the dipole and exhaustion before the trade s
   is the trade leg before, and neighbouring pictures overlap. Each picture shades only its own trade leg.
 - Nothing is typed, labelled, measured or put in the Excel sheets from these pictures until decided with him.
 - Code: Markets `ccr-b66f34d5-h6ra1t`, `root/leg_renders.py`. Built, not run.
+
+Greg, same session: "For the time being, just pick 10 random ones per day with those 3 to start"; "Those 3 renders i
+mean"; "Per trade".
+- The first pictures are 10 trade legs picked at random on each of the four trade days (40), not every trade leg yet.
+- Each picture is HIS THREE RENDERS (trade price curve, dipole at the tick, exhaustion at the tick), one picture per
+  trade leg. The 20-second line is not in them. The line above that says "the four graphs" is superseded by this.
+- A picture's edges: the trade leg before to the trade leg after, moved outward so no run of trades or dipole
+  stretch is cut.
