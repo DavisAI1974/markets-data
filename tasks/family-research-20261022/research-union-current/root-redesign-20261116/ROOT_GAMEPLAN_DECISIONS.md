@@ -4704,6 +4704,64 @@ whatever timeframe we need to get to."**
   carry the formula exactly (Claude has read only the report's one line on it; nothing is to be reinvented);
   (2) lay it out for him; (3) build it and run it on a pod on his go. Written into handoff S.
 
+## Seventeenth session (2026-11-23, in a code session)
+
+Greg pasted the drop-in of the sixteenth session (handoff S). Read in full: handoff S, the notes file, this file's
+sixteenth session, `root-audit-20261116/RESEARCH_INTENTIONS.md`; then on his word in the session ("And read the last
+2 sessions also") this file's fifteenth session and handoff R.
+- Code: Markets `ccr-26ff219b-72monm` (`2df4f14`) brought into the session's own branch `ccr-dd95052b-3vcrwq` by
+  fast-forward (the session branch held nothing of its own) and pushed there: both names now stand on `2df4f14`.
+  Nothing to the trunk.
+- The Runpod skills were loaded and the account read: NO POD EXISTS; the balance is $31.39. The agent skills router
+  and the git workflow skill were read from the pinned public source (tag 0.6.8). Superpowers loaded by itself and
+  was not used.
+- Not opened: last week's strategy material; Codex's code for its measure (that comes after the research threads
+  run). Not touched: AWS (an AWS tool is attached to the session; it was not called).
+- READ IN THE SESSION, each named to him in the message it was made in, receipts and file lists only, NO TABLE
+  OPENED: on each of the four daily branches (`bc213c9`, `85fd853`, `1eccc49`, `a4f2708`, as handoff S has them)
+  `CALC-move_steps-<trade day>.json`, `CALC-resting-<trade day>.json`, `crypto-ng-tick/CRYPTO-NG-TICK-<trade
+  day>.json`, `RECEIPT.json` and `FILES.md`. Nothing was calculated on market data.
+- A read of the session's environment settings was stopped by him as it ran (he was adding "read the last 2
+  sessions"). It was not repeated. It is made after his go, for the approval card of the pod's address.
+
+**THE RESEARCH THREADS RUN, PUT TO HIM WITH THE PRICE (2026-11-23, seventeenth session). NOT STARTED: it waits for
+the word "go".**
+- WHAT IT COVERS, from the stored receipts (THIS CORRECTS HANDOFF S, which said "about 36,000 moves a trade day"):
+  a line for every move and a line for every hump, not for every trade.
+  - MOVES THAT ENDED, each trade day on its own: 33,128 (Oct 2); 36,451 (Oct 3); 34,334 (Oct 17); 32,262 (Oct 18):
+    136,175 on the four. Of them trade legs 6,118; 6,906; 5,659; 5,119. Runs of the best bid 13,331; 14,779;
+    14,812; 13,876. Runs of the best ask 13,679; 14,766; 13,863; 13,267. Beside them the few moves still going at
+    the last tick of a trade day (one trade leg on each; at most one run of the bid and one of the ask): the job
+    writes their number.
+  - HUMPS of the 20-second exhaustion line: 4,459; 4,579; 4,103; 4,163: 17,304 on the four (as handoff S).
+  - The trades under them, for scale: 38,127; 41,410; 33,703; 30,739 on the tape.
+- THE PRICE, read from the account this session: General Purpose `cpu3g`, 8 CPUs, $0.04 a CPU an hour, $0.32 an
+  hour. Stock at 8 CPUs is LOW at both United States sites listed (US-CA-2, US-NE-1). One pod, the four trade days
+  side by side, each pinned to its own two CPUs. Estimate, the program has never run: about five minutes, two to
+  three cents.
+- CHECKED BEFORE THE LAUNCH, by name only (no table opened): every column the program asks for is in the column
+  list of its stored table (the move steps facts, 32 columns; the resting facts, 61; the two crypto and ng lines;
+  the trades on the tape; the humps); the stored wording of a read made at a trade ("a trade was received") is
+  the wording the program looks for; the files the pod pulls are about 290 megabytes for the four trade days.
+- THE TWO CHECKS, THEIR PASS RULES WRITTEN BEFORE THE RUN so they cannot be bent afterwards:
+  1. THE JOIN TO THE STORED RESTING LINES. In all eight rows (four trade days; the best ask up, the best bid down)
+     and for each way a first level emptied (every order filled; every order pulled; some filled, some pulled;
+     other): the job's "took a third step" plus its "two steps only" must equal the `moves` of
+     `HOW_A_LEVEL_EMPTIED.json`, and its "took a third step" must equal that file's. Read first: the job's count
+     of runs with a second step and no resting line (it must explain any shortfall). Known differences of form,
+     not of substance: the "other" row is worded differently in the two; the job leaves out a move still going
+     at the last tick; the job has a row "no order stood there" that the file has not. ANY DIFFERENCE IN A NUMBER
+     IS TRACED TO A NAMED MOVE BEFORE ANYTHING IS SAID FROM THE RUN.
+  2. THE STORED EXHAUSTION LINE AT EVERY FIRST STEP against the figure made from the step line's own 20-second
+     flow: the job's counts (equal; not equal; both empty; one empty and the other not) are read to him as
+     counted, each trade day on its own. A "not equal" is not explained by a guess.
+- WHAT THE FETCH PROGRAM DOES NOT BRING: `RESEARCH-THREADS-COUNT-<trade day>.json` is written by the job and is
+  not in the receipt's list of files. Its content is whole inside the receipt (`counts`). Claude's call: it is
+  fetched by hand and stored beside the receipt, because everything a pod makes goes to markets-data.
+- AFTER THE RUN, in his order: the two checks; then the counts read to him, each trade day on its own, as leads;
+  then the Excel column list for the two tables put to him before anything goes in a sheet; then Codex's own code
+  for its measure is read and laid out. The strategy step is not started until he says.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
