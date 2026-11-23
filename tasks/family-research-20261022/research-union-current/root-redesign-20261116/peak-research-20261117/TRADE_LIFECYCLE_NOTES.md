@@ -872,3 +872,20 @@ offer on, read its two prices in the stored index table. Trade day Oct 2, trade 
 - By eye, one trade: at its start the best bid and the best offer both stood a tick higher for a moment and stepped
   down together; after that the offer moved back and forth a tick several times while the bid stood. The bid and
   the offer do not always step together: the thing the mid price hid.
+
+## 2026-11-23 (sixteenth session): Desktop's earlier pictures, read for their concepts (Greg: "look the concepts over to see if they have value")
+
+His pictures: the flow lean and the midpoint around Native's birth; the share of candidates above or below their
+level against matched controls; recognition minus the first event (aggressor lots, touch size, quote move). His word
+on them: "We didn't have the full depth of the data and we ran the days wrong so these values aren't right".
+- Built in, so not a finding: the lean reaching fully one-sided at the birth and dropping 20 seconds later (that is
+  what a birth and a 20-second span are); the flat shelf at 50 seconds (Native's fixed wait); the price rising
+  into the birth (20 seconds of one-sided trading).
+- Not built in, worth making again properly: after a birth the price stood on the birth's side more often than at
+  control moments on all four trade days. In our terms: does a one-sided burst carry the price its way afterwards,
+  one event at a time, best bid and best offer each on its own, ends set by the data.
+- The concept under the first-event curves: around one event, which came first and how long each took: a trade on
+  that side, a change of size at the best price, a step of the best bid or offer. Stepped before it was hit =
+  pulled; stepped after = eaten. The same lead as stage (3) above, read at the start of an event.
+- The event to use is the HUMP of the stored 20-second line (17,304 on the four trade days), not Native's birth.
+- Laid out to him as one table and one workbook; not built until his word (the full list is in the decisions file).

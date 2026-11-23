@@ -4305,6 +4305,135 @@ sixteenth session), on his "Go".**
   about `ocu44mumcu9pwc`, which is off.)
 - Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
 
+**Greg (2026-11-23, sixteenth session): "Do you or frankiw used these renders to.learn from.of it is jist for my
+benefit".** Answered: they are for him. Frankie reads rows, not pictures, and nothing of them is in a sheet; Claude
+looks at each one in the session and carries nothing over but what is written here and in the notes. What can be
+learned from is the stored numbers behind them.
+
+**Greg (2026-11-23, sixteenth session): "Make sure rhe 4 separate day rxcel sheets are updated fully and correctly for
+all because it's time to do the strategy analysis step again that you didn't get to complete because of incomplete
+data. Check those over before we move on".**
+- SAID TO HIM FIRST: THERE ARE NO FOUR EXCEL WORKBOOKS. He was told so on 2026-11-17 and decided "Just keep the
+  daily sheets updated and we'll do the workbook all at once at a slow time". The "daily sheets" are the four
+  `root-rows-<trade day>` branches. The only Excel files are `ROOT_dipoles_pinned.xlsx` (all four trade days in
+  one file) and the short stretch of trade day Oct 2.
+- THE SESSION HAD RESTARTED: the account was read first (no pod).
+- WHAT WAS CHECKED, told to him first. Names, receipts, file lists and commit history only: NO DATA TABLE WAS
+  OPENED AND NOTHING WAS PROVED BYTE FOR BYTE. Branches at `bc213c9`, `85fd853`, `1eccc49`, `a4f2708`.
+  1. WHAT EACH HOLDS: the rows (820,670; 879,497; 846,158; 771,468 rows, 408 columns), the sixteen calculations
+     (`book_totals`, `chain_peaks`, `flow_peak`, `leg_peaks`, `move_steps`, `open_stories`, `outside_changes`,
+     `peak_links`, `peak_story`, `quote_peaks`, `quote_runs`, `refills`, `resting`, `sweeps`, `together`,
+     `turn_peaks`), `dipole-peaks`, the crypto and ng run (`crypto-ng-tick/`), Native's pinned dipoles and their
+     pictures, 10 trade leg pictures, 10 trade pictures, Desktop's peak lives, Native's episodes, the playback.
+     THE SAME SET ON ALL FOUR, column for column (each calculation has the same number of columns on every trade
+     day). The differences, all known: the 6 pm to 8 pm trade legs on trade days Oct 2 and Oct 17 only; 32
+     printed samples of the crypto and ng line on trade day Oct 17 only; the best bid and best offer test on
+     trade days Oct 2 and Oct 18 only.
+  2. THE ROWS BUILD'S OWN CHECKS pass on all four: the book equals the vendor's restatement order for order, the
+     book adds up at every trade, every raw record is accounted for, the outside figures are pinned (323 columns).
+  3. EVERY CALCULATION'S RECEIPT says its checks passed, was made on the same number of rows as the stored rows
+     and on the same raw tape files, and its part files hold the same number of rows as the rows parts beside them.
+  4. MADE AFTER THE ROWS WERE LAST REBUILT? The rows were last written 2026-11-17 05:45 UTC. Ten calculations
+     were written before that (`book_totals`, `quote_runs`, `peak_story`, `peak_links`, `open_stories`,
+     `chain_peaks`, `refills`, `sweeps`, `together`, `quote_peaks`), and so were the book pictures and the 6 pm to
+     8 pm trade legs. That rebuild only added the hourly outside columns; its commit records that every column
+     shared with the rows before it was proved equal on every row, and the one calculation that reads the outside
+     columns (`outside_changes`) was made again with it. So none of the ten is stale. Rests on that record, not
+     on a new proof.
+  5. EVERY FILE A RECEIPT LISTS IS ON ITS BRANCH, WITH ONE EXCEPTION: `renders/DIPOLE-RENDERS-<trade day>.json`
+     still lists the exhaustion pages and their index that were deleted on his word on 2026-11-18 (239, 265, 216
+     and 200 pages). `FILES.md` says they were removed; the receipt was never brought up to date.
+  6. EVERY FILE ON A BRANCH IS COVERED BY A RECEIPT except Desktop's two files on each (`desktop/`), and every
+     kind of file is named in that branch's `FILES.md`.
+- FOUND, each his to say, none repaired:
+  1. `ROOT_dipoles_pinned.xlsx`: its four "peaks" sheets name, for every 20-second peak, a page
+     (`exhaustion-sheet-...png`) that was deleted on 2026-11-18, and its read-me cites the deleted index and the
+     withdrawn plan of "a line made at the tick". Its four "dipoles" sheets point at pictures that exist (741, 833,
+     741, 863 rows; the same counts as the pictures). Desktop writes to that file.
+  2. The four `trade-renders/` index tables still hold, for a trade that ended at no tick, the mid price as its
+     end price (the new tables in `trade-renders-quotes-test/` of trade days Oct 2 and Oct 18 do not).
+  3. The stale lines in the four `DIPOLE-RENDERS` receipts (above).
+  4. Nothing of the crypto and ng run (the dipole line, the exhaustion line, the program's trades, the humps) is
+     in any Excel sheet, by his rule that nothing goes in until decided together.
+  5. Three outside columns are empty on every row of all four trade days (`x10_cities_missing`,
+     `x12_street_estimate_bcf`, `x12_surprise_bcf`): the street estimate was never obtained.
+  6. Native's own record of 6 pm to 8 pm on trade days Oct 2 and Oct 17 is still his open call.
+- NOT DONE, offered: a proof of every stored file against its receipt, byte for byte, on a pod (it has to
+  download all four branches). It does not block.
+- WHAT STANDS BETWEEN HERE AND THE STRATEGY STEP, said to him once: what may feed a strategy version is not
+  settled. Markets `CLAUDE.md` makes the crypto and ng outputs (dipole, exhaustion, the program's trades)
+  observation only, never an input to a strategy; his word of 2026-11-18 took the calculations that stand on the
+  20-second peaks out of every calculation, and the crypto formulas were then brought back for the two lines.
+  And the standing order: he is told before the strategies start so he can raise the effort setting; first how a
+  version is formed blind to its own trade day; then 15 versions in one message; last week's material stays shut.
+
+**Greg (2026-11-23, sixteenth session), with five pictures of Desktop's from the research steps of a few weeks ago:
+"Before we get to the analysis these are things that desktop had worked on when we did our research steps a few weeks
+ago. We didn't have the full depth of the data and we ran the days wrong so these values aren't right but I want you to
+look the concepts over to see if they have value that we could use and if so do the research and create excel columns
+for this data".**
+- THE PICTURES (as read off the images; nothing measured; three of them are in the notes of 2026-11-18):
+  1. "Flow lean and midpoint around the birth, four days": for Native's candidates (741, 824, 740, 852), from 40
+     seconds before the birth second to 60 after: the trailing 20-second lean turned to the birth's side (middle
+     value and the middle half of the candidates), the share of candidates with the lean fully one-sided, and
+     the change of the midpoint in ticks (five percentiles). Grey: matched controls.
+  2. His own words on it to Desktop: "Don't worry about how it was defined, that's not important. The shape and
+     the dive at the event and the shot back up is."
+  3. "Share of candidates whose midpoint is above / below its anchor-boundary level, oriented by birth direction",
+     60 seconds before to 160 after, against 500 matched-control draws.
+  4. "My analog of the first-event curves": Native's recognition time minus the time of the first aggressor lots
+     in the birth direction, the first change of size at the touch, the first move of the best bid or ask; every
+     candidate in order of size, the four trade days laid over each other. And the earlier version of the first
+     panel, its left end circled by him.
+- CLAUDE'S READ OF EACH CONCEPT, stated to him, his to correct:
+  1. THE LEAN'S SHAPE AROUND THE BIRTH (climb, full one-sidedness at the birth, drop 20 seconds later). As drawn
+     it is made by how a birth is defined: a birth IS the second the 20-second lean becomes fully one-sided, and
+     the drop at 20 seconds is the first of those trades leaving the 20 seconds. The same goes for the dip in
+     "share against" before the birth. LITTLE NEW VALUE AS A FINDING. The concept itself (the line building,
+     standing, letting go, around one event) is what the hump already is: stored for every hump of the 20-second
+     line (4,459; 4,579; 4,103; 4,163), with how it began, its furthest, how it ended.
+  2. THE PRICE AGAINST ITS LEVEL AT THE BIRTH, BEFORE AND AFTER. THE ONE THING IN THESE PICTURES THAT IS NOT BUILT
+     IN: after a birth the price stood on the birth's side more often than at the control moments, on all four
+     trade days, out to 160 seconds. Part of the jump right after zero is built in (the birth second's own trades
+     move the price), and the rise into the birth is built in (20 seconds of one-sided trading). HAS VALUE:
+     whether a one-sided burst carries the price its way afterwards. To be made again properly: one event at a
+     time, the best bid and the best offer each on its own (no midpoint), ends the data sets (no 60 or 160
+     seconds), on the right trade days.
+  3. RECOGNITION MINUS THE FIRST EVENT. The flat shelf at about 50 seconds is Native's own fixed wait, not the
+     market (the notes, 2026-11-17). The left end he circled (recognition hundreds of seconds BEFORE the first
+     aggressor lot in the birth's direction) is the births with no trade in their birth second: the lean went
+     one-sided only because old trades left, and nobody traded that way for minutes. NO VALUE AS DRAWN (it
+     measures the detector). THE CONCEPT UNDER IT HAS VALUE: around one event, WHICH of the three happened
+     first and how long each took: a trade on that side, a change of size at the best price, a step of the
+     best bid or offer. A quote that steps before it is hit was pulled away; one that steps after was eaten.
+     That is the lead the notes already hold as the strongest (a level that was eaten leads on, a level only
+     abandoned leads nowhere), read here at the start of an event and with no window.
+- WHAT IN THOSE PICTURES IS NOT CARRIED, each by a standing rule of his: Native's candidates and their recognition
+  time (predetermined windows: the 20-second roll, the 45-second spacing, the 50-second wait); the midpoint; the
+  shares, percentiles and middle values across candidates; the matched-control draws; the fixed spans of seconds;
+  the four trade days laid over each other.
+- PUT TO HIM, NOT BUILT (a new table; his standing rule: any new line is put to him before it is built, and
+  nothing goes in a sheet until decided together). ONE LINE PER HUMP OF THE STORED 20-SECOND EXHAUSTION LINE
+  (17,304 humps on the four trade days), the hump being the data's own event. Beside the columns already stored
+  for a hump, three groups of new columns, every one a stored value read at a moment the data sets, nothing
+  worked out across events:
+  A. THE PRICE, NO MIDPOINT: the best bid and the best offer, each on its own, at the moment the hump began, at
+     the moment the line first stood at its furthest, and at the moment it ended.
+  B. WHAT CAME FIRST AFTER IT BEGAN: the first trade on the hump's side; the first change of size at the best
+     bid and at the best offer; the first step of the best bid and of the best offer (from what price to what).
+     For each: its position on the tape and its nanosecond. The same five, the last of each BEFORE it began.
+  C. HOW IT BEGAN AND ENDED ON THE TAPE: whether it began on a trade or at a moment old trades left the 20
+     seconds with nothing new traded, and the same for its end.
+  No order, no label, no share, no control draw. Claude's call on the event: the hump, not Native's birth,
+  because it is the crypto exhaustion line's own start and stop (his rule of the fourteenth session) and needs
+  no spacing rule or wait. It reads the stored crypto and ng line, so it is OBSERVATION ONLY under that name
+  until he says otherwise.
+- THE EXCEL COLUMNS: one workbook, `ROOT_hump_events.xlsx`, a sheet for each of the four trade days (about 4,100
+  to 4,600 lines each), with a READ ME and a COLUMNS page, written from the stored table and laid out like
+  `ROOT_dipoles_pinned.xlsx`. Written only after he has seen the column list above.
+- NOT RUN. It goes on a pod on his go, with the price in front of him: one pod, all four trade days, 17,304
+  humps, General Purpose 8 CPUs at $0.32 an hour.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
