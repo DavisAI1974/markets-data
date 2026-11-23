@@ -5826,3 +5826,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   nothing of it is pushed to Markets. Records and output still go to markets-data. Pushing to the new repository
   needs write access for this session (an approval card when asked for). Codex's `main` there is not touched by
   Claude before Greg says Codex is done.
+- MOVE THE PAPER TRADE CODE TO THE NEW REPOSITORY AND DELETE THE OLD COPIES. Greg: "So move everything there and then
+  delete the old copies in other repo and local machine"; of Codex: "Codex is also working in it so if you're going
+  to use, I'll let him know". Claude's reading, said to him: "everything" is the paper trade CODE (Markets
+  `strategies/`: the 7e check, its requirements, and the runner being built); the records and output stay in
+  markets-data, as the new repository's own AGENTS.md says. Order: push to the new repository first (Claude's own
+  branch, a new folder, none of Codex's files touched); only when that push is confirmed, remove `strategies/` from
+  the Markets session branch and from the session's machine. The copy on the earlier session's Markets branch
+  `ccr-fffbc766-a1gxpl` is another branch: removed only on his word for that branch by name. BLOCKED at the time of
+  writing: this session's push to the new repository is refused (the Claude GitHub App is not installed on it).
