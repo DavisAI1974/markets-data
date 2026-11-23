@@ -5777,3 +5777,7 @@ figure. To bring back when the work reaches what moves the market and price-curv
   feed lacks <what>", each one named, and none of them enters the scoring of the new system (the experiment record,
   the keep-if-better loop). They are kept as a record, not as a result. Which strategies that is waits on the stream
   run with the market open.
+- OUR OWN PAPER PLATFORM, LIKELY. Greg: "We're probably going to have to build our own. While we wait I'm going to
+  have codex devise a plan to handoff to you". Codex writes the plan; Claude builds from it when it arrives. Nothing
+  of it is started before the plan. The tastytrade checks under way (the 18:01 ET order check, the stream run with
+  the market open) go on: their records say what tastytrade can and cannot do.
