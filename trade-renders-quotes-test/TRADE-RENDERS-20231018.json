@@ -1,0 +1,252 @@
+{
+ "what": "One picture for every trade of the crypto and ng program, set up as the crypto pictures were: zero at the trade's start; the trade's two points, bought and sold, joined by a line (no mid price); the crypto dipole line (60 seconds) and the crypto exhaustion line (20 seconds), turned to the trade's side",
+ "asked": "Greg, 2026-11-23: \"Yes I want the prebirths laid out. Not worried about the 2000 averaging. I just want to make sure we are setting them up the same. Show each individual trade and their prebirths like this without designated start times for dipole and exhaustion. Their start times are when they start showing up.\"",
+ "trade_day": "2023-10-18",
+ "the_lines": {
+  "price": "two points and the line joining them, in dollars, not turned, and no mid price (Greg, 2026-11-23): where the trade was bought and where it was sold, each at the price of the trade on the tape that filled it there; a dotted line at the moment of each; the scale set by the two prices alone. A trade that ended at no tick has the dotted line at its end and no point: nothing traded there, so no price is drawn or stored for it",
+  "mid_price": "in the last graph only (its change at each tick it moves), read from the stored rows through the rows gate and drawn; no value made from the mid price is stored by this run",
+  "best_bid_and_best_ask": "drawn in this run",
+  "best_bid_and_best_ask_how": "each its own graph, by tick, from the stored rows through the rows gate, in dollars: a rounded curve (shape-keeping, drawing only) through the first and the last tick of every stretch the price stands unchanged, so it is a straight line where the price is not changing and rounded from one price to the next; no value is changed and nothing is averaged",
+  "rates": "per tick, not per second: the dipole line's change at each of its own reads, and the mid price's change at each tick it moves, each drawn as a stroke at that tick",
+  "dipole": {
+   "read_from": "crypto-ng-tick/crypto-ng-tick-lean-60s-20231018.parquet",
+   "span_seconds": 60,
+   "formula": "bought minus sold over bought plus sold, over the trades received in the span, read at the nanosecond; turned to the trade's side"
+  },
+  "exhaustion": {
+   "read_from": "crypto-ng-tick/crypto-ng-tick-line-20s-20231018.parquet",
+   "span_seconds": 20,
+   "formula": "bought minus sold over bought plus sold, over the trades received in the span, read at the nanosecond; turned to the trade's side"
+  }
+ },
+ "edges": "set by the data: the frame runs from the start of the trade two before to the end of the trade after; every hump of the dipole line and of the exhaustion line that the frame touches is in the picture whole",
+ "index_columns": [
+  {
+   "column": "trade",
+   "what": "The trade of the crypto and ng program, in the order they started. A label only."
+  },
+  {
+   "column": "side",
+   "what": "buy or sell: the side the program took."
+  },
+  {
+   "column": "turn_received_ns",
+   "what": "The moment the program marked the turn it was made on."
+  },
+  {
+   "column": "onset_received_ns",
+   "what": "THE START: when the trade on the tape that filled it was received. Zero on its picture."
+  },
+  {
+   "column": "end_received_ns",
+   "what": "When it ended. Empty when it was still open at the last tick of the trade day."
+  },
+  {
+   "column": "ended",
+   "what": "How it ended, in the words of the July rule that ended it."
+  },
+  {
+   "column": "length_seconds",
+   "what": "From its start to its end, in seconds."
+  },
+  {
+   "column": "start_price",
+   "what": "The price of the point at its start, in dollars: the trade on the tape that filled it."
+  },
+  {
+   "column": "end_price",
+   "what": "The price of the point at its end, in dollars: the trade on the tape that ended it. Empty when it ended at no tick (nothing traded there, so there is no price) and when it was still open."
+  },
+  {
+   "column": "picture_first_ns",
+   "what": "Where its picture starts, set by the data."
+  },
+  {
+   "column": "picture_last_ns",
+   "what": "Where its picture ends, set by the data."
+  },
+  {
+   "column": "render",
+   "what": "The picture drawn for it in this run. Empty when this run did not draw it."
+  }
+ ],
+ "counts": {
+  "trade_day": "2023-10-18",
+  "trades_of_the_program_in_the_trade_day": 1682,
+  "pictures_this_run_draws": 1,
+  "trades_on_the_tape": 30739,
+  "best_bid_and_best_ask_drawn": true,
+  "drawn": "the trades asked for by number: [982]",
+  "pictures_drawn": 1,
+  "picture_bytes": 268909,
+  "picture_megabytes": 0.3,
+  "largest_picture_bytes": 268909,
+  "trades_still_open_at_the_last_tick": 0,
+  "trades_whose_picture_starts_at_their_own_start": 0,
+  "trades_that_ended_at_no_tick_and_have_no_end_price": 134,
+  "helpers": 4
+ },
+ "trades_with_no_lead_in": [],
+ "trades_that_ended_at_no_tick": [
+  4,
+  5,
+  6,
+  8,
+  12,
+  15,
+  16,
+  18,
+  19,
+  23,
+  27,
+  28,
+  30,
+  31,
+  32,
+  34,
+  35,
+  36,
+  37,
+  40,
+  41,
+  43,
+  48,
+  51,
+  52,
+  54,
+  58,
+  59,
+  61,
+  63,
+  67,
+  69,
+  70,
+  71,
+  76,
+  79,
+  81,
+  92,
+  103,
+  107,
+  109,
+  110,
+  112,
+  115,
+  118,
+  122,
+  124,
+  125,
+  126,
+  127,
+  129,
+  131,
+  132,
+  139,
+  140,
+  174,
+  177,
+  186,
+  192,
+  194,
+  199,
+  209,
+  212,
+  238,
+  239,
+  246,
+  247,
+  248,
+  270,
+  275,
+  284,
+  287,
+  290,
+  291,
+  297,
+  316,
+  335,
+  358,
+  363,
+  380,
+  386,
+  427,
+  433,
+  490,
+  812,
+  813,
+  889,
+  898,
+  907,
+  911,
+  984,
+  985,
+  1022,
+  1048,
+  1064,
+  1068,
+  1074,
+  1077,
+  1095,
+  1098,
+  1188,
+  1291,
+  1301,
+  1322,
+  1514,
+  1521,
+  1526,
+  1529,
+  1538,
+  1539,
+  1545,
+  1546,
+  1561,
+  1568,
+  1576,
+  1578,
+  1585,
+  1593,
+  1599,
+  1600,
+  1603,
+  1605,
+  1610,
+  1617,
+  1623,
+  1628,
+  1631,
+  1637,
+  1638,
+  1651,
+  1652,
+  1662,
+  1666,
+  1670
+ ],
+ "checks": {
+  "passed": true,
+  "what": "the stored trades of the program are in the order they started and none ends before it starts; both stored lines and the mid price are in time order; every trade's start (and its end, where it ended on a trade) is a trade the stored tape holds; every picture holds its trade whole; every trade asked for was drawn exactly once"
+ },
+ "read_from": [
+  "crypto-ng-tick/crypto-ng-tick-program-trades-20231018.parquet",
+  "rows-20231018-part*.parquet",
+  "crypto-ng-tick/crypto-ng-tick-tape-trades-20231018.parquet",
+  "crypto-ng-tick/crypto-ng-tick-lean-60s-20231018.parquet",
+  "crypto-ng-tick/crypto-ng-tick-line-20s-20231018.parquet"
+ ],
+ "nothing_applied": "Nothing is averaged, ranked, typed or labelled. Observation only.",
+ "files": [
+  {
+   "file": "trade-renders-index-20231018.parquet",
+   "rows": 1682,
+   "bytes": 85236,
+   "sha256": "f2316900f07353cfb59add0f33295ece395941966218840fedb64ced50a0cd87"
+  },
+  {
+   "file": "trade-render-20231018-00982.png",
+   "bytes": 268909,
+   "sha256": "dea37485208b8f2e81477694c06e102b55af96b54662019ff490ba4f7b5c76c4"
+  }
+ ],
+ "seconds": 15.0
+}
