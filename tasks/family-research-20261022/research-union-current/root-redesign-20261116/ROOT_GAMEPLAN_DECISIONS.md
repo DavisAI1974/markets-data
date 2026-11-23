@@ -3799,6 +3799,36 @@ y axis on dipole and exhaustion".**
 - Built, not run: Markets `ccr-b66f34d5-h6ra1t`, `17afc6a`. The 40 stored now are replaced by the rerun (deleted
   while it runs, the removal confirmed, then the new ones fetched). It waits for his go.
 
+**Greg (2026-11-23, fifteenth session), on the 40 pictures: "And the price curves don't look right. And recheck the
+shaded areas to designate trade".**
+- RECHECKED by enlarging the price graph of two stored pictures (trade day Oct 2, trade leg 3016; trade day Oct 17,
+  trade leg 2375). Nothing was read from the stored tables and nothing was run.
+- THE PRICE CURVE, three faults found, all in the DRAWING:
+  1. The smooth curve drew arcs and S-bends between two trades, where nothing traded.
+  2. It went through only the last trade of an instant. Where one order traded at several prices at one
+     nanosecond, the other trades hung off the curve as loose dots or a spike.
+  3. Under both: the trade price steps a tick back and forth as prints alternate between the bid and the ask.
+     That is in the prints, not in the drawing.
+  CHANGED (Markets `ccr-b66f34d5-h6ra1t`, `57e188a`): the trade price is drawn as it printed, every trade a dot,
+  joined in tape order by straight lines, nothing smoothed. Claude's call, stated to him, his to correct; the
+  smooth curve was his word of 2026-11-18 and comes back on his word.
+- THE SHADED AREA: it IS where the stored trade leg says (in both pictures the band starts on the first trade of
+  the stretch the leg starts from and ends on its last trade, and the prices at its two ends are the ones in the
+  title; the job's own check ties each band to the stored facts). WHAT LOOKS WRONG IS THE TRADE LEG ITSELF. The
+  stored rule (the earlier work's, `leg_peaks`) ends a leg at the first single print that steps the other way,
+  even by one tick. So a move the eye sees as one is cut into pieces:
+  - trade day Oct 2, trade leg 3016: the trade price falls from 2.866 to 2.859 in about 20 seconds. The band
+    covers only 2.864 to 2.862, because one print a tick up at 2.863 ended the leg; the fall to 2.859 that
+    follows at once is the NEXT trade leg.
+  - trade day Oct 17, trade leg 2375: the rise the eye sees starts at 3.080; the band starts later, at a single
+    print that dipped back to 3.081.
+  Most stored trade legs are one step long for the same reason (said in the notes since 2026-11-17).
+- PUT TO HIM ONCE, with Claude's call: what the shaded area should be. (a) the stored trade leg, as now (his word
+  of this session); (b) the trade of the crypto and ng program (stored: 1,794; 1,895; 1,672; 1,682 on the four
+  trade days), which is what the crypto exhaustion graphs were drawn around and what the program was brought back
+  to make. Claude's call: (b), because he asked for crypto exactness and a one-tick print does not end one. Not
+  built until his word; any other rule for a move would need a number of ours, which he has ruled out.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
