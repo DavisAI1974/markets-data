@@ -1,0 +1,883 @@
+{
+ "what": "The earlier research threads read again on the rebuilt data: every move in price and every hump of the exhaustion line, each on its own line, with stored values laid beside it; and counts of those lines",
+ "asked": "Greg, 2026-11-23: \"rerun those threads with the better data ... Just use the research avenues that are already there\"; \"not the research values, just the questions\"; \"make sure these research threads are adding value\"",
+ "trade_day": "2023-10-02",
+ "nothing_applied": "No window, no label, no average, no midpoint, nothing ranked; no value of the old research; nothing from another trade day. Prices are in dollars.",
+ "read_from": [
+  "calc-move_steps-facts-20231002-part*.parquet",
+  "calc-resting-facts-20231002-part*.parquet",
+  "rows-20231002-part*.parquet (through the rows gate)",
+  "crypto-ng-tick/crypto-ng-tick-humps-20231002.parquet",
+  "crypto-ng-tick/crypto-ng-tick-tape-trades-20231002.parquet",
+  "crypto-ng-tick/crypto-ng-tick-line-20s-20231002.parquet",
+  "crypto-ng-tick/crypto-ng-tick-lean-60s-20231002.parquet"
+ ],
+ "tables": {
+  "moves": [
+   {
+    "column": "move",
+    "what": "Which move: trade leg, run of the best bid, run of the best ask."
+   },
+   {
+    "column": "direction",
+    "what": "Which way it goes: up or down."
+   },
+   {
+    "column": "move_start_position",
+    "what": "The move: the trade leg's first trade, or the tick the run started. A label only."
+   },
+   {
+    "column": "first_step_position",
+    "what": "The tick of its first step: the first moment it could be known. Position on the tape."
+   },
+   {
+    "column": "first_step_received_ns",
+    "what": "When that tick was received."
+   },
+   {
+    "column": "first_step_price",
+    "what": "The price it had reached at its first step, in dollars."
+   },
+   {
+    "column": "second_step_received_ns",
+    "what": "When its second step was received. Empty when it made one step only."
+   },
+   {
+    "column": "steps_in_all",
+    "what": "How many steps it made in all. Empty when it was still going at the last tick."
+   },
+   {
+    "column": "end_position",
+    "what": "The tick it ended at. Empty when it was still going."
+   },
+   {
+    "column": "end_received_ns",
+    "what": "When that tick was received."
+   },
+   {
+    "column": "end_price",
+    "what": "The price it ended at, in dollars."
+   },
+   {
+    "column": "given_back",
+    "what": "The price once the ending tick was done minus the price it ended at, in dollars."
+   },
+   {
+    "column": "best_bid_at_first_step",
+    "what": "As stored on its first step line, once that tick was done: best_bid (dollars)."
+   },
+   {
+    "column": "best_ask_at_first_step",
+    "what": "As stored on its first step line, once that tick was done: best_ask (dollars)."
+   },
+   {
+    "column": "best_bid_size_at_first_step",
+    "what": "As stored on its first step line, once that tick was done: best_bid_size."
+   },
+   {
+    "column": "best_ask_size_at_first_step",
+    "what": "As stored on its first step line, once that tick was done: best_ask_size."
+   },
+   {
+    "column": "best_bid_orders_at_first_step",
+    "what": "As stored on its first step line, once that tick was done: best_bid_orders."
+   },
+   {
+    "column": "best_ask_orders_at_first_step",
+    "what": "As stored on its first step line, once that tick was done: best_ask_orders."
+   },
+   {
+    "column": "bid_total_size_at_first_step",
+    "what": "As stored on its first step line, once that tick was done: bid_total_size."
+   },
+   {
+    "column": "ask_total_size_at_first_step",
+    "what": "As stored on its first step line, once that tick was done: ask_total_size."
+   },
+   {
+    "column": "run_side_at_first_step",
+    "what": "As stored on its first step line, once that tick was done: run_side."
+   },
+   {
+    "column": "run_size_at_first_step",
+    "what": "As stored on its first step line, once that tick was done: run_size."
+   },
+   {
+    "column": "run_trades_at_first_step",
+    "what": "As stored on its first step line, once that tick was done: run_trades."
+   },
+   {
+    "column": "exhaustion_20s_at_first_step",
+    "what": "THE EXHAUSTION LINE at its first step: bought minus sold over bought plus sold, the trades of the last 20 seconds, the stored line as it stood AT THAT TICK (read by place on the tape: no trade that came after the tick is in it, also when it shares the tick's nanosecond). Above zero buying, below zero selling. Empty where nothing with a side had traded in the span."
+   },
+   {
+    "column": "dipole_60s_at_first_step",
+    "what": "THE DIPOLE LINE at its first step: the same figure over the last 60 seconds."
+   },
+   {
+    "column": "best_bid_at_end",
+    "what": "The best bid once its ending tick was done, in dollars."
+   },
+   {
+    "column": "best_ask_at_end",
+    "what": "The best offer once its ending tick was done, in dollars."
+   },
+   {
+    "column": "exhaustion_20s_at_end",
+    "what": "The exhaustion line as it stood at its end."
+   },
+   {
+    "column": "dipole_60s_at_end",
+    "what": "The dipole line as it stood at its end."
+   },
+   {
+    "column": "best_bid_at_first_trade",
+    "what": "Trade legs only: the best bid once the tick of its first trade was done, in dollars."
+   },
+   {
+    "column": "best_ask_at_first_trade",
+    "what": "Trade legs only: the best offer once the tick of its first trade was done."
+   },
+   {
+    "column": "level_orders_at_turn",
+    "what": "Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many orders stood there."
+   },
+   {
+    "column": "level_size_at_turn",
+    "what": "Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: their size."
+   },
+   {
+    "column": "level_left_by_fill",
+    "what": "Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had left by being filled."
+   },
+   {
+    "column": "level_left_by_cancel",
+    "what": "Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had left by being pulled."
+   },
+   {
+    "column": "level_still_resting_orders",
+    "what": "Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many still rested."
+   },
+   {
+    "column": "level_moved_orders",
+    "what": "Runs of the quote that took a second step only, from the stored resting line at that second step, for the orders that stood at that quote's best price when the run started: how many had changed price."
+   }
+  ],
+  "humps": [
+   {
+    "column": "hump",
+    "what": "The number of this hump of the 20-second line, in order through the trade day. A label only."
+   },
+   {
+    "column": "side",
+    "what": "buy or sell: the side of zero the line stays on through this hump."
+   },
+   {
+    "column": "began_received_ns",
+    "what": "When it began: the moment the line came onto this side."
+   },
+   {
+    "column": "how_it_began",
+    "what": "What the line was just before: empty (nothing traded in the 20 seconds), at zero, or on the other side."
+   },
+   {
+    "column": "ended_received_ns",
+    "what": "When it ended: the moment the line next stood at zero, was empty, or had crossed. Empty when it was still on this side at the end of the trade day."
+   },
+   {
+    "column": "how_it_ended",
+    "what": "What the line did there: went empty, came to zero, or crossed to the other side."
+   },
+   {
+    "column": "length_seconds",
+    "what": "From its beginning to its end, in seconds. Empty when it had not ended."
+   },
+   {
+    "column": "furthest_flow",
+    "what": "The furthest the line stood from zero during it (above zero buying, below selling)."
+   },
+   {
+    "column": "furthest_received_ns",
+    "what": "The moment it first stood there."
+   },
+   {
+    "column": "trades_inside",
+    "what": "How many trades on the tape were received from its beginning up to its end."
+   },
+   {
+    "column": "first_trade_position",
+    "what": "The first of them: its position on the tape. Empty when there is none."
+   },
+   {
+    "column": "last_trade_position",
+    "what": "The last of them."
+   },
+   {
+    "column": "first_trade_price",
+    "what": "The price of the first of them, in dollars."
+   },
+   {
+    "column": "last_trade_price",
+    "what": "The price of the last of them."
+   },
+   {
+    "column": "highest_trade_price",
+    "what": "The highest price traded inside it."
+   },
+   {
+    "column": "lowest_trade_price",
+    "what": "The lowest price traded inside it."
+   },
+   {
+    "column": "first_trade_leg",
+    "what": "The stored trade leg under way at its first trade: its number."
+   },
+   {
+    "column": "last_trade_leg",
+    "what": "The stored trade leg under way at its last trade."
+   },
+   {
+    "column": "trade_legs_under_way",
+    "what": "How many different stored trade legs were under way at its trades."
+   },
+   {
+    "column": "began_on",
+    "what": "What the stored line says changed it as the hump began: a trade was received, or trades left the span at a moment with no tick (nothing new had traded)."
+   },
+   {
+    "column": "began_position",
+    "what": "The trade it began on: its position on the tape. Empty when it began with no tick."
+   },
+   {
+    "column": "ended_on",
+    "what": "The same for the read at which it ended. Empty when it had not ended."
+   },
+   {
+    "column": "best_bid_at_began",
+    "what": "The best bid as it stood at the moment the hump began, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+   },
+   {
+    "column": "best_ask_at_began",
+    "what": "The best offer as it stood at the moment the hump began, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+   },
+   {
+    "column": "dipole_60s_at_began",
+    "what": "The dipole line (60 seconds) as it stood at the moment the hump began, read by place on the tape: no trade that came after that read is in it."
+   },
+   {
+    "column": "best_bid_at_furthest",
+    "what": "The best bid as it stood at the moment the hump first stood at its furthest, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+   },
+   {
+    "column": "best_ask_at_furthest",
+    "what": "The best offer as it stood at the moment the hump first stood at its furthest, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+   },
+   {
+    "column": "dipole_60s_at_furthest",
+    "what": "The dipole line (60 seconds) as it stood at the moment the hump first stood at its furthest, read by place on the tape: no trade that came after that read is in it."
+   },
+   {
+    "column": "best_bid_at_ended",
+    "what": "The best bid as it stood at the moment the hump ended, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+   },
+   {
+    "column": "best_ask_at_ended",
+    "what": "The best offer as it stood at the moment the hump ended, in dollars: once the tick of that read was done (when the read is trades leaving the span: once the last tick received before that moment was done)."
+   },
+   {
+    "column": "dipole_60s_at_ended",
+    "what": "The dipole line (60 seconds) as it stood at the moment the hump ended, read by place on the tape: no trade that came after that read is in it."
+   },
+   {
+    "column": "next_bid_step_position",
+    "what": "The first a step of the best bid after the hump began: its position on the tape."
+   },
+   {
+    "column": "next_bid_step_received_ns",
+    "what": "The first a step of the best bid after the hump began: when it was received."
+   },
+   {
+    "column": "next_bid_step_price_from",
+    "what": "The first a step of the best bid after the hump began: the price it stepped from, in dollars."
+   },
+   {
+    "column": "next_bid_step_price_to",
+    "what": "The first a step of the best bid after the hump began: the price it stepped to, in dollars."
+   },
+   {
+    "column": "next_bid_step_same_event",
+    "what": "The first a step of the best bid after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+   },
+   {
+    "column": "next_ask_step_position",
+    "what": "The first a step of the best offer after the hump began: its position on the tape."
+   },
+   {
+    "column": "next_ask_step_received_ns",
+    "what": "The first a step of the best offer after the hump began: when it was received."
+   },
+   {
+    "column": "next_ask_step_price_from",
+    "what": "The first a step of the best offer after the hump began: the price it stepped from, in dollars."
+   },
+   {
+    "column": "next_ask_step_price_to",
+    "what": "The first a step of the best offer after the hump began: the price it stepped to, in dollars."
+   },
+   {
+    "column": "next_ask_step_same_event",
+    "what": "The first a step of the best offer after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+   },
+   {
+    "column": "next_same_side_trade_position",
+    "what": "The first a trade on the hump's side after the hump began: its position on the tape."
+   },
+   {
+    "column": "next_same_side_trade_received_ns",
+    "what": "The first a trade on the hump's side after the hump began: when it was received."
+   },
+   {
+    "column": "next_same_side_trade_same_event",
+    "what": "The first a trade on the hump's side after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+   },
+   {
+    "column": "next_other_side_trade_position",
+    "what": "The first a trade on the other side after the hump began: its position on the tape."
+   },
+   {
+    "column": "next_other_side_trade_received_ns",
+    "what": "The first a trade on the other side after the hump began: when it was received."
+   },
+   {
+    "column": "next_other_side_trade_same_event",
+    "what": "The first a trade on the other side after the hump began: yes when it is in the same exchange event as the trade the hump began on."
+   },
+   {
+    "column": "last_bid_step_position",
+    "what": "The last a step of the best bid before the hump began: its position on the tape."
+   },
+   {
+    "column": "last_bid_step_received_ns",
+    "what": "The last a step of the best bid before the hump began: when it was received."
+   },
+   {
+    "column": "last_bid_step_price_from",
+    "what": "The last a step of the best bid before the hump began: the price it stepped from, in dollars."
+   },
+   {
+    "column": "last_bid_step_price_to",
+    "what": "The last a step of the best bid before the hump began: the price it stepped to, in dollars."
+   },
+   {
+    "column": "last_ask_step_position",
+    "what": "The last a step of the best offer before the hump began: its position on the tape."
+   },
+   {
+    "column": "last_ask_step_received_ns",
+    "what": "The last a step of the best offer before the hump began: when it was received."
+   },
+   {
+    "column": "last_ask_step_price_from",
+    "what": "The last a step of the best offer before the hump began: the price it stepped from, in dollars."
+   },
+   {
+    "column": "last_ask_step_price_to",
+    "what": "The last a step of the best offer before the hump began: the price it stepped to, in dollars."
+   },
+   {
+    "column": "last_same_side_trade_position",
+    "what": "The last a trade on the hump's side before the hump began: its position on the tape."
+   },
+   {
+    "column": "last_same_side_trade_received_ns",
+    "what": "The last a trade on the hump's side before the hump began: when it was received."
+   },
+   {
+    "column": "last_other_side_trade_position",
+    "what": "The last a trade on the other side before the hump began: its position on the tape."
+   },
+   {
+    "column": "last_other_side_trade_received_ns",
+    "what": "The last a trade on the other side before the hump began: when it was received."
+   }
+  ]
+ },
+ "counts": {
+  "trade_day": "2023-10-02",
+  "moves": 33131,
+  "moves_that_ended": 33128,
+  "moves_still_going_at_the_last_tick": 3,
+  "runs_with_a_second_step_and_no_resting_line": 0,
+  "first_steps_the_stored_exhaustion_line_against_the_step_lines_own_20_second_flow": {
+   "both empty": 371,
+   "equal": 32760
+  },
+  "humps": 4459
+ },
+ "the_counts": {
+  "how a hump began | buy": {
+   "a trade was received; trades inside: one or more": 1197,
+   "trades left the span at a moment with no tick; trades inside: none": 695,
+   "trades left the span at a moment with no tick; trades inside: one or more": 415
+  },
+  "how a hump began | sell": {
+   "a trade was received; trades inside: one or more": 1129,
+   "trades left the span at a moment with no tick; trades inside: none": 629,
+   "trades left the span at a moment with no tick; trades inside: one or more": 394
+  },
+  "how much of a move was left at its first step | run of the best ask down": {
+   "1 steps in all": 5361,
+   "2 steps in all": 1024,
+   "3 steps in all": 312,
+   "4 steps in all": 92,
+   "5 steps in all": 34,
+   "6 steps in all": 9,
+   "7 steps in all": 4,
+   "8 steps in all": 4
+  },
+  "how much of a move was left at its first step | run of the best ask up": {
+   "1 steps in all": 5462,
+   "2 steps in all": 872,
+   "3 steps in all": 341,
+   "4 steps in all": 94,
+   "5 steps in all": 42,
+   "6 steps in all": 21,
+   "7 steps in all": 4,
+   "8 steps in all": 2,
+   "9 steps in all": 1
+  },
+  "how much of a move was left at its first step | run of the best bid down": {
+   "1 steps in all": 5298,
+   "12 steps in all": 1,
+   "2 steps in all": 882,
+   "3 steps in all": 297,
+   "4 steps in all": 114,
+   "5 steps in all": 47,
+   "6 steps in all": 10,
+   "7 steps in all": 8,
+   "8 steps in all": 8,
+   "9 steps in all": 1
+  },
+  "how much of a move was left at its first step | run of the best bid up": {
+   "1 steps in all": 5299,
+   "11 steps in all": 1,
+   "2 steps in all": 938,
+   "3 steps in all": 305,
+   "4 steps in all": 77,
+   "5 steps in all": 31,
+   "6 steps in all": 9,
+   "7 steps in all": 2,
+   "8 steps in all": 2,
+   "9 steps in all": 1
+  },
+  "how much of a move was left at its first step | trade leg down": {
+   "1 steps in all": 1914,
+   "10 steps in all": 2,
+   "12 steps in all": 1,
+   "15 steps in all": 1,
+   "2 steps in all": 706,
+   "3 steps in all": 255,
+   "4 steps in all": 100,
+   "5 steps in all": 43,
+   "6 steps in all": 19,
+   "7 steps in all": 13,
+   "8 steps in all": 4,
+   "9 steps in all": 1
+  },
+  "how much of a move was left at its first step | trade leg up": {
+   "1 steps in all": 1964,
+   "10 steps in all": 1,
+   "2 steps in all": 693,
+   "3 steps in all": 248,
+   "4 steps in all": 76,
+   "5 steps in all": 46,
+   "6 steps in all": 19,
+   "7 steps in all": 5,
+   "8 steps in all": 5,
+   "9 steps in all": 2
+  },
+  "how the first level emptied by the second step | run of the best ask down": {
+   "every order filled: took a third step": 84,
+   "every order filled: two steps only": 222,
+   "every order pulled: took a third step": 59,
+   "every order pulled: two steps only": 146,
+   "other (an order still rested or changed price): took a third step": 312,
+   "other (an order still rested or changed price): two steps only": 656
+  },
+  "how the first level emptied by the second step | run of the best ask up": {
+   "every order filled: took a third step": 53,
+   "every order filled: two steps only": 70,
+   "every order pulled: took a third step": 63,
+   "every order pulled: two steps only": 149,
+   "other (an order still rested or changed price): took a third step": 27,
+   "other (an order still rested or changed price): two steps only": 56,
+   "some filled, some pulled: took a third step": 362,
+   "some filled, some pulled: two steps only": 597
+  },
+  "how the first level emptied by the second step | run of the best bid down": {
+   "every order filled: took a third step": 60,
+   "every order filled: two steps only": 75,
+   "every order pulled: took a third step": 37,
+   "every order pulled: two steps only": 107,
+   "other (an order still rested or changed price): took a third step": 6,
+   "other (an order still rested or changed price): two steps only": 23,
+   "some filled, some pulled: took a third step": 383,
+   "some filled, some pulled: two steps only": 677
+  },
+  "how the first level emptied by the second step | run of the best bid up": {
+   "every order filled: took a third step": 76,
+   "every order filled: two steps only": 187,
+   "every order pulled: took a third step": 65,
+   "every order pulled: two steps only": 139,
+   "other (an order still rested or changed price): took a third step": 287,
+   "other (an order still rested or changed price): two steps only": 612
+  },
+  "the dipole_60s line at the first step | run of the best ask down": {
+   "the line stood at zero: one step only": 107,
+   "the line stood at zero: took a second step": 35,
+   "the line was against the move: one step only": 2487,
+   "the line was against the move: took a second step": 694,
+   "the line was empty: one step only": 24,
+   "the line was empty: took a second step": 28,
+   "the line was on the move's side: one step only": 2743,
+   "the line was on the move's side: took a second step": 722
+  },
+  "the dipole_60s line at the first step | run of the best ask up": {
+   "the line stood at zero: one step only": 110,
+   "the line stood at zero: took a second step": 39,
+   "the line was against the move: one step only": 2838,
+   "the line was against the move: took a second step": 621,
+   "the line was empty: one step only": 6,
+   "the line was empty: took a second step": 2,
+   "the line was on the move's side: one step only": 2508,
+   "the line was on the move's side: took a second step": 715
+  },
+  "the dipole_60s line at the first step | run of the best bid down": {
+   "the line stood at zero: one step only": 99,
+   "the line stood at zero: took a second step": 39,
+   "the line was against the move: one step only": 2554,
+   "the line was against the move: took a second step": 634,
+   "the line was empty: one step only": 9,
+   "the line was empty: took a second step": 5,
+   "the line was on the move's side: one step only": 2636,
+   "the line was on the move's side: took a second step": 690
+  },
+  "the dipole_60s line at the first step | run of the best bid up": {
+   "the line stood at zero: one step only": 94,
+   "the line stood at zero: took a second step": 36,
+   "the line was against the move: one step only": 2623,
+   "the line was against the move: took a second step": 639,
+   "the line was empty: one step only": 13,
+   "the line was empty: took a second step": 11,
+   "the line was on the move's side: one step only": 2569,
+   "the line was on the move's side: took a second step": 680
+  },
+  "the dipole_60s line at the first step | trade leg down": {
+   "the line stood at zero: one step only": 45,
+   "the line stood at zero: took a second step": 31,
+   "the line was against the move: one step only": 937,
+   "the line was against the move: took a second step": 547,
+   "the line was empty: took a second step": 3,
+   "the line was on the move's side: one step only": 932,
+   "the line was on the move's side: took a second step": 564
+  },
+  "the dipole_60s line at the first step | trade leg up": {
+   "the line stood at zero: one step only": 33,
+   "the line stood at zero: took a second step": 25,
+   "the line was against the move: one step only": 1041,
+   "the line was against the move: took a second step": 520,
+   "the line was empty: took a second step": 1,
+   "the line was on the move's side: one step only": 890,
+   "the line was on the move's side: took a second step": 549
+  },
+  "the exhaustion_20s line at the first step | run of the best ask down": {
+   "the line stood at zero: one step only": 131,
+   "the line stood at zero: took a second step": 44,
+   "the line was against the move: one step only": 2464,
+   "the line was against the move: took a second step": 651,
+   "the line was empty: one step only": 92,
+   "the line was empty: took a second step": 72,
+   "the line was on the move's side: one step only": 2674,
+   "the line was on the move's side: took a second step": 712
+  },
+  "the exhaustion_20s line at the first step | run of the best ask up": {
+   "the line stood at zero: one step only": 145,
+   "the line stood at zero: took a second step": 54,
+   "the line was against the move: one step only": 2731,
+   "the line was against the move: took a second step": 598,
+   "the line was empty: one step only": 35,
+   "the line was empty: took a second step": 9,
+   "the line was on the move's side: one step only": 2551,
+   "the line was on the move's side: took a second step": 716
+  },
+  "the exhaustion_20s line at the first step | run of the best bid down": {
+   "the line stood at zero: one step only": 152,
+   "the line stood at zero: took a second step": 49,
+   "the line was against the move: one step only": 2485,
+   "the line was against the move: took a second step": 595,
+   "the line was empty: one step only": 30,
+   "the line was empty: took a second step": 16,
+   "the line was on the move's side: one step only": 2631,
+   "the line was on the move's side: took a second step": 708
+  },
+  "the exhaustion_20s line at the first step | run of the best bid up": {
+   "the line stood at zero: one step only": 158,
+   "the line stood at zero: took a second step": 39,
+   "the line was against the move: one step only": 2559,
+   "the line was against the move: took a second step": 629,
+   "the line was empty: one step only": 68,
+   "the line was empty: took a second step": 41,
+   "the line was on the move's side: one step only": 2514,
+   "the line was on the move's side: took a second step": 657
+  },
+  "the exhaustion_20s line at the first step | trade leg down": {
+   "the line stood at zero: one step only": 69,
+   "the line stood at zero: took a second step": 36,
+   "the line was against the move: one step only": 943,
+   "the line was against the move: took a second step": 508,
+   "the line was empty: one step only": 3,
+   "the line was empty: took a second step": 3,
+   "the line was on the move's side: one step only": 899,
+   "the line was on the move's side: took a second step": 598
+  },
+  "the exhaustion_20s line at the first step | trade leg up": {
+   "the line stood at zero: one step only": 58,
+   "the line stood at zero: took a second step": 41,
+   "the line was against the move: one step only": 1029,
+   "the line was against the move: took a second step": 507,
+   "the line was empty: one step only": 1,
+   "the line was empty: took a second step": 1,
+   "the line was on the move's side: one step only": 876,
+   "the line was on the move's side: took a second step": 546
+  },
+  "the print against the quote | trade leg down": {
+   "1 steps in all: the best bid and the best offer both stood where they were": 1121,
+   "1 steps in all: the best bid and the best offer were not both where they were": 793,
+   "10 steps in all: the best bid and the best offer were not both where they were": 2,
+   "12 steps in all: the best bid and the best offer were not both where they were": 1,
+   "15 steps in all: the best bid and the best offer were not both where they were": 1,
+   "2 steps in all: the best bid and the best offer both stood where they were": 60,
+   "2 steps in all: the best bid and the best offer were not both where they were": 646,
+   "3 steps in all: the best bid and the best offer both stood where they were": 2,
+   "3 steps in all: the best bid and the best offer were not both where they were": 253,
+   "4 steps in all: the best bid and the best offer were not both where they were": 100,
+   "5 steps in all: the best bid and the best offer were not both where they were": 43,
+   "6 steps in all: the best bid and the best offer were not both where they were": 19,
+   "7 steps in all: the best bid and the best offer were not both where they were": 13,
+   "8 steps in all: the best bid and the best offer were not both where they were": 4,
+   "9 steps in all: the best bid and the best offer were not both where they were": 1
+  },
+  "the print against the quote | trade leg up": {
+   "1 steps in all: the best bid and the best offer both stood where they were": 1202,
+   "1 steps in all: the best bid and the best offer were not both where they were": 762,
+   "10 steps in all: the best bid and the best offer were not both where they were": 1,
+   "2 steps in all: the best bid and the best offer both stood where they were": 54,
+   "2 steps in all: the best bid and the best offer were not both where they were": 639,
+   "3 steps in all: the best bid and the best offer both stood where they were": 2,
+   "3 steps in all: the best bid and the best offer were not both where they were": 246,
+   "4 steps in all: the best bid and the best offer were not both where they were": 76,
+   "5 steps in all: the best bid and the best offer were not both where they were": 46,
+   "6 steps in all: the best bid and the best offer were not both where they were": 19,
+   "7 steps in all: the best bid and the best offer were not both where they were": 5,
+   "8 steps in all: the best bid and the best offer were not both where they were": 5,
+   "9 steps in all: the best bid and the best offer were not both where they were": 2
+  },
+  "what a move gave back | run of the best ask down": {
+   "1 steps in all, gave back +0.001": 5317,
+   "1 steps in all, gave back +0.002": 38,
+   "1 steps in all, gave back +0.003": 4,
+   "1 steps in all, gave back +0.004": 2,
+   "2 steps in all, gave back +0.001": 1007,
+   "2 steps in all, gave back +0.002": 14,
+   "2 steps in all, gave back +0.003": 1,
+   "2 steps in all, gave back +0.005": 1,
+   "2 steps in all, gave back +0.008": 1,
+   "3 steps in all, gave back +0.001": 310,
+   "3 steps in all, gave back +0.002": 2,
+   "4 steps in all, gave back +0.001": 88,
+   "4 steps in all, gave back +0.002": 4,
+   "5 steps in all, gave back +0.001": 34,
+   "6 steps in all, gave back +0.001": 8,
+   "6 steps in all, gave back +0.002": 1,
+   "7 steps in all, gave back +0.001": 3,
+   "7 steps in all, gave back +0.003": 1,
+   "8 steps in all, gave back +0.001": 4
+  },
+  "what a move gave back | run of the best ask up": {
+   "1 steps in all, gave back -0.001": 5388,
+   "1 steps in all, gave back -0.002": 61,
+   "1 steps in all, gave back -0.003": 6,
+   "1 steps in all, gave back -0.004": 6,
+   "1 steps in all, gave back -0.005": 1,
+   "2 steps in all, gave back -0.001": 854,
+   "2 steps in all, gave back -0.002": 15,
+   "2 steps in all, gave back -0.003": 1,
+   "2 steps in all, gave back -0.004": 1,
+   "2 steps in all, gave back -0.009": 1,
+   "3 steps in all, gave back -0.001": 333,
+   "3 steps in all, gave back -0.002": 7,
+   "3 steps in all, gave back -0.007": 1,
+   "4 steps in all, gave back -0.001": 89,
+   "4 steps in all, gave back -0.002": 5,
+   "5 steps in all, gave back -0.001": 41,
+   "5 steps in all, gave back -0.002": 1,
+   "6 steps in all, gave back -0.001": 21,
+   "7 steps in all, gave back -0.001": 4,
+   "8 steps in all, gave back -0.001": 1,
+   "8 steps in all, gave back -0.002": 1,
+   "9 steps in all, gave back -0.001": 1
+  },
+  "what a move gave back | run of the best bid down": {
+   "1 steps in all, gave back +0.001": 5242,
+   "1 steps in all, gave back +0.002": 51,
+   "1 steps in all, gave back +0.003": 4,
+   "1 steps in all, gave back +0.006": 1,
+   "12 steps in all, gave back +0.001": 1,
+   "2 steps in all, gave back +0.001": 861,
+   "2 steps in all, gave back +0.002": 17,
+   "2 steps in all, gave back +0.003": 3,
+   "2 steps in all, gave back +0.005": 1,
+   "3 steps in all, gave back +0.001": 292,
+   "3 steps in all, gave back +0.002": 3,
+   "3 steps in all, gave back +0.003": 1,
+   "3 steps in all, gave back +0.004": 1,
+   "4 steps in all, gave back +0.001": 108,
+   "4 steps in all, gave back +0.002": 5,
+   "4 steps in all, gave back +0.003": 1,
+   "5 steps in all, gave back +0.001": 42,
+   "5 steps in all, gave back +0.002": 3,
+   "5 steps in all, gave back +0.003": 1,
+   "5 steps in all, gave back +0.004": 1,
+   "6 steps in all, gave back +0.001": 10,
+   "7 steps in all, gave back +0.001": 5,
+   "7 steps in all, gave back +0.002": 3,
+   "8 steps in all, gave back +0.001": 7,
+   "8 steps in all, gave back +0.003": 1,
+   "9 steps in all, gave back +0.001": 1
+  },
+  "what a move gave back | run of the best bid up": {
+   "1 steps in all, gave back -0.001": 5267,
+   "1 steps in all, gave back -0.002": 28,
+   "1 steps in all, gave back -0.003": 2,
+   "1 steps in all, gave back -0.004": 1,
+   "1 steps in all, gave back -0.005": 1,
+   "11 steps in all, gave back -0.001": 1,
+   "2 steps in all, gave back -0.001": 930,
+   "2 steps in all, gave back -0.002": 7,
+   "2 steps in all, gave back -0.003": 1,
+   "3 steps in all, gave back -0.001": 301,
+   "3 steps in all, gave back -0.002": 2,
+   "3 steps in all, gave back -0.003": 1,
+   "3 steps in all, gave back -0.004": 1,
+   "4 steps in all, gave back -0.001": 76,
+   "4 steps in all, gave back -0.002": 1,
+   "5 steps in all, gave back -0.001": 31,
+   "6 steps in all, gave back -0.001": 7,
+   "6 steps in all, gave back -0.002": 1,
+   "6 steps in all, gave back -0.003": 1,
+   "7 steps in all, gave back -0.001": 2,
+   "8 steps in all, gave back -0.001": 2,
+   "9 steps in all, gave back -0.001": 1
+  },
+  "what a move gave back | trade leg down": {
+   "1 steps in all, gave back +0.001": 1816,
+   "1 steps in all, gave back +0.002": 95,
+   "1 steps in all, gave back +0.003": 2,
+   "1 steps in all, gave back +0.024": 1,
+   "10 steps in all, gave back +0.001": 2,
+   "12 steps in all, gave back +0.001": 1,
+   "15 steps in all, gave back +0.001": 1,
+   "2 steps in all, gave back +0.001": 645,
+   "2 steps in all, gave back +0.002": 56,
+   "2 steps in all, gave back +0.003": 4,
+   "2 steps in all, gave back +0.005": 1,
+   "3 steps in all, gave back +0.001": 231,
+   "3 steps in all, gave back +0.002": 23,
+   "3 steps in all, gave back +0.003": 1,
+   "4 steps in all, gave back +0.001": 86,
+   "4 steps in all, gave back +0.002": 7,
+   "4 steps in all, gave back +0.003": 6,
+   "4 steps in all, gave back +0.004": 1,
+   "5 steps in all, gave back +0.001": 40,
+   "5 steps in all, gave back +0.002": 2,
+   "5 steps in all, gave back +0.003": 1,
+   "6 steps in all, gave back +0.001": 16,
+   "6 steps in all, gave back +0.002": 3,
+   "7 steps in all, gave back +0.001": 11,
+   "7 steps in all, gave back +0.002": 1,
+   "7 steps in all, gave back +0.003": 1,
+   "8 steps in all, gave back +0.001": 4,
+   "9 steps in all, gave back +0.001": 1
+  },
+  "what a move gave back | trade leg up": {
+   "1 steps in all, gave back -0.001": 1851,
+   "1 steps in all, gave back -0.002": 105,
+   "1 steps in all, gave back -0.003": 5,
+   "1 steps in all, gave back -0.004": 2,
+   "1 steps in all, gave back -0.006": 1,
+   "10 steps in all, gave back -0.001": 1,
+   "2 steps in all, gave back -0.001": 642,
+   "2 steps in all, gave back -0.002": 45,
+   "2 steps in all, gave back -0.003": 4,
+   "2 steps in all, gave back -0.004": 2,
+   "3 steps in all, gave back -0.001": 235,
+   "3 steps in all, gave back -0.002": 10,
+   "3 steps in all, gave back -0.003": 2,
+   "3 steps in all, gave back -0.005": 1,
+   "4 steps in all, gave back -0.001": 73,
+   "4 steps in all, gave back -0.002": 3,
+   "5 steps in all, gave back -0.001": 41,
+   "5 steps in all, gave back -0.002": 5,
+   "6 steps in all, gave back -0.001": 17,
+   "6 steps in all, gave back -0.002": 1,
+   "6 steps in all, gave back -0.003": 1,
+   "7 steps in all, gave back -0.001": 5,
+   "8 steps in all, gave back -0.001": 4,
+   "8 steps in all, gave back -0.002": 1,
+   "9 steps in all, gave back -0.001": 2
+  },
+  "what came first after a hump began | buy, began on: a trade was received": {
+   "a step of the best bid": 145,
+   "a step of the best offer": 534,
+   "a trade on the hump's side": 438,
+   "a trade on the other side": 80
+  },
+  "what came first after a hump began | buy, began on: trades left the span at a moment with no tick": {
+   "a step of the best bid": 127,
+   "a step of the best offer": 146,
+   "a trade on the hump's side": 433,
+   "a trade on the other side": 404
+  },
+  "what came first after a hump began | sell, began on: a trade was received": {
+   "a step of the best bid": 521,
+   "a step of the best offer": 70,
+   "a trade on the hump's side": 442,
+   "a trade on the other side": 96
+  },
+  "what came first after a hump began | sell, began on: trades left the span at a moment with no tick": {
+   "a step of the best bid": 115,
+   "a step of the best offer": 114,
+   "a trade on the hump's side": 412,
+   "a trade on the other side": 382
+  }
+ },
+ "checks": {
+  "passed": true,
+  "what": "every move has its first step line and its steps in a row, and they add up to the stored count; no step is stored twice and no move ends twice; every trade leg's first trade is a tick of the trade day; the stored lines and the rows are in time order; every hump is begun and ended by a read of the stored line; no move or hump ends before it begins; a hump's last tick before it is before its next tick after it; every moment of a hump is a read of the stored line, and every stored line is read by place on the tape"
+ },
+ "files": [
+  {
+   "file": "research-moves-20231002.parquet",
+   "rows": 33131,
+   "bytes": 1550666,
+   "sha256": "40170165a851bd1bdd35647ff0dc4603bf00468e2e635d12e55a188039c4fcf1"
+  },
+  {
+   "file": "research-humps-20231002.parquet",
+   "rows": 4459,
+   "bytes": 669399,
+   "sha256": "48a84c52faa0190c158b5a67e8178d1cf0ae2c10355512f376768de8c176488a"
+  }
+ ],
+ "seconds": 17.1
+}
