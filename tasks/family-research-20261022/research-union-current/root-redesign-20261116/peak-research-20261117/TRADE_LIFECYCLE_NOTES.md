@@ -808,3 +808,19 @@ measured, to carry into the next look:
   is often a piece of the move the eye sees (trade day Oct 2, trade leg 3016; trade day Oct 3, trade leg 2554 is
   0.4 seconds long inside a two-minute rise). Put to Greg: shade the crypto and ng program's own trade instead
   (what the crypto graphs were drawn around). Not answered yet.
+
+## 2026-11-23 (fifteenth session): the pictures set up as the crypto pictures were (`trade-renders/`)
+
+Greg: "I just want to make sure we are setting them up the same. Show each individual trade and their prebirths like
+this without designated start times for dipole and exhaustion"; "instead of per sec, we are doing per tick like price".
+- One picture per trade of the crypto and ng program; zero at the trade's start; the mid price from where it stood
+  there; the 60-second dipole; the 20-second exhaustion; the dipole's rate and the price's rate per tick. All
+  turned to the trade's side. No designated start: two trades back, and every hump whole.
+- What the crypto code showed (Markets `75b15fa`), kept so it is not looked up again: the dipole picture's price is
+  the MID price; its zero is the lowest (or highest) mid in the half hour before, so the price V there is made by
+  the choice of zero and the dipole V is not; every line is an average of many trades.
+- By eye in three of the first 40: one trade (trade day Oct 18, trade 982) shows the dive before zero and the
+  recovery after it in all three lines; two others show the dipole against the trade through its life.
+- Per tick, the price rate is always half a tick up or down: it carries timing and direction only.
+- To look for across the 40 before anything is said: whether the dive before zero comes with the trades that then
+  go the trade's way, each trade on its own, none combined.

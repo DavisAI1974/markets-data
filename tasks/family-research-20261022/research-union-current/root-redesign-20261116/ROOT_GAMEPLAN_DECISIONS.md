@@ -3952,6 +3952,36 @@ tick like price".**
   the dipole changes, how fast the price changes (the crypto picture's order: lines above, rates below).
 - Built, not run: Markets `ccr-b66f34d5-h6ra1t`. It waits for his go.
 
+**THE 40 PICTURES SET UP AS THE CRYPTO PICTURES WERE, done (2026-11-23, fifteenth session), on his "Go".**
+- ONE POD, all four trade days together, each pinned to its own two CPUs: General Purpose 8 CPUs, $0.32 an hour,
+  `8n71jls6de5d3q` (US-CA-2), 10:19:51 to about 10:23:40 UTC: about 2 cents.
+  `root/pod_leg_renders.sh 1b4bbd2... trade_renders --random 10` (Markets `ccr-b66f34d5-h6ra1t`).
+- ALL FOUR PASSED every check on the first run (the first time this program ran anywhere): the stored trades of
+  the program are in the order they started and none ends before it starts; both stored lines and the mid price
+  are in time order; a mid price stood as every trade started; every picture holds its trade whole; every trade
+  asked for was drawn exactly once.
+- THE TRADES OF THE PROGRAM, counted by the job before it drew: 1,794; 1,895; 1,672; 1,682, the stored counts.
+- THE PICK (the computer's, seeded with the trade day's own number): Oct 2: 21, 184, 424, 528, 883, 1090, 1396,
+  1608, 1627, 1672. Oct 3: 435, 678, 698, 707, 831, 1420, 1603, 1627, 1751, 1763. Oct 17: 7, 299, 388, 451, 543,
+  699, 772, 1275, 1440, 1521. Oct 18: 171, 420, 556, 982, 991, 1042, 1056, 1160, 1343, 1419.
+- EVERY ONE OF THE 7,043 TRADES HAS A LEAD-IN: no picture starts at its own trade's start.
+- STORED in `trade-renders/` on each daily branch, each file fetched and proved against its receipt, `FILES.md`
+  brought up to date, each push confirmed on the remote: `root-rows-20231002` `04a4931`, `-20231003` `f8fe3ea`,
+  `-20231017` `11797e5`, `-20231018` `a1b9c53`. The 10 pictures of a trade day are 2,134,076; 2,230,908; 2,144,612;
+  2,157,931 bytes; every trade of the program at that size is about 1.4 gigabytes. THE POD WAS DELETED after every
+  push was confirmed; the account was read and shows none.
+- THE TRADE LEG PICTURES (`leg-renders/`) are still stored beside them; whether they stay is his to say.
+- SEEN BY EYE in three of the 40, nothing measured, said to him as it is:
+  1. The set-up reads as the crypto pictures do: zero at the trade's start, each line on the page before it.
+  2. Trade day Oct 18, trade 982 (a buy): the price, the dipole and the exhaustion all fall before zero and come
+     back after it: the dive into the turn and the recovery of the crypto picture, in a single trade. One case.
+  3. Trade day Oct 2, trade 883 and trade day Oct 17, trade 772 (sells): the dipole sits against the trade
+     through its life; the price drifts against it too. Mixed, as single trades are.
+  4. THE PRICE RATE strokes are all one height: the mid price only ever moves by half a tick, so per tick its
+     rate says WHEN and WHICH WAY and nothing about how much. The dipole rate strokes do differ in height.
+  5. The step of the exhaustion line at zero is there, as the rule makes it.
+- Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
