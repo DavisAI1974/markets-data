@@ -4057,6 +4057,22 @@ straight".**
   3. Each move of the mid price in graph 1 is one of the two stepping, which the two graphs now show apart.
   Two pictures. Whether it shows him anything is his to say.
 
+**Greg, on the two test pictures (2026-11-23, fifteenth session): "It's alright that it's blocky. I see what I wanted
+to. Price is either a mix of or closely resembles one in shape and movement which is interesting. Is that already a
+separate column in the spreadsheets?"**
+- THE BLOCKY CURVES STAND. He saw what he wanted to.
+- HIS READ: the price is either a mix of the best bid and the best offer or closely resembles one of them in shape
+  and movement.
+- SAID TO HIM: the price graph in these pictures is the mid price, which is exactly halfway between the two, so
+  "a mix of the two" is how it is made. What is not made that way: WHICH of the two stepped at each move.
+- ANSWERED, checked in the file and in the code: YES. `best_bid` and `best_ask` are each their own column on every
+  tick of the stored rows (`root/rows.py`, section "D. The book at this tick"), with `gap` (best ask minus best
+  bid) beside them, and four marks in section E that say when each one moved and from what to what
+  (`best_bid_moved_from`, `best_bid_moved_to`, `best_ask_moved_from`, `best_ask_moved_to`). The Excel file
+  `ROOT_short_stretch_20231002_0900.xlsx` carries those columns too, but it holds only one short stretch of trade
+  day Oct 2; the full trade days are in the stored rows, and the full workbooks are still an open item of his.
+  NOT a column anywhere: the mid price (it is worked out in the picture).
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
