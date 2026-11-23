@@ -1,0 +1,23 @@
+{
+ "trade_day": "2023-10-03",
+ "counts": {
+  "trade_day": "2023-10-03",
+  "ticks": 878671,
+  "leg_moves_set_on_their_first_step": 6907,
+  "bid_run_moves_set_on_their_first_step": 14780,
+  "ask_run_moves_set_on_their_first_step": 14767,
+  "humps_set_on_the_tick_they_began_on": 2416,
+  "humps_that_began_with_no_tick": 2163,
+  "of_them_set_on_the_last_tick_before": 1733,
+  "of_them_second_or_later_before_the_next_tick": 430,
+  "of_them_before_the_first_tick_of_the_trade_day": 0,
+  "moves": 36454,
+  "humps": 4579,
+  "columns": 327
+ },
+ "checks": {
+  "passed": true,
+  "what": "each file holds the rows of the stored rows file beside it, in the same order; every tick of the trade day is in exactly one of them; at every trade with a side the exhaustion line is that trade's own stored read; every move sits on the tick of its first step and no two of one kind share a tick; every hump that began on a trade sits on that tick"
+ },
+ "seconds": 33.4
+}
