@@ -5510,6 +5510,8 @@ think part of tasty problem was that i didn't confirm email and do one of the st
 - THE TASTYTRADE SANDBOX is not ruled out: the futures orders it rejected on about 2026-11-09 may have failed because
   his email was not confirmed and one set-up step was not done right. To be tried again once that is done.
 - Nothing is bought, installed, connected or built on this until it has been laid out to him.
+- Greg, same discussion: "And i can sign up for ninja". NinjaTrader's free simulated account is in play. It is a
+  Windows program: it runs on his own computer, not in a cloud session.
 
 ## Held for the later stage: figuring out what moves the market
 
