@@ -3942,6 +3942,16 @@ up."**
   after a turn, so the 20-second line steps against the trade at zero and steps back 20 seconds later when that
   trade leaves. That step is made by the rule, not by the market.
 
+**DECIDED (Greg, 2026-11-23, fifteenth session), on the two rate lines: "Bit instead of per sec, we are doing per
+tick like price".**
+- THE RATE LINES ARE READ PER TICK, NOT PER SECOND. The dipole's rate is its change at each of its own reads (a
+  trade received, or old trades leaving the 60 seconds); the price's rate is the change of the mid price at each
+  tick it moves. No span of time enters either. Each is drawn as a stroke at the nanosecond of that tick, in its
+  own graph, turned to the trade's side like the lines.
+- So a picture now holds FIVE separate graphs on the one clock: the price, the dipole, the exhaustion, how fast
+  the dipole changes, how fast the price changes (the crypto picture's order: lines above, rates below).
+- Built, not run: Markets `ccr-b66f34d5-h6ra1t`. It waits for his go.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
