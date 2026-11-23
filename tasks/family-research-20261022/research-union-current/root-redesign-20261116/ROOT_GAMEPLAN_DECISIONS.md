@@ -5501,6 +5501,16 @@ the sessions and read our discussions"; "After you read stop so we can discuss".
   in Claude's session list); the folder `paper-rules/20261109/` on `main` (listed, never opened).
 - NOTHING IS BUILT OR STARTED UNTIL HE HAS DISCUSSED IT.
 
+**DECIDED (Greg, 2026-11-23, eighteenth session), on being read what the chats say. His words: "We are going to do
+what we can free on these platforms and then get an open source one and chage it to fit our remaining needs. And i
+think part of tasty problem was that i didn't confirm email and do one of the steps right".**
+- THE PAPER-TRADING ROUTE: first, whatever can be done FREE on the platforms already looked at (Tradovate demo, CME's
+  practice simulator, tastytrade's sandbox, NinjaTrader's simulated account); then an OPEN SOURCE platform, changed
+  to fit what those cannot do.
+- THE TASTYTRADE SANDBOX is not ruled out: the futures orders it rejected on about 2026-11-09 may have failed because
+  his email was not confirmed and one set-up step was not done right. To be tried again once that is done.
+- Nothing is bought, installed, connected or built on this until it has been laid out to him.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
