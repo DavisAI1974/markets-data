@@ -5781,3 +5781,7 @@ figure. To bring back when the work reaches what moves the market and price-curv
   have codex devise a plan to handoff to you". Codex writes the plan; Claude builds from it when it arrives. Nothing
   of it is started before the plan. The tastytrade checks under way (the 18:01 ET order check, the stream run with
   the market open) go on: their records say what tastytrade can and cannot do.
+- CHANGED, Greg right after: "He'll do initial build and you will check it after he's done to make any adjustments
+  if needed. That way he can do that while you're doing this". So Codex does the first build of our own paper
+  platform; Claude checks it when Codex is done and makes the adjustments needed; meanwhile Claude goes on with the
+  tastytrade checks.
