@@ -1,0 +1,86 @@
+{
+ "trade_day": "2023-10-02",
+ "counts": {
+  "trade_day": "2023-10-02",
+  "moves": 33131,
+  "humps": 4459,
+  "first_steps_the_stored_exhaustion_line_against_the_step_lines_own_20_second_flow": {
+   "both empty": 371,
+   "equal": 32656,
+   "not equal": 104,
+   "not equal by time: equal by place on the tape": 104
+  },
+  "every_look_up_both_ways": {
+   "a hump's began, the best ask": {
+    "look-ups": 4459,
+    "on a nanosecond holding more than one tick": 2307,
+    "a different value by place than by time": 20
+   },
+   "a hump's began, the best bid": {
+    "look-ups": 4459,
+    "on a nanosecond holding more than one tick": 2307,
+    "a different value by place than by time": 12
+   },
+   "a hump's began, the dipole_60s line": {
+    "look-ups": 4459,
+    "on a nanosecond holding more than one read": 88,
+    "a different value by place than by time": 50
+   },
+   "a hump's ended, the best ask": {
+    "look-ups": 4458,
+    "on a nanosecond holding more than one tick": 1522,
+    "a different value by place than by time": 19
+   },
+   "a hump's ended, the best bid": {
+    "look-ups": 4458,
+    "on a nanosecond holding more than one tick": 1522,
+    "a different value by place than by time": 15
+   },
+   "a hump's ended, the dipole_60s line": {
+    "look-ups": 4458,
+    "on a nanosecond holding more than one read": 58,
+    "a different value by place than by time": 40
+   },
+   "a hump's furthest, the best ask": {
+    "look-ups": 4459,
+    "on a nanosecond holding more than one tick": 1988,
+    "a different value by place than by time": 41
+   },
+   "a hump's furthest, the best bid": {
+    "look-ups": 4459,
+    "on a nanosecond holding more than one tick": 1988,
+    "a different value by place than by time": 35
+   },
+   "a hump's furthest, the dipole_60s line": {
+    "look-ups": 4459,
+    "on a nanosecond holding more than one read": 66,
+    "a different value by place than by time": 10
+   },
+   "a move's end, the dipole_60s line": {
+    "look-ups": 33128,
+    "on a nanosecond holding more than one read": 224,
+    "a different value by place than by time": 113
+   },
+   "a move's end, the exhaustion_20s line": {
+    "look-ups": 33128,
+    "on a nanosecond holding more than one read": 224,
+    "a different value by place than by time": 104
+   },
+   "a move's first step, the dipole_60s line": {
+    "look-ups": 33131,
+    "on a nanosecond holding more than one read": 224,
+    "a different value by place than by time": 113
+   },
+   "a move's first step, the exhaustion_20s line": {
+    "look-ups": 33131,
+    "on a nanosecond holding more than one read": 224,
+    "a different value by place than by time": 104
+   }
+  }
+ },
+ "checks": {
+  "passed": true,
+  "what": "both stored lines are in time order; every stored value of the two research tables is the line (or the quote) read by time; the counts of equal and not equal first steps are the ones the research threads job wrote; every hump's moment is a read of the stored line"
+ },
+ "seconds": 7.9
+}

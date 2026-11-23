@@ -1,0 +1,47 @@
+{
+ "trade_day": "2023-10-02",
+ "counts": {
+  "trade_day": "2023-10-02",
+  "trades_with_a_side": 35897,
+  "reads_of_the_stored_exhaustion_line": 71220,
+  "reads": {
+   "a trade was received": 35897,
+   "trades left the span at a moment with no tick": 35323
+  },
+  "figures": {
+   "made": 70393,
+   "none: nothing with a side traded in the 20 seconds": 827
+  },
+  "pieces holding a trade, of twenty": {
+   "01": 3750,
+   "02": 5068,
+   "03": 5792,
+   "04": 7196,
+   "05": 7715,
+   "06": 7178,
+   "07": 6280,
+   "08": 4778,
+   "09": 4041,
+   "10": 3496,
+   "11": 3073,
+   "12": 2772,
+   "13": 2096,
+   "14": 1597,
+   "15": 1381,
+   "16": 988,
+   "17": 553,
+   "18": 409,
+   "19": 170,
+   "20": 2060
+  },
+  "the shared information": {
+   "above zero; trading on both sides": 65799,
+   "exactly zero; all the trading on one side": 4594
+  }
+ },
+ "checks": {
+  "passed": true,
+  "what": "every read made at a trade is the next trade with a side on the tape, at its own nanosecond; no read of trades leaving holds a trade not yet read; every trade inside a read is less than 20 seconds old; at every read the twenty bought pieces add up to the stored bought and the twenty sold pieces to the stored sold; the operator gives nothing exactly where the stored line says nothing traded; the first figure equals the stored exhaustion line at every read; every trade with a side is in a read; the operator file is the one that was compared with the copy Codex pinned"
+ },
+ "seconds": 121.7
+}
