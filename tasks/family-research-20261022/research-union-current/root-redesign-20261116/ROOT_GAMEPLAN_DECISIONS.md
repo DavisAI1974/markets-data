@@ -5403,6 +5403,25 @@ notes hold counts from all four trade days: "Use all 4 days to make strategies".
 - NEXT, each on his word: the try (one pod run, one line for each stance, put to him with the price); the discard
   of the old research and strategy documents (the list by name first, then his "delete").
 
+**DECIDED (Greg, 2026-11-23, eighteenth session), on being shown the fifteen versions. His words: "And we don't need
+one winner strategy. We need 15 good ones that work. They will all be used for paper trading. And we will be testing
+strategies in paper trading. That's what it's there for."; then, pasting Codex's handoff note: "From codex"; "And i
+want 15 strategies from you".**
+- ALL FIFTEEN GO FORWARD, EACH ON ITS OWN, TO PAPER TRADING. No winner is picked among them.
+- PAPER TRADING IS THE TEST. WITHDRAWN, and not to be raised again: Claude's asks for a "try" of the versions on a
+  pod before paper trading and for a trade day beyond the four as a blind test.
+- HE WANTS FIFTEEN STRATEGIES FROM CLAUDE: rules that each open a paper trade. OWNED: the first set held one version
+  that never opened a trade (CL09, a rule about what is not a signal), one that traded the same events as another
+  the opposite way (CL11 against CL10), four that were a warning as well as a stance, and one marked "cannot be
+  evaluated". Rewritten as v2 (below); the first proposals are kept whole under them.
+- CODEX'S NOTE, as he pasted it: branch `codex/ng-blind-20261123`, commit `ad10921479e49678dd228b0f6b144dca3e610a0d`,
+  folder `strategy-20261123-codex/` (its `VERSIONS.md` with fifteen current v2 paper-trading rules and the v1
+  proposals below them, `EVIDENCE.md`, `OPEN_QUESTIONS.md`, `BLIND_FORMATION.md`, `ACCESS_RECORD.md`, an
+  `observations/` folder for each trade day, `trace_pairs.py`). It says: "Open after your independent set of 15
+  strategies is finished." CLAUDE'S CALL, stated to him: the folder and the branch were NOT opened, listed or
+  searched. Claude's v2 was written without them. Whether Claude's fifteen are finished is his to say once he has
+  seen v2; the folder is opened on his word.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
