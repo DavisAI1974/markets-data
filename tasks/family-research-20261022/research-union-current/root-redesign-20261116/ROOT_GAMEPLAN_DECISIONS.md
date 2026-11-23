@@ -3982,6 +3982,18 @@ tick like price".**
   5. The step of the exhaustion line at zero is there, as the rule makes it.
 - Nothing is typed, labelled, measured or put in the Excel sheets from these pictures.
 
+**DECIDED (Greg, 2026-11-23, fifteenth session), on the 40 pictures set up the crypto way: "Just show price graph
+with 2 points: bought and sold".**
+- THE PRICE GRAPH CARRIES TWO POINTS AND NOTHING ELSE: where the trade was bought and where it was sold. A buy is
+  bought at its start and sold at its end; a sell is sold at its start and bought at its end.
+- Claude's reading, stated to him, his to correct from the picture: the price line itself stays (the mid price),
+  now in plain dollars and NOT turned to the trade's side, because a bought point and a sold point are read on a
+  real price; the shading and the two marker lines come OFF the price graph and stay on the four graphs under it.
+  Each point sits at the price of the trade on the tape that filled it there (the mid price standing then, when a
+  trade ended at no tick). The other four graphs are unchanged; the price's rate is in dollars per tick, not turned.
+- Built, not run: Markets `ccr-b66f34d5-h6ra1t`. The 40 stored now are replaced by the rerun (deleted while it runs,
+  the removal confirmed, then the new ones fetched). It waits for his go.
+
 **SAVED BY GREG FOR AFTER THE CURRENT WORK (2026-11-23, fifteenth session): "Random thought to look at once your
 current work is done, would graphing best bid and best offer as separate graphs show us anything? So not trades but
 the bids and offers flowing independently up and down by tick through the day? Again, take care of all of the
