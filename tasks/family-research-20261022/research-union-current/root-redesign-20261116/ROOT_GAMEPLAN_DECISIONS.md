@@ -4174,6 +4174,28 @@ program was searched, and the text files of this branch.**
   (c) `end_price` at no tick: emptied the next time each index table is written; (d) the 40 pictures of
   `trade-renders/`: redrawn the new way when he says.
 
+**Greg (2026-11-23, sixteenth session), after the price and the list were put to him: "Proceed. Make sure that
+midprice hasn't been added to the excel sheets".**
+- "PROCEED" IS NOT THE WORD "GO". No pod was started (his rule: an instruction is not a go). The pod waits for
+  the word.
+- THE MID PRICE IS IN NO EXCEL SHEET. CHECKED this session, told to him first, on this branch at `c2e3381`:
+  - Every Excel file was found by name: on this branch `ROOT_dipoles_pinned.xlsx`,
+    `ROOT_short_stretch_20231002_0900.xlsx` and `data/outside/ng_oct2023/made/outside_tables.xlsx` (plus nine raw
+    storage files as downloaded from the EIA, not ours and not opened). The four daily branches hold no Excel
+    file (names listed, no sizes: 916; 1,001; 1,007; 1,013 files).
+  - Every cell of every sheet of the three was read (9, 3 and 13 sheets). No formula in any of them. No column
+    heading, column description or read-me line names a mid price, a midpoint, a halfway price or an average of
+    the best bid and the best ask.
+  - The only cells holding the letters "mid": "the middle month" of the settled curve (two column descriptions of
+    the outside data), the "midwest" storage region and one EIA note. None is a price of ours.
+  - The price columns of the short stretch sheet are `price`, `left_price`, `touched_price`, `best_bid`,
+    `best_ask`, `gap` and the four "moved from / moved to" marks: all 408 columns of the data sheet are
+    described on its COLUMNS page.
+  - The two programs that write the sheets (`root/sheet.py`, `root/pinned_excel.py`) do not work out a mid.
+  - Neither ROOT file has changed since the fifteenth session's check; Desktop has added nothing since `aeea0bf`.
+- NOT CHECKED BY VALUE: no column was compared with a mid worked out in the session (that would be a calculation
+  on market data in the session). The check is by every heading, description, formula and text cell.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
