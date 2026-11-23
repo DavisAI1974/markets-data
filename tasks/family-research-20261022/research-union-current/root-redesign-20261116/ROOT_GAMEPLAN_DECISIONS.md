@@ -5567,6 +5567,34 @@ can first".**
   - THE FIRST TEST, when his sandbox is set up: one day order in natural gas, to see whether a future fills there
     at all. Not placed: it needs his sandbox sign-in.
 
+**RECEIVED (Greg, 2026-11-23, eighteenth session): the graph engineering adoption plan and its handoff index, from his
+chat with Claude as architect, sent as two zips ("Only the tasty updaes changd and s3 is noted as ooen question").**
+- STORED as sent: Markets `ccr-fffbc766-a1gxpl`, `research/kalshi/frankie_boss/CLAUDE_ARCH_PLAN_GRAPH_ENGINEERING_
+  ADOPTION_20261123.md` and `README_HANDOFF_20261123.md`. HELD, not applied: the three agent files (scout on
+  Haiku, builder on Sonnet, reviewer on Opus) and the CLAUDE.md patch; they are stage 1, filed.
+- HIS DIRECTION, as the plan records it: NOW, stage 7 only: paper trading on the tastytrade sandbox, standalone,
+  rules kept in git, a runner on GitHub Actions, every signal, order and fill recorded to markets-data before the
+  sandbox's 24-hour reset; starting the runner needs his go. THE FEED FOR SIGNALS: "Tasty's for now": tastytrade's
+  production quote stream on a login used for market data only, never for orders; orders go only to the sandbox.
+  FRANKIE DOES NOT CHANGE. Stages 1 to 6 and 8 are filed until he decides. AWS is not available.
+- THE FIRST STEP (7e): check that the sandbox lists and accepts natural gas futures and futures options and how it
+  fills them; record which event types and fields the production stream delivers for natural gas (quotes, trades,
+  any book depth) and at what timestamp resolution.
+- OVERRULED FOR THIS ADOPTION ONLY, his word as the plan lists it: the keep-if-better loop; confidence cutoffs in
+  fan-out reducers; model-based merging of names; token-budgeted context built from a graph; exit criteria and
+  per-run budgets; swarms. STILL IN FORCE: launch HOLD and his step-by-step go; his merge authority; Codex review;
+  code in Markets, data in markets-data with MANIFEST.json entries; the four trade days through
+  `for_calculations()`; gross only; zero synthetic data; the leakage gate.
+- OPEN WITH HIM, as listed: the metric of each keep-if-better loop; Granite as the grounding checker or replaced
+  after the stage 8 test; when the filed stages proceed; THE S3 BUCKET (the raw tick tape, the 5-year natural gas
+  pull): not decided; until he does, the bucket, its data and the existing S3 code are left exactly as they are.
+- SAID TO HIM, Claude's calls: (1) a GitHub Actions job runs at most about 6 hours and a trade day is 23, so the
+  runner must hand over between jobs or run somewhere that stays up; (2) what the production stream carries decides
+  which rules can run (the two lines need every trade with its side; six of Claude's fifteen need single orders
+  with their numbers); (3) the production stream needs its own read-only login from his real account, and natural
+  gas quotes may need a data entitlement there; (4) live signals read today's market, outside the four trade
+  days: his word to run stage 7 is taken to cover it, and its output is kept in its own folder apart from ROOT.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be
