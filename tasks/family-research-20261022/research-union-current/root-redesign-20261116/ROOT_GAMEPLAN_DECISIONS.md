@@ -5297,6 +5297,26 @@ until everything is finished."**
   four trade days; a session says in its first message how it uses them, or leaves them shut. That holds for
   Claude's own strategy session too.
 
+**DECIDED (Greg, 2026-11-23, seventeenth session). His words: ".ake sure everything is updated, committed and pushed
+for him. 15 strategies each. You can open the original doc, just don't use what you built after. His doc will be in
+your sessions from last week or week before"; then "Let's start new session for this. And he should have your new
+research paper available to look at if needed. Just make a note that old research and strategy docs from previous
+sessions are not to be used. We should actually discard those if they have old data".**
+- THE STRATEGY STEP STARTS IN A NEW SESSION. 15 STRATEGIES FROM EACH OF CODEX AND CLAUDE.
+- THE OLD RESEARCH AND STRATEGY DOCUMENTS OF EARLIER SESSIONS ARE NOT TO BE USED, by either session. Written into
+  Codex's handoff and into handoff T.
+- THE NEW RESEARCH PAPER, for both sessions to look at if needed: `research-union-current/RESEARCH_PAPER_20261123.md`
+  (the research threads on the rebuilt data, each trade day on its own; its two largest tables checked row by row
+  against the stored receipts). It says its counts were read from all four trade days.
+- EVERYTHING IS COMMITTED AND PUSHED FOR CODEX: the documents branch, the four daily branches and Markets
+  `ccr-dd95052b-3vcrwq` stand on the remote where the session has them, nothing uncommitted.
+- "WE SHOULD ACTUALLY DISCARD THOSE IF THEY HAVE OLD DATA": NOT DONE in this session. Claude's call, stated to him:
+  it is done the way it was on 2026-11-16, the list by name in front of him and then his word "delete", because
+  the files are on `main` and on Codex's own branches. It is the first open item of handoff T.
+- His pointer to the original doc in Claude's earlier sessions: a search of the sessions of 2026-11-08 and 09 was
+  started; with "old ... docs are not to be used" it is not needed and nothing of it is used.
+- Handoff `NEXT_SESSION_HANDOFF_20261123T.md` replaces handoff S.
+
 ## Held for the later stage: figuring out what moves the market
 
 Greg: "So keep that in mind for later." "And same for storage. Simple is fine in root stage. Those 2 things will be

@@ -27,10 +27,13 @@ do not ask to see them; do not compare against them. Claude is under the same ru
 `codex/` branch. You may reach an overlapping idea; keep it on its own merits. When both are finished Greg says what
 happens next; there is no step here to compare, filter, merge or pick winners.
 
-DO NOT OPEN LAST WEEK'S STRATEGY MATERIAL (the fifteen candidates, the review and gap list of November 13, the
-selected cases, the paper rules). It was made on data that was built wrong (cut on the wrong clock, two trade days
-missing their first two hours, trades only). Nothing of it is carried: not a value, not a rate, not a rule. If you
-have already read it, say so in your access record rather than claiming blindness, and do not use it.
+THE OLD RESEARCH AND STRATEGY DOCUMENTS OF EARLIER SESSIONS ARE NOT TO BE USED (Greg, November 23). That is every
+research report, finding, case set, strategy list, candidate, review, gap list and paper rule made before the
+rebuild of November 16: the fifteen candidates, the review and gap list of November 13, the selected cases, the
+paper rules, the reanalysis and discovery reports, the earlier workbooks. They were made on data that was built
+wrong (cut on the wrong clock, two trade days missing their first two hours, trades only). Nothing of them is
+carried: not a value, not a rate, not a rule. If you have already read them, say so in your access record rather
+than claiming blindness, and do not use them. The one research paper to use is `RESEARCH_PAPER_20261123.md` (below).
 
 Start in a fresh session.
 
@@ -42,7 +45,7 @@ Start in a fresh session.
    a later trade day may know what was found on an earlier one. Lay out exactly how you keep that (which trade days
    each version is formed on, which it is tried on, and what you had already seen of each trade day before you
    began, honestly).
-2. THEN: 15 VERSIONS, laid out in one message. Each: the situation and the stage of a trade it is for; what must be
+2. THEN: 15 VERSIONS (15 strategies from each session), laid out in one message. Each: the situation and the stage of a trade it is for; what must be
    observed, on which clock, known at which tick; the direction; how it arms, expires and resets; entry, management
    and what invalidates it; what it does when an input is missing; and what would show it to be wrong. Distinguish
    observations from proposed rules. Keep versions that overlap or oppose each other.
@@ -124,6 +127,9 @@ The decisions and the notes are common ground for both sessions; they are not ei
 Branch `ccr-349e2ffe-07p8od` of `DavisAI1974/markets-data`, under
 `tasks/family-research-20261022/research-union-current/`:
 
+- `RESEARCH_PAPER_20261123.md`: THE NEW RESEARCH PAPER, there to look at if needed: what the research threads
+  found on the rebuilt data, each trade day on its own. Its counts were read from ALL FOUR trade days: the same
+  care as for the notes below.
 - `root-redesign-20261116/ROOT_GAMEPLAN_DECISIONS.md`: every decision of Greg's, with his words.
 - `root-audit-20261116/RESEARCH_INTENTIONS.md`: the earlier research questions, with no result.
 - `root-redesign-20261116/FURTHER_RESEARCH_LIST.md`: research set aside for later. Not part of this task.
