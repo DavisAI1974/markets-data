@@ -7182,3 +7182,14 @@ figure. To bring back when the work reaches what moves the market and price-curv
   earlier claim and the later claim that stands over it, each pair its own line that can be taken back: the
   cause of the wrong-branch answer), and ASK IN TURNS (the next session asks the graph by task as it goes, under
   a short page of standing rules, instead of leaning on one text: the cause of the missing trade-day rule).
+- ALL OF THE DATA DEPTH BACK IN (Greg, 2026-11-24, on being told the packet had not carried the dipole and
+  exhaustion lines): "We have to get all of data depth back.in. those are 2 very important pirces". Taken as:
+  the decider is given the full depth of the data the engine holds at the signal, not a thin summary, and the
+  dipole and exhaustion lines are two very important pieces of it; said to him as Claude's reading, his to
+  correct. What was so: the engine holds the whole order book and every calculated line at every tick; the
+  packet built for the decider carried only the signal's own row and the run's earlier rows. Being built: the
+  question carries everything the engine's inputs hold at that tick, each by its own name, and the order
+  book's depth on both sides level by level (platform, agent run 90); the packet passes all of it through, whole
+  for a written decider and as text within the token budget for a live agent, the two lines first (Markets, the
+  next builder). Read from what already exists; nothing computed anew; no mid price; nothing from after the
+  signal; nothing changes when no decider is plugged in.

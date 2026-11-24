@@ -157,6 +157,15 @@ as stage 7d (the links, with no word on when) and one paragraph of stage 8d.
 - [ ] 37b. The decider's side in Markets: for each question the graph's packet is built, the brief is handed to
   an agent, the answer goes back, and every decision is its own line (the packet, its tokens, the answer, who
   answered, how long it took). Shown by: checks on a real run's journal with no engine.
+- [ ] 37d. ALL OF THE DATA DEPTH REACHES THE DECIDER (Greg: "We have to get all of data depth back.in"): the
+  dipole and exhaustion lines, every other value the engine's inputs hold at the signal's tick, and the order
+  book's depth level by level. Shown by: the platform's question carrying it (code and no-tape checks), the
+  packet passing it through, and, on tape (step 38), one question's `state` beside the book as the journal has
+  it at that tick.
+- [ ] 37e. The loop on the decider program: one file an agent changes (`loop_decider.py`), one trial to try it,
+  every trial recorded; and a first version written by an agent (`decider_v1.py`, in git for Greg to read:
+  Markets `04f4378`). Shown by: the control file loading, the ready check, and checks with a command that only
+  prints.
 - [ ] 37c. NOT BUILT, said so: the gate in a paced or live run (the order would have to wait while the tape moves
   on), and answers reaching a run on a GitHub runner from a session. A decider at the scale of a whole trade day
   needs a model key; none exists in GitHub or a session.
