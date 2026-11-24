@@ -7600,3 +7600,32 @@ figure. To bring back when the work reaches what moves the market and price-curv
   May ("New coding session", "Continue Phase 2 pipeline development") are where the Markets version was built
   and were not read either. FOR THE NEXT SESSION: read those transcripts with the session tools, or have the E
   drive folder pushed to GitHub or shared, before anything is taken from it.
+- THE AUTOSEARCH DISCUSSIONS, READ, AND WHETHER CODEX SHOULD FETCH THE FILES (Greg, 2026-11-24: "Our discussions
+  of autosearch will tell you if i should ask codex to get files. Read the discussions first"). WHAT WAS READ:
+  the written-up discussion in git, whole: `HANDOFF_TO_CODE_PHASE2.md` ("Phase 2 handoff: autoresearch", from the
+  architect to Code, 2026-05-04, Markets `ccc53eb`); the commit messages of `93e3a80` and `926a4ee`; the head of
+  `odcore/symbolic.py`; and the turn-end replies of the May 4 session and of the April SENTINEL session. NOT
+  READ: the architect's own chat (it was a Desktop chat, which a Code session cannot open) and the middle of the
+  old sessions' transcripts. WHAT THE DISCUSSION SAYS: autoresearch is a SEARCH that finds the best-fitting
+  operator (equation) for each regime from the data, without being told the regimes; on 5 April it recovered a
+  known generating equation ("the apr5 OD autoresearch branch (piecewise Liouvillian recovery on QD3SET-1,
+  R²=0.999997)"). Its own limits, in its words: "No ground truth in markets"; "Overfit risk is severe ... It
+  will find something that fits any chunk"; and its guards: train and test split, a complexity penalty, one
+  feasibility chunk first, success only on held-out data. WHAT IS IN GIT AND WHAT IS NOT: the plan was to PORT the
+  April program ("port from apr5 branch's QD3SET-1 loader"); what was built in Markets on 4 May is a stand-in,
+  `autoresearch_lite.py` ("minimal autoresearcher (no PySR dependency)": nine hand-coded forms, Lasso, a
+  degree-2 polynomial); `odcore/symbolic.py` on the trunk says of itself "RECONSTRUCTED-FROM-CLAUDE.md ...
+  would-be port". THE APRIL PROGRAM ITSELF IS NOT IN ANY REPOSITORY THIS SESSION CAN SEE. The handoffs give its
+  home: "OD knowledge files at E:\\, factory knowledge base at F:\\Factory\\knowledge\\" (save locations
+  `E:\\information_layer\\markets\\` and `F:\\Factory\\knowledge\\information_layer\\markets\\`).
+  CLAUDE'S ANSWER TO HIM, his to decide: YES, ask Codex for the files IF the April search program itself is
+  wanted for the agents, because git holds only the plan, a stand-in and a reconstruction. What to ask for: the
+  apr5 OD autoresearch branch (the search program, its loader, its complexity penalty and settings, its own
+  write-up of the QD3SET-1 result) from `E:\\information_layer` and `F:\\Factory\\knowledge\\information_layer`,
+  pushed to GitHub on a branch of its own, never the trunk; no SENTINEL or crypto data, the program and its notes
+  only. NO, there is no need, if what is wanted is only the pattern (propose, test, keep or revert): the loop in
+  `tools/ratchet/` already is that. HOW IT COULD FIT, as a proposal and nothing built: the search would be a
+  PROPOSER'S TOOL, making candidate forms from the natural gas lines; every candidate would still be a claim that
+  is registered with its mechanism and falsifiers, challenged by the reviewer, and trialled only on his go. It
+  would have to be remade to his rules of today (each event on its own, no pooling, no ranking, the leakage gate,
+  ticks at the nanosecond); the May stand-in pooled and ranked. Anything taken is put to him first.
