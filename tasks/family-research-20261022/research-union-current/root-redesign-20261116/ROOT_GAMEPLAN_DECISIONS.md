@@ -6506,3 +6506,17 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - TOKENS OF THE SIX REVIEWERS (runs 54 to 59, `claude-opus-5-5`): the harness reported 845,876 in all (134,742 + 170,151 + 119,689 + 185,427 + 102,210 + 133,657; this line first said 846,176, written before the sum was made, a slip of Claude's); their own
   transcripts add to 18,524,726 over every call, the advisor's 655,810 included. Both figures for each run are in
   `agent-runs.jsonl`.
+- BUDGETS AND THE PHONE KEYS (Greg, 2026-11-24): "The token spend didn't give us a good read on budget because it
+  was mostly building and not in a live environment like paper trading. We probably should bump them up some. You
+  can put the keys in the cloud environment. Just do whatever is the easiest for you to retrieve. I'll post what
+  codex wnded with and finish the couple of things". What came of it:
+  THE BUDGETS. The figures on record are his of the twenty-first session, by the total the harness reports: scout
+  300,000 tokens, builder 600,000, reviewer 250,000. He gave no new figure, so none is written; the hook and the
+  launcher still have no default. Asked of him: the new figures, and by which measure (the reported total is the
+  last call only; the six reviewers of this session reported 845,876 and used 18,524,726 over all their calls).
+  THE KEYS. Claude cannot fetch them: they are GitHub Actions secrets, which GitHub never gives back. Pushover
+  takes its two keys inside the message itself, not in a header, so the environment's network secrets cannot carry
+  them. The way left: he enters the two values himself in the Markets cloud environment's settings, as environment
+  variables named `PUSHOVER_APP_TOKEN` and `PUSHOVER_USER_KEY` (the names the hook and the launcher read); a new
+  session picks them up. Done by Claude, on his approval prompt: `api.pushover.net` added to that environment's
+  allowed hosts. Nothing was sent to Pushover. The hook is still registered nowhere.
