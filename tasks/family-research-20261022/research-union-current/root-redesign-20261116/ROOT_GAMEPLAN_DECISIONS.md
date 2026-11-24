@@ -6098,3 +6098,39 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - STEP 0 DONE AT THE START: Markets `ccr-532eaea6-vgz20z` (`65f71a9`) fast-forwarded onto the session's branch
   `ccr-075001b3-wcxrxy`; paper-trading-platform attached with push access and cloned at `claude/tasty-runner`
   (`e077b2e`); this branch checked out at `ac4e136`. The session's own markets-data branch is not used for outputs.
+- FOUND AT STEP 0 AND SAID TO GREG AT ONCE (2026-11-24): the dipole events and peaks of the four trade days are in
+  git (`root-redesign-20261116/ROOT_dipoles_pinned.xlsx`: 741, 833, 741 and 863 dipoles; 9,525, 10,577, 8,619 and
+  7,967 peaks) and ROOT's stored rows and calc receipts are on the branches `root-rows-<trade day>`, so stages 4b
+  and 6 can read them without AWS. NOT REACHABLE: Granite's per-call receipts (none in either repository; the
+  runbook puts receipts on the Linux box under `/opt/frankie-box/receipts/`, which is AWS), so stage 8's baseline
+  (8a) cannot be checked on real receipts; the build plan workbook with the "Experiment Arms" sheet
+  (`Frankie_BOSS_Build_Plan_R4_20260921.xlsx` is named by the runbook, its folder is not on the branch), so its
+  arms cannot be loaded into stage 2. No model API key is set in the session.
+- THE AGENT TYPES did not load at the start (the session began outside the Markets folder); the scout's locate run
+  (run 14) was made as a general agent on Haiku with `.claude/agents/scout.md` as its brief: 125,570 tokens against
+  the 80,000 cap Claude gave it. The types `scout`, `builder`, `reviewer` appeared later in the session.
+- STAGES 2 AND 4a BUILT (Markets `d6331d0` on `ccr-075001b3-wcxrxy`; records `graph/` and `experiments/` at
+  `42614ca` here): `tools/exp_dag.py` (push, fetch, log, children, leaves, lineage, diff, set-status, rebuild) and
+  `tools/kgraph/` (the node and link types, the four write rules, lines only ever added to, a NetworkX view).
+  Claude's call, his to strike: the lines in `experiments/trials.jsonl` are the record and the plan's SQLite file
+  `experiments/frankie_exp_dag.sqlite` is rebuilt whole from them, because Desktop and Codex push to this branch
+  and a binary changed in place cannot be merged. First load: the 14 agent runs as AgentRun nodes, the three paper
+  run folders as trials (each figure of each receipt on its own line; status "recorded": not scored). 11 checks,
+  all on real records.
+- GREG INTERRUPTED THE BUILD (2026-11-24), four messages: "Put it on exfra when you start building?"; "#run
+  mattpocock-skills"; "Then you build yourself"; "And bump up the limit"; "No limit for the build". So: THE MAIN
+  SESSION BUILDS, not the builder agent, and THE BUILD HAS NO TOKEN LIMIT. The three agent runs in flight stopped
+  with the interrupt and are not restarted: run 15 (builder, the no-model part of 4b), run 16 (reviewer, stages 2
+  and 4a), run 17 (scout, the canary read of handoff X). The harness reports no tokens for a stopped run, so what
+  they spent is not known and is written down as not known. The scout's and the reviewer's budgets were not
+  changed by his words (scout 300,000, of which 174,430 was left before run 17; reviewer 250,000).
+  "Extra": Claude cannot change its own effort setting from inside a turn; said to him (the app's selector).
+- MATTPOCOCK-SKILLS FOUND (2026-11-24): not installed in the session (the three earlier searches were right about
+  that), but the public repository `mattpocock/skills` could be cloned (`abeeaf9`). Used from the clone, not
+  installed: `implement` (build from the spec, tests at agreed seams, the whole suite once at the end, a code
+  review, commit to the current branch) and `tdd` (a failing check first; checks at the public seam; an expected
+  value never worked out the way the code works it out). The seams, said here in place of asking: each stage's
+  own command or function (`tools/exp_dag.py` verbs; `GraphStore.write`; each `ingest_*`; `extract load`;
+  `grounding.check`; the loop's `run`; `context.build`; the packet builder; the swarm's reducer; the paper loader;
+  the token test's call table). Expected values come from the saved records themselves, counted in the check by
+  another route. CLAUDE.md's "one router only" stands: these are borrowed one at a time, not made the router.
