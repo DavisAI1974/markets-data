@@ -7267,3 +7267,20 @@ figure. To bring back when the work reaches what moves the market and price-curv
   opening signal can have up to four trades under it (the rule's own and up to three managers'), each kept with
   its own result and none added to another. The journal carries open profit and highest open profit only on
   the 325 give-back closing orders, not as a series while a trade is open.
+- A HYBRID, NOT EITHER OR (Greg, 2026-11-24, to the second test's result and the two-part session start): "So do a
+  hybred system. Rarely are things either or for the builds". DECIDED BY HIM: the session start is both: a short
+  page written fresh each session (where things are, the standing rules, what needs his go) AND the graph asked
+  by task as the session goes. The same holds wherever the build offered a choice of two this session: a decider
+  may be a live agent and a written program; the packet is text for an agent and whole structure for a program.
+- "DATE RULE?" (Greg, 2026-11-24, to "one pair refused by the code's own date rule"). Answered: the command that
+  records a later claim over an earlier one refuses a pair whose "later" claim is dated earlier. It had read the
+  date out of a folder's name (`family-research-20261022`) and so took a claim of 2026-11-24 for 2026-10-22: a
+  false refusal. Corrected (Markets `233cd8c`: the date is read from the file's own name) and the pair applied:
+  all 32 consolidation links are in the graph (markets-data `203c4bc`); `kgraph check`: no breach.
+- HIS STOP ENDED THREE BUILDERS AGAIN (runs 88, 93, 95); "Restart agenrs"; "Proceed". Everything each had written
+  was committed as it stood and pushed first. Run 88 had pushed all its pieces (the loop on the decider program:
+  `replay_questions`, `trial_with_decider`, the file proposer, `platform_decider.md`, `loop_decider.py`, 20
+  checks passing by its notes); only its closing report was cut off, so it is not started again and its work is
+  read in the final review. Run 95 (the platform's depth) had pushed its pieces through the market series; one
+  of its 39 no-tape checks failed as it stood: started again as run 99. Run 93 (every layer through the packet)
+  was mid-work: started again as run 100.
