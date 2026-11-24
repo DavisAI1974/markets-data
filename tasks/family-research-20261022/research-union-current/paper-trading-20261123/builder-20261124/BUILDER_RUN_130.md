@@ -1,4 +1,4 @@
-# Builder run 130 (Sonnet): ticket 25, ingest_artifacts
+# Builder run 130 (Sonnet): ticket 25, ingest_artifacts, and then the points of the first read
 
 Kept word for word as the agent returned it, 2026-11-24 (twenty-fifth session). Nothing below this line is the main session's.
 
@@ -85,3 +85,99 @@ TIDY-UP AND CALL COUNT
 - /tmp/run130 and /tmp/pytest-of-root are deleted. `git -C /home/user/markets-data status --short` is empty.
 - Tool calls: 17.
 - Hard-limit status is not recorded: I did not time the run or total the tokens. The 60-call limit was not reached, and the wall-clock (40 minutes) and token limits were not checked.
+
+---
+
+## The next hand-back
+
+Ticket 25, second pass: all eight points are built. The commit is 6de2e47, and the merge that carries it is 74006f2, pushed to ccr-659edd86-di9udt with no force. Three things are open: mutant (d) cannot be noticed by any check (details in the (d) paragraph), the "main session" basis over-claims, and I could not confirm which node the first ingest revised.
+
+Last runs before the push: my file 27 passed in 130.8 s; test_stage5a_context.py 18 passed, 2 xfailed in 129 s. The merge at the end brought in only other builders' files, but I did not re-run after it.
+
+The eight points. Line numbers are in tools/kgraph/ingest_artifacts.py.
+1. **Authorship.** `authorship()` at line 140 sets `authoring_run` and `authoring_basis` by the four steps: field, builder outcome text, main session, outside the runs, plus "not settled" for two runs. Step (b) takes the role's first word with punctuation stripped, so run 87's "builder, as the writer" counts. `git_author` is set only for step (d). PRODUCED from a run is written only for field and outcome text, at the PRODUCED edges in `ingest()`. The ingest prints counts by basis and lists every artifact whose basis is not a field, one line each.
+   - Checks: test_a_builders_outcome_text_names_the_author, test_authoring_run_from_a_field_in_the_real_record, test_a_reviewers_task_text_is_not_authorship, test_platform_rule_files_were_made_outside_the_agent_runs, test_the_main_sessions_commits_and_those_outside_the_runs_hold_against_git, and test_main_prints_the_counts_by_basis_and_the_listing.
+2. **Snapshot.** `read_snapshot()` at line 183 reads the checkouts, record, last commits and commit details once. `ingest(store, snap)` at line 267 writes from it alone.
+   - Check: test_the_same_snapshot_ingested_twice_writes_nothing_new. It ingests the same snapshot twice, then the same state with a later read time. All three runs write nothing new beyond the first.
+   - The branch checks compare the stored head to git read before and after the snapshot.
+3. **Block labels and order.** `LABELS` at line 80 holds the four words in the order you gave. `current_versions_lines` at line 331 builds the block from them.
+   - Check: test_the_block_says_which_repository_holds_what_and_ours_first.
+4. **`first_read_at`.** `_node` at line 255 keeps a standing line, with its old key, while only the read time differs. A new line is written only when the state changes. The block prints "first read at".
+   - Checks: the branch-artifact test asserts `first_read_at` is present and `as_read_at` is not, and the same-state-read-later case in the snapshot check.
+5. **Never-cut lines.** The branch lines and the closing sentence are never cut. The docstring says so, and the note line says so when file lines are cut.
+   - Check: test_at_a_small_budget_the_branch_lines_stay_and_the_file_lines_go (1,000 tokens: four branch lines, no file line, "9 control files and decider programs are not shown").
+   - Also: test_current_versions_block_is_held_to_a_tenth_and_says_what_it_cut.
+6. **Sets.** `SETS` at line 44 now holds the zip plans in Markets, the verifier plan, and a seventh set "agent files" with the four agent files. A listed file missing from the checkout is named in the skipped list.
+   - Check: test_every_listed_file_has_an_artifact_and_a_missing_one_is_named.
+7. **Mutants (c) and (d).**
+   - (c) is checked by test_case_two_runs_name_one_commit_in_a_field, in the section "CASES THE REAL RECORD DOES NOT HOLD" at the end of the test file. It re-appends run 121's real line with code_commit set to 68d65a6, so runs 114 and 121 both name it.
+   - Two more cases in that section: two builders naming one outcome commit, and the `commits` field in both forms plus a wrong-repository item.
+   - (d), `fixed` computed without the block: **no check can notice it**. I tried budgets 2,500, 3,000, 4,000 and 6,000 tokens under the mutant, and the text stays within budget in every case. The cause is in context.py: after the first estimate, `render()` re-measures and trims or refills the text by real renders, and that loop holds the final text to the budget. Counting the block in `fixed` is correct, but it changes only the first estimate. The check I added, test_session_text_is_within_its_budget_with_the_block_counted, therefore passes with or without the line. I did not change context.py.
+8. **First ingest's revised node.** I could not confirm which one it was. Now the Commit nodes already in the graph are not written again (`commits = [... if not store.node(cid)]`), and the fresh-copy ingest printed `{'new': 837, 'revised': 0, 'unchanged': 0}`. test_an_existing_commit_node_is_left_as_it_is checks a head's Commit node has one line. My script to find the node failed on an unloaded store, so the old revised line stays unexplained. My guess is a Commit node, but I did not prove it.
+
+Counts by authoring basis on a scratch copy of the real graph, 102 artifacts in all:
+
+| Basis | Artifacts |
+|---|---|
+| field | 1 |
+| outcome text of a builder | 10 |
+| the main session's commits | 44 |
+| outside the agent runs | 48 |
+| two runs | 0 |
+
+By set: 4 control files, 5 decider programs, 32 rule files, 7 execution plans, 41 run plans, 6 plan files, 4 agent files, plus 4 branch artifacts. The ingest wrote 577 metric figures, skipped no files and no runs.
+
+Every artifact whose basis is (b):
+- platform_decider.md: run:0088
+- platform_exit.md: run:0069
+- decider README.md: run:0102
+- decider_v1.md: run:0087
+- decider_v1.py: run:0087
+- loop_decider.py: run:0088
+- skip_all.py: run:0085
+- .claude/agents/builder.md: run:0121
+- .claude/agents/reviewer.md: run:0121
+- the platform working branch: run:0106
+
+The CURRENT VERSIONS block at 6,000 tokens on the scratch copy (the text was 23,915 characters against 24,000):
+```
+CURRENT VERSIONS (as last read into the graph):
+- Markets (code): branch wt-b25, head 74006f2 (2026-11-24), first read at 2026-11-24T14:54:28Z
+- markets-data (records, graph, tickets): branch ccr-659edd86-di9udt, head a233fc5 (2026-11-24), first read at 2026-11-24T14:54:28Z
+- paper-trading-platform (the platform; OUR change is on this branch): branch ccr-0ac78691-8zapbb, head 28d4dbb (2026-11-24), first read at 2026-11-24T14:54:28Z
+- paper-trading-platform, Codex's branch (his; our change is NOT on it): branch origin/codex/strategy-trades-and-mbo-capture, head 47fa1c5 (2026-11-24), first read at 2026-11-24T14:54:28Z
+- tools/decider/programs/README.md: version 2ac873f, authored by run:0102 [outcome text of a builder]
+- tools/decider/programs/decider_v1.md: version 073f43d, authored by run:0087 [outcome text of a builder]
+- tools/decider/programs/decider_v1.py: version 04f4378, authored by run:0087 [outcome text of a builder]
+- tools/decider/programs/loop_decider.py: version 131a9dc, authored by run:0088 [outcome text of a builder]
+- tools/decider/programs/skip_all.py: version 1d0a6dc, authored by run:0085 [outcome text of a builder]
+- tools/ratchet/programs/packet_graph_v1.md: version 92a0cf4, authored by none: made outside the agent runs [outside the agent runs]
+- tools/ratchet/programs/paper_rules.md: version 3104192, authored by none: made outside the agent runs [outside the agent runs]
+- tools/ratchet/programs/platform_decider.md: version 131a9dc, authored by run:0088 [outcome text of a builder]
+- tools/ratchet/programs/platform_exit.md: version 35d1537, authored by run:0069 [outcome text of a builder]
+- 32 rule files, 7 execution plans, 41 run plans, 6 plan files, 4 agent files
+These are the versions as last read into the graph; check each with git before trusting it.
+```
+
+The seven put-back changes. I applied each one to the code, ran my 26-check file (27 with the check added afterwards), and restored the file each time. The "Checks that noticed it" column shows what the file's checks reported. The first six rows are one pass; (h) is a separate one.
+
+| Mutant | Checks that noticed it |
+|---|---|
+| (a) last-commit lookup `-- rel` changed to `HEAD` | 5 checks: decider_v1 version, builder outcome, rule files, main output, block held to a tenth |
+| (b) null figure `continue` changed to `v = 0` | test_a_null_figure_writes_no_metric |
+| (c) `== 1` changed to `>= 1` | test_case_two_runs_name_one_commit_in_a_field |
+| (d) `fixed` without the block | none (see point 7) |
+| (e) `if old and` changed to `if False and` | test_the_same_snapshot_ingested_twice_writes_nothing_new, which needed the later-read case, since the same stamp hides it |
+| (f) step (b) also reads a builder's task text | none in that pass |
+| (f2) step (b) for any role, outcome plus task | test_a_reviewers_task_text_is_not_authorship |
+| (g) block sorted by id | test_the_block_says_which_repository_holds_what_and_ours_first |
+
+- (f) was not noticed because no real builder's task names a relevant commit. I added test_case_a_builders_task_text_is_not_authorship (run 119's real line re-appended with " 1757145" in its task). I have not re-run mutant (f) against that check.
+- For (h), I did not run the 27-check file against any mutant after the merge.
+
+Things to know:
+1. **The "main session" basis over-claims.** Builders push markets-data commits under the same Claude-Session line, so any unnamed builder commit there reads as the main session's. This is why 44 artifacts carry that basis. It follows your rule as given.
+2. **No run line has started_at.** Spans came from the commit times of the session's markets-data commits, so the check "inside the span" is trivially true for any commit that carries the session's line.
+3. **Counts of 6 plan files and 41 run plans** reflect other builders still adding files.
+4. **/tmp/run130 is deleted and `git -C /home/user/markets-data status --short` is empty.**
+5. **Tool calls this pass: 14, about 31 for the whole run.** I did not keep a clock for the 40-minute limit; this pass was long, mostly waiting on the mutant runs.
