@@ -7149,3 +7149,36 @@ figure. To bring back when the work reaches what moves the market and price-curv
   `f856f46`, on the branch `ccr-0ac78691-8zapbb` of that repository): a close by answer now closes the paper
   trade through the matcher and leaves the rule's idea alone; the matcher's file is again byte for byte Codex's.
   It said itself that the close path was never run. Run 86 reads the fixes.
+- HIS GO TO CARRY ON (Greg, 2026-11-24): "Go", after being told what would be built next. Taken as his go to build
+  the loop on the decider program and to have an agent write its first version. NOT taken as a go for a trial: no
+  trial had been put to him with its budget.
+- THE FIRST WRITTEN DECIDER, FOR HIM TO READ BEFORE ANYTHING IS TRIED (agent run 87, Sonnet, 110,334 tokens; Markets
+  `04f4378`, `073f43d`): `tools/decider/programs/decider_v1.py` and its page `decider_v1.md`. It takes every signal
+  unless one of four named grounds says skip: a CX13 or CX14 "suspend additions" warning on that side (the rule
+  texts); the same rule already open on the same run of the quote (CL16's text); the offer at or below the bid
+  (CL06's text); and, for seven rules that trade with the quote's step, the flow at the newest dipole event
+  against the trade by 0.20 or more (the standing dipole research). FIVE OF ITS STEPS ARE INFERENCES, listed in
+  its page; the largest: that the research's 0.20 is on the scale of our flow figure, and that a dipole event
+  minutes old stands for the line now. A count only, not a result: on the 73 real opening signals of the first
+  seconds after 6 pm it would take 69 and skip 4. It was shown no trade outcome of the half hour it will be tried
+  on. WHAT IT FOUND: the packet did not carry the dipole and exhaustion lines as they stand at the signal.
+- THE LINES AT THE SIGNAL NOW REACH THE DECIDER (agent run 89, Sonnet, 88,218 tokens; platform `4bf9a66`,
+  `d7bfdff` on the branch `ccr-0ac78691-8zapbb`): the question a decider is asked carries the dipole (60 s) and
+  exhaustion (20 s) values the engine holds at the signal's own tick, and the exchange's own time of the event;
+  nothing is computed anew and nothing changes when no decider is plugged in. The same run closed what the
+  reviewer's second read found (run 86, Opus, 107,355 tokens): an answer carrying a stray key could pass as
+  valid and open a trade (closed: such an answer opens nothing); CLOSING A TRADE BY ANSWER IS SWITCHED OFF AND
+  MARKED NOT BUILT (Claude's choice, said to him: it was never run, had loose ends, and his give-back hold rule
+  forbids it today). With nothing plugged in the second read again found nothing that differs from Codex's code
+  but the one receipt key. THE PLATFORM CHANGE STAYS OFF CODEX'S BRANCH until one pass of the tape shows a run
+  with nothing plugged in is the same row for row (Claude's choice, said to him); that pass needs his go.
+- "MEMORY AS A MODEL" (Greg, 2026-11-24): he sent https://arxiv.org/pdf/2605.15156 with "You don't have to use
+  anything i suggest if it doesn't close any gaps". arxiv.org was blocked from the session; it was added to the
+  Markets environment's allowed hosts on his approval, and the paper was read (MeMo, 14 May 2026: a small
+  separate memory model is trained on a corpus and the main model asks it short questions in turns). Said to
+  him: training a memory model is not for us now (a GPU run for each corpus with pods on HOLD, retraining at
+  every change of the record, and answers with no file and line, which the graph's own rule requires). Two of
+  its ideas close gaps the fresh-agent test measured and are taken: CONSOLIDATE BEFORE USE (a pass that finds an
+  earlier claim and the later claim that stands over it, each pair its own line that can be taken back: the
+  cause of the wrong-branch answer), and ASK IN TURNS (the next session asks the graph by task as it goes, under
+  a short page of standing rules, instead of leaning on one text: the cause of the missing trade-day rule).
