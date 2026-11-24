@@ -134,8 +134,11 @@ DO FIRST, group by group (GROUPS.md has the whole table):
    repositories are public. Do not write its content anywhere in git or in an agent's brief. Ask him how the
    plan may refer to it BEFORE writing the plan.
    DECIDED BY HIM: BOTH operator tools are used on natural gas and STACKED ("doesn't have to be either or").
-   The second tool must first come from his machine through Codex; where it is put (these repositories are
-   public; a private one was advised) is his to say. Where it stands in the order
+   The second tool must first come from his machine through Codex, to a branch of Markets. HIS WORD ON THE
+   REPOSITORIES: "When we're done building it goes private. No one knows these repos exist so that is safety
+   by itself": nothing is moved or rewritten now; MAKING THE REPOSITORIES PRIVATE WHEN THE BUILD IS DONE is a
+   step of his, kept on this page so it is not forgotten. The one idea the plan needs from the source kept out
+   of git is now in `47.md`; nothing else of that source is written. Where it stands in the order
    beside the other groups is his to say; it shares no file with them, so its suite can work beside them.
 
 1. G01, tickets 02, 03, 01. The reviewer reads Markets `931b2b3..b12d8ef` on `tools/kgraph/defend.py` and

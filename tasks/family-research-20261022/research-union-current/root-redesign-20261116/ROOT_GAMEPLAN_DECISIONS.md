@@ -7777,3 +7777,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   today; the discovery pipeline is the core of that work. Claude's advice is a PRIVATE repository for it, given
   to a session by name, and his word on whether the April branch stays where it is. In the plan no tool is
   graded against the other: each read is kept per event, and what the stack adds is shown event by event.
+- THE REPOSITORIES STAY AS THEY ARE WHILE WE BUILD AND GO PRIVATE WHEN THE BUILD IS DONE (Greg, 2026-11-24: "When
+  we're done building it goes private. No one knows these repos exist so that is safety by itself"). DECIDED BY
+  HIM, in answer to what was put to him above: no private repository is made now; Codex brings the discovery
+  pipeline to a branch of Markets, as it did the April engine; the April branch stays where it is; the lines of
+  this file that name the April session stay, and no history is rewritten. AT THE END OF THE BUILD the
+  repositories are made private: that step is his, and it is on the start page so it is not forgotten.
+  CLAUDE'S READING OF HOW FAR THIS REACHES, his to correct: it lets the plan for ticket 47 state the ONE idea it
+  needs from the April discussion (written in `47.md`, three lines). Everything else from that discussion stays
+  out of git as before; it is not needed for the build and was never asked for here.
