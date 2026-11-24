@@ -7227,3 +7227,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   session does not lean on one text: it asks the graph by task as it goes. The proposer's checks are finished on
   real records and the ready check on `platform_exit.md` reports ready on each of its 18 entries; it starts
   nothing.
+- EVERYTHING STAYS IN AT FIRST (Greg, 2026-11-24): "Especially while we are first running and training and
+  learning. We might find after we have more runs that we can drop some things but not at first". DECIDED BY HIM:
+  no data layer is dropped while the deciders and the strategies are first run, trained and learned from;
+  whether anything can be dropped later is his decision, made from the runs. Built for that decision: each
+  decision's own line records every layer its packet held and which layers the decider named as its grounds;
+  one line a decision, nothing added up or ranked.
