@@ -7392,3 +7392,22 @@ figure. To bring back when the work reaches what moves the market and price-curv
   him.
 - PROMISED FOR THE CLOSE AND NOT DONE (Claude): the test of the short page and the graph together on the 15
   questions (ticket 32), and reading the decisions file after line 7195 into the graph. The start page says both.
+- THE TWENTY-FIFTH SESSION STARTS (2026-11-24, session_017eY1WPrMpaE6ySGEd7D4ZL). Greg: "#run mattpocock-skills
+  to do these quickly and focused", with the start page `NEXT_SESSION_START_20261124AB.md`. Set up as the page
+  asks: the session's branches (`ccr-659edd86-di9udt` in Markets and in markets-data) put on top of Markets
+  `2ac873f` and markets-data `dc51ed2` and pushed; both checkouts hold their whole history (Markets 713 commits,
+  markets-data 610); the Pocock skills cloned read-only from `mattpocock/skills` at `abeeaf9` (`implement` a
+  ticket at a time, `tdd` at each ticket's "shown done by" line, `code-review` kept for ticket 45).
+  paper-trading-platform is cloned with its whole history READ-ONLY: this session was refused push access to it,
+  so nothing written on the platform can reach GitHub from this session (it bears on tickets 41 to 43 only).
+  The `scout`, `builder` and `reviewer` agent types did not load by name at first (the session read its agent
+  list from the old tip): runs 107 and 108 are general agents handed `reviewer.md` and `scout.md` as their own
+  instructions, on each file's model, and their lines say so. The types loaded by name afterwards; from run 109
+  the agents run as themselves. Put to him as ticket 15's question; not yet answered.
+- THE AGENTS ROLL ON TO THE NEXT THREE AS THEY FINISH (Greg, 2026-11-24): "And if we can have the first group of
+  agemts that are done with these 3 start their part on the next group of 3, we can be efficient about this".
+  DECIDED BY HIM: an agent that has finished its part of a batch of tickets starts its part of the next
+  consecutive batch without waiting for the whole batch to close. First use: the scout's locating for tickets
+  04, 05 and 06 (agent run 109) starts while the reviewer's re-read of tickets 02 and 03 (agent run 107) and the
+  scout's locating for ticket 01 (agent run 108) are still running. A ticket's box is still marked only with
+  its evidence beside it; rolling on does not mark anything.
