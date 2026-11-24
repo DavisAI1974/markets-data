@@ -7052,3 +7052,19 @@ figure. To bring back when the work reaches what moves the market and price-curv
   session's agent; the tokens are written by the main session from the harness's own report, never by the agent);
   a ready check that starts nothing; the control file's data path and declared budgets; checks on real records;
   the manual. Briefed to start nothing that puts the tape through the engine.
+- HIS GO FOR THE READS (Greg, 2026-11-24): asked whether the scout may read handoffs Y, Z and AA and the decisions
+  file after line 6152 into claims, with the budget told (about 1.5 million tokens on Haiku): "Go, all four", and
+  again in words: "I didn't mean to skip. Do all 4". On the two lines of run 47 he gave no pick. Taken as asked of
+  him and his to change: both lines stay in the file; a line marked `corrects` is that run's next revision.
+- THE BUILDER WAS STOPPED BY HIS MESSAGE (agent run 68, Sonnet): killed a few minutes in; it had committed
+  nothing and left no file in Markets. No token figure was reported for it.
+- "HAVE WE BEEN DOING THE GRAPHING PART? THE BIGGEST SAVINGS?" (Greg, 2026-11-24). THE ANSWER: no. The graph is
+  built and holds 1,147 claims from 8 documents, but no session has started from it, the last three handoffs are
+  not in it, and the saving has never been measured. This session read the pile at its start: 78,868 characters,
+  about 19,700 tokens at 4 characters a token.
+- A LIST BEFORE ANY CODE (Greg, 2026-11-24): "Before you start coding i want you to come up with a step by step
+  list that you will mark off when they are accomplished steps of how we are going to fully implement our build
+  plan. I don't want any excuses or handwaving saying that things are done when they aren't. This is our last
+  building session for the agents". Done before any code: `paper-trading-20261123/AGENT_BUILD_CHECKLIST_20261124.md`,
+  33 steps. A box is marked only with its evidence beside it; what waits for his go or his decision is marked so
+  and is never called done.
