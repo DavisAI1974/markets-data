@@ -1,0 +1,512 @@
+[
+  {
+    "rule": "CX01",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "post",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "One contract represents the independent idea at the confirming event. CX01 gives no size increment for the move in the bid.",
+    "why_open": "I place the buy at the higher bid observed in the confirming event. This keeps the resting order at the level CX01 monitors.",
+    "open_quote": "the print and the bid rise, and q belongs to a different exchange event.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 18,
+    "why_close": "I sell against displayed bids when that level gives way or a line loses its positive sign.",
+    "close_quote": "Close at the first breach.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 20
+  },
+  {
+    "rule": "CX02",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "I choose the exchange minimum for the single selling sequence. The lower bid supplies a level, with no instruction to increase quantity.",
+    "why_open": "I sell at the bid on the confirmation row, with the limit set at that bid. This ties the instruction to the lower bid named in the selling sequence.",
+    "open_quote": "A reported seller prints below p in a different exchange event, with a lower bid. Open downward.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 26,
+    "why_close": "I buy back at the first bid or flow invalidation. The author gives no buyback price boundary.",
+    "close_quote": "Close on the first bid above q’s bid or when either line reaches zero or turns positive.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 28
+  },
+  {
+    "rule": "CX03",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "The recovery starts one upward idea. Its change in exhaustion specifies direction and supplies no scale-in quantity, so I choose one contract.",
+    "why_open": "I buy up to the confirming best offer where the reported purchase occurred.",
+    "open_quote": "a reported buyer trades at the best offer. Open upward.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 34,
+    "why_close": "I sell against the displayed book on the first breach of the offer or the flow condition.",
+    "close_quote": "Close at the first breach.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 36
+  },
+  {
+    "rule": "CX04",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "I choose one contract for this downward re-entry. The bounce is a condition on flow and quotes, with no size instruction.",
+    "why_open": "I sell with a limit at the displayed bid where CX04 requires the reported sale.",
+    "open_quote": "a reported seller trades at the bid, and the offer is at or below its value at p. Open downward.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 42,
+    "why_close": "I buy back when the offer breaks upward or a line loses its negative sign. The observed offer serves as the trigger.",
+    "close_quote": "Close when the offer rises above q’s offer or either line reaches zero or turns positive.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 44
+  },
+  {
+    "rule": "CX05",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "One contract represents the manager’s own upward position. Its trigger only gives an exit.",
+    "why_open": "I buy one independent manager position on the eligible upward parent opening signal so the manager can later act on existing inventory.",
+    "open_quote": "An upward paper position is open",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 50,
+    "why_close": "I sell the manager’s held contracts immediately on its exit decision at q.",
+    "close_quote": "Issue an exit indication at q.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 50,
+    "entry_rules": [
+      "CL01",
+      "CL02",
+      "CL03",
+      "CL04",
+      "CL05",
+      "CL06",
+      "CL07",
+      "CL08",
+      "CL09",
+      "CL10",
+      "CL11",
+      "CL12",
+      "CL13",
+      "CL14",
+      "CL15",
+      "CX01",
+      "CX03",
+      "CX07",
+      "CX10",
+      "CX15"
+    ],
+    "on_parent_close": "exit",
+    "why_parents": "I select every parent capable of an upward entry. The router selects only buys and keeps each parent trade separate. I close the manager when its parent closes, ending that position’s warning.",
+    "parents_quote": "Attach a management rule separately to each eligible paper position.",
+    "parents_quote_file": "codex-strategy/VERSIONS.md",
+    "parents_quote_line": 9,
+    "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
+    "parent_close_quote_file": "codex-strategy/VERSIONS.md",
+    "parent_close_quote_line": 10
+  },
+  {
+    "rule": "CX06",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "I choose one contract for each downward parent position that CX06 follows. The rule gives an exit indication and offers no size multiplier.",
+    "why_open": "I sell on the downward parent opening signal to establish the manager’s independent position before the flow-turn decision.",
+    "open_quote": "A downward paper position is open",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 58,
+    "why_close": "I buy back as soon as the rising offer and flow change produce an exit at q.",
+    "close_quote": "Issue an exit indication at q.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 58,
+    "entry_rules": [
+      "CL01",
+      "CL02",
+      "CL03",
+      "CL04",
+      "CL05",
+      "CL06",
+      "CL07",
+      "CL08",
+      "CL09",
+      "CL10",
+      "CL11",
+      "CL12",
+      "CL13",
+      "CL14",
+      "CL15",
+      "CX02",
+      "CX04",
+      "CX08",
+      "CX09",
+      "CX15"
+    ],
+    "on_parent_close": "exit",
+    "why_parents": "I follow every eligible downward entry because CX06 requires an existing downward position without naming its origin. I exit on parent close so a later warning starts with a fresh position.",
+    "parents_quote": "Attach a management rule separately to each eligible paper position.",
+    "parents_quote_file": "codex-strategy/VERSIONS.md",
+    "parents_quote_line": 9,
+    "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
+    "parent_close_quote_file": "codex-strategy/VERSIONS.md",
+    "parent_close_quote_line": 10
+  },
+  {
+    "rule": "CX07",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "I select one contract for the purchase at the new offer. The unchanged bid is a condition on the book, with no sizing instruction.",
+    "why_open": "I buy with a limit at that new offer. That is the price level whose movement isolates this setup.",
+    "open_quote": "A reported buyer pays the new, higher best offer.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 66,
+    "why_close": "I sell on whichever quote breaks its recorded level first.",
+    "close_quote": "Close on the first offer below q’s offer or bid below q’s bid.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 68
+  },
+  {
+    "rule": "CX08",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "I choose one contract for the sale at the lower bid. The unchanged offer supplies no quantity adjustment.",
+    "why_open": "I sell with a limit at the new best bid on which CX08 conditions its downward entry.",
+    "open_quote": "A reported seller trades at the new, lower best bid.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 74,
+    "why_close": "I buy back on the first rise through either quoted level.",
+    "close_quote": "Close on the first bid above q’s bid or offer above q’s offer.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 76
+  },
+  {
+    "rule": "CX09",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "post",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "One contract represents the reversal from the stationary offer. The gap between successive prints has no quantity attached.",
+    "why_open": "I post the sell order at the stationary offer. That is the reference level from which the rule studies the downward reversal.",
+    "open_quote": "The offer is unchanged, the next print is lower and the bid has fallen. Open downward.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 82,
+    "why_close": "I buy back at the first invalidating print or bid increase.",
+    "close_quote": "Close on the first print at or above p’s print or the first bid above q’s bid.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 84
+  },
+  {
+    "rule": "CX10",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "post",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "I choose one contract for this upward idea. The separation between the bid and the new offer supplies no quantity.",
+    "why_open": "I post the buy at the unchanged bid. That keeps the entry order on the bid that anchors this reversal.",
+    "open_quote": "The bid is unchanged, the next print is higher and the offer has risen. Open upward.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 90,
+    "why_close": "I sell immediately when the print revisits its lower boundary or the offer breaches its reference.",
+    "close_quote": "Close on the first print at or below p’s print or the first offer below q’s offer.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 92
+  },
+  {
+    "rule": "CX11",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "The instruction maintains an existing position, so I choose one contract at its inception and add nothing on the bid test.",
+    "why_open": "I buy on the eligible upward parent opening signal to give the manager a separate position to maintain. Its later hold signal places no order.",
+    "open_quote": "An upward paper position is open and dipole is positive.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 98,
+    "why_close": "I sell the manager’s held inventory on the first withdrawal of the hold that gives an exit.",
+    "close_quote": "Withdraw the hold and issue an exit on the first bid below q’s bid or dipole at or below zero.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 100,
+    "entry_rules": [
+      "CL01",
+      "CL02",
+      "CL03",
+      "CL04",
+      "CL05",
+      "CL06",
+      "CL07",
+      "CL08",
+      "CL09",
+      "CL10",
+      "CL11",
+      "CL12",
+      "CL13",
+      "CL14",
+      "CL15",
+      "CX01",
+      "CX03",
+      "CX07",
+      "CX10",
+      "CX15"
+    ],
+    "on_parent_close": "exit",
+    "why_parents": "I follow all parent signals capable of opening an upward position. Each tested bid belongs to that parent trade separately. Closing the parent ends the hold and I close its manager position.",
+    "parents_quote": "Attach a management rule separately to each eligible paper position.",
+    "parents_quote_file": "codex-strategy/VERSIONS.md",
+    "parents_quote_line": 9,
+    "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
+    "parent_close_quote_file": "codex-strategy/VERSIONS.md",
+    "parent_close_quote_line": 10
+  },
+  {
+    "rule": "CX12",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "I choose one contract for the separate downward position. Maintaining it after the offer test requires no increase.",
+    "why_open": "I sell on the downward parent opening signal to establish the independent position before a buyer can test its lower offer.",
+    "open_quote": "A downward paper position is open and dipole is negative.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 106,
+    "why_close": "I buy back at the first offer or dipole breach specified in the hold.",
+    "close_quote": "Withdraw the hold and issue an exit on the first offer above q’s offer or dipole at or above zero.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 108,
+    "entry_rules": [
+      "CL01",
+      "CL02",
+      "CL03",
+      "CL04",
+      "CL05",
+      "CL06",
+      "CL07",
+      "CL08",
+      "CL09",
+      "CL10",
+      "CL11",
+      "CL12",
+      "CL13",
+      "CL14",
+      "CL15",
+      "CX02",
+      "CX04",
+      "CX08",
+      "CX09",
+      "CX15"
+    ],
+    "on_parent_close": "exit",
+    "why_parents": "I include every eligible downward parent and follow its own trade ID. I exit on its close because the hold belongs to that existing position.",
+    "parents_quote": "Attach a management rule separately to each eligible paper position.",
+    "parents_quote_file": "codex-strategy/VERSIONS.md",
+    "parents_quote_line": 9,
+    "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
+    "parent_close_quote_file": "codex-strategy/VERSIONS.md",
+    "parent_close_quote_line": 10
+  },
+  {
+    "rule": "CX13",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "I use one contract initially. CX13 can suspend additions and gives no instruction to add on activation or release.",
+    "why_open": "I buy on the eligible upward parent's opening signal to establish the position the warning can act on. The warning can only suspend additions.",
+    "open_quote": "An upward paper position is open and dipole is negative.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 114,
+    "why_close": "I sell on the exit indication from the later print. A warning or its release alone leaves the held amount unchanged.",
+    "close_quote": "If a later print first falls below q’s print, issue an exit.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 116,
+    "entry_rules": [
+      "CL01",
+      "CL02",
+      "CL03",
+      "CL04",
+      "CL05",
+      "CL06",
+      "CL07",
+      "CL08",
+      "CL09",
+      "CL10",
+      "CL11",
+      "CL12",
+      "CL13",
+      "CL14",
+      "CL15",
+      "CX01",
+      "CX03",
+      "CX07",
+      "CX10",
+      "CX15"
+    ],
+    "on_parent_close": "exit",
+    "why_parents": "Every upward parent can supply the position that carries this warning. I handle each in its own trade record and exit on the parent close that releases its warning.",
+    "parents_quote": "Attach a management rule separately to each eligible paper position.",
+    "parents_quote_file": "codex-strategy/VERSIONS.md",
+    "parents_quote_line": 9,
+    "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
+    "parent_close_quote_file": "codex-strategy/VERSIONS.md",
+    "parent_close_quote_line": 10
+  },
+  {
+    "rule": "CX14",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "One contract establishes the downward position. Suspending an addition calls for no added contracts.",
+    "why_open": "I sell on a downward parent opening signal to create the separate inventory the later warning can manage.",
+    "open_quote": "A downward paper position is open and dipole is positive.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 122,
+    "why_close": "I buy back when the later print converts the warning to an exit. Warning release alone sends no order.",
+    "close_quote": "If a later print first rises above q’s print, issue an exit.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 124,
+    "entry_rules": [
+      "CL01",
+      "CL02",
+      "CL03",
+      "CL04",
+      "CL05",
+      "CL06",
+      "CL07",
+      "CL08",
+      "CL09",
+      "CL10",
+      "CL11",
+      "CL12",
+      "CL13",
+      "CL14",
+      "CL15",
+      "CX02",
+      "CX04",
+      "CX08",
+      "CX09",
+      "CX15"
+    ],
+    "on_parent_close": "exit",
+    "why_parents": "I follow every eligible downward parent because the warning references its downward position. I close when the parent closes and its warning ends.",
+    "parents_quote": "Attach a management rule separately to each eligible paper position.",
+    "parents_quote_file": "codex-strategy/VERSIONS.md",
+    "parents_quote_line": 9,
+    "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
+    "parent_close_quote_file": "codex-strategy/VERSIONS.md",
+    "parent_close_quote_line": 10
+  },
+  {
+    "rule": "CX15",
+    "decision": "decided",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "I choose one contract for the change of sign at the unchanged quote endpoints. The trigger specifies a direction without scaling its size.",
+    "why_open": "I follow the confirmed aggressor with a buy at the offer or a sell at the bid. I cap the order at the corresponding unchanged quote endpoint.",
+    "open_quote": "Exhaustion now has the opposite strict sign and the reported aggressor agrees with it. Open in that new direction.",
+    "open_quote_file": "codex-strategy/VERSIONS.md",
+    "open_quote_line": 130,
+    "why_close": "I cross out of the position when exhaustion loses the required sign or the relevant quote breaks, according to direction.",
+    "close_quote": "For an upward indication close if exhaustion reaches zero or turns negative, or the bid falls below q’s bid. For downward, close if exhaustion reaches zero or turns positive, or the offer rises above q’s offer.",
+    "close_quote_file": "codex-strategy/VERSIONS.md",
+    "close_quote_line": 132
+  }
+]

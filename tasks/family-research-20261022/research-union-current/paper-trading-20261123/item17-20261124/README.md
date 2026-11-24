@@ -15,16 +15,15 @@ or offer, lift an offer or hit a bid. Frankie and the agents choose placement an
 - Two things read from the matcher's code that a manager's entry depends on (in that same record).
 - The briefs for two decider agents, one for each rule family: `BRIEF_COMMON.md`, `BRIEF_CL.md`, `BRIEF_CX.md`.
 
-## Not in hand
+## Family decisions and remaining work
 
-- No choice from any agent. The two decider runs (41 for CL01 to CL15, 42 for CX01 to CX15) were stopped by Greg's
-  message at the session change before either wrote an answer. No answer file exists.
-- Frankie's choices, for all 30 rules: launch is on HOLD and needs Greg's go.
-- So no plan file exists, and item 17 stays open.
+Greg transferred #17 and both family decision agents to Codex. The resumed decision pass produced [CL01–CL15 answers](CL-answer.json) and [CX01–CX15 answers](CX-answer.json). Each answer records the agent's order choices and the source wording behind them. All 30 have decisions. The six CX managers also specify their parent entries and when to close. Both families chose one NGX3 contract per entry.
+
+Codex builds the family-agent plan on draft PR #5 from the markets-data commit containing these answers. Frankie's separate launch is still on hold. A paper session needs Greg's explicit authorization.
 
 ## Start item 17 here
 
-Ccode can give each family its brief from this folder. Source paths in the answers are relative to the brief. The strategy files preserve the original line numbers.
+The two family agents used the briefs in this folder. Source paths in the answers are relative to the brief. The strategy files preserve the original line numbers.
 
 | Family | Agent instructions | Author's files |
 | --- | --- | --- |
