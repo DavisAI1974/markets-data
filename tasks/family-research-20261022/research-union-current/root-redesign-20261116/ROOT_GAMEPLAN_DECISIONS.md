@@ -6785,3 +6785,17 @@ figure. To bring back when the work reaches what moves the market and price-curv
   "after you add those things then go": the same test is started again once the graph he meant is in. So the
   third test was cancelled from GitHub (which also tries the cancel path for the first time), the page deployed
   again, and a fourth test started with the same values: said to him as it was done.
+- EVERY TRADE A LOSS, SEEN BY HIM ON THE PAGE (Greg, 2026-11-24): "We have lost on every trade and they are all
+  .004 or .005 loss"; "I see some .002 amd .003 losses too bit all losses"; and "make the triangles smaller. Too
+  big for the small graph" (done, platform `1441e05`). Counted trade by trade on the third test's record (paper
+  run `064df1c2b58f46999f0276304c10d49e`, 4.5 minutes of tape from 6:30 pm Eastern of trade day 2023-10-02,
+  stopped by Claude's cancel; its receipt: "run stopped", flat, no error, so the cancel path works). Of 437
+  trades closed by the rules themselves, each trade's own P/L in USD/MMBtu: -0.009: 6, -0.008: 6, -0.007: 19,
+  -0.006: 30, -0.005: 62, -0.004: 116, -0.003: 80, -0.002: 48, -0.001: 55, 0.000: 10, +0.001: 5. 436 of the 437
+  took the market at both ends (bought at the ask, sold at the bid); the spread at the opening fill was 0.001 to
+  0.007. 264 of the 437 were held under one second; 4 over a minute. The closes are the rules' own written close
+  conditions (CL06: 13 of 20 under one second, shortest 0.0005 s; CL11: 11 of 13; CL10: 7 of 13; CL03: 8 of 19).
+  NOT CHECKED: whether the platform's close conditions match each rule's written text. This is one stretch of one
+  trade day, each trade its own line; no claim about any strategy is made from it.
+- THE FOURTH TEST: the page deployed again with the smaller marks (live 09:11 UTC), then the same test started
+  again by Claude on his standing go: `stop_after_minutes` `30+30`, the page on, both budgets 825,874.
