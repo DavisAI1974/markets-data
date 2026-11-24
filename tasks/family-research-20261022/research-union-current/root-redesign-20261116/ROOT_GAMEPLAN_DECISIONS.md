@@ -7330,3 +7330,22 @@ figure. To bring back when the work reaches what moves the market and price-curv
   `code-review` skill, two readers with fresh context who built none of the work, one against the house rules
   and one against the tickets; for each ticket what it asked, what is in git, and where the two differ. No
   ticket is called done on the main session's word alone.
+- DO THE GAPS CLOSE? (Greg, 2026-11-24): "Does this close the gaps that were concerning to you along with the
+  latest paper that we took from?" Answered: not yet and not all. Closed with evidence: a decider reading the
+  future (the packet's leak check; the after-the-fact file kept apart); a model too slow and costly at each tick
+  (the written decider, built and not run); the platform change altering a normal run (three independent reads
+  found nothing). Covered by a ticket and not done: every claim defended; the graph not knowing where things are
+  now; the two-part session start untested; the first decider's 0.20 from the crypto-era research; nothing has
+  met the tape. From the paper: consolidation was done once and is not a standing step; asking in turns is on
+  the start page and unproven. Two gaps of Claude's that no ticket covered were put to him: fitting a decider to
+  the half hour it is tried on, and consolidation as a standing step. HIS WORD: "The 30 min thing will go away.
+  That's just shoet testing runs. And we just have toncome up with a solution to stop that vonsolidation drift.
+  Make it a tciket to fix it". DECIDED BY HIM: the half hour is only the length of the short test runs and goes
+  away as runs lengthen; no ticket for it. Consolidation drift is ticket 46.
+- THE THIRD REVIEW'S FINDINGS ON THE PLATFORM, CLOSED (agent run 106, Sonnet, 122,930 tokens; platform `28d4dbb`,
+  45 no-tape checks): what a decider is given is now built by a walk over every attribute of the engine, the
+  rules and the matcher, so nothing is left out unnamed and a thing added later appears by itself; the book's
+  guard also compares the tape reference; the state's hash leaves out wall-clock fields; the time spent building
+  a question is out of the run's clock; the market series has its counts and hashes on record. Found and left
+  alone, said to him: Codex's matcher builds a fee model that takes its rates from the plan's instrument; all
+  five plans in the repository have fees of zero; a plan written with a fee would produce one.

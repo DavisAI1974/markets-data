@@ -59,3 +59,4 @@ data layer (ticket 38's work), and the reviewer's read of the platform change (p
 | 43 | Nothing starts the live graph follower when a run starts. | None to build; it starts with a run, which is his go | ready |
 | 44 | From this morning's list, still open: the Markets checkout's history (5), the whole suite on the data as it st | None | ready |
 | 45 | An independent review compares the work to the tickets (the Pocock `code-review` skill; two readers who built none of it) | every ticket that is worked | blocked |
+| 46 | Stop the consolidation drift: consolidation is a standing step after every read into the graph | None | ready |
