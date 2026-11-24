@@ -7126,3 +7126,26 @@ figure. To bring back when the work reaches what moves the market and price-curv
   the trade day rule and would work on the wrong branch. Being fixed in the context builder (agent run 80): a
   share of the budget for each section, the rules every handoff repeats first, a date on every line, and the
   task's own words used to fill the budget. The same 15 questions are put to a fresh agent again after the fix.
+- A DECIDER THE AGENTS WRITE ONCE (Greg, 2026-11-24). He sent https://github.com/mbzuai-oryx/LoopedWSP and asked:
+  "Would this help with the issue?" Read (a read-only copy of the public repository, commit `2752cd9`; its README's
+  own account): a model that answered hard mazes badly in text was asked instead to write a small looped program
+  once, as hand-set transformer weights, and the program then solved them with no further model call. Said to
+  him: its code helps with neither of our issues and its idea helps with one. Not with the graph as the memory.
+  Yes with the deciders at the tick, where an agent answering live costs seconds and tokens at each of about 217
+  opening signals in a half hour: an agent can write the decision procedure once, between runs, and the program
+  answers at every signal with no model call. What does not carry over: their tasks have an exact known answer
+  and ours has none; plain code does for us what their hand-set weights do. HIS WORD: "Let's do it then."
+  DECIDED BY HIM: a decider may be a program the agents wrote, beside an agent answering live; both go through
+  one door, the same checks and the same record, one line a decision. Built to it: the door (agent run 85); a
+  loop whose one changeable file is the decider program, starting from "take every signal", which is the rules
+  alone as they run today; a first version written by an agent, each line naming the claim it rests on, shown
+  only the packet's layout from a different stretch of tape than the one it will be tried on; shown to him
+  before anything is tried. No trial without his go.
+- THE REVIEWER'S FINDINGS ON THE PLATFORM CHANGE, FIXED AND BEING READ AGAIN (runs 82, 84, 86). Run 82 (Opus,
+  138,193 tokens): with nothing plugged in it found no path where a row, order, fill, timer or budget differs,
+  only the one new receipt key; with answers or a decider on it found that a malformed answer could stop a run,
+  that a close by answer also ended the rule's own research idea, that the wait for a decider counted against
+  the run's clock, and smaller ones. Run 84 (Sonnet, 91,401 tokens) fixed all eight (platform `86ecd21`,
+  `f856f46`, on the branch `ccr-0ac78691-8zapbb` of that repository): a close by answer now closes the paper
+  trade through the matcher and leaves the rule's idea alone; the matcher's file is again byte for byte Codex's.
+  It said itself that the close path was never run. Run 86 reads the fixes.
