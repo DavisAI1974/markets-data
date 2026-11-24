@@ -7291,3 +7291,19 @@ figure. To bring back when the work reaches what moves the market and price-curv
   form used only where it saves room and never as the only copy; the journal and the market's own series are the
   record for learning after the fact; every claim of the graph keeps its file and line so the document itself
   can be read.
+- EVERY CLAIM DEFENDED; A SECOND READ; A LIST OF WHAT IS MISSING; TICKETS (Greg, 2026-11-24). "I thought every claim
+  had to be defended with the new piece that we added to our agents that wasn't in the loop pdf. Go back and
+  reread the files in the pdf"; then, the zip sent again: "We are still missing pieces. Don't do anything after
+  you read but mKe a list". His stop ended run 100 (the packet) and run 101 (the reviewer's third read of the
+  platform); what run 100 had open was pushed as it stood; nothing else was done after the read. Read again in
+  full: the zip's eight files, the verifier plan they name, the paper's appendix. THE PIECE HE MEANT: the
+  independent verifier ("the proposer of a claim must not be its sole verifier"), made one system with the
+  graph by the Codex amendments. WHAT IS SO: nothing built this session does it; every claim was checked only by
+  whoever made it. The list: `paper-trading-20261123/MISSING_PIECES_20261124.md`, 44 items (markets-data
+  `5a627d9`): 11 on claims defended, 6 on the agents' own files not followed (the scout never used, the builder
+  never showing its diff first, the reviewer not on the final diff), 3 on the token plan, 11 on the graph (no
+  artifact nodes, which the plan asks for and which is the cause of the wrong-branch answer), 13 on what never
+  ran or is unfinished. Then: "#run mattpocock-skills". The Pocock router was read; the flow for a build too big
+  for one session is `to-tickets` then `implement` a ticket at a time. The 44 items were cut into 14 tickets and
+  shown to him as the skill asks; HIS WORD: "Approve, start at 1". The tickets:
+  `paper-trading-20261123/tickets-20261124/`, one file each with what blocks it and how it is shown done.
