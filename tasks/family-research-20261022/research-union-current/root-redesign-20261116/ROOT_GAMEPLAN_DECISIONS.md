@@ -7634,3 +7634,27 @@ figure. To bring back when the work reaches what moves the market and price-curv
   words. It is weighed only where a named gap of the build exists that it could fill, and then put to him. No
   ticket is opened for it and no agent is given it as a task. The lead and where the files are stay on record
   above for that day.
+- THE APRIL AUTORESEARCH FILES ARE ON GITHUB, AND WHAT THEY ARE (Greg, 2026-11-24: "Codex asked", with the link
+  to Markets branch `od-autoresearch/apr5-handoff`). ON THE BRANCH: one commit, `e65441a`, seven files, no history
+  shared with the trunk: `od_autoresearch.md` (the instructions the agent ran by), `od_engine.py`, `od_config.py`,
+  `benchmark.py`, `SUMMARY.md`, `results.tsv`, and Codex's `README.md` (source `E:\\od_autoresearch`, each file's
+  hash, no data). READ BY THE MAIN SESSION: the instructions, the README, the results and the head of the summary;
+  not the engine's code. WHAT IT IS: not a search program. It is a written PROCEDURE for an agent: change ONE
+  settings file, run a fixed benchmark, keep the change if one figure rose and undo it if not, log every try,
+  stop on a rule. In April it made 14 tries (7 kept, 7 undone) on one 401-point physics trajectory. The engine it
+  tuned recovers a quantum physics operator; it has no use on a market tape. CODEX'S OWN CAUTION, in its README:
+  the engine fits on the whole trajectory before the last fifth is scored, so the April "holdout" figure "is not
+  an independent held-out fit". SET BESIDE WHAT IS BUILT: the plan's stage 3 loop (`tools/ratchet/`, its control
+  file `PROGRAM_TEMPLATE.md`) is the same kind of loop and already holds the files that may and may not be
+  changed, the command and its figure, a time limit, a budget, the stop after trials without a keep, the stop
+  after crashes in a row, keep and undo, and the experiment record; and it adds what April did not have (his
+  go, a budget told first, a claim registered and challenged before a trial). WHAT APRIL HAS THAT THE LOOP'S
+  TEMPLATE DOES NOT NAME (by a search of the template for the words, not a full read of the loop's code): a short
+  canary run before a full one; a stop when a target is reached; a second figure that is logged and never chosen
+  on; a written summary when the loop stops; an order of search for the proposer (one change at a time first).
+  CLAUDE'S READING AGAINST HIS RULE ("Only consider it if it can fill gaps"): these are small gaps of the loop's
+  CONTROL FILE, and they matter only where a loop is about to be given its first control file and first start:
+  tickets 22 and 23, both waiting on his go and his figure. Nothing is taken now. When 22 or 23 is reached, the
+  five items are put to him with the control file. Two things in the April text go AGAINST his rules and are not
+  taken at all: "Do not ask the human" (ours runs only on his go, with its budget), and its ranked lists of
+  changes. The branch is left as Codex pushed it.
