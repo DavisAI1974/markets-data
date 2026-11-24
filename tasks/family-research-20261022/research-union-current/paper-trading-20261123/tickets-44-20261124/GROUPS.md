@@ -29,7 +29,7 @@ README only as "held and not ticketed": they are in the last row.
 | G12 First pass on tape | 40, 41, 43 (placed) | NO: his go, told with its budget. 43 can be built; it starts with a run. | Not started. The platform cannot be pushed to from a session: push access was refused. |
 | G13 The loop's first start | 22, 23 (placed) | NO: his go and his figure. | Not started. |
 | G14 Frankie's own events as the trigger | 36 | NO: his decision. | Not started. |
-| G15 An operator for the natural gas market (added on his word, 2026-11-24; no file in the old folder) | 47 | Locating and planning: yes. Any calculation: NO, his word on the state and the target and his go with the budget first. | Opened at the close; a scout (run 155) is locating the pieces. |
+| G15 An operator for the natural gas market (added on his word, 2026-11-24; no file in the old folder) | 47 | WORKED LAST, on his word of the twenty-sixth session: after the rest of the list and after the 30 minute test without the operator coefficients (G12). Then locating and planning: yes. Any calculation: NO, his word on the state and the target and his go with the budget first. | Located in part (scout run 155). Codex brought the discovery pipeline to Markets `od-refrag/markets-handoff` (`93ac56f`); only its README is read. |
 | Outside the groups | 45 (placed): the independent review at the end, two readers who built none of it. | After every worked ticket. | Not started. |
 | Held, no suite until he says | 17 (placed), 24, 28, 29, 33, 34, 35, 42 | NO: each needs his go or decision; most need a model key that does not exist or receipts that are on AWS. | Not started. |
 
@@ -45,3 +45,11 @@ Every one of the 48 is in exactly one row (47 was added at the close): 01 02 03 
 - Run numbers are given out by the main session only. A run's limits are in git before it starts, and he is told
   the limits first, with the total across the suites.
 - A group that waits on his go or his decision gets a scout at most, and no build.
+
+## The order from the twenty-sixth session (Greg, 2026-11-24)
+
+"Is everything else on the build list done? Of not, finish that first. ... let's save the od part for the very last
+after we do a 30 min test without it". So: (1) every group a builder may work on without his go; (2) G12, the 30
+minute test of the agents without the operator coefficients, on his go, told with its limits; (3) G15, ticket 47;
+(4) the same test with the coefficients, set beside the first. A send-back is a new run with its own plan (the
+decisions file, twenty-sixth session).

@@ -1,5 +1,15 @@
 # Start page AC, 2026-11-24 (twenty-fifth session). The page before this one: `NEXT_SESSION_START_20261124AB.md`.
 
+## CHANGED IN THE TWENTY-SIXTH SESSION (2026-11-24), on his word: read this before item 0 below
+
+Greg: "Is everything else on the build list done? Of not, finish that first. I want to run the agents with and
+without the operator discovery coefficients to find out the effect of od. So let's save the od part for the very
+last after we do a 30 min test without it". TICKET 47 IS NO LONGER FIRST: it is LAST. The order is: the groups a
+builder may work on without his go (items 1 to 7 below); then the 30 minute test without the operator
+coefficients (G12, on his go, told with its limits); then ticket 47; then the same test with the coefficients.
+Codex's branch with the discovery pipeline is Markets `od-refrag/markets-handoff` (`93ac56f`). The session's
+branches are now `ccr-144315dd-pta2ze` in both repositories. The decisions file, twenty-sixth session, has the rest.
+
 ## READ FIRST, EVERY SESSION (his word)
 
 Greg, 2026-11-24: "Make sure you have bext sess load the zip files into local memory".
