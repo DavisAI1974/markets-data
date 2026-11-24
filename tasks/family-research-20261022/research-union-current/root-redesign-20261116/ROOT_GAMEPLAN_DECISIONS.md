@@ -5908,3 +5908,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   one) is written on the receipt as a number and resets nothing.
 - STILL HIS TO STRIKE, from handoff V, said to him this session: the G3 start is counted from the first print of
   ANY side; a trade still open when a recording ends stays open on the ledger (`closed: null`).
+- POINT c IS A RULE TO WRITE, NOT A CODE FIX (Greg, 2026-11-24): "We need to create a strategy for that amd not
+  just a code fix". So what a print with no side is and does gets its own written text, put to him and versioned
+  in git like the rules themselves, and the code follows that text. No code is changed for it before his word.
+  Measured for it the same session (record: the last section of `paper-trading-20261123/step0-20261124/
+  STEP0_TRACE_20261124.md`): 141 of 440 prints have no side on the 25-minute recording; they are the first to show
+  34 of 149 quote steps and 80 of 216 new prices; 108 of them print at their own offer and 33 at their own bid;
+  nothing else in the message tells them apart.
