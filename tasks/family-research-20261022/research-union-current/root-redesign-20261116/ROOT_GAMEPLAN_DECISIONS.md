@@ -6976,3 +6976,8 @@ figure. To bring back when the work reaches what moves the market and price-curv
   that and said so: no record of the night is to be read or quoted as showing a strategy bad. The one point left
   between them, his to hold: Claude does not call the strategies shown good by the night either. Nothing is to be
   built on either reading; the runs stay unscored.
+- END OF THE TWENTY-THIRD SESSION (Greg, 2026-11-24): "When this run finishes we are finished for a while".
+  Handoff: `NEXT_SESSION_HANDOFF_20261124AA.md`. A CORRECTION (Claude): lines above say "seven runs"; the runs
+  with a record are six (`036ed575`, `06ce6b90`, `064df1c2`, `058313bb`, `ea4c1d2e`, `0f33fec4`); the start
+  before them refused itself in its first second and made no record. The sixth, `0f33fec4`, was started after
+  the builder's brief was written and is not loaded into the graph or the experiment record.
