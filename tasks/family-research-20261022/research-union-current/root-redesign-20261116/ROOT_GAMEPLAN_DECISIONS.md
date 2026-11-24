@@ -6036,3 +6036,11 @@ figure. To bring back when the work reaches what moves the market and price-curv
   The account is NOT closed out and no further order is sent to the sandbox for it. What is still worked on is
   what holds on any feed and any broker: the rules (section A of the list) and the runner's own gaps (C2, C3, C4,
   C12, C16, C17, C21).
+- OBSERVE ON THE LEDGER (Greg, 2026-11-24): "Write handoff W and push everything. We can just observe on ledger".
+  From now, runs are ledger-only: the runner without `--orders`, the live feed, all 32 strategies, each paper trade
+  written with both quotes at each end, nothing sent to the sandbox. Each run still needs his go.
+- CLOSE OF THE TWENTIETH SESSION. Handoff `NEXT_SESSION_HANDOFF_20261124W.md` replaces handoff V. Pushed:
+  paper-trading-platform `claude/tasty-runner` `0772834` (26 checks pass; none of Codex's files touched); this branch
+  at the commit that adds handoff W; Markets session branch `ccr-d613618f-v7t9jy` `65f71a9` (unchanged from
+  `ccr-532eaea6-vgz20z`; nothing on the trunk). Agent budgets left: builder 102,225 of 300,000; reviewer 187,551
+  of 250,000. No pod exists. The sandbox account is short 13 lots of /NGF7 and is left as it is.
