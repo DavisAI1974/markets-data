@@ -6050,3 +6050,15 @@ figure. To bring back when the work reaches what moves the market and price-curv
   stage 4 of the graph adoption plan (4b, the scout's extraction) and starting a session from the graph instead of
   the handoff pile is stage 5; both are filed, not built, and markets-data has no `graph/` folder. Only stages 1
   and 7 have been started. On the list as C24 and C25. Starting stage 4 is on his word, with a declared budget.
+- THE AGENT PROGRAM FIRST, THEN PAPER TRADING (Greg, 2026-11-24, asked whether stage 4 starts now or next session):
+  "Next session. We need to finish building everything for the agents before we do any more paper trading. Create
+  handoff and print drop in for next session. Say to finish all the steps". So: no paper run until the steps of the
+  graph adoption plan that are not built are built (stages 2, 3, 4a, 4b, 4c, 5a, 5b, 6, 7d, 7f, 8), and the next
+  session is to finish all of them, in the plan's order, not one. Claude's reading, written into the handoff, his
+  to strike: "build" is code, checks on real records and records in markets-data; what the standing rules hold
+  back still needs his go, each said to him first with its budget (anything that launches or changes Frankie,
+  Granite or a pod; switching Frankie's input; a run of the swarm or of the token test; any paper run; deleting a
+  saved file; anything onto the trunk).
+- Handoff `NEXT_SESSION_HANDOFF_20261124X.md` replaces handoff W as the starting point; W stays as the record of
+  the paper runner. Pushed: this branch at the commit that adds handoff X; paper-trading-platform
+  `claude/tasty-runner` `e077b2e`; Markets `ccr-d613618f-v7t9jy` `65f71a9` unchanged.
