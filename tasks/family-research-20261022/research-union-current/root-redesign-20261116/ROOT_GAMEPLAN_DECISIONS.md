@@ -7513,3 +7513,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   113 (reviewer, the plan for tickets 03b to 06) had returned nothing; the plan is changed first to what the
   zip says, then read as run 115. Markets' push printed a warning that the repository is approaching its size
   quota; said to him.
+- DO WHAT THE PLAN SAYS (Greg, 2026-11-24, after the zip's answers were laid beside the questions the main
+  session had asked him): "Do whatever our plan says". DECIDED BY HIM: where the adoption plan, the amendments,
+  the verifier plan or the agents' own files say what to do, it is done as they say and he is not asked. He is
+  asked only for what they leave to him by name (a go for anything through the engine, a paper run, a model
+  key, a read into the graph with its budget, a figure such as a loop's metric or a confidence cutoff) and for
+  what none of them answers; the reviewer's list of what is not answered is where such a question comes from.
