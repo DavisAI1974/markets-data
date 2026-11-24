@@ -8031,3 +8031,18 @@ figure. To bring back when the work reaches what moves the market and price-curv
   AFTER-THE-FACT DATA IS A LAYER AND IT GOES IN; WHAT HE MEANT BY HYBRID; THE PACKET AGAINST THE EXCEL DAILY
   SHEETS), both Excel files whole (their READ ME and COLUMNS sheets), and the file lists of the four daily
   branches. What was found is written at the foot of `paper-trading-20261123/tickets-44-20261124/PLAN_38_EVERY_LAYER_20261124.md`.
+- SEVEN LINES OF THE RUN RECORD PUT RIGHT IN PLACE, ON HIS WORD (Greg, 2026-11-24, twenty-sixth session, asked how
+  to clear it: "Fix the 7 lines (Recommended)"). What it was: the main session's correcting lines for runs 107 to
+  113 (lines 249 to 255 of `paper-trading-20261123/agent-runs.jsonl`, markets-data `090116cc`) carried the harness
+  id found inside the kept transcript as their session, not the session of the line they correct; the loader
+  refuses a correcting line from another session, so the record could not be loaded and builder run 211 was
+  blocked at its first check (11 check files load the record). DECIDED BY HIM: the session value on those seven
+  lines is put right in place; each carries a `session_note` saying what it was and that it was changed; no
+  figure on them changes. This is the one change in place he has allowed; the rule stays "only add". STILL OPEN,
+  for a builder: the recorder takes a correcting line's session from the line it corrects (tools/kgraph/run_record.py
+  line 271 reads the transcript's own id when the run has no plan); run 179's line goes back as it was written
+  and the loader takes its correcting line.
+- THE ANSWER ON THE AUDITOR, CORRECTED: the entry above says the standing page held "one auditor run at the close".
+  It did not: that sentence is in this file (the entry READ AFTER READ AFTER READ) and in
+  `RETRO_20261124_SESSION26.md` item 2. It is taken back in both by this entry, and the standing page now says in
+  its auditor section that every run is audited, a group's runs by that group's own auditor run.

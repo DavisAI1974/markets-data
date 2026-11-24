@@ -53,6 +53,8 @@ the kept copies are in `PAPER/transcripts/`).
   for the main session, what code cannot hold. If nothing is left for the builder, say so in those words.
 
 ## The performance auditor
+- EVERY RUN IS AUDITED (Greg's rule; said again 2026-11-24: "So why no auditor for every ticket?"): a group's runs are
+  audited by that group's own auditor run before any box of the group is marked. There is no "one auditor at the close".
 - Inspection commands only (`git status/log/show/diff`, `rg`, `ls`, `stat`, `head`, `tail`, `wc`, `cat`, `jq`, `awk`).
 - THE FIRST LINE OF YOUR REPORT IS EXACTLY `# Performance auditor run N`; each audited run's block starts at column 0
   with `## Run NNN`; no other heading begins with "## Run". Nothing is averaged or totalled across runs. The whole
