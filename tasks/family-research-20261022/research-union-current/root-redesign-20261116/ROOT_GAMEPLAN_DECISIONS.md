@@ -6773,3 +6773,15 @@ figure. To bring back when the work reaches what moves the market and price-curv
   carried into it. Started by Claude on his go: `stop_after_minutes` `30+30`, the page on, both budgets 825,874,
   no tokens, one runner. The page was deployed again with the graph and the P/L first (Render deploy live at
   09:03 UTC).
+- THE THIRD TEST AND THE GRAPH HE MEANT (Greg, 2026-11-24). The third test (Actions run 45361797316, paper run
+  `064df1c2b58f46999f0276304c10d49e`, on `40861f7`) started at the tape's 6:30:00.005 pm Eastern, nothing
+  journaled before it, and kept pace (52.7 seconds of tape in 53.7 on the runner). The first test ended cleanly at
+  its own 30-minute stop (GitHub: success). On the graph his words: "I mean show the price that the historical
+  price traded, revealed more as time goes on and our trades in comparison. Make a second trade line show hiw our
+  trades are matching up. And trade price graphs are smooth and not straight lines". Built and pushed, not seen
+  drawn (platform `f30f6a8`, item 24): two smooth lines, the price the market traded at (the last trade of each
+  second of tape that has one, a real print) and the prices of this run's paper fills; no bid or ask line, no
+  mid. The curves pass through every point; the bends between are drawing only. Claude's reading of his earlier
+  "after you add those things then go": the same test is started again once the graph he meant is in. So the
+  third test was cancelled from GitHub (which also tries the cancel path for the first time), the page deployed
+  again, and a fourth test started with the same values: said to him as it was done.
