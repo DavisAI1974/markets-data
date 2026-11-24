@@ -6520,3 +6520,18 @@ figure. To bring back when the work reaches what moves the market and price-curv
   variables named `PUSHOVER_APP_TOKEN` and `PUSHOVER_USER_KEY` (the names the hook and the launcher read); a new
   session picks them up. Done by Claude, on his approval prompt: `api.pushover.net` added to that environment's
   allowed hosts. Nothing was sent to Pushover. The hook is still registered nowhere.
+- WHERE CODEX ENDED (posted by Greg, 2026-11-24): "I worked through #1-#19 and pushed the changes to draft PR #5.
+  10 items are checked off and 9 remain open." Checked: 3, 4, 5, 8, 10, 11, 13, 14, 15, 19. Built in draft,
+  awaiting merge: 16, 18. Awaiting operational evidence: 1, 2, 6, 9, 12, 17 (the live workflow needs configuration
+  and Greg's go; 6 needs a full live week; 12 a completed live run and its replay; all 32 strategies have order
+  decisions). Storage decision deferred: 7. "No checks, validation, tests, or paper session ran." His handoff on
+  the branch now reads: Codex owns 1 to 19, Ccode owns 20 to 35. So the findings this session left "for Codex"
+  under items 20 to 32 are Claude's own to finish. The whole checklist: 15 of 35 checked (Codex's ten, and 21,
+  22, 29, 33, 34).
+- ITEM 25, THE FIRST COMMIT, MEASURED AND CHANGED (platform `37c5e91`). Only git was run, on a throwaway copy of
+  markets-data fetched as the workflow fetches it; no platform code ran, nothing was pushed, and the copy was
+  removed after. The publisher's first commit made git fetch 504 files (405 MB, 13.2 seconds against a 25-second
+  limit), and the first push's pack would be 423,340,066 bytes. A branch with no parent holding only the run
+  folder: 347 bytes, nothing fetched. The publisher now starts the run branch that way. Record:
+  `paper-trading-20261123/review-20261124/item25-first-commit-measured.md`. Said to Greg after it was done, not
+  before: it ran git and nothing of the platform.
