@@ -1,0 +1,41 @@
+{
+  "written_by": "the main session, after the run, NOT by the program",
+  "why": "the program's own receipt was not written: its file (Markets strategies/tasty_7e_check.py) was removed from the machine by the main session while the run was still going (the move of the paper trade code to paper-trading-platform). The recording and the summary were complete before that; the receipt step reads the program's own file and failed.",
+  "sub_command": "sandbox-stream",
+  "arguments": {
+    "cmd": "sandbox-stream",
+    "out": "tasks/family-research-20261022/research-union-current/paper-trading-20261123/7e",
+    "streamer_symbol": [
+      "/NGF27:XNYM"
+    ],
+    "seconds": 1500
+  },
+  "code": "Markets strategies/tasty_7e_check.py at commit 78e98f2048ee7378bf40658cd3384395f6188b6f (the same file is paper-trading-platform tasty/tasty_7e_check.py at afcf107, but for its source label)",
+  "run_start_utc_ns": 1795476943011745306,
+  "counted_by_the_main_session": {
+    "messages_received": 984,
+    "TimeAndSale": 440,
+    "TimeAndSale_sides": {
+      "BUY": 74,
+      "SELL": 225,
+      "UNDEFINED": 141
+    },
+    "Quote": 398,
+    "Trade": 268,
+    "Summary": 6,
+    "Profile": 1
+  },
+  "stopped_by": "completed (the program printed 'messages received: 984' and exited 0)",
+  "files": [
+    {
+      "path": "tasks/family-research-20261022/research-union-current/paper-trading-20261123/7e/sandbox-stream-20261123T233543011745306Z.jsonl",
+      "bytes": 617230,
+      "sha256": "636a4858a1d07373c26dfb67a9c237410e933103377aeff3cf482be30e623f8a"
+    },
+    {
+      "path": "tasks/family-research-20261022/research-union-current/paper-trading-20261123/7e/sandbox-stream-20261123T233543011745306Z-summary.json",
+      "bytes": 7147,
+      "sha256": "50eb6f8f45c1f611159b06071f21cce8d91d48bcb7880b357b4f0e09da91b6c8"
+    }
+  ]
+}
