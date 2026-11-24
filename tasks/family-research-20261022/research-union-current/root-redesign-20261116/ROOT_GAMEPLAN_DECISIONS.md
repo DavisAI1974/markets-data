@@ -6938,3 +6938,20 @@ figure. To bring back when the work reaches what moves the market and price-curv
   him first: a run of the give-back plan on the tape from 6:30 pm to 7:00 pm Eastern of trade day 2023-10-02,
   `stop_after_minutes` `30+30`, the page on, both budgets 825,874, no tokens, one runner. It is the first run on
   the runner's changes for a run of hours (pushes spaced ten seconds apart) and for a restarted page. Not scored.
+- THE BUILDER FINISHED (run 67, Sonnet; the harness reported 160,941 tokens, 9,177,121 over its 77 calls, 13
+  minutes). On Markets `ccr-98b49128-u7vawo`: `tools/kgraph/ingest_platform.py` (`06ced22`), the loop's control
+  file `tools/ratchet/programs/platform_exit.md` (`890c18e`), five checks on real records (`c2f9b2d`), the manual
+  (`8ddd12c`). In markets-data (`20dddb1`): the five finished runs of 2026-11-24 are in the graph (one Order for
+  each paper order, one Fill for each fill, a rule version for each rule and commit, each tied to the document
+  its rule rests on) and each is one trial of the experiment record, status recorded, NOT SCORED, with his words.
+  Counts it made, checked by Claude against the journals read earlier: 036ed5: 579 orders, 574 fills; 06ce6b:
+  1,905 and 1,874; 064df1: 923 and 902; 058313: 1,690 and 1,644; ea4c1d: 1,710 and 1,684. `kgraph check` on the
+  real graph: no breach. The control file's one changeable file is `paper_platform/execution_plans/
+  loop-trial.json`; its figure is not chosen (direction null), so a loop only records. WHAT IT FOUND THAT IS NOT
+  ITS OWN: the agent program's whole suite no longer passes on the data as it stands (30 failed, 62 passed, 21
+  skipped, 52 errors; on the code before its changes with the same data: 26, 57, 25, 52). Causes it names:
+  `agent-runs.jsonl` has two lines that both say run 47 (a correcting line of the last session), which the reader
+  of that file refuses, and that alone makes the 52 errors; commits missing from the session's shallow copies; and
+  old-runner files the rule-version checks look for. Not fixed: which line of run 47 stands is not Claude's to
+  choose. ONE EDIT OUTSIDE ITS BRIEF, read by Claude and kept: two lines in `tools/kgraph/platform_scope.py` so an
+  order or fill of the own platform is not marked as belonging to the tastytrade sandbox.
