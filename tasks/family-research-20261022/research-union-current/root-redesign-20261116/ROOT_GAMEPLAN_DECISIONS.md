@@ -7318,3 +7318,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   his go, 6 on his decision.
 - A CORRECTION (Claude): the line above counts the 44 tickets wrongly. As written in the tickets: 14 can start, 14
   wait on another ticket, 10 wait on his go, 6 on his decision.
+- TWO OR THREE TICKETS AT A TIME, CONSECUTIVE NUMBERS (Greg, 2026-11-24): "Actually we can do 2 or 3 at a time
+  with the number of agents we've been doing but they are consecutively numbered". DECIDED BY HIM: the 44
+  tickets are worked in batches of two or three with consecutive numbers. The first batch is tickets 1, 2 and 3,
+  worked in the order 2, 3, 1 (a claim is registered and challenged before every claim can be). From this batch
+  on the agents are used as their own files say (tickets 12 to 14): the builder shows its change and waits, and
+  the reviewer reads it before the builder goes further. Agent run 104 (builder, Sonnet; limits told: 600,000
+  tokens, 60 tool calls, 30 minutes, no sub-agents, no write into the real graph) builds tickets 2 and 3.
