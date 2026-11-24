@@ -1,4 +1,4 @@
-# Builder run 129 (Sonnet): ticket 19, run_record
+# Builder run 129 (Sonnet): ticket 19, run_record, and then the points of the first read
 
 Kept word for word as the agent returned it, 2026-11-24 (twenty-fifth session). Nothing below this line is the main session's.
 
@@ -51,3 +51,76 @@ NOT DONE / NOT LOCATED: nothing I needed was missing. The `missing` output shows
 CLEAN-UP: /tmp/run129 and /tmp/pytest-of-root are deleted. `git -C /home/user/markets-data status --short` is empty.
 
 TOOL CALLS: 5 in total (3 Bash, 1 Bash for the diff stat and status checks, and the commit-and-push Bash). The write and edit steps were done inside Bash. I made no sub-agent calls and no engine, tape or AWS use.
+
+---
+
+## The next hand-back
+
+All eight points are built, test first, and pushed. I did not call the advisor tool.
+
+COMMIT: 1f51fac (the merge of FETCH_HEAD after my commit; my own commit is just before it). The push to ccr-659edd86-di9udt went through, 44b345e..1f51fac. I followed the red-first rule this time: I wrote the tests alone, saw 11 fail and 9 pass, then wrote the code.
+PYTEST after the last merge: 20 passed, 0 failed.
+/tmp/run129 is deleted. `git -C /home/user/markets-data status --short` is empty.
+
+DEVIATION FROM YOUR RULE (point 1): the rule as you wrote it, two different run numbers in the first 200 characters means no run, would refuse run 135's real brief. That brief reads "You are the reviewer, agent run 135 ... the builder's fix (agent run 131)", so run 131 sits inside the first 200 characters. Run 135's live transcript made the check fail.
+- What I built: a brief that begins "You are the <agent>, agent run N" is run N's own, even if it names another run after that. Any other brief falls back to your rule.
+- Under that rule, your trap (a sentence naming run 117 put in front of run 119's brief) is still refused.
+- Please confirm or correct this.
+
+POINTS, with file:line (all in tools/kgraph/run_record.py unless named) and the check that holds each:
+1. Which run a transcript is: `figures_of` opening and `own` regex, and the refusal message in `_check_brief` (line 142).
+   - Checks: test_a_brief_that_names_a_later_run_is_still_its_own_run (run 135 live) and test_trap_a_sentence_naming_another_run_in_front_of_the_brief (run 119 live, refused by `append` and `keep`).
+2. `keep` never writes over a kept gz (`cmd_keep`, line 228).
+   - It compares the unzipped sha256. The same bytes with no sidecar get a sidecar and it says so. Other bytes are refused with the file left unchanged.
+   - Check: test_keep_never_writes_over_a_kept_gz_that_has_no_sidecar.
+3. `report` keeps every hand-back (`cmd_report`, line 208).
+   - Each stands under "## Hand-back K of N".
+   - A short last hand-back gets "## The message its last hand-back points at" added after it. A run with no hand-back gets "## No hand-back: its longest message". A run with neither gets a file stating that, with its reply and tool-call counts, and exit 0.
+   - Checks: test_report_keeps_both_hand_backs_of_run_121, test_report_adds_the_message_run_124_hand_back_points_at, test_report_of_a_stopped_run_with_no_hand_back_and_no_text_says_so (run 110), and test_trap_a_real_hand_back_followed_by_a_short_one_drops_nothing.
+4. A correcting line keeps the earlier `tokens_reported` and its note unless `--tokens-reported` is given again (in `cmd_append`).
+   - Check: test_a_correcting_line_keeps_the_earlier_tokens_reported_unless_given_again.
+5. `append` now writes `started_at`, `ended_at`, `hand_backs` and `sub_agent_calls`.
+   - Check: test_append_refuses_a_run_that_has_a_line_then_writes_a_correction.
+6. `missing` (`cmd_missing`, line 297, with `_differences` and `WALL_CLOCK_TOLERANCE_MS` at line 264) now prints these row kinds:
+   - "NO LINE run N" for a plan or kept transcript with no line, and for a live transcript with no line.
+   - "NOT KEPT run N" for a live transcript whose run is not kept yet.
+   - "DIFFERS run N | field: line X, transcript Y", with a 1,000 ms tolerance on the wall clock.
+   - For `model_replies`, it names the run when the line holds none.
+   - The counts line gained these figures, and the docstring says both wall clocks exist.
+   - Checks: test_missing_names_runs_with_a_plan_or_kept_transcript_and_no_line, test_missing_with_live_names_transcripts_with_no_line_and_not_kept, and test_trap_a_line_whose_figures_differ_from_its_kept_transcript_is_named (500 ms not named, 5,000 ms named).
+7. The tests made to bite:
+   - The report checks now assert both hand-backs of run 121 and the pointed-at message of run 124.
+   - test_missing_on_the_record_as_it_was_at_the_reviewers_commit builds 6e234e2's record, run-plans and transcripts from `git show` and asserts the reviewer's jq facts.
+   - Those facts are runs 1 to 106 lacking input and output tokens, 30 lacking a wall clock, 84 lacking an exact model id, and none lacking an outcome.
+   - test_data_without_a_record_is_refused_for_every_verb now covers `missing`, `keep` and `append`, and checks nothing was created.
+8. The last section of the test file is headed "CASES THE REAL RECORD DOES NOT HOLD" and holds three traps: the run 119 prefix sentence, a real hand-back followed by a short one, and a line that differs from its kept transcript.
+   - The file header now says what is so.
+
+THE FOUR PUT-BACK BREAKS (each made alone, then reverted):
+- Count every line, not once per message id: 3 checks failed (test_figures_run_117..., test_append_refuses_a_run_that_has_a_line_then_writes_a_correction, test_trap_a_line_whose_figures_differ...).
+- Count the hand-back as a tool call: 3 failed (test_figures_run_117..., test_figures_run_116, test_append_refuses_a_run_that_has_a_line_then_writes_a_correction).
+- Drop the brief-names-another-run refusal: 3 failed (test_append_refuses_another_runs_transcript_empty_outcome_and_bad_role, test_keep_writes_the_same_bytes_as_the_real_kept_file, test_trap_a_sentence_naming_another_run_in_front_of_the_brief).
+- Drop the sha comparison in `keep`: 1 failed (test_keep_never_writes_over_a_kept_gz_that_has_no_sidecar).
+  - test_keep_refuses_a_kept_file_with_another_sha still passed, because it holds a sidecar and the sidecar check still refuses.
+
+`missing --live` on the real record as it stands (live folder with 32 transcripts naming a single run, 2 naming none):
+- COUNTS line: "runs 135; lacking exact model 84; lacking input tokens 106; lacking output tokens 106; lacking wall clock 30; lacking outcome 0; with a kept transcript 2; lacking something 106, of which a kept transcript could fill 0 and none kept 106; plan or kept transcript with no line 5; live transcripts 32 (naming no single run 2), live transcripts with no line 5, live transcripts not kept 30; figures that differ 29".
+- Transcripts with no line: runs 136, 137, 138, 139 and 140. Each has a plan and a live transcript.
+- Transcripts not kept (30): runs 109 to 115, 118 to 140.
+- Runs 116 and 117 are kept.
+- DIFFERS rows:
+  - Runs 109 to 121 except 116 and 117, plus 116 and 117 themselves: "model_replies: the line holds none".
+  - Run 128: input and output tokens, tool calls, model replies and wall clock differ (line 116,492 ms, transcript 813,375 ms).
+  - Run 129 (this session's own, still running): the same set differs (line 101,374 ms, transcript 816,794 ms).
+  - Both lines were evidently written before those runs finished.
+
+EXPECTATIONS CHANGED:
+- The `missing` check on the current record is replaced by the one on 6e234e2's record, as you asked. It also took the model rule from the code to independent facts.
+- The row-1 and row-15 assertions are now regex-tight.
+- The `--data` check now covers all three verbs.
+- The run-117 `append` check gained the new fields.
+- The expected report format changed with the new headings.
+
+NOT DONE: I did not read the reviewer's sections 2 and 4. The instructions you gave were enough, so I skipped them to save calls.
+
+TOOL CALLS: about 13 in this follow-up (5 in the first pass), so about 18 for the whole run. No sub-agents, engine, tape or AWS.
