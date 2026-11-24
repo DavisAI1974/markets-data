@@ -1,4 +1,4 @@
-# Builder run 131 (Sonnet): ticket 03b, the six points of the first read
+# Builder run 131 (Sonnet): ticket 03b, the points of the first read and then of the second
 
 Kept word for word as the agent returned it, 2026-11-24 (twenty-fifth session). Nothing below this line is the main session's.
 
@@ -62,3 +62,57 @@ HOUSEKEEPING
 - /tmp/run131 and /tmp/pytest-of-root are deleted.
 - `git -C /home/user/markets-data status --short` is empty.
 - Tool calls: about 14 of 45.
+
+---
+
+## The next hand-back
+
+Run 131, second read, seven points. Pushed to ccr-659edd86-di9udt. M4, the unheld rule "record-only only when every clearing auditor lists the run", is NOT held by any check; see M4 below.
+
+COMMIT
+- 120579e, on top of a merge of FETCH_HEAD done at the start. Pushed without a further merge and without force.
+
+PYTEST
+- 31 passed, 0 failed, run after the last merge.
+- Before the code change: 5 failed, 26 passed. The failing checks were written first for points 4, 5, 6 and 7 and for the g2b case. Points 1 (M2, M4, M5) and 3's real-record check passed straight away, because the code already held those rules.
+
+THE SEVEN POINTS (line numbers are approximate; file names are exact)
+1. The four unheld rules. The new section is at the end of tests/agent_program/test_auditor_called.py, under the comment "CASES THE REAL RECORD DOES NOT HOLD".
+   - How I built the cases: `git clone --shared --no-checkout` of markets-data into tmp_path, with the record file written over it. I chose this because the code reads every report with git from the `--data` folder, and a shared clone holds every real report commit.
+   - The file header sentence now says every check above that section rests on real lines only.
+   - Checks: `test_case_m1_...`, `test_case_m2_...`, `test_case_m4_and_m5_...`, `test_case_g2b_...`.
+   - M1: run 120's newest line (at d75eff9) re-appended with agent_type and role set to builder. M2: the real record cut to runs up to 109, plus run 111's two real lines and run 116's first line. M4 and M5: run 116's newest line (at 9bfef60) with audits plus [118, 50]. g2b: run 121's newest line (at 9bfef60) with the auditor agent type and run 133's real report.
+   - M2: I could not use run 111's first line alone. Then runs 1 to 109 would be unaudited and the exit would be 1 for that reason too. So I built the case from run 111's two real lines plus run 116's first line (no report). In that case not_audited is empty and only no_report makes the exit 1.
+2. Record-only rule in the test: `_expected` in the test file (about lines 36-60) now derives it from the docstring. Record-only only when every auditor that clears the run lists it as record-only. The test does not call the code.
+3. A report must be the auditor's own.
+   - Code: analyse in tools/kgraph/auditor_called.py, the `own_first` check (about lines 98-125). The reason text is "the report it names is another run's".
+   - Checks: `test_on_the_real_record_every_auditors_report_is_its_own_by_its_first_line` (reads each real report's first line with git) and `test_case_g2b_...`.
+4. `--ticket` fails on an auditor's run that names no report.
+   - Code: the ticket loop in main (`code = 1 if n in rep.not_audited or n in rep.no_report`), and the `stand` text "an auditor's own run that names no report".
+   - Checks: `test_tickets_03b_and_02_at_9cea759_and_03b_at_c0d4ff1` now expects 1 at c0d4ff1 and that runs 111, 116 and 120 print "names no report".
+   - A commit where `--ticket 03b` exits 0 does not exist yet. I ran it at every commit that touched TICKET_RUNS.json (a7f647e back to b96fc54). It exits 1 at every one from df71602 on, and at 9cea759 and c0d4ff1, because other runs are unaudited or run 121 has no line. At b96fc54 it exits 0 but only because no auditor was listed, so that is not a valid case.
+5. Heading of list (3) now carries "a general agent handed a role's file is listed here, with its role". Check: `test_list_3_heading_says_...`. At 9bfef60 runs 107 and 108 print as reviewer and scout, not as general agents. So I check only the heading, not those rows.
+6. The line "run N was an auditor's run by an earlier line and is not by its newest: the audits it named are not counted" is printed from main after the "data:" line. It is held by `test_case_m1_...`.
+7. A missing commit: the refusal now adds "; <commit> is not in that repository" when `git cat-file -e <commit>^{commit}` fails. Check: `test_an_at_that_is_not_a_commit_of_that_repository_says_so`.
+
+THE REVIEWER'S FOUR ONE-LINE CHANGES PUT BACK, ONE AT A TIME
+- M1 (any line decides the auditor): `test_case_m1_...` goes red.
+- M2 (the plain command's exit ignores no_report): `test_case_m2_...` goes red.
+- M5 (a name alone clears): `test_case_m4_and_m5_...` goes red.
+- M4 (any clearing auditor instead of all): all 31 pass, so NO check holds it.
+  - Holding it needs two auditors that both clear the same run with a row in each real report. I checked the real reports of runs 111, 116, 120, 124 and 133. No run has a row in two of them.
+  - Point 3's own-report rule also stops me pointing a second auditor's line at another run's real report. I did not write a changed report; that would be made-up data.
+  - I kept only the first half: run 50 stays record-only when run 116's report has no row for it.
+
+EXPECTATIONS CHANGED
+- Two tickets-at-a-commit checks now expect that an auditor's run naming no report fails its ticket. These are the c0d4ff1 check, 0 changed to 1, and the b96fc54 check, whose derivation now counts `_no_report`. The settled rule of point 4 changed them.
+- The two real-record ticket checks add the same derivation.
+- Run 107's row is no longer asserted (see point 5).
+
+REAL RECORD AS IT STANDS (markets-data was still moving)
+- `COUNTS runs=135 not_audited=7 record_only=106 with_own_row=17 outside_roster=26 auditor_runs=5 no_report=0 plan_no_line=4`
+- The plain command exits 1.
+
+HOUSEKEEPING
+- /tmp/run131 is deleted. `git -C /home/user/markets-data status --short` is empty.
+- Tool calls: about 22 for the whole run.
