@@ -5915,3 +5915,13 @@ figure. To bring back when the work reaches what moves the market and price-curv
   STEP0_TRACE_20261124.md`): 141 of 440 prints have no side on the 25-minute recording; they are the first to show
   34 of 149 quote steps and 80 of 216 new prices; 108 of them print at their own offer and 33 at their own bid;
   nothing else in the message tells them apart.
+- POINT b DECIDED; THE "DIFFERENT EVENTS" ANSWER WAS FOR b, NOT c (Greg, 2026-11-24, asked whether "different
+  events" meant the quote on a no-side print counting at once): "i meant the first question you asked". So his
+  words "Can't we make both decisions at the same time? They're different events right?" answer point b: where
+  two things a rule orders show at one print, they are two events and both are decided at that print. Built
+  (`7e506e5` on `claude/tasty-runner`): the ledger line names both events at that print in the place of right or
+  wrong and claims no "first" (CL06, CL07, CL08). One line changes on the 10-minute recording (CL07-0004: "both at
+  one print: the quote the hump was hitting stepped away; the hump ended"), none on the 25-minute one; all four
+  checks pass on both. Claude's reading of what the line then says, his to strike.
+- POINT c STAYS OPEN: it has no answer of his yet beyond "We need to create a strategy for that amd not just a
+  code fix". Claude's earlier reading of "different events" as an answer to c was wrong.
