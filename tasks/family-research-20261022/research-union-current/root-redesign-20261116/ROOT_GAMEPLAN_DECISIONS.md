@@ -6062,3 +6062,39 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - Handoff `NEXT_SESSION_HANDOFF_20261124X.md` replaces handoff W as the starting point; W stays as the record of
   the paper runner. Pushed: this branch at the commit that adds handoff X; paper-trading-platform
   `claude/tasty-runner` `e077b2e`; Markets `ccr-d613618f-v7t9jy` `65f71a9` unchanged.
+
+## Twenty-first session (2026-11-24, in a code session): the agent program, all the steps not built
+
+- THE KICKOFF (Greg, 2026-11-24): "Continue the Markets work: FINISH ALL THE STEPS of the agent program (the graph
+  adoption plan). No paper trading until they are all built"; "BUILD ALL the steps of the plan that are not built,
+  in the plan's order: stage 2 and 4a together, then 4b, then 4c, then 3, then 5a, then 5b and 6, then 7d and 7f,
+  then stage 8. Do not stop after one stage: finish them all. Say at the start which steps are built and which are
+  not". His order puts 4c before 3 (the plan's own text has 3 before 5a and does not place 4c); his order is
+  followed.
+- WHAT "BUILDING" IS (Greg, same message): "Building is code, checks on real records, and records in markets-data.
+  These still need my go, each told to me first with its budget: anything that launches or changes Frankie, Granite
+  or a pod; switching Frankie's input; a run of the swarm or of the token test; any paper run; deleting a saved
+  file".
+- REPOSITORIES AND BRANCHES as he gave them: markets-data `ccr-349e2ffe-07p8od` ("records, documents, decisions, and
+  the new graph/ and experiments/ folders. Desktop and Codex write there too: fetch before every push"); Markets
+  `ccr-532eaea6-vgz20z` (`65f71a9`) "brought in first on the session's own branch. The agent program's code goes on
+  the session's own branch. Nothing goes to the trunk without my word"; paper-trading-platform `claude/tasty-runner`
+  ("our code, folder tasty/"), "Codex works on main there: touch none of his files until I say he is done. No paper
+  run this session"; "All outputs go to markets-data".
+- THE AGENTS AND BUDGETS (Greg): "Use the four agents, each with a declared budget, each run's model and tokens
+  recorded. Budgets: scout 300,000 tokens, builder 600,000, reviewer 250,000. If a budget is hit, stop and tell me
+  at once". No budget was declared for the frankie-performance-auditor, so it is not run.
+- STANDING RULES as he restated them: a trade day is 6 pm Eastern the evening before to 5 pm Eastern on the named
+  date; no mid price; no trade cost; no averaging, pooling, ranking or labels; no made-up numbers; only add to what
+  exists; nothing is run without telling him first; AWS is off limits; nothing he has decided is asked again; plain
+  words, the answer in the first lines; his decisions recorded in git as they are made.
+- "#run matt skills" and "#run using-agent-skills" (his kickoff lines): neither is installed in this session. A
+  search of the account's skills and of the disk found none; `.claude/settings.json` names the agent-skills plugin
+  but the session did not load it. Only Superpowers loaded, and CLAUDE.md says it is not to be the router. Said to
+  him at the start.
+- SAID AT THE START, as he asked: BUILT are stage 1 (the four agents; the retiring of the `aws-*` agent files and
+  the `aws-mcp` entry is not done and waits for his go, being a delete) and stage 7's runner (7a, 7b, 7c, 7e).
+  NOT BUILT, all of them this session's work: 2, 4a, 4b, 4c, 3, 5a, 5b, 6, 7d, 7f, 8.
+- STEP 0 DONE AT THE START: Markets `ccr-532eaea6-vgz20z` (`65f71a9`) fast-forwarded onto the session's branch
+  `ccr-075001b3-wcxrxy`; paper-trading-platform attached with push access and cloned at `claude/tasty-runner`
+  (`e077b2e`); this branch checked out at `ac4e136`. The session's own markets-data branch is not used for outputs.
