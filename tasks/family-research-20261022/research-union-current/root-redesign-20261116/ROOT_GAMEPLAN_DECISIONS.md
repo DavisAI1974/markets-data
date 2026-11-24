@@ -5975,3 +5975,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   is built, written down, for the rewrite. The aim now is a working run and a plain account of how it behaves.
   Claude's call from it: the reviewer's run is aimed at the order path (can it send twice, send anywhere but the
   sandbox, leave a position), not at rule wording that will be rewritten.
+- START PAPER TRADING (Greg, 2026-11-24): "We need to start running paper trading and see how it works". Said to
+  him before anything runs: run 1 on the live sandbox feed for 30 minutes with all 32 strategies and NO orders, as
+  soon as builder run B2's code is checked; then the canary with orders, 30 minutes, 1 lot a trade, at most 20
+  orders in all with the last kept back to flatten, once the reviewer has looked at the order path (capped at
+  100,000 of its 250,000 tokens).
+- THE RUNNING LIST (Greg, 2026-11-24): "Start a list and save as md file in paper trade repo so it can be added to
+  and is accessible". It is `tasty/RUNNING_LIST.md` in `DavisAI1974/paper-trading-platform`, branch
+  `claude/tasty-runner`: what has been seen and what to look at in the rewrite, in four sections (the rules, the
+  feed, the runner, the runs), with how to add a line.
