@@ -6491,3 +6491,18 @@ figure. To bring back when the work reaches what moves the market and price-curv
   figure used is written beside the code and under item 20, and is his to change. NOT covered by his words and
   left as they are: a run started so late that its 5.75 hours land after 6 pm Eastern, and a stored replay that
   runs to the end of its trade day.
+- THE NINE NUMBERS, WHERE THEY STAND (paper-trading-platform, Codex's branch, to `f93f91b` and one correction
+  after it; every change in draft, nothing run or parsed). The six reviewers' reports are in
+  `paper-trading-20261123/review-20261124/`, word for word, with a table of what was done about every finding.
+  The rule kept: a change was made only where the finding is certain from the code and alters no order sent and
+  no journal field's meaning; the rest is written under its number for Codex or for Greg. Made: item 20, four
+  changes and then his 5 pm decision (`8019fca`, `8df8027`); item 24, three on the page (`5c74649`); item 27,
+  four on the page (`de048e0`); item 28, one in the receipt (`7459241`); item 31, two (`55e54fd`); item 32, seven
+  (`fee5336`); items 25 and 30, none; item 35, the review recorded. NOT DONE, and not doable without his go: the
+  authorized run that items 20, 24 and 25 need. FIRST THING FOR CODEX BEFORE ANY RUN (item 25, not tried): the run
+  branch's first commit is made on a pinned commit in a checkout without file contents, and may fail to publish.
+  A SLIP (Claude): the item 28 text first said the event table had 37 rows; it has 40, and 4 more for rows never
+  written. Corrected on the branch in its own commit.
+- TOKENS OF THE SIX REVIEWERS (runs 54 to 59, `claude-opus-5-5`): the harness reported 846,176 in all; their own
+  transcripts add to 18,524,726 over every call, the advisor's 655,810 included. Both figures for each run are in
+  `agent-runs.jsonl`.

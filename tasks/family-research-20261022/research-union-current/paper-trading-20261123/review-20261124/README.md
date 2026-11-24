@@ -117,3 +117,45 @@ NautilusTrader's own source at release 1.231.0 was read to settle what the repor
 | F9. The trades API returns bare nanosecond integers | Not changed; left for Codex. |
 | F10. An "Earlier events" page lists trades past its cut-off | Not changed: Greg's or Codex's call. |
 | F12. Every manager close is labelled "Manager exit" | Fixed on the page. |
+
+## Run 55, items 24 and 25: the phone view and git publication (`run55-item24-25-phone-view-git-publication.md`). Platform commits `5c74649` (24), `842007e` (25).
+
+| Finding | What was done |
+| --- | --- |
+| 1 [25]. The run branch's first commit rests on a pinned commit in a shallow checkout without file contents | Not changed. Written under item 25 as the first thing to settle before a run. Whether it fails depends on git and on the remote; it was not tried. |
+| 2 [25]. In a live run, timer orders and fills are not pushed before the next tick | Not changed; left for Codex (it changes how a step admits a message). |
+| 3 [25]. Only "paper order" and "fill" get their own commit | Not changed: whether order-status rows count is Greg's reading. Said under item 25. |
+| 4 [25]. The minute snapshot's clock, missed minutes, commit time | Not changed; left for Codex. |
+| 5 [25]. A race on the recorded stop reason | Not changed; left for Codex. |
+| 6 [25]. Git's error text is thrown away; a failed last push is not reported with how far the remote got | Not changed; left for Codex. |
+| 7 [25, 24]. The wait for a push does not notice a stop | Not changed; left for Codex. |
+| 8 [24]. Event cards and the header do not name the trade day | Fixed on the page. |
+| 9 [24]. Posts to Render have no retry | Not changed; left for Codex. Said under items 24 and 26. |
+| 10 [24]. After a relay restart, one request per event on the main thread | Not changed; left for Codex. |
+| 11 [24]. A stop's events reach the page after the phone notice | Not changed; left for Codex. |
+| 12 [24]. Smaller page items | Long text now wraps. The rest left for Codex. |
+
+## Run 57, items 28 and 30: the event history and the trace (`run57-item28-30-event-history-trace.md`). Platform commits `7459241` (28), `b6775ed` (30).
+
+The report's table has 40 rows for events the journal can write (2 status, 18 signal, 7 paper order, 8 order
+status, 5 fill shapes) and 4 for rows that are never written.
+
+| Finding | What was done |
+| --- | --- |
+| 1. The platform commit is on no journal row | Not changed; left for Codex (a new field on every row). |
+| 2. A rule's commit covers its rule file only | Fixed in part: the receipt's calculation files now list the five code files that decide for the rules. |
+| 3 to 8. Rows that lack one of the messages the decision was made from | Not changed; left for Codex. Each adds a field to a decision, which changes the fingerprint the cutoff gate and the replay comparison check. |
+| 9. No exchange time on order-status and fill rows | Not changed; left for Codex. |
+| 10. A cancel caused by a later close is not linked to it | Not changed; left for Codex. |
+| 11, 12. The flattening order: no signal link in some cases; two messages in one row | Not changed; left for Codex. Said under items 20 and 30. |
+| 13, 14, 15. Rows never written | Not changed; left for Codex. |
+| 16. The no-quote refusal has no `execution_event` | Not changed; left for Codex. |
+| 17. `finding` points at a family document | Not changed. Said under item 30. |
+| 18. The parent's commit and finding are not on a manager's order | Not changed; left for Codex. |
+| 19. A fill's `reference` means different things by path | Not changed. Said under item 30. |
+| 20, 21. Rule commits not guarded against a checkout without history; receipt replay compares the code commit only | Not changed; left for Codex. |
+
+## Greg's decision from the review (item 20)
+
+"If 5.75 is going to land inside of the hour, flatten before 5 and end at 5." Built on the platform branch as
+`8df8027`, in draft, not run.
