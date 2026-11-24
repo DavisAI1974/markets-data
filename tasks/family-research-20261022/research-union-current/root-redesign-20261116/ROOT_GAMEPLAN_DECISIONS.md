@@ -5925,3 +5925,8 @@ figure. To bring back when the work reaches what moves the market and price-curv
   checks pass on both. Claude's reading of what the line then says, his to strike.
 - POINT c STAYS OPEN: it has no answer of his yet beyond "We need to create a strategy for that amd not just a
   code fix". Claude's earlier reading of "different events" as an answer to c was wrong.
+- THE 30 IS NOT THE LIMIT (Greg, 2026-11-24): "We can make a 31 trade strategy if needed. The 30 is a jumping off
+  point, not the limit". So "a strategy for that" (the print with no side) means a TRADING strategy of its own,
+  beside the 30, not only a rule about how the 30 read the feed. Claude's drafts, NOT ADOPTED, for his word:
+  `strategy-20261123-claude/PROPOSED_NO_SIDE_PRINT_STRATEGIES_20261124.md` (CL16: a step of the quote first shown
+  by a print with no side; CL17: the print with no side taken at the quote it traded at). Neither is in the code.
