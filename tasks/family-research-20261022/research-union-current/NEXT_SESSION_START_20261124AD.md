@@ -114,8 +114,12 @@ Markets branch; what two of them left uncommitted is kept as patch files in
 `paper-trading-20261123/builder-20261124/LEFT_UNCOMMITTED_RUN_212_ON_793c5af.patch` and
 `LEFT_UNCOMMITTED_RUN_213_ON_4f0757c.patch`. The working copies themselves are lost with the session.
 
-THE SESSION BRANCH OF MARKETS HOLDS FAILING CHECKS, known and named: 11 of the 79 defend and outcome checks (ticket
-04's own point 1: see `04.md`); one check of test_ingest_artifacts.py (the record: see `25.md` and `19.md`).
+THE SESSION BRANCH OF MARKETS HOLDS FAILING CHECKS. What is shown, no more: (1) test_defend.py printed "11 failed,
+68 passed" for stopped run 210; the one failure whose text is kept is a `defend.show` with no run named (ticket
+04's own point 1); the names of the 11 are not kept (`04.md`). (2) One check of test_ingest_artifacts.py fails
+because of the record (`25.md`, `19.md`). (3) Stopped run 213 saw 2 failing in a run of test_consolidate.py,
+test_stage5a_context.py and test_stage4c_grounding.py together; names not kept; one was a file missing in the
+platform checkout (`46.md`). Run each file whole before building on it.
 
 NOTHING WENT THROUGH THE ENGINE OR THE TAPE. NOTHING WAS CALCULATED. NOTHING WAS WRITTEN INTO THE REAL GRAPH. No
 paper run, no Frankie, no pod, no AWS, nothing to the trunk. THREE TICKETS ARE MARKED DONE: 03b, 21, 31.
@@ -138,7 +142,7 @@ DO, in this order:
    its known time, or the afterwards layer) from the plan's foot; ONE builder for parts A, B and E; ONE reviewer
    read with the stored planes present. The reviewer is also given the possible fault in `root/dipole_peaks.py`.
 3. G05, ticket 25 points 3 and 4 (after item 1), then ticket 37 from scout 197's places.
-4. G03, ticket 04: a builder clears the 11 failing checks its point 1 left (`04.md`); then one reviewer read
+4. G03, ticket 04: a builder runs test_defend.py whole and clears the failing checks its point 1 left (`04.md`); then one reviewer read
    against its done-line; then G04 (05, 06, 09), the same chain of files.
 5. G11, ticket 46: point 4 from the kept patch (`46.md`); then the box.
 6. G01: the three small points of reviewer run 190; the proposer's commit on eight grounds; ticket 01.

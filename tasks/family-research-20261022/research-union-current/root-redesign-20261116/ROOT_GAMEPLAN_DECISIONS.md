@@ -8073,3 +8073,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   owe an auditor's row; the Markets session branch holds 11 failing checks from ticket 04's own change and one
   from the record. Nothing went through the engine or the tape; nothing was calculated; nothing was written into
   the real graph; nothing went to the trunk. Start page: `NEXT_SESSION_START_20261124AD.md`.
+- THE CLOSE ENTRY ABOVE, CORRECTED: it says the Markets session branch "holds 11 failing checks from ticket 04's own
+  change". What is shown is less: stopped run 210's output printed "11 failed, 68 passed" under test_defend; one
+  failure's text is kept (a `defend.show` with no run named, ticket 04's point 1); the names of the 11 are not
+  kept and their cause is shown for that one only. Stopped run 213 also saw 2 failing in three check files run
+  together, names not kept. Each is written exactly at the foot of `04.md` and `46.md` and on start page AD. The
+  kept transcripts of all 15 runs that owe an auditor's row are in git.

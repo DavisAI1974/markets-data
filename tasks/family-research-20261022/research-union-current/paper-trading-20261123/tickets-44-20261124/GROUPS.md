@@ -72,3 +72,8 @@ started in the session.
 | G11 (27, 30, 31, 21, 44, 46) | 21 and 31 DONE. 46: built and read once; the one builder pass was under way (see `46.md`). 44: one piece built. | Mark 46 when its pass is in and audited. |
 | G12, G13, G14, G10, G02, held | Not started: each needs his go or his decision. | The sheet `../to-questionnaire-what-only-greg-can-say.md`. |
 | G15 (47) | LAST, on his word. Only the README of Codex's branch is read. | After the 30 minute test without the coefficients. |
+
+CHANGED AT THE VERY CLOSE (the three builders were stopped on his word): G03's next step is a builder for the
+failing checks ticket 04's point 1 left in test_defend.py (`04.md`), before any reviewer read. G11's next step is
+ticket 46's point 4 from the kept patch (`46.md`). G07's is points 6 and 7 of parts C and D, point 6 from the kept
+patch (`38.md`), then parts A, B and E.
