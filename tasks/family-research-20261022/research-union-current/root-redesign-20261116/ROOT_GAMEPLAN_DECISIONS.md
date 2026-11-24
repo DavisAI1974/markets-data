@@ -6215,3 +6215,20 @@ figure. To bring back when the work reaches what moves the market and price-curv
   moment is taken out of the graph.
 - A FAULT FOUND BY A CHECK AND FIXED (Claude): `tools/exp_dag.py log` listed trials written in the same second in
   the order of their ids, not the order they were pushed. Fixed in Markets `3104192`.
+- NO NEW CLAIM IS TIED TO A TASTYTRADE PLATFORM ISSUE (Greg, 2026-11-24): "Make sure any nee claims aren't tied to
+  tasty platdorm issues". Claude's reading, his to strike: what the sandbox does and what its thin feed lacks are
+  parked ("The sandbox specific issues won't be a problem soon"; "we don't need to make system around thin data"),
+  so nothing the agent program makes from here on may rest on them. Built so: every claim that names the
+  tastytrade platform, its sandbox or its thin feed is marked as tied to a platform issue, with the words that
+  tied it; a new claim or a rule version may not be linked to a marked claim as what it rests on (the store
+  refuses the link); the grounding check reports any that does; the session context leaves marked claims out
+  unless asked for, and says how many; Greg's own decisions about the platform stay shown. The marked claims are
+  kept, not removed. The reviewer is told the same: no finding of its own on the sandbox's behaviour.
+- NO CAP FOR THE BUILD REVIEW (Greg, 2026-11-24): "O cap for the build review" (said after Claude told him the
+  reviewer would run capped at 150,000 of the 250,000 he declared). The reviewer runs with no cap.
+- RESTART ALL AGENTS (Greg, 2026-11-24): "Restart all agents". The three runs his interrupt stopped (run 26, the
+  builder on the stage 6 code; run 27, the builder on the stage 8 code; run 28, the reviewer on the build) are
+  started again as runs 29, 30 and 31, each from what the stopped run left on disk; the harness reports no tokens
+  for a stopped run, so what runs 26 to 28 spent is not known. The scout is started again too (its canary, run 17,
+  was stopped by the first interrupt): it reads the next two handoffs not read yet, V and U, inside the 174,430
+  left of the 300,000 he declared for it.

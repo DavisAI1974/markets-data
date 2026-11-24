@@ -5,14 +5,14 @@
  "files": [
   {
    "path": "experiments/trials.jsonl",
-   "bytes": 56697,
-   "sha256": "121926605d6a9ce601c8f55a08101d3482a13729b787c44233e3991935897eae",
+   "bytes": 59442,
+   "sha256": "dc3d3131f3adb1b7216b369a189b1183d5ae2499f0353f2e12774bdd423f703a",
    "source": "the record: one line for each trial and each change to one"
   },
   {
    "path": "experiments/frankie_exp_dag.sqlite",
    "bytes": 86016,
-   "sha256": "e1cefd6c688e4f73a4b7874c584d9ca495f6f8e0ddfbb4dbf21b615358fd7cab",
+   "sha256": "b29e59109d031ae434c8ad81b2d1b7aab8b6feb773c07155d19cc802e53b45d9",
    "source": "rebuilt whole from trials.jsonl by tools/exp_dag.py rebuild"
   }
  ]
