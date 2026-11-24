@@ -124,7 +124,11 @@ DO FIRST, group by group (GROUPS.md has the whole table):
    used"): the April engine fits the law of motion of ANY two-state system (a 2 by 2 state over time) and
    nothing in its fit is physics; bought and sold are such a state and the dipole line is its two populations'
    difference. The engine itself, given natural gas's two-sided state, is the FIRST method of the plan. Do not
-   call it a physics engine or set it aside: read the correction at the end of `47.md` and of the decisions file. Where it stands in the order
+   call it a physics engine or set it aside: read the correction at the end of `47.md` and of the decisions file.
+   THERE IS A SECOND OPERATOR TOOL (his word: "we found an operator thaf worked in the crypto sphere. Desktop
+   found it"): the discovery pipeline that gave each crypto trade its vector of operator coefficients, on which
+   the algebraic dipole was found per pair. It is on his machine (`E:\refrag`, `E:\Markets\_markets_*.py`),
+   NOT on GitHub: whether Codex fetches it is his to say (asked of him at the close). `47.md` has the detail. Where it stands in the order
    beside the other groups is his to say; it shares no file with them, so its suite can work beside them.
 
 1. G01, tickets 02, 03, 01. The reviewer reads Markets `931b2b3..b12d8ef` on `tools/kgraph/defend.py` and

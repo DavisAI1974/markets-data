@@ -7717,3 +7717,38 @@ figure. To bring back when the work reaches what moves the market and price-curv
   state (nothing at first; or a second two-sided quantity such as the resting book's bid and ask); which span
   the two populations are read over (the 20 seconds of exhaustion, the 60 seconds of the dipole, or both); how
   the stretches are cut (by the humps of the line, by the turns, by the data); and the go with its budget.
+- AN OPERATOR WAS FOUND THAT WORKED ON CRYPTO, BY DESKTOP (Greg, 2026-11-24: "And we found an operator thaf
+  worked in the crypto sphere. Desktop found it"). LOOKED UP BEFORE ANSWERING, in `CLAUDE_ARCHIVE_OD.md` (branch
+  `archive/crypto`) and the May handoffs. WHAT THE RECORD HOLDS, taken to be what he means (his to correct):
+  (1) THE OPERATOR: each trade was given a 128-number vector of OPERATOR COEFFICIENTS by the operator discovery
+  pipeline ("refrag", on his machine: `E:\\refrag\\discoveries\\operator_discoveries\\`, adapter
+  `refrag/adapters/markets_refrag_adapter.py`), from a window that ends at the entry and holds nothing after it.
+  On those vectors the ALGEBRAIC DIPOLE was found: H_a and H_b are a trade's projections on the winners' and the
+  losers' centres, and they obey H_a^2 = a + b*(H_a*H_b) + c*(H_a*H_b)^2. The archive, line 1050: "Dipole is
+  REAL on the 128-dim per-pair basis ... the algebraic surface reproduces per pair (R^2 up to 0.975) while
+  POOLED collapses to 0.49", and on pre-entry coefficients "real-vs-null z = +9.6 across all 12/12 pairs". The
+  original scripts are "LOCAL untracked ... `E:\\Markets\\_markets_algebraic_dipole.py`" (also
+  `_markets_dipole_kfold.py`, `_markets_dipole_separation.py`, `_markets_gate_v2.py`): they were never in git.
+  (2) WHY IT HAD LOOKED DEAD BEFORE THAT, in his own words in the archive: the earlier run "mashed all sources
+  together instead of analyzing them separately"; it also used a hand-built 15-number vector in place of the
+  original 128, and a fixed form in place of a discovered one. "tool-wrong, not signal-absent".
+  (3) WHAT CAME AFTER, said with the same care as the hits: in June the +9.6 was marked superseded, because the
+  winners and losers had come from different dates and pipelines; with both taken from the same period the
+  winner-against-loser separation did not beat its null in any of 12 cells. He then set that grading down as
+  the wrong lens (S35): what stands is that each cell's coefficients are exact, repeatable and distinct, a
+  fingerprint, and the goal is predicting winners by that fingerprint with the tools stacked. The dipole and
+  exhaustion read that the natural gas lines are made from today came out of this same work (S36).
+  (4) THE MAY HANDOFF TO DESKTOP says where the idea came from: on the cyber project "we recovered moving
+  operator coefficients ... with the drift itself being the diagnostic signal", and Greg: "we should be able to
+  find coefficients in a digital market"; each regime's stretch recovers its own coefficients and a jump at a
+  boundary is a change of regime.
+  WHAT THIS MEANS FOR TICKET 47: there are TWO operator tools to bring to natural gas, not one: the April engine
+  (the law of motion of the two-sided state, regime by regime) and the discovery pipeline that gives every trade
+  its coefficient vector. THE GAP: the second is NOT in any repository a session can read. Git holds the adapter's
+  shape (`markets_adapter.py`) and rebuilt pieces (`odcore/dipole_predictor.py` was rewritten "to the verbatim
+  construction"; `odcore/fingerprint.py`), not the pipeline that makes the 128 coefficients, nor the original
+  `_markets_*` scripts. CLAUDE'S ANSWER TO HIM, his to decide: ask Codex for those, as it did for April: from
+  `E:\\refrag` the discovery code that turns a window of market data into `operator_coefficients` (the markets
+  adapter, the decoder, what they import), and from `E:\\Markets` the `_markets_*.py` originals; code and notes
+  only, no crypto data, on a branch of its own. THE THREE FAULTS NOT TO REPEAT on natural gas, from his own
+  record: the wrong basis, a hard-coded form, pooling.
