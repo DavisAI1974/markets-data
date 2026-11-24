@@ -6641,3 +6641,24 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - END OF THE TWENTY-SECOND SESSION (Greg: "Update everything, commit, and push after you make handoff and then
   post drop in box so i can strat new session"; then "Start new chat. You're getting extremely slow"). Handoff:
   `NEXT_SESSION_HANDOFF_20261124Z.md`. Job 1 (the agent program in Markets) was not touched this session.
+
+## Twenty-third session (2026-11-24, in a code session): the run test comes first
+
+- THE START (Greg, 2026-11-24): work from handoff Z on paper-trading-platform, Codex's branch, draft PR 5. "First
+  job: finish the speed bar for the stored tape (item 12)", then the held items on 20 to 35. Item 17 and its two
+  deciders stay Codex's. The agent program in Markets waits for his word.
+- THE POCOCK SKILLS (Greg, 2026-11-24): "run mattpocock-skills there are great skills to uae to make finishing this
+  faster. Use one and that's a directive". They are not installed in the session, so the public repository
+  mattpocock/skills was read (a read-only copy on the session's machine; it holds nothing of ours). The one taken:
+  `implement` (build from a written list, then a review of the change by two readers). Its steps that write or run
+  tests are switched off by his own rule for Codex's branch (build only, no checks or tests).
+- THE SPEED BAR WAITS (Greg, 2026-11-24, minutes later, stopping the work): "The speed bar can be put on the list
+  md in the paper repo of things to add later. We aren't going to spend time now doing. We need to be doing a run
+  test very very shortly". Done, platform `3952da7`: a section "TO ADD LATER (not among the 35)" at the foot of
+  the checklist holds the speed bar, and item 12 says it waits. No code was written for it this session:
+  `paper_platform/playback.py` is as the last session left it and nothing calls it. The first run test goes at the
+  tape's own pace.
+- WHAT WAS RUN, SAID AFTER AND NOT BEFORE (Claude): git only. The three repositories and mattpocock/skills were
+  cloned or fetched and files were read from them, and one record count was read from the stored tape's
+  `MANIFEST.json` (4,279,455 records over its seven files). No platform code ran, nothing was parsed, no agent was
+  started, no token was spent on an agent.
