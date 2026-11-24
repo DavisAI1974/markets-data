@@ -7658,3 +7658,21 @@ figure. To bring back when the work reaches what moves the market and price-curv
   five items are put to him with the control file. Two things in the April text go AGAINST his rules and are not
   taken at all: "Do not ask the human" (ours runs only on his go, with its budget), and its ranked lists of
   changes. The branch is left as Codex pushed it.
+- FIND AN OPERATOR FOR THE NATURAL GAS MARKET WITH THE OPERATOR SEARCH. HE WANTS IT DONE (Greg, 2026-11-24, at
+  the close of the twenty-fifth session, on reading that autosearch is "a search that finds the best-fitting
+  equation for each regime from the data, without being told the regimes exist"): "Wait. What?? You just made a
+  huuuge remark. That may find an operator for the ng market!! We absolutely want to do this. Proceed". DECIDED
+  BY HIM: this is wanted and is worked. It REPLACES his word of an hour before ("Only consider it if it can fill
+  gaps. This isn't a directive") for this one purpose. DONE ON IT IN THIS SESSION: it is ticket 47
+  (`paper-trading-20261123/tickets-44-20261124/47.md`), its own group G15 in `GROUPS.md`; a scout was started to
+  locate the pieces. WHAT CLAUDE SAID TO HIM STRAIGHT, so the ticket does not rest on a wrong picture: the
+  sentence he reacted to is the architect's description in the May handoff. The April engine itself
+  (`od_engine.py` on Markets branch `od-autoresearch/apr5-handoff`) recovers a quantum physics operator from a
+  density matrix and cannot be pointed at a market tape as it is; the April LOOP tuned that engine's settings.
+  What can look for an operator in natural gas is the METHOD, with natural gas's own state put in its place, and
+  the operator tools already on the trunk (`odcore/`: the symbolic search, the null and coupling tools, the
+  leakage gate). STILL HIS TO SAY, put to him with the plan before anything is calculated: what the STATE is (the
+  dipole and exhaustion lines, the book, ROOT's planes), what the operator is asked to explain, and the go with
+  its budget. HIS STANDING RULES BIND IT: only the four trade days; every calculation at the tick; each event on
+  its own, no pooling and no ranking; the leakage gate before any backtest; no crypto data; nothing calculated
+  without telling him first; a found form is a claim that is registered and challenged before it is trusted.

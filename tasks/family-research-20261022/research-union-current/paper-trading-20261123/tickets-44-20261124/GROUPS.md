@@ -29,11 +29,12 @@ README only as "held and not ticketed": they are in the last row.
 | G12 First pass on tape | 40, 41, 43 (placed) | NO: his go, told with its budget. 43 can be built; it starts with a run. | Not started. The platform cannot be pushed to from a session: push access was refused. |
 | G13 The loop's first start | 22, 23 (placed) | NO: his go and his figure. | Not started. |
 | G14 Frankie's own events as the trigger | 36 | NO: his decision. | Not started. |
+| G15 An operator for the natural gas market (added on his word, 2026-11-24; no file in the old folder) | 47 | Locating and planning: yes. Any calculation: NO, his word on the state and the target and his go with the budget first. | Opened at the close; a scout (run 155) is locating the pieces. |
 | Outside the groups | 45 (placed): the independent review at the end, two readers who built none of it. | After every worked ticket. | Not started. |
 | Held, no suite until he says | 17 (placed), 24, 28, 29, 33, 34, 35, 42 | NO: each needs his go or decision; most need a model key that does not exist or receipts that are on AWS. | Not started. |
 
-Every one of the 47 is in exactly one row: 01 02 03 03b 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
-25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46.
+Every one of the 48 is in exactly one row (47 was added at the close): 01 02 03 03b 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47.
 
 ## What limits how many suites work at once
 

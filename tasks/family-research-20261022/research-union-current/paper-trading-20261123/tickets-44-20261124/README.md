@@ -61,9 +61,12 @@ data layer (ticket 38's work), and the reviewer's read of the platform change (p
 | 44 | From this morning's list, still open: the Markets checkout's history (5), the whole suite on the data as it st | None | ready |
 | 45 | An independent review compares the work to the tickets (the Pocock `code-review` skill; two readers who built none of it) | every ticket that is worked | blocked |
 | 46 | Stop the consolidation drift: consolidation is a standing step after every read into the graph | None | ready |
+| 47 | FIND AN OPERATOR FOR THE NATURAL GAS MARKET WITH THE OPERATOR SEARCH (added on his word, 2026-11-24, twenty-fifth session). | His word on the state and the target, and his go with the budget, before anything is calculated | opened; being located |
 
 State at the end of the twenty-fourth session: NONE of the 46 tickets is marked done. Each ticket's own file carries its state.
 
 Added in the twenty-fifth session (2026-11-24), on his word: ticket 03b, worked after 03 and before 04. The tickets are 47 with it. None is marked done.
 
 State at the close of the twenty-fifth session (2026-11-24): ONE ticket is marked done, 03b. The other 46 are open; each worked ticket's own file ends with its state at this close, and `GROUPS.md` says which group each is in and where each group stands. From the next session the work is handed out by group, a full suite of the four kinds of agent on each (his word).
+
+Added at the close of the twenty-fifth session, on his word: ticket 47 (an operator for the natural gas market). The tickets are 48 with it.
