@@ -1,0 +1,1119 @@
+{
+ "pieces": [
+  {
+   "piece": "src:markets-data:tasks/family-research-20261022/research-union-current/NEXT_SESSION_HANDOFF_20261124X.md@ac4e136c4d#L1-L119",
+   "claims": [
+    {
+     "line_start": 3,
+     "line_end": 3,
+     "statement_kind": "state",
+     "said_by": "Claude",
+     "said_on": "2026-11-23",
+     "inference": false,
+     "quote": "This file replaces handoff W as the starting point",
+     "text": "Handoff X replaces handoff W as the starting point for the next session.",
+     "mentions": [
+      "handoff X",
+      "handoff W"
+     ]
+    },
+    {
+     "line_start": 4,
+     "line_end": 4,
+     "statement_kind": "state",
+     "said_by": "Claude",
+     "said_on": null,
+     "inference": false,
+     "quote": "Handoff W stays as the record of the paper runner; nothing in it is withdrawn except its \"next\" list",
+     "text": "Handoff W stays as the record of the paper runner; only its \"next\" list is withdrawn and replaced by handoff X.",
+     "mentions": [
+      "handoff W",
+      "paper runner"
+     ]
+    },
+    {
+     "line_start": 5,
+     "line_end": 5,
+     "statement_kind": "rule",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "Desktop and Codex write to this branch too: fetch before every push",
+     "text": "Desktop and Codex also write to markets-data branch ccr-349e2ffe-07p8od, so fetch before every push.",
+     "mentions": [
+      "ccr-349e2ffe-07p8od",
+      "markets-data"
+     ]
+    },
+    {
+     "line_start": 7,
+     "line_end": 8,
+     "statement_kind": "decision",
+     "said_by": "Greg",
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "We need to finish building everything for the agents before we do any more paper trading",
+     "text": "Greg decided that everything for the agents is finished being built before any more paper trading is done.",
+     "mentions": [
+      "agent program",
+      "paper trading"
+     ]
+    },
+    {
+     "line_start": 8,
+     "line_end": 9,
+     "statement_kind": "plan",
+     "said_by": "Claude",
+     "said_on": null,
+     "inference": false,
+     "quote": "the next session builds ALL the steps of the agent program that are not built yet, in the plan's order",
+     "text": "The next session builds all the steps of the agent program that are not built yet, in the plan's order, and does not stop after one of them.",
+     "mentions": [
+      "agent program",
+      "graph adoption plan"
+     ]
+    },
+    {
+     "line_start": 9,
+     "line_end": 9,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "NO PAPER RUN until they are finished",
+     "text": "No paper run is made until all the steps of the agent program are finished.",
+     "mentions": [
+      "paper run",
+      "agent program"
+     ]
+    },
+    {
+     "line_start": 13,
+     "line_end": 14,
+     "statement_kind": "definition",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "(233 lines; stages 1 to 8)",
+     "text": "The plan is Markets research/kalshi/frankie_boss/CLAUDE_ARCH_PLAN_GRAPH_ENGINEERING_ADOPTION_20261123.md, 233 lines, stages 1 to 8.",
+     "mentions": [
+      "CLAUDE_ARCH_PLAN_GRAPH_ENGINEERING_ADOPTION_20261123.md",
+      "graph adoption plan"
+     ]
+    },
+    {
+     "line_start": 26,
+     "line_end": 26,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "BUILT. One item of it NOT done: the plan says to retire `.claude/agents/aws-*.md` and the `aws-mcp` entry in `.mcp.json`; both are still there.",
+     "text": "Stage 1 (the four agents) is built; one item is not done: retiring .claude/agents/aws-*.md and the aws-mcp entry in .mcp.json, both still there.",
+     "mentions": [
+      "stage 1",
+      ".claude/agents/aws-*.md",
+      "aws-mcp",
+      ".mcp.json"
+     ]
+    },
+    {
+     "line_start": 26,
+     "line_end": 26,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "Removing files goes to Greg first.",
+     "text": "Removing files goes to Greg first.",
+     "mentions": [
+      "Greg"
+     ]
+    },
+    {
+     "line_start": 27,
+     "line_end": 27,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "every trial a line with its parent, run, change, figures and status",
+     "text": "When handoff X was written, stage 2 (the experiment record: every trial a line with its parent, run, change, figures and status; tools/exp_dag.py; one SQLite file in markets-data experiments/) was not built.",
+     "mentions": [
+      "stage 2",
+      "tools/exp_dag.py",
+      "experiments/"
+     ]
+    },
+    {
+     "line_start": 28,
+     "line_end": 28,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "a control file for each loop; every trial pushed to stage 2, the reverted and the crashed too",
+     "text": "When handoff X was written, stage 3 (the keep-if-better loop: a control file for each loop, every trial pushed to stage 2, the reverted and the crashed too) was not built.",
+     "mentions": [
+      "stage 3",
+      "keep-if-better loop"
+     ]
+    },
+    {
+     "line_start": 28,
+     "line_end": 28,
+     "statement_kind": "open_question",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "Which figure each loop goes by is Greg's; the harness is built so it does not wait on that.",
+     "text": "Which figure each keep-if-better loop goes by is Greg's to decide; the harness is built so that it does not wait on that.",
+     "mentions": [
+      "stage 3",
+      "Greg"
+     ]
+    },
+    {
+     "line_start": 29,
+     "line_end": 29,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "NOT BUILT. markets-data has no `graph/` folder.",
+     "text": "When handoff X was written, stage 4a (the knowledge graph's layout) was not built and markets-data had no graph/ folder.",
+     "mentions": [
+      "stage 4a",
+      "graph/"
+     ]
+    },
+    {
+     "line_start": 30,
+     "line_end": 30,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "the scout turning the handoffs, kickoffs and research notes into claims tied to their source",
+     "text": "When handoff X was written, stage 4b (filling the graph: calc outputs and manifests with no model, the scout turning the handoffs, kickoffs and research notes into claims tied to their source, then merging names that mean one thing) was not built.",
+     "mentions": [
+      "stage 4b",
+      "scout"
+     ]
+    },
+    {
+     "line_start": 31,
+     "line_end": 31,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "the reviewer checks a claim against the graph and says what evidence is missing",
+     "text": "When handoff X was written, stage 4c (the grounding check: the reviewer checks a claim against the graph and says what evidence is missing) was not built; the reviewer's definition already names it.",
+     "mentions": [
+      "stage 4c",
+      "reviewer"
+     ]
+    },
+    {
+     "line_start": 32,
+     "line_end": 32,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "a context builder in place of the pile of handoffs",
+     "text": "When handoff X was written, stage 5a (a session starts from the graph: a context builder in place of the pile of handoffs) was not built.",
+     "mentions": [
+      "stage 5a",
+      "context builder"
+     ]
+    },
+    {
+     "line_start": 32,
+     "line_end": 32,
+     "statement_kind": "decision",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "convert the handoffs into graphs so theere isn't so much to read",
+     "text": "Greg asked that the handoffs be converted into graphs so there is not so much to read; stage 5a is what he asked about.",
+     "mentions": [
+      "stage 5a",
+      "Greg",
+      "handoffs"
+     ]
+    },
+    {
+     "line_start": 33,
+     "line_end": 33,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "a new input path beside `stacked_v1`, run side by side",
+     "text": "When handoff X was written, stage 5b (Frankie's packet from the graph: a new input path beside stacked_v1, run side by side) was not built.",
+     "mentions": [
+      "stage 5b",
+      "stacked_v1",
+      "Frankie"
+     ]
+    },
+    {
+     "line_start": 33,
+     "line_end": 33,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "Built beside the old one; switched only on Greg's go.",
+     "text": "Frankie's graph-built packet is built beside the old input path and is switched to only on Greg's go.",
+     "mentions": [
+      "stage 5b",
+      "Frankie",
+      "Greg"
+     ]
+    },
+    {
+     "line_start": 34,
+     "line_end": 34,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "one Haiku worker for each dipole event, a reducer, a refute wave",
+     "text": "When handoff X was written, stage 6 (the swarm: one Haiku worker for each dipole event, a reducer, a refute wave) was not built.",
+     "mentions": [
+      "stage 6",
+      "swarm",
+      "dipole event"
+     ]
+    },
+    {
+     "line_start": 35,
+     "line_end": 35,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "BUILT AND RUN (handoff W). On hold now.",
+     "text": "Stage 7 (paper trading: the runner on the tastytrade sandbox) is built and has been run (handoff W) and is on hold.",
+     "mentions": [
+      "stage 7",
+      "paper runner",
+      "tastytrade sandbox"
+     ]
+    },
+    {
+     "line_start": 35,
+     "line_end": 35,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "7d (each order and fill linked in the graph) and 7f (the loop and the grounding check on rule versions) waited for stages 2 and 4 and are NOT BUILT.",
+     "text": "When handoff X was written, 7d (each order and fill linked in the graph) and 7f (the loop and the grounding check on rule versions) were not built; they waited for stages 2 and 4.",
+     "mentions": [
+      "stage 7d",
+      "stage 7f"
+     ]
+    },
+    {
+     "line_start": 36,
+     "line_end": 36,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "every Granite call of one trade day, replayed through five arms",
+     "text": "When handoff X was written, stage 8 (the token test: can Claude agents carry Granite's daily load, every Granite call of one trade day replayed through five arms) was not built.",
+     "mentions": [
+      "stage 8",
+      "token test",
+      "Granite"
+     ]
+    },
+    {
+     "line_start": 38,
+     "line_end": 38,
+     "statement_kind": "definition",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "The plan's own order: 2 and 4a together, then 4b, then 3, then 5a, then 5b and 6.",
+     "text": "The plan's own order of stages is 2 and 4a together, then 4b, then 3, then 5a, then 5b and 6, then 7d and 7f, then 8.",
+     "mentions": [
+      "graph adoption plan"
+     ]
+    },
+    {
+     "line_start": 42,
+     "line_end": 43,
+     "statement_kind": "plan",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "Bring Markets `ccr-532eaea6-vgz20z` (`65f71a9`) onto the session's own branch first",
+     "text": "Step 0: bring Markets ccr-532eaea6-vgz20z (65f71a9) onto the session's own branch first, which is what makes the agent types scout, builder and reviewer available.",
+     "mentions": [
+      "ccr-532eaea6-vgz20z",
+      "65f71a9",
+      "scout",
+      "builder",
+      "reviewer"
+     ]
+    },
+    {
+     "line_start": 43,
+     "line_end": 43,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "They were not there at the start of the twentieth session.",
+     "text": "The agent types scout, builder and reviewer were not available at the start of the twentieth session.",
+     "mentions": [
+      "scout",
+      "builder",
+      "reviewer",
+      "twentieth session"
+     ]
+    },
+    {
+     "line_start": 44,
+     "line_end": 45,
+     "statement_kind": "plan",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "declare the budget for each agent run before it starts",
+     "text": "Step 0: say to Greg which steps the session will build and in what order, and declare the budget for each agent run before it starts.",
+     "mentions": [
+      "agent run",
+      "budget"
+     ]
+    },
+    {
+     "line_start": 46,
+     "line_end": 47,
+     "statement_kind": "plan",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "Have the scout locate what stage 4b and stage 6 read",
+     "text": "Step 0: have the scout locate what stage 4b and stage 6 read: the calc outputs and manifests, the handoff and kickoff files, the dipole events' stored layers, and the Granite receipts for stage 8.",
+     "mentions": [
+      "scout",
+      "stage 4b",
+      "stage 6",
+      "Granite receipts"
+     ]
+    },
+    {
+     "line_start": 47,
+     "line_end": 48,
+     "statement_kind": "rule",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "reachable without AWS, say so at once: AWS is off limits",
+     "text": "If something a stage needs is not reachable without AWS, it is said at once; AWS is off limits.",
+     "mentions": [
+      "AWS"
+     ]
+    },
+    {
+     "line_start": 52,
+     "line_end": 53,
+     "statement_kind": "rule",
+     "said_by": "Claude",
+     "said_on": null,
+     "inference": false,
+     "quote": "BUILT WITHOUT ASKING AGAIN (code, checks on real records, records written to markets-data)",
+     "text": "Built without asking again (code, checks on real records, records written to markets-data): stages 2, 3, 4a, 4b, 4c, 5a, the code of 5b, the code of 6, 7d, 7f and the code of 8.",
+     "mentions": [
+      "stage 2",
+      "stage 3",
+      "stage 4a",
+      "stage 4b",
+      "stage 4c",
+      "stage 5a"
+     ]
+    },
+    {
+     "line_start": 56,
+     "line_end": 56,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "anything that launches or changes Frankie, Granite or a pod (launch is HOLD)",
+     "text": "Anything that launches or changes Frankie, Granite or a pod still needs Greg's go, said to him first with its budget; launch is HOLD.",
+     "mentions": [
+      "Frankie",
+      "Granite",
+      "pod",
+      "HOLD"
+     ]
+    },
+    {
+     "line_start": 57,
+     "line_end": 57,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "switching Frankie's input to the graph-built packet (5b)",
+     "text": "Switching Frankie's input to the graph-built packet (5b) still needs Greg's go.",
+     "mentions": [
+      "Frankie",
+      "stage 5b"
+     ]
+    },
+    {
+     "line_start": 58,
+     "line_end": 58,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "a run of the swarm (6) and a run of the token test (8): both spend model tokens at scale",
+     "text": "A run of the swarm (6) and a run of the token test (8) each still need Greg's go, because both spend model tokens at scale.",
+     "mentions": [
+      "swarm",
+      "token test",
+      "stage 6",
+      "stage 8"
+     ]
+    },
+    {
+     "line_start": 59,
+     "line_end": 59,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "dispatching a loop on the GitHub runner or a pod (3)",
+     "text": "Dispatching a keep-if-better loop on the GitHub runner or a pod (3) still needs Greg's go.",
+     "mentions": [
+      "stage 3",
+      "GitHub runner",
+      "pod"
+     ]
+    },
+    {
+     "line_start": 60,
+     "line_end": 60,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "any paper run (7);",
+     "text": "Any paper run (7) still needs Greg's go.",
+     "mentions": [
+      "paper run",
+      "stage 7"
+     ]
+    },
+    {
+     "line_start": 61,
+     "line_end": 61,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "deleting any file already saved (the `aws-*` agent files of stage 1 included)",
+     "text": "Deleting any file already saved still needs Greg's go, the aws-* agent files of stage 1 included.",
+     "mentions": [
+      "aws-* agent files",
+      "stage 1"
+     ]
+    },
+    {
+     "line_start": 62,
+     "line_end": 62,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "anything onto the Markets trunk",
+     "text": "Anything onto the Markets trunk still needs Greg's go.",
+     "mentions": [
+      "Markets trunk"
+     ]
+    },
+    {
+     "line_start": 62,
+     "line_end": 62,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "Each stage lands on a branch for Codex's review; nothing is merged without Greg.",
+     "text": "Each stage lands on a branch for Codex's review, and nothing is merged without Greg.",
+     "mentions": [
+      "Codex",
+      "Greg"
+     ]
+    },
+    {
+     "line_start": 66,
+     "line_end": 66,
+     "statement_kind": "rule",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "Code of the agent program: Markets, on the session's own branch",
+     "text": "The code of the agent program goes to Markets, on the session's own branch; the plan names tools/exp_dag.py.",
+     "mentions": [
+      "Markets",
+      "tools/exp_dag.py",
+      "agent program"
+     ]
+    },
+    {
+     "line_start": 66,
+     "line_end": 67,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "near its GitHub size limit: code only, no output",
+     "text": "Markets is near its GitHub size limit, so it holds code only and no output.",
+     "mentions": [
+      "Markets"
+     ]
+    },
+    {
+     "line_start": 68,
+     "line_end": 68,
+     "statement_kind": "rule",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "Outputs: markets-data only: `graph/`, `experiments/`, each with a `MANIFEST.json` entry.",
+     "text": "Outputs of the agent program go to markets-data only: graph/ and experiments/, each with a MANIFEST.json entry.",
+     "mentions": [
+      "markets-data",
+      "graph/",
+      "experiments/",
+      "MANIFEST.json"
+     ]
+    },
+    {
+     "line_start": 69,
+     "line_end": 71,
+     "statement_kind": "plan",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "The first things to load into stages 2 and 4, already on this branch",
+     "text": "The first things to load into stages 2 and 4 are paper-trading-20261123/agent-runs.jsonl, the three run folders in paper-trading-20261123/live-runs/, the NEXT_SESSION_HANDOFF_*.md files and the decisions file.",
+     "mentions": [
+      "agent-runs.jsonl",
+      "live-runs/",
+      "ROOT_GAMEPLAN_DECISIONS.md",
+      "stage 2",
+      "stage 4a"
+     ]
+    },
+    {
+     "line_start": 70,
+     "line_end": 70,
+     "statement_kind": "measurement",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "(13 agent runs, each with its model and tokens)",
+     "text": "paper-trading-20261123/agent-runs.jsonl held 13 agent runs, each with its model and tokens, when handoff X was written.",
+     "mentions": [
+      "agent-runs.jsonl"
+     ]
+    },
+    {
+     "line_start": 72,
+     "line_end": 72,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "Paper runner code: `DavisAI1974/paper-trading-platform`, `claude/tasty-runner` (`e077b2e`).",
+     "text": "The paper runner's code is in DavisAI1974/paper-trading-platform on branch claude/tasty-runner at e077b2e.",
+     "mentions": [
+      "paper-trading-platform",
+      "claude/tasty-runner",
+      "e077b2e"
+     ]
+    },
+    {
+     "line_start": 73,
+     "line_end": 73,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "Codex's `main` there is not touched until Greg says he is done.",
+     "text": "Codex's main branch of paper-trading-platform is not touched until Greg says Codex is done.",
+     "mentions": [
+      "Codex",
+      "paper-trading-platform",
+      "main"
+     ]
+    },
+    {
+     "line_start": 77,
+     "line_end": 77,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "No made-up data, not even to check code: a check reads real records or is skipped.",
+     "text": "No made-up data is used, not even to check code: a check reads real records or is skipped.",
+     "mentions": [
+      "made-up data"
+     ]
+    },
+    {
+     "line_start": 77,
+     "line_end": 78,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "No averaging, pooling, ranking or labels; each trial, claim and trade is its own line.",
+     "text": "No averaging, pooling, ranking or labels: each trial, claim and trade is its own line.",
+     "mentions": [
+      "averaging",
+      "pooling"
+     ]
+    },
+    {
+     "line_start": 78,
+     "line_end": 79,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "A reverted or cut item stays written down with its status",
+     "text": "A reverted or cut item stays written down with its status: the plan's overrule allows the loop's reverts and the reducer's cutoffs but does not allow losing them.",
+     "mentions": [
+      "keep-if-better loop",
+      "reducer"
+     ]
+    },
+    {
+     "line_start": 79,
+     "line_end": 80,
+     "statement_kind": "rule",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "claim has a source or is marked as an inference",
+     "text": "Every claim has a source or is marked as an inference.",
+     "mentions": [
+      "claim",
+      "source"
+     ]
+    },
+    {
+     "line_start": 80,
+     "line_end": 81,
+     "statement_kind": "definition",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "A trade day is 6 pm Eastern the evening before to 5 pm Eastern on the named date.",
+     "text": "A trade day is 6 pm Eastern the evening before to 5 pm Eastern on the named date.",
+     "mentions": [
+      "trade day"
+     ]
+    },
+    {
+     "line_start": 81,
+     "line_end": 81,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "No mid price, no trade cost. AWS is off limits.",
+     "text": "No mid price and no trade cost are used, and AWS is off limits.",
+     "mentions": [
+      "mid price",
+      "trade cost",
+      "AWS"
+     ]
+    },
+    {
+     "line_start": 81,
+     "line_end": 81,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "Plain words, the answer in the first lines.",
+     "text": "Reports to Greg are in plain words with the answer in the first lines.",
+     "mentions": [
+      "Greg"
+     ]
+    },
+    {
+     "line_start": 81,
+     "line_end": 82,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "decisions recorded in git as they are made",
+     "text": "Greg's decisions are recorded in git as they are made.",
+     "mentions": [
+      "Greg",
+      "git"
+     ]
+    },
+    {
+     "line_start": 86,
+     "line_end": 86,
+     "statement_kind": "measurement",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "builder 102,225 of 300,000; reviewer 187,551 of 250,000",
+     "text": "Agent budgets left from the twentieth session: builder 102,225 of 300,000 tokens and reviewer 187,551 of 250,000 tokens.",
+     "mentions": [
+      "builder",
+      "reviewer",
+      "twentieth session"
+     ]
+    },
+    {
+     "line_start": 86,
+     "line_end": 87,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "no scout budget was declared",
+     "text": "No scout budget was declared in the twentieth session.",
+     "mentions": [
+      "scout",
+      "twentieth session"
+     ]
+    },
+    {
+     "line_start": 87,
+     "line_end": 88,
+     "statement_kind": "rule",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "A run's tokens are read from the notice the harness sends when it returns",
+     "text": "An agent run's tokens are read from the notice the harness sends when it returns and are written to paper-trading-20261123/agent-runs.jsonl until stage 2 gives them a home.",
+     "mentions": [
+      "agent-runs.jsonl",
+      "agent run"
+     ]
+    },
+    {
+     "line_start": 89,
+     "line_end": 90,
+     "statement_kind": "slip",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "a brief has to say which of those are lifted and why, or the builder stalls",
+     "text": "The builder's definition says to show a diff and wait and never to run against market data, so a brief has to say which of those are lifted and why, or the builder stalls.",
+     "mentions": [
+      "builder"
+     ]
+    },
+    {
+     "line_start": 94,
+     "line_end": 94,
+     "statement_kind": "measurement",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "The paper runner: 32 strategies, 26 checks passing, three run records, none scored.",
+     "text": "The paper runner has 32 strategies, 26 checks passing and three run records, none scored.",
+     "mentions": [
+      "paper runner"
+     ]
+    },
+    {
+     "line_start": 94,
+     "line_end": 95,
+     "statement_kind": "decision",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "We can just observe on ledger",
+     "text": "Greg decided that paper runs are ledger-only when they resume: \"We can just observe on ledger\".",
+     "mentions": [
+      "paper run",
+      "ledger"
+     ]
+    },
+    {
+     "line_start": 95,
+     "line_end": 95,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "The runner makes no pictures and no graph links (list C24).",
+     "text": "The paper runner makes no pictures and no graph links (running list C24).",
+     "mentions": [
+      "paper runner",
+      "C24"
+     ]
+    },
+    {
+     "line_start": 96,
+     "line_end": 96,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": "2026-11-24",
+     "inference": false,
+     "quote": "The sandbox account 5WY79188 is short 13 lots of /NGF7 and is left as it is",
+     "text": "The sandbox account 5WY79188 is short 13 lots of /NGF7 and is left as it is.",
+     "mentions": [
+      "5WY79188",
+      "/NGF7"
+     ]
+    },
+    {
+     "line_start": 96,
+     "line_end": 96,
+     "statement_kind": "decision",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "sandbox-only issues are parked.",
+     "text": "Sandbox-only issues are parked.",
+     "mentions": [
+      "tastytrade sandbox"
+     ]
+    },
+    {
+     "line_start": 97,
+     "line_end": 97,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "Richer data is coming; nothing more is built around the thin feed.",
+     "text": "Richer data is coming, so nothing more is built around the thin tastytrade feed.",
+     "mentions": [
+      "tastytrade feed"
+     ]
+    },
+    {
+     "line_start": 98,
+     "line_end": 99,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "Keys: the three sandbox values are in `paper-trading-20261123/tasty-sandbox.env`.",
+     "text": "The three sandbox key values are in paper-trading-20261123/tasty-sandbox.env and are not needed while no paper run is made.",
+     "mentions": [
+      "tasty-sandbox.env"
+     ]
+    },
+    {
+     "line_start": 103,
+     "line_end": 103,
+     "statement_kind": "open_question",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "the figure each loop goes by (stage 3)",
+     "text": "Open with Greg, from the plan: the figure each keep-if-better loop goes by (stage 3).",
+     "mentions": [
+      "stage 3",
+      "keep-if-better loop"
+     ]
+    },
+    {
+     "line_start": 103,
+     "line_end": 104,
+     "statement_kind": "open_question",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "whether Granite takes the grounding check for Frankie's own claims (stage 4c)",
+     "text": "Open with Greg, from the plan: whether Granite takes the grounding check for Frankie's own claims (stage 4c).",
+     "mentions": [
+      "Granite",
+      "stage 4c",
+      "Frankie"
+     ]
+    },
+    {
+     "line_start": 104,
+     "line_end": 104,
+     "statement_kind": "open_question",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "where this sits beside the fresh-run family step",
+     "text": "Open with Greg, from the plan: where the agent program sits beside the fresh-run family step.",
+     "mentions": [
+      "fresh-run family step"
+     ]
+    },
+    {
+     "line_start": 105,
+     "line_end": 105,
+     "statement_kind": "open_question",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "the exit indications of Codex's management rules",
+     "text": "Open with Greg, carried from handoff W: the exit indications of Codex's management rules.",
+     "mentions": [
+      "Codex",
+      "handoff W"
+     ]
+    },
+    {
+     "line_start": 105,
+     "line_end": 106,
+     "statement_kind": "open_question",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "whether Codex writes a strategy for the print with no side",
+     "text": "Open with Greg, carried from handoff W: whether Codex writes a strategy for the print with no side.",
+     "mentions": [
+      "Codex",
+      "print with no side"
+     ]
+    },
+    {
+     "line_start": 106,
+     "line_end": 106,
+     "statement_kind": "open_question",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "whether the fifteen read the quote a no-side print carries",
+     "text": "Open with Greg, carried from handoff W: whether the fifteen (CL01 to CL15) read the quote a no-side print carries.",
+     "mentions": [
+      "the fifteen",
+      "print with no side"
+     ]
+    },
+    {
+     "line_start": 106,
+     "line_end": 106,
+     "statement_kind": "open_question",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "Codex's wording not carried;",
+     "text": "Open with Greg, carried from handoff W: Codex's wording that the runner does not carry yet.",
+     "mentions": [
+      "Codex"
+     ]
+    },
+    {
+     "line_start": 107,
+     "line_end": 107,
+     "statement_kind": "open_question",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "and handoff V's and U's lists",
+     "text": "Open with Greg, carried from handoff W: the lists of handoff V and handoff U.",
+     "mentions": [
+      "handoff V",
+      "handoff U"
+     ]
+    },
+    {
+     "line_start": 111,
+     "line_end": 112,
+     "statement_kind": "slip",
+     "said_by": "Claude",
+     "said_on": null,
+     "inference": false,
+     "quote": "Claude wrote handoff W as prose and closed the session without saying that the handoff-to-graph step of the agent program had never been built.",
+     "text": "Slip: Claude wrote handoff W as prose and closed the session without saying that the handoff-to-graph step of the agent program had never been built; Greg had to ask.",
+     "mentions": [
+      "handoff W",
+      "Claude"
+     ]
+    },
+    {
+     "line_start": 112,
+     "line_end": 113,
+     "statement_kind": "rule",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "When a plan has filed stages, say at the start of a session which are built and which are not.",
+     "text": "When a plan has filed stages, say at the start of a session which are built and which are not.",
+     "mentions": [
+      "plan"
+     ]
+    },
+    {
+     "line_start": 115,
+     "line_end": 115,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "carry into every handoff until done",
+     "text": "Greg: the \"to revisit\" item on Native's predetermined windows is carried into every handoff until it is done.",
+     "mentions": [
+      "Native",
+      "handoff"
+     ]
+    },
+    {
+     "line_start": 117,
+     "line_end": 118,
+     "statement_kind": "state",
+     "said_by": null,
+     "said_on": null,
+     "inference": false,
+     "quote": "Native's record is built on predetermined windows (a 20-second roll, a level set from 85 in 100 seconds, 60-second horizons, a 45-second spacing and a 50-second wait before a dipole is made known)",
+     "text": "Native's record is built on predetermined windows: a 20-second roll, a level set from 85 in 100 seconds, 60-second horizons, a 45-second spacing and a 50-second wait before a dipole is made known.",
+     "mentions": [
+      "Native",
+      "dipole"
+     ]
+    },
+    {
+     "line_start": 118,
+     "line_end": 119,
+     "statement_kind": "rule",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "rule does not allow for our own work",
+     "text": "Greg's \"no predetermined windows\" rule does not allow predetermined windows for our own work.",
+     "mentions": [
+      "no predetermined windows"
+     ]
+    },
+    {
+     "line_start": 119,
+     "line_end": 119,
+     "statement_kind": "decision",
+     "said_by": "Greg",
+     "said_on": null,
+     "inference": false,
+     "quote": "He chose to keep Native as it was made for now.",
+     "text": "Greg chose to keep Native as it was made for now.",
+     "mentions": [
+      "Native",
+      "Greg"
+     ]
+    }
+   ]
+  }
+ ]
+}
