@@ -1,0 +1,25 @@
+{
+ "run": 147,
+ "session": "session_017eY1WPrMpaE6ySGEd7D4ZL",
+ "agent": "builder",
+ "model": "claude-sonnet-5-5",
+ "task": "tickets 02, 03 and 01: the points the fourth read left in tools/kgraph/defend.py, among them that a cited line names the commit it was read at; commit marked PROPOSED, push, stop",
+ "tickets": [
+  "02",
+  "03",
+  "01"
+ ],
+ "written_before_the_run_started": true,
+ "max_model_calls": 50,
+ "max_sub_agents": 0,
+ "max_concurrent_workers": 1,
+ "max_tool_calls": 50,
+ "max_tokens": 400000,
+ "max_wall_clock_s": 2100,
+ "max_retries": 1,
+ "max_graph_writes": 0,
+ "max_graph_writes_is": "writes into the real graph of markets-data; a write into a scratch copy is not counted",
+ "max_tokens_is": "the harness's total for the run when it ends (input and output together); the transcript's sum is recorded beside it",
+ "on_reaching_a_limit": "the run stops and returns what is done, what is open and why it stopped",
+ "note": "in the working copy of defend.py; briefed with line ranges, no searching"
+}
