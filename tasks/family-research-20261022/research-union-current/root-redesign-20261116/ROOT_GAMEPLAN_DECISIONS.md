@@ -8046,3 +8046,8 @@ figure. To bring back when the work reaches what moves the market and price-curv
   It did not: that sentence is in this file (the entry READ AFTER READ AFTER READ) and in
   `RETRO_20261124_SESSION26.md` item 2. It is taken back in both by this entry, and the standing page now says in
   its auditor section that every run is audited, a group's runs by that group's own auditor run.
+- NO MORE AGENT STARTS IN THIS SESSION (Greg, 2026-11-24, twenty-sixth session, after run 214 was started as the
+  send-back of run 211): "No more agent starts in this session". DECIDED BY HIM: the four builders then working
+  (runs 210, 212, 213, 214) are left to finish; nothing further is started, not a send-back, not a restart and
+  not an auditor. A run that hands back blocked or unfinished is recorded as it stands and goes on the next
+  session's start page.
