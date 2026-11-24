@@ -6731,3 +6731,11 @@ figure. To bring back when the work reaches what moves the market and price-curv
   each, 420 of them. GitHub gives a job's log only when the job ends, so the record branch is what was read.
   Built in draft and told to him, not run (platform item 25): the stored-tape run no longer waits for each push;
   each push carries the journal to the newest order or fill waiting. He was told he can refuse the change.
+- THE PAGE ANSWERS, THE SECRET IS IN, THE SECOND TEST (Greg, 2026-11-24): he signed in to
+  https://ng-paper-viewer.onrender.com (his screenshot: "Waiting for a session"), entered the GitHub Actions secret
+  `PAPER_RELAY_TOKEN` himself, and said "Secret is in, go". He had pasted the page's two values into the chat from
+  Render's screen; Claude repeated neither and wrote them nowhere. The stored-tape workflow now uses the page's
+  address when the variable `PAPER_RELAY_URL` is unset (platform `b49e929`, item 26), so the variable was not
+  needed from him. Started by Claude on his go, told to him as it started: the same test (trade day 2023-10-02,
+  both budgets 825,874, `stop_after_minutes` 30) on `b49e929`, with `phone_page` on and without the wait for each
+  push. The first test was still running beside it.
