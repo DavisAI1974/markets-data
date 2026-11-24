@@ -7359,3 +7359,8 @@ figure. To bring back when the work reaches what moves the market and price-curv
   brief the reviewer was given, from a reviewer that is not the proposer and wrote none of the grounds. Shown as
   a proposed change and read by the reviewer (run 105) before the builder went on; the 13 findings fixed; THE
   FIX NOT YET RE-READ, so neither ticket is marked done. Ticket 01 not started.
+- THE PACKET AGAINST THE EXCEL DAILY SHEETS (Greg, 2026-11-24): "We should compare that against the excel daily
+  sheets or just one day. They should have same columns on each day". DECIDED BY HIM, added to ticket 38: the
+  four trade days' daily sheets are compared with each other, and for one trade day every column of its sheet is
+  placed in what a decider is given at the moment, in the after-the-fact file, or named as not placed with the
+  reason; a check on the real workbook holds it. Sent to the builder on the packet (agent run 102).
