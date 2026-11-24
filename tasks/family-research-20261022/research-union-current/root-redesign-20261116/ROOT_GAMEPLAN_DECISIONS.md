@@ -6295,3 +6295,30 @@ figure. To bring back when the work reaches what moves the market and price-curv
   tasty platform issue; C29 nothing gets replaced; C30 no rule of the 32 is tied to a finding.
 - A SLIP IN A COMMIT MESSAGE (Claude): the message of Markets `7f071b1` lost one word, because a backquoted word in
   the shell ran a program that only printed its help. Nothing else ran and no file was changed by it.
+- CLAUDE IS TO HELP CODEX, WITH AGENTS ON BOTH JOBS (Greg, 2026-11-24): "How much do you have to do still?"; "You're
+  going to have to help codex"; "#run mattpocock-skills to help with this"; " No token limits on this build process
+  either"; "Paste this to Ccode", followed by the task as he pasted it: "Work on DavisAI1974/paper-trading-platform,
+  branch codex/strategy-trades-and-mbo-capture, in draft PR #5. Start with item 17. Stay on one number until it is
+  complete or a specific blocker requires moving on. Update the existing marked 35-item checklist as work lands."
+  The order he pasted: (1) item 17, paper execution: "The native matcher is built in draft. You own the agents.
+  Coordinate with Frankie and the agents to commit their placement and size choices for each strategy"; (2) item 2,
+  all 30 strategies: "All 30 rule files exist. Use the item 17 plan to finish independent execution for each
+  strategy, including the six manager rules"; (3) item 23, budgets: "The paper runner has limits and a stop-notice
+  path. Finish budget enforcement and stop notices for Ccode-owned agent runs"; (4) item 26, phone notices: "The
+  Pushover secret names are configured. Finish the Render and Pushover wiring for budget stops, run stops, and
+  failures. Phone receipt is" (the paste ends there). He gave the link to
+  `docs/platform/OWN_PLATFORM_WISHLIST_20261123.md` on that branch. Then: "Procreed. Keep some agents on theri build
+  while also having some on this. Restart all agents". So: this lifts, for that branch, his kickoff word that
+  Codex's files are not touched; builders stay on the agent program's fixes while Claude starts item 17.
+  Said to him first, as he asked: what is left on the agent program is (a) the reviewer's findings and (b) the
+  close-out.
+- THE REVIEW (reviewer runs 34 and 35, Opus, both stopped by a message before their last reply; their notes are
+  complete through the twelfth and last point and are kept as `graph/reviews/review-notes-20261124.md`): about
+  seventy findings. The ones that cost most if left: the token test's `plan` step would have sent Granite's prompts
+  to the API to count tokens wherever a key is set, without his go (none is set here; nothing was sent); Frankie's
+  graph packet shows five of Native's values (polarity, magnitude, threshold, baseline, prominence) that Native's
+  record carries only on the dipole's closing line, written 4 to 1,028 seconds after the moment the packet takes;
+  the swarm's check of a worker's figures could be passed by swapping two figures between columns or by writing a
+  number as a word; the session start shows a stale claim beside the claim that says the opposite, with nothing to
+  say which stands, because no link between them is ever written; checks still held invented strings. Four builder
+  runs (37 to 40) are fixing them, each to a written list of decisions; Claude fixes the packet.
