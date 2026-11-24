@@ -6968,3 +6968,11 @@ figure. To bring back when the work reaches what moves the market and price-curv
   That is one half hour of a thin Sunday-evening tape, unscored on his word: it shows neither that the strategies
   are solid nor that they are not. (4) Whether logic and memory are the trouble was not tested: no run had
   either. The same stretch run with and without them is what would show it, and the loop is what makes that run.
+- "WE'LL AGREE TO DISAGREE" (Greg, 2026-11-24): "We can't say our strategies are bad if there is zero logic in
+  applying them like we have been building for. That's our main piece and what we have put so much effort into.
+  That's what frankie and the agents are for and they have played no paet at a. We can't judge the strategies as
+  bad if we didn't use our logic to apply them". HIS RULING, taken as it stands: the runs of 2026-11-24 are no
+  judgement of the strategies, because Frankie and the agents took no part in applying them. Claude agrees with
+  that and said so: no record of the night is to be read or quoted as showing a strategy bad. The one point left
+  between them, his to hold: Claude does not call the strategies shown good by the night either. Nothing is to be
+  built on either reading; the runs stay unscored.
