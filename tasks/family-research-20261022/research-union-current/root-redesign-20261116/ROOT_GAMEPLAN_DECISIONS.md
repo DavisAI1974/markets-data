@@ -7938,3 +7938,14 @@ figure. To bring back when the work reaches what moves the market and price-curv
   no Pocock skill), so here the Skill tool still answers "Unknown skill: ask-matt" and the skills go on being run
   from the repository's own files. FOR THE NEXT SESSION: the skills should be in its list from the start, under
   the plugin's name; it says in its first message whether they are, and calls them by name if so.
+- THE PLATFORM REPOSITORY CAN BE READ NOW (Greg, 2026-11-24, twenty-sixth session: "I set you up in git for the
+  paper repo", with the page of his account showing the Claude GitHub App installed and "Claude Code cloud
+  sessions can work in DavisAI1974/paper-trading-platform"). WHAT IS SO: reading it is allowed and it was cloned
+  whole, READ-ONLY (8 branches; the working copy is at `ccr-0ac78691-8zapbb`, `28d4dbb`, the change of the
+  twenty-fourth session), and put where the checks look for it. Attaching it WITH PUSH ACCESS was still refused
+  to this session, so nothing can be written to the platform from here: tickets 41, 42 and 43 and the 30 minute
+  test still need a session started with the repository selected. THE CHECK THAT IT WORKS: with the checkout in
+  place, `tests/agent_program/test_defend.py` and `test_outcome.py` ran 89 checks, none skipped, none failing
+  (318 seconds), at Markets `20c13a1`; before, all 79 defend checks were skipped and the 10 outcome checks ended
+  in a refusal. SO G01, G03 AND G04 ARE NO LONGER HELD: the reviewer's read of G01 and the builder for G03 are
+  sent out; G04 follows G03 on the same files.
