@@ -7629,3 +7629,8 @@ figure. To bring back when the work reaches what moves the market and price-curv
   is registered with its mechanism and falsifiers, challenged by the reviewer, and trialled only on his go. It
   would have to be remade to his rules of today (each event on its own, no pooling, no ranking, the leakage gate,
   ticks at the nanosecond); the May stand-in pooled and ranked. Anything taken is put to him first.
+- AUTOSEARCH IS NOT A DIRECTIVE (Greg, 2026-11-24, after the answer above): "Only consider it if it can fill gaps.
+  This isn't a directive". DECIDED BY HIM: nothing is fetched, ported or built for autosearch on his earlier
+  words. It is weighed only where a named gap of the build exists that it could fill, and then put to him. No
+  ticket is opened for it and no agent is given it as a task. The lead and where the files are stay on record
+  above for that day.
