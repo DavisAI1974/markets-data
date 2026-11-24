@@ -5892,18 +5892,16 @@ figure. To bring back when the work reaches what moves the market and price-curv
   side may do; step 0 found the ledger writes such closes at the wrong print with no mark), point d (what counts
   as a gap; step 0 measured that the builder's count mostly counts the order messages arrive in). Builder run B
   waits for his answers.
-- DECIDED (Greg, 2026-11-24), points b and c, one answer for both: "Can't we make both decisions at the same time?
-  They're different events right?"; then, the first answer having been sent unfinished: "My second answer is good
-  for my first one too". Claude's reading, said to him, his to strike: THE QUOTE A PRINT CARRIES AND THE TRADE OF
-  THAT PRINT ARE TWO DIFFERENT EVENTS, EACH DECIDED ON ITS OWN, AT THAT PRINT.
-  (c) A print with no side: its QUOTE is read at that print like any other, so a step of the quote it shows closes
-  a trade right there and may open a rule whose trigger is the quote (CL06, CL10, CL11, CL15, the step away of
-  CL08). Its TRADE opens and closes nothing (rule 5 as written): it is no buy and no sell, it is not in the two
-  lines, and a trade leg's step or end that it shows (CL05) is acted on at the next print that has a side, with
-  BOTH prints named on the ledger line and the word "late".
-  (b) Where two things a rule orders show at one print, BOTH are written on the ledger line, each as its own
-  event at that print, and no "first" is claimed (the line says "both at one print: <one>; <the other>" where it
-  would say right or wrong).
+- POINTS b AND c ARE NOT DECIDED. Greg's first answer to both (2026-11-24): "Can't we make both decisions at the
+  same time? They're different events right?"; the first having been sent unfinished: "My second answer is good
+  for my first one too". Claude read that as "the quote a print carries and the trade of that print are two
+  events, each decided on its own at that print", wrote it here as decided and began to build on it. Greg, at
+  once: "Let's go over point c more before we decide". So: nothing is decided on c, and b waits with it (one
+  answer covered both). The entry that called them decided is replaced by this one. The code change begun on that
+  reading was never committed and was taken back out; `claude/tasty-runner` stands at `30b1dfc`.
+- THIRTY RULES (Greg, 2026-11-24): "There should be 30 rules. 15 from you and 15 from him". Where it stands: the
+  30 are Claude's CL01 to CL15 and Codex's CX01 to CX15. Only Claude's 15 are in the runner's code so far (9 run
+  on this feed, 6 cannot: they need single orders). Codex's 15 are builder run B, not started.
 - DECIDED (Greg, 2026-11-24), point d: "Only a real break". A GAP is: the stream dropped and came back; or a
   print's sequence number steps by anything but 1 or 2 (never seen on the 547 prints of the two recordings); or a
   print arrives out of order. The day-volume shortfall (21 lots on the 10-minute recording, 81 on the 25-minute
