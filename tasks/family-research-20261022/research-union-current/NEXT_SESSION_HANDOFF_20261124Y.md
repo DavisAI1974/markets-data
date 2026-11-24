@@ -55,7 +55,16 @@ Item 17 stands here (all of it in `paper-trading-20261123/item17-20261124/README
   paths re-pointed before a new run.
 - Frankie's choices are missing for all 30 rules: launch is on HOLD and needs Greg's go.
 
-Items 2, 23 and 26 are not started.
+Item 23 (added after this handoff was first written; Greg: "go to a different number while I get 17 straight with
+codex"): BUILT IN DRAFT, NOTHING RUN, on his branch as `297f8a4`. `paper_platform/agent_launcher.py` stops an agent
+run at its token or clock budget and sends the reason to the phone; `.github/workflows/agent_run.yml` starts it on
+Greg's go. Missing, his to say, and written under item 23: the budget figures for an agent run, the
+`ANTHROPIC_API_KEY` Actions secret, and the open gap that an agent started inside a Claude Code session cannot be
+stopped part-way. Item 23 stays open until it has been run.
+
+Item 2 waits on the item 17 plan. Item 26 is not started. Greg is settling item 17 with Codex himself: leave item
+17 and its deciders alone until he says. Codex added both authors' rule text and the plan format to
+`paper-trading-20261123/item17-20261124/` (`41ec052`).
 
 ## Put to Greg, not answered
 

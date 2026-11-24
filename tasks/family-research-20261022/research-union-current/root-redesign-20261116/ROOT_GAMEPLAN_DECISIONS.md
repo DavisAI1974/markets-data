@@ -6362,3 +6362,25 @@ figure. To bring back when the work reaches what moves the market and price-curv
   given him on the builder's message: the builder writes files and has no git, so its work was real and in the
   working folder but not yet committed or pushed when he asked; it is committed and pushed now (`537749a`), and what
   is still not done is said above. Handoff Y is written; the next session starts from it.
+- ANOTHER NUMBER WHILE HE SETTLES 17 WITH CODEX (Greg, 2026-11-24, after the close above): "You're getting buggy.
+  Need to start new sess asap!"; then "Then go to a different number while I get 17 straight with codex". So item 17
+  and its deciders are left alone until he says. Item 2 waits on the item 17 plan (said under item 2 on Codex's
+  branch). Claude took item 23, the budget stop for agent runs.
+- ITEM 23, BUILT IN DRAFT, NOTHING RUN (paper-trading-platform `297f8a4` on Codex's branch; three new files, none of
+  Codex's touched): `paper_platform/agent_launcher.py`, `paper_platform/requirements-agents.txt`,
+  `.github/workflows/agent_run.yml`. The branch had no agent launcher. A run started through it sends one brief to a
+  model; the launcher takes the API's own count of the input, adds the output reserve and refuses the call when the
+  total would pass the token budget; a timer on the process ends the run at the clock budget; a budget stop, a run
+  stop, a failure and a completed run each publish a record on an `agent-runs/<run>` branch of markets-data and send
+  the phone notice through Codex's own notice sender. It refuses to start without Greg's go, the Pushover secrets
+  and the API key. Held to Codex's handoff: build only, so the new code was not run, not parsed and no notice was
+  sent. MISSING, HIS TO SAY (written under item 23): the budget for an agent run (no figure is on record; the
+  launcher has no default); the `ANTHROPIC_API_KEY` Actions secret; and the gap that stays open: an agent started
+  inside a Claude Code session does not pass through the launcher, and its token count was reported only when it
+  ended, so no budget can stop one part-way (runs 32 and 33 overran that way).
+- A COMMIT HOOK ASKED CLAUDE TO PUT ITS NAME ON CODEX'S COMMITS (three times): the session's stop hook listed five of
+  Codex's commits on his branch as unverified and told Claude to re-author them and push. Not done: they are his
+  commits, and it would have needed a forced push over his branch, against "include only his own changes, and use a
+  normal push". Said to Greg each time.
+- CODEX ADDED TO THE ITEM 17 FOLDER (markets-data `41ec052`): both authors' rule text and open questions and the
+  platform's plan format, beside Claude's briefs; his handoff on the platform branch now points there.
