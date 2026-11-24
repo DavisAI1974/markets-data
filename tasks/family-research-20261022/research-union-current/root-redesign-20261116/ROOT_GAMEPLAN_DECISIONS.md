@@ -6870,3 +6870,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   page has been deployed without the fill marks and with every trade on the market line. Built for a run of
   hours, not run (platform, item 25): pushes spaced ten seconds apart; the held-contracts list sent to the page
   only at a run's end.
+- THE GRAPH'S FRAME, AND HOLDING LONGER (Greg, 2026-11-24): "Remove triangles from graph and legend. Also the tine
+  should be on bottom of x axis line and price on y the line ... I mean the lines that create the perimeter of
+  graph" (built, platform `dc7717c`: a frame of four lines, prices down its left side at whole ticks, times along
+  its bottom at round clock times; to be deployed between runs). "Later today we'll work on strategies to hold
+  trades longer. Jist make note in the md list file in paper repo": noted under "TO ADD LATER" at the foot of the
+  platform checklist, with what is on record to start from. Not started; it waits for him.
