@@ -35,7 +35,7 @@ data layer (ticket 38's work), and the reviewer's read of the platform change (p
 | 18 | NO RUN HAD ITS BUDGET WRITTEN IN A PLAN BEFORE IT STARTED. | None | ready |
 | 19 | AGENT RUNS ARE NOT RECORDED AS THE PLAN ASKS. | None | ready |
 | 20 | THE SAVING IS NOT MEASURED. | 32 for the session start; the Frankie packet half is on HOLD | blocked |
-| 21 | The record's first users (the build plan workbook's Experiment Arms sheet, the experiment orchestrator's steps | None | ready |
+| 21 | The record's first users (the build plan workbook's Experiment Arms sheet, the experiment orchestrator's steps | None | DONE: marked 2026-11-24 with its evidence in its file (reviewer run 164; the check exits 0 at markets-data `4233bd2`) |
 | 22 | The loop has never run. | Greg's go and Greg's figure | needs Greg's go |
 | 23 | The plan's own candidate loops have no control file: the extraction prompt itself (the paper's "graph autorese | 29 for the extraction loop; Granite is on HOLD for the other | blocked |
 | 24 | Nothing runs a loop on a GitHub runner or a pod; there is no workflow file (dispatch is on HOLD). | HOLD: dispatch is his | needs Greg's go |
@@ -70,3 +70,5 @@ Added in the twenty-fifth session (2026-11-24), on his word: ticket 03b, worked 
 State at the close of the twenty-fifth session (2026-11-24): ONE ticket is marked done, 03b. The other 46 are open; each worked ticket's own file ends with its state at this close, and `GROUPS.md` says which group each is in and where each group stands. From the next session the work is handed out by group, a full suite of the four kinds of agent on each (his word).
 
 Added at the close of the twenty-fifth session, on his word: ticket 47 (an operator for the natural gas market). The tickets are 48 with it.
+
+State in the twenty-sixth session (2026-11-24): TWO tickets are marked done, 03b and 21. The work is out by group, a suite of the four kinds of agent on each; `GROUPS.md` holds the order his word set (the rest of the list, then the 30 minute test without the operator coefficients, then ticket 47).
