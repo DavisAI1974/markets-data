@@ -7793,3 +7793,69 @@ figure. To bring back when the work reaches what moves the market and price-curv
   paired with there. So the three lines in ticket 47 stand, and the plan for ticket 47 may speak of the operator
   freely. A session that reads the April session for the operator writes down the operator and nothing it was
   paired with.
+
+## Twenty-sixth session (2026-11-24, in a code session): the build list first, the operator part last
+
+- THE TWENTY-SIXTH SESSION STARTS (2026-11-24, session_017eY1WSS3Qut93aDb3jnVG6). Greg: "#run mattpocock-skills to
+  find something to make this go faster and more focused", with the start page `NEXT_SESSION_START_20261124AC.md`.
+  SET UP AS THE PAGE ASKS: the session's branches (`ccr-144315dd-pta2ze` in Markets and in markets-data) were put
+  on top of `ccr-659edd86-di9udt` by fast-forward (Markets `74006f2`, markets-data `557a3b0`) and pushed.
+  markets-data holds its whole history (696 commits). Markets holds the whole history of that branch (751
+  commits) and NOT every branch of the repository: a fetch of every branch passed 32 GB and was about to fill the
+  disk, so it was stopped and only the working branch was fetched whole. The eight files of the zip were read in
+  full, each whole, with the verifier plan; the session HAS NO MEMORY FOLDER of its own (said to him), so
+  `frankie_handoff_20261123_2/` in git stays where they are kept. The four agent types loaded by name before any
+  agent was started; no general agent was used.
+  THE POCOCK SKILLS (cloned read-only from `mattpocock/skills` at `d653911`, into the session's scratch folder,
+  none installed and none used as a router): two are borrowed. `writing-for-agents` for every brief (point at
+  the file and lines instead of retyping; one clear and exhaustive "done when" for each step; say what to do, not
+  a list of what not to do; each thing said once). `to-questionnaire` for what the plans leave to him by name:
+  one sheet, the most important first, one idea to a question, an answer line under each, so he answers once
+  instead of across an hour of chat. `code-review` stays kept for ticket 45.
+  THE CHECK AT THE START: at markets-data `557a3b0`, from Markets `74006f2`, `python3 -m tools.kgraph.auditor_called`
+  exited 0: `COUNTS runs=156 not_audited=0 record_only=106 with_own_row=41 outside_roster=26 auditor_runs=9
+  no_report=0 plan_no_line=0`. The next run is 157.
+- CODEX BROUGHT THE DISCOVERY PIPELINE (Greg, 2026-11-24, passing on Codex's note "CCODE HANDOFF - MARKETS DIGITAL
+  OPERATOR"): Markets branch `od-refrag/markets-handoff`, commit `93ac56f`, 87 files, code and static definitions
+  only, no data, no history shared with the trunk; copies, the originals untouched. Codex's note: "Focus on the
+  numerical transformation, regardless of operator titles: market-data window -> log returns -> spectral encoding
+  -> retrieval -> decoder -> operator_coefficients (normally 128 numbers)"; main code
+  `refrag/adapters/markets_refrag_adapter.py`, `markets_bar_loader.py`, `od_refrag_adapter.py`,
+  `refrag/refrag_discovery/runtime/operator_decoder.py` and `operator_orchestrator.py`; the original scripts
+  `markets/vendored_build_kit/_markets_*.py`; "Known gap: _markets_combined_info_flow_kfold.py was not located.
+  The gate and centroid exporter need it; coefficient generation does not"; "Work only in the handoff copy and
+  its branch. Do not alter originals or trunk. Keep crypto data, discovery outputs, SENTINEL knowledge, and
+  credentials out of GitHub." READ BY THE MAIN SESSION SO FAR: the branch's README, whole. NOT READ: any of its
+  code. Nothing is said of what the pipeline can or cannot do until its code is read (the slip of the
+  twenty-fifth session). The box of ticket 47 for "on GitHub" is not marked: it also asks for the code read and
+  its inputs and outputs located.
+- THE BUILD LIST FIRST; A 30 MINUTE TEST WITHOUT THE OPERATOR COEFFICIENTS; THE OPERATOR PART LAST (Greg,
+  2026-11-24): "Is everything else on the build list done? Of not, finish that first. I want to run the agents
+  with and without the operator discovery coefficients to find out the effect of od. So let's save the od part
+  for the very last after we do a 30 min test without it". ANSWERED: no, one ticket of 48 is marked done (03b).
+  DECIDED BY HIM: (1) the rest of the build list is finished before the operator work; ticket 47 moves from first
+  on the list to last. It REPLACES the order of the start page ("First on the list: ticket 47"). (2) The agents
+  are run for 30 minutes WITHOUT the operator discovery coefficients first. (3) Then the operator part is built
+  and the agents are run WITH the coefficients, and the two are set side by side to show what the operator
+  discovery adds. CLAUDE'S READING, his to correct: (a) "the agents" are the deciders at the tick (a live agent
+  or a program an agent wrote), on the platform's own paper run, so the 30 minute test is group G12's first pass
+  on tape (tickets 40, 41, 43) and the "with" arm is that same run made again after ticket 47; (b) the two arms
+  are made from the same commit of the rules, on the same stretch of tape, differing only in the coefficients
+  being given to the decider, and are laid side by side decision by decision, with no pooled figure and no
+  score; (c) "the od part" is all of ticket 47, both operator tools, the April engine and the discovery pipeline.
+  WHAT HIS SENTENCE IS NOT: it sets the order; it is not the go for the run. The 30 minute test puts the tape
+  through the platform, so it starts only on his go, told first with its limits (his standing hold). WHAT THE
+  TEST NEEDS THAT THIS SESSION DOES NOT HAVE: paper-trading-platform was not selected when the session was
+  started; tickets 40, 41 and 43 are worked there. Said to him.
+- DESKTOP MAY HOLD WHAT IS MISSING (Greg, 2026-11-24): "I think desktop might have the missing info we need". A
+  LEAD OF HIS, taken to mean the helper Codex could not find, `_markets_combined_info_flow_kfold.py` (needed by
+  `_markets_gate_v2.py` and `_markets_dipole_export_centroids_v2.py`; not needed to make the coefficients). A
+  code session cannot open a Desktop chat or his drives. It is kept on ticket 47 for when the operator part is
+  reached; asking Desktop is his.
+- A SEND-BACK IS A NEW RUN WITH ITS OWN PLAN (the main session, settling what the auditor's reports 153 and 154
+  left open, before any suite of this session starts). When a builder is sent the reviewer's points, or any
+  agent is given a second part, that is a NEW RUN: a new run number, a new plan with its own eight limits written
+  and pushed before it starts, its own line, its own kept transcript, its own row from the auditor. So a run's
+  wall clock never holds the wait for the main session, and each limit is measured on one piece of work. The
+  limit `max_retries` counts only the same brief started again after a stop or a failure; a send-back is not a
+  retry. Every plan of this session carries that sentence in its note.
