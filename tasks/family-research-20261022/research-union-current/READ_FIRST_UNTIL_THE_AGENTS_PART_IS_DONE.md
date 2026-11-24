@@ -39,3 +39,11 @@ A session is cut from an old tip, so it loads its agent list before the four age
 `scout`, `builder`, `reviewer` and `frankie-performance-auditor` are refused by name at first. Put the session's
 Markets branch on the working head first; the types load by name a few minutes later. Do not start a general
 agent in a role's place.
+
+## THE AUDITOR IS CALLED ON EVERY RUN OF THE OTHER THREE (Greg, 2026-11-24; ticket 03b)
+
+"The per aud should have been called every run that we've done with the other 3 agents and hasn't been until
+now." Every run of the scout, the builder and the reviewer is audited by the performance auditor, each run its
+own row, against the limits told to Greg before it started. Through run 110 it was called on none. The check
+that holds this is ticket 03b (`paper-trading-20261123/tickets-44-20261124/03b.md`); until it is built, the
+main session calls the auditor on each batch's runs before any box of that batch is marked.

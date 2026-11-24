@@ -17,6 +17,7 @@ data layer (ticket 38's work), and the reviewer's read of the platform change (p
 | 01 | NO CLAIM MADE TODAY WAS CHALLENGED BY ANYONE BUT ITS PROPOSER. | 2, 3 | blocked |
 | 02 | NO CLAIM IS REGISTERED BEFORE ITS OUTCOME IS SEEN. | None | built, read once, fixed; the fix not re-read |
 | 03 | NO COMPETING EXPLANATION, NO FALSIFIER, NO DISTINGUISHING OBSERVATION is asked of anyone. | 2 | built, read once, fixed; the fix not re-read |
+| 03b | THE PERFORMANCE AUDITOR IS NOT CALLED ON THE OTHER THREE AGENTS' RUNS (added on his word, 2026-11-24, twenty-fifth session). | None | ready |
 | 04 | NOTHING KEEPS THE OUTCOME FROM THE CHALLENGER until the challenge is on record. | 3 | blocked |
 | 05 | NO CHECK IS WRITTEN AFTER A TRIAL. | 3; shown on tape only with Greg's go | blocked |
 | 06 | NO ADVERSE EVIDENCE IS ON RECORD. | 5 | blocked |
@@ -62,3 +63,5 @@ data layer (ticket 38's work), and the reviewer's read of the platform change (p
 | 46 | Stop the consolidation drift: consolidation is a standing step after every read into the graph | None | ready |
 
 State at the end of the twenty-fourth session: NONE of the 46 tickets is marked done. Each ticket's own file carries its state.
+
+Added in the twenty-fifth session (2026-11-24), on his word: ticket 03b, worked after 03 and before 04. The tickets are 47 with it. None is marked done.

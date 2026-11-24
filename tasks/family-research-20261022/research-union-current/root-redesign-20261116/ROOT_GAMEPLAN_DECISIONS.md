@@ -7441,3 +7441,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   The scout's two reports (runs 108 and 109) are in `paper-trading-20261123/scout-20261124/`. Run 108 went past
   the tokens told to him (174,551 against 150,000) and run 109 past its tool calls (41 against 40); nothing
   stopped either, which is ticket 18's own point.
+- THE AUDITOR IS CALLED ON EVERY RUN OF THE OTHER THREE; TICKET 03b (Greg, 2026-11-24): "The per aud should have
+  been called every run that we've done with the other 3 agents and hasn't been until now. Make that ticket 3b
+  to make a file that makes sure that he's callled too". DECIDED BY HIM: the performance auditor audits every
+  run of the scout, the builder and the reviewer, and a file makes sure of it so that it does not rest on
+  anyone remembering. WHAT WAS SO: through run 110 the auditor had been given nothing; its first run is 111.
+  Ticket 03b is written (`paper-trading-20261123/tickets-44-20261124/03b.md`), worked after 03 and before 04:
+  the rule in the places every session reads, and one command that lists every run of the other three that no
+  auditor run names and fails while any is listed. THE MAIN SESSION'S READING, put to him: one auditor run may
+  cover the runs of one batch, each run its own row, rather than one auditor run for each single run.
