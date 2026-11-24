@@ -6553,3 +6553,15 @@ figure. To bring back when the work reaches what moves the market and price-curv
   strategies against the plan (2 and 17), which item 2's own text says is still to do; the weekly book and the
   raw recording (6 and 7); replay and the not-scored marks (12, 16, 18). Each writes its findings to a file as it
   goes, so a stop part-way loses nothing.
+- A LIVE RUN THAT CROSSES THE WHOLE 5 PM TO 6 PM HOUR IS NOT CUT SHORT (Greg, 2026-11-24). Claude asked whether
+  one rule should hold for every live run still going at 4:59 pm Eastern (flatten then and end), which would also
+  take in a run started after about 12:15 in the afternoon, whose 5.75 hours land after 6 pm. His answer: "No
+  because we will be able to continue on next trade day and we need to see how pur system handles that and we
+  need market data across it". Taken as: the rule is NOT widened. His earlier decision stands as he gave it (a
+  5.75-hour stop that would land INSIDE the hour is brought forward to before 5 pm). A run whose 5.75 hours land
+  after 6 pm runs on across the hour and into the next trade day's session, recording the market data all the way,
+  and what the system does there is to be seen on a run. Nothing was changed in the code for this. As the code
+  stands, read not run: a session is given one named trade day, so at 5 pm its CL trades close at the first record
+  at or after 5 pm and its CX trades are interrupted, and the engine decides nothing in the next trade day; the
+  recorder and the books go on. (His first reading of the question, "The break is 5 pm not 5 am", came from
+  Claude's "12:15 pm", which he took for 12:15 at night; said to him.)
