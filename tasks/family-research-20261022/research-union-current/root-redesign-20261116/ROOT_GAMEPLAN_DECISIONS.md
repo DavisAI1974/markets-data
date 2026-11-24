@@ -7098,3 +7098,15 @@ figure. To bring back when the work reaches what moves the market and price-curv
   run. Its `--data ../markets-data` resolved from the loop's worktree to a folder that does not exist; it is now
   `--data "$MARKETS_DATA"`. Its budget declared nothing for the proposing agent; it now declares 45 model calls, 3
   agents and 300,000 tokens (the session's plain small values, his to change). The earlier wording is in git.
+- ZERO OUTSIDE GIT (Greg, 2026-11-24): "Why are we committimg stuff to my local machine again? Almost every session
+  i say not to do that amd we have to waste time migrating everything to git and deleting local copies. Zero on
+  local drives and 100% in git. Fix now". What was so: nothing was on his computer (the session runs on a cloud
+  machine and no computer of his is attached), but work did sit outside GitHub. A SLIP (Claude): two builders were
+  briefed to commit and not push, and the main session wrote "committed locally". FIXED AT ONCE: every file in
+  every working copy was committed as it stood, the unfinished ones named unfinished, and pushed. Markets
+  `26f4110` and markets-data `7877d9b` on `ccr-0ac78691-8zapbb`; the platform's five commits on a branch of that
+  name in paper-trading-platform (`6f7c54f`), held off Codex's branch until the reviewer has read them (Claude's
+  choice, said to him). Checked after: no working copy holds an uncommitted file and each is at GitHub's commit.
+  THE RULE FROM HERE: every agent pushes each piece as it stands; no agent is briefed to hold a commit; the word
+  for work not yet pushed is "not yet on GitHub".
+- HIS STOP ENDED THREE AGENTS (runs 69, 77 and 79); each is started again (his standing rule), as runs 80, 81, 82.
