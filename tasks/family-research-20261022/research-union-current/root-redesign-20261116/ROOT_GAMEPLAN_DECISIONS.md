@@ -6955,3 +6955,16 @@ figure. To bring back when the work reaches what moves the market and price-curv
   old-runner files the rule-version checks look for. Not fixed: which line of run 47 stands is not Claude's to
   choose. ONE EDIT OUTSIDE ITS BRIEF, read by Claude and kept: two lines in `tools/kgraph/platform_scope.py` so an
   order or fill of the own platform is not marked as belonging to the tastytrade sandbox.
+- HIS READING OF THE NIGHT, AND WHAT WAS SAID BACK (Greg, 2026-11-24, of the new graph and the runs): "That's good.
+  So with zero logic and memory it's doing well. And the shape does matter because that means we are picking up
+  the dipole and stuff correctly compared to actual trade day data. Our strategies are solid. It's our logic and
+  memory that is causing the problem". Said to him, because the records of the night do not carry that: (1) the
+  two lines having one shape shows the platform fills at the market's own prices at the right instants, which is
+  the platform reading the tape rightly; any orders at all would trace that shape, so it does not show the
+  entries are right. (2) That the dipole and exhaustion are worked out rightly is shown by a different thing, the
+  check that the platform's lines equal ROOT's at every sided print, which passed the last time this branch's
+  checks ran (2026-11-23) and has not run since. (3) The trades of the night: under the rules' own closes 422 of
+  437 lost about the spread; under the give-back exit, at 6 minutes, none of 398 open trades had been above zero.
+  That is one half hour of a thin Sunday-evening tape, unscored on his word: it shows neither that the strategies
+  are solid nor that they are not. (4) Whether logic and memory are the trouble was not tested: no run had
+  either. The same stretch run with and without them is what would show it, and the loop is what makes that run.
