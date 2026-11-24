@@ -7583,3 +7583,20 @@ figure. To bring back when the work reaches what moves the market and price-curv
   `autoresearch_lite.py` as written pools four crypto datasets and ranks operators by a fit figure: under his
   rules of today (no pooling, no ranking, no crypto data in our analysis) only its METHOD could be taken, never
   its code, its data or its figures; anything taken is put to him first.
+- WHERE THE SENTINEL AUTOSEARCH WAS LOOKED FOR (Greg, 2026-11-24: "Look on e or f drive", then "Look back in
+  your sessions"). HIS DRIVES: a cloud session cannot read them; his computer offered this session no folder
+  (the list was empty). THE OLD SESSIONS (all of them listed, back to December 2025; none has sentinel or
+  autosearch in its title): the session "Check dispatch and git repository status" (8 to 17 April 2026, id
+  `session_0158CbPSs1LZWUmq6dUXs26J`) is SENTINEL work. Its last replies name the repository `Factory`, the
+  branch `claude/check-dispatch-git-status-auNbx`, the files `sentinel/pipeline/atlas_builder.py` and
+  `sentinel/pipeline/atlas_data/`, and his own copy at `E:\sentinal\Factory--claude-check-dispatch-git-status-auNbx`.
+  ON GITHUB TODAY: `DavisAI1974/Factory` shows no branch at all and size 0, so that branch is not there any
+  more; a code search of every repository of the account finds "autoresearch" only in Markets
+  (`markets_adapter.py`, and the May files named above) and finds no "QD3SET" or "Liouvillian"; the three small
+  repositories pushed in April and May (`novell`, `od-render-workflow`, `evolution`) hold no autosearch.
+  SO, AS FAR AS THIS SESSION COULD SEE: the April SENTINEL code is on his E drive (the folder above) and in that
+  old session's transcript, and nowhere on GitHub. NOT DONE: the April session's transcript was not read past
+  its last three replies, so whether it holds the autosearch program itself is NOT KNOWN; the sessions of 4 to 7
+  May ("New coding session", "Continue Phase 2 pipeline development") are where the Markets version was built
+  and were not read either. FOR THE NEXT SESSION: read those transcripts with the session tools, or have the E
+  drive folder pushed to GitHub or shared, before anything is taken from it.
