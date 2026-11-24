@@ -1,4 +1,4 @@
-# Builder run 131 (Sonnet): ticket 03b, the points of the first read and then of the second
+# Builder run 131 (Sonnet): ticket 03b, the points of the first, the second and the third read
 
 Kept word for word as the agent returned it, 2026-11-24 (twenty-fifth session). Nothing below this line is the main session's.
 
@@ -116,3 +116,45 @@ REAL RECORD AS IT STANDS (markets-data was still moving)
 HOUSEKEEPING
 - /tmp/run131 is deleted. `git -C /home/user/markets-data status --short` is empty.
 - Tool calls: about 22 for the whole run.
+
+---
+
+## The next hand-back
+
+Run 131, third read, six points plus the docstring. Pushed to ccr-659edd86-di9udt. Commit 781f0ac. After the last merge (done at the start; the push needed no further merge) pytest gives 37 passed, 0 failed.
+
+ORDER OF WORK (a departure from your rule)
+- I wrote the code for points 1-5 before the new checks, which is the wrong order. To show red afterwards, I ran the new checks against the old code at 120579e. 6 failed and 31 passed: the two N3 cases, the first-line check, the unreadable-report case, the reasons case, and the `--at`-without-`--data` case. The new code then passed all 37.
+
+THE SIX POINTS
+1. Own-report rule held tightly, in tests/agent_program/test_auditor_called.py.
+   - `test_case_n3_a_report_whose_first_line_holds_the_number_inside_a_longer_one_is_not_that_runs_own` has two parametrized cases: run 13 with run 133's report, and run 11 with run 111's report.
+   - Both read the report from the record at f1e3be4 through `_report_of`.
+   - `test_case_g2b_...` now reads run 133's report from f1e3be4 too.
+2. An unreadable report is no report. The code is in the per-report loop of `analyse` in tools/kgraph/auditor_called.py. The run goes into `no_report` unless at least one named report is readable and its own, and the reason is recorded. The check is `test_case_a_report_that_cannot_be_read_at_its_commit_is_no_report_and_fails_plain_and_ticket`. It replaces run 120's two lines at 9bfef60 with its newest line at commit 0000000. Both the plain command and `--ticket` exit 1. The scratch copy gets a TICKET_RUNS.json written into it for this case.
+3. Each named run gets its true reason, and list (4) marks each report.
+   - Notes now read "its own report has no row for run N", or "names no readable report of its own (reasons)".
+   - Report marks are "(its own)", "(another run's, not counted)", "(not readable at <commit>)", "(no commit named)" and "(not its own, not counted)".
+   - The check is `test_case_each_named_run_gets_the_reason_true_of_it_and_list_4_marks_each_report`: run 116 at 9bfef60, its newest line re-appended naming run 111's report, audits extended by 50 and 118.
+4. First-line rule, in `first_line_problem` in the same file. It accepts a space, `(`, `:` or the end of the line after the number. It refuses a following digit as "another run's". A byte-order mark or leading space gives "its first line does not begin with `# Performance auditor run N`". The check is `test_first_line_after_the_number_may_be_a_space_paren_colon_or_the_end_only`, which derives its strings from run 133's real first line.
+5. `--at` with a commit not in the repository and no `--data` is refused with exit 2, in main, using the same words as with `--data`. The check is `test_an_at_that_is_not_a_commit_without_data_is_refused_too`.
+6. The separated section's header is reworded as you gave it. The module docstring now states the rule the record cannot show yet: audited from the record alone only when every clearing auditor lists the run so, and no real run has a row in two reports.
+
+THE SEVEN PUT-BACK CHANGES, each applied by hand once to the new code (failures out of 37)
+- M1 (any line decides the auditor): 1 failed, `test_case_m1_...`.
+- M2 (plain exit ignores no_report): 1 failed, `test_case_m2_...`.
+- M4 (any clearing auditor instead of all): 0 failed. This is the expected unheld rule and is said in the docstring.
+- M5 (a name alone clears): 2 failed, `test_case_m4_and_m5_...` and the reasons case.
+- N1 (own-report rule dropped, `problem = None`): 4 failed. They are g2b, both N3 cases, and the reasons case.
+- N2 (`--ticket` ignores no_report): 3 failed. They are the 9cea759/c0d4ff1 ticket check, the ticket-at-a-commit check, and the unreadable-report case.
+- N3 (first-line test loosened to the number anywhere in the line, `str(arun) in first`): 3 failed. They are both N3 cases and the first-line check. The reviewer's version of N3 left all 31 checks clean; this one no longer does.
+
+REAL RECORD AS IT STANDS (markets-data was still moving)
+- `COUNTS runs=139 not_audited=5 record_only=106 with_own_row=22 outside_roster=26 auditor_runs=6 no_report=0 plan_no_line=3`
+- The plain command exits 1.
+- List (1) holds runs 128, 131, 136, 140 and 141.
+- List (4) holds runs 111, 116, 120, 124, 133 and 139. Each prints its report path with its commit and its mark. 111's mark begins "(its o...", and I saw the other marks only as cut-off output (the full text was shortened on screen), so I did not read them off the screen. The checks hold the marks.
+
+HOUSEKEEPING
+- /tmp/run131 is deleted. `git -C /home/user/markets-data status --short` is empty.
+- Tool calls for the whole run: about 29.
