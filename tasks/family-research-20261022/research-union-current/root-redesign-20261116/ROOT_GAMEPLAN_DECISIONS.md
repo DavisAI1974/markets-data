@@ -6903,3 +6903,18 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - BUILT TONIGHT AND NOT YET LIVE ON THE PAGE: the graph without fill marks, with a frame and its scales, and with
   every trade on the market line (platform `dc7717c` and before). The page is not deployed while the run's
   results are on it; it goes live at the next deploy, which empties the page.
+- A STOPPED AGENT IS ALWAYS STARTED AGAIN (Greg, 2026-11-24): "Restart agents", then, after the stop button had
+  killed the builder a second time: "Restart.agents. inless i say something, always restart stopped agents. The
+  only way my prompts will get to you0 is by hitting atop button which also stops agents. Can't we make them more
+  durable?" STANDING RULE, HIS: an agent stopped by his stop button is started again without asking, unless he
+  says otherwise. The stop button is how his message gets through; it is not a judgement on the agent's work.
+  What was done: run 66 could not be resumed with its context (the harness refuses a stopped agent), so run 67
+  was started fresh with a brief built for stops: read the notes of the run before it and the state of git first
+  and continue from there; write a line of notes after each step; commit and push each piece as it stands. Told to
+  him: what else would make agents outlast the button (a separate cloud session for long builds), with its cost.
+  His "we'll do the changes later" of the hour before is overtaken by "Restart agents": the connection of the
+  agent program to the platform is being built now. "Don't use score" stands: the runs of 2026-11-24 are loaded as
+  records and carry no result figure.
+- A TRIAL RUNNER FOR THE LOOP (platform `72798d9`, item 12; built by Claude, NOT RUN): a stretch of the stored tape
+  through the same session and matcher as a paper run, without pacing, page or pushes, writing to a scratch copy.
+  Its last printed line holds counts of what was written and no result figure.
