@@ -5835,3 +5835,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   the Markets session branch and from the session's machine. The copy on the earlier session's Markets branch
   `ccr-fffbc766-a1gxpl` is another branch: removed only on his word for that branch by name. BLOCKED at the time of
   writing: this session's push to the new repository is refused (the Claude GitHub App is not installed on it).
+- DONE (2026-11-23, about 7 pm Eastern): Greg installed the GitHub App on `DavisAI1974/paper-trading-platform`
+  ("Installed"). The paper trade code is there on branch `claude/tasty-runner` (`afcf107`), in a new folder `tasty/`
+  (the 7e check as `tasty/tasty_7e_check.py`, the runner's first part as `tasty/paper/`) with its test in
+  `tests/tasty_runner/`; none of Codex's files is changed. Every file was compared with the pushed branch, then
+  `strategies/` and `tests/strategies/` were removed from the Markets session branch `ccr-532eaea6-vgz20z`
+  (`65f71a9`) and from the session's machine. NOT removed: the copy of the 7e check on the earlier session's Markets
+  branch `ccr-fffbc766-a1gxpl` (his word for that branch by name), and the two holding commits in the session
+  branch's history. The 7e receipts name the code as `strategies/tasty_7e_check.py @ <Markets commit>`: that is
+  where it was when it ran.
