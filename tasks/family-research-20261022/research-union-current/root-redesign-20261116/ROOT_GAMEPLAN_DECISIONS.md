@@ -7316,3 +7316,5 @@ figure. To bring back when the work reaches what moves the market and price-curv
   finished first: the packet that carries every data layer (agent run 102, Sonnet) and the reviewer's third read
   of the platform change (agent run 103, Opus). Of the 44: 15 can start, 13 wait on another ticket, 10 wait on
   his go, 6 on his decision.
+- A CORRECTION (Claude): the line above counts the 44 tickets wrongly. As written in the tickets: 14 can start, 14
+  wait on another ticket, 10 wait on his go, 6 on his decision.
