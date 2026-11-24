@@ -6918,3 +6918,17 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - A TRIAL RUNNER FOR THE LOOP (platform `72798d9`, item 12; built by Claude, NOT RUN): a stretch of the stored tape
   through the same session and matcher as a paper run, without pacing, page or pushes, writing to a scratch copy.
   Its last printed line holds counts of what was written and no result figure.
+- THE TRIAL RUNNER, RUN ONCE ON HIS GO (Greg, 2026-11-24: "Go", to "running that trial runner here, once, on the
+  6:30 pm to 7:00 pm stretch"). Told first; no tokens; nothing pushed. The platform's libraries were installed in
+  the session for it. RESULT, read from the two journals: the stretch took 4 seconds (the paced run of the same
+  stretch, `058313bbf2304bb0bb14aaed3315ab0e`, took 30 minutes); both journals hold 4,016 rows; with the run's
+  ID, the trade IDs made from it and the journal's own clock set aside, the first 3,981 rows (every signal,
+  order, order status and fill up to the stop) are the same in every field but `rule_commit`; the last 35 rows
+  are each run's own stop. `rule_commit` differs because the session's copy of the repository holds only its
+  last 20 commits, and git then names the oldest of them for every rule file: a trial must be run in a checkout
+  with the whole history. Written under item 12 (platform `189671b`).
+- THE GIVE-BACK RUN ENDED AT ITS OWN STOP (paper run `ea4c1d2e7e0c43168c150c8b2aef3960`). His words with the graph
+  on his screen: "Exceept for latest trade this was really good". The last point of our line was a buy at 2.931
+  at 7:00:00 pm Eastern against a market last traded at 2.918: the stop closing every open trade at once into a
+  thin book. Those closes are administrative, not trade data; the line no longer draws them (platform `189671b`,
+  not deployed). The run is not scored, on his word.
