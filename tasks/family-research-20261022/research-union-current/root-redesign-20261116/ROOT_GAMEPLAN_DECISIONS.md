@@ -6503,6 +6503,6 @@ figure. To bring back when the work reaches what moves the market and price-curv
   branch's first commit is made on a pinned commit in a checkout without file contents, and may fail to publish.
   A SLIP (Claude): the item 28 text first said the event table had 37 rows; it has 40, and 4 more for rows never
   written. Corrected on the branch in its own commit.
-- TOKENS OF THE SIX REVIEWERS (runs 54 to 59, `claude-opus-5-5`): the harness reported 846,176 in all; their own
+- TOKENS OF THE SIX REVIEWERS (runs 54 to 59, `claude-opus-5-5`): the harness reported 845,876 in all (134,742 + 170,151 + 119,689 + 185,427 + 102,210 + 133,657; this line first said 846,176, written before the sum was made, a slip of Claude's); their own
   transcripts add to 18,524,726 over every call, the advisor's 655,810 included. Both figures for each run are in
   `agent-runs.jsonl`.
