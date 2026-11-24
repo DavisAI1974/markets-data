@@ -6663,3 +6663,11 @@ figure. To bring back when the work reaches what moves the market and price-curv
   cloned or fetched and files were read from them, and one record count was read from the stored tape's
   `MANIFEST.json` (4,279,455 records over its seven files). No platform code ran, nothing was parsed, no agent was
   started, no token was spent on an agent.
+- THE PARSE-ONLY PASS (Greg, 2026-11-24): "Do the parse-only pass". Done on the platform branch head `3952da7`:
+  53 Python files, 10 YAML files and 35 JSON files read for grammar, none run or imported; the phone page template
+  has no stray `$` and its 20 names are all supplied. Nothing failed to parse. It does not show a misspelled name,
+  a wrong import or anything the code does when it runs. Written under item 35 of the checklist.
+- WHAT GITHUB SHOWS HIM (his screenshot of the Actions page): only past runs, all of the verification workflow. The
+  paper workflow is on the trunk and has never been run. The last verification of Codex's branch (run 11, on
+  2026-11-23, commit `7252561`) failed one phone-page check of 27 (a 404 where a 401 was expected); read from its
+  log, nothing run. Nothing pushed to the branch since has been verified.
