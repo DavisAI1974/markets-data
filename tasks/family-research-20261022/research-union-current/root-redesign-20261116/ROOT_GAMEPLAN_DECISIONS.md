@@ -6596,3 +6596,32 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - TOKENS: the four reviewers (runs 60 to 63) reported 732,244 in all and used 21,424,187 over every call, the
   advisor's 790,341 included. The look-back (run 64) reported 303,912 and used 25,873,032 over 105 calls, the
   advisor's 479,585 included: it read 90 pages of transcript. Each run's figures are in `agent-runs.jsonl`.
+- THE STORED TAPE, FED LIKE LIVE (Greg, 2026-11-24): "Don't we need to retain the books somehow? Figure out a way
+  to do that. What storage dec and explain gaps. Explain que pos. We are going to use our historical data and feed
+  it like it's live". His four points answer the four things Claude had left open under items 6 and 7.
+  THE DECISION: the paper runs use the stored tape fed at live pace. That is the path already built
+  (`purchased_mbo_paper.yml`, tape `purchased-archive`), and Databento's live replay span no longer stands in the
+  way of a first run. As built it covers about 6 pm to 11:45 pm Eastern of the named trade day; carrying on from
+  there needs a start point, not built, his word.
+  RETAINING THE BOOK. Counted on the seven stored files (read record by record, no platform code, the count told
+  to him before it ran): one clear record in each, always the first; unflagged on the two Sunday files (the
+  exchange's start-up), snapshot-flagged on the other five (the vendor's UTC opening, compared and never
+  applied); none after a file's first record. So on the stored tape the book is already carried through every
+  boundary. For a true live feed the way is written under item 6 (hold the three books at a mid-week clear, read
+  what follows as a restatement, keep the orders named again with their place and times, add the unknown, take
+  out the unnamed, mark it and tell the phone) and NOT built: no stored record of such a reset exists to build it
+  on. Record: `paper-trading-20261123/review-20261124/item6-clear-records-counted.md`.
+  TAKEN BACK (Claude), item 6, platform `32b25c3`: the change of `2de679a` that sent a raised order to the back of
+  the matcher's line. NautilusTrader sets to nothing the size ahead of a resting paper order on ANY delete at its
+  price, so the change made posted paper orders jump the queue more often and changed no fill's price or size.
+  The matcher line is as Codex left it. The second slip of this kind today; both were pushed before their effect
+  was read through.
+  ALSO: the phone now says "paper run" for a stored-tape run and "paper replay" only for a receipt replay
+  (`970af86`); the gap between checkpoints does not exist on the stored tape (said under item 7); the stop before
+  5 pm reads the wall clock and so acts only on a live-following run (said under item 20).
+- THE PUSHOVER KEYS, GIVEN IN THIS CHAT (Greg, 2026-11-24): two screenshots, the application's API token (the
+  application is named "Paper trade alert") and his user key. Claude wrote neither value into any file, commit or
+  command. The environment tool's own rule is that a secret is never set through it (it stores what it is given
+  in plain text and shows it on the approval card): the person enters secrets in the environment's settings. So
+  the two values still go in by his hand, once: `PUSHOVER_APP_TOKEN` and `PUSHOVER_USER_KEY` on the Markets
+  environment. Said to him.
