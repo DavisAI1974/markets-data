@@ -6671,3 +6671,11 @@ figure. To bring back when the work reaches what moves the market and price-curv
   paper workflow is on the trunk and has never been run. The last verification of Codex's branch (run 11, on
   2026-11-23, commit `7252561`) failed one phone-page check of 27 (a 404 where a 401 was expected); read from its
   log, nothing run. Nothing pushed to the branch since has been verified.
+- THE KEYS, AGAIN (Greg, 2026-11-24, with a screenshot of "Workflow dispatch failed"): "This key issue is really
+  stadting to bothe rme. You have them so use the. And now all of a sudden there are more for some reason. And
+  again we don't need the prod ones because we are in our own paper trade sys". What is so, read from the
+  workflow: the failure on his screen is not a key. The form was sent from `main` with the trade day and both
+  budgets empty. A SLIP (Claude): the list given to him named `MARKETS_DATA_TOKEN` as needed; it is not (with the
+  deploy key the push goes over SSH). No broker, Databento or capture key is read by a stored-tape run. The run
+  reads three names that are already in GitHub and the two of the phone page. The table is added to
+  `paper-trading-20261123/KEYS_WHERE_THEY_ARE.md` so no session lists them wrongly again.

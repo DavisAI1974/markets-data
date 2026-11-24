@@ -26,3 +26,21 @@ State on 2026-11-24, end of the twenty-second session: the two Pushover names we
 enter them: the environment's own rule is that the person types a secret into its settings. Whether the GitHub
 Actions secret `PUSHOVER_APP_TOKEN` holds the token of the application "Paper trade alert" cannot be read from a
 session; the first run's start notice shows it.
+
+## What a run of the stored tape reads (added 2026-11-24, twenty-third session)
+
+Read from `purchased_mbo_paper.yml` and `.github/actions/markets-data/action.yml` on the platform branch. The
+workflow reads every one of these from GitHub by itself. No session holds one, needs one, or asks Greg for one.
+
+| Name | Needed for the stored-tape run (tape `purchased-archive`) | State, as far as it can be seen without the value |
+| --- | --- | --- |
+| `MARKETS_DATA_DEPLOY_KEY` | yes: it pushes the run's records | set: the verification runs used it and passed |
+| `PUSHOVER_APP_TOKEN`, `PUSHOVER_USER_KEY` | yes: the runner refuses to start without them | recorded as set by Codex on 2026-11-23 |
+| `PAPER_RELAY_URL` (a variable), `PAPER_RELAY_TOKEN` | yes: the runner refuses to start without the phone page | NOT listed when Codex looked on 2026-11-23; not seen since |
+| `MARKETS_DATA_TOKEN` | NO: with the deploy key the push goes over SSH and the token is never read | does not matter |
+| `PAPER_CAPTURE_KEY` | NO: only the `purchased-capture` and `live-capture` tapes read it | does not matter |
+| `DATABENTO_API_KEY` | NO: only a live recording reads it | does not matter |
+| any tastytrade or broker key | NO: the platform is our own; it sends no order anywhere | does not matter |
+
+A session cannot list the secret names of the repository. A name that is missing shows itself in the run's first
+minute: the runner refuses to start and says which name.
