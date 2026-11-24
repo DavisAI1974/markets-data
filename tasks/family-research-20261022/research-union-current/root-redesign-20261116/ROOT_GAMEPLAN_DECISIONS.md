@@ -6011,7 +6011,7 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - THE ACCOUNT IS LEFT SHORT 13 LOTS OF /NGF7 IN THE SANDBOX. Said to Greg before it was done: a close-out by hand,
   a cancel of each unfinished order and then one buy of 13. Sent: six cancels (five accepted, the one for order
   2207911 refused); the buy was NOT sent, its dry run refused again; a dry run of "Buy to Close" refused too.
-  Records: `paper-trading-20261123/live-runs/closeout-20261124T011337Z/`. Ways out, his to choose: try the buy
+  Records: `paper-trading-20261123/live-runs/closeout-20261124T011335Z/`. Ways out, his to choose: try the buy
   again after the trade day ends (the unfinished sell orders are Day orders), or reset the sandbox account on
   tastytrade's tool page.
 - A FEED-ONLY RECORDING (no orders) was started at 8:14 pm Eastern, said to him first, to catch the 15-minute-old
@@ -6021,6 +6021,11 @@ figure. To bring back when the work reaches what moves the market and price-curv
   at the moment of the order, not the stream it gives us, which is 900 seconds old. Each of the 13 fills of the
   first run with orders lies at the bid or the offer of the feed's own print just before or just after the fill's
   time (feed-only recording, 8:14 to 8:31 pm Eastern, exactly 900.1 seconds behind). The prints the rules acted on
-  were up to 11 ticks away. So on the sandbox with its own stream a rule decides on one quote and is filled on
+  were up to 12 ticks away (CL06-0002: filled at 3.548, the bid it acted on 3.536). So on the sandbox with its own stream a rule decides on one quote and is filled on
   another: the fills there say nothing about the rules. Each fill on its own line:
   `paper-trading-20261123/live-runs/feed-only-20261124T011440Z/fills-beside-the-market.json`. Not scored.
+- CHECKED AT THE END OF THE RUNS (2026-11-24): no file outside `tasty/` and `tests/tasty_runner/` differs from
+  `afcf107` on `claude/tasty-runner` (none of Codex's files touched); none of the three sandbox key values is in any
+  file of `live-runs/` or `step0-20261124/` (exact match, names and true/false only). SAID TO GREG, a miss of
+  Claude's: the start check let the run begin with order 2207911 standing, after Claude's own change to it before
+  the run (list, C20).
