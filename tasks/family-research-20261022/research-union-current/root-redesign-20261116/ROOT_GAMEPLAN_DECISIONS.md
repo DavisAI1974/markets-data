@@ -6362,3 +6362,24 @@ figure. To bring back when the work reaches what moves the market and price-curv
   given him on the builder's message: the builder writes files and has no git, so its work was real and in the
   working folder but not yet committed or pushed when he asked; it is committed and pushed now (`537749a`), and what
   is still not done is said above. Handoff Y is written; the next session starts from it.
+
+## Twenty-second session (2026-11-24, in a code session): Codex's draft PR 5
+
+- WHERE THE WORK IS (Greg, 2026-11-24): "You will be working in paper trade repo for Codex's work". Taken as:
+  the session works on DavisAI1974/paper-trading-platform, branch `codex/strategy-trades-and-mbo-capture`, draft
+  PR 5. The agent program (the real graph through the fixed code, the link between a stale claim and the claim
+  that says otherwise, the manual) is not started this session and waits for his word.
+- NOTHING ON THE LOCAL MACHINE (Greg, 2026-11-24): "Othing goes on local machine. I saw it every session. Git
+  only. If there is something on local.machine, needs migrated". What was local and where it went: the Markets
+  work of the last session (head `537749a`) was on the session's machine only as a fast-forward of the session's
+  branch; pushed to Markets `ccr-39e0401c-g5omlm`. The markets-data handoff branch `ccr-349e2ffe-07p8od` (to
+  Codex's `41ec052`) is merged into the session's branch `ccr-39e0401c-g5omlm` and pushed. The paper platform
+  clone had no change of the session's. The one other thing on the machine is a read-only copy of the public
+  repository mattpocock/skills, read because he asked for those skills; it holds nothing of ours. From here every
+  file the session or an agent writes is committed and pushed as it lands.
+- CODEX ON ITEM 17 (his message, passed on by Greg): "I found the blocker. Ccode's saved briefs point to a deleted
+  scratch folder, and the two authors' strategy documents are on different branches. I'll put the pinned source
+  files beside the briefs on Ccode's markets-data branch and replace the stale paths." Done by him as markets-data
+  `41ec052`. The deciders have still not been run; no agent's choice is on record.
+- A DIFFERENT NUMBER (Greg, 2026-11-24): "Then nove to different number". Taken as: leave item 17 where it stands
+  and take up the next number of his order (17, then 2, 23, 26; 35 waits), which is item 2.
