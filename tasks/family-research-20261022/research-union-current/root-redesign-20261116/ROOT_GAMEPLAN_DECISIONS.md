@@ -6701,3 +6701,15 @@ figure. To bring back when the work reaches what moves the market and price-curv
   2023-10-02, tape `purchased-archive`, the same plan, message budget 825,874, event budget 825,874 (so that
   neither cuts the run before the 30 minutes; Claude's choice), `stop_after_minutes` 30, `phone_page` off. No
   tokens, one GitHub runner.
+- THE 30-MINUTE TEST IS RUNNING (Actions run 45356808551, paper run `036ed57524584afdaeb0bc60be6aaa71`, record
+  branch `paper-runs/036ed57524584afdaeb0bc60be6aaa71` of markets-data): past startup, signals, paper orders and
+  fills journaled and pushed as they happen; 36 journal rows and 9 strategies in its first minute.
+- "FILL THEM WITH SOMETHING" AND "SET UP THE PHONE PAGE ON RENDER" (Greg, 2026-11-24): he asked that the page
+  settings be filled from a GoDaddy address, then that the page be set up on Render. What is so: an address with
+  no program behind it fails the run's first call; the session's GoDaddy connection only checks and suggests
+  names; render.com cannot be reached from the session's network; a session cannot write a GitHub variable or
+  secret. A Render connector is installed on his Claude account and NOT signed in. Asked of him: sign that
+  connector in to his Render account; Claude then creates the service `ng-paper-viewer` from the branch. Left
+  for his hand after that, because nothing else can write them: the GitHub Actions variable `PAPER_RELAY_URL`
+  and the secret `PAPER_RELAY_TOKEN`. The phone-page program was read for what it imports: only `fastapi`,
+  `uvicorn` and Python's own library, so `requirements-viewer.txt` is enough for it.
