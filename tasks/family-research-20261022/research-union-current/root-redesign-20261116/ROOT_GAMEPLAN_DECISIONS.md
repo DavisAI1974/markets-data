@@ -5968,3 +5968,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   settled before the canary.
 - BUILDER RUN B2 (agent run 12, Sonnet, budget 150,000) started 2026-11-24: the order path, the live stream reader
   and the runner loop, with offline checks only. No sign-in, no network, no order in the run.
+- NOT PERFECTION NOW, FEEDBACK ON HOW IT WORKS (Greg, 2026-11-24): "We're going to ha e to rewrite rules a little
+  later. We have that agent program that will help highlight things. I'm not shooting for perfection right now,
+  jist feedback on how it's working so far". So: the open points on rule wording (the fifteen and the no-side
+  quote, Codex's wording not carried, the exit indication, the G3 start) do NOT hold the work up; each stays as it
+  is built, written down, for the rewrite. The aim now is a working run and a plain account of how it behaves.
+  Claude's call from it: the reviewer's run is aimed at the order path (can it send twice, send anywhere but the
+  sandbox, leave a position), not at rule wording that will be rewritten.
