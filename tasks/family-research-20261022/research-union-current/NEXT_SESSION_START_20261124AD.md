@@ -24,7 +24,7 @@ OWED, by group (each group's runs by that group's own auditor run):
 - G08, tickets 18 and 19: run 194.
 - G11, ticket 46: runs 202, 209, 213.
 - Scout run 206 (his earlier answers; it names tickets 15, 16, 22, 29, 36, 38, 42).
-`python3 -m tools.kgraph.auditor_called --data <data>` EXITS 1 until they have their rows (it did when last run: 12 runs listed, before runs 210, 212 and 213 were recorded). No ticket's box is
+`python3 -m tools.kgraph.auditor_called --data <data>` EXITS 1 until they have their rows (it did when last run: 12 runs listed, before runs 210, 212 and 213 were recorded; with them 15 runs owe a row). No ticket's box is
 marked before that. Send the auditor group by group (each run its own `## Run NNN` block; the kept transcripts are
 in `paper-trading-20261123/transcripts/`), limits written and pushed and told to him first.
 
@@ -96,21 +96,26 @@ at the foot of the ticket, not another round.
 
 | Repository | Branch | Head |
 | --- | --- | --- |
-| Markets (code) | `ccr-144315dd-pta2ze` | `0cadc66` when this page was first written; see the last line of this page |
+| Markets (code) | `ccr-144315dd-pta2ze` | `793c5af` |
 | markets-data (records, graph, tickets) | `ccr-144315dd-pta2ze` | the commit that holds this page |
 | paper-trading-platform, the change of the twenty-fourth session | `ccr-0ac78691-8zapbb` (NOT Codex's branch) | `28d4dbb` (read only; no push access in the twenty-sixth session) |
 | markets-data, the stored planes of the four trade days (the daily sheets) | `root-rows-20231002`, `-20231003`, `-20231017`, `-20231018` | `360fdaa`, `c8a0b75`, `733442a`, `1bd670e` |
 | Markets, Codex's discovery pipeline (ticket 47, LAST) | `od-refrag/markets-handoff` | `93ac56f` (only its README is read) |
 | Markets, the April operator search (ticket 47) | `od-autoresearch/apr5-handoff` | `e65441a` |
 
-Agent runs are recorded through 214, less the three named just below. The next run is 215.
+Agent runs are recorded through 214. The next run is 215.
 
 ## Where the work stopped
 
-THREE BUILDERS WERE STILL WORKING WHEN THIS PAGE WAS FIRST WRITTEN: run 210 (ticket 04), run 212 (ticket 38, parts C
-and D), run 213 (ticket 46). If the lines "AT THE VERY CLOSE" are not at the foot of this page, the session ended
-before they handed back: look for their lines in `paper-trading-20261123/agent-runs.jsonl`, their commits on the
-Markets branch, and any uncommitted edits they left (their working copies are lost with the session).
+NOTHING IS IN FLIGHT. At the close he said "Close it" and the last three builders (runs 210, 212, 213) were stopped
+by the main session before they handed back; every run of the session is recorded (157 to 214): its report word
+for word where it handed back, its line, its kept transcript. What the stopped builders had pushed is on the
+Markets branch; what two of them left uncommitted is kept as patch files in
+`paper-trading-20261123/builder-20261124/LEFT_UNCOMMITTED_RUN_212_ON_793c5af.patch` and
+`LEFT_UNCOMMITTED_RUN_213_ON_4f0757c.patch`. The working copies themselves are lost with the session.
+
+THE SESSION BRANCH OF MARKETS HOLDS FAILING CHECKS, known and named: 11 of the 79 defend and outcome checks (ticket
+04's own point 1: see `04.md`); one check of test_ingest_artifacts.py (the record: see `25.md` and `19.md`).
 
 NOTHING WENT THROUGH THE ENGINE OR THE TAPE. NOTHING WAS CALCULATED. NOTHING WAS WRITTEN INTO THE REAL GRAPH. No
 paper run, no Frankie, no pod, no AWS, nothing to the trunk. THREE TICKETS ARE MARKED DONE: 03b, 21, 31.
@@ -128,12 +133,14 @@ DO, in this order:
    run 179's line goes back as written with the loader taking its correcting line. Then tickets 18 and 19 are
    marked.
 2. G07, ticket 38, the one he has said again and again: every data layer to the decider. Read the plan and its
-   foot. Write the known-at table (each group of columns of each of the 63 layers: packet at its tick, packet at
+   foot and `38.md`. FIRST points 6 and 7 of parts C and D (point 6 from the kept patch: the after-the-fact file
+   out of the folder a decider reads). Write the known-at table (each group of columns of each of the 63 layers: packet at its tick, packet at
    its known time, or the afterwards layer) from the plan's foot; ONE builder for parts A, B and E; ONE reviewer
    read with the stored planes present. The reviewer is also given the possible fault in `root/dipole_peaks.py`.
 3. G05, ticket 25 points 3 and 4 (after item 1), then ticket 37 from scout 197's places.
-4. G03, ticket 04: one reviewer read against its done-line; then G04 (05, 06, 09), the same chain of files.
-5. G11, ticket 46: mark when its builder pass is in and audited.
+4. G03, ticket 04: a builder clears the 11 failing checks its point 1 left (`04.md`); then one reviewer read
+   against its done-line; then G04 (05, 06, 09), the same chain of files.
+5. G11, ticket 46: point 4 from the kept patch (`46.md`); then the box.
 6. G01: the three small points of reviewer run 190; the proposer's commit on eight grounds; ticket 01.
 7. G09: ticket 14's nine points and the read of the platform change `28d4dbb`; the write-ups of 12 and 13; 15 is
    answered and is marked once scout 206 has its row.

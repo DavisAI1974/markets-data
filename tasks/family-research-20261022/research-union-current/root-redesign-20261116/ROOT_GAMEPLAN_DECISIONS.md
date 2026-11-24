@@ -8063,3 +8063,13 @@ figure. To bring back when the work reaches what moves the market and price-curv
   the rest of this session, the close included; the next session's first job is to fix the auditor. Start page AD
   opens with it. Claude's reading of what the fix covers, his to correct: the rows owed, and the way the auditor
   is called so that every group's suite goes out with its auditor.
+- THE SESSION CLOSED ON HIS WORD (Greg, 2026-11-24, twenty-sixth session): "Do as much of the handoff, updating,
+  committing and pushing we can while the agents finish"; "Print the drop in when the agents are done"; then, told
+  the last builder needed about half an hour more: "Close it. Can you close the other 2 amd update what they have
+  done?". DONE: runs 210, 212 and 213 were stopped by the main session before they handed back and are recorded
+  with what each had pushed and what its checks had printed; the edits two of them left uncommitted are kept as
+  patch files beside the builders' reports; the state of tickets 04, 38 and 46 is at the foot of each file. No
+  auditor was run and no box was marked. THE STATE AT THE CLOSE: three tickets marked done (03b, 21, 31); 15 runs
+  owe an auditor's row; the Markets session branch holds 11 failing checks from ticket 04's own change and one
+  from the record. Nothing went through the engine or the tape; nothing was calculated; nothing was written into
+  the real graph; nothing went to the trunk. Start page: `NEXT_SESSION_START_20261124AD.md`.

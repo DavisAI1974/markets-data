@@ -1,0 +1,65 @@
+diff --git a/tests/agent_program/test_consolidate.py b/tests/agent_program/test_consolidate.py
+index c125e2b..95a776f 100644
+--- a/tests/agent_program/test_consolidate.py
++++ b/tests/agent_program/test_consolidate.py
+@@ -10,6 +10,7 @@ the file."""
+ import json
+ import re
+ import shutil
++from pathlib import Path
+ 
+ import pytest
+ 
+@@ -327,3 +328,16 @@ def test_a_claim_added_under_the_read_after_its_task_is_not_yet_while_the_reads_
+     assert line[1] == "151" and "150 through the step" in line[2] and "1 not yet" in line[2]
+     assert counts["through_the_step"] == 150 and counts["not_yet"] == counts["claims"] - 150
+     assert counts["reads_not_yet"] == counts["reads"] - len([r for r in reads if reads[r][1] == "through the step"])
++
++
++# ==== POINT 4: THE ORDER OF TWO CLAIMS OF THE SAME DATE NEVER DEPENDS ON WHERE A CHECKOUT SITS ====
++def test_a_same_date_pair_with_an_unreadable_commit_time_is_refused_naming_the_repository(scratch):
++    root, g = scratch
++    platform = next((d for d in (Path(__file__).resolve().parents[3] / "paper-trading-platform", Path("/home/user/paper-trading-platform")) if d.exists()), None)
++    if platform is None:
++        pytest.skip("no paper-trading-platform checkout on this machine (the commit time of the platform claim is read from it)")
++    dirs = repo_dirs(root, None, str(platform))
++    assert "paper-trading-platform" in dirs                      # the case is this folder left out
++    left_out = {k: v for k, v in dirs.items() if k != "paper-trading-platform"}
++    with pytest.raises(schema.Refused, match="paper-trading-platform"):
++        resolve.supersede(GraphStore(root, graph_dir=g), "claim:2689fd7e52d1", "claim:61549a6d6869", "run 96's pair, platform folder left out", "code:test", left_out)
+diff --git a/tools/kgraph/resolve.py b/tools/kgraph/resolve.py
+index 5378aea..d06816f 100644
+--- a/tools/kgraph/resolve.py
++++ b/tools/kgraph/resolve.py
+@@ -280,14 +280,14 @@ def _when(store: GraphStore, claim: dict, dirs: dict | None) -> tuple:
+     # (`family-research-20261022/` once made a claim of 2026-11-24 read as 2026-10-22).
+     m = re.search(r"(20\d{6})", src.rsplit("/", 1)[-1])
+     day = a.get("said_on") or (f"{m.group(1)[:4]}-{m.group(1)[4:6]}-{m.group(1)[6:]}" if m else "")
+-    stamp = 0
++    stamp = None                                    # None: the commit time could not be read (never taken as zero)
+     repo = src.split(":", 2)[1] if src.count(":") >= 2 else None
+     if dirs and repo in dirs and a.get("source_commit"):
+         try:
+             stamp = int(git(dirs[repo], "log", "-1", "--format=%ct", a["source_commit"]))
+         except (RuntimeError, ValueError):
+-            stamp = 0
+-    return (day, stamp)
++            stamp = None
++    return (day, stamp, repo)
+ 
+ 
+ def supersede(store: GraphStore, new_id: str, old_id: str, why: str, run: str, dirs: dict | None = None) -> str:
+@@ -307,6 +307,13 @@ def supersede(store: GraphStore, new_id: str, old_id: str, why: str, run: str, d
+             raise schema.Refused(f"{old_id} already stands over {new_id} by the link {standing['id']}: a pair and its reverse are "
+                                  "never both applied (take that link back with `resolve undo` first)")
+     a, b = _when(store, new, dirs), _when(store, old, dirs)
++    if a[0] and a[0] == b[0]:                       # the same date: the commit time says which is later, so it must be readable
++        for cid, w in ((new_id, a), (old_id, b)):
++            if w[1] is None:
++                raise schema.Refused(f"{new_id} and {old_id} have the same date ({a[0]}) and the commit time of {cid} could not be read: "
++                                     f"its repository {w[2]!r} is not among the folders given (or the commit is not in it); "
++                                     "give that folder so the order does not depend on where a checkout sits")
++    a, b = (a[0], a[1] or 0), (b[0], b[1] or 0)
+     if a[0] and b[0] and a < b:
+         raise schema.Refused(f"{new_id} was made earlier than {old_id} ({a[0]} against {b[0]}): only a later claim takes "
+                              "the place of an earlier one")

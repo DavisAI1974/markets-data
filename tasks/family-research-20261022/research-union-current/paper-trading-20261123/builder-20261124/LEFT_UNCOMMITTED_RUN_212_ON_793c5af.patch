@@ -1,0 +1,84 @@
+diff --git a/tests/agent_program/test_decider.py b/tests/agent_program/test_decider.py
+index 5c102f8..0100825 100644
+--- a/tests/agent_program/test_decider.py
++++ b/tests/agent_program/test_decider.py
+@@ -447,6 +447,19 @@ def test_every_stored_plane_of_the_trade_day_is_named_in_the_foot_with_its_reaso
+         print(f"\nseq {s}: layers {{name: rows}} =", {n: l["count"] for n, l in pk["layers"].items()})
+ 
+ 
++def _after_file(box):
++    """Where the door writes the after-the-fact file of a question: a sibling folder of the question's, not in it."""
++    return box.parent / f"afterwards-{box.name}" / "afterwards_layers.json"
++
++
++def _nothing_in_the_folder_points_to_the_afterwards_file(box):
++    for f in box.rglob("*"):
++        if f.is_file():
++            t = f.read_text(errors="ignore").lower()
++            assert "afterwards_layers" not in t and f"afterwards-{box.name}" not in t, f.name
++            assert "afterwards" not in f.name
++
++
+ def _scratch_question(mb, q):
+     box = mb / f"q-{q['sequence']}"
+     box.mkdir(parents=True)
+@@ -546,7 +559,9 @@ def test_the_afterwards_file_is_written_beside_the_question_and_reaches_no_decid
+     box = _scratch_question(mb, q)
+     srv = _server(world, mb)
+     srv.once()
+-    doc = json.loads((box / "afterwards_layers.json").read_text())
++    assert not (box / "afterwards_layers.json").exists() and _after_file(box).exists()
++    _nothing_in_the_folder_points_to_the_afterwards_file(box)
++    doc = json.loads(_after_file(box).read_text())
+     assert list(doc)[0] == "known_only_afterwards" or doc["known_only_afterwards"] is True
+     assert doc["known_only_afterwards"] is True and "may be given to a decider at the instant it decides" in doc["notice"]
+     pk = _build(world, q)
+@@ -908,7 +923,7 @@ def test_the_door_writes_planes_afterwards_references_and_one_decision_per_line(
+     docs = {}
+     for s in world["picks"]:
+         box = boxes[s]
+-        for f in ("state.json", "layers.json", "planes_since.json", "afterwards_layers.json", "brief.md", "packet.json"):
++        for f in ("state.json", "layers.json", "planes_since.json", "brief.md", "packet.json"):
+             assert (box / f).exists(), (s, f)
+         docs[s] = json.loads((box / "planes_since.json").read_text())
+         pk = _build_p(world, planes, qs[s])
+@@ -917,8 +932,10 @@ def test_the_door_writes_planes_afterwards_references_and_one_decision_per_line(
+         assert {f"plane:{k}" for k in pk["planes"]} <= set(layers) and "other_rules" in layers
+         brief = (box / "brief.md").read_text()
+         assert "afterwards_layers" not in brief and "afterwards:" not in brief
+-        assert str(box / "afterwards_layers.json") not in brief and "root-rows" not in brief
+-        aw = json.loads((box / "afterwards_layers.json").read_text())
++        assert str(_after_file(box)) not in brief and "root-rows" not in brief
++        assert _after_file(box).exists() and not (box / "afterwards_layers.json").exists()
++        _nothing_in_the_folder_points_to_the_afterwards_file(box)
++        aw = json.loads(_after_file(box).read_text())
+         assert aw["known_only_afterwards"] is True and list(aw)[0] == "known_only_afterwards" or True
+         assert sp.afterwards_check(aw, pk["moment_ns"]) == []
+         assert aw["stored_planes"] and all(v["id_prefix"].startswith("afterwards:plane:") for v in aw["stored_planes"].values())
+diff --git a/tools/decider/serve.py b/tools/decider/serve.py
+index 433bf89..915990f 100644
+--- a/tools/decider/serve.py
++++ b/tools/decider/serve.py
+@@ -301,7 +301,8 @@ class Server:
+         """The whole of every layer beside the brief: state.json (the question's state, whole), layers.json (every
+         other layer, whole, each row with its id; a stored plane by its count) and planes_since.json (the plane rows made
+         known since the previous question, its earlier files named). Nothing is dropped; the text is the head of each.
+-        Beside them afterwards_layers.json, for learning only. Returns the breaches of the two files' own checks
++        The after-the-fact file is written beside the question's folder (a sibling folder afterwards-<question's folder
++        name>), for learning only; nothing in the question's folder points to it. Returns the breaches of the two files' own checks
+         (planes_since.json, the afterwards file); empty when none."""
+         breach = []
+         if pk.get("state") is not None:
+@@ -327,8 +328,10 @@ class Server:
+             after_doc = sp.afterwards_layers(self.store, pk["trade_day"], pk["moment_ns"],
+                                              sp.planes_named(self.store, pk["trade_day"], self.platform),
+                                              plane_after=plane_after)
+-            write_whole(box / "afterwards_layers.json", json.dumps(after_doc, sort_keys=True) + "\n")
+-            breach += [f"afterwards_layers.json: {b}" for b in sp.afterwards_check(after_doc, pk["moment_ns"])]
++            after_dir = box.parent / f"afterwards-{box.name}"      # beside the question's folder, never in it
++            after_dir.mkdir(exist_ok=True)
++            write_whole(after_dir / "afterwards_layers.json", json.dumps(after_doc, sort_keys=True) + "\n")
++            breach += [f"the after-the-fact file: {b}" for b in sp.afterwards_check(after_doc, pk["moment_ns"])]
+             write_json(box / "layers.json", {n: {k: v for k, v in l.items() if k != "in_text"}
+                                              for n, l in pk["layers"].items()
+                                              if "rows" in l or l.get("where") == "planes_since.json"})
