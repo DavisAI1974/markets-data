@@ -7284,3 +7284,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   read in the final review. Run 95 (the platform's depth) had pushed its pieces through the market series; one
   of its 39 no-tape checks failed as it stood: started again as run 99. Run 93 (every layer through the packet)
   was mid-work: started again as run 100.
+- WHAT HE MEANT BY HYBRID (Greg, 2026-11-24): "What i mean is don't only rely on graphs if need be". HIS RULE: the
+  graph is one tool and not the only one; where it falls short the plain source stands beside it. As built: a
+  session starts from a short fresh page beside the graph (the graph was unreliable on where things are now); a
+  decider is given the data layers whole as they are, each also written out in full beside the brief, with graph
+  form used only where it saves room and never as the only copy; the journal and the market's own series are the
+  record for learning after the fact; every claim of the graph keeps its file and line so the document itself
+  can be read.
