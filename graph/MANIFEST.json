@@ -5,9 +5,9 @@
  "files": [
   {
    "path": "graph/edges/DERIVED_FROM.jsonl",
-   "bytes": 28862,
-   "sha256": "ea10e7d028de57ee57368f2461ba739d2d7356929360cf14db8c3920be609a7c",
-   "lines": 89,
+   "bytes": 29221,
+   "sha256": "85e68aa66b62be240386ec5e8b90145720aa3abf4c6d50f2d728fedce0c3e00a",
+   "lines": 90,
    "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
   },
   {
@@ -15,6 +15,13 @@
    "bytes": 317378,
    "sha256": "b96230ce8266b0bbdff35143f50a4a0983dfcb68dcbfdfb03895d12a88d4a071",
    "lines": 307,
+   "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
+  },
+  {
+   "path": "graph/edges/MENTIONS.jsonl",
+   "bytes": 43818,
+   "sha256": "4139022f8e6c5de9451b5e4a31b453ca95fc5479bdaa9ea9b7ece5a43a125c29",
+   "lines": 174,
    "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
   },
   {
@@ -26,16 +33,23 @@
   },
   {
    "path": "graph/edges/PRODUCED.jsonl",
-   "bytes": 18776,
-   "sha256": "0de9f31b79fe363f009b3057387b5a99a9b297b004fe329ad767ae9bfa16bc75",
-   "lines": 68,
+   "bytes": 37730,
+   "sha256": "20f7a7412f5a4315185cd7a9274cc2cdc6df099839afa5715456ad5791f6598a",
+   "lines": 146,
+   "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
+  },
+  {
+   "path": "graph/edges/SUPPORTS.jsonl",
+   "bytes": 28954,
+   "sha256": "1396a1287eca6f3f23a656390636b6e4b0421eb53324302c398c01f6c8419009",
+   "lines": 78,
    "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
   },
   {
    "path": "graph/nodes/AgentRun.jsonl",
-   "bytes": 16205,
-   "sha256": "2438891a1b9c712a695a1733f37fe7dd57dd332fbc3f887f12b610725dfcd13b",
-   "lines": 17,
+   "bytes": 17240,
+   "sha256": "c66dbb840e8c0adc88f4e8ed7ed4415fa284eae8a3ff7d68859a757f7b81f147",
+   "lines": 18,
    "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
   },
   {
@@ -43,6 +57,13 @@
    "bytes": 430230,
    "sha256": "faba04a4012ba22e65cf238e59bc2de8423ae75b2282eff338a926d5e1abf068",
    "lines": 68,
+   "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
+  },
+  {
+   "path": "graph/nodes/Claim.jsonl",
+   "bytes": 60011,
+   "sha256": "da5d0020a809874462e38a1ddc9f79c31c81dfcf996e94b8750cf63204d1bd9e",
+   "lines": 78,
    "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
   },
   {
@@ -57,6 +78,13 @@
    "bytes": 4219177,
    "sha256": "b14f8a602689eef0ffb6ad369d8bce6dd0697a0775aca1399bb78d075c523495",
    "lines": 3178,
+   "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
+  },
+  {
+   "path": "graph/nodes/Entity.jsonl",
+   "bytes": 24875,
+   "sha256": "9a93f1f26f2ca0361febffc201b6f580d742f266b7805fe480a31e84d2b6d282",
+   "lines": 92,
    "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
   },
   {
@@ -75,9 +103,9 @@
   },
   {
    "path": "graph/nodes/Source.jsonl",
-   "bytes": 225632,
-   "sha256": "1b580d9886d986c61bcca6be265cf419f68ce33a45c198cd4f8c26a99dc238a3",
-   "lines": 384,
+   "bytes": 226839,
+   "sha256": "51c8d0f5c4675539abd279992536c2bcc14e6423055e1a74aaafd446f0c90a1c",
+   "lines": 386,
    "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
   },
   {
