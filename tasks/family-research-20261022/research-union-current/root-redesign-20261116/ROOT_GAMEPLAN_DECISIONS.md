@@ -8051,3 +8051,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   (runs 210, 212, 213, 214) are left to finish; nothing further is started, not a send-back, not a restart and
   not an auditor. A run that hands back blocked or unfinished is recorded as it stands and goes on the next
   session's start page.
+- THE QUESTIONS GO TO THE NEXT SESSION (Greg, 2026-11-24, twenty-sixth session): "Put the questions to next
+  session". DECIDED BY HIM: nothing more is asked of him in this session. The nine gos and decisions of
+  `paper-trading-20261123/to-questionnaire-what-only-greg-can-say.md` and the three points raised from the data
+  layer read (the 20 columns of the crypto and ng program's own trades; the tables that are not on all four daily
+  branches; the possible fault in `root/dipole_peaks.py`, not checked on the data) are carried on the next
+  session's start page, each as one yes or no.
