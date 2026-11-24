@@ -22,3 +22,5 @@ A ticket's boxes are marked only with the evidence beside them.
 | 14 | [Frankie's own events as the trigger (stage 8d)](14-frankies-events-as-the-trigger.md) | GREG'S DECISION | needs Greg's decision |
 
 Held and not ticketed for building now, each needing his go and most a model key that does not exist: a swarm run, the token test, Frankie's packet side by side, the 97 unread documents, a loop on a runner, the gate in a paced or live run, a gold set to measure the readers.
+
+REPLACED on Greg's word the same hour ("Do each number as a ticket"): the 44 items are each their own ticket in `../tickets-44-20261124/`. These 14 stay on record and are not worked.

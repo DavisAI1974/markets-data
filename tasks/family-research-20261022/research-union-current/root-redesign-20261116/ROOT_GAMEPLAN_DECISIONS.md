@@ -7307,3 +7307,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   for one session is `to-tickets` then `implement` a ticket at a time. The 44 items were cut into 14 tickets and
   shown to him as the skill asks; HIS WORD: "Approve, start at 1". The tickets:
   `paper-trading-20261123/tickets-20261124/`, one file each with what blocks it and how it is shown done.
+- EACH NUMBER A TICKET, ONE AT A TIME, AND NOTHING ELSE (Greg, 2026-11-24): "Do each number as a ticket. We do
+  nothing else right niw but do the complete build plan we agreed on and all 44 or whatever steps there are one
+  at a time. This is our only focus. Finish up and half done stuff but that's it before we start on this".
+  DECIDED BY HIM: the 44 missing pieces are 44 tickets, worked one at a time; the only work before them is
+  finishing what was in flight. Done: `paper-trading-20261123/tickets-44-20261124/`, one file a ticket with what
+  blocks it and how it is shown done; the 14 grouped tickets stay on record, marked replaced. In flight and being
+  finished first: the packet that carries every data layer (agent run 102, Sonnet) and the reviewer's third read
+  of the platform change (agent run 103, Opus). Of the 44: 15 can start, 13 wait on another ticket, 10 wait on
+  his go, 6 on his decision.
