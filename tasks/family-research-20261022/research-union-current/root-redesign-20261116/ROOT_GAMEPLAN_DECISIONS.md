@@ -6649,9 +6649,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   deciders stay Codex's. The agent program in Markets waits for his word.
 - THE POCOCK SKILLS (Greg, 2026-11-24): "run mattpocock-skills there are great skills to uae to make finishing this
   faster. Use one and that's a directive". They are not installed in the session, so the public repository
-  mattpocock/skills was read (a read-only copy on the session's machine; it holds nothing of ours). The one taken:
-  `implement` (build from a written list, then a review of the change by two readers). Its steps that write or run
-  tests are switched off by his own rule for Codex's branch (build only, no checks or tests).
+  mattpocock/skills was read (a read-only copy on the session's machine; it holds nothing of ours). The one chosen:
+  `implement` (build from a written list, then a review of the change by two readers). NOT YET USED: the speed bar
+  was set aside before anything was built under it. His directive stands for the next build. Its steps that write
+  or run tests are switched off by his own rule for Codex's branch (build only, no checks or tests).
 - THE SPEED BAR WAITS (Greg, 2026-11-24, minutes later, stopping the work): "The speed bar can be put on the list
   md in the paper repo of things to add later. We aren't going to spend time now doing. We need to be doing a run
   test very very shortly". Done, platform `3952da7`: a section "TO ADD LATER (not among the 35)" at the foot of
