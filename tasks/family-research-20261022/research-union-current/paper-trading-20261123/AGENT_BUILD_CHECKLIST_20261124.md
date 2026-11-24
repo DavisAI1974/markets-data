@@ -58,6 +58,11 @@ been measured.
   page during a run, who decides at the tick); 1 WRONG (the platform branch, from an old claim). The context
   builder is being changed for it (Markets, agent run 80). The box is marked only when a fresh agent, after the
   change, answers all 15 from the text or each miss is named here.
+  SECOND TEST (agent run 98, Sonnet, 115,078 tokens, one tool call; after the builder's change, the read to line
+  7195 and 31 consolidation links): 9 answered, 3 in part, 2 not in the text (the one file a trial changes; how
+  run 47 was settled), 1 WRONG (the platform's repository and branch). STILL NOT HOLDING on the graph alone. The
+  start becomes two parts (step 10): a short page of where things are and the standing rules, and the graph
+  asked by task; the pair is tested at the close.
 - [ ] 10. This session's handoff is the graph's start command and a short page of what the graph does not hold,
   not another long handoff. Shown by: the page in git and the command's output for the next session's task.
 - [GO] 11. The other 97 documents in the reader's scope (the older handoffs, the research notes). Not read. About
