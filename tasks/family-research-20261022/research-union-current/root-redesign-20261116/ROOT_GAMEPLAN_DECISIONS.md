@@ -6992,3 +6992,59 @@ figure. To bring back when the work reaches what moves the market and price-curv
   BUILD it. The next session runs no paper run of any kind: not the stored-tape workflow, not the trial runner,
   not the loop (a trial puts the tape through the engine and the paper matcher). Each needs his go, told first
   with its budget. The handoff's order of work is changed to say so.
+
+## Twenty-fourth session (2026-11-24, in a code session): the agents' part in the platform, built and not run
+
+- THE START (Greg, 2026-11-24): "The job: get the agents working in the platform like we planned. My go for BUILDING
+  that is given". "NO PAPER RUNS: not the GitHub workflow, not the trial runner, not the loop. Build it, have it
+  ready, and ask me before anything puts the tape through the engine. Also no go for Frankie, Granite, a pod, the
+  swarm or the token test." His rules for the session, as he wrote them: "No mid price. No trade cost. No
+  averaging, pooling, ranking or labels. No made-up numbers. Nothing is replaced: only add. Nothing is run without
+  telling me first, with its budget. AWS is off limits. Launch is HOLD." "On Codex's branch: fetch his head before
+  every push, include only your own changes, normal push. Use the agents, each run's model and tokens recorded."
+  Standing, his words: "the runs of 2026-11-24 are not scored and are no judgement of the strategies"; "The hold
+  rule in force is: hold until the trade gives back 20% of its highest profit."
+- THE POCOCK SKILL (Greg, 2026-11-24): "run mattpocock-skills use skill that will quickly and correctly help.you do
+  agent wiring and build". Not installed in the session; the public repository mattpocock/skills was read again
+  (read-only copy, commit `abeeaf9`). The one used: `implement` (build from a written list, here the order of work
+  in handoff AA; its closing review by two readers is the handoff's step 5), with the routing of `chief-of-staff`
+  (the work goes to agents, the main session routes). No second memory is kept beside the graph.
+- THE ZIP AND THE PAPER, AGAIN (Greg, 2026-11-24): "Here's the zip and pdf again. PLEASE READ SLOWLY AND APPLY THE
+  DIRECTIVES AND GOALS TO THE PROJECT!" Read in full before anything was built: the paper's 11 pages and the zip's
+  eight files (the plan, the handoff note, the Codex amendments, the CLAUDE.md patch, the four agent files). The
+  plan in the zip is byte for byte the plan in git.
+- HIS QUESTION ON THE HANDOFFS (Greg, 2026-11-24): "And are we applying the agent graphing like to the handoffs lie
+  we are supposed to be dojng?" THE ANSWER, read from the graph: only in part. Read into claims as they stand:
+  handoffs U, V, W and X and the three plan files (seven documents, 967 lines, with the platform's running list
+  an eighth). NOT read: handoffs Y, Z and AA, and the decisions file after line 6152 of 6994 (the twenty-first
+  session's later part and all of the twenty-second and twenty-third). 101 documents in the reader's scope are not
+  read. This session began from the handoff pile and not from the graph's own context, because the graph does not
+  hold the last three handoffs. Reading them is a model read and waits for his go, put to him with its budget.
+- A SLIP (Claude): the graph's `coverage` command was run as a read. It also adds lines (a Task line and a Source
+  line for each document), and in the session's shallow copies 62 of the 67 Source lines it added named the oldest
+  commit the copy holds instead of the file's own. Nothing was committed; the lines were discarded. No graph
+  command that names a file's commit is run from a shallow copy.
+- STEP 1 OF HANDOFF AA, DONE: the platform checkout holds its whole history (167 commits, not shallow) and the
+  libraries of `paper_platform/requirements.txt` are installed in the session's container.
+- STEP 2, DONE (platform `47fa1c5`): `paper_platform/execution_plans/loop-trial.json`, a byte copy of the give-back
+  plan (his hold rule in force); a paragraph in the plans' README says what it is. Only those two files were
+  pushed to Codex's branch, his head fetched first. Not run.
+- THE LAST RUN OF THE NIGHT ENDED AS SET (paper run `0f33fec49f8c4905b6c212912077d439`, read from its receipt):
+  status "stopped 30 minutes after the first paced record, as set at the start"; its last push 10:27:03 UTC
+  (5:27:03 am Eastern); 4,033 journal rows; 9,707 tape messages delivered; no position, no working order, no
+  shutdown error. Not scored, on his word.
+- STEP 6, DONE: that run is loaded with the fixed loader (`tools.kgraph.ingest_platform`, no model): 1,710 orders,
+  1,684 fills and 25 rule versions in the graph, and one trial of the experiment record, `exp-2633f97cb6b9`,
+  status recorded, NOT SCORED. Loaded first into a scratch copy to see the commits it names: each is the
+  platform's own (the rule commit `1757145fa7` now carries its subject and date as a second revision; the first
+  line stays). `kgraph check`: no breach. All six runs of 2026-11-24 are now in the graph.
+- STEP 5, THE GROUNDING CHECK, READ AND NOT RECORDED: `tools.kgraph.rule_versions check` without `--record`: 60
+  rule versions checked, 60 ask for evidence ("nothing in the graph says which claim or finding <rule> rests
+  on"). That is the state the handoff names: no rule is tied to a claim, because the documents the rules rest on
+  are not read into claims. It is reported as it is and is not made a gate.
+- THE BUILDER STARTED (agent run 68, Sonnet, budget 600,000 tokens by the harness's total, told to him first): in
+  Markets, the proposer that hands each trial's history and the graph's context to an agent and takes one change
+  to `loop-trial.json` back (a handshake by files, since no model key exists and the loop's code cannot call a
+  session's agent; the tokens are written by the main session from the harness's own report, never by the agent);
+  a ready check that starts nothing; the control file's data path and declared budgets; checks on real records;
+  the manual. Briefed to start nothing that puts the tape through the engine.
