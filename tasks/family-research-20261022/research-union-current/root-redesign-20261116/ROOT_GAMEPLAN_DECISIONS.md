@@ -6232,3 +6232,23 @@ figure. To bring back when the work reaches what moves the market and price-curv
   for a stopped run, so what runs 26 to 28 spent is not known. The scout is started again too (its canary, run 17,
   was stopped by the first interrupt): it reads the next two handoffs not read yet, V and U, inside the 174,430
   left of the 300,000 he declared for it.
+- THE SCOUT WENT OVER ITS BUDGET, SAID TO GREG AT ONCE (Claude's miss, 2026-11-24): after "Restart all agents"
+  the scout was started on handoffs V and U, with 174,430 of its 300,000 left. Claude expected about 75,000 tokens
+  a read, from what the builder's reads had cost (68,474 to 112,121); the two scout reads took 167,042 and
+  165,778. With the locate run (125,570) the scout has spent 458,390, plus what the stopped canary used, which
+  is not known. No further scout run is started. The two reads were already made, so they were loaded: 136 claims
+  from handoff V and 130 from handoff U, every quote standing in its file. For the next budget: a read of one
+  handoff by a general agent on Haiku reports about 165,000 tokens, which is more than the same read reported on
+  Sonnet; the reported figure is the harness's total for the run, not the document's size.
+- THE PLATFORM RULE BUILT AND RUN (Markets `fc26934`): of the 1,147 claims now in the graph, 191 are tied to a
+  tastytrade platform issue: 59 by the running list's own parked lines (its entry "SANDBOX-ONLY ISSUES ARE PARKED",
+  its section on the feed, and "RICHER DATA IS COMING") and 132 because their own words name the sandbox,
+  tastytrade, the thin feed, a stand-in or a print with no side. The store refuses a link by which a new claim or a
+  rule version would rest on any of the 191. The session start leaves the 59 out and marks the 132. Greg's own
+  decisions about the platform are not tied. A tie made by mistake is taken back with
+  `python3 -m tools.kgraph.platform_scope untie` and its reason is kept. Claude's reading of "tied to", his to
+  strike: the words that tie a claim are deliberately wide, so a claim that only mentions the sandbox in passing
+  is tied too; that keeps anything doubtful out of what new claims may rest on.
+- A READ NOW LOADS AFTER ITS FILE HAS GROWN (Markets `fc26934`): the decisions file is added to all the time, and a
+  read of it could not be loaded again once it had been. A read is now checked against the file as it stood at the
+  commit it was cut from, and each claim says which wording it was read from.
