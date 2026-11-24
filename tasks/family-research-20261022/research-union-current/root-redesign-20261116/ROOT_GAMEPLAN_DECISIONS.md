@@ -6535,3 +6535,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   folder: 347 bytes, nothing fetched. The publisher now starts the run branch that way. Record:
   `paper-trading-20261123/review-20261124/item25-first-commit-measured.md`. Said to Greg after it was done, not
   before: it ran git and nothing of the platform.
+- "LOOK BACK" FOR THE KEYS (Greg, 2026-11-24): "In the last session you put them somewhere. Look back in that or
+  the one before". Looked, by name only, no value read out: the keys earlier sessions stored are the three
+  tastytrade SANDBOX test keys (`TASTY_SANDBOX_CLIENT_ID`, `TASTY_SANDBOX_CLIENT_SECRET`,
+  `TASTY_SANDBOX_REFRESH_TOKEN`), in `paper-trading-20261123/tasty-sandbox.env`, put there on his word of
+  2026-11-23 and still there. No Pushover value is in that file, in any file of markets-data, in this session's
+  variables, or in any commit before today; the record of the last two sessions says of them only that the two
+  secret NAMES are configured in GitHub Actions, and of item 26 that "No value was read, set or sent". So there is
+  no Pushover key for Claude to move: said to him, with the two ways left (he enters the two values once in the
+  Markets environment's settings; or a notice workflow in GitHub, where the keys already are, sends the notice).
