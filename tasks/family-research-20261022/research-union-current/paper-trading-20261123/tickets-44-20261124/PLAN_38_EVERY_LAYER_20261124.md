@@ -65,3 +65,30 @@ reads the whole change, with the stored planes present (a git folder holding the
 
 It runs no paper run and puts nothing through the engine or the tape. It reads the stored planes of one of the
 four trade days, which the existing checks of the packet already do.
+
+## CHANGED AFTER THE REVIEWER'S READ OF THIS PLAN (run 203, `../reviews-20261124/REVIEW_RUN_203_TICKET_38_PLAN.md`)
+
+What the read found, and what the plan now says. Parts A and B above stand as amended here.
+
+1. ONE ENTRY FOR EACH GROUP OF COLUMNS, NOT FOR EACH LAYER. `calc-research_columns` holds, on the same row, the
+   per-tick reads (`dipole_60s`, `exhaustion_20s`, the information measure), which are made from trades up to the
+   tick, and 316 columns that say how a move or a hump ENDED, written on the tick where it BEGAN. So the table of
+   part B has an entry for each group of columns of each layer: when that group became known, and the place in the
+   calculation's code that shows it.
+2. WHERE EACH GROUP GOES. Known at its tick: in the packet, placed by the tick. Known later (an end, an outcome, a
+   row made from what was still open when the tape ended): placed at the time it BECAME known if the layer carries
+   that time (`known_received_time_ns`, `known_position`) and the code shows every column of the group is no later
+   than it; otherwise in the after-the-fact file. Nothing is left out of both.
+3. THE SAME NANOSECOND. Several ticks share a nanosecond. A row is handed to a decider only if its tick is at or
+   before the SIGNAL'S OWN tick on the tape: the time first, the tape position to break the tie (the rule the
+   stored reads already use, `root/research_threads.py` lines 157 to 169). The signal's tape position is carried
+   with its moment.
+4. WHICH ROWS AT ALL. Only the four trade days; a trade day's rows from 6 pm Eastern the evening before to the
+   moment; the rows of the 5 pm to 6 pm stretch and of the Sunday start-up are not handed to a decider (they are
+   named, with that rule as the reason).
+5. THE CHECK OF PART E COVERS EVERY LAYER, not only the Excel sheets: every column of each of the 63 layers of the
+   branch is in exactly one place: the packet at the moment, the after-the-fact file, or the program's own trades;
+   the count in no place is zero, and it is asserted. The Excel sheets' 458 columns stay as a second check.
+6. BEFORE THE BUILDER OF A AND B STARTS: the calculation code of each layer is read for when its columns become
+   known (scout runs 207 and 208), and the table is written from those places. The reviewer reads the table with
+   the change.
