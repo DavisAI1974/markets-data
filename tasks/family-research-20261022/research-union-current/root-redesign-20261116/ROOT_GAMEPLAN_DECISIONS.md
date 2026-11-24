@@ -6843,3 +6843,15 @@ figure. To bring back when the work reaches what moves the market and price-curv
   `"also_before_profit": true`, under which the fifth is taken off a trade's best open result whatever its sign.
   SAID TO HIM, from the arithmetic: a trade opens down by the spread, a fifth of a spread of 0.001 to 0.007 is
   less than one tick, so the first tick against a trade that has not made back its spread closes it.
+- NO NEW STRATEGY TONIGHT; LET IT RUN; COLLECT THE DATA (Greg, 2026-11-24, with a screenshot of the two lines):
+  "Seriously we are doing an amazing job of being very close to the historic shape. So we are using the right
+  signals. Just the timing is off. Like we're always late or something because if we just shift our line down, we
+  are extremely close to being the exact sgape. We won't mess with ew strategies tonight and just let this run. Be
+  sure to collect the data on how we performed when the run is done". DECIDED BY HIM: no further strategy change
+  tonight; the give-back run (profit side only) runs to its end; its results are collected when it is done. So
+  the both-sides plan is built and NOT run. SAID TO HIM, because the graph alone cannot carry his reading: our
+  line is our fills, and a paper fill is made at the market's own quote of that instant, so any orders at all
+  would trace the market's shape; and it sits above the market line by about the spread because most of our fills
+  in view are buys at the ask while the market's last trades printed lower. The shape and the offset are therefore
+  not evidence that the signals are right or that the entries are late. What would test it: where the market
+  stood after each entry, trade by trade, which is read from the runs' own records when they end.
