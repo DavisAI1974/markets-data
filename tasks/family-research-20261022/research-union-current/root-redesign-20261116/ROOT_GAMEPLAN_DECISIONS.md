@@ -7544,3 +7544,19 @@ figure. To bring back when the work reaches what moves the market and price-curv
   after another behind the builder on tickets 02 and 03. Added beside them, the next tickets in number order
   that are free to start and touch other files: 18, 19 and 25. THIS REACHES PAST the batches of two or three
   consecutive numbers he set in the twenty-fourth session; it is done on this word and said to him as that.
+- A FULL SUITE OF THE FOUR KINDS OF AGENT ON EACH TICKET GROUP, AND A NEW SESSION FIRST (Greg, 2026-11-24,
+  twenty-fifth session): "You said that these tickets were grouped together before. Let's get a full suite of 4
+  types of agents on each ticket group. We can start new sess first though". DECIDED BY HIM: the work is handed
+  out by ticket GROUP, and each group gets all four kinds of agent (a scout, a builder, a reviewer and the
+  performance auditor); this session is closed first and the suites start in the next one. CLAUDE'S READING, his
+  to correct: (1) the groups are the fourteen of `paper-trading-20261123/tickets-20261124/` (the cut he approved
+  with "Approve, start at 1" before he said "Do each number as a ticket"); the 47 numbered tickets stay the
+  tracker and their boxes are still marked one by one with evidence; the group is the unit the agents are given.
+  Which ticket is in which group is written in `paper-trading-20261123/tickets-44-20261124/GROUPS.md`: where the
+  group files name the items themselves it is taken from them, and the ten tickets no group file names are
+  placed by Claude and marked as that. (2) "Four agents in total; no more" is read as four KINDS, several of a
+  kind at once (his "We need more builder agents working in parallel"). (3) Within a suite the order is the
+  agents' own files: the scout locates, the builder builds from exact places, the reviewer reads the change, the
+  auditor audits that group's runs, each run its own row; so no run is left without the auditor. (4) A group
+  that waits on his go or his decision gets no build. (5) Nothing new was started in this session after his
+  word; the agents already out were let finish and recorded, because a new session cannot reach them.
