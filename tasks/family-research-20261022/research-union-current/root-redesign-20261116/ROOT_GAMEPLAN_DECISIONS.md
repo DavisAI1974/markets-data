@@ -5892,3 +5892,21 @@ figure. To bring back when the work reaches what moves the market and price-curv
   side may do; step 0 found the ledger writes such closes at the wrong print with no mark), point d (what counts
   as a gap; step 0 measured that the builder's count mostly counts the order messages arrive in). Builder run B
   waits for his answers.
+- DECIDED (Greg, 2026-11-24), points b and c, one answer for both: "Can't we make both decisions at the same time?
+  They're different events right?"; then, the first answer having been sent unfinished: "My second answer is good
+  for my first one too". Claude's reading, said to him, his to strike: THE QUOTE A PRINT CARRIES AND THE TRADE OF
+  THAT PRINT ARE TWO DIFFERENT EVENTS, EACH DECIDED ON ITS OWN, AT THAT PRINT.
+  (c) A print with no side: its QUOTE is read at that print like any other, so a step of the quote it shows closes
+  a trade right there and may open a rule whose trigger is the quote (CL06, CL10, CL11, CL15, the step away of
+  CL08). Its TRADE opens and closes nothing (rule 5 as written): it is no buy and no sell, it is not in the two
+  lines, and a trade leg's step or end that it shows (CL05) is acted on at the next print that has a side, with
+  BOTH prints named on the ledger line and the word "late".
+  (b) Where two things a rule orders show at one print, BOTH are written on the ledger line, each as its own
+  event at that print, and no "first" is claimed (the line says "both at one print: <one>; <the other>" where it
+  would say right or wrong).
+- DECIDED (Greg, 2026-11-24), point d: "Only a real break". A GAP is: the stream dropped and came back; or a
+  print's sequence number steps by anything but 1 or 2 (never seen on the 547 prints of the two recordings); or a
+  print arrives out of order. The day-volume shortfall (21 lots on the 10-minute recording, 81 on the 25-minute
+  one) is written on the receipt as a number and resets nothing.
+- STILL HIS TO STRIKE, from handoff V, said to him this session: the G3 start is counted from the first print of
+  ANY side; a trade still open when a recording ends stays open on the ledger (`closed: null`).
