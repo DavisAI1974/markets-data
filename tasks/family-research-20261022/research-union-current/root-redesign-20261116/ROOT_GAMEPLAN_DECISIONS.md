@@ -6724,3 +6724,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   `PAPER_RELAY_TOKEN`, hold fresh random values Claude made and passed to Render; they are written in no file,
   commit or reply, and are read on the service's Environment page on Render. Still his hand, because nothing else
   can write them: the GitHub Actions variable `PAPER_RELAY_URL` and the secret `PAPER_RELAY_TOKEN`.
+- WHAT THE FIRST RUN SHOWED (read from its record branch while it ran, on his "You need to look at log"): it
+  works and it is far behind the tape. In 642 seconds on the runner: 510 journal rows, 20 of the 32 strategies
+  acting, opens, closes, fills, cancels and not-scored marks all written and all in markets-data; and 3.08 seconds
+  of tape covered. Cause: the run waits for a push to markets-data after each order and each fill, 1.53 seconds
+  each, 420 of them. GitHub gives a job's log only when the job ends, so the record branch is what was read.
+  Built in draft and told to him, not run (platform item 25): the stored-tape run no longer waits for each push;
+  each push carries the journal to the newest order or fill waiting. He was told he can refuse the change.
