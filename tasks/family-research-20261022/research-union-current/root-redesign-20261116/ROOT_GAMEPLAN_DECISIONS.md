@@ -7068,3 +7068,18 @@ figure. To bring back when the work reaches what moves the market and price-curv
   building session for the agents". Done before any code: `paper-trading-20261123/AGENT_BUILD_CHECKLIST_20261124.md`,
   33 steps. A box is marked only with its evidence beside it; what waits for his go or his decision is marked so
   and is never called done.
+- THE GRAPH LIVE IN A RUN, AND ROOT (Greg, 2026-11-24): "Bit it's not just building the old stuff, there's supposed
+  to have been code that should have been reading and building the graphs pretty much in real time and applying to
+  the strategies. Also is root running its part in real.time?" THE ANSWERS, read from the platform's code and the
+  last run's receipt. THE GRAPH: no. Nothing in a run reads the graph, writes it or calls an agent; a finished
+  run is loaded by hand; the 32 rules decide alone. It was never built, and the plan's text carries it only as
+  stage 7d's links and a paragraph of stage 8d. Added to the list as part H (steps 34 to 39): the graph written
+  while a run goes, a packet from the graph for every opening signal, a place where an answer is applied to the
+  strategy (built with nothing plugged in), and, his to say, who answers at the tick. ROOT: yes for what the
+  rules read. Every run works out `root/calcs/quote_runs.py`, `root/calcs/leg_peaks.py`, `root/book.py` and the
+  dipole and exhaustion lines at every tape message, on the tape's nanosecond times; the receipt lists them with
+  their hashes. Not shown since 2026-11-23: that they equal ROOT's stored lines (the platform's checks have not
+  run since).
+- MARKETS-DATA HOLDS ITS WHOLE HISTORY in the session (571 commits, not shallow), so a graph write names each
+  file's own commit. The old runner's branch `claude/tasty-runner` was fetched into the platform checkout so the
+  loop's existing checks find their base commit.

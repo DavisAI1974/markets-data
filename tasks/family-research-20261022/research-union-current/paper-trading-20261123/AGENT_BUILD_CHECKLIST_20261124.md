@@ -112,6 +112,42 @@ asks for evidence on all 60. The platform's rules point at 3 documents; none of 
 - [HIS] 31. The plan's stage 1 says to retire the three `aws-*` agent files and the `aws-mcp` entry. They are
   still in Markets. Removing files goes to Greg first; not done.
 
+## H. The graph live in a run, and applied to the strategies (Greg's word, 2026-11-24, added after the list)
+
+Greg: "it's not just building the old stuff, there's supposed to have been code that should have been reading and
+building the graphs pretty much in real time and applying to the strategies."
+
+State today, read from the platform's code and the last run's receipt: NONE OF THIS EXISTS. Nothing in a run
+reads the graph, writes the graph or calls an agent. A run's orders and fills reach the graph only when a session
+loads the finished run by hand. The 32 written rules decide alone at the tick. The plan's own text has this only
+as stage 7d (the links, with no word on when) and one paragraph of stage 8d.
+
+- [ ] 34. The graph is written WHILE a run goes: a follower takes each push of the run's journal (they come at
+  most ten seconds apart) and adds its new signals, orders and fills to the graph, the run a trial marked
+  "running" until its receipt comes. Fixed code, no model. Shown by: a check that follows a real run's record
+  branch push by push and ends with the same graph lines as the load of the finished run.
+- [ ] 35. For every opening signal, the graph's packet for that moment is built (what the graph holds on the
+  rule, its version, its claims, the earlier trials of the loop) under a token budget, and its size is written
+  beside the signal. Shown by: the packets for a real run's signals, each with its token count, and the leakage
+  check that no packet holds anything from after its signal's tape time.
+- [ ] 36. A place in the run where an answer is applied to the strategy: take the trade or not, hold or close.
+  Built with nothing plugged in, so a run behaves exactly as today until something is; every answer and the
+  packet it was given are journaled. An answer counts only from the tape time it arrives at: nothing reads
+  ahead. Shown by: a check that a run's journal is the same row for row with nothing plugged in.
+- [HIS] 37. WHO ANSWERS AT THE TICK. No model key is in GitHub or a session; Frankie and Granite are on HOLD. A
+  model's answer takes seconds, and 264 of the 437 trades counted on the third test were held under one second,
+  so a model can answer at the scale of a dipole event or a hold, not at every print.
+- [GO] 38. The first run with the graph live in it. A paper run: waits for Greg's go.
+
+ROOT in a run (his question the same hour): YES for the calculations the rules read. Every run works out, at
+every tape message and on the tape's own nanosecond times, `root/calcs/quote_runs.py`, `root/calcs/leg_peaks.py`,
+`root/book.py`, `root/calendar.py` and the dipole (60 s) and exhaustion (20 s) lines of `crypto_ng/tick.py`; the
+receipt of each run lists them with their hashes, and its causal check passed. NOT SHOWN SINCE 2026-11-23: that
+those lines equal ROOT's stored ones at every sided print (the platform branch's own checks have not run since).
+
+- [GO] 39. The platform's own checks run again (`verify_paper_platform.yml`, his to start or to give the go
+  for): they hold the check that the run's lines equal ROOT's.
+
 ## G. The close
 
 - [ ] 32. Greg's decisions of the session are in the decisions file as they were made.
