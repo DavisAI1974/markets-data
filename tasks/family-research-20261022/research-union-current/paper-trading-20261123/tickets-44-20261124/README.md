@@ -45,7 +45,7 @@ data layer (ticket 38's work), and the reviewer's read of the platform change (p
 | 28 | The build plan workbook and the research notes are not read into claims; 97 documents unread (needs his go). | Greg's go (about 97 reads, about 16 million tokens on Haiku) | needs Greg's go |
 | 29 | No gold set, so no measure of the readers (precision, recall), of the merges, or of the answers beyond the 15- | Greg's decision on who makes the gold set | needs Greg's decision |
 | 30 | The graph's own count of documents read is stale (its refresh waits on the Markets checkout's history), and th | 44 (the Markets checkout's history) | blocked |
-| 31 | Whether the files added to markets-data today have their MANIFEST.json entries: not checked. | None | ready |
+| 31 | Whether the files added to markets-data today have their MANIFEST.json entries: not checked. | None | DONE: marked 2026-11-24 with its evidence in its file (142 files named, none with an entry; read three times; the check exits 0 at markets-data ) |
 | 32 | The session start from the graph does not hold yet; the short page beside it is not written or tested. | 25 | blocked |
 | 33 | Frankie's packet from the graph: built beside the old path, never run side by side (HOLD). | HOLD | needs Greg's go |
 | 34 | The swarm: built, never run (needs his go and a model key; none exists). | Greg's go and a model key; none exists | needs Greg's go |
@@ -71,4 +71,4 @@ State at the close of the twenty-fifth session (2026-11-24): ONE ticket is marke
 
 Added at the close of the twenty-fifth session, on his word: ticket 47 (an operator for the natural gas market). The tickets are 48 with it.
 
-State in the twenty-sixth session (2026-11-24): TWO tickets are marked done, 03b and 21. The work is out by group, a suite of the four kinds of agent on each; `GROUPS.md` holds the order his word set (the rest of the list, then the 30 minute test without the operator coefficients, then ticket 47).
+State in the twenty-sixth session (2026-11-24): THREE tickets are marked done: 03b, 21 and 31. The work is out by group, a suite of the four kinds of agent on each; `GROUPS.md` holds the order his word set (the rest of the list, then the 30 minute test without the operator coefficients, then ticket 47).
