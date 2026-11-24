@@ -6981,3 +6981,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   with a record are six (`036ed575`, `06ce6b90`, `064df1c2`, `058313bb`, `ea4c1d2e`, `0f33fec4`); the start
   before them refused itself in its first second and made no record. The sixth, `0f33fec4`, was started after
   the builder's brief was written and is not loaded into the graph or the experiment record.
+- HIS GO FOR THE AGENTS' WORK, IN A NEW WINDOW (Greg, 2026-11-24, his last words of the session): "I'm going to
+  start new window and you can actually start the agents work to get them working in the platform like we
+  planned". Taken as: the next session builds and starts the agents' part in the platform as the plan has it
+  (stages 7d and 7f on stages 2 to 5): the trial plan, an agent that proposes each change, the loop run with a
+  small budget told to him first, the grounding check. Not taken as a go for Frankie, Granite, a pod, the swarm
+  or the token test. This session does no more of that work, so two sessions do not work the same files; it only
+  notes how the last run ended. The order of work is in handoff AA, "What the next session does first".

@@ -16,6 +16,30 @@
 - He ended the session with: "When this run finishes we are finished for a while". Earlier: "Later today we'll
   work on strategies to hold trades longer".
 
+## What the next session does first (his go is given)
+
+Greg, 2026-11-24, his last words of the session: "I'm going to start new window and you can actually start the
+agents work to get them working in the platform like we planned". Taken as his go to build and start the agents'
+part in the platform, as the plan has it (`CLAUDE_ARCH_PLAN_GRAPH_ENGINEERING_ADOPTION_20261123.md`, stages 7d and
+7f, with stages 2 to 5). It is NOT a go for Frankie, Granite, a pod, the swarm or the token test: those stay on
+HOLD until he names them. In order:
+
+1. A checkout of paper-trading-platform with its WHOLE history (a trial names every rule's commit wrongly in a
+   shallow one), and the platform's libraries installed (`paper_platform/requirements.txt`).
+2. `paper_platform/execution_plans/loop-trial.json`: the plan a trial changes. Start it as a copy of the give-back
+   plan (his hold rule in force).
+3. The agent that proposes each change. The harness (`tools/ratchet/loop.py`) only replays commits; give it a
+   proposer that hands the trial's history and the graph's context to the builder agent, takes one change to
+   `loop-trial.json` back, and reports the tokens it used. One change a trial, every trial recorded.
+4. Run the loop on the control file `tools/ratchet/programs/platform_exit.md` with a small budget, told to him
+   first with the budget. With no figure chosen every trial is recorded and none is kept or reverted: that is
+   correct until he chooses the figure. Put the choice to him with the first trials in front of him.
+5. The grounding check on the rule versions (`tools.kgraph.rule_versions check`) and the reviewer on the diff.
+6. Load run `0f33fec49f8c4905b6c212912077d439` (the last run of the night) with `tools.kgraph.ingest_platform`.
+7. Settle the two lines of run 47 in `agent-runs.jsonl` with him, so the agent program's suite reads again.
+
+Still his to say before it is built: whether Frankie decides at the tick (stage 8d).
+
 ## Where things are
 
 | Repository | Branch | Head |
