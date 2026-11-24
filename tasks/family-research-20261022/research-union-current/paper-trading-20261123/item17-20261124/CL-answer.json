@@ -1,0 +1,444 @@
+[
+  {
+    "rule": "CL01",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Take the decision-row offer for a buy or bid for a sell. Cap the attempt at that displayed quote because the second step is defined on that side of the book.",
+    "open_quote": "BUY for the best offer up. SELL for the best bid down.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 65,
+    "why_close": "Cross on the first step back. That event ends the run even when there was a later-event third step.",
+    "close_quote": "at the run's first step back.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 66
+  },
+  {
+    "rule": "CL02",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "post",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Join the offer on the upward step or the bid on the downward step. The sale or purchase then rests on the quoted side whose first level was pulled.",
+    "open_quote": "SELL for the best offer up. BUY for the best bid down.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 79,
+    "why_close": "Cross when the run either steps back or takes its third step. Each event ends this fade and cancels any outstanding entry.",
+    "close_quote": "at the run's third step.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 81
+  },
+  {
+    "rule": "CL03",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Follow the initiating buy at the new offer or the initiating sell at the new bid. Limit the attempt to the displayed decision-row quote after the removal by fill.",
+    "open_quote": "exchange event that holds a buy. (Mirror: the best bid steps DOWN on a fill by a sell.)",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 90,
+    "why_close": "Cross as soon as the followed run steps back. The second step affects the observation but does not prolong the position.",
+    "close_quote": "at the run's first step back.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 93
+  },
+  {
+    "rule": "CL04",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Attempt one contract against the standing level being consumed. A limit at the current offer or bid ties that attempt to the level the rule requires to still stand.",
+    "open_quote": "BUY when the best offer is being eaten. SELL when the best bid is.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 106,
+    "why_close": "Cross on the first disturbance before the level gives, or on the first step back after it gives. Both exits are triggered by a change in the monitored state.",
+    "close_quote": "at the first tick size is pulled, added or moved at that price",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 107
+  },
+  {
+    "rule": "CL05",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Cross when the first print step is confirmed and the leg still exists at the event end. The entry is tied to a print sequence and has no named limit level.",
+    "open_quote": "the end of the exchange event of that print.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 121,
+    "why_close": "Cross when the ending print arrives. Waiting for a new resting order would extend the position past the leg.",
+    "close_quote": "at the print that ends the leg.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 123
+  },
+  {
+    "rule": "CL06",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Use the executable member of the newly advanced or retreated pair as the limit. Buy at the decision-row offer or sell at the bid, with zero offset.",
+    "open_quote": "BUY when both stepped up. SELL when both stepped down.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 137,
+    "why_close": "Cross at the first reversal of either quote. The rule can end on a move of either side and supplies no separate exit limit.",
+    "close_quote": "at the first step the other way by either quote.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 138
+  },
+  {
+    "rule": "CL07",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Cross in the direction of the fresh trading when its hump is confirmed at event end. The same-side dipole is a direction condition and specifies no entry price.",
+    "open_quote": "BUY for a buying hump. SELL for a selling hump.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 150,
+    "why_close": "Cross at the end of the hump. The line can end independently of which quote moved, so the order follows the state change.",
+    "close_quote": "when the hump ends (the line next stands at zero, is empty, or has crossed).",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 151
+  },
+  {
+    "rule": "CL08",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Take the quote hit by the new side once its step is confirmed in the later event. Use that decision-row offer or bid as the cap on the attempt.",
+    "open_quote": "the quote the hump is hitting steps away in a LATER exchange event, before the hump ends.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 161,
+    "why_close": "Cross on the first of the two exit events. Either event ends the condition under which the entry was allowed.",
+    "close_quote": "when the hump ends, or at that quote's first step back, whichever comes first.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 164
+  },
+  {
+    "rule": "CL09",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "post",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "On the first step caused by a cancellation, join the new offer as seller or the new bid as buyer. This places the fade at the side that moved in the event without a trade.",
+    "open_quote": "SELL for the best offer up. BUY for the best bid down. (Against the step.)",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 177,
+    "why_close": "Cross at the first reversal or the second step forward. If the posted entry is still waiting, the end of the setup cancels it.",
+    "close_quote": "at the run's second step.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 179
+  },
+  {
+    "rule": "CL10",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Cross with the second step at the confirmed event end. Either quote can be the one that moved, while the order direction follows the run in both cases.",
+    "open_quote": "BUY for a run up. SELL for a run down. (With the price.)",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 192,
+    "why_close": "Cross when the tracked run reverses for the first time. A third step leaves that exit instruction intact.",
+    "close_quote": "at the run's first step back.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 193
+  },
+  {
+    "rule": "CL11",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Cross against the run while its second step still stands at the event end. Either side of the book can produce the run, so this order follows the reversal direction without requiring a particular resting level.",
+    "open_quote": "SELL for a run up. BUY for a run down.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 204,
+    "why_close": "Cross on the first step back or on the third step in the same direction. These close the fade on distinct signals with the same timing requirement.",
+    "close_quote": "at the run's first step back.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 205
+  },
+  {
+    "rule": "CL12",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "post",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Post the sale at the offer or the purchase at the bid to join the side showing replenished size. Our order joins the queue as a separate order.",
+    "open_quote": "SELL when an offer is reloaded. BUY when a bid is.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 218,
+    "why_close": "Cross when the tracked order disappears by cancellation or fill, when the quote steps through, or when either quote steps away in the stated direction. Each condition ends the reason for joining the reload.",
+    "close_quote": "when that order is cancelled (the one reloading has gone).",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 221
+  },
+  {
+    "rule": "CL13",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Cross in the sweep aggressor's direction once the multilevel event ends. The observed sweep establishes direction and supplies no single surviving entry level.",
+    "open_quote": "one exchange event holds a trade that fills through MORE THAN ONE price level, with one aggressor side.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 229,
+    "why_close": "Cross on the first step back of the swept quote. A further step in its original direction records an observation and leaves the exit trigger intact.",
+    "close_quote": "at the first step back of the quote that was swept.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 232
+  },
+  {
+    "rule": "CL14",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Sell at the bid where the first opposing sell printed, or buy at the offer where the first opposing buy printed. Cap the attempt at the standing quote at event end.",
+    "open_quote": "at the level that step made; and that level still stands at the end of the exchange event.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 242,
+    "why_close": "Cross on the first step back or the next continuation step. Which direction wins that race supplies the close reason.",
+    "close_quote": "at the run's next step the same way.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 247
+  },
+  {
+    "rule": "CL15",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Claude assigns one lot to each trigger across all fifteen v2 rules. One NGX3 lot is one contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS.md",
+    "size_quote_line": 30,
+    "why_open": "Cross when the one-step counter-run has ended and the original direction resumes at the event end. The pattern can form on either quote and names no order price.",
+    "open_quote": "the ORIGINAL direction: BUY when the first run was up, SELL when it was down.",
+    "open_quote_file": "claude-strategy/VERSIONS.md",
+    "open_quote_line": 259,
+    "why_close": "Cross at the first step back of the new run. That timing depends on the return sequence and does not require an additional print at a chosen price.",
+    "close_quote": "at the new run's first step back.",
+    "close_quote_file": "claude-strategy/VERSIONS.md",
+    "close_quote_line": 260
+  },
+  {
+    "rule": "CL16",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Line 276 extends common rule 2 to both unsided-print rules. That rule specifies one lot per trigger, or one NGX3 contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "size_quote_line": 33,
+    "why_open": "Cross in the direction of the quote step observed on the unsided print. Either the bid or the offer can supply the step, so the rule sets a direction without naming an entry limit.",
+    "open_quote": "with the step. BUY for a step up. SELL for a step down.",
+    "open_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "open_quote_line": 282,
+    "why_close": "Cross on the first step back of the same quote that armed the trade. A further step in the original direction keeps that exit active.",
+    "close_quote": "at that quote's first step back.",
+    "close_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "close_quote_line": 283
+  },
+  {
+    "rule": "CL17",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Line 276 extends common rule 2 to both unsided-print rules. That rule specifies one lot per trigger, or one NGX3 contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "size_quote_line": 33,
+    "why_open": "On the qualifying unsided print, cap the buy at its displayed best offer or the sell at its displayed best bid. A zero offset preserves the named quote.",
+    "open_quote": "BUY at the offer. SELL at the bid.",
+    "open_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "open_quote_line": 296,
+    "why_close": "Cross when the quote at which the unsided print traded first steps back. The next move of that quote determines the exit independently of the aggressor-side field.",
+    "close_quote": "at the first step back of the quote it traded at.",
+    "close_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "close_quote_line": 297
+  }
+]

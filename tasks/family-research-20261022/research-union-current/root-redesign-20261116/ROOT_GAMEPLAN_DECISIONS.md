@@ -6393,6 +6393,17 @@ figure. To bring back when the work reaches what moves the market and price-curv
   under item 26): on Render, service `ng-paper-viewer`, `PAPER_VIEW_PASSWORD` and `PAPER_RELAY_TOKEN`; in GitHub
   Actions the variable `PAPER_RELAY_URL` and the secret `PAPER_RELAY_TOKEN` (same value as on Render). No value was
   read, set or sent. Receipt on the phone has not been exercised and waits for his permission.
+- ITEM 17 WENT TO CODEX (seen on his branch, `a58ef5b`; his handoff: "Greg transferred #17 and its two family
+  decision agents to Codex. Ccode retains #2, #23, #26 and #35"). He ran both deciders and committed the plan for
+  all 30 rules. Claude leaves item 17 alone. What Claude's work gave it: the instrument ID and the NGX3 contract
+  record.
+- A FAULT CLAUDE FOUND IN ITS OWN LAUNCHER AND FIXED (`bf1d039`): the clock stop and the run stop were ordinary
+  exceptions, and the model library reports any ordinary exception raised inside a request as a connection
+  failure (read in the installed library, `_base_client.py`). A clock stop during the network call would have
+  reached the phone as "failure". The two stops no longer derive from the ordinary exception class. Read, not run.
+- ITEM 2 BEGUN, NOT FINISHED (`9af214a`): the accounting is done from the plan (all 30 rule IDs, one contract each,
+  crossing closes, the six managers' parents and their exit at the parent's close, the side words matching). The
+  reading of the matcher path for each rule and manager against the plan is not done.
 
 ## Twenty-second session (2026-11-24, in a code session): Codex's draft PR 5
 
@@ -6429,3 +6440,34 @@ figure. To bring back when the work reaches what moves the market and price-curv
   launcher of `297f8a4` line by line against the code and the model API it calls; one traces every stop and
   failure path to the phone and every Pushover and Render name of `5fb648d` and the runner. What they find is
   fixed on Codex's branch under the number it belongs to.
+- TWO CLAUDE SESSIONS ON THE SAME NUMBERS (seen on Codex's branch, said to Greg): the session of handoff Y
+  (`session_017eY1WPXaDdwBFUzSkPm5Hd`) kept working after this one started, on the same numbers and the same
+  branch. It built items 23 and 26 in draft (`297f8a4`, `5fb648d`), made the launcher's stops BaseException
+  (`bf1d039`, the fix this session's reader also found), and wrote the plan's accounting under item 2 (`9af214a`).
+  This session fetches before every push and built only what was not already there. Codex built the item 17 plan
+  from his two deciders' answers (`a58ef5b`), then carried CL16 and CL17 into it (`95400eb`): 32 strategies.
+- ITEM 23, WHAT THIS SESSION ADDED (paper-trading-platform, Codex's branch; nothing run or parsed there).
+  `8ac675b` and `ad12472`: `paper_platform/agent_budget_hook.py`, a hook Claude Code calls before each tool call
+  of a subagent. It adds up the subagent's own transcript and refuses its tool calls once a budget on record is
+  passed, writes a stop record and sends the phone notice when the session holds the Pushover credentials. It is
+  registered in no settings file, so it is not in force. `e0da2fa`: the launcher sends the phone notice before the
+  record, time-limits its git steps, sends a notice on a refused start, reads only files committed in the platform
+  repository, proves the push destination before any request that costs tokens, and compares the API's usage with
+  the budget after the call (run 50's findings).
+- WHAT THE HARNESS REPORTS AS AN AGENT'S TOKENS (read on this session's own runs, the transcripts on the machine):
+  the total is the size of the last step of the run's last model call, not the sum over its calls. The four runs
+  that finished agree with their reported total to the token: run 50, 278,875 reported and 3,297,977 over all
+  twelve calls, of which 532,296 were the advisor's; run 51, 226,255 and 1,775,341 over nine calls, 206,815 the
+  advisor's; run 52, 114,843 and 661,943 over seven calls; run 53, 11,673 and 18,664 over two. The advisor's
+  tokens are in no reported total. Every `tokens_reported` in `agent-runs.jsonl` is the first kind of figure. So
+  a subagent's count CAN be read part-way: the earlier line under item 23 that it cannot is corrected there.
+- ITEM 26, WHAT THIS SESSION ADDED (`a5818fc`, run 51's findings; nothing run, no notice sent): the run-end notice
+  covers every manual workflow, stops plainly on an unset Pushover secret and retries; a start the runner refuses
+  before its session exists sends a notice; the runner takes the place of the step's shell in the three workflows
+  that start one, so a cancel reaches it; a dead checkpoint publisher is named in the record-only workflow; a
+  failed notice attempt leaves a log line. Left to Codex, said under item 26: the first failure notice gives no
+  cause (the word is also the receipt's status), and the run stops when Render cannot be reached mid-run.
+- NOT DECIDED, HIS (each written under its number): the measure and the figure of an agent's token budget; how
+  the Pushover credentials reach a Claude Code session (this one holds none); his word to register the hook, and
+  in which repository's settings; the Render and Actions settings of item 26. NOT DONE: the Render blueprint's
+  place and Python version (render.com is not reachable from this session, run 53); the agent program (job 1).

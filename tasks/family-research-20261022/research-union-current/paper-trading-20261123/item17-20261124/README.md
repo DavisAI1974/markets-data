@@ -15,23 +15,22 @@ or offer, lift an offer or hit a bid. Frankie and the agents choose placement an
 - Two things read from the matcher's code that a manager's entry depends on (in that same record).
 - The briefs for two decider agents, one for each rule family: `BRIEF_COMMON.md`, `BRIEF_CL.md`, `BRIEF_CX.md`.
 
-## Not in hand
+## Family decisions and remaining work
 
-- No choice from any agent. The two decider runs (41 for CL01 to CL15, 42 for CX01 to CX15) were stopped by Greg's
-  message at the session change before either wrote an answer. No answer file exists.
-- Frankie's choices, for all 30 rules: launch is on HOLD and needs Greg's go.
-- So no plan file exists, and item 17 stays open.
+Greg transferred #17 and both family decision agents to Codex. The resumed decision pass produced [CL01–CL17 answers](CL-answer.json) and [CX01–CX15 answers](CX-answer.json). Each answer records the agent's order choices and the source wording behind them. All 32 have decisions. CL16 follows a quote step at an unsided print. CL17 acts at the bid or offer that an unsided print traded at. The six CX managers also specify their parent entries and when to close. Both families chose one NGX3 contract per entry.
+
+Codex builds the family-agent plan on draft PR #5 from the markets-data commit containing these answers. Frankie's separate launch is still on hold. A paper session needs Greg's explicit authorization.
 
 ## Start item 17 here
 
-Ccode can give each family its brief from this folder. Source paths in the answers are relative to the brief. The strategy files preserve the original line numbers.
+The two family agents used the briefs in this folder. Source paths in the answers are relative to the brief. The strategy files preserve the original line numbers.
 
 | Family | Agent instructions | Author's files |
 | --- | --- | --- |
-| CL01–CL15 | [CL brief](BRIEF_CL.md) | [Claude's rules](claude-strategy/VERSIONS.md) · [Open questions](claude-strategy/OPEN_QUESTIONS.md) |
+| CL01–CL17 | [CL brief](BRIEF_CL.md) | [Claude's original fifteen](claude-strategy/VERSIONS.md) · [CL16 and CL17 source](claude-strategy/VERSIONS_WITH_CL16_CL17.md) · [Open questions](claude-strategy/OPEN_QUESTIONS.md) |
 | CX01–CX15 | [CX brief](BRIEF_CX.md) | [Codex's rules](codex-strategy/VERSIONS.md) · [Open questions](codex-strategy/OPEN_QUESTIONS.md) |
 
-Both agents use the [common brief](BRIEF_COMMON.md). The copies come from [Claude's source revision](https://github.com/DavisAI1974/markets-data/tree/46199c5f4af03fde341535a7aff6a0396300cc73/tasks/family-research-20261022/research-union-current/strategy-20261123-claude) and [Codex's source revision](https://github.com/DavisAI1974/markets-data/tree/ad10921479e49678dd228b0f6b144dca3e610a0d/tasks/family-research-20261022/research-union-current/strategy-20261123-codex). This folder also includes the [plan format](platform/README.md) and the [NGX3 contract definition](platform/NG_OCT2023_CONTRACT.md) for Databento instrument `150611`. Those two files were copied from [platform revision 2986b3c](https://github.com/DavisAI1974/paper-trading-platform/tree/2986b3ce3001bc1926df64a06588b4558a5b648e/paper_platform/execution_plans).
+Both agents use the [common brief](BRIEF_COMMON.md). The copies come from [Claude's source revision](https://github.com/DavisAI1974/markets-data/tree/46199c5f4af03fde341535a7aff6a0396300cc73/tasks/family-research-20261022/research-union-current/strategy-20261123-claude) and [Codex's source revision](https://github.com/DavisAI1974/markets-data/tree/ad10921479e49678dd228b0f6b144dca3e610a0d/tasks/family-research-20261022/research-union-current/strategy-20261123-codex). The expanded Claude source is pinned to [the revision containing both additions](https://github.com/DavisAI1974/markets-data/blob/af2a0efab906302a6302e70c06f108b681d66857/tasks/family-research-20261022/research-union-current/strategy-20261123-claude/VERSIONS.md). This folder also includes the [plan format](platform/README.md) and the [NGX3 contract definition](platform/NG_OCT2023_CONTRACT.md) for Databento instrument `150611`. Those two files were copied from [platform revision 2986b3c](https://github.com/DavisAI1974/paper-trading-platform/tree/2986b3ce3001bc1926df64a06588b4558a5b648e/paper_platform/execution_plans).
 
 Collect `CL-answer.json` and `CX-answer.json` beside the briefs. Each participating rule needs its chosen contract quantity and its opening and closing instructions. CX05, CX06, CX11, CX12, CX13 and CX14 also need their parent entry rules and parent-close instructions. Frankie and the agents own these decisions. Frankie's launch awaits Greg's go.
 
