@@ -6482,3 +6482,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   fixes it calls for. Six independent reviewers were started in parallel (runs 54 to 59, the reviewer agent,
   reading only, nothing run on the branch): item 20; items 24 and 25; item 27; items 28 and 30; item 31; item 32.
   Each finding is fixed on Codex's branch under its own number, and the review is recorded under item 35.
+- THE 5.75-HOUR STOP AND THE 5 PM TO 6 PM HOUR (Greg, 2026-11-24). Put to him from the item 20 review: a run that
+  crosses 5 pm Eastern reaches its 5.75-hour stop inside the hour, and the code then sends the flattening orders
+  all the same, so "no trades in that hour" and "the stop flattens every position" cannot both hold. His answer:
+  "If 5.75 is going to land inside of the hour, flatten before 5 and end at 5". Built from these words under
+  item 20: when the 5.75-hour stop of a live run would land in the 5 pm to 6 pm Eastern hour, the run stops and
+  flattens before 5 pm Eastern and is over at 5. How long before 5 the flatten is sent is not in his words; the
+  figure used is written beside the code and under item 20, and is his to change. NOT covered by his words and
+  left as they are: a run started so late that its 5.75 hours land after 6 pm Eastern, and a stored replay that
+  runs to the end of its trade day.
