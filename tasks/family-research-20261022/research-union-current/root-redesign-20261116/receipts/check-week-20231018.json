@@ -1,0 +1,296 @@
+{
+ "what": "ROOT tape: check-week (files, fingerprints, counts, what each record is)",
+ "specification": "SPEC-root.md (approved 2026-11-16), part tape",
+ "trade_day": "2023-10-18",
+ "week_sunday": "2023-10-15",
+ "files": [
+  {
+   "file": "NG_v0_mbo_20231015.dbn.zst",
+   "utc_clock_day": "2023-10-15",
+   "sha256": "a75c9dd6f5cff8172ac491cc0b46a1c7ed6892d44c846c80871434a9be63ce2d",
+   "records": 29063,
+   "vendor_snapshot_records": 0,
+   "ticks": 29063,
+   "vendor_snapshot_actions": {},
+   "tick_actions": {
+    "A": 9712,
+    "C": 9016,
+    "F": 1908,
+    "M": 3754,
+    "N": 3320,
+    "R": 1,
+    "T": 1352
+   },
+   "tick_flags": {
+    "F_LAST": 21386,
+    "F_TOB": 0,
+    "F_SNAPSHOT": 350,
+    "F_MBP": 0,
+    "F_BAD_TS_RECV": 351,
+    "F_MAYBE_BAD_BOOK": 0,
+    "F_PUBLISHER_SPECIFIC": 0
+   },
+   "ticks_by_label": {
+    "5 pm to 6 pm stretch": 252,
+    "Sunday start-up": 351,
+    "trade day 2023-10-16": 28460
+   },
+   "ticks_for_this_box": {
+    "warm-up": 29063
+   },
+   "instrument_ids": [
+    150611
+   ],
+   "mappings": {
+    "NG.v.0": [
+     {
+      "start_date": "2023-10-13",
+      "end_date": "2023-10-16",
+      "symbol": "150611"
+     }
+    ]
+   },
+   "fields": [
+    "length",
+    "rtype",
+    "publisher_id",
+    "instrument_id",
+    "ts_event",
+    "order_id",
+    "price",
+    "size",
+    "flags",
+    "channel_id",
+    "action",
+    "side",
+    "ts_recv",
+    "ts_in_delta",
+    "sequence"
+   ]
+  },
+  {
+   "file": "NG_v0_mbo_20231016.dbn.zst",
+   "utc_clock_day": "2023-10-16",
+   "sha256": "c3b9a0390180fedd88a52a3fc49a5a0546b1aa275ba9ecbcfb2bd0403650835e",
+   "records": 925662,
+   "vendor_snapshot_records": 697,
+   "ticks": 924965,
+   "vendor_snapshot_actions": {
+    "R": 1,
+    "A": 696
+   },
+   "tick_actions": {
+    "A": 328407,
+    "C": 328366,
+    "F": 70456,
+    "M": 50000,
+    "N": 105281,
+    "T": 42455
+   },
+   "tick_flags": {
+    "F_LAST": 675903,
+    "F_TOB": 0,
+    "F_SNAPSHOT": 0,
+    "F_MBP": 0,
+    "F_BAD_TS_RECV": 0,
+    "F_MAYBE_BAD_BOOK": 0,
+    "F_PUBLISHER_SPECIFIC": 0
+   },
+   "ticks_by_label": {
+    "5 pm to 6 pm stretch": 422,
+    "trade day 2023-10-16": 920160,
+    "trade day 2023-10-17": 4383
+   },
+   "ticks_for_this_box": {
+    "warm-up": 924965
+   },
+   "instrument_ids": [
+    150611
+   ],
+   "mappings": {
+    "NG.v.0": [
+     {
+      "start_date": "2023-10-16",
+      "end_date": "2023-10-17",
+      "symbol": "150611"
+     }
+    ]
+   },
+   "fields": [
+    "length",
+    "rtype",
+    "publisher_id",
+    "instrument_id",
+    "ts_event",
+    "order_id",
+    "price",
+    "size",
+    "flags",
+    "channel_id",
+    "action",
+    "side",
+    "ts_recv",
+    "ts_in_delta",
+    "sequence"
+   ]
+  },
+  {
+   "file": "NG_v0_mbo_20231017.dbn.zst",
+   "utc_clock_day": "2023-10-17",
+   "sha256": "ce36e2ed242731698004cd83c1947365e8aac0e9dac939d271a8f22752bcca65",
+   "records": 858976,
+   "vendor_snapshot_records": 738,
+   "ticks": 858238,
+   "vendor_snapshot_actions": {
+    "R": 1,
+    "A": 737
+   },
+   "tick_actions": {
+    "A": 313621,
+    "C": 313641,
+    "F": 56108,
+    "M": 47485,
+    "N": 93677,
+    "T": 33706
+   },
+   "tick_flags": {
+    "F_LAST": 649794,
+    "F_TOB": 0,
+    "F_SNAPSHOT": 0,
+    "F_MBP": 0,
+    "F_BAD_TS_RECV": 0,
+    "F_MAYBE_BAD_BOOK": 0,
+    "F_PUBLISHER_SPECIFIC": 0
+   },
+   "ticks_by_label": {
+    "5 pm to 6 pm stretch": 490,
+    "trade day 2023-10-17": 840863,
+    "trade day 2023-10-18": 16885
+   },
+   "ticks_for_this_box": {
+    "warm-up": 840863,
+    "written": 17375
+   },
+   "instrument_ids": [
+    150611
+   ],
+   "mappings": {
+    "NG.v.0": [
+     {
+      "start_date": "2023-10-17",
+      "end_date": "2023-10-18",
+      "symbol": "150611"
+     }
+    ]
+   },
+   "fields": [
+    "length",
+    "rtype",
+    "publisher_id",
+    "instrument_id",
+    "ts_event",
+    "order_id",
+    "price",
+    "size",
+    "flags",
+    "channel_id",
+    "action",
+    "side",
+    "ts_recv",
+    "ts_in_delta",
+    "sequence"
+   ]
+  },
+  {
+   "file": "NG_v0_mbo_20231018.dbn.zst",
+   "utc_clock_day": "2023-10-18",
+   "sha256": "54b2b14c4762a7e4160cc00ce1e70504961ea4e6954e28866dd1bfbaa140f5d5",
+   "records": 760803,
+   "vendor_snapshot_records": 718,
+   "ticks": 760085,
+   "vendor_snapshot_actions": {
+    "R": 1,
+    "A": 717
+   },
+   "tick_actions": {
+    "A": 276721,
+    "C": 276708,
+    "F": 49084,
+    "M": 40556,
+    "N": 86205,
+    "T": 30811
+   },
+   "tick_flags": {
+    "F_LAST": 573297,
+    "F_TOB": 0,
+    "F_SNAPSHOT": 0,
+    "F_MBP": 0,
+    "F_BAD_TS_RECV": 0,
+    "F_MAYBE_BAD_BOOK": 0,
+    "F_PUBLISHER_SPECIFIC": 0
+   },
+   "ticks_by_label": {
+    "5 pm to 6 pm stretch": 399,
+    "trade day 2023-10-18": 753694,
+    "trade day 2023-10-19": 5992
+   },
+   "ticks_for_this_box": {
+    "shelved": 5992,
+    "written": 754093
+   },
+   "instrument_ids": [
+    150611
+   ],
+   "mappings": {
+    "NG.v.0": [
+     {
+      "start_date": "2023-10-18",
+      "end_date": "2023-10-19",
+      "symbol": "150611"
+     }
+    ]
+   },
+   "fields": [
+    "length",
+    "rtype",
+    "publisher_id",
+    "instrument_id",
+    "ts_event",
+    "order_id",
+    "price",
+    "size",
+    "flags",
+    "channel_id",
+    "action",
+    "side",
+    "ts_recv",
+    "ts_in_delta",
+    "sequence"
+   ]
+  }
+ ],
+ "contract_instrument_id": 150611,
+ "record_fields": [
+  "ts_recv",
+  "ts_event",
+  "rtype",
+  "publisher_id",
+  "instrument_id",
+  "action",
+  "side",
+  "price",
+  "size",
+  "channel_id",
+  "order_id",
+  "flags",
+  "ts_in_delta",
+  "sequence"
+ ],
+ "never_exercised": [
+  "a later file that does not open with a flagged clear",
+  "a first file that does not open with an unflagged clear",
+  "a flagged record after the opening block",
+  "more than one contract in a week"
+ ],
+ "seconds": 22.0
+}

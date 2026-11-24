@@ -1,0 +1,29 @@
+{
+ "file": "NG_v0_mbo_20231001.dbn.zst",
+ "orders_in_opening_block": 342,
+ "distinct_block_event_times": [
+  "2023-10-01 12:00:04.281532035"
+ ],
+ "distinct_block_recv_times": [
+  "2023-10-01 12:00:04.481274710"
+ ],
+ "distinct_block_sequences": 11,
+ "first_live_message": {
+  "file_index": 343,
+  "recv_utc": "2023-10-01 21:01:00.004344801",
+  "action": "A"
+ },
+ "counts_of_individual_orders": {
+  "never_touched_again_in_oct1_file": 319,
+  "removed_in_oct1_file": 21,
+  "priority_reset_in_oct1_file": 4,
+  "resting_at_trade_day_oct2_start": 342,
+  "resting_at_0000utc_oct2": 321,
+  "in_oct2_snapshot_with_the_block_event_time": 319,
+  "in_oct2_snapshot_with_another_event_time": 2,
+  "in_oct3_snapshot_with_the_block_event_time": 247,
+  "in_oct3_snapshot_with_another_event_time": 12
+ },
+ "orders_in_0000utc_oct3_snapshot_with_an_oct1_event_date": 252,
+ "of_those_carrying_the_block_event_time": 247
+}

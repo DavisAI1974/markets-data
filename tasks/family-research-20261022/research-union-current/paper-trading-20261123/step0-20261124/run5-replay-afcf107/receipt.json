@@ -1,0 +1,192 @@
+{
+ "counts": {
+  "day_volume_messages": 56,
+  "gaps": 15,
+  "print_size_seen": 149.0,
+  "prints": 107,
+  "prints_missing_bid_or_offer": 0,
+  "prints_with_no_price": 0,
+  "prints_with_no_side": 9,
+  "prints_with_no_size": 0,
+  "quote_messages": 111,
+  "quote_messages_missing_bid_or_offer": 0,
+  "rules": {
+   "CL01": {
+    "armed": 0,
+    "closed": 0,
+    "missing": {
+     "single orders": 98
+    },
+    "opened": 0,
+    "same_key_skipped": 0,
+    "title": "the eaten level"
+   },
+   "CL02": {
+    "armed": 0,
+    "closed": 0,
+    "missing": {
+     "single orders": 98
+    },
+    "opened": 0,
+    "same_key_skipped": 0,
+    "title": "the abandoned level"
+   },
+   "CL03": {
+    "armed": 0,
+    "closed": 0,
+    "missing": {
+     "single orders": 98
+    },
+    "opened": 0,
+    "same_key_skipped": 0,
+    "title": "the first step made by a fill"
+   },
+   "CL04": {
+    "armed": 0,
+    "closed": 0,
+    "missing": {
+     "single orders": 98
+    },
+    "opened": 0,
+    "same_key_skipped": 0,
+    "title": "a level that has only been eaten"
+   },
+   "CL05": {
+    "armed": 18,
+    "closed": 2,
+    "missing": {
+     "exhaustion line (20 s)": 5,
+     "first trade leg cut at the start": 1
+    },
+    "opened": 3,
+    "same_key_skipped": 0,
+    "title": "a trade leg's first step with the exhaustion line on its side"
+   },
+   "CL06": {
+    "armed": 17,
+    "closed": 17,
+    "missing": {},
+    "opened": 17,
+    "same_key_skipped": 0,
+    "title": "both quotes have stepped the same way"
+   },
+   "CL07": {
+    "armed": 11,
+    "began_at_a_moment_not_opened": 4,
+    "closed": 5,
+    "missing": {
+     "dipole line (60 s) before the trade": 3
+    },
+    "opened": 5,
+    "same_key_skipped": 0,
+    "title": "fresh trading on the dipole's side"
+   },
+   "CL08": {
+    "armed": 3,
+    "began_at_a_moment_not_opened": 4,
+    "closed": 2,
+    "missing": {
+     "dipole line (60 s) before the trade": 3
+    },
+    "opened": 2,
+    "same_key_skipped": 0,
+    "title": "fresh trading against the dipole"
+   },
+   "CL09": {
+    "armed": 0,
+    "closed": 0,
+    "missing": {
+     "single orders": 98
+    },
+    "opened": 0,
+    "same_key_skipped": 0,
+    "title": "the first step made by a cancel"
+   },
+   "CL10": {
+    "armed": 20,
+    "closed": 4,
+    "missing": {
+     "dipole line (60 s)": 5
+    },
+    "opened": 4,
+    "same_key_skipped": 0,
+    "title": "the price runs against the dipole: with the price"
+   },
+   "CL11": {
+    "armed": 20,
+    "closed": 4,
+    "missing": {
+     "dipole line (60 s)": 5
+    },
+    "opened": 4,
+    "same_key_skipped": 0,
+    "title": "the price runs against the dipole: against the price"
+   },
+   "CL12": {
+    "armed": 0,
+    "closed": 0,
+    "missing": {
+     "single orders": 98
+    },
+    "opened": 0,
+    "same_key_skipped": 0,
+    "title": "the reloaded level"
+   },
+   "CL13": {
+    "armed": 0,
+    "closed": 0,
+    "missing": {},
+    "opened": 0,
+    "same_key_skipped": 0,
+    "title": "paying up through more than one level"
+   },
+   "CL14": {
+    "armed": 15,
+    "closed": 14,
+    "missing": {
+     "first quote run cut at the start": 1
+    },
+    "opened": 14,
+    "same_key_skipped": 0,
+    "title": "the other side arrives at the top step of a run"
+   },
+   "CL15": {
+    "armed": 10,
+    "closed": 10,
+    "missing": {},
+    "opened": 10,
+    "same_key_skipped": 0,
+    "title": "the step back and the return"
+   }
+  },
+  "unexplained_day_volume_at_end": 21.0
+ },
+ "leakage_gate": "the cut-equals-whole check stands in for odcore/leakage.py on a replay; nothing here is a backtest result",
+ "manifest_entries": [
+  {
+   "bytes": 37074,
+   "path": "ledger.jsonl",
+   "sha256": "ba6285df248b6e453f5c4ced7336ce6040d314e1e8753fd1089d14728e310386",
+   "source": "/home/user/markets-data/tasks/family-research-20261022/research-union-current/paper-trading-20261123/7e/sandbox-stream-20261123T231452738619403Z.jsonl"
+  }
+ ],
+ "not_testable_on_real_data": "the 4:44 pm stop, the halt hour and the settlement window (the recordings cover about 6:00 to 6:26 pm on the feed)",
+ "note": "not scored: tastytrade sandbox feed",
+ "recording": {
+  "bytes": 200614,
+  "cut_first_k_messages": null,
+  "path": "/home/user/markets-data/tasks/family-research-20261022/research-union-current/paper-trading-20261123/7e/sandbox-stream-20261123T231452738619403Z.jsonl",
+  "sha256": "d441297746b556386c3a755e21d46ed950a8fe1af000dc2b1bc6a36024005faa"
+ },
+ "stand_ins": {
+  "CL13": "prints of one side sharing one feed time at more than one price",
+  "S1": "the clock: the lines are made on the feed trade time in ms (as ns) and sequence",
+  "S2": "the event mark: a rule decides at the feed message (print) that shows its trigger; \"a later exchange event\" is read as \"a later feed trade time\"",
+  "S3": "the quotes: the print's own bid and offer only (G1); quote messages are recorded, never read by a rule",
+  "S4": "the trades: the lines and the rules use prints that carry a side; prints with no side are counted",
+  "S5": "a moment at which trades only leave a span is known at the next print; a close that depends on it is made then and marked known late",
+  "S6": "the end-of-trade-day close cannot be sent; the flatten at the stop takes its place (not in Part A)"
+ },
+ "trades_in_ledger": 59,
+ "what": "replay of a 7e recording through the paper runner, Part A: sends nothing"
+}

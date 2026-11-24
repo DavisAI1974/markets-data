@@ -1,0 +1,154 @@
+{
+ "event": "dipole:dip-19632-1696206142",
+ "claims": [
+  {
+   "k": 1,
+   "cells": [
+    1,
+    10
+   ],
+   "text": "dipole:dip-19632-1696206142 stores born_eastern 2023-10-01 20:22:22 and native_polarity 1.",
+   "statement_kind": "measurement",
+   "inference": false,
+   "rests_on": [],
+   "confidence": 0.99
+  },
+  {
+   "k": 2,
+   "cells": [
+    6,
+    11
+   ],
+   "text": "dipole:dip-19632-1696206142 stores native_baseline 0.1461538461538462 and native_prominence 0.8538461538461538.",
+   "statement_kind": "measurement",
+   "inference": false,
+   "rests_on": [],
+   "confidence": 0.99
+  },
+  {
+   "k": 3,
+   "cells": [
+    9,
+    12
+   ],
+   "text": "dipole:dip-19632-1696206142 stores native_magnitude 1 and native_threshold 1.",
+   "statement_kind": "measurement",
+   "inference": false,
+   "rests_on": [],
+   "confidence": 0.99
+  },
+  {
+   "k": 4,
+   "cells": [
+    14,
+    18
+   ],
+   "text": "dipole:dip-19632-1696206142 stores our_flow_bought_20s_after 2 and our_flow_sold_20s_after 0.",
+   "statement_kind": "measurement",
+   "inference": false,
+   "rests_on": [],
+   "confidence": 0.99
+  },
+  {
+   "k": 5,
+   "cells": [
+    16,
+    17
+   ],
+   "text": "dipole:dip-19632-1696206142 stores true for our_flow_fully_one_sided_after and true for our_flow_on_native_side_after.",
+   "statement_kind": "state",
+   "inference": false,
+   "rests_on": [],
+   "confidence": 0.97
+  },
+  {
+   "k": 6,
+   "cells": [
+    21,
+    22
+   ],
+   "text": "dipole:dip-19632-1696206142 stores seconds_since_dipole_before 106 and seconds_to_dipole_after 45.",
+   "statement_kind": "measurement",
+   "inference": false,
+   "rests_on": [],
+   "confidence": 0.99
+  },
+  {
+   "k": 7,
+   "cells": [
+    4,
+    5,
+    24,
+    25
+   ],
+   "text": "dipole:dip-19632-1696206142 stores no value (null) for first_position_in_birth_second and last_position_in_birth_second, and stores ticks_in_birth_second 0 and trades_in_birth_second 0.",
+   "statement_kind": "measurement",
+   "inference": false,
+   "rests_on": [],
+   "confidence": 0.95
+  },
+  {
+   "k": 8,
+   "cells": [
+    60,
+    64,
+    68
+   ],
+   "text": "dipole:dip-19632-1696206187 stores native_polarity -1, our_flow_bought_20s_after 0 and our_flow_sold_20s_after 5.",
+   "statement_kind": "measurement",
+   "inference": false,
+   "rests_on": [],
+   "confidence": 0.99
+  },
+  {
+   "k": 9,
+   "cells": [
+    76,
+    77,
+    79
+   ],
+   "text": "peak:2023-10-02:15006 stores high_eastern 2023-10-01 20:21:32, peak_side sell and bought_minus_sold_at_high 9.",
+   "statement_kind": "measurement",
+   "inference": false,
+   "rests_on": [],
+   "confidence": 0.98
+  },
+  {
+   "k": 10,
+   "cells": [],
+   "text": "The event dipole:dip-19632-1696206142 and the dipole dipole:dip-19632-1696206187 just after it store opposite signs of native_polarity, 1 and -1.",
+   "statement_kind": "state",
+   "inference": true,
+   "rests_on": [
+    1,
+    8
+   ],
+   "confidence": 0.92
+  },
+  {
+   "k": 11,
+   "cells": [],
+   "text": "The sign of native_polarity stored for the event (1) goes with the side of its stored flow in the following seconds (bought 2, sold 0), and the sign stored for the dipole just after it (-1) goes with the side of its stored flow (bought 0, sold 5); I read bought as the plus side and sold as the minus side, which the cells do not say themselves.",
+   "statement_kind": "state",
+   "inference": true,
+   "rests_on": [
+    1,
+    4,
+    8
+   ],
+   "confidence": 0.6
+  },
+  {
+   "k": 12,
+   "cells": [
+    31,
+    36
+   ],
+   "text": "dipole:dip-19632-1696206036 stores native_baseline 1 and native_prominence 0.",
+   "statement_kind": "measurement",
+   "inference": false,
+   "rests_on": [],
+   "confidence": 0.99
+  }
+ ]
+}

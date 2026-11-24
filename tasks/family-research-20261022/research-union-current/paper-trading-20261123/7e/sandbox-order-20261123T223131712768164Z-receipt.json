@@ -1,0 +1,70 @@
+{
+  "arguments": {
+    "account": "5WY79188",
+    "action": "Buy",
+    "cancel_if_open": false,
+    "cmd": "sandbox-order",
+    "gtc_date": null,
+    "max_pages": null,
+    "order_type": "Market",
+    "out": "tasks/family-research-20261022/research-union-current/paper-trading-20261123/7e",
+    "poll_count": null,
+    "poll_seconds": null,
+    "price": null,
+    "quantity": 1,
+    "submit": false,
+    "symbol": "/NGF7",
+    "time_in_force": "Day"
+  },
+  "asked": "Does a natural gas future order get accepted and fill in the sandbox (dry-run, and with --submit the order and its polling)?",
+  "code_commit": "ec2e86fde9dce9d0b4e7bca85d521fe51bb79fd6",
+  "code_file_sha256": "d673dd509a173bf48091ade006915f50c958ff13edb6e977a87ad43797477965",
+  "constants_used": {
+    "acceptDataFormat": "FULL",
+    "acceptKeepaliveTimeout": 60,
+    "accept_aggregation_period": 0,
+    "backoff_rule": "sleep 2**attempt seconds plus uniform(0,1) seconds, between attempts",
+    "event_types_asked_for": [
+      "Quote",
+      "Trade",
+      "TradeETH",
+      "TimeAndSale",
+      "Summary",
+      "Profile",
+      "Order"
+    ],
+    "feed_channel": 3,
+    "http_timeout_seconds": 30,
+    "keepaliveTimeout": 60,
+    "keepalive_seconds": 30,
+    "max_attempts": 4,
+    "secret_length_floors": {
+      "credentials": "none (any length)",
+      "learned_from_responses": 8
+    },
+    "setup_version": "0.1-DXF-JS/0.3.0",
+    "start_date_rule": "previous day in US Eastern time (America/New_York), yyyy-mm-dd",
+    "terminal_statuses": [
+      "cancelled",
+      "expired",
+      "filled",
+      "partially removed",
+      "rejected",
+      "removed"
+    ],
+    "user_agent": "davisai-paper/0.1"
+  },
+  "failed_steps": [],
+  "files": [
+    {
+      "bytes": 3840,
+      "path": "/home/user/markets-data/tasks/family-research-20261022/research-union-current/paper-trading-20261123/7e/sandbox-order-20261123T223131712768164Z.jsonl",
+      "sha256": "84d9002ad5ab38a4d95df53ee7071f3f14b01ea280e6cd33eac5091fe26e0959"
+    }
+  ],
+  "problems_writing_outputs": [],
+  "receive_time_note": "t_ns on a received stream message is time.time_ns() taken when the websocket library hands the frame to our code",
+  "run_start_utc_ns": 1795473091712768164,
+  "stopped_by": "StepStop: POST /accounts/5WY79188/orders/dry-run: HTTP 422",
+  "sub_command": "sandbox-order"
+}

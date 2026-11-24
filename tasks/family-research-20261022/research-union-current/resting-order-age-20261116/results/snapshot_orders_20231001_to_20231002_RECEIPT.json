@@ -1,0 +1,29 @@
+{
+ "prior_utc_clock_day": "20231001",
+ "next_utc_clock_day": "20231002",
+ "prior_file_records": 12532,
+ "snapshot_block_records": 733,
+ "snapshot_orders": 732,
+ "snapshot_orders_in_carried_book": 732,
+ "carried_orders": 732,
+ "same_side_price_size": 732,
+ "counts_of_individual_orders": {
+  "snapshot_event_equals_replay_priority_event": 732,
+  "snapshot_event_differs_from_replay_priority_event": 0,
+  "snapshot_sequence_equals_replay_priority_sequence": 732,
+  "orders_whose_priority_was_reset_after_first_seen": 31,
+  "of_those_snapshot_event_equals_the_reset_event": 31,
+  "of_those_snapshot_event_equals_the_first_seen_event": 0,
+  "orders_with_priority_keeping_changes_after_priority_was_set": 19,
+  "of_those_snapshot_event_equals_replay_priority_event": 19,
+  "of_those_snapshot_event_equals_the_last_priority_keeping_change": 0,
+  "priority_set_by": {
+   "live_add": 382,
+   "opening_block_of_prior_file": 319,
+   "priority_losing_modify": 31
+  },
+  "replay_priority_recv_more_than_1s_after_snapshot_event": 0,
+  "replay_priority_recv_before_snapshot_event": 0
+ },
+ "per_order_file": "snapshot_orders_20231001_to_20231002.csv"
+}

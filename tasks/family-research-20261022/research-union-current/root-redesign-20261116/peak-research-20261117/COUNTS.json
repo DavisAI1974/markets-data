@@ -1,0 +1,798 @@
+{
+ "20231002": {
+  "file": "peaks-by-place-in-the-move-20231002.parquet",
+  "lines": 21092,
+  "sha256": "cea214153d7bbcadc6c997386b3aee5fb327b2683656471e8e71a50534a172b5",
+  "counts": {
+   "20-second flow | trade leg": {
+    "at the beginning": {
+     "peaks": 2472,
+     "high_on_the_exact_tick": 399,
+     "peak_side_goes_with_the_move": 1431,
+     "flow_fully_one_sided (number is 1.0)": 369
+    },
+    "at the end": {
+     "peaks": 2240,
+     "high_on_the_exact_tick": 702,
+     "peak_side_goes_with_the_move": 1933,
+     "flow_fully_one_sided (number is 1.0)": 265
+    },
+    "the whole move (one step)": {
+     "peaks": 3528,
+     "high_on_the_exact_tick": 873,
+     "peak_side_goes_with_the_move": 2641,
+     "flow_fully_one_sided (number is 1.0)": 501
+    },
+    "in between": {
+     "peaks": 1285,
+     "high_on_the_exact_tick": 254,
+     "peak_side_goes_with_the_move": 920,
+     "flow_fully_one_sided (number is 1.0)": 228
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 0
+    }
+   },
+   "20-second flow | run of the best bid": {
+    "at the beginning": {
+     "peaks": 2772,
+     "high_on_the_exact_tick": 14,
+     "peak_side_goes_with_the_move": 1697,
+     "flow_fully_one_sided (number is 1.0)": 457
+    },
+    "at the end": {
+     "peaks": 1206,
+     "high_on_the_exact_tick": 4,
+     "peak_side_goes_with_the_move": 543,
+     "flow_fully_one_sided (number is 1.0)": 206
+    },
+    "the whole move (one step)": {
+     "peaks": 4457,
+     "high_on_the_exact_tick": 26,
+     "peak_side_goes_with_the_move": 1331,
+     "flow_fully_one_sided (number is 1.0)": 546
+    },
+    "in between": {
+     "peaks": 1090,
+     "high_on_the_exact_tick": 2,
+     "peak_side_goes_with_the_move": 859,
+     "flow_fully_one_sided (number is 1.0)": 154
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 0
+    }
+   },
+   "20-second flow | run of the best ask": {
+    "at the beginning": {
+     "peaks": 2912,
+     "high_on_the_exact_tick": 10,
+     "peak_side_goes_with_the_move": 1792,
+     "flow_fully_one_sided (number is 1.0)": 464
+    },
+    "at the end": {
+     "peaks": 1177,
+     "high_on_the_exact_tick": 9,
+     "peak_side_goes_with_the_move": 540,
+     "flow_fully_one_sided (number is 1.0)": 206
+    },
+    "the whole move (one step)": {
+     "peaks": 4368,
+     "high_on_the_exact_tick": 41,
+     "peak_side_goes_with_the_move": 1312,
+     "flow_fully_one_sided (number is 1.0)": 540
+    },
+    "in between": {
+     "peaks": 1068,
+     "high_on_the_exact_tick": 1,
+     "peak_side_goes_with_the_move": 831,
+     "flow_fully_one_sided (number is 1.0)": 153
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 0
+    }
+   },
+   "no window | trade leg": {
+    "at the beginning": {
+     "peaks": 2715,
+     "high_on_the_exact_tick": 399,
+     "peak_side_goes_with_the_move": 1313,
+     "run_of_one_trade": 986
+    },
+    "at the end": {
+     "peaks": 2702,
+     "high_on_the_exact_tick": 1042,
+     "peak_side_goes_with_the_move": 2320,
+     "run_of_one_trade": 734
+    },
+    "the whole move (one step)": {
+     "peaks": 4555,
+     "high_on_the_exact_tick": 1725,
+     "peak_side_goes_with_the_move": 3889,
+     "run_of_one_trade": 1902
+    },
+    "in between": {
+     "peaks": 1595,
+     "high_on_the_exact_tick": 229,
+     "peak_side_goes_with_the_move": 796,
+     "run_of_one_trade": 529
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 0
+    }
+   },
+   "no window | run of the best bid": {
+    "at the beginning": {
+     "peaks": 2847,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 1770,
+     "run_of_one_trade": 871
+    },
+    "at the end": {
+     "peaks": 1846,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 450,
+     "run_of_one_trade": 717
+    },
+    "the whole move (one step)": {
+     "peaks": 5437,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 1115,
+     "run_of_one_trade": 2103
+    },
+    "in between": {
+     "peaks": 1437,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 888,
+     "run_of_one_trade": 460
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 0
+    }
+   },
+   "no window | run of the best ask": {
+    "at the beginning": {
+     "peaks": 3020,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 1888,
+     "run_of_one_trade": 968
+    },
+    "at the end": {
+     "peaks": 1737,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 425,
+     "run_of_one_trade": 651
+    },
+    "the whole move (one step)": {
+     "peaks": 5368,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 1131,
+     "run_of_one_trade": 2037
+    },
+    "in between": {
+     "peaks": 1442,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 884,
+     "run_of_one_trade": 495
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 0
+    }
+   }
+  }
+ },
+ "20231003": {
+  "file": "peaks-by-place-in-the-move-20231003.parquet",
+  "lines": 23261,
+  "sha256": "57796b5ce9da005cd580017e2ef9ec5fa286df0b6a2aa500af70c9de6256e95a",
+  "counts": {
+   "20-second flow | trade leg": {
+    "at the beginning": {
+     "peaks": 2721,
+     "high_on_the_exact_tick": 410,
+     "peak_side_goes_with_the_move": 1482,
+     "flow_fully_one_sided (number is 1.0)": 362
+    },
+    "at the end": {
+     "peaks": 2207,
+     "high_on_the_exact_tick": 709,
+     "peak_side_goes_with_the_move": 1933,
+     "flow_fully_one_sided (number is 1.0)": 240
+    },
+    "the whole move (one step)": {
+     "peaks": 4431,
+     "high_on_the_exact_tick": 1165,
+     "peak_side_goes_with_the_move": 3373,
+     "flow_fully_one_sided (number is 1.0)": 562
+    },
+    "in between": {
+     "peaks": 1218,
+     "high_on_the_exact_tick": 203,
+     "peak_side_goes_with_the_move": 866,
+     "flow_fully_one_sided (number is 1.0)": 164
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 0
+    }
+   },
+   "20-second flow | run of the best bid": {
+    "at the beginning": {
+     "peaks": 3153,
+     "high_on_the_exact_tick": 22,
+     "peak_side_goes_with_the_move": 1848,
+     "flow_fully_one_sided (number is 1.0)": 428
+    },
+    "at the end": {
+     "peaks": 1211,
+     "high_on_the_exact_tick": 12,
+     "peak_side_goes_with_the_move": 566,
+     "flow_fully_one_sided (number is 1.0)": 163
+    },
+    "the whole move (one step)": {
+     "peaks": 5199,
+     "high_on_the_exact_tick": 61,
+     "peak_side_goes_with_the_move": 1655,
+     "flow_fully_one_sided (number is 1.0)": 641
+    },
+    "in between": {
+     "peaks": 1014,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 810,
+     "flow_fully_one_sided (number is 1.0)": 96
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 0
+    }
+   },
+   "20-second flow | run of the best ask": {
+    "at the beginning": {
+     "peaks": 3137,
+     "high_on_the_exact_tick": 12,
+     "peak_side_goes_with_the_move": 1847,
+     "flow_fully_one_sided (number is 1.0)": 420
+    },
+    "at the end": {
+     "peaks": 1232,
+     "high_on_the_exact_tick": 5,
+     "peak_side_goes_with_the_move": 556,
+     "flow_fully_one_sided (number is 1.0)": 178
+    },
+    "the whole move (one step)": {
+     "peaks": 5302,
+     "high_on_the_exact_tick": 36,
+     "peak_side_goes_with_the_move": 1690,
+     "flow_fully_one_sided (number is 1.0)": 624
+    },
+    "in between": {
+     "peaks": 906,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 726,
+     "flow_fully_one_sided (number is 1.0)": 106
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 0
+    }
+   },
+   "no window | trade leg": {
+    "at the beginning": {
+     "peaks": 2808,
+     "high_on_the_exact_tick": 402,
+     "peak_side_goes_with_the_move": 1340,
+     "run_of_one_trade": 970
+    },
+    "at the end": {
+     "peaks": 2763,
+     "high_on_the_exact_tick": 1130,
+     "peak_side_goes_with_the_move": 2406,
+     "run_of_one_trade": 750
+    },
+    "the whole move (one step)": {
+     "peaks": 5609,
+     "high_on_the_exact_tick": 2178,
+     "peak_side_goes_with_the_move": 4771,
+     "run_of_one_trade": 2468
+    },
+    "in between": {
+     "peaks": 1504,
+     "high_on_the_exact_tick": 203,
+     "peak_side_goes_with_the_move": 755,
+     "run_of_one_trade": 504
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 0
+    }
+   },
+   "no window | run of the best bid": {
+    "at the beginning": {
+     "peaks": 3256,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 2019,
+     "run_of_one_trade": 1076
+    },
+    "at the end": {
+     "peaks": 1850,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 431,
+     "run_of_one_trade": 749
+    },
+    "the whole move (one step)": {
+     "peaks": 6214,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 1312,
+     "run_of_one_trade": 2436
+    },
+    "in between": {
+     "peaks": 1364,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 855,
+     "run_of_one_trade": 431
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 0
+    }
+   },
+   "no window | run of the best ask": {
+    "at the beginning": {
+     "peaks": 3184,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 1985,
+     "run_of_one_trade": 1013
+    },
+    "at the end": {
+     "peaks": 1900,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 466,
+     "run_of_one_trade": 747
+    },
+    "the whole move (one step)": {
+     "peaks": 6353,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 1361,
+     "run_of_one_trade": 2546
+    },
+    "in between": {
+     "peaks": 1247,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 771,
+     "run_of_one_trade": 386
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 0
+    }
+   }
+  }
+ },
+ "20231017": {
+  "file": "peaks-by-place-in-the-move-20231017.parquet",
+  "lines": 19020,
+  "sha256": "62c5fb9b6a081c4ddef89a7c38018df48c63c0ba12ea06a72aaf9c427e132784",
+  "counts": {
+   "20-second flow | trade leg": {
+    "at the beginning": {
+     "peaks": 2272,
+     "high_on_the_exact_tick": 415,
+     "peak_side_goes_with_the_move": 1227,
+     "flow_fully_one_sided (number is 1.0)": 394
+    },
+    "at the end": {
+     "peaks": 2179,
+     "high_on_the_exact_tick": 709,
+     "peak_side_goes_with_the_move": 1884,
+     "flow_fully_one_sided (number is 1.0)": 253
+    },
+    "the whole move (one step)": {
+     "peaks": 2827,
+     "high_on_the_exact_tick": 811,
+     "peak_side_goes_with_the_move": 2134,
+     "flow_fully_one_sided (number is 1.0)": 423
+    },
+    "in between": {
+     "peaks": 1340,
+     "high_on_the_exact_tick": 263,
+     "peak_side_goes_with_the_move": 980,
+     "flow_fully_one_sided (number is 1.0)": 236
+    },
+    "move not ended in the trade day": {
+     "peaks": 1,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 1
+    }
+   },
+   "20-second flow | run of the best bid": {
+    "at the beginning": {
+     "peaks": 2737,
+     "high_on_the_exact_tick": 15,
+     "peak_side_goes_with_the_move": 1700,
+     "flow_fully_one_sided (number is 1.0)": 484
+    },
+    "at the end": {
+     "peaks": 1152,
+     "high_on_the_exact_tick": 8,
+     "peak_side_goes_with_the_move": 517,
+     "flow_fully_one_sided (number is 1.0)": 145
+    },
+    "the whole move (one step)": {
+     "peaks": 3695,
+     "high_on_the_exact_tick": 52,
+     "peak_side_goes_with_the_move": 1168,
+     "flow_fully_one_sided (number is 1.0)": 537
+    },
+    "in between": {
+     "peaks": 1035,
+     "high_on_the_exact_tick": 2,
+     "peak_side_goes_with_the_move": 804,
+     "flow_fully_one_sided (number is 1.0)": 141
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 0
+    }
+   },
+   "20-second flow | run of the best ask": {
+    "at the beginning": {
+     "peaks": 2649,
+     "high_on_the_exact_tick": 18,
+     "peak_side_goes_with_the_move": 1661,
+     "flow_fully_one_sided (number is 1.0)": 442
+    },
+    "at the end": {
+     "peaks": 1221,
+     "high_on_the_exact_tick": 8,
+     "peak_side_goes_with_the_move": 559,
+     "flow_fully_one_sided (number is 1.0)": 196
+    },
+    "the whole move (one step)": {
+     "peaks": 3694,
+     "high_on_the_exact_tick": 41,
+     "peak_side_goes_with_the_move": 1140,
+     "flow_fully_one_sided (number is 1.0)": 541
+    },
+    "in between": {
+     "peaks": 1054,
+     "high_on_the_exact_tick": 2,
+     "peak_side_goes_with_the_move": 834,
+     "flow_fully_one_sided (number is 1.0)": 127
+    },
+    "move not ended in the trade day": {
+     "peaks": 1,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 1
+    }
+   },
+   "no window | trade leg": {
+    "at the beginning": {
+     "peaks": 2406,
+     "high_on_the_exact_tick": 424,
+     "peak_side_goes_with_the_move": 1130,
+     "run_of_one_trade": 954
+    },
+    "at the end": {
+     "peaks": 2683,
+     "high_on_the_exact_tick": 1144,
+     "peak_side_goes_with_the_move": 2355,
+     "run_of_one_trade": 668
+    },
+    "the whole move (one step)": {
+     "peaks": 3694,
+     "high_on_the_exact_tick": 1595,
+     "peak_side_goes_with_the_move": 3182,
+     "run_of_one_trade": 1715
+    },
+    "in between": {
+     "peaks": 1618,
+     "high_on_the_exact_tick": 276,
+     "peak_side_goes_with_the_move": 819,
+     "run_of_one_trade": 588
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 0
+    }
+   },
+   "no window | run of the best bid": {
+    "at the beginning": {
+     "peaks": 2875,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 1894,
+     "run_of_one_trade": 951
+    },
+    "at the end": {
+     "peaks": 1763,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 455,
+     "run_of_one_trade": 746
+    },
+    "the whole move (one step)": {
+     "peaks": 4408,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 944,
+     "run_of_one_trade": 1798
+    },
+    "in between": {
+     "peaks": 1355,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 883,
+     "run_of_one_trade": 430
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 0
+    }
+   },
+   "no window | run of the best ask": {
+    "at the beginning": {
+     "peaks": 2765,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 1800,
+     "run_of_one_trade": 852
+    },
+    "at the end": {
+     "peaks": 1832,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 472,
+     "run_of_one_trade": 807
+    },
+    "the whole move (one step)": {
+     "peaks": 4354,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 885,
+     "run_of_one_trade": 1788
+    },
+    "in between": {
+     "peaks": 1450,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 935,
+     "run_of_one_trade": 478
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 0
+    }
+   }
+  }
+ },
+ "20231018": {
+  "file": "peaks-by-place-in-the-move-20231018.parquet",
+  "lines": 17516,
+  "sha256": "d600f24e0f806c4a8dae33adec219205456cefd205e7177339e159d78a9c0960",
+  "counts": {
+   "20-second flow | trade leg": {
+    "at the beginning": {
+     "peaks": 2094,
+     "high_on_the_exact_tick": 385,
+     "peak_side_goes_with_the_move": 1162,
+     "flow_fully_one_sided (number is 1.0)": 439
+    },
+    "at the end": {
+     "peaks": 2061,
+     "high_on_the_exact_tick": 627,
+     "peak_side_goes_with_the_move": 1719,
+     "flow_fully_one_sided (number is 1.0)": 307
+    },
+    "the whole move (one step)": {
+     "peaks": 2530,
+     "high_on_the_exact_tick": 693,
+     "peak_side_goes_with_the_move": 1859,
+     "flow_fully_one_sided (number is 1.0)": 408
+    },
+    "in between": {
+     "peaks": 1281,
+     "high_on_the_exact_tick": 304,
+     "peak_side_goes_with_the_move": 898,
+     "flow_fully_one_sided (number is 1.0)": 305
+    },
+    "move not ended in the trade day": {
+     "peaks": 1,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 1
+    }
+   },
+   "20-second flow | run of the best bid": {
+    "at the beginning": {
+     "peaks": 2324,
+     "high_on_the_exact_tick": 21,
+     "peak_side_goes_with_the_move": 1498,
+     "flow_fully_one_sided (number is 1.0)": 484
+    },
+    "at the end": {
+     "peaks": 1091,
+     "high_on_the_exact_tick": 8,
+     "peak_side_goes_with_the_move": 466,
+     "flow_fully_one_sided (number is 1.0)": 198
+    },
+    "the whole move (one step)": {
+     "peaks": 3599,
+     "high_on_the_exact_tick": 30,
+     "peak_side_goes_with_the_move": 1132,
+     "flow_fully_one_sided (number is 1.0)": 609
+    },
+    "in between": {
+     "peaks": 949,
+     "high_on_the_exact_tick": 3,
+     "peak_side_goes_with_the_move": 731,
+     "flow_fully_one_sided (number is 1.0)": 167
+    },
+    "move not ended in the trade day": {
+     "peaks": 4,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 2
+    }
+   },
+   "20-second flow | run of the best ask": {
+    "at the beginning": {
+     "peaks": 2393,
+     "high_on_the_exact_tick": 13,
+     "peak_side_goes_with_the_move": 1515,
+     "flow_fully_one_sided (number is 1.0)": 492
+    },
+    "at the end": {
+     "peaks": 1154,
+     "high_on_the_exact_tick": 7,
+     "peak_side_goes_with_the_move": 528,
+     "flow_fully_one_sided (number is 1.0)": 237
+    },
+    "the whole move (one step)": {
+     "peaks": 3468,
+     "high_on_the_exact_tick": 41,
+     "peak_side_goes_with_the_move": 1088,
+     "flow_fully_one_sided (number is 1.0)": 558
+    },
+    "in between": {
+     "peaks": 952,
+     "high_on_the_exact_tick": 2,
+     "peak_side_goes_with_the_move": 737,
+     "flow_fully_one_sided (number is 1.0)": 173
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "flow_fully_one_sided (number is 1.0)": 0
+    }
+   },
+   "no window | trade leg": {
+    "at the beginning": {
+     "peaks": 2166,
+     "high_on_the_exact_tick": 410,
+     "peak_side_goes_with_the_move": 1049,
+     "run_of_one_trade": 903
+    },
+    "at the end": {
+     "peaks": 2600,
+     "high_on_the_exact_tick": 992,
+     "peak_side_goes_with_the_move": 2217,
+     "run_of_one_trade": 695
+    },
+    "the whole move (one step)": {
+     "peaks": 3257,
+     "high_on_the_exact_tick": 1358,
+     "peak_side_goes_with_the_move": 2774,
+     "run_of_one_trade": 1518
+    },
+    "in between": {
+     "peaks": 1525,
+     "high_on_the_exact_tick": 316,
+     "peak_side_goes_with_the_move": 773,
+     "run_of_one_trade": 583
+    },
+    "move not ended in the trade day": {
+     "peaks": 1,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 1
+    }
+   },
+   "no window | run of the best bid": {
+    "at the beginning": {
+     "peaks": 2496,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 1683,
+     "run_of_one_trade": 830
+    },
+    "at the end": {
+     "peaks": 1579,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 372,
+     "run_of_one_trade": 732
+    },
+    "the whole move (one step)": {
+     "peaks": 4180,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 883,
+     "run_of_one_trade": 1740
+    },
+    "in between": {
+     "peaks": 1290,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 871,
+     "run_of_one_trade": 396
+    },
+    "move not ended in the trade day": {
+     "peaks": 4,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 2
+    }
+   },
+   "no window | run of the best ask": {
+    "at the beginning": {
+     "peaks": 2575,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 1700,
+     "run_of_one_trade": 864
+    },
+    "at the end": {
+     "peaks": 1669,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 407,
+     "run_of_one_trade": 776
+    },
+    "the whole move (one step)": {
+     "peaks": 4042,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 825,
+     "run_of_one_trade": 1677
+    },
+    "in between": {
+     "peaks": 1263,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 847,
+     "run_of_one_trade": 383
+    },
+    "move not ended in the trade day": {
+     "peaks": 0,
+     "high_on_the_exact_tick": 0,
+     "peak_side_goes_with_the_move": 0,
+     "run_of_one_trade": 0
+    }
+   }
+  }
+ }
+}

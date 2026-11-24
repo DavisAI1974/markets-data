@@ -1,0 +1,70 @@
+{
+  "arguments": {
+    "account": "5WY79188",
+    "action": "Buy",
+    "cancel_if_open": true,
+    "cmd": "sandbox-order",
+    "gtc_date": null,
+    "max_pages": 2,
+    "order_type": "Market",
+    "out": "tasks/family-research-20261022/research-union-current/paper-trading-20261123/7e",
+    "poll_count": 10,
+    "poll_seconds": 5.0,
+    "price": null,
+    "quantity": 1,
+    "submit": true,
+    "symbol": "/NGF7",
+    "time_in_force": "Day"
+  },
+  "asked": "Does a natural gas future order get accepted and fill in the sandbox (dry-run, and with --submit the order and its polling)?",
+  "code_commit": "78e98f2048ee7378bf40658cd3384395f6188b6f",
+  "code_file_sha256": "dad364ea9d85797531287c6f16fea3642308a9c61db9fe631e648b68c3d95ccf",
+  "constants_used": {
+    "acceptDataFormat": "FULL",
+    "acceptKeepaliveTimeout": 60,
+    "accept_aggregation_period": 0,
+    "backoff_rule": "sleep 2**attempt seconds plus uniform(0,1) seconds, between attempts",
+    "event_types_asked_for": [
+      "Quote",
+      "Trade",
+      "TradeETH",
+      "TimeAndSale",
+      "Summary",
+      "Profile",
+      "Order"
+    ],
+    "feed_channel": 3,
+    "http_timeout_seconds": 30,
+    "keepaliveTimeout": 60,
+    "keepalive_seconds": 30,
+    "max_attempts": 4,
+    "secret_length_floors": {
+      "credentials": "none (any length)",
+      "learned_from_responses": 8
+    },
+    "setup_version": "0.1-DXF-JS/0.3.0",
+    "start_date_rule": "previous day in US Eastern time (America/New_York), yyyy-mm-dd",
+    "terminal_statuses": [
+      "cancelled",
+      "expired",
+      "filled",
+      "partially removed",
+      "rejected",
+      "removed"
+    ],
+    "user_agent": "davisai-paper/0.1"
+  },
+  "failed_steps": [],
+  "files": [
+    {
+      "bytes": 24775,
+      "path": "/home/user/markets-data/tasks/family-research-20261022/research-union-current/paper-trading-20261123/7e/sandbox-order-20261123T230217484820112Z.jsonl",
+      "sha256": "dc32f9eb91988cacd82444315113e2a19eb1e897787b74e015b41996219752f5"
+    }
+  ],
+  "problems_writing_outputs": [],
+  "receive_time_note": "t_ns on a received stream message is time.time_ns() taken when the websocket library hands the frame to our code",
+  "run_start_utc_ns": 1795474937484820112,
+  "stopped_by": "completed",
+  "sub_command": "sandbox-order"
+}

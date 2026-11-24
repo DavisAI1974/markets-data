@@ -1,0 +1,4 @@
+# Lines only ever added to: when two writers add lines to one file, keep both sets.
+graph/nodes/*.jsonl merge=union
+graph/edges/*.jsonl merge=union
+experiments/trials.jsonl merge=union

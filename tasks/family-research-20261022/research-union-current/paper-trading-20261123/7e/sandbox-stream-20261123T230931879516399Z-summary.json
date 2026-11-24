@@ -1,0 +1,255 @@
+{
+  "events_by_event_type": {
+    "Profile": {
+      "events": 1,
+      "field_names": [
+        "beta",
+        "description",
+        "dividendFrequency",
+        "earningsPerShare",
+        "eventSymbol",
+        "eventTime",
+        "eventType",
+        "exDividendAmount",
+        "exDividendDayId",
+        "freeFloat",
+        "haltEndTime",
+        "haltStartTime",
+        "high52WeekPrice",
+        "highLimitPrice",
+        "low52WeekPrice",
+        "lowLimitPrice",
+        "shares",
+        "shortSaleRestriction",
+        "tradingStatus"
+      ],
+      "side_fields_first": {},
+      "time_fields_first": {
+        "eventTime": 0,
+        "haltEndTime": 0,
+        "haltStartTime": 0
+      },
+      "time_fields_last": {
+        "eventTime": 0,
+        "haltEndTime": 0,
+        "haltStartTime": 0
+      }
+    },
+    "Quote": {
+      "events": 5,
+      "field_names": [
+        "askExchangeCode",
+        "askPrice",
+        "askSize",
+        "askTime",
+        "bidExchangeCode",
+        "bidPrice",
+        "bidSize",
+        "bidTime",
+        "eventSymbol",
+        "eventTime",
+        "eventType",
+        "sequence",
+        "timeNanoPart"
+      ],
+      "side_fields_first": {},
+      "time_fields_first": {
+        "askTime": 0,
+        "bidTime": 0,
+        "eventTime": 0,
+        "sequence": 0,
+        "timeNanoPart": 0
+      },
+      "time_fields_last": {
+        "askTime": 0,
+        "bidTime": 0,
+        "eventTime": 0,
+        "sequence": 0,
+        "timeNanoPart": 0
+      }
+    },
+    "Summary": {
+      "events": 1,
+      "field_names": [
+        "dayClosePrice",
+        "dayClosePriceType",
+        "dayHighPrice",
+        "dayId",
+        "dayLowPrice",
+        "dayOpenPrice",
+        "eventSymbol",
+        "eventTime",
+        "eventType",
+        "openInterest",
+        "prevDayClosePrice",
+        "prevDayClosePriceType",
+        "prevDayId",
+        "prevDayVolume"
+      ],
+      "side_fields_first": {},
+      "time_fields_first": {
+        "eventTime": 0
+      },
+      "time_fields_last": {
+        "eventTime": 0
+      }
+    },
+    "Trade": {
+      "events": 1,
+      "field_names": [
+        "change",
+        "dayId",
+        "dayTurnover",
+        "dayVolume",
+        "eventSymbol",
+        "eventTime",
+        "eventType",
+        "exchangeCode",
+        "extendedTradingHours",
+        "price",
+        "sequence",
+        "size",
+        "tickDirection",
+        "time",
+        "timeNanoPart",
+        "tradeId"
+      ],
+      "side_fields_first": {},
+      "time_fields_first": {
+        "eventTime": 0,
+        "sequence": 0,
+        "time": 1795471194885,
+        "timeNanoPart": 0
+      },
+      "time_fields_last": {
+        "eventTime": 0,
+        "sequence": 0,
+        "time": 1795471194885,
+        "timeNanoPart": 0
+      }
+    }
+  },
+  "feed_config_data_format": "FULL",
+  "feed_configs_as_received": [
+    {
+      "aggregationPeriod": 0.0,
+      "channel": 3,
+      "dataFormat": "FULL",
+      "type": "FEED_CONFIG"
+    },
+    {
+      "aggregationPeriod": 0.0,
+      "channel": 3,
+      "dataFormat": "FULL",
+      "eventFields": {
+        "Trade": [
+          "eventType",
+          "eventSymbol",
+          "eventTime",
+          "time",
+          "timeNanoPart",
+          "sequence",
+          "exchangeCode",
+          "tradeId",
+          "price",
+          "change",
+          "size",
+          "dayId",
+          "dayVolume",
+          "dayTurnover",
+          "tickDirection",
+          "extendedTradingHours"
+        ]
+      },
+      "type": "FEED_CONFIG"
+    },
+    {
+      "aggregationPeriod": 0.0,
+      "channel": 3,
+      "dataFormat": "FULL",
+      "eventFields": {
+        "Profile": [
+          "eventType",
+          "eventSymbol",
+          "eventTime",
+          "description",
+          "shortSaleRestriction",
+          "tradingStatus",
+          "statusReason",
+          "haltStartTime",
+          "haltEndTime",
+          "highLimitPrice",
+          "lowLimitPrice",
+          "high52WeekPrice",
+          "low52WeekPrice",
+          "beta",
+          "earningsPerShare",
+          "dividendFrequency",
+          "exDividendAmount",
+          "exDividendDayId",
+          "shares",
+          "freeFloat"
+        ]
+      },
+      "type": "FEED_CONFIG"
+    },
+    {
+      "aggregationPeriod": 0.0,
+      "channel": 3,
+      "dataFormat": "FULL",
+      "eventFields": {
+        "Quote": [
+          "eventType",
+          "eventSymbol",
+          "eventTime",
+          "sequence",
+          "timeNanoPart",
+          "bidTime",
+          "bidExchangeCode",
+          "bidPrice",
+          "bidSize",
+          "askTime",
+          "askExchangeCode",
+          "askPrice",
+          "askSize"
+        ]
+      },
+      "type": "FEED_CONFIG"
+    },
+    {
+      "aggregationPeriod": 0.0,
+      "channel": 3,
+      "dataFormat": "FULL",
+      "eventFields": {
+        "Summary": [
+          "eventType",
+          "eventSymbol",
+          "eventTime",
+          "dayId",
+          "dayOpenPrice",
+          "dayHighPrice",
+          "dayLowPrice",
+          "dayClosePrice",
+          "dayClosePriceType",
+          "prevDayId",
+          "prevDayClosePrice",
+          "prevDayClosePriceType",
+          "prevDayVolume",
+          "openInterest"
+        ]
+      },
+      "type": "FEED_CONFIG"
+    }
+  ],
+  "feed_data_items_not_decoded": 0,
+  "messages_by_type": {
+    "AUTH_STATE": 2,
+    "CHANNEL_OPENED": 1,
+    "FEED_CONFIG": 5,
+    "FEED_DATA": 8,
+    "KEEPALIVE": 9,
+    "SETUP": 1
+  },
+  "messages_received": 26,
+  "undecoded_note": null
+}

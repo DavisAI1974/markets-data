@@ -1,0 +1,127 @@
+{
+ "what": "ROOT book: check-book (the carried book against the vendor restatement; the book adds up)",
+ "specification": "SPEC-root.md (approved 2026-11-16), part book; criteria 3 and 4",
+ "trade_day": "2023-10-03",
+ "files": [
+  "NG_v0_mbo_20231001.dbn.zst",
+  "NG_v0_mbo_20231002.dbn.zst",
+  "NG_v0_mbo_20231003.dbn.zst"
+ ],
+ "book_equals_restatement": [
+  {
+   "orders_in_restatement": 732,
+   "orders_in_our_book": 732,
+   "only_in_restatement": 0,
+   "only_in_our_book": 0,
+   "side_price_or_size_differs": 0,
+   "place_time_differs": 0,
+   "lines_in_a_different_order": 0,
+   "equal": true,
+   "file": "NG_v0_mbo_20231002.dbn.zst"
+  },
+  {
+   "orders_in_restatement": 740,
+   "orders_in_our_book": 740,
+   "only_in_restatement": 0,
+   "only_in_our_book": 0,
+   "side_price_or_size_differs": 0,
+   "place_time_differs": 0,
+   "lines_in_a_different_order": 0,
+   "equal": true,
+   "file": "NG_v0_mbo_20231003.dbn.zst"
+  }
+ ],
+ "all_equal": true,
+ "whole_book_figures": [
+  {
+   "file": "NG_v0_mbo_20231002.dbn.zst",
+   "running": {
+    "B": {
+     "size": 959,
+     "orders": 369,
+     "levels": 187
+    },
+    "A": {
+     "size": 791,
+     "orders": 363,
+     "levels": 176
+    }
+   },
+   "fresh": {
+    "B": {
+     "size": 959,
+     "orders": 369,
+     "levels": 187
+    },
+    "A": {
+     "size": 791,
+     "orders": 363,
+     "levels": 176
+    }
+   }
+  },
+  {
+   "file": "NG_v0_mbo_20231003.dbn.zst",
+   "running": {
+    "B": {
+     "size": 1050,
+     "orders": 374,
+     "levels": 168
+    },
+    "A": {
+     "size": 747,
+     "orders": 366,
+     "levels": 180
+    }
+   },
+   "fresh": {
+    "B": {
+     "size": 1050,
+     "orders": 374,
+     "levels": 168
+    },
+    "A": {
+     "size": 747,
+     "orders": 366,
+     "levels": 180
+    }
+   }
+  },
+  {
+   "file": "end of the record",
+   "running": {
+    "B": {
+     "size": 1174,
+     "orders": 418,
+     "levels": 196
+    },
+    "A": {
+     "size": 754,
+     "orders": 359,
+     "levels": 167
+    }
+   },
+   "fresh": {
+    "B": {
+     "size": 1174,
+     "orders": 418,
+     "levels": 196
+    },
+    "A": {
+     "size": 754,
+     "orders": 359,
+     "levels": 167
+    }
+   },
+   "ticks": 1703477,
+   "trades_checked": 79755
+  }
+ ],
+ "all_add_up": true,
+ "irregular": {
+  "the exchange sequence number went backwards": 101
+ },
+ "irregular_note": "the sequence number goes backwards only inside the Sunday start-up block, where the re-listed orders are grouped by price and not by sequence number",
+ "orders_resting_at_the_end": 777,
+ "seconds": 25.1
+}
