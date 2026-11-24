@@ -80,3 +80,16 @@ that was missing.
    flattens when the FEED shows 4:44 pm (4:59 pm by the wall clock). Those closing orders are marked as such and are
    not trade data.
 3. The settlement window (2:28 to 2:30 pm Eastern) is read on the feed's own time.
+
+## Added 2026-11-24 (twentieth session)
+
+| Rule | Needs beyond prints, sides, the two lines and the quotes | On this feed |
+|---|---|---|
+| CL16 a step of the quote first shown by a print with no side | the prints with no side, quote steps | RUNS with S2, S3; given every print |
+| CL17 the print with no side, taken at the quote it traded at | the prints with no side, the quote at the print | RUNS with S2, S3; given every print |
+
+- 32 strategies now: 6 cannot run on this feed (as before), 26 run (11 of Claude's, 15 of Codex's).
+- Stand-in S7 (new): CL01 to CL15 are not given a print with no side; a close such a print shows is made at the
+  next print with a side and the line names both prints.
+- S3 above stays superseded by G1 (the quote from the prints' own bid and offer only).
+- A gap is no longer read from the day volume (Greg: "Only a real break"): see the plan's changes of 2026-11-24.

@@ -129,3 +129,61 @@ the graph links; any scoring.
 - NOT YET TESTABLE ON REAL DATA: the 4:44 pm stop, the halt hour and the settlement window (the recordings cover
   about 6:00 to 6:26 pm on the feed). Said on the receipt; a recording across those hours is needed before a run
   through them.
+
+---
+
+# CHANGES OF 2026-11-24 (twentieth session). These replace the text above where they differ.
+
+The code is in `DavisAI1974/paper-trading-platform`, branch `claude/tasty-runner`, folder `tasty/paper/` (not
+`strategies/paper/` in Markets). State of the code these changes describe: `0d6226e`.
+
+## Decided by Greg this session
+
+- TWO THINGS AT ONE PRINT (point b): "Can't we make both decisions at the same time? They're different events
+  right?" Where two things a rule orders show at one print, the ledger line names both, each as its own event, and
+  claims no "first" (`rule_base.both`).
+- A GAP (point d): "Only a real break". A gap is the stream dropping and coming back, a print's sequence number
+  stepping by anything but 1 or 2, or a print out of order. The day volume ahead of the prints is a number on the
+  receipt and resets nothing. (On the two recordings: 0 gaps; the day volume is ahead by 21 and 81 lots.)
+- THE PRINT WITH NO SIDE (point c): "We need to create a strategy for that amd not just a code fix"; "The 30 is a
+  jumping off point, not the limit"; "Both". CL16 and CL17 are two strategies made for it
+  (`strategy-20261123-claude/VERSIONS.md`). There are 32 strategies: CL01 to CL17, CX01 to CX15.
+
+## Claude's calls, said to Greg, his to strike
+
+- THE FIFTEEN STAY AS WRITTEN (CL01 to CL15). A print with no side is never given to them (their rule 5). Where
+  such a print shows the step or the leg end that closes one of their trades, the trade is closed at the next print
+  that has a side and the ledger line names both prints: "closed" is the print that showed it, "acted_at" the print
+  acted at, marked known late (stand-in S7). A trigger such a print shows is counted as passed over.
+- CL14: the print whose own quote shows the step can be the first sell or buy since it (step 0 found the code
+  passing it over). The quote a print carries stood before its trade.
+- RULES 3 AND 4 (point a). Rule 3: nothing opens on a print whose feed time is inside the settlement window,
+  bounded as ROOT marks it (2:28:00.000 pm Eastern in, 2:30:00.000 pm out); a trade open when it begins is marked.
+  In the code (`clock.py`, `Rule.open`), not yet provable on real data. Rule 4 stays stand-in S6 (the flatten at
+  the stop), which is the runner's.
+
+## What the rules are given now (the interface builder run B builds on)
+
+- Every print is one step of the engine. A rule says which kind it is with `reads_no_side`.
+  - `False` (CL01 to CL15): given sided prints only; facts a no-side print showed come at the next sided print
+    with `here=False` and name the print that showed them.
+  - `True` (CL16, CL17, and CODEX'S FIFTEEN, whose own text says the next print counts "including a print whose
+    aggressor is unknown"): given EVERY print. `snap.sided` says whether it has a side. Every fact is `here=True`.
+- `snap.lines` for those rules comes from `LiveLines(every_print=True)`: at a print with no side the two lines are
+  READ as they stand at its feed time (the print is not in them). EMPTY and MISSING stay apart from zero.
+- `snap.in_settlement`; the engine's count of gaps; `Rule.close(..., fact=f)` names the print that showed a close.
+- The quote is still the print's own bid and offer only (G1). The Quote messages are read by no rule, Codex's
+  included: "every tape row" in his text is, on this feed, every print.
+
+## The checks, all on the real recordings (nine at `0d6226e`, all pass on both)
+
+Cut equals whole; the lines equal one pass of `tick.reads` (at sided prints, and at prints with no side for the
+rules that read them); a rule's quote never comes from a Quote message; CL14 opens on the first print since the
+step; a close names the print that showed it; the fifteen never act at a print with no side; CL16 and CL17 open
+where the raw messages say. The last five read the raw messages, not the engine's facts.
+
+## Still to build (builder run B, 300,000 tokens declared; in two runs so the spend is read between them)
+
+- B1: `rules_cx.py`, Codex's fifteen from his `VERSIONS.md` (markets-data branch `codex/ng-blind-20261123`), on
+  the interface above, with checks on the real recordings.
+- B2: `broker_tasty.py` (the order path) and `runner.py` (the loop), as the plan above says.
