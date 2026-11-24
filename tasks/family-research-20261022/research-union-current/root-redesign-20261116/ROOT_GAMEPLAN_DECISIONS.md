@@ -5844,3 +5844,8 @@ figure. To bring back when the work reaches what moves the market and price-curv
   branch `ccr-fffbc766-a1gxpl` (his word for that branch by name), and the two holding commits in the session
   branch's history. The 7e receipts name the code as `strategies/tasty_7e_check.py @ <Markets commit>`: that is
   where it was when it ran.
+- THE SANDBOX REFRESH TOKEN GOES IN THE SANDBOX KEY FILE. Greg: "Put it in file". Added to
+  `paper-trading-20261123/tasty-sandbox.env` as `TASTY_SANDBOX_REFRESH_TOKEN` (a public repository, a test key, his
+  choice as for the client ID and secret). No production key is ever put there.
+- A NEW SESSION. Greg: "Let's start new session". Handoff V (`NEXT_SESSION_HANDOFF_20261124V.md`) is the starting
+  point.

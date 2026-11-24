@@ -51,11 +51,11 @@ Desktop and Codex write to this branch too: fetch before every push.
 
 - SANDBOX client ID and secret: `paper-trading-20261123/tasty-sandbox.env` (public repository, his choice). Load
   with `set -a; . <that file>; set +a`.
-- SANDBOX REFRESH TOKEN: NOT STORED ANYWHERE. Greg pasted it in the nineteenth session's chat and it was used from
-  there. The cloud environment "Markets" has NO environment variables saved (checked twice). First thing next
-  session: check `TASTY_SANDBOX_REFRESH_TOKEN` by name; if missing, tell him at once. The refresh token is the long
-  string starting `eyJ` shown ONCE in the yellow box after "Create grant" on the sandbox tool page; the short code
-  starting `G` is the grant's id and does not sign in.
+- SANDBOX REFRESH TOKEN: in the same file, as `TASTY_SANDBOX_REFRESH_TOKEN` (Greg, 2026-11-23: "Put it in file").
+  Loading the file sets all three sandbox values; nothing has to be pasted. If a sign-in is refused, the token was
+  revoked or replaced: "Create grant" on the sandbox tool page gives a new one (the long string starting `eyJ`,
+  shown ONCE in the yellow box; the short code starting `G` is the grant's id and does not sign in), and it replaces
+  the line in the file. The cloud environment "Markets" has no environment variables saved.
 - PRODUCTION (three `TASTY_PROD_*`): not set, not needed yet.
 - Network: `api.cert.tastyworks.com`, `developer.tastytrade.com` and `tasty-demo-dxlink-md-ws.dxfeed.com` (the
   sandbox stream, approved by Greg this session) are allowed on environment "Markets".
@@ -135,7 +135,7 @@ Declared to Greg: scout 150,000; reviewer on the plan 200,000; builder 600,000 (
 1. The builder's points a to d above.
 2. The copy of the 7e check on the earlier session's Markets branch `ccr-fffbc766-a1gxpl`: deleted only on his word
    for that branch by name.
-3. Where the sandbox refresh token is kept (the environment's settings, or the sandbox key file).
+3. (Settled: the sandbox refresh token is in the sandbox key file.)
 4. How a paper fill is priced (his word; until then both quotes at each end and no result figure).
 5. Where an order-by-order live feed for our own platform comes from (a price is shown to him first).
 6. Carried from handoff U, unchanged: the delete list waiting for his word "delete"; the live store and the phone
