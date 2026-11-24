@@ -6749,3 +6749,16 @@ figure. To bring back when the work reaches what moves the market and price-curv
   no shutdown error. Built and pushed, not run (platform `52c9a1e`, item 24): with `--keep-tape-pace` a slow or
   failed post to the page is tried again beside the run and never stops it; the page's store uses write-ahead
   logging. The page was deployed again by hand with that change, which emptied what it showed.
+- A PRICE GRAPH AND P/L FOR EACH TRADE (Greg, 2026-11-24): "We need to add a live trade graph that show price
+  curve on render so it shows up on my phone. And p/l for each trade". Built and pushed, not run, the graph not
+  yet seen drawn (platform `96ba822`, items 24 and 27). THE GRAPH: the best ask and the best bid as two lines
+  over tape time, this run's paper fills marked on them; no mid price drawn or computed; one sample for each
+  second of tape (the quotes at the first message of that second), sent to the page only, not to the journal.
+  THE P/L: one figure for one trade, from that trade's own paper fills, gross (no fee, no slippage), shown once
+  the trade holds no contract; no total, no average, no ranking across trades; a trade closed by the run's own
+  stop shows its figure with "an administrative close, not trade data". Taken as his word on a result figure for
+  the single trade, which items 17 and 27 had held back until he gave it. A contract is 10,000 MMBtu, from the
+  exchange definition kept with the plan. The engine and the journal carry no result.
+- THE FIRST TEST REACHED ITS OWN 30-MINUTE STOP (paper run `036ed57524584afdaeb0bc60be6aaa71`, old code): the
+  stop fired, and its closes carry the reason "stopped 30 minutes after the first paced record, as set at the
+  start", marked not trade data. In those 30 minutes it covered 13.9 seconds of tape (1,398 journal rows).
