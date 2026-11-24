@@ -6150,3 +6150,68 @@ figure. To bring back when the work reaches what moves the market and price-curv
   its trade day; 74 renders. Checked in the code's checks: every dipole's own birth time lies inside the trade day
   its sheet is named for. LEFT OUT, by name: the four "crypto and ng" sheets (the program's own trades, for
   observation only) and the four `CALC-research_columns-<day>.log` files (not JSON).
+- THE BUILDER IS BACK, TO HELP (Greg, 2026-11-24, two messages): "Also restart the build agent to help you";
+  "Proceed". So the main session builds and the builder agent builds beside it, with no limit for the build. The
+  session's effort setting reads extra high from here (his setting; "Put it on exfra").
+- WHO BUILT WHAT, so it is on record: the main session wrote stages 2, 4a, 4b (the store, the no-model load taken
+  over from the stopped run 15, the claim reader, the merges), 4c, 5a, 5b and 7f. The builder (Sonnet) wrote, to the
+  main session's written design and reviewed by it before each commit: stage 3 (run 19, 104,584 tokens), stage 7d
+  (run 20, 139,046), and the code of stages 6 and 8 (runs 26 and 27). The builder also made the READS of stage 4b
+  as the plan's reader, because the scout's budget was not lifted and the builder's was: handoff W (run 21, 70,763
+  tokens, 158 claims), the decisions file's twentieth and twenty-first sessions (run 22, 112,121 tokens, 256 claims),
+  the running list (run 23, 68,474, 150 claims), the plan and its two companions (run 24, 96,663, 239 claims); and
+  the merging of names (run 25, 66,036). Handoff X was read by the main session (run 18, 78 claims). Claude's
+  reading of his words, his to strike: a read of a document into claims is part of the build.
+- STAGE 4b, THE CLAIMS: 881 claims from 7 documents, each tied to its file and its lines by a link, each quote
+  checked against the file by code before the claim was written. 15 claims a reader returned were NOT believed
+  (their quote was not in the file word for word, or was under four words): they are kept as Task lines, not as
+  claims. What each reader returned is kept as it came back in `graph/reads/`. 99 of the 106 documents in scope
+  (14,599 of 21,632 lines) are NOT read yet: each has a Task line that says so. Reading them all is a run at
+  scale: put to Greg with its figure, not started.
+- STAGE 4b, MERGING NAMES: 64 names merged by exact rule (a name that is one tracked file's path or its only
+  basename; a commit id one checkout knows; "handoff W" where one file carries the letter) and 11 by the resolver
+  at 0.9 or above; 22 of the resolver's merges are under the cutoff and are held as open Task lines for a person to
+  look at; 21 names a rule matched could not be placed (a name several files carry; a key file, which is never
+  opened). Every merge keeps its evidence and can be undone by one command.
+- STAGE 4c BUILT AND RUN ON THE REAL GRAPH (Markets `e7e5eca`): the grounding check looks for a claim's supporting
+  path and reads its quoted words again in the file. Of 881 claims and 30 rule versions, 53 need evidence: 23
+  claims the documents themselves mark as readings with nothing in the graph they rest on, and all 30 rule versions
+  (no rule of the paper runner is tied to any finding). Each check is kept as an Evaluation line with the fields of
+  Codex's check register. No verdict word is used: a result says what was checked, what was observed and what
+  remains open.
+- STAGE 5a BUILT (Markets `31687e5`): `python3 -m tools.kgraph.context --budget 6000` builds a session start from
+  the graph: what Greg decided (newest first), the rules, where things stand, what is planned, what is open, the
+  slips, each line with its claim id, file and line. With a task it brings the claims about the things the task
+  names. The first real one: 116 lines within 6,000 tokens (estimated at 4 characters a token) from 881 claims; 732
+  claims cut for the budget and said so, by kind; 33 folded into a line that carries the same words from another
+  file. Every claim is in exactly one of: shown, folded, superseded, cut, not reached.
+- STAGE 3 BUILT (Markets `4839a75`, by the builder): one control file a loop; each trial is a commit on the loop's
+  own branch in its own worktree; kept, reverted and crashed trials are all in the experiment record, and a
+  reverted trial's commit stays reachable. Checked by replaying real commits of the paper runner against its own
+  count of passing checks (17, 25, 25, 26): the tie was reverted and kept on record. With no figure chosen the
+  harness records and neither keeps nor reverts, so it does not wait on Greg's choice. Nothing is dispatched.
+- STAGE 7d BUILT AND LOADED (Markets `c47845e`, by the builder): 485 orders (120, 1 and 364 in the three folders)
+  and 13 fills are in the graph, each fill tied to its order, each order to its rule version, each rule version to
+  the run's commit; each fill carries the sandbox's price and, beside it, the bid and the offer of the feed's own
+  print just before and just after. No mid price anywhere. Counts match the running list. ONE DIFFERENCE FOUND IN
+  THE RECORD: the running list (D1) says the first run with orders ran code `ef58c85`; that run's own
+  `receipt.json` says `74b1f22`. The receipt is what the graph uses. Two orders have no rule (the run's flatten and
+  the close-out's buy of 13). The cancel of order 2207911 could not be put on an order: it is an order of the day
+  before.
+- STAGE 7f BUILT AND RUN (Markets `3104192`): the five commits that changed the paper runner's rule files are
+  trials of the experiment record, each on the one before; both runs that carry a code commit ran under rule version
+  `13ddfa9`; the grounding check was run on all 30 rule versions and kept (above); the rules loop has its control
+  file, with no figure chosen and never run. NOT DONE of 7f: the tastytrade MCP server for agent read access (the
+  plan says it "can be added"; it needs their server built and a credential).
+- STAGE 5b BUILT BESIDE, NOT SWITCHED (Markets `92a0cf4`): a packet for one dipole event built from the graph, the
+  path `graph_v1`. SAID AT ONCE: the code of Frankie's current packet (`stacked_v1`) is NOT on the Markets branch
+  Greg gave; it is on `ccr-d2f8f826-iefeah-frankie` (`granite_context_stacked.py` and beside it), and running it is
+  under HOLD. So NO SIDE BY SIDE WAS MADE AND NO SAVING IS CLAIMED. Claude's readings, each his to strike: (1) a
+  packet is anchored on one dipole event at the moment it is made known; (2) which columns of the dipole sheet are
+  known at that moment (19 are shown; the six that describe what came after, and the picture, are hidden; the list
+  is an allow-list, so a new column is hidden until it is put on it); (3) no peak is in a packet, because the graph
+  holds the time of a peak's high and not the time it became known; (4) no claim from a handoff is in a packet.
+  Checked on the real events: the packet of an event is the same text when everything made known at or after its
+  moment is taken out of the graph.
+- A FAULT FOUND BY A CHECK AND FIXED (Claude): `tools/exp_dag.py log` listed trials written in the same second in
+  the order of their ids, not the order they were pushed. Fixed in Markets `3104192`.
