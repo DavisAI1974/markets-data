@@ -6029,3 +6029,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   file of `live-runs/` or `step0-20261124/` (exact match, names and true/false only). SAID TO GREG, a miss of
   Claude's: the start check let the run begin with order 2207911 standing, after Claude's own change to it before
   the run (list, C20).
+- SANDBOX-ONLY ISSUES ARE NOT WORKED ON (Greg, 2026-11-24): "The sandbox specific issues won't be a problem soon so
+  don't spend time on them". So: the refused buys, the fills at the live market, the server errors, the statuses
+  that stay "Live", the start check on order 2207911 and the sandbox account left short 13 lots are left as they
+  are, written down (`tasty/RUNNING_LIST.md`, C22 names the lines) and dropped when the sandbox is left behind.
+  The account is NOT closed out and no further order is sent to the sandbox for it. What is still worked on is
+  what holds on any feed and any broker: the rules (section A of the list) and the runner's own gaps (C2, C3, C4,
+  C12, C16, C17, C21).
