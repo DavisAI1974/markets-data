@@ -5984,3 +5984,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   and is accessible". It is `tasty/RUNNING_LIST.md` in `DavisAI1974/paper-trading-platform`, branch
   `claude/tasty-runner`: what has been seen and what to look at in the rewrite, in four sections (the rules, the
   feed, the runner, the runs), with how to add a line.
+- GO FOR THE RUN WITH ORDERS, AND NO RUN WITHOUT THEM FIRST (Greg, 2026-11-24): "Just do run 2 with trades". The
+  no-order run is dropped. The run with orders is as said to him and not changed by him: 30 minutes, the live
+  sandbox feed, all 32 strategies, 1 lot a trade, at most 20 orders in all with the last kept back to flatten; it
+  starts only if the account shows no position and no live order. It starts when builder run B2's code has been
+  checked and the reviewer has looked at the order path.
+- THE LIST IS OF GAPS AND MISSES (Greg, same message): "Meaning start list of gaps and misses to take care of".
+  `tasty/RUNNING_LIST.md` is headed so; each live run's gaps and misses are added to it.
