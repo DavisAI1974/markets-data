@@ -35,6 +35,17 @@ the kept copies are in `PAPER/transcripts/`).
 - Report: first line "# Builder run N (Sonnet): <tickets>, <what>"; point by point the check's name, the lines changed,
   the commit; the counts of each check file; what is open; what code cannot hold; your tool calls by name.
 
+## AGAINST READ AFTER READ (added on Greg's word, 2026-11-24: "We keep moving around creating read after read after read")
+- ONE REVIEWER READ FOR A TICKET, then one builder pass on what it finds, then the main session runs the named
+  checks and marks the box. A second read only where the same check has failed twice.
+- A reviewer measures a change against TWO things only: the ticket's own "shown done by" line, and the standing
+  rules by name (no data layer dropped; after-the-fact kept out of what a decider reads; nothing averaged, pooled,
+  capped or ranked; trade day; no made-up data; nothing replaced, only added). A point that breaks neither is not
+  a point for the builder: it is one line under "beyond the ticket".
+- A HAND-BACK IS 500 WORDS AT MOST (a scout's pointers: 900). Counts, file:line, the concrete case. No narration
+  of what you ran; the transcript holds that.
+- STAY UNDER 10 REPLIES: do the reading in one call, the checks in one call, the put-backs in one call.
+
 ## A reviewer
 - Read-only. Put one line back to see whether a check notices; `git checkout -- .` after each, and say so.
 - Report: first line "# Reviewer run N (Opus): <tickets>, <which read>"; file:line, what the code does, what the ticket

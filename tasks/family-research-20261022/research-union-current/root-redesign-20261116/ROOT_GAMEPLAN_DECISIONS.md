@@ -7998,3 +7998,16 @@ figure. To bring back when the work reaches what moves the market and price-curv
   marked: 03b, 21, 31. (3) Found while checking: the library the packet's checks need to read the stored planes
   (pyarrow) was not on this machine at all, so those checks could not have run in any session started on this
   environment; it is installed for this session and goes into the environment's setup script.
+- READ AFTER READ AFTER READ IS THE TOKEN PROBLEM (Greg, 2026-11-24, twenty-sixth session): "That's our token
+  probelem. We keep moving around creating read after read after read"; "#run a mattpocock-skills to combat this
+  drift". THE SKILL RUN: `retro`, from his repository, on this session's own record:
+  `paper-trading-20261123/RETRO_20261124_SESSION26.md`. WHAT THE RECORD SHOWS: 45 runs, 25.5 million tokens in the
+  transcripts of which 21.8 million are an agent reading its own context again; ticket 31 took 13 runs to close;
+  tickets 18, 19, 02 and 03 are on their fifth read; 11 runs were stopped and done again; 13 runs are the auditor
+  counting. CHANGED NOW, in the page every brief points at: ONE reviewer read for a ticket, measured against the
+  ticket's own "shown done by" line and the rules by name, 500 words at most, then one builder pass, then the box
+  is marked; what a reviewer sees beyond the line is a line at the foot of the ticket. "Round again until the
+  reviewer leaves nothing" was the main session's reading (twenty-fifth session), not his word, and is withdrawn.
+  One auditor run at the close for every run still owing a row. PUT TO HIM, his rule to change or keep: the
+  auditor's row for each run made by a command with no model, the auditor agent called once at a close on the
+  rows that differ.
