@@ -5996,3 +5996,24 @@ figure. To bring back when the work reaches what moves the market and price-curv
   built to fit the tastytrade sandbox feed's thinness. The stand-ins and the thin-feed handling that exist stay as
   they are for the runs on this feed, are listed (`tasty/RUNNING_LIST.md`, C7) and are dropped or redone when the
   richer feed arrives. The rules take plain events and know nothing of tastytrade, so they carry over.
+- BUILDER RUN B2 AND THE REVIEWER (agent runs 12 and 13). B2 (Sonnet, budget 150,000, spent 108,305): the order
+  path, the stream reader and the runner loop; builder total 197,775 of the 300,000 declared. Reviewer (Opus,
+  capped by Claude at 100,000 of the 250,000, spent 62,449), aimed at the order path only: no path found that sends
+  twice, sends off the sandbox, overspends the budget or leaks a key; its findings fixed by the main session before
+  the run (`ef58c85`), two left on the list.
+- THE FIRST RUN WITH ORDERS (2026-11-23, 8:05 to 8:12 pm Eastern, trade day Tue Nov 24, 2026; Greg: "Start the run
+  as soon as the reviewer is done"). The live sandbox feed, all 32 strategies, 1 lot a trade, at most 20 orders,
+  account 5WY79188. Not scored. It stopped itself at the order budget after 7 minutes: 19 submits, ALL SELLS; 13
+  filled (3.545 to 3.548); 6 answered with a server error and never became orders; 101 intended orders not sent
+  (43 buys refused by the sandbox with "Cannot buy and sell against the same symbol", 34 closes held back because
+  their open had not filled, 23 cut off by the budget stop, and the flatten itself refused). 62 paper trades on
+  the ledger from 13 strategies. Records: `paper-trading-20261123/live-runs/orders-20261124T010517Z/`.
+- THE ACCOUNT IS LEFT SHORT 13 LOTS OF /NGF7 IN THE SANDBOX. Said to Greg before it was done: a close-out by hand,
+  a cancel of each unfinished order and then one buy of 13. Sent: six cancels (five accepted, the one for order
+  2207911 refused); the buy was NOT sent, its dry run refused again; a dry run of "Buy to Close" refused too.
+  Records: `paper-trading-20261123/live-runs/closeout-20261124T011337Z/`. Ways out, his to choose: try the buy
+  again after the trade day ends (the unfinished sell orders are Day orders), or reset the sandbox account on
+  tastytrade's tool page.
+- A FEED-ONLY RECORDING (no orders) was started at 8:14 pm Eastern, said to him first, to catch the 15-minute-old
+  feed as it reaches the moments the orders filled.
+- The gaps and misses the run showed are on the list: `tasty/RUNNING_LIST.md`, lines C8 to C18 and D1.
