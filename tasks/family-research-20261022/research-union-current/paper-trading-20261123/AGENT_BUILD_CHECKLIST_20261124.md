@@ -1,5 +1,7 @@
 # The agents' build: the list, marked off as each step is shown done (2026-11-24, twenty-fourth session)
 
+LATER THE SAME DAY: this list is the morning's. The state of the work is now carried by the tickets in `tickets-44-20261124/` (46 tickets, none marked done at the session's end) and the list `MISSING_PIECES_20261124.md`. Steps 36 and 37a to 37f below are not kept up to date here.
+
 Greg, 2026-11-24: "Before you start coding i want you to come up with a step by step list that you will mark off
 when they are accomplished steps of how we are going to fully implement our build plan. I don't want any excuses
 or handwaving saying that things are done when they aren't. This is our last building session for the agents".

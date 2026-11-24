@@ -15,8 +15,8 @@ data layer (ticket 38's work), and the reviewer's read of the platform change (p
 | # | Ticket | Blocked by | Status |
 |---|---|---|---|
 | 01 | NO CLAIM MADE TODAY WAS CHALLENGED BY ANYONE BUT ITS PROPOSER. | 2, 3 | blocked |
-| 02 | NO CLAIM IS REGISTERED BEFORE ITS OUTCOME IS SEEN. | None | ready |
-| 03 | NO COMPETING EXPLANATION, NO FALSIFIER, NO DISTINGUISHING OBSERVATION is asked of anyone. | 2 | blocked |
+| 02 | NO CLAIM IS REGISTERED BEFORE ITS OUTCOME IS SEEN. | None | built, read once, fixed; the fix not re-read |
+| 03 | NO COMPETING EXPLANATION, NO FALSIFIER, NO DISTINGUISHING OBSERVATION is asked of anyone. | 2 | built, read once, fixed; the fix not re-read |
 | 04 | NOTHING KEEPS THE OUTCOME FROM THE CHALLENGER until the challenge is on record. | 3 | blocked |
 | 05 | NO CHECK IS WRITTEN AFTER A TRIAL. | 3; shown on tape only with Greg's go | blocked |
 | 06 | NO ADVERSE EVIDENCE IS ON RECORD. | 5 | blocked |
@@ -51,7 +51,7 @@ data layer (ticket 38's work), and the reviewer's read of the platform change (p
 | 35 | The token test: built to plan, never run; its baseline cannot be made from git. | Greg's go, a model key, and receipts that are on AWS | needs Greg's go |
 | 36 | Stage 8d: the trigger is to be Frankie's own state (events, births, peaks, exhaustion) "posting a task with it | Greg's decision | needs Greg's decision |
 | 37 | Rule versions are not nodes of the experiment record for the own platform (the plan: each rule edit a commit,  | None | ready |
-| 38 | The packet with every data layer (ROOT's stored planes, the whole state beside the brief, the after-the-fact f | None: half done, being finished first | ready |
+| 38 | The packet with every data layer (ROOT's stored planes, the whole state beside the brief, the after-the-fact f | None: half done, being finished first | partly built; OPEN (418 of 458 columns not given to a decider) |
 | 39 | The first decider was written before the dipole and exhaustion lines and the depth reached the packet; it does | 38, and 2 and 3 (it goes through the defended-claim door) | blocked |
 | 40 | The gate, the question's whole state, the MBO window, the book and the market series have never met the tape. | Greg's go, told with its budget | needs Greg's go |
 | 41 | The platform change is on its own branch, not on Codex's. | 40 | blocked |
@@ -60,3 +60,5 @@ data layer (ticket 38's work), and the reviewer's read of the platform change (p
 | 44 | From this morning's list, still open: the Markets checkout's history (5), the whole suite on the data as it st | None | ready |
 | 45 | An independent review compares the work to the tickets (the Pocock `code-review` skill; two readers who built none of it) | every ticket that is worked | blocked |
 | 46 | Stop the consolidation drift: consolidation is a standing step after every read into the graph | None | ready |
+
+State at the end of the twenty-fourth session: NONE of the 46 tickets is marked done. Each ticket's own file carries its state.

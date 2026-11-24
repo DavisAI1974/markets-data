@@ -14,6 +14,20 @@ run to compare our work to the work on the tickets" (ticket 45).
 - The Pocock skills (public repository mattpocock/skills, read-only): `implement` a ticket at a time; ticket 45
   is `code-review` by two readers who built none of it.
 
+## Set up before anything else (each of these cost time this session)
+
+- The session's branches are cut from an old tip. Put them on top of the heads in the table below before working
+  (this session's branches held no commits of their own).
+- paper-trading-platform is not attached to a new session: add it with `add_repo`, then fetch its WHOLE history
+  (a shallow copy names every rule's commit wrongly).
+- markets-data must hold its whole history BEFORE any command that writes into the graph (a shallow copy wrote 62
+  wrong-commit lines this session; they were discarded). The same for Markets before a graph write names one of
+  its files: this session's Markets copy stayed shallow.
+- `tools.kgraph.extract coverage` WRITES into the graph; it is not a read.
+- The graph's store refuses a write from a working copy that holds uncommitted code: write from a clean copy.
+- The session's disk fills from test scratch folders (`/tmp/pytest-of-root`, any `--basetemp`): delete after each run.
+- arxiv.org is allowed in the Markets environment (added this session on his approval).
+
 ## Where things are (heads at the time of writing; check each with git before trusting it)
 
 | Repository | Branch | Head |
@@ -72,19 +86,30 @@ DO FIRST, in this order:
 - NO FEES are computed now; Codex's matcher stands as it is (his word).
 - The hold rule in force: hold until the trade gives back 20% of its highest open profit. The runs of 2026-11-24
   are not scored and are no judgement of the strategies.
+- NEVER deploy the phone page during a run (a deploy empties it).
 - His stop button ends agents; a stopped agent is started again unless he says otherwise; brief every agent to
   push each piece. Keys: names and places only, `paper-trading-20261123/KEYS_WHERE_THEY_ARE.md`; never ask him.
 - Tell him before anything runs, with its limits. Plain words, the answer first. Record his decisions in git as
   they are made. Use the agents as their own files say: the scout locates and reads, the builder shows its change
   and waits, the reviewer reads every final diff.
 
-## Ask the graph, do not read the pile
+## Ask the graph for what it holds; read the file for what it does not
 
 ```
 cd Markets && MARKETS_DATA=../markets-data python3 -m tools.kgraph.context --budget 6000 --task "<what you are about to do>"
 ```
-Every line carries its claim id, file and line. The graph is weak on "where things are now" (two tests today):
-trust this page and git for that. The session's disk fills from test scratch folders: delete them after each run.
+Every line carries its claim id, file and line. KNOW ITS LIMITS:
+- The graph holds the decisions file only to line 7195. EVERYTHING HE DECIDED AFTER THAT IS NOT IN IT: all of
+  the data depth, after-the-fact data, the hybrid, every claim defended, the tickets and their batches, no fees,
+  ticket 46, the Excel comparison. Read the decisions file from line 7196 to its end
+  (`root-redesign-20261116/ROOT_GAMEPLAN_DECISIONS.md`); it is short.
+- The graph is weak on "where things are now" (two tests this session: 7 then 9 of 15 questions answered, one
+  wrong both times, the platform's branch). Trust this page and git for that.
+- THIS PAGE AND THE GRAPH HAVE NOT BEEN TESTED TOGETHER. That test (a fresh agent, the 15 questions) was promised
+  for the close and was not run; it is ticket 32. Do not read this page as proven. It does not say: the one file
+  a trial changes (`paper_platform/execution_plans/loop-trial.json`, a byte copy of the give-back plan); how run
+  47 was settled (both lines stay; the line marked `corrects` is the run's next revision).
+- Also promised for the close and not done: reading the decisions file's tail into the graph.
 
 ## Slips of this session, so they are not made again
 

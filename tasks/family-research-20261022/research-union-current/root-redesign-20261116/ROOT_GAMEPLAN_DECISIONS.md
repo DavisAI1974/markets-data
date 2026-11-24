@@ -7382,3 +7382,13 @@ figure. To bring back when the work reaches what moves the market and price-curv
   loop. No model key was used; every agent was a session agent. Of the 46 tickets none is marked done: tickets
   02 and 03 are built, read once and fixed, the fix not re-read; ticket 38 is partly built and open; the rest
   are not started.
+- A CORRECTION TO THE LINE ABOVE ON THE ENGINE (Claude). What is so, as checked: no paper run, no trial of the
+  stored tape and no loop on the platform was started by the main session, and every builder was briefed not to
+  start one. NOT THE SAME AS "nothing replayed anything": the loop's own existing checks
+  (`tests/agent_program/test_stage3_ratchet.py`), run by builders 69 and 80, run the old tastytrade runner's
+  tests in a scratch clone of the platform's `claude/tasty-runner` branch, and those tests replay a recorded
+  tastytrade SANDBOX stream of 2026-11-23 through the OLD runner (not the stored tape, not the own platform's
+  engine, no order, no result figure). They went from 6 to 20 running once the old branch was fetched. Said to
+  him.
+- PROMISED FOR THE CLOSE AND NOT DONE (Claude): the test of the short page and the graph together on the 15
+  questions (ticket 32), and reading the decisions file after line 7195 into the graph. The start page says both.
