@@ -7560,3 +7560,26 @@ figure. To bring back when the work reaches what moves the market and price-curv
   auditor audits that group's runs, each run its own row; so no run is left without the auditor. (4) A group
   that waits on his go or his decision gets no build. (5) Nothing new was started in this session after his
   word; the agents already out were let finish and recorded, because a new session cannot reach them.
+- THE NEXT SESSION LOADS THE ZIP'S FILES INTO ITS MEMORY (Greg, 2026-11-24, at the close of the twenty-fifth
+  session): "Make sure you have bext sess load the zip files into local memory". DONE FOR IT: the zip's eight
+  files are now in markets-data byte for byte in one folder, `research-union-current/frankie_handoff_20261123_2/`;
+  the read-first page and the start page make reading all eight in full the first thing a session does, and
+  tell it to copy them into its own memory folder if it has one. What is so, said to him before: a cloud session
+  has no memory that outlasts it, so git is where they are kept.
+- AUTOSEARCH, AS USED ON SENTINEL, MAY FIT THE AGENTS' WORK (Greg, 2026-11-24, same message): "You know
+  autosearch that we used on sentinel might be a good fit for the agent's work. Autosearch should be somewhere
+  in older sess. Maybe april or may?" THIS IS A LEAD HE GAVE, NOT A DECISION TO BUILD. WHAT WAS FOUND (the main
+  session, with git): Markets commit `ccc53eb` of 2026-05-04 added `HANDOFF_TO_CODE.md` (its line 10: "Cross-domain
+  probe from SENTINEL machinery") and `HANDOFF_TO_CODE_PHASE2.md`, titled "Phase 2 handoff: autoresearch", which
+  says "The apr5 OD autoresearch branch (piecewise Liouvillian recovery on QD3SET-1, R²=0.999997) is structurally
+  identical to what markets needs"; Markets commit `93e3a80` of the same day added `autoresearch_lite.py` (356
+  lines) and `backtester.py`. Those files left the trunk on 2026-11-16 with the crypto files (branch
+  `archive/crypto`); they are read with `git show <commit>:<file>`. The April work itself ("apr5", on SENTINEL)
+  is in a repository this session cannot reach: no repository with sentinel in its name is offered to the
+  session. NOT DONE: nothing was read past the first lines, nothing built. CLAUDE'S NOTES, his to correct:
+  (1) the word in the files is "autoresearch"; it is taken to be what he means by autosearch. (2) The plan's
+  stage 3 loop (`tools/ratchet/`) is already built on the same idea (propose a change, test it, keep or revert);
+  what the next session's scout is to report is what the May program does that the loop does not. (3)
+  `autoresearch_lite.py` as written pools four crypto datasets and ranks operators by a fit figure: under his
+  rules of today (no pooling, no ranking, no crypto data in our analysis) only its METHOD could be taken, never
+  its code, its data or its figures; anything taken is put to him first.

@@ -66,3 +66,15 @@ main session calls the auditor on each batch's runs before any box of that batch
   taken out of any of them.
 - MORE THAN ONE BUILDER WORKS AT A TIME (Greg, 2026-11-24: "We need more builder agents working in parallel"),
   each in its own working copy on files no other builder is on.
+
+## ADDED at the close of the twenty-fifth session: the zip's own eight files are in git, in one folder
+
+Greg, 2026-11-24: "Make sure you have bext sess load the zip files into local memory".
+
+`frankie_handoff_20261123_2/` (beside this page) holds the eight files exactly as they are in the zip, byte for
+byte, at the zip's own paths. THE FIRST THING A SESSION DOES, before the start page's other steps and before any
+ticket work: read all eight IN FULL into the session (with the Read tool, each file whole, not a search of it),
+and read the verifier plan named above with them. If the session has a memory folder of its own, copy the eight
+files into it as well and say so; if it has none, say that to him plainly and name this folder as where they
+are kept. Two of the agent files in Markets have 5 lines added since the zip (the table above says which); this
+folder holds the zip's own text.
