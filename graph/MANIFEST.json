@@ -1,0 +1,35 @@
+{
+ "what": "The knowledge graph of the agent program (graph adoption plan, stage 4): one line for each node and each link, only ever added to.",
+ "schema": "markets.kgraph.v1",
+ "how_to_read": "Markets tools/kgraph/store.py GraphStore; the latest rev of an id is how it stands, earlier revs stay in the file.",
+ "files": [
+  {
+   "path": "graph/edges/DERIVED_FROM.jsonl",
+   "bytes": 5171,
+   "sha256": "711e9e0b51ed5cdb99228360dda9012c322ab73e87967fafbc9c6528872d0f39",
+   "lines": 14,
+   "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
+  },
+  {
+   "path": "graph/nodes/AgentRun.jsonl",
+   "bytes": 13474,
+   "sha256": "666b76a6290730ee0d49fdd8b741defd2e726707bbf3520a4dcaaadf99d11fcc",
+   "lines": 14,
+   "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
+  },
+  {
+   "path": "graph/nodes/Commit.jsonl",
+   "bytes": 988,
+   "sha256": "815ca9c4b9b471f6c9291db59d96c4065627d292ac917e186179ddb5cc834d5b",
+   "lines": 2,
+   "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
+  },
+  {
+   "path": "graph/nodes/Source.jsonl",
+   "bytes": 625,
+   "sha256": "06bcf06c16b6cbbdf7071a4e7639cdb013c7928279b97d9f36b77f97eff598b4",
+   "lines": 1,
+   "source": "written by Markets tools/kgraph (the knowledge graph, plan stage 4)"
+  }
+ ]
+}

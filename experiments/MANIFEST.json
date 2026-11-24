@@ -1,0 +1,19 @@
+{
+ "what": "The experiment record of the agent program (graph adoption plan, stage 2): every trial with its parent, run, change, figures and how it ended, the reverted and the crashed too.",
+ "schema": "markets.exp_dag.v1",
+ "how_to_read": "Markets tools/exp_dag.py (push, fetch, log, children, leaves, lineage, diff)",
+ "files": [
+  {
+   "path": "experiments/trials.jsonl",
+   "bytes": 52408,
+   "sha256": "f924686d4cfd9fe2682076e1c75090eaea85fcb79e4ab2f8325ac8ad7701090f",
+   "source": "the record: one line for each trial and each change to one"
+  },
+  {
+   "path": "experiments/frankie_exp_dag.sqlite",
+   "bytes": 77824,
+   "sha256": "9074acf359cbd065e01a13420733d50fc144f294fea5346f46ad91e883b92f97",
+   "source": "rebuilt whole from trials.jsonl by tools/exp_dag.py rebuild"
+  }
+ ]
+}
