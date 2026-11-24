@@ -138,7 +138,9 @@ DO FIRST, group by group (GROUPS.md has the whole table):
    REPOSITORIES: "When we're done building it goes private. No one knows these repos exist so that is safety
    by itself": nothing is moved or rewritten now; MAKING THE REPOSITORIES PRIVATE WHEN THE BUILD IS DONE is a
    step of his, kept on this page so it is not forgotten. The one idea the plan needs from the source kept out
-   of git is now in `47.md`; nothing else of that source is written. Where it stands in the order
+   of git is now in `47.md`; nothing else of that source is written. HIS WORD ON WHAT IS SENSITIVE: "it was other things
+   paired with that operator that made it sensitive, not the operator alone": the operator may be written of
+   freely; what it was paired with in that April discussion stays out of git, briefs and saved files. Where it stands in the order
    beside the other groups is his to say; it shares no file with them, so its suite can work beside them.
 
 1. G01, tickets 02, 03, 01. The reviewer reads Markets `931b2b3..b12d8ef` on `tools/kgraph/defend.py` and

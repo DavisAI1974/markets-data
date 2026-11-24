@@ -7786,3 +7786,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
   CLAUDE'S READING OF HOW FAR THIS REACHES, his to correct: it lets the plan for ticket 47 state the ONE idea it
   needs from the April discussion (written in `47.md`, three lines). Everything else from that discussion stays
   out of git as before; it is not needed for the build and was never asked for here.
+- WHAT IS SENSITIVE AND WHAT IS NOT (Greg, 2026-11-24: "And it was other things paired with that operator that
+  made it sensitive, not the operator alone"). DECIDED BY HIM: the operator itself, its engine, its coefficients
+  and the reading of them may be worked on and written in these repositories. What stays out of git, out of
+  agents' briefs and out of saved files is the OTHER material of the April discussion that the operator was
+  paired with there. So the three lines in ticket 47 stand, and the plan for ticket 47 may speak of the operator
+  freely. A session that reads the April session for the operator writes down the operator and nothing it was
+  paired with.
