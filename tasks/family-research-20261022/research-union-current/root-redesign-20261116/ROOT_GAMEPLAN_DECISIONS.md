@@ -7083,3 +7083,18 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - MARKETS-DATA HOLDS ITS WHOLE HISTORY in the session (571 commits, not shallow), so a graph write names each
   file's own commit. The old runner's branch `claude/tasty-runner` was fetched into the platform checkout so the
   loop's existing checks find their base commit.
+- THE AGENTS ARE THE DECIDERS (Greg, 2026-11-24, to the list's step "who answers at the tick"): "Do you mean who
+  makes trade decion when you ask by the tick? We are supposed to be testing our new agents setup to see if they
+  could be the decders. Again, that's the intent behind all of the work we've done on them and it's stated in the
+  zip files". DECIDED BY HIM, and it was his from the start (the plan's stage 8: whether Claude agents can carry
+  the deciding Granite was to carry, with the graph's packet to keep the tokens workable): the agents decide each
+  trade. A SLIP (Claude): it was put to him as an open question when the plan and the zip already say it. Built to
+  it from here: at each opening signal the decider is asked, with the graph's packet for that moment, and the
+  order goes only on "take"; a missing answer opens no trade; closing a held trade by answer stays switched off
+  while his give-back hold rule is in force. The handshake is by files, because the agents live in a session and
+  no model key is in GitHub. The first decider test is a trial of stored tape: it waits for his go, with its
+  budget.
+- THE CONTROL FILE WAS CORRECTED IN PLACE (Markets `35d1537`, builder run 69): `platform_exit.md` had never been
+  run. Its `--data ../markets-data` resolved from the loop's worktree to a folder that does not exist; it is now
+  `--data "$MARKETS_DATA"`. Its budget declared nothing for the proposing agent; it now declares 45 model calls, 3
+  agents and 300,000 tokens (the session's plain small values, his to change). The earlier wording is in git.

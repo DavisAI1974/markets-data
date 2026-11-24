@@ -134,10 +134,21 @@ as stage 7d (the links, with no word on when) and one paragraph of stage 8d.
   Built with nothing plugged in, so a run behaves exactly as today until something is; every answer and the
   packet it was given are journaled. An answer counts only from the tape time it arrives at: nothing reads
   ahead. Shown by: a check that a run's journal is the same row for row with nothing plugged in.
-- [HIS] 37. WHO ANSWERS AT THE TICK. No model key is in GitHub or a session; Frankie and Granite are on HOLD. A
-  model's answer takes seconds, and 264 of the 437 trades counted on the third test were held under one second,
-  so a model can answer at the scale of a dipole event or a hold, not at every print.
-- [GO] 38. The first run with the graph live in it. A paper run: waits for Greg's go.
+- [x] 37. WHO ANSWERS AT THE TICK: DECIDED BY GREG, 2026-11-24: "We are supposed to be testing our new agents
+  setup to see if they could be the decders. Again, that's the intent behind all of the work we've done on them
+  and it's stated in the zip files". The agents decide. Evidence: his words, in the decisions file.
+- [ ] 37a. The gate: when a rule's opening signal fires, the decider is asked and the order goes only on "take";
+  a missing or broken answer opens no trade. Built for the trial (not paced). Shown by: the code, its checks
+  that need no tape, and the reviewer's read. Its proof on tape is step 38.
+- [ ] 37b. The decider's side in Markets: for each question the graph's packet is built, the brief is handed to
+  an agent, the answer goes back, and every decision is its own line (the packet, its tokens, the answer, who
+  answered, how long it took). Shown by: checks on a real run's journal with no engine.
+- [ ] 37c. NOT BUILT, said so: the gate in a paced or live run (the order would have to wait while the tape moves
+  on), and answers reaching a run on a GitHub runner from a session. A decider at the scale of a whole trade day
+  needs a model key; none exists in GitHub or a session.
+- [GO] 38. THE FIRST DECIDER TEST: a trial of a stretch of stored tape with the agents deciding each opening
+  signal from the graph's packet. It puts the tape through the engine: waits for Greg's go, put to him with its
+  budget (how many signals, which model, how many tokens).
 
 ROOT in a run (his question the same hour): YES for the calculations the rules read. Every run works out, at
 every tape message and on the tape's own nanosecond times, `root/calcs/quote_runs.py`, `root/calcs/leg_peaks.py`,
