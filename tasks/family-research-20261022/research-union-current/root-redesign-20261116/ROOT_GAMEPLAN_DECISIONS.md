@@ -5849,3 +5849,46 @@ figure. To bring back when the work reaches what moves the market and price-curv
   choice as for the client ID and secret). No production key is ever put there.
 - A NEW SESSION. Greg: "Let's start new session". Handoff V (`NEXT_SESSION_HANDOFF_20261124V.md`) is the starting
   point.
+
+## Twentieth session (2026-11-24, in a code session): stage 7, the paper runner on the tastytrade sandbox
+
+- THE KICKOFF (Greg, 2026-11-24): "Continue the Markets work: STAGE 7, the paper runner on the tastytrade sandbox";
+  "FIRST: the handoff's step 0 (check each rule that opened against its own text), then its next steps in order".
+  Repositories and branches as he gave them: markets-data `ccr-349e2ffe-07p8od` (all outputs; Desktop and Codex
+  write there too, fetch before every push); paper-trading-platform `claude/tasty-runner` (our code, `tasty/`),
+  "Codex works on main there: touch none of his files until I say he is done"; Markets `ccr-532eaea6-vgz20z`
+  (`65f71a9`) brought in on the session's own branch, "Nothing goes to the trunk without my word".
+- THE KEYS (Greg): "I do not paste them again: all three sandbox keys ... are in
+  paper-trading-20261123/tasty-sandbox.env on the data branch"; "Keep them out of every other file and commit.
+  Production keys are not needed until live trading". Checked by name only at the start: the three
+  `TASTY_SANDBOX_*` names are set after loading the file; no production name is set.
+- THE AGENTS AND BUDGETS (Greg): "Use the four agents, each with a declared budget, each run's model and tokens
+  recorded. What is left: builder 300,000 tokens, reviewer 250,000. If a budget is hit, stop and tell me at once".
+- STANDING RULES as he restated them: a trade day is 6 pm Eastern the evening before to 5 pm Eastern on the named
+  date; no mid price; no trade cost; no averaging, pooling, ranking or labels; no made-up numbers; only add to what
+  exists; nothing is run without telling him first; AWS is off limits; nothing he has decided is asked again;
+  plain words, the answer in the first lines; his decisions recorded in git as they are made.
+- "#run mattpocock-skills" (his kickoff line): no skill or plugin of that name is installed in this session; a
+  search found none. Only Superpowers loaded again; the agent-skills plugin did not. Said to him.
+- DONE AT THE START: paper-trading-platform attached with push access; Codex's `main` (`5810cdd`) fetched and
+  `crypto_ng/tick.py`, `root/calcs/quote_runs.py` and `root/calcs/leg_peaks.py` found byte-identical on his `main`,
+  on `claude/tasty-runner` and on Markets `65f71a9`. None of his files touched.
+- STEP 0 DONE (record: `paper-trading-20261123/step0-20261124/STEP0_TRACE_20261124.md`). One ledger line of each
+  rule that opened was traced by hand against the raw recording and the rule's text, by the main session (no
+  agent, so nothing spent from the two budgets). Seven of the eight match (CL05, CL06, CL07, CL08, CL10, CL11,
+  CL15); CL13 was traced on the 25-minute recording and matches its stand-in. CL14 DID NOT MATCH: its text says the
+  FIRST sell (or buy) since the quote's latest step; the code opened on the second. Claude's fix, his to strike:
+  the print whose own quote shows the step can be that first one, because the quote a print carries stood before
+  its trade (measured on both recordings). Code `4142f97` on `claude/tasty-runner`, with a check that reads the
+  raw messages and fails on the old code. CL14 opens 23 times on the 10-minute recording (14 before) and 60 on the
+  25-minute one (37 before); every line of the other rules is unchanged.
+- STEP 2 DONE: the replay and the checks were rerun on the 25-minute recording (440 prints, 141 with no side).
+  All four checks pass on both recordings. Output in `paper-trading-20261123/step0-20261124/`. Not scored.
+- CLAUDE'S CALL ON POINT a OF HANDOFF V, his to strike: rules 3 and 4 of "what holds for all fifteen" go into the
+  runner in part B. The settlement window is bounded as ROOT already marks it (`root/rows.py`: from 2:28:00.000 pm
+  Eastern, up to but not including 2:30:00.000 pm), read on the feed's own time. The close at the end of the trade
+  day stays as stand-in S6 (the flatten at the stop takes its place), already adopted in the plan.
+- PUT TO GREG, each once: point b (two things the rule orders showing at one print), point c (what a print with no
+  side may do; step 0 found the ledger writes such closes at the wrong print with no mark), point d (what counts
+  as a gap; step 0 measured that the builder's count mostly counts the order messages arrive in). Builder run B
+  waits for his answers.
