@@ -102,12 +102,12 @@ made up. This is the main session's decision, told to him; he has not objected.
 | markets-data, Codex's rules | `codex/ng-blind-20261123` | fetch first |
 | Markets, the April operator search as Codex found it (ticket 47) | `od-autoresearch/apr5-handoff` | `e65441a` |
 
-Agent runs are recorded through 155. The next run is 156.
+Agent runs are recorded through 156. The next run is 157.
 
 ## Where the work stopped
 
 NOTHING IS IN FLIGHT. Every agent of the twenty-fifth session handed back and is recorded: its report word for
-word, its run line, its kept transcript (runs 107 to 155). NO TICKET IS MARKED DONE. Nothing went through the
+word, its run line, its kept transcript (runs 107 to 156). NO TICKET IS MARKED DONE. Nothing went through the
 engine or the tape. NOTHING WAS WRITTEN INTO THE REAL GRAPH. Everything named here is on GitHub.
 
 Each worked ticket's own file ends with "State at the close of the twenty-fifth session": what was built, what
