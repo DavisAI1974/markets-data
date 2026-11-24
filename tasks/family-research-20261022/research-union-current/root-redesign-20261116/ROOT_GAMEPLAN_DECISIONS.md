@@ -6988,3 +6988,7 @@ figure. To bring back when the work reaches what moves the market and price-curv
   small budget told to him first, the grounding check. Not taken as a go for Frankie, Granite, a pod, the swarm
   or the token test. This session does no more of that work, so two sessions do not work the same files; it only
   notes how the last run ended. The order of work is in handoff AA, "What the next session does first".
+- "NO PAPER RUNS THOUGH" (Greg, 2026-11-24, on the box for the new window). The go for the agents' work is a go to
+  BUILD it. The next session runs no paper run of any kind: not the stored-tape workflow, not the trial runner,
+  not the loop (a trial puts the tape through the engine and the paper matcher). Each needs his go, told first
+  with its budget. The handoff's order of work is changed to say so.
