@@ -30,13 +30,17 @@ _Why this matters: a run command already written for the loop starts at minute 3
 
 >
 
-### 2. Must the per-tick dipole and exhaustion columns reach the decider before that test?
+### 2. WITHDRAWN: your rule already answers it (every data layer reaches the decider). It should not have been asked. It is being built: `tickets-44-20261124/PLAN_38_EVERY_LAYER_20261124.md`.
+
+~~Must the per-tick dipole and exhaustion columns reach the decider before that test?~~
 
 _Why this matters: today they do not. Most rows of that stored file carry no time, so the packet leaves the whole file out and names it. The decider sees the two lines at the signal's own tick and the dipole sheet's cells, not the per-tick columns. You said "the dipole above all"._
 
 >
 
-### 3. May the after-the-fact file sit in the same folder a live agent decider reads its question from?
+### 3. WITHDRAWN: your rule already answers it (after-the-fact data is kept out of what a decider reads). The file is being moved out of that folder.
+
+~~May the after-the-fact file sit in the same folder a live agent decider reads its question from?~~
 
 _Why this matters: today it does. A decision that names anything in it is refused, but nothing stops an agent from opening the file._
 

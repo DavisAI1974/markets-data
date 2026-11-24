@@ -7967,3 +7967,17 @@ figure. To bring back when the work reaches what moves the market and price-curv
   PLACE (the model its plan names, with a note saying so), the one line of this session that was changed and not
   added to. Whether that stands is question 9 of the sheet. The recorder is being changed so it cannot write an
   empty model again (builder run 194).
+- EVERY DATA LAYER REACHES THE AGENTS: SAID AGAIN, AND IT WAS NOT FIXED (Greg, 2026-11-24, twenty-sixth session, on
+  the sheet's second question): "I have said multiple times with you that every data layer has to be available to
+  agents nd supposedly that was fixed". WHAT IS SO: it is not fixed. Ticket 38 has been open since the
+  twenty-fourth session ("418 of 458 columns of the daily sheets are not given to a decider") and was not worked
+  in the twenty-fifth; this session's reviewer measured the same figures again (27 in the packet, 13 after the
+  fact, 418 not placed) and found that the per-tick dipole and exhaustion columns are among what is left out.
+  A SLIP OF THIS SESSION: the main session put it to him as a question (the sheet's question 2) when his rule
+  already answers it; question 3 (the after-the-fact file in the decider's folder) is answered by his rule in the
+  same way. Both are withdrawn on the sheet. DONE ON HIS WORD: ticket 38 is taken first among the groups; its plan
+  is `paper-trading-20261123/tickets-44-20261124/PLAN_38_EVERY_LAYER_20261124.md` (every column of the stored
+  rows; every layer placed by the time its row became known, from a table with one shown entry for each layer;
+  the reviewer's points; the after-the-fact file out of the decider's folder; a check that asserts zero columns
+  left out for any reason but the program's own trades). The reviewer reads the plan before the builder of the
+  placing in time starts; the builder of the reviewer's own points starts now.
