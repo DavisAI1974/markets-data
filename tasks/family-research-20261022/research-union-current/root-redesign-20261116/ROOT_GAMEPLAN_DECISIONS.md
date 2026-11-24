@@ -7450,3 +7450,16 @@ figure. To bring back when the work reaches what moves the market and price-curv
   the rule in the places every session reads, and one command that lists every run of the other three that no
   auditor run names and fails while any is listed. THE MAIN SESSION'S READING, put to him: one auditor run may
   cover the runs of one batch, each run its own row, rather than one auditor run for each single run.
+- A HYPOTHESIS MAKES THE CLAIM; IT MAY NOT SURVIVE AS ONE (Greg, 2026-11-24, to the question whether the
+  proposer's hypothesis belongs in the reviewer's brief): "It MAKES the claim but may not survive as A CLAIM.
+  to go from making a hypothesis to being factual is part of our process right?" Answered: yes. DECIDED BY HIM,
+  AS THE MAIN SESSION READS IT (said to him as its reading): the hypothesis is the claim as it is made, the
+  thing put up to be challenged, so it stays in the reviewer's brief; the proposer's mechanism, alternatives,
+  falsifiers and reasons stay out. The process: made (registered before its outcome, with what would show it
+  wrong written first), challenged by a reviewer not given the proposer's reasoning, tried on the tape on his
+  go, checked falsifier by falsifier, and then it stands within its scope or the evidence against it is kept
+  beside it, both standing. Registration says a claim was proposed, never that it is so. A GAP THIS SHOWS
+  (Claude): the session text built from the graph does not say where a registered claim is in those steps, so
+  a fresh agent can read a hypothesis as settled (it happened in the twenty-fourth session's second test).
+  Added to the plan for tickets 04 to 06: each registered claim is shown with its place in the process, in
+  plain words and with no verdict label.
