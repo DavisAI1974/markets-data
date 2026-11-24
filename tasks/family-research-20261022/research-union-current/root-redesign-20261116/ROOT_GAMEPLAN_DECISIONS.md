@@ -6384,3 +6384,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   normal push". Said to Greg each time.
 - CODEX ADDED TO THE ITEM 17 FOLDER (markets-data `41ec052`): both authors' rule text and open questions and the
   platform's plan format, beside Claude's briefs; his handoff on the platform branch now points there.
+- ITEM 26, THE REMAINING WIRING BUILT IN DRAFT, NOTHING RUN (paper-trading-platform `5fb648d` on Codex's branch; one
+  new file, none of Codex's touched): `.github/workflows/run_end_notice.yml`. Codex's runner already sends the phone
+  notice for a budget stop, a run stop and a failure it can see. The new workflow sends one when any of the four
+  manual workflows ends other than in success, which covers what the runner cannot report: a step failing before
+  the runner starts, a cancelled or timed-out job, a lost runner. GitHub starts it only from the default branch, so
+  it does nothing until merged. When the runner also reported, Greg gets both notices. ONLY GREG CAN SUPPLY (written
+  under item 26): on Render, service `ng-paper-viewer`, `PAPER_VIEW_PASSWORD` and `PAPER_RELAY_TOKEN`; in GitHub
+  Actions the variable `PAPER_RELAY_URL` and the secret `PAPER_RELAY_TOKEN` (same value as on Render). No value was
+  read, set or sent. Receipt on the phone has not been exercised and waits for his permission.

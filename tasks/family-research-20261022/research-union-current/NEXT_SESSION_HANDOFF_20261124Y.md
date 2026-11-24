@@ -62,7 +62,11 @@ Greg's go. Missing, his to say, and written under item 23: the budget figures fo
 `ANTHROPIC_API_KEY` Actions secret, and the open gap that an agent started inside a Claude Code session cannot be
 stopped part-way. Item 23 stays open until it has been run.
 
-Item 2 waits on the item 17 plan. Item 26 is not started. Greg is settling item 17 with Codex himself: leave item
+Item 26: the remaining wiring is BUILT IN DRAFT, NOTHING RUN, on his branch as `5fb648d`
+(`.github/workflows/run_end_notice.yml`: a phone notice when a manual workflow ends other than in success; it
+works only once on the default branch). Only Greg can supply the Render and Actions settings named under item 26.
+
+Item 2 waits on the item 17 plan. Greg is settling item 17 with Codex himself: leave item
 17 and its deciders alone until he says. Codex added both authors' rule text and the plan format to
 `paper-trading-20261123/item17-20261124/` (`41ec052`).
 
