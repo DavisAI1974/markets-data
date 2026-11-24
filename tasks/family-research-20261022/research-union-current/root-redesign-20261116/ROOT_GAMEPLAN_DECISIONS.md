@@ -7325,3 +7325,8 @@ figure. To bring back when the work reaches what moves the market and price-curv
   on the agents are used as their own files say (tickets 12 to 14): the builder shows its change and waits, and
   the reviewer reads it before the builder goes further. Agent run 104 (builder, Sonnet; limits told: 600,000
   tokens, 60 tool calls, 30 minutes, no sub-agents, no write into the real graph) builds tickets 2 and 3.
+- AN INDEPENDENT REVIEW AT THE END (Greg, 2026-11-24): "And when we're done, I want a independent review agent
+  skill run to compare our work to the work on the tickets". DECIDED BY HIM. It is ticket 45: the Pocock
+  `code-review` skill, two readers with fresh context who built none of the work, one against the house rules
+  and one against the tickets; for each ticket what it asked, what is in git, and where the two differ. No
+  ticket is called done on the main session's word alone.
