@@ -1,4 +1,4 @@
-# Builder run 131 (Sonnet): ticket 03b, the points of the first, the second and the third read
+# Builder run 131 (Sonnet): ticket 03b, the points of the first, second, third and fourth read
 
 Kept word for word as the agent returned it, 2026-11-24 (twenty-fifth session). Nothing below this line is the main session's.
 
@@ -158,3 +158,29 @@ REAL RECORD AS IT STANDS (markets-data was still moving)
 HOUSEKEEPING
 - /tmp/run131 is deleted. `git -C /home/user/markets-data status --short` is empty.
 - Tool calls for the whole run: about 29.
+
+---
+
+## The next hand-back
+
+Run 131, fourth read, six points. Pushed to ccr-659edd86-di9udt. Commit d8ecd10. After the last merge, pytest gives 39 passed, 0 failed.
+
+ONE EXPECTATION I CHANGED
+- You said point 2 must leave all 37 clean. It could not. The check `test_case_m4_and_m5_a_name_without_a_row_in_the_report_clears_nothing` asserted a note for run 50, a run that stays record-only (audited). Point 2 says notes are kept only for runs left not audited, so that assertion is now `50 not in rep.notes`.
+- I changed the check rather than loosen the rule. The check carries a comment saying so.
+
+THE SIX POINTS (file:line in tools/kgraph/auditor_called.py unless stated)
+1. List (4) prints each distinct report once. The `seen` set is at line 126, in the per-report loop of `analyse`. The check is `test_list_4_prints_each_distinct_report_once_run_124_at_7c3d2af`. It asserts run 124's row holds exactly two entries: one `AUDIT_RUN_124.md@None (no commit named)` and one `(its own)`. This check passed before the change as well, because the real record only has the two-entry shape and no case names one report twice. It holds the shape, not a repeat.
+2. Notes only for runs left not audited, with every auditor's reason joined by "; ". The reasons are collected in `why_not` (line 113) and written to `rep.notes` at line 164, only for a run in neither cleared nor auditors. No new check, as you said.
+3. The field comment at line 88 now reads "auditor runs that name no report that can be read at its commit and is its own".
+4. The first-line reason is in `first_line_problem`, line 56. It now says "after `# Performance auditor run N` its first line holds '<the character>', where a space, `(`, `:` or the end of the line is expected". The byte-order-mark and leading-space reason is unchanged. The check, written first, was red before the code change. It is `test_first_line_with_the_right_number_and_a_tab_full_stop_or_hyphen_says_what_is_so`, in the test file. Its strings come from run 133's real first line.
+5. In the test file, the first-line check and the `--at` without `--data` check are moved above the separated section's header. The header now also names the TICKET_RUNS.json that `_scratch(tickets=...)` writes.
+6. The rule's places: CLAUDE.md lines 25-27, and .claude/agents/frankie-performance-auditor.md at line 119 onward, in the section "Every run of the other three agents".
+
+THE TWO PARAGRAPHS AS THEY NOW READ
+- CLAUDE.md, after "The auditor's report for each of its runs is kept in git word for word.": "The report's first line begins `# Performance auditor run N` and each audited run has its own heading `## Run NNN` at the start of a line; an auditor's run whose report cannot be read from git at the commit its line names, or is another run's, fails the command."
+- Auditor's file: "Your hand-back is kept word for word under a first line `# Performance auditor run N` that the main session writes, so you start each run's block with `## Run NNN` at the start of a line and nothing else at that level. A report that cannot be read from git at the commit your line names, or that is another run's, fails the command."
+
+HOUSEKEEPING
+- /tmp/run131 is deleted. `git -C /home/user/markets-data status --short` is empty.
+- Tool calls for the whole run: about 34.
