@@ -18,23 +18,40 @@ run to compare our work to the work on the tickets" (ticket 45).
 
 | Repository | Branch | Head |
 | --- | --- | --- |
-| Markets (code) | `ccr-0ac78691-8zapbb` | `071777f` |
+| Markets (code) | `ccr-0ac78691-8zapbb` | `2ac873f` |
 | markets-data (records, graph, tickets) | `ccr-0ac78691-8zapbb` | the commit that holds this page |
-| paper-trading-platform, today's change | `ccr-0ac78691-8zapbb` (NOT Codex's branch) | `27f7261` |
+| paper-trading-platform, today's change | `ccr-0ac78691-8zapbb` (NOT Codex's branch) | `28d4dbb` |
 | paper-trading-platform, Codex's branch (draft PR 5; he pushes there; fetch first) | `codex/strategy-trades-and-mbo-capture` | `47fa1c5` |
 
 The platform change stays OFF Codex's branch until one pass of the tape shows a run with nothing plugged in is the
 same row for row (ticket 40, his go).
 
-## In flight when this page was written (read each one's last commits and notes before starting anything)
+## Where the work stopped (nothing is in flight; every agent has reported and every working copy is on GitHub)
 
-- Ticket batch 1, 2, 3 (worked 2, 3, 1): agent run 104 builds `tools/kgraph/defend.py` (a claim registered before
-  its outcome; an independent challenge blind to the proposer's reasoning). It pushes a commit whose subject
-  starts "PROPOSED, NOT YET READ BY THE REVIEWER" and stops; the reviewer reads it; then it goes on.
-- Half-done work being finished: agent run 102, the packet that carries every data layer
-  (`tools/kgraph/signal_packet.py`, `tools/decider/serve.py`; notes `tools/decider/BUILD_NOTES.md`); agent run 103,
-  the reviewer's third read of the platform change (`47fa1c5..27f7261`).
-- Not yet recorded in `paper-trading-20261123/agent-runs.jsonl`: runs 99 to 104. The next run is 105.
+Heads when this was written: Markets `2ac873f`, the platform's `ccr-0ac78691-8zapbb` branch `28d4dbb`.
+
+DO FIRST, in this order:
+1. The reviewer re-reads Markets `3a6ac09` (tickets 02 and 03, `tools/kgraph/defend.py`) against its own findings
+   in `paper-trading-20261123/reviews-20261124/REVIEW_RUNS_103_105.md`. Then mark tickets 02 and 03 or list what
+   is open.
+2. Ticket 01: every claim of the first written decider registered and independently challenged (its ticket file
+   says what it needs). Batches after that: consecutive numbers, two or three at a time. Ticket 46 (stop the
+   consolidation drift) and ticket 45 (the independent review at the end) are added to the 44.
+3. Ticket 38 is OPEN and matters to him: "all of the data depth" is not met. Of the 458 columns of the Excel
+   daily sheets for 2023-10-02, 27 reach the packet, 13 the after-the-fact file, and 418 are not given to a
+   decider (398 are ROOT's per-tick columns, left out for size). Its ticket file has the five open points.
+4. The reviewer has not read: Markets `e55da89..2ac873f` (the packet), `7672c8d` (afterwards), `6fdd4e1..1e9a7c5`
+   (the loop on the decider program), `9054a00`, `1d0a6dc` (the deciders' door), `04f4378` (the first decider),
+   `53d46c9` (the context builder), and the platform's `28d4dbb` (the third review's fixes).
+
+- The platform change (`47fa1c5..28d4dbb`) has been read three times by the reviewer: nothing changes a run with
+  nothing plugged in, by reading. It has never met the tape. What the first pass must show, in order, is in the
+  reviews file.
+- The stored planes of ROOT are on the markets-data branch `root-rows-20231002`, not in the working checkout:
+  the packet reads them from a git dir named by `MARKETS_PLANES_GIT` (make one with a blobless mirror of that
+  branch; it is not kept anywhere).
+- Agent runs are recorded through 106 except run 102, whose figures the main session had not received when this
+  was written. The next run is 107.
 
 ## His rules (each is his word, in the decisions file, twenty-fourth session)
 
@@ -52,6 +69,7 @@ same row for row (ticket 40, his go).
   the market conditions. After-the-fact data is kept and joined to every decision for learning; it is kept out
   only of the packet a decider reads at the instant it decides.
 - DO NOT RELY ONLY ON GRAPHS where they fall short: the plain source stands beside the graph.
+- NO FEES are computed now; Codex's matcher stands as it is (his word).
 - The hold rule in force: hold until the trade gives back 20% of its highest open profit. The runs of 2026-11-24
   are not scored and are no judgement of the strategies.
 - His stop button ends agents; a stopped agent is started again unless he says otherwise; brief every agent to

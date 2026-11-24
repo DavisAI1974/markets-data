@@ -7364,3 +7364,21 @@ figure. To bring back when the work reaches what moves the market and price-curv
   four trade days' daily sheets are compared with each other, and for one trade day every column of its sheet is
   placed in what a decider is given at the moment, in the after-the-fact file, or named as not placed with the
   reason; a check on the real workbook holds it. Sent to the builder on the packet (agent run 102).
+- THE PACKET AGAINST THE EXCEL SHEETS: A HOLE (agent run 102, Sonnet; Markets `e55da89`, `1992e8e`, `4706fef`,
+  `2ac873f`; 38 checks). SAID TO HIM FIRST: "all of the data depth" is not met. The four trade days' daily sheets
+  have the same columns in the same order (dipoles 25, peaks 5, crypto and ng 20). For trade day 2023-10-02, of
+  458 columns: 27 are in the packet at the signal's moment, 13 in the after-the-fact file, and 418 are NOT given
+  to a decider: 398 of them ROOT's per-tick columns (sections A to G of the stored-rows sheet), known at the
+  tick and left out for size (the day is about 1 GB in memory), and 20 the program's own trades. Each is named
+  in the packet's foot; named is not given. Also short of his rule: 35 of the 63 stored layers are named and not
+  placed, most because their rows carry a tape position and no time; and a question's folder holds only the
+  plane rows since the previous question, with pointers to the earlier ones, because a whole copy for each
+  question would be about 3.4 GB. Built and standing: the two lines first; every layer of the state; 28 stored
+  planes placed by each row's own time; the whole state beside the brief; the after-the-fact file kept apart;
+  the check he asked for, which fails when a column is added to a sheet and not placed. Ticket 38 stays open
+  with these points written in it.
+- END OF THE TWENTY-FOURTH SESSION'S BUILDING. The start page for the next session:
+  `NEXT_SESSION_START_20261124AB.md`. Nothing went through the engine this session: no paper run, no trial, no
+  loop. No model key was used; every agent was a session agent. Of the 46 tickets none is marked done: tickets
+  02 and 03 are built, read once and fixed, the fix not re-read; ticket 38 is partly built and open; the rest
+  are not started.
