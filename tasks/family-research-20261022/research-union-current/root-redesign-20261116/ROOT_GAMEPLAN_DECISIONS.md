@@ -6799,3 +6799,20 @@ figure. To bring back when the work reaches what moves the market and price-curv
   trade day, each trade its own line; no claim about any strategy is made from it.
 - THE FOURTH TEST: the page deployed again with the smaller marks (live 09:11 UTC), then the same test started
   again by Claude on his standing go: `stop_after_minutes` `30+30`, the page on, both budgets 825,874.
+- THE SPREAD AND THE HOLD (Greg, 2026-11-24): "The spread isn't an issue if you are hitting when the price is
+  retreating and lifting when going up, but the biggest culpret is probably our hold time". Offered to him and to
+  be run on the fourth test's own record when it ends, unless he says no: for each trade, where the market stood
+  1 second, 10 seconds, 1 minute and 5 minutes after it opened, on the side the trade would be closed at; each
+  trade its own line, a pointer and not a result.
+- THE GRAPH, FIRST SEEN (Greg, 2026-11-24, with a screenshot): "That graph isn't right". What the screenshot
+  showed: long arcs drawn between trades minutes apart on a thin Sunday-evening tape, and our line swinging
+  between bid-side and ask-side fills. Changed (platform `1c6933d`): each line stays level at its last price
+  until the next trade, corners rounded. The page was deployed again during the fourth test, which empties it.
+  Asked of him: what else looked wrong, since his words name nothing.
+- A GIVE-BACK EXIT (Greg, 2026-11-24): "We should try a simple exit strategy. Sell when we give 20% from highest
+  profit value back once we enter trade." Built and pushed, not run (platform, item 17): a new plan file, the
+  agents' plan with `"exit": {"give_back_fraction": "0.2"}` added; under it a paper trade is closed when its open
+  profit (its own fills, and its contracts valued at the bid for a long and the ask for a short) has fallen back
+  20% from its highest; the rule's own close stays a research signal and sends no order. LEFT OPEN BY HIS WORDS
+  and built this way until he says: a trade never in profit is held until the run stops (no loss stop); rules go
+  on opening while earlier trades are held, so contracts add up; a one-tick profit is given back by one tick.
