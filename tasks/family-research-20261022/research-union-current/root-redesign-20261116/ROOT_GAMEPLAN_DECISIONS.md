@@ -7897,3 +7897,16 @@ figure. To bring back when the work reaches what moves the market and price-curv
   paper-trading-platform beside Markets: without it all 79 checks of `tests/agent_program/test_defend.py` are
   skipped and the 10 of `test_outcome.py` end in a refusal ("a rule ground needs rule_id, a commit sha and a
   platform checkout"). This session was not started with that repository and adding it was refused. Said to him.
+- THE POCOCK SKILLS ARE NOW IN THE MARKETS REPOSITORY'S SETTINGS (Greg, 2026-11-24, twenty-sixth session: "Did you
+  put the skills in markets repo?", with the link to `github.com/mattpocock/skills`). ANSWERED: no, until then
+  they were only a read-only copy in the session's scratch folder. DONE ON HIS WORDS ("Those skills should be in
+  your library"; "It's a directive"): Markets `.claude/settings.json` registers that repository as a plugin
+  source pinned at its tag `v1.3.2` and turns the plugin `mattpocock-skills` on (the same way the agent-skills
+  plugin is there: by settings, never copied into the repository); `CLAUDE.md`, section Agent skills, says so.
+  ON THE SESSION'S BRANCH `ccr-144315dd-pta2ze`, NOT THE TRUNK: it reaches the trunk on his word. WHAT IS SO:
+  the plugin ships 27 skills, loaded under the prefix `mattpocock-skills:`; `chief-of-staff` is not among them
+  (it is in that repository's in-progress folder). It conflicts with one line of `CLAUDE.md` written in session
+  94 ("One router only. Do not stack a second skill framework (Superpowers, Pocock) as an active router"): his
+  words of today are taken to stand over that line for the Pocock skills; the line is left in place, his to
+  strike or keep. NOT KNOWN: whether a cloud session's machine can fetch the plugin from GitHub when it starts;
+  the next session says whether the skills are in its list.
