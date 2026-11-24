@@ -162,6 +162,11 @@ as stage 7d (the links, with no word on when) and one paragraph of stage 8d.
   book's depth level by level. Shown by: the platform's question carrying it (code and no-tape checks), the
   packet passing it through, and, on tape (step 38), one question's `state` beside the book as the journal has
   it at that tick.
+- [ ] 37f. AFTER-THE-FACT DATA IS KEPT AND JOINED TO EVERY DECISION (Greg: "we will absolutely want to know actual
+  traxe data after the fact"): never in the packet of the instant, always in the afterwards record: the trade's
+  own later rows, the market's own series for the stretch, ROOT's after-the-fact columns and the peaks. Shown by:
+  the afterwards file for a real run's 217 signals (checks, no engine), the trial's kept series (code and
+  no-tape checks), and on tape (step 38) one decision's afterwards line beside the journal.
 - [ ] 37e. The loop on the decider program: one file an agent changes (`loop_decider.py`), one trial to try it,
   every trial recorded; and a first version written by an agent (`decider_v1.py`, in git for Greg to read:
   Markets `04f4378`). Shown by: the control file loading, the ready check, and checks with a command that only

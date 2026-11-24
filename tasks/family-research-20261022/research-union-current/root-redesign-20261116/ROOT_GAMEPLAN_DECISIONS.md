@@ -7233,3 +7233,16 @@ figure. To bring back when the work reaches what moves the market and price-curv
   whether anything can be dropped later is his decision, made from the runs. Built for that decision: each
   decision's own line records every layer its packet held and which layers the decider named as its grounds;
   one line a decision, nothing added up or ranked.
+- AFTER-THE-FACT DATA IS A LAYER AND IT GOES IN (Greg, 2026-11-24, to Claude's "what happened after an event never
+  goes to a decider"): "We will want to learn from after the fact data for future and it will help us figure out
+  near future forecasts better even if we can't use it in real time so i disagree with not including afterr.the
+  fact. Like we will absolutely want to know actual traxe data after the fact". DECIDED BY HIM, and Claude had it
+  too narrow: what happened after a signal is kept, joined to its decision and used for learning. It is kept out
+  of one place only, by his own words ("even if we can't use it in real time"): the packet a decider reads at
+  the instant it decides. Built to it: every decision, taken or skipped, gets its afterwards record (the trade's
+  own fills and how it closed, its open profit and highest open profit as journaled, the rule's own close, what
+  the market did after); the trial keeps the market's own series for its stretch (every change of the best bid
+  and ask, every trade print) so no horizon is chosen for him; ROOT's after-the-fact columns, the peaks and the
+  columns Native wrote later than the moment go into the same afterwards layer; the agents that write the next
+  decider read all of it, each decision its own line, nothing averaged. (Platform, agent run 95; Markets, agent
+  runs 93 and 97.)
