@@ -121,3 +121,7 @@ Every line carries its claim id, file and line. KNOW ITS LIMITS:
 ## ADDED 2026-11-24, twenty-fifth session (his word): READ FIRST, EVERY SESSION
 
 `READ_FIRST_UNTIL_THE_AGENTS_PART_IS_DONE.md` (beside this page): the eight files of the zip `frankie_handoff_20261123_2.zip`, where each is in git, and that THERE ARE FOUR AGENTS. Read them in full before any ticket work, every session, until Greg says the agents part is done.
+
+## REPLACED 2026-11-24 at the close of the twenty-fifth session
+
+The start page is now `NEXT_SESSION_START_20261124AC.md` (beside this one). This page stays on record.

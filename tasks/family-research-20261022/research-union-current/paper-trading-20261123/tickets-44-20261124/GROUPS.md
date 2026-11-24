@@ -15,15 +15,15 @@ README only as "held and not ticketed": they are in the last row.
 
 | Group (file in `../tickets-20261124/`) | Its tickets here | Can a builder work on it without his go? | State at the close of the twenty-fifth session |
 |---|---|---|---|
-| G01 One claim defended, end to end | 01, 02, 03, 11 | Yes for 01, 02, 03. 11 waits on 05. | 02, 03: built, read four times, the fourth read's points being built (run 147). 01: ten claim files written; none registered or challenged. |
+| G01 One claim defended, end to end | 01, 02, 03, 11 | Yes for 01, 02, 03. 11 waits on 05. | 02, 03: built, read four times; the fourth read's points built by run 147 and NOT READ. 01: ten claim files written; none registered or challenged. |
 | G02 The grounds read into the graph | 07, 08 | NO: the reads need his go (budget told then). | Located only (scout run 117). |
-| G03 The loop takes only defended claims | 04 (its other items, 01 to 03, are in G01) | Yes | 04: built (run 137), first read by the reviewer (run 146). |
+| G03 The loop takes only defended claims | 04 (its other items, 01 to 03, are in G01) | Yes | 04: built (run 137), read once (run 146); its points are open for the builder. |
 | G04 The check after a trial, and adverse evidence | 05, 06, 09 | Yes to build; shown on tape only with his go | Planned (`PLAN_03b_04_05_06_v2.md`); not built. Same file chain as G01 and G03. |
-| G05 Artifact and metric nodes | 25, 26, 37 (placed) | Yes for 25 and 37. 26 waits on 06. | 25: built, read once, the read's points being built (run 130). 37: located (scout run 152). |
+| G05 Artifact and metric nodes | 25, 26, 37 (placed) | Yes for 25 and 37. 26 waits on 06. | 25: built in two parts (run 130); the second part not read. 37: located (scout run 152). |
 | G06 The hybrid session start | 20 (the session half), 32 | 32 waits on 25. 20 waits on 32. | Not started. |
 | G07 Every data layer to the decider | 38, 39 | Yes for 38. 39 waits on 38, 02 and 03. | 38 partly built and OPEN (418 of 458 columns not given to a decider). |
 | G08 A budget and a full record for every agent run | 18, 19 | Yes | Both built; 18 read three times (run 149), 19 read four times (run 148). |
-| G09 The agents used as their files say | 12, 13, 14, 15, 03b (placed), 16 (placed) | Yes for 12, 13, 14, 03b. 15 and 16 are his decision. | 03b: code read five times, nothing left for the builder; the showing at one quiet commit is not made. 12, 13, 14: shown by how the runs are made, not written up. |
+| G09 The agents used as their files say | 12, 13, 14, 15, 03b (placed), 16 (placed) | Yes for 12, 13, 14, 03b. 15 and 16 are his decision. | 03b: DONE, marked with its evidence (the check exits 0 at markets-data `9a8f404`). 12, 13, 14: shown by how the runs are made, not written up. |
 | G10 Refute wave | 10 | NO: his go, budget told then. Waits on 01. | Not started. |
 | G11 The real graph put in order | 27, 30, 31, 21 (placed), 44 (placed), 46 (placed) | Yes for 31, 21, 44, 46. 27 is a model run: its budget is told first. 30 waits on 44. | 21 and 31: located (scout runs 150, 151). 46: its ticket says it is worked at its place in the order or when he says sooner. |
 | G12 First pass on tape | 40, 41, 43 (placed) | NO: his go, told with its budget. 43 can be built; it starts with a run. | Not started. The platform cannot be pushed to from a session: push access was refused. |
