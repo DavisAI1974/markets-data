@@ -6713,3 +6713,14 @@ figure. To bring back when the work reaches what moves the market and price-curv
   for his hand after that, because nothing else can write them: the GitHub Actions variable `PAPER_RELAY_URL`
   and the secret `PAPER_RELAY_TOKEN`. The phone-page program was read for what it imports: only `fastapi`,
   `uvicorn` and Python's own library, so `requirements-viewer.txt` is enough for it.
+- THE PHONE PAGE ON RENDER, CREATED (Greg, 2026-11-24: "Set up the phone page on Render"; "Render is connected";
+  "Try now"). The Render connector read "not connected" on two looks and "connected" on the third; no service
+  named for the paper page existed among his ten. Claude created the web service `ng-paper-viewer` (service
+  `srv-dc2kqjec6qcc73fbc48g`, free plan, Ohio, Python) from paper-trading-platform, branch
+  `codex/strategy-trades-and-mbo-capture`, with the build and start commands of `paper_platform/render.yaml`.
+  Address: https://ng-paper-viewer.onrender.com. Automatic deploys are OFF (Claude's choice): the page keeps its
+  events in a file that a redeploy empties, and every push to the branch would otherwise redeploy it in the
+  middle of a run. A change to the page is deployed by hand. Its two settings, `PAPER_VIEW_PASSWORD` and
+  `PAPER_RELAY_TOKEN`, hold fresh random values Claude made and passed to Render; they are written in no file,
+  commit or reply, and are read on the service's Environment page on Render. Still his hand, because nothing else
+  can write them: the GitHub Actions variable `PAPER_RELAY_URL` and the secret `PAPER_RELAY_TOKEN`.
