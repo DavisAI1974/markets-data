@@ -1,0 +1,19 @@
+{
+ "run": 115,
+ "session": "session_017eY1WPrMpaE6ySGEd7D4ZL",
+ "agent": "reviewer",
+ "model": "claude-opus-5-5",
+ "task": "read PLAN_03b_04_05_06.md, with its changes after the zip was read again, before the builder starts on it",
+ "written_before_the_run_started": true,
+ "max_model_calls": 30,
+ "max_sub_agents": 0,
+ "max_concurrent_workers": 1,
+ "max_tool_calls": 30,
+ "max_tokens": 250000,
+ "max_wall_clock_s": 1200,
+ "max_retries": 1,
+ "max_graph_writes": 0,
+ "max_tokens_is": "the harness's total for the run when it ends (input and output together), the figure on every earlier line; the transcript's sum is recorded beside it",
+ "on_reaching_a_limit": "the run stops and returns what is done, what is open and why it stopped",
+ "note": "read-only"
+}

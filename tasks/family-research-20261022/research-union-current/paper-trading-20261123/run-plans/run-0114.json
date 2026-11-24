@@ -1,0 +1,19 @@
+{
+ "run": 114,
+ "session": "session_017eY1WPrMpaE6ySGEd7D4ZL",
+ "agent": "builder",
+ "model": "claude-sonnet-5-5",
+ "task": "tickets 02 and 03: finish the open points of the reviewer's second read from Markets 9ca6a48, the failing check first; commit marked PROPOSED, push, stop for the reviewer",
+ "written_before_the_run_started": true,
+ "max_model_calls": 60,
+ "max_sub_agents": 0,
+ "max_concurrent_workers": 1,
+ "max_tool_calls": 80,
+ "max_tokens": 600000,
+ "max_wall_clock_s": 2400,
+ "max_retries": 1,
+ "max_graph_writes": 0,
+ "max_tokens_is": "the harness's total for the run when it ends (input and output together), the figure on every earlier line; the transcript's sum is recorded beside it",
+ "on_reaching_a_limit": "the run stops and returns what is done, what is open and why it stopped",
+ "note": "every graph write goes to a scratch copy of the real graph; the real graph gets none"
+}

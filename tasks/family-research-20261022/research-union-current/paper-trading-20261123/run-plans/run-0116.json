@@ -1,0 +1,19 @@
+{
+ "run": 116,
+ "session": "session_017eY1WPrMpaE6ySGEd7D4ZL",
+ "agent": "frankie-performance-auditor",
+ "model": "claude-sonnet-5-5",
+ "task": "audit runs 110, 112 and 113 (two of them ended by his stop), each its own row, against the limits told and their transcripts",
+ "written_before_the_run_started": true,
+ "max_model_calls": 20,
+ "max_sub_agents": 0,
+ "max_concurrent_workers": 1,
+ "max_tool_calls": 25,
+ "max_tokens": 150000,
+ "max_wall_clock_s": 900,
+ "max_retries": 1,
+ "max_graph_writes": 0,
+ "max_tokens_is": "the harness's total for the run when it ends (input and output together), the figure on every earlier line; the transcript's sum is recorded beside it",
+ "on_reaching_a_limit": "the run stops and returns what is done, what is open and why it stopped",
+ "note": "read-only; inspection commands only, as its own file says"
+}
