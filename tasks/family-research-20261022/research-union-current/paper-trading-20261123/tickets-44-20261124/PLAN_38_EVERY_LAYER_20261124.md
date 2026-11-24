@@ -92,3 +92,86 @@ What the read found, and what the plan now says. Parts A and B above stand as am
 6. BEFORE THE BUILDER OF A AND B STARTS: the calculation code of each layer is read for when its columns become
    known (scout runs 207 and 208), and the table is written from those places. The reviewer reads the table with
    the change.
+
+## LAID AGAINST HIS OWN WORDS AND THE DAILY SHEETS (twenty-sixth session, on his word)
+
+Greg, 2026-11-24: "Read our discussion about data layers a nd after the fact data and how it gets handled. Discussions
+in your sessions fro m today"; "You need to look at daily excel sheets to see data layers". DEC below is
+`root-redesign-20261116/ROOT_GAMEPLAN_DECISIONS.md`. Nothing here was calculated: his words, the two Excel files'
+own pages, file names of the four daily branches, and the code read by scout runs 207 and 208.
+
+### What his words already settle (not to be asked again)
+
+1. A decider is given EVERY data layer: the MBO, all the planes and ROOT's calculations, the dipole above all, the
+   market conditions. Nobody chooses what to thin (DEC:7196).
+2. Layers may be put in graph form to save room; none is dropped. The whole of every layer is written beside the
+   brief; a written decider gets all of it; a live agent's brief shows the head of every layer and says where the
+   rest is (DEC:7196 to 7209; "don't only rely on graphs if need be", DEC:7286).
+3. Everything stays in while the deciders and strategies are first run and learned from; dropping anything later is
+   his decision, from the runs. Each decision's own line records every layer its packet held and which layers the
+   decider named as its grounds (DEC:7230).
+4. After-the-fact data is a layer and it is KEPT: joined to its decision, taken or skipped, and read by the agents
+   that write the next decider, each decision its own line, nothing averaged. It is kept out of one place only: the
+   packet a decider reads at the instant it decides (DEC:7236).
+5. ROOT's after-the-fact columns, the peaks, and the columns Native wrote later than the moment go into that same
+   afterwards layer (DEC:7245). This settles the earlier line "held back until he rules" (DEC:7215).
+
+### What the sheets show
+
+- "The daily sheets" are the four `root-rows-<trade day>` branches (DEC:4317). The only Excel files are the short
+  stretch of trade day 2023-10-02 and the pinned workbook.
+- THE STORED-ROWS SHEET HAS 408 COLUMNS, AND ITS OWN `COLUMNS` PAGE MARKS EVERY ONE "Shown to Frankie: yes". Its
+  sections are the layers as he sees them: A the native tape, 16 columns (the MBO message itself); B our labels, 8;
+  C what this tick did, 23; D the book at this tick, 31; E change-of-state marks, 7; G the outside data points, 323
+  (the market conditions; column names carry x01 to x13, none carries x04). The page has no section F: its READ ME
+  says calculated columns are filled as each is built, and they are stored as column files beside the rows. So
+  part A of this plan (all 408 columns to the decider) is what the sheet has said all along. The packet gives 10.
+- The pinned workbook: dipoles 25 columns, peaks 5, crypto and ng 20, the same on all four trade days.
+  408 + 25 + 5 + 20 = 458, the figure the check of run 102 counts.
+- THE FOUR BRANCHES DO NOT HOLD THE SAME STORED TABLES (file names compared, columns not): 63 on 2023-10-02, 59 on
+  10-03, 62 on 10-17, 60 on 10-18. `trade-legs-6pm-to-8pm-legs`, `-stretches` and `-trades` are on 10-02 and 10-17
+  only; `trade-renders-quotes-test/trade-renders-index` is on 10-02 only. His word was "They should have same
+  columns on each day". Said to him; these four are tables of one stretch and one test, and whether they are made
+  for the other days is his.
+
+### What the scouts found, for the known-at table of part B (their reports: `../scout-20261124/SCOUT_RUN_207_...` and `SCOUT_RUN_208_...`)
+
+- The 16 per-tick calculation layers of `root/calcs`: every per-tick column is the value at its own tick (each
+  writer quoted). They go in the packet, placed by the tick.
+- 15 of the 16 facts tables write each line at the tick it became known, with `known_position` and
+  `known_received_time_ns` on the line. They go in the packet, placed by that time, the tape position breaking a
+  tie.
+- The 8 "open at the end" tables are written after the last tick. Afterwards layer.
+- The 20-second line, the 60-second line and the information measure: each row is a read at its own moment. Packet.
+- Columns set at a later tick than their row's start, each named in scout 208's report: the crypto and ng turns
+  (`what_became_of_it`, `program_trade`), the program's trades (the end columns), the tape trades (the three
+  program columns), the humps (ended, furthest, how it ended), `research-moves` (second step, the end columns, the
+  level columns), `research-humps` (ended, furthest, the next columns), `dipoles-pinned`, `leg-renders-index` (the
+  end columns), the three `trade-legs` tables. By plan point 2: placed at the time they became known where the row
+  carries it and the code shows it; otherwise the afterwards layer.
+- NOT REACHED by either scout: `research-trace-first-steps`, `trade-renders-index`; read in part only:
+  `book-pictures`, `vendor-restatements`, `dipoles-pinned`, `leg-renders-index`, the `trade-legs` tables. No
+  writer of `peak-lives` is in `root/` (the layer sits in a folder named `desktop`). None of these is placed until
+  its code is read.
+- THE TWO SCOUTS DISAGREE ON `root/dipole_peaks.py`, AND THE CODE AS READ BY THE MAIN SESSION BACKS SCOUT 208
+  (lines 165 to 185, 204, 223 to 233). `dipoles()` keeps one record for each of Native's dipoles and every later
+  line of Native's updates that same record, the closing line's polarity and magnitude included; it finishes
+  before `follow()` walks the tape. So the line placed at the tick a dipole was RECOGNIZED, and the per-tick
+  counts `native_dipoles_known_plus` and `native_dipoles_known_minus` from that tick on, can carry a polarity
+  Native wrote only later. NOT CHECKED ON THE DATA: whether Native's recognized line already carries the same
+  polarity is not known from the code. Until it is shown, by point 5 above those columns go to the afterwards
+  layer, not the packet. If it is so in the data it is also a fault in a stored ROOT output (its own rule: no
+  value on a row uses anything that arrived after that row's tick): that goes to the reviewer and to Greg before
+  anything is rebuilt.
+
+### What changes in this plan
+
+a. The packet names its layers the way the sheet does (sections A to E and G, then each calculation, then the
+   lines), so a decider's brief and his sheet read the same.
+b. Native's later-written columns need no ruling: afterwards layer (point 5).
+c. `dipole-peaks`: the polarity columns as above.
+d. THE 20 COLUMNS OF THE CRYPTO AND NG PROGRAM'S OWN TRADES are kept out of the packet AND out of the afterwards
+   layer by this plan, on his rule that they are observation and verification only. That is Claude's reading
+   where two of his rules meet (no layer dropped; the program's trades are never an input); it is his to correct.
+e. When part D is read: the afterwards record must still join to its decision by the decision's id from the
+   learning side, now that the file is outside the decider's folder.
