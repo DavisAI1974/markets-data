@@ -6833,3 +6833,13 @@ figure. To bring back when the work reaches what moves the market and price-curv
   the two can be read against each other trade by trade. STILL OPEN, his to settle, built as said under item 17:
   what happens to a trade that never shows a profit (held to the stop, no loss stop); whether a rule may open
   again while it holds; a one-tick profit given back by one tick.
+- THE FIRST GIVE-BACK RUN, ITS FIRST 70 SECONDS (paper run `ea4c1d2e7e0c43168c150c8b2aef3960`): at pace, 161
+  opening fills, 38 give-back closes each filled, 123 trades still holding a contract (97 long, 26 short). The
+  first closes had a highest open profit of 0.001 and closed at 0.000.
+- TRIANGLES OFF, AND THE SAME 20% FOR A TRADE NEVER IN PROFIT (Greg, 2026-11-24, with a screenshot of the graph
+  drawn whole): "leave triangles off. They make the screen too messy. This looks better without them. And make
+  same 20% for trades that never get positive". Built and pushed, not run (platform, items 17 and 24): the fill
+  marks are off the graph, to be deployed between runs and not during one; a third plan file adds
+  `"also_before_profit": true`, under which the fifth is taken off a trade's best open result whatever its sign.
+  SAID TO HIM, from the arithmetic: a trade opens down by the spread, a fifth of a spread of 0.001 to 0.007 is
+  less than one tick, so the first tick against a trade that has not made back its spread closes it.
