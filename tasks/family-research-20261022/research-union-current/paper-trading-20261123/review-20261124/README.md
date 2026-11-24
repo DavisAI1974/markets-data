@@ -174,3 +174,91 @@ status, 5 fill shapes) and 4 for rows that are never written.
 
 `save_report.py` here is the script that took each report out of its agent's transcript, word for word, and read
 the token figures. Its paths are those of the session's machine.
+
+# Codex's open numbers, 1 to 19, reviewed and fixed on Greg's word (runs 60 to 63)
+
+Greg, 2026-11-24: "Do what you can to finish what he didn't get done", then "Fix the issues in the numbered
+problems as they come back". Four reviewers (the reviewer agent, `claude-opus-5-5`) read Codex's open numbers on
+the branch, reading only. Each fix below is in draft on the platform branch; nothing was run there. The source of
+the Databento client 0.81.0, of `databento-dbn` 0.62.0 and of NautilusTrader 1.231.0 was read to settle what the
+reports marked as depending on them.
+
+## Run 62, items 6 and 7 (`run62-item6-7-weekly-book-raw-recording.md`). Platform commits `2de679a` (6), `34797ef` (7).
+
+| Finding | What was done |
+| --- | --- |
+| 1 [6]. A book clear after the Sunday start-up empties all three books silently | Not changed. Asked of Greg whether it should stop the run. |
+| 2 [6]. A size raise keeps its place in the matcher; ROOT sends it to the back | Fixed. Confirmed in NautilusTrader's `orderbook/level.rs`: an update replaces the order where it stands. Can change a paper fill. |
+| 3 [6]. A paper order's queue position is an estimate | Not changed: NautilusTrader's own queue model. |
+| 4 [6]. Nothing compares the books on a live or captured stream | Fixed in part: the mirror is checked against ROOT's book at every UTC date change. The rule venues' own books are still compared with nothing. |
+| 5 [6]. A mid-week live start asks for the week from Sunday | Not changed. The question put to Greg and Codex under item 1. |
+| 6 [6]. No holiday calendar; a week must open on the UTC Sunday | Not changed. |
+| 7 [7]. The receive time is the wall clock, read after decoding and after the previous write | Not changed (a new stored column). |
+| 8 [7]. The delivery that crosses the clock limit is dropped | Fixed: it is stored before the stop. |
+| 9, 10, 12 [7]. What the client hands on; replays after a drop; arrival order | Not changed. |
+| 11 [7]. A hung checkpoint push has no limit | Fixed: 55 seconds on the minute-by-minute push; none on the final publish. The span between checkpoints is Greg's deferred storage decision. |
+
+## Run 61, items 2 and 17 (`run61-item2-17-strategies-against-the-plan.md`). Platform commits `a357451`, `4b78e40` (2), `469ab84` (17).
+
+| Finding | What was done |
+| --- | --- |
+| 1. An empty window ends a CX trade as "not scored" | Not changed: the strategy text ends an observation at "a detected gap". The wording of the mark is under item 18. |
+| 2. An interrupted CX entry rule never opens again | CHANGED, THEN TAKEN BACK THE SAME DAY (Claude's slip). The change let the rule open again, on the strategy text "Resume with fresh prints". Codex's check `test_indeterminate_assessments_never_issue_a_strategy_close_or_reopen` requires the opposite, and was read only after the push. The engine is as Codex left it. The check and the text do not agree; said under item 2. |
+| 3. An interruption sends no order; contracts held to the stop | Not changed: Codex built it so after the first note on this. |
+| 4. An interruption leaves a resting order working | Fixed: it is cancelled, marked with the interruption's reason. |
+| 5. CL closes at the trade day's end fall in the 5 pm to 6 pm hour | Not changed: Greg's decision of the same day is that a run crossing the hour is left to run. |
+| 6, 7, 8, 12. A crossing limit cancelled unfilled; orders priced before the print's own fills; a close not retried; one engine for all of a rule's trades | Not changed; no small fix. |
+| 9. The event budget can skip a close | Not changed. |
+| 10. The earlier 30-rule plan can still be selected | Named as superseded in the plan folder's README. Deleting the file is Greg's word. |
+| 11. CL01 to CL15 get no mark when a side of the book is empty | Not changed (also run 63, finding 14). |
+| 13, 14. A CL confirmation lost at an unsided print; CL05 and unsided prints | Not changed. |
+
+## Run 60, items 1 and 9 (`run60-item1-9-live-run-path.md`). Platform commits `95e2de3` (1), `7cab0e4` (9).
+
+| Finding | What was done |
+| --- | --- |
+| 1. The recorder asks for the week from Sunday on every connection | Not changed. THE question before a live run: how far back Databento's live service replays. |
+| 2, 3. The contract file waits on the week's first MBO and on two "replay completed" messages | Fixed: it is written once both the instrument and its definition are known. |
+| 4. The definition header may not build | No change needed: read in `databento_dbn`'s own type file, the four arguments are optional. |
+| 5. The definition file is written uncompressed | Fixed. Confirmed in NautilusTrader's `adapters/databento/src/loader.rs`: every file is opened with `Decoder::from_zstd_file`. Uncompressed, every live run would have stopped where the plan is bound. |
+| 6. The deploy key is not checked | Fixed: the live and record-only workflows stop at once without it. |
+| 7. Nothing checks that the trade day overlaps the run | Fixed: refused at the start, with a phone notice. |
+| 8. No session until the preflight has its messages | Not changed: item 11's gate. |
+| 9. One failed checkpoint push ends the run | Not changed. |
+| 10. A new capture branch starts from the checkout's commit | Fixed: it starts with no parent. |
+| 11. Each order waits for its own push | Not changed: under item 25. |
+| 12. The new mirror check can end a run | Stands: a difference between the two books is a fault. |
+| 13. The cutoff copy attaches the capture by an address that may not be honoured | Fixed: the connection is opened by address. |
+| 14. One message budget, counted two ways | Not changed. Said under item 1. |
+| 15. Heartbeats may not reset the silence timer | No change needed: read in the client's `protocol.py`, every record is handed on, heartbeats included. |
+| 16. Settings that depend on the account; the contract roll | Not changed. Said under item 1. |
+| 17. The launcher ends silently when no definition arrives | Fixed: the phone is told. |
+| 18 [9]. The two windows are kept by the platform's own code | Not changed. Put to Greg under item 9. |
+| 19 to 21 [9]. A one-sided book resets the quote runs; quotes read from the mirror; the trade-day gate written out again | Not changed. Said under item 9. |
+| 22. The trade-day close can fill in the 5 pm to 6 pm hour | Not changed: Greg's decision of the same day. |
+| 23. The fee model takes its fees from the contract | Fixed: a live definition that carries a fee is refused. |
+
+## Run 63, items 12, 16 and 18 (`run63-item12-16-18-replay-not-scored.md`). Platform commits `d3531c4` (12), `3c47bda` (18), `f45ea79` (16).
+
+| Finding | What was done |
+| --- | --- |
+| 1 [12]. A clock stop can leave the live run without its last frame's decisions | Not changed: it needs a new receipt field and a matching step in the replay. |
+| 2 [12]. A clock stop inside one decision can skip some of its orders | Fixed: only the event budget cuts a decision's orders short. |
+| 3 [12]. A replay's constants never match a run stopped before 5 pm | Not changed. |
+| 4 [12]. A replay can run on smaller budgets | Fixed: it runs on the live run's own. |
+| 5 [12]. The comparison reports only the first difference | Fixed: each on its own line. |
+| 6 [12]. A purchased-tape replay is paced at tape speed | Not changed. Put to Greg under item 12. |
+| 7, 8, 9 [12]. The comparison's field list; reasons compared as text; the newest checkpoint restored | Not changed. |
+| 10 [12]. The replay's phone notice; Python in the comparison workflow | Fixed. |
+| 11, 12 [18]. Two "not scored" rows without `trade_data` false | Fixed. |
+| 13 [18]. An empty window reported as the feed lacking something | Not changed: Codex's check asserts the opening words of the mark. |
+| 14 [18]. CL01 to CL15 unmarked when a side of the book is empty | Not changed. |
+| 15, 16 [18]. No row for a dropped CL entry; the wording of an unpriced order | Not changed. |
+| 17 [18]. The page shows only the reason of a not-scored trade | Fixed on the page. |
+
+## Run 64: the look-back for the Pushover keys (`run64-look-back-for-the-pushover-keys.md`)
+
+Greg: "They are in the chats. I pasted them in there for you." An agent read every message he typed in the four
+most recent sessions and one short one, back to each one's first event, 90 pages. No Pushover value is in any of
+them. The keys pasted in those chats are the tastytrade sandbox ones. The report names messages by their IDs and
+gives no value.

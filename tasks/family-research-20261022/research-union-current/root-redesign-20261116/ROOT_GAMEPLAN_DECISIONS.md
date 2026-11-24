@@ -6565,3 +6565,34 @@ figure. To bring back when the work reaches what moves the market and price-curv
   at or after 5 pm and its CX trades are interrupted, and the engine decides nothing in the next trade day; the
   recorder and the books go on. (His first reading of the question, "The break is 5 pm not 5 am", came from
   Claude's "12:15 pm", which he took for 12:15 at night; said to him.)
+- "FIX THE ISSUES IN THE NUMBERED PROBLEMS AS THEY COME BACK" (Greg, 2026-11-24). Done for the four reviews of
+  Codex's open numbers, each fixed as its report landed (paper-trading-platform, Codex's branch, to `f45ea79`;
+  every change in draft, nothing run or parsed). The reports are in `paper-trading-20261123/review-20261124/`,
+  word for word, with a table of what was done about every finding. By number: item 1, seven changes (`95e2de3`);
+  item 2, one kept and one taken back (`a357451`, `4b78e40`); item 6, two (`2de679a`); item 7, two (`34797ef`);
+  item 9, none, one matter put to him (`7cab0e4`); item 12, five (`d3531c4`); item 16, none (`f45ea79`); item 17,
+  one in the plan folder's README (`469ab84`); item 18, three (`3c47bda`).
+- THE FINDING THAT WOULD HAVE STOPPED EVERY LIVE RUN (item 1): the live contract file was written uncompressed,
+  and NautilusTrader's loader opens every file as zstd (read in its `loader.rs`). Every live run would have ended
+  at the step that binds the plan. Fixed.
+- THE QUESTION BEFORE A LIVE RUN, NOT ANSWERED BY ANY CODE (items 1 and 6): on every connection the recorder asks
+  Databento for the week's MBO from Sunday at midnight UTC, and the book can be seated no other way. How far back
+  Databento's live service replays could not be read from this session. If it is 24 hours, a live run can start
+  only in the first 24 hours of the week and item 6's full live week cannot be recorded as built.
+- A SLIP (Claude), item 2: a change that let a CX entry rule open again after an interruption was pushed
+  (`a357451`) on the strength of the strategy text ("Resume with fresh prints") and taken back within the hour
+  (`4b78e40`): Codex's check `test_indeterminate_assessments_never_issue_a_strategy_close_or_reopen` requires that
+  such a rule neither closes nor opens again, and Claude read the check only after the push. The engine is as
+  Codex left it. From here every change to the decision engine is read against the checks before it is pushed.
+- PUT TO GREG, NOT ANSWERED: whether a book clear that arrives mid-week should stop the run (item 6); whether the
+  platform's own keeping of the 60-second and 20-second windows stands as the crypto formula, since it calls
+  `crypto_ng.tick.line` and not `reads` (item 9); whether a replay of the purchased tape should have a switch to
+  run unpaced, since at tape speed it covers only about 6 pm to 11:45 pm Eastern (item 12).
+- THE LOOK-BACK FOR THE PUSHOVER KEYS, RUN 64 (Greg: "They are in the chats. I pasted them in there for you. Might
+  have even been last one"). An agent read every message he typed in the four most recent sessions and one short
+  one, to each one's first event. No Pushover value is in any of them; the word first appears in his paste of
+  Codex's task on 2026-11-24 ("The Pushover secret names are configured"). The keys pasted in those chats are the
+  tastytrade sandbox ones. So the two values are not in a chat Claude can read; the source is his Pushover account.
+- TOKENS: the four reviewers (runs 60 to 63) reported 732,244 in all and used 21,424,187 over every call, the
+  advisor's 790,341 included. The look-back (run 64) reported 303,912 and used 25,873,032 over 105 calls, the
+  advisor's 479,585 included: it read 90 pages of transcript. Each run's figures are in `agent-runs.jsonl`.
