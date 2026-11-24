@@ -1,4 +1,4 @@
-# Builder run 129 (Sonnet): ticket 19, run_record, and then the points of the first read
+# Builder run 129 (Sonnet): ticket 19, run_record, and then the points of the first and the second read
 
 Kept word for word as the agent returned it, 2026-11-24 (twenty-fifth session). Nothing below this line is the main session's.
 
@@ -124,3 +124,69 @@ EXPECTATIONS CHANGED:
 NOT DONE: I did not read the reviewer's sections 2 and 4. The instructions you gave were enough, so I skipped them to save calls.
 
 TOOL CALLS: about 13 in this follow-up (5 in the first pass), so about 18 for the whole run. No sub-agents, engine, tape or AWS.
+
+---
+
+## The next hand-back
+
+All five points are built, test first, and pushed. I did not call the advisor tool.
+
+COMMIT: 5baaf03, the merge of FETCH_HEAD after my own commit; the push went through (781f0ac..5baaf03).
+PYTEST after the last merge: 26 passed, 0 failed. I wrote the tests first and ran them red (15 failed, 11 passed) before writing any code.
+Clean-up: /tmp/run129 is deleted. `git -C /home/user/markets-data status --short` is empty.
+
+THE FIVE (file:line, then the check that holds it; run_record.py = tools/kgraph/run_record.py, test file = tests/agent_program/test_run_record.py):
+1. Agent-id tie:
+   - Code: `figures_of` (the `agentId` set, line 135) and `_tie` (line 159). `_tie` refuses lines whose agentId is not the given id, a brief naming another run, and a different id already recorded in the run's line, plan or sidecar. `append` and `keep` take a required `--agent-id` and write `agent_id`. The tie note is "the brief names no run: tied by the agent id given at launch". The docstring states the limit.
+   - Checks: test_the_agent_id_must_be_the_transcripts_own (run 117 accepted with its real id, refused with run 116's id), test_a_brief_that_names_no_run_is_tied_by_the_agent_id_alone (run 107's live transcript kept on a scratch folder), test_trap_a_long_sentence_in_front_of_run_119s_brief_is_tied_only_by_the_agent_id, and test_trap_a_run_whose_line_holds_another_agent_id_refuses_this_one.
+   - The long-sentence check, with run 136's plan:
+     - Run 119's transcript given `--run 136` and its real id is accepted while nothing on record names run 136's agent id. That is the stated limit.
+     - It is refused ("another agent id") once run 136's plan carries a different `agent_id`.
+2. `missing` (`cmd_missing`, line 337):
+   - A complete line that differs reads "lacks: nothing | differs: <fields>". The counts line gained the three "complete ..." figures (line 426).
+   - UNNAMED rows (line 357) give file name and agentId. DUPLICATE rows name both files and take neither.
+   - Checks: test_missing_complete_line_that_differs_is_not_read_as_lacking_nothing and test_missing_names_a_live_transcript_that_names_no_run_and_two_that_name_one.
+3. `report`: the added message is the agent's last text message before its last hand-back, not the longest (`text_before_hb` at line 117, used at line 253).
+   - Check: test_report_adds_the_message_run_124_hand_back_points_at (line 182). The test says that in run 124 the last text message and the longest are the same 11,210-character one. It asserts the heading and the message's opening 60 characters, read by hand.
+4. Tests:
+   - The always-true assertion in the no-line check is now the exact count (test_missing_names_runs_with_a_plan_or_kept_transcript_and_no_line, line 293), derived in the test from the plan, kept and record files.
+   - test_missing_with_live_counts_on_the_record_as_it_was_at_7de89a4 (line 308) builds the record at 7de89a4 and unzips its kept transcripts into a scratch live folder. It asserts the three live counts, derived independently.
+   - The long-sentence trap is the one above (line 474).
+5. The separated section's header now says "a real transcript or a real line of the record with exactly the change named in the case's own comment". Each trap carries its change in a comment, and the third trap's comment names a record line.
+
+THE EIGHT PUT-BACK CHANGES (checks that failed with each):
+- B1, count every line:
+  - Failed: test_figures_run_117..., test_append_refuses_a_run_that_has_a_line_then_writes_a_correction, test_trap_a_line_whose_figures_differ...
+  - 3 failed.
+- B2, count the hand-back as a tool call:
+  - Failed: test_figures_run_117..., test_figures_run_116, test_append_refuses_a_run_that_has_a_line_then_writes_a_correction.
+  - 3 failed.
+- B3, drop the brief-names-another-run refusal:
+  - Failed: test_append_refuses_another_runs_transcript_empty_outcome_and_bad_role, test_keep_writes_the_same_bytes_as_the_real_kept_file.
+  - 2 failed. The short-sentence trap now still passes under B3, because the two-numbers refusal is a separate rule.
+- B4, drop the sha comparison in `keep`:
+  - Failed: test_keep_never_writes_over_a_kept_gz_that_has_no_sidecar.
+  - 1 failed.
+- N1, first run number anywhere (two edits):
+  - Failed: test_a_brief_that_names_no_run_is_tied_by_the_agent_id_alone, test_missing_names_a_live_transcript_that_names_no_run_and_two_that_name_one, test_trap_a_sentence_naming_another_run_in_front_of_the_brief, test_trap_a_long_sentence_in_front_of_run_119s_brief....
+  - 4 failed.
+- N2, `report` keeps only the last hand-back:
+  - Failed: test_report_keeps_both_hand_backs_of_run_121, test_trap_a_real_hand_back_followed_by_a_short_one_drops_nothing.
+  - 2 failed.
+- N3, `missing` does not name a differing figure:
+  - Failed: test_missing_complete_line_that_differs_is_not_read_as_lacking_nothing, test_trap_a_line_whose_figures_differ....
+  - 2 failed.
+- New, agent-id comparison dropped:
+  - Failed: test_the_agent_id_must_be_the_transcripts_own.
+  - 1 failed.
+
+`missing --live /root/.claude/projects/-home-user/3356516d-d71a-5e13-907d-ff8d8ffcb6d4/subagents` on the real record as it stands:
+- COUNTS: "runs 139; lacking exact model 84; lacking input tokens 106; lacking output tokens 106; lacking wall clock 30; lacking outcome 0; with a kept transcript 18; lacking something 106, of which a kept transcript could fill 0 and none kept 106; complete and agreeing with a kept or live transcript: 17; complete, a figure differs: 14; complete, no transcript to compare: 2; plan or kept transcript with no line 4; live transcripts 35 (naming no single run 2), live transcripts with no line 4, live transcripts not kept 17; figures that differ 21".
+- UNNAMED: agent-ae63f020e27f3aa06.jsonl (agentId ae63f020e27f3aa06) and agent-a374a5827c8bc7cc6.jsonl (agentId a374a5827c8bc7cc6), runs 108 and 107.
+- No DUPLICATE rows.
+
+EXPECTATIONS CHANGED:
+- The short-sentence trap now expects "names two different runs" in place of "names no run". Two numbers in the opening is now kept separate from no number, because with no number the agent id alone ties the transcript.
+- Every `append` and `keep` call in the tests now carries `--agent-id`, read by hand from the transcript's first line.
+
+TOOL CALLS: 5 in the first pass, about 13 in the second and 7 in this one, so about 25 for the whole run. No sub-agents, engine, tape or AWS.
