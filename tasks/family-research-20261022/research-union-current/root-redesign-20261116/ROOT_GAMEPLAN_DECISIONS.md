@@ -7949,3 +7949,21 @@ figure. To bring back when the work reaches what moves the market and price-curv
   (318 seconds), at Markets `20c13a1`; before, all 79 defend checks were skipped and the 10 outcome checks ended
   in a refusal. SO G01, G03 AND G04 ARE NO LONGER HELD: the reviewer's read of G01 and the builder for G03 are
   sent out; G04 follows G03 on the same files.
+- THE SESSION'S ENVIRONMENT NOW BRINGS THE PLATFORM WITH IT; A POCOCK SKILL RUN FROM HIS REPOSITORY (Greg,
+  2026-11-24, twenty-sixth session: "You can update your own environment, fix the git issues in your system";
+  "You can update your own environment. Do i need to be on the web version? Amd run a matt skill. Use his repo
+  to run ot"). DONE: (1) the environment "Markets" (his personal one) has a setup script, approved by him at the
+  prompt: at the start of each new session it clones paper-trading-platform READ-ONLY beside Markets and puts it
+  at `ccr-0ac78691-8zapbb`; it was run here twice from an empty folder and worked (32 rule files). It is unproven
+  until a fresh session starts on that environment. It gives no push access: a session's repositories with push
+  access are chosen when the session is started. (2) markets-data's whole history was put back (721 commits; it
+  had been made shallow by a depth-limited fetch inside two programs, which builder run 195 is taking out).
+  (3) THE SKILL RUN: `to-questionnaire`, from `mattpocock/skills` (`skills/productivity/to-questionnaire/SKILL.md`),
+  followed as written: one sheet for the person who holds what the asker lacks, the most important first, one
+  idea to a question, an answer line under each. THE SHEET: `paper-trading-20261123/to-questionnaire-what-only-
+  greg-can-say.md`, 17 questions, the first five on the 30 minute test. Nothing in it is done until he answers.
+- A FAULT OF THIS SESSION, said to him: one line of the run record (run 179, stopped before its first reply) was
+  written with an empty model; it stopped the graph's loader and 26 checks of ticket 25. It was put right IN
+  PLACE (the model its plan names, with a note saying so), the one line of this session that was changed and not
+  added to. Whether that stands is question 9 of the sheet. The recorder is being changed so it cannot write an
+  empty model again (builder run 194).
