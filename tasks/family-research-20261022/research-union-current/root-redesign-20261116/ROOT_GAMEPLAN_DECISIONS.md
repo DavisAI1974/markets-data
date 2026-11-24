@@ -6688,3 +6688,16 @@ figure. To bring back when the work reaches what moves the market and price-curv
   Claude's GitHub connection acts as his account, so Claude started it on his word: Actions run 45356283296,
   started 2026-11-24 08:27:32 UTC. He sent the two Pushover values again as screenshots; Claude wrote them nowhere:
   they are already in GitHub Actions, where the run reads them.
+- THE FIRST RUN REFUSED ITSELF (Actions run 45356283296, read from its log): every step before the runner passed,
+  the runner's code loaded, and it stopped in its first second with "Render must use an HTTPS URL". The log shows
+  `PAPER_RELAY_URL` and `PAPER_RELAY_TOKEN` empty in GitHub Actions and both Pushover secrets set. No session,
+  journal or order was made. Built so a test does not wait on the phone page (platform `166ab37`, item 24): a box
+  `phone_page` on the stored-tape workflow, checked by default; unchecked, the run goes without the page and the
+  journal goes to markets-data alone.
+- A 30-MINUTE TEST (Greg, 2026-11-24): "Test this on like 30 minutes of one of the 4 days just to make sure
+  everything is working". Taken as his go for a short run of the stored tape with the phone page off. Built for it
+  (platform `4a8c0b1`, item 24): a box `stop_after_minutes`; the runner stops itself that many minutes after the
+  first paced record, by the manual-stop path. Started by Claude on his word, told to him as it started: trade day
+  2023-10-02, tape `purchased-archive`, the same plan, message budget 825,874, event budget 825,874 (so that
+  neither cuts the run before the 30 minutes; Claude's choice), `stop_after_minutes` 30, `phone_page` off. No
+  tokens, one GitHub runner.
