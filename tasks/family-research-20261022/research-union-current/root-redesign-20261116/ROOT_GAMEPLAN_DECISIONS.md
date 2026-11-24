@@ -7193,3 +7193,37 @@ figure. To bring back when the work reaches what moves the market and price-curv
   for a written decider and as text within the token budget for a live agent, the two lines first (Markets, the
   next builder). Read from what already exists; nothing computed anew; no mid price; nothing from after the
   signal; nothing changes when no decider is plugged in.
+- NO DATA LAYER IS DROPPED (Greg, 2026-11-24, confirming the reading of "all of data depth"): "Yes! And mbo and all
+  of our planes data. We don't know what is the unknown piece that puts the puzzle together and we can't make that
+  determination. Especially in testing whe we are not only testing tbe agents but the additional strategies we
+  come up with that are novel and proprietary. The thinner the data the less effective probably. If it saves room
+  by graphing the data layers then do it but do not drop data layesrs. We have the root calcs that will be applied
+  but dipole is huge in our decision making. Look how many of our initial strategies are dipole related? And mbo
+  and the market conditions are massively important too". A STANDING RULE OF THE BUILD, HIS: a decider is given
+  every data layer: the MBO data, all of the planes and ROOT's calculations, the dipole above all, and the market
+  conditions. Layers may be put in graph form to save room; none is left out, and nobody chooses what to thin.
+  TWO THINGS THIS CAUGHT (Claude): a builder had left the rules' own working state out of what a decider is
+  given, by its own call; and the packet's brief said that what does not fit the token budget is counted and not
+  shown, which is dropping. Both changed: only what cannot be written down at all is left out, each such thing
+  named; the whole of every layer is always written beside the brief, a written decider gets all of it, and a
+  live agent's brief shows the head of every layer and says where the rest is. Being built (platform, agent run
+  94; Markets, agent run 93): the MBO messages themselves in a declared window up to the signal (the dipole's own
+  60 seconds unless widened), the book with every order in queue at every level, every piece of state the engine
+  and the rules hold, the market conditions the run can state at that tick, and ROOT's stored planes for the
+  trade day as known by the signal's moment. ONE LIMIT, said to him: what could only be known after the moment
+  is not a layer a decider may have. The columns that hold what happened after an event never go in; the columns
+  Native wrote later than the moment stay held back until he rules; each is named in every packet with its
+  reason.
+- THE BOOK REACHES THE QUESTION (agent run 91, Sonnet, 49,190 tokens; platform `227f4dd`): one line in Codex's
+  `feed.py` stores a handle on the weekly book; the depth goes into a question only when the book's best bid and
+  best ask equal the engine's at that tick, each side compared by itself. Before it, agent run 90 (Sonnet,
+  85,396 tokens; platform `a646619`) put every value the engine's inputs hold at the tick into the question by
+  its own name. The session's disk allowance filled during run 90 (41 GB of old test scratch folders); the main
+  session freed it, checked the files were whole and committed and pushed them. None of it has been run on tape.
+- THE CONTEXT BUILDER CHANGED AND ITS LIMIT (agent run 80, Sonnet, 172,629 tokens; Markets `a5b0242`, `53d46c9`):
+  a share of the budget for each section, the rules restated in most documents first, a date on every line, the
+  task's own words used to fill the budget. At 6,000 tokens the session-start text now holds the trade-day rule;
+  it still does not hold where the keys are named or the phone-page rule (there are 390 rule claims). So a
+  session does not lean on one text: it asks the graph by task as it goes. The proposer's checks are finished on
+  real records and the ready check on `platform_exit.md` reports ready on each of its 18 entries; it starts
+  nothing.
