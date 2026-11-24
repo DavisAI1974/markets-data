@@ -74,3 +74,19 @@ None of these holds work that can be built now.
 ### The auditor's row for each run made by a command with no model, and the auditor agent called once at a close on the rows that differ (the retro, `RETRO_20261124_SESSION26.md`, item 2)?
 
 >
+
+## ADDED AT THE CLOSE OF THE TWENTY-SIXTH SESSION (Greg: "Put the questions to next session"): three from the data layer read
+
+The detail is at the foot of `tickets-44-20261124/PLAN_38_EVERY_LAYER_20261124.md`. None holds a builder.
+
+### The 20 columns of the crypto and ng program's own trades: kept out of BOTH the packet and the afterwards layer (your "observation and verification only"), or kept in the afterwards layer for learning?
+
+>
+
+### Three `trade-legs-6pm-to-8pm` tables are on the 10-02 and 10-17 daily branches only, and one test index on 10-02 only ("They should have same columns on each day"): make them for the other trade days, or leave them as one-off tables that no decider is given?
+
+>
+
+### `root/dipole_peaks.py` may put a polarity Native wrote only on its later closing line onto the earlier recognized line and into the per-tick counts (read in the code; NOT checked on the data): may a reviewer check it against Native's stored record for the four trade days?
+
+>
