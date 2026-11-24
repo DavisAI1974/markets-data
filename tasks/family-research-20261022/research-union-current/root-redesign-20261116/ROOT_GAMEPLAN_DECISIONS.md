@@ -6932,3 +6932,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   at 7:00:00 pm Eastern against a market last traded at 2.918: the stop closing every open trade at once into a
   thin book. Those closes are administrative, not trade data; the line no longer draws them (platform `189671b`,
   not deployed). The run is not scored, on his word.
+- THE PAGE DEPLOYED AND A RUN TO SEE IT (Greg, 2026-11-24): "Go", then "Make the changes live", then "Go". The page
+  was deployed on platform `189671b` (live 09:55 UTC): no fill marks, the frame with its scales, every trade on
+  the market line, the stop's own closes left off our line. A deploy empties the page. Then, on his go, told to
+  him first: a run of the give-back plan on the tape from 6:30 pm to 7:00 pm Eastern of trade day 2023-10-02,
+  `stop_after_minutes` `30+30`, the page on, both budgets 825,874, no tokens, one runner. It is the first run on
+  the runner's changes for a run of hours (pushes spaced ten seconds apart) and for a restarted page. Not scored.
