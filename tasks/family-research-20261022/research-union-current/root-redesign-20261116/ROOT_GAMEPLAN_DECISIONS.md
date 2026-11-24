@@ -6273,3 +6273,25 @@ figure. To bring back when the work reaches what moves the market and price-curv
   and stays in reach. The word "replace" is not used for it again.
   THE REVIEWER was stopped again by his message (a message sent while agents run stops them); restarted as run 35
   from the notes run 34 left.
+- NOTHING IS REPLACED, BUILT (Markets `3275e24`): the session start now drops no claim. A claim with a later claim
+  set over it, or one that belongs to the tastytrade platform, is marked with what stands against it and placed
+  after the claims of its kind that have nothing against them, so under a budget it is the first to fall and a
+  larger budget shows it. Every claim is in exactly one of: shown, folded into a line that cites it, under the
+  budget, not reached by the task.
+- THE PLATFORM RULE REWORKED from the reviewer's eight findings (run 34's notes; Markets `3fcac27`, `ab29e50`). It
+  had holes and it marked too much and too little by a word list. Now: (1) a claim written as a later wording of a
+  marked claim is refused like one that rests on it; (2) the paper runs' own 485 orders, 13 fills and 13 files are
+  marked, so nothing new can rest on a sandbox record; (3) every path that writes a claim marks, and the check
+  command lists anything left unmarked; (4) a mark is lifted only on Greg's own words, which are kept on the line;
+  (5) nothing Greg said is ever marked, and a standing rule is marked only where the running list itself parks its
+  line; (6) a mark made from a word alone is provisional, and a model reads each doubtful claim against a written
+  rubric and confirms or lifts it. THE EVALUATOR'S READ (run 36, Sonnet, 87,223 tokens; its answer kept as
+  `graph/evaluations/run-0036-tastytrade-platform.json`): of about 730 claims it marked 123 (68 that the word list
+  had marked and 55 it had missed) and lifted 65 provisional marks, each with its reason. MARKED NOW: 182 claims
+  (123 by the evaluator, 58 by the running list's own parked lines, 1 still provisional) and the 511 records of the
+  sandbox runs. Nothing was removed.
+- THE RUNNING LIST was added to (paper-trading-platform `bd5e51b`, `tasty/RUNNING_LIST.md` only): C24's links and
+  C25 done; C26 built; C27 the list and the receipt disagree on the first run's code; C28 no new claim tied to a
+  tasty platform issue; C29 nothing gets replaced; C30 no rule of the 32 is tied to a finding.
+- A SLIP IN A COMMIT MESSAGE (Claude): the message of Markets `7f071b1` lost one word, because a backquoted word in
+  the shell ran a program that only printed its help. Nothing else ran and no file was changed by it.
