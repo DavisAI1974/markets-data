@@ -72,3 +72,5 @@ State at the close of the twenty-fifth session (2026-11-24): ONE ticket is marke
 Added at the close of the twenty-fifth session, on his word: ticket 47 (an operator for the natural gas market). The tickets are 48 with it.
 
 State in the twenty-sixth session (2026-11-24): THREE tickets are marked done: 03b, 21 and 31. The work is out by group, a suite of the four kinds of agent on each; `GROUPS.md` holds the order his word set (the rest of the list, then the 30 minute test without the operator coefficients, then ticket 47).
+
+State at the close of the twenty-sixth session (2026-11-24): THREE tickets are marked done (03b, 21, 31). No further box was marked: the auditor's rows for the session's last runs are owed and he said no more agents were to be started. Each worked ticket's own file ends with its state at this close; `GROUPS.md` ends with where each group stands and what comes next. The next start page is `../../NEXT_SESSION_START_20261124AD.md`.

@@ -53,3 +53,22 @@ after we do a 30 min test without it". So: (1) every group a builder may work on
 minute test of the agents without the operator coefficients, on his go, told with its limits; (3) G15, ticket 47;
 (4) the same test with the coefficients, set beside the first. A send-back is a new run with its own plan (the
 decisions file, twenty-sixth session).
+
+## Where each group stood at the close of the twenty-sixth session (2026-11-24)
+
+Each worked ticket's own file ends with its state at this close. No box was marked after tickets 21 and 31: the
+auditor's rows for the last runs are owed (start page AD, its first job), and he said no more agents were to be
+started in the session.
+
+| Group | Where it stands | Next |
+|---|---|---|
+| G01 (01, 02, 03, 11) | 02 and 03 read a fifth time: 79 checks run clean; three small points for the builder. 01 not started. | The three points; the proposer names commit `b134dc4` on eight grounds of three claim files; then ticket 01's four steps (they write into the real graph). |
+| G03 (04) | The six points of reviewer run 146 are on GitHub (Markets `17869d4`, `e9e052f`). See `04.md` for the last run. | One reviewer read against the done-line. Then G04 (05, 06, 09), the same chain of files. |
+| G05 (25, 26, 37) | 25: points 1 and 2 on GitHub; one check fails because of the record; points 3 and 4 not started. 37: the done-line is not met; needs a builder. | Ticket 19's recorder fix first (it clears 25's failing check); then 25's points 3 and 4; then 37 from scout 197. |
+| G06 (20, 32) | Not started (waits on 25). | |
+| G07 (38, 39) | Plan written, read by the reviewer, laid against his words and the daily sheets; the code of the layers read by two scouts; parts C and D with a builder (see `38.md`). Parts A, B and E not started. | The known-at table from the plan's foot; ONE builder for A, B and E; one reviewer read with the stored planes present. |
+| G08 (18, 19) | Both built and read. Two faults found in the main session's own correcting lines (see `19.md`). | A builder for the recorder (a correcting line takes its session and its unstated fields from the line it corrects); the auditor's row for run 194; then both boxes. |
+| G09 (12, 13, 14, 15, 03b, 16) | 15 answered by him. 14 read: nine points for the builder; the platform change `28d4dbb` not yet read. 12 and 13 shown, not written up. | 14's builder and its second read; the write-ups of 12 and 13. |
+| G11 (27, 30, 31, 21, 44, 46) | 21 and 31 DONE. 46: built and read once; the one builder pass was under way (see `46.md`). 44: one piece built. | Mark 46 when its pass is in and audited. |
+| G12, G13, G14, G10, G02, held | Not started: each needs his go or his decision. | The sheet `../to-questionnaire-what-only-greg-can-say.md`. |
+| G15 (47) | LAST, on his word. Only the README of Codex's branch is read. | After the 30 minute test without the coefficients. |
