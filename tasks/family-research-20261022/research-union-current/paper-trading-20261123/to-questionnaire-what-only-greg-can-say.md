@@ -1,129 +1,76 @@
-# What only Greg can say: the build list, 2026-11-24
+# What only Greg can say: the build list, 2026-11-24 (second writing, after his earlier answers were found)
 
-**Purpose:** the agents have reached the points the plans leave to you by name. Each question below is one of
-them. Your answers decide what the builders are sent next and what the 30 minute test is.
+Greg, 2026-11-24: "I a swered all of these questions in a session earlier today. You need to search in the previous
+sessions from today for your answers." A scout found his words (run 206, `scout-20261124/SCOUT_RUN_206_HIS_EARLIER_ANSWERS.md`;
+DEC below is `root-redesign-20261116/ROOT_GAMEPLAN_DECISIONS.md`). NINE of the seventeen questions of the first
+writing were already answered and are struck. Nothing below holds any builder: these are gos and decisions for
+work that is not buildable without him.
 
-**From:** Claude (the main session of the twenty-sixth session), **To:** Greg, **How your answers will be
-used:** each answer is written into the decisions file word for word and then into the ticket it settles.
+## ANSWERED BY HIM ALREADY: not asked again
 
-Written with the Pocock skill `to-questionnaire`, run from his repository (`mattpocock/skills`,
-`skills/productivity/to-questionnaire/SKILL.md`). Its two interview steps (who it goes to, what is needed back)
-were not asked of you: it goes to you, and what is needed back is the list of things the reviewers and the
-plans left "for Greg" today.
+1. THE 30 MINUTE TEST. "Test this on like 30 minutes of one of the 4 days just to make sure everything is working"
+   (DEC:6697); the trial runner was run once on his go on the 6:30 pm to 7:00 pm stretch (DEC:6921); "The 30 min
+   thing will go away. That's just shoet testing runs" (DEC:7341). So: 30 minutes of one of the four trade days on
+   the stored tape, a short test. What remains is his go for the run itself, told with its limits (his standing hold).
+2. WHO DECIDES. "We are supposed to be testing our new agents setup to see if they could be the decders"
+   (DEC:7086); a decider may be a live agent or a program an agent wrote, both through one door (DEC:7138).
+3. EVERY DATA LAYER. "We have to get all of data depth back.in" (DEC:7186); "do not drop data layesrs ... dipole is
+   huge in our decision making" (DEC:7196). Being built: ticket 38.
+4. AFTER-THE-FACT DATA. "We will want to learn from after the fact data ... even if we can't use it in real time"
+   (DEC:7236): kept and joined to every decision; out of what a decider reads at the instant. The file is being
+   moved out of the decider's folder.
+5. A QUESTION'S FOLDER HOLDING ONLY WHAT IS NEW. "If it saves room by graphing the data layers then do it but do not
+   drop data layesrs" (DEC:7196): saving room is his; dropping is not. The rows since the last question with
+   pointers to the earlier ones drop nothing, so it stands.
+6. NO RUN WITHOUT HIS GO. "NO PAPER RUNS: not the GitHub workflow, not the trial runner, not the loop ... ask me
+   before anything puts the tape through the engine" (DEC:7004); the platform's wishlist item 22, "Nothing starts
+   without Greg's go. DECIDED." So the lock in the code is built as that rule says; it is not a new question.
+7. LABEL WORDS. "Everything stays as a possibility. it's a matter of 0 confidence or highly confident" (DEC:7480);
+   the plans settle the six labels in upper case (ticket 02). It stands as built.
+8. MANIFEST ENTRIES. The plan's standing term, his word as the plan lists it: data in markets-data with
+   MANIFEST.json entries (DEC:5583). So the paper-trading folder gets its manifest; a builder makes the command.
+9. A RECORD IS ADDED TO, NEVER CHANGED. "Nothing is replaced: only add" (DEC:7005); for run 47, "Both lines stay; a
+   line marked `corrects` is the run's next revision". So this session's change in place to run 179's line was
+   against his rule: the line goes back as it was written, and the loader is changed to take the correcting line.
+10. THE AGENTS. "There's 4 agents!" (DEC:7414) and, in his start message of this session, "No general agents".
+    Ticket 15 is answered.
 
-## Context
+## STILL HIS: a go or a decision, one word each (yes, not yet, no)
 
-The build list is being worked group by group, a scout, a builder, a reviewer and the auditor on each. Two
-tickets of 48 are marked done. Today's reads found several places where the code does something the plans do
-not settle, and several tickets that wait on your go. Nothing below has been done; nothing is run on a guess.
+None of these holds work that can be built now.
 
-## How to answer
-
-A word or a line under each is enough. "Yes", "no", "not yet" and "I don't know" are all useful. Skip nothing
-you are unsure of: say you are unsure. The first five matter most; they shape the 30 minute test.
-
-## Before the 30 minute test
-
-### 1. Is this the 30 minute test you mean: the deciders answering every signal on the platform's own paper run, over 30 minutes of trade day 2023-10-02?
-
-_Why this matters: a run command already written for the loop starts at minute 30 of that trade day and runs 30 minutes. If you mean a different stretch, a different day, or live agents and not a program, the build before the test changes._
-
->
-
-### 2. WITHDRAWN: your rule already answers it (every data layer reaches the decider). It should not have been asked. It is being built: `tickets-44-20261124/PLAN_38_EVERY_LAYER_20261124.md`.
-
-~~Must the per-tick dipole and exhaustion columns reach the decider before that test?~~
-
-_Why this matters: today they do not. Most rows of that stored file carry no time, so the packet leaves the whole file out and names it. The decider sees the two lines at the signal's own tick and the dipole sheet's cells, not the per-tick columns. You said "the dipole above all"._
-
->
-
-### 3. WITHDRAWN: your rule already answers it (after-the-fact data is kept out of what a decider reads). The file is being moved out of that folder.
-
-~~May the after-the-fact file sit in the same folder a live agent decider reads its question from?~~
-
-_Why this matters: today it does. A decision that names anything in it is refused, but nothing stops an agent from opening the file._
+### Tickets 07 and 08: three rule documents and the first decider's ground read into the graph (about 1.2 million and 200,000 tokens on Haiku)?
 
 >
 
-### 4. Do you want a lock in the code, so that no paper run can start without a go you have written down (a small file with the date and the limits)?
-
-_Why this matters: today only the documents say a run needs your go. The trial command and the loop would start if someone ran them._
+### Ticket 28: the 97 unread documents read into claims (about 16 million tokens on Haiku), or leave them?
 
 >
 
-### 5. Will you start the next session with paper-trading-platform selected, with push access?
-
-_Why this matters: this session can read it and cannot write to it. Tickets 41, 42 and 43 and the test itself are worked there._
+### Ticket 10: the refute wave on the first claims (Opus), once they are registered and challenged?
 
 >
 
-## The decider's packet
-
-### 6. A question's folder holds only the rows that became known since the previous question, with pointers back to the earlier ones. Accept that, or the whole trade day in every question's folder?
-
-_Why this matters: the whole day for each of 217 questions is about 3.4 GB. It was put to you once and not answered._
+### Ticket 16: take out the three `aws-*` agent files and the `aws-mcp` entry?
 
 >
 
-## Claims and their words
-
-### 7. Label words inside an ordinary lower-case sentence ("it is inconclusive") are now let through; a label in UPPER CASE, or a label as a field's whole value, is refused. Is that what you want?
-
-_Why this matters: this point was marked "for Greg" and a builder settled it this way without your word._
+### Ticket 22: the loop's first start, and the figure it is steered by?
 
 >
 
-## The records
-
-### 8. Should the paper-trading folder have its own manifest, brought up to date by one command at the close of each session?
-
-_Why this matters: the new check found that the files added today (run plans, kept transcripts, reports: 113 at the last count) have no manifest entry at all. The rule says new outputs get their own linked manifest._
+### Ticket 29: who makes the gold set the readers are measured against?
 
 >
 
-### 9. One record line was put right in place today and not by an added line: a run stopped before its first reply had been written down with an empty model, and that one line stopped the graph's loader. Is a correction in place acceptable for a line that cannot be loaded, or must the line go back as it was and the loader be changed?
+### Ticket 36: Frankie's own events as the trigger: now, or after the test?
 
 >
 
-## Your go or your decision, ticket by ticket
-
-One word each: yes, not yet, or no.
-
-### 10. Tickets 07 and 08: read the rule documents and the first decider's ground into the graph (about 1.2 million and 200,000 tokens on Haiku).
+### Ticket 42: the gate for a paced or live run on a GitHub runner: build it?
 
 >
 
-### 11. Ticket 10: the refute wave on the first claims (Opus), once they are registered and challenged.
-
->
-
-### 12. Ticket 16: take out the three `aws-*` agent files and the `aws-mcp` entry.
-
->
-
-### 13. Ticket 22: the loop's first start. It needs your go and the figure it is steered by.
-
->
-
-### 14. Ticket 28: read the 97 unread documents into claims (about 16 million tokens on Haiku).
-
->
-
-### 15. Ticket 29: who makes the gold set that the readers and the merges are measured against?
-
->
-
-### 16. Ticket 36: Frankie's own events as the trigger. Decide now, or leave it until the test has run?
-
->
-
-### 17. Ticket 42: build the gate that today exists only inside a trial?
-
->
-
-## Anything else?
-
-Anything not asked here that the builders should know before the 30 minute test?
+### The auditor's row for each run made by a command with no model, and the auditor agent called once at a close on the rows that differ (the retro, `RETRO_20261124_SESSION26.md`, item 2)?
 
 >
