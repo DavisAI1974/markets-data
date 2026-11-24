@@ -6471,3 +6471,14 @@ figure. To bring back when the work reaches what moves the market and price-curv
   the Pushover credentials reach a Claude Code session (this one holds none); his word to register the hook, and
   in which repository's settings; the Render and Actions settings of item 26. NOT DONE: the Render blueprint's
   place and Python version (render.com is not reachable from this session, run 53); the agent program (job 1).
+- NINE NUMBERS ARE CLAUDE'S TO FIX AND FINISH (Greg, 2026-11-24, passing on Codex's source review): "This is what
+  codex found for the numbers. Here are yours to fix and finish": 20 (the 5.75-hour stop), 24 (the real-time phone
+  view), 25 (git publication), 27 (per-strategy trade details), 28 (append-only event history), 30 (fill-to-finding
+  trace), 31 (duplicate order tags), 32 (credential handling), 35 (the independent Claude review). Codex's note with
+  it: "This was a source and GitHub-history review. No platform checks, tests, workflows, or paper". His line before
+  it, "Put seperate builder groups on w3 and 26 to do them in parallel", he withdrew in the same message:
+  "Disregard the first prompt. Sent a while ago". So item 35 no longer waits. What 20, 24 and 25 still lack is a
+  demonstration on an authorized run, which stays his go; what can be done now is the review by reading and the
+  fixes it calls for. Six independent reviewers were started in parallel (runs 54 to 59, the reviewer agent,
+  reading only, nothing run on the branch): item 20; items 24 and 25; item 27; items 28 and 30; item 31; item 32.
+  Each finding is fixed on Codex's branch under its own number, and the review is recorded under item 35.
