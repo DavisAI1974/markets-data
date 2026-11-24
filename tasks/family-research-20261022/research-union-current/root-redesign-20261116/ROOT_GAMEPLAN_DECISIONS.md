@@ -7859,3 +7859,22 @@ figure. To bring back when the work reaches what moves the market and price-curv
   wall clock never holds the wait for the main session, and each limit is measured on one piece of work. The
   limit `max_retries` counts only the same brief started again after a stop or a failure; a send-back is not a
   retry. Every plan of this session carries that sentence in its note.
+- ONE SUITE PER TICKET GROUP, ALL OF IT FIRST, WITH THE POCOCK SKILL; A DIRECTIVE (Greg, 2026-11-24, twenty-sixth
+  session): "One suite per ticket group. We need to get all of that done first and stay focused. Run the matt
+  skill for that"; "It's a directive". DECIDED BY HIM: each ticket group is given one suite of the four kinds of
+  agent (scout, builder, reviewer, performance auditor); the whole build list is done that way before anything
+  else; the work is run by the Pocock skill. HOW IT IS DONE (the main session; the skill's text is at
+  `mattpocock/skills` `d653911`, `skills/engineering/implement/SKILL.md`, with `tdd` and `code-review` which it
+  calls, and `skills/in-progress/chief-of-staff/SKILL.md` for handing work to agents): `implement` is run group
+  by group. Its steps, as they land on the four agents: the ticket's title is stated before work starts; the
+  builder writes the failing check first, one check and one change at a time (`tdd`: red before green, checks at
+  the public commands, expected values from the real record and never worked out the way the code works them
+  out); single check files are run as the work goes and the whole folder of checks once at the end; the reviewer
+  reads the change against the ticket's own "shown done by" line and the standing rules (`code-review`: the
+  ticket and the rules, side by side); every piece is committed and pushed. From `chief-of-staff`: the main
+  session hands each piece to an agent with a fresh context and briefs it by pointing at the file and lines, the
+  goal, what is ruled out and the scope; what each run teaches is written into git, dated, with its commit.
+  NOTHING OF THE SKILL IS INSTALLED and it is not a router (CLAUDE.md: one router only; borrow single skills).
+  WHERE THE SKILL AND HIS RULES DIFFER, HIS RULES STAND: the skill's check examples build their own inputs; here
+  no market data and no figure is made up, so a check reads real records. The skill's review runs two readers;
+  that is ticket 45, at the end.
