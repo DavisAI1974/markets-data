@@ -5941,3 +5941,30 @@ figure. To bring back when the work reaches what moves the market and price-curv
   prints, each with its bid and offer, and says "late". CL16 and CL17 read every print. Codex's fifteen read every
   print, as his own text says.
 - OPEN WITH GREG, put once: whether Codex writes a strategy of his own for the print with no side.
+- SAID TO GREG THIS SESSION (2026-11-24), his to strike, not struck so far: the G3 start is counted from the first
+  print of ANY side; a trade still open when a recording ends stays open on the ledger (`closed: null`). And the
+  count that bears on "the fifteen stay as written": on the 25-minute recording the fifteen pass over, because a
+  print with no side showed it, CL05 70 triggers (42 opened), CL10 and CL11 15 each (12 opened), CL06 11 (37
+  opened), CL15 5 (17 opened).
+- BUILT BEFORE THE BUILDER AGENT, by the main session (`c0c8b32` on `claude/tasty-runner`): CL16 and CL17; the
+  fifteen's late closes naming both prints; the gap as a real break only; rule 3 (the settlement window, not yet
+  provable on real data); the lines READ at a print with no side for the rules that read every print; how a
+  management rule of Codex's sees a position (INDICATION signals; whether an exit indication also closes the
+  position is one switch in the engine). Eleven checks on the 10-minute recording, ten on the 25-minute one.
+- BUILDER RUN B1 (agent run 11, Sonnet, budget 150,000, spent 89,470): Codex's fifteen rules, `rules_cx.py`,
+  committed by the main session as `13ddfa9` after rerunning the checks (17 pass on both recordings; the lines of
+  CL01 to CL17 unchanged). Opened, not scored: 10 CX trades on the 10-minute recording, 35 on the 25-minute one;
+  3 and 20 indications; 1 and 6 trades closed by an exit indication.
+- CODEX'S WORDING THE RUNNER DOES NOT CARRY YET (listed by the builder, not chosen; for Greg, and through him for
+  Codex): (1) what "end the observation as interrupted and reset" does to a trade that is OPEN (only the arm is
+  reset now; neither a gap nor a settlement row is in the recordings); (2) "mark the assessment indeterminate and
+  clear its reference" when a line is missing while a trade is open (now: counted, nothing closed); (3) the "what
+  would contradict it on paper" record after q; (4) CX07's "a later higher bid is a distinct observation to log";
+  (5) what the record of a "release" (CX13, CX14) is. Readings made, his to strike: a management rule may arm at
+  the same print its position was opened; a print at which an entry closes may itself arm the next one.
+- OPEN WITH GREG, put once (2026-11-24): whether an EXIT indication of CX05, CX06, CX11 to CX14 closes the position
+  another of Codex's rules opened (the plan of 2026-11-23, and how the switch is set now) or is only written
+  beside it (Codex's text: an exit in one strategy's record "never erases another strategy's entry"). To be
+  settled before the canary.
+- BUILDER RUN B2 (agent run 12, Sonnet, budget 150,000) started 2026-11-24: the order path, the live stream reader
+  and the runner loop, with offline checks only. No sign-in, no network, no order in the run.
