@@ -187,8 +187,8 @@ reports marked as depending on them.
 
 | Finding | What was done |
 | --- | --- |
-| 1 [6]. A book clear after the Sunday start-up empties all three books silently | Not changed. Asked of Greg whether it should stop the run. |
-| 2 [6]. A size raise keeps its place in the matcher; ROOT sends it to the back | Fixed. Confirmed in NautilusTrader's `orderbook/level.rs`: an update replaces the order where it stands. Can change a paper fill. |
+| 1 [6]. A book clear after the Sunday start-up empties all three books silently | Counted on the seven stored files: no clear comes after a file's first record, so it cannot happen on the stored tape (`item6-clear-records-counted.md`). Greg's answer: retain the books. The way for a live feed is written under item 6 and not built. |
+| 2 [6]. A size raise keeps its place in the matcher; ROOT sends it to the back | Fixed in `2de679a`, then TAKEN BACK in `32b25c3`: NautilusTrader sets the size ahead of a resting paper order to nothing on any delete at its price, so the change made posted paper orders fill sooner and changed no fill's price or size. The matcher line is as Codex left it. |
 | 3 [6]. A paper order's queue position is an estimate | Not changed: NautilusTrader's own queue model. |
 | 4 [6]. Nothing compares the books on a live or captured stream | Fixed in part: the mirror is checked against ROOT's book at every UTC date change. The rule venues' own books are still compared with nothing. |
 | 5 [6]. A mid-week live start asks for the week from Sunday | Not changed. The question put to Greg and Codex under item 1. |
