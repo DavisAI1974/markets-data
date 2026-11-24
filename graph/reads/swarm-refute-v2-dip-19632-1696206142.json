@@ -1,0 +1,107 @@
+{
+ "checks": [
+  {
+   "claim": "claim:43edb08540c8",
+   "contradicted": false,
+   "cells": [
+    1,
+    10
+   ],
+   "why": "Compared the claim with the cells of the event: they store born_eastern=\"2023-10-01 20:22:22\" and native_polarity=1, the same pairs the sentence writes."
+  },
+  {
+   "claim": "claim:0bb08749232d",
+   "contradicted": false,
+   "cells": [
+    6,
+    11
+   ],
+   "why": "Compared the claim with the cells of the event: they store native_baseline=0.1461538461538462 and native_prominence=0.8538461538461538, the same pairs the sentence writes; no other cell of the event stores a different baseline or prominence."
+  },
+  {
+   "claim": "claim:97a42958a140",
+   "contradicted": false,
+   "cells": [
+    9,
+    12
+   ],
+   "why": "Compared the claim with the cells of the event: they store native_magnitude=1 and native_threshold=1, the same pairs the sentence writes."
+  },
+  {
+   "claim": "claim:d99430131838",
+   "contradicted": false,
+   "cells": [
+    14,
+    18
+   ],
+   "why": "Compared the claim with the cells of the event: they store our_flow_bought_20s_after=2 and our_flow_sold_20s_after=0, the same pairs the sentence writes; the cells before the event store our_flow_bought_20s_before=2 and our_flow_sold_20s_before=0."
+  },
+  {
+   "claim": "claim:6c63867b9acc",
+   "contradicted": false,
+   "cells": [
+    16,
+    17
+   ],
+   "why": "Compared the claim with the cells of the event: they store our_flow_fully_one_sided_after=true and our_flow_on_native_side_after=true, the same pairs the sentence writes."
+  },
+  {
+   "claim": "claim:df4324ee8801",
+   "contradicted": false,
+   "cells": [
+    21,
+    22
+   ],
+   "why": "Compared the claim with the cells of the event: they store seconds_since_dipole_before=106 and seconds_to_dipole_after=45, the same pairs the sentence writes."
+  },
+  {
+   "claim": "claim:52c73ad4a857",
+   "contradicted": false,
+   "cells": [
+    4,
+    5,
+    24,
+    25
+   ],
+   "why": "Compared the claim with the cells of the event: they store first_position_in_birth_second=null, last_position_in_birth_second=null, ticks_in_birth_second=0 and trades_in_birth_second=0, the same pairs the sentence writes."
+  },
+  {
+   "claim": "claim:2006a51875c0",
+   "contradicted": false,
+   "cells": [
+    60,
+    64,
+    68
+   ],
+   "why": "Compared the claim with the cells of the dipole just after: they store native_polarity=-1, our_flow_bought_20s_after=0 and our_flow_sold_20s_after=5, the same pairs the sentence writes."
+  },
+  {
+   "claim": "claim:17af4a87db88",
+   "contradicted": false,
+   "cells": [
+    76,
+    77,
+    79
+   ],
+   "why": "Compared the claim with the cells of the peak: they store high_eastern=\"2023-10-01 20:21:32\", peak_side=\"sell\" and bought_minus_sold_at_high=9, the same pairs the sentence writes."
+  },
+  {
+   "claim": "claim:3f9a9cebee0e",
+   "contradicted": false,
+   "cells": [
+    10,
+    60
+   ],
+   "why": "Compared the claim with the cells of the event and of the dipole just after: they store native_polarity=1 and native_polarity=-1; I found no stored cell that disagrees with the sentence."
+  },
+  {
+   "claim": "claim:a471454b6878",
+   "contradicted": false,
+   "cells": [
+    31,
+    36
+   ],
+   "why": "Compared the claim with the cells of the dipole just before: they store native_baseline=1 and native_prominence=0, the same pairs the sentence writes."
+  }
+ ]
+}
