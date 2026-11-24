@@ -7246,3 +7246,24 @@ figure. To bring back when the work reaches what moves the market and price-curv
   columns Native wrote later than the moment go into the same afterwards layer; the agents that write the next
   decider read all of it, each decision its own line, nothing averaged. (Platform, agent run 95; Markets, agent
   runs 93 and 97.)
+- THE GRAPH AS THE MEMORY, TESTED AGAIN: BETTER, STILL NOT ENOUGH BY ITSELF (agent run 98, Sonnet, one tool call).
+  Before it: the decisions file read to line 7195 (agent run 92, Haiku, 199,776 tokens; the eight reads together
+  1,482,273 of the 1.5 million he approved; 2,694 claims), and the consolidation pass (agent run 96, Sonnet,
+  235,977 tokens): 32 pairs proposed where a later claim settles or overturns an earlier one, each read by the
+  main session, 31 applied as links that can be taken back and 1 refused by the code's own date rule. The same
+  15 questions on the graph's text built by the changed builder: 9 answered with claim ids (the first test: 7),
+  now with what a trade day is, never deploying the phone page during a run, and that the agents decide at the
+  tick; 3 in part (where the keys are named, what goes wrong in a shallow checkout, what comes next); 2 not in
+  the text (the one file a trial changes, how run 47 was settled); 1 WRONG again, and worse: it named
+  markets-data and an old branch as where the platform work is. What it shows: the graph carries decisions and
+  rules; it does not yet carry "where things are now" (repository, branch, head, which file), which changes
+  every session and is stated many times over. Also seen: the graph now holds claims about this very test, and
+  the agent quoted them as if they were state. SO THE SESSION START IS TWO PARTS, to be tested together once
+  more at the close: a short page written fresh each session (where things are, the standing rules, what needs
+  his go), and the graph asked by task as the session goes. It is called a saving only when that pair answers
+  the 15 questions.
+- EACH DECISION JOINED TO WHAT CAME AFTER IT (agent run 97, Sonnet, 99,233 tokens; Markets `7672c8d`):
+  `tools/decider/afterwards.py`, 10 checks on the real journal of run `0f33fec4` (217 opening signals). One
+  opening signal can have up to four trades under it (the rule's own and up to three managers'), each kept with
+  its own result and none added to another. The journal carries open profit and highest open profit only on
+  the 325 give-back closing orders, not as a series while a trade is open.
