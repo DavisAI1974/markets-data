@@ -44,3 +44,15 @@ workflow reads every one of these from GitHub by itself. No session holds one, n
 
 A session cannot list the secret names of the repository. A name that is missing shows itself in the run's first
 minute: the runner refuses to start and says which name.
+
+## The phone page on Render (added 2026-11-24, twenty-third session)
+
+| Thing | Where it is |
+| --- | --- |
+| The service | Render, workspace "My Workspace", web service `ng-paper-viewer` (`srv-dc2kqjec6qcc73fbc48g`), https://ng-paper-viewer.onrender.com |
+| `PAPER_VIEW_PASSWORD` (sign-in name `greg`) | that service's Environment page on Render. A random value made by Claude on 2026-11-24; his to change there |
+| `PAPER_RELAY_TOKEN` | the same page. The same value must be entered as the GitHub Actions secret `PAPER_RELAY_TOKEN` of paper-trading-platform |
+| `PAPER_RELAY_URL` | GitHub Actions VARIABLE of paper-trading-platform: `https://ng-paper-viewer.onrender.com` |
+
+A session reaches Render through the Render connector on Greg's Claude account (render.com itself is blocked from
+the session's network). State at the time of writing: the service is live; the two GitHub entries are not in yet.
