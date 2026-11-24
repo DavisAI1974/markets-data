@@ -6625,3 +6625,19 @@ figure. To bring back when the work reaches what moves the market and price-curv
   in plain text and shows it on the approval card): the person enters secrets in the environment's settings. So
   the two values still go in by his hand, once: `PUSHOVER_APP_TOKEN` and `PUSHOVER_USER_KEY` on the Markets
   environment. Said to him.
+- A SPEED BAR FOR THE STORED TAPE (Greg, 2026-11-24): "we should make sure there is a pitch bar for the time
+  speed. We can slow down or speed up the playback speed for the data feed and it speeds us up too". Started,
+  not wired, nothing run: platform `be4d244` holds the pace arithmetic (`paper_platform/playback.py`) and, under
+  item 12, what is left to build and what was read first (no rule, calculation or fill reads the runner's clock;
+  at 4x a trade day fits in the 5.75 hours and the run reaches the tape's 5 pm for the first time).
+- WHERE THE KEYS ARE KEPT (Greg, 2026-11-24): "Write those into something so i don't have to keep finding them
+  for you every chat". Written as names and places only, `paper-trading-20261123/KEYS_WHERE_THEY_ARE.md`: item
+  32 is his own rule (no key in a file or commit) and both repositories are public. The two Pushover values go
+  into the Markets environment by his hand, once; no session asks him again.
+- "Did we include api function in our list to change in paper trade platform" (Greg, 2026-11-24). Answer given:
+  the 35 items have no item for an API. What exists: the platform's own read routes (`api.py`, the phone relay),
+  the Pushover notice (items 23 and 26), Databento (items 1, 5, 7). Which one he means is asked of him; nothing
+  built on it.
+- END OF THE TWENTY-SECOND SESSION (Greg: "Update everything, commit, and push after you make handoff and then
+  post drop in box so i can strat new session"; then "Start new chat. You're getting extremely slow"). Handoff:
+  `NEXT_SESSION_HANDOFF_20261124Z.md`. Job 1 (the agent program in Markets) was not touched this session.
