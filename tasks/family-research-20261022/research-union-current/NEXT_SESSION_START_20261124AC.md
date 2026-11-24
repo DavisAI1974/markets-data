@@ -120,8 +120,11 @@ DO FIRST, group by group (GROUPS.md has the whole table):
    155, `scout-20261124/SCOUT_RUN_155_TICKET_47.md`). NEXT: the plan is written from those pointers (the state,
    the target, the forms searched, the guards, one feasibility piece first), the REVIEWER READS THE PLAN BEFORE
    ANY BUILDER (it touches ROOT's calculations, the tape and the leakage gate), and his word on the state and the
-   target and his go with the budget are on record BEFORE ANYTHING IS CALCULATED. The April engine is a physics
-   engine and is not pointed at the tape as it is: the method is what is taken. Where it stands in the order
+   target and his go with the budget are on record BEFORE ANYTHING IS CALCULATED. CORRECTED ON HIS WORD ("The operator can definitely be
+   used"): the April engine fits the law of motion of ANY two-state system (a 2 by 2 state over time) and
+   nothing in its fit is physics; bought and sold are such a state and the dipole line is its two populations'
+   difference. The engine itself, given natural gas's two-sided state, is the FIRST method of the plan. Do not
+   call it a physics engine or set it aside: read the correction at the end of `47.md` and of the decisions file. Where it stands in the order
    beside the other groups is his to say; it shares no file with them, so its suite can work beside them.
 
 1. G01, tickets 02, 03, 01. The reviewer reads Markets `931b2b3..b12d8ef` on `tools/kgraph/defend.py` and
@@ -241,6 +244,9 @@ Every line carries its claim id, file and line. KNOW ITS LIMITS:
 
 ## Slips of the twenty-fifth session, so they are not made again
 
+- Told him the April operator engine could not be used on the tape, from its notes and file names, before
+  reading its code. He had to say "Do more resurch and reading before you throw that away". Read the code
+  before saying what a thing cannot do.
 - Asked him questions the zip answers. Used three kinds of agent until he said there are four. Ran two general
   agents with a role's file before the four agent types had loaded.
 - Told builders and reviewers to read whole files; the auditor measured the cost.

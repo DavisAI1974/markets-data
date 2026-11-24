@@ -7676,3 +7676,44 @@ figure. To bring back when the work reaches what moves the market and price-curv
   its budget. HIS STANDING RULES BIND IT: only the four trade days; every calculation at the tick; each event on
   its own, no pooling and no ranking; the leakage gate before any backtest; no crypto data; nothing calculated
   without telling him first; a found form is a claim that is registered and challenged before it is trusted.
+- CORRECTION, ON HIS WORD: THE APRIL OPERATOR ENGINE CAN BE USED ON THE NATURAL GAS TAPE (Greg, 2026-11-24: "The
+  operator can definitely be used. That operator is describing the digital word. Do more resurch and reading
+  before you throw that away and we spend an hour fgoing back and forth"). CLAUDE WAS WRONG to tell him and to
+  write (in the two entries above, in ticket 47 and on the start page) that the engine "cannot be pointed at a
+  market tape as it is" and is "a physics engine": that was said from its notes and file names, before its code
+  was read. WHAT THE READING SHOWS (the engine's code read in full to its entry function, the April summary
+  whole, the May phase 1 handoff, `markets_adapter.py`, and the Information Layer sections of
+  `CLAUDE_ARCHIVE_OD.md` on branch `archive/crypto`):
+  (1) THE ENGINE FITS THE LAW OF MOTION OF A TWO-STATE SYSTEM AND NOTHING IN THE FIT IS PHYSICS. `od_engine.py`
+  takes a state that is a 2 by 2 array at each time (two "populations" on the diagonal, two cross terms off it)
+  and finds the 4 by 4 operator L with d(state)/dt = L times state (`_discover_least_squares`, lines 115 to 154:
+  differences in time, then a least-squares solve). No line of that path asks for a quantum property. It takes
+  any array of shape (n_t, 2, 2); uneven times are used as they are. With `n_segments` above 1 it fits one L
+  for each stretch of the trajectory: that is the "operator per regime". What it returns for each L are its
+  eigenvalues: real parts are RATES (how fast the state relaxes), imaginary parts are CYCLES.
+  (2) A MARKET'S TWO SIDES ARE A TWO-STATE SYSTEM. Bought and sold are the two populations, and the dipole line
+  ("bought minus sold over bought plus sold") is exactly the difference of the two populations of that state.
+  The natural gas line files already hold `bought`, `sold` and `flow` at every read, to the nanosecond. So the
+  diagonal of the engine's input exists today for the four trade days. A rate of L is then how fast an
+  imbalance dies (what he calls exhaustion), and a change of L from one stretch to the next is a change of regime.
+  (3) THE OPERATOR WORK WAS NEVER ABOUT PHYSICS ONLY. The archive's own finding (INFO-014): the same direction of
+  the operator basis is reached by eight unlike systems, among them GARCH, pure noise and chaos, and the reading
+  "physics-related" is marked "rejected: non-physics systems are also on the attractor". The May handoff calls
+  the market work a "Cross-domain probe from SENTINEL machinery", and `markets_adapter.py` maps the operator
+  pipeline onto markets part for part ("operator" = a signal function with coefficients, "recovery" = fitting
+  them, "ground truth" = what the market then did). The patents filed 24 March 2026 include "Blind Lindblad":
+  recovering this kind of operator blind, from the trajectory alone.
+  (4) THE MAY PLAN WAS TO PORT THIS ENGINE TO MARKETS AND THAT WAS NEVER DONE: a nine-form stand-in was built
+  instead. As far as was read, the engine itself has never been run on a market. It is an untried path, not a
+  discarded one.
+  WHAT STILL HOLDS, and goes into the plan as guards, not as reasons against: the April held-out figure was not
+  an independent test (Codex's README; `benchmark.py` lines 91 to 116); the April fit cut the trajectory into
+  EQUAL stretches, not stretches found from the data (its own summary names adaptive cutting as the next step);
+  a fit over a stretch reads that whole stretch, so the leakage gate decides what may be known at a tick; the
+  entropy form of the market dipole had its own trouble in June (buy and sell entropies nearly equal, so the
+  fit was a trivial identity; and a 0.993 score flagged as "exactly the shape leakage takes"): the engine works
+  on the flows themselves, not on entropies, so that trouble is not carried over, but the lesson is.
+  WHAT IS HIS TO SAY, put to him in the plan with the choices laid out: what fills the two cross terms of the
+  state (nothing at first; or a second two-sided quantity such as the resting book's bid and ask); which span
+  the two populations are read over (the 20 seconds of exhaustion, the 60 seconds of the dipole, or both); how
+  the stretches are cut (by the humps of the line, by the turns, by the data); and the go with its budget.
