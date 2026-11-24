@@ -388,5 +388,57 @@
     "close_quote": "at the new run's first step back.",
     "close_quote_file": "claude-strategy/VERSIONS.md",
     "close_quote_line": 260
+  },
+  {
+    "rule": "CL16",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Line 276 extends common rule 2 to both unsided-print rules. That rule specifies one lot per trigger, or one NGX3 contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "size_quote_line": 33,
+    "why_open": "Cross in the direction of the quote step observed on the unsided print. Either the bid or the offer can supply the step, so the rule sets a direction without naming an entry limit.",
+    "open_quote": "with the step. BUY for a step up. SELL for a step down.",
+    "open_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "open_quote_line": 282,
+    "why_close": "Cross on the first step back of the same quote that armed the trade. A further step in the original direction keeps that exit active.",
+    "close_quote": "at that quote's first step back.",
+    "close_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "close_quote_line": 283
+  },
+  {
+    "rule": "CL17",
+    "decision": "decided",
+    "decider": "CL family decision agent for item 17",
+    "contracts": 1,
+    "open": {
+      "style": "cross_limit",
+      "offset_ticks": 0
+    },
+    "close": {
+      "style": "cross",
+      "offset_ticks": 0
+    },
+    "why_size": "Line 276 extends common rule 2 to both unsided-print rules. That rule specifies one lot per trigger, or one NGX3 contract.",
+    "size_quote": "ONE PAPER TRADE FOR EACH TRIGGER, ONE LOT, EACH ON ITS OWN LINE.",
+    "size_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "size_quote_line": 33,
+    "why_open": "On the qualifying unsided print, cap the buy at its displayed best offer or the sell at its displayed best bid. A zero offset preserves the named quote.",
+    "open_quote": "BUY at the offer. SELL at the bid.",
+    "open_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "open_quote_line": 296,
+    "why_close": "Cross when the quote at which the unsided print traded first steps back. The next move of that quote determines the exit independently of the aggressor-side field.",
+    "close_quote": "at the first step back of the quote it traded at.",
+    "close_quote_file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+    "close_quote_line": 297
   }
 ]

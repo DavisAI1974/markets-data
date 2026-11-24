@@ -124,6 +124,8 @@
       "CL13",
       "CL14",
       "CL15",
+      "CL16",
+      "CL17",
       "CX01",
       "CX03",
       "CX07",
@@ -131,13 +133,27 @@
       "CX15"
     ],
     "on_parent_close": "exit",
-    "why_parents": "I select every parent capable of an upward entry. The router selects only buys and keeps each parent trade separate. I close the manager when its parent closes, ending that position’s warning.",
+    "why_parents": "I select every parent capable of an upward entry. The router selects only buys and keeps each parent trade separate. I close the manager when its parent closes, ending that position’s warning. I include upward CL16 steps and CL17 offer entries.",
     "parents_quote": "Attach a management rule separately to each eligible paper position.",
     "parents_quote_file": "codex-strategy/VERSIONS.md",
     "parents_quote_line": 9,
     "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
     "parent_close_quote_file": "codex-strategy/VERSIONS.md",
-    "parent_close_quote_line": 10
+    "parent_close_quote_line": 10,
+    "additional_parent_sources": [
+      {
+        "rule": "CL16",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 282,
+        "quote": "BUY for a step up. SELL for a step down."
+      },
+      {
+        "rule": "CL17",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 296,
+        "quote": "BUY at the offer. SELL at the bid."
+      }
+    ]
   },
   {
     "rule": "CX06",
@@ -176,6 +192,8 @@
       "CL13",
       "CL14",
       "CL15",
+      "CL16",
+      "CL17",
       "CX02",
       "CX04",
       "CX08",
@@ -183,13 +201,27 @@
       "CX15"
     ],
     "on_parent_close": "exit",
-    "why_parents": "I follow every eligible downward entry because CX06 requires an existing downward position without naming its origin. I exit on parent close so a later warning starts with a fresh position.",
+    "why_parents": "I follow every eligible downward entry because CX06 requires an existing downward position without naming its origin. I exit on parent close so a later warning starts with a fresh position. I include downward CL16 steps and CL17 bid entries.",
     "parents_quote": "Attach a management rule separately to each eligible paper position.",
     "parents_quote_file": "codex-strategy/VERSIONS.md",
     "parents_quote_line": 9,
     "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
     "parent_close_quote_file": "codex-strategy/VERSIONS.md",
-    "parent_close_quote_line": 10
+    "parent_close_quote_line": 10,
+    "additional_parent_sources": [
+      {
+        "rule": "CL16",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 282,
+        "quote": "BUY for a step up. SELL for a step down."
+      },
+      {
+        "rule": "CL17",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 296,
+        "quote": "BUY at the offer. SELL at the bid."
+      }
+    ]
   },
   {
     "rule": "CX07",
@@ -316,6 +348,8 @@
       "CL13",
       "CL14",
       "CL15",
+      "CL16",
+      "CL17",
       "CX01",
       "CX03",
       "CX07",
@@ -323,13 +357,27 @@
       "CX15"
     ],
     "on_parent_close": "exit",
-    "why_parents": "I follow all parent signals capable of opening an upward position. Each tested bid belongs to that parent trade separately. Closing the parent ends the hold and I close its manager position.",
+    "why_parents": "I follow all parent signals capable of opening an upward position. Each tested bid belongs to that parent trade separately. Closing the parent ends the hold and I close its manager position. I include upward CL16 steps and CL17 offer entries.",
     "parents_quote": "Attach a management rule separately to each eligible paper position.",
     "parents_quote_file": "codex-strategy/VERSIONS.md",
     "parents_quote_line": 9,
     "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
     "parent_close_quote_file": "codex-strategy/VERSIONS.md",
-    "parent_close_quote_line": 10
+    "parent_close_quote_line": 10,
+    "additional_parent_sources": [
+      {
+        "rule": "CL16",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 282,
+        "quote": "BUY for a step up. SELL for a step down."
+      },
+      {
+        "rule": "CL17",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 296,
+        "quote": "BUY at the offer. SELL at the bid."
+      }
+    ]
   },
   {
     "rule": "CX12",
@@ -368,6 +416,8 @@
       "CL13",
       "CL14",
       "CL15",
+      "CL16",
+      "CL17",
       "CX02",
       "CX04",
       "CX08",
@@ -375,13 +425,27 @@
       "CX15"
     ],
     "on_parent_close": "exit",
-    "why_parents": "I include every eligible downward parent and follow its own trade ID. I exit on its close because the hold belongs to that existing position.",
+    "why_parents": "I include every eligible downward parent and follow its own trade ID. I exit on its close because the hold belongs to that existing position. I include downward CL16 steps and CL17 bid entries.",
     "parents_quote": "Attach a management rule separately to each eligible paper position.",
     "parents_quote_file": "codex-strategy/VERSIONS.md",
     "parents_quote_line": 9,
     "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
     "parent_close_quote_file": "codex-strategy/VERSIONS.md",
-    "parent_close_quote_line": 10
+    "parent_close_quote_line": 10,
+    "additional_parent_sources": [
+      {
+        "rule": "CL16",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 282,
+        "quote": "BUY for a step up. SELL for a step down."
+      },
+      {
+        "rule": "CL17",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 296,
+        "quote": "BUY at the offer. SELL at the bid."
+      }
+    ]
   },
   {
     "rule": "CX13",
@@ -420,6 +484,8 @@
       "CL13",
       "CL14",
       "CL15",
+      "CL16",
+      "CL17",
       "CX01",
       "CX03",
       "CX07",
@@ -427,13 +493,27 @@
       "CX15"
     ],
     "on_parent_close": "exit",
-    "why_parents": "Every upward parent can supply the position that carries this warning. I handle each in its own trade record and exit on the parent close that releases its warning.",
+    "why_parents": "Every upward parent can supply the position that carries this warning. I handle each in its own trade record and exit on the parent close that releases its warning. I include upward CL16 steps and CL17 offer entries.",
     "parents_quote": "Attach a management rule separately to each eligible paper position.",
     "parents_quote_file": "codex-strategy/VERSIONS.md",
     "parents_quote_line": 9,
     "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
     "parent_close_quote_file": "codex-strategy/VERSIONS.md",
-    "parent_close_quote_line": 10
+    "parent_close_quote_line": 10,
+    "additional_parent_sources": [
+      {
+        "rule": "CL16",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 282,
+        "quote": "BUY for a step up. SELL for a step down."
+      },
+      {
+        "rule": "CL17",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 296,
+        "quote": "BUY at the offer. SELL at the bid."
+      }
+    ]
   },
   {
     "rule": "CX14",
@@ -472,6 +552,8 @@
       "CL13",
       "CL14",
       "CL15",
+      "CL16",
+      "CL17",
       "CX02",
       "CX04",
       "CX08",
@@ -479,13 +561,27 @@
       "CX15"
     ],
     "on_parent_close": "exit",
-    "why_parents": "I follow every eligible downward parent because the warning references its downward position. I close when the parent closes and its warning ends.",
+    "why_parents": "I follow every eligible downward parent because the warning references its downward position. I close when the parent closes and its warning ends. I include downward CL16 steps and CL17 bid entries.",
     "parents_quote": "Attach a management rule separately to each eligible paper position.",
     "parents_quote_file": "codex-strategy/VERSIONS.md",
     "parents_quote_line": 9,
     "parent_close_quote": "An actual close of the managed position releases its pending warnings.",
     "parent_close_quote_file": "codex-strategy/VERSIONS.md",
-    "parent_close_quote_line": 10
+    "parent_close_quote_line": 10,
+    "additional_parent_sources": [
+      {
+        "rule": "CL16",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 282,
+        "quote": "BUY for a step up. SELL for a step down."
+      },
+      {
+        "rule": "CL17",
+        "file": "claude-strategy/VERSIONS_WITH_CL16_CL17.md",
+        "line": 296,
+        "quote": "BUY at the offer. SELL at the bid."
+      }
+    ]
   },
   {
     "rule": "CX15",
