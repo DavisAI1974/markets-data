@@ -5,6 +5,9 @@ strategy. We need 15 good ones that work. They will all be used for paper tradin
 in paper trading. That's what it's there for"; "Don't change your strategys based on codex. I want all 30 different
 ones in paper trading".
 
+ADDED 2026-11-24: CL16 AND CL17, two strategies made for the print with no side (their own sections, after CL15;
+the fifteen are not changed by them).
+
 THE FIRST 15 SECTIONS BELOW ARE THE CURRENT RULES (v2): the same fifteen, each written as a rule that opens and
 closes a paper trade. THE FIRST PROPOSALS (v1) ARE KEPT WHOLE UNDER THEM. These rules were written and pushed before
 Codex's folder was opened and are not changed by it. None has been traded: paper trading is the test. The counts
@@ -263,6 +266,40 @@ WHAT CHANGED FROM v1, said plainly:
 - READS: `calc-quote_runs-facts`.
 - BEHIND IT: no count. The first step back of a run is one tick nearly every time; whether the move then comes
   again has not been read.
+
+## CL16 (v1, added 2026-11-24). A step of the quote first shown by a print with no side
+
+Added on Greg's word, 2026-11-24, twentieth session: "We need to create a strategy for that amd not just a code
+fix"; "We can make a 31 trade strategy if needed. The 30 is a jumping off point, not the limit"; of CL16 and CL17:
+"Both. If one doesn't cover it all, then 2 works". Rule 5 of "what holds for all fifteen" (a trade the tape gives no
+side for neither opens nor closes anything) holds for CL01 to CL15 and NOT for CL16 and CL17: the print with no
+side is what these two read. Rules 1 to 4 and 6 to 11 hold for them as for the fifteen.
+
+- WHEN: unknown; that is what paper trading is to show.
+- TRIGGER: a print with no side whose own quote shows a step of the best bid or of the best offer (that quote is
+  not where it stood at the print before).
+- DECIDED AT: that print.
+- SIDE: with the step. BUY for a step up. SELL for a step down.
+- CLOSES: at that quote's first step back. RIGHT if that quote stepped further the same way first; WRONG if the
+  step back came first.
+- OPENS AGAIN: at the next such step. The same run of the quote never opens a second trade.
+- READS: the prints with no side, the quote at each print, `quote_runs`.
+- BEHIND IT: no count. Seen on the tastytrade sandbox feed only (6 of 52 and 34 of 149 steps of the quote on the
+  two recordings of 2026-11-23); what followed such a step has not been counted anywhere.
+
+## CL17 (v1, added 2026-11-24). The print with no side, taken at the quote it traded at
+
+- WHEN: unknown.
+- TRIGGER: a print with no side trades at its own best offer (mirror: at its own best bid), and it is the first
+  print with no side there since that quote last stepped.
+- DECIDED AT: that print.
+- SIDE: the side a marked print there would have had. BUY at the offer. SELL at the bid.
+- CLOSES: at the first step back of the quote it traded at. RIGHT if that quote stepped further away first (the
+  offer up for a BUY, the bid down for a SELL); WRONG if the step back came first.
+- OPENS AGAIN: at the next print with no side at that quote after it has stepped.
+- READS: the prints with no side, the quote at each print, `quote_runs`.
+- BEHIND IT: no count. It asks one question on its own: does a print with no side at the offer behave like a buy.
+  The two lines are NOT changed by it: no side is written into the dipole or the exhaustion.
 
 ---
 

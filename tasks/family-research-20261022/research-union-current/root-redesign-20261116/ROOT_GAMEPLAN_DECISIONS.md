@@ -5930,3 +5930,14 @@ figure. To bring back when the work reaches what moves the market and price-curv
   beside the 30, not only a rule about how the 30 read the feed. Claude's drafts, NOT ADOPTED, for his word:
   `strategy-20261123-claude/PROPOSED_NO_SIDE_PRINT_STRATEGIES_20261124.md` (CL16: a step of the quote first shown
   by a print with no side; CL17: the print with no side taken at the quote it traded at). Neither is in the code.
+- CL16 AND CL17 ADOPTED (Greg, 2026-11-24, asked "both, one, neither, or rewritten?"): "Both. If one doesn't cover
+  it all, then 2 works". They are written into `strategy-20261123-claude/VERSIONS.md` as CL16 (v1) and CL17 (v1),
+  after CL15; the proposal file is replaced by those sections (CL17's "first at that level" is said there as
+  "the first print with no side there since that quote last stepped"). There are now 32 strategies: Claude's
+  CL01 to CL17 and Codex's CX01 to CX15.
+- CLAUDE'S CALL, put to him with CL16 and CL17 and not struck: THE FIFTEEN STAY AS WRITTEN. For CL01 to CL15 a
+  print with no side opens and closes nothing (their rule 5). Where such a print shows the step or the leg end that
+  closes one of their trades, the trade is closed at the next print that has a side and the ledger line names BOTH
+  prints, each with its bid and offer, and says "late". CL16 and CL17 read every print. Codex's fifteen read every
+  print, as his own text says.
+- OPEN WITH GREG, put once: whether Codex writes a strategy of his own for the print with no side.
