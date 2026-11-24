@@ -6816,3 +6816,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   20% from its highest; the rule's own close stays a research signal and sends no order. LEFT OPEN BY HIS WORDS
   and built this way until he says: a trade never in profit is held until the run stops (no loss stop); rules go
   on opening while earlier trades are held, so contracts add up; a one-tick profit is given back by one tick.
+- THE MARKET LINE WENT MISSING (Greg, 2026-11-24, with a screenshot): "It's mossing historical line". A SLIP
+  (Claude): the page was deployed again during the fourth test to correct the graph. That emptied the page; the
+  runner refilled the journal one row to a post (read in Render's log), the graph's points waited behind it, and
+  the market line sent before the restart was not sent again. The run and its record in markets-data were not
+  touched. Changed in the runner, not run (platform, item 24): a restarted page is refilled 128 rows to a post
+  and given every traded price of the run again. The page is not to be deployed during a run.
