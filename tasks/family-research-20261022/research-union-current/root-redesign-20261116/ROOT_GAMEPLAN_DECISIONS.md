@@ -6679,3 +6679,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   deploy key the push goes over SSH). No broker, Databento or capture key is read by a stored-tape run. The run
   reads three names that are already in GitHub and the two of the phone page. The table is added to
   `paper-trading-20261123/KEYS_WHERE_THEY_ARE.md` so no session lists them wrongly again.
+- THE FIRST PAPER RUN, HIS GO (Greg, 2026-11-24): "Go", to this, told to him first: the stored tape fed like live
+  (`purchased_mbo_paper.yml` on Codex's branch at `cd18d96`), trade day 2023-10-02, tape `purchased-archive`, plan
+  `ngx3-12be6ea6e40347def5f574b1c2f36093bba99200.json`, market `nymex-ng`, message budget 825,874 (the full count
+  of the two stored files that trade day reads), event budget 500 (Claude's choice for a short test, not a measured
+  figure), no tokens, one GitHub runner. Before it: his own first start was skipped by GitHub in 2 seconds (the job
+  runs only with the box "Start this paper session" checked), and a second start of his never reached GitHub.
+  Claude's GitHub connection acts as his account, so Claude started it on his word: Actions run 45356283296,
+  started 2026-11-24 08:27:32 UTC. He sent the two Pushover values again as screenshots; Claude wrote them nowhere:
+  they are already in GitHub Actions, where the run reads them.
