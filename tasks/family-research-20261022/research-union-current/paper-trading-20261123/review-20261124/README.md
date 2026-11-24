@@ -159,3 +159,18 @@ status, 5 fill shapes) and 4 for rows that are never written.
 
 "If 5.75 is going to land inside of the hour, flatten before 5 and end at 5." Built on the platform branch as
 `8df8027`, in draft, not run.
+
+## Two reading checks made after the adjustments (nothing run)
+
+- The platform's own test files (`paper_platform/test_*.py`, `tests/root/`) were read against every string and
+  key the adjustments changed. No assertion there contradicts one: the only test that reads page text asks for
+  "Window expiry (ns)" on an event card, which is still printed, and the raw receive time a viewer test looks for
+  is still shown.
+- The receipt's `constants` gained two keys with the 5 pm decision (`clock_stop_seconds`, `clock_stop`). The only
+  reader of `constants` is the runner, which takes the two budgets from a receipt; the replay comparison reads
+  `weekly_book_boundaries` and `calculation_files`, not `constants`. The words "5.75-hour" also stand in three
+  preflight messages (`causal_gate.py`, `capture.py`); when a run's stop is the one before 5 pm, a preflight that
+  runs out of time will still say "5.75-hour budget". Not changed.
+
+`save_report.py` here is the script that took each report out of its agent's transcript, word for word, and read
+the token figures. Its paths are those of the session's machine.
