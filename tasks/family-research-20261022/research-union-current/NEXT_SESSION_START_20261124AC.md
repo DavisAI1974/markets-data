@@ -21,7 +21,7 @@ agreed on and all 44 or whatever steps there are one at a time. This is our only
 Greg, 2026-11-24, the last word of the twenty-fifth session: "You said that these tickets were grouped together
 before. Let's get a full suite of 4 types of agents on each ticket group. We can start new sess first though".
 
-- The tickets (47): `paper-trading-20261123/tickets-44-20261124/` (README first). ONE IS MARKED DONE (03b). A box is
+- The tickets (48, with ticket 47 added at the close): `paper-trading-20261123/tickets-44-20261124/` (README first). ONE IS MARKED DONE (03b). A box is
   marked only with its evidence beside it, and only when `python3 -m tools.kgraph.auditor_called --ticket NN`
   exits 0 (no run that worked on it is unaudited).
 - The groups: `paper-trading-20261123/tickets-44-20261124/GROUPS.md` says which ticket is in which of the
@@ -100,19 +100,29 @@ made up. This is the main session's decision, told to him; he has not objected.
 | paper-trading-platform, the change of the twenty-fourth session | `ccr-0ac78691-8zapbb` (NOT Codex's branch) | `28d4dbb` (read-only this session) |
 | paper-trading-platform, Codex's branch (draft PR 5) | `codex/strategy-trades-and-mbo-capture` | fetch first |
 | markets-data, Codex's rules | `codex/ng-blind-20261123` | fetch first |
+| Markets, the April operator search as Codex found it (ticket 47) | `od-autoresearch/apr5-handoff` | `e65441a` |
 
-Agent runs are recorded through 154. The next run is 155.
+Agent runs are recorded through 155. The next run is 156.
 
 ## Where the work stopped
 
 NOTHING IS IN FLIGHT. Every agent of the twenty-fifth session handed back and is recorded: its report word for
-word, its run line, its kept transcript (runs 107 to 154). NO TICKET IS MARKED DONE. Nothing went through the
+word, its run line, its kept transcript (runs 107 to 155). NO TICKET IS MARKED DONE. Nothing went through the
 engine or the tape. NOTHING WAS WRITTEN INTO THE REAL GRAPH. Everything named here is on GitHub.
 
 Each worked ticket's own file ends with "State at the close of the twenty-fifth session": what was built, what
 the reviewer left for the builder, what code cannot hold. Start each suite from that section, not from memory.
 
 DO FIRST, group by group (GROUPS.md has the whole table):
+
+0. G15, ticket 47, ADDED AT THE VERY CLOSE ON HIS WORD AND WANTED ("We absolutely want to do this"): find an
+   operator for the natural gas market with the operator search. Read `47.md`. A scout located the pieces (run
+   155, `scout-20261124/SCOUT_RUN_155_TICKET_47.md`). NEXT: the plan is written from those pointers (the state,
+   the target, the forms searched, the guards, one feasibility piece first), the REVIEWER READS THE PLAN BEFORE
+   ANY BUILDER (it touches ROOT's calculations, the tape and the leakage gate), and his word on the state and the
+   target and his go with the budget are on record BEFORE ANYTHING IS CALCULATED. The April engine is a physics
+   engine and is not pointed at the tape as it is: the method is what is taken. Where it stands in the order
+   beside the other groups is his to say; it shares no file with them, so its suite can work beside them.
 
 1. G01, tickets 02, 03, 01. The reviewer reads Markets `931b2b3..b12d8ef` on `tools/kgraph/defend.py` and
    `tests/agent_program/test_defend.py` (builder run 147's change, NOT READ YET) against the open list of its own
@@ -126,7 +136,7 @@ DO FIRST, group by group (GROUPS.md has the whole table):
    showing: scout run 152 found the code that already writes rule versions into the experiment record.
 4. G08, tickets 18 and 19. The builder takes the lists in `18.md` and `19.md`. The main session's own part of
    ticket 19: the run lines of 107 to 154 were written by a scratch helper and lack fields (`started_at` on all,
-   `model_replies` on 109 to 121, `agent_id` before 146); put them right with `run_record append --corrects`
+   `model_replies` on 109 to 121, `agent_id` on most); put them right with `run_record append --corrects`
    from the kept transcripts; `run_record missing` lists each.
 5. G09, ticket 03b: see the line below on the check at this close. Tickets 12, 13, 14 are shown by how the runs
    were made this session (scout first, the builder's change shown as a PROPOSED commit, the reviewer reading
@@ -155,10 +165,12 @@ new plan for each part).
 - The stored planes of ROOT are on the markets-data branch `root-rows-20231002`; the packet reads them from a git
   dir named by `MARKETS_PLANES_GIT` (a blobless mirror of that branch; it is not kept anywhere).
 - Markets printed "Repository is approaching its size quota" on a push this session.
-- AUTOSEARCH (his words, this session): "Only consider it if it can fill gaps. This isn't a directive". Nothing is
-  fetched or built for it and no agent is given it. What it is, where the April program lives (his E and F
-  drives, not GitHub) and the May stand-in in Markets history are at the end of the decisions file, for the day
-  a named gap calls for it.
+- THE OPERATOR SEARCH (his words run from "Only consider it if it can fill gaps. This isn't a directive" to, at
+  the very close, "That may find an operator for the ng market!! We absolutely want to do this. Proceed"): it is
+  ticket 47 and item 0 above. The April files Codex found are on GitHub: Markets branch
+  `od-autoresearch/apr5-handoff`, commit `e65441a` (seven files, no data, no history shared with the trunk; left
+  as Codex pushed it). The whole trail (what was read, what the April loop has that the stage 3 loop's control
+  file does not name, what goes against his rules and is not taken) is at the end of the decisions file.
 - The decisions file grew this session: read it from the line "FOUR AGENTS" of the twenty-fifth session to its
   end as well as from line 7196; it is not in the graph.
 
