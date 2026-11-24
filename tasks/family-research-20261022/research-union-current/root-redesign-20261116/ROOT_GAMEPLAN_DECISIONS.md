@@ -7349,3 +7349,13 @@ figure. To bring back when the work reaches what moves the market and price-curv
   a question is out of the run's clock; the market series has its counts and hashes on record. Found and left
   alone, said to him: Codex's matcher builds a fee model that takes its rates from the plan's instrument; all
   five plans in the repository have fees of zero; a plan written with a fee would produce one.
+- NO FEES NOW; CODEX'S SETUP STANDS (Greg, 2026-11-24, on the matcher's fee model that takes its rates from the
+  plan's instrument, all five plans holding zero): "We don't want to compute fees now. He's corr[ect]". DECIDED
+  BY HIM: no fee is computed now; Codex's matcher is right as it stands (the model is there and is fed zeros);
+  his file is left alone. A plan is written with fees of zero until he says otherwise.
+- TICKETS 02 AND 03, WHERE THEY STAND (agent run 104, Sonnet, 162,364 tokens; Markets `071777f`, then `3a6ac09`):
+  a claim is registered before its outcome with the verifier's fields, its artifact's hash checked against the
+  real file, a refused claim kept on record; an independent challenge is recorded with the hash of the exact
+  brief the reviewer was given, from a reviewer that is not the proposer and wrote none of the grounds. Shown as
+  a proposed change and read by the reviewer (run 105) before the builder went on; the 13 findings fixed; THE
+  FIX NOT YET RE-READ, so neither ticket is marked done. Ticket 01 not started.
