@@ -7878,3 +7878,22 @@ figure. To bring back when the work reaches what moves the market and price-curv
   WHERE THE SKILL AND HIS RULES DIFFER, HIS RULES STAND: the skill's check examples build their own inputs; here
   no market data and no figure is made up, so a check reads real records. The skill's review runs two readers;
   that is ticket 45, at the end.
+- HIS STOP ENDED FOUR AGENTS; "RESTART AGENTS"; MORE GROUPS OUT AT ONCE (Greg, 2026-11-24, twenty-sixth session):
+  "#run mattpocock-skills"; "I'm serious that's a directive"; "Those skills should be in your library"; "What
+  repo are you refering to?"; "And there should be multiple groups of the 4 agents out working on the build
+  groups"; then "Restart agents". WHAT WAS SO when he said it: five runs were out on three groups (scout 157 on
+  G08; scout 158 on G07; scout 159, reviewer 160 and builder 161 on G11). His stop ended 158, 159, 160 and 161;
+  157 had handed back. ANSWERED TO HIM: the Pocock skills are NOT in this session's list of skills and no copy
+  is installed on its machine; "the repo" is the public repository `mattpocock/skills` on GitHub, where Matt
+  Pocock publishes them, cloned read-only into the session's scratch folder at `d653911`; they are run from
+  those files (`implement`, with `tdd` and `code-review`, and `chief-of-staff`). Putting them in the library of
+  every session is a setting of his, not something a session can do for the next one. DONE ON HIS WORD: each
+  stopped run keeps its number, its line and its kept transcript, marked stopped; builder 161's unfinished file
+  was committed as it stood and pushed, marked UNFINISHED (Markets `60f8086`); each is started again as a NEW run
+  (162 to 165); and more groups are sent out at the same time: runs 162 to 170 on six groups (G03, G05, G07, G08,
+  G09, G11), their limits in git before they start. A SEND-BACK OR A START AGAIN IS A NEW RUN (the main session,
+  correcting its own sentence above): `max_retries` is written 0 from run 162 on.
+  WHAT IS NOT OUT, AND WHY: G01 and G04 (and the builder of G03). Their checks need a checkout of
+  paper-trading-platform beside Markets: without it all 79 checks of `tests/agent_program/test_defend.py` are
+  skipped and the 10 of `test_outcome.py` end in a refusal ("a rule ground needs rule_id, a commit sha and a
+  platform checkout"). This session was not started with that repository and adding it was refused. Said to him.
