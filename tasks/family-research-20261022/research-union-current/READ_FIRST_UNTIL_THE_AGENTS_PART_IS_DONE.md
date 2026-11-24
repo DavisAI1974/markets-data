@@ -47,3 +47,22 @@ now." Every run of the scout, the builder and the reviewer is audited by the per
 own row, against the limits told to Greg before it started. Through run 110 it was called on none. The check
 that holds this is ticket 03b (`paper-trading-20261123/tickets-44-20261124/03b.md`); until it is built, the
 main session calls the auditor on each batch's runs before any box of that batch is marked.
+
+## ADDED LATER ON 2026-11-24 (the reviewer's read of ticket 03b, agent run 123): what is so now
+
+- The check exists: from the Markets checkout, `MARKETS_DATA=<markets-data> python3 -m tools.kgraph.auditor_called`
+  lists every run that no auditor's report has its own row for and ends with a failing exit code while any is
+  listed; `--ticket NN` does the same for the runs that worked on one ticket (`paper-trading-20261123/
+  tickets-44-20261124/TICKET_RUNS.json`). It is built and read once; its ticket is not marked.
+- A TICKET'S BOX IS NOT MARKED WHILE A RUN THAT WORKED ON IT IS UNAUDITED. The command is run before any box is
+  marked and at the close of every session. Nothing runs it by itself: the main session does.
+- THE AUDITOR'S REPORT FOR EACH OF ITS RUNS IS KEPT IN GIT WORD FOR WORD (`paper-trading-20261123/
+  audits-20261124/`), and each sub-agent's own transcript is kept in `paper-trading-20261123/transcripts/`, so a
+  later session can check a run's line and its report against what the agent actually did.
+- THE TABLE ABOVE, AS THE FILES STAND NOW IN MARKETS (`3a98333`): `builder.md` is the zip's text plus 1 line and
+  `reviewer.md` the zip's text plus 6 lines (each gained "you do not search or read whole files to find things",
+  Greg, 2026-11-24); `frankie-performance-auditor.md` is the zip's text plus a section of 18 lines, "Every run of
+  the other three agents"; `scout.md` is unchanged since the table was written. Nothing of the zip's text was
+  taken out of any of them.
+- MORE THAN ONE BUILDER WORKS AT A TIME (Greg, 2026-11-24: "We need more builder agents working in parallel"),
+  each in its own working copy on files no other builder is on.
