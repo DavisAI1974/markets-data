@@ -1,0 +1,69 @@
+{
+ "claim_key": "decider_v1/inference-4b",
+ "artifact_repo": "Markets",
+ "artifact_path": "tools/decider/programs/decider_v1.py",
+ "code_commit": "04f437861201ba5b8be0b411346a91eafdc531c6",
+ "artifact_sha256": "a36aaf9c822601362b65e7a3fd4867fd39d7fe134279c07ade705379160afbc0",
+ "outcome_visibility": {
+  "outcome_seen": true,
+  "what": "The page says of the decider: \"It was written with these trade days already studied, as the rule texts were.\" (decider_v1.md lines 40-41). It also says: \"Nothing here has been tried on the tape, and nothing is claimed about it being good.\" (line 7) and the program says \"Nothing here was scored.\" So the author had studied the trade days (which, the page does not say how or what was seen) before writing this condition; no scored outcome of the decider exists."
+ },
+ "data_manifest_hashes": {
+  "none": "no data file bears on this claim yet: it is about what rule texts and CLAUDE.md say and what the program does with them; nothing was run on the tape or the engine"
+ },
+ "reasoning_files": [
+  "tools/decider/programs/decider_v1.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/claims-20261124/decider_v1/README.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/tickets-44-20261124/01.md"
+ ],
+ "inference": true,
+ "hypothesis": "The -0.20 of CLAUDE.md's divergence line is on the same scale as the decider's figure, bought minus sold over bought plus sold.",
+ "exact_claim": "The page (inference 4, second statement): 'that -0.20 is on the scale of ours (CLAUDE.md does not say the scale of `imb_level`)'. The decider compares (bought minus sold) over (bought plus sold), signed to the trade's side, with -0.20.",
+ "scope": "Condition 4 (decider_v1/condition-4): the threshold STRONG_DIVERGENCE = -0.20 in the program. The page names no trade days and no dates; it says only that the decider was written with 'these trade days' already studied.",
+ "boundaries": "The -0.20 is a crypto-era figure. Says nothing about whether the span (20 seconds) matches the research's span, or about outcomes.",
+ "inference_reason": "Inferred from CLAUDE.md's divergence line, which gives -0.20 for aligned_flow = imb_level x sign(price_drift) without saying how imb_level is measured, and from lines 187-188, which give the 2026-11-23 formula for the flow figures.",
+ "mechanism": "If imb_level in the research is the same ratio, the figure runs between -1 and 1 and -0.20 sits one fifth of the way from balance on the adverse side.",
+ "alternatives": [
+  "Line 383 describes the dipole 'collapsing toward 0.5', which reads as a figure centred on 0.5; if imb_level is on that scale, a value of -0.20 cannot be reached and the threshold would be a different one.",
+  "The research may have computed imb_level over a different span or on a differently weighted count."
+ ],
+ "falsifiers": [
+  {
+   "observation": "The crypto-era code or note that defines imb_level as a figure centred on 0.5, or a count other than bought and sold quantity.",
+   "record": "research/shape_s71/regroup2.py and _dipole_price_overlay.py on Markets commit 75b15fa, named in CLAUDE.md lines 189-192"
+  },
+  {
+   "observation": "A line of CLAUDE.md giving the range of imb_level.",
+   "record": "CLAUDE.md dipole research lines 372-392"
+  }
+ ],
+ "rests_on": [
+  {
+   "kind": "cited",
+   "repo": "Markets",
+   "path": "CLAUDE.md",
+   "line_start": 381,
+   "line_end": 382,
+   "quote": "**DIVERGENCE** — `aligned_flow = imb_level × sign(price_drift)`; strong divergence (≤ −0.20) → ~65% reversal",
+   "said_by": "Markets CLAUDE.md as committed; line 379 labels the bullet 'The core read (S36, 2 factors, stack monotonically)'; the file names no speaker for these lines"
+  },
+  {
+   "kind": "cited",
+   "repo": "Markets",
+   "path": "CLAUDE.md",
+   "line_start": 382,
+   "line_end": 383,
+   "quote": "(2) **EXHAUSTION** — the dipole COLLAPSING toward 0.5",
+   "said_by": "Markets CLAUDE.md as committed; the same bullet as the DIVERGENCE line; the file names no speaker for these lines"
+  },
+  {
+   "kind": "cited",
+   "repo": "Markets",
+   "path": "CLAUDE.md",
+   "line_start": 187,
+   "line_end": 188,
+   "quote": "Both are ONE figure, bought minus sold over bought plus sold",
+   "said_by": "Markets CLAUDE.md as committed; the bullet quotes Greg on 2026-11-23 in its first lines; whether Greg's words reach these lines is not marked in the file; the file names no speaker for these lines"
+  }
+ ]
+}

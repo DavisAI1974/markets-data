@@ -1,0 +1,60 @@
+{
+ "claim_key": "decider_v1/condition-2",
+ "artifact_repo": "Markets",
+ "artifact_path": "tools/decider/programs/decider_v1.py",
+ "code_commit": "04f437861201ba5b8be0b411346a91eafdc531c6",
+ "artifact_sha256": "a36aaf9c822601362b65e7a3fd4867fd39d7fe134279c07ade705379160afbc0",
+ "outcome_visibility": {
+  "outcome_seen": true,
+  "what": "The page says of the decider: \"It was written with these trade days already studied, as the rule texts were.\" (decider_v1.md lines 40-41). It also says: \"Nothing here has been tried on the tape, and nothing is claimed about it being good.\" (line 7) and the program says \"Nothing here was scored.\" So the author had studied the trade days (which, the page does not say how or what was seen) before writing this condition; no scored outcome of the decider exists."
+ },
+ "data_manifest_hashes": {
+  "none": "no data file bears on this claim yet: it is about what rule texts and CLAUDE.md say and what the program does with them; nothing was run on the tape or the engine"
+ },
+ "reasoning_files": [
+  "tools/decider/programs/decider_v1.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/claims-20261124/decider_v1/README.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/tickets-44-20261124/01.md"
+ ],
+ "hypothesis": "A rule that has already opened a trade on one run of a quote does not open a second trade on that same run, so a second opening signal of the same rule on the same run and quote is outside what the rule texts allow and the decider should skip it.",
+ "exact_claim": "decider_v1 skips an opening signal, with the reason tag [same-run], when the same rule already opened a trade on the same run of the same quote (the signal's own journaled run and quote). The page rests it on CL16: 'The same run of the quote never opens a second trade', and on the 'OPENS AGAIN: at the next run's start' lines of CL03 and CL09.",
+ "scope": "The program applies it to the signal's own rule, matched on journaled rule, run and quote, for any rule. The page grounds it in CL16, CL03 and CL09 only. The page names no trade days and no dates; it says only that the decider was written with 'these trade days' already studied.",
+ "boundaries": "The page grounds the skip in CL16, CL03 and CL09 and lists no inference for applying it to other rules; the program applies it to every rule (some rules say 'at the next run's second step', and CL13 'at the next such event'). That wider reach is not grounded by the three texts cited and is left to the challenge. Does not apply when the signal carries no journaled run or quote. Nothing about outcomes is claimed.",
+ "mechanism": "CL16 says the same run never opens a second trade, and CL03 and CL09 say the rule opens again only at the next run's start. So an opening on a run already opened by the same rule is, in the texts, not a signal the rule would make; the program finds it by matching rule, run and quote against earlier opens.",
+ "alternatives": [
+  "CL16, CL03 and CL09 describe those rules' own openings; the other rules have other 'OPENS AGAIN' lines (a run's second step, the next such event), so the same-run skip may remove openings those rules' texts allow.",
+  "A repeated signal on the same run may be the platform re-sending a signal whose open was refused or never filled, in which case the earlier row is not an opened trade.",
+  "'Run' in the journal conditions may count differently from the rule texts' 'run of the quote'."
+ ],
+ "falsifiers": [
+  {
+   "observation": "A skip tagged [same-run] on a rule whose specification allows a second opening within one run, or where the earlier cited open is a different rule, run or quote.",
+   "record": "the decision's skip reason, the journal rows it cites, and that rule's OPENS AGAIN line in paper_platform/rules"
+  },
+  {
+   "observation": "A journal where the same rule opens twice on one run and quote and the rule text allows it.",
+   "record": "journal rows of the run, section same_rule, action open, with conditions run and quote"
+  }
+ ],
+ "inference": false,
+ "rests_on": [
+  {
+   "kind": "rule",
+   "rule_id": "CL16",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "The same run of the quote never opens a second trade."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL03",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "OPENS AGAIN: at the next run's start."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL09",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "OPENS AGAIN: at the next run's start."
+  }
+ ]
+}

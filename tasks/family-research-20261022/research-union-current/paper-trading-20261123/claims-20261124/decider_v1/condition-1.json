@@ -1,0 +1,72 @@
+{
+ "claim_key": "decider_v1/condition-1",
+ "artifact_repo": "Markets",
+ "artifact_path": "tools/decider/programs/decider_v1.py",
+ "code_commit": "04f437861201ba5b8be0b411346a91eafdc531c6",
+ "artifact_sha256": "a36aaf9c822601362b65e7a3fd4867fd39d7fe134279c07ade705379160afbc0",
+ "outcome_visibility": {
+  "outcome_seen": true,
+  "what": "The page says of the decider: \"It was written with these trade days already studied, as the rule texts were.\" (decider_v1.md lines 40-41). It also says: \"Nothing here has been tried on the tape, and nothing is claimed about it being good.\" (line 7) and the program says \"Nothing here was scored.\" So the author had studied the trade days (which, the page does not say how or what was seen) before writing this condition; no scored outcome of the decider exists."
+ },
+ "data_manifest_hashes": {
+  "none": "no data file bears on this claim yet: it is about what rule texts and CLAUDE.md say and what the program does with them; nothing was run on the tape or the engine"
+ },
+ "reasoning_files": [
+  "tools/decider/programs/decider_v1.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/claims-20261124/decider_v1/README.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/tickets-44-20261124/01.md"
+ ],
+ "hypothesis": "While a CX13 or CX14 warning to suspend additions stands on one side in a run, a new opening signal on that same side is an addition the rule texts warn against, and the decider should skip it.",
+ "exact_claim": "decider_v1 skips an opening signal, with the reason tag [suspended-additions], when an earlier row of this run is a CX13 or CX14 row with action 'suspend additions' on the same side as the signal and that warning is still standing: the newest row of that trade is still the suspension (the page says a release, an 'unresolved' end or a close ends it). The page rests it on CX13: 'Suspend additions to the upward position', released 'if the bid first rises above q's bid or exhaustion becomes nonnegative', and CX14 the same downward.",
+ "scope": "Opening signals of any rule, on the side of a CX13 (upward) or CX14 (downward) suspension that is the newest row of its trade within the run, as the program matches side and trade_id. The page names no trade days and no dates; it says only that the decider was written with 'these trade days' already studied.",
+ "boundaries": "Does not apply when no suspension row is earlier in the run, when the newest row of that trade is a release or a close, or when the packet cannot be read (the decider then takes). The page's 'unresolved' end does not appear in CX13 or CX14 (they name a release and an exit); it is the decider's own addition and is not grounded here. Applying a warning that CX13/CX14 give about their own position to the signals of other rules is inference 1, a separate file. Nothing is claimed about whether skipping helps or hurts a trade: nothing was tried on the tape.",
+ "mechanism": "CX13 and CX14 raise a warning on the position they watch when the print moves and the quote does not follow, and say what ends it. The program reads the same warning as standing for as long as the newest row of that trade is still the suspension, and treats a new signal on that side as an addition to be held back.",
+ "alternatives": [
+  "The texts warn on 'the upward position' of their own trade, so a new trade opened by another rule is not an 'addition to the upward position' and the rule texts say nothing about it (inference 1).",
+  "A suspension row can sit as the newest row of its trade for reasons not in the texts (a release or exit not journaled), so the program's idea of 'still standing' may differ from the rule's.",
+  "The page's 'unresolved' end is not in the rule texts; a warning the program treats as ended by it may still stand under CX13/CX14."
+ ],
+ "falsifiers": [
+  {
+   "observation": "A skip tagged [suspended-additions] where the cited suspension row is on the other side from the signal, or where its trade has a later row of release, exit or close.",
+   "record": "the decision's skip reason and the two journal rows it cites (the signal and the suspension row)"
+  },
+  {
+   "observation": "A CX13 or CX14 specification line naming an end of the warning that the program does not treat as an end, or a rule text saying a standing warning applies only to its own trade.",
+   "record": "paper_platform/rules/CX13.json and CX14.json, specification line, at the platform commit"
+  }
+ ],
+ "inference": false,
+ "rests_on": [
+  {
+   "kind": "rule",
+   "rule_id": "CX13",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "Suspend additions to the upward position."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CX13",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "Release the warning if the bid first rises above q’s bid or exhaustion becomes nonnegative."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CX13",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "If a later print first falls below q’s print, issue an exit."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CX14",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "Suspend additions to the downward position."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CX14",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "Release the warning if the offer first falls below q’s offer or exhaustion becomes nonpositive."
+  }
+ ]
+}

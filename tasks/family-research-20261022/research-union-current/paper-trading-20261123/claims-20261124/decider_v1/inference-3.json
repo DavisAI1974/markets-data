@@ -1,0 +1,54 @@
+{
+ "claim_key": "decider_v1/inference-3",
+ "artifact_repo": "Markets",
+ "artifact_path": "tools/decider/programs/decider_v1.py",
+ "code_commit": "04f437861201ba5b8be0b411346a91eafdc531c6",
+ "artifact_sha256": "a36aaf9c822601362b65e7a3fd4867fd39d7fe134279c07ade705379160afbc0",
+ "outcome_visibility": {
+  "outcome_seen": true,
+  "what": "The page says of the decider: \"It was written with these trade days already studied, as the rule texts were.\" (decider_v1.md lines 40-41). It also says: \"Nothing here has been tried on the tape, and nothing is claimed about it being good.\" (line 7) and the program says \"Nothing here was scored.\" So the author had studied the trade days (which, the page does not say how or what was seen) before writing this condition; no scored outcome of the decider exists."
+ },
+ "data_manifest_hashes": {
+  "none": "no data file bears on this claim yet: it is about what rule texts and CLAUDE.md say and what the program does with them; nothing was run on the tape or the engine"
+ },
+ "reasoning_files": [
+  "tools/decider/programs/decider_v1.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/claims-20261124/decider_v1/README.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/tickets-44-20261124/01.md"
+ ],
+ "inference": true,
+ "hypothesis": "CL06's sentence about a crossed or locked quote can be applied to every rule's opening signal.",
+ "exact_claim": "The page (inference 3): 'applying CL06's sentence to every rule. Only CL06's text says it.' This is the step condition 3 takes beyond CL06's text.",
+ "scope": "Condition 3 (decider_v1/condition-3): every rule's opening signal. The page names no trade days and no dates; it says only that the decider was written with 'these trade days' already studied.",
+ "boundaries": "Says nothing about whether other rules' texts allow a crossed quote; no other text was read as stating the exclusion. No outcome claimed.",
+ "inference_reason": "Inferred from CL06's own text: the sentence 'Not while the best offer is at or below the best bid' is part of CL06's trigger and names CL06's rule only.",
+ "mechanism": "A state in which the offer is at or below the bid is an abnormal quote; the decider treats the sentence CL06 writes for itself as a fact about the quote that holds for any rule's signal.",
+ "alternatives": [
+  "Each rule's trigger is its own; a rule that states no such exclusion may be meant to act in that state.",
+  "CL06's clause may be there because its trigger reads two quotes' steps, which a crossed quote confuses, a reason that does not carry to rules reading one quote."
+ ],
+ "falsifiers": [
+  {
+   "observation": "A rule specification that triggers on a state in which the best offer is at or below the best bid, or says what to do in that state differently.",
+   "record": "paper_platform/rules specification lines at the platform commit"
+  },
+  {
+   "observation": "Journal rows where a signal of a rule other than CL06 with a crossed quote opened and closed in the way that rule's text lays out.",
+   "record": "journal rows of the run: bid, ask and the rule's open and close rows"
+  }
+ ],
+ "rests_on": [
+  {
+   "kind": "rule",
+   "rule_id": "CL06",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "Not while the best offer\\n  is at or below the best bid."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL06",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "CL06 (v2). Both quotes have stepped the same way"
+  }
+ ]
+}

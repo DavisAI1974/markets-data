@@ -1,0 +1,78 @@
+{
+ "claim_key": "decider_v1/inference-4a",
+ "artifact_repo": "Markets",
+ "artifact_path": "tools/decider/programs/decider_v1.py",
+ "code_commit": "04f437861201ba5b8be0b411346a91eafdc531c6",
+ "artifact_sha256": "a36aaf9c822601362b65e7a3fd4867fd39d7fe134279c07ade705379160afbc0",
+ "outcome_visibility": {
+  "outcome_seen": true,
+  "what": "The page says of the decider: \"It was written with these trade days already studied, as the rule texts were.\" (decider_v1.md lines 40-41). It also says: \"Nothing here has been tried on the tape, and nothing is claimed about it being good.\" (line 7) and the program says \"Nothing here was scored.\" So the author had studied the trade days (which, the page does not say how or what was seen) before writing this condition; no scored outcome of the decider exists."
+ },
+ "data_manifest_hashes": {
+  "none": "no data file bears on this claim yet: it is about what rule texts and CLAUDE.md say and what the program does with them; nothing was run on the tape or the engine"
+ },
+ "reasoning_files": [
+  "tools/decider/programs/decider_v1.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/claims-20261124/decider_v1/README.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/tickets-44-20261124/01.md"
+ ],
+ "inference": true,
+ "hypothesis": "The 20-second flow carried on the newest known dipole event stands for the line at the signal, even when that event is minutes old.",
+ "exact_claim": "The page (inference 4, first statement): 'that the flow on the newest known dipole event stands for the line now (the event can be minutes old, and the packet's dipole line shows the 20-second flow at its birth, not at the signal)'. It is a step condition 4 takes.",
+ "scope": "Condition 4 (decider_v1/condition-4): the seven rules' opening signals when a dipole event is known. The page names no trade days and no dates; it says only that the decider was written with 'these trade days' already studied.",
+ "boundaries": "Says nothing on the threshold's scale (inference 4b) or the rule list (inference 4c). Does not cover signals with no known dipole event.",
+ "inference_reason": "Inferred from what CLAUDE.md says the flow figure is (a figure over the trades received in a span, read at the nanosecond) and what the packet says its fields are (the 20-second flow at the end of the event's birth second): neither text says the figure at birth equals the figure now.",
+ "mechanism": "The decider has only the packet, which shows the figure at each dipole event's birth. Reading the newest event's figure as the present state assumes the flow has not changed since.",
+ "alternatives": [
+  "The figure is read at the event's birth, which can be minutes before the signal; the flow at the signal can be on the other side.",
+  "CLAUDE.md names the 20-second figure the EXHAUSTION line and the 60-second figure the DIPOLE line; the event's 20-second field may not be the line the research's divergence reads."
+ ],
+ "falsifiers": [
+  {
+   "observation": "A signal where the flow over the 20 seconds before the signal, from the tape, lies on the other side of the threshold from the newest event's figure.",
+   "record": "the packet's dipole line and the tape's trades in the 20 seconds before the signal (not read by the proposer)"
+  },
+  {
+   "observation": "A packet whose newest dipole event is older than the span the figure covers.",
+   "record": "the packet's dipole line: native birth and known times against the signal's time"
+  }
+ ],
+ "rests_on": [
+  {
+   "kind": "cited",
+   "repo": "Markets",
+   "path": "CLAUDE.md",
+   "line_start": 187,
+   "line_end": 188,
+   "quote": "Both are ONE figure, bought minus sold over bought plus sold",
+   "said_by": "Markets CLAUDE.md as committed; the bullet quotes Greg on 2026-11-23 in its first lines; whether Greg's words reach these lines is not marked in the file; the file names no speaker for these lines"
+  },
+  {
+   "kind": "cited",
+   "repo": "Markets",
+   "path": "CLAUDE.md",
+   "line_start": 189,
+   "line_end": 189,
+   "quote": "the EXHAUSTION line is that figure over the last 20 seconds",
+   "said_by": "Markets CLAUDE.md as committed; same bullet; the file names no speaker for these lines"
+  },
+  {
+   "kind": "cited",
+   "repo": "Markets",
+   "path": "CLAUDE.md",
+   "line_start": 191,
+   "line_end": 191,
+   "quote": "the DIPOLE line is that figure over the last 60 seconds",
+   "said_by": "Markets CLAUDE.md as committed; same bullet; the file names no speaker for these lines"
+  },
+  {
+   "kind": "cited",
+   "repo": "Markets",
+   "path": "tools/kgraph/packet.py",
+   "line_start": 81,
+   "line_end": 81,
+   "quote": "our 20-second flow on the last tick received before the END of the birth second",
+   "said_by": "a string constant in tools/kgraph/packet.py; the file names no speaker"
+  }
+ ]
+}

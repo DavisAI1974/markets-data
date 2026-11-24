@@ -1,0 +1,47 @@
+{
+ "claim_key": "decider_v1/condition-3",
+ "artifact_repo": "Markets",
+ "artifact_path": "tools/decider/programs/decider_v1.py",
+ "code_commit": "04f437861201ba5b8be0b411346a91eafdc531c6",
+ "artifact_sha256": "a36aaf9c822601362b65e7a3fd4867fd39d7fe134279c07ade705379160afbc0",
+ "outcome_visibility": {
+  "outcome_seen": true,
+  "what": "The page says of the decider: \"It was written with these trade days already studied, as the rule texts were.\" (decider_v1.md lines 40-41). It also says: \"Nothing here has been tried on the tape, and nothing is claimed about it being good.\" (line 7) and the program says \"Nothing here was scored.\" So the author had studied the trade days (which, the page does not say how or what was seen) before writing this condition; no scored outcome of the decider exists."
+ },
+ "data_manifest_hashes": {
+  "none": "no data file bears on this claim yet: it is about what rule texts and CLAUDE.md say and what the program does with them; nothing was run on the tape or the engine"
+ },
+ "reasoning_files": [
+  "tools/decider/programs/decider_v1.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/claims-20261124/decider_v1/README.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/tickets-44-20261124/01.md"
+ ],
+ "hypothesis": "When the best offer is at or below the best bid at the signal (a crossed or locked quote), the signal should not be taken, because CL06's text says its rule does not run in that state.",
+ "exact_claim": "decider_v1 skips an opening signal, with the reason tag [crossed-quote], when the best offer is at or below the best bid at the signal. The page rests it on CL06: 'Not while the best offer is at or below the best bid'.",
+ "scope": "The program applies it to every rule's opening signal that carries both a bid and an ask. The page rests it on CL06's sentence alone. The page names no trade days and no dates; it says only that the decider was written with 'these trade days' already studied.",
+ "boundaries": "CL06's sentence is a clause of CL06's own trigger; extending it to every rule is inference 3, a separate file. Does not apply when bid or ask is missing in the packet. Nothing about outcomes is claimed.",
+ "mechanism": "CL06 says its trigger does not hold while the best offer is at or below the best bid. The program reads the bid and ask journaled on the signal and skips on that state for any rule.",
+ "alternatives": [
+  "Only CL06 states the exclusion; the other rules may be built to run while the quote is locked or crossed, in which case the skip removes signals their texts allow.",
+  "The bid and ask on the signal row may be taken at a different instant from the state CL06 describes (the end of the exchange event), so the row can show a crossed quote that the rule's own decision point does not."
+ ],
+ "falsifiers": [
+  {
+   "observation": "A skip tagged [crossed-quote] on a signal whose journaled bid is below its ask.",
+   "record": "the decision's skip reason and the signal's journal row"
+  },
+  {
+   "observation": "A rule specification whose trigger is stated to hold while the offer is at or below the bid.",
+   "record": "paper_platform/rules specification lines at the platform commit"
+  }
+ ],
+ "inference": false,
+ "rests_on": [
+  {
+   "kind": "rule",
+   "rule_id": "CL06",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "Not while the best offer\\n  is at or below the best bid."
+  }
+ ]
+}

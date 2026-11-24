@@ -1,0 +1,66 @@
+{
+ "claim_key": "decider_v1/inference-1",
+ "artifact_repo": "Markets",
+ "artifact_path": "tools/decider/programs/decider_v1.py",
+ "code_commit": "04f437861201ba5b8be0b411346a91eafdc531c6",
+ "artifact_sha256": "a36aaf9c822601362b65e7a3fd4867fd39d7fe134279c07ade705379160afbc0",
+ "outcome_visibility": {
+  "outcome_seen": true,
+  "what": "The page says of the decider: \"It was written with these trade days already studied, as the rule texts were.\" (decider_v1.md lines 40-41). It also says: \"Nothing here has been tried on the tape, and nothing is claimed about it being good.\" (line 7) and the program says \"Nothing here was scored.\" So the author had studied the trade days (which, the page does not say how or what was seen) before writing this condition; no scored outcome of the decider exists."
+ },
+ "data_manifest_hashes": {
+  "none": "no data file bears on this claim yet: it is about what rule texts and CLAUDE.md say and what the program does with them; nothing was run on the tape or the engine"
+ },
+ "reasoning_files": [
+  "tools/decider/programs/decider_v1.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/claims-20261124/decider_v1/README.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/tickets-44-20261124/01.md"
+ ],
+ "inference": true,
+ "hypothesis": "A CX13 or CX14 'suspend additions' warning can be applied to an opening signal of any rule on that side, though the texts name only their own position.",
+ "exact_claim": "The page (inference 1): 'applying a CX13/CX14 warning to an opening signal of any rule on that side. The texts name the position they warn on, not other rules.' This is the step condition 1 takes beyond the CX13 and CX14 texts.",
+ "scope": "Condition 1 (decider_v1/condition-1): any rule's opening signal, on the side of a standing CX13 or CX14 warning. The page names no trade days and no dates; it says only that the decider was written with 'these trade days' already studied.",
+ "boundaries": "Does not cover whether the warning is still standing (condition 1) or any outcome. No source text says the warning reaches other rules; that is why it is an inference.",
+ "inference_reason": "Inferred from CX13 and CX14's own texts: each arms on an open paper position of one direction and says to suspend additions to that position; the texts name no other rule's signal.",
+ "mechanism": "A warning to stop adding to a direction can be read as about the direction (any further opening that way) or about the one position. The decider takes the first reading: a new opening on that side adds to the same exposure.",
+ "alternatives": [
+  "The texts' 'the upward position' is one open paper position; a new signal of another rule opens its own trade, which the warning does not name.",
+  "CX13 and CX14 arm only when a position of the same trade is open, so a signal when none is open may sit outside what they warn on."
+ ],
+ "falsifiers": [
+  {
+   "observation": "A rule or platform text that treats each rule's trade as separate exposure, or that limits 'additions' to the trade that armed the warning.",
+   "record": "paper_platform/rules CX13, CX14 and any shared-rules text at the platform commit"
+  },
+  {
+   "observation": "A journaled run where a skip under [suspended-additions] was applied to a rule that was not the one that raised the warning and the warned trade's row shows no open position.",
+   "record": "decision skip reasons and journal rows of the run"
+  }
+ ],
+ "rests_on": [
+  {
+   "kind": "rule",
+   "rule_id": "CX13",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "An upward paper position is open and dipole is negative."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CX13",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "Suspend additions to the upward position."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CX14",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "A downward paper position is open and dipole is positive."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CX14",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "Suspend additions to the downward position."
+  }
+ ]
+}

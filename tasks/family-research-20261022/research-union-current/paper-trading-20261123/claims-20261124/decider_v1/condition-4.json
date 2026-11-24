@@ -1,0 +1,106 @@
+{
+ "claim_key": "decider_v1/condition-4",
+ "artifact_repo": "Markets",
+ "artifact_path": "tools/decider/programs/decider_v1.py",
+ "code_commit": "04f437861201ba5b8be0b411346a91eafdc531c6",
+ "artifact_sha256": "a36aaf9c822601362b65e7a3fd4867fd39d7fe134279c07ade705379160afbc0",
+ "outcome_visibility": {
+  "outcome_seen": true,
+  "what": "The page says of the decider: \"It was written with these trade days already studied, as the rule texts were.\" (decider_v1.md lines 40-41). It also says: \"Nothing here has been tried on the tape, and nothing is claimed about it being good.\" (line 7) and the program says \"Nothing here was scored.\" So the author had studied the trade days (which, the page does not say how or what was seen) before writing this condition; no scored outcome of the decider exists."
+ },
+ "data_manifest_hashes": {
+  "none": "no data file bears on this claim yet: it is about what rule texts and CLAUDE.md say and what the program does with them; nothing was run on the tape or the engine"
+ },
+ "reasoning_files": [
+  "tools/decider/programs/decider_v1.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/claims-20261124/decider_v1/README.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/tickets-44-20261124/01.md"
+ ],
+ "hypothesis": "For the seven rules whose SIDE lines put the trade with the quote's step, a trade going against a strong divergence read (the 20-second flow of the newest known dipole event at -0.20 or worse against the trade's side) is entering where the dipole research says a reversal follows, so the decider should skip it.",
+ "exact_claim": "decider_v1 skips, with the reason tag [divergence], an opening signal of CL01, CL03, CL06, CL10, CL13, CL15 or CL16 (the page says their SIDE lines put the trade with the quote's step) when the 20-second flow carried on the newest dipole event known by then (bought minus sold over bought plus sold) runs against the trade's side at -0.20 or worse. The page rests it on the dipole research in CLAUDE.md (DIVERGENCE: aligned_flow = imb_level x sign(price_drift); strong divergence at or beyond -0.20, about 65% reversal). The page adds that it is the divergence read, not the flow as a direction call.",
+ "scope": "Opening signals of the seven named rules, on the buy or sell side, when a dipole event is known and bought plus sold is above zero. The page names no trade days and no dates; it says only that the decider was written with 'these trade days' already studied.",
+ "boundaries": "The -0.20 and the 65 per cent are crypto-era measurements (CLAUDE.md's dipole research, S36); whether they carry to this tape is not shown. The three inferences it needs (flow of the newest event stands for the line now; -0.20 is on the scale of the decider's figure; the seven are the with-the-move rules) are separate files (inference-4a, 4b, 4c). Does not apply to other rules, nor when no dipole event is known. No mirror for entries against the move. Nothing about outcomes is claimed.",
+ "mechanism": "CLAUDE.md states the crypto-era read: flow aligned with the price drift's sign, at or beyond -0.20, was followed by reversal about 65 per cent of the time. For a rule that trades with the step, the drift's sign is the trade's side, so aligned flow at or beyond -0.20 reads as a trade entered into a probable reversal; the program computes the aligned figure from the packet's 20-second flow fields.",
+ "alternatives": [
+  "The crypto-era figures describe a different instrument and period; on this tape the same threshold may mark nothing.",
+  "The program's figure is the 20-second flow, which CLAUDE.md calls the EXHAUSTION line, not the 60-second DIPOLE line; the research's imb_level may be a different quantity from it.",
+  "CLAUDE.md's 'Discipline' lines say the signed flow is not a direct direction predictor and that the divergence/flip read is the robust edge; a skip on flow alone may behave as a direction call."
+ ],
+ "falsifiers": [
+  {
+   "observation": "A skip tagged [divergence] whose cited dipole line gives bought plus sold at zero, or an aligned figure above -0.20, or whose rule is not one of the seven.",
+   "record": "the decision's skip reason, the cited dipole line of the packet, and WITH_THE_MOVE in decider_v1.py"
+  },
+  {
+   "observation": "A SIDE line of one of the seven rules that puts the trade against the quote's step.",
+   "record": "paper_platform/rules specification lines, SIDE, at the platform commit"
+  },
+  {
+   "observation": "A line of CLAUDE.md's dipole research that gives the -0.20 on a quantity other than bought minus sold over bought plus sold, or on a span other than the one the packet carries.",
+   "record": "CLAUDE.md lines 187-191 and 381-383"
+  }
+ ],
+ "inference": false,
+ "rests_on": [
+  {
+   "kind": "cited",
+   "repo": "Markets",
+   "path": "CLAUDE.md",
+   "line_start": 381,
+   "line_end": 382,
+   "quote": "**DIVERGENCE** — `aligned_flow = imb_level × sign(price_drift)`; strong divergence (≤ −0.20) → ~65% reversal",
+   "said_by": "Markets CLAUDE.md as committed; line 379 labels the bullet 'The core read (S36, 2 factors, stack monotonically)'; the file names no speaker for these lines"
+  },
+  {
+   "kind": "cited",
+   "repo": "Markets",
+   "path": "CLAUDE.md",
+   "line_start": 386,
+   "line_end": 386,
+   "quote": "**Discipline (load-bearing):** the signed flow is NOT a direct direction predictor",
+   "said_by": "Markets CLAUDE.md as committed; line 386 labels the bullet 'Discipline (load-bearing)'; the file names no speaker for these lines"
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL01",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: BUY for the best offer up. SELL for the best bid down."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL03",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: BUY for the best offer up. SELL for the best bid down."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL06",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: BUY when both stepped up. SELL when both stepped down."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL10",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: BUY for a run up. SELL for a run down. (With the price.)"
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL13",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: BUY when a buyer paid up. SELL when a seller did."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL15",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: the ORIGINAL direction: BUY when the first run was up, SELL when it was down."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL16",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: with the step. BUY for a step up. SELL for a step down."
+  }
+ ]
+}

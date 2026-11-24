@@ -1,0 +1,91 @@
+{
+ "claim_key": "decider_v1/inference-4c",
+ "artifact_repo": "Markets",
+ "artifact_path": "tools/decider/programs/decider_v1.py",
+ "code_commit": "04f437861201ba5b8be0b411346a91eafdc531c6",
+ "artifact_sha256": "a36aaf9c822601362b65e7a3fd4867fd39d7fe134279c07ade705379160afbc0",
+ "outcome_visibility": {
+  "outcome_seen": true,
+  "what": "The page says of the decider: \"It was written with these trade days already studied, as the rule texts were.\" (decider_v1.md lines 40-41). It also says: \"Nothing here has been tried on the tape, and nothing is claimed about it being good.\" (line 7) and the program says \"Nothing here was scored.\" So the author had studied the trade days (which, the page does not say how or what was seen) before writing this condition; no scored outcome of the decider exists."
+ },
+ "data_manifest_hashes": {
+  "none": "no data file bears on this claim yet: it is about what rule texts and CLAUDE.md say and what the program does with them; nothing was run on the tape or the engine"
+ },
+ "reasoning_files": [
+  "tools/decider/programs/decider_v1.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/claims-20261124/decider_v1/README.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/tickets-44-20261124/01.md"
+ ],
+ "inference": true,
+ "hypothesis": "The seven rules the decider lists (CL01, CL03, CL06, CL10, CL13, CL15, CL16) are the rules that enter with the move, so the drift's sign is the trade's side for each.",
+ "exact_claim": "The page (inference 4, third statement): 'that this rule list is the \"with the move\" rules. CL10 is in the list although its own trigger is \"the dipole stands on the OTHER side\"; so it skips when the flow is strongly against, which is the case its trigger describes.'",
+ "scope": "Condition 4 (decider_v1/condition-4): WITH_THE_MOVE in the program. The page names no trade days and no dates; it says only that the decider was written with 'these trade days' already studied.",
+ "boundaries": "The page quotes CL10's trigger as 'the dipole stands on the OTHER side'; the file reads 'while the dipole line stands on the OTHER side' (the claim quotes the file). The list leaves out rules not named by the page. CL15's SIDE line says 'the ORIGINAL direction'; how that is 'with the move' is part of what is put up.",
+ "inference_reason": "Inferred from the seven SIDE lines read by the author, which put the trade in the direction of the step, the run, the sweep or the return, and from CL10's trigger, which has the dipole line on the other side of the run.",
+ "mechanism": "Where a rule's side is the direction of the price's last step, the research's price-drift sign equals the trade's side. For CL10 the trigger itself is the dipole against the price, so a strong flow against is the rule's own entry condition.",
+ "alternatives": [
+  "For CL10 the flow on the other side is the trigger itself, so the skip removes the signals the rule exists to take.",
+  "CL15 enters the original direction after a step back and a return, so the drift at the signal is not obviously the original direction's sign.",
+  "A rule left out of the list may also enter with the move; the list was made from the SIDE lines by one reader."
+ ],
+ "falsifiers": [
+  {
+   "observation": "A SIDE line of a listed rule that puts the trade against the last step, or a SIDE line of an unlisted rule that puts it with the step.",
+   "record": "paper_platform/rules specification lines, SIDE, at the platform commit"
+  },
+  {
+   "observation": "CL10 journaled trades where the dipole line stood on the other side and the decider skipped them all, so that no CL10 signal is ever taken.",
+   "record": "decision skip reasons for CL10 signals and the packet dipole lines"
+  }
+ ],
+ "rests_on": [
+  {
+   "kind": "rule",
+   "rule_id": "CL01",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: BUY for the best offer up. SELL for the best bid down."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL03",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: BUY for the best offer up. SELL for the best bid down."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL06",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: BUY when both stepped up. SELL when both stepped down."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL10",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: BUY for a run up. SELL for a run down. (With the price.)"
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL13",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: BUY when a buyer paid up. SELL when a seller did."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL15",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: the ORIGINAL direction: BUY when the first run was up, SELL when it was down."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL16",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "SIDE: with the step. BUY for a step up. SELL for a step down."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL10",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "takes its second step while the dipole line stands on the\\n  OTHER side."
+  }
+ ]
+}
