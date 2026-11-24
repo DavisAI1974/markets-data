@@ -6044,3 +6044,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   at the commit that adds handoff W; Markets session branch `ccr-d613618f-v7t9jy` `65f71a9` (unchanged from
   `ccr-532eaea6-vgz20z`; nothing on the trunk). Agent budgets left: builder 102,225 of 300,000; reviewer 187,551
   of 250,000. No pod exists. The sandbox account is short 13 lots of /NGF7 and is left as it is.
+- ASKED AFTER THE CLOSE (Greg, 2026-11-24): "Is it creating the graphs for the ledger?"; "I thought the new agent
+  program was supposed to convert the handoffs into graphs so theere isn't so much to read?" Answered: no graph of
+  any kind is made yet. The runner writes files of lines only. Turning the handoffs into the knowledge graph is
+  stage 4 of the graph adoption plan (4b, the scout's extraction) and starting a session from the graph instead of
+  the handoff pile is stage 5; both are filed, not built, and markets-data has no `graph/` folder. Only stages 1
+  and 7 have been started. On the list as C24 and C25. Starting stage 4 is on his word, with a declared budget.
