@@ -6822,3 +6822,14 @@ figure. To bring back when the work reaches what moves the market and price-curv
   the market line sent before the restart was not sent again. The run and its record in markets-data were not
   touched. Changed in the runner, not run (platform, item 24): a restarted page is refilled 128 rows to a post
   and given every traded price of the run again. The page is not to be deployed during a run.
+- THE GIVE-BACK EXIT IS THE HOLD STRATEGY FOR NOW (Greg, 2026-11-24): "Do the simple exit until we do more research
+  and find better ones"; "And that is our hold strategy. Hold until we give 20% back". DECIDED BY HIM: a paper
+  trade is held until it gives back 20% of its highest open profit, and that stands as the exit and the hold rule
+  until research finds a better one. It stands beside the rules' own closes, which stay in the journal as
+  research signals; nothing of theirs is removed. Taken also as his go to run it. Started by Claude, told to him
+  as it started: the plan `ngx3-12be6ea6e40347def5f574b1c2f36093bba99200-giveback20.json` on platform `2f7cbde`,
+  trade day 2023-10-02, the tape from 6:30 pm to 7:00 pm Eastern (`30+30`), the page on, both budgets 825,874, no
+  tokens, one runner. The fourth test (the rules' own closes, the same half hour) is left running beside it, so
+  the two can be read against each other trade by trade. STILL OPEN, his to settle, built as said under item 17:
+  what happens to a trade that never shows a profit (held to the stop, no loss stop); whether a rule may open
+  again while it holds; a one-tick profit given back by one tick.
