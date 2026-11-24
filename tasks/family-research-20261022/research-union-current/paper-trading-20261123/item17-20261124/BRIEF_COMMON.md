@@ -18,11 +18,11 @@ For each strategy that takes part, the plan holds:
 - For a manager rule only: `entry_rules` (the entry rules whose opens it follows) and `on_parent_close`
   (`"exit"` or `"hold"`).
 
-The guide is `/home/user/ptp-codex/paper_platform/execution_plans/README.md`. Read it.
+The guide is [plan guide](platform/README.md). Read it.
 
 ## What the matcher does with each choice (read from the code; check any line you doubt)
 
-Code: `/home/user/ptp-codex/paper_platform/paper_execution.py`, `engine.py`, `session.py`, same folder.
+Code: [paper_execution.py](https://github.com/DavisAI1974/paper-trading-platform/blob/2986b3ce3001bc1926df64a06588b4558a5b648e/paper_platform/paper_execution.py), `engine.py`, `session.py`, same folder.
 
 1. The matcher is given each tape message before the decision engine sees it (`session.py` line 263). An order
    that comes out of a decision is submitted at that decision row's own receive time. No delay is modelled.
@@ -99,18 +99,17 @@ One JSON file: a list with one object for each rule you were given, in order.
   "why_size":  "<one or two plain sentences>",
   "why_open":  "<one or two plain sentences>",
   "open_quote": "<words copied exactly from one line of a file>",
-  "open_quote_file": "<absolute path>", "open_quote_line": <line number in that file>,
+  "open_quote_file": "<path relative to this brief>", "open_quote_line": <line number in that file>,
   "why_close": "<one or two plain sentences>",
   "close_quote": "<words copied exactly from one line of a file>",
-  "close_quote_file": "<absolute path>", "close_quote_line": <line number>,
+  "close_quote_file": "<path relative to this brief>", "close_quote_line": <line number>,
   "why_parents": "...", "parents_quote": "...", "parents_quote_file": "...", "parents_quote_line": <n>,   (managers)
   "missing": "<for no decision: exactly what is missing and who could supply it>"
 }
 ```
 
 Every quote must stand in the named file on the named line, word for word (a quote may be part of a line, never
-more than one line). Each quote is checked against the file by code; an answer whose quote is not there is not
-used. Quote from the strategy documents named in your own brief (they have real lines), not from a rule's JSON
+more than one line). Automated quote checks are deferred during this build-only pass. Quote from the strategy documents named in your own brief (they have real lines), not from a rule's JSON
 file (its text is one long line).
 
 When the file is written, reply with: the path, how many rules you decided, how many you left with no

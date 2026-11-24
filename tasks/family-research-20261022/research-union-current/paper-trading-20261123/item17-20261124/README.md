@@ -22,20 +22,20 @@ or offer, lift an offer or hit a bid. Frankie and the agents choose placement an
 - Frankie's choices, for all 30 rules: launch is on HOLD and needs Greg's go.
 - So no plan file exists, and item 17 stays open.
 
-## To pick it up
+## Start item 17 here
 
-1. The briefs name files in the session's scratch folder that is gone. Before a decider is run again: check out
-   Codex's branch, and write the two authors' strategy documents to a folder the decider can read
-   (Claude's `strategy-20261123-claude/VERSIONS.md` and `OPEN_QUESTIONS.md` at markets-data `46199c5f`, Codex's
-   `strategy-20261123-codex/VERSIONS.md` and `OPEN_QUESTIONS.md` at markets-data `ad109214`), then put those paths
-   and the answer path in place of the scratch paths in the three briefs.
-2. Run one decider for each family. Check every quote in an answer against its file word for word, by code.
-3. Build the plan file from the answers by code (only the keys the matcher reads: `instrument`,
-   `databento_instrument_id` as the integer 150611, `rules`). A rule with no decision stays out of `rules` and is
-   listed by rule ID under item 17. Keep who decided and why in a file beside the plan.
-4. A plan is never edited once a run has used it: a change is a new file.
-5. Codex's handoff says this pass is build only: no checks, validation or tests on that branch, and no paper session
-   without Greg's go.
+Ccode can give each family its brief from this folder. Source paths in the answers are relative to the brief. The strategy files preserve the original line numbers.
+
+| Family | Agent instructions | Author's files |
+| --- | --- | --- |
+| CL01–CL15 | [CL brief](BRIEF_CL.md) | [Claude's rules](claude-strategy/VERSIONS.md) · [Open questions](claude-strategy/OPEN_QUESTIONS.md) |
+| CX01–CX15 | [CX brief](BRIEF_CX.md) | [Codex's rules](codex-strategy/VERSIONS.md) · [Open questions](codex-strategy/OPEN_QUESTIONS.md) |
+
+Both agents use the [common brief](BRIEF_COMMON.md). The copies come from [Claude's source revision](https://github.com/DavisAI1974/markets-data/tree/46199c5f4af03fde341535a7aff6a0396300cc73/tasks/family-research-20261022/research-union-current/strategy-20261123-claude) and [Codex's source revision](https://github.com/DavisAI1974/markets-data/tree/ad10921479e49678dd228b0f6b144dca3e610a0d/tasks/family-research-20261022/research-union-current/strategy-20261123-codex). This folder also includes the [plan format](platform/README.md) and the [NGX3 contract definition](platform/NG_OCT2023_CONTRACT.md) for Databento instrument `150611`. Those two files were copied from [platform revision 2986b3c](https://github.com/DavisAI1974/paper-trading-platform/tree/2986b3ce3001bc1926df64a06588b4558a5b648e/paper_platform/execution_plans).
+
+Collect `CL-answer.json` and `CX-answer.json` beside the briefs. Each participating rule needs its chosen contract quantity and its opening and closing instructions. CX05, CX06, CX11, CX12, CX13 and CX14 also need their parent entry rules and parent-close instructions. Frankie and the agents own these decisions. Frankie's launch awaits Greg's go.
+
+Commit the versioned plan and decision attribution under [execution_plans on draft PR #5](https://github.com/DavisAI1974/paper-trading-platform/tree/codex/strategy-trades-and-mbo-capture/paper_platform/execution_plans). Leave undecided rules out of the plan and record their IDs under #17 in the [running checklist](https://github.com/DavisAI1974/paper-trading-platform/blob/codex/strategy-trades-and-mbo-capture/docs/platform/OWN_PLATFORM_WISHLIST_20261123.md). Preserve any plan used by a run. The [original 35-item list](https://github.com/DavisAI1974/markets-data/blob/111e46bc156ecf05bfa25814cea3b9c7040a5fc9/tasks/family-research-20261022/research-union-current/paper-trading-20261123/OWN_PLATFORM_WISHLIST_20261123.md) records the original request. Greg deferred checks, validation and tests. A paper session requires his explicit go.
 
 ## Codex's branch moved while this was written
 
