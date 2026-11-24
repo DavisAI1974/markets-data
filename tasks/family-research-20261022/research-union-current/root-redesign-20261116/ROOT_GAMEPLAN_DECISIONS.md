@@ -6252,3 +6252,24 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - A READ NOW LOADS AFTER ITS FILE HAS GROWN (Markets `fc26934`): the decisions file is added to all the time, and a
   read of it could not be loaded again once it had been. A read is now checked against the file as it stood at the
   commit it was cut from, and each claim says which wording it was read from.
+- NO LIMITS FOR THE BUILD PROCESS (Greg, 2026-11-24, after Claude told him the scout had gone over its budget): "Like
+  i said, no limits for the build process". So no figure of a build run is a ceiling; each run's tokens are still
+  written down.
+- NOTHING GETS REPLACED; WHAT DOES NOT WORK IS SCORED SO IT IS NOT CALLED (Greg, 2026-11-24). His words, in order:
+  "Doesn't the agent rules already have that covered?"; "Meaning the rule replacement"; " Othing gets replaced i
+  thought and stuff that doesn't work just gets scored so it doesn't get called"; "I mean nothing gets replaced.
+  Thay was in the pdf. I'll reattach so you can reread"; "Reread the pdf pl2"; "And restart agents". He attached
+  the paper again (Graph Engineering, 11 pages) and Claude reread all of it. What it says, in its own words: every
+  experiment has "a parent state, a code diff, a metric, and a keep-or-discard decision"; "A failed experiment can
+  still contain useful evidence. The primary operation is no longer 'merge this into main.' It is 'traverse the
+  search graph.'"; "A discarded change may still teach other agents that an idea fails under one condition"; the
+  artifact plane stores everything "as immutable versions"; "every superseded object remains addressable"; the
+  context builder is to "prioritize recent verified claims" and "include conflicts and uncertainty". So he is
+  right: nothing is replaced, and what is used is chosen by the checks on it.
+  WHERE CLAUDE'S BUILD WENT PAST THAT (Claude's miss): everything was kept, but (1) the session start left a claim
+  out altogether once a later claim was linked over it, and left out the parked tastytrade lines the same way; (2)
+  Claude had just added a command it described to him as "a later claim taking the place of an earlier one". Both
+  are being changed: nothing is dropped by a link; a claim with something against it is marked and called last,
+  and stays in reach. The word "replace" is not used for it again.
+  THE REVIEWER was stopped again by his message (a message sent while agents run stops them); restarted as run 35
+  from the notes run 34 left.

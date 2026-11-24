@@ -1,0 +1,107 @@
+{
+ "checks": [
+  {
+   "claim": "claim:cde93d51e098",
+   "contradicted": false,
+   "cells": [
+    1,
+    10
+   ],
+   "why": "I compared the sentence with born_eastern and native_polarity of the event: the cells store 2023-10-01 20:22:22 and 1, as written."
+  },
+  {
+   "claim": "claim:e174a7bdc6e5",
+   "contradicted": false,
+   "cells": [
+    6,
+    11
+   ],
+   "why": "I compared native_baseline and native_prominence of the event: the cells store 0.1461538461538462 and 0.8538461538461538, as written."
+  },
+  {
+   "claim": "claim:63d63df3f8d5",
+   "contradicted": false,
+   "cells": [
+    9,
+    12
+   ],
+   "why": "I compared native_magnitude and native_threshold of the event: the cells store 1 and 1, as written."
+  },
+  {
+   "claim": "claim:c1d5bd27c036",
+   "contradicted": false,
+   "cells": [
+    14,
+    18
+   ],
+   "why": "I compared our_flow_bought_20s_after and our_flow_sold_20s_after of the event: the cells store 2 and 0, as written."
+  },
+  {
+   "claim": "claim:0f956ec165ab",
+   "contradicted": false,
+   "cells": [
+    16,
+    17
+   ],
+   "why": "I compared our_flow_fully_one_sided_after and our_flow_on_native_side_after of the event: both cells store true, as written."
+  },
+  {
+   "claim": "claim:3090213f4ae6",
+   "contradicted": false,
+   "cells": [
+    21,
+    22
+   ],
+   "why": "I compared seconds_since_dipole_before and seconds_to_dipole_after of the event: the cells store 106 and 45, as written. The born_eastern cells of the neighbours were also read, and I found nothing stored that disagrees."
+  },
+  {
+   "claim": "claim:01b1f91ce384",
+   "contradicted": false,
+   "cells": [
+    4,
+    5,
+    24,
+    25
+   ],
+   "why": "I compared first_position_in_birth_second, last_position_in_birth_second, ticks_in_birth_second and trades_in_birth_second of the event: the first two store null and the other two store 0, as written."
+  },
+  {
+   "claim": "claim:eec27fab176d",
+   "contradicted": false,
+   "cells": [
+    60,
+    64,
+    68
+   ],
+   "why": "I compared native_polarity, our_flow_bought_20s_after and our_flow_sold_20s_after of the dipole just after: the cells store -1, 0 and 5, as written."
+  },
+  {
+   "claim": "claim:f2e739d7cbc0",
+   "contradicted": false,
+   "cells": [
+    76,
+    77,
+    79
+   ],
+   "why": "I compared high_eastern, peak_side and bought_minus_sold_at_high of the first peak in the span: the cells store 2023-10-01 20:21:32, sell and 9, as written."
+  },
+  {
+   "claim": "claim:dff4e5b0d265",
+   "contradicted": false,
+   "cells": [
+    10,
+    60
+   ],
+   "why": "I compared native_polarity of the event and of the dipole just after: the cells store 1 and -1, which are opposite in sign, as the sentence says."
+  },
+  {
+   "claim": "claim:5831447afa7b",
+   "contradicted": false,
+   "cells": [
+    31,
+    36
+   ],
+   "why": "I compared native_baseline and native_prominence of the dipole just before: the cells store 1 and 0, as written."
+  }
+ ]
+}
