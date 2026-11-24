@@ -6544,3 +6544,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   secret NAMES are configured in GitHub Actions, and of item 26 that "No value was read, set or sent". So there is
   no Pushover key for Claude to move: said to him, with the two ways left (he enters the two values once in the
   Markets environment's settings; or a notice workflow in GitHub, where the keys already are, sends the notice).
+- CODEX'S OPEN NUMBERS GO TO CLAUDE (Greg, 2026-11-24): "I sent you his message about his numbers a few prompts
+  ago. Do what you can to finish what he didn't get done". His open numbers, as he posted them: 16 and 18 (built in
+  draft, awaiting merge), 1, 2, 6, 9, 12 and 17 (awaiting operational evidence), 7 (the storage decision
+  deferred). What can be done without a run is a review by reading and the fixes it calls for, as on 20 to 35;
+  what needs a run or a merge still needs his go. Four reviewers started in parallel (runs 60 to 63, the reviewer
+  agent, reading only, nothing run on the branch): the live run path (items 1 and 9); the wiring of all 32
+  strategies against the plan (2 and 17), which item 2's own text says is still to do; the weekly book and the
+  raw recording (6 and 7); replay and the not-scored marks (12, 16, 18). Each writes its findings to a file as it
+  goes, so a stop part-way loses nothing.
