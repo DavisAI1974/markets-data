@@ -6739,3 +6739,13 @@ figure. To bring back when the work reaches what moves the market and price-curv
   needed from him. Started by Claude on his go, told to him as it started: the same test (trade day 2023-10-02,
   both budgets 825,874, `stop_after_minutes` 30) on `b49e929`, with `phone_page` on and without the wait for each
   push. The first test was still running beside it.
+- THE SECOND TEST (Actions run 45359530482, paper run `06ce6b90c0384057997e17a22d7a4624`, on `b49e929`): it kept
+  the tape's pace (56.75 seconds of tape in 57.9 on the runner) and Greg watched it on his phone. It ended at 2
+  minutes 46 seconds of tape: one post to the phone page took 8,580 ms on Render (read in Render's log), past the
+  runner's 8 seconds, and the runner is built to end the run on any failed post. His words on what he saw: "On my
+  phone but all trade requests are failures". What it was: the stop closed every open trade as an administrative
+  close marked "failure"; the trades before it had filled (937 opening fills, 937 closing fills, 25 strategies).
+  Its receipt: status "failure", 2,765 messages, 4,668 journal rows, every position flat, no working order left,
+  no shutdown error. Built and pushed, not run (platform `52c9a1e`, item 24): with `--keep-tape-pace` a slow or
+  failed post to the page is tried again beside the run and never stops it; the page's store uses write-ahead
+  logging. The page was deployed again by hand with that change, which emptied what it showed.
