@@ -6855,3 +6855,18 @@ figure. To bring back when the work reaches what moves the market and price-curv
   in view are buys at the ask while the market's last trades printed lower. The shape and the offset are therefore
   not evidence that the signals are right or that the entries are late. What would test it: where the market
   stood after each entry, trade by trade, which is read from the runs' own records when they end.
+- THE OPEN TRADES, AND NANOSECOND TIME (Greg, 2026-11-24): "Our line should be the price we are buying and selling
+  at. The other line should be the historic price that was bought or sold at on that day" (it is so). "Then we
+  sbould try to exit those trades profitably"; "Don't let a bunch of trade die without trying to exit. It looks
+  like we're holding them longer now which is good"; "Aren't we doing nano tick time and not full seconds?".
+  Read from the give-back run's record at 6 minutes of tape: 505 trades opened, 107 closed by the give-back, 398
+  still open; of the 398, none had been above zero at any moment since it opened, 131 had touched zero, 267 had
+  not. ON NANOSECOND TIME: the platform decides, orders and fills on the tape's nanosecond times; only the graph's
+  market line had been thinned to one trade a second. It now draws every trade (platform `a773869`, not run).
+  ON THE OPEN TRADES, put to him as four choices because his words fit more than one: HE CHOSE "More time": the
+  same give-back exit, a run of 5.75 hours from 6:30 pm on the tape, so open trades have hours to come good; what
+  is still open at the very end is flattened. Not chosen: a wind-down before the stop; the 20% on both sides
+  (built, not run). Taken as his go for that run, to be started when the two runs in flight have ended and the
+  page has been deployed without the fill marks and with every trade on the market line. Built for a run of
+  hours, not run (platform, item 25): pushes spaced ten seconds apart; the held-contracts list sent to the page
+  only at a run's end.
