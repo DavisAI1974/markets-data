@@ -7110,3 +7110,19 @@ figure. To bring back when the work reaches what moves the market and price-curv
   THE RULE FROM HERE: every agent pushes each piece as it stands; no agent is briefed to hold a commit; the word
   for work not yet pushed is "not yet on GitHub".
 - HIS STOP ENDED THREE AGENTS (runs 69, 77 and 79); each is started again (his standing rule), as runs 80, 81, 82.
+- THE GRAPH AS THE MEMORY, TESTED AND FOUND SHORT (the list's steps 8 and 9; agent run 83, Sonnet). All seven reads
+  are in (handoffs Y, Z, AA and the decisions file to line 7070; 2,563 claims, the seven readers 1,282,497 tokens
+  on Haiku by the harness's totals, of the 1.5 million he approved). SIZE: the graph's text for a session start
+  plus this task is 36,029 characters, about 9,000 tokens at 4 characters a token, against 78,868 characters,
+  about 19,700 tokens, for the pile this session read at its start. THE TEST: a fresh agent given only that text
+  (one tool call, the read of the text) and 15 things a new session must know. What came back, each question its
+  own line and none added up: the hold rule, the runs not scored, what needs his go, the loop's figure not
+  chosen, restart a stopped agent, a trial needs the whole history, launch on HOLD: each answered with its claim
+  ids. NOT IN THE TEXT: what a TRADE DAY is; where the keys are named and that he is not asked for one; never
+  deploy the phone page during a run; who decides at the tick (recorded after the lines the readers were given).
+  ONLY IN PART: the one file a trial changes; how run 47 was settled; what comes next. WRONG: it named
+  `claude/tasty-runner` as the branch of the platform work, an old claim shown beside the right one with nothing
+  to tell them apart. So the smaller text is NOT yet a saving: a session started from it alone would not know
+  the trade day rule and would work on the wrong branch. Being fixed in the context builder (agent run 80): a
+  share of the budget for each section, the rules every handoff repeats first, a date on every line, and the
+  task's own words used to fill the budget. The same 15 questions are put to a fresh agent again after the fix.
