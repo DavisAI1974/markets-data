@@ -1,0 +1,715 @@
+{
+  "run": "058313bbf2304bb0bb14aaed3315ab0e",
+  "market": "nymex-ng",
+  "trade_day": "2023-10-02",
+  "code_commit": "1441e059c63d613f6eca9ff699b10edb3dd7f359",
+  "order_book": {
+    "engine": "NautilusTrader",
+    "version": "1.231.0",
+    "type": "L3_MBO"
+  },
+  "inputs": [
+    {
+      "file": "NG_v0_mbo_20231001.dbn.zst",
+      "sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78",
+      "records": 12532,
+      "utc_file_date": "2023-10-01",
+      "instrument_ids": [
+        150611
+      ]
+    },
+    {
+      "file": "NG_v0_mbo_20231002.dbn.zst",
+      "sha256": "4fd5fb8827e2ee560a9d938c54460f4a45d2569425157f910db06d4f55b7fe0d",
+      "records": 813342,
+      "utc_file_date": "2023-10-02",
+      "instrument_ids": [
+        150611
+      ]
+    }
+  ],
+  "execution_plan": {
+    "databento_instrument_id": 150611,
+    "instrument": {
+      "activation_ns": 1290637800000000000,
+      "asset_class": "COMMODITY",
+      "currency": "USD",
+      "exchange": "XNYM",
+      "expiration_ns": 1698431400000000000,
+      "id": "NGX3.GLBX",
+      "info": {},
+      "lot_size": "1",
+      "maker_fee": "0",
+      "margin_init": "0",
+      "margin_maint": "0",
+      "max_price": null,
+      "max_quantity": null,
+      "min_price": null,
+      "min_quantity": "1",
+      "multiplier": "10000",
+      "price_increment": "0.001",
+      "price_precision": 3,
+      "raw_symbol": "NGX3",
+      "size_increment": "1",
+      "size_precision": 0,
+      "taker_fee": "0",
+      "tick_scheme_name": null,
+      "ts_event": 1696158307834444822,
+      "ts_init": 1696158307834444822,
+      "type": "FuturesContract",
+      "underlying": "NG"
+    },
+    "rules": {
+      "CL01": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CL02": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "post"
+        }
+      },
+      "CL03": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CL04": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CL05": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CL06": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CL07": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CL08": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CL09": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "post"
+        }
+      },
+      "CL10": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CL11": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CL12": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "post"
+        }
+      },
+      "CL13": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CL14": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CL15": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CL16": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CL17": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CX01": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "post"
+        }
+      },
+      "CX02": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CX03": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CX04": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CX05": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "entry_rules": [
+          "CL01",
+          "CL02",
+          "CL03",
+          "CL04",
+          "CL05",
+          "CL06",
+          "CL07",
+          "CL08",
+          "CL09",
+          "CL10",
+          "CL11",
+          "CL12",
+          "CL13",
+          "CL14",
+          "CL15",
+          "CL16",
+          "CL17",
+          "CX01",
+          "CX03",
+          "CX07",
+          "CX10",
+          "CX15"
+        ],
+        "on_parent_close": "exit",
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CX06": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "entry_rules": [
+          "CL01",
+          "CL02",
+          "CL03",
+          "CL04",
+          "CL05",
+          "CL06",
+          "CL07",
+          "CL08",
+          "CL09",
+          "CL10",
+          "CL11",
+          "CL12",
+          "CL13",
+          "CL14",
+          "CL15",
+          "CL16",
+          "CL17",
+          "CX02",
+          "CX04",
+          "CX08",
+          "CX09",
+          "CX15"
+        ],
+        "on_parent_close": "exit",
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CX07": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CX08": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      },
+      "CX09": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "post"
+        }
+      },
+      "CX10": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "post"
+        }
+      },
+      "CX11": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "entry_rules": [
+          "CL01",
+          "CL02",
+          "CL03",
+          "CL04",
+          "CL05",
+          "CL06",
+          "CL07",
+          "CL08",
+          "CL09",
+          "CL10",
+          "CL11",
+          "CL12",
+          "CL13",
+          "CL14",
+          "CL15",
+          "CL16",
+          "CL17",
+          "CX01",
+          "CX03",
+          "CX07",
+          "CX10",
+          "CX15"
+        ],
+        "on_parent_close": "exit",
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CX12": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "entry_rules": [
+          "CL01",
+          "CL02",
+          "CL03",
+          "CL04",
+          "CL05",
+          "CL06",
+          "CL07",
+          "CL08",
+          "CL09",
+          "CL10",
+          "CL11",
+          "CL12",
+          "CL13",
+          "CL14",
+          "CL15",
+          "CL16",
+          "CL17",
+          "CX02",
+          "CX04",
+          "CX08",
+          "CX09",
+          "CX15"
+        ],
+        "on_parent_close": "exit",
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CX13": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "entry_rules": [
+          "CL01",
+          "CL02",
+          "CL03",
+          "CL04",
+          "CL05",
+          "CL06",
+          "CL07",
+          "CL08",
+          "CL09",
+          "CL10",
+          "CL11",
+          "CL12",
+          "CL13",
+          "CL14",
+          "CL15",
+          "CL16",
+          "CL17",
+          "CX01",
+          "CX03",
+          "CX07",
+          "CX10",
+          "CX15"
+        ],
+        "on_parent_close": "exit",
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CX14": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "entry_rules": [
+          "CL01",
+          "CL02",
+          "CL03",
+          "CL04",
+          "CL05",
+          "CL06",
+          "CL07",
+          "CL08",
+          "CL09",
+          "CL10",
+          "CL11",
+          "CL12",
+          "CL13",
+          "CL14",
+          "CL15",
+          "CL16",
+          "CL17",
+          "CX02",
+          "CX04",
+          "CX08",
+          "CX09",
+          "CX15"
+        ],
+        "on_parent_close": "exit",
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross"
+        }
+      },
+      "CX15": {
+        "close": {
+          "offset_ticks": 0,
+          "style": "cross"
+        },
+        "contracts": 1,
+        "open": {
+          "offset_ticks": 0,
+          "style": "cross_limit"
+        }
+      }
+    }
+  },
+  "execution_plan_source": "paper_platform/execution_plans/ngx3-12be6ea6e40347def5f574b1c2f36093bba99200.json",
+  "execution_plan_sha256": "a58ad9ec49afbf663844e64b776c31cfe102d57fef5036202a35a4dc522a12bc",
+  "manifest_sha256": "b2cba6ece2660bbf06c5cffeda91e7ae0d100030d2861266c1c3cc9b24c8ae0b",
+  "data_commit": "46199c5f4af03fde341535a7aff6a0396300cc73",
+  "calculation_files": {
+    "paper_platform/inputs.py": "24805995b06ca12d0715bedcbe078186a14ba46ad0d9e2e48084790be2acb1cf",
+    "crypto_ng/tick.py": "47795d3393882b9dd955847da94bc63bfd273cbed85f58859a6e3e5896164b9b",
+    "root/calcs/quote_runs.py": "d560e56aedf3568eee2bb45f182d172c09f6762866f587f362bcca1cc57022b3",
+    "root/calcs/leg_peaks.py": "2513ac7e7a7039443a28ad5034461bceb47a97d3cedfd874c62fa17c96896539",
+    "root/calendar.py": "d220d2340b04f14e27ad82bf1a1451e2dfa5a361aac14ad880bb2bae0eb45c6a",
+    "root/book.py": "6344ad837ec4df0dbbabc4e84c56813437c0a7788421be92a2d763f22a979a6e",
+    "paper_platform/claude_rules.py": "05187e78d5454e5d4ee13f03450e924551d53936d006f7477e41e751b63ad946",
+    "paper_platform/unsided_print_rules.py": "6646ceb377f907f257cb1f5e563b9b97eac9ff8849a84d9022b493f296319d6f",
+    "paper_platform/engine.py": "9bb34768d91396453c7e402372e551f89134baa45e4728da282826fd7e9f31c5",
+    "paper_platform/rulebook.py": "233ae0a4af1015ee3f85012df4239b47080220f386f9522d5b6cf6a576a5eb60",
+    "paper_platform/cx_observations.py": "89f864cc2d071c38a76f80290f827c434540f6f9adae968bbbb4a199102c5442"
+  },
+  "rule_commits": {
+    "CL01": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL02": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL03": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL04": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL05": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL06": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL07": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL08": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL09": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL10": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL11": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL12": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL13": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL14": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL15": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CL16": "95400eba118442ebf0012dc1c1d39ae5a6c917e5",
+    "CL17": "95400eba118442ebf0012dc1c1d39ae5a6c917e5",
+    "CX01": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX02": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX03": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX04": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX05": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX06": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX07": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX08": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX09": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX10": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX11": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX12": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX13": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX14": "1757145fa7a6d71341d86d4b9b7a709166d72174",
+    "CX15": "1757145fa7a6d71341d86d4b9b7a709166d72174"
+  },
+  "rule_files": {
+    "CL01": "50ad8ae7915afb6567a270b6030612058ba86f7f9a18f4f292e5a81178023e6b",
+    "CL02": "08c92417dc9cf45b87abe8830cf7b1e11213faa692a102a5270e58c6e45a0990",
+    "CL03": "a922a61053de8814f082221ea49481c730bd2e3d39903e6acdc781a033a85a3a",
+    "CL04": "6a795b422c8f1f811e891aea8466ce0cc408f3da03180c913fa8a5912520aaf9",
+    "CL05": "eb6e4430767a7da6731fc6b72ed8d6e372ab90f31bf683beda6a3d1a7fd8eedf",
+    "CL06": "f391e699a137f6c89193e074ce2ddf7e968e0995e846184441090e7715b78594",
+    "CL07": "b854b308f083280b22142d59b590e60075be2516179d9647030684859a79b194",
+    "CL08": "4621469d852d47ee469a046d35e68906dc14e2a25a15038856ebe05d4ef0964f",
+    "CL09": "d39b964aba8b249fc53f0c0baff74f75ab1a4211fe1505a9cfeb343f15e072c7",
+    "CL10": "25b2dbc8e8e95cf9800f5402e5b5073231c9f61936dcc4366557778c597a2b6c",
+    "CL11": "8199676999d8d6197b7d2ffcb00003ac489c8c8a30f4f01b8291d73b1f600c1e",
+    "CL12": "355b91ad508058a7073baae7ff3db6a820350cc3841984c31726af0952629656",
+    "CL13": "0614049913f1bcc6a90f15b12ec35fe0c2fc4aeadea0bc92cc0a856f2b1b3216",
+    "CL14": "c7c5769e7ca5a502a91562d9706b69d75e0da673f605a852ccc551cef3f36267",
+    "CL15": "98cc22482abbfde6400bf9eb180b6dd134a6cfc895168f8ecb30c59c08710139",
+    "CL16": "da1064bf1f85c7e8ff33f99adab3a94451262e892ac3e2372ceabe4e86ae68e5",
+    "CL17": "d2ed3db86608972b41875524b4a74de556c612103af07e777e1897497af5cf71",
+    "CX01": "24bc78bce99e91c8f016d4216ae83a35d8367fa28d4a00dc823db9c207f10f9b",
+    "CX02": "f2ff364c6ec4cbec0ea7c4aef57093fd2a39951566c656b93f2c85d2d61a1670",
+    "CX03": "62fa951a0f12fb5647e839fb0c5b4706f7f4675ccc9a47a786b9a51d226b5b71",
+    "CX04": "3d0fd6f07cb3adc8d22cd34cc8c0f0ac3a9e380fca5dd558456437676c8ec305",
+    "CX05": "5527f161ec1f8f222c8de4db7864d6ed6d0660428a9498fa31ba3a7322768bea",
+    "CX06": "cc62a71ccf7fb47d4ee1cf3c62a14e26b8178bd70372e87bcde0d1a7f951127a",
+    "CX07": "44c7dc6d211f562e74d74427a6e6bebee948d862c9e3057dc6ebe1f1d48d8fdd",
+    "CX08": "36e488c2176fe1a0241e094a651dcd8e70144adff5c3d275d796e103af587267",
+    "CX09": "c513cb79a2586e3ecd4e10cc7805cb1a5f2a3d86083aecbcdddee392e3285add",
+    "CX10": "d1e5d24343bc39dd116a1af08de18d8d48b08965bbe46d80bf5579a732334dfe",
+    "CX11": "9ed7b64f9021adf0e1ddea699b7a2cff49cd597f26488f3b35e98dd61cc57093",
+    "CX12": "7634a6b33678722ee5799a23c5ec9c0b721dd0535d1f076acf28ea1534cbc7bb",
+    "CX13": "9e6ba576418a9a7e81dc2457894da2fc1386c8a84673fd8c557f4427284b01b8",
+    "CX14": "a3aaebc554e400b6ca6d972676f95d0af2d9dc7936cc450677b97c1d3e3275c4",
+    "CX15": "782958883759ecac893457d3c6cf4b3713c232d312bdea11d776066d9a2ea042"
+  },
+  "causal_check": {
+    "status": "passed",
+    "cutoff": {
+      "cursor": 4564,
+      "source_sha256": "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78",
+      "record_index": 4564,
+      "tape_receive_ns": 1696198230220150770
+    },
+    "trade_day_records": 4096,
+    "decisions": 1219,
+    "opens": 437,
+    "decisions_sha256": "be59e06c1e89617c95e82e314179580d73182b6a199df223142dd684f458b1f2"
+  },
+  "constants": {
+    "dipole_seconds": 60.0,
+    "exhaustion_seconds": 20.0,
+    "stop_seconds": 20700.0,
+    "clock_stop_seconds": 20700.0,
+    "clock_stop": "flattened at the 5.75-hour stop",
+    "message_budget": 825874,
+    "event_budget": 825874,
+    "paced_from_tape_ns": 1696199400000000000
+  },
+  "status": "stopped 30 minutes after the first paced record, as set at the start",
+  "delivered": 9707,
+  "events": 4016,
+  "files": {
+    "events.jsonl": "b34d00846204a3f950464e35baaef23cf3608351ae7fa64c9b1ff675853d3d09",
+    "receive-ns.u64le": "495cd00bfaf1234b4c1dd3a4810ea0899001c0737282a57bd0606b779c74e6b7",
+    "start.json": "8c56f9ea886712a39e588cd4309f1169183aa9f4004d1e3a270b4466c3a876a4"
+  },
+  "first_live_decision_cursor": null,
+  "shutdown": {
+    "elapsed_ns_at_stop": 1830132512671,
+    "remaining_working_orders": {},
+    "errors": [],
+    "native_flat": true
+  },
+  "remaining_paper_inventory": {},
+  "last_source": {
+    "cursor": 9706,
+    "reference": [
+      "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78",
+      9706
+    ],
+    "tape_received_ns": 1696201200001839512,
+    "host_received_ns": 1795513370886727762
+  },
+  "capture_end": null,
+  "weekly_book_boundaries": [
+    {
+      "utc_date": "2023-10-01",
+      "position": 0,
+      "source": [
+        "4c0b3ebc07c3c46dceeba0e3d0a26693a42e320a413fe0109ed962a7a6f6bc78",
+        0
+      ],
+      "instrument_id": 150611,
+      "exchange_action": "R",
+      "orders_before": 0,
+      "queue_sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
