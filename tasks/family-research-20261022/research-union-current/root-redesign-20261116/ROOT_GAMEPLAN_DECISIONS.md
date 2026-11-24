@@ -5991,3 +5991,8 @@ figure. To bring back when the work reaches what moves the market and price-curv
   checked and the reviewer has looked at the order path.
 - THE LIST IS OF GAPS AND MISSES (Greg, same message): "Meaning start list of gaps and misses to take care of".
   `tasty/RUNNING_LIST.md` is headed so; each live run's gaps and misses are added to it.
+- DO NOT BUILD THE SYSTEM AROUND THIN DATA (Greg, 2026-11-24): "remember that we will have richer data to run from
+  in a little while so we don't need to make system around thin data". Claude's call from it: nothing more is
+  built to fit the tastytrade sandbox feed's thinness. The stand-ins and the thin-feed handling that exist stay as
+  they are for the runs on this feed, are listed (`tasty/RUNNING_LIST.md`, C7) and are dropped or redone when the
+  richer feed arrives. The rules take plain events and know nothing of tastytrade, so they carry over.
