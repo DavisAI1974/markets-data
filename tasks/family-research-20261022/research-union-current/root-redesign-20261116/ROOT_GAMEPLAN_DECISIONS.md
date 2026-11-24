@@ -7981,3 +7981,20 @@ figure. To bring back when the work reaches what moves the market and price-curv
   the reviewer's points; the after-the-fact file out of the decider's folder; a check that asserts zero columns
   left out for any reason but the program's own trades). The reviewer reads the plan before the builder of the
   placing in time starts; the builder of the reviewer's own points starts now.
+- HE HAS ANSWERED THESE BEFORE; AND WHY SO FEW TICKETS ARE CLOSED (Greg, 2026-11-24, twenty-sixth session, on the
+  sheet of questions): "When the build is done the agents shluld be the deciders. I a swered all of these
+  questions in a session earlier today. You need to search in the previous sessions from today for your answers.
+  I have answered these questions numerous tiez"; "And why are there only 2 tickets closed? Why do we keep stopping
+  on the tickets before they are done?". DONE ON IT: (1) the sheet is NOT put to him again as it stands: a scout
+  (run 206) is finding his own words on each of its topics in the record of today's earlier sessions, and every
+  question his words already answer is struck with the place of his answer beside it. A SLIP, the same one the
+  start page warns of, made a third time: asking him what the record already answers; this session read the
+  decisions file only from the twenty-fifth session on and not the four sessions of the same day before it.
+  (2) WHY SO FEW ARE CLOSED, as said to him: three stops ended fourteen agents mid-work and each was done again;
+  the first hour went to a missing platform checkout; and, the main session's own fault, a ticket was held open
+  for every further point a reviewer found, well past the ticket's own "shown done by" line. FROM NOW: a ticket is
+  marked when its own "shown done by" line is met and every run on it has its auditor's row; what a reviewer
+  finds beyond that line is written at the foot of the ticket as open work and does not hold the box. Three are
+  marked: 03b, 21, 31. (3) Found while checking: the library the packet's checks need to read the stored planes
+  (pyarrow) was not on this machine at all, so those checks could not have run in any session started on this
+  environment; it is installed for this session and goes into the environment's setup script.
