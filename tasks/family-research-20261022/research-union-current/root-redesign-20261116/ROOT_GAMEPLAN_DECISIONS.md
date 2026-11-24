@@ -6393,3 +6393,14 @@ figure. To bring back when the work reaches what moves the market and price-curv
   under item 26): on Render, service `ng-paper-viewer`, `PAPER_VIEW_PASSWORD` and `PAPER_RELAY_TOKEN`; in GitHub
   Actions the variable `PAPER_RELAY_URL` and the secret `PAPER_RELAY_TOKEN` (same value as on Render). No value was
   read, set or sent. Receipt on the phone has not been exercised and waits for his permission.
+- ITEM 17 WENT TO CODEX (seen on his branch, `a58ef5b`; his handoff: "Greg transferred #17 and its two family
+  decision agents to Codex. Ccode retains #2, #23, #26 and #35"). He ran both deciders and committed the plan for
+  all 30 rules. Claude leaves item 17 alone. What Claude's work gave it: the instrument ID and the NGX3 contract
+  record.
+- A FAULT CLAUDE FOUND IN ITS OWN LAUNCHER AND FIXED (`bf1d039`): the clock stop and the run stop were ordinary
+  exceptions, and the model library reports any ordinary exception raised inside a request as a connection
+  failure (read in the installed library, `_base_client.py`). A clock stop during the network call would have
+  reached the phone as "failure". The two stops no longer derive from the ordinary exception class. Read, not run.
+- ITEM 2 BEGUN, NOT FINISHED (`9af214a`): the accounting is done from the plan (all 30 rule IDs, one contract each,
+  crossing closes, the six managers' parents and their exit at the parent's close, the side words matching). The
+  reading of the matcher path for each rule and manager against the plan is not done.

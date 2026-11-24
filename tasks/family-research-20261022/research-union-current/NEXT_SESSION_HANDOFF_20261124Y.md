@@ -40,35 +40,35 @@ Not done:
 
 ### 2. Codex's draft PR 5 (paper-trading-platform, branch `codex/strategy-trades-and-mbo-capture`)
 
-Greg: help Codex; item 17 first, then 2, 23, 26; item 35 waits. One number at a time; the checklist text under
-the number is updated in the same commit (`docs/platform/OWN_PLATFORM_WISHLIST_20261123.md`). Codex's handoff
-(`docs/platform/HANDOFF.md`) says this pass is build only: no checks, validation or tests on that branch, and no
-paper session without Greg's go.
+Greg: help Codex. One number at a time; the checklist text under the number is updated in the same commit
+(`docs/platform/OWN_PLATFORM_WISHLIST_20261123.md`). Codex's handoff (`docs/platform/HANDOFF.md`) gives the split
+and says this pass is build only: no checks, validation or tests on that branch, and no paper session without
+Greg's go. Fetch his head before every push, include only your own changes, normal push. He pushes often.
 
-Item 17 stands here (all of it in `paper-trading-20261123/item17-20261124/README.md`):
+THE SPLIT NOW (Greg moved item 17 to Codex during the session): Codex has 17. Claude has 2, 23, 26 and 35.
 
-- On his branch (`f475465`): `paper_platform/execution_plans/NG_OCT2023_CONTRACT.md` with the tape's instrument ID
-  (150611) and the NGX3 contract definition, converted from the stored exchange record by NautilusTrader's own
-  loader; and the status under item 17 with what is missing, by rule ID.
-- NOT done: the plan file. No agent has chosen placement or size for any rule. Two decider runs (41, 42) were
-  briefed and were stopped at the session change before they answered. Their briefs are kept and need their
-  paths re-pointed before a new run.
-- Frankie's choices are missing for all 30 rules: launch is on HOLD and needs Greg's go.
+- ITEM 17 IS CODEX'S. LEAVE IT ALONE. He ran both family deciders himself and committed the plan for all 30 rules
+  (`paper_platform/execution_plans/ngx3-599eb8c0d48926292bbb4ef83fd518d5d2753daf.json`; the agents' answers are
+  `CL-answer.json` and `CX-answer.json` in `paper-trading-20261123/item17-20261124/`). What Claude gave it: the
+  tape's instrument ID (150611) and the NGX3 contract record. Frankie's choices are still missing for all 30: HOLD.
+- ITEM 2 IS NEXT, and is only begun (`9af214a`). Done: the accounting, read from the plan: all 30 rule IDs are in
+  it, one contract each, crossing closes, six managers with 20 parents each that exit when the parent closes; the
+  side words of the signals match the managers' directions. NOT done: reading the matcher path
+  (`paper_platform/paper_execution.py`, `engine.py`, `session.py`) for each selected rule and manager against that
+  plan and finishing whatever wiring it lacks. One thing already read from the code: the engine drops a manager's
+  state when its parent's trade closes, so a manager set to hold could never exit by itself; this plan sets all
+  six to exit, so it does not bite today.
+- ITEM 23 IS BUILT IN DRAFT, NOTHING RUN (`297f8a4`, fixed in `bf1d039`): `paper_platform/agent_launcher.py` stops
+  an agent run at its token or clock budget and sends the reason to the phone; `.github/workflows/agent_run.yml`
+  starts it on Greg's go. Missing, his to say, written under item 23: the budget figures for an agent run, the
+  `ANTHROPIC_API_KEY` Actions secret, and the open gap that an agent started inside a Claude Code session cannot
+  be stopped part-way. The workflow reads a brief from the platform repository only.
+- ITEM 26, THE REMAINING WIRING IS BUILT IN DRAFT, NOTHING RUN (`5fb648d`): `.github/workflows/run_end_notice.yml`
+  sends a phone notice when a manual workflow ends other than in success. It works only once it is on the default
+  branch. Only Greg can supply the Render and Actions settings named under item 26.
+- ITEM 35 (Claude's independent review) waits: Greg's instruction defers checks, validation and tests.
 
-Item 23 (added after this handoff was first written; Greg: "go to a different number while I get 17 straight with
-codex"): BUILT IN DRAFT, NOTHING RUN, on his branch as `297f8a4`. `paper_platform/agent_launcher.py` stops an agent
-run at its token or clock budget and sends the reason to the phone; `.github/workflows/agent_run.yml` starts it on
-Greg's go. Missing, his to say, and written under item 23: the budget figures for an agent run, the
-`ANTHROPIC_API_KEY` Actions secret, and the open gap that an agent started inside a Claude Code session cannot be
-stopped part-way. Item 23 stays open until it has been run.
-
-Item 26: the remaining wiring is BUILT IN DRAFT, NOTHING RUN, on his branch as `5fb648d`
-(`.github/workflows/run_end_notice.yml`: a phone notice when a manual workflow ends other than in success; it
-works only once on the default branch). Only Greg can supply the Render and Actions settings named under item 26.
-
-Item 2 waits on the item 17 plan. Greg is settling item 17 with Codex himself: leave item
-17 and its deciders alone until he says. Codex added both authors' rule text and the plan format to
-`paper-trading-20261123/item17-20261124/` (`41ec052`).
+None of the three new files on his branch has been run or even parsed. They need a run before any is relied on.
 
 ## Put to Greg, not answered
 
