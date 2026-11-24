@@ -7932,3 +7932,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   stopped builders had written was pushed as it stood (run 166: tickets 18 and 19, Markets `344e3e6` and
   `d7a44f7`; run 175: its check file, `886dbf7`, marked UNFINISHED). Each is started again as a new run, 180 to
   185, its limits in git first.
+- THE POCOCK SKILLS ARE IN HIS LIBRARY (Greg, 2026-11-24, twenty-sixth session: he sent the page of his account
+  showing the plugin "Skills For Real Engineers", `mattpocock/skills`, marked "Added"). DONE BY HIM. WHAT IS SO IN
+  THIS SESSION: its machine took its copy of his library when it started (the folder is dated 16:52 UTC and holds
+  no Pocock skill), so here the Skill tool still answers "Unknown skill: ask-matt" and the skills go on being run
+  from the repository's own files. FOR THE NEXT SESSION: the skills should be in its list from the start, under
+  the plugin's name; it says in its first message whether they are, and calls them by name if so.

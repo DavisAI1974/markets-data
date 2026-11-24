@@ -9,6 +9,9 @@ builder may work on without his go (items 1 to 7 below); then the 30 minute test
 coefficients (G12, on his go, told with its limits); then ticket 47; then the same test with the coefficients.
 Codex's branch with the discovery pipeline is Markets `od-refrag/markets-handoff` (`93ac56f`). The session's
 branches are now `ccr-144315dd-pta2ze` in both repositories. The decisions file, twenty-sixth session, has the rest.
+THE POCOCK SKILLS: he added the plugin "Skills For Real Engineers" to his own library during the twenty-sixth
+session. Say in your first message whether its skills (`ask-matt`, `implement`, `implement-spec`, `tdd`,
+`code-review`) are in your list, and call them by name if they are. They are NOT registered in Markets (his word).
 
 ## READ FIRST, EVERY SESSION (his word)
 
