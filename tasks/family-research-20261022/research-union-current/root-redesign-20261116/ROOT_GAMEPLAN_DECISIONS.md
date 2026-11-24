@@ -7519,3 +7519,19 @@ figure. To bring back when the work reaches what moves the market and price-curv
   asked only for what they leave to him by name (a go for anything through the engine, a paper run, a model
   key, a read into the graph with its budget, a figure such as a loop's metric or a confidence cutoff) and for
   what none of them answers; the reviewer's list of what is not answered is where such a question comes from.
+- THE BUILDER AND THE REVIEWER WERE DOING THE SCOUT'S WORK (Greg, 2026-11-24, to the auditor's figures): "Should
+  we fix the wasteful repeated runs that builder and reviewer do? It sounds like their jobs aren't clearly
+  defined and they are doing runs that other agents should be doing". Answered: yes. WHAT THE AUDITOR MEASURED
+  (runs 116 and 120): the builder and the reviewer make about one tool call a reply and over nine tenths of
+  their tokens are their own context read again at each reply (builder 114: 93.7 per cent over 22 replies;
+  reviewer 115: 91.5 over 19); the largest things they read were whole files (the code 38,117 characters, the
+  checks 28,265, a review 17,209); the scout makes three calls a reply (run 117: 82.9 per cent over 10).
+  WHERE THE FAULT IS (Claude): their own files already say it (the builder works "once the files and the
+  approach are known (the scout has located them, the plan names them)"; the roles: locating and reading is
+  the scout's); the main session's briefs told them to read whole files and find things themselves. THE FIX,
+  from the next run: the scout locates first and the brief hands over line ranges, not files; the builder gets
+  each point with its file and line and stops to ask if something must be found; the reviewer gets the diff
+  since its own last read and its own open list, with any of Greg's words it needs quoted in the brief; both
+  bundle their commands; the auditor's next report sets the figures beside these. Kept: the reviewer runs the
+  checks itself. A line saying they do not search is added to the builder's and the reviewer's own files by
+  the builder, under ticket 12. It is a candidate saving until the auditor's figures show it.
