@@ -45,6 +45,14 @@ In order:
 
 Still his to say before it is built: whether Frankie decides at the tick (stage 8d).
 
+## The last run of the night ended cleanly
+
+Paper run `0f33fec49f8c4905b6c212912077d439` (Actions run 45369951846, platform `189671b`, the give-back plan, tape
+6:30 pm to 7:00 pm Eastern of trade day 2023-10-02) stopped itself at its 30 minutes: 9,707 messages, 4,033 journal
+rows, every position flat, no shutdown error, GitHub marks it a success. It has the same number of journal rows as
+the earlier run of the same plan and stretch (`ea4c1d2e`, 4,033). It is the first run on the spaced pushes and the
+smaller page posts. Not scored. Not loaded into the graph yet.
+
 ## Where things are
 
 | Repository | Branch | Head |
