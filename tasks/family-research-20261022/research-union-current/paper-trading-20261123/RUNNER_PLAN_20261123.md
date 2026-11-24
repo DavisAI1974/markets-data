@@ -172,6 +172,13 @@ The code is in `DavisAI1974/paper-trading-platform`, branch `claude/tasty-runner
 - `snap.lines` for those rules comes from `LiveLines(every_print=True)`: at a print with no side the two lines are
   READ as they stand at its feed time (the print is not in them). EMPTY and MISSING stay apart from zero.
 - `snap.in_settlement`; the engine's count of gaps; `Rule.close(..., fact=f)` names the print that showed a close.
+- A MANAGEMENT RULE (CX05, CX06, CX11 to CX14) sets `manages = 'CX'` and is shown, in `snap.positions`, the open
+  trades of Codex's ENTRY rules only (never Claude's). It answers with INDICATION signals naming the position and
+  a kind (exit, hold, suspend additions, ...). Each is written on the ledger under the management rule's code and
+  beside the position. Whether an EXIT indication also closes the position is set in ONE place in the engine
+  (`replay.EXIT_INDICATION_CLOSES`, now as the plan of 2026-11-23 says: it does). OPEN WITH GREG: Codex's text
+  also says an exit in one strategy's record "never erases another strategy's entry".
+- `snap.gap` is True at the first print a rule is given after a gap.
 - The quote is still the print's own bid and offer only (G1). The Quote messages are read by no rule, Codex's
   included: "every tape row" in his text is, on this feed, every print.
 
