@@ -1,4 +1,4 @@
-# Builder run 129 (Sonnet): ticket 19, run_record, and then the points of the first and the second read
+# Builder run 129 (Sonnet): ticket 19, run_record, and then the points of the first, second and third read
 
 Kept word for word as the agent returned it, 2026-11-24 (twenty-fifth session). Nothing below this line is the main session's.
 
@@ -190,3 +190,51 @@ EXPECTATIONS CHANGED:
 - Every `append` and `keep` call in the tests now carries `--agent-id`, read by hand from the transcript's first line.
 
 TOOL CALLS: 5 in the first pass, about 13 in the second and 7 in this one, so about 25 for the whole run. No sub-agents, engine, tape or AWS.
+
+---
+
+## The next hand-back
+
+All seven points are built, test first, and pushed. I did not call the advisor tool.
+
+COMMIT: bdf4c01 (the merge reported "Already up to date", so it is my own commit); the push went through (931b2b3..bdf4c01).
+PYTEST after the last merge: 33 passed, 0 failed. Written red first: 7 failed, 26 passed before the code.
+Clean-up: /tmp/run129 is deleted. `git -C /home/user/markets-data status --short` is empty.
+
+DEVIATION, point 4: your rule was "the last text message of an EARLIER reply (another message id than the hand-back's own)". In run 124's real transcript that rule would exclude the real message. The 11,210-character text and the hand-back share one message id (msg_011ChMqyEQSc...): the text is on line 26 and the hand-back on line 27. With your rule the report no longer pointed at it, and the run-124 check went red.
+- What I built: the pointed-at message is the LAST text before the hand-back that is longer than the hand-back (run_record.py:122).
+- A short text inside the hand-back's own reply is not longer than it, so it displaces nothing.
+- An earlier, longer text does not win over a later one. Please confirm or correct.
+
+THE SEVEN (run_record.py = tools/kgraph/run_record.py, test file = tests/agent_program/test_run_record.py):
+1. One transcript is one run's (run_record.py:188 for another run's line; :197 for another run's plan or sidecar; the sha256 refusal sits in the same block).
+   - It refuses when the agent id is already on record for another run (newest line, plan or sidecar), or when the bytes are already kept as another run. The refusal names that run.
+   - Checks: test_one_transcript_is_one_runs_not_two (run 107 kept as 107, then as 108, refused naming run 107) and the long-sentence trap (run 119's transcript kept as 119, then refused as 136, naming run 119).
+2. A line already on record is compared with the transcript (`_compare_with_line`, :203).
+   - It applies to `append --corrects` and `keep`. The line's exact model must be among the transcript's models, and input and output tokens must each be no lower, with both figures named in the refusal.
+   - Checks: test_trap_a_line_already_on_record_is_compared_with_the_transcript (run 107's transcript with a fresh id, given as run 108) and test_trap_a_line_with_more_tokens_than_its_transcript_refuses_a_correction (input and output each tested, with a line below the transcript accepted).
+   - test_a_transcript_that_is_run_108s_own_agrees_with_its_line_and_run_107s_does_not covers 108's real transcript being accepted against its own line. Its name overstates what it checks; only the accept side is asserted.
+3. `--outside-roster` (in `cmd_append`, next to the `--agent-type` handling).
+   - `agent_type` holds the text as given, `role` stays one of the four, and `--agent-type` given together with a different `--outside-roster` is refused ("exactly one").
+   - Check: test_outside_the_roster_the_agent_type_is_the_text_given (run 107's real transcript, with the roster text of runs 107 and 108).
+4. `report` (run_record.py:122). See the deviation above.
+   - Checks: test_report_adds_the_message_run_124_hand_back_points_at, test_trap_the_pointed_at_message_is_the_last_one_not_the_longest (a 12,000-character text added in an earlier reply), and test_trap_a_short_text_inside_the_hand_backs_own_message_does_not_displace_the_real_one.
+5. The live-count check (test file:308) now takes each transcript's run from the kept sidecars' own `run` and `agent_id` at 7de89a4. It also asserts that the unzipped transcript's first-line agentId equals the sidecar's. It no longer re-reads briefs.
+6. The counts line now reads "live transcripts N, of which M name one run and K name none" (run_record.py:474). The check in 5 asserts that exact wording.
+7. Every trap in the separated section now opens with a "# change:" comment naming all it changes. That includes the short-hand-back copy, the record line that gets output_tokens 18000, the wall clock and the removed model_replies, and the new traps.
+
+THE THREE PUT-BACK CHANGES:
+- Line 122 made `longest`: 1 failed, test_trap_the_pointed_at_message_is_the_last_one_not_the_longest. The run-124 check stays clean, because there the last and the longest are the same message. That is why the new trap exists.
+- Another-run refusal dropped (line, plan, sidecar and sha rules): 2 failed, test_one_transcript_is_one_runs_not_two and test_trap_a_long_sentence_in_front_of_run_119s_brief....
+- No-lower comparison dropped: 1 failed, test_trap_a_line_with_more_tokens_than_its_transcript_refuses_a_correction.
+- I did not put the model-refusal half of point 2 back by hand. Only the no-lower half was broken.
+
+`missing --live /root/.claude/projects/-home-user/3356516d-d71a-5e13-907d-ff8d8ffcb6d4/subagents` on the real record as it stands:
+- COUNTS: "runs 144; lacking exact model 84; lacking input tokens 106; lacking output tokens 106; lacking wall clock 30; lacking outcome 0; with a kept transcript 18; lacking something 106, of which a kept transcript could fill 0 and none kept 106; complete and agreeing with a kept or live transcript: 20; complete, a figure differs: 16; complete, no transcript to compare: 2; plan or kept transcript with no line 3; live transcripts 41, of which 39 name one run and 2 name none, live transcripts with no line 3, live transcripts not kept 21; figures that differ 37".
+- UNNAMED: agent-ae63f020e27f3aa06.jsonl and agent-a374a5827c8bc7cc6.jsonl. No DUPLICATE rows.
+
+EXPECTATIONS CHANGED:
+- The long-sentence trap no longer asserts that run 136 is accepted with run 119's transcript. With the new rule that case is refused, naming run 119. The "nothing on record names the id, so accepted" limit is shown with the transcript kept as 119 itself.
+- The counts-line wording is as in point 6.
+
+TOOL CALLS: about 25 before this follow-up, plus 6 in it, so about 31 for the whole run. No sub-agents, engine, tape or AWS.
