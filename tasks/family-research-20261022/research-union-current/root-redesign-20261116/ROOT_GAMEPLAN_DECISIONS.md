@@ -7910,3 +7910,25 @@ figure. To bring back when the work reaches what moves the market and price-curv
   words of today are taken to stand over that line for the Pocock skills; the line is left in place, his to
   strike or keep. NOT KNOWN: whether a cloud session's machine can fetch the plugin from GitHub when it starts;
   the next session says whether the skills are in its list.
+- NOT IN THE REPOSITORY: IN HIS LIBRARY, FOR EVERY ENVIRONMENT; AND RUN ONE (Greg, 2026-11-24, twenty-sixth
+  session, on being told the plugin had been registered in Markets' settings): "Don't. Put them in your library
+  so I can run them in any environment"; "Run one of his skills!". DONE: the registration in Markets was taken
+  back out by a new commit (Markets `38f051f`; nothing rewritten; `0b595f2` stays in the history), so the entry
+  above this one no longer describes the settings. FOUND: the skills are in the plugin directory of his own
+  account as "Skills For Real Engineers" (Matt Pocock), not turned on; the card to turn it on was put in front
+  of him. TURNING IT ON IS HIS CLICK: a session cannot add to his account's library by itself. Until it is on,
+  the Skill tool cannot call a Pocock skill by name, and the skills are run from the repository's own files.
+  THE SKILL THAT WAS RUN: `ask-matt` (its router: "Ask which skill or flow fits your situation"), read whole and
+  followed. WHAT IT POINTS TO for work that already has tickets with blocking edges and is more than one
+  session long: `implement-spec`: the tickets are a task graph; there is always a frontier of tickets ready to be
+  taken; a fresh agent for each, each in its own working copy on its own branch, in the background, briefed by
+  pointing at files and not by retyping them; each one's work merged onto one integration branch as it
+  finishes; when the frontier changes, more are sent out; one `code-review` over the whole at the end. THAT IS
+  HOW THE SUITES ARE NOW RUN: the integration branch is the session's branch; the implementer is the builder
+  (with `tdd`), and his own rules add what the skill does not have: the scout before the builder, the reviewer
+  on every change, the auditor on every run, limits in git before each run.
+- HIS STOP ENDED SIX MORE AGENTS; "RESTART AGENTS"; "RESUME" (Greg, 2026-11-24): runs 166, 168, 169, 170, 175 and
+  179 were stopped. Each keeps its number, its line and its kept transcript, marked stopped. What the two
+  stopped builders had written was pushed as it stood (run 166: tickets 18 and 19, Markets `344e3e6` and
+  `d7a44f7`; run 175: its check file, `886dbf7`, marked UNFINISHED). Each is started again as a new run, 180 to
+  185, its limits in git first.

@@ -1,0 +1,24 @@
+{
+ "run": 180,
+ "session": "session_017eY1WSS3Qut93aDb3jnVG6",
+ "agent": "builder",
+ "model": "claude-sonnet-5-5",
+ "task": "group G08, tickets 18 and 19 (run 166 started again after his stop, from Markets 0d00ba0): the ten points are committed (344e3e6, d7a44f7); go through each against its check, run both check files, finish what is unfinished, and report point by point",
+ "written_before_the_run_started": true,
+ "max_model_calls": 45,
+ "max_sub_agents": 0,
+ "max_concurrent_workers": 1,
+ "max_tool_calls": 40,
+ "max_tokens": 300000,
+ "max_wall_clock_s": 1800,
+ "max_retries": 0,
+ "max_graph_writes": 0,
+ "max_graph_writes_is": "writes into the real graph of markets-data; a write into a scratch copy is not counted",
+ "max_tokens_is": "the harness's total for the run when it ends (input and output together); the transcript's sum is recorded beside it",
+ "on_reaching_a_limit": "the run stops and returns what is done, what is open and why it stopped",
+ "note": "the failing check first; four files only; a send-back or a start again is a new run with its own plan",
+ "tickets": [
+  "18",
+  "19"
+ ]
+}
