@@ -128,7 +128,11 @@ DO FIRST, group by group (GROUPS.md has the whole table):
    THERE IS A SECOND OPERATOR TOOL (his word: "we found an operator thaf worked in the crypto sphere. Desktop
    found it"): the discovery pipeline that gave each crypto trade its vector of operator coefficients, on which
    the algebraic dipole was found per pair. It is on his machine (`E:\refrag`, `E:\Markets\_markets_*.py`),
-   NOT on GitHub: whether Codex fetches it is his to say (asked of him at the close). `47.md` has the detail. Where it stands in the order
+   NOT on GitHub: whether Codex fetches it is his to say (asked of him at the close). `47.md` has the detail.
+   ONE SOURCE IS NOT IN GIT ON PURPOSE: the discussion of the digital world and the natural one (the April
+   SENTINEL session) was read at his word; he had decided there that it is not for public places, and these
+   repositories are public. Do not write its content anywhere in git or in an agent's brief. Ask him how the
+   plan may refer to it BEFORE writing the plan. Where it stands in the order
    beside the other groups is his to say; it shares no file with them, so its suite can work beside them.
 
 1. G01, tickets 02, 03, 01. The reviewer reads Markets `931b2b3..b12d8ef` on `tools/kgraph/defend.py` and

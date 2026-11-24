@@ -7752,3 +7752,15 @@ figure. To bring back when the work reaches what moves the market and price-curv
   adapter, the decoder, what they import), and from `E:\\Markets` the `_markets_*.py` originals; code and notes
   only, no crypto data, on a branch of its own. THE THREE FAULTS NOT TO REPEAT on natural gas, from his own
   record: the wrong basis, a hard-coded form, pooling.
+- THE DISCUSSION OF THE DIGITAL WORLD AND THE NATURAL ONE: READ, AND DELIBERATELY NOT WRITTEN HERE (Greg,
+  2026-11-24: "And look back and read the discussion about the digital wotld and the natural one in sentinel
+  discussions"). It was found and read in the April session named above (the part of 9 April, and the plan
+  approved on 15 April). IN THAT SESSION HE DECIDED that this material is not for public places or cloud records
+  ("never gets discussed publicly"), to be told only through proper channels. THESE REPOSITORIES ARE PUBLIC, so
+  none of its content is written in this file, in ticket 47, on the start page or in any agent's brief, and the
+  pages of that session that were saved on this session's machine while reading were deleted. What it means for
+  ticket 47 was said to him in the chat only. HIS TO SAY before the plan for ticket 47 is written: how, and
+  whether, the plan in git may refer to that idea at all. ALSO PUT TO HIM: lines 7586 to 7597 of this file
+  (written earlier today, before that was read) name that session, the repository and branch, two file paths
+  and his own folder; they hold none of the material itself; taking them out of a public history would need the
+  history rewritten, which is not done without his word.
