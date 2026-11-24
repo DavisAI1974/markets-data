@@ -6762,3 +6762,14 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - THE FIRST TEST REACHED ITS OWN 30-MINUTE STOP (paper run `036ed57524584afdaeb0bc60be6aaa71`, old code): the
   stop fired, and its closes carry the reason "stopped 30 minutes after the first paced record, as set at the
   start", marked not trade data. In those 30 minutes it covered 13.9 seconds of tape (1,398 journal rows).
+- "AFTER YOU ADD THOSE THINGS THEN GO ... PAIR UP THE TRADES ... THE NEXT 30 MIN" (Greg, 2026-11-24, three
+  messages): "after you add those things then go"; "You're going to have to pair up the trades so you have both
+  sides to get p=l"; "Just do the next 30 min for run 2". Taken as: (1) his go for the third test once the graph
+  and the P/L are in. (2) The P/L pairs a trade's opening side with its closing side: it is so built, each trade's
+  own opening fills against its own closing fills, by trade ID. (3) The next run covers the NEXT 30 minutes of the
+  tape, 6:30 pm to 7:00 pm Eastern of trade day 2023-10-02, and not the first 30 again; Claude's reading of
+  "next", said to him. Built for it (platform `40861f7`, item 12): a start point; the tape before it is read
+  without waiting to seat the book and warm the rule inputs, nothing is decided before it and no position is
+  carried into it. Started by Claude on his go: `stop_after_minutes` `30+30`, the page on, both budgets 825,874,
+  no tokens, one runner. The page was deployed again with the graph and the P/L first (Render deploy live at
+  09:03 UTC).
