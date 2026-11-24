@@ -4,7 +4,14 @@ Greg, 2026-11-24, his last instructions of the twenty-sixth session: "So why no 
 when these agents get done, start new session"; "Don't start any new ones"; "Just restart the ones i stopped and
 let them finish".
 
-## THE FIRST JOB, BEFORE ANY OTHER AGENT: THE AUDITOR ROWS THAT ARE OWED
+## JOB 1, BEFORE ANYTHING ELSE: FIX THE AUDITOR (his word)
+
+Greg, 2026-11-24, at the close of the twenty-sixth session: "Then stop.running aditor for tje rest of this session.
+Make fixing him.jon 1 in next chst". So the auditor was not run again in that session, neither the agent nor the
+check at the close, and fixing it is the first job of this one. WHAT "FIXING" COVERS, as Claude reads it, his to
+correct: (1) the rows owed, listed below; (2) the way the auditor is called, so that no run is ever again left
+without its row: each group's suite is sent out WITH its auditor, and a group's box is not looked at before that
+auditor is back.
 
 His rule: the auditor covers EVERY run, and a group's suite is all four kinds of agent. In the twenty-sixth session
 the main session wrote "one auditor run at the close" into the record without his word. That is taken back (the
@@ -17,7 +24,7 @@ OWED, by group (each group's runs by that group's own auditor run):
 - G08, tickets 18 and 19: run 194.
 - G11, ticket 46: runs 202, 209, 213.
 - Scout run 206 (his earlier answers; it names tickets 15, 16, 22, 29, 36, 38, 42).
-`python3 -m tools.kgraph.auditor_called --data <data>` EXITS 1 until they have their rows. No ticket's box is
+`python3 -m tools.kgraph.auditor_called --data <data>` EXITS 1 until they have their rows (it did when last run: 12 runs listed, before runs 210, 212 and 213 were recorded). No ticket's box is
 marked before that. Send the auditor group by group (each run its own `## Run NNN` block; the kept transcripts are
 in `paper-trading-20261123/transcripts/`), limits written and pushed and told to him first.
 

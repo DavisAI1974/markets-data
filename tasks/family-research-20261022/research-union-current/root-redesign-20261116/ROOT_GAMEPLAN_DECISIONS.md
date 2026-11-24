@@ -8057,3 +8057,9 @@ figure. To bring back when the work reaches what moves the market and price-curv
   layer read (the 20 columns of the crypto and ng program's own trades; the tables that are not on all four daily
   branches; the possible fault in `root/dipole_peaks.py`, not checked on the data) are carried on the next
   session's start page, each as one yes or no.
+- THE AUDITOR IS NOT RUN AGAIN THIS SESSION; FIXING IT IS JOB 1 OF THE NEXT (Greg, 2026-11-24, twenty-sixth session,
+  on being told the auditor check fails with 12 runs owing a row): "Then stop.running aditor for tje rest of this
+  session. Make fixing him.jon 1 in next chst". DECIDED BY HIM: no auditor agent and no auditor check is run for
+  the rest of this session, the close included; the next session's first job is to fix the auditor. Start page AD
+  opens with it. Claude's reading of what the fix covers, his to correct: the rows owed, and the way the auditor
+  is called so that every group's suite goes out with its auditor.
