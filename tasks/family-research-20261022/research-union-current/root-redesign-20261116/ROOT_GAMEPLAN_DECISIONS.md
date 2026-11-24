@@ -7764,3 +7764,16 @@ figure. To bring back when the work reaches what moves the market and price-curv
   (written earlier today, before that was read) name that session, the repository and branch, two file paths
   and his own folder; they hold none of the material itself; taking them out of a public history would need the
   history rewritten, which is not done without his word.
+- BOTH OPERATOR TOOLS ARE USED ON NATURAL GAS, STACKED (Greg, 2026-11-24: "Let's use both options. Again, doesn't
+  have to be either or and stackimg adds value a lot of the time"). DECIDED BY HIM: ticket 47 does not choose
+  between the April engine (the law of motion of the two-sided state, regime by regime) and the discovery
+  pipeline that gives each trade its vector of operator coefficients; both are brought to natural gas and their
+  reads are stacked. It is his standing rule said again ("tools are COMPLEMENTARY, not competing. Evaluate by
+  STACKING"). CLAUDE'S READING, his to correct: "both" is these two tools, and the reading of the coefficients
+  that was kept out of git is stacked with them, as far as he allows it to be written. WHAT FOLLOWS: the second
+  tool is on his machine only, so Codex is asked to bring it (what to ask for is in ticket 47). PUT TO HIM WITH
+  THAT, not decided by Claude: Markets and markets-data are PUBLIC repositories, and in April he said "anything od
+  centric ... needs to be very secure"; the April engine's branch (`od-autoresearch/apr5-handoff`) is public
+  today; the discovery pipeline is the core of that work. Claude's advice is a PRIVATE repository for it, given
+  to a session by name, and his word on whether the April branch stays where it is. In the plan no tool is
+  graded against the other: each read is kept per event, and what the stack adds is shown event by event.

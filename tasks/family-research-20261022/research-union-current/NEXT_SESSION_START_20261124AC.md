@@ -132,7 +132,10 @@ DO FIRST, group by group (GROUPS.md has the whole table):
    ONE SOURCE IS NOT IN GIT ON PURPOSE: the discussion of the digital world and the natural one (the April
    SENTINEL session) was read at his word; he had decided there that it is not for public places, and these
    repositories are public. Do not write its content anywhere in git or in an agent's brief. Ask him how the
-   plan may refer to it BEFORE writing the plan. Where it stands in the order
+   plan may refer to it BEFORE writing the plan.
+   DECIDED BY HIM: BOTH operator tools are used on natural gas and STACKED ("doesn't have to be either or").
+   The second tool must first come from his machine through Codex; where it is put (these repositories are
+   public; a private one was advised) is his to say. Where it stands in the order
    beside the other groups is his to say; it shares no file with them, so its suite can work beside them.
 
 1. G01, tickets 02, 03, 01. The reviewer reads Markets `931b2b3..b12d8ef` on `tools/kgraph/defend.py` and
