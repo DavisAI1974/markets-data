@@ -6134,3 +6134,19 @@ figure. To bring back when the work reaches what moves the market and price-curv
   `grounding.check`; the loop's `run`; `context.build`; the packet builder; the swarm's reducer; the paper loader;
   the token test's call table). Expected values come from the saved records themselves, counted in the check by
   another route. CLAUDE.md's "one router only" stands: these are borrowed one at a time, not made the router.
+- THE GRAPH'S FIRST LOAD WAS REBUILT ONCE, said here so it is not a silent rewrite (Claude, 2026-11-24): the first
+  load (`42614ca` and the commit after it) gave a file an id that carried its commit, so each new line added to
+  `agent-runs.jsonl` re-wrote all the runs already loaded (14 revised), and a tape file listed by two manifests
+  became two nodes. Fixed in Markets `1ad1b4b`: one file, one id; the node carries the commit and is revised when
+  the file changes; what a manifest says of a file is on its link. Because the graph then held only lines made by
+  code from saved records (no claim, nothing a model wrote), its files were made again whole from those records
+  rather than carrying the faulty lines forward. From here the graph is only added to. `.gitattributes` now keeps
+  both writers' lines when two sessions add to one graph file.
+- STAGE 4b, THE PART WITH NO MODEL, BUILT AND RUN (Markets `07b3ffc`, `1ad1b4b`): 4 trade days; 6 manifests with
+  307 entries (one link each; 7 listed files are not in the checkout; where a manifest gives a file's sha256 the
+  link says whether it is the file's); 68 calc outputs from the four `root-rows-<trade day>` branches (17
+  calculations a trade day, each with its receipt kept whole); 3,178 dipole events (741, 833, 741, 863) and 36,688
+  peaks (9,525, 10,577, 8,619, 7,967) from `ROOT_dipoles_pinned.xlsx`, every cell kept as stored, each pinned to
+  its trade day; 74 renders. Checked in the code's checks: every dipole's own birth time lies inside the trade day
+  its sheet is named for. LEFT OUT, by name: the four "crypto and ng" sheets (the program's own trades, for
+  observation only) and the four `CALC-research_columns-<day>.log` files (not JSON).
