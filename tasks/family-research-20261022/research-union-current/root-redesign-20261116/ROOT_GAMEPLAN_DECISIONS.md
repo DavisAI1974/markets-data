@@ -6876,3 +6876,30 @@ figure. To bring back when the work reaches what moves the market and price-curv
   its bottom at round clock times; to be deployed between runs). "Later today we'll work on strategies to hold
   trades longer. Jist make note in the md list file in paper repo": noted under "TO ADD LATER" at the foot of the
   platform checklist, with what is on record to start from. Not started; it waits for him.
+- THE AGENTS, THE PLAN, AND TONIGHT (Greg, 2026-11-24). He asked: "The agents are scoring these runs lie our plan
+  says right? And are they deciding when to trade?" The answer given: no on both; the 32 written rules decide at
+  the tick, nothing calls an agent during a run, and nothing scores a run. He attached the paper ("Graph
+  Engineering", 11 pages) and the handoff zip of 2026-11-23 (the architecture plan, the four agent files, the
+  CLAUDE.md patch, the Codex amendments) and said: "Read the plan and tell me what is missing. That's the whole
+  idea of the agents lol ... read it slowly, thoroughly and carefully ... Don't do anything else until you do".
+  Read in full, all of both. WHAT IS MISSING, told to him: (1) the figure the loop keeps or reverts by, his to
+  choose, never chosen; (2) the loop's control file points at the old tastytrade runner and lists `paper_platform`
+  as never to be touched; (3) no agent proposes the changes (the harness replays commits; no model key in GitHub;
+  the scout, builder and reviewer were not loaded in the session); (4) tonight's runs are in no experiment record
+  and not in the graph (the loader reads the old runner's files); (5) no evaluator checks a trial and no rule is
+  tied to a claim; (6) the real graph has not been run through the fixed code and 97 documents are unread; (7) the
+  swarm and the token test have never run. On deciding when to trade: the plan has the written rules decide at
+  the tick and agents change the rules between runs (stage 7f); an agent starting from a live event is stage 8d.
+- "THAT'S THE ENTIRE REASON WHY WE BUILT THSI THING!!! Doesn't matter how much work it is. Just let the test time
+  iut, don't stop it" (Greg). Taken as his word to build the connection. Claude brought the agent program onto
+  the session's Markets branch (`ccr-98b49128-u7vawo`, fast-forward to `537749a`) and started a builder (run 65).
+  HE STOPPED IT about three minutes in: "So notjing from the agent plan is running tonight lll. Just let this run
+  finish and we'll do the changes later"; "Don't use score since we didn't use anything we wanted scored".
+  DECIDED BY HIM: the connection of the agent program to the platform is for later, not tonight; the run in
+  flight finishes by itself; tonight's runs are NOT scored and no score is made from them, because none of what
+  the plan would score was in use. So: no long run is started; the earlier "collect the data on how we performed"
+  is set aside by this; the runs stay as their own records on their `paper-runs/<run>` branches, unscored and not
+  loaded as trials. Run 65 had only read files; its scratch copy was removed; nothing of it is in git.
+- BUILT TONIGHT AND NOT YET LIVE ON THE PAGE: the graph without fill marks, with a frame and its scales, and with
+  every trade on the market line (platform `dc7717c` and before). The page is not deployed while the run's
+  results are on it; it goes live at the next deploy, which empties the page.
