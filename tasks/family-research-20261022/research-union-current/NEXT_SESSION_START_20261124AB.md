@@ -50,8 +50,8 @@ DO FIRST, in this order:
 - The stored planes of ROOT are on the markets-data branch `root-rows-20231002`, not in the working checkout:
   the packet reads them from a git dir named by `MARKETS_PLANES_GIT` (make one with a blobless mirror of that
   branch; it is not kept anywhere).
-- Agent runs are recorded through 106 except run 102, whose figures the main session had not received when this
-  was written. The next run is 107.
+- Agent runs are recorded through 106 in `paper-trading-20261123/agent-runs.jsonl` (runs 99 to 106 are not yet
+  loaded into the graph: run `ingest_agent_runs` from committed code). The next run is 107.
 
 ## His rules (each is his word, in the decisions file, twenty-fourth session)
 
