@@ -26,8 +26,9 @@ working in this one is `[ ]` until it is seen.
 - [x] 4. That run is in the graph and the experiment record. Evidence: markets-data `8c6d0ec`; 1,710 orders,
   1,684 fills, 25 rule versions, trial `exp-2633f97cb6b9`; `kgraph check` prints "no breach".
 - [ ] 5. Markets and markets-data checkouts hold enough history that a graph write names each file's own commit.
-  Shown by: `--is-shallow-repository` false in both, or, where the whole history is too large to fetch, each file
-  a write names is checked against the shallow boundary before the write.
+  HALF DONE. markets-data: `--is-shallow-repository` prints `false`, 571 commits. Markets: STILL SHALLOW (builders
+  are writing in it); until it is whole, no graph command that names a Markets file's commit is run, and the
+  `coverage` refresh waits on it.
 
 ## B. The graph as the memory (the plan's "largest expected saving", stages 4b and 5a)
 
@@ -35,22 +36,28 @@ State today, read from the graph: 1,147 claims from 8 documents. Handoffs U, V, 
 and the decisions file after line 6152 are NOT. Sessions still start from the handoff pile. The saving has never
 been measured.
 
-- [ ] 6. The two lines of run 47 are settled so the agent-run record reads again. Greg gave no pick; taken as
-  asked of him: both lines stay, a line marked `corrects` is the run's next revision. Shown by:
-  `tools.kgraph.ingest_agent_runs` runs without refusing, and the graph's AgentRun count goes from 35 to the
-  number of runs in the file.
-- [ ] 7. Handoffs Y, Z and AA and the decisions file from line 6153 to its end are read into claims by the scout
-  (Haiku). Greg's go: "Do all 4". Budget told: about 1.5 million tokens on Haiku. Shown by: `extract coverage`
-  lists each of the four as read as it stands; each read is a line of `agent-runs.jsonl` with its model and
-  tokens; the returned JSON is kept under `graph/reads/`.
-- [ ] 8. The saving is measured, not claimed. The pile this session read at its start (handoff AA, the
-  twenty-third session, the keys note, the manual, the plan) is 78,868 characters, about 19,700 tokens at 4
-  characters a token. Shown by: the graph's context for the same start, built after step 7, with its token count
-  beside that figure, and a list of what the pile said that the graph's text does not.
-- [ ] 9. A fresh agent given ONLY the graph's context answers the questions a new session needs (the hold rule,
-  what needs a go, what is built and not run, where the keys are named, what comes next). The paper's own exit
-  test for this stage: "cross-session queries work". Shown by: its answers beside the documents' words, each
-  answer with its claim id, and each miss listed.
+- [x] 6. The two lines of run 47 are settled so the agent-run record reads again. Greg: "do all 4 like you
+  recommeded". Both lines stay; a line marked `corrects` is the run's next revision. Evidence: Markets `d712e0d`;
+  `ingest_agent_runs` ran without refusing; the graph's AgentRun count went 35 -> 75 (every run in the file then);
+  run 47's node shows the correcting line's figures; markets-data `d6b42ea`, `7877d9b`.
+- [x] 7. Handoffs Y, Z and AA and the decisions file from line 6153 are read into claims by seven readers on Haiku
+  (runs 70 to 76). Evidence: each reader's last line with a claim equals its piece's last line and no top-level
+  bullet is without a claim (checked by code); 1,416 claims taken, 15 refused because the quote did not stand
+  word for word (kept as Task lines); Claims 1,147 -> 2,563; `kgraph check`: no breach; the JSON under
+  `graph/reads/run-0070..0076-*`; tokens by the harness: 139,521 / 131,291 / 157,673 / 216,270 / 219,900 /
+  211,376 / 206,466 = 1,282,497 of the 1.5 million approved. NOT COVERED: the decisions file is read to line
+  7070; this session's later entries are read at the close (step 32). `extract coverage` has not been run again
+  (it waits on step 5), so the graph's own count of documents read is stale.
+- [x] 8. The size is measured; it is NOT yet a saving. Evidence: the graph's session-start text plus the text for
+  this task is 36,029 characters, about 9,000 tokens at 4 characters a token, against 78,868 characters, about
+  19,700 tokens, for the pile. What the smaller text does not carry is step 9's result.
+- [ ] 9. A fresh agent given ONLY the graph's context answers what a new session needs. FIRST TEST DONE, AND IT
+  DOES NOT YET HOLD (agent run 83, Sonnet, one tool call: the read of the text; 109,515 tokens by the harness).
+  Of 15 questions: 7 answered with claim ids; 3 in part (the one file a trial changes, how run 47 was settled,
+  what comes next); 4 not in the text (what a trade day is, where the keys are named, never deploy the phone
+  page during a run, who decides at the tick); 1 WRONG (the platform branch, from an old claim). The context
+  builder is being changed for it (Markets, agent run 80). The box is marked only when a fresh agent, after the
+  change, answers all 15 from the text or each miss is named here.
 - [ ] 10. This session's handoff is the graph's start command and a short page of what the graph does not hold,
   not another long handoff. Shown by: the page in git and the command's output for the next session's task.
 - [GO] 11. The other 97 documents in the reader's scope (the older handoffs, the research notes). Not read. About
@@ -122,18 +129,25 @@ reads the graph, writes the graph or calls an agent. A run's orders and fills re
 loads the finished run by hand. The 32 written rules decide alone at the tick. The plan's own text has this only
 as stage 7d (the links, with no word on when) and one paragraph of stage 8d.
 
-- [ ] 34. The graph is written WHILE a run goes: a follower takes each push of the run's journal (they come at
-  most ten seconds apart) and adds its new signals, orders and fills to the graph, the run a trial marked
-  "running" until its receipt comes. Fixed code, no model. Shown by: a check that follows a real run's record
-  branch push by push and ends with the same graph lines as the load of the finished run.
-- [ ] 35. For every opening signal, the graph's packet for that moment is built (what the graph holds on the
-  rule, its version, its claims, the earlier trials of the loop) under a token budget, and its size is written
-  beside the signal. Shown by: the packets for a real run's signals, each with its token count, and the leakage
-  check that no packet holds anything from after its signal's tape time.
-- [ ] 36. A place in the run where an answer is applied to the strategy: take the trade or not, hold or close.
-  Built with nothing plugged in, so a run behaves exactly as today until something is; every answer and the
-  packet it was given are journaled. An answer counts only from the tape time it arrives at: nothing reads
-  ahead. Shown by: a check that a run's journal is the same row for row with nothing plugged in.
+- [x] 34. The graph is written WHILE a run goes: `tools/kgraph/live.py` follows a run's record branch push by push.
+  Evidence (Markets `9637393`, `6644da0`; checks on real records, 7 passed in `test_live_platform.py`): followed
+  over all 90 pushes of run `0f33fec4` (25.3 s) and all 143 of `ea4c1d2e` (39.8 s), each ends with the same
+  (id, content) of every node and edge as one load of the finished run; a second follow writes nothing. NOT
+  DONE, said so: nothing starts the follower by itself when a run starts; a session starts it.
+- [x] 35. For every opening signal the graph's packet for that moment is built: `tools/kgraph/signal_packet.py`.
+  Evidence (Markets `7b85a49`): on run `0f33fec4` all 217 opening signals, 0 breaches of the leak check; a packet
+  built at an early push equals the one built at the tip; 612 to 5,998 tokens a packet at a 6,000 budget. WHAT
+  THE CHECK CANNOT SEE: whether a stored value was itself made from later ticks; and the rule texts were written
+  with these four trade days already seen. On the 2023 tape every claim of the graph is out of every packet
+  (2,563 of 2,563): each was written after that tape. A packet today is the rule, the run's own earlier rows and
+  the dipole events known by then.
+- [GO] 36. A place in the run where an answer is applied to the strategy, built switched off. BUILT, READ BY THE
+  REVIEWER, NOT RUN (platform branch `ccr-0ac78691-8zapbb`, `d2403b1`..`6f7c54f`; NOT on Codex's branch). The
+  reviewer (run 82, Opus) walked every added line with nothing plugged in and found no path where a row, order,
+  fill, timer or budget differs. It found faults with answers or a decider ON: a malformed answer can stop a run;
+  a close by answer also ends the rule's own research idea; the wait for a decider counts against the run's
+  clock; two smaller ones. Being fixed (run 84), then read again. ITS PROOF, that a run with nothing plugged in
+  is the same row for row, is one pass of the tape through the engine: waits for Greg's go.
 - [x] 37. WHO ANSWERS AT THE TICK: DECIDED BY GREG, 2026-11-24: "We are supposed to be testing our new agents
   setup to see if they could be the decders. Again, that's the intent behind all of the work we've done on them
   and it's stated in the zip files". The agents decide. Evidence: his words, in the decisions file.
