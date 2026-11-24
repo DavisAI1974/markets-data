@@ -7535,3 +7535,12 @@ figure. To bring back when the work reaches what moves the market and price-curv
   bundle their commands; the auditor's next report sets the figures beside these. Kept: the reviewer runs the
   checks itself. A line saying they do not search is added to the builder's and the reviewer's own files by
   the builder, under ticket 12. It is a candidate saving until the auditor's figures show it.
+- MORE BUILDERS AT ONCE (Greg, 2026-11-24): "We need more builder agents working in parallel". DECIDED BY HIM:
+  more than one builder works at a time. It also answers what the main session had asked of the roster: the
+  four kinds of agent, and more than one of a kind at once. HOW IT IS DONE: each builder has its own working
+  copy and works only on files no other builder is on; each is handed line ranges the scout located first;
+  each builder's change is still read by a reviewer before it goes further and each run still gets its own
+  row from the auditor. Tickets 04, 05 and 06 are a chain on one file (each needs the one before) and stay one
+  after another behind the builder on tickets 02 and 03. Added beside them, the next tickets in number order
+  that are free to start and touch other files: 18, 19 and 25. THIS REACHES PAST the batches of two or three
+  consecutive numbers he set in the twenty-fourth session; it is done on this word and said to him as that.
