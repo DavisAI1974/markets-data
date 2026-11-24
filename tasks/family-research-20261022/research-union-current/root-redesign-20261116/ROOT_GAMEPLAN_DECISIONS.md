@@ -7463,3 +7463,17 @@ figure. To bring back when the work reaches what moves the market and price-curv
   a fresh agent can read a hypothesis as settled (it happened in the twenty-fourth session's second test).
   Added to the plan for tickets 04 to 06: each registered claim is shown with its place in the process, in
   plain words and with no verdict label.
+- IT DOES NOT STAY AS A STRATEGY UNLESS IT IS PROVEN FIRST (Greg, 2026-11-24, to the main session's "there is
+  also no proven label at the end"): "It does not stay as a strategy unless it's proven first". DECIDED BY HIM:
+  a hypothesis that makes a claim is on trial until it has been through the process; it stays as a strategy
+  only once it is proven; one that is not proven does not stay as a strategy. A CORRECTION (Claude): the main
+  session had said the record would carry no "proven" at the end, reading his earlier word on verdict labels
+  too far; a strategy's standing is his rule and the record carries it. THE MAIN SESSION'S READING, said to him
+  as its reading: what is not proven stops being a rule a decider trades on, and its record (the claim, the
+  challenge, the checks, the evidence against it) is kept, nothing replaced; every rule and the first decider
+  as they stand today are on trial, none proven. PUT TO HIM, NOT ANSWERED: who says "proven" and on what. The
+  main session's recommendation: code lists the strategies whose every falsifier has a check on record after a
+  real trial with nothing seen against them; his word makes one proven; nothing is promoted by code (the
+  verifier plan: a result is not proven merely because checks pass; no automatic promotion). To be added to
+  the plan for tickets 04 to 06 and it bears on tickets 07 and 39: each strategy is tied to its claims and
+  shows where each stands.
