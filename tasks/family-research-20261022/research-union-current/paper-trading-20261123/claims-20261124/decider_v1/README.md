@@ -12,6 +12,7 @@ quote check before the file was written. Each file was tried on a scratch copy o
 | condition-3.json | 18-19 | crossed quote (CL06) |
 | condition-4.json | 20-24 | strong divergence on an entry with the move (CLAUDE.md lines 381-382; SIDE lines of CL01, CL03, CL06, CL10, CL13, CL15, CL16) |
 | inference-1.json | 29-30 | a CX13/CX14 warning applied to any rule's signal on that side |
+| inference-2.json | (none: the page lists no inference for condition 2) | the inference the program makes: the same-run skip applied to any rule; written as a tenth file by the coordinator's word |
 | inference-3.json | 31 | CL06's sentence applied to every rule |
 | inference-4a.json | 32-36 (item 4) | the flow on the newest known dipole event stands for the line now |
 | inference-4b.json | 32-36 (item 4) | -0.20 is on the scale of ours |

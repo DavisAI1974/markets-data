@@ -1,0 +1,84 @@
+{
+ "claim_key": "decider_v1/inference-2",
+ "artifact_repo": "Markets",
+ "artifact_path": "tools/decider/programs/decider_v1.py",
+ "code_commit": "04f437861201ba5b8be0b411346a91eafdc531c6",
+ "artifact_sha256": "a36aaf9c822601362b65e7a3fd4867fd39d7fe134279c07ade705379160afbc0",
+ "outcome_visibility": {
+  "outcome_seen": true,
+  "what": "The page says of the decider: \"It was written with these trade days already studied, as the rule texts were.\" (decider_v1.md lines 40-41). It also says: \"Nothing here has been tried on the tape, and nothing is claimed about it being good.\" (line 7) and the program says \"Nothing here was scored.\" So the author had studied the trade days (which, the page does not say how or what was seen) before writing this condition; no scored outcome of the decider exists."
+ },
+ "data_manifest_hashes": {
+  "none": "no data file bears on this claim yet: it is about what rule texts and CLAUDE.md say and what the program does with them; nothing was run on the tape or the engine"
+ },
+ "reasoning_files": [
+  "tools/decider/programs/decider_v1.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/claims-20261124/decider_v1/README.md",
+  "tasks/family-research-20261022/research-union-current/paper-trading-20261123/tickets-44-20261124/01.md"
+ ],
+ "inference": true,
+ "hypothesis": "The same-run skip, which the cited texts state for CL16, CL03 and CL09 (and, as 'the next run's second step', for CL01, CL02, CL10 and CL11), can be applied to an opening signal of any rule.",
+ "exact_claim": "The page lists no inference for condition 2. The program applies the same-run skip ([same-run]) to the opening signal of any rule, matched on the signal's journaled rule, run and quote, while the texts it cites speak for CL16, CL03 and CL09 (page) and, in the program's own comment, for CL01, CL02, CL10 and CL11 ('at the next run's second step'). This file puts that step up as the inference it is.",
+ "scope": "Condition 2 (decider_v1/condition-2): any rule's opening signal that carries a journaled run and quote. The page names no trade days and no dates; it says only that the decider was written with 'these trade days' already studied.",
+ "boundaries": "Rules whose own OPENS AGAIN wording is neither of the quoted kinds (for example CL13, whose text reads 'at the next such event') are the ones the cited texts do not speak for. Says nothing about whether the earlier open is a real trade, or about outcomes.",
+ "inference_reason": "Inferred from the OPENS AGAIN and same-run sentences of the named rules: each names only its own rule, and the page names no text for the other rules.",
+ "mechanism": "Each cited text says its rule opens again only at a later point of the quote's run (the next run's start, its second step, the next such step). The program reads that as a property of any rule's opening: one open per rule per run of a quote.",
+ "alternatives": [
+  "Rules with another OPENS AGAIN wording (such as CL13's next such event) may open more than once inside one run, so the skip removes openings their texts allow.",
+  "The rules reading 'at the next run's second step' may allow a first opening before that step on the same run, which a run-and-quote match would treat as a repeat."
+ ],
+ "falsifiers": [
+  {
+   "observation": "An OPENS AGAIN line of a rule outside the cited ones that allows a second opening on one run of the quote.",
+   "record": "paper_platform/rules specification lines, OPENS AGAIN, at the platform commit"
+  },
+  {
+   "observation": "A skip tagged [same-run] on a rule whose cited earlier open was on a different run or quote, or was another rule.",
+   "record": "the decision's skip reason and the journal rows it cites"
+  }
+ ],
+ "rests_on": [
+  {
+   "kind": "rule",
+   "rule_id": "CL16",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "The same run of the quote never opens a second trade."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL03",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "OPENS AGAIN: at the next run's start."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL09",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "OPENS AGAIN: at the next run's start."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL01",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "OPENS AGAIN: at the next run's second step."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL02",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "OPENS AGAIN: at the next run's second step."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL10",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "OPENS AGAIN: at the next run's second step."
+  },
+  {
+   "kind": "rule",
+   "rule_id": "CL11",
+   "commit": "28d4dbb080ff462e1318bd825f0fd858838b91ef",
+   "quote": "OPENS AGAIN: at the next run's second step."
+  }
+ ]
+}
