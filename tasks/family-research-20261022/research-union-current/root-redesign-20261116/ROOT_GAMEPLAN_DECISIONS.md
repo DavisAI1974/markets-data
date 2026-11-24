@@ -7411,3 +7411,33 @@ figure. To bring back when the work reaches what moves the market and price-curv
   04, 05 and 06 (agent run 109) starts while the reviewer's re-read of tickets 02 and 03 (agent run 107) and the
   scout's locating for ticket 01 (agent run 108) are still running. A ticket's box is still marked only with
   its evidence beside it; rolling on does not mark anything.
+- THERE ARE FOUR AGENTS (Greg, 2026-11-24, to the main session's table of three runs, a reviewer and two scouts):
+  "Isn't there 4 agents??"; "Ok but you ignorned a very important question!! There's 4 agents!". WHAT WAS SO:
+  the roster is scout, builder, reviewer and frankie-performance-auditor; at that moment only the reviewer (run
+  107) and the scout (runs 108, 109) had been given work, the builder had not started and the auditor had been
+  given nothing; and his first question went unanswered while the main session worked on. CORRECTED: all four
+  are given their part of each batch; one with no part in a batch is said so with the reason. THE MAIN SESSION'S
+  READING, NOT HIS WORDS: that this also answers ticket 15's question as "the four, as themselves, and no
+  general agents"; put to him as that reading. Runs 107 and 108 were general agents handed a role's file,
+  before the types had loaded by name; none is started so again.
+- THE ZIP KEPT ACROSS SESSIONS (Greg, 2026-11-24, sending `frankie_handoff_20261123_2.zip` again): "Please put
+  tjese files in your local memory until we are finished with this part"; then, to the main session keeping
+  them in the session's own scratch folder: "Not this session but your claude local mem through many sessions
+  until we are done with the agents part". SAID TO HIM: a cloud session has no memory that outlasts it; git is
+  the only thing a later session can read. DONE: `READ_FIRST_UNTIL_THE_AGENTS_PART_IS_DONE.md` beside the start
+  page names the eight files and where each is in git (six the same bytes as the zip, the scout's and the
+  reviewer's files the zip's text plus five later lines each, the patch applied on the working branch); the
+  start page names it; every start page names it until he says the agents part is done.
+- THE RE-READ OF TICKETS 02 AND 03 (agent run 107, reviewer, Opus, 149,733 tokens by the harness; Markets
+  `3a6ac09` as it stands at `2ac873f`): 40 checks ran, none errored. NOT MARKED: 15 points are open after the
+  read. Twelve from the first read's 15 findings (who said a cited line is only declared; outcome seen is only
+  declared; a data hash is checked for its shape only; an inference with nothing under it registers; a refusal
+  can still leave no record and a refused challenge never does; a reviewer is any run whose role holds the word;
+  the brief handed in is not compared with the brief the code makes; the hypothesis in the brief is his reading
+  to settle; dead code; REVISES and CONTRADICTS are his to settle; ordinary words such as passed and rejected
+  are refused; four cases have no check) and three new in the fix (a proposer's revision takes back links other
+  runs wrote into its claim; registering can write a new revision of a Source node other claims point at; the
+  build notes still say DEPENDS_ON). Word for word: `paper-trading-20261123/reviews-20261124/REVIEW_RUN_107.md`.
+  The scout's two reports (runs 108 and 109) are in `paper-trading-20261123/scout-20261124/`. Run 108 went past
+  the tokens told to him (174,551 against 150,000) and run 109 past its tool calls (41 against 40); nothing
+  stopped either, which is ticket 18's own point.

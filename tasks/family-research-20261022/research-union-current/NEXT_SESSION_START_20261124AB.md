@@ -117,3 +117,7 @@ Every line carries its claim id, file and line. KNOW ITS LIMITS:
 - Told builders to commit and not push; told builders not to show their diff first; never used the scout.
 - Let a builder leave data out of what a decider is given; nobody chooses what to thin.
 - Called a size cut a saving before the content test held.
+
+## ADDED 2026-11-24, twenty-fifth session (his word): READ FIRST, EVERY SESSION
+
+`READ_FIRST_UNTIL_THE_AGENTS_PART_IS_DONE.md` (beside this page): the eight files of the zip `frankie_handoff_20261123_2.zip`, where each is in git, and that THERE ARE FOUR AGENTS. Read them in full before any ticket work, every session, until Greg says the agents part is done.
