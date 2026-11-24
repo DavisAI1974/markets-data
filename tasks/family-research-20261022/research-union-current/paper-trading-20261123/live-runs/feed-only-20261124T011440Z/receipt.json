@@ -1,0 +1,462 @@
+{
+ "account_positions_left_not_flattened": null,
+ "arguments": {
+  "account": "5WY79188",
+  "max_orders": 1,
+  "orders": false,
+  "out": "/home/user/markets-data/tasks/family-research-20261022/research-union-current/paper-trading-20261123/live-runs/feed-only-20261124T011440Z",
+  "replay": null,
+  "seconds": 960.0,
+  "streamer_symbol": "/NGF27:XNYM",
+  "symbol": "/NGF7"
+ },
+ "code_commit": "562b6f3041ed2f60d4939402824eb6110c0903a7",
+ "constants_used": {
+  "backoff_rule": "sleep 2**attempt seconds plus uniform(0,1) seconds, between attempts",
+  "budget_rule": "when submits reach max_orders - 1 nothing more is opened or closed by a rule; the run flattens and stops",
+  "external_identifier_rule": "<run id>-<strategy>-<trade id>-<open|close>, characters outside A-Za-z0-9._- replaced by _",
+  "feed_stop_et": [
+   16,
+   44
+  ],
+  "flatten_rule": "one order of the absolute net quantity of --symbol, opposite side, marked: flattened at the stop: not trade data",
+  "halt_hour_et": [
+   17,
+   18
+  ],
+  "http_timeout_seconds": 30,
+  "lookup_max_pages": 5,
+  "max_attempts": 4,
+  "order_type": "Market",
+  "poll_count": 10,
+  "poll_seconds": 1,
+  "quantity": 1,
+  "run_cap_seconds": 20700.0,
+  "sandbox_host": "api.cert.tastyworks.com",
+  "terminal_statuses": [
+   "cancelled",
+   "expired",
+   "filled",
+   "partially removed",
+   "rejected",
+   "removed"
+  ],
+  "time_in_force": "Day",
+  "user_agent": "davisai-paper/0.1",
+  "wall_stop_et": [
+   16,
+   50
+  ]
+ },
+ "counts": {
+  "engine": {
+   "day_volume_ahead_of_the_prints_at_end": 41.0,
+   "day_volume_messages": 58,
+   "gap_places": [],
+   "gaps": 0,
+   "print_size_seen": 258.0,
+   "prints": 231,
+   "prints_inside_the_settlement_window": 0,
+   "prints_missing_bid_or_offer": 0,
+   "prints_with_no_price": 0,
+   "prints_with_no_side": 12,
+   "prints_with_no_size": 0,
+   "quote_messages": 280,
+   "quote_messages_missing_bid_or_offer": 0,
+   "rules": {
+    "CL01": {
+     "armed": 0,
+     "closed": 0,
+     "missing": {
+      "single orders": 219
+     },
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "the eaten level"
+    },
+    "CL02": {
+     "armed": 0,
+     "closed": 0,
+     "missing": {
+      "single orders": 219
+     },
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "the abandoned level"
+    },
+    "CL03": {
+     "armed": 0,
+     "closed": 0,
+     "missing": {
+      "single orders": 219
+     },
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "the first step made by a fill"
+    },
+    "CL04": {
+     "armed": 0,
+     "closed": 0,
+     "missing": {
+      "single orders": 219
+     },
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "a level that has only been eaten"
+    },
+    "CL05": {
+     "armed": 30,
+     "closed": 9,
+     "closed late: shown by a print with no side": 1,
+     "missing": {
+      "exhaustion line (20 s)": 1,
+      "first trade leg cut at the start": 1
+     },
+     "opened": 9,
+     "same_key_skipped": 0,
+     "title": "a trade leg's first step with the exhaustion line on its side",
+     "trigger shown by a print with no side: not opened (rule 5)": 1
+    },
+    "CL06": {
+     "armed": 41,
+     "closed": 39,
+     "closed late: shown by a print with no side": 1,
+     "missing": {
+      "first quote run cut at the start": 1
+     },
+     "opened": 40,
+     "same_key_skipped": 0,
+     "title": "both quotes have stepped the same way",
+     "trigger shown by a print with no side: not opened (rule 5)": 3
+    },
+    "CL07": {
+     "armed": 21,
+     "began_at_a_moment_not_opened": 2,
+     "closed": 9,
+     "missing": {
+      "dipole line (60 s) before the trade": 4
+     },
+     "opened": 9,
+     "same_key_skipped": 0,
+     "title": "fresh trading on the dipole's side"
+    },
+    "CL08": {
+     "armed": 8,
+     "began_at_a_moment_not_opened": 2,
+     "closed": 6,
+     "missing": {
+      "dipole line (60 s) before the trade": 4
+     },
+     "opened": 6,
+     "same_key_skipped": 0,
+     "title": "fresh trading against the dipole"
+    },
+    "CL09": {
+     "armed": 0,
+     "closed": 0,
+     "missing": {
+      "single orders": 219
+     },
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "the first step made by a cancel"
+    },
+    "CL10": {
+     "armed": 30,
+     "closed": 7,
+     "closed late: shown by a print with no side": 1,
+     "missing": {
+      "first quote run cut at the start": 2
+     },
+     "opened": 7,
+     "same_key_skipped": 0,
+     "title": "the price runs against the dipole: with the price",
+     "trigger shown by a print with no side: not opened (rule 5)": 2
+    },
+    "CL11": {
+     "armed": 30,
+     "closed": 7,
+     "closed late: shown by a print with no side": 1,
+     "missing": {
+      "first quote run cut at the start": 2
+     },
+     "opened": 7,
+     "same_key_skipped": 0,
+     "title": "the price runs against the dipole: against the price",
+     "trigger shown by a print with no side: not opened (rule 5)": 2
+    },
+    "CL12": {
+     "armed": 0,
+     "closed": 0,
+     "missing": {
+      "single orders": 219
+     },
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "the reloaded level"
+    },
+    "CL13": {
+     "armed": 5,
+     "closed": 5,
+     "closed late: shown by a print with no side": 1,
+     "missing": {},
+     "opened": 5,
+     "same_key_skipped": 0,
+     "title": "paying up through more than one level"
+    },
+    "CL14": {
+     "armed": 47,
+     "closed": 44,
+     "closed late: shown by a print with no side": 1,
+     "missing": {
+      "first quote run cut at the start": 2
+     },
+     "opened": 45,
+     "same_key_skipped": 0,
+     "title": "the other side arrives at the top step of a run"
+    },
+    "CL15": {
+     "armed": 23,
+     "closed": 22,
+     "missing": {
+      "first quote run cut at the start": 1
+     },
+     "opened": 22,
+     "same_key_skipped": 0,
+     "title": "the step back and the return",
+     "trigger shown by a print with no side: not opened (rule 5)": 1
+    },
+    "CL16": {
+     "armed": 9,
+     "closed": 9,
+     "missing": {},
+     "opened": 9,
+     "same_key_skipped": 0,
+     "title": "a step of the quote first shown by a print with no side"
+    },
+    "CL17": {
+     "armed": 6,
+     "closed": 6,
+     "missing": {},
+     "opened": 6,
+     "same_key_skipped": 0,
+     "title": "the print with no side, taken at the quote it traded at"
+    },
+    "CX01": {
+     "armed": 94,
+     "closed": 3,
+     "closed by an exit indication": 1,
+     "missing": {
+      "dip at p": 1,
+      "exh at p": 17
+     },
+     "opened": 4,
+     "same_key_skipped": 0,
+     "title": "buying that carries into a new event"
+    },
+    "CX02": {
+     "armed": 27,
+     "closed": 3,
+     "missing": {
+      "dip at p": 1,
+      "exh at p": 17
+     },
+     "opened": 3,
+     "same_key_skipped": 0,
+     "title": "selling that moves the bid down"
+    },
+    "CX03": {
+     "armed": 20,
+     "closed": 3,
+     "closed by an exit indication": 1,
+     "missing": {
+      "dip at p": 1,
+      "exh at p": 17,
+      "side at q": 1
+     },
+     "opened": 4,
+     "same_key_skipped": 0,
+     "title": "upward re-entry after a pullback"
+    },
+    "CX04": {
+     "armed": 8,
+     "closed": 0,
+     "missing": {
+      "dip at p": 1,
+      "exh at p": 17
+     },
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "downward re-entry after a bounce"
+    },
+    "CX05": {
+     "armed": 96,
+     "closed": 0,
+     "missing": {},
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "exit an upward position when the bid gives way"
+    },
+    "CX06": {
+     "armed": 21,
+     "closed": 0,
+     "missing": {},
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "exit a downward position as the offer lifts"
+    },
+    "CX07": {
+     "armed": 96,
+     "closed": 4,
+     "missing": {
+      "side at q": 3
+     },
+     "opened": 4,
+     "same_key_skipped": 0,
+     "title": "a buyer to a higher offer"
+    },
+    "CX08": {
+     "armed": 90,
+     "closed": 1,
+     "closed by an exit indication": 1,
+     "missing": {
+      "side at q": 8
+     },
+     "opened": 2,
+     "same_key_skipped": 0,
+     "title": "a seller to a lower bid"
+    },
+    "CX09": {
+     "armed": 86,
+     "closed": 0,
+     "missing": {
+      "exh at p": 17
+     },
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "reverse down from a stationary offer"
+    },
+    "CX10": {
+     "armed": 51,
+     "closed": 0,
+     "missing": {
+      "exh at p": 17
+     },
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "reverse up from a stationary bid"
+    },
+    "CX11": {
+     "armed": 84,
+     "closed": 0,
+     "indication: exit": 2,
+     "indication: maintain": 4,
+     "indication: withdraw hold": 2,
+     "missing": {
+      "side at q": 2
+     },
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "stay in an upward position when a seller tests a higher bid"
+    },
+    "CX12": {
+     "armed": 21,
+     "closed": 0,
+     "indication: exit": 1,
+     "indication: maintain": 1,
+     "indication: withdraw hold": 1,
+     "missing": {},
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "stay in a downward position when a buyer tests a lower offer"
+    },
+    "CX13": {
+     "armed": 1,
+     "closed": 0,
+     "missing": {},
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "question a rise that the bid does not follow"
+    },
+    "CX14": {
+     "armed": 31,
+     "closed": 0,
+     "indication: release": 2,
+     "indication: release (known late)": 1,
+     "indication: suspend additions": 3,
+     "missing": {
+      "side at q": 1
+     },
+     "opened": 0,
+     "same_key_skipped": 0,
+     "title": "question a decline that the offer does not follow"
+    },
+    "CX15": {
+     "armed": 201,
+     "closed": 1,
+     "missing": {
+      "exh at p": 17,
+      "side at q": 6
+     },
+     "opened": 1,
+     "same_key_skipped": 0,
+     "title": "a pressure turn at an unchanged price"
+    }
+   }
+  },
+  "events_close": 181,
+  "events_indication": 17,
+  "events_open": 183,
+  "frames": 440,
+  "intents": 364,
+  "intents_sent": 0,
+  "submits": 0
+ },
+ "failed_steps": [],
+ "files": [
+  {
+   "bytes": 273521,
+   "path": "/home/user/markets-data/tasks/family-research-20261022/research-union-current/paper-trading-20261123/live-runs/feed-only-20261124T011440Z/feed.jsonl",
+   "sha256": "1b547f870ddedd35c2dd060e056995feca83f56744b4087850e33a6173b73cf7"
+  },
+  {
+   "bytes": 154348,
+   "path": "/home/user/markets-data/tasks/family-research-20261022/research-union-current/paper-trading-20261123/live-runs/feed-only-20261124T011440Z/events.jsonl",
+   "sha256": "e47640a813afdd08900f7c840941e0e4944e61727d3de6f134e70ac3ce78440d"
+  },
+  {
+   "bytes": 134390,
+   "path": "/home/user/markets-data/tasks/family-research-20261022/research-union-current/paper-trading-20261123/live-runs/feed-only-20261124T011440Z/orders.jsonl",
+   "sha256": "6a20f223022472572b42a924340299aa89a6e73d2eec254ea7b3f4d7b8b34a24"
+  },
+  {
+   "bytes": 219783,
+   "path": "/home/user/markets-data/tasks/family-research-20261022/research-union-current/paper-trading-20261123/live-runs/feed-only-20261124T011440Z/ledger.jsonl",
+   "sha256": "fb62af7e327da00f93a8f2e7631d7090d66c2ffec039fedd95bcde8841ba1a2a"
+  }
+ ],
+ "flatten_orders": [],
+ "mode": {
+  "orders_flag": false,
+  "orders_sent_to_sandbox": false,
+  "replay": false
+ },
+ "not_exercised_live": [
+  "sign-in, quote token and the DXLink socket inside the runner (the 7e check ran them; this runner's copy has not)",
+  "the order worker against the sandbox: dry-run, submit, polling and the fill reading in a running loop",
+  "an order submit that returns 2xx without data.order.id, and one that is uncertain (timeout, 5xx): the look-up by external-identifier and the outcome read from what it finds",
+  "a dry-run that returns errors or warnings",
+  "a close sent after a confirmed open; a close withheld because its open was not confirmed",
+  "the order budget stop (max-orders minus one) and the flatten that it keeps back for",
+  "the flatten order, the start check (no position, no live order), and the final pull of orders and positions",
+  "the 4:44 pm feed stop, the 4:50 pm wall-clock stop and the 5 pm to 6 pm refusal of orders on the live wall clock",
+  "a dropped stream (no reconnect), SIGINT and SIGTERM during a live run",
+  "an external-identifier longer or differently shaped than the sandbox accepts (not known)"
+ ],
+ "not_scored": "not scored: tastytrade sandbox feed",
+ "note": "not scored: tastytrade sandbox feed",
+ "run_id": "20261124T011440919295606Z",
+ "stopped_by": "--seconds 960.0 reached",
+ "trades_in_ledger": 183,
+ "what": "paper runner on the tastytrade sandbox"
+}

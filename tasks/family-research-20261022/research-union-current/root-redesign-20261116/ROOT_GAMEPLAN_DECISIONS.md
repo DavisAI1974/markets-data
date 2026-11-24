@@ -6017,3 +6017,10 @@ figure. To bring back when the work reaches what moves the market and price-curv
 - A FEED-ONLY RECORDING (no orders) was started at 8:14 pm Eastern, said to him first, to catch the 15-minute-old
   feed as it reaches the moments the orders filled.
 - The gaps and misses the run showed are on the list: `tasty/RUNNING_LIST.md`, lines C8 to C18 and D1.
+- WHAT QUOTE THE SANDBOX FILLS FROM (the question of handoff V, step 5), MEASURED 2026-11-24: the market as it is
+  at the moment of the order, not the stream it gives us, which is 900 seconds old. Each of the 13 fills of the
+  first run with orders lies at the bid or the offer of the feed's own print just before or just after the fill's
+  time (feed-only recording, 8:14 to 8:31 pm Eastern, exactly 900.1 seconds behind). The prints the rules acted on
+  were up to 11 ticks away. So on the sandbox with its own stream a rule decides on one quote and is filled on
+  another: the fills there say nothing about the rules. Each fill on its own line:
+  `paper-trading-20261123/live-runs/feed-only-20261124T011440Z/fills-beside-the-market.json`. Not scored.
